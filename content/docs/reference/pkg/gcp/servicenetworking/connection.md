@@ -235,7 +235,9 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
 
     <dt class="property-required"
             title="Required">
-        <span>Network</span>
+        <span id="network_csharp">
+<a href="#network_csharp" style="color: inherit; text-decoration: inherit;">Network</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -244,7 +246,9 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
 
     <dt class="property-required"
             title="Required">
-        <span>Reserved<wbr>Peering<wbr>Ranges</span>
+        <span id="reservedpeeringranges_csharp">
+<a href="#reservedpeeringranges_csharp" style="color: inherit; text-decoration: inherit;">Reserved<wbr>Peering<wbr>Ranges</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -255,7 +259,9 @@ is already established will not reallocate already provisioned service producer 
 
     <dt class="property-required"
             title="Required">
-        <span>Service</span>
+        <span id="service_csharp">
+<a href="#service_csharp" style="color: inherit; text-decoration: inherit;">Service</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -273,7 +279,9 @@ service provider organization. For Google services that support this functionali
 
     <dt class="property-required"
             title="Required">
-        <span>Network</span>
+        <span id="network_go">
+<a href="#network_go" style="color: inherit; text-decoration: inherit;">Network</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -282,7 +290,9 @@ service provider organization. For Google services that support this functionali
 
     <dt class="property-required"
             title="Required">
-        <span>Reserved<wbr>Peering<wbr>Ranges</span>
+        <span id="reservedpeeringranges_go">
+<a href="#reservedpeeringranges_go" style="color: inherit; text-decoration: inherit;">Reserved<wbr>Peering<wbr>Ranges</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -293,7 +303,9 @@ is already established will not reallocate already provisioned service producer 
 
     <dt class="property-required"
             title="Required">
-        <span>Service</span>
+        <span id="service_go">
+<a href="#service_go" style="color: inherit; text-decoration: inherit;">Service</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -311,7 +323,9 @@ service provider organization. For Google services that support this functionali
 
     <dt class="property-required"
             title="Required">
-        <span>network</span>
+        <span id="network_nodejs">
+<a href="#network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -320,7 +334,9 @@ service provider organization. For Google services that support this functionali
 
     <dt class="property-required"
             title="Required">
-        <span>reserved<wbr>Peering<wbr>Ranges</span>
+        <span id="reservedpeeringranges_nodejs">
+<a href="#reservedpeeringranges_nodejs" style="color: inherit; text-decoration: inherit;">reserved<wbr>Peering<wbr>Ranges</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -331,7 +347,9 @@ is already established will not reallocate already provisioned service producer 
 
     <dt class="property-required"
             title="Required">
-        <span>service</span>
+        <span id="service_nodejs">
+<a href="#service_nodejs" style="color: inherit; text-decoration: inherit;">service</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -349,7 +367,9 @@ service provider organization. For Google services that support this functionali
 
     <dt class="property-required"
             title="Required">
-        <span>network</span>
+        <span id="network_python">
+<a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -358,7 +378,9 @@ service provider organization. For Google services that support this functionali
 
     <dt class="property-required"
             title="Required">
-        <span>reserved_<wbr>peering_<wbr>ranges</span>
+        <span id="reserved_peering_ranges_python">
+<a href="#reserved_peering_ranges_python" style="color: inherit; text-decoration: inherit;">reserved_<wbr>peering_<wbr>ranges</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -369,7 +391,9 @@ is already established will not reallocate already provisioned service producer 
 
     <dt class="property-required"
             title="Required">
-        <span>service</span>
+        <span id="service_python">
+<a href="#service_python" style="color: inherit; text-decoration: inherit;">service</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -398,7 +422,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -406,7 +432,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Peering</span>
+        <span id="peering_csharp">
+<a href="#peering_csharp" style="color: inherit; text-decoration: inherit;">Peering</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -421,7 +449,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -429,7 +459,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Peering</span>
+        <span id="peering_go">
+<a href="#peering_go" style="color: inherit; text-decoration: inherit;">Peering</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -444,7 +476,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -452,7 +486,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>peering</span>
+        <span id="peering_nodejs">
+<a href="#peering_nodejs" style="color: inherit; text-decoration: inherit;">peering</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -467,7 +503,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -475,7 +513,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>peering</span>
+        <span id="peering_python">
+<a href="#peering_python" style="color: inherit; text-decoration: inherit;">peering</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -616,7 +656,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Network</span>
+        <span id="state_network_csharp">
+<a href="#state_network_csharp" style="color: inherit; text-decoration: inherit;">Network</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -625,7 +667,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Peering</span>
+        <span id="state_peering_csharp">
+<a href="#state_peering_csharp" style="color: inherit; text-decoration: inherit;">Peering</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -633,7 +677,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Reserved<wbr>Peering<wbr>Ranges</span>
+        <span id="state_reservedpeeringranges_csharp">
+<a href="#state_reservedpeeringranges_csharp" style="color: inherit; text-decoration: inherit;">Reserved<wbr>Peering<wbr>Ranges</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -644,7 +690,9 @@ is already established will not reallocate already provisioned service producer 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Service</span>
+        <span id="state_service_csharp">
+<a href="#state_service_csharp" style="color: inherit; text-decoration: inherit;">Service</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -662,7 +710,9 @@ service provider organization. For Google services that support this functionali
 
     <dt class="property-optional"
             title="Optional">
-        <span>Network</span>
+        <span id="state_network_go">
+<a href="#state_network_go" style="color: inherit; text-decoration: inherit;">Network</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -671,7 +721,9 @@ service provider organization. For Google services that support this functionali
 
     <dt class="property-optional"
             title="Optional">
-        <span>Peering</span>
+        <span id="state_peering_go">
+<a href="#state_peering_go" style="color: inherit; text-decoration: inherit;">Peering</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -679,7 +731,9 @@ service provider organization. For Google services that support this functionali
 
     <dt class="property-optional"
             title="Optional">
-        <span>Reserved<wbr>Peering<wbr>Ranges</span>
+        <span id="state_reservedpeeringranges_go">
+<a href="#state_reservedpeeringranges_go" style="color: inherit; text-decoration: inherit;">Reserved<wbr>Peering<wbr>Ranges</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -690,7 +744,9 @@ is already established will not reallocate already provisioned service producer 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Service</span>
+        <span id="state_service_go">
+<a href="#state_service_go" style="color: inherit; text-decoration: inherit;">Service</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -708,7 +764,9 @@ service provider organization. For Google services that support this functionali
 
     <dt class="property-optional"
             title="Optional">
-        <span>network</span>
+        <span id="state_network_nodejs">
+<a href="#state_network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -717,7 +775,9 @@ service provider organization. For Google services that support this functionali
 
     <dt class="property-optional"
             title="Optional">
-        <span>peering</span>
+        <span id="state_peering_nodejs">
+<a href="#state_peering_nodejs" style="color: inherit; text-decoration: inherit;">peering</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -725,7 +785,9 @@ service provider organization. For Google services that support this functionali
 
     <dt class="property-optional"
             title="Optional">
-        <span>reserved<wbr>Peering<wbr>Ranges</span>
+        <span id="state_reservedpeeringranges_nodejs">
+<a href="#state_reservedpeeringranges_nodejs" style="color: inherit; text-decoration: inherit;">reserved<wbr>Peering<wbr>Ranges</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -736,7 +798,9 @@ is already established will not reallocate already provisioned service producer 
 
     <dt class="property-optional"
             title="Optional">
-        <span>service</span>
+        <span id="state_service_nodejs">
+<a href="#state_service_nodejs" style="color: inherit; text-decoration: inherit;">service</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -754,7 +818,9 @@ service provider organization. For Google services that support this functionali
 
     <dt class="property-optional"
             title="Optional">
-        <span>network</span>
+        <span id="state_network_python">
+<a href="#state_network_python" style="color: inherit; text-decoration: inherit;">network</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -763,7 +829,9 @@ service provider organization. For Google services that support this functionali
 
     <dt class="property-optional"
             title="Optional">
-        <span>peering</span>
+        <span id="state_peering_python">
+<a href="#state_peering_python" style="color: inherit; text-decoration: inherit;">peering</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -771,7 +839,9 @@ service provider organization. For Google services that support this functionali
 
     <dt class="property-optional"
             title="Optional">
-        <span>reserved_<wbr>peering_<wbr>ranges</span>
+        <span id="state_reserved_peering_ranges_python">
+<a href="#state_reserved_peering_ranges_python" style="color: inherit; text-decoration: inherit;">reserved_<wbr>peering_<wbr>ranges</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -782,7 +852,9 @@ is already established will not reallocate already provisioned service producer 
 
     <dt class="property-optional"
             title="Optional">
-        <span>service</span>
+        <span id="state_service_python">
+<a href="#state_service_python" style="color: inherit; text-decoration: inherit;">service</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

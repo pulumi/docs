@@ -1627,7 +1627,7 @@ for a list of these restrictions.</p>
 <span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
 
 <span class="n">admin</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">organizations</span><span class="o">.</span><span class="n">get_iam_policy</span><span class="p">(</span><span class="n">audit_configs</span><span class="o">=</span><span class="p">[{</span>
-        <span class="s2">&quot;auditLogConfigs&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;audit_log_configs&quot;</span><span class="p">:</span> <span class="p">[</span>
             <span class="p">{</span>
                 <span class="s2">&quot;exemptedMembers&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;user:you@domain.com&quot;</span><span class="p">],</span>
                 <span class="s2">&quot;logType&quot;</span><span class="p">:</span> <span class="s2">&quot;DATA_READ&quot;</span><span class="p">,</span>

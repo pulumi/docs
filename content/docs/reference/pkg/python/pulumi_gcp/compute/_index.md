@@ -622,7 +622,6 @@ define.</p>
     <span class="p">})</span>
 </pre></div>
 </div>
-<p>Deprecated: gcp.compute.Autoscalar has been deprecated in favour of gcp.compute.Autoscaler</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4016,7 +4015,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">description</span><span class="o">=</span><span class="s2">&quot;An externally managed VPN gateway&quot;</span><span class="p">,</span>
     <span class="n">interface</span><span class="o">=</span><span class="p">[{</span>
         <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-        <span class="s2">&quot;ipAddress&quot;</span><span class="p">:</span> <span class="s2">&quot;8.8.8.8&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;ip_address&quot;</span><span class="p">:</span> <span class="s2">&quot;8.8.8.8&quot;</span><span class="p">,</span>
     <span class="p">}])</span>
 <span class="n">network_subnet1</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Subnetwork</span><span class="p">(</span><span class="s2">&quot;networkSubnet1&quot;</span><span class="p">,</span>
     <span class="n">ip_cidr_range</span><span class="o">=</span><span class="s2">&quot;10.0.1.0/24&quot;</span><span class="p">,</span>
@@ -6824,7 +6823,7 @@ balancing.</p>
     <span class="p">}],</span>
     <span class="n">path_matcher</span><span class="o">=</span><span class="p">[{</span>
         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;allpaths&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;defaultService&quot;</span><span class="p">:</span> <span class="n">default_backend_service</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;default_service&quot;</span><span class="p">:</span> <span class="n">default_backend_service</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
         <span class="s2">&quot;path_rule&quot;</span><span class="p">:</span> <span class="p">[{</span>
             <span class="s2">&quot;paths&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;/*&quot;</span><span class="p">],</span>
             <span class="s2">&quot;service&quot;</span><span class="p">:</span> <span class="n">default_backend_service</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
@@ -6888,7 +6887,7 @@ balancing.</p>
     <span class="p">}],</span>
     <span class="n">path_matcher</span><span class="o">=</span><span class="p">[{</span>
         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;allpaths&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;defaultService&quot;</span><span class="p">:</span> <span class="n">default_backend_service</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;default_service&quot;</span><span class="p">:</span> <span class="n">default_backend_service</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
         <span class="s2">&quot;path_rule&quot;</span><span class="p">:</span> <span class="p">[{</span>
             <span class="s2">&quot;paths&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;/*&quot;</span><span class="p">],</span>
             <span class="s2">&quot;service&quot;</span><span class="p">:</span> <span class="n">default_backend_service</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
@@ -7983,9 +7982,9 @@ healthy again and can receive new connections.</p>
     <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Health check via tcp&quot;</span><span class="p">,</span>
     <span class="n">healthy_threshold</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>
     <span class="n">tcp_health_check</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;portName&quot;</span><span class="p">:</span> <span class="s2">&quot;health-check-port&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;port_name&quot;</span><span class="p">:</span> <span class="s2">&quot;health-check-port&quot;</span><span class="p">,</span>
         <span class="s2">&quot;portSpecification&quot;</span><span class="p">:</span> <span class="s2">&quot;USE_NAMED_PORT&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;proxyHeader&quot;</span><span class="p">:</span> <span class="s2">&quot;NONE&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;proxy_header&quot;</span><span class="p">:</span> <span class="s2">&quot;NONE&quot;</span><span class="p">,</span>
         <span class="s2">&quot;request&quot;</span><span class="p">:</span> <span class="s2">&quot;ARE YOU HEALTHY?&quot;</span><span class="p">,</span>
         <span class="s2">&quot;response&quot;</span><span class="p">:</span> <span class="s2">&quot;I AM HEALTHY&quot;</span><span class="p">,</span>
     <span class="p">},</span>
@@ -8012,9 +8011,9 @@ healthy again and can receive new connections.</p>
     <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Health check via ssl&quot;</span><span class="p">,</span>
     <span class="n">healthy_threshold</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>
     <span class="n">ssl_health_check</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;portName&quot;</span><span class="p">:</span> <span class="s2">&quot;health-check-port&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;port_name&quot;</span><span class="p">:</span> <span class="s2">&quot;health-check-port&quot;</span><span class="p">,</span>
         <span class="s2">&quot;portSpecification&quot;</span><span class="p">:</span> <span class="s2">&quot;USE_NAMED_PORT&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;proxyHeader&quot;</span><span class="p">:</span> <span class="s2">&quot;NONE&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;proxy_header&quot;</span><span class="p">:</span> <span class="s2">&quot;NONE&quot;</span><span class="p">,</span>
         <span class="s2">&quot;request&quot;</span><span class="p">:</span> <span class="s2">&quot;ARE YOU HEALTHY?&quot;</span><span class="p">,</span>
         <span class="s2">&quot;response&quot;</span><span class="p">:</span> <span class="s2">&quot;I AM HEALTHY&quot;</span><span class="p">,</span>
     <span class="p">},</span>
@@ -8042,10 +8041,10 @@ healthy again and can receive new connections.</p>
     <span class="n">healthy_threshold</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>
     <span class="n">http_health_check</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;host&quot;</span><span class="p">:</span> <span class="s2">&quot;1.2.3.4&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;portName&quot;</span><span class="p">:</span> <span class="s2">&quot;health-check-port&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;port_name&quot;</span><span class="p">:</span> <span class="s2">&quot;health-check-port&quot;</span><span class="p">,</span>
         <span class="s2">&quot;portSpecification&quot;</span><span class="p">:</span> <span class="s2">&quot;USE_NAMED_PORT&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;proxyHeader&quot;</span><span class="p">:</span> <span class="s2">&quot;NONE&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;requestPath&quot;</span><span class="p">:</span> <span class="s2">&quot;/mypath&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;proxy_header&quot;</span><span class="p">:</span> <span class="s2">&quot;NONE&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;request_path&quot;</span><span class="p">:</span> <span class="s2">&quot;/mypath&quot;</span><span class="p">,</span>
         <span class="s2">&quot;response&quot;</span><span class="p">:</span> <span class="s2">&quot;I AM HEALTHY&quot;</span><span class="p">,</span>
     <span class="p">},</span>
     <span class="n">timeout_sec</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
@@ -8072,10 +8071,10 @@ healthy again and can receive new connections.</p>
     <span class="n">healthy_threshold</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>
     <span class="n">https_health_check</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;host&quot;</span><span class="p">:</span> <span class="s2">&quot;1.2.3.4&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;portName&quot;</span><span class="p">:</span> <span class="s2">&quot;health-check-port&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;port_name&quot;</span><span class="p">:</span> <span class="s2">&quot;health-check-port&quot;</span><span class="p">,</span>
         <span class="s2">&quot;portSpecification&quot;</span><span class="p">:</span> <span class="s2">&quot;USE_NAMED_PORT&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;proxyHeader&quot;</span><span class="p">:</span> <span class="s2">&quot;NONE&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;requestPath&quot;</span><span class="p">:</span> <span class="s2">&quot;/mypath&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;proxy_header&quot;</span><span class="p">:</span> <span class="s2">&quot;NONE&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;request_path&quot;</span><span class="p">:</span> <span class="s2">&quot;/mypath&quot;</span><span class="p">,</span>
         <span class="s2">&quot;response&quot;</span><span class="p">:</span> <span class="s2">&quot;I AM HEALTHY&quot;</span><span class="p">,</span>
     <span class="p">},</span>
     <span class="n">timeout_sec</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
@@ -8102,10 +8101,10 @@ healthy again and can receive new connections.</p>
     <span class="n">healthy_threshold</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>
     <span class="n">http2_health_check</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;host&quot;</span><span class="p">:</span> <span class="s2">&quot;1.2.3.4&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;portName&quot;</span><span class="p">:</span> <span class="s2">&quot;health-check-port&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;port_name&quot;</span><span class="p">:</span> <span class="s2">&quot;health-check-port&quot;</span><span class="p">,</span>
         <span class="s2">&quot;portSpecification&quot;</span><span class="p">:</span> <span class="s2">&quot;USE_NAMED_PORT&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;proxyHeader&quot;</span><span class="p">:</span> <span class="s2">&quot;NONE&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;requestPath&quot;</span><span class="p">:</span> <span class="s2">&quot;/mypath&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;proxy_header&quot;</span><span class="p">:</span> <span class="s2">&quot;NONE&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;request_path&quot;</span><span class="p">:</span> <span class="s2">&quot;/mypath&quot;</span><span class="p">,</span>
         <span class="s2">&quot;response&quot;</span><span class="p">:</span> <span class="s2">&quot;I AM HEALTHY&quot;</span><span class="p">,</span>
     <span class="p">},</span>
     <span class="n">timeout_sec</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
@@ -10505,7 +10504,7 @@ and
     <span class="n">disk</span><span class="o">=</span><span class="p">[{</span>
         <span class="s2">&quot;sourceImage&quot;</span><span class="p">:</span> <span class="s2">&quot;debian-cloud/debian-9&quot;</span><span class="p">,</span>
         <span class="s2">&quot;autoDelete&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
-        <span class="s2">&quot;diskSizeGb&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
+        <span class="s2">&quot;disk_size_gb&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
         <span class="s2">&quot;boot&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
     <span class="p">}],</span>
     <span class="n">network_interface</span><span class="o">=</span><span class="p">[{</span>
@@ -11051,7 +11050,7 @@ and <a class="reference external" href="https://cloud.google.com/compute/docs/re
     <span class="n">healthy_threshold</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
     <span class="n">unhealthy_threshold</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
     <span class="n">http_health_check</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;requestPath&quot;</span><span class="p">:</span> <span class="s2">&quot;/healthz&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;request_path&quot;</span><span class="p">:</span> <span class="s2">&quot;/healthz&quot;</span><span class="p">,</span>
         <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="s2">&quot;8080&quot;</span><span class="p">,</span>
     <span class="p">})</span>
 <span class="n">appserver</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">InstanceGroupManager</span><span class="p">(</span><span class="s2">&quot;appserver&quot;</span><span class="p">,</span>
@@ -13557,7 +13556,7 @@ certificates may entail some downtime while the certificate provisions.</p>
     <span class="p">}],</span>
     <span class="n">path_matcher</span><span class="o">=</span><span class="p">[{</span>
         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;allpaths&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;defaultService&quot;</span><span class="p">:</span> <span class="n">default_backend_service</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;default_service&quot;</span><span class="p">:</span> <span class="n">default_backend_service</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
         <span class="s2">&quot;path_rule&quot;</span><span class="p">:</span> <span class="p">[{</span>
             <span class="s2">&quot;paths&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;/*&quot;</span><span class="p">],</span>
             <span class="s2">&quot;service&quot;</span><span class="p">:</span> <span class="n">default_backend_service</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
@@ -13759,16 +13758,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_gcp.compute.MangedSslCertificate">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.compute.</code><code class="sig-name descname">MangedSslCertificate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">certificate_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">managed</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.MangedSslCertificate" title="Permalink to this definition">¶</a></dt>
-<dd><p>Deprecated: gcp.compute.MangedSslCertificate has been deprecated in favour of gcp.compute.ManagedSslCertificate</p>
+<dd><p>Create a MangedSslCertificate resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[float] certificate_id: The unique identifier for the resource.
+:param pulumi.Input[str] description: An optional description of this resource.
+:param pulumi.Input[dict] managed: Properties relevant to a managed certificate. These will be used if the certificate is managed (as indicated by a value</p>
+<blockquote>
+<div><p>of ‘MANAGED’ in ‘type’).</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>certificate_id</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The unique identifier for the resource.</p></li>
-<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An optional description of this resource.</p></li>
-<li><p><strong>managed</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Properties relevant to a managed certificate. These will be used if the certificate is managed (as indicated by a value
-of ‘MANAGED’ in ‘type’).</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
 comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
 ‘<a class="reference external" href="[-a-z0-9]*[a-z0-9]">a-z</a>?’ which means the first character must be a lowercase letter, and all following characters
@@ -18406,9 +18407,9 @@ healthy again and can receive new connections.</p>
     <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Health check via tcp&quot;</span><span class="p">,</span>
     <span class="n">healthy_threshold</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>
     <span class="n">tcp_health_check</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;portName&quot;</span><span class="p">:</span> <span class="s2">&quot;health-check-port&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;port_name&quot;</span><span class="p">:</span> <span class="s2">&quot;health-check-port&quot;</span><span class="p">,</span>
         <span class="s2">&quot;portSpecification&quot;</span><span class="p">:</span> <span class="s2">&quot;USE_NAMED_PORT&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;proxyHeader&quot;</span><span class="p">:</span> <span class="s2">&quot;NONE&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;proxy_header&quot;</span><span class="p">:</span> <span class="s2">&quot;NONE&quot;</span><span class="p">,</span>
         <span class="s2">&quot;request&quot;</span><span class="p">:</span> <span class="s2">&quot;ARE YOU HEALTHY?&quot;</span><span class="p">,</span>
         <span class="s2">&quot;response&quot;</span><span class="p">:</span> <span class="s2">&quot;I AM HEALTHY&quot;</span><span class="p">,</span>
     <span class="p">},</span>
@@ -18435,9 +18436,9 @@ healthy again and can receive new connections.</p>
     <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Health check via ssl&quot;</span><span class="p">,</span>
     <span class="n">healthy_threshold</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>
     <span class="n">ssl_health_check</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;portName&quot;</span><span class="p">:</span> <span class="s2">&quot;health-check-port&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;port_name&quot;</span><span class="p">:</span> <span class="s2">&quot;health-check-port&quot;</span><span class="p">,</span>
         <span class="s2">&quot;portSpecification&quot;</span><span class="p">:</span> <span class="s2">&quot;USE_NAMED_PORT&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;proxyHeader&quot;</span><span class="p">:</span> <span class="s2">&quot;NONE&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;proxy_header&quot;</span><span class="p">:</span> <span class="s2">&quot;NONE&quot;</span><span class="p">,</span>
         <span class="s2">&quot;request&quot;</span><span class="p">:</span> <span class="s2">&quot;ARE YOU HEALTHY?&quot;</span><span class="p">,</span>
         <span class="s2">&quot;response&quot;</span><span class="p">:</span> <span class="s2">&quot;I AM HEALTHY&quot;</span><span class="p">,</span>
     <span class="p">},</span>
@@ -18479,10 +18480,10 @@ healthy again and can receive new connections.</p>
     <span class="n">healthy_threshold</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>
     <span class="n">http_health_check</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;host&quot;</span><span class="p">:</span> <span class="s2">&quot;1.2.3.4&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;portName&quot;</span><span class="p">:</span> <span class="s2">&quot;health-check-port&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;port_name&quot;</span><span class="p">:</span> <span class="s2">&quot;health-check-port&quot;</span><span class="p">,</span>
         <span class="s2">&quot;portSpecification&quot;</span><span class="p">:</span> <span class="s2">&quot;USE_NAMED_PORT&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;proxyHeader&quot;</span><span class="p">:</span> <span class="s2">&quot;NONE&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;requestPath&quot;</span><span class="p">:</span> <span class="s2">&quot;/mypath&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;proxy_header&quot;</span><span class="p">:</span> <span class="s2">&quot;NONE&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;request_path&quot;</span><span class="p">:</span> <span class="s2">&quot;/mypath&quot;</span><span class="p">,</span>
         <span class="s2">&quot;response&quot;</span><span class="p">:</span> <span class="s2">&quot;I AM HEALTHY&quot;</span><span class="p">,</span>
     <span class="p">},</span>
     <span class="n">timeout_sec</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
@@ -18509,10 +18510,10 @@ healthy again and can receive new connections.</p>
     <span class="n">healthy_threshold</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>
     <span class="n">https_health_check</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;host&quot;</span><span class="p">:</span> <span class="s2">&quot;1.2.3.4&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;portName&quot;</span><span class="p">:</span> <span class="s2">&quot;health-check-port&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;port_name&quot;</span><span class="p">:</span> <span class="s2">&quot;health-check-port&quot;</span><span class="p">,</span>
         <span class="s2">&quot;portSpecification&quot;</span><span class="p">:</span> <span class="s2">&quot;USE_NAMED_PORT&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;proxyHeader&quot;</span><span class="p">:</span> <span class="s2">&quot;NONE&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;requestPath&quot;</span><span class="p">:</span> <span class="s2">&quot;/mypath&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;proxy_header&quot;</span><span class="p">:</span> <span class="s2">&quot;NONE&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;request_path&quot;</span><span class="p">:</span> <span class="s2">&quot;/mypath&quot;</span><span class="p">,</span>
         <span class="s2">&quot;response&quot;</span><span class="p">:</span> <span class="s2">&quot;I AM HEALTHY&quot;</span><span class="p">,</span>
     <span class="p">},</span>
     <span class="n">timeout_sec</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
@@ -18539,10 +18540,10 @@ healthy again and can receive new connections.</p>
     <span class="n">healthy_threshold</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>
     <span class="n">http2_health_check</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;host&quot;</span><span class="p">:</span> <span class="s2">&quot;1.2.3.4&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;portName&quot;</span><span class="p">:</span> <span class="s2">&quot;health-check-port&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;port_name&quot;</span><span class="p">:</span> <span class="s2">&quot;health-check-port&quot;</span><span class="p">,</span>
         <span class="s2">&quot;portSpecification&quot;</span><span class="p">:</span> <span class="s2">&quot;USE_NAMED_PORT&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;proxyHeader&quot;</span><span class="p">:</span> <span class="s2">&quot;NONE&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;requestPath&quot;</span><span class="p">:</span> <span class="s2">&quot;/mypath&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;proxy_header&quot;</span><span class="p">:</span> <span class="s2">&quot;NONE&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;request_path&quot;</span><span class="p">:</span> <span class="s2">&quot;/mypath&quot;</span><span class="p">,</span>
         <span class="s2">&quot;response&quot;</span><span class="p">:</span> <span class="s2">&quot;I AM HEALTHY&quot;</span><span class="p">,</span>
     <span class="p">},</span>
     <span class="n">timeout_sec</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
@@ -19258,7 +19259,7 @@ and <a class="reference external" href="https://cloud.google.com/compute/docs/re
     <span class="n">healthy_threshold</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
     <span class="n">unhealthy_threshold</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
     <span class="n">http_health_check</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;requestPath&quot;</span><span class="p">:</span> <span class="s2">&quot;/healthz&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;request_path&quot;</span><span class="p">:</span> <span class="s2">&quot;/healthz&quot;</span><span class="p">,</span>
         <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="s2">&quot;8080&quot;</span><span class="p">,</span>
     <span class="p">})</span>
 <span class="n">appserver</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">RegionInstanceGroupManager</span><span class="p">(</span><span class="s2">&quot;appserver&quot;</span><span class="p">,</span>
@@ -20002,7 +20003,7 @@ state as plain-text. <a class="reference external" href="https://www.pulumi.com/
     <span class="p">}],</span>
     <span class="n">path_matcher</span><span class="o">=</span><span class="p">[{</span>
         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;allpaths&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;defaultService&quot;</span><span class="p">:</span> <span class="n">default_region_backend_service</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;default_service&quot;</span><span class="p">:</span> <span class="n">default_region_backend_service</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
         <span class="s2">&quot;path_rule&quot;</span><span class="p">:</span> <span class="p">[{</span>
             <span class="s2">&quot;paths&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;/*&quot;</span><span class="p">],</span>
             <span class="s2">&quot;service&quot;</span><span class="p">:</span> <span class="n">default_region_backend_service</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
@@ -20222,7 +20223,7 @@ forwarding rules to route incoming HTTP requests to a URL map.</p>
     <span class="p">}],</span>
     <span class="n">path_matcher</span><span class="o">=</span><span class="p">[{</span>
         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;allpaths&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;defaultService&quot;</span><span class="p">:</span> <span class="n">default_region_backend_service</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;default_service&quot;</span><span class="p">:</span> <span class="n">default_region_backend_service</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
         <span class="s2">&quot;path_rule&quot;</span><span class="p">:</span> <span class="p">[{</span>
             <span class="s2">&quot;paths&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;/*&quot;</span><span class="p">],</span>
             <span class="s2">&quot;service&quot;</span><span class="p">:</span> <span class="n">default_region_backend_service</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
@@ -20438,7 +20439,7 @@ forwarding rules to route incoming HTTPS requests to a URL map.</p>
     <span class="p">}],</span>
     <span class="n">path_matcher</span><span class="o">=</span><span class="p">[{</span>
         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;allpaths&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;defaultService&quot;</span><span class="p">:</span> <span class="n">default_region_backend_service</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;default_service&quot;</span><span class="p">:</span> <span class="n">default_region_backend_service</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
         <span class="s2">&quot;path_rule&quot;</span><span class="p">:</span> <span class="p">[{</span>
             <span class="s2">&quot;paths&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;/*&quot;</span><span class="p">],</span>
             <span class="s2">&quot;service&quot;</span><span class="p">:</span> <span class="n">default_region_backend_service</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
@@ -20628,7 +20629,7 @@ that you define for the host and path of an incoming URL.</p>
     <span class="n">timeout_sec</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
     <span class="n">http_health_check</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span>
-        <span class="s2">&quot;requestPath&quot;</span><span class="p">:</span> <span class="s2">&quot;/&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;request_path&quot;</span><span class="p">:</span> <span class="s2">&quot;/&quot;</span><span class="p">,</span>
     <span class="p">})</span>
 <span class="n">login</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">RegionBackendService</span><span class="p">(</span><span class="s2">&quot;login&quot;</span><span class="p">,</span>
     <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
@@ -20650,7 +20651,7 @@ that you define for the host and path of an incoming URL.</p>
     <span class="p">}],</span>
     <span class="n">path_matcher</span><span class="o">=</span><span class="p">[{</span>
         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;allpaths&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;defaultService&quot;</span><span class="p">:</span> <span class="n">home</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;default_service&quot;</span><span class="p">:</span> <span class="n">home</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
         <span class="s2">&quot;path_rule&quot;</span><span class="p">:</span> <span class="p">[</span>
             <span class="p">{</span>
                 <span class="s2">&quot;paths&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;/home&quot;</span><span class="p">],</span>
@@ -20689,7 +20690,7 @@ that you define for the host and path of an incoming URL.</p>
     <span class="p">}],</span>
     <span class="n">path_matcher</span><span class="o">=</span><span class="p">[{</span>
         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;allpaths&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;defaultService&quot;</span><span class="p">:</span> <span class="n">home</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;default_service&quot;</span><span class="p">:</span> <span class="n">home</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
         <span class="s2">&quot;path_rule&quot;</span><span class="p">:</span> <span class="p">[{</span>
             <span class="s2">&quot;paths&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;/home&quot;</span><span class="p">],</span>
             <span class="s2">&quot;route_action&quot;</span><span class="p">:</span> <span class="p">{</span>
@@ -20716,7 +20717,7 @@ that you define for the host and path of an incoming URL.</p>
                     <span class="p">},</span>
                 <span class="p">},</span>
                 <span class="s2">&quot;request_mirror_policy&quot;</span><span class="p">:</span> <span class="p">{</span>
-                    <span class="s2">&quot;backendService&quot;</span><span class="p">:</span> <span class="n">home</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+                    <span class="s2">&quot;backend_service&quot;</span><span class="p">:</span> <span class="n">home</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
                 <span class="p">},</span>
                 <span class="s2">&quot;retry_policy&quot;</span><span class="p">:</span> <span class="p">{</span>
                     <span class="s2">&quot;numRetries&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
@@ -20737,7 +20738,7 @@ that you define for the host and path of an incoming URL.</p>
                     <span class="s2">&quot;pathPrefixRewrite&quot;</span><span class="p">:</span> <span class="s2">&quot;A replacement path&quot;</span><span class="p">,</span>
                 <span class="p">},</span>
                 <span class="s2">&quot;weighted_backend_services&quot;</span><span class="p">:</span> <span class="p">[{</span>
-                    <span class="s2">&quot;backendService&quot;</span><span class="p">:</span> <span class="n">home</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+                    <span class="s2">&quot;backend_service&quot;</span><span class="p">:</span> <span class="n">home</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
                     <span class="s2">&quot;weight&quot;</span><span class="p">:</span> <span class="mi">400</span><span class="p">,</span>
                     <span class="s2">&quot;header_action&quot;</span><span class="p">:</span> <span class="p">{</span>
                         <span class="s2">&quot;requestHeadersToRemoves&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;RemoveMe&quot;</span><span class="p">],</span>
@@ -20784,7 +20785,7 @@ that you define for the host and path of an incoming URL.</p>
     <span class="p">}],</span>
     <span class="n">path_matcher</span><span class="o">=</span><span class="p">[{</span>
         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;allpaths&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;defaultService&quot;</span><span class="p">:</span> <span class="n">home</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;default_service&quot;</span><span class="p">:</span> <span class="n">home</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
         <span class="s2">&quot;path_rule&quot;</span><span class="p">:</span> <span class="p">[{</span>
             <span class="s2">&quot;paths&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;/home&quot;</span><span class="p">],</span>
             <span class="s2">&quot;route_action&quot;</span><span class="p">:</span> <span class="p">{</span>
@@ -20807,7 +20808,7 @@ that you define for the host and path of an incoming URL.</p>
                     <span class="s2">&quot;pathPrefixRewrite&quot;</span><span class="p">:</span> <span class="s2">&quot;A replacement path&quot;</span><span class="p">,</span>
                 <span class="p">},</span>
                 <span class="s2">&quot;weighted_backend_services&quot;</span><span class="p">:</span> <span class="p">[{</span>
-                    <span class="s2">&quot;backendService&quot;</span><span class="p">:</span> <span class="n">home</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+                    <span class="s2">&quot;backend_service&quot;</span><span class="p">:</span> <span class="n">home</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
                     <span class="s2">&quot;weight&quot;</span><span class="p">:</span> <span class="mi">400</span><span class="p">,</span>
                     <span class="s2">&quot;header_action&quot;</span><span class="p">:</span> <span class="p">{</span>
                         <span class="s2">&quot;response_headers_to_add&quot;</span><span class="p">:</span> <span class="p">[{</span>
@@ -20847,7 +20848,7 @@ that you define for the host and path of an incoming URL.</p>
     <span class="p">}],</span>
     <span class="n">path_matcher</span><span class="o">=</span><span class="p">[{</span>
         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;allpaths&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;defaultService&quot;</span><span class="p">:</span> <span class="n">home</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;default_service&quot;</span><span class="p">:</span> <span class="n">home</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
         <span class="s2">&quot;route_rules&quot;</span><span class="p">:</span> <span class="p">[{</span>
             <span class="s2">&quot;priority&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
             <span class="s2">&quot;header_action&quot;</span><span class="p">:</span> <span class="p">{</span>
@@ -20920,7 +20921,7 @@ that you define for the host and path of an incoming URL.</p>
     <span class="p">}],</span>
     <span class="n">path_matcher</span><span class="o">=</span><span class="p">[{</span>
         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;allpaths&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;defaultService&quot;</span><span class="p">:</span> <span class="n">home</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;default_service&quot;</span><span class="p">:</span> <span class="n">home</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
         <span class="s2">&quot;route_rules&quot;</span><span class="p">:</span> <span class="p">[{</span>
             <span class="s2">&quot;priority&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
             <span class="s2">&quot;service&quot;</span><span class="p">:</span> <span class="n">home</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
@@ -23301,8 +23302,8 @@ like Cloud SQL and Dataflow.</p>
     <span class="n">specific_reservation</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;count&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
         <span class="s2">&quot;instanceProperties&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="s2">&quot;machineType&quot;</span><span class="p">:</span> <span class="s2">&quot;n2-standard-2&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;minCpuPlatform&quot;</span><span class="p">:</span> <span class="s2">&quot;Intel Cascade Lake&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;machine_type&quot;</span><span class="p">:</span> <span class="s2">&quot;n2-standard-2&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;min_cpu_platform&quot;</span><span class="p">:</span> <span class="s2">&quot;Intel Cascade Lake&quot;</span><span class="p">,</span>
         <span class="p">},</span>
     <span class="p">},</span>
     <span class="n">zone</span><span class="o">=</span><span class="s2">&quot;us-central1-a&quot;</span><span class="p">)</span>
@@ -23593,7 +23594,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <span class="n">bar</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">ResourcePolicy</span><span class="p">(</span><span class="s2">&quot;bar&quot;</span><span class="p">,</span>
     <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
     <span class="n">snapshot_schedule_policy</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;retentionPolicy&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;retention_policy&quot;</span><span class="p">:</span> <span class="p">{</span>
             <span class="s2">&quot;maxRetentionDays&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
             <span class="s2">&quot;onSourceDiskDelete&quot;</span><span class="p">:</span> <span class="s2">&quot;KEEP_AUTO_SNAPSHOTS&quot;</span><span class="p">,</span>
         <span class="p">},</span>
@@ -24326,8 +24327,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">network</span><span class="o">=</span><span class="n">foobar_network</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
     <span class="n">bgp</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;asn&quot;</span><span class="p">:</span> <span class="mi">64514</span><span class="p">,</span>
-        <span class="s2">&quot;advertiseMode&quot;</span><span class="p">:</span> <span class="s2">&quot;CUSTOM&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;advertisedGroups&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;ALL_SUBNETS&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;advertise_mode&quot;</span><span class="p">:</span> <span class="s2">&quot;CUSTOM&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;advertised_groups&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;ALL_SUBNETS&quot;</span><span class="p">],</span>
         <span class="s2">&quot;advertised_ip_ranges&quot;</span><span class="p">:</span> <span class="p">[</span>
             <span class="p">{</span>
                 <span class="s2">&quot;range&quot;</span><span class="p">:</span> <span class="s2">&quot;1.2.3.4&quot;</span><span class="p">,</span>
@@ -25421,7 +25422,7 @@ state as plain-text. <a class="reference external" href="https://www.pulumi.com/
     <span class="p">}],</span>
     <span class="n">path_matcher</span><span class="o">=</span><span class="p">[{</span>
         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;allpaths&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;defaultService&quot;</span><span class="p">:</span> <span class="n">default_backend_service</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;default_service&quot;</span><span class="p">:</span> <span class="n">default_backend_service</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
         <span class="s2">&quot;path_rule&quot;</span><span class="p">:</span> <span class="p">[{</span>
             <span class="s2">&quot;paths&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;/*&quot;</span><span class="p">],</span>
             <span class="s2">&quot;service&quot;</span><span class="p">:</span> <span class="n">default_backend_service</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
@@ -26893,7 +26894,7 @@ of the network, even entire subnets, using firewall rules.</p>
     <span class="n">network</span><span class="o">=</span><span class="n">custom_test</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="n">secondary_ip_range</span><span class="o">=</span><span class="p">[{</span>
         <span class="s2">&quot;rangeName&quot;</span><span class="p">:</span> <span class="s2">&quot;tf-test-secondary-range-update1&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;ipCidrRange&quot;</span><span class="p">:</span> <span class="s2">&quot;192.168.10.0/24&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;ip_cidr_range&quot;</span><span class="p">:</span> <span class="s2">&quot;192.168.10.0/24&quot;</span><span class="p">,</span>
     <span class="p">}])</span>
 </pre></div>
 </div>
@@ -28025,7 +28026,7 @@ forwarding rule to route incoming HTTP requests to a URL map.</p>
     <span class="p">}],</span>
     <span class="n">path_matcher</span><span class="o">=</span><span class="p">[{</span>
         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;allpaths&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;defaultService&quot;</span><span class="p">:</span> <span class="n">default_backend_service</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;default_service&quot;</span><span class="p">:</span> <span class="n">default_backend_service</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
         <span class="s2">&quot;path_rule&quot;</span><span class="p">:</span> <span class="p">[{</span>
             <span class="s2">&quot;paths&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;/*&quot;</span><span class="p">],</span>
             <span class="s2">&quot;service&quot;</span><span class="p">:</span> <span class="n">default_backend_service</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
@@ -28221,7 +28222,7 @@ global forwarding rule to route incoming HTTPS requests to a URL map.</p>
     <span class="p">}],</span>
     <span class="n">path_matcher</span><span class="o">=</span><span class="p">[{</span>
         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;allpaths&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;defaultService&quot;</span><span class="p">:</span> <span class="n">default_backend_service</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;default_service&quot;</span><span class="p">:</span> <span class="n">default_backend_service</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
         <span class="s2">&quot;path_rule&quot;</span><span class="p">:</span> <span class="p">[{</span>
             <span class="s2">&quot;paths&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;/*&quot;</span><span class="p">],</span>
             <span class="s2">&quot;service&quot;</span><span class="p">:</span> <span class="n">default_backend_service</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
@@ -29253,7 +29254,7 @@ that you define for the host and path of an incoming URL.</p>
     <span class="n">path_matcher</span><span class="o">=</span><span class="p">[</span>
         <span class="p">{</span>
             <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;mysite&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;defaultService&quot;</span><span class="p">:</span> <span class="n">home</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+            <span class="s2">&quot;default_service&quot;</span><span class="p">:</span> <span class="n">home</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
             <span class="s2">&quot;path_rule&quot;</span><span class="p">:</span> <span class="p">[</span>
                 <span class="p">{</span>
                     <span class="s2">&quot;paths&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;/home&quot;</span><span class="p">],</span>
@@ -29271,7 +29272,7 @@ that you define for the host and path of an incoming URL.</p>
         <span class="p">},</span>
         <span class="p">{</span>
             <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;otherpaths&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;defaultService&quot;</span><span class="p">:</span> <span class="n">home</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+            <span class="s2">&quot;default_service&quot;</span><span class="p">:</span> <span class="n">home</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
         <span class="p">},</span>
     <span class="p">],</span>
     <span class="n">test</span><span class="o">=</span><span class="p">[{</span>
@@ -29302,7 +29303,7 @@ that you define for the host and path of an incoming URL.</p>
     <span class="p">}],</span>
     <span class="n">path_matcher</span><span class="o">=</span><span class="p">[{</span>
         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;allpaths&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;defaultService&quot;</span><span class="p">:</span> <span class="n">home</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;default_service&quot;</span><span class="p">:</span> <span class="n">home</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
         <span class="s2">&quot;route_rules&quot;</span><span class="p">:</span> <span class="p">[{</span>
             <span class="s2">&quot;priority&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
             <span class="s2">&quot;header_action&quot;</span><span class="p">:</span> <span class="p">{</span>
@@ -29376,7 +29377,7 @@ that you define for the host and path of an incoming URL.</p>
     <span class="p">}],</span>
     <span class="n">path_matcher</span><span class="o">=</span><span class="p">[{</span>
         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;allpaths&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;defaultService&quot;</span><span class="p">:</span> <span class="n">home</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;default_service&quot;</span><span class="p">:</span> <span class="n">home</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
         <span class="s2">&quot;route_rules&quot;</span><span class="p">:</span> <span class="p">[{</span>
             <span class="s2">&quot;priority&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
             <span class="s2">&quot;match_rules&quot;</span><span class="p">:</span> <span class="p">[{</span>
@@ -29421,7 +29422,7 @@ that you define for the host and path of an incoming URL.</p>
     <span class="p">}],</span>
     <span class="n">path_matcher</span><span class="o">=</span><span class="p">[{</span>
         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;allpaths&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;defaultService&quot;</span><span class="p">:</span> <span class="n">home</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;default_service&quot;</span><span class="p">:</span> <span class="n">home</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
         <span class="s2">&quot;path_rule&quot;</span><span class="p">:</span> <span class="p">[{</span>
             <span class="s2">&quot;paths&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;/home&quot;</span><span class="p">],</span>
             <span class="s2">&quot;route_action&quot;</span><span class="p">:</span> <span class="p">{</span>
@@ -29449,7 +29450,7 @@ that you define for the host and path of an incoming URL.</p>
                     <span class="p">},</span>
                 <span class="p">},</span>
                 <span class="s2">&quot;request_mirror_policy&quot;</span><span class="p">:</span> <span class="p">{</span>
-                    <span class="s2">&quot;backendService&quot;</span><span class="p">:</span> <span class="n">home</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+                    <span class="s2">&quot;backend_service&quot;</span><span class="p">:</span> <span class="n">home</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
                 <span class="p">},</span>
                 <span class="s2">&quot;retry_policy&quot;</span><span class="p">:</span> <span class="p">{</span>
                     <span class="s2">&quot;numRetries&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
@@ -29470,7 +29471,7 @@ that you define for the host and path of an incoming URL.</p>
                     <span class="s2">&quot;pathPrefixRewrite&quot;</span><span class="p">:</span> <span class="s2">&quot;A replacement path&quot;</span><span class="p">,</span>
                 <span class="p">},</span>
                 <span class="s2">&quot;weighted_backend_services&quot;</span><span class="p">:</span> <span class="p">[{</span>
-                    <span class="s2">&quot;backendService&quot;</span><span class="p">:</span> <span class="n">home</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+                    <span class="s2">&quot;backend_service&quot;</span><span class="p">:</span> <span class="n">home</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
                     <span class="s2">&quot;weight&quot;</span><span class="p">:</span> <span class="mi">400</span><span class="p">,</span>
                     <span class="s2">&quot;header_action&quot;</span><span class="p">:</span> <span class="p">{</span>
                         <span class="s2">&quot;requestHeadersToRemoves&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;RemoveMe&quot;</span><span class="p">],</span>
@@ -29518,7 +29519,7 @@ that you define for the host and path of an incoming URL.</p>
     <span class="p">}],</span>
     <span class="n">path_matcher</span><span class="o">=</span><span class="p">[{</span>
         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;allpaths&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;defaultService&quot;</span><span class="p">:</span> <span class="n">home</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;default_service&quot;</span><span class="p">:</span> <span class="n">home</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
         <span class="s2">&quot;path_rule&quot;</span><span class="p">:</span> <span class="p">[{</span>
             <span class="s2">&quot;paths&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;/home&quot;</span><span class="p">],</span>
             <span class="s2">&quot;route_action&quot;</span><span class="p">:</span> <span class="p">{</span>
@@ -29533,7 +29534,7 @@ that you define for the host and path of an incoming URL.</p>
                     <span class="s2">&quot;disabled&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
                 <span class="p">},</span>
                 <span class="s2">&quot;weighted_backend_services&quot;</span><span class="p">:</span> <span class="p">[{</span>
-                    <span class="s2">&quot;backendService&quot;</span><span class="p">:</span> <span class="n">home</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+                    <span class="s2">&quot;backend_service&quot;</span><span class="p">:</span> <span class="n">home</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
                     <span class="s2">&quot;weight&quot;</span><span class="p">:</span> <span class="mi">400</span><span class="p">,</span>
                     <span class="s2">&quot;header_action&quot;</span><span class="p">:</span> <span class="p">{</span>
                         <span class="s2">&quot;requestHeadersToRemoves&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;RemoveMe&quot;</span><span class="p">],</span>

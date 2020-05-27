@@ -252,7 +252,9 @@ The ServicePerimeterResource resource accepts the following [input]({{< relref "
 
     <dt class="property-required"
             title="Required">
-        <span>Perimeter<wbr>Name</span>
+        <span id="perimetername_csharp">
+<a href="#perimetername_csharp" style="color: inherit; text-decoration: inherit;">Perimeter<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -261,7 +263,9 @@ The ServicePerimeterResource resource accepts the following [input]({{< relref "
 
     <dt class="property-required"
             title="Required">
-        <span>Resource</span>
+        <span id="resource_csharp">
+<a href="#resource_csharp" style="color: inherit; text-decoration: inherit;">Resource</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -279,7 +283,9 @@ Format: projects/{project_number}
 
     <dt class="property-required"
             title="Required">
-        <span>Perimeter<wbr>Name</span>
+        <span id="perimetername_go">
+<a href="#perimetername_go" style="color: inherit; text-decoration: inherit;">Perimeter<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -288,7 +294,9 @@ Format: projects/{project_number}
 
     <dt class="property-required"
             title="Required">
-        <span>Resource</span>
+        <span id="resource_go">
+<a href="#resource_go" style="color: inherit; text-decoration: inherit;">Resource</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -306,7 +314,9 @@ Format: projects/{project_number}
 
     <dt class="property-required"
             title="Required">
-        <span>perimeter<wbr>Name</span>
+        <span id="perimetername_nodejs">
+<a href="#perimetername_nodejs" style="color: inherit; text-decoration: inherit;">perimeter<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -315,7 +325,9 @@ Format: projects/{project_number}
 
     <dt class="property-required"
             title="Required">
-        <span>resource</span>
+        <span id="resource_nodejs">
+<a href="#resource_nodejs" style="color: inherit; text-decoration: inherit;">resource</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -333,7 +345,9 @@ Format: projects/{project_number}
 
     <dt class="property-required"
             title="Required">
-        <span>perimeter_<wbr>name</span>
+        <span id="perimeter_name_python">
+<a href="#perimeter_name_python" style="color: inherit; text-decoration: inherit;">perimeter_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -342,7 +356,9 @@ Format: projects/{project_number}
 
     <dt class="property-required"
             title="Required">
-        <span>resource</span>
+        <span id="resource_python">
+<a href="#resource_python" style="color: inherit; text-decoration: inherit;">resource</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -371,7 +387,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -386,7 +404,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -401,7 +421,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -416,7 +438,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -557,7 +581,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Perimeter<wbr>Name</span>
+        <span id="state_perimetername_csharp">
+<a href="#state_perimetername_csharp" style="color: inherit; text-decoration: inherit;">Perimeter<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -566,7 +592,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource</span>
+        <span id="state_resource_csharp">
+<a href="#state_resource_csharp" style="color: inherit; text-decoration: inherit;">Resource</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -584,7 +612,9 @@ Format: projects/{project_number}
 
     <dt class="property-optional"
             title="Optional">
-        <span>Perimeter<wbr>Name</span>
+        <span id="state_perimetername_go">
+<a href="#state_perimetername_go" style="color: inherit; text-decoration: inherit;">Perimeter<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -593,7 +623,9 @@ Format: projects/{project_number}
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource</span>
+        <span id="state_resource_go">
+<a href="#state_resource_go" style="color: inherit; text-decoration: inherit;">Resource</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -611,7 +643,9 @@ Format: projects/{project_number}
 
     <dt class="property-optional"
             title="Optional">
-        <span>perimeter<wbr>Name</span>
+        <span id="state_perimetername_nodejs">
+<a href="#state_perimetername_nodejs" style="color: inherit; text-decoration: inherit;">perimeter<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -620,7 +654,9 @@ Format: projects/{project_number}
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource</span>
+        <span id="state_resource_nodejs">
+<a href="#state_resource_nodejs" style="color: inherit; text-decoration: inherit;">resource</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -638,7 +674,9 @@ Format: projects/{project_number}
 
     <dt class="property-optional"
             title="Optional">
-        <span>perimeter_<wbr>name</span>
+        <span id="state_perimeter_name_python">
+<a href="#state_perimeter_name_python" style="color: inherit; text-decoration: inherit;">perimeter_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -647,7 +685,9 @@ Format: projects/{project_number}
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource</span>
+        <span id="state_resource_python">
+<a href="#state_resource_python" style="color: inherit; text-decoration: inherit;">resource</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

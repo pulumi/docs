@@ -73,13 +73,13 @@ deletion. <a class="reference external" href="https://cloud.google.com/composer/
 <span class="n">test_environment</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">composer</span><span class="o">.</span><span class="n">Environment</span><span class="p">(</span><span class="s2">&quot;testEnvironment&quot;</span><span class="p">,</span>
     <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
     <span class="n">config</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;nodeCount&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+        <span class="s2">&quot;node_count&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
         <span class="s2">&quot;node_config&quot;</span><span class="p">:</span> <span class="p">{</span>
             <span class="s2">&quot;zone&quot;</span><span class="p">:</span> <span class="s2">&quot;us-central1-a&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;machineType&quot;</span><span class="p">:</span> <span class="s2">&quot;n1-standard-1&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;machine_type&quot;</span><span class="p">:</span> <span class="s2">&quot;n1-standard-1&quot;</span><span class="p">,</span>
             <span class="s2">&quot;network&quot;</span><span class="p">:</span> <span class="n">test_network</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
             <span class="s2">&quot;subnetwork&quot;</span><span class="p">:</span> <span class="n">test_subnetwork</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
-            <span class="s2">&quot;serviceAccount&quot;</span><span class="p">:</span> <span class="n">test_account</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+            <span class="s2">&quot;service_account&quot;</span><span class="p">:</span> <span class="n">test_account</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
         <span class="p">},</span>
     <span class="p">})</span>
 </pre></div>
@@ -93,7 +93,7 @@ deletion. <a class="reference external" href="https://cloud.google.com/composer/
             <span class="s2">&quot;airflowConfigOverrides&quot;</span><span class="p">:</span> <span class="p">{</span>
                 <span class="s2">&quot;core-loadExample&quot;</span><span class="p">:</span> <span class="s2">&quot;True&quot;</span><span class="p">,</span>
             <span class="p">},</span>
-            <span class="s2">&quot;envVariables&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;env_variables&quot;</span><span class="p">:</span> <span class="p">{</span>
                 <span class="s2">&quot;FOO&quot;</span><span class="p">:</span> <span class="s2">&quot;bar&quot;</span><span class="p">,</span>
             <span class="p">},</span>
             <span class="s2">&quot;pypiPackages&quot;</span><span class="p">:</span> <span class="p">{</span>
@@ -195,6 +195,7 @@ and region.</p></li>
 will be used to run this environment.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">privateEnvironmentConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The configuration used for the Private IP Cloud Composer environment. Structure is documented below.</p>
 <ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">cloudSqlIpv4CidrBlock</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The CIDR block from which IP range in tenant project will be reserved for Cloud SQL. Needs to be disjoint from <code class="docutils literal notranslate"><span class="pre">web_server_ipv4_cidr_block</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">enablePrivateEndpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - -
 If true, access to the public endpoint of the GKE cluster is denied.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">masterIpv4CidrBlock</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The IP range in CIDR notation to use for the hosted master network. This range is used
@@ -202,6 +203,7 @@ for assigning internal IP addresses to the cluster master or set of masters and 
 internal load balancer virtual IP. This range must not overlap with any other ranges
 in use within the cluster’s network.
 If left blank, the default value of ‘172.16.0.0/28’ is used.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">webServerIpv4CidrBlock</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The CIDR block from which IP range for web server will be reserved. Needs to be disjoint from <code class="docutils literal notranslate"><span class="pre">master_ipv4_cidr_block</span></code> and <code class="docutils literal notranslate"><span class="pre">cloud_sql_ipv4_cidr_block</span></code>.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">softwareConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The configuration settings for software inside the environment.  Structure is documented below.</p>
@@ -245,6 +247,20 @@ pinning it to a version specifier, use the empty string as the value.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">pythonVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - -
 The major version of Python used to run the Apache Airflow scheduler, worker, and webserver processes.
 Can be set to ‘2’ or ‘3’. If not specified, the default is ‘2’. Cannot be updated.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">webServerNetworkAccessControl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The network-level access control policy for the Airflow web server. If unspecified, no network-level access restrictions will be applied.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">allowedIpRanges</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - -
+A collection of allowed IP ranges with descriptions. Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A description of this ip range.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - IP address or range, defined using CIDR notation, of requests that this rule applies to.
+Examples: <code class="docutils literal notranslate"><span class="pre">192.168.1.1</span></code> or <code class="docutils literal notranslate"><span class="pre">192.168.0.0/16</span></code> or <code class="docutils literal notranslate"><span class="pre">2001:db8::/32</span></code> or <code class="docutils literal notranslate"><span class="pre">2001:0db8:0000:0042:0000:8a2e:0370:7334</span></code>.
+IP range prefixes should be properly truncated. For example,
+<code class="docutils literal notranslate"><span class="pre">1.2.3.4/24</span></code> should be truncated to <code class="docutils literal notranslate"><span class="pre">1.2.3.0/24</span></code>. Similarly, for IPv6, <code class="docutils literal notranslate"><span class="pre">2001:db8::1/32</span></code> should be truncated to <code class="docutils literal notranslate"><span class="pre">2001:db8::/32</span></code>.</p></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -319,6 +335,7 @@ and region.</p></li>
 will be used to run this environment.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">privateEnvironmentConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The configuration used for the Private IP Cloud Composer environment. Structure is documented below.</p>
 <ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">cloudSqlIpv4CidrBlock</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The CIDR block from which IP range in tenant project will be reserved for Cloud SQL. Needs to be disjoint from <code class="docutils literal notranslate"><span class="pre">web_server_ipv4_cidr_block</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">enablePrivateEndpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - -
 If true, access to the public endpoint of the GKE cluster is denied.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">masterIpv4CidrBlock</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The IP range in CIDR notation to use for the hosted master network. This range is used
@@ -326,6 +343,7 @@ for assigning internal IP addresses to the cluster master or set of masters and 
 internal load balancer virtual IP. This range must not overlap with any other ranges
 in use within the cluster’s network.
 If left blank, the default value of ‘172.16.0.0/28’ is used.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">webServerIpv4CidrBlock</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The CIDR block from which IP range for web server will be reserved. Needs to be disjoint from <code class="docutils literal notranslate"><span class="pre">master_ipv4_cidr_block</span></code> and <code class="docutils literal notranslate"><span class="pre">cloud_sql_ipv4_cidr_block</span></code>.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">softwareConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The configuration settings for software inside the environment.  Structure is documented below.</p>
@@ -369,6 +387,20 @@ pinning it to a version specifier, use the empty string as the value.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">pythonVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - -
 The major version of Python used to run the Apache Airflow scheduler, worker, and webserver processes.
 Can be set to ‘2’ or ‘3’. If not specified, the default is ‘2’. Cannot be updated.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">webServerNetworkAccessControl</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The network-level access control policy for the Airflow web server. If unspecified, no network-level access restrictions will be applied.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">allowedIpRanges</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - -
+A collection of allowed IP ranges with descriptions. Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A description of this ip range.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - IP address or range, defined using CIDR notation, of requests that this rule applies to.
+Examples: <code class="docutils literal notranslate"><span class="pre">192.168.1.1</span></code> or <code class="docutils literal notranslate"><span class="pre">192.168.0.0/16</span></code> or <code class="docutils literal notranslate"><span class="pre">2001:db8::/32</span></code> or <code class="docutils literal notranslate"><span class="pre">2001:0db8:0000:0042:0000:8a2e:0370:7334</span></code>.
+IP range prefixes should be properly truncated. For example,
+<code class="docutils literal notranslate"><span class="pre">1.2.3.4/24</span></code> should be truncated to <code class="docutils literal notranslate"><span class="pre">1.2.3.0/24</span></code>. Similarly, for IPv6, <code class="docutils literal notranslate"><span class="pre">2001:db8::1/32</span></code> should be truncated to <code class="docutils literal notranslate"><span class="pre">2001:db8::/32</span></code>.</p></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -503,6 +535,7 @@ and region.</p></li>
 will be used to run this environment.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">privateEnvironmentConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The configuration used for the Private IP Cloud Composer environment. Structure is documented below.</p>
 <ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">cloudSqlIpv4CidrBlock</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The CIDR block from which IP range in tenant project will be reserved for Cloud SQL. Needs to be disjoint from <code class="docutils literal notranslate"><span class="pre">web_server_ipv4_cidr_block</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">enablePrivateEndpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - -
 If true, access to the public endpoint of the GKE cluster is denied.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">masterIpv4CidrBlock</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The IP range in CIDR notation to use for the hosted master network. This range is used
@@ -510,6 +543,7 @@ for assigning internal IP addresses to the cluster master or set of masters and 
 internal load balancer virtual IP. This range must not overlap with any other ranges
 in use within the cluster’s network.
 If left blank, the default value of ‘172.16.0.0/28’ is used.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">webServerIpv4CidrBlock</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The CIDR block from which IP range for web server will be reserved. Needs to be disjoint from <code class="docutils literal notranslate"><span class="pre">master_ipv4_cidr_block</span></code> and <code class="docutils literal notranslate"><span class="pre">cloud_sql_ipv4_cidr_block</span></code>.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">softwareConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The configuration settings for software inside the environment.  Structure is documented below.</p>
@@ -553,6 +587,20 @@ pinning it to a version specifier, use the empty string as the value.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">pythonVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - -
 The major version of Python used to run the Apache Airflow scheduler, worker, and webserver processes.
 Can be set to ‘2’ or ‘3’. If not specified, the default is ‘2’. Cannot be updated.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">webServerNetworkAccessControl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The network-level access control policy for the Airflow web server. If unspecified, no network-level access restrictions will be applied.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">allowedIpRanges</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - -
+A collection of allowed IP ranges with descriptions. Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A description of this ip range.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - IP address or range, defined using CIDR notation, of requests that this rule applies to.
+Examples: <code class="docutils literal notranslate"><span class="pre">192.168.1.1</span></code> or <code class="docutils literal notranslate"><span class="pre">192.168.0.0/16</span></code> or <code class="docutils literal notranslate"><span class="pre">2001:db8::/32</span></code> or <code class="docutils literal notranslate"><span class="pre">2001:0db8:0000:0042:0000:8a2e:0370:7334</span></code>.
+IP range prefixes should be properly truncated. For example,
+<code class="docutils literal notranslate"><span class="pre">1.2.3.4/24</span></code> should be truncated to <code class="docutils literal notranslate"><span class="pre">1.2.3.0/24</span></code>. Similarly, for IPv6, <code class="docutils literal notranslate"><span class="pre">2001:db8::1/32</span></code> should be truncated to <code class="docutils literal notranslate"><span class="pre">2001:db8::/32</span></code>.</p></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>

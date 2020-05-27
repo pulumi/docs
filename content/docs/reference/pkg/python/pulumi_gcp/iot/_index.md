@@ -28,7 +28,7 @@ anything, please consult the source <a class="reference external" href="https://
 <span class="n">default_telemetry</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">pubsub</span><span class="o">.</span><span class="n">Topic</span><span class="p">(</span><span class="s2">&quot;default-telemetry&quot;</span><span class="p">)</span>
 <span class="n">default_registry</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">iot</span><span class="o">.</span><span class="n">Registry</span><span class="p">(</span><span class="s2">&quot;default-registry&quot;</span><span class="p">,</span>
     <span class="n">event_notification_configs</span><span class="o">=</span><span class="p">[{</span>
-        <span class="s2">&quot;pubsubTopicName&quot;</span><span class="p">:</span> <span class="n">default_telemetry</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;pubsub_topic_name&quot;</span><span class="p">:</span> <span class="n">default_telemetry</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="p">}],</span>
     <span class="n">state_notification_config</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;pubsub_topic_name&quot;</span><span class="p">:</span> <span class="n">default_devicestatus</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>

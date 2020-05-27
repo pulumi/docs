@@ -256,7 +256,9 @@ The DefaultObjectACL resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-required"
             title="Required">
-        <span>Bucket</span>
+        <span id="bucket_csharp">
+<a href="#bucket_csharp" style="color: inherit; text-decoration: inherit;">Bucket</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -265,7 +267,9 @@ The DefaultObjectACL resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Role<wbr>Entities</span>
+        <span id="roleentities_csharp">
+<a href="#roleentities_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Entities</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -283,7 +287,9 @@ Omitting the field is the same as providing an empty list.
 
     <dt class="property-required"
             title="Required">
-        <span>Bucket</span>
+        <span id="bucket_go">
+<a href="#bucket_go" style="color: inherit; text-decoration: inherit;">Bucket</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -292,7 +298,9 @@ Omitting the field is the same as providing an empty list.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Role<wbr>Entities</span>
+        <span id="roleentities_go">
+<a href="#roleentities_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Entities</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -310,7 +318,9 @@ Omitting the field is the same as providing an empty list.
 
     <dt class="property-required"
             title="Required">
-        <span>bucket</span>
+        <span id="bucket_nodejs">
+<a href="#bucket_nodejs" style="color: inherit; text-decoration: inherit;">bucket</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -319,7 +329,9 @@ Omitting the field is the same as providing an empty list.
 
     <dt class="property-optional"
             title="Optional">
-        <span>role<wbr>Entities</span>
+        <span id="roleentities_nodejs">
+<a href="#roleentities_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Entities</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -337,7 +349,9 @@ Omitting the field is the same as providing an empty list.
 
     <dt class="property-required"
             title="Required">
-        <span>bucket</span>
+        <span id="bucket_python">
+<a href="#bucket_python" style="color: inherit; text-decoration: inherit;">bucket</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -346,7 +360,9 @@ Omitting the field is the same as providing an empty list.
 
     <dt class="property-optional"
             title="Optional">
-        <span>role_<wbr>entities</span>
+        <span id="role_entities_python">
+<a href="#role_entities_python" style="color: inherit; text-decoration: inherit;">role_<wbr>entities</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -375,7 +391,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -390,7 +408,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -405,7 +425,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -420,7 +442,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -561,7 +585,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Bucket</span>
+        <span id="state_bucket_csharp">
+<a href="#state_bucket_csharp" style="color: inherit; text-decoration: inherit;">Bucket</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -570,7 +596,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Role<wbr>Entities</span>
+        <span id="state_roleentities_csharp">
+<a href="#state_roleentities_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Entities</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -588,7 +616,9 @@ Omitting the field is the same as providing an empty list.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Bucket</span>
+        <span id="state_bucket_go">
+<a href="#state_bucket_go" style="color: inherit; text-decoration: inherit;">Bucket</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -597,7 +627,9 @@ Omitting the field is the same as providing an empty list.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Role<wbr>Entities</span>
+        <span id="state_roleentities_go">
+<a href="#state_roleentities_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Entities</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -615,7 +647,9 @@ Omitting the field is the same as providing an empty list.
 
     <dt class="property-optional"
             title="Optional">
-        <span>bucket</span>
+        <span id="state_bucket_nodejs">
+<a href="#state_bucket_nodejs" style="color: inherit; text-decoration: inherit;">bucket</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -624,7 +658,9 @@ Omitting the field is the same as providing an empty list.
 
     <dt class="property-optional"
             title="Optional">
-        <span>role<wbr>Entities</span>
+        <span id="state_roleentities_nodejs">
+<a href="#state_roleentities_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Entities</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -642,7 +678,9 @@ Omitting the field is the same as providing an empty list.
 
     <dt class="property-optional"
             title="Optional">
-        <span>bucket</span>
+        <span id="state_bucket_python">
+<a href="#state_bucket_python" style="color: inherit; text-decoration: inherit;">bucket</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -651,7 +689,9 @@ Omitting the field is the same as providing an empty list.
 
     <dt class="property-optional"
             title="Optional">
-        <span>role_<wbr>entities</span>
+        <span id="state_role_entities_python">
+<a href="#state_role_entities_python" style="color: inherit; text-decoration: inherit;">role_<wbr>entities</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>

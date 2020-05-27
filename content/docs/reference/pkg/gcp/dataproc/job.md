@@ -200,7 +200,9 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 
     <dt class="property-required"
             title="Required">
-        <span>Placement</span>
+        <span id="placement_csharp">
+<a href="#placement_csharp" style="color: inherit; text-decoration: inherit;">Placement</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobplacement">Job<wbr>Placement<wbr>Args</a></span>
     </dt>
@@ -208,7 +210,9 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Force<wbr>Delete</span>
+        <span id="forcedelete_csharp">
+<a href="#forcedelete_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Delete</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -219,7 +223,9 @@ job is first cancelled before issuing the delete.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Hadoop<wbr>Config</span>
+        <span id="hadoopconfig_csharp">
+<a href="#hadoopconfig_csharp" style="color: inherit; text-decoration: inherit;">Hadoop<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobhadoopconfig">Job<wbr>Hadoop<wbr>Config<wbr>Args</a></span>
     </dt>
@@ -227,7 +233,9 @@ job is first cancelled before issuing the delete.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Hive<wbr>Config</span>
+        <span id="hiveconfig_csharp">
+<a href="#hiveconfig_csharp" style="color: inherit; text-decoration: inherit;">Hive<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobhiveconfig">Job<wbr>Hive<wbr>Config<wbr>Args</a></span>
     </dt>
@@ -235,7 +243,9 @@ job is first cancelled before issuing the delete.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Labels</span>
+        <span id="labels_csharp">
+<a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -244,7 +254,9 @@ job is first cancelled before issuing the delete.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Pig<wbr>Config</span>
+        <span id="pigconfig_csharp">
+<a href="#pigconfig_csharp" style="color: inherit; text-decoration: inherit;">Pig<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobpigconfig">Job<wbr>Pig<wbr>Config<wbr>Args</a></span>
     </dt>
@@ -252,7 +264,9 @@ job is first cancelled before issuing the delete.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project</span>
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -262,7 +276,9 @@ subsequently run against. If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Pyspark<wbr>Config</span>
+        <span id="pysparkconfig_csharp">
+<a href="#pysparkconfig_csharp" style="color: inherit; text-decoration: inherit;">Pyspark<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobpysparkconfig">Job<wbr>Pyspark<wbr>Config<wbr>Args</a></span>
     </dt>
@@ -270,7 +286,9 @@ subsequently run against. If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Reference</span>
+        <span id="reference_csharp">
+<a href="#reference_csharp" style="color: inherit; text-decoration: inherit;">Reference</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobreference">Job<wbr>Reference<wbr>Args</a></span>
     </dt>
@@ -278,7 +296,9 @@ subsequently run against. If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="region_csharp">
+<a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -288,7 +308,9 @@ for this job to be submitted to. If not specified, defaults to `global`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Scheduling</span>
+        <span id="scheduling_csharp">
+<a href="#scheduling_csharp" style="color: inherit; text-decoration: inherit;">Scheduling</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobscheduling">Job<wbr>Scheduling<wbr>Args</a></span>
     </dt>
@@ -297,7 +319,9 @@ for this job to be submitted to. If not specified, defaults to `global`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Spark<wbr>Config</span>
+        <span id="sparkconfig_csharp">
+<a href="#sparkconfig_csharp" style="color: inherit; text-decoration: inherit;">Spark<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobsparkconfig">Job<wbr>Spark<wbr>Config<wbr>Args</a></span>
     </dt>
@@ -305,7 +329,9 @@ for this job to be submitted to. If not specified, defaults to `global`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Sparksql<wbr>Config</span>
+        <span id="sparksqlconfig_csharp">
+<a href="#sparksqlconfig_csharp" style="color: inherit; text-decoration: inherit;">Sparksql<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobsparksqlconfig">Job<wbr>Sparksql<wbr>Config<wbr>Args</a></span>
     </dt>
@@ -320,7 +346,9 @@ for this job to be submitted to. If not specified, defaults to `global`.
 
     <dt class="property-required"
             title="Required">
-        <span>Placement</span>
+        <span id="placement_go">
+<a href="#placement_go" style="color: inherit; text-decoration: inherit;">Placement</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobplacement">Job<wbr>Placement</a></span>
     </dt>
@@ -328,7 +356,9 @@ for this job to be submitted to. If not specified, defaults to `global`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Force<wbr>Delete</span>
+        <span id="forcedelete_go">
+<a href="#forcedelete_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Delete</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -339,7 +369,9 @@ job is first cancelled before issuing the delete.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Hadoop<wbr>Config</span>
+        <span id="hadoopconfig_go">
+<a href="#hadoopconfig_go" style="color: inherit; text-decoration: inherit;">Hadoop<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobhadoopconfig">Job<wbr>Hadoop<wbr>Config</a></span>
     </dt>
@@ -347,7 +379,9 @@ job is first cancelled before issuing the delete.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Hive<wbr>Config</span>
+        <span id="hiveconfig_go">
+<a href="#hiveconfig_go" style="color: inherit; text-decoration: inherit;">Hive<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobhiveconfig">Job<wbr>Hive<wbr>Config</a></span>
     </dt>
@@ -355,7 +389,9 @@ job is first cancelled before issuing the delete.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Labels</span>
+        <span id="labels_go">
+<a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -364,7 +400,9 @@ job is first cancelled before issuing the delete.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Pig<wbr>Config</span>
+        <span id="pigconfig_go">
+<a href="#pigconfig_go" style="color: inherit; text-decoration: inherit;">Pig<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobpigconfig">Job<wbr>Pig<wbr>Config</a></span>
     </dt>
@@ -372,7 +410,9 @@ job is first cancelled before issuing the delete.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project</span>
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -382,7 +422,9 @@ subsequently run against. If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Pyspark<wbr>Config</span>
+        <span id="pysparkconfig_go">
+<a href="#pysparkconfig_go" style="color: inherit; text-decoration: inherit;">Pyspark<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobpysparkconfig">Job<wbr>Pyspark<wbr>Config</a></span>
     </dt>
@@ -390,7 +432,9 @@ subsequently run against. If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Reference</span>
+        <span id="reference_go">
+<a href="#reference_go" style="color: inherit; text-decoration: inherit;">Reference</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobreference">Job<wbr>Reference</a></span>
     </dt>
@@ -398,7 +442,9 @@ subsequently run against. If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="region_go">
+<a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -408,7 +454,9 @@ for this job to be submitted to. If not specified, defaults to `global`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Scheduling</span>
+        <span id="scheduling_go">
+<a href="#scheduling_go" style="color: inherit; text-decoration: inherit;">Scheduling</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobscheduling">Job<wbr>Scheduling</a></span>
     </dt>
@@ -417,7 +465,9 @@ for this job to be submitted to. If not specified, defaults to `global`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Spark<wbr>Config</span>
+        <span id="sparkconfig_go">
+<a href="#sparkconfig_go" style="color: inherit; text-decoration: inherit;">Spark<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobsparkconfig">Job<wbr>Spark<wbr>Config</a></span>
     </dt>
@@ -425,7 +475,9 @@ for this job to be submitted to. If not specified, defaults to `global`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Sparksql<wbr>Config</span>
+        <span id="sparksqlconfig_go">
+<a href="#sparksqlconfig_go" style="color: inherit; text-decoration: inherit;">Sparksql<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobsparksqlconfig">Job<wbr>Sparksql<wbr>Config</a></span>
     </dt>
@@ -440,7 +492,9 @@ for this job to be submitted to. If not specified, defaults to `global`.
 
     <dt class="property-required"
             title="Required">
-        <span>placement</span>
+        <span id="placement_nodejs">
+<a href="#placement_nodejs" style="color: inherit; text-decoration: inherit;">placement</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobplacement">Job<wbr>Placement</a></span>
     </dt>
@@ -448,7 +502,9 @@ for this job to be submitted to. If not specified, defaults to `global`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>force<wbr>Delete</span>
+        <span id="forcedelete_nodejs">
+<a href="#forcedelete_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Delete</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -459,7 +515,9 @@ job is first cancelled before issuing the delete.
 
     <dt class="property-optional"
             title="Optional">
-        <span>hadoop<wbr>Config</span>
+        <span id="hadoopconfig_nodejs">
+<a href="#hadoopconfig_nodejs" style="color: inherit; text-decoration: inherit;">hadoop<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobhadoopconfig">Job<wbr>Hadoop<wbr>Config</a></span>
     </dt>
@@ -467,7 +525,9 @@ job is first cancelled before issuing the delete.
 
     <dt class="property-optional"
             title="Optional">
-        <span>hive<wbr>Config</span>
+        <span id="hiveconfig_nodejs">
+<a href="#hiveconfig_nodejs" style="color: inherit; text-decoration: inherit;">hive<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobhiveconfig">Job<wbr>Hive<wbr>Config</a></span>
     </dt>
@@ -475,7 +535,9 @@ job is first cancelled before issuing the delete.
 
     <dt class="property-optional"
             title="Optional">
-        <span>labels</span>
+        <span id="labels_nodejs">
+<a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -484,7 +546,9 @@ job is first cancelled before issuing the delete.
 
     <dt class="property-optional"
             title="Optional">
-        <span>pig<wbr>Config</span>
+        <span id="pigconfig_nodejs">
+<a href="#pigconfig_nodejs" style="color: inherit; text-decoration: inherit;">pig<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobpigconfig">Job<wbr>Pig<wbr>Config</a></span>
     </dt>
@@ -492,7 +556,9 @@ job is first cancelled before issuing the delete.
 
     <dt class="property-optional"
             title="Optional">
-        <span>project</span>
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -502,7 +568,9 @@ subsequently run against. If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>pyspark<wbr>Config</span>
+        <span id="pysparkconfig_nodejs">
+<a href="#pysparkconfig_nodejs" style="color: inherit; text-decoration: inherit;">pyspark<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobpysparkconfig">Job<wbr>Pyspark<wbr>Config</a></span>
     </dt>
@@ -510,7 +578,9 @@ subsequently run against. If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>reference</span>
+        <span id="reference_nodejs">
+<a href="#reference_nodejs" style="color: inherit; text-decoration: inherit;">reference</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobreference">Job<wbr>Reference</a></span>
     </dt>
@@ -518,7 +588,9 @@ subsequently run against. If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="region_nodejs">
+<a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -528,7 +600,9 @@ for this job to be submitted to. If not specified, defaults to `global`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>scheduling</span>
+        <span id="scheduling_nodejs">
+<a href="#scheduling_nodejs" style="color: inherit; text-decoration: inherit;">scheduling</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobscheduling">Job<wbr>Scheduling</a></span>
     </dt>
@@ -537,7 +611,9 @@ for this job to be submitted to. If not specified, defaults to `global`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>spark<wbr>Config</span>
+        <span id="sparkconfig_nodejs">
+<a href="#sparkconfig_nodejs" style="color: inherit; text-decoration: inherit;">spark<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobsparkconfig">Job<wbr>Spark<wbr>Config</a></span>
     </dt>
@@ -545,7 +621,9 @@ for this job to be submitted to. If not specified, defaults to `global`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>sparksql<wbr>Config</span>
+        <span id="sparksqlconfig_nodejs">
+<a href="#sparksqlconfig_nodejs" style="color: inherit; text-decoration: inherit;">sparksql<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobsparksqlconfig">Job<wbr>Sparksql<wbr>Config</a></span>
     </dt>
@@ -560,7 +638,9 @@ for this job to be submitted to. If not specified, defaults to `global`.
 
     <dt class="property-required"
             title="Required">
-        <span>placement</span>
+        <span id="placement_python">
+<a href="#placement_python" style="color: inherit; text-decoration: inherit;">placement</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobplacement">Dict[Job<wbr>Placement]</a></span>
     </dt>
@@ -568,7 +648,9 @@ for this job to be submitted to. If not specified, defaults to `global`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>force_<wbr>delete</span>
+        <span id="force_delete_python">
+<a href="#force_delete_python" style="color: inherit; text-decoration: inherit;">force_<wbr>delete</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -579,7 +661,9 @@ job is first cancelled before issuing the delete.
 
     <dt class="property-optional"
             title="Optional">
-        <span>hadoop_<wbr>config</span>
+        <span id="hadoop_config_python">
+<a href="#hadoop_config_python" style="color: inherit; text-decoration: inherit;">hadoop_<wbr>config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobhadoopconfig">Dict[Job<wbr>Hadoop<wbr>Config]</a></span>
     </dt>
@@ -587,7 +671,9 @@ job is first cancelled before issuing the delete.
 
     <dt class="property-optional"
             title="Optional">
-        <span>hive_<wbr>config</span>
+        <span id="hive_config_python">
+<a href="#hive_config_python" style="color: inherit; text-decoration: inherit;">hive_<wbr>config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobhiveconfig">Dict[Job<wbr>Hive<wbr>Config]</a></span>
     </dt>
@@ -595,7 +681,9 @@ job is first cancelled before issuing the delete.
 
     <dt class="property-optional"
             title="Optional">
-        <span>labels</span>
+        <span id="labels_python">
+<a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -604,7 +692,9 @@ job is first cancelled before issuing the delete.
 
     <dt class="property-optional"
             title="Optional">
-        <span>pig_<wbr>config</span>
+        <span id="pig_config_python">
+<a href="#pig_config_python" style="color: inherit; text-decoration: inherit;">pig_<wbr>config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobpigconfig">Dict[Job<wbr>Pig<wbr>Config]</a></span>
     </dt>
@@ -612,7 +702,9 @@ job is first cancelled before issuing the delete.
 
     <dt class="property-optional"
             title="Optional">
-        <span>project</span>
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -622,7 +714,9 @@ subsequently run against. If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>pyspark_<wbr>config</span>
+        <span id="pyspark_config_python">
+<a href="#pyspark_config_python" style="color: inherit; text-decoration: inherit;">pyspark_<wbr>config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobpysparkconfig">Dict[Job<wbr>Pyspark<wbr>Config]</a></span>
     </dt>
@@ -630,7 +724,9 @@ subsequently run against. If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>reference</span>
+        <span id="reference_python">
+<a href="#reference_python" style="color: inherit; text-decoration: inherit;">reference</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobreference">Dict[Job<wbr>Reference]</a></span>
     </dt>
@@ -638,7 +734,9 @@ subsequently run against. If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="region_python">
+<a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -648,7 +746,9 @@ for this job to be submitted to. If not specified, defaults to `global`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>scheduling</span>
+        <span id="scheduling_python">
+<a href="#scheduling_python" style="color: inherit; text-decoration: inherit;">scheduling</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobscheduling">Dict[Job<wbr>Scheduling]</a></span>
     </dt>
@@ -657,7 +757,9 @@ for this job to be submitted to. If not specified, defaults to `global`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>spark_<wbr>config</span>
+        <span id="spark_config_python">
+<a href="#spark_config_python" style="color: inherit; text-decoration: inherit;">spark_<wbr>config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobsparkconfig">Dict[Job<wbr>Spark<wbr>Config]</a></span>
     </dt>
@@ -665,7 +767,9 @@ for this job to be submitted to. If not specified, defaults to `global`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>sparksql_<wbr>config</span>
+        <span id="sparksql_config_python">
+<a href="#sparksql_config_python" style="color: inherit; text-decoration: inherit;">sparksql_<wbr>config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobsparksqlconfig">Dict[Job<wbr>Sparksql<wbr>Config]</a></span>
     </dt>
@@ -691,7 +795,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Driver<wbr>Controls<wbr>Files<wbr>Uri</span>
+        <span id="drivercontrolsfilesuri_csharp">
+<a href="#drivercontrolsfilesuri_csharp" style="color: inherit; text-decoration: inherit;">Driver<wbr>Controls<wbr>Files<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -700,7 +806,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Driver<wbr>Output<wbr>Resource<wbr>Uri</span>
+        <span id="driveroutputresourceuri_csharp">
+<a href="#driveroutputresourceuri_csharp" style="color: inherit; text-decoration: inherit;">Driver<wbr>Output<wbr>Resource<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -709,7 +817,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -717,7 +827,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Status</span>
+        <span id="status_csharp">
+<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobstatus">Job<wbr>Status</a></span>
     </dt>
@@ -732,7 +844,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Driver<wbr>Controls<wbr>Files<wbr>Uri</span>
+        <span id="drivercontrolsfilesuri_go">
+<a href="#drivercontrolsfilesuri_go" style="color: inherit; text-decoration: inherit;">Driver<wbr>Controls<wbr>Files<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -741,7 +855,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Driver<wbr>Output<wbr>Resource<wbr>Uri</span>
+        <span id="driveroutputresourceuri_go">
+<a href="#driveroutputresourceuri_go" style="color: inherit; text-decoration: inherit;">Driver<wbr>Output<wbr>Resource<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -750,7 +866,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -758,7 +876,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Status</span>
+        <span id="status_go">
+<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobstatus">Job<wbr>Status</a></span>
     </dt>
@@ -773,7 +893,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>driver<wbr>Controls<wbr>Files<wbr>Uri</span>
+        <span id="drivercontrolsfilesuri_nodejs">
+<a href="#drivercontrolsfilesuri_nodejs" style="color: inherit; text-decoration: inherit;">driver<wbr>Controls<wbr>Files<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -782,7 +904,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>driver<wbr>Output<wbr>Resource<wbr>Uri</span>
+        <span id="driveroutputresourceuri_nodejs">
+<a href="#driveroutputresourceuri_nodejs" style="color: inherit; text-decoration: inherit;">driver<wbr>Output<wbr>Resource<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -791,7 +915,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -799,7 +925,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>status</span>
+        <span id="status_nodejs">
+<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobstatus">Job<wbr>Status</a></span>
     </dt>
@@ -814,7 +942,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>driver_<wbr>controls_<wbr>files_<wbr>uri</span>
+        <span id="driver_controls_files_uri_python">
+<a href="#driver_controls_files_uri_python" style="color: inherit; text-decoration: inherit;">driver_<wbr>controls_<wbr>files_<wbr>uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -823,7 +953,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>driver_<wbr>output_<wbr>resource_<wbr>uri</span>
+        <span id="driver_output_resource_uri_python">
+<a href="#driver_output_resource_uri_python" style="color: inherit; text-decoration: inherit;">driver_<wbr>output_<wbr>resource_<wbr>uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -832,7 +964,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -840,7 +974,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>status</span>
+        <span id="status_python">
+<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobstatus">Dict[Job<wbr>Status]</a></span>
     </dt>
@@ -981,7 +1117,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Driver<wbr>Controls<wbr>Files<wbr>Uri</span>
+        <span id="state_drivercontrolsfilesuri_csharp">
+<a href="#state_drivercontrolsfilesuri_csharp" style="color: inherit; text-decoration: inherit;">Driver<wbr>Controls<wbr>Files<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -990,7 +1128,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Driver<wbr>Output<wbr>Resource<wbr>Uri</span>
+        <span id="state_driveroutputresourceuri_csharp">
+<a href="#state_driveroutputresourceuri_csharp" style="color: inherit; text-decoration: inherit;">Driver<wbr>Output<wbr>Resource<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -999,7 +1139,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Force<wbr>Delete</span>
+        <span id="state_forcedelete_csharp">
+<a href="#state_forcedelete_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Delete</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1010,7 +1152,9 @@ job is first cancelled before issuing the delete.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Hadoop<wbr>Config</span>
+        <span id="state_hadoopconfig_csharp">
+<a href="#state_hadoopconfig_csharp" style="color: inherit; text-decoration: inherit;">Hadoop<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobhadoopconfig">Job<wbr>Hadoop<wbr>Config<wbr>Args</a></span>
     </dt>
@@ -1018,7 +1162,9 @@ job is first cancelled before issuing the delete.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Hive<wbr>Config</span>
+        <span id="state_hiveconfig_csharp">
+<a href="#state_hiveconfig_csharp" style="color: inherit; text-decoration: inherit;">Hive<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobhiveconfig">Job<wbr>Hive<wbr>Config<wbr>Args</a></span>
     </dt>
@@ -1026,7 +1172,9 @@ job is first cancelled before issuing the delete.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Labels</span>
+        <span id="state_labels_csharp">
+<a href="#state_labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -1035,7 +1183,9 @@ job is first cancelled before issuing the delete.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Pig<wbr>Config</span>
+        <span id="state_pigconfig_csharp">
+<a href="#state_pigconfig_csharp" style="color: inherit; text-decoration: inherit;">Pig<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobpigconfig">Job<wbr>Pig<wbr>Config<wbr>Args</a></span>
     </dt>
@@ -1043,7 +1193,9 @@ job is first cancelled before issuing the delete.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Placement</span>
+        <span id="state_placement_csharp">
+<a href="#state_placement_csharp" style="color: inherit; text-decoration: inherit;">Placement</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobplacement">Job<wbr>Placement<wbr>Args</a></span>
     </dt>
@@ -1051,7 +1203,9 @@ job is first cancelled before issuing the delete.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project</span>
+        <span id="state_project_csharp">
+<a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1061,7 +1215,9 @@ subsequently run against. If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Pyspark<wbr>Config</span>
+        <span id="state_pysparkconfig_csharp">
+<a href="#state_pysparkconfig_csharp" style="color: inherit; text-decoration: inherit;">Pyspark<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobpysparkconfig">Job<wbr>Pyspark<wbr>Config<wbr>Args</a></span>
     </dt>
@@ -1069,7 +1225,9 @@ subsequently run against. If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Reference</span>
+        <span id="state_reference_csharp">
+<a href="#state_reference_csharp" style="color: inherit; text-decoration: inherit;">Reference</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobreference">Job<wbr>Reference<wbr>Args</a></span>
     </dt>
@@ -1077,7 +1235,9 @@ subsequently run against. If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="state_region_csharp">
+<a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1087,7 +1247,9 @@ for this job to be submitted to. If not specified, defaults to `global`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Scheduling</span>
+        <span id="state_scheduling_csharp">
+<a href="#state_scheduling_csharp" style="color: inherit; text-decoration: inherit;">Scheduling</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobscheduling">Job<wbr>Scheduling<wbr>Args</a></span>
     </dt>
@@ -1096,7 +1258,9 @@ for this job to be submitted to. If not specified, defaults to `global`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Spark<wbr>Config</span>
+        <span id="state_sparkconfig_csharp">
+<a href="#state_sparkconfig_csharp" style="color: inherit; text-decoration: inherit;">Spark<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobsparkconfig">Job<wbr>Spark<wbr>Config<wbr>Args</a></span>
     </dt>
@@ -1104,7 +1268,9 @@ for this job to be submitted to. If not specified, defaults to `global`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Sparksql<wbr>Config</span>
+        <span id="state_sparksqlconfig_csharp">
+<a href="#state_sparksqlconfig_csharp" style="color: inherit; text-decoration: inherit;">Sparksql<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobsparksqlconfig">Job<wbr>Sparksql<wbr>Config<wbr>Args</a></span>
     </dt>
@@ -1112,7 +1278,9 @@ for this job to be submitted to. If not specified, defaults to `global`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Status</span>
+        <span id="state_status_csharp">
+<a href="#state_status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobstatus">Job<wbr>Status<wbr>Args</a></span>
     </dt>
@@ -1127,7 +1295,9 @@ for this job to be submitted to. If not specified, defaults to `global`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Driver<wbr>Controls<wbr>Files<wbr>Uri</span>
+        <span id="state_drivercontrolsfilesuri_go">
+<a href="#state_drivercontrolsfilesuri_go" style="color: inherit; text-decoration: inherit;">Driver<wbr>Controls<wbr>Files<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1136,7 +1306,9 @@ for this job to be submitted to. If not specified, defaults to `global`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Driver<wbr>Output<wbr>Resource<wbr>Uri</span>
+        <span id="state_driveroutputresourceuri_go">
+<a href="#state_driveroutputresourceuri_go" style="color: inherit; text-decoration: inherit;">Driver<wbr>Output<wbr>Resource<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1145,7 +1317,9 @@ for this job to be submitted to. If not specified, defaults to `global`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Force<wbr>Delete</span>
+        <span id="state_forcedelete_go">
+<a href="#state_forcedelete_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Delete</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1156,7 +1330,9 @@ job is first cancelled before issuing the delete.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Hadoop<wbr>Config</span>
+        <span id="state_hadoopconfig_go">
+<a href="#state_hadoopconfig_go" style="color: inherit; text-decoration: inherit;">Hadoop<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobhadoopconfig">Job<wbr>Hadoop<wbr>Config</a></span>
     </dt>
@@ -1164,7 +1340,9 @@ job is first cancelled before issuing the delete.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Hive<wbr>Config</span>
+        <span id="state_hiveconfig_go">
+<a href="#state_hiveconfig_go" style="color: inherit; text-decoration: inherit;">Hive<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobhiveconfig">Job<wbr>Hive<wbr>Config</a></span>
     </dt>
@@ -1172,7 +1350,9 @@ job is first cancelled before issuing the delete.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Labels</span>
+        <span id="state_labels_go">
+<a href="#state_labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -1181,7 +1361,9 @@ job is first cancelled before issuing the delete.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Pig<wbr>Config</span>
+        <span id="state_pigconfig_go">
+<a href="#state_pigconfig_go" style="color: inherit; text-decoration: inherit;">Pig<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobpigconfig">Job<wbr>Pig<wbr>Config</a></span>
     </dt>
@@ -1189,7 +1371,9 @@ job is first cancelled before issuing the delete.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Placement</span>
+        <span id="state_placement_go">
+<a href="#state_placement_go" style="color: inherit; text-decoration: inherit;">Placement</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobplacement">Job<wbr>Placement</a></span>
     </dt>
@@ -1197,7 +1381,9 @@ job is first cancelled before issuing the delete.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project</span>
+        <span id="state_project_go">
+<a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1207,7 +1393,9 @@ subsequently run against. If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Pyspark<wbr>Config</span>
+        <span id="state_pysparkconfig_go">
+<a href="#state_pysparkconfig_go" style="color: inherit; text-decoration: inherit;">Pyspark<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobpysparkconfig">Job<wbr>Pyspark<wbr>Config</a></span>
     </dt>
@@ -1215,7 +1403,9 @@ subsequently run against. If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Reference</span>
+        <span id="state_reference_go">
+<a href="#state_reference_go" style="color: inherit; text-decoration: inherit;">Reference</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobreference">Job<wbr>Reference</a></span>
     </dt>
@@ -1223,7 +1413,9 @@ subsequently run against. If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="state_region_go">
+<a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1233,7 +1425,9 @@ for this job to be submitted to. If not specified, defaults to `global`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Scheduling</span>
+        <span id="state_scheduling_go">
+<a href="#state_scheduling_go" style="color: inherit; text-decoration: inherit;">Scheduling</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobscheduling">Job<wbr>Scheduling</a></span>
     </dt>
@@ -1242,7 +1436,9 @@ for this job to be submitted to. If not specified, defaults to `global`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Spark<wbr>Config</span>
+        <span id="state_sparkconfig_go">
+<a href="#state_sparkconfig_go" style="color: inherit; text-decoration: inherit;">Spark<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobsparkconfig">Job<wbr>Spark<wbr>Config</a></span>
     </dt>
@@ -1250,7 +1446,9 @@ for this job to be submitted to. If not specified, defaults to `global`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Sparksql<wbr>Config</span>
+        <span id="state_sparksqlconfig_go">
+<a href="#state_sparksqlconfig_go" style="color: inherit; text-decoration: inherit;">Sparksql<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobsparksqlconfig">Job<wbr>Sparksql<wbr>Config</a></span>
     </dt>
@@ -1258,7 +1456,9 @@ for this job to be submitted to. If not specified, defaults to `global`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Status</span>
+        <span id="state_status_go">
+<a href="#state_status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobstatus">Job<wbr>Status</a></span>
     </dt>
@@ -1273,7 +1473,9 @@ for this job to be submitted to. If not specified, defaults to `global`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>driver<wbr>Controls<wbr>Files<wbr>Uri</span>
+        <span id="state_drivercontrolsfilesuri_nodejs">
+<a href="#state_drivercontrolsfilesuri_nodejs" style="color: inherit; text-decoration: inherit;">driver<wbr>Controls<wbr>Files<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1282,7 +1484,9 @@ for this job to be submitted to. If not specified, defaults to `global`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>driver<wbr>Output<wbr>Resource<wbr>Uri</span>
+        <span id="state_driveroutputresourceuri_nodejs">
+<a href="#state_driveroutputresourceuri_nodejs" style="color: inherit; text-decoration: inherit;">driver<wbr>Output<wbr>Resource<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1291,7 +1495,9 @@ for this job to be submitted to. If not specified, defaults to `global`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>force<wbr>Delete</span>
+        <span id="state_forcedelete_nodejs">
+<a href="#state_forcedelete_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Delete</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1302,7 +1508,9 @@ job is first cancelled before issuing the delete.
 
     <dt class="property-optional"
             title="Optional">
-        <span>hadoop<wbr>Config</span>
+        <span id="state_hadoopconfig_nodejs">
+<a href="#state_hadoopconfig_nodejs" style="color: inherit; text-decoration: inherit;">hadoop<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobhadoopconfig">Job<wbr>Hadoop<wbr>Config</a></span>
     </dt>
@@ -1310,7 +1518,9 @@ job is first cancelled before issuing the delete.
 
     <dt class="property-optional"
             title="Optional">
-        <span>hive<wbr>Config</span>
+        <span id="state_hiveconfig_nodejs">
+<a href="#state_hiveconfig_nodejs" style="color: inherit; text-decoration: inherit;">hive<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobhiveconfig">Job<wbr>Hive<wbr>Config</a></span>
     </dt>
@@ -1318,7 +1528,9 @@ job is first cancelled before issuing the delete.
 
     <dt class="property-optional"
             title="Optional">
-        <span>labels</span>
+        <span id="state_labels_nodejs">
+<a href="#state_labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -1327,7 +1539,9 @@ job is first cancelled before issuing the delete.
 
     <dt class="property-optional"
             title="Optional">
-        <span>pig<wbr>Config</span>
+        <span id="state_pigconfig_nodejs">
+<a href="#state_pigconfig_nodejs" style="color: inherit; text-decoration: inherit;">pig<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobpigconfig">Job<wbr>Pig<wbr>Config</a></span>
     </dt>
@@ -1335,7 +1549,9 @@ job is first cancelled before issuing the delete.
 
     <dt class="property-optional"
             title="Optional">
-        <span>placement</span>
+        <span id="state_placement_nodejs">
+<a href="#state_placement_nodejs" style="color: inherit; text-decoration: inherit;">placement</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobplacement">Job<wbr>Placement</a></span>
     </dt>
@@ -1343,7 +1559,9 @@ job is first cancelled before issuing the delete.
 
     <dt class="property-optional"
             title="Optional">
-        <span>project</span>
+        <span id="state_project_nodejs">
+<a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1353,7 +1571,9 @@ subsequently run against. If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>pyspark<wbr>Config</span>
+        <span id="state_pysparkconfig_nodejs">
+<a href="#state_pysparkconfig_nodejs" style="color: inherit; text-decoration: inherit;">pyspark<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobpysparkconfig">Job<wbr>Pyspark<wbr>Config</a></span>
     </dt>
@@ -1361,7 +1581,9 @@ subsequently run against. If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>reference</span>
+        <span id="state_reference_nodejs">
+<a href="#state_reference_nodejs" style="color: inherit; text-decoration: inherit;">reference</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobreference">Job<wbr>Reference</a></span>
     </dt>
@@ -1369,7 +1591,9 @@ subsequently run against. If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="state_region_nodejs">
+<a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1379,7 +1603,9 @@ for this job to be submitted to. If not specified, defaults to `global`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>scheduling</span>
+        <span id="state_scheduling_nodejs">
+<a href="#state_scheduling_nodejs" style="color: inherit; text-decoration: inherit;">scheduling</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobscheduling">Job<wbr>Scheduling</a></span>
     </dt>
@@ -1388,7 +1614,9 @@ for this job to be submitted to. If not specified, defaults to `global`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>spark<wbr>Config</span>
+        <span id="state_sparkconfig_nodejs">
+<a href="#state_sparkconfig_nodejs" style="color: inherit; text-decoration: inherit;">spark<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobsparkconfig">Job<wbr>Spark<wbr>Config</a></span>
     </dt>
@@ -1396,7 +1624,9 @@ for this job to be submitted to. If not specified, defaults to `global`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>sparksql<wbr>Config</span>
+        <span id="state_sparksqlconfig_nodejs">
+<a href="#state_sparksqlconfig_nodejs" style="color: inherit; text-decoration: inherit;">sparksql<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobsparksqlconfig">Job<wbr>Sparksql<wbr>Config</a></span>
     </dt>
@@ -1404,7 +1634,9 @@ for this job to be submitted to. If not specified, defaults to `global`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>status</span>
+        <span id="state_status_nodejs">
+<a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobstatus">Job<wbr>Status</a></span>
     </dt>
@@ -1419,7 +1651,9 @@ for this job to be submitted to. If not specified, defaults to `global`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>driver_<wbr>controls_<wbr>files_<wbr>uri</span>
+        <span id="state_driver_controls_files_uri_python">
+<a href="#state_driver_controls_files_uri_python" style="color: inherit; text-decoration: inherit;">driver_<wbr>controls_<wbr>files_<wbr>uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1428,7 +1662,9 @@ for this job to be submitted to. If not specified, defaults to `global`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>driver_<wbr>output_<wbr>resource_<wbr>uri</span>
+        <span id="state_driver_output_resource_uri_python">
+<a href="#state_driver_output_resource_uri_python" style="color: inherit; text-decoration: inherit;">driver_<wbr>output_<wbr>resource_<wbr>uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1437,7 +1673,9 @@ for this job to be submitted to. If not specified, defaults to `global`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>force_<wbr>delete</span>
+        <span id="state_force_delete_python">
+<a href="#state_force_delete_python" style="color: inherit; text-decoration: inherit;">force_<wbr>delete</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1448,7 +1686,9 @@ job is first cancelled before issuing the delete.
 
     <dt class="property-optional"
             title="Optional">
-        <span>hadoop_<wbr>config</span>
+        <span id="state_hadoop_config_python">
+<a href="#state_hadoop_config_python" style="color: inherit; text-decoration: inherit;">hadoop_<wbr>config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobhadoopconfig">Dict[Job<wbr>Hadoop<wbr>Config]</a></span>
     </dt>
@@ -1456,7 +1696,9 @@ job is first cancelled before issuing the delete.
 
     <dt class="property-optional"
             title="Optional">
-        <span>hive_<wbr>config</span>
+        <span id="state_hive_config_python">
+<a href="#state_hive_config_python" style="color: inherit; text-decoration: inherit;">hive_<wbr>config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobhiveconfig">Dict[Job<wbr>Hive<wbr>Config]</a></span>
     </dt>
@@ -1464,7 +1706,9 @@ job is first cancelled before issuing the delete.
 
     <dt class="property-optional"
             title="Optional">
-        <span>labels</span>
+        <span id="state_labels_python">
+<a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -1473,7 +1717,9 @@ job is first cancelled before issuing the delete.
 
     <dt class="property-optional"
             title="Optional">
-        <span>pig_<wbr>config</span>
+        <span id="state_pig_config_python">
+<a href="#state_pig_config_python" style="color: inherit; text-decoration: inherit;">pig_<wbr>config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobpigconfig">Dict[Job<wbr>Pig<wbr>Config]</a></span>
     </dt>
@@ -1481,7 +1727,9 @@ job is first cancelled before issuing the delete.
 
     <dt class="property-optional"
             title="Optional">
-        <span>placement</span>
+        <span id="state_placement_python">
+<a href="#state_placement_python" style="color: inherit; text-decoration: inherit;">placement</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobplacement">Dict[Job<wbr>Placement]</a></span>
     </dt>
@@ -1489,7 +1737,9 @@ job is first cancelled before issuing the delete.
 
     <dt class="property-optional"
             title="Optional">
-        <span>project</span>
+        <span id="state_project_python">
+<a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1499,7 +1749,9 @@ subsequently run against. If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>pyspark_<wbr>config</span>
+        <span id="state_pyspark_config_python">
+<a href="#state_pyspark_config_python" style="color: inherit; text-decoration: inherit;">pyspark_<wbr>config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobpysparkconfig">Dict[Job<wbr>Pyspark<wbr>Config]</a></span>
     </dt>
@@ -1507,7 +1759,9 @@ subsequently run against. If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>reference</span>
+        <span id="state_reference_python">
+<a href="#state_reference_python" style="color: inherit; text-decoration: inherit;">reference</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobreference">Dict[Job<wbr>Reference]</a></span>
     </dt>
@@ -1515,7 +1769,9 @@ subsequently run against. If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="state_region_python">
+<a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1525,7 +1781,9 @@ for this job to be submitted to. If not specified, defaults to `global`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>scheduling</span>
+        <span id="state_scheduling_python">
+<a href="#state_scheduling_python" style="color: inherit; text-decoration: inherit;">scheduling</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobscheduling">Dict[Job<wbr>Scheduling]</a></span>
     </dt>
@@ -1534,7 +1792,9 @@ for this job to be submitted to. If not specified, defaults to `global`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>spark_<wbr>config</span>
+        <span id="state_spark_config_python">
+<a href="#state_spark_config_python" style="color: inherit; text-decoration: inherit;">spark_<wbr>config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobsparkconfig">Dict[Job<wbr>Spark<wbr>Config]</a></span>
     </dt>
@@ -1542,7 +1802,9 @@ for this job to be submitted to. If not specified, defaults to `global`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>sparksql_<wbr>config</span>
+        <span id="state_sparksql_config_python">
+<a href="#state_sparksql_config_python" style="color: inherit; text-decoration: inherit;">sparksql_<wbr>config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobsparksqlconfig">Dict[Job<wbr>Sparksql<wbr>Config]</a></span>
     </dt>
@@ -1550,7 +1812,9 @@ for this job to be submitted to. If not specified, defaults to `global`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>status</span>
+        <span id="state_status_python">
+<a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobstatus">Dict[Job<wbr>Status]</a></span>
     </dt>
@@ -1591,7 +1855,9 @@ for this job to be submitted to. If not specified, defaults to `global`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Archive<wbr>Uris</span>
+        <span id="archiveuris_csharp">
+<a href="#archiveuris_csharp" style="color: inherit; text-decoration: inherit;">Archive<wbr>Uris</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1600,7 +1866,9 @@ for this job to be submitted to. If not specified, defaults to `global`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Args</span>
+        <span id="args_csharp">
+<a href="#args_csharp" style="color: inherit; text-decoration: inherit;">Args</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1609,7 +1877,9 @@ for this job to be submitted to. If not specified, defaults to `global`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>File<wbr>Uris</span>
+        <span id="fileuris_csharp">
+<a href="#fileuris_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Uris</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1618,7 +1888,9 @@ for this job to be submitted to. If not specified, defaults to `global`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Jar<wbr>File<wbr>Uris</span>
+        <span id="jarfileuris_csharp">
+<a href="#jarfileuris_csharp" style="color: inherit; text-decoration: inherit;">Jar<wbr>File<wbr>Uris</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1627,7 +1899,9 @@ for this job to be submitted to. If not specified, defaults to `global`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Logging<wbr>Config</span>
+        <span id="loggingconfig_csharp">
+<a href="#loggingconfig_csharp" style="color: inherit; text-decoration: inherit;">Logging<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobhadoopconfigloggingconfig">Job<wbr>Hadoop<wbr>Config<wbr>Logging<wbr>Config<wbr>Args</a></span>
     </dt>
@@ -1635,7 +1909,9 @@ for this job to be submitted to. If not specified, defaults to `global`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Main<wbr>Class</span>
+        <span id="mainclass_csharp">
+<a href="#mainclass_csharp" style="color: inherit; text-decoration: inherit;">Main<wbr>Class</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1644,7 +1920,9 @@ for this job to be submitted to. If not specified, defaults to `global`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Main<wbr>Jar<wbr>File<wbr>Uri</span>
+        <span id="mainjarfileuri_csharp">
+<a href="#mainjarfileuri_csharp" style="color: inherit; text-decoration: inherit;">Main<wbr>Jar<wbr>File<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1653,7 +1931,9 @@ for this job to be submitted to. If not specified, defaults to `global`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Properties</span>
+        <span id="properties_csharp">
+<a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -1669,7 +1949,9 @@ for this job to be submitted to. If not specified, defaults to `global`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Archive<wbr>Uris</span>
+        <span id="archiveuris_go">
+<a href="#archiveuris_go" style="color: inherit; text-decoration: inherit;">Archive<wbr>Uris</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1678,7 +1960,9 @@ for this job to be submitted to. If not specified, defaults to `global`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Args</span>
+        <span id="args_go">
+<a href="#args_go" style="color: inherit; text-decoration: inherit;">Args</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1687,7 +1971,9 @@ for this job to be submitted to. If not specified, defaults to `global`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>File<wbr>Uris</span>
+        <span id="fileuris_go">
+<a href="#fileuris_go" style="color: inherit; text-decoration: inherit;">File<wbr>Uris</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1696,7 +1982,9 @@ for this job to be submitted to. If not specified, defaults to `global`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Jar<wbr>File<wbr>Uris</span>
+        <span id="jarfileuris_go">
+<a href="#jarfileuris_go" style="color: inherit; text-decoration: inherit;">Jar<wbr>File<wbr>Uris</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1705,7 +1993,9 @@ for this job to be submitted to. If not specified, defaults to `global`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Logging<wbr>Config</span>
+        <span id="loggingconfig_go">
+<a href="#loggingconfig_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobhadoopconfigloggingconfig">Job<wbr>Hadoop<wbr>Config<wbr>Logging<wbr>Config</a></span>
     </dt>
@@ -1713,7 +2003,9 @@ for this job to be submitted to. If not specified, defaults to `global`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Main<wbr>Class</span>
+        <span id="mainclass_go">
+<a href="#mainclass_go" style="color: inherit; text-decoration: inherit;">Main<wbr>Class</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1722,7 +2014,9 @@ for this job to be submitted to. If not specified, defaults to `global`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Main<wbr>Jar<wbr>File<wbr>Uri</span>
+        <span id="mainjarfileuri_go">
+<a href="#mainjarfileuri_go" style="color: inherit; text-decoration: inherit;">Main<wbr>Jar<wbr>File<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1731,7 +2025,9 @@ for this job to be submitted to. If not specified, defaults to `global`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Properties</span>
+        <span id="properties_go">
+<a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -1747,7 +2043,9 @@ for this job to be submitted to. If not specified, defaults to `global`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>archive<wbr>Uris</span>
+        <span id="archiveuris_nodejs">
+<a href="#archiveuris_nodejs" style="color: inherit; text-decoration: inherit;">archive<wbr>Uris</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1756,7 +2054,9 @@ for this job to be submitted to. If not specified, defaults to `global`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>args</span>
+        <span id="args_nodejs">
+<a href="#args_nodejs" style="color: inherit; text-decoration: inherit;">args</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1765,7 +2065,9 @@ for this job to be submitted to. If not specified, defaults to `global`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>file<wbr>Uris</span>
+        <span id="fileuris_nodejs">
+<a href="#fileuris_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Uris</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1774,7 +2076,9 @@ for this job to be submitted to. If not specified, defaults to `global`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>jar<wbr>File<wbr>Uris</span>
+        <span id="jarfileuris_nodejs">
+<a href="#jarfileuris_nodejs" style="color: inherit; text-decoration: inherit;">jar<wbr>File<wbr>Uris</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1783,7 +2087,9 @@ for this job to be submitted to. If not specified, defaults to `global`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>logging<wbr>Config</span>
+        <span id="loggingconfig_nodejs">
+<a href="#loggingconfig_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobhadoopconfigloggingconfig">Job<wbr>Hadoop<wbr>Config<wbr>Logging<wbr>Config</a></span>
     </dt>
@@ -1791,7 +2097,9 @@ for this job to be submitted to. If not specified, defaults to `global`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>main<wbr>Class</span>
+        <span id="mainclass_nodejs">
+<a href="#mainclass_nodejs" style="color: inherit; text-decoration: inherit;">main<wbr>Class</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1800,7 +2108,9 @@ for this job to be submitted to. If not specified, defaults to `global`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>main<wbr>Jar<wbr>File<wbr>Uri</span>
+        <span id="mainjarfileuri_nodejs">
+<a href="#mainjarfileuri_nodejs" style="color: inherit; text-decoration: inherit;">main<wbr>Jar<wbr>File<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1809,7 +2119,9 @@ for this job to be submitted to. If not specified, defaults to `global`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>properties</span>
+        <span id="properties_nodejs">
+<a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -1825,7 +2137,9 @@ for this job to be submitted to. If not specified, defaults to `global`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>archive<wbr>Uris</span>
+        <span id="archiveuris_python">
+<a href="#archiveuris_python" style="color: inherit; text-decoration: inherit;">archive<wbr>Uris</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1834,7 +2148,9 @@ for this job to be submitted to. If not specified, defaults to `global`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>args</span>
+        <span id="args_python">
+<a href="#args_python" style="color: inherit; text-decoration: inherit;">args</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1843,7 +2159,9 @@ for this job to be submitted to. If not specified, defaults to `global`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>file<wbr>Uris</span>
+        <span id="fileuris_python">
+<a href="#fileuris_python" style="color: inherit; text-decoration: inherit;">file<wbr>Uris</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1852,7 +2170,9 @@ for this job to be submitted to. If not specified, defaults to `global`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>jar<wbr>File<wbr>Uris</span>
+        <span id="jarfileuris_python">
+<a href="#jarfileuris_python" style="color: inherit; text-decoration: inherit;">jar<wbr>File<wbr>Uris</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1861,7 +2181,9 @@ for this job to be submitted to. If not specified, defaults to `global`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>logging<wbr>Config</span>
+        <span id="loggingconfig_python">
+<a href="#loggingconfig_python" style="color: inherit; text-decoration: inherit;">logging<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobhadoopconfigloggingconfig">Dict[Job<wbr>Hadoop<wbr>Config<wbr>Logging<wbr>Config]</a></span>
     </dt>
@@ -1869,7 +2191,9 @@ for this job to be submitted to. If not specified, defaults to `global`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>main<wbr>Class</span>
+        <span id="mainclass_python">
+<a href="#mainclass_python" style="color: inherit; text-decoration: inherit;">main<wbr>Class</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1878,7 +2202,9 @@ for this job to be submitted to. If not specified, defaults to `global`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>main<wbr>Jar<wbr>File<wbr>Uri</span>
+        <span id="mainjarfileuri_python">
+<a href="#mainjarfileuri_python" style="color: inherit; text-decoration: inherit;">main<wbr>Jar<wbr>File<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1887,7 +2213,9 @@ for this job to be submitted to. If not specified, defaults to `global`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>properties</span>
+        <span id="properties_python">
+<a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -1921,7 +2249,9 @@ for this job to be submitted to. If not specified, defaults to `global`.
 
     <dt class="property-required"
             title="Required">
-        <span>Driver<wbr>Log<wbr>Levels</span>
+        <span id="driverloglevels_csharp">
+<a href="#driverloglevels_csharp" style="color: inherit; text-decoration: inherit;">Driver<wbr>Log<wbr>Levels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -1936,7 +2266,9 @@ for this job to be submitted to. If not specified, defaults to `global`.
 
     <dt class="property-required"
             title="Required">
-        <span>Driver<wbr>Log<wbr>Levels</span>
+        <span id="driverloglevels_go">
+<a href="#driverloglevels_go" style="color: inherit; text-decoration: inherit;">Driver<wbr>Log<wbr>Levels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -1951,7 +2283,9 @@ for this job to be submitted to. If not specified, defaults to `global`.
 
     <dt class="property-required"
             title="Required">
-        <span>driver<wbr>Log<wbr>Levels</span>
+        <span id="driverloglevels_nodejs">
+<a href="#driverloglevels_nodejs" style="color: inherit; text-decoration: inherit;">driver<wbr>Log<wbr>Levels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -1966,7 +2300,9 @@ for this job to be submitted to. If not specified, defaults to `global`.
 
     <dt class="property-required"
             title="Required">
-        <span>driver<wbr>Log<wbr>Levels</span>
+        <span id="driverloglevels_python">
+<a href="#driverloglevels_python" style="color: inherit; text-decoration: inherit;">driver<wbr>Log<wbr>Levels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -1999,7 +2335,9 @@ for this job to be submitted to. If not specified, defaults to `global`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Continue<wbr>On<wbr>Failure</span>
+        <span id="continueonfailure_csharp">
+<a href="#continueonfailure_csharp" style="color: inherit; text-decoration: inherit;">Continue<wbr>On<wbr>Failure</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -2008,7 +2346,9 @@ for this job to be submitted to. If not specified, defaults to `global`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Jar<wbr>File<wbr>Uris</span>
+        <span id="jarfileuris_csharp">
+<a href="#jarfileuris_csharp" style="color: inherit; text-decoration: inherit;">Jar<wbr>File<wbr>Uris</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -2017,7 +2357,9 @@ for this job to be submitted to. If not specified, defaults to `global`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Properties</span>
+        <span id="properties_csharp">
+<a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -2026,7 +2368,9 @@ for this job to be submitted to. If not specified, defaults to `global`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Query<wbr>File<wbr>Uri</span>
+        <span id="queryfileuri_csharp">
+<a href="#queryfileuri_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>File<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2036,7 +2380,9 @@ Conflicts with `query_list`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Query<wbr>Lists</span>
+        <span id="querylists_csharp">
+<a href="#querylists_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>Lists</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -2046,7 +2392,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Script<wbr>Variables</span>
+        <span id="scriptvariables_csharp">
+<a href="#scriptvariables_csharp" style="color: inherit; text-decoration: inherit;">Script<wbr>Variables</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -2062,7 +2410,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Continue<wbr>On<wbr>Failure</span>
+        <span id="continueonfailure_go">
+<a href="#continueonfailure_go" style="color: inherit; text-decoration: inherit;">Continue<wbr>On<wbr>Failure</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -2071,7 +2421,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Jar<wbr>File<wbr>Uris</span>
+        <span id="jarfileuris_go">
+<a href="#jarfileuris_go" style="color: inherit; text-decoration: inherit;">Jar<wbr>File<wbr>Uris</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -2080,7 +2432,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Properties</span>
+        <span id="properties_go">
+<a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -2089,7 +2443,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Query<wbr>File<wbr>Uri</span>
+        <span id="queryfileuri_go">
+<a href="#queryfileuri_go" style="color: inherit; text-decoration: inherit;">Query<wbr>File<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2099,7 +2455,9 @@ Conflicts with `query_list`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Query<wbr>Lists</span>
+        <span id="querylists_go">
+<a href="#querylists_go" style="color: inherit; text-decoration: inherit;">Query<wbr>Lists</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -2109,7 +2467,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Script<wbr>Variables</span>
+        <span id="scriptvariables_go">
+<a href="#scriptvariables_go" style="color: inherit; text-decoration: inherit;">Script<wbr>Variables</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -2125,7 +2485,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>continue<wbr>On<wbr>Failure</span>
+        <span id="continueonfailure_nodejs">
+<a href="#continueonfailure_nodejs" style="color: inherit; text-decoration: inherit;">continue<wbr>On<wbr>Failure</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -2134,7 +2496,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>jar<wbr>File<wbr>Uris</span>
+        <span id="jarfileuris_nodejs">
+<a href="#jarfileuris_nodejs" style="color: inherit; text-decoration: inherit;">jar<wbr>File<wbr>Uris</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -2143,7 +2507,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>properties</span>
+        <span id="properties_nodejs">
+<a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -2152,7 +2518,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>query<wbr>File<wbr>Uri</span>
+        <span id="queryfileuri_nodejs">
+<a href="#queryfileuri_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>File<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2162,7 +2530,9 @@ Conflicts with `query_list`
 
     <dt class="property-optional"
             title="Optional">
-        <span>query<wbr>Lists</span>
+        <span id="querylists_nodejs">
+<a href="#querylists_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Lists</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -2172,7 +2542,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>script<wbr>Variables</span>
+        <span id="scriptvariables_nodejs">
+<a href="#scriptvariables_nodejs" style="color: inherit; text-decoration: inherit;">script<wbr>Variables</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -2188,7 +2560,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>continue<wbr>On<wbr>Failure</span>
+        <span id="continueonfailure_python">
+<a href="#continueonfailure_python" style="color: inherit; text-decoration: inherit;">continue<wbr>On<wbr>Failure</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2197,7 +2571,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>jar<wbr>File<wbr>Uris</span>
+        <span id="jarfileuris_python">
+<a href="#jarfileuris_python" style="color: inherit; text-decoration: inherit;">jar<wbr>File<wbr>Uris</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -2206,7 +2582,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>properties</span>
+        <span id="properties_python">
+<a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -2215,7 +2593,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>query<wbr>File<wbr>Uri</span>
+        <span id="queryfileuri_python">
+<a href="#queryfileuri_python" style="color: inherit; text-decoration: inherit;">query<wbr>File<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2225,7 +2605,9 @@ Conflicts with `query_list`
 
     <dt class="property-optional"
             title="Optional">
-        <span>query<wbr>Lists</span>
+        <span id="querylists_python">
+<a href="#querylists_python" style="color: inherit; text-decoration: inherit;">query<wbr>Lists</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -2235,7 +2617,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>script<wbr>Variables</span>
+        <span id="scriptvariables_python">
+<a href="#scriptvariables_python" style="color: inherit; text-decoration: inherit;">script<wbr>Variables</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -2269,7 +2653,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Continue<wbr>On<wbr>Failure</span>
+        <span id="continueonfailure_csharp">
+<a href="#continueonfailure_csharp" style="color: inherit; text-decoration: inherit;">Continue<wbr>On<wbr>Failure</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -2278,7 +2664,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Jar<wbr>File<wbr>Uris</span>
+        <span id="jarfileuris_csharp">
+<a href="#jarfileuris_csharp" style="color: inherit; text-decoration: inherit;">Jar<wbr>File<wbr>Uris</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -2287,7 +2675,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Logging<wbr>Config</span>
+        <span id="loggingconfig_csharp">
+<a href="#loggingconfig_csharp" style="color: inherit; text-decoration: inherit;">Logging<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobpigconfigloggingconfig">Job<wbr>Pig<wbr>Config<wbr>Logging<wbr>Config<wbr>Args</a></span>
     </dt>
@@ -2295,7 +2685,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Properties</span>
+        <span id="properties_csharp">
+<a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -2304,7 +2696,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Query<wbr>File<wbr>Uri</span>
+        <span id="queryfileuri_csharp">
+<a href="#queryfileuri_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>File<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2314,7 +2708,9 @@ Conflicts with `query_list`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Query<wbr>Lists</span>
+        <span id="querylists_csharp">
+<a href="#querylists_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>Lists</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -2324,7 +2720,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Script<wbr>Variables</span>
+        <span id="scriptvariables_csharp">
+<a href="#scriptvariables_csharp" style="color: inherit; text-decoration: inherit;">Script<wbr>Variables</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -2340,7 +2738,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Continue<wbr>On<wbr>Failure</span>
+        <span id="continueonfailure_go">
+<a href="#continueonfailure_go" style="color: inherit; text-decoration: inherit;">Continue<wbr>On<wbr>Failure</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -2349,7 +2749,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Jar<wbr>File<wbr>Uris</span>
+        <span id="jarfileuris_go">
+<a href="#jarfileuris_go" style="color: inherit; text-decoration: inherit;">Jar<wbr>File<wbr>Uris</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -2358,7 +2760,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Logging<wbr>Config</span>
+        <span id="loggingconfig_go">
+<a href="#loggingconfig_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobpigconfigloggingconfig">Job<wbr>Pig<wbr>Config<wbr>Logging<wbr>Config</a></span>
     </dt>
@@ -2366,7 +2770,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Properties</span>
+        <span id="properties_go">
+<a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -2375,7 +2781,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Query<wbr>File<wbr>Uri</span>
+        <span id="queryfileuri_go">
+<a href="#queryfileuri_go" style="color: inherit; text-decoration: inherit;">Query<wbr>File<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2385,7 +2793,9 @@ Conflicts with `query_list`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Query<wbr>Lists</span>
+        <span id="querylists_go">
+<a href="#querylists_go" style="color: inherit; text-decoration: inherit;">Query<wbr>Lists</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -2395,7 +2805,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Script<wbr>Variables</span>
+        <span id="scriptvariables_go">
+<a href="#scriptvariables_go" style="color: inherit; text-decoration: inherit;">Script<wbr>Variables</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -2411,7 +2823,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>continue<wbr>On<wbr>Failure</span>
+        <span id="continueonfailure_nodejs">
+<a href="#continueonfailure_nodejs" style="color: inherit; text-decoration: inherit;">continue<wbr>On<wbr>Failure</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -2420,7 +2834,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>jar<wbr>File<wbr>Uris</span>
+        <span id="jarfileuris_nodejs">
+<a href="#jarfileuris_nodejs" style="color: inherit; text-decoration: inherit;">jar<wbr>File<wbr>Uris</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -2429,7 +2845,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>logging<wbr>Config</span>
+        <span id="loggingconfig_nodejs">
+<a href="#loggingconfig_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobpigconfigloggingconfig">Job<wbr>Pig<wbr>Config<wbr>Logging<wbr>Config</a></span>
     </dt>
@@ -2437,7 +2855,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>properties</span>
+        <span id="properties_nodejs">
+<a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -2446,7 +2866,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>query<wbr>File<wbr>Uri</span>
+        <span id="queryfileuri_nodejs">
+<a href="#queryfileuri_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>File<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2456,7 +2878,9 @@ Conflicts with `query_list`
 
     <dt class="property-optional"
             title="Optional">
-        <span>query<wbr>Lists</span>
+        <span id="querylists_nodejs">
+<a href="#querylists_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Lists</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -2466,7 +2890,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>script<wbr>Variables</span>
+        <span id="scriptvariables_nodejs">
+<a href="#scriptvariables_nodejs" style="color: inherit; text-decoration: inherit;">script<wbr>Variables</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -2482,7 +2908,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>continue<wbr>On<wbr>Failure</span>
+        <span id="continueonfailure_python">
+<a href="#continueonfailure_python" style="color: inherit; text-decoration: inherit;">continue<wbr>On<wbr>Failure</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2491,7 +2919,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>jar<wbr>File<wbr>Uris</span>
+        <span id="jarfileuris_python">
+<a href="#jarfileuris_python" style="color: inherit; text-decoration: inherit;">jar<wbr>File<wbr>Uris</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -2500,7 +2930,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>logging<wbr>Config</span>
+        <span id="loggingconfig_python">
+<a href="#loggingconfig_python" style="color: inherit; text-decoration: inherit;">logging<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobpigconfigloggingconfig">Dict[Job<wbr>Pig<wbr>Config<wbr>Logging<wbr>Config]</a></span>
     </dt>
@@ -2508,7 +2940,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>properties</span>
+        <span id="properties_python">
+<a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -2517,7 +2951,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>query<wbr>File<wbr>Uri</span>
+        <span id="queryfileuri_python">
+<a href="#queryfileuri_python" style="color: inherit; text-decoration: inherit;">query<wbr>File<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2527,7 +2963,9 @@ Conflicts with `query_list`
 
     <dt class="property-optional"
             title="Optional">
-        <span>query<wbr>Lists</span>
+        <span id="querylists_python">
+<a href="#querylists_python" style="color: inherit; text-decoration: inherit;">query<wbr>Lists</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -2537,7 +2975,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>script<wbr>Variables</span>
+        <span id="scriptvariables_python">
+<a href="#scriptvariables_python" style="color: inherit; text-decoration: inherit;">script<wbr>Variables</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -2571,7 +3011,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-required"
             title="Required">
-        <span>Driver<wbr>Log<wbr>Levels</span>
+        <span id="driverloglevels_csharp">
+<a href="#driverloglevels_csharp" style="color: inherit; text-decoration: inherit;">Driver<wbr>Log<wbr>Levels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -2586,7 +3028,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-required"
             title="Required">
-        <span>Driver<wbr>Log<wbr>Levels</span>
+        <span id="driverloglevels_go">
+<a href="#driverloglevels_go" style="color: inherit; text-decoration: inherit;">Driver<wbr>Log<wbr>Levels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -2601,7 +3045,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-required"
             title="Required">
-        <span>driver<wbr>Log<wbr>Levels</span>
+        <span id="driverloglevels_nodejs">
+<a href="#driverloglevels_nodejs" style="color: inherit; text-decoration: inherit;">driver<wbr>Log<wbr>Levels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -2616,7 +3062,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-required"
             title="Required">
-        <span>driver<wbr>Log<wbr>Levels</span>
+        <span id="driverloglevels_python">
+<a href="#driverloglevels_python" style="color: inherit; text-decoration: inherit;">driver<wbr>Log<wbr>Levels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -2649,7 +3097,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-required"
             title="Required">
-        <span>Cluster<wbr>Name</span>
+        <span id="clustername_csharp">
+<a href="#clustername_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2657,7 +3107,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cluster<wbr>Uuid</span>
+        <span id="clusteruuid_csharp">
+<a href="#clusteruuid_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Uuid</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2672,7 +3124,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-required"
             title="Required">
-        <span>Cluster<wbr>Name</span>
+        <span id="clustername_go">
+<a href="#clustername_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2680,7 +3134,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cluster<wbr>Uuid</span>
+        <span id="clusteruuid_go">
+<a href="#clusteruuid_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Uuid</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2695,7 +3151,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-required"
             title="Required">
-        <span>cluster<wbr>Name</span>
+        <span id="clustername_nodejs">
+<a href="#clustername_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2703,7 +3161,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>cluster<wbr>Uuid</span>
+        <span id="clusteruuid_nodejs">
+<a href="#clusteruuid_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Uuid</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2718,7 +3178,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-required"
             title="Required">
-        <span>cluster<wbr>Name</span>
+        <span id="clustername_python">
+<a href="#clustername_python" style="color: inherit; text-decoration: inherit;">cluster<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2726,7 +3188,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>cluster<wbr>Uuid</span>
+        <span id="clusteruuid_python">
+<a href="#clusteruuid_python" style="color: inherit; text-decoration: inherit;">cluster<wbr>Uuid</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2759,7 +3223,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-required"
             title="Required">
-        <span>Main<wbr>Python<wbr>File<wbr>Uri</span>
+        <span id="mainpythonfileuri_csharp">
+<a href="#mainpythonfileuri_csharp" style="color: inherit; text-decoration: inherit;">Main<wbr>Python<wbr>File<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2768,7 +3234,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Archive<wbr>Uris</span>
+        <span id="archiveuris_csharp">
+<a href="#archiveuris_csharp" style="color: inherit; text-decoration: inherit;">Archive<wbr>Uris</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -2777,7 +3245,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Args</span>
+        <span id="args_csharp">
+<a href="#args_csharp" style="color: inherit; text-decoration: inherit;">Args</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -2786,7 +3256,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>File<wbr>Uris</span>
+        <span id="fileuris_csharp">
+<a href="#fileuris_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Uris</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -2795,7 +3267,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Jar<wbr>File<wbr>Uris</span>
+        <span id="jarfileuris_csharp">
+<a href="#jarfileuris_csharp" style="color: inherit; text-decoration: inherit;">Jar<wbr>File<wbr>Uris</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -2804,7 +3278,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Logging<wbr>Config</span>
+        <span id="loggingconfig_csharp">
+<a href="#loggingconfig_csharp" style="color: inherit; text-decoration: inherit;">Logging<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobpysparkconfigloggingconfig">Job<wbr>Pyspark<wbr>Config<wbr>Logging<wbr>Config<wbr>Args</a></span>
     </dt>
@@ -2812,7 +3288,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Properties</span>
+        <span id="properties_csharp">
+<a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -2821,7 +3299,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Python<wbr>File<wbr>Uris</span>
+        <span id="pythonfileuris_csharp">
+<a href="#pythonfileuris_csharp" style="color: inherit; text-decoration: inherit;">Python<wbr>File<wbr>Uris</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -2837,7 +3317,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-required"
             title="Required">
-        <span>Main<wbr>Python<wbr>File<wbr>Uri</span>
+        <span id="mainpythonfileuri_go">
+<a href="#mainpythonfileuri_go" style="color: inherit; text-decoration: inherit;">Main<wbr>Python<wbr>File<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2846,7 +3328,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Archive<wbr>Uris</span>
+        <span id="archiveuris_go">
+<a href="#archiveuris_go" style="color: inherit; text-decoration: inherit;">Archive<wbr>Uris</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -2855,7 +3339,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Args</span>
+        <span id="args_go">
+<a href="#args_go" style="color: inherit; text-decoration: inherit;">Args</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -2864,7 +3350,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>File<wbr>Uris</span>
+        <span id="fileuris_go">
+<a href="#fileuris_go" style="color: inherit; text-decoration: inherit;">File<wbr>Uris</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -2873,7 +3361,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Jar<wbr>File<wbr>Uris</span>
+        <span id="jarfileuris_go">
+<a href="#jarfileuris_go" style="color: inherit; text-decoration: inherit;">Jar<wbr>File<wbr>Uris</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -2882,7 +3372,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Logging<wbr>Config</span>
+        <span id="loggingconfig_go">
+<a href="#loggingconfig_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobpysparkconfigloggingconfig">Job<wbr>Pyspark<wbr>Config<wbr>Logging<wbr>Config</a></span>
     </dt>
@@ -2890,7 +3382,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Properties</span>
+        <span id="properties_go">
+<a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -2899,7 +3393,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Python<wbr>File<wbr>Uris</span>
+        <span id="pythonfileuris_go">
+<a href="#pythonfileuris_go" style="color: inherit; text-decoration: inherit;">Python<wbr>File<wbr>Uris</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -2915,7 +3411,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-required"
             title="Required">
-        <span>main<wbr>Python<wbr>File<wbr>Uri</span>
+        <span id="mainpythonfileuri_nodejs">
+<a href="#mainpythonfileuri_nodejs" style="color: inherit; text-decoration: inherit;">main<wbr>Python<wbr>File<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2924,7 +3422,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>archive<wbr>Uris</span>
+        <span id="archiveuris_nodejs">
+<a href="#archiveuris_nodejs" style="color: inherit; text-decoration: inherit;">archive<wbr>Uris</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -2933,7 +3433,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>args</span>
+        <span id="args_nodejs">
+<a href="#args_nodejs" style="color: inherit; text-decoration: inherit;">args</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -2942,7 +3444,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>file<wbr>Uris</span>
+        <span id="fileuris_nodejs">
+<a href="#fileuris_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Uris</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -2951,7 +3455,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>jar<wbr>File<wbr>Uris</span>
+        <span id="jarfileuris_nodejs">
+<a href="#jarfileuris_nodejs" style="color: inherit; text-decoration: inherit;">jar<wbr>File<wbr>Uris</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -2960,7 +3466,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>logging<wbr>Config</span>
+        <span id="loggingconfig_nodejs">
+<a href="#loggingconfig_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobpysparkconfigloggingconfig">Job<wbr>Pyspark<wbr>Config<wbr>Logging<wbr>Config</a></span>
     </dt>
@@ -2968,7 +3476,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>properties</span>
+        <span id="properties_nodejs">
+<a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -2977,7 +3487,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>python<wbr>File<wbr>Uris</span>
+        <span id="pythonfileuris_nodejs">
+<a href="#pythonfileuris_nodejs" style="color: inherit; text-decoration: inherit;">python<wbr>File<wbr>Uris</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -2993,7 +3505,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-required"
             title="Required">
-        <span>main<wbr>Python<wbr>File<wbr>Uri</span>
+        <span id="mainpythonfileuri_python">
+<a href="#mainpythonfileuri_python" style="color: inherit; text-decoration: inherit;">main<wbr>Python<wbr>File<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3002,7 +3516,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>archive<wbr>Uris</span>
+        <span id="archiveuris_python">
+<a href="#archiveuris_python" style="color: inherit; text-decoration: inherit;">archive<wbr>Uris</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -3011,7 +3527,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>args</span>
+        <span id="args_python">
+<a href="#args_python" style="color: inherit; text-decoration: inherit;">args</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -3020,7 +3538,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>file<wbr>Uris</span>
+        <span id="fileuris_python">
+<a href="#fileuris_python" style="color: inherit; text-decoration: inherit;">file<wbr>Uris</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -3029,7 +3549,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>jar<wbr>File<wbr>Uris</span>
+        <span id="jarfileuris_python">
+<a href="#jarfileuris_python" style="color: inherit; text-decoration: inherit;">jar<wbr>File<wbr>Uris</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -3038,7 +3560,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>logging<wbr>Config</span>
+        <span id="loggingconfig_python">
+<a href="#loggingconfig_python" style="color: inherit; text-decoration: inherit;">logging<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobpysparkconfigloggingconfig">Dict[Job<wbr>Pyspark<wbr>Config<wbr>Logging<wbr>Config]</a></span>
     </dt>
@@ -3046,7 +3570,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>properties</span>
+        <span id="properties_python">
+<a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -3055,7 +3581,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>python<wbr>File<wbr>Uris</span>
+        <span id="pythonfileuris_python">
+<a href="#pythonfileuris_python" style="color: inherit; text-decoration: inherit;">python<wbr>File<wbr>Uris</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -3089,7 +3617,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-required"
             title="Required">
-        <span>Driver<wbr>Log<wbr>Levels</span>
+        <span id="driverloglevels_csharp">
+<a href="#driverloglevels_csharp" style="color: inherit; text-decoration: inherit;">Driver<wbr>Log<wbr>Levels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -3104,7 +3634,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-required"
             title="Required">
-        <span>Driver<wbr>Log<wbr>Levels</span>
+        <span id="driverloglevels_go">
+<a href="#driverloglevels_go" style="color: inherit; text-decoration: inherit;">Driver<wbr>Log<wbr>Levels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -3119,7 +3651,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-required"
             title="Required">
-        <span>driver<wbr>Log<wbr>Levels</span>
+        <span id="driverloglevels_nodejs">
+<a href="#driverloglevels_nodejs" style="color: inherit; text-decoration: inherit;">driver<wbr>Log<wbr>Levels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -3134,7 +3668,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-required"
             title="Required">
-        <span>driver<wbr>Log<wbr>Levels</span>
+        <span id="driverloglevels_python">
+<a href="#driverloglevels_python" style="color: inherit; text-decoration: inherit;">driver<wbr>Log<wbr>Levels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -3167,7 +3703,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Job<wbr>Id</span>
+        <span id="jobid_csharp">
+<a href="#jobid_csharp" style="color: inherit; text-decoration: inherit;">Job<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3182,7 +3720,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Job<wbr>Id</span>
+        <span id="jobid_go">
+<a href="#jobid_go" style="color: inherit; text-decoration: inherit;">Job<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3197,7 +3737,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>job<wbr>Id</span>
+        <span id="jobid_nodejs">
+<a href="#jobid_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3212,7 +3754,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>job_<wbr>id</span>
+        <span id="job_id_python">
+<a href="#job_id_python" style="color: inherit; text-decoration: inherit;">job_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3245,7 +3789,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-required"
             title="Required">
-        <span>Max<wbr>Failures<wbr>Per<wbr>Hour</span>
+        <span id="maxfailuresperhour_csharp">
+<a href="#maxfailuresperhour_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Failures<wbr>Per<wbr>Hour</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -3260,7 +3806,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-required"
             title="Required">
-        <span>Max<wbr>Failures<wbr>Per<wbr>Hour</span>
+        <span id="maxfailuresperhour_go">
+<a href="#maxfailuresperhour_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Failures<wbr>Per<wbr>Hour</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -3275,7 +3823,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-required"
             title="Required">
-        <span>max<wbr>Failures<wbr>Per<wbr>Hour</span>
+        <span id="maxfailuresperhour_nodejs">
+<a href="#maxfailuresperhour_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Failures<wbr>Per<wbr>Hour</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -3290,7 +3840,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-required"
             title="Required">
-        <span>max<wbr>Failures<wbr>Per<wbr>Hour</span>
+        <span id="maxfailuresperhour_python">
+<a href="#maxfailuresperhour_python" style="color: inherit; text-decoration: inherit;">max<wbr>Failures<wbr>Per<wbr>Hour</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -3323,7 +3875,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Archive<wbr>Uris</span>
+        <span id="archiveuris_csharp">
+<a href="#archiveuris_csharp" style="color: inherit; text-decoration: inherit;">Archive<wbr>Uris</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -3332,7 +3886,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Args</span>
+        <span id="args_csharp">
+<a href="#args_csharp" style="color: inherit; text-decoration: inherit;">Args</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -3341,7 +3897,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>File<wbr>Uris</span>
+        <span id="fileuris_csharp">
+<a href="#fileuris_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Uris</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -3350,7 +3908,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Jar<wbr>File<wbr>Uris</span>
+        <span id="jarfileuris_csharp">
+<a href="#jarfileuris_csharp" style="color: inherit; text-decoration: inherit;">Jar<wbr>File<wbr>Uris</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -3359,7 +3919,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Logging<wbr>Config</span>
+        <span id="loggingconfig_csharp">
+<a href="#loggingconfig_csharp" style="color: inherit; text-decoration: inherit;">Logging<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobsparkconfigloggingconfig">Job<wbr>Spark<wbr>Config<wbr>Logging<wbr>Config<wbr>Args</a></span>
     </dt>
@@ -3367,7 +3929,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Main<wbr>Class</span>
+        <span id="mainclass_csharp">
+<a href="#mainclass_csharp" style="color: inherit; text-decoration: inherit;">Main<wbr>Class</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3376,7 +3940,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Main<wbr>Jar<wbr>File<wbr>Uri</span>
+        <span id="mainjarfileuri_csharp">
+<a href="#mainjarfileuri_csharp" style="color: inherit; text-decoration: inherit;">Main<wbr>Jar<wbr>File<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3385,7 +3951,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Properties</span>
+        <span id="properties_csharp">
+<a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -3401,7 +3969,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Archive<wbr>Uris</span>
+        <span id="archiveuris_go">
+<a href="#archiveuris_go" style="color: inherit; text-decoration: inherit;">Archive<wbr>Uris</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -3410,7 +3980,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Args</span>
+        <span id="args_go">
+<a href="#args_go" style="color: inherit; text-decoration: inherit;">Args</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -3419,7 +3991,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>File<wbr>Uris</span>
+        <span id="fileuris_go">
+<a href="#fileuris_go" style="color: inherit; text-decoration: inherit;">File<wbr>Uris</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -3428,7 +4002,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Jar<wbr>File<wbr>Uris</span>
+        <span id="jarfileuris_go">
+<a href="#jarfileuris_go" style="color: inherit; text-decoration: inherit;">Jar<wbr>File<wbr>Uris</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -3437,7 +4013,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Logging<wbr>Config</span>
+        <span id="loggingconfig_go">
+<a href="#loggingconfig_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobsparkconfigloggingconfig">Job<wbr>Spark<wbr>Config<wbr>Logging<wbr>Config</a></span>
     </dt>
@@ -3445,7 +4023,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Main<wbr>Class</span>
+        <span id="mainclass_go">
+<a href="#mainclass_go" style="color: inherit; text-decoration: inherit;">Main<wbr>Class</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3454,7 +4034,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Main<wbr>Jar<wbr>File<wbr>Uri</span>
+        <span id="mainjarfileuri_go">
+<a href="#mainjarfileuri_go" style="color: inherit; text-decoration: inherit;">Main<wbr>Jar<wbr>File<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3463,7 +4045,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Properties</span>
+        <span id="properties_go">
+<a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -3479,7 +4063,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>archive<wbr>Uris</span>
+        <span id="archiveuris_nodejs">
+<a href="#archiveuris_nodejs" style="color: inherit; text-decoration: inherit;">archive<wbr>Uris</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -3488,7 +4074,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>args</span>
+        <span id="args_nodejs">
+<a href="#args_nodejs" style="color: inherit; text-decoration: inherit;">args</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -3497,7 +4085,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>file<wbr>Uris</span>
+        <span id="fileuris_nodejs">
+<a href="#fileuris_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Uris</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -3506,7 +4096,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>jar<wbr>File<wbr>Uris</span>
+        <span id="jarfileuris_nodejs">
+<a href="#jarfileuris_nodejs" style="color: inherit; text-decoration: inherit;">jar<wbr>File<wbr>Uris</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -3515,7 +4107,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>logging<wbr>Config</span>
+        <span id="loggingconfig_nodejs">
+<a href="#loggingconfig_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobsparkconfigloggingconfig">Job<wbr>Spark<wbr>Config<wbr>Logging<wbr>Config</a></span>
     </dt>
@@ -3523,7 +4117,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>main<wbr>Class</span>
+        <span id="mainclass_nodejs">
+<a href="#mainclass_nodejs" style="color: inherit; text-decoration: inherit;">main<wbr>Class</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3532,7 +4128,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>main<wbr>Jar<wbr>File<wbr>Uri</span>
+        <span id="mainjarfileuri_nodejs">
+<a href="#mainjarfileuri_nodejs" style="color: inherit; text-decoration: inherit;">main<wbr>Jar<wbr>File<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3541,7 +4139,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>properties</span>
+        <span id="properties_nodejs">
+<a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -3557,7 +4157,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>archive<wbr>Uris</span>
+        <span id="archiveuris_python">
+<a href="#archiveuris_python" style="color: inherit; text-decoration: inherit;">archive<wbr>Uris</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -3566,7 +4168,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>args</span>
+        <span id="args_python">
+<a href="#args_python" style="color: inherit; text-decoration: inherit;">args</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -3575,7 +4179,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>file<wbr>Uris</span>
+        <span id="fileuris_python">
+<a href="#fileuris_python" style="color: inherit; text-decoration: inherit;">file<wbr>Uris</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -3584,7 +4190,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>jar<wbr>File<wbr>Uris</span>
+        <span id="jarfileuris_python">
+<a href="#jarfileuris_python" style="color: inherit; text-decoration: inherit;">jar<wbr>File<wbr>Uris</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -3593,7 +4201,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>logging<wbr>Config</span>
+        <span id="loggingconfig_python">
+<a href="#loggingconfig_python" style="color: inherit; text-decoration: inherit;">logging<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobsparkconfigloggingconfig">Dict[Job<wbr>Spark<wbr>Config<wbr>Logging<wbr>Config]</a></span>
     </dt>
@@ -3601,7 +4211,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>main<wbr>Class</span>
+        <span id="mainclass_python">
+<a href="#mainclass_python" style="color: inherit; text-decoration: inherit;">main<wbr>Class</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3610,7 +4222,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>main<wbr>Jar<wbr>File<wbr>Uri</span>
+        <span id="mainjarfileuri_python">
+<a href="#mainjarfileuri_python" style="color: inherit; text-decoration: inherit;">main<wbr>Jar<wbr>File<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3619,7 +4233,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>properties</span>
+        <span id="properties_python">
+<a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -3653,7 +4269,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-required"
             title="Required">
-        <span>Driver<wbr>Log<wbr>Levels</span>
+        <span id="driverloglevels_csharp">
+<a href="#driverloglevels_csharp" style="color: inherit; text-decoration: inherit;">Driver<wbr>Log<wbr>Levels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -3668,7 +4286,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-required"
             title="Required">
-        <span>Driver<wbr>Log<wbr>Levels</span>
+        <span id="driverloglevels_go">
+<a href="#driverloglevels_go" style="color: inherit; text-decoration: inherit;">Driver<wbr>Log<wbr>Levels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -3683,7 +4303,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-required"
             title="Required">
-        <span>driver<wbr>Log<wbr>Levels</span>
+        <span id="driverloglevels_nodejs">
+<a href="#driverloglevels_nodejs" style="color: inherit; text-decoration: inherit;">driver<wbr>Log<wbr>Levels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -3698,7 +4320,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-required"
             title="Required">
-        <span>driver<wbr>Log<wbr>Levels</span>
+        <span id="driverloglevels_python">
+<a href="#driverloglevels_python" style="color: inherit; text-decoration: inherit;">driver<wbr>Log<wbr>Levels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -3731,7 +4355,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Jar<wbr>File<wbr>Uris</span>
+        <span id="jarfileuris_csharp">
+<a href="#jarfileuris_csharp" style="color: inherit; text-decoration: inherit;">Jar<wbr>File<wbr>Uris</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -3740,7 +4366,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Logging<wbr>Config</span>
+        <span id="loggingconfig_csharp">
+<a href="#loggingconfig_csharp" style="color: inherit; text-decoration: inherit;">Logging<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobsparksqlconfigloggingconfig">Job<wbr>Sparksql<wbr>Config<wbr>Logging<wbr>Config<wbr>Args</a></span>
     </dt>
@@ -3748,7 +4376,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Properties</span>
+        <span id="properties_csharp">
+<a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -3757,7 +4387,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Query<wbr>File<wbr>Uri</span>
+        <span id="queryfileuri_csharp">
+<a href="#queryfileuri_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>File<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3767,7 +4399,9 @@ Conflicts with `query_list`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Query<wbr>Lists</span>
+        <span id="querylists_csharp">
+<a href="#querylists_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>Lists</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -3777,7 +4411,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Script<wbr>Variables</span>
+        <span id="scriptvariables_csharp">
+<a href="#scriptvariables_csharp" style="color: inherit; text-decoration: inherit;">Script<wbr>Variables</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -3793,7 +4429,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Jar<wbr>File<wbr>Uris</span>
+        <span id="jarfileuris_go">
+<a href="#jarfileuris_go" style="color: inherit; text-decoration: inherit;">Jar<wbr>File<wbr>Uris</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -3802,7 +4440,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Logging<wbr>Config</span>
+        <span id="loggingconfig_go">
+<a href="#loggingconfig_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobsparksqlconfigloggingconfig">Job<wbr>Sparksql<wbr>Config<wbr>Logging<wbr>Config</a></span>
     </dt>
@@ -3810,7 +4450,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Properties</span>
+        <span id="properties_go">
+<a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -3819,7 +4461,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Query<wbr>File<wbr>Uri</span>
+        <span id="queryfileuri_go">
+<a href="#queryfileuri_go" style="color: inherit; text-decoration: inherit;">Query<wbr>File<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3829,7 +4473,9 @@ Conflicts with `query_list`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Query<wbr>Lists</span>
+        <span id="querylists_go">
+<a href="#querylists_go" style="color: inherit; text-decoration: inherit;">Query<wbr>Lists</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -3839,7 +4485,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Script<wbr>Variables</span>
+        <span id="scriptvariables_go">
+<a href="#scriptvariables_go" style="color: inherit; text-decoration: inherit;">Script<wbr>Variables</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -3855,7 +4503,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>jar<wbr>File<wbr>Uris</span>
+        <span id="jarfileuris_nodejs">
+<a href="#jarfileuris_nodejs" style="color: inherit; text-decoration: inherit;">jar<wbr>File<wbr>Uris</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -3864,7 +4514,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>logging<wbr>Config</span>
+        <span id="loggingconfig_nodejs">
+<a href="#loggingconfig_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobsparksqlconfigloggingconfig">Job<wbr>Sparksql<wbr>Config<wbr>Logging<wbr>Config</a></span>
     </dt>
@@ -3872,7 +4524,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>properties</span>
+        <span id="properties_nodejs">
+<a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -3881,7 +4535,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>query<wbr>File<wbr>Uri</span>
+        <span id="queryfileuri_nodejs">
+<a href="#queryfileuri_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>File<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3891,7 +4547,9 @@ Conflicts with `query_list`
 
     <dt class="property-optional"
             title="Optional">
-        <span>query<wbr>Lists</span>
+        <span id="querylists_nodejs">
+<a href="#querylists_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Lists</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -3901,7 +4559,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>script<wbr>Variables</span>
+        <span id="scriptvariables_nodejs">
+<a href="#scriptvariables_nodejs" style="color: inherit; text-decoration: inherit;">script<wbr>Variables</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -3917,7 +4577,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>jar<wbr>File<wbr>Uris</span>
+        <span id="jarfileuris_python">
+<a href="#jarfileuris_python" style="color: inherit; text-decoration: inherit;">jar<wbr>File<wbr>Uris</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -3926,7 +4588,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>logging<wbr>Config</span>
+        <span id="loggingconfig_python">
+<a href="#loggingconfig_python" style="color: inherit; text-decoration: inherit;">logging<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobsparksqlconfigloggingconfig">Dict[Job<wbr>Sparksql<wbr>Config<wbr>Logging<wbr>Config]</a></span>
     </dt>
@@ -3934,7 +4598,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>properties</span>
+        <span id="properties_python">
+<a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -3943,7 +4609,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>query<wbr>File<wbr>Uri</span>
+        <span id="queryfileuri_python">
+<a href="#queryfileuri_python" style="color: inherit; text-decoration: inherit;">query<wbr>File<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3953,7 +4621,9 @@ Conflicts with `query_list`
 
     <dt class="property-optional"
             title="Optional">
-        <span>query<wbr>Lists</span>
+        <span id="querylists_python">
+<a href="#querylists_python" style="color: inherit; text-decoration: inherit;">query<wbr>Lists</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -3963,7 +4633,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>script<wbr>Variables</span>
+        <span id="scriptvariables_python">
+<a href="#scriptvariables_python" style="color: inherit; text-decoration: inherit;">script<wbr>Variables</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -3997,7 +4669,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-required"
             title="Required">
-        <span>Driver<wbr>Log<wbr>Levels</span>
+        <span id="driverloglevels_csharp">
+<a href="#driverloglevels_csharp" style="color: inherit; text-decoration: inherit;">Driver<wbr>Log<wbr>Levels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -4012,7 +4686,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-required"
             title="Required">
-        <span>Driver<wbr>Log<wbr>Levels</span>
+        <span id="driverloglevels_go">
+<a href="#driverloglevels_go" style="color: inherit; text-decoration: inherit;">Driver<wbr>Log<wbr>Levels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -4027,7 +4703,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-required"
             title="Required">
-        <span>driver<wbr>Log<wbr>Levels</span>
+        <span id="driverloglevels_nodejs">
+<a href="#driverloglevels_nodejs" style="color: inherit; text-decoration: inherit;">driver<wbr>Log<wbr>Levels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -4042,7 +4720,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-required"
             title="Required">
-        <span>driver<wbr>Log<wbr>Levels</span>
+        <span id="driverloglevels_python">
+<a href="#driverloglevels_python" style="color: inherit; text-decoration: inherit;">driver<wbr>Log<wbr>Levels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -4075,7 +4755,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Details</span>
+        <span id="details_csharp">
+<a href="#details_csharp" style="color: inherit; text-decoration: inherit;">Details</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4083,7 +4765,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>State</span>
+        <span id="state_csharp">
+<a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4091,7 +4775,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>State<wbr>Start<wbr>Time</span>
+        <span id="statestarttime_csharp">
+<a href="#statestarttime_csharp" style="color: inherit; text-decoration: inherit;">State<wbr>Start<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4099,7 +4785,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Substate</span>
+        <span id="substate_csharp">
+<a href="#substate_csharp" style="color: inherit; text-decoration: inherit;">Substate</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4114,7 +4802,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Details</span>
+        <span id="details_go">
+<a href="#details_go" style="color: inherit; text-decoration: inherit;">Details</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -4122,7 +4812,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>State</span>
+        <span id="state_go">
+<a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -4130,7 +4822,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>State<wbr>Start<wbr>Time</span>
+        <span id="statestarttime_go">
+<a href="#statestarttime_go" style="color: inherit; text-decoration: inherit;">State<wbr>Start<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -4138,7 +4832,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Substate</span>
+        <span id="substate_go">
+<a href="#substate_go" style="color: inherit; text-decoration: inherit;">Substate</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -4153,7 +4849,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>details</span>
+        <span id="details_nodejs">
+<a href="#details_nodejs" style="color: inherit; text-decoration: inherit;">details</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4161,7 +4859,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>state</span>
+        <span id="state_nodejs">
+<a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4169,7 +4869,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>state<wbr>Start<wbr>Time</span>
+        <span id="statestarttime_nodejs">
+<a href="#statestarttime_nodejs" style="color: inherit; text-decoration: inherit;">state<wbr>Start<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4177,7 +4879,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>substate</span>
+        <span id="substate_nodejs">
+<a href="#substate_nodejs" style="color: inherit; text-decoration: inherit;">substate</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4192,7 +4896,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>details</span>
+        <span id="details_python">
+<a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4200,7 +4906,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>state</span>
+        <span id="state_python">
+<a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4208,7 +4916,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>state<wbr>Start<wbr>Time</span>
+        <span id="statestarttime_python">
+<a href="#statestarttime_python" style="color: inherit; text-decoration: inherit;">state<wbr>Start<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4216,7 +4926,9 @@ Conflicts with `query_file_uri`
 
     <dt class="property-optional"
             title="Optional">
-        <span>substate</span>
+        <span id="substate_python">
+<a href="#substate_python" style="color: inherit; text-decoration: inherit;">substate</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

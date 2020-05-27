@@ -204,7 +204,9 @@ The PerInstanceConfig resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span>Instance<wbr>Group<wbr>Manager</span>
+        <span id="instancegroupmanager_csharp">
+<a href="#instancegroupmanager_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Group<wbr>Manager</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -213,7 +215,9 @@ The PerInstanceConfig resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span>Zone</span>
+        <span id="zone_csharp">
+<a href="#zone_csharp" style="color: inherit; text-decoration: inherit;">Zone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -222,7 +226,9 @@ The PerInstanceConfig resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Minimal<wbr>Action</span>
+        <span id="minimalaction_csharp">
+<a href="#minimalaction_csharp" style="color: inherit; text-decoration: inherit;">Minimal<wbr>Action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -236,7 +242,9 @@ Default is `NONE`. Possible values are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Most<wbr>Disruptive<wbr>Allowed<wbr>Action</span>
+        <span id="mostdisruptiveallowedaction_csharp">
+<a href="#mostdisruptiveallowedaction_csharp" style="color: inherit; text-decoration: inherit;">Most<wbr>Disruptive<wbr>Allowed<wbr>Action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -250,7 +258,9 @@ Default is `REPLACE`. Possible values are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -259,7 +269,9 @@ Default is `REPLACE`. Possible values are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Preserved<wbr>State</span>
+        <span id="preservedstate_csharp">
+<a href="#preservedstate_csharp" style="color: inherit; text-decoration: inherit;">Preserved<wbr>State</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#perinstanceconfigpreservedstate">Per<wbr>Instance<wbr>Config<wbr>Preserved<wbr>State<wbr>Args</a></span>
     </dt>
@@ -268,7 +280,9 @@ Default is `REPLACE`. Possible values are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project</span>
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -285,7 +299,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>Instance<wbr>Group<wbr>Manager</span>
+        <span id="instancegroupmanager_go">
+<a href="#instancegroupmanager_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Group<wbr>Manager</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -294,7 +310,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>Zone</span>
+        <span id="zone_go">
+<a href="#zone_go" style="color: inherit; text-decoration: inherit;">Zone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -303,7 +321,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Minimal<wbr>Action</span>
+        <span id="minimalaction_go">
+<a href="#minimalaction_go" style="color: inherit; text-decoration: inherit;">Minimal<wbr>Action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -317,7 +337,9 @@ Default is `NONE`. Possible values are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Most<wbr>Disruptive<wbr>Allowed<wbr>Action</span>
+        <span id="mostdisruptiveallowedaction_go">
+<a href="#mostdisruptiveallowedaction_go" style="color: inherit; text-decoration: inherit;">Most<wbr>Disruptive<wbr>Allowed<wbr>Action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -331,7 +353,9 @@ Default is `REPLACE`. Possible values are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -340,7 +364,9 @@ Default is `REPLACE`. Possible values are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Preserved<wbr>State</span>
+        <span id="preservedstate_go">
+<a href="#preservedstate_go" style="color: inherit; text-decoration: inherit;">Preserved<wbr>State</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#perinstanceconfigpreservedstate">Per<wbr>Instance<wbr>Config<wbr>Preserved<wbr>State</a></span>
     </dt>
@@ -349,7 +375,9 @@ Default is `REPLACE`. Possible values are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project</span>
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -366,7 +394,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>instance<wbr>Group<wbr>Manager</span>
+        <span id="instancegroupmanager_nodejs">
+<a href="#instancegroupmanager_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Group<wbr>Manager</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -375,7 +405,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>zone</span>
+        <span id="zone_nodejs">
+<a href="#zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -384,7 +416,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>minimal<wbr>Action</span>
+        <span id="minimalaction_nodejs">
+<a href="#minimalaction_nodejs" style="color: inherit; text-decoration: inherit;">minimal<wbr>Action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -398,7 +432,9 @@ Default is `NONE`. Possible values are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>most<wbr>Disruptive<wbr>Allowed<wbr>Action</span>
+        <span id="mostdisruptiveallowedaction_nodejs">
+<a href="#mostdisruptiveallowedaction_nodejs" style="color: inherit; text-decoration: inherit;">most<wbr>Disruptive<wbr>Allowed<wbr>Action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -412,7 +448,9 @@ Default is `REPLACE`. Possible values are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -421,7 +459,9 @@ Default is `REPLACE`. Possible values are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>preserved<wbr>State</span>
+        <span id="preservedstate_nodejs">
+<a href="#preservedstate_nodejs" style="color: inherit; text-decoration: inherit;">preserved<wbr>State</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#perinstanceconfigpreservedstate">Per<wbr>Instance<wbr>Config<wbr>Preserved<wbr>State</a></span>
     </dt>
@@ -430,7 +470,9 @@ Default is `REPLACE`. Possible values are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>project</span>
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -447,7 +489,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>instance_<wbr>group_<wbr>manager</span>
+        <span id="instance_group_manager_python">
+<a href="#instance_group_manager_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>group_<wbr>manager</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -456,7 +500,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>zone</span>
+        <span id="zone_python">
+<a href="#zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -465,7 +511,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>minimal_<wbr>action</span>
+        <span id="minimal_action_python">
+<a href="#minimal_action_python" style="color: inherit; text-decoration: inherit;">minimal_<wbr>action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -479,7 +527,9 @@ Default is `NONE`. Possible values are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>most_<wbr>disruptive_<wbr>allowed_<wbr>action</span>
+        <span id="most_disruptive_allowed_action_python">
+<a href="#most_disruptive_allowed_action_python" style="color: inherit; text-decoration: inherit;">most_<wbr>disruptive_<wbr>allowed_<wbr>action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -493,7 +543,9 @@ Default is `REPLACE`. Possible values are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -502,7 +554,9 @@ Default is `REPLACE`. Possible values are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>preserved_<wbr>state</span>
+        <span id="preserved_state_python">
+<a href="#preserved_state_python" style="color: inherit; text-decoration: inherit;">preserved_<wbr>state</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#perinstanceconfigpreservedstate">Dict[Per<wbr>Instance<wbr>Config<wbr>Preserved<wbr>State]</a></span>
     </dt>
@@ -511,7 +565,9 @@ Default is `REPLACE`. Possible values are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>project</span>
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -539,7 +595,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -554,7 +612,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -569,7 +629,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -584,7 +646,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -725,7 +789,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Instance<wbr>Group<wbr>Manager</span>
+        <span id="state_instancegroupmanager_csharp">
+<a href="#state_instancegroupmanager_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Group<wbr>Manager</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -734,7 +800,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Minimal<wbr>Action</span>
+        <span id="state_minimalaction_csharp">
+<a href="#state_minimalaction_csharp" style="color: inherit; text-decoration: inherit;">Minimal<wbr>Action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -748,7 +816,9 @@ Default is `NONE`. Possible values are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Most<wbr>Disruptive<wbr>Allowed<wbr>Action</span>
+        <span id="state_mostdisruptiveallowedaction_csharp">
+<a href="#state_mostdisruptiveallowedaction_csharp" style="color: inherit; text-decoration: inherit;">Most<wbr>Disruptive<wbr>Allowed<wbr>Action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -762,7 +832,9 @@ Default is `REPLACE`. Possible values are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -771,7 +843,9 @@ Default is `REPLACE`. Possible values are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Preserved<wbr>State</span>
+        <span id="state_preservedstate_csharp">
+<a href="#state_preservedstate_csharp" style="color: inherit; text-decoration: inherit;">Preserved<wbr>State</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#perinstanceconfigpreservedstate">Per<wbr>Instance<wbr>Config<wbr>Preserved<wbr>State<wbr>Args</a></span>
     </dt>
@@ -780,7 +854,9 @@ Default is `REPLACE`. Possible values are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project</span>
+        <span id="state_project_csharp">
+<a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -790,7 +866,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Zone</span>
+        <span id="state_zone_csharp">
+<a href="#state_zone_csharp" style="color: inherit; text-decoration: inherit;">Zone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -806,7 +884,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Instance<wbr>Group<wbr>Manager</span>
+        <span id="state_instancegroupmanager_go">
+<a href="#state_instancegroupmanager_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Group<wbr>Manager</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -815,7 +895,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Minimal<wbr>Action</span>
+        <span id="state_minimalaction_go">
+<a href="#state_minimalaction_go" style="color: inherit; text-decoration: inherit;">Minimal<wbr>Action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -829,7 +911,9 @@ Default is `NONE`. Possible values are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Most<wbr>Disruptive<wbr>Allowed<wbr>Action</span>
+        <span id="state_mostdisruptiveallowedaction_go">
+<a href="#state_mostdisruptiveallowedaction_go" style="color: inherit; text-decoration: inherit;">Most<wbr>Disruptive<wbr>Allowed<wbr>Action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -843,7 +927,9 @@ Default is `REPLACE`. Possible values are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -852,7 +938,9 @@ Default is `REPLACE`. Possible values are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Preserved<wbr>State</span>
+        <span id="state_preservedstate_go">
+<a href="#state_preservedstate_go" style="color: inherit; text-decoration: inherit;">Preserved<wbr>State</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#perinstanceconfigpreservedstate">Per<wbr>Instance<wbr>Config<wbr>Preserved<wbr>State</a></span>
     </dt>
@@ -861,7 +949,9 @@ Default is `REPLACE`. Possible values are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project</span>
+        <span id="state_project_go">
+<a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -871,7 +961,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Zone</span>
+        <span id="state_zone_go">
+<a href="#state_zone_go" style="color: inherit; text-decoration: inherit;">Zone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -887,7 +979,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>instance<wbr>Group<wbr>Manager</span>
+        <span id="state_instancegroupmanager_nodejs">
+<a href="#state_instancegroupmanager_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Group<wbr>Manager</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -896,7 +990,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>minimal<wbr>Action</span>
+        <span id="state_minimalaction_nodejs">
+<a href="#state_minimalaction_nodejs" style="color: inherit; text-decoration: inherit;">minimal<wbr>Action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -910,7 +1006,9 @@ Default is `NONE`. Possible values are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>most<wbr>Disruptive<wbr>Allowed<wbr>Action</span>
+        <span id="state_mostdisruptiveallowedaction_nodejs">
+<a href="#state_mostdisruptiveallowedaction_nodejs" style="color: inherit; text-decoration: inherit;">most<wbr>Disruptive<wbr>Allowed<wbr>Action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -924,7 +1022,9 @@ Default is `REPLACE`. Possible values are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -933,7 +1033,9 @@ Default is `REPLACE`. Possible values are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>preserved<wbr>State</span>
+        <span id="state_preservedstate_nodejs">
+<a href="#state_preservedstate_nodejs" style="color: inherit; text-decoration: inherit;">preserved<wbr>State</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#perinstanceconfigpreservedstate">Per<wbr>Instance<wbr>Config<wbr>Preserved<wbr>State</a></span>
     </dt>
@@ -942,7 +1044,9 @@ Default is `REPLACE`. Possible values are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>project</span>
+        <span id="state_project_nodejs">
+<a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -952,7 +1056,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>zone</span>
+        <span id="state_zone_nodejs">
+<a href="#state_zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -968,7 +1074,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>instance_<wbr>group_<wbr>manager</span>
+        <span id="state_instance_group_manager_python">
+<a href="#state_instance_group_manager_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>group_<wbr>manager</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -977,7 +1085,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>minimal_<wbr>action</span>
+        <span id="state_minimal_action_python">
+<a href="#state_minimal_action_python" style="color: inherit; text-decoration: inherit;">minimal_<wbr>action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -991,7 +1101,9 @@ Default is `NONE`. Possible values are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>most_<wbr>disruptive_<wbr>allowed_<wbr>action</span>
+        <span id="state_most_disruptive_allowed_action_python">
+<a href="#state_most_disruptive_allowed_action_python" style="color: inherit; text-decoration: inherit;">most_<wbr>disruptive_<wbr>allowed_<wbr>action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1005,7 +1117,9 @@ Default is `REPLACE`. Possible values are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1014,7 +1128,9 @@ Default is `REPLACE`. Possible values are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>preserved_<wbr>state</span>
+        <span id="state_preserved_state_python">
+<a href="#state_preserved_state_python" style="color: inherit; text-decoration: inherit;">preserved_<wbr>state</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#perinstanceconfigpreservedstate">Dict[Per<wbr>Instance<wbr>Config<wbr>Preserved<wbr>State]</a></span>
     </dt>
@@ -1023,7 +1139,9 @@ Default is `REPLACE`. Possible values are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>project</span>
+        <span id="state_project_python">
+<a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1033,7 +1151,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>zone</span>
+        <span id="state_zone_python">
+<a href="#state_zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1075,7 +1195,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Disks</span>
+        <span id="disks_csharp">
+<a href="#disks_csharp" style="color: inherit; text-decoration: inherit;">Disks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#perinstanceconfigpreservedstatedisk">List&lt;Per<wbr>Instance<wbr>Config<wbr>Preserved<wbr>State<wbr>Disk<wbr>Args&gt;</a></span>
     </dt>
@@ -1084,7 +1206,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Metadata</span>
+        <span id="metadata_csharp">
+<a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -1100,7 +1224,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Disks</span>
+        <span id="disks_go">
+<a href="#disks_go" style="color: inherit; text-decoration: inherit;">Disks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#perinstanceconfigpreservedstatedisk">[]Per<wbr>Instance<wbr>Config<wbr>Preserved<wbr>State<wbr>Disk</a></span>
     </dt>
@@ -1109,7 +1235,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Metadata</span>
+        <span id="metadata_go">
+<a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -1125,7 +1253,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>disks</span>
+        <span id="disks_nodejs">
+<a href="#disks_nodejs" style="color: inherit; text-decoration: inherit;">disks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#perinstanceconfigpreservedstatedisk">Per<wbr>Instance<wbr>Config<wbr>Preserved<wbr>State<wbr>Disk[]</a></span>
     </dt>
@@ -1134,7 +1264,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>metadata</span>
+        <span id="metadata_nodejs">
+<a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -1150,7 +1282,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>disks</span>
+        <span id="disks_python">
+<a href="#disks_python" style="color: inherit; text-decoration: inherit;">disks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#perinstanceconfigpreservedstatedisk">List[Per<wbr>Instance<wbr>Config<wbr>Preserved<wbr>State<wbr>Disk]</a></span>
     </dt>
@@ -1159,7 +1293,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>metadata</span>
+        <span id="metadata_python">
+<a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -1193,7 +1329,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>Device<wbr>Name</span>
+        <span id="devicename_csharp">
+<a href="#devicename_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1202,7 +1340,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>Source</span>
+        <span id="source_csharp">
+<a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1212,7 +1352,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Delete<wbr>Rule</span>
+        <span id="deleterule_csharp">
+<a href="#deleterule_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>Rule</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1225,7 +1367,9 @@ deleted from the instance group.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Mode</span>
+        <span id="mode_csharp">
+<a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1241,7 +1385,9 @@ deleted from the instance group.
 
     <dt class="property-required"
             title="Required">
-        <span>Device<wbr>Name</span>
+        <span id="devicename_go">
+<a href="#devicename_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1250,7 +1396,9 @@ deleted from the instance group.
 
     <dt class="property-required"
             title="Required">
-        <span>Source</span>
+        <span id="source_go">
+<a href="#source_go" style="color: inherit; text-decoration: inherit;">Source</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1260,7 +1408,9 @@ deleted from the instance group.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Delete<wbr>Rule</span>
+        <span id="deleterule_go">
+<a href="#deleterule_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>Rule</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1273,7 +1423,9 @@ deleted from the instance group.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Mode</span>
+        <span id="mode_go">
+<a href="#mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1289,7 +1441,9 @@ deleted from the instance group.
 
     <dt class="property-required"
             title="Required">
-        <span>device<wbr>Name</span>
+        <span id="devicename_nodejs">
+<a href="#devicename_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1298,7 +1452,9 @@ deleted from the instance group.
 
     <dt class="property-required"
             title="Required">
-        <span>source</span>
+        <span id="source_nodejs">
+<a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1308,7 +1464,9 @@ deleted from the instance group.
 
     <dt class="property-optional"
             title="Optional">
-        <span>delete<wbr>Rule</span>
+        <span id="deleterule_nodejs">
+<a href="#deleterule_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Rule</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1321,7 +1479,9 @@ deleted from the instance group.
 
     <dt class="property-optional"
             title="Optional">
-        <span>mode</span>
+        <span id="mode_nodejs">
+<a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1337,7 +1497,9 @@ deleted from the instance group.
 
     <dt class="property-required"
             title="Required">
-        <span>device_<wbr>name</span>
+        <span id="device_name_python">
+<a href="#device_name_python" style="color: inherit; text-decoration: inherit;">device_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1346,7 +1508,9 @@ deleted from the instance group.
 
     <dt class="property-required"
             title="Required">
-        <span>source</span>
+        <span id="source_python">
+<a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1356,7 +1520,9 @@ deleted from the instance group.
 
     <dt class="property-optional"
             title="Optional">
-        <span>delete<wbr>Rule</span>
+        <span id="deleterule_python">
+<a href="#deleterule_python" style="color: inherit; text-decoration: inherit;">delete<wbr>Rule</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1369,7 +1535,9 @@ deleted from the instance group.
 
     <dt class="property-optional"
             title="Optional">
-        <span>mode</span>
+        <span id="mode_python">
+<a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

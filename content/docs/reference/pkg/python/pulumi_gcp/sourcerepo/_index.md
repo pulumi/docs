@@ -42,7 +42,7 @@ anything, please consult the source <a class="reference external" href="https://
 <span class="n">my_repo</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">sourcerepo</span><span class="o">.</span><span class="n">Repository</span><span class="p">(</span><span class="s2">&quot;my-repo&quot;</span><span class="p">,</span> <span class="n">pubsub_configs</span><span class="o">=</span><span class="p">[{</span>
     <span class="s2">&quot;topic&quot;</span><span class="p">:</span> <span class="n">topic</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="s2">&quot;messageFormat&quot;</span><span class="p">:</span> <span class="s2">&quot;JSON&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;serviceAccountEmail&quot;</span><span class="p">:</span> <span class="n">test_account</span><span class="o">.</span><span class="n">email</span><span class="p">,</span>
+    <span class="s2">&quot;service_account_email&quot;</span><span class="p">:</span> <span class="n">test_account</span><span class="o">.</span><span class="n">email</span><span class="p">,</span>
 <span class="p">}])</span>
 </pre></div>
 </div>

@@ -13,6 +13,7 @@ Explore the resources and functions of the monitoring module in the GCP package.
 <ul class="api">
     <li><a href="alertpolicy" title="AlertPolicy"><span class="symbol resource"></span>AlertPolicy</a></li>
     <li><a href="customservice" title="CustomService"><span class="symbol resource"></span>CustomService</a></li>
+    <li><a href="dashboard" title="Dashboard"><span class="symbol resource"></span>Dashboard</a></li>
     <li><a href="group" title="Group"><span class="symbol resource"></span>Group</a></li>
     <li><a href="notificationchannel" title="NotificationChannel"><span class="symbol resource"></span>NotificationChannel</a></li>
     <li><a href="slo" title="Slo"><span class="symbol resource"></span>Slo</a></li>
@@ -36,7 +37,7 @@ Explore the resources and functions of the monitoring module in the GCP package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
 	<dt>Version</dt>
-	<dd>3.6.0</dd>
+	<dd>3.7.0</dd>
 </dl>
 
 

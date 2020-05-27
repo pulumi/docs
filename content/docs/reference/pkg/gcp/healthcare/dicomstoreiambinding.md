@@ -279,7 +279,9 @@ The DicomStoreIamBinding resource accepts the following [input]({{< relref "/doc
 
     <dt class="property-required"
             title="Required">
-        <span>Dicom<wbr>Store<wbr>Id</span>
+        <span id="dicomstoreid_csharp">
+<a href="#dicomstoreid_csharp" style="color: inherit; text-decoration: inherit;">Dicom<wbr>Store<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -291,7 +293,9 @@ project setting will be used as a fallback.
 
     <dt class="property-required"
             title="Required">
-        <span>Members</span>
+        <span id="members_csharp">
+<a href="#members_csharp" style="color: inherit; text-decoration: inherit;">Members</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -299,7 +303,9 @@ project setting will be used as a fallback.
 
     <dt class="property-required"
             title="Required">
-        <span>Role</span>
+        <span id="role_csharp">
+<a href="#role_csharp" style="color: inherit; text-decoration: inherit;">Role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -310,7 +316,9 @@ project setting will be used as a fallback.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Condition</span>
+        <span id="condition_csharp">
+<a href="#condition_csharp" style="color: inherit; text-decoration: inherit;">Condition</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dicomstoreiambindingcondition">Dicom<wbr>Store<wbr>Iam<wbr>Binding<wbr>Condition<wbr>Args</a></span>
     </dt>
@@ -325,7 +333,9 @@ project setting will be used as a fallback.
 
     <dt class="property-required"
             title="Required">
-        <span>Dicom<wbr>Store<wbr>Id</span>
+        <span id="dicomstoreid_go">
+<a href="#dicomstoreid_go" style="color: inherit; text-decoration: inherit;">Dicom<wbr>Store<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -337,7 +347,9 @@ project setting will be used as a fallback.
 
     <dt class="property-required"
             title="Required">
-        <span>Members</span>
+        <span id="members_go">
+<a href="#members_go" style="color: inherit; text-decoration: inherit;">Members</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -345,7 +357,9 @@ project setting will be used as a fallback.
 
     <dt class="property-required"
             title="Required">
-        <span>Role</span>
+        <span id="role_go">
+<a href="#role_go" style="color: inherit; text-decoration: inherit;">Role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -356,7 +370,9 @@ project setting will be used as a fallback.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Condition</span>
+        <span id="condition_go">
+<a href="#condition_go" style="color: inherit; text-decoration: inherit;">Condition</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dicomstoreiambindingcondition">Dicom<wbr>Store<wbr>Iam<wbr>Binding<wbr>Condition</a></span>
     </dt>
@@ -371,7 +387,9 @@ project setting will be used as a fallback.
 
     <dt class="property-required"
             title="Required">
-        <span>dicom<wbr>Store<wbr>Id</span>
+        <span id="dicomstoreid_nodejs">
+<a href="#dicomstoreid_nodejs" style="color: inherit; text-decoration: inherit;">dicom<wbr>Store<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -383,7 +401,9 @@ project setting will be used as a fallback.
 
     <dt class="property-required"
             title="Required">
-        <span>members</span>
+        <span id="members_nodejs">
+<a href="#members_nodejs" style="color: inherit; text-decoration: inherit;">members</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -391,7 +411,9 @@ project setting will be used as a fallback.
 
     <dt class="property-required"
             title="Required">
-        <span>role</span>
+        <span id="role_nodejs">
+<a href="#role_nodejs" style="color: inherit; text-decoration: inherit;">role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -402,7 +424,9 @@ project setting will be used as a fallback.
 
     <dt class="property-optional"
             title="Optional">
-        <span>condition</span>
+        <span id="condition_nodejs">
+<a href="#condition_nodejs" style="color: inherit; text-decoration: inherit;">condition</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dicomstoreiambindingcondition">Dicom<wbr>Store<wbr>Iam<wbr>Binding<wbr>Condition</a></span>
     </dt>
@@ -417,7 +441,9 @@ project setting will be used as a fallback.
 
     <dt class="property-required"
             title="Required">
-        <span>dicom_<wbr>store_<wbr>id</span>
+        <span id="dicom_store_id_python">
+<a href="#dicom_store_id_python" style="color: inherit; text-decoration: inherit;">dicom_<wbr>store_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -429,7 +455,9 @@ project setting will be used as a fallback.
 
     <dt class="property-required"
             title="Required">
-        <span>members</span>
+        <span id="members_python">
+<a href="#members_python" style="color: inherit; text-decoration: inherit;">members</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -437,7 +465,9 @@ project setting will be used as a fallback.
 
     <dt class="property-required"
             title="Required">
-        <span>role</span>
+        <span id="role_python">
+<a href="#role_python" style="color: inherit; text-decoration: inherit;">role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -448,7 +478,9 @@ project setting will be used as a fallback.
 
     <dt class="property-optional"
             title="Optional">
-        <span>condition</span>
+        <span id="condition_python">
+<a href="#condition_python" style="color: inherit; text-decoration: inherit;">condition</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dicomstoreiambindingcondition">Dict[Dicom<wbr>Store<wbr>Iam<wbr>Binding<wbr>Condition]</a></span>
     </dt>
@@ -474,7 +506,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Etag</span>
+        <span id="etag_csharp">
+<a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -483,7 +517,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -498,7 +534,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Etag</span>
+        <span id="etag_go">
+<a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -507,7 +545,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -522,7 +562,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>etag</span>
+        <span id="etag_nodejs">
+<a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -531,7 +573,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -546,7 +590,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>etag</span>
+        <span id="etag_python">
+<a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -555,7 +601,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -696,7 +744,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Condition</span>
+        <span id="state_condition_csharp">
+<a href="#state_condition_csharp" style="color: inherit; text-decoration: inherit;">Condition</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dicomstoreiambindingcondition">Dicom<wbr>Store<wbr>Iam<wbr>Binding<wbr>Condition<wbr>Args</a></span>
     </dt>
@@ -704,7 +754,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dicom<wbr>Store<wbr>Id</span>
+        <span id="state_dicomstoreid_csharp">
+<a href="#state_dicomstoreid_csharp" style="color: inherit; text-decoration: inherit;">Dicom<wbr>Store<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -716,7 +768,9 @@ project setting will be used as a fallback.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Etag</span>
+        <span id="state_etag_csharp">
+<a href="#state_etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -725,7 +779,9 @@ project setting will be used as a fallback.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Members</span>
+        <span id="state_members_csharp">
+<a href="#state_members_csharp" style="color: inherit; text-decoration: inherit;">Members</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -733,7 +789,9 @@ project setting will be used as a fallback.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Role</span>
+        <span id="state_role_csharp">
+<a href="#state_role_csharp" style="color: inherit; text-decoration: inherit;">Role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -751,7 +809,9 @@ project setting will be used as a fallback.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Condition</span>
+        <span id="state_condition_go">
+<a href="#state_condition_go" style="color: inherit; text-decoration: inherit;">Condition</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dicomstoreiambindingcondition">Dicom<wbr>Store<wbr>Iam<wbr>Binding<wbr>Condition</a></span>
     </dt>
@@ -759,7 +819,9 @@ project setting will be used as a fallback.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dicom<wbr>Store<wbr>Id</span>
+        <span id="state_dicomstoreid_go">
+<a href="#state_dicomstoreid_go" style="color: inherit; text-decoration: inherit;">Dicom<wbr>Store<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -771,7 +833,9 @@ project setting will be used as a fallback.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Etag</span>
+        <span id="state_etag_go">
+<a href="#state_etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -780,7 +844,9 @@ project setting will be used as a fallback.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Members</span>
+        <span id="state_members_go">
+<a href="#state_members_go" style="color: inherit; text-decoration: inherit;">Members</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -788,7 +854,9 @@ project setting will be used as a fallback.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Role</span>
+        <span id="state_role_go">
+<a href="#state_role_go" style="color: inherit; text-decoration: inherit;">Role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -806,7 +874,9 @@ project setting will be used as a fallback.
 
     <dt class="property-optional"
             title="Optional">
-        <span>condition</span>
+        <span id="state_condition_nodejs">
+<a href="#state_condition_nodejs" style="color: inherit; text-decoration: inherit;">condition</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dicomstoreiambindingcondition">Dicom<wbr>Store<wbr>Iam<wbr>Binding<wbr>Condition</a></span>
     </dt>
@@ -814,7 +884,9 @@ project setting will be used as a fallback.
 
     <dt class="property-optional"
             title="Optional">
-        <span>dicom<wbr>Store<wbr>Id</span>
+        <span id="state_dicomstoreid_nodejs">
+<a href="#state_dicomstoreid_nodejs" style="color: inherit; text-decoration: inherit;">dicom<wbr>Store<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -826,7 +898,9 @@ project setting will be used as a fallback.
 
     <dt class="property-optional"
             title="Optional">
-        <span>etag</span>
+        <span id="state_etag_nodejs">
+<a href="#state_etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -835,7 +909,9 @@ project setting will be used as a fallback.
 
     <dt class="property-optional"
             title="Optional">
-        <span>members</span>
+        <span id="state_members_nodejs">
+<a href="#state_members_nodejs" style="color: inherit; text-decoration: inherit;">members</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -843,7 +919,9 @@ project setting will be used as a fallback.
 
     <dt class="property-optional"
             title="Optional">
-        <span>role</span>
+        <span id="state_role_nodejs">
+<a href="#state_role_nodejs" style="color: inherit; text-decoration: inherit;">role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -861,7 +939,9 @@ project setting will be used as a fallback.
 
     <dt class="property-optional"
             title="Optional">
-        <span>condition</span>
+        <span id="state_condition_python">
+<a href="#state_condition_python" style="color: inherit; text-decoration: inherit;">condition</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dicomstoreiambindingcondition">Dict[Dicom<wbr>Store<wbr>Iam<wbr>Binding<wbr>Condition]</a></span>
     </dt>
@@ -869,7 +949,9 @@ project setting will be used as a fallback.
 
     <dt class="property-optional"
             title="Optional">
-        <span>dicom_<wbr>store_<wbr>id</span>
+        <span id="state_dicom_store_id_python">
+<a href="#state_dicom_store_id_python" style="color: inherit; text-decoration: inherit;">dicom_<wbr>store_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -881,7 +963,9 @@ project setting will be used as a fallback.
 
     <dt class="property-optional"
             title="Optional">
-        <span>etag</span>
+        <span id="state_etag_python">
+<a href="#state_etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -890,7 +974,9 @@ project setting will be used as a fallback.
 
     <dt class="property-optional"
             title="Optional">
-        <span>members</span>
+        <span id="state_members_python">
+<a href="#state_members_python" style="color: inherit; text-decoration: inherit;">members</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -898,7 +984,9 @@ project setting will be used as a fallback.
 
     <dt class="property-optional"
             title="Optional">
-        <span>role</span>
+        <span id="state_role_python">
+<a href="#state_role_python" style="color: inherit; text-decoration: inherit;">role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -942,7 +1030,9 @@ project setting will be used as a fallback.
 
     <dt class="property-required"
             title="Required">
-        <span>Expression</span>
+        <span id="expression_csharp">
+<a href="#expression_csharp" style="color: inherit; text-decoration: inherit;">Expression</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -950,7 +1040,9 @@ project setting will be used as a fallback.
 
     <dt class="property-required"
             title="Required">
-        <span>Title</span>
+        <span id="title_csharp">
+<a href="#title_csharp" style="color: inherit; text-decoration: inherit;">Title</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -958,7 +1050,9 @@ project setting will be used as a fallback.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -973,7 +1067,9 @@ project setting will be used as a fallback.
 
     <dt class="property-required"
             title="Required">
-        <span>Expression</span>
+        <span id="expression_go">
+<a href="#expression_go" style="color: inherit; text-decoration: inherit;">Expression</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -981,7 +1077,9 @@ project setting will be used as a fallback.
 
     <dt class="property-required"
             title="Required">
-        <span>Title</span>
+        <span id="title_go">
+<a href="#title_go" style="color: inherit; text-decoration: inherit;">Title</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -989,7 +1087,9 @@ project setting will be used as a fallback.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1004,7 +1104,9 @@ project setting will be used as a fallback.
 
     <dt class="property-required"
             title="Required">
-        <span>expression</span>
+        <span id="expression_nodejs">
+<a href="#expression_nodejs" style="color: inherit; text-decoration: inherit;">expression</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1012,7 +1114,9 @@ project setting will be used as a fallback.
 
     <dt class="property-required"
             title="Required">
-        <span>title</span>
+        <span id="title_nodejs">
+<a href="#title_nodejs" style="color: inherit; text-decoration: inherit;">title</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1020,7 +1124,9 @@ project setting will be used as a fallback.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1035,7 +1141,9 @@ project setting will be used as a fallback.
 
     <dt class="property-required"
             title="Required">
-        <span>expression</span>
+        <span id="expression_python">
+<a href="#expression_python" style="color: inherit; text-decoration: inherit;">expression</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1043,7 +1151,9 @@ project setting will be used as a fallback.
 
     <dt class="property-required"
             title="Required">
-        <span>title</span>
+        <span id="title_python">
+<a href="#title_python" style="color: inherit; text-decoration: inherit;">title</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1051,7 +1161,9 @@ project setting will be used as a fallback.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

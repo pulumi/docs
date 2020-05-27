@@ -270,7 +270,9 @@ The Attestor resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-required"
             title="Required">
-        <span>Attestation<wbr>Authority<wbr>Note</span>
+        <span id="attestationauthoritynote_csharp">
+<a href="#attestationauthoritynote_csharp" style="color: inherit; text-decoration: inherit;">Attestation<wbr>Authority<wbr>Note</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#attestorattestationauthoritynote">Attestor<wbr>Attestation<wbr>Authority<wbr>Note<wbr>Args</a></span>
     </dt>
@@ -279,7 +281,9 @@ The Attestor resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -289,7 +293,9 @@ displayed in chooser dialogs.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -298,7 +304,9 @@ displayed in chooser dialogs.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project</span>
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -315,7 +323,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>Attestation<wbr>Authority<wbr>Note</span>
+        <span id="attestationauthoritynote_go">
+<a href="#attestationauthoritynote_go" style="color: inherit; text-decoration: inherit;">Attestation<wbr>Authority<wbr>Note</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#attestorattestationauthoritynote">Attestor<wbr>Attestation<wbr>Authority<wbr>Note</a></span>
     </dt>
@@ -324,7 +334,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -334,7 +346,9 @@ displayed in chooser dialogs.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -343,7 +357,9 @@ displayed in chooser dialogs.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project</span>
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -360,7 +376,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>attestation<wbr>Authority<wbr>Note</span>
+        <span id="attestationauthoritynote_nodejs">
+<a href="#attestationauthoritynote_nodejs" style="color: inherit; text-decoration: inherit;">attestation<wbr>Authority<wbr>Note</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#attestorattestationauthoritynote">Attestor<wbr>Attestation<wbr>Authority<wbr>Note</a></span>
     </dt>
@@ -369,7 +387,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -379,7 +399,9 @@ displayed in chooser dialogs.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -388,7 +410,9 @@ displayed in chooser dialogs.
 
     <dt class="property-optional"
             title="Optional">
-        <span>project</span>
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -405,7 +429,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>attestation_<wbr>authority_<wbr>note</span>
+        <span id="attestation_authority_note_python">
+<a href="#attestation_authority_note_python" style="color: inherit; text-decoration: inherit;">attestation_<wbr>authority_<wbr>note</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#attestorattestationauthoritynote">Dict[Attestor<wbr>Attestation<wbr>Authority<wbr>Note]</a></span>
     </dt>
@@ -414,7 +440,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -424,7 +452,9 @@ displayed in chooser dialogs.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -433,7 +463,9 @@ displayed in chooser dialogs.
 
     <dt class="property-optional"
             title="Optional">
-        <span>project</span>
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -461,7 +493,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -476,7 +510,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -491,7 +527,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -506,7 +544,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -647,7 +687,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Attestation<wbr>Authority<wbr>Note</span>
+        <span id="state_attestationauthoritynote_csharp">
+<a href="#state_attestationauthoritynote_csharp" style="color: inherit; text-decoration: inherit;">Attestation<wbr>Authority<wbr>Note</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#attestorattestationauthoritynote">Attestor<wbr>Attestation<wbr>Authority<wbr>Note<wbr>Args</a></span>
     </dt>
@@ -656,7 +698,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_csharp">
+<a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -666,7 +710,9 @@ displayed in chooser dialogs.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -675,7 +721,9 @@ displayed in chooser dialogs.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project</span>
+        <span id="state_project_csharp">
+<a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -692,7 +740,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Attestation<wbr>Authority<wbr>Note</span>
+        <span id="state_attestationauthoritynote_go">
+<a href="#state_attestationauthoritynote_go" style="color: inherit; text-decoration: inherit;">Attestation<wbr>Authority<wbr>Note</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#attestorattestationauthoritynote">Attestor<wbr>Attestation<wbr>Authority<wbr>Note</a></span>
     </dt>
@@ -701,7 +751,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_go">
+<a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -711,7 +763,9 @@ displayed in chooser dialogs.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -720,7 +774,9 @@ displayed in chooser dialogs.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project</span>
+        <span id="state_project_go">
+<a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -737,7 +793,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>attestation<wbr>Authority<wbr>Note</span>
+        <span id="state_attestationauthoritynote_nodejs">
+<a href="#state_attestationauthoritynote_nodejs" style="color: inherit; text-decoration: inherit;">attestation<wbr>Authority<wbr>Note</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#attestorattestationauthoritynote">Attestor<wbr>Attestation<wbr>Authority<wbr>Note</a></span>
     </dt>
@@ -746,7 +804,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_nodejs">
+<a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -756,7 +816,9 @@ displayed in chooser dialogs.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -765,7 +827,9 @@ displayed in chooser dialogs.
 
     <dt class="property-optional"
             title="Optional">
-        <span>project</span>
+        <span id="state_project_nodejs">
+<a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -782,7 +846,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>attestation_<wbr>authority_<wbr>note</span>
+        <span id="state_attestation_authority_note_python">
+<a href="#state_attestation_authority_note_python" style="color: inherit; text-decoration: inherit;">attestation_<wbr>authority_<wbr>note</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#attestorattestationauthoritynote">Dict[Attestor<wbr>Attestation<wbr>Authority<wbr>Note]</a></span>
     </dt>
@@ -791,7 +857,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_python">
+<a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -801,7 +869,9 @@ displayed in chooser dialogs.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -810,7 +880,9 @@ displayed in chooser dialogs.
 
     <dt class="property-optional"
             title="Optional">
-        <span>project</span>
+        <span id="state_project_python">
+<a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -853,7 +925,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>Note<wbr>Reference</span>
+        <span id="notereference_csharp">
+<a href="#notereference_csharp" style="color: inherit; text-decoration: inherit;">Note<wbr>Reference</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -868,7 +942,9 @@ and that links to this Note.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Delegation<wbr>Service<wbr>Account<wbr>Email</span>
+        <span id="delegationserviceaccountemail_csharp">
+<a href="#delegationserviceaccountemail_csharp" style="color: inherit; text-decoration: inherit;">Delegation<wbr>Service<wbr>Account<wbr>Email</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -886,7 +962,9 @@ different naming pattern.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Public<wbr>Keys</span>
+        <span id="publickeys_csharp">
+<a href="#publickeys_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Keys</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#attestorattestationauthoritynotepublickey">List&lt;Attestor<wbr>Attestation<wbr>Authority<wbr>Note<wbr>Public<wbr>Key<wbr>Args&gt;</a></span>
     </dt>
@@ -908,7 +986,9 @@ attestations exist.  Structure is documented below.
 
     <dt class="property-required"
             title="Required">
-        <span>Note<wbr>Reference</span>
+        <span id="notereference_go">
+<a href="#notereference_go" style="color: inherit; text-decoration: inherit;">Note<wbr>Reference</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -923,7 +1003,9 @@ and that links to this Note.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Delegation<wbr>Service<wbr>Account<wbr>Email</span>
+        <span id="delegationserviceaccountemail_go">
+<a href="#delegationserviceaccountemail_go" style="color: inherit; text-decoration: inherit;">Delegation<wbr>Service<wbr>Account<wbr>Email</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -941,7 +1023,9 @@ different naming pattern.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Public<wbr>Keys</span>
+        <span id="publickeys_go">
+<a href="#publickeys_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Keys</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#attestorattestationauthoritynotepublickey">[]Attestor<wbr>Attestation<wbr>Authority<wbr>Note<wbr>Public<wbr>Key</a></span>
     </dt>
@@ -963,7 +1047,9 @@ attestations exist.  Structure is documented below.
 
     <dt class="property-required"
             title="Required">
-        <span>note<wbr>Reference</span>
+        <span id="notereference_nodejs">
+<a href="#notereference_nodejs" style="color: inherit; text-decoration: inherit;">note<wbr>Reference</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -978,7 +1064,9 @@ and that links to this Note.
 
     <dt class="property-optional"
             title="Optional">
-        <span>delegation<wbr>Service<wbr>Account<wbr>Email</span>
+        <span id="delegationserviceaccountemail_nodejs">
+<a href="#delegationserviceaccountemail_nodejs" style="color: inherit; text-decoration: inherit;">delegation<wbr>Service<wbr>Account<wbr>Email</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -996,7 +1084,9 @@ different naming pattern.
 
     <dt class="property-optional"
             title="Optional">
-        <span>public<wbr>Keys</span>
+        <span id="publickeys_nodejs">
+<a href="#publickeys_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Keys</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#attestorattestationauthoritynotepublickey">Attestor<wbr>Attestation<wbr>Authority<wbr>Note<wbr>Public<wbr>Key[]</a></span>
     </dt>
@@ -1018,7 +1108,9 @@ attestations exist.  Structure is documented below.
 
     <dt class="property-required"
             title="Required">
-        <span>note<wbr>Reference</span>
+        <span id="notereference_python">
+<a href="#notereference_python" style="color: inherit; text-decoration: inherit;">note<wbr>Reference</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1033,7 +1125,9 @@ and that links to this Note.
 
     <dt class="property-optional"
             title="Optional">
-        <span>delegation<wbr>Service<wbr>Account<wbr>Email</span>
+        <span id="delegationserviceaccountemail_python">
+<a href="#delegationserviceaccountemail_python" style="color: inherit; text-decoration: inherit;">delegation<wbr>Service<wbr>Account<wbr>Email</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1051,7 +1145,9 @@ different naming pattern.
 
     <dt class="property-optional"
             title="Optional">
-        <span>public<wbr>Keys</span>
+        <span id="publickeys_python">
+<a href="#publickeys_python" style="color: inherit; text-decoration: inherit;">public<wbr>Keys</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#attestorattestationauthoritynotepublickey">List[Attestor<wbr>Attestation<wbr>Authority<wbr>Note<wbr>Public<wbr>Key]</a></span>
     </dt>
@@ -1091,7 +1187,9 @@ attestations exist.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ascii<wbr>Armored<wbr>Pgp<wbr>Public<wbr>Key</span>
+        <span id="asciiarmoredpgppublickey_csharp">
+<a href="#asciiarmoredpgppublickey_csharp" style="color: inherit; text-decoration: inherit;">Ascii<wbr>Armored<wbr>Pgp<wbr>Public<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1108,7 +1206,9 @@ be overwritten by the API-calculated ID.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Comment</span>
+        <span id="comment_csharp">
+<a href="#comment_csharp" style="color: inherit; text-decoration: inherit;">Comment</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1117,7 +1217,9 @@ be overwritten by the API-calculated ID.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1131,7 +1233,9 @@ See the documentation on publicKey cases below for details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Pkix<wbr>Public<wbr>Key</span>
+        <span id="pkixpublickey_csharp">
+<a href="#pkixpublickey_csharp" style="color: inherit; text-decoration: inherit;">Pkix<wbr>Public<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#attestorattestationauthoritynotepublickeypkixpublickey">Attestor<wbr>Attestation<wbr>Authority<wbr>Note<wbr>Public<wbr>Key<wbr>Pkix<wbr>Public<wbr>Key<wbr>Args</a></span>
     </dt>
@@ -1151,7 +1255,9 @@ encoding of the public key.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ascii<wbr>Armored<wbr>Pgp<wbr>Public<wbr>Key</span>
+        <span id="asciiarmoredpgppublickey_go">
+<a href="#asciiarmoredpgppublickey_go" style="color: inherit; text-decoration: inherit;">Ascii<wbr>Armored<wbr>Pgp<wbr>Public<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1168,7 +1274,9 @@ be overwritten by the API-calculated ID.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Comment</span>
+        <span id="comment_go">
+<a href="#comment_go" style="color: inherit; text-decoration: inherit;">Comment</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1177,7 +1285,9 @@ be overwritten by the API-calculated ID.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1191,7 +1301,9 @@ See the documentation on publicKey cases below for details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Pkix<wbr>Public<wbr>Key</span>
+        <span id="pkixpublickey_go">
+<a href="#pkixpublickey_go" style="color: inherit; text-decoration: inherit;">Pkix<wbr>Public<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#attestorattestationauthoritynotepublickeypkixpublickey">Attestor<wbr>Attestation<wbr>Authority<wbr>Note<wbr>Public<wbr>Key<wbr>Pkix<wbr>Public<wbr>Key</a></span>
     </dt>
@@ -1211,7 +1323,9 @@ encoding of the public key.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ascii<wbr>Armored<wbr>Pgp<wbr>Public<wbr>Key</span>
+        <span id="asciiarmoredpgppublickey_nodejs">
+<a href="#asciiarmoredpgppublickey_nodejs" style="color: inherit; text-decoration: inherit;">ascii<wbr>Armored<wbr>Pgp<wbr>Public<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1228,7 +1342,9 @@ be overwritten by the API-calculated ID.
 
     <dt class="property-optional"
             title="Optional">
-        <span>comment</span>
+        <span id="comment_nodejs">
+<a href="#comment_nodejs" style="color: inherit; text-decoration: inherit;">comment</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1237,7 +1353,9 @@ be overwritten by the API-calculated ID.
 
     <dt class="property-optional"
             title="Optional">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1251,7 +1369,9 @@ See the documentation on publicKey cases below for details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>pkix<wbr>Public<wbr>Key</span>
+        <span id="pkixpublickey_nodejs">
+<a href="#pkixpublickey_nodejs" style="color: inherit; text-decoration: inherit;">pkix<wbr>Public<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#attestorattestationauthoritynotepublickeypkixpublickey">Attestor<wbr>Attestation<wbr>Authority<wbr>Note<wbr>Public<wbr>Key<wbr>Pkix<wbr>Public<wbr>Key</a></span>
     </dt>
@@ -1271,7 +1391,9 @@ encoding of the public key.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ascii<wbr>Armored<wbr>Pgp<wbr>Public<wbr>Key</span>
+        <span id="asciiarmoredpgppublickey_python">
+<a href="#asciiarmoredpgppublickey_python" style="color: inherit; text-decoration: inherit;">ascii<wbr>Armored<wbr>Pgp<wbr>Public<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1288,7 +1410,9 @@ be overwritten by the API-calculated ID.
 
     <dt class="property-optional"
             title="Optional">
-        <span>comment</span>
+        <span id="comment_python">
+<a href="#comment_python" style="color: inherit; text-decoration: inherit;">comment</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1297,7 +1421,9 @@ be overwritten by the API-calculated ID.
 
     <dt class="property-optional"
             title="Optional">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1311,7 +1437,9 @@ See the documentation on publicKey cases below for details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>pkix<wbr>Public<wbr>Key</span>
+        <span id="pkixpublickey_python">
+<a href="#pkixpublickey_python" style="color: inherit; text-decoration: inherit;">pkix<wbr>Public<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#attestorattestationauthoritynotepublickeypkixpublickey">Dict[Attestor<wbr>Attestation<wbr>Authority<wbr>Note<wbr>Public<wbr>Key<wbr>Pkix<wbr>Public<wbr>Key]</a></span>
     </dt>
@@ -1349,7 +1477,9 @@ encoding of the public key.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Public<wbr>Key<wbr>Pem</span>
+        <span id="publickeypem_csharp">
+<a href="#publickeypem_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Key<wbr>Pem</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1359,7 +1489,9 @@ encoding of the public key.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Signature<wbr>Algorithm</span>
+        <span id="signaturealgorithm_csharp">
+<a href="#signaturealgorithm_csharp" style="color: inherit; text-decoration: inherit;">Signature<wbr>Algorithm</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1379,7 +1511,9 @@ public key).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Public<wbr>Key<wbr>Pem</span>
+        <span id="publickeypem_go">
+<a href="#publickeypem_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Key<wbr>Pem</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1389,7 +1523,9 @@ public key).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Signature<wbr>Algorithm</span>
+        <span id="signaturealgorithm_go">
+<a href="#signaturealgorithm_go" style="color: inherit; text-decoration: inherit;">Signature<wbr>Algorithm</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1409,7 +1545,9 @@ public key).
 
     <dt class="property-optional"
             title="Optional">
-        <span>public<wbr>Key<wbr>Pem</span>
+        <span id="publickeypem_nodejs">
+<a href="#publickeypem_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Key<wbr>Pem</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1419,7 +1557,9 @@ public key).
 
     <dt class="property-optional"
             title="Optional">
-        <span>signature<wbr>Algorithm</span>
+        <span id="signaturealgorithm_nodejs">
+<a href="#signaturealgorithm_nodejs" style="color: inherit; text-decoration: inherit;">signature<wbr>Algorithm</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1439,7 +1579,9 @@ public key).
 
     <dt class="property-optional"
             title="Optional">
-        <span>public<wbr>Key<wbr>Pem</span>
+        <span id="publickeypem_python">
+<a href="#publickeypem_python" style="color: inherit; text-decoration: inherit;">public<wbr>Key<wbr>Pem</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1449,7 +1591,9 @@ public key).
 
     <dt class="property-optional"
             title="Optional">
-        <span>signature<wbr>Algorithm</span>
+        <span id="signaturealgorithm_python">
+<a href="#signaturealgorithm_python" style="color: inherit; text-decoration: inherit;">signature<wbr>Algorithm</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

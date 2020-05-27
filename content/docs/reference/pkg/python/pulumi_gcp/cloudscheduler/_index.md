@@ -85,7 +85,7 @@ does not have an App Engine app, you must create one.</p>
         <span class="s2">&quot;httpMethod&quot;</span><span class="p">:</span> <span class="s2">&quot;GET&quot;</span><span class="p">,</span>
         <span class="s2">&quot;uri&quot;</span><span class="p">:</span> <span class="s2">&quot;https://cloudscheduler.googleapis.com/v1/projects/my-project-name/locations/us-west1/jobs&quot;</span><span class="p">,</span>
         <span class="s2">&quot;oauth_token&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="s2">&quot;serviceAccountEmail&quot;</span><span class="p">:</span> <span class="n">default</span><span class="o">.</span><span class="n">email</span><span class="p">,</span>
+            <span class="s2">&quot;service_account_email&quot;</span><span class="p">:</span> <span class="n">default</span><span class="o">.</span><span class="n">email</span><span class="p">,</span>
         <span class="p">},</span>
     <span class="p">})</span>
 </pre></div>
@@ -103,7 +103,7 @@ does not have an App Engine app, you must create one.</p>
         <span class="s2">&quot;httpMethod&quot;</span><span class="p">:</span> <span class="s2">&quot;GET&quot;</span><span class="p">,</span>
         <span class="s2">&quot;uri&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.com/ping&quot;</span><span class="p">,</span>
         <span class="s2">&quot;oidc_token&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="s2">&quot;serviceAccountEmail&quot;</span><span class="p">:</span> <span class="n">default</span><span class="o">.</span><span class="n">email</span><span class="p">,</span>
+            <span class="s2">&quot;service_account_email&quot;</span><span class="p">:</span> <span class="n">default</span><span class="o">.</span><span class="n">email</span><span class="p">,</span>
         <span class="p">},</span>
     <span class="p">})</span>
 </pre></div>

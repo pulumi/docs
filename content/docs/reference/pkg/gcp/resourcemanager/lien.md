@@ -228,7 +228,9 @@ The Lien resource accepts the following [input]({{< relref "/docs/intro/concepts
 
     <dt class="property-required"
             title="Required">
-        <span>Origin</span>
+        <span id="origin_csharp">
+<a href="#origin_csharp" style="color: inherit; text-decoration: inherit;">Origin</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -239,7 +241,9 @@ of the Lien, intended to be inspected programmatically. Maximum length of
 
     <dt class="property-required"
             title="Required">
-        <span>Parent</span>
+        <span id="parent_csharp">
+<a href="#parent_csharp" style="color: inherit; text-decoration: inherit;">Parent</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -251,7 +255,9 @@ prefix (e.g. "projects/my-project-name").
 
     <dt class="property-required"
             title="Required">
-        <span>Reason</span>
+        <span id="reason_csharp">
+<a href="#reason_csharp" style="color: inherit; text-decoration: inherit;">Reason</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -261,7 +267,9 @@ on a resource. Maximum length of 200 characters.
 
     <dt class="property-required"
             title="Required">
-        <span>Restrictions</span>
+        <span id="restrictions_csharp">
+<a href="#restrictions_csharp" style="color: inherit; text-decoration: inherit;">Restrictions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -281,7 +289,9 @@ e.g. ['resourcemanager.projects.delete']
 
     <dt class="property-required"
             title="Required">
-        <span>Origin</span>
+        <span id="origin_go">
+<a href="#origin_go" style="color: inherit; text-decoration: inherit;">Origin</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -292,7 +302,9 @@ of the Lien, intended to be inspected programmatically. Maximum length of
 
     <dt class="property-required"
             title="Required">
-        <span>Parent</span>
+        <span id="parent_go">
+<a href="#parent_go" style="color: inherit; text-decoration: inherit;">Parent</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -304,7 +316,9 @@ prefix (e.g. "projects/my-project-name").
 
     <dt class="property-required"
             title="Required">
-        <span>Reason</span>
+        <span id="reason_go">
+<a href="#reason_go" style="color: inherit; text-decoration: inherit;">Reason</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -314,7 +328,9 @@ on a resource. Maximum length of 200 characters.
 
     <dt class="property-required"
             title="Required">
-        <span>Restrictions</span>
+        <span id="restrictions_go">
+<a href="#restrictions_go" style="color: inherit; text-decoration: inherit;">Restrictions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -334,7 +350,9 @@ e.g. ['resourcemanager.projects.delete']
 
     <dt class="property-required"
             title="Required">
-        <span>origin</span>
+        <span id="origin_nodejs">
+<a href="#origin_nodejs" style="color: inherit; text-decoration: inherit;">origin</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -345,7 +363,9 @@ of the Lien, intended to be inspected programmatically. Maximum length of
 
     <dt class="property-required"
             title="Required">
-        <span>parent</span>
+        <span id="parent_nodejs">
+<a href="#parent_nodejs" style="color: inherit; text-decoration: inherit;">parent</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -357,7 +377,9 @@ prefix (e.g. "projects/my-project-name").
 
     <dt class="property-required"
             title="Required">
-        <span>reason</span>
+        <span id="reason_nodejs">
+<a href="#reason_nodejs" style="color: inherit; text-decoration: inherit;">reason</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -367,7 +389,9 @@ on a resource. Maximum length of 200 characters.
 
     <dt class="property-required"
             title="Required">
-        <span>restrictions</span>
+        <span id="restrictions_nodejs">
+<a href="#restrictions_nodejs" style="color: inherit; text-decoration: inherit;">restrictions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -387,7 +411,9 @@ e.g. ['resourcemanager.projects.delete']
 
     <dt class="property-required"
             title="Required">
-        <span>origin</span>
+        <span id="origin_python">
+<a href="#origin_python" style="color: inherit; text-decoration: inherit;">origin</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -398,7 +424,9 @@ of the Lien, intended to be inspected programmatically. Maximum length of
 
     <dt class="property-required"
             title="Required">
-        <span>parent</span>
+        <span id="parent_python">
+<a href="#parent_python" style="color: inherit; text-decoration: inherit;">parent</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -410,7 +438,9 @@ prefix (e.g. "projects/my-project-name").
 
     <dt class="property-required"
             title="Required">
-        <span>reason</span>
+        <span id="reason_python">
+<a href="#reason_python" style="color: inherit; text-decoration: inherit;">reason</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -420,7 +450,9 @@ on a resource. Maximum length of 200 characters.
 
     <dt class="property-required"
             title="Required">
-        <span>restrictions</span>
+        <span id="restrictions_python">
+<a href="#restrictions_python" style="color: inherit; text-decoration: inherit;">restrictions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -451,7 +483,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Create<wbr>Time</span>
+        <span id="createtime_csharp">
+<a href="#createtime_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -460,7 +494,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -468,7 +504,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -484,7 +522,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Create<wbr>Time</span>
+        <span id="createtime_go">
+<a href="#createtime_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -493,7 +533,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -501,7 +543,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -517,7 +561,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>create<wbr>Time</span>
+        <span id="createtime_nodejs">
+<a href="#createtime_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -526,7 +572,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -534,7 +582,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -550,7 +600,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>create_<wbr>time</span>
+        <span id="create_time_python">
+<a href="#create_time_python" style="color: inherit; text-decoration: inherit;">create_<wbr>time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -559,7 +611,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -567,7 +621,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -709,7 +765,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Create<wbr>Time</span>
+        <span id="state_createtime_csharp">
+<a href="#state_createtime_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -718,7 +776,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -727,7 +787,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Origin</span>
+        <span id="state_origin_csharp">
+<a href="#state_origin_csharp" style="color: inherit; text-decoration: inherit;">Origin</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -738,7 +800,9 @@ of the Lien, intended to be inspected programmatically. Maximum length of
 
     <dt class="property-optional"
             title="Optional">
-        <span>Parent</span>
+        <span id="state_parent_csharp">
+<a href="#state_parent_csharp" style="color: inherit; text-decoration: inherit;">Parent</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -750,7 +814,9 @@ prefix (e.g. "projects/my-project-name").
 
     <dt class="property-optional"
             title="Optional">
-        <span>Reason</span>
+        <span id="state_reason_csharp">
+<a href="#state_reason_csharp" style="color: inherit; text-decoration: inherit;">Reason</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -760,7 +826,9 @@ on a resource. Maximum length of 200 characters.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Restrictions</span>
+        <span id="state_restrictions_csharp">
+<a href="#state_restrictions_csharp" style="color: inherit; text-decoration: inherit;">Restrictions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -780,7 +848,9 @@ e.g. ['resourcemanager.projects.delete']
 
     <dt class="property-optional"
             title="Optional">
-        <span>Create<wbr>Time</span>
+        <span id="state_createtime_go">
+<a href="#state_createtime_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -789,7 +859,9 @@ e.g. ['resourcemanager.projects.delete']
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -798,7 +870,9 @@ e.g. ['resourcemanager.projects.delete']
 
     <dt class="property-optional"
             title="Optional">
-        <span>Origin</span>
+        <span id="state_origin_go">
+<a href="#state_origin_go" style="color: inherit; text-decoration: inherit;">Origin</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -809,7 +883,9 @@ of the Lien, intended to be inspected programmatically. Maximum length of
 
     <dt class="property-optional"
             title="Optional">
-        <span>Parent</span>
+        <span id="state_parent_go">
+<a href="#state_parent_go" style="color: inherit; text-decoration: inherit;">Parent</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -821,7 +897,9 @@ prefix (e.g. "projects/my-project-name").
 
     <dt class="property-optional"
             title="Optional">
-        <span>Reason</span>
+        <span id="state_reason_go">
+<a href="#state_reason_go" style="color: inherit; text-decoration: inherit;">Reason</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -831,7 +909,9 @@ on a resource. Maximum length of 200 characters.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Restrictions</span>
+        <span id="state_restrictions_go">
+<a href="#state_restrictions_go" style="color: inherit; text-decoration: inherit;">Restrictions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -851,7 +931,9 @@ e.g. ['resourcemanager.projects.delete']
 
     <dt class="property-optional"
             title="Optional">
-        <span>create<wbr>Time</span>
+        <span id="state_createtime_nodejs">
+<a href="#state_createtime_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -860,7 +942,9 @@ e.g. ['resourcemanager.projects.delete']
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -869,7 +953,9 @@ e.g. ['resourcemanager.projects.delete']
 
     <dt class="property-optional"
             title="Optional">
-        <span>origin</span>
+        <span id="state_origin_nodejs">
+<a href="#state_origin_nodejs" style="color: inherit; text-decoration: inherit;">origin</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -880,7 +966,9 @@ of the Lien, intended to be inspected programmatically. Maximum length of
 
     <dt class="property-optional"
             title="Optional">
-        <span>parent</span>
+        <span id="state_parent_nodejs">
+<a href="#state_parent_nodejs" style="color: inherit; text-decoration: inherit;">parent</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -892,7 +980,9 @@ prefix (e.g. "projects/my-project-name").
 
     <dt class="property-optional"
             title="Optional">
-        <span>reason</span>
+        <span id="state_reason_nodejs">
+<a href="#state_reason_nodejs" style="color: inherit; text-decoration: inherit;">reason</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -902,7 +992,9 @@ on a resource. Maximum length of 200 characters.
 
     <dt class="property-optional"
             title="Optional">
-        <span>restrictions</span>
+        <span id="state_restrictions_nodejs">
+<a href="#state_restrictions_nodejs" style="color: inherit; text-decoration: inherit;">restrictions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -922,7 +1014,9 @@ e.g. ['resourcemanager.projects.delete']
 
     <dt class="property-optional"
             title="Optional">
-        <span>create_<wbr>time</span>
+        <span id="state_create_time_python">
+<a href="#state_create_time_python" style="color: inherit; text-decoration: inherit;">create_<wbr>time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -931,7 +1025,9 @@ e.g. ['resourcemanager.projects.delete']
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -940,7 +1036,9 @@ e.g. ['resourcemanager.projects.delete']
 
     <dt class="property-optional"
             title="Optional">
-        <span>origin</span>
+        <span id="state_origin_python">
+<a href="#state_origin_python" style="color: inherit; text-decoration: inherit;">origin</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -951,7 +1049,9 @@ of the Lien, intended to be inspected programmatically. Maximum length of
 
     <dt class="property-optional"
             title="Optional">
-        <span>parent</span>
+        <span id="state_parent_python">
+<a href="#state_parent_python" style="color: inherit; text-decoration: inherit;">parent</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -963,7 +1063,9 @@ prefix (e.g. "projects/my-project-name").
 
     <dt class="property-optional"
             title="Optional">
-        <span>reason</span>
+        <span id="state_reason_python">
+<a href="#state_reason_python" style="color: inherit; text-decoration: inherit;">reason</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -973,7 +1075,9 @@ on a resource. Maximum length of 200 characters.
 
     <dt class="property-optional"
             title="Optional">
-        <span>restrictions</span>
+        <span id="state_restrictions_python">
+<a href="#state_restrictions_python" style="color: inherit; text-decoration: inherit;">restrictions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>

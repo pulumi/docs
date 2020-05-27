@@ -48,6 +48,7 @@ foo = gcp.container.Cluster("foo",
         "username": "mr.yoda",
         "password": "adoy.rm",
     })
+pulumi.export("stableChannelVersion", central1b.release_channel_default_version["STABLE"])
 ```
 {{% /example %}}
 
@@ -69,6 +70,7 @@ const foo = new gcp.container.Cluster("foo", {
         password: "adoy.rm",
     },
 });
+export const stableChannelVersion = central1b.then(central1b => central1b.releaseChannelDefaultVersion.STABLE);
 ```
 {{% /example %}}
 
@@ -113,7 +115,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Location</span>
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -125,7 +129,9 @@ specified, the provider-level zone must be set and is used instead.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project</span>
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -135,7 +141,9 @@ Defaults to the project that the provider is authenticated with.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Version<wbr>Prefix</span>
+        <span id="versionprefix_csharp">
+<a href="#versionprefix_csharp" style="color: inherit; text-decoration: inherit;">Version<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -156,7 +164,9 @@ for full details on how version strings are formatted.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Location</span>
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -168,7 +178,9 @@ specified, the provider-level zone must be set and is used instead.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project</span>
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -178,7 +190,9 @@ Defaults to the project that the provider is authenticated with.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Version<wbr>Prefix</span>
+        <span id="versionprefix_go">
+<a href="#versionprefix_go" style="color: inherit; text-decoration: inherit;">Version<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -199,7 +213,9 @@ for full details on how version strings are formatted.
 
     <dt class="property-optional"
             title="Optional">
-        <span>location</span>
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -211,7 +227,9 @@ specified, the provider-level zone must be set and is used instead.
 
     <dt class="property-optional"
             title="Optional">
-        <span>project</span>
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -221,7 +239,9 @@ Defaults to the project that the provider is authenticated with.
 
     <dt class="property-optional"
             title="Optional">
-        <span>version<wbr>Prefix</span>
+        <span id="versionprefix_nodejs">
+<a href="#versionprefix_nodejs" style="color: inherit; text-decoration: inherit;">version<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -242,7 +262,9 @@ for full details on how version strings are formatted.
 
     <dt class="property-optional"
             title="Optional">
-        <span>location</span>
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -254,7 +276,9 @@ specified, the provider-level zone must be set and is used instead.
 
     <dt class="property-optional"
             title="Optional">
-        <span>project</span>
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -264,7 +288,9 @@ Defaults to the project that the provider is authenticated with.
 
     <dt class="property-optional"
             title="Optional">
-        <span>version_<wbr>prefix</span>
+        <span id="version_prefix_python">
+<a href="#version_prefix_python" style="color: inherit; text-decoration: inherit;">version_<wbr>prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -298,7 +324,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Default<wbr>Cluster<wbr>Version</span>
+        <span id="defaultclusterversion_csharp">
+<a href="#defaultclusterversion_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Cluster<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -307,7 +335,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -316,7 +346,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Latest<wbr>Master<wbr>Version</span>
+        <span id="latestmasterversion_csharp">
+<a href="#latestmasterversion_csharp" style="color: inherit; text-decoration: inherit;">Latest<wbr>Master<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -325,7 +357,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Latest<wbr>Node<wbr>Version</span>
+        <span id="latestnodeversion_csharp">
+<a href="#latestnodeversion_csharp" style="color: inherit; text-decoration: inherit;">Latest<wbr>Node<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -334,7 +368,20 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Valid<wbr>Master<wbr>Versions</span>
+        <span id="releasechanneldefaultversion_csharp">
+<a href="#releasechanneldefaultversion_csharp" style="color: inherit; text-decoration: inherit;">Release<wbr>Channel<wbr>Default<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A map from a release channel name to the channel's default version.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="validmasterversions_csharp">
+<a href="#validmasterversions_csharp" style="color: inherit; text-decoration: inherit;">Valid<wbr>Master<wbr>Versions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -343,7 +390,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Valid<wbr>Node<wbr>Versions</span>
+        <span id="validnodeversions_csharp">
+<a href="#validnodeversions_csharp" style="color: inherit; text-decoration: inherit;">Valid<wbr>Node<wbr>Versions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -352,7 +401,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Location</span>
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -360,7 +411,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Project</span>
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -368,7 +421,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Version<wbr>Prefix</span>
+        <span id="versionprefix_csharp">
+<a href="#versionprefix_csharp" style="color: inherit; text-decoration: inherit;">Version<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -383,7 +438,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Default<wbr>Cluster<wbr>Version</span>
+        <span id="defaultclusterversion_go">
+<a href="#defaultclusterversion_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Cluster<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -392,7 +449,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -401,7 +460,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Latest<wbr>Master<wbr>Version</span>
+        <span id="latestmasterversion_go">
+<a href="#latestmasterversion_go" style="color: inherit; text-decoration: inherit;">Latest<wbr>Master<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -410,7 +471,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Latest<wbr>Node<wbr>Version</span>
+        <span id="latestnodeversion_go">
+<a href="#latestnodeversion_go" style="color: inherit; text-decoration: inherit;">Latest<wbr>Node<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -419,7 +482,20 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Valid<wbr>Master<wbr>Versions</span>
+        <span id="releasechanneldefaultversion_go">
+<a href="#releasechanneldefaultversion_go" style="color: inherit; text-decoration: inherit;">Release<wbr>Channel<wbr>Default<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}A map from a release channel name to the channel's default version.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="validmasterversions_go">
+<a href="#validmasterversions_go" style="color: inherit; text-decoration: inherit;">Valid<wbr>Master<wbr>Versions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -428,7 +504,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Valid<wbr>Node<wbr>Versions</span>
+        <span id="validnodeversions_go">
+<a href="#validnodeversions_go" style="color: inherit; text-decoration: inherit;">Valid<wbr>Node<wbr>Versions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -437,7 +515,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Location</span>
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -445,7 +525,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Project</span>
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -453,7 +535,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Version<wbr>Prefix</span>
+        <span id="versionprefix_go">
+<a href="#versionprefix_go" style="color: inherit; text-decoration: inherit;">Version<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -468,7 +552,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>default<wbr>Cluster<wbr>Version</span>
+        <span id="defaultclusterversion_nodejs">
+<a href="#defaultclusterversion_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Cluster<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -477,7 +563,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -486,7 +574,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>latest<wbr>Master<wbr>Version</span>
+        <span id="latestmasterversion_nodejs">
+<a href="#latestmasterversion_nodejs" style="color: inherit; text-decoration: inherit;">latest<wbr>Master<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -495,7 +585,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>latest<wbr>Node<wbr>Version</span>
+        <span id="latestnodeversion_nodejs">
+<a href="#latestnodeversion_nodejs" style="color: inherit; text-decoration: inherit;">latest<wbr>Node<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -504,7 +596,20 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>valid<wbr>Master<wbr>Versions</span>
+        <span id="releasechanneldefaultversion_nodejs">
+<a href="#releasechanneldefaultversion_nodejs" style="color: inherit; text-decoration: inherit;">release<wbr>Channel<wbr>Default<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}A map from a release channel name to the channel's default version.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="validmasterversions_nodejs">
+<a href="#validmasterversions_nodejs" style="color: inherit; text-decoration: inherit;">valid<wbr>Master<wbr>Versions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -513,7 +618,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>valid<wbr>Node<wbr>Versions</span>
+        <span id="validnodeversions_nodejs">
+<a href="#validnodeversions_nodejs" style="color: inherit; text-decoration: inherit;">valid<wbr>Node<wbr>Versions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -522,7 +629,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>location</span>
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -530,7 +639,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>project</span>
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -538,7 +649,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>version<wbr>Prefix</span>
+        <span id="versionprefix_nodejs">
+<a href="#versionprefix_nodejs" style="color: inherit; text-decoration: inherit;">version<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -553,7 +666,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>default_<wbr>cluster_<wbr>version</span>
+        <span id="default_cluster_version_python">
+<a href="#default_cluster_version_python" style="color: inherit; text-decoration: inherit;">default_<wbr>cluster_<wbr>version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -562,7 +677,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -571,7 +688,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>latest_<wbr>master_<wbr>version</span>
+        <span id="latest_master_version_python">
+<a href="#latest_master_version_python" style="color: inherit; text-decoration: inherit;">latest_<wbr>master_<wbr>version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -580,7 +699,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>latest_<wbr>node_<wbr>version</span>
+        <span id="latest_node_version_python">
+<a href="#latest_node_version_python" style="color: inherit; text-decoration: inherit;">latest_<wbr>node_<wbr>version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -589,7 +710,20 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>valid_<wbr>master_<wbr>versions</span>
+        <span id="release_channel_default_version_python">
+<a href="#release_channel_default_version_python" style="color: inherit; text-decoration: inherit;">release_<wbr>channel_<wbr>default_<wbr>version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, str]</span>
+    </dt>
+    <dd>{{% md %}}A map from a release channel name to the channel's default version.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="valid_master_versions_python">
+<a href="#valid_master_versions_python" style="color: inherit; text-decoration: inherit;">valid_<wbr>master_<wbr>versions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -598,7 +732,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>valid_<wbr>node_<wbr>versions</span>
+        <span id="valid_node_versions_python">
+<a href="#valid_node_versions_python" style="color: inherit; text-decoration: inherit;">valid_<wbr>node_<wbr>versions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -607,7 +743,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>location</span>
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -615,7 +753,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>project</span>
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -623,7 +763,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>version_<wbr>prefix</span>
+        <span id="version_prefix_python">
+<a href="#version_prefix_python" style="color: inherit; text-decoration: inherit;">version_<wbr>prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

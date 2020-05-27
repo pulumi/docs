@@ -78,7 +78,7 @@ appeng_slo = gcp.monitoring.Slo("appengSlo",
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/monitoring/#Slo">Slo</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>basic_sli=None<span class="p">, </span>calendar_period=None<span class="p">, </span>display_name=None<span class="p">, </span>goal=None<span class="p">, </span>project=None<span class="p">, </span>request_based_sli=None<span class="p">, </span>rolling_period_days=None<span class="p">, </span>service=None<span class="p">, </span>slo_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/monitoring/#Slo">Slo</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>basic_sli=None<span class="p">, </span>calendar_period=None<span class="p">, </span>display_name=None<span class="p">, </span>goal=None<span class="p">, </span>project=None<span class="p">, </span>request_based_sli=None<span class="p">, </span>rolling_period_days=None<span class="p">, </span>service=None<span class="p">, </span>slo_id=None<span class="p">, </span>windows_based_sli=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -252,7 +252,9 @@ The Slo resource accepts the following [input]({{< relref "/docs/intro/concepts/
 
     <dt class="property-required"
             title="Required">
-        <span>Goal</span>
+        <span id="goal_csharp">
+<a href="#goal_csharp" style="color: inherit; text-decoration: inherit;">Goal</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
@@ -262,7 +264,9 @@ to be met. 0 < goal <= 0.999
 
     <dt class="property-required"
             title="Required">
-        <span>Service</span>
+        <span id="service_csharp">
+<a href="#service_csharp" style="color: inherit; text-decoration: inherit;">Service</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -271,7 +275,9 @@ to be met. 0 < goal <= 0.999
 
     <dt class="property-optional"
             title="Optional">
-        <span>Basic<wbr>Sli</span>
+        <span id="basicsli_csharp">
+<a href="#basicsli_csharp" style="color: inherit; text-decoration: inherit;">Basic<wbr>Sli</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#slobasicsli">Slo<wbr>Basic<wbr>Sli<wbr>Args</a></span>
     </dt>
@@ -280,12 +286,14 @@ Performance will be computed on the basis of pre-defined metrics.
 SLIs are used to measure and calculate the quality of the Service's
 performance with respect to a single aspect of service quality.
 Exactly one of the following must be set:
-`basic_sli`, `request_based_sli`  Structure is documented below.
+`basic_sli`, `request_based_sli`, `windows_based_sli`  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Calendar<wbr>Period</span>
+        <span id="calendarperiod_csharp">
+<a href="#calendarperiod_csharp" style="color: inherit; text-decoration: inherit;">Calendar<wbr>Period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -295,7 +303,9 @@ Exactly one of the following must be set:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Display<wbr>Name</span>
+        <span id="displayname_csharp">
+<a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -304,7 +314,9 @@ Exactly one of the following must be set:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project</span>
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -314,7 +326,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Request<wbr>Based<wbr>Sli</span>
+        <span id="requestbasedsli_csharp">
+<a href="#requestbasedsli_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Based<wbr>Sli</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#slorequestbasedsli">Slo<wbr>Request<wbr>Based<wbr>Sli<wbr>Args</a></span>
     </dt>
@@ -324,12 +338,14 @@ A SLI describes a good service.
 It is used to measure and calculate the quality of the Service's
 performance with respect to a single aspect of service quality.
 Exactly one of the following must be set:
-`basic_sli`, `request_based_sli`  Structure is documented below.
+`basic_sli`, `request_based_sli`, `windows_based_sli`  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Rolling<wbr>Period<wbr>Days</span>
+        <span id="rollingperioddays_csharp">
+<a href="#rollingperioddays_csharp" style="color: inherit; text-decoration: inherit;">Rolling<wbr>Period<wbr>Days</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -339,11 +355,31 @@ Must be between 1 to 30 days, inclusive.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Slo<wbr>Id</span>
+        <span id="sloid_csharp">
+<a href="#sloid_csharp" style="color: inherit; text-decoration: inherit;">Slo<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The id to use for this ServiceLevelObjective. If omitted, an id will be generated instead.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="windowsbasedsli_csharp">
+<a href="#windowsbasedsli_csharp" style="color: inherit; text-decoration: inherit;">Windows<wbr>Based<wbr>Sli</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#slowindowsbasedsli">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A windows-based SLI defines the criteria for time windows.
+good_service is defined based off the count of these time windows
+for which the provided service was of good quality.
+A SLI describes a good service. It is used to measure and calculate
+the quality of the Service's performance with respect to a single
+aspect of service quality.
+Exactly one of the following must be set:
+`basic_sli`, `request_based_sli`, `windows_based_sli`  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -355,7 +391,9 @@ Must be between 1 to 30 days, inclusive.
 
     <dt class="property-required"
             title="Required">
-        <span>Goal</span>
+        <span id="goal_go">
+<a href="#goal_go" style="color: inherit; text-decoration: inherit;">Goal</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
@@ -365,7 +403,9 @@ to be met. 0 < goal <= 0.999
 
     <dt class="property-required"
             title="Required">
-        <span>Service</span>
+        <span id="service_go">
+<a href="#service_go" style="color: inherit; text-decoration: inherit;">Service</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -374,7 +414,9 @@ to be met. 0 < goal <= 0.999
 
     <dt class="property-optional"
             title="Optional">
-        <span>Basic<wbr>Sli</span>
+        <span id="basicsli_go">
+<a href="#basicsli_go" style="color: inherit; text-decoration: inherit;">Basic<wbr>Sli</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#slobasicsli">Slo<wbr>Basic<wbr>Sli</a></span>
     </dt>
@@ -383,12 +425,14 @@ Performance will be computed on the basis of pre-defined metrics.
 SLIs are used to measure and calculate the quality of the Service's
 performance with respect to a single aspect of service quality.
 Exactly one of the following must be set:
-`basic_sli`, `request_based_sli`  Structure is documented below.
+`basic_sli`, `request_based_sli`, `windows_based_sli`  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Calendar<wbr>Period</span>
+        <span id="calendarperiod_go">
+<a href="#calendarperiod_go" style="color: inherit; text-decoration: inherit;">Calendar<wbr>Period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -398,7 +442,9 @@ Exactly one of the following must be set:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Display<wbr>Name</span>
+        <span id="displayname_go">
+<a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -407,7 +453,9 @@ Exactly one of the following must be set:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project</span>
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -417,7 +465,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Request<wbr>Based<wbr>Sli</span>
+        <span id="requestbasedsli_go">
+<a href="#requestbasedsli_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Based<wbr>Sli</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#slorequestbasedsli">Slo<wbr>Request<wbr>Based<wbr>Sli</a></span>
     </dt>
@@ -427,12 +477,14 @@ A SLI describes a good service.
 It is used to measure and calculate the quality of the Service's
 performance with respect to a single aspect of service quality.
 Exactly one of the following must be set:
-`basic_sli`, `request_based_sli`  Structure is documented below.
+`basic_sli`, `request_based_sli`, `windows_based_sli`  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Rolling<wbr>Period<wbr>Days</span>
+        <span id="rollingperioddays_go">
+<a href="#rollingperioddays_go" style="color: inherit; text-decoration: inherit;">Rolling<wbr>Period<wbr>Days</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -442,11 +494,31 @@ Must be between 1 to 30 days, inclusive.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Slo<wbr>Id</span>
+        <span id="sloid_go">
+<a href="#sloid_go" style="color: inherit; text-decoration: inherit;">Slo<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The id to use for this ServiceLevelObjective. If omitted, an id will be generated instead.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="windowsbasedsli_go">
+<a href="#windowsbasedsli_go" style="color: inherit; text-decoration: inherit;">Windows<wbr>Based<wbr>Sli</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#slowindowsbasedsli">Slo<wbr>Windows<wbr>Based<wbr>Sli</a></span>
+    </dt>
+    <dd>{{% md %}}A windows-based SLI defines the criteria for time windows.
+good_service is defined based off the count of these time windows
+for which the provided service was of good quality.
+A SLI describes a good service. It is used to measure and calculate
+the quality of the Service's performance with respect to a single
+aspect of service quality.
+Exactly one of the following must be set:
+`basic_sli`, `request_based_sli`, `windows_based_sli`  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -458,7 +530,9 @@ Must be between 1 to 30 days, inclusive.
 
     <dt class="property-required"
             title="Required">
-        <span>goal</span>
+        <span id="goal_nodejs">
+<a href="#goal_nodejs" style="color: inherit; text-decoration: inherit;">goal</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
@@ -468,7 +542,9 @@ to be met. 0 < goal <= 0.999
 
     <dt class="property-required"
             title="Required">
-        <span>service</span>
+        <span id="service_nodejs">
+<a href="#service_nodejs" style="color: inherit; text-decoration: inherit;">service</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -477,7 +553,9 @@ to be met. 0 < goal <= 0.999
 
     <dt class="property-optional"
             title="Optional">
-        <span>basic<wbr>Sli</span>
+        <span id="basicsli_nodejs">
+<a href="#basicsli_nodejs" style="color: inherit; text-decoration: inherit;">basic<wbr>Sli</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#slobasicsli">Slo<wbr>Basic<wbr>Sli</a></span>
     </dt>
@@ -486,12 +564,14 @@ Performance will be computed on the basis of pre-defined metrics.
 SLIs are used to measure and calculate the quality of the Service's
 performance with respect to a single aspect of service quality.
 Exactly one of the following must be set:
-`basic_sli`, `request_based_sli`  Structure is documented below.
+`basic_sli`, `request_based_sli`, `windows_based_sli`  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>calendar<wbr>Period</span>
+        <span id="calendarperiod_nodejs">
+<a href="#calendarperiod_nodejs" style="color: inherit; text-decoration: inherit;">calendar<wbr>Period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -501,7 +581,9 @@ Exactly one of the following must be set:
 
     <dt class="property-optional"
             title="Optional">
-        <span>display<wbr>Name</span>
+        <span id="displayname_nodejs">
+<a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -510,7 +592,9 @@ Exactly one of the following must be set:
 
     <dt class="property-optional"
             title="Optional">
-        <span>project</span>
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -520,7 +604,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>request<wbr>Based<wbr>Sli</span>
+        <span id="requestbasedsli_nodejs">
+<a href="#requestbasedsli_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Based<wbr>Sli</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#slorequestbasedsli">Slo<wbr>Request<wbr>Based<wbr>Sli</a></span>
     </dt>
@@ -530,12 +616,14 @@ A SLI describes a good service.
 It is used to measure and calculate the quality of the Service's
 performance with respect to a single aspect of service quality.
 Exactly one of the following must be set:
-`basic_sli`, `request_based_sli`  Structure is documented below.
+`basic_sli`, `request_based_sli`, `windows_based_sli`  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>rolling<wbr>Period<wbr>Days</span>
+        <span id="rollingperioddays_nodejs">
+<a href="#rollingperioddays_nodejs" style="color: inherit; text-decoration: inherit;">rolling<wbr>Period<wbr>Days</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -545,11 +633,31 @@ Must be between 1 to 30 days, inclusive.
 
     <dt class="property-optional"
             title="Optional">
-        <span>slo<wbr>Id</span>
+        <span id="sloid_nodejs">
+<a href="#sloid_nodejs" style="color: inherit; text-decoration: inherit;">slo<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The id to use for this ServiceLevelObjective. If omitted, an id will be generated instead.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="windowsbasedsli_nodejs">
+<a href="#windowsbasedsli_nodejs" style="color: inherit; text-decoration: inherit;">windows<wbr>Based<wbr>Sli</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#slowindowsbasedsli">Slo<wbr>Windows<wbr>Based<wbr>Sli</a></span>
+    </dt>
+    <dd>{{% md %}}A windows-based SLI defines the criteria for time windows.
+good_service is defined based off the count of these time windows
+for which the provided service was of good quality.
+A SLI describes a good service. It is used to measure and calculate
+the quality of the Service's performance with respect to a single
+aspect of service quality.
+Exactly one of the following must be set:
+`basic_sli`, `request_based_sli`, `windows_based_sli`  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -561,7 +669,9 @@ Must be between 1 to 30 days, inclusive.
 
     <dt class="property-required"
             title="Required">
-        <span>goal</span>
+        <span id="goal_python">
+<a href="#goal_python" style="color: inherit; text-decoration: inherit;">goal</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -571,7 +681,9 @@ to be met. 0 < goal <= 0.999
 
     <dt class="property-required"
             title="Required">
-        <span>service</span>
+        <span id="service_python">
+<a href="#service_python" style="color: inherit; text-decoration: inherit;">service</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -580,7 +692,9 @@ to be met. 0 < goal <= 0.999
 
     <dt class="property-optional"
             title="Optional">
-        <span>basic_<wbr>sli</span>
+        <span id="basic_sli_python">
+<a href="#basic_sli_python" style="color: inherit; text-decoration: inherit;">basic_<wbr>sli</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#slobasicsli">Dict[Slo<wbr>Basic<wbr>Sli]</a></span>
     </dt>
@@ -589,12 +703,14 @@ Performance will be computed on the basis of pre-defined metrics.
 SLIs are used to measure and calculate the quality of the Service's
 performance with respect to a single aspect of service quality.
 Exactly one of the following must be set:
-`basic_sli`, `request_based_sli`  Structure is documented below.
+`basic_sli`, `request_based_sli`, `windows_based_sli`  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>calendar_<wbr>period</span>
+        <span id="calendar_period_python">
+<a href="#calendar_period_python" style="color: inherit; text-decoration: inherit;">calendar_<wbr>period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -604,7 +720,9 @@ Exactly one of the following must be set:
 
     <dt class="property-optional"
             title="Optional">
-        <span>display_<wbr>name</span>
+        <span id="display_name_python">
+<a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -613,7 +731,9 @@ Exactly one of the following must be set:
 
     <dt class="property-optional"
             title="Optional">
-        <span>project</span>
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -623,7 +743,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>request_<wbr>based_<wbr>sli</span>
+        <span id="request_based_sli_python">
+<a href="#request_based_sli_python" style="color: inherit; text-decoration: inherit;">request_<wbr>based_<wbr>sli</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#slorequestbasedsli">Dict[Slo<wbr>Request<wbr>Based<wbr>Sli]</a></span>
     </dt>
@@ -633,12 +755,14 @@ A SLI describes a good service.
 It is used to measure and calculate the quality of the Service's
 performance with respect to a single aspect of service quality.
 Exactly one of the following must be set:
-`basic_sli`, `request_based_sli`  Structure is documented below.
+`basic_sli`, `request_based_sli`, `windows_based_sli`  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>rolling_<wbr>period_<wbr>days</span>
+        <span id="rolling_period_days_python">
+<a href="#rolling_period_days_python" style="color: inherit; text-decoration: inherit;">rolling_<wbr>period_<wbr>days</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -648,11 +772,31 @@ Must be between 1 to 30 days, inclusive.
 
     <dt class="property-optional"
             title="Optional">
-        <span>slo_<wbr>id</span>
+        <span id="slo_id_python">
+<a href="#slo_id_python" style="color: inherit; text-decoration: inherit;">slo_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The id to use for this ServiceLevelObjective. If omitted, an id will be generated instead.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="windows_based_sli_python">
+<a href="#windows_based_sli_python" style="color: inherit; text-decoration: inherit;">windows_<wbr>based_<wbr>sli</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#slowindowsbasedsli">Dict[Slo<wbr>Windows<wbr>Based<wbr>Sli]</a></span>
+    </dt>
+    <dd>{{% md %}}A windows-based SLI defines the criteria for time windows.
+good_service is defined based off the count of these time windows
+for which the provided service was of good quality.
+A SLI describes a good service. It is used to measure and calculate
+the quality of the Service's performance with respect to a single
+aspect of service quality.
+Exactly one of the following must be set:
+`basic_sli`, `request_based_sli`, `windows_based_sli`  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -675,7 +819,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -683,7 +829,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -700,7 +848,9 @@ projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SL
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -708,7 +858,9 @@ projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SL
 
     <dt class="property-"
             title="">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -725,7 +877,9 @@ projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SL
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -733,7 +887,9 @@ projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SL
 
     <dt class="property-"
             title="">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -750,7 +906,9 @@ projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SL
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -758,7 +916,9 @@ projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SL
 
     <dt class="property-"
             title="">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -785,7 +945,7 @@ Get an existing Slo resource's state with the given name, ID, and optional extra
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>basic_sli=None<span class="p">, </span>calendar_period=None<span class="p">, </span>display_name=None<span class="p">, </span>goal=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>request_based_sli=None<span class="p">, </span>rolling_period_days=None<span class="p">, </span>service=None<span class="p">, </span>slo_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>basic_sli=None<span class="p">, </span>calendar_period=None<span class="p">, </span>display_name=None<span class="p">, </span>goal=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>request_based_sli=None<span class="p">, </span>rolling_period_days=None<span class="p">, </span>service=None<span class="p">, </span>slo_id=None<span class="p">, </span>windows_based_sli=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -901,7 +1061,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Basic<wbr>Sli</span>
+        <span id="state_basicsli_csharp">
+<a href="#state_basicsli_csharp" style="color: inherit; text-decoration: inherit;">Basic<wbr>Sli</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#slobasicsli">Slo<wbr>Basic<wbr>Sli<wbr>Args</a></span>
     </dt>
@@ -910,12 +1072,14 @@ Performance will be computed on the basis of pre-defined metrics.
 SLIs are used to measure and calculate the quality of the Service's
 performance with respect to a single aspect of service quality.
 Exactly one of the following must be set:
-`basic_sli`, `request_based_sli`  Structure is documented below.
+`basic_sli`, `request_based_sli`, `windows_based_sli`  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Calendar<wbr>Period</span>
+        <span id="state_calendarperiod_csharp">
+<a href="#state_calendarperiod_csharp" style="color: inherit; text-decoration: inherit;">Calendar<wbr>Period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -925,7 +1089,9 @@ Exactly one of the following must be set:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Display<wbr>Name</span>
+        <span id="state_displayname_csharp">
+<a href="#state_displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -934,7 +1100,9 @@ Exactly one of the following must be set:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Goal</span>
+        <span id="state_goal_csharp">
+<a href="#state_goal_csharp" style="color: inherit; text-decoration: inherit;">Goal</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
@@ -944,7 +1112,9 @@ to be met. 0 < goal <= 0.999
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -954,7 +1124,9 @@ projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SL
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project</span>
+        <span id="state_project_csharp">
+<a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -964,7 +1136,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Request<wbr>Based<wbr>Sli</span>
+        <span id="state_requestbasedsli_csharp">
+<a href="#state_requestbasedsli_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Based<wbr>Sli</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#slorequestbasedsli">Slo<wbr>Request<wbr>Based<wbr>Sli<wbr>Args</a></span>
     </dt>
@@ -974,12 +1148,14 @@ A SLI describes a good service.
 It is used to measure and calculate the quality of the Service's
 performance with respect to a single aspect of service quality.
 Exactly one of the following must be set:
-`basic_sli`, `request_based_sli`  Structure is documented below.
+`basic_sli`, `request_based_sli`, `windows_based_sli`  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Rolling<wbr>Period<wbr>Days</span>
+        <span id="state_rollingperioddays_csharp">
+<a href="#state_rollingperioddays_csharp" style="color: inherit; text-decoration: inherit;">Rolling<wbr>Period<wbr>Days</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -989,7 +1165,9 @@ Must be between 1 to 30 days, inclusive.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Service</span>
+        <span id="state_service_csharp">
+<a href="#state_service_csharp" style="color: inherit; text-decoration: inherit;">Service</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -998,11 +1176,31 @@ Must be between 1 to 30 days, inclusive.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Slo<wbr>Id</span>
+        <span id="state_sloid_csharp">
+<a href="#state_sloid_csharp" style="color: inherit; text-decoration: inherit;">Slo<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The id to use for this ServiceLevelObjective. If omitted, an id will be generated instead.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_windowsbasedsli_csharp">
+<a href="#state_windowsbasedsli_csharp" style="color: inherit; text-decoration: inherit;">Windows<wbr>Based<wbr>Sli</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#slowindowsbasedsli">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A windows-based SLI defines the criteria for time windows.
+good_service is defined based off the count of these time windows
+for which the provided service was of good quality.
+A SLI describes a good service. It is used to measure and calculate
+the quality of the Service's performance with respect to a single
+aspect of service quality.
+Exactly one of the following must be set:
+`basic_sli`, `request_based_sli`, `windows_based_sli`  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1014,7 +1212,9 @@ Must be between 1 to 30 days, inclusive.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Basic<wbr>Sli</span>
+        <span id="state_basicsli_go">
+<a href="#state_basicsli_go" style="color: inherit; text-decoration: inherit;">Basic<wbr>Sli</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#slobasicsli">Slo<wbr>Basic<wbr>Sli</a></span>
     </dt>
@@ -1023,12 +1223,14 @@ Performance will be computed on the basis of pre-defined metrics.
 SLIs are used to measure and calculate the quality of the Service's
 performance with respect to a single aspect of service quality.
 Exactly one of the following must be set:
-`basic_sli`, `request_based_sli`  Structure is documented below.
+`basic_sli`, `request_based_sli`, `windows_based_sli`  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Calendar<wbr>Period</span>
+        <span id="state_calendarperiod_go">
+<a href="#state_calendarperiod_go" style="color: inherit; text-decoration: inherit;">Calendar<wbr>Period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1038,7 +1240,9 @@ Exactly one of the following must be set:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Display<wbr>Name</span>
+        <span id="state_displayname_go">
+<a href="#state_displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1047,7 +1251,9 @@ Exactly one of the following must be set:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Goal</span>
+        <span id="state_goal_go">
+<a href="#state_goal_go" style="color: inherit; text-decoration: inherit;">Goal</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
@@ -1057,7 +1263,9 @@ to be met. 0 < goal <= 0.999
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1067,7 +1275,9 @@ projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SL
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project</span>
+        <span id="state_project_go">
+<a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1077,7 +1287,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Request<wbr>Based<wbr>Sli</span>
+        <span id="state_requestbasedsli_go">
+<a href="#state_requestbasedsli_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Based<wbr>Sli</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#slorequestbasedsli">Slo<wbr>Request<wbr>Based<wbr>Sli</a></span>
     </dt>
@@ -1087,12 +1299,14 @@ A SLI describes a good service.
 It is used to measure and calculate the quality of the Service's
 performance with respect to a single aspect of service quality.
 Exactly one of the following must be set:
-`basic_sli`, `request_based_sli`  Structure is documented below.
+`basic_sli`, `request_based_sli`, `windows_based_sli`  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Rolling<wbr>Period<wbr>Days</span>
+        <span id="state_rollingperioddays_go">
+<a href="#state_rollingperioddays_go" style="color: inherit; text-decoration: inherit;">Rolling<wbr>Period<wbr>Days</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1102,7 +1316,9 @@ Must be between 1 to 30 days, inclusive.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Service</span>
+        <span id="state_service_go">
+<a href="#state_service_go" style="color: inherit; text-decoration: inherit;">Service</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1111,11 +1327,31 @@ Must be between 1 to 30 days, inclusive.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Slo<wbr>Id</span>
+        <span id="state_sloid_go">
+<a href="#state_sloid_go" style="color: inherit; text-decoration: inherit;">Slo<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The id to use for this ServiceLevelObjective. If omitted, an id will be generated instead.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_windowsbasedsli_go">
+<a href="#state_windowsbasedsli_go" style="color: inherit; text-decoration: inherit;">Windows<wbr>Based<wbr>Sli</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#slowindowsbasedsli">Slo<wbr>Windows<wbr>Based<wbr>Sli</a></span>
+    </dt>
+    <dd>{{% md %}}A windows-based SLI defines the criteria for time windows.
+good_service is defined based off the count of these time windows
+for which the provided service was of good quality.
+A SLI describes a good service. It is used to measure and calculate
+the quality of the Service's performance with respect to a single
+aspect of service quality.
+Exactly one of the following must be set:
+`basic_sli`, `request_based_sli`, `windows_based_sli`  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1127,7 +1363,9 @@ Must be between 1 to 30 days, inclusive.
 
     <dt class="property-optional"
             title="Optional">
-        <span>basic<wbr>Sli</span>
+        <span id="state_basicsli_nodejs">
+<a href="#state_basicsli_nodejs" style="color: inherit; text-decoration: inherit;">basic<wbr>Sli</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#slobasicsli">Slo<wbr>Basic<wbr>Sli</a></span>
     </dt>
@@ -1136,12 +1374,14 @@ Performance will be computed on the basis of pre-defined metrics.
 SLIs are used to measure and calculate the quality of the Service's
 performance with respect to a single aspect of service quality.
 Exactly one of the following must be set:
-`basic_sli`, `request_based_sli`  Structure is documented below.
+`basic_sli`, `request_based_sli`, `windows_based_sli`  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>calendar<wbr>Period</span>
+        <span id="state_calendarperiod_nodejs">
+<a href="#state_calendarperiod_nodejs" style="color: inherit; text-decoration: inherit;">calendar<wbr>Period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1151,7 +1391,9 @@ Exactly one of the following must be set:
 
     <dt class="property-optional"
             title="Optional">
-        <span>display<wbr>Name</span>
+        <span id="state_displayname_nodejs">
+<a href="#state_displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1160,7 +1402,9 @@ Exactly one of the following must be set:
 
     <dt class="property-optional"
             title="Optional">
-        <span>goal</span>
+        <span id="state_goal_nodejs">
+<a href="#state_goal_nodejs" style="color: inherit; text-decoration: inherit;">goal</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
@@ -1170,7 +1414,9 @@ to be met. 0 < goal <= 0.999
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1180,7 +1426,9 @@ projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SL
 
     <dt class="property-optional"
             title="Optional">
-        <span>project</span>
+        <span id="state_project_nodejs">
+<a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1190,7 +1438,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>request<wbr>Based<wbr>Sli</span>
+        <span id="state_requestbasedsli_nodejs">
+<a href="#state_requestbasedsli_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Based<wbr>Sli</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#slorequestbasedsli">Slo<wbr>Request<wbr>Based<wbr>Sli</a></span>
     </dt>
@@ -1200,12 +1450,14 @@ A SLI describes a good service.
 It is used to measure and calculate the quality of the Service's
 performance with respect to a single aspect of service quality.
 Exactly one of the following must be set:
-`basic_sli`, `request_based_sli`  Structure is documented below.
+`basic_sli`, `request_based_sli`, `windows_based_sli`  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>rolling<wbr>Period<wbr>Days</span>
+        <span id="state_rollingperioddays_nodejs">
+<a href="#state_rollingperioddays_nodejs" style="color: inherit; text-decoration: inherit;">rolling<wbr>Period<wbr>Days</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1215,7 +1467,9 @@ Must be between 1 to 30 days, inclusive.
 
     <dt class="property-optional"
             title="Optional">
-        <span>service</span>
+        <span id="state_service_nodejs">
+<a href="#state_service_nodejs" style="color: inherit; text-decoration: inherit;">service</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1224,11 +1478,31 @@ Must be between 1 to 30 days, inclusive.
 
     <dt class="property-optional"
             title="Optional">
-        <span>slo<wbr>Id</span>
+        <span id="state_sloid_nodejs">
+<a href="#state_sloid_nodejs" style="color: inherit; text-decoration: inherit;">slo<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The id to use for this ServiceLevelObjective. If omitted, an id will be generated instead.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_windowsbasedsli_nodejs">
+<a href="#state_windowsbasedsli_nodejs" style="color: inherit; text-decoration: inherit;">windows<wbr>Based<wbr>Sli</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#slowindowsbasedsli">Slo<wbr>Windows<wbr>Based<wbr>Sli</a></span>
+    </dt>
+    <dd>{{% md %}}A windows-based SLI defines the criteria for time windows.
+good_service is defined based off the count of these time windows
+for which the provided service was of good quality.
+A SLI describes a good service. It is used to measure and calculate
+the quality of the Service's performance with respect to a single
+aspect of service quality.
+Exactly one of the following must be set:
+`basic_sli`, `request_based_sli`, `windows_based_sli`  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1240,7 +1514,9 @@ Must be between 1 to 30 days, inclusive.
 
     <dt class="property-optional"
             title="Optional">
-        <span>basic_<wbr>sli</span>
+        <span id="state_basic_sli_python">
+<a href="#state_basic_sli_python" style="color: inherit; text-decoration: inherit;">basic_<wbr>sli</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#slobasicsli">Dict[Slo<wbr>Basic<wbr>Sli]</a></span>
     </dt>
@@ -1249,12 +1525,14 @@ Performance will be computed on the basis of pre-defined metrics.
 SLIs are used to measure and calculate the quality of the Service's
 performance with respect to a single aspect of service quality.
 Exactly one of the following must be set:
-`basic_sli`, `request_based_sli`  Structure is documented below.
+`basic_sli`, `request_based_sli`, `windows_based_sli`  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>calendar_<wbr>period</span>
+        <span id="state_calendar_period_python">
+<a href="#state_calendar_period_python" style="color: inherit; text-decoration: inherit;">calendar_<wbr>period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1264,7 +1542,9 @@ Exactly one of the following must be set:
 
     <dt class="property-optional"
             title="Optional">
-        <span>display_<wbr>name</span>
+        <span id="state_display_name_python">
+<a href="#state_display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1273,7 +1553,9 @@ Exactly one of the following must be set:
 
     <dt class="property-optional"
             title="Optional">
-        <span>goal</span>
+        <span id="state_goal_python">
+<a href="#state_goal_python" style="color: inherit; text-decoration: inherit;">goal</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1283,7 +1565,9 @@ to be met. 0 < goal <= 0.999
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1293,7 +1577,9 @@ projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SL
 
     <dt class="property-optional"
             title="Optional">
-        <span>project</span>
+        <span id="state_project_python">
+<a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1303,7 +1589,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>request_<wbr>based_<wbr>sli</span>
+        <span id="state_request_based_sli_python">
+<a href="#state_request_based_sli_python" style="color: inherit; text-decoration: inherit;">request_<wbr>based_<wbr>sli</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#slorequestbasedsli">Dict[Slo<wbr>Request<wbr>Based<wbr>Sli]</a></span>
     </dt>
@@ -1313,12 +1601,14 @@ A SLI describes a good service.
 It is used to measure and calculate the quality of the Service's
 performance with respect to a single aspect of service quality.
 Exactly one of the following must be set:
-`basic_sli`, `request_based_sli`  Structure is documented below.
+`basic_sli`, `request_based_sli`, `windows_based_sli`  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>rolling_<wbr>period_<wbr>days</span>
+        <span id="state_rolling_period_days_python">
+<a href="#state_rolling_period_days_python" style="color: inherit; text-decoration: inherit;">rolling_<wbr>period_<wbr>days</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1328,7 +1618,9 @@ Must be between 1 to 30 days, inclusive.
 
     <dt class="property-optional"
             title="Optional">
-        <span>service</span>
+        <span id="state_service_python">
+<a href="#state_service_python" style="color: inherit; text-decoration: inherit;">service</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1337,11 +1629,31 @@ Must be between 1 to 30 days, inclusive.
 
     <dt class="property-optional"
             title="Optional">
-        <span>slo_<wbr>id</span>
+        <span id="state_slo_id_python">
+<a href="#state_slo_id_python" style="color: inherit; text-decoration: inherit;">slo_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The id to use for this ServiceLevelObjective. If omitted, an id will be generated instead.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_windows_based_sli_python">
+<a href="#state_windows_based_sli_python" style="color: inherit; text-decoration: inherit;">windows_<wbr>based_<wbr>sli</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#slowindowsbasedsli">Dict[Slo<wbr>Windows<wbr>Based<wbr>Sli]</a></span>
+    </dt>
+    <dd>{{% md %}}A windows-based SLI defines the criteria for time windows.
+good_service is defined based off the count of these time windows
+for which the provided service was of good quality.
+A SLI describes a good service. It is used to measure and calculate
+the quality of the Service's performance with respect to a single
+aspect of service quality.
+Exactly one of the following must be set:
+`basic_sli`, `request_based_sli`, `windows_based_sli`  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1379,7 +1691,9 @@ Must be between 1 to 30 days, inclusive.
 
     <dt class="property-required"
             title="Required">
-        <span>Latency</span>
+        <span id="latency_csharp">
+<a href="#latency_csharp" style="color: inherit; text-decoration: inherit;">Latency</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#slobasicslilatency">Slo<wbr>Basic<wbr>Sli<wbr>Latency<wbr>Args</a></span>
     </dt>
@@ -1388,7 +1702,9 @@ Must be between 1 to 30 days, inclusive.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Locations</span>
+        <span id="locations_csharp">
+<a href="#locations_csharp" style="color: inherit; text-decoration: inherit;">Locations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1402,7 +1718,9 @@ field will result in an error.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Methods</span>
+        <span id="methods_csharp">
+<a href="#methods_csharp" style="color: inherit; text-decoration: inherit;">Methods</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1416,7 +1734,9 @@ error.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Versions</span>
+        <span id="versions_csharp">
+<a href="#versions_csharp" style="color: inherit; text-decoration: inherit;">Versions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1437,7 +1757,9 @@ field will result in an error.
 
     <dt class="property-required"
             title="Required">
-        <span>Latency</span>
+        <span id="latency_go">
+<a href="#latency_go" style="color: inherit; text-decoration: inherit;">Latency</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#slobasicslilatency">Slo<wbr>Basic<wbr>Sli<wbr>Latency</a></span>
     </dt>
@@ -1446,7 +1768,9 @@ field will result in an error.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Locations</span>
+        <span id="locations_go">
+<a href="#locations_go" style="color: inherit; text-decoration: inherit;">Locations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1460,7 +1784,9 @@ field will result in an error.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Methods</span>
+        <span id="methods_go">
+<a href="#methods_go" style="color: inherit; text-decoration: inherit;">Methods</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1474,7 +1800,9 @@ error.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Versions</span>
+        <span id="versions_go">
+<a href="#versions_go" style="color: inherit; text-decoration: inherit;">Versions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1495,7 +1823,9 @@ field will result in an error.
 
     <dt class="property-required"
             title="Required">
-        <span>latency</span>
+        <span id="latency_nodejs">
+<a href="#latency_nodejs" style="color: inherit; text-decoration: inherit;">latency</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#slobasicslilatency">Slo<wbr>Basic<wbr>Sli<wbr>Latency</a></span>
     </dt>
@@ -1504,7 +1834,9 @@ field will result in an error.
 
     <dt class="property-optional"
             title="Optional">
-        <span>locations</span>
+        <span id="locations_nodejs">
+<a href="#locations_nodejs" style="color: inherit; text-decoration: inherit;">locations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1518,7 +1850,9 @@ field will result in an error.
 
     <dt class="property-optional"
             title="Optional">
-        <span>methods</span>
+        <span id="methods_nodejs">
+<a href="#methods_nodejs" style="color: inherit; text-decoration: inherit;">methods</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1532,7 +1866,9 @@ error.
 
     <dt class="property-optional"
             title="Optional">
-        <span>versions</span>
+        <span id="versions_nodejs">
+<a href="#versions_nodejs" style="color: inherit; text-decoration: inherit;">versions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1553,7 +1889,9 @@ field will result in an error.
 
     <dt class="property-required"
             title="Required">
-        <span>latency</span>
+        <span id="latency_python">
+<a href="#latency_python" style="color: inherit; text-decoration: inherit;">latency</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#slobasicslilatency">Dict[Slo<wbr>Basic<wbr>Sli<wbr>Latency]</a></span>
     </dt>
@@ -1562,7 +1900,9 @@ field will result in an error.
 
     <dt class="property-optional"
             title="Optional">
-        <span>locations</span>
+        <span id="locations_python">
+<a href="#locations_python" style="color: inherit; text-decoration: inherit;">locations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1576,7 +1916,9 @@ field will result in an error.
 
     <dt class="property-optional"
             title="Optional">
-        <span>methods</span>
+        <span id="methods_python">
+<a href="#methods_python" style="color: inherit; text-decoration: inherit;">methods</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1590,7 +1932,9 @@ error.
 
     <dt class="property-optional"
             title="Optional">
-        <span>versions</span>
+        <span id="versions_python">
+<a href="#versions_python" style="color: inherit; text-decoration: inherit;">versions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1629,7 +1973,9 @@ field will result in an error.
 
     <dt class="property-required"
             title="Required">
-        <span>Threshold</span>
+        <span id="threshold_csharp">
+<a href="#threshold_csharp" style="color: inherit; text-decoration: inherit;">Threshold</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1647,7 +1993,9 @@ this service that return in no more than threshold.
 
     <dt class="property-required"
             title="Required">
-        <span>Threshold</span>
+        <span id="threshold_go">
+<a href="#threshold_go" style="color: inherit; text-decoration: inherit;">Threshold</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1665,7 +2013,9 @@ this service that return in no more than threshold.
 
     <dt class="property-required"
             title="Required">
-        <span>threshold</span>
+        <span id="threshold_nodejs">
+<a href="#threshold_nodejs" style="color: inherit; text-decoration: inherit;">threshold</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1683,7 +2033,9 @@ this service that return in no more than threshold.
 
     <dt class="property-required"
             title="Required">
-        <span>threshold</span>
+        <span id="threshold_python">
+<a href="#threshold_python" style="color: inherit; text-decoration: inherit;">threshold</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1719,7 +2071,9 @@ this service that return in no more than threshold.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Distribution<wbr>Cut</span>
+        <span id="distributioncut_csharp">
+<a href="#distributioncut_csharp" style="color: inherit; text-decoration: inherit;">Distribution<wbr>Cut</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#slorequestbasedslidistributioncut">Slo<wbr>Request<wbr>Based<wbr>Sli<wbr>Distribution<wbr>Cut<wbr>Args</a></span>
     </dt>
@@ -1727,13 +2081,14 @@ this service that return in no more than threshold.
 Distribution that fall into a good range. The total_service is the
 total count of all values aggregated in the Distribution.
 Defines a distribution TimeSeries filter and thresholds used for
-measuring good service and total service.
-Exactly one of `distribution_cut` or `good_total_ratio` can be set.  Structure is documented below.
+measuring good service and total service.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Good<wbr>Total<wbr>Ratio</span>
+        <span id="goodtotalratio_csharp">
+<a href="#goodtotalratio_csharp" style="color: inherit; text-decoration: inherit;">Good<wbr>Total<wbr>Ratio</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#slorequestbasedsligoodtotalratio">Slo<wbr>Request<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Args</a></span>
     </dt>
@@ -1741,8 +2096,7 @@ Exactly one of `distribution_cut` or `good_total_ratio` can be set.  Structure i
 Defines computing this ratio with two TimeSeries [monitoring filters](https://cloud.google.com/monitoring/api/v3/filters)
 Must specify exactly two of good, bad, and total service filters.
 The relationship good_service + bad_service = total_service
-will be assumed.
-Exactly one of `distribution_cut` or `good_total_ratio` can be set.  Structure is documented below.
+will be assumed.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1754,7 +2108,9 @@ Exactly one of `distribution_cut` or `good_total_ratio` can be set.  Structure i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Distribution<wbr>Cut</span>
+        <span id="distributioncut_go">
+<a href="#distributioncut_go" style="color: inherit; text-decoration: inherit;">Distribution<wbr>Cut</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#slorequestbasedslidistributioncut">Slo<wbr>Request<wbr>Based<wbr>Sli<wbr>Distribution<wbr>Cut</a></span>
     </dt>
@@ -1762,13 +2118,14 @@ Exactly one of `distribution_cut` or `good_total_ratio` can be set.  Structure i
 Distribution that fall into a good range. The total_service is the
 total count of all values aggregated in the Distribution.
 Defines a distribution TimeSeries filter and thresholds used for
-measuring good service and total service.
-Exactly one of `distribution_cut` or `good_total_ratio` can be set.  Structure is documented below.
+measuring good service and total service.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Good<wbr>Total<wbr>Ratio</span>
+        <span id="goodtotalratio_go">
+<a href="#goodtotalratio_go" style="color: inherit; text-decoration: inherit;">Good<wbr>Total<wbr>Ratio</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#slorequestbasedsligoodtotalratio">Slo<wbr>Request<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio</a></span>
     </dt>
@@ -1776,8 +2133,7 @@ Exactly one of `distribution_cut` or `good_total_ratio` can be set.  Structure i
 Defines computing this ratio with two TimeSeries [monitoring filters](https://cloud.google.com/monitoring/api/v3/filters)
 Must specify exactly two of good, bad, and total service filters.
 The relationship good_service + bad_service = total_service
-will be assumed.
-Exactly one of `distribution_cut` or `good_total_ratio` can be set.  Structure is documented below.
+will be assumed.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1789,7 +2145,9 @@ Exactly one of `distribution_cut` or `good_total_ratio` can be set.  Structure i
 
     <dt class="property-optional"
             title="Optional">
-        <span>distribution<wbr>Cut</span>
+        <span id="distributioncut_nodejs">
+<a href="#distributioncut_nodejs" style="color: inherit; text-decoration: inherit;">distribution<wbr>Cut</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#slorequestbasedslidistributioncut">Slo<wbr>Request<wbr>Based<wbr>Sli<wbr>Distribution<wbr>Cut</a></span>
     </dt>
@@ -1797,13 +2155,14 @@ Exactly one of `distribution_cut` or `good_total_ratio` can be set.  Structure i
 Distribution that fall into a good range. The total_service is the
 total count of all values aggregated in the Distribution.
 Defines a distribution TimeSeries filter and thresholds used for
-measuring good service and total service.
-Exactly one of `distribution_cut` or `good_total_ratio` can be set.  Structure is documented below.
+measuring good service and total service.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>good<wbr>Total<wbr>Ratio</span>
+        <span id="goodtotalratio_nodejs">
+<a href="#goodtotalratio_nodejs" style="color: inherit; text-decoration: inherit;">good<wbr>Total<wbr>Ratio</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#slorequestbasedsligoodtotalratio">Slo<wbr>Request<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio</a></span>
     </dt>
@@ -1811,8 +2170,7 @@ Exactly one of `distribution_cut` or `good_total_ratio` can be set.  Structure i
 Defines computing this ratio with two TimeSeries [monitoring filters](https://cloud.google.com/monitoring/api/v3/filters)
 Must specify exactly two of good, bad, and total service filters.
 The relationship good_service + bad_service = total_service
-will be assumed.
-Exactly one of `distribution_cut` or `good_total_ratio` can be set.  Structure is documented below.
+will be assumed.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1824,7 +2182,9 @@ Exactly one of `distribution_cut` or `good_total_ratio` can be set.  Structure i
 
     <dt class="property-optional"
             title="Optional">
-        <span>distribution<wbr>Cut</span>
+        <span id="distributioncut_python">
+<a href="#distributioncut_python" style="color: inherit; text-decoration: inherit;">distribution<wbr>Cut</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#slorequestbasedslidistributioncut">Dict[Slo<wbr>Request<wbr>Based<wbr>Sli<wbr>Distribution<wbr>Cut]</a></span>
     </dt>
@@ -1832,13 +2192,14 @@ Exactly one of `distribution_cut` or `good_total_ratio` can be set.  Structure i
 Distribution that fall into a good range. The total_service is the
 total count of all values aggregated in the Distribution.
 Defines a distribution TimeSeries filter and thresholds used for
-measuring good service and total service.
-Exactly one of `distribution_cut` or `good_total_ratio` can be set.  Structure is documented below.
+measuring good service and total service.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>good<wbr>Total<wbr>Ratio</span>
+        <span id="goodtotalratio_python">
+<a href="#goodtotalratio_python" style="color: inherit; text-decoration: inherit;">good<wbr>Total<wbr>Ratio</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#slorequestbasedsligoodtotalratio">Dict[Slo<wbr>Request<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio]</a></span>
     </dt>
@@ -1846,8 +2207,7 @@ Exactly one of `distribution_cut` or `good_total_ratio` can be set.  Structure i
 Defines computing this ratio with two TimeSeries [monitoring filters](https://cloud.google.com/monitoring/api/v3/filters)
 Must specify exactly two of good, bad, and total service filters.
 The relationship good_service + bad_service = total_service
-will be assumed.
-Exactly one of `distribution_cut` or `good_total_ratio` can be set.  Structure is documented below.
+will be assumed.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1877,7 +2237,9 @@ Exactly one of `distribution_cut` or `good_total_ratio` can be set.  Structure i
 
     <dt class="property-required"
             title="Required">
-        <span>Distribution<wbr>Filter</span>
+        <span id="distributionfilter_csharp">
+<a href="#distributionfilter_csharp" style="color: inherit; text-decoration: inherit;">Distribution<wbr>Filter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1889,7 +2251,9 @@ MetricKind = DELTA or MetricKind = CUMULATIVE.
 
     <dt class="property-required"
             title="Required">
-        <span>Range</span>
+        <span id="range_csharp">
+<a href="#range_csharp" style="color: inherit; text-decoration: inherit;">Range</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#slorequestbasedslidistributioncutrange">Slo<wbr>Request<wbr>Based<wbr>Sli<wbr>Distribution<wbr>Cut<wbr>Range<wbr>Args</a></span>
     </dt>
@@ -1897,7 +2261,8 @@ MetricKind = DELTA or MetricKind = CUMULATIVE.
 will be the count of values x in the Distribution such
 that range.min <= x < range.max. inclusive of min and
 exclusive of max. Open ranges can be defined by setting
-just one of min or max.  Structure is documented below.
+just one of min or max. Summed value `X` should satisfy
+`range.min <= X < range.max` for a good window.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1909,7 +2274,9 @@ just one of min or max.  Structure is documented below.
 
     <dt class="property-required"
             title="Required">
-        <span>Distribution<wbr>Filter</span>
+        <span id="distributionfilter_go">
+<a href="#distributionfilter_go" style="color: inherit; text-decoration: inherit;">Distribution<wbr>Filter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1921,7 +2288,9 @@ MetricKind = DELTA or MetricKind = CUMULATIVE.
 
     <dt class="property-required"
             title="Required">
-        <span>Range</span>
+        <span id="range_go">
+<a href="#range_go" style="color: inherit; text-decoration: inherit;">Range</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#slorequestbasedslidistributioncutrange">Slo<wbr>Request<wbr>Based<wbr>Sli<wbr>Distribution<wbr>Cut<wbr>Range</a></span>
     </dt>
@@ -1929,7 +2298,8 @@ MetricKind = DELTA or MetricKind = CUMULATIVE.
 will be the count of values x in the Distribution such
 that range.min <= x < range.max. inclusive of min and
 exclusive of max. Open ranges can be defined by setting
-just one of min or max.  Structure is documented below.
+just one of min or max. Summed value `X` should satisfy
+`range.min <= X < range.max` for a good window.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1941,7 +2311,9 @@ just one of min or max.  Structure is documented below.
 
     <dt class="property-required"
             title="Required">
-        <span>distribution<wbr>Filter</span>
+        <span id="distributionfilter_nodejs">
+<a href="#distributionfilter_nodejs" style="color: inherit; text-decoration: inherit;">distribution<wbr>Filter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1953,7 +2325,9 @@ MetricKind = DELTA or MetricKind = CUMULATIVE.
 
     <dt class="property-required"
             title="Required">
-        <span>range</span>
+        <span id="range_nodejs">
+<a href="#range_nodejs" style="color: inherit; text-decoration: inherit;">range</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#slorequestbasedslidistributioncutrange">Slo<wbr>Request<wbr>Based<wbr>Sli<wbr>Distribution<wbr>Cut<wbr>Range</a></span>
     </dt>
@@ -1961,7 +2335,8 @@ MetricKind = DELTA or MetricKind = CUMULATIVE.
 will be the count of values x in the Distribution such
 that range.min <= x < range.max. inclusive of min and
 exclusive of max. Open ranges can be defined by setting
-just one of min or max.  Structure is documented below.
+just one of min or max. Summed value `X` should satisfy
+`range.min <= X < range.max` for a good window.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1973,7 +2348,9 @@ just one of min or max.  Structure is documented below.
 
     <dt class="property-required"
             title="Required">
-        <span>distribution<wbr>Filter</span>
+        <span id="distributionfilter_python">
+<a href="#distributionfilter_python" style="color: inherit; text-decoration: inherit;">distribution<wbr>Filter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1985,7 +2362,9 @@ MetricKind = DELTA or MetricKind = CUMULATIVE.
 
     <dt class="property-required"
             title="Required">
-        <span>range</span>
+        <span id="range_python">
+<a href="#range_python" style="color: inherit; text-decoration: inherit;">range</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#slorequestbasedslidistributioncutrange">Dict[Slo<wbr>Request<wbr>Based<wbr>Sli<wbr>Distribution<wbr>Cut<wbr>Range]</a></span>
     </dt>
@@ -1993,7 +2372,8 @@ MetricKind = DELTA or MetricKind = CUMULATIVE.
 will be the count of values x in the Distribution such
 that range.min <= x < range.max. inclusive of min and
 exclusive of max. Open ranges can be defined by setting
-just one of min or max.  Structure is documented below.
+just one of min or max. Summed value `X` should satisfy
+`range.min <= X < range.max` for a good window.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -2023,7 +2403,9 @@ just one of min or max.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max</span>
+        <span id="max_csharp">
+<a href="#max_csharp" style="color: inherit; text-decoration: inherit;">Max</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -2034,7 +2416,9 @@ will be set to "infinity", defining an open range
 
     <dt class="property-optional"
             title="Optional">
-        <span>Min</span>
+        <span id="min_csharp">
+<a href="#min_csharp" style="color: inherit; text-decoration: inherit;">Min</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -2052,7 +2436,9 @@ will be set to "-infinity", defining an open range
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max</span>
+        <span id="max_go">
+<a href="#max_go" style="color: inherit; text-decoration: inherit;">Max</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -2063,7 +2449,9 @@ will be set to "infinity", defining an open range
 
     <dt class="property-optional"
             title="Optional">
-        <span>Min</span>
+        <span id="min_go">
+<a href="#min_go" style="color: inherit; text-decoration: inherit;">Min</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -2081,7 +2469,9 @@ will be set to "-infinity", defining an open range
 
     <dt class="property-optional"
             title="Optional">
-        <span>max</span>
+        <span id="max_nodejs">
+<a href="#max_nodejs" style="color: inherit; text-decoration: inherit;">max</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -2092,7 +2482,9 @@ will be set to "infinity", defining an open range
 
     <dt class="property-optional"
             title="Optional">
-        <span>min</span>
+        <span id="min_nodejs">
+<a href="#min_nodejs" style="color: inherit; text-decoration: inherit;">min</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -2110,7 +2502,9 @@ will be set to "-infinity", defining an open range
 
     <dt class="property-optional"
             title="Optional">
-        <span>max</span>
+        <span id="max_python">
+<a href="#max_python" style="color: inherit; text-decoration: inherit;">max</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2121,7 +2515,9 @@ will be set to "infinity", defining an open range
 
     <dt class="property-optional"
             title="Optional">
-        <span>min</span>
+        <span id="min_python">
+<a href="#min_python" style="color: inherit; text-decoration: inherit;">min</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2157,46 +2553,52 @@ will be set to "-infinity", defining an open range
 
     <dt class="property-optional"
             title="Optional">
-        <span>Bad<wbr>Service<wbr>Filter</span>
+        <span id="badservicefilter_csharp">
+<a href="#badservicefilter_csharp" style="color: inherit; text-decoration: inherit;">Bad<wbr>Service<wbr>Filter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
 quantifying bad service provided, either demanded service that
 was not provided or demanded service that was of inadequate
-quality.
+quality. Exactly two of
+good, bad, or total service filter must be defined (where
+good + bad = total is assumed)
 Must have ValueType = DOUBLE or ValueType = INT64 and
 must have MetricKind = DELTA or MetricKind = CUMULATIVE.
-Exactly two of `good_service_filter`,`bad_service_filter`,`total_service_filter`
-must be set (good + bad = total is assumed).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Good<wbr>Service<wbr>Filter</span>
+        <span id="goodservicefilter_csharp">
+<a href="#goodservicefilter_csharp" style="color: inherit; text-decoration: inherit;">Good<wbr>Service<wbr>Filter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
-quantifying good service provided.
+quantifying good service provided. Exactly two of
+good, bad, or total service filter must be defined (where
+good + bad = total is assumed)
 Must have ValueType = DOUBLE or ValueType = INT64 and
 must have MetricKind = DELTA or MetricKind = CUMULATIVE.
-Exactly two of `good_service_filter`,`bad_service_filter`,`total_service_filter`
-must be set (good + bad = total is assumed).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Total<wbr>Service<wbr>Filter</span>
+        <span id="totalservicefilter_csharp">
+<a href="#totalservicefilter_csharp" style="color: inherit; text-decoration: inherit;">Total<wbr>Service<wbr>Filter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
-quantifying total demanded service.
+quantifying total demanded service. Exactly two of
+good, bad, or total service filter must be defined (where
+good + bad = total is assumed)
 Must have ValueType = DOUBLE or ValueType = INT64 and
 must have MetricKind = DELTA or MetricKind = CUMULATIVE.
-Exactly two of `good_service_filter`,`bad_service_filter`,`total_service_filter`
-must be set (good + bad = total is assumed).
 {{% /md %}}</dd>
 
 </dl>
@@ -2208,46 +2610,52 @@ must be set (good + bad = total is assumed).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Bad<wbr>Service<wbr>Filter</span>
+        <span id="badservicefilter_go">
+<a href="#badservicefilter_go" style="color: inherit; text-decoration: inherit;">Bad<wbr>Service<wbr>Filter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
 quantifying bad service provided, either demanded service that
 was not provided or demanded service that was of inadequate
-quality.
+quality. Exactly two of
+good, bad, or total service filter must be defined (where
+good + bad = total is assumed)
 Must have ValueType = DOUBLE or ValueType = INT64 and
 must have MetricKind = DELTA or MetricKind = CUMULATIVE.
-Exactly two of `good_service_filter`,`bad_service_filter`,`total_service_filter`
-must be set (good + bad = total is assumed).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Good<wbr>Service<wbr>Filter</span>
+        <span id="goodservicefilter_go">
+<a href="#goodservicefilter_go" style="color: inherit; text-decoration: inherit;">Good<wbr>Service<wbr>Filter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
-quantifying good service provided.
+quantifying good service provided. Exactly two of
+good, bad, or total service filter must be defined (where
+good + bad = total is assumed)
 Must have ValueType = DOUBLE or ValueType = INT64 and
 must have MetricKind = DELTA or MetricKind = CUMULATIVE.
-Exactly two of `good_service_filter`,`bad_service_filter`,`total_service_filter`
-must be set (good + bad = total is assumed).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Total<wbr>Service<wbr>Filter</span>
+        <span id="totalservicefilter_go">
+<a href="#totalservicefilter_go" style="color: inherit; text-decoration: inherit;">Total<wbr>Service<wbr>Filter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
-quantifying total demanded service.
+quantifying total demanded service. Exactly two of
+good, bad, or total service filter must be defined (where
+good + bad = total is assumed)
 Must have ValueType = DOUBLE or ValueType = INT64 and
 must have MetricKind = DELTA or MetricKind = CUMULATIVE.
-Exactly two of `good_service_filter`,`bad_service_filter`,`total_service_filter`
-must be set (good + bad = total is assumed).
 {{% /md %}}</dd>
 
 </dl>
@@ -2259,46 +2667,52 @@ must be set (good + bad = total is assumed).
 
     <dt class="property-optional"
             title="Optional">
-        <span>bad<wbr>Service<wbr>Filter</span>
+        <span id="badservicefilter_nodejs">
+<a href="#badservicefilter_nodejs" style="color: inherit; text-decoration: inherit;">bad<wbr>Service<wbr>Filter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
 quantifying bad service provided, either demanded service that
 was not provided or demanded service that was of inadequate
-quality.
+quality. Exactly two of
+good, bad, or total service filter must be defined (where
+good + bad = total is assumed)
 Must have ValueType = DOUBLE or ValueType = INT64 and
 must have MetricKind = DELTA or MetricKind = CUMULATIVE.
-Exactly two of `good_service_filter`,`bad_service_filter`,`total_service_filter`
-must be set (good + bad = total is assumed).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>good<wbr>Service<wbr>Filter</span>
+        <span id="goodservicefilter_nodejs">
+<a href="#goodservicefilter_nodejs" style="color: inherit; text-decoration: inherit;">good<wbr>Service<wbr>Filter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
-quantifying good service provided.
+quantifying good service provided. Exactly two of
+good, bad, or total service filter must be defined (where
+good + bad = total is assumed)
 Must have ValueType = DOUBLE or ValueType = INT64 and
 must have MetricKind = DELTA or MetricKind = CUMULATIVE.
-Exactly two of `good_service_filter`,`bad_service_filter`,`total_service_filter`
-must be set (good + bad = total is assumed).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>total<wbr>Service<wbr>Filter</span>
+        <span id="totalservicefilter_nodejs">
+<a href="#totalservicefilter_nodejs" style="color: inherit; text-decoration: inherit;">total<wbr>Service<wbr>Filter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
-quantifying total demanded service.
+quantifying total demanded service. Exactly two of
+good, bad, or total service filter must be defined (where
+good + bad = total is assumed)
 Must have ValueType = DOUBLE or ValueType = INT64 and
 must have MetricKind = DELTA or MetricKind = CUMULATIVE.
-Exactly two of `good_service_filter`,`bad_service_filter`,`total_service_filter`
-must be set (good + bad = total is assumed).
 {{% /md %}}</dd>
 
 </dl>
@@ -2310,46 +2724,2352 @@ must be set (good + bad = total is assumed).
 
     <dt class="property-optional"
             title="Optional">
-        <span>bad<wbr>Service<wbr>Filter</span>
+        <span id="badservicefilter_python">
+<a href="#badservicefilter_python" style="color: inherit; text-decoration: inherit;">bad<wbr>Service<wbr>Filter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
 quantifying bad service provided, either demanded service that
 was not provided or demanded service that was of inadequate
-quality.
+quality. Exactly two of
+good, bad, or total service filter must be defined (where
+good + bad = total is assumed)
 Must have ValueType = DOUBLE or ValueType = INT64 and
 must have MetricKind = DELTA or MetricKind = CUMULATIVE.
-Exactly two of `good_service_filter`,`bad_service_filter`,`total_service_filter`
-must be set (good + bad = total is assumed).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>good<wbr>Service<wbr>Filter</span>
+        <span id="goodservicefilter_python">
+<a href="#goodservicefilter_python" style="color: inherit; text-decoration: inherit;">good<wbr>Service<wbr>Filter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
-quantifying good service provided.
+quantifying good service provided. Exactly two of
+good, bad, or total service filter must be defined (where
+good + bad = total is assumed)
 Must have ValueType = DOUBLE or ValueType = INT64 and
 must have MetricKind = DELTA or MetricKind = CUMULATIVE.
-Exactly two of `good_service_filter`,`bad_service_filter`,`total_service_filter`
-must be set (good + bad = total is assumed).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>total<wbr>Service<wbr>Filter</span>
+        <span id="totalservicefilter_python">
+<a href="#totalservicefilter_python" style="color: inherit; text-decoration: inherit;">total<wbr>Service<wbr>Filter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
-quantifying total demanded service.
+quantifying total demanded service. Exactly two of
+good, bad, or total service filter must be defined (where
+good + bad = total is assumed)
 Must have ValueType = DOUBLE or ValueType = INT64 and
 must have MetricKind = DELTA or MetricKind = CUMULATIVE.
-Exactly two of `good_service_filter`,`bad_service_filter`,`total_service_filter`
-must be set (good + bad = total is assumed).
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="slowindowsbasedsli">Slo<wbr>Windows<wbr>Based<wbr>Sli</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#SloWindowsBasedSli">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#SloWindowsBasedSli">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#SloWindowsBasedSliArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#SloWindowsBasedSliOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Inputs.SloWindowsBasedSliArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Outputs.SloWindowsBasedSli.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="goodbadmetricfilter_csharp">
+<a href="#goodbadmetricfilter_csharp" style="color: inherit; text-decoration: inherit;">Good<wbr>Bad<wbr>Metric<wbr>Filter</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
+with ValueType = BOOL. The window is good if any true values
+appear in the window. One of `good_bad_metric_filter`,
+`good_total_ratio_threshold`, `metric_mean_in_range`,
+`metric_sum_in_range` must be set for `windows_based_sli`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="goodtotalratiothreshold_csharp">
+<a href="#goodtotalratiothreshold_csharp" style="color: inherit; text-decoration: inherit;">Good<wbr>Total<wbr>Ratio<wbr>Threshold</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothreshold">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Criterion that describes a window as good if its performance is
+high enough. One of `good_bad_metric_filter`,
+`good_total_ratio_threshold`, `metric_mean_in_range`,
+`metric_sum_in_range` must be set for `windows_based_sli`.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="metricmeaninrange_csharp">
+<a href="#metricmeaninrange_csharp" style="color: inherit; text-decoration: inherit;">Metric<wbr>Mean<wbr>In<wbr>Range</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#slowindowsbasedslimetricmeaninrange">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Metric<wbr>Mean<wbr>In<wbr>Range<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Criterion that describes a window as good if the metric's value
+is in a good range, *averaged* across returned streams.
+One of `good_bad_metric_filter`,
+`good_total_ratio_threshold`, `metric_mean_in_range`,
+`metric_sum_in_range` must be set for `windows_based_sli`.
+Average value X of `time_series` should satisfy
+`range.min <= X < range.max` for a good window.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="metricsuminrange_csharp">
+<a href="#metricsuminrange_csharp" style="color: inherit; text-decoration: inherit;">Metric<wbr>Sum<wbr>In<wbr>Range</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#slowindowsbasedslimetricsuminrange">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Metric<wbr>Sum<wbr>In<wbr>Range<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Criterion that describes a window as good if the metric's value
+is in a good range, *summed* across returned streams.
+Summed value `X` of `time_series` should satisfy
+`range.min <= X < range.max` for a good window.
+One of `good_bad_metric_filter`,
+`good_total_ratio_threshold`, `metric_mean_in_range`,
+`metric_sum_in_range` must be set for `windows_based_sli`.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="windowperiod_csharp">
+<a href="#windowperiod_csharp" style="color: inherit; text-decoration: inherit;">Window<wbr>Period</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Duration over which window quality is evaluated, given as a
+duration string "{X}s" representing X seconds. Must be an
+integer fraction of a day and at least 60s.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="goodbadmetricfilter_go">
+<a href="#goodbadmetricfilter_go" style="color: inherit; text-decoration: inherit;">Good<wbr>Bad<wbr>Metric<wbr>Filter</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
+with ValueType = BOOL. The window is good if any true values
+appear in the window. One of `good_bad_metric_filter`,
+`good_total_ratio_threshold`, `metric_mean_in_range`,
+`metric_sum_in_range` must be set for `windows_based_sli`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="goodtotalratiothreshold_go">
+<a href="#goodtotalratiothreshold_go" style="color: inherit; text-decoration: inherit;">Good<wbr>Total<wbr>Ratio<wbr>Threshold</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothreshold">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold</a></span>
+    </dt>
+    <dd>{{% md %}}Criterion that describes a window as good if its performance is
+high enough. One of `good_bad_metric_filter`,
+`good_total_ratio_threshold`, `metric_mean_in_range`,
+`metric_sum_in_range` must be set for `windows_based_sli`.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="metricmeaninrange_go">
+<a href="#metricmeaninrange_go" style="color: inherit; text-decoration: inherit;">Metric<wbr>Mean<wbr>In<wbr>Range</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#slowindowsbasedslimetricmeaninrange">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Metric<wbr>Mean<wbr>In<wbr>Range</a></span>
+    </dt>
+    <dd>{{% md %}}Criterion that describes a window as good if the metric's value
+is in a good range, *averaged* across returned streams.
+One of `good_bad_metric_filter`,
+`good_total_ratio_threshold`, `metric_mean_in_range`,
+`metric_sum_in_range` must be set for `windows_based_sli`.
+Average value X of `time_series` should satisfy
+`range.min <= X < range.max` for a good window.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="metricsuminrange_go">
+<a href="#metricsuminrange_go" style="color: inherit; text-decoration: inherit;">Metric<wbr>Sum<wbr>In<wbr>Range</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#slowindowsbasedslimetricsuminrange">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Metric<wbr>Sum<wbr>In<wbr>Range</a></span>
+    </dt>
+    <dd>{{% md %}}Criterion that describes a window as good if the metric's value
+is in a good range, *summed* across returned streams.
+Summed value `X` of `time_series` should satisfy
+`range.min <= X < range.max` for a good window.
+One of `good_bad_metric_filter`,
+`good_total_ratio_threshold`, `metric_mean_in_range`,
+`metric_sum_in_range` must be set for `windows_based_sli`.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="windowperiod_go">
+<a href="#windowperiod_go" style="color: inherit; text-decoration: inherit;">Window<wbr>Period</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Duration over which window quality is evaluated, given as a
+duration string "{X}s" representing X seconds. Must be an
+integer fraction of a day and at least 60s.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="goodbadmetricfilter_nodejs">
+<a href="#goodbadmetricfilter_nodejs" style="color: inherit; text-decoration: inherit;">good<wbr>Bad<wbr>Metric<wbr>Filter</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
+with ValueType = BOOL. The window is good if any true values
+appear in the window. One of `good_bad_metric_filter`,
+`good_total_ratio_threshold`, `metric_mean_in_range`,
+`metric_sum_in_range` must be set for `windows_based_sli`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="goodtotalratiothreshold_nodejs">
+<a href="#goodtotalratiothreshold_nodejs" style="color: inherit; text-decoration: inherit;">good<wbr>Total<wbr>Ratio<wbr>Threshold</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothreshold">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold</a></span>
+    </dt>
+    <dd>{{% md %}}Criterion that describes a window as good if its performance is
+high enough. One of `good_bad_metric_filter`,
+`good_total_ratio_threshold`, `metric_mean_in_range`,
+`metric_sum_in_range` must be set for `windows_based_sli`.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="metricmeaninrange_nodejs">
+<a href="#metricmeaninrange_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Mean<wbr>In<wbr>Range</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#slowindowsbasedslimetricmeaninrange">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Metric<wbr>Mean<wbr>In<wbr>Range</a></span>
+    </dt>
+    <dd>{{% md %}}Criterion that describes a window as good if the metric's value
+is in a good range, *averaged* across returned streams.
+One of `good_bad_metric_filter`,
+`good_total_ratio_threshold`, `metric_mean_in_range`,
+`metric_sum_in_range` must be set for `windows_based_sli`.
+Average value X of `time_series` should satisfy
+`range.min <= X < range.max` for a good window.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="metricsuminrange_nodejs">
+<a href="#metricsuminrange_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Sum<wbr>In<wbr>Range</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#slowindowsbasedslimetricsuminrange">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Metric<wbr>Sum<wbr>In<wbr>Range</a></span>
+    </dt>
+    <dd>{{% md %}}Criterion that describes a window as good if the metric's value
+is in a good range, *summed* across returned streams.
+Summed value `X` of `time_series` should satisfy
+`range.min <= X < range.max` for a good window.
+One of `good_bad_metric_filter`,
+`good_total_ratio_threshold`, `metric_mean_in_range`,
+`metric_sum_in_range` must be set for `windows_based_sli`.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="windowperiod_nodejs">
+<a href="#windowperiod_nodejs" style="color: inherit; text-decoration: inherit;">window<wbr>Period</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Duration over which window quality is evaluated, given as a
+duration string "{X}s" representing X seconds. Must be an
+integer fraction of a day and at least 60s.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="goodbadmetricfilter_python">
+<a href="#goodbadmetricfilter_python" style="color: inherit; text-decoration: inherit;">good<wbr>Bad<wbr>Metric<wbr>Filter</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
+with ValueType = BOOL. The window is good if any true values
+appear in the window. One of `good_bad_metric_filter`,
+`good_total_ratio_threshold`, `metric_mean_in_range`,
+`metric_sum_in_range` must be set for `windows_based_sli`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="goodtotalratiothreshold_python">
+<a href="#goodtotalratiothreshold_python" style="color: inherit; text-decoration: inherit;">good<wbr>Total<wbr>Ratio<wbr>Threshold</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothreshold">Dict[Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold]</a></span>
+    </dt>
+    <dd>{{% md %}}Criterion that describes a window as good if its performance is
+high enough. One of `good_bad_metric_filter`,
+`good_total_ratio_threshold`, `metric_mean_in_range`,
+`metric_sum_in_range` must be set for `windows_based_sli`.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="metricmeaninrange_python">
+<a href="#metricmeaninrange_python" style="color: inherit; text-decoration: inherit;">metric<wbr>Mean<wbr>In<wbr>Range</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#slowindowsbasedslimetricmeaninrange">Dict[Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Metric<wbr>Mean<wbr>In<wbr>Range]</a></span>
+    </dt>
+    <dd>{{% md %}}Criterion that describes a window as good if the metric's value
+is in a good range, *averaged* across returned streams.
+One of `good_bad_metric_filter`,
+`good_total_ratio_threshold`, `metric_mean_in_range`,
+`metric_sum_in_range` must be set for `windows_based_sli`.
+Average value X of `time_series` should satisfy
+`range.min <= X < range.max` for a good window.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="metricsuminrange_python">
+<a href="#metricsuminrange_python" style="color: inherit; text-decoration: inherit;">metric<wbr>Sum<wbr>In<wbr>Range</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#slowindowsbasedslimetricsuminrange">Dict[Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Metric<wbr>Sum<wbr>In<wbr>Range]</a></span>
+    </dt>
+    <dd>{{% md %}}Criterion that describes a window as good if the metric's value
+is in a good range, *summed* across returned streams.
+Summed value `X` of `time_series` should satisfy
+`range.min <= X < range.max` for a good window.
+One of `good_bad_metric_filter`,
+`good_total_ratio_threshold`, `metric_mean_in_range`,
+`metric_sum_in_range` must be set for `windows_based_sli`.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="windowperiod_python">
+<a href="#windowperiod_python" style="color: inherit; text-decoration: inherit;">window<wbr>Period</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Duration over which window quality is evaluated, given as a
+duration string "{X}s" representing X seconds. Must be an
+integer fraction of a day and at least 60s.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="slowindowsbasedsligoodtotalratiothreshold">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#SloWindowsBasedSliGoodTotalRatioThreshold">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#SloWindowsBasedSliGoodTotalRatioThreshold">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#SloWindowsBasedSliGoodTotalRatioThresholdArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#SloWindowsBasedSliGoodTotalRatioThresholdOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Inputs.SloWindowsBasedSliGoodTotalRatioThresholdArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Outputs.SloWindowsBasedSliGoodTotalRatioThreshold.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="basicsliperformance_csharp">
+<a href="#basicsliperformance_csharp" style="color: inherit; text-decoration: inherit;">Basic<wbr>Sli<wbr>Performance</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdbasicsliperformance">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Basic<wbr>Sli<wbr>Performance<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Basic SLI to evaluate to judge window quality.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="performance_csharp">
+<a href="#performance_csharp" style="color: inherit; text-decoration: inherit;">Performance</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdperformance">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Performance<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Request-based SLI to evaluate to judge window quality.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="threshold_csharp">
+<a href="#threshold_csharp" style="color: inherit; text-decoration: inherit;">Threshold</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+    </dt>
+    <dd>{{% md %}}A duration string, e.g. 10s.
+Good service is defined to be the count of requests made to
+this service that return in no more than threshold.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="basicsliperformance_go">
+<a href="#basicsliperformance_go" style="color: inherit; text-decoration: inherit;">Basic<wbr>Sli<wbr>Performance</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdbasicsliperformance">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Basic<wbr>Sli<wbr>Performance</a></span>
+    </dt>
+    <dd>{{% md %}}Basic SLI to evaluate to judge window quality.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="performance_go">
+<a href="#performance_go" style="color: inherit; text-decoration: inherit;">Performance</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdperformance">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Performance</a></span>
+    </dt>
+    <dd>{{% md %}}Request-based SLI to evaluate to judge window quality.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="threshold_go">
+<a href="#threshold_go" style="color: inherit; text-decoration: inherit;">Threshold</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+    </dt>
+    <dd>{{% md %}}A duration string, e.g. 10s.
+Good service is defined to be the count of requests made to
+this service that return in no more than threshold.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="basicsliperformance_nodejs">
+<a href="#basicsliperformance_nodejs" style="color: inherit; text-decoration: inherit;">basic<wbr>Sli<wbr>Performance</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdbasicsliperformance">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Basic<wbr>Sli<wbr>Performance</a></span>
+    </dt>
+    <dd>{{% md %}}Basic SLI to evaluate to judge window quality.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="performance_nodejs">
+<a href="#performance_nodejs" style="color: inherit; text-decoration: inherit;">performance</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdperformance">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Performance</a></span>
+    </dt>
+    <dd>{{% md %}}Request-based SLI to evaluate to judge window quality.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="threshold_nodejs">
+<a href="#threshold_nodejs" style="color: inherit; text-decoration: inherit;">threshold</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+    </dt>
+    <dd>{{% md %}}A duration string, e.g. 10s.
+Good service is defined to be the count of requests made to
+this service that return in no more than threshold.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="basicsliperformance_python">
+<a href="#basicsliperformance_python" style="color: inherit; text-decoration: inherit;">basic<wbr>Sli<wbr>Performance</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdbasicsliperformance">Dict[Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Basic<wbr>Sli<wbr>Performance]</a></span>
+    </dt>
+    <dd>{{% md %}}Basic SLI to evaluate to judge window quality.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="performance_python">
+<a href="#performance_python" style="color: inherit; text-decoration: inherit;">performance</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdperformance">Dict[Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Performance]</a></span>
+    </dt>
+    <dd>{{% md %}}Request-based SLI to evaluate to judge window quality.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="threshold_python">
+<a href="#threshold_python" style="color: inherit; text-decoration: inherit;">threshold</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}A duration string, e.g. 10s.
+Good service is defined to be the count of requests made to
+this service that return in no more than threshold.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="slowindowsbasedsligoodtotalratiothresholdbasicsliperformance">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Basic<wbr>Sli<wbr>Performance</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformance">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformance">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Inputs.SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Outputs.SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformance.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="latency_csharp">
+<a href="#latency_csharp" style="color: inherit; text-decoration: inherit;">Latency</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdbasicsliperformancelatency">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Basic<wbr>Sli<wbr>Performance<wbr>Latency<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Parameters for a latency threshold SLI.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="locations_csharp">
+<a href="#locations_csharp" style="color: inherit; text-decoration: inherit;">Locations</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}An optional set of locations to which this SLI is relevant.
+Telemetry from other locations will not be used to calculate
+performance for this SLI. If omitted, this SLI applies to all
+locations in which the Service has activity. For service types
+that don't support breaking down by location, setting this
+field will result in an error.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="methods_csharp">
+<a href="#methods_csharp" style="color: inherit; text-decoration: inherit;">Methods</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}An optional set of RPCs to which this SLI is relevant.
+Telemetry from other methods will not be used to calculate
+performance for this SLI. If omitted, this SLI applies to all
+the Service's methods. For service types that don't support
+breaking down by method, setting this field will result in an
+error.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="versions_csharp">
+<a href="#versions_csharp" style="color: inherit; text-decoration: inherit;">Versions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The set of API versions to which this SLI is relevant.
+Telemetry from other API versions will not be used to
+calculate performance for this SLI. If omitted,
+this SLI applies to all API versions. For service types
+that don't support breaking down by version, setting this
+field will result in an error.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="latency_go">
+<a href="#latency_go" style="color: inherit; text-decoration: inherit;">Latency</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdbasicsliperformancelatency">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Basic<wbr>Sli<wbr>Performance<wbr>Latency</a></span>
+    </dt>
+    <dd>{{% md %}}Parameters for a latency threshold SLI.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="locations_go">
+<a href="#locations_go" style="color: inherit; text-decoration: inherit;">Locations</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}An optional set of locations to which this SLI is relevant.
+Telemetry from other locations will not be used to calculate
+performance for this SLI. If omitted, this SLI applies to all
+locations in which the Service has activity. For service types
+that don't support breaking down by location, setting this
+field will result in an error.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="methods_go">
+<a href="#methods_go" style="color: inherit; text-decoration: inherit;">Methods</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}An optional set of RPCs to which this SLI is relevant.
+Telemetry from other methods will not be used to calculate
+performance for this SLI. If omitted, this SLI applies to all
+the Service's methods. For service types that don't support
+breaking down by method, setting this field will result in an
+error.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="versions_go">
+<a href="#versions_go" style="color: inherit; text-decoration: inherit;">Versions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}The set of API versions to which this SLI is relevant.
+Telemetry from other API versions will not be used to
+calculate performance for this SLI. If omitted,
+this SLI applies to all API versions. For service types
+that don't support breaking down by version, setting this
+field will result in an error.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="latency_nodejs">
+<a href="#latency_nodejs" style="color: inherit; text-decoration: inherit;">latency</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdbasicsliperformancelatency">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Basic<wbr>Sli<wbr>Performance<wbr>Latency</a></span>
+    </dt>
+    <dd>{{% md %}}Parameters for a latency threshold SLI.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="locations_nodejs">
+<a href="#locations_nodejs" style="color: inherit; text-decoration: inherit;">locations</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}An optional set of locations to which this SLI is relevant.
+Telemetry from other locations will not be used to calculate
+performance for this SLI. If omitted, this SLI applies to all
+locations in which the Service has activity. For service types
+that don't support breaking down by location, setting this
+field will result in an error.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="methods_nodejs">
+<a href="#methods_nodejs" style="color: inherit; text-decoration: inherit;">methods</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}An optional set of RPCs to which this SLI is relevant.
+Telemetry from other methods will not be used to calculate
+performance for this SLI. If omitted, this SLI applies to all
+the Service's methods. For service types that don't support
+breaking down by method, setting this field will result in an
+error.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="versions_nodejs">
+<a href="#versions_nodejs" style="color: inherit; text-decoration: inherit;">versions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}The set of API versions to which this SLI is relevant.
+Telemetry from other API versions will not be used to
+calculate performance for this SLI. If omitted,
+this SLI applies to all API versions. For service types
+that don't support breaking down by version, setting this
+field will result in an error.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="latency_python">
+<a href="#latency_python" style="color: inherit; text-decoration: inherit;">latency</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdbasicsliperformancelatency">Dict[Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Basic<wbr>Sli<wbr>Performance<wbr>Latency]</a></span>
+    </dt>
+    <dd>{{% md %}}Parameters for a latency threshold SLI.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="locations_python">
+<a href="#locations_python" style="color: inherit; text-decoration: inherit;">locations</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}An optional set of locations to which this SLI is relevant.
+Telemetry from other locations will not be used to calculate
+performance for this SLI. If omitted, this SLI applies to all
+locations in which the Service has activity. For service types
+that don't support breaking down by location, setting this
+field will result in an error.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="methods_python">
+<a href="#methods_python" style="color: inherit; text-decoration: inherit;">methods</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}An optional set of RPCs to which this SLI is relevant.
+Telemetry from other methods will not be used to calculate
+performance for this SLI. If omitted, this SLI applies to all
+the Service's methods. For service types that don't support
+breaking down by method, setting this field will result in an
+error.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="versions_python">
+<a href="#versions_python" style="color: inherit; text-decoration: inherit;">versions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}The set of API versions to which this SLI is relevant.
+Telemetry from other API versions will not be used to
+calculate performance for this SLI. If omitted,
+this SLI applies to all API versions. For service types
+that don't support breaking down by version, setting this
+field will result in an error.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="slowindowsbasedsligoodtotalratiothresholdbasicsliperformancelatency">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Basic<wbr>Sli<wbr>Performance<wbr>Latency</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatency">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatency">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatencyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatencyOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Inputs.SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatencyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Outputs.SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatency.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="threshold_csharp">
+<a href="#threshold_csharp" style="color: inherit; text-decoration: inherit;">Threshold</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}A duration string, e.g. 10s.
+Good service is defined to be the count of requests made to
+this service that return in no more than threshold.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="threshold_go">
+<a href="#threshold_go" style="color: inherit; text-decoration: inherit;">Threshold</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A duration string, e.g. 10s.
+Good service is defined to be the count of requests made to
+this service that return in no more than threshold.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="threshold_nodejs">
+<a href="#threshold_nodejs" style="color: inherit; text-decoration: inherit;">threshold</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A duration string, e.g. 10s.
+Good service is defined to be the count of requests made to
+this service that return in no more than threshold.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="threshold_python">
+<a href="#threshold_python" style="color: inherit; text-decoration: inherit;">threshold</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}A duration string, e.g. 10s.
+Good service is defined to be the count of requests made to
+this service that return in no more than threshold.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="slowindowsbasedsligoodtotalratiothresholdperformance">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Performance</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#SloWindowsBasedSliGoodTotalRatioThresholdPerformance">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#SloWindowsBasedSliGoodTotalRatioThresholdPerformance">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#SloWindowsBasedSliGoodTotalRatioThresholdPerformanceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#SloWindowsBasedSliGoodTotalRatioThresholdPerformanceOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Inputs.SloWindowsBasedSliGoodTotalRatioThresholdPerformanceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Outputs.SloWindowsBasedSliGoodTotalRatioThresholdPerformance.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="distributioncut_csharp">
+<a href="#distributioncut_csharp" style="color: inherit; text-decoration: inherit;">Distribution<wbr>Cut</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdperformancedistributioncut">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Performance<wbr>Distribution<wbr>Cut<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Used when good_service is defined by a count of values aggregated in a
+Distribution that fall into a good range. The total_service is the
+total count of all values aggregated in the Distribution.
+Defines a distribution TimeSeries filter and thresholds used for
+measuring good service and total service.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="goodtotalratio_csharp">
+<a href="#goodtotalratio_csharp" style="color: inherit; text-decoration: inherit;">Good<wbr>Total<wbr>Ratio</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdperformancegoodtotalratio">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Performance<wbr>Good<wbr>Total<wbr>Ratio<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A means to compute a ratio of `good_service` to `total_service`.
+Defines computing this ratio with two TimeSeries [monitoring filters](https://cloud.google.com/monitoring/api/v3/filters)
+Must specify exactly two of good, bad, and total service filters.
+The relationship good_service + bad_service = total_service
+will be assumed.  Structure is documented below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="distributioncut_go">
+<a href="#distributioncut_go" style="color: inherit; text-decoration: inherit;">Distribution<wbr>Cut</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdperformancedistributioncut">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Performance<wbr>Distribution<wbr>Cut</a></span>
+    </dt>
+    <dd>{{% md %}}Used when good_service is defined by a count of values aggregated in a
+Distribution that fall into a good range. The total_service is the
+total count of all values aggregated in the Distribution.
+Defines a distribution TimeSeries filter and thresholds used for
+measuring good service and total service.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="goodtotalratio_go">
+<a href="#goodtotalratio_go" style="color: inherit; text-decoration: inherit;">Good<wbr>Total<wbr>Ratio</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdperformancegoodtotalratio">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Performance<wbr>Good<wbr>Total<wbr>Ratio</a></span>
+    </dt>
+    <dd>{{% md %}}A means to compute a ratio of `good_service` to `total_service`.
+Defines computing this ratio with two TimeSeries [monitoring filters](https://cloud.google.com/monitoring/api/v3/filters)
+Must specify exactly two of good, bad, and total service filters.
+The relationship good_service + bad_service = total_service
+will be assumed.  Structure is documented below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="distributioncut_nodejs">
+<a href="#distributioncut_nodejs" style="color: inherit; text-decoration: inherit;">distribution<wbr>Cut</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdperformancedistributioncut">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Performance<wbr>Distribution<wbr>Cut</a></span>
+    </dt>
+    <dd>{{% md %}}Used when good_service is defined by a count of values aggregated in a
+Distribution that fall into a good range. The total_service is the
+total count of all values aggregated in the Distribution.
+Defines a distribution TimeSeries filter and thresholds used for
+measuring good service and total service.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="goodtotalratio_nodejs">
+<a href="#goodtotalratio_nodejs" style="color: inherit; text-decoration: inherit;">good<wbr>Total<wbr>Ratio</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdperformancegoodtotalratio">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Performance<wbr>Good<wbr>Total<wbr>Ratio</a></span>
+    </dt>
+    <dd>{{% md %}}A means to compute a ratio of `good_service` to `total_service`.
+Defines computing this ratio with two TimeSeries [monitoring filters](https://cloud.google.com/monitoring/api/v3/filters)
+Must specify exactly two of good, bad, and total service filters.
+The relationship good_service + bad_service = total_service
+will be assumed.  Structure is documented below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="distributioncut_python">
+<a href="#distributioncut_python" style="color: inherit; text-decoration: inherit;">distribution<wbr>Cut</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdperformancedistributioncut">Dict[Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Performance<wbr>Distribution<wbr>Cut]</a></span>
+    </dt>
+    <dd>{{% md %}}Used when good_service is defined by a count of values aggregated in a
+Distribution that fall into a good range. The total_service is the
+total count of all values aggregated in the Distribution.
+Defines a distribution TimeSeries filter and thresholds used for
+measuring good service and total service.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="goodtotalratio_python">
+<a href="#goodtotalratio_python" style="color: inherit; text-decoration: inherit;">good<wbr>Total<wbr>Ratio</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdperformancegoodtotalratio">Dict[Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Performance<wbr>Good<wbr>Total<wbr>Ratio]</a></span>
+    </dt>
+    <dd>{{% md %}}A means to compute a ratio of `good_service` to `total_service`.
+Defines computing this ratio with two TimeSeries [monitoring filters](https://cloud.google.com/monitoring/api/v3/filters)
+Must specify exactly two of good, bad, and total service filters.
+The relationship good_service + bad_service = total_service
+will be assumed.  Structure is documented below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="slowindowsbasedsligoodtotalratiothresholdperformancedistributioncut">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Performance<wbr>Distribution<wbr>Cut</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCut">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCut">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Inputs.SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Outputs.SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCut.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="distributionfilter_csharp">
+<a href="#distributionfilter_csharp" style="color: inherit; text-decoration: inherit;">Distribution<wbr>Filter</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
+aggregating values to quantify the good service provided.
+Must have ValueType = DISTRIBUTION and
+MetricKind = DELTA or MetricKind = CUMULATIVE.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="range_csharp">
+<a href="#range_csharp" style="color: inherit; text-decoration: inherit;">Range</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdperformancedistributioncutrange">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Performance<wbr>Distribution<wbr>Cut<wbr>Range<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Range of numerical values. The computed good_service
+will be the count of values x in the Distribution such
+that range.min <= x < range.max. inclusive of min and
+exclusive of max. Open ranges can be defined by setting
+just one of min or max. Summed value `X` should satisfy
+`range.min <= X < range.max` for a good window.  Structure is documented below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="distributionfilter_go">
+<a href="#distributionfilter_go" style="color: inherit; text-decoration: inherit;">Distribution<wbr>Filter</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
+aggregating values to quantify the good service provided.
+Must have ValueType = DISTRIBUTION and
+MetricKind = DELTA or MetricKind = CUMULATIVE.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="range_go">
+<a href="#range_go" style="color: inherit; text-decoration: inherit;">Range</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdperformancedistributioncutrange">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Performance<wbr>Distribution<wbr>Cut<wbr>Range</a></span>
+    </dt>
+    <dd>{{% md %}}Range of numerical values. The computed good_service
+will be the count of values x in the Distribution such
+that range.min <= x < range.max. inclusive of min and
+exclusive of max. Open ranges can be defined by setting
+just one of min or max. Summed value `X` should satisfy
+`range.min <= X < range.max` for a good window.  Structure is documented below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="distributionfilter_nodejs">
+<a href="#distributionfilter_nodejs" style="color: inherit; text-decoration: inherit;">distribution<wbr>Filter</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
+aggregating values to quantify the good service provided.
+Must have ValueType = DISTRIBUTION and
+MetricKind = DELTA or MetricKind = CUMULATIVE.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="range_nodejs">
+<a href="#range_nodejs" style="color: inherit; text-decoration: inherit;">range</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdperformancedistributioncutrange">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Performance<wbr>Distribution<wbr>Cut<wbr>Range</a></span>
+    </dt>
+    <dd>{{% md %}}Range of numerical values. The computed good_service
+will be the count of values x in the Distribution such
+that range.min <= x < range.max. inclusive of min and
+exclusive of max. Open ranges can be defined by setting
+just one of min or max. Summed value `X` should satisfy
+`range.min <= X < range.max` for a good window.  Structure is documented below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="distributionfilter_python">
+<a href="#distributionfilter_python" style="color: inherit; text-decoration: inherit;">distribution<wbr>Filter</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
+aggregating values to quantify the good service provided.
+Must have ValueType = DISTRIBUTION and
+MetricKind = DELTA or MetricKind = CUMULATIVE.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="range_python">
+<a href="#range_python" style="color: inherit; text-decoration: inherit;">range</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdperformancedistributioncutrange">Dict[Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Performance<wbr>Distribution<wbr>Cut<wbr>Range]</a></span>
+    </dt>
+    <dd>{{% md %}}Range of numerical values. The computed good_service
+will be the count of values x in the Distribution such
+that range.min <= x < range.max. inclusive of min and
+exclusive of max. Open ranges can be defined by setting
+just one of min or max. Summed value `X` should satisfy
+`range.min <= X < range.max` for a good window.  Structure is documented below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="slowindowsbasedsligoodtotalratiothresholdperformancedistributioncutrange">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Performance<wbr>Distribution<wbr>Cut<wbr>Range</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRange">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRange">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRangeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRangeOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Inputs.SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRangeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Outputs.SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRange.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="max_csharp">
+<a href="#max_csharp" style="color: inherit; text-decoration: inherit;">Max</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}max value for the range (inclusive). If not given,
+will be set to "infinity", defining an open range
+">= range.min"
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="min_csharp">
+<a href="#min_csharp" style="color: inherit; text-decoration: inherit;">Min</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Min value for the range (inclusive). If not given,
+will be set to "-infinity", defining an open range
+"< range.max"
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="max_go">
+<a href="#max_go" style="color: inherit; text-decoration: inherit;">Max</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}max value for the range (inclusive). If not given,
+will be set to "infinity", defining an open range
+">= range.min"
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="min_go">
+<a href="#min_go" style="color: inherit; text-decoration: inherit;">Min</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Min value for the range (inclusive). If not given,
+will be set to "-infinity", defining an open range
+"< range.max"
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="max_nodejs">
+<a href="#max_nodejs" style="color: inherit; text-decoration: inherit;">max</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}max value for the range (inclusive). If not given,
+will be set to "infinity", defining an open range
+">= range.min"
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="min_nodejs">
+<a href="#min_nodejs" style="color: inherit; text-decoration: inherit;">min</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Min value for the range (inclusive). If not given,
+will be set to "-infinity", defining an open range
+"< range.max"
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="max_python">
+<a href="#max_python" style="color: inherit; text-decoration: inherit;">max</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}max value for the range (inclusive). If not given,
+will be set to "infinity", defining an open range
+">= range.min"
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="min_python">
+<a href="#min_python" style="color: inherit; text-decoration: inherit;">min</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}Min value for the range (inclusive). If not given,
+will be set to "-infinity", defining an open range
+"< range.max"
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="slowindowsbasedsligoodtotalratiothresholdperformancegoodtotalratio">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Performance<wbr>Good<wbr>Total<wbr>Ratio</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatio">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatio">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatioArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatioOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Inputs.SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatioArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Outputs.SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatio.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="badservicefilter_csharp">
+<a href="#badservicefilter_csharp" style="color: inherit; text-decoration: inherit;">Bad<wbr>Service<wbr>Filter</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
+quantifying bad service provided, either demanded service that
+was not provided or demanded service that was of inadequate
+quality. Exactly two of
+good, bad, or total service filter must be defined (where
+good + bad = total is assumed)
+Must have ValueType = DOUBLE or ValueType = INT64 and
+must have MetricKind = DELTA or MetricKind = CUMULATIVE.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="goodservicefilter_csharp">
+<a href="#goodservicefilter_csharp" style="color: inherit; text-decoration: inherit;">Good<wbr>Service<wbr>Filter</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
+quantifying good service provided. Exactly two of
+good, bad, or total service filter must be defined (where
+good + bad = total is assumed)
+Must have ValueType = DOUBLE or ValueType = INT64 and
+must have MetricKind = DELTA or MetricKind = CUMULATIVE.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="totalservicefilter_csharp">
+<a href="#totalservicefilter_csharp" style="color: inherit; text-decoration: inherit;">Total<wbr>Service<wbr>Filter</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
+quantifying total demanded service. Exactly two of
+good, bad, or total service filter must be defined (where
+good + bad = total is assumed)
+Must have ValueType = DOUBLE or ValueType = INT64 and
+must have MetricKind = DELTA or MetricKind = CUMULATIVE.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="badservicefilter_go">
+<a href="#badservicefilter_go" style="color: inherit; text-decoration: inherit;">Bad<wbr>Service<wbr>Filter</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
+quantifying bad service provided, either demanded service that
+was not provided or demanded service that was of inadequate
+quality. Exactly two of
+good, bad, or total service filter must be defined (where
+good + bad = total is assumed)
+Must have ValueType = DOUBLE or ValueType = INT64 and
+must have MetricKind = DELTA or MetricKind = CUMULATIVE.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="goodservicefilter_go">
+<a href="#goodservicefilter_go" style="color: inherit; text-decoration: inherit;">Good<wbr>Service<wbr>Filter</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
+quantifying good service provided. Exactly two of
+good, bad, or total service filter must be defined (where
+good + bad = total is assumed)
+Must have ValueType = DOUBLE or ValueType = INT64 and
+must have MetricKind = DELTA or MetricKind = CUMULATIVE.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="totalservicefilter_go">
+<a href="#totalservicefilter_go" style="color: inherit; text-decoration: inherit;">Total<wbr>Service<wbr>Filter</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
+quantifying total demanded service. Exactly two of
+good, bad, or total service filter must be defined (where
+good + bad = total is assumed)
+Must have ValueType = DOUBLE or ValueType = INT64 and
+must have MetricKind = DELTA or MetricKind = CUMULATIVE.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="badservicefilter_nodejs">
+<a href="#badservicefilter_nodejs" style="color: inherit; text-decoration: inherit;">bad<wbr>Service<wbr>Filter</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
+quantifying bad service provided, either demanded service that
+was not provided or demanded service that was of inadequate
+quality. Exactly two of
+good, bad, or total service filter must be defined (where
+good + bad = total is assumed)
+Must have ValueType = DOUBLE or ValueType = INT64 and
+must have MetricKind = DELTA or MetricKind = CUMULATIVE.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="goodservicefilter_nodejs">
+<a href="#goodservicefilter_nodejs" style="color: inherit; text-decoration: inherit;">good<wbr>Service<wbr>Filter</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
+quantifying good service provided. Exactly two of
+good, bad, or total service filter must be defined (where
+good + bad = total is assumed)
+Must have ValueType = DOUBLE or ValueType = INT64 and
+must have MetricKind = DELTA or MetricKind = CUMULATIVE.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="totalservicefilter_nodejs">
+<a href="#totalservicefilter_nodejs" style="color: inherit; text-decoration: inherit;">total<wbr>Service<wbr>Filter</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
+quantifying total demanded service. Exactly two of
+good, bad, or total service filter must be defined (where
+good + bad = total is assumed)
+Must have ValueType = DOUBLE or ValueType = INT64 and
+must have MetricKind = DELTA or MetricKind = CUMULATIVE.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="badservicefilter_python">
+<a href="#badservicefilter_python" style="color: inherit; text-decoration: inherit;">bad<wbr>Service<wbr>Filter</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
+quantifying bad service provided, either demanded service that
+was not provided or demanded service that was of inadequate
+quality. Exactly two of
+good, bad, or total service filter must be defined (where
+good + bad = total is assumed)
+Must have ValueType = DOUBLE or ValueType = INT64 and
+must have MetricKind = DELTA or MetricKind = CUMULATIVE.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="goodservicefilter_python">
+<a href="#goodservicefilter_python" style="color: inherit; text-decoration: inherit;">good<wbr>Service<wbr>Filter</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
+quantifying good service provided. Exactly two of
+good, bad, or total service filter must be defined (where
+good + bad = total is assumed)
+Must have ValueType = DOUBLE or ValueType = INT64 and
+must have MetricKind = DELTA or MetricKind = CUMULATIVE.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="totalservicefilter_python">
+<a href="#totalservicefilter_python" style="color: inherit; text-decoration: inherit;">total<wbr>Service<wbr>Filter</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
+quantifying total demanded service. Exactly two of
+good, bad, or total service filter must be defined (where
+good + bad = total is assumed)
+Must have ValueType = DOUBLE or ValueType = INT64 and
+must have MetricKind = DELTA or MetricKind = CUMULATIVE.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="slowindowsbasedslimetricmeaninrange">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Metric<wbr>Mean<wbr>In<wbr>Range</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#SloWindowsBasedSliMetricMeanInRange">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#SloWindowsBasedSliMetricMeanInRange">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#SloWindowsBasedSliMetricMeanInRangeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#SloWindowsBasedSliMetricMeanInRangeOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Inputs.SloWindowsBasedSliMetricMeanInRangeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Outputs.SloWindowsBasedSliMetricMeanInRange.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="range_csharp">
+<a href="#range_csharp" style="color: inherit; text-decoration: inherit;">Range</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#slowindowsbasedslimetricmeaninrangerange">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Metric<wbr>Mean<wbr>In<wbr>Range<wbr>Range<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Range of numerical values. The computed good_service
+will be the count of values x in the Distribution such
+that range.min <= x < range.max. inclusive of min and
+exclusive of max. Open ranges can be defined by setting
+just one of min or max. Summed value `X` should satisfy
+`range.min <= X < range.max` for a good window.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="timeseries_csharp">
+<a href="#timeseries_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Series</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}A [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
+specifying the TimeSeries to use for evaluating window
+quality. The provided TimeSeries must have
+ValueType = INT64 or ValueType = DOUBLE and
+MetricKind = GAUGE.
+Summed value `X` should satisfy
+`range.min <= X < range.max` for a good window.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="range_go">
+<a href="#range_go" style="color: inherit; text-decoration: inherit;">Range</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#slowindowsbasedslimetricmeaninrangerange">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Metric<wbr>Mean<wbr>In<wbr>Range<wbr>Range</a></span>
+    </dt>
+    <dd>{{% md %}}Range of numerical values. The computed good_service
+will be the count of values x in the Distribution such
+that range.min <= x < range.max. inclusive of min and
+exclusive of max. Open ranges can be defined by setting
+just one of min or max. Summed value `X` should satisfy
+`range.min <= X < range.max` for a good window.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="timeseries_go">
+<a href="#timeseries_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Series</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
+specifying the TimeSeries to use for evaluating window
+quality. The provided TimeSeries must have
+ValueType = INT64 or ValueType = DOUBLE and
+MetricKind = GAUGE.
+Summed value `X` should satisfy
+`range.min <= X < range.max` for a good window.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="range_nodejs">
+<a href="#range_nodejs" style="color: inherit; text-decoration: inherit;">range</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#slowindowsbasedslimetricmeaninrangerange">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Metric<wbr>Mean<wbr>In<wbr>Range<wbr>Range</a></span>
+    </dt>
+    <dd>{{% md %}}Range of numerical values. The computed good_service
+will be the count of values x in the Distribution such
+that range.min <= x < range.max. inclusive of min and
+exclusive of max. Open ranges can be defined by setting
+just one of min or max. Summed value `X` should satisfy
+`range.min <= X < range.max` for a good window.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="timeseries_nodejs">
+<a href="#timeseries_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Series</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
+specifying the TimeSeries to use for evaluating window
+quality. The provided TimeSeries must have
+ValueType = INT64 or ValueType = DOUBLE and
+MetricKind = GAUGE.
+Summed value `X` should satisfy
+`range.min <= X < range.max` for a good window.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="range_python">
+<a href="#range_python" style="color: inherit; text-decoration: inherit;">range</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#slowindowsbasedslimetricmeaninrangerange">Dict[Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Metric<wbr>Mean<wbr>In<wbr>Range<wbr>Range]</a></span>
+    </dt>
+    <dd>{{% md %}}Range of numerical values. The computed good_service
+will be the count of values x in the Distribution such
+that range.min <= x < range.max. inclusive of min and
+exclusive of max. Open ranges can be defined by setting
+just one of min or max. Summed value `X` should satisfy
+`range.min <= X < range.max` for a good window.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="timeseries_python">
+<a href="#timeseries_python" style="color: inherit; text-decoration: inherit;">time<wbr>Series</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}A [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
+specifying the TimeSeries to use for evaluating window
+quality. The provided TimeSeries must have
+ValueType = INT64 or ValueType = DOUBLE and
+MetricKind = GAUGE.
+Summed value `X` should satisfy
+`range.min <= X < range.max` for a good window.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="slowindowsbasedslimetricmeaninrangerange">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Metric<wbr>Mean<wbr>In<wbr>Range<wbr>Range</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#SloWindowsBasedSliMetricMeanInRangeRange">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#SloWindowsBasedSliMetricMeanInRangeRange">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#SloWindowsBasedSliMetricMeanInRangeRangeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#SloWindowsBasedSliMetricMeanInRangeRangeOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Inputs.SloWindowsBasedSliMetricMeanInRangeRangeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Outputs.SloWindowsBasedSliMetricMeanInRangeRange.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="max_csharp">
+<a href="#max_csharp" style="color: inherit; text-decoration: inherit;">Max</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}max value for the range (inclusive). If not given,
+will be set to "infinity", defining an open range
+">= range.min"
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="min_csharp">
+<a href="#min_csharp" style="color: inherit; text-decoration: inherit;">Min</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Min value for the range (inclusive). If not given,
+will be set to "-infinity", defining an open range
+"< range.max"
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="max_go">
+<a href="#max_go" style="color: inherit; text-decoration: inherit;">Max</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}max value for the range (inclusive). If not given,
+will be set to "infinity", defining an open range
+">= range.min"
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="min_go">
+<a href="#min_go" style="color: inherit; text-decoration: inherit;">Min</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Min value for the range (inclusive). If not given,
+will be set to "-infinity", defining an open range
+"< range.max"
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="max_nodejs">
+<a href="#max_nodejs" style="color: inherit; text-decoration: inherit;">max</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}max value for the range (inclusive). If not given,
+will be set to "infinity", defining an open range
+">= range.min"
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="min_nodejs">
+<a href="#min_nodejs" style="color: inherit; text-decoration: inherit;">min</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Min value for the range (inclusive). If not given,
+will be set to "-infinity", defining an open range
+"< range.max"
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="max_python">
+<a href="#max_python" style="color: inherit; text-decoration: inherit;">max</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}max value for the range (inclusive). If not given,
+will be set to "infinity", defining an open range
+">= range.min"
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="min_python">
+<a href="#min_python" style="color: inherit; text-decoration: inherit;">min</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}Min value for the range (inclusive). If not given,
+will be set to "-infinity", defining an open range
+"< range.max"
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="slowindowsbasedslimetricsuminrange">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Metric<wbr>Sum<wbr>In<wbr>Range</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#SloWindowsBasedSliMetricSumInRange">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#SloWindowsBasedSliMetricSumInRange">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#SloWindowsBasedSliMetricSumInRangeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#SloWindowsBasedSliMetricSumInRangeOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Inputs.SloWindowsBasedSliMetricSumInRangeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Outputs.SloWindowsBasedSliMetricSumInRange.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="range_csharp">
+<a href="#range_csharp" style="color: inherit; text-decoration: inherit;">Range</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#slowindowsbasedslimetricsuminrangerange">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Metric<wbr>Sum<wbr>In<wbr>Range<wbr>Range<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Range of numerical values. The computed good_service
+will be the count of values x in the Distribution such
+that range.min <= x < range.max. inclusive of min and
+exclusive of max. Open ranges can be defined by setting
+just one of min or max. Summed value `X` should satisfy
+`range.min <= X < range.max` for a good window.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="timeseries_csharp">
+<a href="#timeseries_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Series</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}A [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
+specifying the TimeSeries to use for evaluating window
+quality. The provided TimeSeries must have
+ValueType = INT64 or ValueType = DOUBLE and
+MetricKind = GAUGE.
+Summed value `X` should satisfy
+`range.min <= X < range.max` for a good window.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="range_go">
+<a href="#range_go" style="color: inherit; text-decoration: inherit;">Range</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#slowindowsbasedslimetricsuminrangerange">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Metric<wbr>Sum<wbr>In<wbr>Range<wbr>Range</a></span>
+    </dt>
+    <dd>{{% md %}}Range of numerical values. The computed good_service
+will be the count of values x in the Distribution such
+that range.min <= x < range.max. inclusive of min and
+exclusive of max. Open ranges can be defined by setting
+just one of min or max. Summed value `X` should satisfy
+`range.min <= X < range.max` for a good window.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="timeseries_go">
+<a href="#timeseries_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Series</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
+specifying the TimeSeries to use for evaluating window
+quality. The provided TimeSeries must have
+ValueType = INT64 or ValueType = DOUBLE and
+MetricKind = GAUGE.
+Summed value `X` should satisfy
+`range.min <= X < range.max` for a good window.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="range_nodejs">
+<a href="#range_nodejs" style="color: inherit; text-decoration: inherit;">range</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#slowindowsbasedslimetricsuminrangerange">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Metric<wbr>Sum<wbr>In<wbr>Range<wbr>Range</a></span>
+    </dt>
+    <dd>{{% md %}}Range of numerical values. The computed good_service
+will be the count of values x in the Distribution such
+that range.min <= x < range.max. inclusive of min and
+exclusive of max. Open ranges can be defined by setting
+just one of min or max. Summed value `X` should satisfy
+`range.min <= X < range.max` for a good window.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="timeseries_nodejs">
+<a href="#timeseries_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Series</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
+specifying the TimeSeries to use for evaluating window
+quality. The provided TimeSeries must have
+ValueType = INT64 or ValueType = DOUBLE and
+MetricKind = GAUGE.
+Summed value `X` should satisfy
+`range.min <= X < range.max` for a good window.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="range_python">
+<a href="#range_python" style="color: inherit; text-decoration: inherit;">range</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#slowindowsbasedslimetricsuminrangerange">Dict[Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Metric<wbr>Sum<wbr>In<wbr>Range<wbr>Range]</a></span>
+    </dt>
+    <dd>{{% md %}}Range of numerical values. The computed good_service
+will be the count of values x in the Distribution such
+that range.min <= x < range.max. inclusive of min and
+exclusive of max. Open ranges can be defined by setting
+just one of min or max. Summed value `X` should satisfy
+`range.min <= X < range.max` for a good window.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="timeseries_python">
+<a href="#timeseries_python" style="color: inherit; text-decoration: inherit;">time<wbr>Series</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}A [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
+specifying the TimeSeries to use for evaluating window
+quality. The provided TimeSeries must have
+ValueType = INT64 or ValueType = DOUBLE and
+MetricKind = GAUGE.
+Summed value `X` should satisfy
+`range.min <= X < range.max` for a good window.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="slowindowsbasedslimetricsuminrangerange">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Metric<wbr>Sum<wbr>In<wbr>Range<wbr>Range</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#SloWindowsBasedSliMetricSumInRangeRange">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#SloWindowsBasedSliMetricSumInRangeRange">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#SloWindowsBasedSliMetricSumInRangeRangeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#SloWindowsBasedSliMetricSumInRangeRangeOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Inputs.SloWindowsBasedSliMetricSumInRangeRangeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Outputs.SloWindowsBasedSliMetricSumInRangeRange.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="max_csharp">
+<a href="#max_csharp" style="color: inherit; text-decoration: inherit;">Max</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}max value for the range (inclusive). If not given,
+will be set to "infinity", defining an open range
+">= range.min"
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="min_csharp">
+<a href="#min_csharp" style="color: inherit; text-decoration: inherit;">Min</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Min value for the range (inclusive). If not given,
+will be set to "-infinity", defining an open range
+"< range.max"
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="max_go">
+<a href="#max_go" style="color: inherit; text-decoration: inherit;">Max</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}max value for the range (inclusive). If not given,
+will be set to "infinity", defining an open range
+">= range.min"
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="min_go">
+<a href="#min_go" style="color: inherit; text-decoration: inherit;">Min</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Min value for the range (inclusive). If not given,
+will be set to "-infinity", defining an open range
+"< range.max"
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="max_nodejs">
+<a href="#max_nodejs" style="color: inherit; text-decoration: inherit;">max</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}max value for the range (inclusive). If not given,
+will be set to "infinity", defining an open range
+">= range.min"
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="min_nodejs">
+<a href="#min_nodejs" style="color: inherit; text-decoration: inherit;">min</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Min value for the range (inclusive). If not given,
+will be set to "-infinity", defining an open range
+"< range.max"
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="max_python">
+<a href="#max_python" style="color: inherit; text-decoration: inherit;">max</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}max value for the range (inclusive). If not given,
+will be set to "infinity", defining an open range
+">= range.min"
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="min_python">
+<a href="#min_python" style="color: inherit; text-decoration: inherit;">min</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}Min value for the range (inclusive). If not given,
+will be set to "-infinity", defining an open range
+"< range.max"
 {{% /md %}}</dd>
 
 </dl>

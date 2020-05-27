@@ -59,14 +59,14 @@ s3_bucket_nightly_backup = gcp.storage.TransferJob("s3-bucket-nightly-backup",
             "deleteObjectsUniqueInSink": False,
         },
         "aws_s3_data_source": {
-            "bucketName": var["aws_s3_bucket"],
+            "bucket_name": var["aws_s3_bucket"],
             "aws_access_key": {
                 "accessKeyId": var["aws_access_key"],
                 "secretAccessKey": var["aws_secret_key"],
             },
         },
         "gcs_data_sink": {
-            "bucketName": s3_backup_bucket_bucket.name,
+            "bucket_name": s3_backup_bucket_bucket.name,
         },
     },
     schedule={
@@ -337,7 +337,9 @@ The TransferJob resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>Description</span>
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -346,7 +348,9 @@ The TransferJob resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>Schedule</span>
+        <span id="schedule_csharp">
+<a href="#schedule_csharp" style="color: inherit; text-decoration: inherit;">Schedule</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transferjobschedule">Transfer<wbr>Job<wbr>Schedule<wbr>Args</a></span>
     </dt>
@@ -355,7 +359,9 @@ The TransferJob resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>Transfer<wbr>Spec</span>
+        <span id="transferspec_csharp">
+<a href="#transferspec_csharp" style="color: inherit; text-decoration: inherit;">Transfer<wbr>Spec</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transferjobtransferspec">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Args</a></span>
     </dt>
@@ -364,7 +370,9 @@ The TransferJob resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project</span>
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -374,7 +382,9 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Status</span>
+        <span id="status_csharp">
+<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -390,7 +400,9 @@ is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>Description</span>
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -399,7 +411,9 @@ is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>Schedule</span>
+        <span id="schedule_go">
+<a href="#schedule_go" style="color: inherit; text-decoration: inherit;">Schedule</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transferjobschedule">Transfer<wbr>Job<wbr>Schedule</a></span>
     </dt>
@@ -408,7 +422,9 @@ is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>Transfer<wbr>Spec</span>
+        <span id="transferspec_go">
+<a href="#transferspec_go" style="color: inherit; text-decoration: inherit;">Transfer<wbr>Spec</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transferjobtransferspec">Transfer<wbr>Job<wbr>Transfer<wbr>Spec</a></span>
     </dt>
@@ -417,7 +433,9 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project</span>
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -427,7 +445,9 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Status</span>
+        <span id="status_go">
+<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -443,7 +463,9 @@ is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>description</span>
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -452,7 +474,9 @@ is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>schedule</span>
+        <span id="schedule_nodejs">
+<a href="#schedule_nodejs" style="color: inherit; text-decoration: inherit;">schedule</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transferjobschedule">Transfer<wbr>Job<wbr>Schedule</a></span>
     </dt>
@@ -461,7 +485,9 @@ is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>transfer<wbr>Spec</span>
+        <span id="transferspec_nodejs">
+<a href="#transferspec_nodejs" style="color: inherit; text-decoration: inherit;">transfer<wbr>Spec</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transferjobtransferspec">Transfer<wbr>Job<wbr>Transfer<wbr>Spec</a></span>
     </dt>
@@ -470,7 +496,9 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>project</span>
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -480,7 +508,9 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>status</span>
+        <span id="status_nodejs">
+<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -496,7 +526,9 @@ is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>description</span>
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -505,7 +537,9 @@ is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>schedule</span>
+        <span id="schedule_python">
+<a href="#schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transferjobschedule">Dict[Transfer<wbr>Job<wbr>Schedule]</a></span>
     </dt>
@@ -514,7 +548,9 @@ is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>transfer_<wbr>spec</span>
+        <span id="transfer_spec_python">
+<a href="#transfer_spec_python" style="color: inherit; text-decoration: inherit;">transfer_<wbr>spec</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transferjobtransferspec">Dict[Transfer<wbr>Job<wbr>Transfer<wbr>Spec]</a></span>
     </dt>
@@ -523,7 +559,9 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>project</span>
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -533,7 +571,9 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>status</span>
+        <span id="status_python">
+<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -560,7 +600,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Creation<wbr>Time</span>
+        <span id="creationtime_csharp">
+<a href="#creationtime_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -569,7 +611,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Deletion<wbr>Time</span>
+        <span id="deletiontime_csharp">
+<a href="#deletiontime_csharp" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -578,7 +622,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -586,7 +632,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Last<wbr>Modification<wbr>Time</span>
+        <span id="lastmodificationtime_csharp">
+<a href="#lastmodificationtime_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modification<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -595,7 +643,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -611,7 +661,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Creation<wbr>Time</span>
+        <span id="creationtime_go">
+<a href="#creationtime_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -620,7 +672,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Deletion<wbr>Time</span>
+        <span id="deletiontime_go">
+<a href="#deletiontime_go" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -629,7 +683,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -637,7 +693,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Last<wbr>Modification<wbr>Time</span>
+        <span id="lastmodificationtime_go">
+<a href="#lastmodificationtime_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modification<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -646,7 +704,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -662,7 +722,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>creation<wbr>Time</span>
+        <span id="creationtime_nodejs">
+<a href="#creationtime_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -671,7 +733,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>deletion<wbr>Time</span>
+        <span id="deletiontime_nodejs">
+<a href="#deletiontime_nodejs" style="color: inherit; text-decoration: inherit;">deletion<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -680,7 +744,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -688,7 +754,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>last<wbr>Modification<wbr>Time</span>
+        <span id="lastmodificationtime_nodejs">
+<a href="#lastmodificationtime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modification<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -697,7 +765,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -713,7 +783,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>creation_<wbr>time</span>
+        <span id="creation_time_python">
+<a href="#creation_time_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -722,7 +794,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>deletion_<wbr>time</span>
+        <span id="deletion_time_python">
+<a href="#deletion_time_python" style="color: inherit; text-decoration: inherit;">deletion_<wbr>time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -731,7 +805,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -739,7 +815,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>last_<wbr>modification_<wbr>time</span>
+        <span id="last_modification_time_python">
+<a href="#last_modification_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modification_<wbr>time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -748,7 +826,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -890,7 +970,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Creation<wbr>Time</span>
+        <span id="state_creationtime_csharp">
+<a href="#state_creationtime_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -899,7 +981,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Deletion<wbr>Time</span>
+        <span id="state_deletiontime_csharp">
+<a href="#state_deletiontime_csharp" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -908,7 +992,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_csharp">
+<a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -917,7 +1003,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Last<wbr>Modification<wbr>Time</span>
+        <span id="state_lastmodificationtime_csharp">
+<a href="#state_lastmodificationtime_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modification<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -926,7 +1014,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -935,7 +1025,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project</span>
+        <span id="state_project_csharp">
+<a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -945,7 +1037,9 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Schedule</span>
+        <span id="state_schedule_csharp">
+<a href="#state_schedule_csharp" style="color: inherit; text-decoration: inherit;">Schedule</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transferjobschedule">Transfer<wbr>Job<wbr>Schedule<wbr>Args</a></span>
     </dt>
@@ -954,7 +1048,9 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Status</span>
+        <span id="state_status_csharp">
+<a href="#state_status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -963,7 +1059,9 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Transfer<wbr>Spec</span>
+        <span id="state_transferspec_csharp">
+<a href="#state_transferspec_csharp" style="color: inherit; text-decoration: inherit;">Transfer<wbr>Spec</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transferjobtransferspec">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Args</a></span>
     </dt>
@@ -979,7 +1077,9 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Creation<wbr>Time</span>
+        <span id="state_creationtime_go">
+<a href="#state_creationtime_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -988,7 +1088,9 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Deletion<wbr>Time</span>
+        <span id="state_deletiontime_go">
+<a href="#state_deletiontime_go" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -997,7 +1099,9 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_go">
+<a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1006,7 +1110,9 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Last<wbr>Modification<wbr>Time</span>
+        <span id="state_lastmodificationtime_go">
+<a href="#state_lastmodificationtime_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modification<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1015,7 +1121,9 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1024,7 +1132,9 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project</span>
+        <span id="state_project_go">
+<a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1034,7 +1144,9 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Schedule</span>
+        <span id="state_schedule_go">
+<a href="#state_schedule_go" style="color: inherit; text-decoration: inherit;">Schedule</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transferjobschedule">Transfer<wbr>Job<wbr>Schedule</a></span>
     </dt>
@@ -1043,7 +1155,9 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Status</span>
+        <span id="state_status_go">
+<a href="#state_status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1052,7 +1166,9 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Transfer<wbr>Spec</span>
+        <span id="state_transferspec_go">
+<a href="#state_transferspec_go" style="color: inherit; text-decoration: inherit;">Transfer<wbr>Spec</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transferjobtransferspec">Transfer<wbr>Job<wbr>Transfer<wbr>Spec</a></span>
     </dt>
@@ -1068,7 +1184,9 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>creation<wbr>Time</span>
+        <span id="state_creationtime_nodejs">
+<a href="#state_creationtime_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1077,7 +1195,9 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>deletion<wbr>Time</span>
+        <span id="state_deletiontime_nodejs">
+<a href="#state_deletiontime_nodejs" style="color: inherit; text-decoration: inherit;">deletion<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1086,7 +1206,9 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_nodejs">
+<a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1095,7 +1217,9 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>last<wbr>Modification<wbr>Time</span>
+        <span id="state_lastmodificationtime_nodejs">
+<a href="#state_lastmodificationtime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modification<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1104,7 +1228,9 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1113,7 +1239,9 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>project</span>
+        <span id="state_project_nodejs">
+<a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1123,7 +1251,9 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>schedule</span>
+        <span id="state_schedule_nodejs">
+<a href="#state_schedule_nodejs" style="color: inherit; text-decoration: inherit;">schedule</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transferjobschedule">Transfer<wbr>Job<wbr>Schedule</a></span>
     </dt>
@@ -1132,7 +1262,9 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>status</span>
+        <span id="state_status_nodejs">
+<a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1141,7 +1273,9 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>transfer<wbr>Spec</span>
+        <span id="state_transferspec_nodejs">
+<a href="#state_transferspec_nodejs" style="color: inherit; text-decoration: inherit;">transfer<wbr>Spec</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transferjobtransferspec">Transfer<wbr>Job<wbr>Transfer<wbr>Spec</a></span>
     </dt>
@@ -1157,7 +1291,9 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>creation_<wbr>time</span>
+        <span id="state_creation_time_python">
+<a href="#state_creation_time_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1166,7 +1302,9 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>deletion_<wbr>time</span>
+        <span id="state_deletion_time_python">
+<a href="#state_deletion_time_python" style="color: inherit; text-decoration: inherit;">deletion_<wbr>time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1175,7 +1313,9 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_python">
+<a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1184,7 +1324,9 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>last_<wbr>modification_<wbr>time</span>
+        <span id="state_last_modification_time_python">
+<a href="#state_last_modification_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modification_<wbr>time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1193,7 +1335,9 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1202,7 +1346,9 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>project</span>
+        <span id="state_project_python">
+<a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1212,7 +1358,9 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>schedule</span>
+        <span id="state_schedule_python">
+<a href="#state_schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transferjobschedule">Dict[Transfer<wbr>Job<wbr>Schedule]</a></span>
     </dt>
@@ -1221,7 +1369,9 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>status</span>
+        <span id="state_status_python">
+<a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1230,7 +1380,9 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>transfer_<wbr>spec</span>
+        <span id="state_transfer_spec_python">
+<a href="#state_transfer_spec_python" style="color: inherit; text-decoration: inherit;">transfer_<wbr>spec</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transferjobtransferspec">Dict[Transfer<wbr>Job<wbr>Transfer<wbr>Spec]</a></span>
     </dt>
@@ -1272,7 +1424,9 @@ is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>Schedule<wbr>Start<wbr>Date</span>
+        <span id="schedulestartdate_csharp">
+<a href="#schedulestartdate_csharp" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Start<wbr>Date</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transferjobscheduleschedulestartdate">Transfer<wbr>Job<wbr>Schedule<wbr>Schedule<wbr>Start<wbr>Date<wbr>Args</a></span>
     </dt>
@@ -1281,7 +1435,9 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Schedule<wbr>End<wbr>Date</span>
+        <span id="scheduleenddate_csharp">
+<a href="#scheduleenddate_csharp" style="color: inherit; text-decoration: inherit;">Schedule<wbr>End<wbr>Date</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transferjobschedulescheduleenddate">Transfer<wbr>Job<wbr>Schedule<wbr>Schedule<wbr>End<wbr>Date<wbr>Args</a></span>
     </dt>
@@ -1290,7 +1446,9 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Start<wbr>Time<wbr>Of<wbr>Day</span>
+        <span id="starttimeofday_csharp">
+<a href="#starttimeofday_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Time<wbr>Of<wbr>Day</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transferjobschedulestarttimeofday">Transfer<wbr>Job<wbr>Schedule<wbr>Start<wbr>Time<wbr>Of<wbr>Day<wbr>Args</a></span>
     </dt>
@@ -1306,7 +1464,9 @@ is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>Schedule<wbr>Start<wbr>Date</span>
+        <span id="schedulestartdate_go">
+<a href="#schedulestartdate_go" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Start<wbr>Date</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transferjobscheduleschedulestartdate">Transfer<wbr>Job<wbr>Schedule<wbr>Schedule<wbr>Start<wbr>Date</a></span>
     </dt>
@@ -1315,7 +1475,9 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Schedule<wbr>End<wbr>Date</span>
+        <span id="scheduleenddate_go">
+<a href="#scheduleenddate_go" style="color: inherit; text-decoration: inherit;">Schedule<wbr>End<wbr>Date</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transferjobschedulescheduleenddate">Transfer<wbr>Job<wbr>Schedule<wbr>Schedule<wbr>End<wbr>Date</a></span>
     </dt>
@@ -1324,7 +1486,9 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Start<wbr>Time<wbr>Of<wbr>Day</span>
+        <span id="starttimeofday_go">
+<a href="#starttimeofday_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Time<wbr>Of<wbr>Day</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transferjobschedulestarttimeofday">Transfer<wbr>Job<wbr>Schedule<wbr>Start<wbr>Time<wbr>Of<wbr>Day</a></span>
     </dt>
@@ -1340,7 +1504,9 @@ is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>schedule<wbr>Start<wbr>Date</span>
+        <span id="schedulestartdate_nodejs">
+<a href="#schedulestartdate_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Start<wbr>Date</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transferjobscheduleschedulestartdate">Transfer<wbr>Job<wbr>Schedule<wbr>Schedule<wbr>Start<wbr>Date</a></span>
     </dt>
@@ -1349,7 +1515,9 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>schedule<wbr>End<wbr>Date</span>
+        <span id="scheduleenddate_nodejs">
+<a href="#scheduleenddate_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>End<wbr>Date</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transferjobschedulescheduleenddate">Transfer<wbr>Job<wbr>Schedule<wbr>Schedule<wbr>End<wbr>Date</a></span>
     </dt>
@@ -1358,7 +1526,9 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>start<wbr>Time<wbr>Of<wbr>Day</span>
+        <span id="starttimeofday_nodejs">
+<a href="#starttimeofday_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time<wbr>Of<wbr>Day</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transferjobschedulestarttimeofday">Transfer<wbr>Job<wbr>Schedule<wbr>Start<wbr>Time<wbr>Of<wbr>Day</a></span>
     </dt>
@@ -1374,7 +1544,9 @@ is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>schedule<wbr>Start<wbr>Date</span>
+        <span id="schedulestartdate_python">
+<a href="#schedulestartdate_python" style="color: inherit; text-decoration: inherit;">schedule<wbr>Start<wbr>Date</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transferjobscheduleschedulestartdate">Dict[Transfer<wbr>Job<wbr>Schedule<wbr>Schedule<wbr>Start<wbr>Date]</a></span>
     </dt>
@@ -1383,7 +1555,9 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>schedule<wbr>End<wbr>Date</span>
+        <span id="scheduleenddate_python">
+<a href="#scheduleenddate_python" style="color: inherit; text-decoration: inherit;">schedule<wbr>End<wbr>Date</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transferjobschedulescheduleenddate">Dict[Transfer<wbr>Job<wbr>Schedule<wbr>Schedule<wbr>End<wbr>Date]</a></span>
     </dt>
@@ -1392,7 +1566,9 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>start<wbr>Time<wbr>Of<wbr>Day</span>
+        <span id="starttimeofday_python">
+<a href="#starttimeofday_python" style="color: inherit; text-decoration: inherit;">start<wbr>Time<wbr>Of<wbr>Day</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transferjobschedulestarttimeofday">Dict[Transfer<wbr>Job<wbr>Schedule<wbr>Start<wbr>Time<wbr>Of<wbr>Day]</a></span>
     </dt>
@@ -1426,7 +1602,9 @@ is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>Day</span>
+        <span id="day_csharp">
+<a href="#day_csharp" style="color: inherit; text-decoration: inherit;">Day</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1435,7 +1613,9 @@ is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>Month</span>
+        <span id="month_csharp">
+<a href="#month_csharp" style="color: inherit; text-decoration: inherit;">Month</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1444,7 +1624,9 @@ is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>Year</span>
+        <span id="year_csharp">
+<a href="#year_csharp" style="color: inherit; text-decoration: inherit;">Year</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1460,7 +1642,9 @@ is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>Day</span>
+        <span id="day_go">
+<a href="#day_go" style="color: inherit; text-decoration: inherit;">Day</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1469,7 +1653,9 @@ is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>Month</span>
+        <span id="month_go">
+<a href="#month_go" style="color: inherit; text-decoration: inherit;">Month</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1478,7 +1664,9 @@ is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>Year</span>
+        <span id="year_go">
+<a href="#year_go" style="color: inherit; text-decoration: inherit;">Year</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1494,7 +1682,9 @@ is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>day</span>
+        <span id="day_nodejs">
+<a href="#day_nodejs" style="color: inherit; text-decoration: inherit;">day</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1503,7 +1693,9 @@ is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>month</span>
+        <span id="month_nodejs">
+<a href="#month_nodejs" style="color: inherit; text-decoration: inherit;">month</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1512,7 +1704,9 @@ is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>year</span>
+        <span id="year_nodejs">
+<a href="#year_nodejs" style="color: inherit; text-decoration: inherit;">year</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1528,7 +1722,9 @@ is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>day</span>
+        <span id="day_python">
+<a href="#day_python" style="color: inherit; text-decoration: inherit;">day</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1537,7 +1733,9 @@ is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>month</span>
+        <span id="month_python">
+<a href="#month_python" style="color: inherit; text-decoration: inherit;">month</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1546,7 +1744,9 @@ is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>year</span>
+        <span id="year_python">
+<a href="#year_python" style="color: inherit; text-decoration: inherit;">year</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1580,7 +1780,9 @@ is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>Day</span>
+        <span id="day_csharp">
+<a href="#day_csharp" style="color: inherit; text-decoration: inherit;">Day</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1589,7 +1791,9 @@ is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>Month</span>
+        <span id="month_csharp">
+<a href="#month_csharp" style="color: inherit; text-decoration: inherit;">Month</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1598,7 +1802,9 @@ is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>Year</span>
+        <span id="year_csharp">
+<a href="#year_csharp" style="color: inherit; text-decoration: inherit;">Year</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1614,7 +1820,9 @@ is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>Day</span>
+        <span id="day_go">
+<a href="#day_go" style="color: inherit; text-decoration: inherit;">Day</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1623,7 +1831,9 @@ is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>Month</span>
+        <span id="month_go">
+<a href="#month_go" style="color: inherit; text-decoration: inherit;">Month</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1632,7 +1842,9 @@ is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>Year</span>
+        <span id="year_go">
+<a href="#year_go" style="color: inherit; text-decoration: inherit;">Year</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1648,7 +1860,9 @@ is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>day</span>
+        <span id="day_nodejs">
+<a href="#day_nodejs" style="color: inherit; text-decoration: inherit;">day</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1657,7 +1871,9 @@ is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>month</span>
+        <span id="month_nodejs">
+<a href="#month_nodejs" style="color: inherit; text-decoration: inherit;">month</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1666,7 +1882,9 @@ is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>year</span>
+        <span id="year_nodejs">
+<a href="#year_nodejs" style="color: inherit; text-decoration: inherit;">year</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1682,7 +1900,9 @@ is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>day</span>
+        <span id="day_python">
+<a href="#day_python" style="color: inherit; text-decoration: inherit;">day</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1691,7 +1911,9 @@ is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>month</span>
+        <span id="month_python">
+<a href="#month_python" style="color: inherit; text-decoration: inherit;">month</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1700,7 +1922,9 @@ is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>year</span>
+        <span id="year_python">
+<a href="#year_python" style="color: inherit; text-decoration: inherit;">year</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1734,7 +1958,9 @@ is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>Hours</span>
+        <span id="hours_csharp">
+<a href="#hours_csharp" style="color: inherit; text-decoration: inherit;">Hours</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1743,7 +1969,9 @@ is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>Minutes</span>
+        <span id="minutes_csharp">
+<a href="#minutes_csharp" style="color: inherit; text-decoration: inherit;">Minutes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1752,7 +1980,9 @@ is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>Nanos</span>
+        <span id="nanos_csharp">
+<a href="#nanos_csharp" style="color: inherit; text-decoration: inherit;">Nanos</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1761,7 +1991,9 @@ is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>Seconds</span>
+        <span id="seconds_csharp">
+<a href="#seconds_csharp" style="color: inherit; text-decoration: inherit;">Seconds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1777,7 +2009,9 @@ is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>Hours</span>
+        <span id="hours_go">
+<a href="#hours_go" style="color: inherit; text-decoration: inherit;">Hours</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1786,7 +2020,9 @@ is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>Minutes</span>
+        <span id="minutes_go">
+<a href="#minutes_go" style="color: inherit; text-decoration: inherit;">Minutes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1795,7 +2031,9 @@ is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>Nanos</span>
+        <span id="nanos_go">
+<a href="#nanos_go" style="color: inherit; text-decoration: inherit;">Nanos</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1804,7 +2042,9 @@ is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>Seconds</span>
+        <span id="seconds_go">
+<a href="#seconds_go" style="color: inherit; text-decoration: inherit;">Seconds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1820,7 +2060,9 @@ is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>hours</span>
+        <span id="hours_nodejs">
+<a href="#hours_nodejs" style="color: inherit; text-decoration: inherit;">hours</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1829,7 +2071,9 @@ is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>minutes</span>
+        <span id="minutes_nodejs">
+<a href="#minutes_nodejs" style="color: inherit; text-decoration: inherit;">minutes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1838,7 +2082,9 @@ is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>nanos</span>
+        <span id="nanos_nodejs">
+<a href="#nanos_nodejs" style="color: inherit; text-decoration: inherit;">nanos</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1847,7 +2093,9 @@ is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>seconds</span>
+        <span id="seconds_nodejs">
+<a href="#seconds_nodejs" style="color: inherit; text-decoration: inherit;">seconds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1863,7 +2111,9 @@ is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>hours</span>
+        <span id="hours_python">
+<a href="#hours_python" style="color: inherit; text-decoration: inherit;">hours</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1872,7 +2122,9 @@ is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>minutes</span>
+        <span id="minutes_python">
+<a href="#minutes_python" style="color: inherit; text-decoration: inherit;">minutes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1881,7 +2133,9 @@ is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>nanos</span>
+        <span id="nanos_python">
+<a href="#nanos_python" style="color: inherit; text-decoration: inherit;">nanos</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1890,7 +2144,9 @@ is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>seconds</span>
+        <span id="seconds_python">
+<a href="#seconds_python" style="color: inherit; text-decoration: inherit;">seconds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1924,7 +2180,9 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Aws<wbr>S3Data<wbr>Source</span>
+        <span id="awss3datasource_csharp">
+<a href="#awss3datasource_csharp" style="color: inherit; text-decoration: inherit;">Aws<wbr>S3Data<wbr>Source</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transferjobtransferspecawss3datasource">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Aws<wbr>S3Data<wbr>Source<wbr>Args</a></span>
     </dt>
@@ -1933,7 +2191,9 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Gcs<wbr>Data<wbr>Sink</span>
+        <span id="gcsdatasink_csharp">
+<a href="#gcsdatasink_csharp" style="color: inherit; text-decoration: inherit;">Gcs<wbr>Data<wbr>Sink</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transferjobtransferspecgcsdatasink">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Gcs<wbr>Data<wbr>Sink<wbr>Args</a></span>
     </dt>
@@ -1942,7 +2202,9 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Gcs<wbr>Data<wbr>Source</span>
+        <span id="gcsdatasource_csharp">
+<a href="#gcsdatasource_csharp" style="color: inherit; text-decoration: inherit;">Gcs<wbr>Data<wbr>Source</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transferjobtransferspecgcsdatasource">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Gcs<wbr>Data<wbr>Source<wbr>Args</a></span>
     </dt>
@@ -1951,7 +2213,9 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Http<wbr>Data<wbr>Source</span>
+        <span id="httpdatasource_csharp">
+<a href="#httpdatasource_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Data<wbr>Source</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transferjobtransferspechttpdatasource">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Http<wbr>Data<wbr>Source<wbr>Args</a></span>
     </dt>
@@ -1960,7 +2224,9 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Object<wbr>Conditions</span>
+        <span id="objectconditions_csharp">
+<a href="#objectconditions_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Conditions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transferjobtransferspecobjectconditions">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Object<wbr>Conditions<wbr>Args</a></span>
     </dt>
@@ -1969,7 +2235,9 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Transfer<wbr>Options</span>
+        <span id="transferoptions_csharp">
+<a href="#transferoptions_csharp" style="color: inherit; text-decoration: inherit;">Transfer<wbr>Options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transferjobtransferspectransferoptions">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Transfer<wbr>Options<wbr>Args</a></span>
     </dt>
@@ -1985,7 +2253,9 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Aws<wbr>S3Data<wbr>Source</span>
+        <span id="awss3datasource_go">
+<a href="#awss3datasource_go" style="color: inherit; text-decoration: inherit;">Aws<wbr>S3Data<wbr>Source</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transferjobtransferspecawss3datasource">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Aws<wbr>S3Data<wbr>Source</a></span>
     </dt>
@@ -1994,7 +2264,9 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Gcs<wbr>Data<wbr>Sink</span>
+        <span id="gcsdatasink_go">
+<a href="#gcsdatasink_go" style="color: inherit; text-decoration: inherit;">Gcs<wbr>Data<wbr>Sink</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transferjobtransferspecgcsdatasink">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Gcs<wbr>Data<wbr>Sink</a></span>
     </dt>
@@ -2003,7 +2275,9 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Gcs<wbr>Data<wbr>Source</span>
+        <span id="gcsdatasource_go">
+<a href="#gcsdatasource_go" style="color: inherit; text-decoration: inherit;">Gcs<wbr>Data<wbr>Source</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transferjobtransferspecgcsdatasource">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Gcs<wbr>Data<wbr>Source</a></span>
     </dt>
@@ -2012,7 +2286,9 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Http<wbr>Data<wbr>Source</span>
+        <span id="httpdatasource_go">
+<a href="#httpdatasource_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Data<wbr>Source</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transferjobtransferspechttpdatasource">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Http<wbr>Data<wbr>Source</a></span>
     </dt>
@@ -2021,7 +2297,9 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Object<wbr>Conditions</span>
+        <span id="objectconditions_go">
+<a href="#objectconditions_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Conditions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transferjobtransferspecobjectconditions">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Object<wbr>Conditions</a></span>
     </dt>
@@ -2030,7 +2308,9 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Transfer<wbr>Options</span>
+        <span id="transferoptions_go">
+<a href="#transferoptions_go" style="color: inherit; text-decoration: inherit;">Transfer<wbr>Options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transferjobtransferspectransferoptions">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Transfer<wbr>Options</a></span>
     </dt>
@@ -2046,7 +2326,9 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>aws<wbr>S3Data<wbr>Source</span>
+        <span id="awss3datasource_nodejs">
+<a href="#awss3datasource_nodejs" style="color: inherit; text-decoration: inherit;">aws<wbr>S3Data<wbr>Source</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transferjobtransferspecawss3datasource">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Aws<wbr>S3Data<wbr>Source</a></span>
     </dt>
@@ -2055,7 +2337,9 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>gcs<wbr>Data<wbr>Sink</span>
+        <span id="gcsdatasink_nodejs">
+<a href="#gcsdatasink_nodejs" style="color: inherit; text-decoration: inherit;">gcs<wbr>Data<wbr>Sink</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transferjobtransferspecgcsdatasink">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Gcs<wbr>Data<wbr>Sink</a></span>
     </dt>
@@ -2064,7 +2348,9 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>gcs<wbr>Data<wbr>Source</span>
+        <span id="gcsdatasource_nodejs">
+<a href="#gcsdatasource_nodejs" style="color: inherit; text-decoration: inherit;">gcs<wbr>Data<wbr>Source</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transferjobtransferspecgcsdatasource">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Gcs<wbr>Data<wbr>Source</a></span>
     </dt>
@@ -2073,7 +2359,9 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>http<wbr>Data<wbr>Source</span>
+        <span id="httpdatasource_nodejs">
+<a href="#httpdatasource_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Data<wbr>Source</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transferjobtransferspechttpdatasource">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Http<wbr>Data<wbr>Source</a></span>
     </dt>
@@ -2082,7 +2370,9 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>object<wbr>Conditions</span>
+        <span id="objectconditions_nodejs">
+<a href="#objectconditions_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Conditions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transferjobtransferspecobjectconditions">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Object<wbr>Conditions</a></span>
     </dt>
@@ -2091,7 +2381,9 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>transfer<wbr>Options</span>
+        <span id="transferoptions_nodejs">
+<a href="#transferoptions_nodejs" style="color: inherit; text-decoration: inherit;">transfer<wbr>Options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transferjobtransferspectransferoptions">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Transfer<wbr>Options</a></span>
     </dt>
@@ -2107,7 +2399,9 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>aws<wbr>S3Data<wbr>Source</span>
+        <span id="awss3datasource_python">
+<a href="#awss3datasource_python" style="color: inherit; text-decoration: inherit;">aws<wbr>S3Data<wbr>Source</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transferjobtransferspecawss3datasource">Dict[Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Aws<wbr>S3Data<wbr>Source]</a></span>
     </dt>
@@ -2116,7 +2410,9 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>gcs<wbr>Data<wbr>Sink</span>
+        <span id="gcsdatasink_python">
+<a href="#gcsdatasink_python" style="color: inherit; text-decoration: inherit;">gcs<wbr>Data<wbr>Sink</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transferjobtransferspecgcsdatasink">Dict[Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Gcs<wbr>Data<wbr>Sink]</a></span>
     </dt>
@@ -2125,7 +2421,9 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>gcs<wbr>Data<wbr>Source</span>
+        <span id="gcsdatasource_python">
+<a href="#gcsdatasource_python" style="color: inherit; text-decoration: inherit;">gcs<wbr>Data<wbr>Source</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transferjobtransferspecgcsdatasource">Dict[Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Gcs<wbr>Data<wbr>Source]</a></span>
     </dt>
@@ -2134,7 +2432,9 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>http<wbr>Data<wbr>Source</span>
+        <span id="httpdatasource_python">
+<a href="#httpdatasource_python" style="color: inherit; text-decoration: inherit;">http<wbr>Data<wbr>Source</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transferjobtransferspechttpdatasource">Dict[Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Http<wbr>Data<wbr>Source]</a></span>
     </dt>
@@ -2143,7 +2443,9 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>object<wbr>Conditions</span>
+        <span id="objectconditions_python">
+<a href="#objectconditions_python" style="color: inherit; text-decoration: inherit;">object<wbr>Conditions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transferjobtransferspecobjectconditions">Dict[Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Object<wbr>Conditions]</a></span>
     </dt>
@@ -2152,7 +2454,9 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>transfer<wbr>Options</span>
+        <span id="transferoptions_python">
+<a href="#transferoptions_python" style="color: inherit; text-decoration: inherit;">transfer<wbr>Options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transferjobtransferspectransferoptions">Dict[Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Transfer<wbr>Options]</a></span>
     </dt>
@@ -2186,7 +2490,9 @@ is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>Aws<wbr>Access<wbr>Key</span>
+        <span id="awsaccesskey_csharp">
+<a href="#awsaccesskey_csharp" style="color: inherit; text-decoration: inherit;">Aws<wbr>Access<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transferjobtransferspecawss3datasourceawsaccesskey">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Aws<wbr>S3Data<wbr>Source<wbr>Aws<wbr>Access<wbr>Key<wbr>Args</a></span>
     </dt>
@@ -2195,7 +2501,9 @@ is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>Bucket<wbr>Name</span>
+        <span id="bucketname_csharp">
+<a href="#bucketname_csharp" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2211,7 +2519,9 @@ is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>Aws<wbr>Access<wbr>Key</span>
+        <span id="awsaccesskey_go">
+<a href="#awsaccesskey_go" style="color: inherit; text-decoration: inherit;">Aws<wbr>Access<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transferjobtransferspecawss3datasourceawsaccesskey">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Aws<wbr>S3Data<wbr>Source<wbr>Aws<wbr>Access<wbr>Key</a></span>
     </dt>
@@ -2220,7 +2530,9 @@ is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>Bucket<wbr>Name</span>
+        <span id="bucketname_go">
+<a href="#bucketname_go" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2236,7 +2548,9 @@ is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>aws<wbr>Access<wbr>Key</span>
+        <span id="awsaccesskey_nodejs">
+<a href="#awsaccesskey_nodejs" style="color: inherit; text-decoration: inherit;">aws<wbr>Access<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transferjobtransferspecawss3datasourceawsaccesskey">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Aws<wbr>S3Data<wbr>Source<wbr>Aws<wbr>Access<wbr>Key</a></span>
     </dt>
@@ -2245,7 +2559,9 @@ is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>bucket<wbr>Name</span>
+        <span id="bucketname_nodejs">
+<a href="#bucketname_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2261,7 +2577,9 @@ is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>aws<wbr>Access<wbr>Key</span>
+        <span id="awsaccesskey_python">
+<a href="#awsaccesskey_python" style="color: inherit; text-decoration: inherit;">aws<wbr>Access<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transferjobtransferspecawss3datasourceawsaccesskey">Dict[Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Aws<wbr>S3Data<wbr>Source<wbr>Aws<wbr>Access<wbr>Key]</a></span>
     </dt>
@@ -2270,7 +2588,9 @@ is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>bucket_<wbr>name</span>
+        <span id="bucket_name_python">
+<a href="#bucket_name_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2304,7 +2624,9 @@ is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>Access<wbr>Key<wbr>Id</span>
+        <span id="accesskeyid_csharp">
+<a href="#accesskeyid_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Key<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2313,7 +2635,9 @@ is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>Secret<wbr>Access<wbr>Key</span>
+        <span id="secretaccesskey_csharp">
+<a href="#secretaccesskey_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Access<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2329,7 +2653,9 @@ is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>Access<wbr>Key<wbr>Id</span>
+        <span id="accesskeyid_go">
+<a href="#accesskeyid_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Key<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2338,7 +2664,9 @@ is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>Secret<wbr>Access<wbr>Key</span>
+        <span id="secretaccesskey_go">
+<a href="#secretaccesskey_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Access<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2354,7 +2682,9 @@ is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>access<wbr>Key<wbr>Id</span>
+        <span id="accesskeyid_nodejs">
+<a href="#accesskeyid_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Key<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2363,7 +2693,9 @@ is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>secret<wbr>Access<wbr>Key</span>
+        <span id="secretaccesskey_nodejs">
+<a href="#secretaccesskey_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Access<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2379,7 +2711,9 @@ is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>access<wbr>Key<wbr>Id</span>
+        <span id="accesskeyid_python">
+<a href="#accesskeyid_python" style="color: inherit; text-decoration: inherit;">access<wbr>Key<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2388,7 +2722,9 @@ is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>secret<wbr>Access<wbr>Key</span>
+        <span id="secretaccesskey_python">
+<a href="#secretaccesskey_python" style="color: inherit; text-decoration: inherit;">secret<wbr>Access<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2422,7 +2758,9 @@ is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>Bucket<wbr>Name</span>
+        <span id="bucketname_csharp">
+<a href="#bucketname_csharp" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2438,7 +2776,9 @@ is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>Bucket<wbr>Name</span>
+        <span id="bucketname_go">
+<a href="#bucketname_go" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2454,7 +2794,9 @@ is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>bucket<wbr>Name</span>
+        <span id="bucketname_nodejs">
+<a href="#bucketname_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2470,7 +2812,9 @@ is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>bucket_<wbr>name</span>
+        <span id="bucket_name_python">
+<a href="#bucket_name_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2504,7 +2848,9 @@ is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>Bucket<wbr>Name</span>
+        <span id="bucketname_csharp">
+<a href="#bucketname_csharp" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2520,7 +2866,9 @@ is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>Bucket<wbr>Name</span>
+        <span id="bucketname_go">
+<a href="#bucketname_go" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2536,7 +2884,9 @@ is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>bucket<wbr>Name</span>
+        <span id="bucketname_nodejs">
+<a href="#bucketname_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2552,7 +2902,9 @@ is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>bucket_<wbr>name</span>
+        <span id="bucket_name_python">
+<a href="#bucket_name_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2586,7 +2938,9 @@ is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>List<wbr>Url</span>
+        <span id="listurl_csharp">
+<a href="#listurl_csharp" style="color: inherit; text-decoration: inherit;">List<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2602,7 +2956,9 @@ is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>List<wbr>Url</span>
+        <span id="listurl_go">
+<a href="#listurl_go" style="color: inherit; text-decoration: inherit;">List<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2618,7 +2974,9 @@ is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>list<wbr>Url</span>
+        <span id="listurl_nodejs">
+<a href="#listurl_nodejs" style="color: inherit; text-decoration: inherit;">list<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2634,7 +2992,9 @@ is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>list<wbr>Url</span>
+        <span id="listurl_python">
+<a href="#listurl_python" style="color: inherit; text-decoration: inherit;">list<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2668,7 +3028,9 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Exclude<wbr>Prefixes</span>
+        <span id="excludeprefixes_csharp">
+<a href="#excludeprefixes_csharp" style="color: inherit; text-decoration: inherit;">Exclude<wbr>Prefixes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -2677,7 +3039,9 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Include<wbr>Prefixes</span>
+        <span id="includeprefixes_csharp">
+<a href="#includeprefixes_csharp" style="color: inherit; text-decoration: inherit;">Include<wbr>Prefixes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -2686,7 +3050,9 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Time<wbr>Elapsed<wbr>Since<wbr>Last<wbr>Modification</span>
+        <span id="maxtimeelapsedsincelastmodification_csharp">
+<a href="#maxtimeelapsedsincelastmodification_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Time<wbr>Elapsed<wbr>Since<wbr>Last<wbr>Modification</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2695,7 +3061,9 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Min<wbr>Time<wbr>Elapsed<wbr>Since<wbr>Last<wbr>Modification</span>
+        <span id="mintimeelapsedsincelastmodification_csharp">
+<a href="#mintimeelapsedsincelastmodification_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Time<wbr>Elapsed<wbr>Since<wbr>Last<wbr>Modification</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2712,7 +3080,9 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
 
     <dt class="property-optional"
             title="Optional">
-        <span>Exclude<wbr>Prefixes</span>
+        <span id="excludeprefixes_go">
+<a href="#excludeprefixes_go" style="color: inherit; text-decoration: inherit;">Exclude<wbr>Prefixes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -2721,7 +3091,9 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
 
     <dt class="property-optional"
             title="Optional">
-        <span>Include<wbr>Prefixes</span>
+        <span id="includeprefixes_go">
+<a href="#includeprefixes_go" style="color: inherit; text-decoration: inherit;">Include<wbr>Prefixes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -2730,7 +3102,9 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Time<wbr>Elapsed<wbr>Since<wbr>Last<wbr>Modification</span>
+        <span id="maxtimeelapsedsincelastmodification_go">
+<a href="#maxtimeelapsedsincelastmodification_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Time<wbr>Elapsed<wbr>Since<wbr>Last<wbr>Modification</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2739,7 +3113,9 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
 
     <dt class="property-optional"
             title="Optional">
-        <span>Min<wbr>Time<wbr>Elapsed<wbr>Since<wbr>Last<wbr>Modification</span>
+        <span id="mintimeelapsedsincelastmodification_go">
+<a href="#mintimeelapsedsincelastmodification_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Time<wbr>Elapsed<wbr>Since<wbr>Last<wbr>Modification</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2756,7 +3132,9 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
 
     <dt class="property-optional"
             title="Optional">
-        <span>exclude<wbr>Prefixes</span>
+        <span id="excludeprefixes_nodejs">
+<a href="#excludeprefixes_nodejs" style="color: inherit; text-decoration: inherit;">exclude<wbr>Prefixes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -2765,7 +3143,9 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
 
     <dt class="property-optional"
             title="Optional">
-        <span>include<wbr>Prefixes</span>
+        <span id="includeprefixes_nodejs">
+<a href="#includeprefixes_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Prefixes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -2774,7 +3154,9 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Time<wbr>Elapsed<wbr>Since<wbr>Last<wbr>Modification</span>
+        <span id="maxtimeelapsedsincelastmodification_nodejs">
+<a href="#maxtimeelapsedsincelastmodification_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Time<wbr>Elapsed<wbr>Since<wbr>Last<wbr>Modification</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2783,7 +3165,9 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
 
     <dt class="property-optional"
             title="Optional">
-        <span>min<wbr>Time<wbr>Elapsed<wbr>Since<wbr>Last<wbr>Modification</span>
+        <span id="mintimeelapsedsincelastmodification_nodejs">
+<a href="#mintimeelapsedsincelastmodification_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Time<wbr>Elapsed<wbr>Since<wbr>Last<wbr>Modification</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2800,7 +3184,9 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
 
     <dt class="property-optional"
             title="Optional">
-        <span>exclude<wbr>Prefixes</span>
+        <span id="excludeprefixes_python">
+<a href="#excludeprefixes_python" style="color: inherit; text-decoration: inherit;">exclude<wbr>Prefixes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -2809,7 +3195,9 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
 
     <dt class="property-optional"
             title="Optional">
-        <span>include<wbr>Prefixes</span>
+        <span id="includeprefixes_python">
+<a href="#includeprefixes_python" style="color: inherit; text-decoration: inherit;">include<wbr>Prefixes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -2818,7 +3206,9 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Time<wbr>Elapsed<wbr>Since<wbr>Last<wbr>Modification</span>
+        <span id="maxtimeelapsedsincelastmodification_python">
+<a href="#maxtimeelapsedsincelastmodification_python" style="color: inherit; text-decoration: inherit;">max<wbr>Time<wbr>Elapsed<wbr>Since<wbr>Last<wbr>Modification</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2827,7 +3217,9 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
 
     <dt class="property-optional"
             title="Optional">
-        <span>min<wbr>Time<wbr>Elapsed<wbr>Since<wbr>Last<wbr>Modification</span>
+        <span id="mintimeelapsedsincelastmodification_python">
+<a href="#mintimeelapsedsincelastmodification_python" style="color: inherit; text-decoration: inherit;">min<wbr>Time<wbr>Elapsed<wbr>Since<wbr>Last<wbr>Modification</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2862,7 +3254,9 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
 
     <dt class="property-optional"
             title="Optional">
-        <span>Delete<wbr>Objects<wbr>From<wbr>Source<wbr>After<wbr>Transfer</span>
+        <span id="deleteobjectsfromsourceaftertransfer_csharp">
+<a href="#deleteobjectsfromsourceaftertransfer_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>Objects<wbr>From<wbr>Source<wbr>After<wbr>Transfer</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -2871,7 +3265,9 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
 
     <dt class="property-optional"
             title="Optional">
-        <span>Delete<wbr>Objects<wbr>Unique<wbr>In<wbr>Sink</span>
+        <span id="deleteobjectsuniqueinsink_csharp">
+<a href="#deleteobjectsuniqueinsink_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>Objects<wbr>Unique<wbr>In<wbr>Sink</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -2881,7 +3277,9 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
 
     <dt class="property-optional"
             title="Optional">
-        <span>Overwrite<wbr>Objects<wbr>Already<wbr>Existing<wbr>In<wbr>Sink</span>
+        <span id="overwriteobjectsalreadyexistinginsink_csharp">
+<a href="#overwriteobjectsalreadyexistinginsink_csharp" style="color: inherit; text-decoration: inherit;">Overwrite<wbr>Objects<wbr>Already<wbr>Existing<wbr>In<wbr>Sink</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -2897,7 +3295,9 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
 
     <dt class="property-optional"
             title="Optional">
-        <span>Delete<wbr>Objects<wbr>From<wbr>Source<wbr>After<wbr>Transfer</span>
+        <span id="deleteobjectsfromsourceaftertransfer_go">
+<a href="#deleteobjectsfromsourceaftertransfer_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>Objects<wbr>From<wbr>Source<wbr>After<wbr>Transfer</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -2906,7 +3306,9 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
 
     <dt class="property-optional"
             title="Optional">
-        <span>Delete<wbr>Objects<wbr>Unique<wbr>In<wbr>Sink</span>
+        <span id="deleteobjectsuniqueinsink_go">
+<a href="#deleteobjectsuniqueinsink_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>Objects<wbr>Unique<wbr>In<wbr>Sink</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -2916,7 +3318,9 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
 
     <dt class="property-optional"
             title="Optional">
-        <span>Overwrite<wbr>Objects<wbr>Already<wbr>Existing<wbr>In<wbr>Sink</span>
+        <span id="overwriteobjectsalreadyexistinginsink_go">
+<a href="#overwriteobjectsalreadyexistinginsink_go" style="color: inherit; text-decoration: inherit;">Overwrite<wbr>Objects<wbr>Already<wbr>Existing<wbr>In<wbr>Sink</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -2932,7 +3336,9 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
 
     <dt class="property-optional"
             title="Optional">
-        <span>delete<wbr>Objects<wbr>From<wbr>Source<wbr>After<wbr>Transfer</span>
+        <span id="deleteobjectsfromsourceaftertransfer_nodejs">
+<a href="#deleteobjectsfromsourceaftertransfer_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Objects<wbr>From<wbr>Source<wbr>After<wbr>Transfer</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -2941,7 +3347,9 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
 
     <dt class="property-optional"
             title="Optional">
-        <span>delete<wbr>Objects<wbr>Unique<wbr>In<wbr>Sink</span>
+        <span id="deleteobjectsuniqueinsink_nodejs">
+<a href="#deleteobjectsuniqueinsink_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Objects<wbr>Unique<wbr>In<wbr>Sink</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -2951,7 +3359,9 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
 
     <dt class="property-optional"
             title="Optional">
-        <span>overwrite<wbr>Objects<wbr>Already<wbr>Existing<wbr>In<wbr>Sink</span>
+        <span id="overwriteobjectsalreadyexistinginsink_nodejs">
+<a href="#overwriteobjectsalreadyexistinginsink_nodejs" style="color: inherit; text-decoration: inherit;">overwrite<wbr>Objects<wbr>Already<wbr>Existing<wbr>In<wbr>Sink</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -2967,7 +3377,9 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
 
     <dt class="property-optional"
             title="Optional">
-        <span>delete<wbr>Objects<wbr>From<wbr>Source<wbr>After<wbr>Transfer</span>
+        <span id="deleteobjectsfromsourceaftertransfer_python">
+<a href="#deleteobjectsfromsourceaftertransfer_python" style="color: inherit; text-decoration: inherit;">delete<wbr>Objects<wbr>From<wbr>Source<wbr>After<wbr>Transfer</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2976,7 +3388,9 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
 
     <dt class="property-optional"
             title="Optional">
-        <span>delete<wbr>Objects<wbr>Unique<wbr>In<wbr>Sink</span>
+        <span id="deleteobjectsuniqueinsink_python">
+<a href="#deleteobjectsuniqueinsink_python" style="color: inherit; text-decoration: inherit;">delete<wbr>Objects<wbr>Unique<wbr>In<wbr>Sink</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2986,7 +3400,9 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
 
     <dt class="property-optional"
             title="Optional">
-        <span>overwrite<wbr>Objects<wbr>Already<wbr>Existing<wbr>In<wbr>Sink</span>
+        <span id="overwriteobjectsalreadyexistinginsink_python">
+<a href="#overwriteobjectsalreadyexistinginsink_python" style="color: inherit; text-decoration: inherit;">overwrite<wbr>Objects<wbr>Already<wbr>Existing<wbr>In<wbr>Sink</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>

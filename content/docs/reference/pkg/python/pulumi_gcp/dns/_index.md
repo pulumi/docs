@@ -634,10 +634,10 @@ Private Cloud resources.</p>
     <span class="p">},</span>
     <span class="n">networks</span><span class="o">=</span><span class="p">[</span>
         <span class="p">{</span>
-            <span class="s2">&quot;networkUrl&quot;</span><span class="p">:</span> <span class="n">network_1</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+            <span class="s2">&quot;networkUrl&quot;</span><span class="p">:</span> <span class="n">network_1</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
         <span class="p">},</span>
         <span class="p">{</span>
-            <span class="s2">&quot;networkUrl&quot;</span><span class="p">:</span> <span class="n">network_2</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+            <span class="s2">&quot;networkUrl&quot;</span><span class="p">:</span> <span class="n">network_2</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
         <span class="p">},</span>
     <span class="p">])</span>
 </pre></div>

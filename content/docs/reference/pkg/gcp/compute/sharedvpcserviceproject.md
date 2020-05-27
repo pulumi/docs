@@ -243,7 +243,9 @@ The SharedVPCServiceProject resource accepts the following [input]({{< relref "/
 
     <dt class="property-required"
             title="Required">
-        <span>Host<wbr>Project</span>
+        <span id="hostproject_csharp">
+<a href="#hostproject_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -252,7 +254,9 @@ The SharedVPCServiceProject resource accepts the following [input]({{< relref "/
 
     <dt class="property-required"
             title="Required">
-        <span>Service<wbr>Project</span>
+        <span id="serviceproject_csharp">
+<a href="#serviceproject_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -268,7 +272,9 @@ The SharedVPCServiceProject resource accepts the following [input]({{< relref "/
 
     <dt class="property-required"
             title="Required">
-        <span>Host<wbr>Project</span>
+        <span id="hostproject_go">
+<a href="#hostproject_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -277,7 +283,9 @@ The SharedVPCServiceProject resource accepts the following [input]({{< relref "/
 
     <dt class="property-required"
             title="Required">
-        <span>Service<wbr>Project</span>
+        <span id="serviceproject_go">
+<a href="#serviceproject_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -293,7 +301,9 @@ The SharedVPCServiceProject resource accepts the following [input]({{< relref "/
 
     <dt class="property-required"
             title="Required">
-        <span>host<wbr>Project</span>
+        <span id="hostproject_nodejs">
+<a href="#hostproject_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -302,7 +312,9 @@ The SharedVPCServiceProject resource accepts the following [input]({{< relref "/
 
     <dt class="property-required"
             title="Required">
-        <span>service<wbr>Project</span>
+        <span id="serviceproject_nodejs">
+<a href="#serviceproject_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -318,7 +330,9 @@ The SharedVPCServiceProject resource accepts the following [input]({{< relref "/
 
     <dt class="property-required"
             title="Required">
-        <span>host_<wbr>project</span>
+        <span id="host_project_python">
+<a href="#host_project_python" style="color: inherit; text-decoration: inherit;">host_<wbr>project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -327,7 +341,9 @@ The SharedVPCServiceProject resource accepts the following [input]({{< relref "/
 
     <dt class="property-required"
             title="Required">
-        <span>service_<wbr>project</span>
+        <span id="service_project_python">
+<a href="#service_project_python" style="color: inherit; text-decoration: inherit;">service_<wbr>project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -354,7 +370,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -369,7 +387,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -384,7 +404,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -399,7 +421,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -540,7 +564,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Host<wbr>Project</span>
+        <span id="state_hostproject_csharp">
+<a href="#state_hostproject_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -549,7 +575,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Service<wbr>Project</span>
+        <span id="state_serviceproject_csharp">
+<a href="#state_serviceproject_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -565,7 +593,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Host<wbr>Project</span>
+        <span id="state_hostproject_go">
+<a href="#state_hostproject_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -574,7 +604,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Service<wbr>Project</span>
+        <span id="state_serviceproject_go">
+<a href="#state_serviceproject_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -590,7 +622,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>host<wbr>Project</span>
+        <span id="state_hostproject_nodejs">
+<a href="#state_hostproject_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -599,7 +633,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>service<wbr>Project</span>
+        <span id="state_serviceproject_nodejs">
+<a href="#state_serviceproject_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -615,7 +651,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>host_<wbr>project</span>
+        <span id="state_host_project_python">
+<a href="#state_host_project_python" style="color: inherit; text-decoration: inherit;">host_<wbr>project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -624,7 +662,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>service_<wbr>project</span>
+        <span id="state_service_project_python">
+<a href="#state_service_project_python" style="color: inherit; text-decoration: inherit;">service_<wbr>project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
