@@ -23,6 +23,24 @@ Explore the resources and functions of the ml module in the GCP package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
 	<dt>Version</dt>
-	<dd>3.4.0</dd>
+	<dd>3.7.0</dd>
+</dl>
+
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.ML.html" title="Pulumi.Gcp.ML">Pulumi.Gcp.ML</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/ml?tab=doc#" title="gcp/ml">gcp/ml</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/gcp/ml/#" title="@pulumi/gcp/ml">@pulumi/gcp/ml</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_gcp/ml" title="pulumi_gcp/ml">pulumi_gcp/ml</a></dd>
+
 </dl>
 

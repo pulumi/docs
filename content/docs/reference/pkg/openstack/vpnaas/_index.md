@@ -30,3 +30,21 @@ Explore the resources and functions of the vpnaas module in the Open Stack packa
 	<dd>2.2.1</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.OpenStack/Pulumi.OpenStack.VPNaaS.html" title="Pulumi.OpenStack.VPNaaS">Pulumi.OpenStack.VPNaaS</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/vpnaas?tab=doc#" title="openstack/vpnaas">openstack/vpnaas</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/openstack/vpnaas/#" title="@pulumi/openstack/vpnaas">@pulumi/openstack/vpnaas</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_openstack/vpnaas" title="pulumi_openstack/vpnaas">pulumi_openstack/vpnaas</a></dd>
+
+</dl>
+

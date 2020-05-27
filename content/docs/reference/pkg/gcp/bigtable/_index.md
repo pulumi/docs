@@ -28,6 +28,24 @@ Explore the resources and functions of the bigtable module in the GCP package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
 	<dt>Version</dt>
-	<dd>3.4.0</dd>
+	<dd>3.7.0</dd>
+</dl>
+
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigTable.html" title="Pulumi.Gcp.BigTable">Pulumi.Gcp.BigTable</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigtable?tab=doc#" title="gcp/bigtable">gcp/bigtable</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/gcp/bigtable/#" title="@pulumi/gcp/bigtable">@pulumi/gcp/bigtable</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_gcp/bigtable" title="pulumi_gcp/bigtable">pulumi_gcp/bigtable</a></dd>
+
 </dl>
 

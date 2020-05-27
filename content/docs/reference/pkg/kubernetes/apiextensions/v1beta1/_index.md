@@ -22,6 +22,21 @@ Explore the resources and functions of the apiextensions/v1beta1 module in the K
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>2.1.1</dd>
+	<dd>2.2.0</dd>
+</dl>
+
+
+
+<dl class="tabular">
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apiextensions/v1beta1?tab=doc#" title="kubernetes/apiextensions/v1beta1">kubernetes/apiextensions/v1beta1</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/apiextensions/v1beta1/#" title="@pulumi/kubernetes/apiextensions/v1beta1">@pulumi/kubernetes/apiextensions/v1beta1</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_kubernetes/apiextensions.k8s.io/v1beta1" title="pulumi_kubernetes/apiextensions.k8s.io/v1beta1">pulumi_kubernetes/apiextensions.k8s.io/v1beta1</a></dd>
+
 </dl>
 

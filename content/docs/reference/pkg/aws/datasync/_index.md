@@ -28,6 +28,24 @@ Explore the resources and functions of the datasync module in the AWS package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>2.4.0</dd>
+	<dd>2.6.0</dd>
+</dl>
+
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.DataSync.html" title="Pulumi.Aws.DataSync">Pulumi.Aws.DataSync</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/datasync?tab=doc#" title="aws/datasync">aws/datasync</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/datasync/#" title="@pulumi/aws/datasync">@pulumi/aws/datasync</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_aws/datasync" title="pulumi_aws/datasync">pulumi_aws/datasync</a></dd>
+
 </dl>
 

@@ -32,7 +32,7 @@ data outside of resource definitions.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getKMSSecret<span class="p">(</span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/kms/#GetKMSSecretArgs">GetKMSSecretArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/kms/#GetKMSSecretResult">GetKMSSecretResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getKMSSecret<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/kms/#GetKMSSecretArgs">GetKMSSecretArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/kms/#GetKMSSecretResult">GetKMSSecretResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -42,13 +42,14 @@ data outside of resource definitions.
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetKMSSecret<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/kms?tab=doc#GetKMSSecretArgs">GetKMSSecretArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/kms?tab=doc#GetKMSSecretResult">GetKMSSecretResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetKMSSecret<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/kms?tab=doc#GetKMSSecretArgs">GetKMSSecretArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/kms?tab=doc#GetKMSSecretResult">GetKMSSecretResult</a></span>, error)</span></code></pre></div>
+
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetKMSSecret </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Kms.GetKMSSecretResult.html">GetKMSSecretResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Kms.GetKMSSecretArgs.html">GetKMSSecretArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Kms.GetKMSSecretResult.html">GetKMSSecretResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Kms.GetKMSSecretArgs.html">GetKMSSecretArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -63,7 +64,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Ciphertext</span>
+        <span id="ciphertext_csharp">
+<a href="#ciphertext_csharp" style="color: inherit; text-decoration: inherit;">Ciphertext</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -72,7 +75,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Crypto<wbr>Key</span>
+        <span id="cryptokey_csharp">
+<a href="#cryptokey_csharp" style="color: inherit; text-decoration: inherit;">Crypto<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -83,7 +88,9 @@ decrypt the provided ciphertext. This is represented by the format
 
     <dt class="property-optional"
             title="Optional">
-        <span>Additional<wbr>Authenticated<wbr>Data</span>
+        <span id="additionalauthenticateddata_csharp">
+<a href="#additionalauthenticateddata_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Authenticated<wbr>Data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -99,7 +106,9 @@ decrypt the provided ciphertext. This is represented by the format
 
     <dt class="property-required"
             title="Required">
-        <span>Ciphertext</span>
+        <span id="ciphertext_go">
+<a href="#ciphertext_go" style="color: inherit; text-decoration: inherit;">Ciphertext</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -108,7 +117,9 @@ decrypt the provided ciphertext. This is represented by the format
 
     <dt class="property-required"
             title="Required">
-        <span>Crypto<wbr>Key</span>
+        <span id="cryptokey_go">
+<a href="#cryptokey_go" style="color: inherit; text-decoration: inherit;">Crypto<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -119,7 +130,9 @@ decrypt the provided ciphertext. This is represented by the format
 
     <dt class="property-optional"
             title="Optional">
-        <span>Additional<wbr>Authenticated<wbr>Data</span>
+        <span id="additionalauthenticateddata_go">
+<a href="#additionalauthenticateddata_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Authenticated<wbr>Data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -135,7 +148,9 @@ decrypt the provided ciphertext. This is represented by the format
 
     <dt class="property-required"
             title="Required">
-        <span>ciphertext</span>
+        <span id="ciphertext_nodejs">
+<a href="#ciphertext_nodejs" style="color: inherit; text-decoration: inherit;">ciphertext</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -144,7 +159,9 @@ decrypt the provided ciphertext. This is represented by the format
 
     <dt class="property-required"
             title="Required">
-        <span>crypto<wbr>Key</span>
+        <span id="cryptokey_nodejs">
+<a href="#cryptokey_nodejs" style="color: inherit; text-decoration: inherit;">crypto<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -155,7 +172,9 @@ decrypt the provided ciphertext. This is represented by the format
 
     <dt class="property-optional"
             title="Optional">
-        <span>additional<wbr>Authenticated<wbr>Data</span>
+        <span id="additionalauthenticateddata_nodejs">
+<a href="#additionalauthenticateddata_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Authenticated<wbr>Data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -171,7 +190,9 @@ decrypt the provided ciphertext. This is represented by the format
 
     <dt class="property-required"
             title="Required">
-        <span>ciphertext</span>
+        <span id="ciphertext_python">
+<a href="#ciphertext_python" style="color: inherit; text-decoration: inherit;">ciphertext</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -180,7 +201,9 @@ decrypt the provided ciphertext. This is represented by the format
 
     <dt class="property-required"
             title="Required">
-        <span>crypto_<wbr>key</span>
+        <span id="crypto_key_python">
+<a href="#crypto_key_python" style="color: inherit; text-decoration: inherit;">crypto_<wbr>key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -191,7 +214,9 @@ decrypt the provided ciphertext. This is represented by the format
 
     <dt class="property-optional"
             title="Optional">
-        <span>additional_<wbr>authenticated_<wbr>data</span>
+        <span id="additional_authenticated_data_python">
+<a href="#additional_authenticated_data_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>authenticated_<wbr>data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -220,7 +245,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Ciphertext</span>
+        <span id="ciphertext_csharp">
+<a href="#ciphertext_csharp" style="color: inherit; text-decoration: inherit;">Ciphertext</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -228,7 +255,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Crypto<wbr>Key</span>
+        <span id="cryptokey_csharp">
+<a href="#cryptokey_csharp" style="color: inherit; text-decoration: inherit;">Crypto<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -236,7 +265,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -245,7 +276,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Plaintext</span>
+        <span id="plaintext_csharp">
+<a href="#plaintext_csharp" style="color: inherit; text-decoration: inherit;">Plaintext</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -254,7 +287,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Additional<wbr>Authenticated<wbr>Data</span>
+        <span id="additionalauthenticateddata_csharp">
+<a href="#additionalauthenticateddata_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Authenticated<wbr>Data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -269,7 +304,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Ciphertext</span>
+        <span id="ciphertext_go">
+<a href="#ciphertext_go" style="color: inherit; text-decoration: inherit;">Ciphertext</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -277,7 +314,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Crypto<wbr>Key</span>
+        <span id="cryptokey_go">
+<a href="#cryptokey_go" style="color: inherit; text-decoration: inherit;">Crypto<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -285,7 +324,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -294,7 +335,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Plaintext</span>
+        <span id="plaintext_go">
+<a href="#plaintext_go" style="color: inherit; text-decoration: inherit;">Plaintext</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -303,7 +346,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Additional<wbr>Authenticated<wbr>Data</span>
+        <span id="additionalauthenticateddata_go">
+<a href="#additionalauthenticateddata_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Authenticated<wbr>Data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -318,7 +363,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>ciphertext</span>
+        <span id="ciphertext_nodejs">
+<a href="#ciphertext_nodejs" style="color: inherit; text-decoration: inherit;">ciphertext</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -326,7 +373,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>crypto<wbr>Key</span>
+        <span id="cryptokey_nodejs">
+<a href="#cryptokey_nodejs" style="color: inherit; text-decoration: inherit;">crypto<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -334,7 +383,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -343,7 +394,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>plaintext</span>
+        <span id="plaintext_nodejs">
+<a href="#plaintext_nodejs" style="color: inherit; text-decoration: inherit;">plaintext</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -352,7 +405,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>additional<wbr>Authenticated<wbr>Data</span>
+        <span id="additionalauthenticateddata_nodejs">
+<a href="#additionalauthenticateddata_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Authenticated<wbr>Data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -367,7 +422,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>ciphertext</span>
+        <span id="ciphertext_python">
+<a href="#ciphertext_python" style="color: inherit; text-decoration: inherit;">ciphertext</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -375,7 +432,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>crypto_<wbr>key</span>
+        <span id="crypto_key_python">
+<a href="#crypto_key_python" style="color: inherit; text-decoration: inherit;">crypto_<wbr>key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -383,7 +442,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -392,7 +453,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>plaintext</span>
+        <span id="plaintext_python">
+<a href="#plaintext_python" style="color: inherit; text-decoration: inherit;">plaintext</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -401,7 +464,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>additional_<wbr>authenticated_<wbr>data</span>
+        <span id="additional_authenticated_data_python">
+<a href="#additional_authenticated_data_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>authenticated_<wbr>data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

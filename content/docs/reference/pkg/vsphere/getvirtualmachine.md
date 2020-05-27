@@ -13,10 +13,8 @@ meta_desc: "Explore the GetVirtualMachine function of the vSphere package, inclu
 The `vsphere..VirtualMachine` data source can be used to find the UUID of an
 existing virtual machine or template. Its most relevant purpose is for finding
 the UUID of a template to be used as the source for cloning into a new
-[`vsphere..VirtualMachine`][docs-virtual-machine-resource] resource. It also
+`vsphere..VirtualMachine` resource. It also
 reads the guest ID so that can be supplied as well.
-
-[docs-virtual-machine-resource]: /docs/providers/vsphere/r/virtual_machine.html
 
 
 
@@ -84,7 +82,7 @@ const template = datacenter.apply(datacenter => vsphere.getVirtualMachine({
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetVirtualMachine </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.Vsphere.GetVirtualMachineResult.html">GetVirtualMachineResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.VSphere.GetVirtualMachineArgs.html">GetVirtualMachineArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.GetVirtualMachineResult.html">GetVirtualMachineResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.GetVirtualMachineArgs.html">GetVirtualMachineArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -113,8 +111,8 @@ path.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object reference
-ID][docs-about-morefs] of the datacenter the virtual machine is located in.
+    <dd>{{% md %}}The managed object reference
+ID of the datacenter the virtual machine is located in.
 This can be omitted if the search path used in `name` is an absolute path.
 For default datacenters, use the `id` attribute from an empty
 `vsphere..Datacenter` data source.
@@ -153,8 +151,8 @@ path.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object reference
-ID][docs-about-morefs] of the datacenter the virtual machine is located in.
+    <dd>{{% md %}}The managed object reference
+ID of the datacenter the virtual machine is located in.
 This can be omitted if the search path used in `name` is an absolute path.
 For default datacenters, use the `id` attribute from an empty
 `vsphere..Datacenter` data source.
@@ -193,8 +191,8 @@ path.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object reference
-ID][docs-about-morefs] of the datacenter the virtual machine is located in.
+    <dd>{{% md %}}The managed object reference
+ID of the datacenter the virtual machine is located in.
 This can be omitted if the search path used in `name` is an absolute path.
 For default datacenters, use the `id` attribute from an empty
 `vsphere..Datacenter` data source.
@@ -233,8 +231,8 @@ path.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object reference
-ID][docs-about-morefs] of the datacenter the virtual machine is located in.
+    <dd>{{% md %}}The managed object reference
+ID of the datacenter the virtual machine is located in.
 This can be omitted if the search path used in `name` is an absolute path.
 For default datacenters, use the `id` attribute from an empty
 `vsphere..Datacenter` data source.
@@ -797,7 +795,7 @@ defined by `scsi_controller_scan_count` are scanned.
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#GetVirtualMachineDisk">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.VSphere.Outputs.GetVirtualMachineDisk.html">output</a> API doc for this type.
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.Outputs.GetVirtualMachineDisk.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

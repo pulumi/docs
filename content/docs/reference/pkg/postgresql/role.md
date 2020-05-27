@@ -43,6 +43,19 @@ const myReplicationRole = new postgresql.Role("my_replication_role", {
     replication: true,
 });
 ```
+```python
+import pulumi
+import pulumi_postgresql as postgresql
+
+my_role = postgresql.Role("myRole",
+    login=True,
+    password="mypass")
+my_replication_role = postgresql.Role("myReplicationRole",
+    connection_limit=5,
+    login=True,
+    password="md5c98cbfeb6a347a47eb8e96cfb4c4b890",
+    replication=True)
+```
 
 
 
@@ -51,19 +64,19 @@ const myReplicationRole = new postgresql.Role("my_replication_role", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/postgresql/#Role">Role</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/postgresql/#RoleArgs">RoleArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/postgresql/#Role">Role</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/postgresql/#RoleArgs">RoleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Role</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>bypass_row_level_security=None<span class="p">, </span>connection_limit=None<span class="p">, </span>create_database=None<span class="p">, </span>create_role=None<span class="p">, </span>encrypted=None<span class="p">, </span>encrypted_password=None<span class="p">, </span>inherit=None<span class="p">, </span>login=None<span class="p">, </span>name=None<span class="p">, </span>password=None<span class="p">, </span>replication=None<span class="p">, </span>roles=None<span class="p">, </span>search_paths=None<span class="p">, </span>skip_drop_role=None<span class="p">, </span>skip_reassign_owned=None<span class="p">, </span>statement_timeout=None<span class="p">, </span>superuser=None<span class="p">, </span>valid_until=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/postgresql/#Role">Role</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>bypass_row_level_security=None<span class="p">, </span>connection_limit=None<span class="p">, </span>create_database=None<span class="p">, </span>create_role=None<span class="p">, </span>encrypted=None<span class="p">, </span>encrypted_password=None<span class="p">, </span>inherit=None<span class="p">, </span>login=None<span class="p">, </span>name=None<span class="p">, </span>password=None<span class="p">, </span>replication=None<span class="p">, </span>roles=None<span class="p">, </span>search_paths=None<span class="p">, </span>skip_drop_role=None<span class="p">, </span>skip_reassign_owned=None<span class="p">, </span>statement_timeout=None<span class="p">, </span>superuser=None<span class="p">, </span>valid_until=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewRole<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-postgresql/sdk/v2/go/postgresql/?tab=doc#RoleArgs">RoleArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-postgresql/sdk/v2/go/postgresql/?tab=doc#Role">Role</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-postgresql/sdk/v2/go/postgresql/?tab=doc#Role">NewRole</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-postgresql/sdk/v2/go/postgresql/?tab=doc#RoleArgs">RoleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-postgresql/sdk/v2/go/postgresql/?tab=doc#Role">Role</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Postgresql/Pulumi.Postgresql.Role.html">Role</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Postgresql/Pulumi.PostgreSql.RoleArgs.html">RoleArgs</a></span>? <span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.PostgreSql/Pulumi.PostgreSql.Role.html">Role</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.PostgreSql/Pulumi.PostgreSql.RoleArgs.html">RoleArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -192,7 +205,7 @@ const myReplicationRole = new postgresql.Role("my_replication_role", {
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Postgresql/Pulumi.PostgreSql.RoleArgs.html">RoleArgs</a></span>
+        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.PostgreSql/Pulumi.PostgreSql.RoleArgs.html">RoleArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -229,7 +242,9 @@ The Role resource accepts the following [input]({{< relref "/docs/intro/concepts
 
     <dt class="property-optional"
             title="Optional">
-        <span>Bypass<wbr>Row<wbr>Level<wbr>Security</span>
+        <span id="bypassrowlevelsecurity_csharp">
+<a href="#bypassrowlevelsecurity_csharp" style="color: inherit; text-decoration: inherit;">Bypass<wbr>Row<wbr>Level<wbr>Security</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -239,7 +254,9 @@ row-level security (RLS) policy.  Default value is `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Connection<wbr>Limit</span>
+        <span id="connectionlimit_csharp">
+<a href="#connectionlimit_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Limit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -250,7 +267,9 @@ limit.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Create<wbr>Database</span>
+        <span id="createdatabase_csharp">
+<a href="#createdatabase_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Database</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -260,7 +279,9 @@ DATABASE`.  Default value is `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Create<wbr>Role</span>
+        <span id="createrole_csharp">
+<a href="#createrole_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -271,7 +292,9 @@ is `false`.
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>Encrypted</span>
+        <span id="encrypted_csharp">
+<a href="#encrypted_csharp" style="color: inherit; text-decoration: inherit;">Encrypted</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -279,7 +302,9 @@ is `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Encrypted<wbr>Password</span>
+        <span id="encryptedpassword_csharp">
+<a href="#encryptedpassword_csharp" style="color: inherit; text-decoration: inherit;">Encrypted<wbr>Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -292,7 +317,9 @@ behavior of
 
     <dt class="property-optional"
             title="Optional">
-        <span>Inherit</span>
+        <span id="inherit_csharp">
+<a href="#inherit_csharp" style="color: inherit; text-decoration: inherit;">Inherit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -302,7 +329,9 @@ roles it is a member of.  Default value is `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Login</span>
+        <span id="login_csharp">
+<a href="#login_csharp" style="color: inherit; text-decoration: inherit;">Login</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -313,7 +342,9 @@ in the usual sense of the word.  Default value is `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -323,7 +354,9 @@ server instance where it is configured.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Password</span>
+        <span id="password_csharp">
+<a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -333,7 +366,9 @@ for roles having the `login` attribute set to true.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Replication</span>
+        <span id="replication_csharp">
+<a href="#replication_csharp" style="color: inherit; text-decoration: inherit;">Replication</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -344,7 +379,9 @@ value is `false`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Roles</span>
+        <span id="roles_csharp">
+<a href="#roles_csharp" style="color: inherit; text-decoration: inherit;">Roles</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -353,7 +390,9 @@ value is `false`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Search<wbr>Paths</span>
+        <span id="searchpaths_csharp">
+<a href="#searchpaths_csharp" style="color: inherit; text-decoration: inherit;">Search<wbr>Paths</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -364,7 +403,9 @@ due to limitations in the implementation, values cannot contain the substring
 
     <dt class="property-optional"
             title="Optional">
-        <span>Skip<wbr>Drop<wbr>Role</span>
+        <span id="skipdroprole_csharp">
+<a href="#skipdroprole_csharp" style="color: inherit; text-decoration: inherit;">Skip<wbr>Drop<wbr>Role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -379,7 +420,9 @@ This is the third and final step taken when removing a ROLE from a database.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Skip<wbr>Reassign<wbr>Owned</span>
+        <span id="skipreassignowned_csharp">
+<a href="#skipreassignowned_csharp" style="color: inherit; text-decoration: inherit;">Skip<wbr>Reassign<wbr>Owned</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -395,7 +438,9 @@ an implicit
 
     <dt class="property-optional"
             title="Optional">
-        <span>Statement<wbr>Timeout</span>
+        <span id="statementtimeout_csharp">
+<a href="#statementtimeout_csharp" style="color: inherit; text-decoration: inherit;">Statement<wbr>Timeout</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -404,7 +449,9 @@ an implicit
 
     <dt class="property-optional"
             title="Optional">
-        <span>Superuser</span>
+        <span id="superuser_csharp">
+<a href="#superuser_csharp" style="color: inherit; text-decoration: inherit;">Superuser</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -415,7 +462,9 @@ value is `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Valid<wbr>Until</span>
+        <span id="validuntil_csharp">
+<a href="#validuntil_csharp" style="color: inherit; text-decoration: inherit;">Valid<wbr>Until</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -435,7 +484,9 @@ set to `infinity`.  Default is `NULL`, therefore `infinity`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Bypass<wbr>Row<wbr>Level<wbr>Security</span>
+        <span id="bypassrowlevelsecurity_go">
+<a href="#bypassrowlevelsecurity_go" style="color: inherit; text-decoration: inherit;">Bypass<wbr>Row<wbr>Level<wbr>Security</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -445,7 +496,9 @@ row-level security (RLS) policy.  Default value is `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Connection<wbr>Limit</span>
+        <span id="connectionlimit_go">
+<a href="#connectionlimit_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Limit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -456,7 +509,9 @@ limit.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Create<wbr>Database</span>
+        <span id="createdatabase_go">
+<a href="#createdatabase_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Database</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -466,7 +521,9 @@ DATABASE`.  Default value is `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Create<wbr>Role</span>
+        <span id="createrole_go">
+<a href="#createrole_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -477,7 +534,9 @@ is `false`.
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>Encrypted</span>
+        <span id="encrypted_go">
+<a href="#encrypted_go" style="color: inherit; text-decoration: inherit;">Encrypted</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -485,7 +544,9 @@ is `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Encrypted<wbr>Password</span>
+        <span id="encryptedpassword_go">
+<a href="#encryptedpassword_go" style="color: inherit; text-decoration: inherit;">Encrypted<wbr>Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -498,7 +559,9 @@ behavior of
 
     <dt class="property-optional"
             title="Optional">
-        <span>Inherit</span>
+        <span id="inherit_go">
+<a href="#inherit_go" style="color: inherit; text-decoration: inherit;">Inherit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -508,7 +571,9 @@ roles it is a member of.  Default value is `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Login</span>
+        <span id="login_go">
+<a href="#login_go" style="color: inherit; text-decoration: inherit;">Login</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -519,7 +584,9 @@ in the usual sense of the word.  Default value is `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -529,7 +596,9 @@ server instance where it is configured.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Password</span>
+        <span id="password_go">
+<a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -539,7 +608,9 @@ for roles having the `login` attribute set to true.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Replication</span>
+        <span id="replication_go">
+<a href="#replication_go" style="color: inherit; text-decoration: inherit;">Replication</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -550,7 +621,9 @@ value is `false`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Roles</span>
+        <span id="roles_go">
+<a href="#roles_go" style="color: inherit; text-decoration: inherit;">Roles</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -559,7 +632,9 @@ value is `false`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Search<wbr>Paths</span>
+        <span id="searchpaths_go">
+<a href="#searchpaths_go" style="color: inherit; text-decoration: inherit;">Search<wbr>Paths</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -570,7 +645,9 @@ due to limitations in the implementation, values cannot contain the substring
 
     <dt class="property-optional"
             title="Optional">
-        <span>Skip<wbr>Drop<wbr>Role</span>
+        <span id="skipdroprole_go">
+<a href="#skipdroprole_go" style="color: inherit; text-decoration: inherit;">Skip<wbr>Drop<wbr>Role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -585,7 +662,9 @@ This is the third and final step taken when removing a ROLE from a database.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Skip<wbr>Reassign<wbr>Owned</span>
+        <span id="skipreassignowned_go">
+<a href="#skipreassignowned_go" style="color: inherit; text-decoration: inherit;">Skip<wbr>Reassign<wbr>Owned</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -601,7 +680,9 @@ an implicit
 
     <dt class="property-optional"
             title="Optional">
-        <span>Statement<wbr>Timeout</span>
+        <span id="statementtimeout_go">
+<a href="#statementtimeout_go" style="color: inherit; text-decoration: inherit;">Statement<wbr>Timeout</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -610,7 +691,9 @@ an implicit
 
     <dt class="property-optional"
             title="Optional">
-        <span>Superuser</span>
+        <span id="superuser_go">
+<a href="#superuser_go" style="color: inherit; text-decoration: inherit;">Superuser</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -621,7 +704,9 @@ value is `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Valid<wbr>Until</span>
+        <span id="validuntil_go">
+<a href="#validuntil_go" style="color: inherit; text-decoration: inherit;">Valid<wbr>Until</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -641,7 +726,9 @@ set to `infinity`.  Default is `NULL`, therefore `infinity`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>bypass<wbr>Row<wbr>Level<wbr>Security</span>
+        <span id="bypassrowlevelsecurity_nodejs">
+<a href="#bypassrowlevelsecurity_nodejs" style="color: inherit; text-decoration: inherit;">bypass<wbr>Row<wbr>Level<wbr>Security</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -651,7 +738,9 @@ row-level security (RLS) policy.  Default value is `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>connection<wbr>Limit</span>
+        <span id="connectionlimit_nodejs">
+<a href="#connectionlimit_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Limit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -662,7 +751,9 @@ limit.
 
     <dt class="property-optional"
             title="Optional">
-        <span>create<wbr>Database</span>
+        <span id="createdatabase_nodejs">
+<a href="#createdatabase_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Database</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -672,7 +763,9 @@ DATABASE`.  Default value is `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>create<wbr>Role</span>
+        <span id="createrole_nodejs">
+<a href="#createrole_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -683,7 +776,9 @@ is `false`.
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>encrypted</span>
+        <span id="encrypted_nodejs">
+<a href="#encrypted_nodejs" style="color: inherit; text-decoration: inherit;">encrypted</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -691,7 +786,9 @@ is `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>encrypted<wbr>Password</span>
+        <span id="encryptedpassword_nodejs">
+<a href="#encryptedpassword_nodejs" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -704,7 +801,9 @@ behavior of
 
     <dt class="property-optional"
             title="Optional">
-        <span>inherit</span>
+        <span id="inherit_nodejs">
+<a href="#inherit_nodejs" style="color: inherit; text-decoration: inherit;">inherit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -714,7 +813,9 @@ roles it is a member of.  Default value is `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>login</span>
+        <span id="login_nodejs">
+<a href="#login_nodejs" style="color: inherit; text-decoration: inherit;">login</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -725,7 +826,9 @@ in the usual sense of the word.  Default value is `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -735,7 +838,9 @@ server instance where it is configured.
 
     <dt class="property-optional"
             title="Optional">
-        <span>password</span>
+        <span id="password_nodejs">
+<a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -745,7 +850,9 @@ for roles having the `login` attribute set to true.
 
     <dt class="property-optional"
             title="Optional">
-        <span>replication</span>
+        <span id="replication_nodejs">
+<a href="#replication_nodejs" style="color: inherit; text-decoration: inherit;">replication</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -756,7 +863,9 @@ value is `false`
 
     <dt class="property-optional"
             title="Optional">
-        <span>roles</span>
+        <span id="roles_nodejs">
+<a href="#roles_nodejs" style="color: inherit; text-decoration: inherit;">roles</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -765,7 +874,9 @@ value is `false`
 
     <dt class="property-optional"
             title="Optional">
-        <span>search<wbr>Paths</span>
+        <span id="searchpaths_nodejs">
+<a href="#searchpaths_nodejs" style="color: inherit; text-decoration: inherit;">search<wbr>Paths</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -776,7 +887,9 @@ due to limitations in the implementation, values cannot contain the substring
 
     <dt class="property-optional"
             title="Optional">
-        <span>skip<wbr>Drop<wbr>Role</span>
+        <span id="skipdroprole_nodejs">
+<a href="#skipdroprole_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Drop<wbr>Role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -791,7 +904,9 @@ This is the third and final step taken when removing a ROLE from a database.
 
     <dt class="property-optional"
             title="Optional">
-        <span>skip<wbr>Reassign<wbr>Owned</span>
+        <span id="skipreassignowned_nodejs">
+<a href="#skipreassignowned_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Reassign<wbr>Owned</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -807,7 +922,9 @@ an implicit
 
     <dt class="property-optional"
             title="Optional">
-        <span>statement<wbr>Timeout</span>
+        <span id="statementtimeout_nodejs">
+<a href="#statementtimeout_nodejs" style="color: inherit; text-decoration: inherit;">statement<wbr>Timeout</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -816,7 +933,9 @@ an implicit
 
     <dt class="property-optional"
             title="Optional">
-        <span>superuser</span>
+        <span id="superuser_nodejs">
+<a href="#superuser_nodejs" style="color: inherit; text-decoration: inherit;">superuser</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -827,7 +946,9 @@ value is `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>valid<wbr>Until</span>
+        <span id="validuntil_nodejs">
+<a href="#validuntil_nodejs" style="color: inherit; text-decoration: inherit;">valid<wbr>Until</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -847,7 +968,9 @@ set to `infinity`.  Default is `NULL`, therefore `infinity`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>bypass_<wbr>row_<wbr>level_<wbr>security</span>
+        <span id="bypass_row_level_security_python">
+<a href="#bypass_row_level_security_python" style="color: inherit; text-decoration: inherit;">bypass_<wbr>row_<wbr>level_<wbr>security</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -857,7 +980,9 @@ row-level security (RLS) policy.  Default value is `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>connection_<wbr>limit</span>
+        <span id="connection_limit_python">
+<a href="#connection_limit_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>limit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -868,7 +993,9 @@ limit.
 
     <dt class="property-optional"
             title="Optional">
-        <span>create_<wbr>database</span>
+        <span id="create_database_python">
+<a href="#create_database_python" style="color: inherit; text-decoration: inherit;">create_<wbr>database</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -878,7 +1005,9 @@ DATABASE`.  Default value is `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>create_<wbr>role</span>
+        <span id="create_role_python">
+<a href="#create_role_python" style="color: inherit; text-decoration: inherit;">create_<wbr>role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -889,7 +1018,9 @@ is `false`.
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>encrypted</span>
+        <span id="encrypted_python">
+<a href="#encrypted_python" style="color: inherit; text-decoration: inherit;">encrypted</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -897,7 +1028,9 @@ is `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>encrypted_<wbr>password</span>
+        <span id="encrypted_password_python">
+<a href="#encrypted_password_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -910,7 +1043,9 @@ behavior of
 
     <dt class="property-optional"
             title="Optional">
-        <span>inherit</span>
+        <span id="inherit_python">
+<a href="#inherit_python" style="color: inherit; text-decoration: inherit;">inherit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -920,7 +1055,9 @@ roles it is a member of.  Default value is `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>login</span>
+        <span id="login_python">
+<a href="#login_python" style="color: inherit; text-decoration: inherit;">login</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -931,7 +1068,9 @@ in the usual sense of the word.  Default value is `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -941,7 +1080,9 @@ server instance where it is configured.
 
     <dt class="property-optional"
             title="Optional">
-        <span>password</span>
+        <span id="password_python">
+<a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -951,7 +1092,9 @@ for roles having the `login` attribute set to true.
 
     <dt class="property-optional"
             title="Optional">
-        <span>replication</span>
+        <span id="replication_python">
+<a href="#replication_python" style="color: inherit; text-decoration: inherit;">replication</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -962,7 +1105,9 @@ value is `false`
 
     <dt class="property-optional"
             title="Optional">
-        <span>roles</span>
+        <span id="roles_python">
+<a href="#roles_python" style="color: inherit; text-decoration: inherit;">roles</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -971,7 +1116,9 @@ value is `false`
 
     <dt class="property-optional"
             title="Optional">
-        <span>search_<wbr>paths</span>
+        <span id="search_paths_python">
+<a href="#search_paths_python" style="color: inherit; text-decoration: inherit;">search_<wbr>paths</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -982,7 +1129,9 @@ due to limitations in the implementation, values cannot contain the substring
 
     <dt class="property-optional"
             title="Optional">
-        <span>skip_<wbr>drop_<wbr>role</span>
+        <span id="skip_drop_role_python">
+<a href="#skip_drop_role_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>drop_<wbr>role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -997,7 +1146,9 @@ This is the third and final step taken when removing a ROLE from a database.
 
     <dt class="property-optional"
             title="Optional">
-        <span>skip_<wbr>reassign_<wbr>owned</span>
+        <span id="skip_reassign_owned_python">
+<a href="#skip_reassign_owned_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>reassign_<wbr>owned</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1013,7 +1164,9 @@ an implicit
 
     <dt class="property-optional"
             title="Optional">
-        <span>statement_<wbr>timeout</span>
+        <span id="statement_timeout_python">
+<a href="#statement_timeout_python" style="color: inherit; text-decoration: inherit;">statement_<wbr>timeout</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1022,7 +1175,9 @@ an implicit
 
     <dt class="property-optional"
             title="Optional">
-        <span>superuser</span>
+        <span id="superuser_python">
+<a href="#superuser_python" style="color: inherit; text-decoration: inherit;">superuser</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1033,7 +1188,9 @@ value is `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>valid_<wbr>until</span>
+        <span id="valid_until_python">
+<a href="#valid_until_python" style="color: inherit; text-decoration: inherit;">valid_<wbr>until</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1064,7 +1221,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1079,7 +1238,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1094,7 +1255,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1109,7 +1272,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1130,7 +1295,7 @@ Get an existing Role resource's state with the given name, ID, and optional extr
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/postgresql/#RoleState">RoleState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/postgresql/#Role">Role</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/postgresql/#RoleState">RoleState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/postgresql/#Role">Role</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1138,11 +1303,11 @@ Get an existing Role resource's state with the given name, ID, and optional extr
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRole<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-postgresql/sdk/v2/go/postgresql/?tab=doc#RoleState">RoleState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-postgresql/sdk/v2/go/postgresql/?tab=doc#Role">Role</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRole<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-postgresql/sdk/v2/go/postgresql/?tab=doc#RoleState">RoleState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-postgresql/sdk/v2/go/postgresql/?tab=doc#Role">Role</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Postgresql/Pulumi.Postgresql.Role.html">Role</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Postgresql/Pulumi.Postgresql..RoleState.html">RoleState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.PostgreSql/Pulumi.PostgreSql.Role.html">Role</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.PostgreSql/Pulumi.PostgreSql..RoleState.html">RoleState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1250,7 +1415,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Bypass<wbr>Row<wbr>Level<wbr>Security</span>
+        <span id="state_bypassrowlevelsecurity_csharp">
+<a href="#state_bypassrowlevelsecurity_csharp" style="color: inherit; text-decoration: inherit;">Bypass<wbr>Row<wbr>Level<wbr>Security</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1260,7 +1427,9 @@ row-level security (RLS) policy.  Default value is `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Connection<wbr>Limit</span>
+        <span id="state_connectionlimit_csharp">
+<a href="#state_connectionlimit_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Limit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1271,7 +1440,9 @@ limit.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Create<wbr>Database</span>
+        <span id="state_createdatabase_csharp">
+<a href="#state_createdatabase_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Database</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1281,7 +1452,9 @@ DATABASE`.  Default value is `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Create<wbr>Role</span>
+        <span id="state_createrole_csharp">
+<a href="#state_createrole_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1292,7 +1465,9 @@ is `false`.
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>Encrypted</span>
+        <span id="state_encrypted_csharp">
+<a href="#state_encrypted_csharp" style="color: inherit; text-decoration: inherit;">Encrypted</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1300,7 +1475,9 @@ is `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Encrypted<wbr>Password</span>
+        <span id="state_encryptedpassword_csharp">
+<a href="#state_encryptedpassword_csharp" style="color: inherit; text-decoration: inherit;">Encrypted<wbr>Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1313,7 +1490,9 @@ behavior of
 
     <dt class="property-optional"
             title="Optional">
-        <span>Inherit</span>
+        <span id="state_inherit_csharp">
+<a href="#state_inherit_csharp" style="color: inherit; text-decoration: inherit;">Inherit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1323,7 +1502,9 @@ roles it is a member of.  Default value is `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Login</span>
+        <span id="state_login_csharp">
+<a href="#state_login_csharp" style="color: inherit; text-decoration: inherit;">Login</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1334,7 +1515,9 @@ in the usual sense of the word.  Default value is `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1344,7 +1527,9 @@ server instance where it is configured.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Password</span>
+        <span id="state_password_csharp">
+<a href="#state_password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1354,7 +1539,9 @@ for roles having the `login` attribute set to true.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Replication</span>
+        <span id="state_replication_csharp">
+<a href="#state_replication_csharp" style="color: inherit; text-decoration: inherit;">Replication</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1365,7 +1552,9 @@ value is `false`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Roles</span>
+        <span id="state_roles_csharp">
+<a href="#state_roles_csharp" style="color: inherit; text-decoration: inherit;">Roles</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1374,7 +1563,9 @@ value is `false`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Search<wbr>Paths</span>
+        <span id="state_searchpaths_csharp">
+<a href="#state_searchpaths_csharp" style="color: inherit; text-decoration: inherit;">Search<wbr>Paths</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1385,7 +1576,9 @@ due to limitations in the implementation, values cannot contain the substring
 
     <dt class="property-optional"
             title="Optional">
-        <span>Skip<wbr>Drop<wbr>Role</span>
+        <span id="state_skipdroprole_csharp">
+<a href="#state_skipdroprole_csharp" style="color: inherit; text-decoration: inherit;">Skip<wbr>Drop<wbr>Role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1400,7 +1593,9 @@ This is the third and final step taken when removing a ROLE from a database.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Skip<wbr>Reassign<wbr>Owned</span>
+        <span id="state_skipreassignowned_csharp">
+<a href="#state_skipreassignowned_csharp" style="color: inherit; text-decoration: inherit;">Skip<wbr>Reassign<wbr>Owned</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1416,7 +1611,9 @@ an implicit
 
     <dt class="property-optional"
             title="Optional">
-        <span>Statement<wbr>Timeout</span>
+        <span id="state_statementtimeout_csharp">
+<a href="#state_statementtimeout_csharp" style="color: inherit; text-decoration: inherit;">Statement<wbr>Timeout</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1425,7 +1622,9 @@ an implicit
 
     <dt class="property-optional"
             title="Optional">
-        <span>Superuser</span>
+        <span id="state_superuser_csharp">
+<a href="#state_superuser_csharp" style="color: inherit; text-decoration: inherit;">Superuser</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1436,7 +1635,9 @@ value is `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Valid<wbr>Until</span>
+        <span id="state_validuntil_csharp">
+<a href="#state_validuntil_csharp" style="color: inherit; text-decoration: inherit;">Valid<wbr>Until</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1456,7 +1657,9 @@ set to `infinity`.  Default is `NULL`, therefore `infinity`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Bypass<wbr>Row<wbr>Level<wbr>Security</span>
+        <span id="state_bypassrowlevelsecurity_go">
+<a href="#state_bypassrowlevelsecurity_go" style="color: inherit; text-decoration: inherit;">Bypass<wbr>Row<wbr>Level<wbr>Security</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1466,7 +1669,9 @@ row-level security (RLS) policy.  Default value is `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Connection<wbr>Limit</span>
+        <span id="state_connectionlimit_go">
+<a href="#state_connectionlimit_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Limit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1477,7 +1682,9 @@ limit.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Create<wbr>Database</span>
+        <span id="state_createdatabase_go">
+<a href="#state_createdatabase_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Database</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1487,7 +1694,9 @@ DATABASE`.  Default value is `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Create<wbr>Role</span>
+        <span id="state_createrole_go">
+<a href="#state_createrole_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1498,7 +1707,9 @@ is `false`.
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>Encrypted</span>
+        <span id="state_encrypted_go">
+<a href="#state_encrypted_go" style="color: inherit; text-decoration: inherit;">Encrypted</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1506,7 +1717,9 @@ is `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Encrypted<wbr>Password</span>
+        <span id="state_encryptedpassword_go">
+<a href="#state_encryptedpassword_go" style="color: inherit; text-decoration: inherit;">Encrypted<wbr>Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1519,7 +1732,9 @@ behavior of
 
     <dt class="property-optional"
             title="Optional">
-        <span>Inherit</span>
+        <span id="state_inherit_go">
+<a href="#state_inherit_go" style="color: inherit; text-decoration: inherit;">Inherit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1529,7 +1744,9 @@ roles it is a member of.  Default value is `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Login</span>
+        <span id="state_login_go">
+<a href="#state_login_go" style="color: inherit; text-decoration: inherit;">Login</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1540,7 +1757,9 @@ in the usual sense of the word.  Default value is `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1550,7 +1769,9 @@ server instance where it is configured.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Password</span>
+        <span id="state_password_go">
+<a href="#state_password_go" style="color: inherit; text-decoration: inherit;">Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1560,7 +1781,9 @@ for roles having the `login` attribute set to true.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Replication</span>
+        <span id="state_replication_go">
+<a href="#state_replication_go" style="color: inherit; text-decoration: inherit;">Replication</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1571,7 +1794,9 @@ value is `false`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Roles</span>
+        <span id="state_roles_go">
+<a href="#state_roles_go" style="color: inherit; text-decoration: inherit;">Roles</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1580,7 +1805,9 @@ value is `false`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Search<wbr>Paths</span>
+        <span id="state_searchpaths_go">
+<a href="#state_searchpaths_go" style="color: inherit; text-decoration: inherit;">Search<wbr>Paths</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1591,7 +1818,9 @@ due to limitations in the implementation, values cannot contain the substring
 
     <dt class="property-optional"
             title="Optional">
-        <span>Skip<wbr>Drop<wbr>Role</span>
+        <span id="state_skipdroprole_go">
+<a href="#state_skipdroprole_go" style="color: inherit; text-decoration: inherit;">Skip<wbr>Drop<wbr>Role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1606,7 +1835,9 @@ This is the third and final step taken when removing a ROLE from a database.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Skip<wbr>Reassign<wbr>Owned</span>
+        <span id="state_skipreassignowned_go">
+<a href="#state_skipreassignowned_go" style="color: inherit; text-decoration: inherit;">Skip<wbr>Reassign<wbr>Owned</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1622,7 +1853,9 @@ an implicit
 
     <dt class="property-optional"
             title="Optional">
-        <span>Statement<wbr>Timeout</span>
+        <span id="state_statementtimeout_go">
+<a href="#state_statementtimeout_go" style="color: inherit; text-decoration: inherit;">Statement<wbr>Timeout</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1631,7 +1864,9 @@ an implicit
 
     <dt class="property-optional"
             title="Optional">
-        <span>Superuser</span>
+        <span id="state_superuser_go">
+<a href="#state_superuser_go" style="color: inherit; text-decoration: inherit;">Superuser</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1642,7 +1877,9 @@ value is `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Valid<wbr>Until</span>
+        <span id="state_validuntil_go">
+<a href="#state_validuntil_go" style="color: inherit; text-decoration: inherit;">Valid<wbr>Until</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1662,7 +1899,9 @@ set to `infinity`.  Default is `NULL`, therefore `infinity`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>bypass<wbr>Row<wbr>Level<wbr>Security</span>
+        <span id="state_bypassrowlevelsecurity_nodejs">
+<a href="#state_bypassrowlevelsecurity_nodejs" style="color: inherit; text-decoration: inherit;">bypass<wbr>Row<wbr>Level<wbr>Security</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1672,7 +1911,9 @@ row-level security (RLS) policy.  Default value is `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>connection<wbr>Limit</span>
+        <span id="state_connectionlimit_nodejs">
+<a href="#state_connectionlimit_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Limit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1683,7 +1924,9 @@ limit.
 
     <dt class="property-optional"
             title="Optional">
-        <span>create<wbr>Database</span>
+        <span id="state_createdatabase_nodejs">
+<a href="#state_createdatabase_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Database</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1693,7 +1936,9 @@ DATABASE`.  Default value is `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>create<wbr>Role</span>
+        <span id="state_createrole_nodejs">
+<a href="#state_createrole_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1704,7 +1949,9 @@ is `false`.
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>encrypted</span>
+        <span id="state_encrypted_nodejs">
+<a href="#state_encrypted_nodejs" style="color: inherit; text-decoration: inherit;">encrypted</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1712,7 +1959,9 @@ is `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>encrypted<wbr>Password</span>
+        <span id="state_encryptedpassword_nodejs">
+<a href="#state_encryptedpassword_nodejs" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1725,7 +1974,9 @@ behavior of
 
     <dt class="property-optional"
             title="Optional">
-        <span>inherit</span>
+        <span id="state_inherit_nodejs">
+<a href="#state_inherit_nodejs" style="color: inherit; text-decoration: inherit;">inherit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1735,7 +1986,9 @@ roles it is a member of.  Default value is `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>login</span>
+        <span id="state_login_nodejs">
+<a href="#state_login_nodejs" style="color: inherit; text-decoration: inherit;">login</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1746,7 +1999,9 @@ in the usual sense of the word.  Default value is `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1756,7 +2011,9 @@ server instance where it is configured.
 
     <dt class="property-optional"
             title="Optional">
-        <span>password</span>
+        <span id="state_password_nodejs">
+<a href="#state_password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1766,7 +2023,9 @@ for roles having the `login` attribute set to true.
 
     <dt class="property-optional"
             title="Optional">
-        <span>replication</span>
+        <span id="state_replication_nodejs">
+<a href="#state_replication_nodejs" style="color: inherit; text-decoration: inherit;">replication</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1777,7 +2036,9 @@ value is `false`
 
     <dt class="property-optional"
             title="Optional">
-        <span>roles</span>
+        <span id="state_roles_nodejs">
+<a href="#state_roles_nodejs" style="color: inherit; text-decoration: inherit;">roles</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1786,7 +2047,9 @@ value is `false`
 
     <dt class="property-optional"
             title="Optional">
-        <span>search<wbr>Paths</span>
+        <span id="state_searchpaths_nodejs">
+<a href="#state_searchpaths_nodejs" style="color: inherit; text-decoration: inherit;">search<wbr>Paths</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1797,7 +2060,9 @@ due to limitations in the implementation, values cannot contain the substring
 
     <dt class="property-optional"
             title="Optional">
-        <span>skip<wbr>Drop<wbr>Role</span>
+        <span id="state_skipdroprole_nodejs">
+<a href="#state_skipdroprole_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Drop<wbr>Role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1812,7 +2077,9 @@ This is the third and final step taken when removing a ROLE from a database.
 
     <dt class="property-optional"
             title="Optional">
-        <span>skip<wbr>Reassign<wbr>Owned</span>
+        <span id="state_skipreassignowned_nodejs">
+<a href="#state_skipreassignowned_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Reassign<wbr>Owned</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1828,7 +2095,9 @@ an implicit
 
     <dt class="property-optional"
             title="Optional">
-        <span>statement<wbr>Timeout</span>
+        <span id="state_statementtimeout_nodejs">
+<a href="#state_statementtimeout_nodejs" style="color: inherit; text-decoration: inherit;">statement<wbr>Timeout</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1837,7 +2106,9 @@ an implicit
 
     <dt class="property-optional"
             title="Optional">
-        <span>superuser</span>
+        <span id="state_superuser_nodejs">
+<a href="#state_superuser_nodejs" style="color: inherit; text-decoration: inherit;">superuser</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1848,7 +2119,9 @@ value is `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>valid<wbr>Until</span>
+        <span id="state_validuntil_nodejs">
+<a href="#state_validuntil_nodejs" style="color: inherit; text-decoration: inherit;">valid<wbr>Until</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1868,7 +2141,9 @@ set to `infinity`.  Default is `NULL`, therefore `infinity`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>bypass_<wbr>row_<wbr>level_<wbr>security</span>
+        <span id="state_bypass_row_level_security_python">
+<a href="#state_bypass_row_level_security_python" style="color: inherit; text-decoration: inherit;">bypass_<wbr>row_<wbr>level_<wbr>security</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1878,7 +2153,9 @@ row-level security (RLS) policy.  Default value is `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>connection_<wbr>limit</span>
+        <span id="state_connection_limit_python">
+<a href="#state_connection_limit_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>limit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1889,7 +2166,9 @@ limit.
 
     <dt class="property-optional"
             title="Optional">
-        <span>create_<wbr>database</span>
+        <span id="state_create_database_python">
+<a href="#state_create_database_python" style="color: inherit; text-decoration: inherit;">create_<wbr>database</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1899,7 +2178,9 @@ DATABASE`.  Default value is `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>create_<wbr>role</span>
+        <span id="state_create_role_python">
+<a href="#state_create_role_python" style="color: inherit; text-decoration: inherit;">create_<wbr>role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1910,7 +2191,9 @@ is `false`.
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>encrypted</span>
+        <span id="state_encrypted_python">
+<a href="#state_encrypted_python" style="color: inherit; text-decoration: inherit;">encrypted</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1918,7 +2201,9 @@ is `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>encrypted_<wbr>password</span>
+        <span id="state_encrypted_password_python">
+<a href="#state_encrypted_password_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1931,7 +2216,9 @@ behavior of
 
     <dt class="property-optional"
             title="Optional">
-        <span>inherit</span>
+        <span id="state_inherit_python">
+<a href="#state_inherit_python" style="color: inherit; text-decoration: inherit;">inherit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1941,7 +2228,9 @@ roles it is a member of.  Default value is `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>login</span>
+        <span id="state_login_python">
+<a href="#state_login_python" style="color: inherit; text-decoration: inherit;">login</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1952,7 +2241,9 @@ in the usual sense of the word.  Default value is `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1962,7 +2253,9 @@ server instance where it is configured.
 
     <dt class="property-optional"
             title="Optional">
-        <span>password</span>
+        <span id="state_password_python">
+<a href="#state_password_python" style="color: inherit; text-decoration: inherit;">password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1972,7 +2265,9 @@ for roles having the `login` attribute set to true.
 
     <dt class="property-optional"
             title="Optional">
-        <span>replication</span>
+        <span id="state_replication_python">
+<a href="#state_replication_python" style="color: inherit; text-decoration: inherit;">replication</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1983,7 +2278,9 @@ value is `false`
 
     <dt class="property-optional"
             title="Optional">
-        <span>roles</span>
+        <span id="state_roles_python">
+<a href="#state_roles_python" style="color: inherit; text-decoration: inherit;">roles</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1992,7 +2289,9 @@ value is `false`
 
     <dt class="property-optional"
             title="Optional">
-        <span>search_<wbr>paths</span>
+        <span id="state_search_paths_python">
+<a href="#state_search_paths_python" style="color: inherit; text-decoration: inherit;">search_<wbr>paths</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -2003,7 +2302,9 @@ due to limitations in the implementation, values cannot contain the substring
 
     <dt class="property-optional"
             title="Optional">
-        <span>skip_<wbr>drop_<wbr>role</span>
+        <span id="state_skip_drop_role_python">
+<a href="#state_skip_drop_role_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>drop_<wbr>role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2018,7 +2319,9 @@ This is the third and final step taken when removing a ROLE from a database.
 
     <dt class="property-optional"
             title="Optional">
-        <span>skip_<wbr>reassign_<wbr>owned</span>
+        <span id="state_skip_reassign_owned_python">
+<a href="#state_skip_reassign_owned_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>reassign_<wbr>owned</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2034,7 +2337,9 @@ an implicit
 
     <dt class="property-optional"
             title="Optional">
-        <span>statement_<wbr>timeout</span>
+        <span id="state_statement_timeout_python">
+<a href="#state_statement_timeout_python" style="color: inherit; text-decoration: inherit;">statement_<wbr>timeout</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2043,7 +2348,9 @@ an implicit
 
     <dt class="property-optional"
             title="Optional">
-        <span>superuser</span>
+        <span id="state_superuser_python">
+<a href="#state_superuser_python" style="color: inherit; text-decoration: inherit;">superuser</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2054,7 +2361,9 @@ value is `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>valid_<wbr>until</span>
+        <span id="state_valid_until_python">
+<a href="#state_valid_until_python" style="color: inherit; text-decoration: inherit;">valid_<wbr>until</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

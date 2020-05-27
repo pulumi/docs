@@ -129,19 +129,19 @@ const example = new aws.rds.Instance("example", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/rds/#Instance">Instance</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/rds/#InstanceArgs">InstanceArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/rds/#Instance">Instance</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/rds/#InstanceArgs">InstanceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Instance</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>allocated_storage=None<span class="p">, </span>allow_major_version_upgrade=None<span class="p">, </span>apply_immediately=None<span class="p">, </span>auto_minor_version_upgrade=None<span class="p">, </span>availability_zone=None<span class="p">, </span>backup_retention_period=None<span class="p">, </span>backup_window=None<span class="p">, </span>ca_cert_identifier=None<span class="p">, </span>character_set_name=None<span class="p">, </span>copy_tags_to_snapshot=None<span class="p">, </span>db_subnet_group_name=None<span class="p">, </span>delete_automated_backups=None<span class="p">, </span>deletion_protection=None<span class="p">, </span>domain=None<span class="p">, </span>domain_iam_role_name=None<span class="p">, </span>enabled_cloudwatch_logs_exports=None<span class="p">, </span>engine=None<span class="p">, </span>engine_version=None<span class="p">, </span>final_snapshot_identifier=None<span class="p">, </span>iam_database_authentication_enabled=None<span class="p">, </span>identifier=None<span class="p">, </span>identifier_prefix=None<span class="p">, </span>instance_class=None<span class="p">, </span>iops=None<span class="p">, </span>kms_key_id=None<span class="p">, </span>license_model=None<span class="p">, </span>maintenance_window=None<span class="p">, </span>max_allocated_storage=None<span class="p">, </span>monitoring_interval=None<span class="p">, </span>monitoring_role_arn=None<span class="p">, </span>multi_az=None<span class="p">, </span>name=None<span class="p">, </span>option_group_name=None<span class="p">, </span>parameter_group_name=None<span class="p">, </span>password=None<span class="p">, </span>performance_insights_enabled=None<span class="p">, </span>performance_insights_kms_key_id=None<span class="p">, </span>performance_insights_retention_period=None<span class="p">, </span>port=None<span class="p">, </span>publicly_accessible=None<span class="p">, </span>replicate_source_db=None<span class="p">, </span>s3_import=None<span class="p">, </span>security_group_names=None<span class="p">, </span>skip_final_snapshot=None<span class="p">, </span>snapshot_identifier=None<span class="p">, </span>storage_encrypted=None<span class="p">, </span>storage_type=None<span class="p">, </span>tags=None<span class="p">, </span>timezone=None<span class="p">, </span>username=None<span class="p">, </span>vpc_security_group_ids=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/rds/#Instance">Instance</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>allocated_storage=None<span class="p">, </span>allow_major_version_upgrade=None<span class="p">, </span>apply_immediately=None<span class="p">, </span>auto_minor_version_upgrade=None<span class="p">, </span>availability_zone=None<span class="p">, </span>backup_retention_period=None<span class="p">, </span>backup_window=None<span class="p">, </span>ca_cert_identifier=None<span class="p">, </span>character_set_name=None<span class="p">, </span>copy_tags_to_snapshot=None<span class="p">, </span>db_subnet_group_name=None<span class="p">, </span>delete_automated_backups=None<span class="p">, </span>deletion_protection=None<span class="p">, </span>domain=None<span class="p">, </span>domain_iam_role_name=None<span class="p">, </span>enabled_cloudwatch_logs_exports=None<span class="p">, </span>engine=None<span class="p">, </span>engine_version=None<span class="p">, </span>final_snapshot_identifier=None<span class="p">, </span>iam_database_authentication_enabled=None<span class="p">, </span>identifier=None<span class="p">, </span>identifier_prefix=None<span class="p">, </span>instance_class=None<span class="p">, </span>iops=None<span class="p">, </span>kms_key_id=None<span class="p">, </span>license_model=None<span class="p">, </span>maintenance_window=None<span class="p">, </span>max_allocated_storage=None<span class="p">, </span>monitoring_interval=None<span class="p">, </span>monitoring_role_arn=None<span class="p">, </span>multi_az=None<span class="p">, </span>name=None<span class="p">, </span>option_group_name=None<span class="p">, </span>parameter_group_name=None<span class="p">, </span>password=None<span class="p">, </span>performance_insights_enabled=None<span class="p">, </span>performance_insights_kms_key_id=None<span class="p">, </span>performance_insights_retention_period=None<span class="p">, </span>port=None<span class="p">, </span>publicly_accessible=None<span class="p">, </span>replicate_source_db=None<span class="p">, </span>s3_import=None<span class="p">, </span>security_group_names=None<span class="p">, </span>skip_final_snapshot=None<span class="p">, </span>snapshot_identifier=None<span class="p">, </span>storage_encrypted=None<span class="p">, </span>storage_type=None<span class="p">, </span>tags=None<span class="p">, </span>timezone=None<span class="p">, </span>username=None<span class="p">, </span>vpc_security_group_ids=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewInstance<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/rds?tab=doc#InstanceArgs">InstanceArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/rds?tab=doc#Instance">Instance</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/rds?tab=doc#Instance">NewInstance</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/rds?tab=doc#InstanceArgs">InstanceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/rds?tab=doc#Instance">Instance</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Rds.Instance.html">Instance</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Rds.InstanceArgs.html">InstanceArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Rds.Instance.html">Instance</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Rds.InstanceArgs.html">InstanceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -307,7 +307,9 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-required"
             title="Required">
-        <span>Instance<wbr>Class</span>
+        <span id="instanceclass_csharp">
+<a href="#instanceclass_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Class</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -316,7 +318,9 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allocated<wbr>Storage</span>
+        <span id="allocatedstorage_csharp">
+<a href="#allocatedstorage_csharp" style="color: inherit; text-decoration: inherit;">Allocated<wbr>Storage</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -325,7 +329,9 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allow<wbr>Major<wbr>Version<wbr>Upgrade</span>
+        <span id="allowmajorversionupgrade_csharp">
+<a href="#allowmajorversionupgrade_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Major<wbr>Version<wbr>Upgrade</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -336,7 +342,9 @@ the change is asynchronously applied as soon as possible.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Apply<wbr>Immediately</span>
+        <span id="applyimmediately_csharp">
+<a href="#applyimmediately_csharp" style="color: inherit; text-decoration: inherit;">Apply<wbr>Immediately</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -348,7 +356,9 @@ information.](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.DB
 
     <dt class="property-optional"
             title="Optional">
-        <span>Auto<wbr>Minor<wbr>Version<wbr>Upgrade</span>
+        <span id="autominorversionupgrade_csharp">
+<a href="#autominorversionupgrade_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Minor<wbr>Version<wbr>Upgrade</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -359,7 +369,9 @@ Defaults to true.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Availability<wbr>Zone</span>
+        <span id="availabilityzone_csharp">
+<a href="#availabilityzone_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -368,7 +380,9 @@ Defaults to true.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Backup<wbr>Retention<wbr>Period</span>
+        <span id="backupretentionperiod_csharp">
+<a href="#backupretentionperiod_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Retention<wbr>Period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -378,7 +392,9 @@ between `0` and `35`. Must be greater than `0` if the database is used as a sour
 
     <dt class="property-optional"
             title="Optional">
-        <span>Backup<wbr>Window</span>
+        <span id="backupwindow_csharp">
+<a href="#backupwindow_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Window</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -389,7 +405,9 @@ not overlap with `maintenance_window`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ca<wbr>Cert<wbr>Identifier</span>
+        <span id="cacertidentifier_csharp">
+<a href="#cacertidentifier_csharp" style="color: inherit; text-decoration: inherit;">Ca<wbr>Cert<wbr>Identifier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -398,20 +416,23 @@ not overlap with `maintenance_window`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Character<wbr>Set<wbr>Name</span>
+        <span id="charactersetname_csharp">
+<a href="#charactersetname_csharp" style="color: inherit; text-decoration: inherit;">Character<wbr>Set<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The character set name to use for DB
-encoding in Oracle instances. This can't be changed. See [Oracle Character Sets
-Supported in Amazon
-RDS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.OracleCharacterSets.html)
-for more information.
+encoding in Oracle and Microsoft SQL instances (collation). This can't be changed. See [Oracle Character Sets
+Supported in Amazon RDS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.OracleCharacterSets.html)
+or [Server-Level Collation for Microsoft SQL Server](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.SQLServer.CommonDBATasks.Collation.html) for more information.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Copy<wbr>Tags<wbr>To<wbr>Snapshot</span>
+        <span id="copytagstosnapshot_csharp">
+<a href="#copytagstosnapshot_csharp" style="color: inherit; text-decoration: inherit;">Copy<wbr>Tags<wbr>To<wbr>Snapshot</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -420,7 +441,9 @@ for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Db<wbr>Subnet<wbr>Group<wbr>Name</span>
+        <span id="dbsubnetgroupname_csharp">
+<a href="#dbsubnetgroupname_csharp" style="color: inherit; text-decoration: inherit;">Db<wbr>Subnet<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -435,7 +458,9 @@ for additional read replica contraints.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Delete<wbr>Automated<wbr>Backups</span>
+        <span id="deleteautomatedbackups_csharp">
+<a href="#deleteautomatedbackups_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>Automated<wbr>Backups</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -444,7 +469,9 @@ for additional read replica contraints.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Deletion<wbr>Protection</span>
+        <span id="deletionprotection_csharp">
+<a href="#deletionprotection_csharp" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Protection</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -453,7 +480,9 @@ for additional read replica contraints.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Domain</span>
+        <span id="domain_csharp">
+<a href="#domain_csharp" style="color: inherit; text-decoration: inherit;">Domain</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -462,7 +491,9 @@ for additional read replica contraints.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Domain<wbr>Iam<wbr>Role<wbr>Name</span>
+        <span id="domainiamrolename_csharp">
+<a href="#domainiamrolename_csharp" style="color: inherit; text-decoration: inherit;">Domain<wbr>Iam<wbr>Role<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -471,16 +502,20 @@ for additional read replica contraints.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enabled<wbr>Cloudwatch<wbr>Logs<wbr>Exports</span>
+        <span id="enabledcloudwatchlogsexports_csharp">
+<a href="#enabledcloudwatchlogsexports_csharp" style="color: inherit; text-decoration: inherit;">Enabled<wbr>Cloudwatch<wbr>Logs<wbr>Exports</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of log types to enable for exporting to CloudWatch logs. If omitted, no logs will be exported. Valid values (depending on `engine`): `agent` (MSSQL), `alert`, `audit`, `error`, `general`, `listener`, `slowquery`, `trace`, `postgresql` (PostgreSQL), `upgrade` (PostgreSQL).
+    <dd>{{% md %}}List of log types to enable for exporting to CloudWatch logs. If omitted, no logs will be exported. Valid values (depending on `engine`). MySQL and MariaDB: `audit`, `error`, `general`, `slowquery`. PostgreSQL: `postgresql`, `upgrade`. MSSQL: `agent` , `error`. Oracle: `alert`, `audit`, `listener`, `trace`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Engine</span>
+        <span id="engine_csharp">
+<a href="#engine_csharp" style="color: inherit; text-decoration: inherit;">Engine</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -494,7 +529,9 @@ in the Amazon RDS User Guide.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Engine<wbr>Version</span>
+        <span id="engineversion_csharp">
+<a href="#engineversion_csharp" style="color: inherit; text-decoration: inherit;">Engine<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -507,7 +544,9 @@ Note that for Amazon Aurora instances the engine version must match the [DB clus
 
     <dt class="property-optional"
             title="Optional">
-        <span>Final<wbr>Snapshot<wbr>Identifier</span>
+        <span id="finalsnapshotidentifier_csharp">
+<a href="#finalsnapshotidentifier_csharp" style="color: inherit; text-decoration: inherit;">Final<wbr>Snapshot<wbr>Identifier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -518,7 +557,9 @@ set to `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Iam<wbr>Database<wbr>Authentication<wbr>Enabled</span>
+        <span id="iamdatabaseauthenticationenabled_csharp">
+<a href="#iamdatabaseauthenticationenabled_csharp" style="color: inherit; text-decoration: inherit;">Iam<wbr>Database<wbr>Authentication<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -529,7 +570,9 @@ accounts is enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Identifier</span>
+        <span id="identifier_csharp">
+<a href="#identifier_csharp" style="color: inherit; text-decoration: inherit;">Identifier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -539,7 +582,9 @@ if omitted, this provider will assign a random, unique identifier.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Identifier<wbr>Prefix</span>
+        <span id="identifierprefix_csharp">
+<a href="#identifierprefix_csharp" style="color: inherit; text-decoration: inherit;">Identifier<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -549,7 +594,9 @@ identifier beginning with the specified prefix. Conflicts with `identifier`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Iops</span>
+        <span id="iops_csharp">
+<a href="#iops_csharp" style="color: inherit; text-decoration: inherit;">Iops</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -559,7 +606,9 @@ storage_type of "io1".
 
     <dt class="property-optional"
             title="Optional">
-        <span>Kms<wbr>Key<wbr>Id</span>
+        <span id="kmskeyid_csharp">
+<a href="#kmskeyid_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -569,7 +618,9 @@ encrypted replica, set this to the destination KMS ARN.
 
     <dt class="property-optional"
             title="Optional">
-        <span>License<wbr>Model</span>
+        <span id="licensemodel_csharp">
+<a href="#licensemodel_csharp" style="color: inherit; text-decoration: inherit;">License<wbr>Model</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -579,7 +630,9 @@ SE1) License model information for this DB instance.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Maintenance<wbr>Window</span>
+        <span id="maintenancewindow_csharp">
+<a href="#maintenancewindow_csharp" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -592,7 +645,9 @@ for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Allocated<wbr>Storage</span>
+        <span id="maxallocatedstorage_csharp">
+<a href="#maxallocatedstorage_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Allocated<wbr>Storage</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -601,7 +656,9 @@ for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Monitoring<wbr>Interval</span>
+        <span id="monitoringinterval_csharp">
+<a href="#monitoringinterval_csharp" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Interval</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -613,7 +670,9 @@ Values: 0, 1, 5, 10, 15, 30, 60.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Monitoring<wbr>Role<wbr>Arn</span>
+        <span id="monitoringrolearn_csharp">
+<a href="#monitoringrolearn_csharp" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Role<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -626,7 +685,9 @@ what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Multi<wbr>Az</span>
+        <span id="multiaz_csharp">
+<a href="#multiaz_csharp" style="color: inherit; text-decoration: inherit;">Multi<wbr>Az</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -635,7 +696,9 @@ what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -644,7 +707,9 @@ what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Option<wbr>Group<wbr>Name</span>
+        <span id="optiongroupname_csharp">
+<a href="#optiongroupname_csharp" style="color: inherit; text-decoration: inherit;">Option<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -653,7 +718,9 @@ what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Parameter<wbr>Group<wbr>Name</span>
+        <span id="parametergroupname_csharp">
+<a href="#parametergroupname_csharp" style="color: inherit; text-decoration: inherit;">Parameter<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -663,7 +730,9 @@ associate.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Password</span>
+        <span id="password_csharp">
+<a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -674,7 +743,9 @@ logs, and it will be stored in the state file.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Performance<wbr>Insights<wbr>Enabled</span>
+        <span id="performanceinsightsenabled_csharp">
+<a href="#performanceinsightsenabled_csharp" style="color: inherit; text-decoration: inherit;">Performance<wbr>Insights<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -683,7 +754,9 @@ logs, and it will be stored in the state file.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Performance<wbr>Insights<wbr>Kms<wbr>Key<wbr>Id</span>
+        <span id="performanceinsightskmskeyid_csharp">
+<a href="#performanceinsightskmskeyid_csharp" style="color: inherit; text-decoration: inherit;">Performance<wbr>Insights<wbr>Kms<wbr>Key<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -692,7 +765,9 @@ logs, and it will be stored in the state file.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Performance<wbr>Insights<wbr>Retention<wbr>Period</span>
+        <span id="performanceinsightsretentionperiod_csharp">
+<a href="#performanceinsightsretentionperiod_csharp" style="color: inherit; text-decoration: inherit;">Performance<wbr>Insights<wbr>Retention<wbr>Period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -701,7 +776,9 @@ logs, and it will be stored in the state file.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Port</span>
+        <span id="port_csharp">
+<a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -710,7 +787,9 @@ logs, and it will be stored in the state file.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Publicly<wbr>Accessible</span>
+        <span id="publiclyaccessible_csharp">
+<a href="#publiclyaccessible_csharp" style="color: inherit; text-decoration: inherit;">Publicly<wbr>Accessible</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -720,13 +799,17 @@ accessible. Default is `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Replicate<wbr>Source<wbr>Db</span>
+        <span id="replicatesourcedb_csharp">
+<a href="#replicatesourcedb_csharp" style="color: inherit; text-decoration: inherit;">Replicate<wbr>Source<wbr>Db</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies that this resource is a Replicate
 database, and to use this value as the source database. This correlates to the
-`identifier` of another Amazon RDS Database to replicate. Note that if you are
+`identifier` of another Amazon RDS Database to replicate (if replicating within
+a single region) or ARN of the Amazon RDS Database to replicate (if replicating
+cross-region). Note that if you are
 creating a cross-region replica of an encrypted database you will also need to
 specify a `kms_key_id`. See [DB Instance Replication][1] and [Working with
 PostgreSQL and MySQL Read Replicas](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ReadRepl.html)
@@ -735,7 +818,9 @@ for more information on using Replication.
 
     <dt class="property-optional"
             title="Optional">
-        <span>S3Import</span>
+        <span id="s3import_csharp">
+<a href="#s3import_csharp" style="color: inherit; text-decoration: inherit;">S3Import</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instances3import">Instance<wbr>S3Import<wbr>Args</a></span>
     </dt>
@@ -744,7 +829,9 @@ for more information on using Replication.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Security<wbr>Group<wbr>Names</span>
+        <span id="securitygroupnames_csharp">
+<a href="#securitygroupnames_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Names</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -755,7 +842,9 @@ Platform](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_VPC.html#U
 
     <dt class="property-optional"
             title="Optional">
-        <span>Skip<wbr>Final<wbr>Snapshot</span>
+        <span id="skipfinalsnapshot_csharp">
+<a href="#skipfinalsnapshot_csharp" style="color: inherit; text-decoration: inherit;">Skip<wbr>Final<wbr>Snapshot</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -768,7 +857,9 @@ is `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Snapshot<wbr>Identifier</span>
+        <span id="snapshotidentifier_csharp">
+<a href="#snapshotidentifier_csharp" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Identifier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -779,7 +870,9 @@ RDS console, e.g: rds:production-2015-06-26-06-05.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Storage<wbr>Encrypted</span>
+        <span id="storageencrypted_csharp">
+<a href="#storageencrypted_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Encrypted</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -791,7 +884,9 @@ default is `false` if not specified.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Storage<wbr>Type</span>
+        <span id="storagetype_csharp">
+<a href="#storagetype_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -802,7 +897,9 @@ specified, "gp2" if not.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -811,7 +908,9 @@ specified, "gp2" if not.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Timezone</span>
+        <span id="timezone_csharp">
+<a href="#timezone_csharp" style="color: inherit; text-decoration: inherit;">Timezone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -824,7 +923,9 @@ for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Username</span>
+        <span id="username_csharp">
+<a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -834,7 +935,9 @@ is provided) Username for the master DB user.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vpc<wbr>Security<wbr>Group<wbr>Ids</span>
+        <span id="vpcsecuritygroupids_csharp">
+<a href="#vpcsecuritygroupids_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Security<wbr>Group<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -851,7 +954,9 @@ associate.
 
     <dt class="property-required"
             title="Required">
-        <span>Instance<wbr>Class</span>
+        <span id="instanceclass_go">
+<a href="#instanceclass_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Class</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">interface{}</span>
     </dt>
@@ -860,7 +965,9 @@ associate.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allocated<wbr>Storage</span>
+        <span id="allocatedstorage_go">
+<a href="#allocatedstorage_go" style="color: inherit; text-decoration: inherit;">Allocated<wbr>Storage</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -869,7 +976,9 @@ associate.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allow<wbr>Major<wbr>Version<wbr>Upgrade</span>
+        <span id="allowmajorversionupgrade_go">
+<a href="#allowmajorversionupgrade_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Major<wbr>Version<wbr>Upgrade</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -880,7 +989,9 @@ the change is asynchronously applied as soon as possible.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Apply<wbr>Immediately</span>
+        <span id="applyimmediately_go">
+<a href="#applyimmediately_go" style="color: inherit; text-decoration: inherit;">Apply<wbr>Immediately</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -892,7 +1003,9 @@ information.](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.DB
 
     <dt class="property-optional"
             title="Optional">
-        <span>Auto<wbr>Minor<wbr>Version<wbr>Upgrade</span>
+        <span id="autominorversionupgrade_go">
+<a href="#autominorversionupgrade_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Minor<wbr>Version<wbr>Upgrade</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -903,7 +1016,9 @@ Defaults to true.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Availability<wbr>Zone</span>
+        <span id="availabilityzone_go">
+<a href="#availabilityzone_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -912,7 +1027,9 @@ Defaults to true.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Backup<wbr>Retention<wbr>Period</span>
+        <span id="backupretentionperiod_go">
+<a href="#backupretentionperiod_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Retention<wbr>Period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -922,7 +1039,9 @@ between `0` and `35`. Must be greater than `0` if the database is used as a sour
 
     <dt class="property-optional"
             title="Optional">
-        <span>Backup<wbr>Window</span>
+        <span id="backupwindow_go">
+<a href="#backupwindow_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Window</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -933,7 +1052,9 @@ not overlap with `maintenance_window`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ca<wbr>Cert<wbr>Identifier</span>
+        <span id="cacertidentifier_go">
+<a href="#cacertidentifier_go" style="color: inherit; text-decoration: inherit;">Ca<wbr>Cert<wbr>Identifier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -942,20 +1063,23 @@ not overlap with `maintenance_window`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Character<wbr>Set<wbr>Name</span>
+        <span id="charactersetname_go">
+<a href="#charactersetname_go" style="color: inherit; text-decoration: inherit;">Character<wbr>Set<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The character set name to use for DB
-encoding in Oracle instances. This can't be changed. See [Oracle Character Sets
-Supported in Amazon
-RDS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.OracleCharacterSets.html)
-for more information.
+encoding in Oracle and Microsoft SQL instances (collation). This can't be changed. See [Oracle Character Sets
+Supported in Amazon RDS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.OracleCharacterSets.html)
+or [Server-Level Collation for Microsoft SQL Server](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.SQLServer.CommonDBATasks.Collation.html) for more information.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Copy<wbr>Tags<wbr>To<wbr>Snapshot</span>
+        <span id="copytagstosnapshot_go">
+<a href="#copytagstosnapshot_go" style="color: inherit; text-decoration: inherit;">Copy<wbr>Tags<wbr>To<wbr>Snapshot</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -964,7 +1088,9 @@ for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Db<wbr>Subnet<wbr>Group<wbr>Name</span>
+        <span id="dbsubnetgroupname_go">
+<a href="#dbsubnetgroupname_go" style="color: inherit; text-decoration: inherit;">Db<wbr>Subnet<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -979,7 +1105,9 @@ for additional read replica contraints.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Delete<wbr>Automated<wbr>Backups</span>
+        <span id="deleteautomatedbackups_go">
+<a href="#deleteautomatedbackups_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>Automated<wbr>Backups</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -988,7 +1116,9 @@ for additional read replica contraints.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Deletion<wbr>Protection</span>
+        <span id="deletionprotection_go">
+<a href="#deletionprotection_go" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Protection</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -997,7 +1127,9 @@ for additional read replica contraints.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Domain</span>
+        <span id="domain_go">
+<a href="#domain_go" style="color: inherit; text-decoration: inherit;">Domain</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1006,7 +1138,9 @@ for additional read replica contraints.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Domain<wbr>Iam<wbr>Role<wbr>Name</span>
+        <span id="domainiamrolename_go">
+<a href="#domainiamrolename_go" style="color: inherit; text-decoration: inherit;">Domain<wbr>Iam<wbr>Role<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1015,16 +1149,20 @@ for additional read replica contraints.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enabled<wbr>Cloudwatch<wbr>Logs<wbr>Exports</span>
+        <span id="enabledcloudwatchlogsexports_go">
+<a href="#enabledcloudwatchlogsexports_go" style="color: inherit; text-decoration: inherit;">Enabled<wbr>Cloudwatch<wbr>Logs<wbr>Exports</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}List of log types to enable for exporting to CloudWatch logs. If omitted, no logs will be exported. Valid values (depending on `engine`): `agent` (MSSQL), `alert`, `audit`, `error`, `general`, `listener`, `slowquery`, `trace`, `postgresql` (PostgreSQL), `upgrade` (PostgreSQL).
+    <dd>{{% md %}}List of log types to enable for exporting to CloudWatch logs. If omitted, no logs will be exported. Valid values (depending on `engine`). MySQL and MariaDB: `audit`, `error`, `general`, `slowquery`. PostgreSQL: `postgresql`, `upgrade`. MSSQL: `agent` , `error`. Oracle: `alert`, `audit`, `listener`, `trace`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Engine</span>
+        <span id="engine_go">
+<a href="#engine_go" style="color: inherit; text-decoration: inherit;">Engine</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1038,7 +1176,9 @@ in the Amazon RDS User Guide.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Engine<wbr>Version</span>
+        <span id="engineversion_go">
+<a href="#engineversion_go" style="color: inherit; text-decoration: inherit;">Engine<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1051,7 +1191,9 @@ Note that for Amazon Aurora instances the engine version must match the [DB clus
 
     <dt class="property-optional"
             title="Optional">
-        <span>Final<wbr>Snapshot<wbr>Identifier</span>
+        <span id="finalsnapshotidentifier_go">
+<a href="#finalsnapshotidentifier_go" style="color: inherit; text-decoration: inherit;">Final<wbr>Snapshot<wbr>Identifier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1062,7 +1204,9 @@ set to `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Iam<wbr>Database<wbr>Authentication<wbr>Enabled</span>
+        <span id="iamdatabaseauthenticationenabled_go">
+<a href="#iamdatabaseauthenticationenabled_go" style="color: inherit; text-decoration: inherit;">Iam<wbr>Database<wbr>Authentication<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1073,7 +1217,9 @@ accounts is enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Identifier</span>
+        <span id="identifier_go">
+<a href="#identifier_go" style="color: inherit; text-decoration: inherit;">Identifier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1083,7 +1229,9 @@ if omitted, this provider will assign a random, unique identifier.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Identifier<wbr>Prefix</span>
+        <span id="identifierprefix_go">
+<a href="#identifierprefix_go" style="color: inherit; text-decoration: inherit;">Identifier<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1093,7 +1241,9 @@ identifier beginning with the specified prefix. Conflicts with `identifier`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Iops</span>
+        <span id="iops_go">
+<a href="#iops_go" style="color: inherit; text-decoration: inherit;">Iops</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1103,7 +1253,9 @@ storage_type of "io1".
 
     <dt class="property-optional"
             title="Optional">
-        <span>Kms<wbr>Key<wbr>Id</span>
+        <span id="kmskeyid_go">
+<a href="#kmskeyid_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1113,7 +1265,9 @@ encrypted replica, set this to the destination KMS ARN.
 
     <dt class="property-optional"
             title="Optional">
-        <span>License<wbr>Model</span>
+        <span id="licensemodel_go">
+<a href="#licensemodel_go" style="color: inherit; text-decoration: inherit;">License<wbr>Model</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1123,7 +1277,9 @@ SE1) License model information for this DB instance.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Maintenance<wbr>Window</span>
+        <span id="maintenancewindow_go">
+<a href="#maintenancewindow_go" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1136,7 +1292,9 @@ for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Allocated<wbr>Storage</span>
+        <span id="maxallocatedstorage_go">
+<a href="#maxallocatedstorage_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Allocated<wbr>Storage</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1145,7 +1303,9 @@ for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Monitoring<wbr>Interval</span>
+        <span id="monitoringinterval_go">
+<a href="#monitoringinterval_go" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Interval</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1157,7 +1317,9 @@ Values: 0, 1, 5, 10, 15, 30, 60.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Monitoring<wbr>Role<wbr>Arn</span>
+        <span id="monitoringrolearn_go">
+<a href="#monitoringrolearn_go" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Role<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1170,7 +1332,9 @@ what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Multi<wbr>Az</span>
+        <span id="multiaz_go">
+<a href="#multiaz_go" style="color: inherit; text-decoration: inherit;">Multi<wbr>Az</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1179,7 +1343,9 @@ what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1188,7 +1354,9 @@ what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Option<wbr>Group<wbr>Name</span>
+        <span id="optiongroupname_go">
+<a href="#optiongroupname_go" style="color: inherit; text-decoration: inherit;">Option<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1197,7 +1365,9 @@ what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Parameter<wbr>Group<wbr>Name</span>
+        <span id="parametergroupname_go">
+<a href="#parametergroupname_go" style="color: inherit; text-decoration: inherit;">Parameter<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1207,7 +1377,9 @@ associate.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Password</span>
+        <span id="password_go">
+<a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1218,7 +1390,9 @@ logs, and it will be stored in the state file.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Performance<wbr>Insights<wbr>Enabled</span>
+        <span id="performanceinsightsenabled_go">
+<a href="#performanceinsightsenabled_go" style="color: inherit; text-decoration: inherit;">Performance<wbr>Insights<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1227,7 +1401,9 @@ logs, and it will be stored in the state file.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Performance<wbr>Insights<wbr>Kms<wbr>Key<wbr>Id</span>
+        <span id="performanceinsightskmskeyid_go">
+<a href="#performanceinsightskmskeyid_go" style="color: inherit; text-decoration: inherit;">Performance<wbr>Insights<wbr>Kms<wbr>Key<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1236,7 +1412,9 @@ logs, and it will be stored in the state file.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Performance<wbr>Insights<wbr>Retention<wbr>Period</span>
+        <span id="performanceinsightsretentionperiod_go">
+<a href="#performanceinsightsretentionperiod_go" style="color: inherit; text-decoration: inherit;">Performance<wbr>Insights<wbr>Retention<wbr>Period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1245,7 +1423,9 @@ logs, and it will be stored in the state file.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Port</span>
+        <span id="port_go">
+<a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1254,7 +1434,9 @@ logs, and it will be stored in the state file.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Publicly<wbr>Accessible</span>
+        <span id="publiclyaccessible_go">
+<a href="#publiclyaccessible_go" style="color: inherit; text-decoration: inherit;">Publicly<wbr>Accessible</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1264,13 +1446,17 @@ accessible. Default is `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Replicate<wbr>Source<wbr>Db</span>
+        <span id="replicatesourcedb_go">
+<a href="#replicatesourcedb_go" style="color: inherit; text-decoration: inherit;">Replicate<wbr>Source<wbr>Db</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies that this resource is a Replicate
 database, and to use this value as the source database. This correlates to the
-`identifier` of another Amazon RDS Database to replicate. Note that if you are
+`identifier` of another Amazon RDS Database to replicate (if replicating within
+a single region) or ARN of the Amazon RDS Database to replicate (if replicating
+cross-region). Note that if you are
 creating a cross-region replica of an encrypted database you will also need to
 specify a `kms_key_id`. See [DB Instance Replication][1] and [Working with
 PostgreSQL and MySQL Read Replicas](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ReadRepl.html)
@@ -1279,7 +1465,9 @@ for more information on using Replication.
 
     <dt class="property-optional"
             title="Optional">
-        <span>S3Import</span>
+        <span id="s3import_go">
+<a href="#s3import_go" style="color: inherit; text-decoration: inherit;">S3Import</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instances3import">Instance<wbr>S3Import</a></span>
     </dt>
@@ -1288,7 +1476,9 @@ for more information on using Replication.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Security<wbr>Group<wbr>Names</span>
+        <span id="securitygroupnames_go">
+<a href="#securitygroupnames_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Names</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1299,7 +1489,9 @@ Platform](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_VPC.html#U
 
     <dt class="property-optional"
             title="Optional">
-        <span>Skip<wbr>Final<wbr>Snapshot</span>
+        <span id="skipfinalsnapshot_go">
+<a href="#skipfinalsnapshot_go" style="color: inherit; text-decoration: inherit;">Skip<wbr>Final<wbr>Snapshot</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1312,7 +1504,9 @@ is `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Snapshot<wbr>Identifier</span>
+        <span id="snapshotidentifier_go">
+<a href="#snapshotidentifier_go" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Identifier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1323,7 +1517,9 @@ RDS console, e.g: rds:production-2015-06-26-06-05.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Storage<wbr>Encrypted</span>
+        <span id="storageencrypted_go">
+<a href="#storageencrypted_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Encrypted</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1335,7 +1531,9 @@ default is `false` if not specified.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Storage<wbr>Type</span>
+        <span id="storagetype_go">
+<a href="#storagetype_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">interface{}</span>
     </dt>
@@ -1346,7 +1544,9 @@ specified, "gp2" if not.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -1355,7 +1555,9 @@ specified, "gp2" if not.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Timezone</span>
+        <span id="timezone_go">
+<a href="#timezone_go" style="color: inherit; text-decoration: inherit;">Timezone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1368,7 +1570,9 @@ for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Username</span>
+        <span id="username_go">
+<a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1378,7 +1582,9 @@ is provided) Username for the master DB user.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vpc<wbr>Security<wbr>Group<wbr>Ids</span>
+        <span id="vpcsecuritygroupids_go">
+<a href="#vpcsecuritygroupids_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Security<wbr>Group<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1395,7 +1601,9 @@ associate.
 
     <dt class="property-required"
             title="Required">
-        <span>instance<wbr>Class</span>
+        <span id="instanceclass_nodejs">
+<a href="#instanceclass_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Class</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">string | Instance<wbr>Type</span>
     </dt>
@@ -1404,7 +1612,9 @@ associate.
 
     <dt class="property-optional"
             title="Optional">
-        <span>allocated<wbr>Storage</span>
+        <span id="allocatedstorage_nodejs">
+<a href="#allocatedstorage_nodejs" style="color: inherit; text-decoration: inherit;">allocated<wbr>Storage</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1413,7 +1623,9 @@ associate.
 
     <dt class="property-optional"
             title="Optional">
-        <span>allow<wbr>Major<wbr>Version<wbr>Upgrade</span>
+        <span id="allowmajorversionupgrade_nodejs">
+<a href="#allowmajorversionupgrade_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Major<wbr>Version<wbr>Upgrade</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1424,7 +1636,9 @@ the change is asynchronously applied as soon as possible.
 
     <dt class="property-optional"
             title="Optional">
-        <span>apply<wbr>Immediately</span>
+        <span id="applyimmediately_nodejs">
+<a href="#applyimmediately_nodejs" style="color: inherit; text-decoration: inherit;">apply<wbr>Immediately</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1436,7 +1650,9 @@ information.](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.DB
 
     <dt class="property-optional"
             title="Optional">
-        <span>auto<wbr>Minor<wbr>Version<wbr>Upgrade</span>
+        <span id="autominorversionupgrade_nodejs">
+<a href="#autominorversionupgrade_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Minor<wbr>Version<wbr>Upgrade</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1447,7 +1663,9 @@ Defaults to true.
 
     <dt class="property-optional"
             title="Optional">
-        <span>availability<wbr>Zone</span>
+        <span id="availabilityzone_nodejs">
+<a href="#availabilityzone_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1456,7 +1674,9 @@ Defaults to true.
 
     <dt class="property-optional"
             title="Optional">
-        <span>backup<wbr>Retention<wbr>Period</span>
+        <span id="backupretentionperiod_nodejs">
+<a href="#backupretentionperiod_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Retention<wbr>Period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1466,7 +1686,9 @@ between `0` and `35`. Must be greater than `0` if the database is used as a sour
 
     <dt class="property-optional"
             title="Optional">
-        <span>backup<wbr>Window</span>
+        <span id="backupwindow_nodejs">
+<a href="#backupwindow_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Window</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1477,7 +1699,9 @@ not overlap with `maintenance_window`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ca<wbr>Cert<wbr>Identifier</span>
+        <span id="cacertidentifier_nodejs">
+<a href="#cacertidentifier_nodejs" style="color: inherit; text-decoration: inherit;">ca<wbr>Cert<wbr>Identifier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1486,20 +1710,23 @@ not overlap with `maintenance_window`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>character<wbr>Set<wbr>Name</span>
+        <span id="charactersetname_nodejs">
+<a href="#charactersetname_nodejs" style="color: inherit; text-decoration: inherit;">character<wbr>Set<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The character set name to use for DB
-encoding in Oracle instances. This can't be changed. See [Oracle Character Sets
-Supported in Amazon
-RDS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.OracleCharacterSets.html)
-for more information.
+encoding in Oracle and Microsoft SQL instances (collation). This can't be changed. See [Oracle Character Sets
+Supported in Amazon RDS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.OracleCharacterSets.html)
+or [Server-Level Collation for Microsoft SQL Server](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.SQLServer.CommonDBATasks.Collation.html) for more information.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>copy<wbr>Tags<wbr>To<wbr>Snapshot</span>
+        <span id="copytagstosnapshot_nodejs">
+<a href="#copytagstosnapshot_nodejs" style="color: inherit; text-decoration: inherit;">copy<wbr>Tags<wbr>To<wbr>Snapshot</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1508,7 +1735,9 @@ for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>db<wbr>Subnet<wbr>Group<wbr>Name</span>
+        <span id="dbsubnetgroupname_nodejs">
+<a href="#dbsubnetgroupname_nodejs" style="color: inherit; text-decoration: inherit;">db<wbr>Subnet<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1523,7 +1752,9 @@ for additional read replica contraints.
 
     <dt class="property-optional"
             title="Optional">
-        <span>delete<wbr>Automated<wbr>Backups</span>
+        <span id="deleteautomatedbackups_nodejs">
+<a href="#deleteautomatedbackups_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Automated<wbr>Backups</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1532,7 +1763,9 @@ for additional read replica contraints.
 
     <dt class="property-optional"
             title="Optional">
-        <span>deletion<wbr>Protection</span>
+        <span id="deletionprotection_nodejs">
+<a href="#deletionprotection_nodejs" style="color: inherit; text-decoration: inherit;">deletion<wbr>Protection</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1541,7 +1774,9 @@ for additional read replica contraints.
 
     <dt class="property-optional"
             title="Optional">
-        <span>domain</span>
+        <span id="domain_nodejs">
+<a href="#domain_nodejs" style="color: inherit; text-decoration: inherit;">domain</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1550,7 +1785,9 @@ for additional read replica contraints.
 
     <dt class="property-optional"
             title="Optional">
-        <span>domain<wbr>Iam<wbr>Role<wbr>Name</span>
+        <span id="domainiamrolename_nodejs">
+<a href="#domainiamrolename_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Iam<wbr>Role<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1559,16 +1796,20 @@ for additional read replica contraints.
 
     <dt class="property-optional"
             title="Optional">
-        <span>enabled<wbr>Cloudwatch<wbr>Logs<wbr>Exports</span>
+        <span id="enabledcloudwatchlogsexports_nodejs">
+<a href="#enabledcloudwatchlogsexports_nodejs" style="color: inherit; text-decoration: inherit;">enabled<wbr>Cloudwatch<wbr>Logs<wbr>Exports</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}List of log types to enable for exporting to CloudWatch logs. If omitted, no logs will be exported. Valid values (depending on `engine`): `agent` (MSSQL), `alert`, `audit`, `error`, `general`, `listener`, `slowquery`, `trace`, `postgresql` (PostgreSQL), `upgrade` (PostgreSQL).
+    <dd>{{% md %}}List of log types to enable for exporting to CloudWatch logs. If omitted, no logs will be exported. Valid values (depending on `engine`). MySQL and MariaDB: `audit`, `error`, `general`, `slowquery`. PostgreSQL: `postgresql`, `upgrade`. MSSQL: `agent` , `error`. Oracle: `alert`, `audit`, `listener`, `trace`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>engine</span>
+        <span id="engine_nodejs">
+<a href="#engine_nodejs" style="color: inherit; text-decoration: inherit;">engine</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1582,7 +1823,9 @@ in the Amazon RDS User Guide.
 
     <dt class="property-optional"
             title="Optional">
-        <span>engine<wbr>Version</span>
+        <span id="engineversion_nodejs">
+<a href="#engineversion_nodejs" style="color: inherit; text-decoration: inherit;">engine<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1595,7 +1838,9 @@ Note that for Amazon Aurora instances the engine version must match the [DB clus
 
     <dt class="property-optional"
             title="Optional">
-        <span>final<wbr>Snapshot<wbr>Identifier</span>
+        <span id="finalsnapshotidentifier_nodejs">
+<a href="#finalsnapshotidentifier_nodejs" style="color: inherit; text-decoration: inherit;">final<wbr>Snapshot<wbr>Identifier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1606,7 +1851,9 @@ set to `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>iam<wbr>Database<wbr>Authentication<wbr>Enabled</span>
+        <span id="iamdatabaseauthenticationenabled_nodejs">
+<a href="#iamdatabaseauthenticationenabled_nodejs" style="color: inherit; text-decoration: inherit;">iam<wbr>Database<wbr>Authentication<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1617,7 +1864,9 @@ accounts is enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>identifier</span>
+        <span id="identifier_nodejs">
+<a href="#identifier_nodejs" style="color: inherit; text-decoration: inherit;">identifier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1627,7 +1876,9 @@ if omitted, this provider will assign a random, unique identifier.
 
     <dt class="property-optional"
             title="Optional">
-        <span>identifier<wbr>Prefix</span>
+        <span id="identifierprefix_nodejs">
+<a href="#identifierprefix_nodejs" style="color: inherit; text-decoration: inherit;">identifier<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1637,7 +1888,9 @@ identifier beginning with the specified prefix. Conflicts with `identifier`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>iops</span>
+        <span id="iops_nodejs">
+<a href="#iops_nodejs" style="color: inherit; text-decoration: inherit;">iops</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1647,7 +1900,9 @@ storage_type of "io1".
 
     <dt class="property-optional"
             title="Optional">
-        <span>kms<wbr>Key<wbr>Id</span>
+        <span id="kmskeyid_nodejs">
+<a href="#kmskeyid_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1657,7 +1912,9 @@ encrypted replica, set this to the destination KMS ARN.
 
     <dt class="property-optional"
             title="Optional">
-        <span>license<wbr>Model</span>
+        <span id="licensemodel_nodejs">
+<a href="#licensemodel_nodejs" style="color: inherit; text-decoration: inherit;">license<wbr>Model</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1667,7 +1924,9 @@ SE1) License model information for this DB instance.
 
     <dt class="property-optional"
             title="Optional">
-        <span>maintenance<wbr>Window</span>
+        <span id="maintenancewindow_nodejs">
+<a href="#maintenancewindow_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1680,7 +1939,9 @@ for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Allocated<wbr>Storage</span>
+        <span id="maxallocatedstorage_nodejs">
+<a href="#maxallocatedstorage_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Allocated<wbr>Storage</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1689,7 +1950,9 @@ for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>monitoring<wbr>Interval</span>
+        <span id="monitoringinterval_nodejs">
+<a href="#monitoringinterval_nodejs" style="color: inherit; text-decoration: inherit;">monitoring<wbr>Interval</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1701,7 +1964,9 @@ Values: 0, 1, 5, 10, 15, 30, 60.
 
     <dt class="property-optional"
             title="Optional">
-        <span>monitoring<wbr>Role<wbr>Arn</span>
+        <span id="monitoringrolearn_nodejs">
+<a href="#monitoringrolearn_nodejs" style="color: inherit; text-decoration: inherit;">monitoring<wbr>Role<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1714,7 +1979,9 @@ what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.
 
     <dt class="property-optional"
             title="Optional">
-        <span>multi<wbr>Az</span>
+        <span id="multiaz_nodejs">
+<a href="#multiaz_nodejs" style="color: inherit; text-decoration: inherit;">multi<wbr>Az</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1723,7 +1990,9 @@ what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1732,7 +2001,9 @@ what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.
 
     <dt class="property-optional"
             title="Optional">
-        <span>option<wbr>Group<wbr>Name</span>
+        <span id="optiongroupname_nodejs">
+<a href="#optiongroupname_nodejs" style="color: inherit; text-decoration: inherit;">option<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1741,7 +2012,9 @@ what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.
 
     <dt class="property-optional"
             title="Optional">
-        <span>parameter<wbr>Group<wbr>Name</span>
+        <span id="parametergroupname_nodejs">
+<a href="#parametergroupname_nodejs" style="color: inherit; text-decoration: inherit;">parameter<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1751,7 +2024,9 @@ associate.
 
     <dt class="property-optional"
             title="Optional">
-        <span>password</span>
+        <span id="password_nodejs">
+<a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1762,7 +2037,9 @@ logs, and it will be stored in the state file.
 
     <dt class="property-optional"
             title="Optional">
-        <span>performance<wbr>Insights<wbr>Enabled</span>
+        <span id="performanceinsightsenabled_nodejs">
+<a href="#performanceinsightsenabled_nodejs" style="color: inherit; text-decoration: inherit;">performance<wbr>Insights<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1771,7 +2048,9 @@ logs, and it will be stored in the state file.
 
     <dt class="property-optional"
             title="Optional">
-        <span>performance<wbr>Insights<wbr>Kms<wbr>Key<wbr>Id</span>
+        <span id="performanceinsightskmskeyid_nodejs">
+<a href="#performanceinsightskmskeyid_nodejs" style="color: inherit; text-decoration: inherit;">performance<wbr>Insights<wbr>Kms<wbr>Key<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1780,7 +2059,9 @@ logs, and it will be stored in the state file.
 
     <dt class="property-optional"
             title="Optional">
-        <span>performance<wbr>Insights<wbr>Retention<wbr>Period</span>
+        <span id="performanceinsightsretentionperiod_nodejs">
+<a href="#performanceinsightsretentionperiod_nodejs" style="color: inherit; text-decoration: inherit;">performance<wbr>Insights<wbr>Retention<wbr>Period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1789,7 +2070,9 @@ logs, and it will be stored in the state file.
 
     <dt class="property-optional"
             title="Optional">
-        <span>port</span>
+        <span id="port_nodejs">
+<a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1798,7 +2081,9 @@ logs, and it will be stored in the state file.
 
     <dt class="property-optional"
             title="Optional">
-        <span>publicly<wbr>Accessible</span>
+        <span id="publiclyaccessible_nodejs">
+<a href="#publiclyaccessible_nodejs" style="color: inherit; text-decoration: inherit;">publicly<wbr>Accessible</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1808,13 +2093,17 @@ accessible. Default is `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>replicate<wbr>Source<wbr>Db</span>
+        <span id="replicatesourcedb_nodejs">
+<a href="#replicatesourcedb_nodejs" style="color: inherit; text-decoration: inherit;">replicate<wbr>Source<wbr>Db</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies that this resource is a Replicate
 database, and to use this value as the source database. This correlates to the
-`identifier` of another Amazon RDS Database to replicate. Note that if you are
+`identifier` of another Amazon RDS Database to replicate (if replicating within
+a single region) or ARN of the Amazon RDS Database to replicate (if replicating
+cross-region). Note that if you are
 creating a cross-region replica of an encrypted database you will also need to
 specify a `kms_key_id`. See [DB Instance Replication][1] and [Working with
 PostgreSQL and MySQL Read Replicas](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ReadRepl.html)
@@ -1823,7 +2112,9 @@ for more information on using Replication.
 
     <dt class="property-optional"
             title="Optional">
-        <span>s3Import</span>
+        <span id="s3import_nodejs">
+<a href="#s3import_nodejs" style="color: inherit; text-decoration: inherit;">s3Import</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instances3import">Instance<wbr>S3Import</a></span>
     </dt>
@@ -1832,7 +2123,9 @@ for more information on using Replication.
 
     <dt class="property-optional"
             title="Optional">
-        <span>security<wbr>Group<wbr>Names</span>
+        <span id="securitygroupnames_nodejs">
+<a href="#securitygroupnames_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Names</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1843,7 +2136,9 @@ Platform](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_VPC.html#U
 
     <dt class="property-optional"
             title="Optional">
-        <span>skip<wbr>Final<wbr>Snapshot</span>
+        <span id="skipfinalsnapshot_nodejs">
+<a href="#skipfinalsnapshot_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Final<wbr>Snapshot</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1856,7 +2151,9 @@ is `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>snapshot<wbr>Identifier</span>
+        <span id="snapshotidentifier_nodejs">
+<a href="#snapshotidentifier_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Identifier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1867,7 +2164,9 @@ RDS console, e.g: rds:production-2015-06-26-06-05.
 
     <dt class="property-optional"
             title="Optional">
-        <span>storage<wbr>Encrypted</span>
+        <span id="storageencrypted_nodejs">
+<a href="#storageencrypted_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Encrypted</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1879,7 +2178,9 @@ default is `false` if not specified.
 
     <dt class="property-optional"
             title="Optional">
-        <span>storage<wbr>Type</span>
+        <span id="storagetype_nodejs">
+<a href="#storagetype_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">string | Storage<wbr>Type</span>
     </dt>
@@ -1890,7 +2191,9 @@ specified, "gp2" if not.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -1899,7 +2202,9 @@ specified, "gp2" if not.
 
     <dt class="property-optional"
             title="Optional">
-        <span>timezone</span>
+        <span id="timezone_nodejs">
+<a href="#timezone_nodejs" style="color: inherit; text-decoration: inherit;">timezone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1912,7 +2217,9 @@ for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>username</span>
+        <span id="username_nodejs">
+<a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1922,7 +2229,9 @@ is provided) Username for the master DB user.
 
     <dt class="property-optional"
             title="Optional">
-        <span>vpc<wbr>Security<wbr>Group<wbr>Ids</span>
+        <span id="vpcsecuritygroupids_nodejs">
+<a href="#vpcsecuritygroupids_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Security<wbr>Group<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1939,7 +2248,9 @@ associate.
 
     <dt class="property-required"
             title="Required">
-        <span>instance_<wbr>class</span>
+        <span id="instance_class_python">
+<a href="#instance_class_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>class</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">string | str</span>
     </dt>
@@ -1948,7 +2259,9 @@ associate.
 
     <dt class="property-optional"
             title="Optional">
-        <span>allocated_<wbr>storage</span>
+        <span id="allocated_storage_python">
+<a href="#allocated_storage_python" style="color: inherit; text-decoration: inherit;">allocated_<wbr>storage</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1957,7 +2270,9 @@ associate.
 
     <dt class="property-optional"
             title="Optional">
-        <span>allow_<wbr>major_<wbr>version_<wbr>upgrade</span>
+        <span id="allow_major_version_upgrade_python">
+<a href="#allow_major_version_upgrade_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>major_<wbr>version_<wbr>upgrade</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1968,7 +2283,9 @@ the change is asynchronously applied as soon as possible.
 
     <dt class="property-optional"
             title="Optional">
-        <span>apply_<wbr>immediately</span>
+        <span id="apply_immediately_python">
+<a href="#apply_immediately_python" style="color: inherit; text-decoration: inherit;">apply_<wbr>immediately</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1980,7 +2297,9 @@ information.](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.DB
 
     <dt class="property-optional"
             title="Optional">
-        <span>auto_<wbr>minor_<wbr>version_<wbr>upgrade</span>
+        <span id="auto_minor_version_upgrade_python">
+<a href="#auto_minor_version_upgrade_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>minor_<wbr>version_<wbr>upgrade</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1991,7 +2310,9 @@ Defaults to true.
 
     <dt class="property-optional"
             title="Optional">
-        <span>availability_<wbr>zone</span>
+        <span id="availability_zone_python">
+<a href="#availability_zone_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2000,7 +2321,9 @@ Defaults to true.
 
     <dt class="property-optional"
             title="Optional">
-        <span>backup_<wbr>retention_<wbr>period</span>
+        <span id="backup_retention_period_python">
+<a href="#backup_retention_period_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>retention_<wbr>period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2010,7 +2333,9 @@ between `0` and `35`. Must be greater than `0` if the database is used as a sour
 
     <dt class="property-optional"
             title="Optional">
-        <span>backup_<wbr>window</span>
+        <span id="backup_window_python">
+<a href="#backup_window_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>window</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2021,7 +2346,9 @@ not overlap with `maintenance_window`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ca_<wbr>cert_<wbr>identifier</span>
+        <span id="ca_cert_identifier_python">
+<a href="#ca_cert_identifier_python" style="color: inherit; text-decoration: inherit;">ca_<wbr>cert_<wbr>identifier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2030,20 +2357,23 @@ not overlap with `maintenance_window`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>character_<wbr>set_<wbr>name</span>
+        <span id="character_set_name_python">
+<a href="#character_set_name_python" style="color: inherit; text-decoration: inherit;">character_<wbr>set_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The character set name to use for DB
-encoding in Oracle instances. This can't be changed. See [Oracle Character Sets
-Supported in Amazon
-RDS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.OracleCharacterSets.html)
-for more information.
+encoding in Oracle and Microsoft SQL instances (collation). This can't be changed. See [Oracle Character Sets
+Supported in Amazon RDS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.OracleCharacterSets.html)
+or [Server-Level Collation for Microsoft SQL Server](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.SQLServer.CommonDBATasks.Collation.html) for more information.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>copy_<wbr>tags_<wbr>to_<wbr>snapshot</span>
+        <span id="copy_tags_to_snapshot_python">
+<a href="#copy_tags_to_snapshot_python" style="color: inherit; text-decoration: inherit;">copy_<wbr>tags_<wbr>to_<wbr>snapshot</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2052,7 +2382,9 @@ for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>db_<wbr>subnet_<wbr>group_<wbr>name</span>
+        <span id="db_subnet_group_name_python">
+<a href="#db_subnet_group_name_python" style="color: inherit; text-decoration: inherit;">db_<wbr>subnet_<wbr>group_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2067,7 +2399,9 @@ for additional read replica contraints.
 
     <dt class="property-optional"
             title="Optional">
-        <span>delete_<wbr>automated_<wbr>backups</span>
+        <span id="delete_automated_backups_python">
+<a href="#delete_automated_backups_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>automated_<wbr>backups</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2076,7 +2410,9 @@ for additional read replica contraints.
 
     <dt class="property-optional"
             title="Optional">
-        <span>deletion_<wbr>protection</span>
+        <span id="deletion_protection_python">
+<a href="#deletion_protection_python" style="color: inherit; text-decoration: inherit;">deletion_<wbr>protection</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2085,7 +2421,9 @@ for additional read replica contraints.
 
     <dt class="property-optional"
             title="Optional">
-        <span>domain</span>
+        <span id="domain_python">
+<a href="#domain_python" style="color: inherit; text-decoration: inherit;">domain</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2094,7 +2432,9 @@ for additional read replica contraints.
 
     <dt class="property-optional"
             title="Optional">
-        <span>domain_<wbr>iam_<wbr>role_<wbr>name</span>
+        <span id="domain_iam_role_name_python">
+<a href="#domain_iam_role_name_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>iam_<wbr>role_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2103,16 +2443,20 @@ for additional read replica contraints.
 
     <dt class="property-optional"
             title="Optional">
-        <span>enabled_<wbr>cloudwatch_<wbr>logs_<wbr>exports</span>
+        <span id="enabled_cloudwatch_logs_exports_python">
+<a href="#enabled_cloudwatch_logs_exports_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>cloudwatch_<wbr>logs_<wbr>exports</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}List of log types to enable for exporting to CloudWatch logs. If omitted, no logs will be exported. Valid values (depending on `engine`): `agent` (MSSQL), `alert`, `audit`, `error`, `general`, `listener`, `slowquery`, `trace`, `postgresql` (PostgreSQL), `upgrade` (PostgreSQL).
+    <dd>{{% md %}}List of log types to enable for exporting to CloudWatch logs. If omitted, no logs will be exported. Valid values (depending on `engine`). MySQL and MariaDB: `audit`, `error`, `general`, `slowquery`. PostgreSQL: `postgresql`, `upgrade`. MSSQL: `agent` , `error`. Oracle: `alert`, `audit`, `listener`, `trace`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>engine</span>
+        <span id="engine_python">
+<a href="#engine_python" style="color: inherit; text-decoration: inherit;">engine</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2126,7 +2470,9 @@ in the Amazon RDS User Guide.
 
     <dt class="property-optional"
             title="Optional">
-        <span>engine_<wbr>version</span>
+        <span id="engine_version_python">
+<a href="#engine_version_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2139,7 +2485,9 @@ Note that for Amazon Aurora instances the engine version must match the [DB clus
 
     <dt class="property-optional"
             title="Optional">
-        <span>final_<wbr>snapshot_<wbr>identifier</span>
+        <span id="final_snapshot_identifier_python">
+<a href="#final_snapshot_identifier_python" style="color: inherit; text-decoration: inherit;">final_<wbr>snapshot_<wbr>identifier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2150,7 +2498,9 @@ set to `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>iam_<wbr>database_<wbr>authentication_<wbr>enabled</span>
+        <span id="iam_database_authentication_enabled_python">
+<a href="#iam_database_authentication_enabled_python" style="color: inherit; text-decoration: inherit;">iam_<wbr>database_<wbr>authentication_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2161,7 +2511,9 @@ accounts is enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>identifier</span>
+        <span id="identifier_python">
+<a href="#identifier_python" style="color: inherit; text-decoration: inherit;">identifier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2171,7 +2523,9 @@ if omitted, this provider will assign a random, unique identifier.
 
     <dt class="property-optional"
             title="Optional">
-        <span>identifier_<wbr>prefix</span>
+        <span id="identifier_prefix_python">
+<a href="#identifier_prefix_python" style="color: inherit; text-decoration: inherit;">identifier_<wbr>prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2181,7 +2535,9 @@ identifier beginning with the specified prefix. Conflicts with `identifier`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>iops</span>
+        <span id="iops_python">
+<a href="#iops_python" style="color: inherit; text-decoration: inherit;">iops</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2191,7 +2547,9 @@ storage_type of "io1".
 
     <dt class="property-optional"
             title="Optional">
-        <span>kms_<wbr>key_<wbr>id</span>
+        <span id="kms_key_id_python">
+<a href="#kms_key_id_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2201,7 +2559,9 @@ encrypted replica, set this to the destination KMS ARN.
 
     <dt class="property-optional"
             title="Optional">
-        <span>license_<wbr>model</span>
+        <span id="license_model_python">
+<a href="#license_model_python" style="color: inherit; text-decoration: inherit;">license_<wbr>model</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2211,7 +2571,9 @@ SE1) License model information for this DB instance.
 
     <dt class="property-optional"
             title="Optional">
-        <span>maintenance_<wbr>window</span>
+        <span id="maintenance_window_python">
+<a href="#maintenance_window_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2224,7 +2586,9 @@ for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>max_<wbr>allocated_<wbr>storage</span>
+        <span id="max_allocated_storage_python">
+<a href="#max_allocated_storage_python" style="color: inherit; text-decoration: inherit;">max_<wbr>allocated_<wbr>storage</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2233,7 +2597,9 @@ for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>monitoring_<wbr>interval</span>
+        <span id="monitoring_interval_python">
+<a href="#monitoring_interval_python" style="color: inherit; text-decoration: inherit;">monitoring_<wbr>interval</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2245,7 +2611,9 @@ Values: 0, 1, 5, 10, 15, 30, 60.
 
     <dt class="property-optional"
             title="Optional">
-        <span>monitoring_<wbr>role_<wbr>arn</span>
+        <span id="monitoring_role_arn_python">
+<a href="#monitoring_role_arn_python" style="color: inherit; text-decoration: inherit;">monitoring_<wbr>role_<wbr>arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2258,7 +2626,9 @@ what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.
 
     <dt class="property-optional"
             title="Optional">
-        <span>multi_<wbr>az</span>
+        <span id="multi_az_python">
+<a href="#multi_az_python" style="color: inherit; text-decoration: inherit;">multi_<wbr>az</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2267,7 +2637,9 @@ what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2276,7 +2648,9 @@ what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.
 
     <dt class="property-optional"
             title="Optional">
-        <span>option_<wbr>group_<wbr>name</span>
+        <span id="option_group_name_python">
+<a href="#option_group_name_python" style="color: inherit; text-decoration: inherit;">option_<wbr>group_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2285,7 +2659,9 @@ what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.
 
     <dt class="property-optional"
             title="Optional">
-        <span>parameter_<wbr>group_<wbr>name</span>
+        <span id="parameter_group_name_python">
+<a href="#parameter_group_name_python" style="color: inherit; text-decoration: inherit;">parameter_<wbr>group_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2295,7 +2671,9 @@ associate.
 
     <dt class="property-optional"
             title="Optional">
-        <span>password</span>
+        <span id="password_python">
+<a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2306,7 +2684,9 @@ logs, and it will be stored in the state file.
 
     <dt class="property-optional"
             title="Optional">
-        <span>performance_<wbr>insights_<wbr>enabled</span>
+        <span id="performance_insights_enabled_python">
+<a href="#performance_insights_enabled_python" style="color: inherit; text-decoration: inherit;">performance_<wbr>insights_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2315,7 +2695,9 @@ logs, and it will be stored in the state file.
 
     <dt class="property-optional"
             title="Optional">
-        <span>performance_<wbr>insights_<wbr>kms_<wbr>key_<wbr>id</span>
+        <span id="performance_insights_kms_key_id_python">
+<a href="#performance_insights_kms_key_id_python" style="color: inherit; text-decoration: inherit;">performance_<wbr>insights_<wbr>kms_<wbr>key_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2324,7 +2706,9 @@ logs, and it will be stored in the state file.
 
     <dt class="property-optional"
             title="Optional">
-        <span>performance_<wbr>insights_<wbr>retention_<wbr>period</span>
+        <span id="performance_insights_retention_period_python">
+<a href="#performance_insights_retention_period_python" style="color: inherit; text-decoration: inherit;">performance_<wbr>insights_<wbr>retention_<wbr>period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2333,7 +2717,9 @@ logs, and it will be stored in the state file.
 
     <dt class="property-optional"
             title="Optional">
-        <span>port</span>
+        <span id="port_python">
+<a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2342,7 +2728,9 @@ logs, and it will be stored in the state file.
 
     <dt class="property-optional"
             title="Optional">
-        <span>publicly_<wbr>accessible</span>
+        <span id="publicly_accessible_python">
+<a href="#publicly_accessible_python" style="color: inherit; text-decoration: inherit;">publicly_<wbr>accessible</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2352,13 +2740,17 @@ accessible. Default is `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>replicate_<wbr>source_<wbr>db</span>
+        <span id="replicate_source_db_python">
+<a href="#replicate_source_db_python" style="color: inherit; text-decoration: inherit;">replicate_<wbr>source_<wbr>db</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies that this resource is a Replicate
 database, and to use this value as the source database. This correlates to the
-`identifier` of another Amazon RDS Database to replicate. Note that if you are
+`identifier` of another Amazon RDS Database to replicate (if replicating within
+a single region) or ARN of the Amazon RDS Database to replicate (if replicating
+cross-region). Note that if you are
 creating a cross-region replica of an encrypted database you will also need to
 specify a `kms_key_id`. See [DB Instance Replication][1] and [Working with
 PostgreSQL and MySQL Read Replicas](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ReadRepl.html)
@@ -2367,7 +2759,9 @@ for more information on using Replication.
 
     <dt class="property-optional"
             title="Optional">
-        <span>s3_<wbr>import</span>
+        <span id="s3_import_python">
+<a href="#s3_import_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>import</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instances3import">Dict[Instance<wbr>S3Import]</a></span>
     </dt>
@@ -2376,7 +2770,9 @@ for more information on using Replication.
 
     <dt class="property-optional"
             title="Optional">
-        <span>security_<wbr>group_<wbr>names</span>
+        <span id="security_group_names_python">
+<a href="#security_group_names_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>names</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -2387,7 +2783,9 @@ Platform](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_VPC.html#U
 
     <dt class="property-optional"
             title="Optional">
-        <span>skip_<wbr>final_<wbr>snapshot</span>
+        <span id="skip_final_snapshot_python">
+<a href="#skip_final_snapshot_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>final_<wbr>snapshot</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2400,7 +2798,9 @@ is `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>snapshot_<wbr>identifier</span>
+        <span id="snapshot_identifier_python">
+<a href="#snapshot_identifier_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>identifier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2411,7 +2811,9 @@ RDS console, e.g: rds:production-2015-06-26-06-05.
 
     <dt class="property-optional"
             title="Optional">
-        <span>storage_<wbr>encrypted</span>
+        <span id="storage_encrypted_python">
+<a href="#storage_encrypted_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>encrypted</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2423,7 +2825,9 @@ default is `false` if not specified.
 
     <dt class="property-optional"
             title="Optional">
-        <span>storage_<wbr>type</span>
+        <span id="storage_type_python">
+<a href="#storage_type_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">string | str</span>
     </dt>
@@ -2434,7 +2838,9 @@ specified, "gp2" if not.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -2443,7 +2849,9 @@ specified, "gp2" if not.
 
     <dt class="property-optional"
             title="Optional">
-        <span>timezone</span>
+        <span id="timezone_python">
+<a href="#timezone_python" style="color: inherit; text-decoration: inherit;">timezone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2456,7 +2864,9 @@ for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>username</span>
+        <span id="username_python">
+<a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2466,7 +2876,9 @@ is provided) Username for the master DB user.
 
     <dt class="property-optional"
             title="Optional">
-        <span>vpc_<wbr>security_<wbr>group_<wbr>ids</span>
+        <span id="vpc_security_group_ids_python">
+<a href="#vpc_security_group_ids_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>security_<wbr>group_<wbr>ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -2494,7 +2906,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Address</span>
+        <span id="address_csharp">
+<a href="#address_csharp" style="color: inherit; text-decoration: inherit;">Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2503,7 +2917,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Arn</span>
+        <span id="arn_csharp">
+<a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2512,7 +2928,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Endpoint</span>
+        <span id="endpoint_csharp">
+<a href="#endpoint_csharp" style="color: inherit; text-decoration: inherit;">Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2521,7 +2939,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Hosted<wbr>Zone<wbr>Id</span>
+        <span id="hostedzoneid_csharp">
+<a href="#hostedzoneid_csharp" style="color: inherit; text-decoration: inherit;">Hosted<wbr>Zone<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2531,7 +2951,9 @@ in a Route 53 Alias record).
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2539,7 +2961,9 @@ in a Route 53 Alias record).
 
     <dt class="property-"
             title="">
-        <span>Replicas</span>
+        <span id="replicas_csharp">
+<a href="#replicas_csharp" style="color: inherit; text-decoration: inherit;">Replicas</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -2547,7 +2971,9 @@ in a Route 53 Alias record).
 
     <dt class="property-"
             title="">
-        <span>Resource<wbr>Id</span>
+        <span id="resourceid_csharp">
+<a href="#resourceid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2556,7 +2982,9 @@ in a Route 53 Alias record).
 
     <dt class="property-"
             title="">
-        <span>Status</span>
+        <span id="status_csharp">
+<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2572,7 +3000,9 @@ in a Route 53 Alias record).
 
     <dt class="property-"
             title="">
-        <span>Address</span>
+        <span id="address_go">
+<a href="#address_go" style="color: inherit; text-decoration: inherit;">Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2581,7 +3011,9 @@ in a Route 53 Alias record).
 
     <dt class="property-"
             title="">
-        <span>Arn</span>
+        <span id="arn_go">
+<a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2590,7 +3022,9 @@ in a Route 53 Alias record).
 
     <dt class="property-"
             title="">
-        <span>Endpoint</span>
+        <span id="endpoint_go">
+<a href="#endpoint_go" style="color: inherit; text-decoration: inherit;">Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2599,7 +3033,9 @@ in a Route 53 Alias record).
 
     <dt class="property-"
             title="">
-        <span>Hosted<wbr>Zone<wbr>Id</span>
+        <span id="hostedzoneid_go">
+<a href="#hostedzoneid_go" style="color: inherit; text-decoration: inherit;">Hosted<wbr>Zone<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2609,7 +3045,9 @@ in a Route 53 Alias record).
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2617,7 +3055,9 @@ in a Route 53 Alias record).
 
     <dt class="property-"
             title="">
-        <span>Replicas</span>
+        <span id="replicas_go">
+<a href="#replicas_go" style="color: inherit; text-decoration: inherit;">Replicas</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -2625,7 +3065,9 @@ in a Route 53 Alias record).
 
     <dt class="property-"
             title="">
-        <span>Resource<wbr>Id</span>
+        <span id="resourceid_go">
+<a href="#resourceid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2634,7 +3076,9 @@ in a Route 53 Alias record).
 
     <dt class="property-"
             title="">
-        <span>Status</span>
+        <span id="status_go">
+<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2650,7 +3094,9 @@ in a Route 53 Alias record).
 
     <dt class="property-"
             title="">
-        <span>address</span>
+        <span id="address_nodejs">
+<a href="#address_nodejs" style="color: inherit; text-decoration: inherit;">address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2659,7 +3105,9 @@ in a Route 53 Alias record).
 
     <dt class="property-"
             title="">
-        <span>arn</span>
+        <span id="arn_nodejs">
+<a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2668,7 +3116,9 @@ in a Route 53 Alias record).
 
     <dt class="property-"
             title="">
-        <span>endpoint</span>
+        <span id="endpoint_nodejs">
+<a href="#endpoint_nodejs" style="color: inherit; text-decoration: inherit;">endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2677,7 +3127,9 @@ in a Route 53 Alias record).
 
     <dt class="property-"
             title="">
-        <span>hosted<wbr>Zone<wbr>Id</span>
+        <span id="hostedzoneid_nodejs">
+<a href="#hostedzoneid_nodejs" style="color: inherit; text-decoration: inherit;">hosted<wbr>Zone<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2687,7 +3139,9 @@ in a Route 53 Alias record).
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2695,7 +3149,9 @@ in a Route 53 Alias record).
 
     <dt class="property-"
             title="">
-        <span>replicas</span>
+        <span id="replicas_nodejs">
+<a href="#replicas_nodejs" style="color: inherit; text-decoration: inherit;">replicas</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -2703,7 +3159,9 @@ in a Route 53 Alias record).
 
     <dt class="property-"
             title="">
-        <span>resource<wbr>Id</span>
+        <span id="resourceid_nodejs">
+<a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2712,7 +3170,9 @@ in a Route 53 Alias record).
 
     <dt class="property-"
             title="">
-        <span>status</span>
+        <span id="status_nodejs">
+<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2728,7 +3188,9 @@ in a Route 53 Alias record).
 
     <dt class="property-"
             title="">
-        <span>address</span>
+        <span id="address_python">
+<a href="#address_python" style="color: inherit; text-decoration: inherit;">address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2737,7 +3199,9 @@ in a Route 53 Alias record).
 
     <dt class="property-"
             title="">
-        <span>arn</span>
+        <span id="arn_python">
+<a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2746,7 +3210,9 @@ in a Route 53 Alias record).
 
     <dt class="property-"
             title="">
-        <span>endpoint</span>
+        <span id="endpoint_python">
+<a href="#endpoint_python" style="color: inherit; text-decoration: inherit;">endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2755,7 +3221,9 @@ in a Route 53 Alias record).
 
     <dt class="property-"
             title="">
-        <span>hosted_<wbr>zone_<wbr>id</span>
+        <span id="hosted_zone_id_python">
+<a href="#hosted_zone_id_python" style="color: inherit; text-decoration: inherit;">hosted_<wbr>zone_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2765,7 +3233,9 @@ in a Route 53 Alias record).
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2773,7 +3243,9 @@ in a Route 53 Alias record).
 
     <dt class="property-"
             title="">
-        <span>replicas</span>
+        <span id="replicas_python">
+<a href="#replicas_python" style="color: inherit; text-decoration: inherit;">replicas</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -2781,7 +3253,9 @@ in a Route 53 Alias record).
 
     <dt class="property-"
             title="">
-        <span>resource_<wbr>id</span>
+        <span id="resource_id_python">
+<a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2790,7 +3264,9 @@ in a Route 53 Alias record).
 
     <dt class="property-"
             title="">
-        <span>status</span>
+        <span id="status_python">
+<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2812,7 +3288,7 @@ Get an existing Instance resource's state with the given name, ID, and optional 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/rds/#InstanceState">InstanceState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/rds/#Instance">Instance</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/rds/#InstanceState">InstanceState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/rds/#Instance">Instance</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -2820,11 +3296,11 @@ Get an existing Instance resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetInstance<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/rds?tab=doc#InstanceState">InstanceState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/rds?tab=doc#Instance">Instance</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetInstance<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/rds?tab=doc#InstanceState">InstanceState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/rds?tab=doc#Instance">Instance</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Rds.Instance.html">Instance</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Rds.InstanceState.html">InstanceState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Rds.Instance.html">Instance</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Rds.InstanceState.html">InstanceState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2932,7 +3408,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Address</span>
+        <span id="state_address_csharp">
+<a href="#state_address_csharp" style="color: inherit; text-decoration: inherit;">Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2941,7 +3419,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allocated<wbr>Storage</span>
+        <span id="state_allocatedstorage_csharp">
+<a href="#state_allocatedstorage_csharp" style="color: inherit; text-decoration: inherit;">Allocated<wbr>Storage</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -2950,7 +3430,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allow<wbr>Major<wbr>Version<wbr>Upgrade</span>
+        <span id="state_allowmajorversionupgrade_csharp">
+<a href="#state_allowmajorversionupgrade_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Major<wbr>Version<wbr>Upgrade</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -2961,7 +3443,9 @@ the change is asynchronously applied as soon as possible.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Apply<wbr>Immediately</span>
+        <span id="state_applyimmediately_csharp">
+<a href="#state_applyimmediately_csharp" style="color: inherit; text-decoration: inherit;">Apply<wbr>Immediately</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -2973,7 +3457,9 @@ information.](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.DB
 
     <dt class="property-optional"
             title="Optional">
-        <span>Arn</span>
+        <span id="state_arn_csharp">
+<a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2982,7 +3468,9 @@ information.](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.DB
 
     <dt class="property-optional"
             title="Optional">
-        <span>Auto<wbr>Minor<wbr>Version<wbr>Upgrade</span>
+        <span id="state_autominorversionupgrade_csharp">
+<a href="#state_autominorversionupgrade_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Minor<wbr>Version<wbr>Upgrade</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -2993,7 +3481,9 @@ Defaults to true.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Availability<wbr>Zone</span>
+        <span id="state_availabilityzone_csharp">
+<a href="#state_availabilityzone_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3002,7 +3492,9 @@ Defaults to true.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Backup<wbr>Retention<wbr>Period</span>
+        <span id="state_backupretentionperiod_csharp">
+<a href="#state_backupretentionperiod_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Retention<wbr>Period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -3012,7 +3504,9 @@ between `0` and `35`. Must be greater than `0` if the database is used as a sour
 
     <dt class="property-optional"
             title="Optional">
-        <span>Backup<wbr>Window</span>
+        <span id="state_backupwindow_csharp">
+<a href="#state_backupwindow_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Window</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3023,7 +3517,9 @@ not overlap with `maintenance_window`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ca<wbr>Cert<wbr>Identifier</span>
+        <span id="state_cacertidentifier_csharp">
+<a href="#state_cacertidentifier_csharp" style="color: inherit; text-decoration: inherit;">Ca<wbr>Cert<wbr>Identifier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3032,20 +3528,23 @@ not overlap with `maintenance_window`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Character<wbr>Set<wbr>Name</span>
+        <span id="state_charactersetname_csharp">
+<a href="#state_charactersetname_csharp" style="color: inherit; text-decoration: inherit;">Character<wbr>Set<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The character set name to use for DB
-encoding in Oracle instances. This can't be changed. See [Oracle Character Sets
-Supported in Amazon
-RDS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.OracleCharacterSets.html)
-for more information.
+encoding in Oracle and Microsoft SQL instances (collation). This can't be changed. See [Oracle Character Sets
+Supported in Amazon RDS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.OracleCharacterSets.html)
+or [Server-Level Collation for Microsoft SQL Server](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.SQLServer.CommonDBATasks.Collation.html) for more information.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Copy<wbr>Tags<wbr>To<wbr>Snapshot</span>
+        <span id="state_copytagstosnapshot_csharp">
+<a href="#state_copytagstosnapshot_csharp" style="color: inherit; text-decoration: inherit;">Copy<wbr>Tags<wbr>To<wbr>Snapshot</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -3054,7 +3553,9 @@ for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Db<wbr>Subnet<wbr>Group<wbr>Name</span>
+        <span id="state_dbsubnetgroupname_csharp">
+<a href="#state_dbsubnetgroupname_csharp" style="color: inherit; text-decoration: inherit;">Db<wbr>Subnet<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3069,7 +3570,9 @@ for additional read replica contraints.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Delete<wbr>Automated<wbr>Backups</span>
+        <span id="state_deleteautomatedbackups_csharp">
+<a href="#state_deleteautomatedbackups_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>Automated<wbr>Backups</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -3078,7 +3581,9 @@ for additional read replica contraints.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Deletion<wbr>Protection</span>
+        <span id="state_deletionprotection_csharp">
+<a href="#state_deletionprotection_csharp" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Protection</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -3087,7 +3592,9 @@ for additional read replica contraints.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Domain</span>
+        <span id="state_domain_csharp">
+<a href="#state_domain_csharp" style="color: inherit; text-decoration: inherit;">Domain</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3096,7 +3603,9 @@ for additional read replica contraints.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Domain<wbr>Iam<wbr>Role<wbr>Name</span>
+        <span id="state_domainiamrolename_csharp">
+<a href="#state_domainiamrolename_csharp" style="color: inherit; text-decoration: inherit;">Domain<wbr>Iam<wbr>Role<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3105,16 +3614,20 @@ for additional read replica contraints.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enabled<wbr>Cloudwatch<wbr>Logs<wbr>Exports</span>
+        <span id="state_enabledcloudwatchlogsexports_csharp">
+<a href="#state_enabledcloudwatchlogsexports_csharp" style="color: inherit; text-decoration: inherit;">Enabled<wbr>Cloudwatch<wbr>Logs<wbr>Exports</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of log types to enable for exporting to CloudWatch logs. If omitted, no logs will be exported. Valid values (depending on `engine`): `agent` (MSSQL), `alert`, `audit`, `error`, `general`, `listener`, `slowquery`, `trace`, `postgresql` (PostgreSQL), `upgrade` (PostgreSQL).
+    <dd>{{% md %}}List of log types to enable for exporting to CloudWatch logs. If omitted, no logs will be exported. Valid values (depending on `engine`). MySQL and MariaDB: `audit`, `error`, `general`, `slowquery`. PostgreSQL: `postgresql`, `upgrade`. MSSQL: `agent` , `error`. Oracle: `alert`, `audit`, `listener`, `trace`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Endpoint</span>
+        <span id="state_endpoint_csharp">
+<a href="#state_endpoint_csharp" style="color: inherit; text-decoration: inherit;">Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3123,7 +3636,9 @@ for additional read replica contraints.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Engine</span>
+        <span id="state_engine_csharp">
+<a href="#state_engine_csharp" style="color: inherit; text-decoration: inherit;">Engine</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3137,7 +3652,9 @@ in the Amazon RDS User Guide.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Engine<wbr>Version</span>
+        <span id="state_engineversion_csharp">
+<a href="#state_engineversion_csharp" style="color: inherit; text-decoration: inherit;">Engine<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3150,7 +3667,9 @@ Note that for Amazon Aurora instances the engine version must match the [DB clus
 
     <dt class="property-optional"
             title="Optional">
-        <span>Final<wbr>Snapshot<wbr>Identifier</span>
+        <span id="state_finalsnapshotidentifier_csharp">
+<a href="#state_finalsnapshotidentifier_csharp" style="color: inherit; text-decoration: inherit;">Final<wbr>Snapshot<wbr>Identifier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3161,7 +3680,9 @@ set to `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Hosted<wbr>Zone<wbr>Id</span>
+        <span id="state_hostedzoneid_csharp">
+<a href="#state_hostedzoneid_csharp" style="color: inherit; text-decoration: inherit;">Hosted<wbr>Zone<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3171,7 +3692,9 @@ in a Route 53 Alias record).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Iam<wbr>Database<wbr>Authentication<wbr>Enabled</span>
+        <span id="state_iamdatabaseauthenticationenabled_csharp">
+<a href="#state_iamdatabaseauthenticationenabled_csharp" style="color: inherit; text-decoration: inherit;">Iam<wbr>Database<wbr>Authentication<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -3182,7 +3705,9 @@ accounts is enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Identifier</span>
+        <span id="state_identifier_csharp">
+<a href="#state_identifier_csharp" style="color: inherit; text-decoration: inherit;">Identifier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3192,7 +3717,9 @@ if omitted, this provider will assign a random, unique identifier.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Identifier<wbr>Prefix</span>
+        <span id="state_identifierprefix_csharp">
+<a href="#state_identifierprefix_csharp" style="color: inherit; text-decoration: inherit;">Identifier<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3202,7 +3729,9 @@ identifier beginning with the specified prefix. Conflicts with `identifier`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Instance<wbr>Class</span>
+        <span id="state_instanceclass_csharp">
+<a href="#state_instanceclass_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Class</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -3211,7 +3740,9 @@ identifier beginning with the specified prefix. Conflicts with `identifier`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Iops</span>
+        <span id="state_iops_csharp">
+<a href="#state_iops_csharp" style="color: inherit; text-decoration: inherit;">Iops</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -3221,7 +3752,9 @@ storage_type of "io1".
 
     <dt class="property-optional"
             title="Optional">
-        <span>Kms<wbr>Key<wbr>Id</span>
+        <span id="state_kmskeyid_csharp">
+<a href="#state_kmskeyid_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3231,7 +3764,9 @@ encrypted replica, set this to the destination KMS ARN.
 
     <dt class="property-optional"
             title="Optional">
-        <span>License<wbr>Model</span>
+        <span id="state_licensemodel_csharp">
+<a href="#state_licensemodel_csharp" style="color: inherit; text-decoration: inherit;">License<wbr>Model</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3241,7 +3776,9 @@ SE1) License model information for this DB instance.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Maintenance<wbr>Window</span>
+        <span id="state_maintenancewindow_csharp">
+<a href="#state_maintenancewindow_csharp" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3254,7 +3791,9 @@ for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Allocated<wbr>Storage</span>
+        <span id="state_maxallocatedstorage_csharp">
+<a href="#state_maxallocatedstorage_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Allocated<wbr>Storage</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -3263,7 +3802,9 @@ for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Monitoring<wbr>Interval</span>
+        <span id="state_monitoringinterval_csharp">
+<a href="#state_monitoringinterval_csharp" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Interval</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -3275,7 +3816,9 @@ Values: 0, 1, 5, 10, 15, 30, 60.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Monitoring<wbr>Role<wbr>Arn</span>
+        <span id="state_monitoringrolearn_csharp">
+<a href="#state_monitoringrolearn_csharp" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Role<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3288,7 +3831,9 @@ what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Multi<wbr>Az</span>
+        <span id="state_multiaz_csharp">
+<a href="#state_multiaz_csharp" style="color: inherit; text-decoration: inherit;">Multi<wbr>Az</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -3297,7 +3842,9 @@ what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3306,7 +3853,9 @@ what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Option<wbr>Group<wbr>Name</span>
+        <span id="state_optiongroupname_csharp">
+<a href="#state_optiongroupname_csharp" style="color: inherit; text-decoration: inherit;">Option<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3315,7 +3864,9 @@ what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Parameter<wbr>Group<wbr>Name</span>
+        <span id="state_parametergroupname_csharp">
+<a href="#state_parametergroupname_csharp" style="color: inherit; text-decoration: inherit;">Parameter<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3325,7 +3876,9 @@ associate.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Password</span>
+        <span id="state_password_csharp">
+<a href="#state_password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3336,7 +3889,9 @@ logs, and it will be stored in the state file.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Performance<wbr>Insights<wbr>Enabled</span>
+        <span id="state_performanceinsightsenabled_csharp">
+<a href="#state_performanceinsightsenabled_csharp" style="color: inherit; text-decoration: inherit;">Performance<wbr>Insights<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -3345,7 +3900,9 @@ logs, and it will be stored in the state file.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Performance<wbr>Insights<wbr>Kms<wbr>Key<wbr>Id</span>
+        <span id="state_performanceinsightskmskeyid_csharp">
+<a href="#state_performanceinsightskmskeyid_csharp" style="color: inherit; text-decoration: inherit;">Performance<wbr>Insights<wbr>Kms<wbr>Key<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3354,7 +3911,9 @@ logs, and it will be stored in the state file.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Performance<wbr>Insights<wbr>Retention<wbr>Period</span>
+        <span id="state_performanceinsightsretentionperiod_csharp">
+<a href="#state_performanceinsightsretentionperiod_csharp" style="color: inherit; text-decoration: inherit;">Performance<wbr>Insights<wbr>Retention<wbr>Period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -3363,7 +3922,9 @@ logs, and it will be stored in the state file.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Port</span>
+        <span id="state_port_csharp">
+<a href="#state_port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -3372,7 +3933,9 @@ logs, and it will be stored in the state file.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Publicly<wbr>Accessible</span>
+        <span id="state_publiclyaccessible_csharp">
+<a href="#state_publiclyaccessible_csharp" style="color: inherit; text-decoration: inherit;">Publicly<wbr>Accessible</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -3382,7 +3945,9 @@ accessible. Default is `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Replicas</span>
+        <span id="state_replicas_csharp">
+<a href="#state_replicas_csharp" style="color: inherit; text-decoration: inherit;">Replicas</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -3390,13 +3955,17 @@ accessible. Default is `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Replicate<wbr>Source<wbr>Db</span>
+        <span id="state_replicatesourcedb_csharp">
+<a href="#state_replicatesourcedb_csharp" style="color: inherit; text-decoration: inherit;">Replicate<wbr>Source<wbr>Db</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies that this resource is a Replicate
 database, and to use this value as the source database. This correlates to the
-`identifier` of another Amazon RDS Database to replicate. Note that if you are
+`identifier` of another Amazon RDS Database to replicate (if replicating within
+a single region) or ARN of the Amazon RDS Database to replicate (if replicating
+cross-region). Note that if you are
 creating a cross-region replica of an encrypted database you will also need to
 specify a `kms_key_id`. See [DB Instance Replication][1] and [Working with
 PostgreSQL and MySQL Read Replicas](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ReadRepl.html)
@@ -3405,7 +3974,9 @@ for more information on using Replication.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Id</span>
+        <span id="state_resourceid_csharp">
+<a href="#state_resourceid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3414,7 +3985,9 @@ for more information on using Replication.
 
     <dt class="property-optional"
             title="Optional">
-        <span>S3Import</span>
+        <span id="state_s3import_csharp">
+<a href="#state_s3import_csharp" style="color: inherit; text-decoration: inherit;">S3Import</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instances3import">Instance<wbr>S3Import<wbr>Args</a></span>
     </dt>
@@ -3423,7 +3996,9 @@ for more information on using Replication.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Security<wbr>Group<wbr>Names</span>
+        <span id="state_securitygroupnames_csharp">
+<a href="#state_securitygroupnames_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Names</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -3434,7 +4009,9 @@ Platform](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_VPC.html#U
 
     <dt class="property-optional"
             title="Optional">
-        <span>Skip<wbr>Final<wbr>Snapshot</span>
+        <span id="state_skipfinalsnapshot_csharp">
+<a href="#state_skipfinalsnapshot_csharp" style="color: inherit; text-decoration: inherit;">Skip<wbr>Final<wbr>Snapshot</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -3447,7 +4024,9 @@ is `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Snapshot<wbr>Identifier</span>
+        <span id="state_snapshotidentifier_csharp">
+<a href="#state_snapshotidentifier_csharp" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Identifier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3458,7 +4037,9 @@ RDS console, e.g: rds:production-2015-06-26-06-05.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Status</span>
+        <span id="state_status_csharp">
+<a href="#state_status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3467,7 +4048,9 @@ RDS console, e.g: rds:production-2015-06-26-06-05.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Storage<wbr>Encrypted</span>
+        <span id="state_storageencrypted_csharp">
+<a href="#state_storageencrypted_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Encrypted</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -3479,7 +4062,9 @@ default is `false` if not specified.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Storage<wbr>Type</span>
+        <span id="state_storagetype_csharp">
+<a href="#state_storagetype_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -3490,7 +4075,9 @@ specified, "gp2" if not.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_csharp">
+<a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -3499,7 +4086,9 @@ specified, "gp2" if not.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Timezone</span>
+        <span id="state_timezone_csharp">
+<a href="#state_timezone_csharp" style="color: inherit; text-decoration: inherit;">Timezone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3512,7 +4101,9 @@ for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Username</span>
+        <span id="state_username_csharp">
+<a href="#state_username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3522,7 +4113,9 @@ is provided) Username for the master DB user.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vpc<wbr>Security<wbr>Group<wbr>Ids</span>
+        <span id="state_vpcsecuritygroupids_csharp">
+<a href="#state_vpcsecuritygroupids_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Security<wbr>Group<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -3539,7 +4132,9 @@ associate.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Address</span>
+        <span id="state_address_go">
+<a href="#state_address_go" style="color: inherit; text-decoration: inherit;">Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3548,7 +4143,9 @@ associate.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allocated<wbr>Storage</span>
+        <span id="state_allocatedstorage_go">
+<a href="#state_allocatedstorage_go" style="color: inherit; text-decoration: inherit;">Allocated<wbr>Storage</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -3557,7 +4154,9 @@ associate.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allow<wbr>Major<wbr>Version<wbr>Upgrade</span>
+        <span id="state_allowmajorversionupgrade_go">
+<a href="#state_allowmajorversionupgrade_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Major<wbr>Version<wbr>Upgrade</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -3568,7 +4167,9 @@ the change is asynchronously applied as soon as possible.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Apply<wbr>Immediately</span>
+        <span id="state_applyimmediately_go">
+<a href="#state_applyimmediately_go" style="color: inherit; text-decoration: inherit;">Apply<wbr>Immediately</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -3580,7 +4181,9 @@ information.](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.DB
 
     <dt class="property-optional"
             title="Optional">
-        <span>Arn</span>
+        <span id="state_arn_go">
+<a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3589,7 +4192,9 @@ information.](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.DB
 
     <dt class="property-optional"
             title="Optional">
-        <span>Auto<wbr>Minor<wbr>Version<wbr>Upgrade</span>
+        <span id="state_autominorversionupgrade_go">
+<a href="#state_autominorversionupgrade_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Minor<wbr>Version<wbr>Upgrade</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -3600,7 +4205,9 @@ Defaults to true.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Availability<wbr>Zone</span>
+        <span id="state_availabilityzone_go">
+<a href="#state_availabilityzone_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3609,7 +4216,9 @@ Defaults to true.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Backup<wbr>Retention<wbr>Period</span>
+        <span id="state_backupretentionperiod_go">
+<a href="#state_backupretentionperiod_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Retention<wbr>Period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -3619,7 +4228,9 @@ between `0` and `35`. Must be greater than `0` if the database is used as a sour
 
     <dt class="property-optional"
             title="Optional">
-        <span>Backup<wbr>Window</span>
+        <span id="state_backupwindow_go">
+<a href="#state_backupwindow_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Window</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3630,7 +4241,9 @@ not overlap with `maintenance_window`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ca<wbr>Cert<wbr>Identifier</span>
+        <span id="state_cacertidentifier_go">
+<a href="#state_cacertidentifier_go" style="color: inherit; text-decoration: inherit;">Ca<wbr>Cert<wbr>Identifier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3639,20 +4252,23 @@ not overlap with `maintenance_window`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Character<wbr>Set<wbr>Name</span>
+        <span id="state_charactersetname_go">
+<a href="#state_charactersetname_go" style="color: inherit; text-decoration: inherit;">Character<wbr>Set<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The character set name to use for DB
-encoding in Oracle instances. This can't be changed. See [Oracle Character Sets
-Supported in Amazon
-RDS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.OracleCharacterSets.html)
-for more information.
+encoding in Oracle and Microsoft SQL instances (collation). This can't be changed. See [Oracle Character Sets
+Supported in Amazon RDS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.OracleCharacterSets.html)
+or [Server-Level Collation for Microsoft SQL Server](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.SQLServer.CommonDBATasks.Collation.html) for more information.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Copy<wbr>Tags<wbr>To<wbr>Snapshot</span>
+        <span id="state_copytagstosnapshot_go">
+<a href="#state_copytagstosnapshot_go" style="color: inherit; text-decoration: inherit;">Copy<wbr>Tags<wbr>To<wbr>Snapshot</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -3661,7 +4277,9 @@ for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Db<wbr>Subnet<wbr>Group<wbr>Name</span>
+        <span id="state_dbsubnetgroupname_go">
+<a href="#state_dbsubnetgroupname_go" style="color: inherit; text-decoration: inherit;">Db<wbr>Subnet<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3676,7 +4294,9 @@ for additional read replica contraints.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Delete<wbr>Automated<wbr>Backups</span>
+        <span id="state_deleteautomatedbackups_go">
+<a href="#state_deleteautomatedbackups_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>Automated<wbr>Backups</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -3685,7 +4305,9 @@ for additional read replica contraints.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Deletion<wbr>Protection</span>
+        <span id="state_deletionprotection_go">
+<a href="#state_deletionprotection_go" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Protection</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -3694,7 +4316,9 @@ for additional read replica contraints.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Domain</span>
+        <span id="state_domain_go">
+<a href="#state_domain_go" style="color: inherit; text-decoration: inherit;">Domain</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3703,7 +4327,9 @@ for additional read replica contraints.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Domain<wbr>Iam<wbr>Role<wbr>Name</span>
+        <span id="state_domainiamrolename_go">
+<a href="#state_domainiamrolename_go" style="color: inherit; text-decoration: inherit;">Domain<wbr>Iam<wbr>Role<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3712,16 +4338,20 @@ for additional read replica contraints.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enabled<wbr>Cloudwatch<wbr>Logs<wbr>Exports</span>
+        <span id="state_enabledcloudwatchlogsexports_go">
+<a href="#state_enabledcloudwatchlogsexports_go" style="color: inherit; text-decoration: inherit;">Enabled<wbr>Cloudwatch<wbr>Logs<wbr>Exports</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}List of log types to enable for exporting to CloudWatch logs. If omitted, no logs will be exported. Valid values (depending on `engine`): `agent` (MSSQL), `alert`, `audit`, `error`, `general`, `listener`, `slowquery`, `trace`, `postgresql` (PostgreSQL), `upgrade` (PostgreSQL).
+    <dd>{{% md %}}List of log types to enable for exporting to CloudWatch logs. If omitted, no logs will be exported. Valid values (depending on `engine`). MySQL and MariaDB: `audit`, `error`, `general`, `slowquery`. PostgreSQL: `postgresql`, `upgrade`. MSSQL: `agent` , `error`. Oracle: `alert`, `audit`, `listener`, `trace`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Endpoint</span>
+        <span id="state_endpoint_go">
+<a href="#state_endpoint_go" style="color: inherit; text-decoration: inherit;">Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3730,7 +4360,9 @@ for additional read replica contraints.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Engine</span>
+        <span id="state_engine_go">
+<a href="#state_engine_go" style="color: inherit; text-decoration: inherit;">Engine</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3744,7 +4376,9 @@ in the Amazon RDS User Guide.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Engine<wbr>Version</span>
+        <span id="state_engineversion_go">
+<a href="#state_engineversion_go" style="color: inherit; text-decoration: inherit;">Engine<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3757,7 +4391,9 @@ Note that for Amazon Aurora instances the engine version must match the [DB clus
 
     <dt class="property-optional"
             title="Optional">
-        <span>Final<wbr>Snapshot<wbr>Identifier</span>
+        <span id="state_finalsnapshotidentifier_go">
+<a href="#state_finalsnapshotidentifier_go" style="color: inherit; text-decoration: inherit;">Final<wbr>Snapshot<wbr>Identifier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3768,7 +4404,9 @@ set to `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Hosted<wbr>Zone<wbr>Id</span>
+        <span id="state_hostedzoneid_go">
+<a href="#state_hostedzoneid_go" style="color: inherit; text-decoration: inherit;">Hosted<wbr>Zone<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3778,7 +4416,9 @@ in a Route 53 Alias record).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Iam<wbr>Database<wbr>Authentication<wbr>Enabled</span>
+        <span id="state_iamdatabaseauthenticationenabled_go">
+<a href="#state_iamdatabaseauthenticationenabled_go" style="color: inherit; text-decoration: inherit;">Iam<wbr>Database<wbr>Authentication<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -3789,7 +4429,9 @@ accounts is enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Identifier</span>
+        <span id="state_identifier_go">
+<a href="#state_identifier_go" style="color: inherit; text-decoration: inherit;">Identifier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3799,7 +4441,9 @@ if omitted, this provider will assign a random, unique identifier.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Identifier<wbr>Prefix</span>
+        <span id="state_identifierprefix_go">
+<a href="#state_identifierprefix_go" style="color: inherit; text-decoration: inherit;">Identifier<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3809,7 +4453,9 @@ identifier beginning with the specified prefix. Conflicts with `identifier`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Instance<wbr>Class</span>
+        <span id="state_instanceclass_go">
+<a href="#state_instanceclass_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Class</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">interface{}</span>
     </dt>
@@ -3818,7 +4464,9 @@ identifier beginning with the specified prefix. Conflicts with `identifier`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Iops</span>
+        <span id="state_iops_go">
+<a href="#state_iops_go" style="color: inherit; text-decoration: inherit;">Iops</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -3828,7 +4476,9 @@ storage_type of "io1".
 
     <dt class="property-optional"
             title="Optional">
-        <span>Kms<wbr>Key<wbr>Id</span>
+        <span id="state_kmskeyid_go">
+<a href="#state_kmskeyid_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3838,7 +4488,9 @@ encrypted replica, set this to the destination KMS ARN.
 
     <dt class="property-optional"
             title="Optional">
-        <span>License<wbr>Model</span>
+        <span id="state_licensemodel_go">
+<a href="#state_licensemodel_go" style="color: inherit; text-decoration: inherit;">License<wbr>Model</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3848,7 +4500,9 @@ SE1) License model information for this DB instance.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Maintenance<wbr>Window</span>
+        <span id="state_maintenancewindow_go">
+<a href="#state_maintenancewindow_go" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3861,7 +4515,9 @@ for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Allocated<wbr>Storage</span>
+        <span id="state_maxallocatedstorage_go">
+<a href="#state_maxallocatedstorage_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Allocated<wbr>Storage</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -3870,7 +4526,9 @@ for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Monitoring<wbr>Interval</span>
+        <span id="state_monitoringinterval_go">
+<a href="#state_monitoringinterval_go" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Interval</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -3882,7 +4540,9 @@ Values: 0, 1, 5, 10, 15, 30, 60.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Monitoring<wbr>Role<wbr>Arn</span>
+        <span id="state_monitoringrolearn_go">
+<a href="#state_monitoringrolearn_go" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Role<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3895,7 +4555,9 @@ what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Multi<wbr>Az</span>
+        <span id="state_multiaz_go">
+<a href="#state_multiaz_go" style="color: inherit; text-decoration: inherit;">Multi<wbr>Az</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -3904,7 +4566,9 @@ what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3913,7 +4577,9 @@ what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Option<wbr>Group<wbr>Name</span>
+        <span id="state_optiongroupname_go">
+<a href="#state_optiongroupname_go" style="color: inherit; text-decoration: inherit;">Option<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3922,7 +4588,9 @@ what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Parameter<wbr>Group<wbr>Name</span>
+        <span id="state_parametergroupname_go">
+<a href="#state_parametergroupname_go" style="color: inherit; text-decoration: inherit;">Parameter<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3932,7 +4600,9 @@ associate.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Password</span>
+        <span id="state_password_go">
+<a href="#state_password_go" style="color: inherit; text-decoration: inherit;">Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3943,7 +4613,9 @@ logs, and it will be stored in the state file.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Performance<wbr>Insights<wbr>Enabled</span>
+        <span id="state_performanceinsightsenabled_go">
+<a href="#state_performanceinsightsenabled_go" style="color: inherit; text-decoration: inherit;">Performance<wbr>Insights<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -3952,7 +4624,9 @@ logs, and it will be stored in the state file.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Performance<wbr>Insights<wbr>Kms<wbr>Key<wbr>Id</span>
+        <span id="state_performanceinsightskmskeyid_go">
+<a href="#state_performanceinsightskmskeyid_go" style="color: inherit; text-decoration: inherit;">Performance<wbr>Insights<wbr>Kms<wbr>Key<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3961,7 +4635,9 @@ logs, and it will be stored in the state file.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Performance<wbr>Insights<wbr>Retention<wbr>Period</span>
+        <span id="state_performanceinsightsretentionperiod_go">
+<a href="#state_performanceinsightsretentionperiod_go" style="color: inherit; text-decoration: inherit;">Performance<wbr>Insights<wbr>Retention<wbr>Period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -3970,7 +4646,9 @@ logs, and it will be stored in the state file.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Port</span>
+        <span id="state_port_go">
+<a href="#state_port_go" style="color: inherit; text-decoration: inherit;">Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -3979,7 +4657,9 @@ logs, and it will be stored in the state file.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Publicly<wbr>Accessible</span>
+        <span id="state_publiclyaccessible_go">
+<a href="#state_publiclyaccessible_go" style="color: inherit; text-decoration: inherit;">Publicly<wbr>Accessible</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -3989,7 +4669,9 @@ accessible. Default is `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Replicas</span>
+        <span id="state_replicas_go">
+<a href="#state_replicas_go" style="color: inherit; text-decoration: inherit;">Replicas</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -3997,13 +4679,17 @@ accessible. Default is `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Replicate<wbr>Source<wbr>Db</span>
+        <span id="state_replicatesourcedb_go">
+<a href="#state_replicatesourcedb_go" style="color: inherit; text-decoration: inherit;">Replicate<wbr>Source<wbr>Db</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies that this resource is a Replicate
 database, and to use this value as the source database. This correlates to the
-`identifier` of another Amazon RDS Database to replicate. Note that if you are
+`identifier` of another Amazon RDS Database to replicate (if replicating within
+a single region) or ARN of the Amazon RDS Database to replicate (if replicating
+cross-region). Note that if you are
 creating a cross-region replica of an encrypted database you will also need to
 specify a `kms_key_id`. See [DB Instance Replication][1] and [Working with
 PostgreSQL and MySQL Read Replicas](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ReadRepl.html)
@@ -4012,7 +4698,9 @@ for more information on using Replication.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Id</span>
+        <span id="state_resourceid_go">
+<a href="#state_resourceid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -4021,7 +4709,9 @@ for more information on using Replication.
 
     <dt class="property-optional"
             title="Optional">
-        <span>S3Import</span>
+        <span id="state_s3import_go">
+<a href="#state_s3import_go" style="color: inherit; text-decoration: inherit;">S3Import</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instances3import">Instance<wbr>S3Import</a></span>
     </dt>
@@ -4030,7 +4720,9 @@ for more information on using Replication.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Security<wbr>Group<wbr>Names</span>
+        <span id="state_securitygroupnames_go">
+<a href="#state_securitygroupnames_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Names</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -4041,7 +4733,9 @@ Platform](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_VPC.html#U
 
     <dt class="property-optional"
             title="Optional">
-        <span>Skip<wbr>Final<wbr>Snapshot</span>
+        <span id="state_skipfinalsnapshot_go">
+<a href="#state_skipfinalsnapshot_go" style="color: inherit; text-decoration: inherit;">Skip<wbr>Final<wbr>Snapshot</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -4054,7 +4748,9 @@ is `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Snapshot<wbr>Identifier</span>
+        <span id="state_snapshotidentifier_go">
+<a href="#state_snapshotidentifier_go" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Identifier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -4065,7 +4761,9 @@ RDS console, e.g: rds:production-2015-06-26-06-05.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Status</span>
+        <span id="state_status_go">
+<a href="#state_status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -4074,7 +4772,9 @@ RDS console, e.g: rds:production-2015-06-26-06-05.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Storage<wbr>Encrypted</span>
+        <span id="state_storageencrypted_go">
+<a href="#state_storageencrypted_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Encrypted</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -4086,7 +4786,9 @@ default is `false` if not specified.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Storage<wbr>Type</span>
+        <span id="state_storagetype_go">
+<a href="#state_storagetype_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">interface{}</span>
     </dt>
@@ -4097,7 +4799,9 @@ specified, "gp2" if not.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_go">
+<a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -4106,7 +4810,9 @@ specified, "gp2" if not.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Timezone</span>
+        <span id="state_timezone_go">
+<a href="#state_timezone_go" style="color: inherit; text-decoration: inherit;">Timezone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -4119,7 +4825,9 @@ for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Username</span>
+        <span id="state_username_go">
+<a href="#state_username_go" style="color: inherit; text-decoration: inherit;">Username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -4129,7 +4837,9 @@ is provided) Username for the master DB user.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vpc<wbr>Security<wbr>Group<wbr>Ids</span>
+        <span id="state_vpcsecuritygroupids_go">
+<a href="#state_vpcsecuritygroupids_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Security<wbr>Group<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -4146,7 +4856,9 @@ associate.
 
     <dt class="property-optional"
             title="Optional">
-        <span>address</span>
+        <span id="state_address_nodejs">
+<a href="#state_address_nodejs" style="color: inherit; text-decoration: inherit;">address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4155,7 +4867,9 @@ associate.
 
     <dt class="property-optional"
             title="Optional">
-        <span>allocated<wbr>Storage</span>
+        <span id="state_allocatedstorage_nodejs">
+<a href="#state_allocatedstorage_nodejs" style="color: inherit; text-decoration: inherit;">allocated<wbr>Storage</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -4164,7 +4878,9 @@ associate.
 
     <dt class="property-optional"
             title="Optional">
-        <span>allow<wbr>Major<wbr>Version<wbr>Upgrade</span>
+        <span id="state_allowmajorversionupgrade_nodejs">
+<a href="#state_allowmajorversionupgrade_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Major<wbr>Version<wbr>Upgrade</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -4175,7 +4891,9 @@ the change is asynchronously applied as soon as possible.
 
     <dt class="property-optional"
             title="Optional">
-        <span>apply<wbr>Immediately</span>
+        <span id="state_applyimmediately_nodejs">
+<a href="#state_applyimmediately_nodejs" style="color: inherit; text-decoration: inherit;">apply<wbr>Immediately</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -4187,7 +4905,9 @@ information.](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.DB
 
     <dt class="property-optional"
             title="Optional">
-        <span>arn</span>
+        <span id="state_arn_nodejs">
+<a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4196,7 +4916,9 @@ information.](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.DB
 
     <dt class="property-optional"
             title="Optional">
-        <span>auto<wbr>Minor<wbr>Version<wbr>Upgrade</span>
+        <span id="state_autominorversionupgrade_nodejs">
+<a href="#state_autominorversionupgrade_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Minor<wbr>Version<wbr>Upgrade</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -4207,7 +4929,9 @@ Defaults to true.
 
     <dt class="property-optional"
             title="Optional">
-        <span>availability<wbr>Zone</span>
+        <span id="state_availabilityzone_nodejs">
+<a href="#state_availabilityzone_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4216,7 +4940,9 @@ Defaults to true.
 
     <dt class="property-optional"
             title="Optional">
-        <span>backup<wbr>Retention<wbr>Period</span>
+        <span id="state_backupretentionperiod_nodejs">
+<a href="#state_backupretentionperiod_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Retention<wbr>Period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -4226,7 +4952,9 @@ between `0` and `35`. Must be greater than `0` if the database is used as a sour
 
     <dt class="property-optional"
             title="Optional">
-        <span>backup<wbr>Window</span>
+        <span id="state_backupwindow_nodejs">
+<a href="#state_backupwindow_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Window</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4237,7 +4965,9 @@ not overlap with `maintenance_window`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ca<wbr>Cert<wbr>Identifier</span>
+        <span id="state_cacertidentifier_nodejs">
+<a href="#state_cacertidentifier_nodejs" style="color: inherit; text-decoration: inherit;">ca<wbr>Cert<wbr>Identifier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4246,20 +4976,23 @@ not overlap with `maintenance_window`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>character<wbr>Set<wbr>Name</span>
+        <span id="state_charactersetname_nodejs">
+<a href="#state_charactersetname_nodejs" style="color: inherit; text-decoration: inherit;">character<wbr>Set<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The character set name to use for DB
-encoding in Oracle instances. This can't be changed. See [Oracle Character Sets
-Supported in Amazon
-RDS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.OracleCharacterSets.html)
-for more information.
+encoding in Oracle and Microsoft SQL instances (collation). This can't be changed. See [Oracle Character Sets
+Supported in Amazon RDS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.OracleCharacterSets.html)
+or [Server-Level Collation for Microsoft SQL Server](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.SQLServer.CommonDBATasks.Collation.html) for more information.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>copy<wbr>Tags<wbr>To<wbr>Snapshot</span>
+        <span id="state_copytagstosnapshot_nodejs">
+<a href="#state_copytagstosnapshot_nodejs" style="color: inherit; text-decoration: inherit;">copy<wbr>Tags<wbr>To<wbr>Snapshot</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -4268,7 +5001,9 @@ for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>db<wbr>Subnet<wbr>Group<wbr>Name</span>
+        <span id="state_dbsubnetgroupname_nodejs">
+<a href="#state_dbsubnetgroupname_nodejs" style="color: inherit; text-decoration: inherit;">db<wbr>Subnet<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4283,7 +5018,9 @@ for additional read replica contraints.
 
     <dt class="property-optional"
             title="Optional">
-        <span>delete<wbr>Automated<wbr>Backups</span>
+        <span id="state_deleteautomatedbackups_nodejs">
+<a href="#state_deleteautomatedbackups_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Automated<wbr>Backups</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -4292,7 +5029,9 @@ for additional read replica contraints.
 
     <dt class="property-optional"
             title="Optional">
-        <span>deletion<wbr>Protection</span>
+        <span id="state_deletionprotection_nodejs">
+<a href="#state_deletionprotection_nodejs" style="color: inherit; text-decoration: inherit;">deletion<wbr>Protection</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -4301,7 +5040,9 @@ for additional read replica contraints.
 
     <dt class="property-optional"
             title="Optional">
-        <span>domain</span>
+        <span id="state_domain_nodejs">
+<a href="#state_domain_nodejs" style="color: inherit; text-decoration: inherit;">domain</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4310,7 +5051,9 @@ for additional read replica contraints.
 
     <dt class="property-optional"
             title="Optional">
-        <span>domain<wbr>Iam<wbr>Role<wbr>Name</span>
+        <span id="state_domainiamrolename_nodejs">
+<a href="#state_domainiamrolename_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Iam<wbr>Role<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4319,16 +5062,20 @@ for additional read replica contraints.
 
     <dt class="property-optional"
             title="Optional">
-        <span>enabled<wbr>Cloudwatch<wbr>Logs<wbr>Exports</span>
+        <span id="state_enabledcloudwatchlogsexports_nodejs">
+<a href="#state_enabledcloudwatchlogsexports_nodejs" style="color: inherit; text-decoration: inherit;">enabled<wbr>Cloudwatch<wbr>Logs<wbr>Exports</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}List of log types to enable for exporting to CloudWatch logs. If omitted, no logs will be exported. Valid values (depending on `engine`): `agent` (MSSQL), `alert`, `audit`, `error`, `general`, `listener`, `slowquery`, `trace`, `postgresql` (PostgreSQL), `upgrade` (PostgreSQL).
+    <dd>{{% md %}}List of log types to enable for exporting to CloudWatch logs. If omitted, no logs will be exported. Valid values (depending on `engine`). MySQL and MariaDB: `audit`, `error`, `general`, `slowquery`. PostgreSQL: `postgresql`, `upgrade`. MSSQL: `agent` , `error`. Oracle: `alert`, `audit`, `listener`, `trace`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>endpoint</span>
+        <span id="state_endpoint_nodejs">
+<a href="#state_endpoint_nodejs" style="color: inherit; text-decoration: inherit;">endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4337,7 +5084,9 @@ for additional read replica contraints.
 
     <dt class="property-optional"
             title="Optional">
-        <span>engine</span>
+        <span id="state_engine_nodejs">
+<a href="#state_engine_nodejs" style="color: inherit; text-decoration: inherit;">engine</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4351,7 +5100,9 @@ in the Amazon RDS User Guide.
 
     <dt class="property-optional"
             title="Optional">
-        <span>engine<wbr>Version</span>
+        <span id="state_engineversion_nodejs">
+<a href="#state_engineversion_nodejs" style="color: inherit; text-decoration: inherit;">engine<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4364,7 +5115,9 @@ Note that for Amazon Aurora instances the engine version must match the [DB clus
 
     <dt class="property-optional"
             title="Optional">
-        <span>final<wbr>Snapshot<wbr>Identifier</span>
+        <span id="state_finalsnapshotidentifier_nodejs">
+<a href="#state_finalsnapshotidentifier_nodejs" style="color: inherit; text-decoration: inherit;">final<wbr>Snapshot<wbr>Identifier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4375,7 +5128,9 @@ set to `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>hosted<wbr>Zone<wbr>Id</span>
+        <span id="state_hostedzoneid_nodejs">
+<a href="#state_hostedzoneid_nodejs" style="color: inherit; text-decoration: inherit;">hosted<wbr>Zone<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4385,7 +5140,9 @@ in a Route 53 Alias record).
 
     <dt class="property-optional"
             title="Optional">
-        <span>iam<wbr>Database<wbr>Authentication<wbr>Enabled</span>
+        <span id="state_iamdatabaseauthenticationenabled_nodejs">
+<a href="#state_iamdatabaseauthenticationenabled_nodejs" style="color: inherit; text-decoration: inherit;">iam<wbr>Database<wbr>Authentication<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -4396,7 +5153,9 @@ accounts is enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>identifier</span>
+        <span id="state_identifier_nodejs">
+<a href="#state_identifier_nodejs" style="color: inherit; text-decoration: inherit;">identifier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4406,7 +5165,9 @@ if omitted, this provider will assign a random, unique identifier.
 
     <dt class="property-optional"
             title="Optional">
-        <span>identifier<wbr>Prefix</span>
+        <span id="state_identifierprefix_nodejs">
+<a href="#state_identifierprefix_nodejs" style="color: inherit; text-decoration: inherit;">identifier<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4416,7 +5177,9 @@ identifier beginning with the specified prefix. Conflicts with `identifier`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>instance<wbr>Class</span>
+        <span id="state_instanceclass_nodejs">
+<a href="#state_instanceclass_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Class</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">string | Instance<wbr>Type</span>
     </dt>
@@ -4425,7 +5188,9 @@ identifier beginning with the specified prefix. Conflicts with `identifier`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>iops</span>
+        <span id="state_iops_nodejs">
+<a href="#state_iops_nodejs" style="color: inherit; text-decoration: inherit;">iops</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -4435,7 +5200,9 @@ storage_type of "io1".
 
     <dt class="property-optional"
             title="Optional">
-        <span>kms<wbr>Key<wbr>Id</span>
+        <span id="state_kmskeyid_nodejs">
+<a href="#state_kmskeyid_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4445,7 +5212,9 @@ encrypted replica, set this to the destination KMS ARN.
 
     <dt class="property-optional"
             title="Optional">
-        <span>license<wbr>Model</span>
+        <span id="state_licensemodel_nodejs">
+<a href="#state_licensemodel_nodejs" style="color: inherit; text-decoration: inherit;">license<wbr>Model</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4455,7 +5224,9 @@ SE1) License model information for this DB instance.
 
     <dt class="property-optional"
             title="Optional">
-        <span>maintenance<wbr>Window</span>
+        <span id="state_maintenancewindow_nodejs">
+<a href="#state_maintenancewindow_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4468,7 +5239,9 @@ for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Allocated<wbr>Storage</span>
+        <span id="state_maxallocatedstorage_nodejs">
+<a href="#state_maxallocatedstorage_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Allocated<wbr>Storage</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -4477,7 +5250,9 @@ for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>monitoring<wbr>Interval</span>
+        <span id="state_monitoringinterval_nodejs">
+<a href="#state_monitoringinterval_nodejs" style="color: inherit; text-decoration: inherit;">monitoring<wbr>Interval</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -4489,7 +5264,9 @@ Values: 0, 1, 5, 10, 15, 30, 60.
 
     <dt class="property-optional"
             title="Optional">
-        <span>monitoring<wbr>Role<wbr>Arn</span>
+        <span id="state_monitoringrolearn_nodejs">
+<a href="#state_monitoringrolearn_nodejs" style="color: inherit; text-decoration: inherit;">monitoring<wbr>Role<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4502,7 +5279,9 @@ what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.
 
     <dt class="property-optional"
             title="Optional">
-        <span>multi<wbr>Az</span>
+        <span id="state_multiaz_nodejs">
+<a href="#state_multiaz_nodejs" style="color: inherit; text-decoration: inherit;">multi<wbr>Az</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -4511,7 +5290,9 @@ what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4520,7 +5301,9 @@ what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.
 
     <dt class="property-optional"
             title="Optional">
-        <span>option<wbr>Group<wbr>Name</span>
+        <span id="state_optiongroupname_nodejs">
+<a href="#state_optiongroupname_nodejs" style="color: inherit; text-decoration: inherit;">option<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4529,7 +5312,9 @@ what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.
 
     <dt class="property-optional"
             title="Optional">
-        <span>parameter<wbr>Group<wbr>Name</span>
+        <span id="state_parametergroupname_nodejs">
+<a href="#state_parametergroupname_nodejs" style="color: inherit; text-decoration: inherit;">parameter<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4539,7 +5324,9 @@ associate.
 
     <dt class="property-optional"
             title="Optional">
-        <span>password</span>
+        <span id="state_password_nodejs">
+<a href="#state_password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4550,7 +5337,9 @@ logs, and it will be stored in the state file.
 
     <dt class="property-optional"
             title="Optional">
-        <span>performance<wbr>Insights<wbr>Enabled</span>
+        <span id="state_performanceinsightsenabled_nodejs">
+<a href="#state_performanceinsightsenabled_nodejs" style="color: inherit; text-decoration: inherit;">performance<wbr>Insights<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -4559,7 +5348,9 @@ logs, and it will be stored in the state file.
 
     <dt class="property-optional"
             title="Optional">
-        <span>performance<wbr>Insights<wbr>Kms<wbr>Key<wbr>Id</span>
+        <span id="state_performanceinsightskmskeyid_nodejs">
+<a href="#state_performanceinsightskmskeyid_nodejs" style="color: inherit; text-decoration: inherit;">performance<wbr>Insights<wbr>Kms<wbr>Key<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4568,7 +5359,9 @@ logs, and it will be stored in the state file.
 
     <dt class="property-optional"
             title="Optional">
-        <span>performance<wbr>Insights<wbr>Retention<wbr>Period</span>
+        <span id="state_performanceinsightsretentionperiod_nodejs">
+<a href="#state_performanceinsightsretentionperiod_nodejs" style="color: inherit; text-decoration: inherit;">performance<wbr>Insights<wbr>Retention<wbr>Period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -4577,7 +5370,9 @@ logs, and it will be stored in the state file.
 
     <dt class="property-optional"
             title="Optional">
-        <span>port</span>
+        <span id="state_port_nodejs">
+<a href="#state_port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -4586,7 +5381,9 @@ logs, and it will be stored in the state file.
 
     <dt class="property-optional"
             title="Optional">
-        <span>publicly<wbr>Accessible</span>
+        <span id="state_publiclyaccessible_nodejs">
+<a href="#state_publiclyaccessible_nodejs" style="color: inherit; text-decoration: inherit;">publicly<wbr>Accessible</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -4596,7 +5393,9 @@ accessible. Default is `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>replicas</span>
+        <span id="state_replicas_nodejs">
+<a href="#state_replicas_nodejs" style="color: inherit; text-decoration: inherit;">replicas</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -4604,13 +5403,17 @@ accessible. Default is `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>replicate<wbr>Source<wbr>Db</span>
+        <span id="state_replicatesourcedb_nodejs">
+<a href="#state_replicatesourcedb_nodejs" style="color: inherit; text-decoration: inherit;">replicate<wbr>Source<wbr>Db</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies that this resource is a Replicate
 database, and to use this value as the source database. This correlates to the
-`identifier` of another Amazon RDS Database to replicate. Note that if you are
+`identifier` of another Amazon RDS Database to replicate (if replicating within
+a single region) or ARN of the Amazon RDS Database to replicate (if replicating
+cross-region). Note that if you are
 creating a cross-region replica of an encrypted database you will also need to
 specify a `kms_key_id`. See [DB Instance Replication][1] and [Working with
 PostgreSQL and MySQL Read Replicas](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ReadRepl.html)
@@ -4619,7 +5422,9 @@ for more information on using Replication.
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource<wbr>Id</span>
+        <span id="state_resourceid_nodejs">
+<a href="#state_resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4628,7 +5433,9 @@ for more information on using Replication.
 
     <dt class="property-optional"
             title="Optional">
-        <span>s3Import</span>
+        <span id="state_s3import_nodejs">
+<a href="#state_s3import_nodejs" style="color: inherit; text-decoration: inherit;">s3Import</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instances3import">Instance<wbr>S3Import</a></span>
     </dt>
@@ -4637,7 +5444,9 @@ for more information on using Replication.
 
     <dt class="property-optional"
             title="Optional">
-        <span>security<wbr>Group<wbr>Names</span>
+        <span id="state_securitygroupnames_nodejs">
+<a href="#state_securitygroupnames_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Names</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -4648,7 +5457,9 @@ Platform](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_VPC.html#U
 
     <dt class="property-optional"
             title="Optional">
-        <span>skip<wbr>Final<wbr>Snapshot</span>
+        <span id="state_skipfinalsnapshot_nodejs">
+<a href="#state_skipfinalsnapshot_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Final<wbr>Snapshot</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -4661,7 +5472,9 @@ is `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>snapshot<wbr>Identifier</span>
+        <span id="state_snapshotidentifier_nodejs">
+<a href="#state_snapshotidentifier_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Identifier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4672,7 +5485,9 @@ RDS console, e.g: rds:production-2015-06-26-06-05.
 
     <dt class="property-optional"
             title="Optional">
-        <span>status</span>
+        <span id="state_status_nodejs">
+<a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4681,7 +5496,9 @@ RDS console, e.g: rds:production-2015-06-26-06-05.
 
     <dt class="property-optional"
             title="Optional">
-        <span>storage<wbr>Encrypted</span>
+        <span id="state_storageencrypted_nodejs">
+<a href="#state_storageencrypted_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Encrypted</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -4693,7 +5510,9 @@ default is `false` if not specified.
 
     <dt class="property-optional"
             title="Optional">
-        <span>storage<wbr>Type</span>
+        <span id="state_storagetype_nodejs">
+<a href="#state_storagetype_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">string | Storage<wbr>Type</span>
     </dt>
@@ -4704,7 +5523,9 @@ specified, "gp2" if not.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_nodejs">
+<a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -4713,7 +5534,9 @@ specified, "gp2" if not.
 
     <dt class="property-optional"
             title="Optional">
-        <span>timezone</span>
+        <span id="state_timezone_nodejs">
+<a href="#state_timezone_nodejs" style="color: inherit; text-decoration: inherit;">timezone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4726,7 +5549,9 @@ for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>username</span>
+        <span id="state_username_nodejs">
+<a href="#state_username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4736,7 +5561,9 @@ is provided) Username for the master DB user.
 
     <dt class="property-optional"
             title="Optional">
-        <span>vpc<wbr>Security<wbr>Group<wbr>Ids</span>
+        <span id="state_vpcsecuritygroupids_nodejs">
+<a href="#state_vpcsecuritygroupids_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Security<wbr>Group<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -4753,7 +5580,9 @@ associate.
 
     <dt class="property-optional"
             title="Optional">
-        <span>address</span>
+        <span id="state_address_python">
+<a href="#state_address_python" style="color: inherit; text-decoration: inherit;">address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4762,7 +5591,9 @@ associate.
 
     <dt class="property-optional"
             title="Optional">
-        <span>allocated_<wbr>storage</span>
+        <span id="state_allocated_storage_python">
+<a href="#state_allocated_storage_python" style="color: inherit; text-decoration: inherit;">allocated_<wbr>storage</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -4771,7 +5602,9 @@ associate.
 
     <dt class="property-optional"
             title="Optional">
-        <span>allow_<wbr>major_<wbr>version_<wbr>upgrade</span>
+        <span id="state_allow_major_version_upgrade_python">
+<a href="#state_allow_major_version_upgrade_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>major_<wbr>version_<wbr>upgrade</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -4782,7 +5615,9 @@ the change is asynchronously applied as soon as possible.
 
     <dt class="property-optional"
             title="Optional">
-        <span>apply_<wbr>immediately</span>
+        <span id="state_apply_immediately_python">
+<a href="#state_apply_immediately_python" style="color: inherit; text-decoration: inherit;">apply_<wbr>immediately</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -4794,7 +5629,9 @@ information.](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.DB
 
     <dt class="property-optional"
             title="Optional">
-        <span>arn</span>
+        <span id="state_arn_python">
+<a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4803,7 +5640,9 @@ information.](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.DB
 
     <dt class="property-optional"
             title="Optional">
-        <span>auto_<wbr>minor_<wbr>version_<wbr>upgrade</span>
+        <span id="state_auto_minor_version_upgrade_python">
+<a href="#state_auto_minor_version_upgrade_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>minor_<wbr>version_<wbr>upgrade</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -4814,7 +5653,9 @@ Defaults to true.
 
     <dt class="property-optional"
             title="Optional">
-        <span>availability_<wbr>zone</span>
+        <span id="state_availability_zone_python">
+<a href="#state_availability_zone_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4823,7 +5664,9 @@ Defaults to true.
 
     <dt class="property-optional"
             title="Optional">
-        <span>backup_<wbr>retention_<wbr>period</span>
+        <span id="state_backup_retention_period_python">
+<a href="#state_backup_retention_period_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>retention_<wbr>period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -4833,7 +5676,9 @@ between `0` and `35`. Must be greater than `0` if the database is used as a sour
 
     <dt class="property-optional"
             title="Optional">
-        <span>backup_<wbr>window</span>
+        <span id="state_backup_window_python">
+<a href="#state_backup_window_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>window</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4844,7 +5689,9 @@ not overlap with `maintenance_window`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ca_<wbr>cert_<wbr>identifier</span>
+        <span id="state_ca_cert_identifier_python">
+<a href="#state_ca_cert_identifier_python" style="color: inherit; text-decoration: inherit;">ca_<wbr>cert_<wbr>identifier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4853,20 +5700,23 @@ not overlap with `maintenance_window`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>character_<wbr>set_<wbr>name</span>
+        <span id="state_character_set_name_python">
+<a href="#state_character_set_name_python" style="color: inherit; text-decoration: inherit;">character_<wbr>set_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The character set name to use for DB
-encoding in Oracle instances. This can't be changed. See [Oracle Character Sets
-Supported in Amazon
-RDS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.OracleCharacterSets.html)
-for more information.
+encoding in Oracle and Microsoft SQL instances (collation). This can't be changed. See [Oracle Character Sets
+Supported in Amazon RDS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.OracleCharacterSets.html)
+or [Server-Level Collation for Microsoft SQL Server](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.SQLServer.CommonDBATasks.Collation.html) for more information.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>copy_<wbr>tags_<wbr>to_<wbr>snapshot</span>
+        <span id="state_copy_tags_to_snapshot_python">
+<a href="#state_copy_tags_to_snapshot_python" style="color: inherit; text-decoration: inherit;">copy_<wbr>tags_<wbr>to_<wbr>snapshot</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -4875,7 +5725,9 @@ for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>db_<wbr>subnet_<wbr>group_<wbr>name</span>
+        <span id="state_db_subnet_group_name_python">
+<a href="#state_db_subnet_group_name_python" style="color: inherit; text-decoration: inherit;">db_<wbr>subnet_<wbr>group_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4890,7 +5742,9 @@ for additional read replica contraints.
 
     <dt class="property-optional"
             title="Optional">
-        <span>delete_<wbr>automated_<wbr>backups</span>
+        <span id="state_delete_automated_backups_python">
+<a href="#state_delete_automated_backups_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>automated_<wbr>backups</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -4899,7 +5753,9 @@ for additional read replica contraints.
 
     <dt class="property-optional"
             title="Optional">
-        <span>deletion_<wbr>protection</span>
+        <span id="state_deletion_protection_python">
+<a href="#state_deletion_protection_python" style="color: inherit; text-decoration: inherit;">deletion_<wbr>protection</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -4908,7 +5764,9 @@ for additional read replica contraints.
 
     <dt class="property-optional"
             title="Optional">
-        <span>domain</span>
+        <span id="state_domain_python">
+<a href="#state_domain_python" style="color: inherit; text-decoration: inherit;">domain</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4917,7 +5775,9 @@ for additional read replica contraints.
 
     <dt class="property-optional"
             title="Optional">
-        <span>domain_<wbr>iam_<wbr>role_<wbr>name</span>
+        <span id="state_domain_iam_role_name_python">
+<a href="#state_domain_iam_role_name_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>iam_<wbr>role_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4926,16 +5786,20 @@ for additional read replica contraints.
 
     <dt class="property-optional"
             title="Optional">
-        <span>enabled_<wbr>cloudwatch_<wbr>logs_<wbr>exports</span>
+        <span id="state_enabled_cloudwatch_logs_exports_python">
+<a href="#state_enabled_cloudwatch_logs_exports_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>cloudwatch_<wbr>logs_<wbr>exports</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}List of log types to enable for exporting to CloudWatch logs. If omitted, no logs will be exported. Valid values (depending on `engine`): `agent` (MSSQL), `alert`, `audit`, `error`, `general`, `listener`, `slowquery`, `trace`, `postgresql` (PostgreSQL), `upgrade` (PostgreSQL).
+    <dd>{{% md %}}List of log types to enable for exporting to CloudWatch logs. If omitted, no logs will be exported. Valid values (depending on `engine`). MySQL and MariaDB: `audit`, `error`, `general`, `slowquery`. PostgreSQL: `postgresql`, `upgrade`. MSSQL: `agent` , `error`. Oracle: `alert`, `audit`, `listener`, `trace`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>endpoint</span>
+        <span id="state_endpoint_python">
+<a href="#state_endpoint_python" style="color: inherit; text-decoration: inherit;">endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4944,7 +5808,9 @@ for additional read replica contraints.
 
     <dt class="property-optional"
             title="Optional">
-        <span>engine</span>
+        <span id="state_engine_python">
+<a href="#state_engine_python" style="color: inherit; text-decoration: inherit;">engine</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4958,7 +5824,9 @@ in the Amazon RDS User Guide.
 
     <dt class="property-optional"
             title="Optional">
-        <span>engine_<wbr>version</span>
+        <span id="state_engine_version_python">
+<a href="#state_engine_version_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4971,7 +5839,9 @@ Note that for Amazon Aurora instances the engine version must match the [DB clus
 
     <dt class="property-optional"
             title="Optional">
-        <span>final_<wbr>snapshot_<wbr>identifier</span>
+        <span id="state_final_snapshot_identifier_python">
+<a href="#state_final_snapshot_identifier_python" style="color: inherit; text-decoration: inherit;">final_<wbr>snapshot_<wbr>identifier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4982,7 +5852,9 @@ set to `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>hosted_<wbr>zone_<wbr>id</span>
+        <span id="state_hosted_zone_id_python">
+<a href="#state_hosted_zone_id_python" style="color: inherit; text-decoration: inherit;">hosted_<wbr>zone_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4992,7 +5864,9 @@ in a Route 53 Alias record).
 
     <dt class="property-optional"
             title="Optional">
-        <span>iam_<wbr>database_<wbr>authentication_<wbr>enabled</span>
+        <span id="state_iam_database_authentication_enabled_python">
+<a href="#state_iam_database_authentication_enabled_python" style="color: inherit; text-decoration: inherit;">iam_<wbr>database_<wbr>authentication_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -5003,7 +5877,9 @@ accounts is enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>identifier</span>
+        <span id="state_identifier_python">
+<a href="#state_identifier_python" style="color: inherit; text-decoration: inherit;">identifier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -5013,7 +5889,9 @@ if omitted, this provider will assign a random, unique identifier.
 
     <dt class="property-optional"
             title="Optional">
-        <span>identifier_<wbr>prefix</span>
+        <span id="state_identifier_prefix_python">
+<a href="#state_identifier_prefix_python" style="color: inherit; text-decoration: inherit;">identifier_<wbr>prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -5023,7 +5901,9 @@ identifier beginning with the specified prefix. Conflicts with `identifier`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>instance_<wbr>class</span>
+        <span id="state_instance_class_python">
+<a href="#state_instance_class_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>class</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">string | str</span>
     </dt>
@@ -5032,7 +5912,9 @@ identifier beginning with the specified prefix. Conflicts with `identifier`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>iops</span>
+        <span id="state_iops_python">
+<a href="#state_iops_python" style="color: inherit; text-decoration: inherit;">iops</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -5042,7 +5924,9 @@ storage_type of "io1".
 
     <dt class="property-optional"
             title="Optional">
-        <span>kms_<wbr>key_<wbr>id</span>
+        <span id="state_kms_key_id_python">
+<a href="#state_kms_key_id_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -5052,7 +5936,9 @@ encrypted replica, set this to the destination KMS ARN.
 
     <dt class="property-optional"
             title="Optional">
-        <span>license_<wbr>model</span>
+        <span id="state_license_model_python">
+<a href="#state_license_model_python" style="color: inherit; text-decoration: inherit;">license_<wbr>model</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -5062,7 +5948,9 @@ SE1) License model information for this DB instance.
 
     <dt class="property-optional"
             title="Optional">
-        <span>maintenance_<wbr>window</span>
+        <span id="state_maintenance_window_python">
+<a href="#state_maintenance_window_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -5075,7 +5963,9 @@ for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>max_<wbr>allocated_<wbr>storage</span>
+        <span id="state_max_allocated_storage_python">
+<a href="#state_max_allocated_storage_python" style="color: inherit; text-decoration: inherit;">max_<wbr>allocated_<wbr>storage</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -5084,7 +5974,9 @@ for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>monitoring_<wbr>interval</span>
+        <span id="state_monitoring_interval_python">
+<a href="#state_monitoring_interval_python" style="color: inherit; text-decoration: inherit;">monitoring_<wbr>interval</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -5096,7 +5988,9 @@ Values: 0, 1, 5, 10, 15, 30, 60.
 
     <dt class="property-optional"
             title="Optional">
-        <span>monitoring_<wbr>role_<wbr>arn</span>
+        <span id="state_monitoring_role_arn_python">
+<a href="#state_monitoring_role_arn_python" style="color: inherit; text-decoration: inherit;">monitoring_<wbr>role_<wbr>arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -5109,7 +6003,9 @@ what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.
 
     <dt class="property-optional"
             title="Optional">
-        <span>multi_<wbr>az</span>
+        <span id="state_multi_az_python">
+<a href="#state_multi_az_python" style="color: inherit; text-decoration: inherit;">multi_<wbr>az</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -5118,7 +6014,9 @@ what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -5127,7 +6025,9 @@ what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.
 
     <dt class="property-optional"
             title="Optional">
-        <span>option_<wbr>group_<wbr>name</span>
+        <span id="state_option_group_name_python">
+<a href="#state_option_group_name_python" style="color: inherit; text-decoration: inherit;">option_<wbr>group_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -5136,7 +6036,9 @@ what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.
 
     <dt class="property-optional"
             title="Optional">
-        <span>parameter_<wbr>group_<wbr>name</span>
+        <span id="state_parameter_group_name_python">
+<a href="#state_parameter_group_name_python" style="color: inherit; text-decoration: inherit;">parameter_<wbr>group_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -5146,7 +6048,9 @@ associate.
 
     <dt class="property-optional"
             title="Optional">
-        <span>password</span>
+        <span id="state_password_python">
+<a href="#state_password_python" style="color: inherit; text-decoration: inherit;">password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -5157,7 +6061,9 @@ logs, and it will be stored in the state file.
 
     <dt class="property-optional"
             title="Optional">
-        <span>performance_<wbr>insights_<wbr>enabled</span>
+        <span id="state_performance_insights_enabled_python">
+<a href="#state_performance_insights_enabled_python" style="color: inherit; text-decoration: inherit;">performance_<wbr>insights_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -5166,7 +6072,9 @@ logs, and it will be stored in the state file.
 
     <dt class="property-optional"
             title="Optional">
-        <span>performance_<wbr>insights_<wbr>kms_<wbr>key_<wbr>id</span>
+        <span id="state_performance_insights_kms_key_id_python">
+<a href="#state_performance_insights_kms_key_id_python" style="color: inherit; text-decoration: inherit;">performance_<wbr>insights_<wbr>kms_<wbr>key_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -5175,7 +6083,9 @@ logs, and it will be stored in the state file.
 
     <dt class="property-optional"
             title="Optional">
-        <span>performance_<wbr>insights_<wbr>retention_<wbr>period</span>
+        <span id="state_performance_insights_retention_period_python">
+<a href="#state_performance_insights_retention_period_python" style="color: inherit; text-decoration: inherit;">performance_<wbr>insights_<wbr>retention_<wbr>period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -5184,7 +6094,9 @@ logs, and it will be stored in the state file.
 
     <dt class="property-optional"
             title="Optional">
-        <span>port</span>
+        <span id="state_port_python">
+<a href="#state_port_python" style="color: inherit; text-decoration: inherit;">port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -5193,7 +6105,9 @@ logs, and it will be stored in the state file.
 
     <dt class="property-optional"
             title="Optional">
-        <span>publicly_<wbr>accessible</span>
+        <span id="state_publicly_accessible_python">
+<a href="#state_publicly_accessible_python" style="color: inherit; text-decoration: inherit;">publicly_<wbr>accessible</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -5203,7 +6117,9 @@ accessible. Default is `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>replicas</span>
+        <span id="state_replicas_python">
+<a href="#state_replicas_python" style="color: inherit; text-decoration: inherit;">replicas</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -5211,13 +6127,17 @@ accessible. Default is `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>replicate_<wbr>source_<wbr>db</span>
+        <span id="state_replicate_source_db_python">
+<a href="#state_replicate_source_db_python" style="color: inherit; text-decoration: inherit;">replicate_<wbr>source_<wbr>db</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies that this resource is a Replicate
 database, and to use this value as the source database. This correlates to the
-`identifier` of another Amazon RDS Database to replicate. Note that if you are
+`identifier` of another Amazon RDS Database to replicate (if replicating within
+a single region) or ARN of the Amazon RDS Database to replicate (if replicating
+cross-region). Note that if you are
 creating a cross-region replica of an encrypted database you will also need to
 specify a `kms_key_id`. See [DB Instance Replication][1] and [Working with
 PostgreSQL and MySQL Read Replicas](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ReadRepl.html)
@@ -5226,7 +6146,9 @@ for more information on using Replication.
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource_<wbr>id</span>
+        <span id="state_resource_id_python">
+<a href="#state_resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -5235,7 +6157,9 @@ for more information on using Replication.
 
     <dt class="property-optional"
             title="Optional">
-        <span>s3_<wbr>import</span>
+        <span id="state_s3_import_python">
+<a href="#state_s3_import_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>import</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instances3import">Dict[Instance<wbr>S3Import]</a></span>
     </dt>
@@ -5244,7 +6168,9 @@ for more information on using Replication.
 
     <dt class="property-optional"
             title="Optional">
-        <span>security_<wbr>group_<wbr>names</span>
+        <span id="state_security_group_names_python">
+<a href="#state_security_group_names_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>names</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -5255,7 +6181,9 @@ Platform](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_VPC.html#U
 
     <dt class="property-optional"
             title="Optional">
-        <span>skip_<wbr>final_<wbr>snapshot</span>
+        <span id="state_skip_final_snapshot_python">
+<a href="#state_skip_final_snapshot_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>final_<wbr>snapshot</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -5268,7 +6196,9 @@ is `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>snapshot_<wbr>identifier</span>
+        <span id="state_snapshot_identifier_python">
+<a href="#state_snapshot_identifier_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>identifier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -5279,7 +6209,9 @@ RDS console, e.g: rds:production-2015-06-26-06-05.
 
     <dt class="property-optional"
             title="Optional">
-        <span>status</span>
+        <span id="state_status_python">
+<a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -5288,7 +6220,9 @@ RDS console, e.g: rds:production-2015-06-26-06-05.
 
     <dt class="property-optional"
             title="Optional">
-        <span>storage_<wbr>encrypted</span>
+        <span id="state_storage_encrypted_python">
+<a href="#state_storage_encrypted_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>encrypted</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -5300,7 +6234,9 @@ default is `false` if not specified.
 
     <dt class="property-optional"
             title="Optional">
-        <span>storage_<wbr>type</span>
+        <span id="state_storage_type_python">
+<a href="#state_storage_type_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">string | str</span>
     </dt>
@@ -5311,7 +6247,9 @@ specified, "gp2" if not.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_python">
+<a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -5320,7 +6258,9 @@ specified, "gp2" if not.
 
     <dt class="property-optional"
             title="Optional">
-        <span>timezone</span>
+        <span id="state_timezone_python">
+<a href="#state_timezone_python" style="color: inherit; text-decoration: inherit;">timezone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -5333,7 +6273,9 @@ for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>username</span>
+        <span id="state_username_python">
+<a href="#state_username_python" style="color: inherit; text-decoration: inherit;">username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -5343,7 +6285,9 @@ is provided) Username for the master DB user.
 
     <dt class="property-optional"
             title="Optional">
-        <span>vpc_<wbr>security_<wbr>group_<wbr>ids</span>
+        <span id="state_vpc_security_group_ids_python">
+<a href="#state_vpc_security_group_ids_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>security_<wbr>group_<wbr>ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -5386,7 +6330,9 @@ associate.
 
     <dt class="property-required"
             title="Required">
-        <span>Bucket<wbr>Name</span>
+        <span id="bucketname_csharp">
+<a href="#bucketname_csharp" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -5395,7 +6341,9 @@ associate.
 
     <dt class="property-required"
             title="Required">
-        <span>Ingestion<wbr>Role</span>
+        <span id="ingestionrole_csharp">
+<a href="#ingestionrole_csharp" style="color: inherit; text-decoration: inherit;">Ingestion<wbr>Role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -5404,7 +6352,9 @@ associate.
 
     <dt class="property-required"
             title="Required">
-        <span>Source<wbr>Engine</span>
+        <span id="sourceengine_csharp">
+<a href="#sourceengine_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Engine</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -5413,7 +6363,9 @@ associate.
 
     <dt class="property-required"
             title="Required">
-        <span>Source<wbr>Engine<wbr>Version</span>
+        <span id="sourceengineversion_csharp">
+<a href="#sourceengineversion_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Engine<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -5422,7 +6374,9 @@ associate.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Bucket<wbr>Prefix</span>
+        <span id="bucketprefix_csharp">
+<a href="#bucketprefix_csharp" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -5438,7 +6392,9 @@ associate.
 
     <dt class="property-required"
             title="Required">
-        <span>Bucket<wbr>Name</span>
+        <span id="bucketname_go">
+<a href="#bucketname_go" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -5447,7 +6403,9 @@ associate.
 
     <dt class="property-required"
             title="Required">
-        <span>Ingestion<wbr>Role</span>
+        <span id="ingestionrole_go">
+<a href="#ingestionrole_go" style="color: inherit; text-decoration: inherit;">Ingestion<wbr>Role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -5456,7 +6414,9 @@ associate.
 
     <dt class="property-required"
             title="Required">
-        <span>Source<wbr>Engine</span>
+        <span id="sourceengine_go">
+<a href="#sourceengine_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Engine</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -5465,7 +6425,9 @@ associate.
 
     <dt class="property-required"
             title="Required">
-        <span>Source<wbr>Engine<wbr>Version</span>
+        <span id="sourceengineversion_go">
+<a href="#sourceengineversion_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Engine<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -5474,7 +6436,9 @@ associate.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Bucket<wbr>Prefix</span>
+        <span id="bucketprefix_go">
+<a href="#bucketprefix_go" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -5490,7 +6454,9 @@ associate.
 
     <dt class="property-required"
             title="Required">
-        <span>bucket<wbr>Name</span>
+        <span id="bucketname_nodejs">
+<a href="#bucketname_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -5499,7 +6465,9 @@ associate.
 
     <dt class="property-required"
             title="Required">
-        <span>ingestion<wbr>Role</span>
+        <span id="ingestionrole_nodejs">
+<a href="#ingestionrole_nodejs" style="color: inherit; text-decoration: inherit;">ingestion<wbr>Role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -5508,7 +6476,9 @@ associate.
 
     <dt class="property-required"
             title="Required">
-        <span>source<wbr>Engine</span>
+        <span id="sourceengine_nodejs">
+<a href="#sourceengine_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Engine</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -5517,7 +6487,9 @@ associate.
 
     <dt class="property-required"
             title="Required">
-        <span>source<wbr>Engine<wbr>Version</span>
+        <span id="sourceengineversion_nodejs">
+<a href="#sourceengineversion_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Engine<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -5526,7 +6498,9 @@ associate.
 
     <dt class="property-optional"
             title="Optional">
-        <span>bucket<wbr>Prefix</span>
+        <span id="bucketprefix_nodejs">
+<a href="#bucketprefix_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -5542,7 +6516,9 @@ associate.
 
     <dt class="property-required"
             title="Required">
-        <span>bucket_<wbr>name</span>
+        <span id="bucket_name_python">
+<a href="#bucket_name_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -5551,7 +6527,9 @@ associate.
 
     <dt class="property-required"
             title="Required">
-        <span>ingestion<wbr>Role</span>
+        <span id="ingestionrole_python">
+<a href="#ingestionrole_python" style="color: inherit; text-decoration: inherit;">ingestion<wbr>Role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -5560,7 +6538,9 @@ associate.
 
     <dt class="property-required"
             title="Required">
-        <span>source<wbr>Engine</span>
+        <span id="sourceengine_python">
+<a href="#sourceengine_python" style="color: inherit; text-decoration: inherit;">source<wbr>Engine</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -5569,7 +6549,9 @@ associate.
 
     <dt class="property-required"
             title="Required">
-        <span>source<wbr>Engine<wbr>Version</span>
+        <span id="sourceengineversion_python">
+<a href="#sourceengineversion_python" style="color: inherit; text-decoration: inherit;">source<wbr>Engine<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -5578,7 +6560,9 @@ associate.
 
     <dt class="property-optional"
             title="Optional">
-        <span>bucket_<wbr>prefix</span>
+        <span id="bucket_prefix_python">
+<a href="#bucket_prefix_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

@@ -86,19 +86,19 @@ example_express_route_circuit_peering = azure.network.ExpressRouteCircuitPeering
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/network/#ExpressRouteCircuitPeering">ExpressRouteCircuitPeering</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/network/#ExpressRouteCircuitPeeringArgs">ExpressRouteCircuitPeeringArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/network/#ExpressRouteCircuitPeering">ExpressRouteCircuitPeering</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/network/#ExpressRouteCircuitPeeringArgs">ExpressRouteCircuitPeeringArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ExpressRouteCircuitPeering</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>express_route_circuit_name=None<span class="p">, </span>microsoft_peering_config=None<span class="p">, </span>peer_asn=None<span class="p">, </span>peering_type=None<span class="p">, </span>primary_peer_address_prefix=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>secondary_peer_address_prefix=None<span class="p">, </span>shared_key=None<span class="p">, </span>vlan_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/network/#ExpressRouteCircuitPeering">ExpressRouteCircuitPeering</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>express_route_circuit_name=None<span class="p">, </span>microsoft_peering_config=None<span class="p">, </span>peer_asn=None<span class="p">, </span>peering_type=None<span class="p">, </span>primary_peer_address_prefix=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>secondary_peer_address_prefix=None<span class="p">, </span>shared_key=None<span class="p">, </span>vlan_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewExpressRouteCircuitPeering<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#ExpressRouteCircuitPeeringArgs">ExpressRouteCircuitPeeringArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#ExpressRouteCircuitPeering">ExpressRouteCircuitPeering</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#ExpressRouteCircuitPeering">NewExpressRouteCircuitPeering</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#ExpressRouteCircuitPeeringArgs">ExpressRouteCircuitPeeringArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#ExpressRouteCircuitPeering">ExpressRouteCircuitPeering</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.ExpressRouteCircuitPeering.html">ExpressRouteCircuitPeering</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.ExpressRouteCircuitPeeringArgs.html">ExpressRouteCircuitPeeringArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.ExpressRouteCircuitPeering.html">ExpressRouteCircuitPeering</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.ExpressRouteCircuitPeeringArgs.html">ExpressRouteCircuitPeeringArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -264,7 +264,9 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
 
     <dt class="property-required"
             title="Required">
-        <span>Express<wbr>Route<wbr>Circuit<wbr>Name</span>
+        <span id="expressroutecircuitname_csharp">
+<a href="#expressroutecircuitname_csharp" style="color: inherit; text-decoration: inherit;">Express<wbr>Route<wbr>Circuit<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -273,7 +275,9 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
 
     <dt class="property-required"
             title="Required">
-        <span>Peering<wbr>Type</span>
+        <span id="peeringtype_csharp">
+<a href="#peeringtype_csharp" style="color: inherit; text-decoration: inherit;">Peering<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -282,7 +286,9 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
 
     <dt class="property-required"
             title="Required">
-        <span>Primary<wbr>Peer<wbr>Address<wbr>Prefix</span>
+        <span id="primarypeeraddressprefix_csharp">
+<a href="#primarypeeraddressprefix_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Peer<wbr>Address<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -291,7 +297,9 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
 
     <dt class="property-required"
             title="Required">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_csharp">
+<a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -301,7 +309,9 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
 
     <dt class="property-required"
             title="Required">
-        <span>Secondary<wbr>Peer<wbr>Address<wbr>Prefix</span>
+        <span id="secondarypeeraddressprefix_csharp">
+<a href="#secondarypeeraddressprefix_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Peer<wbr>Address<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -310,7 +320,9 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
 
     <dt class="property-required"
             title="Required">
-        <span>Vlan<wbr>Id</span>
+        <span id="vlanid_csharp">
+<a href="#vlanid_csharp" style="color: inherit; text-decoration: inherit;">Vlan<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -319,7 +331,9 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
 
     <dt class="property-optional"
             title="Optional">
-        <span>Microsoft<wbr>Peering<wbr>Config</span>
+        <span id="microsoftpeeringconfig_csharp">
+<a href="#microsoftpeeringconfig_csharp" style="color: inherit; text-decoration: inherit;">Microsoft<wbr>Peering<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#expressroutecircuitpeeringmicrosoftpeeringconfig">Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Microsoft<wbr>Peering<wbr>Config<wbr>Args</a></span>
     </dt>
@@ -328,7 +342,9 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
 
     <dt class="property-optional"
             title="Optional">
-        <span>Peer<wbr>Asn</span>
+        <span id="peerasn_csharp">
+<a href="#peerasn_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>Asn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -337,7 +353,9 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
 
     <dt class="property-optional"
             title="Optional">
-        <span>Shared<wbr>Key</span>
+        <span id="sharedkey_csharp">
+<a href="#sharedkey_csharp" style="color: inherit; text-decoration: inherit;">Shared<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -353,7 +371,9 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
 
     <dt class="property-required"
             title="Required">
-        <span>Express<wbr>Route<wbr>Circuit<wbr>Name</span>
+        <span id="expressroutecircuitname_go">
+<a href="#expressroutecircuitname_go" style="color: inherit; text-decoration: inherit;">Express<wbr>Route<wbr>Circuit<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -362,7 +382,9 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
 
     <dt class="property-required"
             title="Required">
-        <span>Peering<wbr>Type</span>
+        <span id="peeringtype_go">
+<a href="#peeringtype_go" style="color: inherit; text-decoration: inherit;">Peering<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -371,7 +393,9 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
 
     <dt class="property-required"
             title="Required">
-        <span>Primary<wbr>Peer<wbr>Address<wbr>Prefix</span>
+        <span id="primarypeeraddressprefix_go">
+<a href="#primarypeeraddressprefix_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Peer<wbr>Address<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -380,7 +404,9 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
 
     <dt class="property-required"
             title="Required">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_go">
+<a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -390,7 +416,9 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
 
     <dt class="property-required"
             title="Required">
-        <span>Secondary<wbr>Peer<wbr>Address<wbr>Prefix</span>
+        <span id="secondarypeeraddressprefix_go">
+<a href="#secondarypeeraddressprefix_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Peer<wbr>Address<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -399,7 +427,9 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
 
     <dt class="property-required"
             title="Required">
-        <span>Vlan<wbr>Id</span>
+        <span id="vlanid_go">
+<a href="#vlanid_go" style="color: inherit; text-decoration: inherit;">Vlan<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -408,7 +438,9 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
 
     <dt class="property-optional"
             title="Optional">
-        <span>Microsoft<wbr>Peering<wbr>Config</span>
+        <span id="microsoftpeeringconfig_go">
+<a href="#microsoftpeeringconfig_go" style="color: inherit; text-decoration: inherit;">Microsoft<wbr>Peering<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#expressroutecircuitpeeringmicrosoftpeeringconfig">Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Microsoft<wbr>Peering<wbr>Config</a></span>
     </dt>
@@ -417,7 +449,9 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
 
     <dt class="property-optional"
             title="Optional">
-        <span>Peer<wbr>Asn</span>
+        <span id="peerasn_go">
+<a href="#peerasn_go" style="color: inherit; text-decoration: inherit;">Peer<wbr>Asn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -426,7 +460,9 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
 
     <dt class="property-optional"
             title="Optional">
-        <span>Shared<wbr>Key</span>
+        <span id="sharedkey_go">
+<a href="#sharedkey_go" style="color: inherit; text-decoration: inherit;">Shared<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -442,7 +478,9 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
 
     <dt class="property-required"
             title="Required">
-        <span>express<wbr>Route<wbr>Circuit<wbr>Name</span>
+        <span id="expressroutecircuitname_nodejs">
+<a href="#expressroutecircuitname_nodejs" style="color: inherit; text-decoration: inherit;">express<wbr>Route<wbr>Circuit<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -451,7 +489,9 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
 
     <dt class="property-required"
             title="Required">
-        <span>peering<wbr>Type</span>
+        <span id="peeringtype_nodejs">
+<a href="#peeringtype_nodejs" style="color: inherit; text-decoration: inherit;">peering<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -460,7 +500,9 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
 
     <dt class="property-required"
             title="Required">
-        <span>primary<wbr>Peer<wbr>Address<wbr>Prefix</span>
+        <span id="primarypeeraddressprefix_nodejs">
+<a href="#primarypeeraddressprefix_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Peer<wbr>Address<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -469,7 +511,9 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
 
     <dt class="property-required"
             title="Required">
-        <span>resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_nodejs">
+<a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -479,7 +523,9 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
 
     <dt class="property-required"
             title="Required">
-        <span>secondary<wbr>Peer<wbr>Address<wbr>Prefix</span>
+        <span id="secondarypeeraddressprefix_nodejs">
+<a href="#secondarypeeraddressprefix_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Peer<wbr>Address<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -488,7 +534,9 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
 
     <dt class="property-required"
             title="Required">
-        <span>vlan<wbr>Id</span>
+        <span id="vlanid_nodejs">
+<a href="#vlanid_nodejs" style="color: inherit; text-decoration: inherit;">vlan<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -497,7 +545,9 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
 
     <dt class="property-optional"
             title="Optional">
-        <span>microsoft<wbr>Peering<wbr>Config</span>
+        <span id="microsoftpeeringconfig_nodejs">
+<a href="#microsoftpeeringconfig_nodejs" style="color: inherit; text-decoration: inherit;">microsoft<wbr>Peering<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#expressroutecircuitpeeringmicrosoftpeeringconfig">Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Microsoft<wbr>Peering<wbr>Config</a></span>
     </dt>
@@ -506,7 +556,9 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
 
     <dt class="property-optional"
             title="Optional">
-        <span>peer<wbr>Asn</span>
+        <span id="peerasn_nodejs">
+<a href="#peerasn_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Asn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -515,7 +567,9 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
 
     <dt class="property-optional"
             title="Optional">
-        <span>shared<wbr>Key</span>
+        <span id="sharedkey_nodejs">
+<a href="#sharedkey_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -531,7 +585,9 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
 
     <dt class="property-required"
             title="Required">
-        <span>express_<wbr>route_<wbr>circuit_<wbr>name</span>
+        <span id="express_route_circuit_name_python">
+<a href="#express_route_circuit_name_python" style="color: inherit; text-decoration: inherit;">express_<wbr>route_<wbr>circuit_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -540,7 +596,9 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
 
     <dt class="property-required"
             title="Required">
-        <span>peering_<wbr>type</span>
+        <span id="peering_type_python">
+<a href="#peering_type_python" style="color: inherit; text-decoration: inherit;">peering_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -549,7 +607,9 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
 
     <dt class="property-required"
             title="Required">
-        <span>primary_<wbr>peer_<wbr>address_<wbr>prefix</span>
+        <span id="primary_peer_address_prefix_python">
+<a href="#primary_peer_address_prefix_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>peer_<wbr>address_<wbr>prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -558,7 +618,9 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
 
     <dt class="property-required"
             title="Required">
-        <span>resource_<wbr>group_<wbr>name</span>
+        <span id="resource_group_name_python">
+<a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -568,7 +630,9 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
 
     <dt class="property-required"
             title="Required">
-        <span>secondary_<wbr>peer_<wbr>address_<wbr>prefix</span>
+        <span id="secondary_peer_address_prefix_python">
+<a href="#secondary_peer_address_prefix_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>peer_<wbr>address_<wbr>prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -577,7 +641,9 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
 
     <dt class="property-required"
             title="Required">
-        <span>vlan_<wbr>id</span>
+        <span id="vlan_id_python">
+<a href="#vlan_id_python" style="color: inherit; text-decoration: inherit;">vlan_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -586,7 +652,9 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
 
     <dt class="property-optional"
             title="Optional">
-        <span>microsoft_<wbr>peering_<wbr>config</span>
+        <span id="microsoft_peering_config_python">
+<a href="#microsoft_peering_config_python" style="color: inherit; text-decoration: inherit;">microsoft_<wbr>peering_<wbr>config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#expressroutecircuitpeeringmicrosoftpeeringconfig">Dict[Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Microsoft<wbr>Peering<wbr>Config]</a></span>
     </dt>
@@ -595,7 +663,9 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
 
     <dt class="property-optional"
             title="Optional">
-        <span>peer_<wbr>asn</span>
+        <span id="peer_asn_python">
+<a href="#peer_asn_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>asn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -604,7 +674,9 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
 
     <dt class="property-optional"
             title="Optional">
-        <span>shared_<wbr>key</span>
+        <span id="shared_key_python">
+<a href="#shared_key_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -631,7 +703,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Azure<wbr>Asn</span>
+        <span id="azureasn_csharp">
+<a href="#azureasn_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Asn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -640,7 +714,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -648,7 +724,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Primary<wbr>Azure<wbr>Port</span>
+        <span id="primaryazureport_csharp">
+<a href="#primaryazureport_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Azure<wbr>Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -657,7 +735,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Secondary<wbr>Azure<wbr>Port</span>
+        <span id="secondaryazureport_csharp">
+<a href="#secondaryazureport_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Azure<wbr>Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -673,7 +753,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Azure<wbr>Asn</span>
+        <span id="azureasn_go">
+<a href="#azureasn_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Asn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -682,7 +764,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -690,7 +774,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Primary<wbr>Azure<wbr>Port</span>
+        <span id="primaryazureport_go">
+<a href="#primaryazureport_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Azure<wbr>Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -699,7 +785,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Secondary<wbr>Azure<wbr>Port</span>
+        <span id="secondaryazureport_go">
+<a href="#secondaryazureport_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Azure<wbr>Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -715,7 +803,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>azure<wbr>Asn</span>
+        <span id="azureasn_nodejs">
+<a href="#azureasn_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Asn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -724,7 +814,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -732,7 +824,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>primary<wbr>Azure<wbr>Port</span>
+        <span id="primaryazureport_nodejs">
+<a href="#primaryazureport_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Azure<wbr>Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -741,7 +835,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>secondary<wbr>Azure<wbr>Port</span>
+        <span id="secondaryazureport_nodejs">
+<a href="#secondaryazureport_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Azure<wbr>Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -757,7 +853,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>azure_<wbr>asn</span>
+        <span id="azure_asn_python">
+<a href="#azure_asn_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>asn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -766,7 +864,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -774,7 +874,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>primary_<wbr>azure_<wbr>port</span>
+        <span id="primary_azure_port_python">
+<a href="#primary_azure_port_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>azure_<wbr>port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -783,7 +885,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>secondary_<wbr>azure_<wbr>port</span>
+        <span id="secondary_azure_port_python">
+<a href="#secondary_azure_port_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>azure_<wbr>port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -805,7 +909,7 @@ Get an existing ExpressRouteCircuitPeering resource's state with the given name,
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/network/#ExpressRouteCircuitPeeringState">ExpressRouteCircuitPeeringState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/network/#ExpressRouteCircuitPeering">ExpressRouteCircuitPeering</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/network/#ExpressRouteCircuitPeeringState">ExpressRouteCircuitPeeringState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/network/#ExpressRouteCircuitPeering">ExpressRouteCircuitPeering</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -813,11 +917,11 @@ Get an existing ExpressRouteCircuitPeering resource's state with the given name,
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetExpressRouteCircuitPeering<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#ExpressRouteCircuitPeeringState">ExpressRouteCircuitPeeringState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#ExpressRouteCircuitPeering">ExpressRouteCircuitPeering</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetExpressRouteCircuitPeering<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#ExpressRouteCircuitPeeringState">ExpressRouteCircuitPeeringState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#ExpressRouteCircuitPeering">ExpressRouteCircuitPeering</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.ExpressRouteCircuitPeering.html">ExpressRouteCircuitPeering</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.ExpressRouteCircuitPeeringState.html">ExpressRouteCircuitPeeringState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.ExpressRouteCircuitPeering.html">ExpressRouteCircuitPeering</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.ExpressRouteCircuitPeeringState.html">ExpressRouteCircuitPeeringState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -925,7 +1029,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Azure<wbr>Asn</span>
+        <span id="state_azureasn_csharp">
+<a href="#state_azureasn_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Asn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -934,7 +1040,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Express<wbr>Route<wbr>Circuit<wbr>Name</span>
+        <span id="state_expressroutecircuitname_csharp">
+<a href="#state_expressroutecircuitname_csharp" style="color: inherit; text-decoration: inherit;">Express<wbr>Route<wbr>Circuit<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -943,7 +1051,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Microsoft<wbr>Peering<wbr>Config</span>
+        <span id="state_microsoftpeeringconfig_csharp">
+<a href="#state_microsoftpeeringconfig_csharp" style="color: inherit; text-decoration: inherit;">Microsoft<wbr>Peering<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#expressroutecircuitpeeringmicrosoftpeeringconfig">Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Microsoft<wbr>Peering<wbr>Config<wbr>Args</a></span>
     </dt>
@@ -952,7 +1062,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Peer<wbr>Asn</span>
+        <span id="state_peerasn_csharp">
+<a href="#state_peerasn_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>Asn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -961,7 +1073,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Peering<wbr>Type</span>
+        <span id="state_peeringtype_csharp">
+<a href="#state_peeringtype_csharp" style="color: inherit; text-decoration: inherit;">Peering<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -970,7 +1084,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Primary<wbr>Azure<wbr>Port</span>
+        <span id="state_primaryazureport_csharp">
+<a href="#state_primaryazureport_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Azure<wbr>Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -979,7 +1095,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Primary<wbr>Peer<wbr>Address<wbr>Prefix</span>
+        <span id="state_primarypeeraddressprefix_csharp">
+<a href="#state_primarypeeraddressprefix_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Peer<wbr>Address<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -988,7 +1106,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="state_resourcegroupname_csharp">
+<a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -998,7 +1118,9 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
 
     <dt class="property-optional"
             title="Optional">
-        <span>Secondary<wbr>Azure<wbr>Port</span>
+        <span id="state_secondaryazureport_csharp">
+<a href="#state_secondaryazureport_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Azure<wbr>Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1007,7 +1129,9 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
 
     <dt class="property-optional"
             title="Optional">
-        <span>Secondary<wbr>Peer<wbr>Address<wbr>Prefix</span>
+        <span id="state_secondarypeeraddressprefix_csharp">
+<a href="#state_secondarypeeraddressprefix_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Peer<wbr>Address<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1016,7 +1140,9 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
 
     <dt class="property-optional"
             title="Optional">
-        <span>Shared<wbr>Key</span>
+        <span id="state_sharedkey_csharp">
+<a href="#state_sharedkey_csharp" style="color: inherit; text-decoration: inherit;">Shared<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1025,7 +1151,9 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vlan<wbr>Id</span>
+        <span id="state_vlanid_csharp">
+<a href="#state_vlanid_csharp" style="color: inherit; text-decoration: inherit;">Vlan<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1041,7 +1169,9 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
 
     <dt class="property-optional"
             title="Optional">
-        <span>Azure<wbr>Asn</span>
+        <span id="state_azureasn_go">
+<a href="#state_azureasn_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Asn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1050,7 +1180,9 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
 
     <dt class="property-optional"
             title="Optional">
-        <span>Express<wbr>Route<wbr>Circuit<wbr>Name</span>
+        <span id="state_expressroutecircuitname_go">
+<a href="#state_expressroutecircuitname_go" style="color: inherit; text-decoration: inherit;">Express<wbr>Route<wbr>Circuit<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1059,7 +1191,9 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
 
     <dt class="property-optional"
             title="Optional">
-        <span>Microsoft<wbr>Peering<wbr>Config</span>
+        <span id="state_microsoftpeeringconfig_go">
+<a href="#state_microsoftpeeringconfig_go" style="color: inherit; text-decoration: inherit;">Microsoft<wbr>Peering<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#expressroutecircuitpeeringmicrosoftpeeringconfig">Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Microsoft<wbr>Peering<wbr>Config</a></span>
     </dt>
@@ -1068,7 +1202,9 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
 
     <dt class="property-optional"
             title="Optional">
-        <span>Peer<wbr>Asn</span>
+        <span id="state_peerasn_go">
+<a href="#state_peerasn_go" style="color: inherit; text-decoration: inherit;">Peer<wbr>Asn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1077,7 +1213,9 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
 
     <dt class="property-optional"
             title="Optional">
-        <span>Peering<wbr>Type</span>
+        <span id="state_peeringtype_go">
+<a href="#state_peeringtype_go" style="color: inherit; text-decoration: inherit;">Peering<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1086,7 +1224,9 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
 
     <dt class="property-optional"
             title="Optional">
-        <span>Primary<wbr>Azure<wbr>Port</span>
+        <span id="state_primaryazureport_go">
+<a href="#state_primaryazureport_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Azure<wbr>Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1095,7 +1235,9 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
 
     <dt class="property-optional"
             title="Optional">
-        <span>Primary<wbr>Peer<wbr>Address<wbr>Prefix</span>
+        <span id="state_primarypeeraddressprefix_go">
+<a href="#state_primarypeeraddressprefix_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Peer<wbr>Address<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1104,7 +1246,9 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="state_resourcegroupname_go">
+<a href="#state_resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1114,7 +1258,9 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
 
     <dt class="property-optional"
             title="Optional">
-        <span>Secondary<wbr>Azure<wbr>Port</span>
+        <span id="state_secondaryazureport_go">
+<a href="#state_secondaryazureport_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Azure<wbr>Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1123,7 +1269,9 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
 
     <dt class="property-optional"
             title="Optional">
-        <span>Secondary<wbr>Peer<wbr>Address<wbr>Prefix</span>
+        <span id="state_secondarypeeraddressprefix_go">
+<a href="#state_secondarypeeraddressprefix_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Peer<wbr>Address<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1132,7 +1280,9 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
 
     <dt class="property-optional"
             title="Optional">
-        <span>Shared<wbr>Key</span>
+        <span id="state_sharedkey_go">
+<a href="#state_sharedkey_go" style="color: inherit; text-decoration: inherit;">Shared<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1141,7 +1291,9 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vlan<wbr>Id</span>
+        <span id="state_vlanid_go">
+<a href="#state_vlanid_go" style="color: inherit; text-decoration: inherit;">Vlan<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1157,7 +1309,9 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
 
     <dt class="property-optional"
             title="Optional">
-        <span>azure<wbr>Asn</span>
+        <span id="state_azureasn_nodejs">
+<a href="#state_azureasn_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Asn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1166,7 +1320,9 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
 
     <dt class="property-optional"
             title="Optional">
-        <span>express<wbr>Route<wbr>Circuit<wbr>Name</span>
+        <span id="state_expressroutecircuitname_nodejs">
+<a href="#state_expressroutecircuitname_nodejs" style="color: inherit; text-decoration: inherit;">express<wbr>Route<wbr>Circuit<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1175,7 +1331,9 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
 
     <dt class="property-optional"
             title="Optional">
-        <span>microsoft<wbr>Peering<wbr>Config</span>
+        <span id="state_microsoftpeeringconfig_nodejs">
+<a href="#state_microsoftpeeringconfig_nodejs" style="color: inherit; text-decoration: inherit;">microsoft<wbr>Peering<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#expressroutecircuitpeeringmicrosoftpeeringconfig">Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Microsoft<wbr>Peering<wbr>Config</a></span>
     </dt>
@@ -1184,7 +1342,9 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
 
     <dt class="property-optional"
             title="Optional">
-        <span>peer<wbr>Asn</span>
+        <span id="state_peerasn_nodejs">
+<a href="#state_peerasn_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Asn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1193,7 +1353,9 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
 
     <dt class="property-optional"
             title="Optional">
-        <span>peering<wbr>Type</span>
+        <span id="state_peeringtype_nodejs">
+<a href="#state_peeringtype_nodejs" style="color: inherit; text-decoration: inherit;">peering<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1202,7 +1364,9 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
 
     <dt class="property-optional"
             title="Optional">
-        <span>primary<wbr>Azure<wbr>Port</span>
+        <span id="state_primaryazureport_nodejs">
+<a href="#state_primaryazureport_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Azure<wbr>Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1211,7 +1375,9 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
 
     <dt class="property-optional"
             title="Optional">
-        <span>primary<wbr>Peer<wbr>Address<wbr>Prefix</span>
+        <span id="state_primarypeeraddressprefix_nodejs">
+<a href="#state_primarypeeraddressprefix_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Peer<wbr>Address<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1220,7 +1386,9 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource<wbr>Group<wbr>Name</span>
+        <span id="state_resourcegroupname_nodejs">
+<a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1230,7 +1398,9 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
 
     <dt class="property-optional"
             title="Optional">
-        <span>secondary<wbr>Azure<wbr>Port</span>
+        <span id="state_secondaryazureport_nodejs">
+<a href="#state_secondaryazureport_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Azure<wbr>Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1239,7 +1409,9 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
 
     <dt class="property-optional"
             title="Optional">
-        <span>secondary<wbr>Peer<wbr>Address<wbr>Prefix</span>
+        <span id="state_secondarypeeraddressprefix_nodejs">
+<a href="#state_secondarypeeraddressprefix_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Peer<wbr>Address<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1248,7 +1420,9 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
 
     <dt class="property-optional"
             title="Optional">
-        <span>shared<wbr>Key</span>
+        <span id="state_sharedkey_nodejs">
+<a href="#state_sharedkey_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1257,7 +1431,9 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
 
     <dt class="property-optional"
             title="Optional">
-        <span>vlan<wbr>Id</span>
+        <span id="state_vlanid_nodejs">
+<a href="#state_vlanid_nodejs" style="color: inherit; text-decoration: inherit;">vlan<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1273,7 +1449,9 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
 
     <dt class="property-optional"
             title="Optional">
-        <span>azure_<wbr>asn</span>
+        <span id="state_azure_asn_python">
+<a href="#state_azure_asn_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>asn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1282,7 +1460,9 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
 
     <dt class="property-optional"
             title="Optional">
-        <span>express_<wbr>route_<wbr>circuit_<wbr>name</span>
+        <span id="state_express_route_circuit_name_python">
+<a href="#state_express_route_circuit_name_python" style="color: inherit; text-decoration: inherit;">express_<wbr>route_<wbr>circuit_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1291,7 +1471,9 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
 
     <dt class="property-optional"
             title="Optional">
-        <span>microsoft_<wbr>peering_<wbr>config</span>
+        <span id="state_microsoft_peering_config_python">
+<a href="#state_microsoft_peering_config_python" style="color: inherit; text-decoration: inherit;">microsoft_<wbr>peering_<wbr>config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#expressroutecircuitpeeringmicrosoftpeeringconfig">Dict[Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Microsoft<wbr>Peering<wbr>Config]</a></span>
     </dt>
@@ -1300,7 +1482,9 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
 
     <dt class="property-optional"
             title="Optional">
-        <span>peer_<wbr>asn</span>
+        <span id="state_peer_asn_python">
+<a href="#state_peer_asn_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>asn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1309,7 +1493,9 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
 
     <dt class="property-optional"
             title="Optional">
-        <span>peering_<wbr>type</span>
+        <span id="state_peering_type_python">
+<a href="#state_peering_type_python" style="color: inherit; text-decoration: inherit;">peering_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1318,7 +1504,9 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
 
     <dt class="property-optional"
             title="Optional">
-        <span>primary_<wbr>azure_<wbr>port</span>
+        <span id="state_primary_azure_port_python">
+<a href="#state_primary_azure_port_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>azure_<wbr>port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1327,7 +1515,9 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
 
     <dt class="property-optional"
             title="Optional">
-        <span>primary_<wbr>peer_<wbr>address_<wbr>prefix</span>
+        <span id="state_primary_peer_address_prefix_python">
+<a href="#state_primary_peer_address_prefix_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>peer_<wbr>address_<wbr>prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1336,7 +1526,9 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource_<wbr>group_<wbr>name</span>
+        <span id="state_resource_group_name_python">
+<a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1346,7 +1538,9 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
 
     <dt class="property-optional"
             title="Optional">
-        <span>secondary_<wbr>azure_<wbr>port</span>
+        <span id="state_secondary_azure_port_python">
+<a href="#state_secondary_azure_port_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>azure_<wbr>port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1355,7 +1549,9 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
 
     <dt class="property-optional"
             title="Optional">
-        <span>secondary_<wbr>peer_<wbr>address_<wbr>prefix</span>
+        <span id="state_secondary_peer_address_prefix_python">
+<a href="#state_secondary_peer_address_prefix_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>peer_<wbr>address_<wbr>prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1364,7 +1560,9 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
 
     <dt class="property-optional"
             title="Optional">
-        <span>shared_<wbr>key</span>
+        <span id="state_shared_key_python">
+<a href="#state_shared_key_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1373,7 +1571,9 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
 
     <dt class="property-optional"
             title="Optional">
-        <span>vlan_<wbr>id</span>
+        <span id="state_vlan_id_python">
+<a href="#state_vlan_id_python" style="color: inherit; text-decoration: inherit;">vlan_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1415,7 +1615,9 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
 
     <dt class="property-required"
             title="Required">
-        <span>Advertised<wbr>Public<wbr>Prefixes</span>
+        <span id="advertisedpublicprefixes_csharp">
+<a href="#advertisedpublicprefixes_csharp" style="color: inherit; text-decoration: inherit;">Advertised<wbr>Public<wbr>Prefixes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1424,7 +1626,9 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
 
     <dt class="property-optional"
             title="Optional">
-        <span>Customer<wbr>Asn</span>
+        <span id="customerasn_csharp">
+<a href="#customerasn_csharp" style="color: inherit; text-decoration: inherit;">Customer<wbr>Asn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1433,7 +1637,9 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
 
     <dt class="property-optional"
             title="Optional">
-        <span>Routing<wbr>Registry<wbr>Name</span>
+        <span id="routingregistryname_csharp">
+<a href="#routingregistryname_csharp" style="color: inherit; text-decoration: inherit;">Routing<wbr>Registry<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1449,7 +1655,9 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
 
     <dt class="property-required"
             title="Required">
-        <span>Advertised<wbr>Public<wbr>Prefixes</span>
+        <span id="advertisedpublicprefixes_go">
+<a href="#advertisedpublicprefixes_go" style="color: inherit; text-decoration: inherit;">Advertised<wbr>Public<wbr>Prefixes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1458,7 +1666,9 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
 
     <dt class="property-optional"
             title="Optional">
-        <span>Customer<wbr>Asn</span>
+        <span id="customerasn_go">
+<a href="#customerasn_go" style="color: inherit; text-decoration: inherit;">Customer<wbr>Asn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1467,7 +1677,9 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
 
     <dt class="property-optional"
             title="Optional">
-        <span>Routing<wbr>Registry<wbr>Name</span>
+        <span id="routingregistryname_go">
+<a href="#routingregistryname_go" style="color: inherit; text-decoration: inherit;">Routing<wbr>Registry<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1483,7 +1695,9 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
 
     <dt class="property-required"
             title="Required">
-        <span>advertised<wbr>Public<wbr>Prefixes</span>
+        <span id="advertisedpublicprefixes_nodejs">
+<a href="#advertisedpublicprefixes_nodejs" style="color: inherit; text-decoration: inherit;">advertised<wbr>Public<wbr>Prefixes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1492,7 +1706,9 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
 
     <dt class="property-optional"
             title="Optional">
-        <span>customer<wbr>Asn</span>
+        <span id="customerasn_nodejs">
+<a href="#customerasn_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Asn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1501,7 +1717,9 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
 
     <dt class="property-optional"
             title="Optional">
-        <span>routing<wbr>Registry<wbr>Name</span>
+        <span id="routingregistryname_nodejs">
+<a href="#routingregistryname_nodejs" style="color: inherit; text-decoration: inherit;">routing<wbr>Registry<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1517,7 +1735,9 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
 
     <dt class="property-required"
             title="Required">
-        <span>advertised<wbr>Public<wbr>Prefixes</span>
+        <span id="advertisedpublicprefixes_python">
+<a href="#advertisedpublicprefixes_python" style="color: inherit; text-decoration: inherit;">advertised<wbr>Public<wbr>Prefixes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1526,7 +1746,9 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
 
     <dt class="property-optional"
             title="Optional">
-        <span>customer<wbr>Asn</span>
+        <span id="customerasn_python">
+<a href="#customerasn_python" style="color: inherit; text-decoration: inherit;">customer<wbr>Asn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1535,7 +1757,9 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
 
     <dt class="property-optional"
             title="Optional">
-        <span>routing<wbr>Registry<wbr>Name</span>
+        <span id="routingregistryname_python">
+<a href="#routingregistryname_python" style="color: inherit; text-decoration: inherit;">routing<wbr>Registry<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

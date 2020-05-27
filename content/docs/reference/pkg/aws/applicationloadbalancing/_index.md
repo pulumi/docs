@@ -35,6 +35,24 @@ Explore the resources and functions of the applicationloadbalancing module in th
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>2.4.0</dd>
+	<dd>2.6.0</dd>
+</dl>
+
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ApplicationLoadBalancing.html" title="Pulumi.Aws.ApplicationLoadBalancing">Pulumi.Aws.ApplicationLoadBalancing</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/applicationloadbalancing?tab=doc#" title="aws/applicationloadbalancing">aws/applicationloadbalancing</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/applicationloadbalancing/#" title="@pulumi/aws/applicationloadbalancing">@pulumi/aws/applicationloadbalancing</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_aws/applicationloadbalancing" title="pulumi_aws/applicationloadbalancing">pulumi_aws/applicationloadbalancing</a></dd>
+
 </dl>
 

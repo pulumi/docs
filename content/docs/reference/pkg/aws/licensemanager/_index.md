@@ -24,6 +24,24 @@ Explore the resources and functions of the licensemanager module in the AWS pack
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>2.4.0</dd>
+	<dd>2.6.0</dd>
+</dl>
+
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.LicenseManager.html" title="Pulumi.Aws.LicenseManager">Pulumi.Aws.LicenseManager</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/licensemanager?tab=doc#" title="aws/licensemanager">aws/licensemanager</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/licensemanager/#" title="@pulumi/aws/licensemanager">@pulumi/aws/licensemanager</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_aws/licensemanager" title="pulumi_aws/licensemanager">pulumi_aws/licensemanager</a></dd>
+
 </dl>
 

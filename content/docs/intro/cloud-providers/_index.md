@@ -33,12 +33,14 @@ aliases: ["/docs/reference/clouds/"]
 ## Infrastructure Providers
 
 * [Aiven]({{< relref "./aiven" >}})
+* [Auth0]({{< relref "./auth0" >}})
 * [Consul]({{< relref "./consul" >}})
 * [Docker]({{< relref "./docker" >}})
 * [Kafka]({{< relref "./kafka" >}})
 * [Mailgun]({{< relref "./mailgun" >}})
 * [MongoDB Atlas]({{< relref "./mongodbatlas" >}})
 * [Okta]({{< relref "./okta" >}})
+* [PagerDuty]({{< relref "./pagerduty" >}})
 * [RabbitMQ]({{< relref "./rabbitmq" >}})
 * [Rancher2]({{< relref "./rancher2" >}})
 * [Spotinst]({{< relref "./spotinst" >}})

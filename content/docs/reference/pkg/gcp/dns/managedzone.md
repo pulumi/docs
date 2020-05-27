@@ -217,6 +217,47 @@ peering_zone = gcp.dns.ManagedZone("peering-zone",
         },
     })
 ```
+## Example Usage - Dns Managed Zone Service Directory
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const example = new gcp.servicedirectory.Namespace("example", {
+    namespaceId: "example",
+    location: "us-central1",
+});
+const sd-zone = new gcp.dns.ManagedZone("sd-zone", {
+    dnsName: "services.example.com.",
+    description: "Example private DNS Service Directory zone",
+    visibility: "private",
+    service_directory_config: {
+        namespace: {
+            namespaceUrl: example.id,
+        },
+    },
+});
+const network = new gcp.compute.Network("network", {autoCreateSubnetworks: false});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+example = gcp.servicedirectory.Namespace("example",
+    namespace_id="example",
+    location="us-central1")
+sd_zone = gcp.dns.ManagedZone("sd-zone",
+    dns_name="services.example.com.",
+    description="Example private DNS Service Directory zone",
+    visibility="private",
+    service_directory_config={
+        "namespace": {
+            "namespaceUrl": example.id,
+        },
+    })
+network = gcp.compute.Network("network", auto_create_subnetworks=False)
+```
 
 
 
@@ -225,19 +266,19 @@ peering_zone = gcp.dns.ManagedZone("peering-zone",
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/dns/#ManagedZone">ManagedZone</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/dns/#ManagedZoneArgs">ManagedZoneArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/dns/#ManagedZone">ManagedZone</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/dns/#ManagedZoneArgs">ManagedZoneArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ManagedZone</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>dns_name=None<span class="p">, </span>dnssec_config=None<span class="p">, </span>forwarding_config=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>peering_config=None<span class="p">, </span>private_visibility_config=None<span class="p">, </span>project=None<span class="p">, </span>reverse_lookup=None<span class="p">, </span>service_directory_config=None<span class="p">, </span>visibility=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/dns/#ManagedZone">ManagedZone</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>dns_name=None<span class="p">, </span>dnssec_config=None<span class="p">, </span>forwarding_config=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>peering_config=None<span class="p">, </span>private_visibility_config=None<span class="p">, </span>project=None<span class="p">, </span>reverse_lookup=None<span class="p">, </span>service_directory_config=None<span class="p">, </span>visibility=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewManagedZone<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dns?tab=doc#ManagedZoneArgs">ManagedZoneArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dns?tab=doc#ManagedZone">ManagedZone</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dns?tab=doc#ManagedZone">NewManagedZone</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dns?tab=doc#ManagedZoneArgs">ManagedZoneArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dns?tab=doc#ManagedZone">ManagedZone</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dns.ManagedZone.html">ManagedZone</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dns.ManagedZoneArgs.html">ManagedZoneArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dns.ManagedZone.html">ManagedZone</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dns.ManagedZoneArgs.html">ManagedZoneArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -403,7 +444,9 @@ The ManagedZone resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>Dns<wbr>Name</span>
+        <span id="dnsname_csharp">
+<a href="#dnsname_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -412,7 +455,9 @@ The ManagedZone resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -421,7 +466,9 @@ The ManagedZone resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dnssec<wbr>Config</span>
+        <span id="dnssecconfig_csharp">
+<a href="#dnssecconfig_csharp" style="color: inherit; text-decoration: inherit;">Dnssec<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzonednssecconfig">Managed<wbr>Zone<wbr>Dnssec<wbr>Config<wbr>Args</a></span>
     </dt>
@@ -430,7 +477,9 @@ The ManagedZone resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Forwarding<wbr>Config</span>
+        <span id="forwardingconfig_csharp">
+<a href="#forwardingconfig_csharp" style="color: inherit; text-decoration: inherit;">Forwarding<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzoneforwardingconfig">Managed<wbr>Zone<wbr>Forwarding<wbr>Config<wbr>Args</a></span>
     </dt>
@@ -441,7 +490,9 @@ to forward to.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Labels</span>
+        <span id="labels_csharp">
+<a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -450,7 +501,9 @@ to forward to.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -460,7 +513,9 @@ Must be unique within the project.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Peering<wbr>Config</span>
+        <span id="peeringconfig_csharp">
+<a href="#peeringconfig_csharp" style="color: inherit; text-decoration: inherit;">Peering<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzonepeeringconfig">Managed<wbr>Zone<wbr>Peering<wbr>Config<wbr>Args</a></span>
     </dt>
@@ -470,7 +525,9 @@ zone. The value of this field contains the network to peer with.  Structure is d
 
     <dt class="property-optional"
             title="Optional">
-        <span>Private<wbr>Visibility<wbr>Config</span>
+        <span id="privatevisibilityconfig_csharp">
+<a href="#privatevisibilityconfig_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Visibility<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzoneprivatevisibilityconfig">Managed<wbr>Zone<wbr>Private<wbr>Visibility<wbr>Config<wbr>Args</a></span>
     </dt>
@@ -480,7 +537,9 @@ resources that the zone is visible from.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project</span>
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -490,7 +549,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Reverse<wbr>Lookup</span>
+        <span id="reverselookup_csharp">
+<a href="#reverselookup_csharp" style="color: inherit; text-decoration: inherit;">Reverse<wbr>Lookup</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -501,17 +562,20 @@ to networks listed under `private_visibility_config`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Service<wbr>Directory<wbr>Config</span>
+        <span id="servicedirectoryconfig_csharp">
+<a href="#servicedirectoryconfig_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Directory<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzoneservicedirectoryconfig">Managed<wbr>Zone<wbr>Service<wbr>Directory<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The presence of this field indicates that this zone is backed by Service Directory. The value of this field contains
-information related to the namespace associated with the zone.
+    <dd>{{% md %}}The presence of this field indicates that this zone is backed by Service Directory. The value of this field contains information related to the namespace associated with the zone.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Visibility</span>
+        <span id="visibility_csharp">
+<a href="#visibility_csharp" style="color: inherit; text-decoration: inherit;">Visibility</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -528,7 +592,9 @@ while private zones are visible only to Virtual Private Cloud resources.
 
     <dt class="property-required"
             title="Required">
-        <span>Dns<wbr>Name</span>
+        <span id="dnsname_go">
+<a href="#dnsname_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -537,7 +603,9 @@ while private zones are visible only to Virtual Private Cloud resources.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -546,7 +614,9 @@ while private zones are visible only to Virtual Private Cloud resources.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dnssec<wbr>Config</span>
+        <span id="dnssecconfig_go">
+<a href="#dnssecconfig_go" style="color: inherit; text-decoration: inherit;">Dnssec<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzonednssecconfig">Managed<wbr>Zone<wbr>Dnssec<wbr>Config</a></span>
     </dt>
@@ -555,7 +625,9 @@ while private zones are visible only to Virtual Private Cloud resources.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Forwarding<wbr>Config</span>
+        <span id="forwardingconfig_go">
+<a href="#forwardingconfig_go" style="color: inherit; text-decoration: inherit;">Forwarding<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzoneforwardingconfig">Managed<wbr>Zone<wbr>Forwarding<wbr>Config</a></span>
     </dt>
@@ -566,7 +638,9 @@ to forward to.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Labels</span>
+        <span id="labels_go">
+<a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -575,7 +649,9 @@ to forward to.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -585,7 +661,9 @@ Must be unique within the project.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Peering<wbr>Config</span>
+        <span id="peeringconfig_go">
+<a href="#peeringconfig_go" style="color: inherit; text-decoration: inherit;">Peering<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzonepeeringconfig">Managed<wbr>Zone<wbr>Peering<wbr>Config</a></span>
     </dt>
@@ -595,7 +673,9 @@ zone. The value of this field contains the network to peer with.  Structure is d
 
     <dt class="property-optional"
             title="Optional">
-        <span>Private<wbr>Visibility<wbr>Config</span>
+        <span id="privatevisibilityconfig_go">
+<a href="#privatevisibilityconfig_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Visibility<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzoneprivatevisibilityconfig">Managed<wbr>Zone<wbr>Private<wbr>Visibility<wbr>Config</a></span>
     </dt>
@@ -605,7 +685,9 @@ resources that the zone is visible from.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project</span>
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -615,7 +697,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Reverse<wbr>Lookup</span>
+        <span id="reverselookup_go">
+<a href="#reverselookup_go" style="color: inherit; text-decoration: inherit;">Reverse<wbr>Lookup</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -626,17 +710,20 @@ to networks listed under `private_visibility_config`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Service<wbr>Directory<wbr>Config</span>
+        <span id="servicedirectoryconfig_go">
+<a href="#servicedirectoryconfig_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Directory<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzoneservicedirectoryconfig">Managed<wbr>Zone<wbr>Service<wbr>Directory<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}The presence of this field indicates that this zone is backed by Service Directory. The value of this field contains
-information related to the namespace associated with the zone.
+    <dd>{{% md %}}The presence of this field indicates that this zone is backed by Service Directory. The value of this field contains information related to the namespace associated with the zone.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Visibility</span>
+        <span id="visibility_go">
+<a href="#visibility_go" style="color: inherit; text-decoration: inherit;">Visibility</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -653,7 +740,9 @@ while private zones are visible only to Virtual Private Cloud resources.
 
     <dt class="property-required"
             title="Required">
-        <span>dns<wbr>Name</span>
+        <span id="dnsname_nodejs">
+<a href="#dnsname_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -662,7 +751,9 @@ while private zones are visible only to Virtual Private Cloud resources.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -671,7 +762,9 @@ while private zones are visible only to Virtual Private Cloud resources.
 
     <dt class="property-optional"
             title="Optional">
-        <span>dnssec<wbr>Config</span>
+        <span id="dnssecconfig_nodejs">
+<a href="#dnssecconfig_nodejs" style="color: inherit; text-decoration: inherit;">dnssec<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzonednssecconfig">Managed<wbr>Zone<wbr>Dnssec<wbr>Config</a></span>
     </dt>
@@ -680,7 +773,9 @@ while private zones are visible only to Virtual Private Cloud resources.
 
     <dt class="property-optional"
             title="Optional">
-        <span>forwarding<wbr>Config</span>
+        <span id="forwardingconfig_nodejs">
+<a href="#forwardingconfig_nodejs" style="color: inherit; text-decoration: inherit;">forwarding<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzoneforwardingconfig">Managed<wbr>Zone<wbr>Forwarding<wbr>Config</a></span>
     </dt>
@@ -691,7 +786,9 @@ to forward to.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>labels</span>
+        <span id="labels_nodejs">
+<a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -700,7 +797,9 @@ to forward to.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -710,7 +809,9 @@ Must be unique within the project.
 
     <dt class="property-optional"
             title="Optional">
-        <span>peering<wbr>Config</span>
+        <span id="peeringconfig_nodejs">
+<a href="#peeringconfig_nodejs" style="color: inherit; text-decoration: inherit;">peering<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzonepeeringconfig">Managed<wbr>Zone<wbr>Peering<wbr>Config</a></span>
     </dt>
@@ -720,7 +821,9 @@ zone. The value of this field contains the network to peer with.  Structure is d
 
     <dt class="property-optional"
             title="Optional">
-        <span>private<wbr>Visibility<wbr>Config</span>
+        <span id="privatevisibilityconfig_nodejs">
+<a href="#privatevisibilityconfig_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Visibility<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzoneprivatevisibilityconfig">Managed<wbr>Zone<wbr>Private<wbr>Visibility<wbr>Config</a></span>
     </dt>
@@ -730,7 +833,9 @@ resources that the zone is visible from.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>project</span>
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -740,7 +845,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>reverse<wbr>Lookup</span>
+        <span id="reverselookup_nodejs">
+<a href="#reverselookup_nodejs" style="color: inherit; text-decoration: inherit;">reverse<wbr>Lookup</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -751,17 +858,20 @@ to networks listed under `private_visibility_config`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>service<wbr>Directory<wbr>Config</span>
+        <span id="servicedirectoryconfig_nodejs">
+<a href="#servicedirectoryconfig_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Directory<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzoneservicedirectoryconfig">Managed<wbr>Zone<wbr>Service<wbr>Directory<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}The presence of this field indicates that this zone is backed by Service Directory. The value of this field contains
-information related to the namespace associated with the zone.
+    <dd>{{% md %}}The presence of this field indicates that this zone is backed by Service Directory. The value of this field contains information related to the namespace associated with the zone.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>visibility</span>
+        <span id="visibility_nodejs">
+<a href="#visibility_nodejs" style="color: inherit; text-decoration: inherit;">visibility</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -778,7 +888,9 @@ while private zones are visible only to Virtual Private Cloud resources.
 
     <dt class="property-required"
             title="Required">
-        <span>dns_<wbr>name</span>
+        <span id="dns_name_python">
+<a href="#dns_name_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -787,7 +899,9 @@ while private zones are visible only to Virtual Private Cloud resources.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -796,7 +910,9 @@ while private zones are visible only to Virtual Private Cloud resources.
 
     <dt class="property-optional"
             title="Optional">
-        <span>dnssec_<wbr>config</span>
+        <span id="dnssec_config_python">
+<a href="#dnssec_config_python" style="color: inherit; text-decoration: inherit;">dnssec_<wbr>config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzonednssecconfig">Dict[Managed<wbr>Zone<wbr>Dnssec<wbr>Config]</a></span>
     </dt>
@@ -805,7 +921,9 @@ while private zones are visible only to Virtual Private Cloud resources.
 
     <dt class="property-optional"
             title="Optional">
-        <span>forwarding_<wbr>config</span>
+        <span id="forwarding_config_python">
+<a href="#forwarding_config_python" style="color: inherit; text-decoration: inherit;">forwarding_<wbr>config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzoneforwardingconfig">Dict[Managed<wbr>Zone<wbr>Forwarding<wbr>Config]</a></span>
     </dt>
@@ -816,7 +934,9 @@ to forward to.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>labels</span>
+        <span id="labels_python">
+<a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -825,7 +945,9 @@ to forward to.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -835,7 +957,9 @@ Must be unique within the project.
 
     <dt class="property-optional"
             title="Optional">
-        <span>peering_<wbr>config</span>
+        <span id="peering_config_python">
+<a href="#peering_config_python" style="color: inherit; text-decoration: inherit;">peering_<wbr>config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzonepeeringconfig">Dict[Managed<wbr>Zone<wbr>Peering<wbr>Config]</a></span>
     </dt>
@@ -845,7 +969,9 @@ zone. The value of this field contains the network to peer with.  Structure is d
 
     <dt class="property-optional"
             title="Optional">
-        <span>private_<wbr>visibility_<wbr>config</span>
+        <span id="private_visibility_config_python">
+<a href="#private_visibility_config_python" style="color: inherit; text-decoration: inherit;">private_<wbr>visibility_<wbr>config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzoneprivatevisibilityconfig">Dict[Managed<wbr>Zone<wbr>Private<wbr>Visibility<wbr>Config]</a></span>
     </dt>
@@ -855,7 +981,9 @@ resources that the zone is visible from.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>project</span>
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -865,7 +993,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>reverse_<wbr>lookup</span>
+        <span id="reverse_lookup_python">
+<a href="#reverse_lookup_python" style="color: inherit; text-decoration: inherit;">reverse_<wbr>lookup</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -876,17 +1006,20 @@ to networks listed under `private_visibility_config`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>service_<wbr>directory_<wbr>config</span>
+        <span id="service_directory_config_python">
+<a href="#service_directory_config_python" style="color: inherit; text-decoration: inherit;">service_<wbr>directory_<wbr>config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzoneservicedirectoryconfig">Dict[Managed<wbr>Zone<wbr>Service<wbr>Directory<wbr>Config]</a></span>
     </dt>
-    <dd>{{% md %}}The presence of this field indicates that this zone is backed by Service Directory. The value of this field contains
-information related to the namespace associated with the zone.
+    <dd>{{% md %}}The presence of this field indicates that this zone is backed by Service Directory. The value of this field contains information related to the namespace associated with the zone.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>visibility</span>
+        <span id="visibility_python">
+<a href="#visibility_python" style="color: inherit; text-decoration: inherit;">visibility</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -914,7 +1047,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -922,7 +1057,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Name<wbr>Servers</span>
+        <span id="nameservers_csharp">
+<a href="#nameservers_csharp" style="color: inherit; text-decoration: inherit;">Name<wbr>Servers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -938,7 +1075,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -946,7 +1085,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Name<wbr>Servers</span>
+        <span id="nameservers_go">
+<a href="#nameservers_go" style="color: inherit; text-decoration: inherit;">Name<wbr>Servers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -962,7 +1103,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -970,7 +1113,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>name<wbr>Servers</span>
+        <span id="nameservers_nodejs">
+<a href="#nameservers_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Servers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -986,7 +1131,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -994,7 +1141,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>name_<wbr>servers</span>
+        <span id="name_servers_python">
+<a href="#name_servers_python" style="color: inherit; text-decoration: inherit;">name_<wbr>servers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1016,7 +1165,7 @@ Get an existing ManagedZone resource's state with the given name, ID, and option
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/dns/#ManagedZoneState">ManagedZoneState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/dns/#ManagedZone">ManagedZone</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/dns/#ManagedZoneState">ManagedZoneState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/dns/#ManagedZone">ManagedZone</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1024,11 +1173,11 @@ Get an existing ManagedZone resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetManagedZone<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dns?tab=doc#ManagedZoneState">ManagedZoneState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dns?tab=doc#ManagedZone">ManagedZone</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetManagedZone<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dns?tab=doc#ManagedZoneState">ManagedZoneState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dns?tab=doc#ManagedZone">ManagedZone</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dns.ManagedZone.html">ManagedZone</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dns.ManagedZoneState.html">ManagedZoneState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dns.ManagedZone.html">ManagedZone</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dns.ManagedZoneState.html">ManagedZoneState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1136,7 +1285,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_csharp">
+<a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1145,7 +1296,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dns<wbr>Name</span>
+        <span id="state_dnsname_csharp">
+<a href="#state_dnsname_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1154,7 +1307,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dnssec<wbr>Config</span>
+        <span id="state_dnssecconfig_csharp">
+<a href="#state_dnssecconfig_csharp" style="color: inherit; text-decoration: inherit;">Dnssec<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzonednssecconfig">Managed<wbr>Zone<wbr>Dnssec<wbr>Config<wbr>Args</a></span>
     </dt>
@@ -1163,7 +1318,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Forwarding<wbr>Config</span>
+        <span id="state_forwardingconfig_csharp">
+<a href="#state_forwardingconfig_csharp" style="color: inherit; text-decoration: inherit;">Forwarding<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzoneforwardingconfig">Managed<wbr>Zone<wbr>Forwarding<wbr>Config<wbr>Args</a></span>
     </dt>
@@ -1174,7 +1331,9 @@ to forward to.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Labels</span>
+        <span id="state_labels_csharp">
+<a href="#state_labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -1183,7 +1342,9 @@ to forward to.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1193,7 +1354,9 @@ Must be unique within the project.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name<wbr>Servers</span>
+        <span id="state_nameservers_csharp">
+<a href="#state_nameservers_csharp" style="color: inherit; text-decoration: inherit;">Name<wbr>Servers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1202,7 +1365,9 @@ Must be unique within the project.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Peering<wbr>Config</span>
+        <span id="state_peeringconfig_csharp">
+<a href="#state_peeringconfig_csharp" style="color: inherit; text-decoration: inherit;">Peering<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzonepeeringconfig">Managed<wbr>Zone<wbr>Peering<wbr>Config<wbr>Args</a></span>
     </dt>
@@ -1212,7 +1377,9 @@ zone. The value of this field contains the network to peer with.  Structure is d
 
     <dt class="property-optional"
             title="Optional">
-        <span>Private<wbr>Visibility<wbr>Config</span>
+        <span id="state_privatevisibilityconfig_csharp">
+<a href="#state_privatevisibilityconfig_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Visibility<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzoneprivatevisibilityconfig">Managed<wbr>Zone<wbr>Private<wbr>Visibility<wbr>Config<wbr>Args</a></span>
     </dt>
@@ -1222,7 +1389,9 @@ resources that the zone is visible from.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project</span>
+        <span id="state_project_csharp">
+<a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1232,7 +1401,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Reverse<wbr>Lookup</span>
+        <span id="state_reverselookup_csharp">
+<a href="#state_reverselookup_csharp" style="color: inherit; text-decoration: inherit;">Reverse<wbr>Lookup</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1243,17 +1414,20 @@ to networks listed under `private_visibility_config`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Service<wbr>Directory<wbr>Config</span>
+        <span id="state_servicedirectoryconfig_csharp">
+<a href="#state_servicedirectoryconfig_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Directory<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzoneservicedirectoryconfig">Managed<wbr>Zone<wbr>Service<wbr>Directory<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The presence of this field indicates that this zone is backed by Service Directory. The value of this field contains
-information related to the namespace associated with the zone.
+    <dd>{{% md %}}The presence of this field indicates that this zone is backed by Service Directory. The value of this field contains information related to the namespace associated with the zone.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Visibility</span>
+        <span id="state_visibility_csharp">
+<a href="#state_visibility_csharp" style="color: inherit; text-decoration: inherit;">Visibility</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1270,7 +1444,9 @@ while private zones are visible only to Virtual Private Cloud resources.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_go">
+<a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1279,7 +1455,9 @@ while private zones are visible only to Virtual Private Cloud resources.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dns<wbr>Name</span>
+        <span id="state_dnsname_go">
+<a href="#state_dnsname_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1288,7 +1466,9 @@ while private zones are visible only to Virtual Private Cloud resources.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dnssec<wbr>Config</span>
+        <span id="state_dnssecconfig_go">
+<a href="#state_dnssecconfig_go" style="color: inherit; text-decoration: inherit;">Dnssec<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzonednssecconfig">Managed<wbr>Zone<wbr>Dnssec<wbr>Config</a></span>
     </dt>
@@ -1297,7 +1477,9 @@ while private zones are visible only to Virtual Private Cloud resources.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Forwarding<wbr>Config</span>
+        <span id="state_forwardingconfig_go">
+<a href="#state_forwardingconfig_go" style="color: inherit; text-decoration: inherit;">Forwarding<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzoneforwardingconfig">Managed<wbr>Zone<wbr>Forwarding<wbr>Config</a></span>
     </dt>
@@ -1308,7 +1490,9 @@ to forward to.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Labels</span>
+        <span id="state_labels_go">
+<a href="#state_labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -1317,7 +1501,9 @@ to forward to.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1327,7 +1513,9 @@ Must be unique within the project.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name<wbr>Servers</span>
+        <span id="state_nameservers_go">
+<a href="#state_nameservers_go" style="color: inherit; text-decoration: inherit;">Name<wbr>Servers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1336,7 +1524,9 @@ Must be unique within the project.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Peering<wbr>Config</span>
+        <span id="state_peeringconfig_go">
+<a href="#state_peeringconfig_go" style="color: inherit; text-decoration: inherit;">Peering<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzonepeeringconfig">Managed<wbr>Zone<wbr>Peering<wbr>Config</a></span>
     </dt>
@@ -1346,7 +1536,9 @@ zone. The value of this field contains the network to peer with.  Structure is d
 
     <dt class="property-optional"
             title="Optional">
-        <span>Private<wbr>Visibility<wbr>Config</span>
+        <span id="state_privatevisibilityconfig_go">
+<a href="#state_privatevisibilityconfig_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Visibility<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzoneprivatevisibilityconfig">Managed<wbr>Zone<wbr>Private<wbr>Visibility<wbr>Config</a></span>
     </dt>
@@ -1356,7 +1548,9 @@ resources that the zone is visible from.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project</span>
+        <span id="state_project_go">
+<a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1366,7 +1560,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Reverse<wbr>Lookup</span>
+        <span id="state_reverselookup_go">
+<a href="#state_reverselookup_go" style="color: inherit; text-decoration: inherit;">Reverse<wbr>Lookup</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1377,17 +1573,20 @@ to networks listed under `private_visibility_config`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Service<wbr>Directory<wbr>Config</span>
+        <span id="state_servicedirectoryconfig_go">
+<a href="#state_servicedirectoryconfig_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Directory<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzoneservicedirectoryconfig">Managed<wbr>Zone<wbr>Service<wbr>Directory<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}The presence of this field indicates that this zone is backed by Service Directory. The value of this field contains
-information related to the namespace associated with the zone.
+    <dd>{{% md %}}The presence of this field indicates that this zone is backed by Service Directory. The value of this field contains information related to the namespace associated with the zone.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Visibility</span>
+        <span id="state_visibility_go">
+<a href="#state_visibility_go" style="color: inherit; text-decoration: inherit;">Visibility</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1404,7 +1603,9 @@ while private zones are visible only to Virtual Private Cloud resources.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_nodejs">
+<a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1413,7 +1614,9 @@ while private zones are visible only to Virtual Private Cloud resources.
 
     <dt class="property-optional"
             title="Optional">
-        <span>dns<wbr>Name</span>
+        <span id="state_dnsname_nodejs">
+<a href="#state_dnsname_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1422,7 +1625,9 @@ while private zones are visible only to Virtual Private Cloud resources.
 
     <dt class="property-optional"
             title="Optional">
-        <span>dnssec<wbr>Config</span>
+        <span id="state_dnssecconfig_nodejs">
+<a href="#state_dnssecconfig_nodejs" style="color: inherit; text-decoration: inherit;">dnssec<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzonednssecconfig">Managed<wbr>Zone<wbr>Dnssec<wbr>Config</a></span>
     </dt>
@@ -1431,7 +1636,9 @@ while private zones are visible only to Virtual Private Cloud resources.
 
     <dt class="property-optional"
             title="Optional">
-        <span>forwarding<wbr>Config</span>
+        <span id="state_forwardingconfig_nodejs">
+<a href="#state_forwardingconfig_nodejs" style="color: inherit; text-decoration: inherit;">forwarding<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzoneforwardingconfig">Managed<wbr>Zone<wbr>Forwarding<wbr>Config</a></span>
     </dt>
@@ -1442,7 +1649,9 @@ to forward to.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>labels</span>
+        <span id="state_labels_nodejs">
+<a href="#state_labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -1451,7 +1660,9 @@ to forward to.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1461,7 +1672,9 @@ Must be unique within the project.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name<wbr>Servers</span>
+        <span id="state_nameservers_nodejs">
+<a href="#state_nameservers_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Servers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1470,7 +1683,9 @@ Must be unique within the project.
 
     <dt class="property-optional"
             title="Optional">
-        <span>peering<wbr>Config</span>
+        <span id="state_peeringconfig_nodejs">
+<a href="#state_peeringconfig_nodejs" style="color: inherit; text-decoration: inherit;">peering<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzonepeeringconfig">Managed<wbr>Zone<wbr>Peering<wbr>Config</a></span>
     </dt>
@@ -1480,7 +1695,9 @@ zone. The value of this field contains the network to peer with.  Structure is d
 
     <dt class="property-optional"
             title="Optional">
-        <span>private<wbr>Visibility<wbr>Config</span>
+        <span id="state_privatevisibilityconfig_nodejs">
+<a href="#state_privatevisibilityconfig_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Visibility<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzoneprivatevisibilityconfig">Managed<wbr>Zone<wbr>Private<wbr>Visibility<wbr>Config</a></span>
     </dt>
@@ -1490,7 +1707,9 @@ resources that the zone is visible from.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>project</span>
+        <span id="state_project_nodejs">
+<a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1500,7 +1719,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>reverse<wbr>Lookup</span>
+        <span id="state_reverselookup_nodejs">
+<a href="#state_reverselookup_nodejs" style="color: inherit; text-decoration: inherit;">reverse<wbr>Lookup</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1511,17 +1732,20 @@ to networks listed under `private_visibility_config`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>service<wbr>Directory<wbr>Config</span>
+        <span id="state_servicedirectoryconfig_nodejs">
+<a href="#state_servicedirectoryconfig_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Directory<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzoneservicedirectoryconfig">Managed<wbr>Zone<wbr>Service<wbr>Directory<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}The presence of this field indicates that this zone is backed by Service Directory. The value of this field contains
-information related to the namespace associated with the zone.
+    <dd>{{% md %}}The presence of this field indicates that this zone is backed by Service Directory. The value of this field contains information related to the namespace associated with the zone.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>visibility</span>
+        <span id="state_visibility_nodejs">
+<a href="#state_visibility_nodejs" style="color: inherit; text-decoration: inherit;">visibility</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1538,7 +1762,9 @@ while private zones are visible only to Virtual Private Cloud resources.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_python">
+<a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1547,7 +1773,9 @@ while private zones are visible only to Virtual Private Cloud resources.
 
     <dt class="property-optional"
             title="Optional">
-        <span>dns_<wbr>name</span>
+        <span id="state_dns_name_python">
+<a href="#state_dns_name_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1556,7 +1784,9 @@ while private zones are visible only to Virtual Private Cloud resources.
 
     <dt class="property-optional"
             title="Optional">
-        <span>dnssec_<wbr>config</span>
+        <span id="state_dnssec_config_python">
+<a href="#state_dnssec_config_python" style="color: inherit; text-decoration: inherit;">dnssec_<wbr>config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzonednssecconfig">Dict[Managed<wbr>Zone<wbr>Dnssec<wbr>Config]</a></span>
     </dt>
@@ -1565,7 +1795,9 @@ while private zones are visible only to Virtual Private Cloud resources.
 
     <dt class="property-optional"
             title="Optional">
-        <span>forwarding_<wbr>config</span>
+        <span id="state_forwarding_config_python">
+<a href="#state_forwarding_config_python" style="color: inherit; text-decoration: inherit;">forwarding_<wbr>config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzoneforwardingconfig">Dict[Managed<wbr>Zone<wbr>Forwarding<wbr>Config]</a></span>
     </dt>
@@ -1576,7 +1808,9 @@ to forward to.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>labels</span>
+        <span id="state_labels_python">
+<a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -1585,7 +1819,9 @@ to forward to.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1595,7 +1831,9 @@ Must be unique within the project.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name_<wbr>servers</span>
+        <span id="state_name_servers_python">
+<a href="#state_name_servers_python" style="color: inherit; text-decoration: inherit;">name_<wbr>servers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1604,7 +1842,9 @@ Must be unique within the project.
 
     <dt class="property-optional"
             title="Optional">
-        <span>peering_<wbr>config</span>
+        <span id="state_peering_config_python">
+<a href="#state_peering_config_python" style="color: inherit; text-decoration: inherit;">peering_<wbr>config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzonepeeringconfig">Dict[Managed<wbr>Zone<wbr>Peering<wbr>Config]</a></span>
     </dt>
@@ -1614,7 +1854,9 @@ zone. The value of this field contains the network to peer with.  Structure is d
 
     <dt class="property-optional"
             title="Optional">
-        <span>private_<wbr>visibility_<wbr>config</span>
+        <span id="state_private_visibility_config_python">
+<a href="#state_private_visibility_config_python" style="color: inherit; text-decoration: inherit;">private_<wbr>visibility_<wbr>config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzoneprivatevisibilityconfig">Dict[Managed<wbr>Zone<wbr>Private<wbr>Visibility<wbr>Config]</a></span>
     </dt>
@@ -1624,7 +1866,9 @@ resources that the zone is visible from.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>project</span>
+        <span id="state_project_python">
+<a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1634,7 +1878,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>reverse_<wbr>lookup</span>
+        <span id="state_reverse_lookup_python">
+<a href="#state_reverse_lookup_python" style="color: inherit; text-decoration: inherit;">reverse_<wbr>lookup</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1645,17 +1891,20 @@ to networks listed under `private_visibility_config`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>service_<wbr>directory_<wbr>config</span>
+        <span id="state_service_directory_config_python">
+<a href="#state_service_directory_config_python" style="color: inherit; text-decoration: inherit;">service_<wbr>directory_<wbr>config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzoneservicedirectoryconfig">Dict[Managed<wbr>Zone<wbr>Service<wbr>Directory<wbr>Config]</a></span>
     </dt>
-    <dd>{{% md %}}The presence of this field indicates that this zone is backed by Service Directory. The value of this field contains
-information related to the namespace associated with the zone.
+    <dd>{{% md %}}The presence of this field indicates that this zone is backed by Service Directory. The value of this field contains information related to the namespace associated with the zone.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>visibility</span>
+        <span id="state_visibility_python">
+<a href="#state_visibility_python" style="color: inherit; text-decoration: inherit;">visibility</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1698,7 +1947,9 @@ while private zones are visible only to Virtual Private Cloud resources.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default<wbr>Key<wbr>Specs</span>
+        <span id="defaultkeyspecs_csharp">
+<a href="#defaultkeyspecs_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Key<wbr>Specs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzonednssecconfigdefaultkeyspec">List&lt;Managed<wbr>Zone<wbr>Dnssec<wbr>Config<wbr>Default<wbr>Key<wbr>Spec<wbr>Args&gt;</a></span>
     </dt>
@@ -1710,7 +1961,9 @@ default_key_specs can only be updated when the state is `off`.  Structure is doc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Kind</span>
+        <span id="kind_csharp">
+<a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1719,7 +1972,9 @@ default_key_specs can only be updated when the state is `off`.  Structure is doc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Non<wbr>Existence</span>
+        <span id="nonexistence_csharp">
+<a href="#nonexistence_csharp" style="color: inherit; text-decoration: inherit;">Non<wbr>Existence</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1729,7 +1984,9 @@ non_existence can only be updated when the state is `off`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>State</span>
+        <span id="state_csharp">
+<a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1745,7 +2002,9 @@ non_existence can only be updated when the state is `off`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default<wbr>Key<wbr>Specs</span>
+        <span id="defaultkeyspecs_go">
+<a href="#defaultkeyspecs_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Key<wbr>Specs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzonednssecconfigdefaultkeyspec">[]Managed<wbr>Zone<wbr>Dnssec<wbr>Config<wbr>Default<wbr>Key<wbr>Spec</a></span>
     </dt>
@@ -1757,7 +2016,9 @@ default_key_specs can only be updated when the state is `off`.  Structure is doc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Kind</span>
+        <span id="kind_go">
+<a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1766,7 +2027,9 @@ default_key_specs can only be updated when the state is `off`.  Structure is doc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Non<wbr>Existence</span>
+        <span id="nonexistence_go">
+<a href="#nonexistence_go" style="color: inherit; text-decoration: inherit;">Non<wbr>Existence</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1776,7 +2039,9 @@ non_existence can only be updated when the state is `off`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>State</span>
+        <span id="state_go">
+<a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1792,7 +2057,9 @@ non_existence can only be updated when the state is `off`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>default<wbr>Key<wbr>Specs</span>
+        <span id="defaultkeyspecs_nodejs">
+<a href="#defaultkeyspecs_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Key<wbr>Specs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzonednssecconfigdefaultkeyspec">Managed<wbr>Zone<wbr>Dnssec<wbr>Config<wbr>Default<wbr>Key<wbr>Spec[]</a></span>
     </dt>
@@ -1804,7 +2071,9 @@ default_key_specs can only be updated when the state is `off`.  Structure is doc
 
     <dt class="property-optional"
             title="Optional">
-        <span>kind</span>
+        <span id="kind_nodejs">
+<a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1813,7 +2082,9 @@ default_key_specs can only be updated when the state is `off`.  Structure is doc
 
     <dt class="property-optional"
             title="Optional">
-        <span>non<wbr>Existence</span>
+        <span id="nonexistence_nodejs">
+<a href="#nonexistence_nodejs" style="color: inherit; text-decoration: inherit;">non<wbr>Existence</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1823,7 +2094,9 @@ non_existence can only be updated when the state is `off`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>state</span>
+        <span id="state_nodejs">
+<a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1839,7 +2112,9 @@ non_existence can only be updated when the state is `off`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>default<wbr>Key<wbr>Specs</span>
+        <span id="defaultkeyspecs_python">
+<a href="#defaultkeyspecs_python" style="color: inherit; text-decoration: inherit;">default<wbr>Key<wbr>Specs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzonednssecconfigdefaultkeyspec">List[Managed<wbr>Zone<wbr>Dnssec<wbr>Config<wbr>Default<wbr>Key<wbr>Spec]</a></span>
     </dt>
@@ -1851,7 +2126,9 @@ default_key_specs can only be updated when the state is `off`.  Structure is doc
 
     <dt class="property-optional"
             title="Optional">
-        <span>kind</span>
+        <span id="kind_python">
+<a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1860,7 +2137,9 @@ default_key_specs can only be updated when the state is `off`.  Structure is doc
 
     <dt class="property-optional"
             title="Optional">
-        <span>non<wbr>Existence</span>
+        <span id="nonexistence_python">
+<a href="#nonexistence_python" style="color: inherit; text-decoration: inherit;">non<wbr>Existence</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1870,7 +2149,9 @@ non_existence can only be updated when the state is `off`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>state</span>
+        <span id="state_python">
+<a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1904,7 +2185,9 @@ non_existence can only be updated when the state is `off`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Algorithm</span>
+        <span id="algorithm_csharp">
+<a href="#algorithm_csharp" style="color: inherit; text-decoration: inherit;">Algorithm</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1913,7 +2196,9 @@ non_existence can only be updated when the state is `off`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Key<wbr>Length</span>
+        <span id="keylength_csharp">
+<a href="#keylength_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Length</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1922,7 +2207,9 @@ non_existence can only be updated when the state is `off`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Key<wbr>Type</span>
+        <span id="keytype_csharp">
+<a href="#keytype_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1936,7 +2223,9 @@ to sign all other types of resource record sets.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Kind</span>
+        <span id="kind_csharp">
+<a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1952,7 +2241,9 @@ to sign all other types of resource record sets.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Algorithm</span>
+        <span id="algorithm_go">
+<a href="#algorithm_go" style="color: inherit; text-decoration: inherit;">Algorithm</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1961,7 +2252,9 @@ to sign all other types of resource record sets.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Key<wbr>Length</span>
+        <span id="keylength_go">
+<a href="#keylength_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Length</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1970,7 +2263,9 @@ to sign all other types of resource record sets.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Key<wbr>Type</span>
+        <span id="keytype_go">
+<a href="#keytype_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1984,7 +2279,9 @@ to sign all other types of resource record sets.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Kind</span>
+        <span id="kind_go">
+<a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2000,7 +2297,9 @@ to sign all other types of resource record sets.
 
     <dt class="property-optional"
             title="Optional">
-        <span>algorithm</span>
+        <span id="algorithm_nodejs">
+<a href="#algorithm_nodejs" style="color: inherit; text-decoration: inherit;">algorithm</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2009,7 +2308,9 @@ to sign all other types of resource record sets.
 
     <dt class="property-optional"
             title="Optional">
-        <span>key<wbr>Length</span>
+        <span id="keylength_nodejs">
+<a href="#keylength_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Length</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -2018,7 +2319,9 @@ to sign all other types of resource record sets.
 
     <dt class="property-optional"
             title="Optional">
-        <span>key<wbr>Type</span>
+        <span id="keytype_nodejs">
+<a href="#keytype_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2032,7 +2335,9 @@ to sign all other types of resource record sets.
 
     <dt class="property-optional"
             title="Optional">
-        <span>kind</span>
+        <span id="kind_nodejs">
+<a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2048,7 +2353,9 @@ to sign all other types of resource record sets.
 
     <dt class="property-optional"
             title="Optional">
-        <span>algorithm</span>
+        <span id="algorithm_python">
+<a href="#algorithm_python" style="color: inherit; text-decoration: inherit;">algorithm</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2057,7 +2364,9 @@ to sign all other types of resource record sets.
 
     <dt class="property-optional"
             title="Optional">
-        <span>key<wbr>Length</span>
+        <span id="keylength_python">
+<a href="#keylength_python" style="color: inherit; text-decoration: inherit;">key<wbr>Length</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2066,7 +2375,9 @@ to sign all other types of resource record sets.
 
     <dt class="property-optional"
             title="Optional">
-        <span>key<wbr>Type</span>
+        <span id="keytype_python">
+<a href="#keytype_python" style="color: inherit; text-decoration: inherit;">key<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2080,7 +2391,9 @@ to sign all other types of resource record sets.
 
     <dt class="property-optional"
             title="Optional">
-        <span>kind</span>
+        <span id="kind_python">
+<a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2114,7 +2427,9 @@ to sign all other types of resource record sets.
 
     <dt class="property-required"
             title="Required">
-        <span>Target<wbr>Name<wbr>Servers</span>
+        <span id="targetnameservers_csharp">
+<a href="#targetnameservers_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Name<wbr>Servers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzoneforwardingconfigtargetnameserver">List&lt;Managed<wbr>Zone<wbr>Forwarding<wbr>Config<wbr>Target<wbr>Name<wbr>Server<wbr>Args&gt;</a></span>
     </dt>
@@ -2132,7 +2447,9 @@ one target is given.  Structure is documented below.
 
     <dt class="property-required"
             title="Required">
-        <span>Target<wbr>Name<wbr>Servers</span>
+        <span id="targetnameservers_go">
+<a href="#targetnameservers_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Name<wbr>Servers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzoneforwardingconfigtargetnameserver">[]Managed<wbr>Zone<wbr>Forwarding<wbr>Config<wbr>Target<wbr>Name<wbr>Server</a></span>
     </dt>
@@ -2150,7 +2467,9 @@ one target is given.  Structure is documented below.
 
     <dt class="property-required"
             title="Required">
-        <span>target<wbr>Name<wbr>Servers</span>
+        <span id="targetnameservers_nodejs">
+<a href="#targetnameservers_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Name<wbr>Servers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzoneforwardingconfigtargetnameserver">Managed<wbr>Zone<wbr>Forwarding<wbr>Config<wbr>Target<wbr>Name<wbr>Server[]</a></span>
     </dt>
@@ -2168,7 +2487,9 @@ one target is given.  Structure is documented below.
 
     <dt class="property-required"
             title="Required">
-        <span>target<wbr>Name<wbr>Servers</span>
+        <span id="targetnameservers_python">
+<a href="#targetnameservers_python" style="color: inherit; text-decoration: inherit;">target<wbr>Name<wbr>Servers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzoneforwardingconfigtargetnameserver">List[Managed<wbr>Zone<wbr>Forwarding<wbr>Config<wbr>Target<wbr>Name<wbr>Server]</a></span>
     </dt>
@@ -2204,7 +2525,9 @@ one target is given.  Structure is documented below.
 
     <dt class="property-required"
             title="Required">
-        <span>Ipv4Address</span>
+        <span id="ipv4address_csharp">
+<a href="#ipv4address_csharp" style="color: inherit; text-decoration: inherit;">Ipv4Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2213,7 +2536,9 @@ one target is given.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Forwarding<wbr>Path</span>
+        <span id="forwardingpath_csharp">
+<a href="#forwardingpath_csharp" style="color: inherit; text-decoration: inherit;">Forwarding<wbr>Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2231,7 +2556,9 @@ to the Internet. When set to `private`, Cloud DNS will always send queries throu
 
     <dt class="property-required"
             title="Required">
-        <span>Ipv4Address</span>
+        <span id="ipv4address_go">
+<a href="#ipv4address_go" style="color: inherit; text-decoration: inherit;">Ipv4Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2240,7 +2567,9 @@ to the Internet. When set to `private`, Cloud DNS will always send queries throu
 
     <dt class="property-optional"
             title="Optional">
-        <span>Forwarding<wbr>Path</span>
+        <span id="forwardingpath_go">
+<a href="#forwardingpath_go" style="color: inherit; text-decoration: inherit;">Forwarding<wbr>Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2258,7 +2587,9 @@ to the Internet. When set to `private`, Cloud DNS will always send queries throu
 
     <dt class="property-required"
             title="Required">
-        <span>ipv4Address</span>
+        <span id="ipv4address_nodejs">
+<a href="#ipv4address_nodejs" style="color: inherit; text-decoration: inherit;">ipv4Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2267,7 +2598,9 @@ to the Internet. When set to `private`, Cloud DNS will always send queries throu
 
     <dt class="property-optional"
             title="Optional">
-        <span>forwarding<wbr>Path</span>
+        <span id="forwardingpath_nodejs">
+<a href="#forwardingpath_nodejs" style="color: inherit; text-decoration: inherit;">forwarding<wbr>Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2285,7 +2618,9 @@ to the Internet. When set to `private`, Cloud DNS will always send queries throu
 
     <dt class="property-required"
             title="Required">
-        <span>ipv4Address</span>
+        <span id="ipv4address_python">
+<a href="#ipv4address_python" style="color: inherit; text-decoration: inherit;">ipv4Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2294,7 +2629,9 @@ to the Internet. When set to `private`, Cloud DNS will always send queries throu
 
     <dt class="property-optional"
             title="Optional">
-        <span>forwarding<wbr>Path</span>
+        <span id="forwardingpath_python">
+<a href="#forwardingpath_python" style="color: inherit; text-decoration: inherit;">forwarding<wbr>Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2330,7 +2667,9 @@ to the Internet. When set to `private`, Cloud DNS will always send queries throu
 
     <dt class="property-required"
             title="Required">
-        <span>Target<wbr>Network</span>
+        <span id="targetnetwork_csharp">
+<a href="#targetnetwork_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Network</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzonepeeringconfigtargetnetwork">Managed<wbr>Zone<wbr>Peering<wbr>Config<wbr>Target<wbr>Network<wbr>Args</a></span>
     </dt>
@@ -2346,7 +2685,9 @@ to the Internet. When set to `private`, Cloud DNS will always send queries throu
 
     <dt class="property-required"
             title="Required">
-        <span>Target<wbr>Network</span>
+        <span id="targetnetwork_go">
+<a href="#targetnetwork_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Network</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzonepeeringconfigtargetnetwork">Managed<wbr>Zone<wbr>Peering<wbr>Config<wbr>Target<wbr>Network</a></span>
     </dt>
@@ -2362,7 +2703,9 @@ to the Internet. When set to `private`, Cloud DNS will always send queries throu
 
     <dt class="property-required"
             title="Required">
-        <span>target<wbr>Network</span>
+        <span id="targetnetwork_nodejs">
+<a href="#targetnetwork_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Network</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzonepeeringconfigtargetnetwork">Managed<wbr>Zone<wbr>Peering<wbr>Config<wbr>Target<wbr>Network</a></span>
     </dt>
@@ -2378,7 +2721,9 @@ to the Internet. When set to `private`, Cloud DNS will always send queries throu
 
     <dt class="property-required"
             title="Required">
-        <span>target<wbr>Network</span>
+        <span id="targetnetwork_python">
+<a href="#targetnetwork_python" style="color: inherit; text-decoration: inherit;">target<wbr>Network</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzonepeeringconfigtargetnetwork">Dict[Managed<wbr>Zone<wbr>Peering<wbr>Config<wbr>Target<wbr>Network]</a></span>
     </dt>
@@ -2412,7 +2757,9 @@ to the Internet. When set to `private`, Cloud DNS will always send queries throu
 
     <dt class="property-required"
             title="Required">
-        <span>Network<wbr>Url</span>
+        <span id="networkurl_csharp">
+<a href="#networkurl_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2430,7 +2777,9 @@ This should be formatted like
 
     <dt class="property-required"
             title="Required">
-        <span>Network<wbr>Url</span>
+        <span id="networkurl_go">
+<a href="#networkurl_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2448,7 +2797,9 @@ This should be formatted like
 
     <dt class="property-required"
             title="Required">
-        <span>network<wbr>Url</span>
+        <span id="networkurl_nodejs">
+<a href="#networkurl_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2466,7 +2817,9 @@ This should be formatted like
 
     <dt class="property-required"
             title="Required">
-        <span>network<wbr>Url</span>
+        <span id="networkurl_python">
+<a href="#networkurl_python" style="color: inherit; text-decoration: inherit;">network<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2502,7 +2855,9 @@ This should be formatted like
 
     <dt class="property-required"
             title="Required">
-        <span>Networks</span>
+        <span id="networks_csharp">
+<a href="#networks_csharp" style="color: inherit; text-decoration: inherit;">Networks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzoneprivatevisibilityconfignetwork">List&lt;Managed<wbr>Zone<wbr>Private<wbr>Visibility<wbr>Config<wbr>Network<wbr>Args&gt;</a></span>
     </dt>
@@ -2518,7 +2873,9 @@ This should be formatted like
 
     <dt class="property-required"
             title="Required">
-        <span>Networks</span>
+        <span id="networks_go">
+<a href="#networks_go" style="color: inherit; text-decoration: inherit;">Networks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzoneprivatevisibilityconfignetwork">[]Managed<wbr>Zone<wbr>Private<wbr>Visibility<wbr>Config<wbr>Network</a></span>
     </dt>
@@ -2534,7 +2891,9 @@ This should be formatted like
 
     <dt class="property-required"
             title="Required">
-        <span>networks</span>
+        <span id="networks_nodejs">
+<a href="#networks_nodejs" style="color: inherit; text-decoration: inherit;">networks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzoneprivatevisibilityconfignetwork">Managed<wbr>Zone<wbr>Private<wbr>Visibility<wbr>Config<wbr>Network[]</a></span>
     </dt>
@@ -2550,7 +2909,9 @@ This should be formatted like
 
     <dt class="property-required"
             title="Required">
-        <span>networks</span>
+        <span id="networks_python">
+<a href="#networks_python" style="color: inherit; text-decoration: inherit;">networks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzoneprivatevisibilityconfignetwork">List[Managed<wbr>Zone<wbr>Private<wbr>Visibility<wbr>Config<wbr>Network]</a></span>
     </dt>
@@ -2584,7 +2945,9 @@ This should be formatted like
 
     <dt class="property-required"
             title="Required">
-        <span>Network<wbr>Url</span>
+        <span id="networkurl_csharp">
+<a href="#networkurl_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2602,7 +2965,9 @@ This should be formatted like
 
     <dt class="property-required"
             title="Required">
-        <span>Network<wbr>Url</span>
+        <span id="networkurl_go">
+<a href="#networkurl_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2620,7 +2985,9 @@ This should be formatted like
 
     <dt class="property-required"
             title="Required">
-        <span>network<wbr>Url</span>
+        <span id="networkurl_nodejs">
+<a href="#networkurl_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2638,7 +3005,9 @@ This should be formatted like
 
     <dt class="property-required"
             title="Required">
-        <span>network<wbr>Url</span>
+        <span id="networkurl_python">
+<a href="#networkurl_python" style="color: inherit; text-decoration: inherit;">network<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2674,7 +3043,9 @@ This should be formatted like
 
     <dt class="property-required"
             title="Required">
-        <span>Namespace</span>
+        <span id="namespace_csharp">
+<a href="#namespace_csharp" style="color: inherit; text-decoration: inherit;">Namespace</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzoneservicedirectoryconfignamespace">Managed<wbr>Zone<wbr>Service<wbr>Directory<wbr>Config<wbr>Namespace<wbr>Args</a></span>
     </dt>
@@ -2690,7 +3061,9 @@ This should be formatted like
 
     <dt class="property-required"
             title="Required">
-        <span>Namespace</span>
+        <span id="namespace_go">
+<a href="#namespace_go" style="color: inherit; text-decoration: inherit;">Namespace</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzoneservicedirectoryconfignamespace">Managed<wbr>Zone<wbr>Service<wbr>Directory<wbr>Config<wbr>Namespace</a></span>
     </dt>
@@ -2706,7 +3079,9 @@ This should be formatted like
 
     <dt class="property-required"
             title="Required">
-        <span>namespace</span>
+        <span id="namespace_nodejs">
+<a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzoneservicedirectoryconfignamespace">Managed<wbr>Zone<wbr>Service<wbr>Directory<wbr>Config<wbr>Namespace</a></span>
     </dt>
@@ -2722,7 +3097,9 @@ This should be formatted like
 
     <dt class="property-required"
             title="Required">
-        <span>namespace</span>
+        <span id="namespace_python">
+<a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzoneservicedirectoryconfignamespace">Dict[Managed<wbr>Zone<wbr>Service<wbr>Directory<wbr>Config<wbr>Namespace]</a></span>
     </dt>
@@ -2756,7 +3133,9 @@ This should be formatted like
 
     <dt class="property-required"
             title="Required">
-        <span>Namespace<wbr>Url</span>
+        <span id="namespaceurl_csharp">
+<a href="#namespaceurl_csharp" style="color: inherit; text-decoration: inherit;">Namespace<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2776,7 +3155,9 @@ Ignored for `public` visibility zones.
 
     <dt class="property-required"
             title="Required">
-        <span>Namespace<wbr>Url</span>
+        <span id="namespaceurl_go">
+<a href="#namespaceurl_go" style="color: inherit; text-decoration: inherit;">Namespace<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2796,7 +3177,9 @@ Ignored for `public` visibility zones.
 
     <dt class="property-required"
             title="Required">
-        <span>namespace<wbr>Url</span>
+        <span id="namespaceurl_nodejs">
+<a href="#namespaceurl_nodejs" style="color: inherit; text-decoration: inherit;">namespace<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2816,7 +3199,9 @@ Ignored for `public` visibility zones.
 
     <dt class="property-required"
             title="Required">
-        <span>namespace<wbr>Url</span>
+        <span id="namespaceurl_python">
+<a href="#namespaceurl_python" style="color: inherit; text-decoration: inherit;">namespace<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

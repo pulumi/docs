@@ -60,7 +60,7 @@ export const virtualNetworkGatewayConnectionId = example.then(example => example
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getGatewayConnection<span class="p">(</span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/network/#GetGatewayConnectionArgs">GetGatewayConnectionArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/network/#GetGatewayConnectionResult">GetGatewayConnectionResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getGatewayConnection<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/network/#GetGatewayConnectionArgs">GetGatewayConnectionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/network/#GetGatewayConnectionResult">GetGatewayConnectionResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -70,13 +70,14 @@ export const virtualNetworkGatewayConnectionId = example.then(example => example
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetGatewayConnection<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#GetGatewayConnectionArgs">GetGatewayConnectionArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#GetGatewayConnectionResult">GetGatewayConnectionResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetGatewayConnection<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#GetGatewayConnectionArgs">GetGatewayConnectionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#GetGatewayConnectionResult">GetGatewayConnectionResult</a></span>, error)</span></code></pre></div>
+
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetGatewayConnection </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.GetGatewayConnectionResult.html">GetGatewayConnectionResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.GetGatewayConnectionArgs.html">GetGatewayConnectionArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.GetGatewayConnectionResult.html">GetGatewayConnectionResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.GetGatewayConnectionArgs.html">GetGatewayConnectionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -91,7 +92,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -100,7 +103,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_csharp">
+<a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -116,7 +121,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -125,7 +132,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_go">
+<a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -141,7 +150,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -150,7 +161,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_nodejs">
+<a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -166,7 +179,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -175,7 +190,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>resource_<wbr>group_<wbr>name</span>
+        <span id="resource_group_name_python">
+<a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -204,7 +221,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Authorization<wbr>Key</span>
+        <span id="authorizationkey_csharp">
+<a href="#authorizationkey_csharp" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -215,7 +234,9 @@ ExpressRoute connection.
 
     <dt class="property-"
             title="">
-        <span>Connection<wbr>Protocol</span>
+        <span id="connectionprotocol_csharp">
+<a href="#connectionprotocol_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -223,7 +244,9 @@ ExpressRoute connection.
 
     <dt class="property-"
             title="">
-        <span>Egress<wbr>Bytes<wbr>Transferred</span>
+        <span id="egressbytestransferred_csharp">
+<a href="#egressbytestransferred_csharp" style="color: inherit; text-decoration: inherit;">Egress<wbr>Bytes<wbr>Transferred</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -231,7 +254,9 @@ ExpressRoute connection.
 
     <dt class="property-"
             title="">
-        <span>Enable<wbr>Bgp</span>
+        <span id="enablebgp_csharp">
+<a href="#enablebgp_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Bgp</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -241,7 +266,9 @@ for this connection.
 
     <dt class="property-"
             title="">
-        <span>Express<wbr>Route<wbr>Circuit<wbr>Id</span>
+        <span id="expressroutecircuitid_csharp">
+<a href="#expressroutecircuitid_csharp" style="color: inherit; text-decoration: inherit;">Express<wbr>Route<wbr>Circuit<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -251,7 +278,9 @@ for this connection.
 
     <dt class="property-"
             title="">
-        <span>Express<wbr>Route<wbr>Gateway<wbr>Bypass</span>
+        <span id="expressroutegatewaybypass_csharp">
+<a href="#expressroutegatewaybypass_csharp" style="color: inherit; text-decoration: inherit;">Express<wbr>Route<wbr>Gateway<wbr>Bypass</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -260,7 +289,9 @@ for this connection.
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -269,7 +300,9 @@ for this connection.
 
     <dt class="property-"
             title="">
-        <span>Ingress<wbr>Bytes<wbr>Transferred</span>
+        <span id="ingressbytestransferred_csharp">
+<a href="#ingressbytestransferred_csharp" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Bytes<wbr>Transferred</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -277,7 +310,9 @@ for this connection.
 
     <dt class="property-"
             title="">
-        <span>Ipsec<wbr>Policies</span>
+        <span id="ipsecpolicies_csharp">
+<a href="#ipsecpolicies_csharp" style="color: inherit; text-decoration: inherit;">Ipsec<wbr>Policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getgatewayconnectionipsecpolicy">List&lt;Get<wbr>Gateway<wbr>Connection<wbr>Ipsec<wbr>Policy&gt;</a></span>
     </dt>
@@ -285,7 +320,9 @@ for this connection.
 
     <dt class="property-"
             title="">
-        <span>Local<wbr>Network<wbr>Gateway<wbr>Id</span>
+        <span id="localnetworkgatewayid_csharp">
+<a href="#localnetworkgatewayid_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Network<wbr>Gateway<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -295,7 +332,9 @@ when a Site-to-Site connection (i.e. when `type` is `IPsec`).
 
     <dt class="property-"
             title="">
-        <span>Location</span>
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -305,7 +344,9 @@ located.
 
     <dt class="property-"
             title="">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -313,7 +354,9 @@ located.
 
     <dt class="property-"
             title="">
-        <span>Peer<wbr>Virtual<wbr>Network<wbr>Gateway<wbr>Id</span>
+        <span id="peervirtualnetworkgatewayid_csharp">
+<a href="#peervirtualnetworkgatewayid_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>Virtual<wbr>Network<wbr>Gateway<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -324,7 +367,9 @@ is `Vnet2Vnet`).
 
     <dt class="property-"
             title="">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_csharp">
+<a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -332,7 +377,9 @@ is `Vnet2Vnet`).
 
     <dt class="property-"
             title="">
-        <span>Resource<wbr>Guid</span>
+        <span id="resourceguid_csharp">
+<a href="#resourceguid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Guid</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -340,7 +387,9 @@ is `Vnet2Vnet`).
 
     <dt class="property-"
             title="">
-        <span>Routing<wbr>Weight</span>
+        <span id="routingweight_csharp">
+<a href="#routingweight_csharp" style="color: inherit; text-decoration: inherit;">Routing<wbr>Weight</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -349,7 +398,9 @@ is `Vnet2Vnet`).
 
     <dt class="property-"
             title="">
-        <span>Shared<wbr>Key</span>
+        <span id="sharedkey_csharp">
+<a href="#sharedkey_csharp" style="color: inherit; text-decoration: inherit;">Shared<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -358,7 +409,9 @@ is `Vnet2Vnet`).
 
     <dt class="property-"
             title="">
-        <span>Tags</span>
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -367,7 +420,9 @@ is `Vnet2Vnet`).
 
     <dt class="property-"
             title="">
-        <span>Type</span>
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -377,7 +432,9 @@ is `Vnet2Vnet`).
 
     <dt class="property-"
             title="">
-        <span>Use<wbr>Policy<wbr>Based<wbr>Traffic<wbr>Selectors</span>
+        <span id="usepolicybasedtrafficselectors_csharp">
+<a href="#usepolicybasedtrafficselectors_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Policy<wbr>Based<wbr>Traffic<wbr>Selectors</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -388,7 +445,9 @@ selectors requires an `ipsec_policy` block.
 
     <dt class="property-"
             title="">
-        <span>Virtual<wbr>Network<wbr>Gateway<wbr>Id</span>
+        <span id="virtualnetworkgatewayid_csharp">
+<a href="#virtualnetworkgatewayid_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Gateway<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -405,7 +464,9 @@ in which the connection is created.
 
     <dt class="property-"
             title="">
-        <span>Authorization<wbr>Key</span>
+        <span id="authorizationkey_go">
+<a href="#authorizationkey_go" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -416,7 +477,9 @@ ExpressRoute connection.
 
     <dt class="property-"
             title="">
-        <span>Connection<wbr>Protocol</span>
+        <span id="connectionprotocol_go">
+<a href="#connectionprotocol_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -424,7 +487,9 @@ ExpressRoute connection.
 
     <dt class="property-"
             title="">
-        <span>Egress<wbr>Bytes<wbr>Transferred</span>
+        <span id="egressbytestransferred_go">
+<a href="#egressbytestransferred_go" style="color: inherit; text-decoration: inherit;">Egress<wbr>Bytes<wbr>Transferred</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -432,7 +497,9 @@ ExpressRoute connection.
 
     <dt class="property-"
             title="">
-        <span>Enable<wbr>Bgp</span>
+        <span id="enablebgp_go">
+<a href="#enablebgp_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Bgp</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -442,7 +509,9 @@ for this connection.
 
     <dt class="property-"
             title="">
-        <span>Express<wbr>Route<wbr>Circuit<wbr>Id</span>
+        <span id="expressroutecircuitid_go">
+<a href="#expressroutecircuitid_go" style="color: inherit; text-decoration: inherit;">Express<wbr>Route<wbr>Circuit<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -452,7 +521,9 @@ for this connection.
 
     <dt class="property-"
             title="">
-        <span>Express<wbr>Route<wbr>Gateway<wbr>Bypass</span>
+        <span id="expressroutegatewaybypass_go">
+<a href="#expressroutegatewaybypass_go" style="color: inherit; text-decoration: inherit;">Express<wbr>Route<wbr>Gateway<wbr>Bypass</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -461,7 +532,9 @@ for this connection.
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -470,7 +543,9 @@ for this connection.
 
     <dt class="property-"
             title="">
-        <span>Ingress<wbr>Bytes<wbr>Transferred</span>
+        <span id="ingressbytestransferred_go">
+<a href="#ingressbytestransferred_go" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Bytes<wbr>Transferred</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -478,7 +553,9 @@ for this connection.
 
     <dt class="property-"
             title="">
-        <span>Ipsec<wbr>Policies</span>
+        <span id="ipsecpolicies_go">
+<a href="#ipsecpolicies_go" style="color: inherit; text-decoration: inherit;">Ipsec<wbr>Policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getgatewayconnectionipsecpolicy">[]Get<wbr>Gateway<wbr>Connection<wbr>Ipsec<wbr>Policy</a></span>
     </dt>
@@ -486,7 +563,9 @@ for this connection.
 
     <dt class="property-"
             title="">
-        <span>Local<wbr>Network<wbr>Gateway<wbr>Id</span>
+        <span id="localnetworkgatewayid_go">
+<a href="#localnetworkgatewayid_go" style="color: inherit; text-decoration: inherit;">Local<wbr>Network<wbr>Gateway<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -496,7 +575,9 @@ when a Site-to-Site connection (i.e. when `type` is `IPsec`).
 
     <dt class="property-"
             title="">
-        <span>Location</span>
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -506,7 +587,9 @@ located.
 
     <dt class="property-"
             title="">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -514,7 +597,9 @@ located.
 
     <dt class="property-"
             title="">
-        <span>Peer<wbr>Virtual<wbr>Network<wbr>Gateway<wbr>Id</span>
+        <span id="peervirtualnetworkgatewayid_go">
+<a href="#peervirtualnetworkgatewayid_go" style="color: inherit; text-decoration: inherit;">Peer<wbr>Virtual<wbr>Network<wbr>Gateway<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -525,7 +610,9 @@ is `Vnet2Vnet`).
 
     <dt class="property-"
             title="">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_go">
+<a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -533,7 +620,9 @@ is `Vnet2Vnet`).
 
     <dt class="property-"
             title="">
-        <span>Resource<wbr>Guid</span>
+        <span id="resourceguid_go">
+<a href="#resourceguid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Guid</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -541,7 +630,9 @@ is `Vnet2Vnet`).
 
     <dt class="property-"
             title="">
-        <span>Routing<wbr>Weight</span>
+        <span id="routingweight_go">
+<a href="#routingweight_go" style="color: inherit; text-decoration: inherit;">Routing<wbr>Weight</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -550,7 +641,9 @@ is `Vnet2Vnet`).
 
     <dt class="property-"
             title="">
-        <span>Shared<wbr>Key</span>
+        <span id="sharedkey_go">
+<a href="#sharedkey_go" style="color: inherit; text-decoration: inherit;">Shared<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -559,7 +652,9 @@ is `Vnet2Vnet`).
 
     <dt class="property-"
             title="">
-        <span>Tags</span>
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -568,7 +663,9 @@ is `Vnet2Vnet`).
 
     <dt class="property-"
             title="">
-        <span>Type</span>
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -578,7 +675,9 @@ is `Vnet2Vnet`).
 
     <dt class="property-"
             title="">
-        <span>Use<wbr>Policy<wbr>Based<wbr>Traffic<wbr>Selectors</span>
+        <span id="usepolicybasedtrafficselectors_go">
+<a href="#usepolicybasedtrafficselectors_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Policy<wbr>Based<wbr>Traffic<wbr>Selectors</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -589,7 +688,9 @@ selectors requires an `ipsec_policy` block.
 
     <dt class="property-"
             title="">
-        <span>Virtual<wbr>Network<wbr>Gateway<wbr>Id</span>
+        <span id="virtualnetworkgatewayid_go">
+<a href="#virtualnetworkgatewayid_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Gateway<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -606,7 +707,9 @@ in which the connection is created.
 
     <dt class="property-"
             title="">
-        <span>authorization<wbr>Key</span>
+        <span id="authorizationkey_nodejs">
+<a href="#authorizationkey_nodejs" style="color: inherit; text-decoration: inherit;">authorization<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -617,7 +720,9 @@ ExpressRoute connection.
 
     <dt class="property-"
             title="">
-        <span>connection<wbr>Protocol</span>
+        <span id="connectionprotocol_nodejs">
+<a href="#connectionprotocol_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -625,7 +730,9 @@ ExpressRoute connection.
 
     <dt class="property-"
             title="">
-        <span>egress<wbr>Bytes<wbr>Transferred</span>
+        <span id="egressbytestransferred_nodejs">
+<a href="#egressbytestransferred_nodejs" style="color: inherit; text-decoration: inherit;">egress<wbr>Bytes<wbr>Transferred</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -633,7 +740,9 @@ ExpressRoute connection.
 
     <dt class="property-"
             title="">
-        <span>enable<wbr>Bgp</span>
+        <span id="enablebgp_nodejs">
+<a href="#enablebgp_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Bgp</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -643,7 +752,9 @@ for this connection.
 
     <dt class="property-"
             title="">
-        <span>express<wbr>Route<wbr>Circuit<wbr>Id</span>
+        <span id="expressroutecircuitid_nodejs">
+<a href="#expressroutecircuitid_nodejs" style="color: inherit; text-decoration: inherit;">express<wbr>Route<wbr>Circuit<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -653,7 +764,9 @@ for this connection.
 
     <dt class="property-"
             title="">
-        <span>express<wbr>Route<wbr>Gateway<wbr>Bypass</span>
+        <span id="expressroutegatewaybypass_nodejs">
+<a href="#expressroutegatewaybypass_nodejs" style="color: inherit; text-decoration: inherit;">express<wbr>Route<wbr>Gateway<wbr>Bypass</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -662,7 +775,9 @@ for this connection.
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -671,7 +786,9 @@ for this connection.
 
     <dt class="property-"
             title="">
-        <span>ingress<wbr>Bytes<wbr>Transferred</span>
+        <span id="ingressbytestransferred_nodejs">
+<a href="#ingressbytestransferred_nodejs" style="color: inherit; text-decoration: inherit;">ingress<wbr>Bytes<wbr>Transferred</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -679,7 +796,9 @@ for this connection.
 
     <dt class="property-"
             title="">
-        <span>ipsec<wbr>Policies</span>
+        <span id="ipsecpolicies_nodejs">
+<a href="#ipsecpolicies_nodejs" style="color: inherit; text-decoration: inherit;">ipsec<wbr>Policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getgatewayconnectionipsecpolicy">Get<wbr>Gateway<wbr>Connection<wbr>Ipsec<wbr>Policy[]</a></span>
     </dt>
@@ -687,7 +806,9 @@ for this connection.
 
     <dt class="property-"
             title="">
-        <span>local<wbr>Network<wbr>Gateway<wbr>Id</span>
+        <span id="localnetworkgatewayid_nodejs">
+<a href="#localnetworkgatewayid_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Network<wbr>Gateway<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -697,7 +818,9 @@ when a Site-to-Site connection (i.e. when `type` is `IPsec`).
 
     <dt class="property-"
             title="">
-        <span>location</span>
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -707,7 +830,9 @@ located.
 
     <dt class="property-"
             title="">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -715,7 +840,9 @@ located.
 
     <dt class="property-"
             title="">
-        <span>peer<wbr>Virtual<wbr>Network<wbr>Gateway<wbr>Id</span>
+        <span id="peervirtualnetworkgatewayid_nodejs">
+<a href="#peervirtualnetworkgatewayid_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Virtual<wbr>Network<wbr>Gateway<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -726,7 +853,9 @@ is `Vnet2Vnet`).
 
     <dt class="property-"
             title="">
-        <span>resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_nodejs">
+<a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -734,7 +863,9 @@ is `Vnet2Vnet`).
 
     <dt class="property-"
             title="">
-        <span>resource<wbr>Guid</span>
+        <span id="resourceguid_nodejs">
+<a href="#resourceguid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Guid</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -742,7 +873,9 @@ is `Vnet2Vnet`).
 
     <dt class="property-"
             title="">
-        <span>routing<wbr>Weight</span>
+        <span id="routingweight_nodejs">
+<a href="#routingweight_nodejs" style="color: inherit; text-decoration: inherit;">routing<wbr>Weight</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -751,7 +884,9 @@ is `Vnet2Vnet`).
 
     <dt class="property-"
             title="">
-        <span>shared<wbr>Key</span>
+        <span id="sharedkey_nodejs">
+<a href="#sharedkey_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -760,7 +895,9 @@ is `Vnet2Vnet`).
 
     <dt class="property-"
             title="">
-        <span>tags</span>
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -769,7 +906,9 @@ is `Vnet2Vnet`).
 
     <dt class="property-"
             title="">
-        <span>type</span>
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -779,7 +918,9 @@ is `Vnet2Vnet`).
 
     <dt class="property-"
             title="">
-        <span>use<wbr>Policy<wbr>Based<wbr>Traffic<wbr>Selectors</span>
+        <span id="usepolicybasedtrafficselectors_nodejs">
+<a href="#usepolicybasedtrafficselectors_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Policy<wbr>Based<wbr>Traffic<wbr>Selectors</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -790,7 +931,9 @@ selectors requires an `ipsec_policy` block.
 
     <dt class="property-"
             title="">
-        <span>virtual<wbr>Network<wbr>Gateway<wbr>Id</span>
+        <span id="virtualnetworkgatewayid_nodejs">
+<a href="#virtualnetworkgatewayid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Gateway<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -807,7 +950,9 @@ in which the connection is created.
 
     <dt class="property-"
             title="">
-        <span>authorization_<wbr>key</span>
+        <span id="authorization_key_python">
+<a href="#authorization_key_python" style="color: inherit; text-decoration: inherit;">authorization_<wbr>key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -818,7 +963,9 @@ ExpressRoute connection.
 
     <dt class="property-"
             title="">
-        <span>connection_<wbr>protocol</span>
+        <span id="connection_protocol_python">
+<a href="#connection_protocol_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -826,7 +973,9 @@ ExpressRoute connection.
 
     <dt class="property-"
             title="">
-        <span>egress_<wbr>bytes_<wbr>transferred</span>
+        <span id="egress_bytes_transferred_python">
+<a href="#egress_bytes_transferred_python" style="color: inherit; text-decoration: inherit;">egress_<wbr>bytes_<wbr>transferred</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -834,7 +983,9 @@ ExpressRoute connection.
 
     <dt class="property-"
             title="">
-        <span>enable_<wbr>bgp</span>
+        <span id="enable_bgp_python">
+<a href="#enable_bgp_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>bgp</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -844,7 +995,9 @@ for this connection.
 
     <dt class="property-"
             title="">
-        <span>express_<wbr>route_<wbr>circuit_<wbr>id</span>
+        <span id="express_route_circuit_id_python">
+<a href="#express_route_circuit_id_python" style="color: inherit; text-decoration: inherit;">express_<wbr>route_<wbr>circuit_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -854,7 +1007,9 @@ for this connection.
 
     <dt class="property-"
             title="">
-        <span>express_<wbr>route_<wbr>gateway_<wbr>bypass</span>
+        <span id="express_route_gateway_bypass_python">
+<a href="#express_route_gateway_bypass_python" style="color: inherit; text-decoration: inherit;">express_<wbr>route_<wbr>gateway_<wbr>bypass</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -863,7 +1018,9 @@ for this connection.
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -872,7 +1029,9 @@ for this connection.
 
     <dt class="property-"
             title="">
-        <span>ingress_<wbr>bytes_<wbr>transferred</span>
+        <span id="ingress_bytes_transferred_python">
+<a href="#ingress_bytes_transferred_python" style="color: inherit; text-decoration: inherit;">ingress_<wbr>bytes_<wbr>transferred</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -880,7 +1039,9 @@ for this connection.
 
     <dt class="property-"
             title="">
-        <span>ipsec_<wbr>policies</span>
+        <span id="ipsec_policies_python">
+<a href="#ipsec_policies_python" style="color: inherit; text-decoration: inherit;">ipsec_<wbr>policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getgatewayconnectionipsecpolicy">List[Get<wbr>Gateway<wbr>Connection<wbr>Ipsec<wbr>Policy]</a></span>
     </dt>
@@ -888,7 +1049,9 @@ for this connection.
 
     <dt class="property-"
             title="">
-        <span>local_<wbr>network_<wbr>gateway_<wbr>id</span>
+        <span id="local_network_gateway_id_python">
+<a href="#local_network_gateway_id_python" style="color: inherit; text-decoration: inherit;">local_<wbr>network_<wbr>gateway_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -898,7 +1061,9 @@ when a Site-to-Site connection (i.e. when `type` is `IPsec`).
 
     <dt class="property-"
             title="">
-        <span>location</span>
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -908,7 +1073,9 @@ located.
 
     <dt class="property-"
             title="">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -916,7 +1083,9 @@ located.
 
     <dt class="property-"
             title="">
-        <span>peer_<wbr>virtual_<wbr>network_<wbr>gateway_<wbr>id</span>
+        <span id="peer_virtual_network_gateway_id_python">
+<a href="#peer_virtual_network_gateway_id_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>virtual_<wbr>network_<wbr>gateway_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -927,7 +1096,9 @@ is `Vnet2Vnet`).
 
     <dt class="property-"
             title="">
-        <span>resource_<wbr>group_<wbr>name</span>
+        <span id="resource_group_name_python">
+<a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -935,7 +1106,9 @@ is `Vnet2Vnet`).
 
     <dt class="property-"
             title="">
-        <span>resource_<wbr>guid</span>
+        <span id="resource_guid_python">
+<a href="#resource_guid_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>guid</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -943,7 +1116,9 @@ is `Vnet2Vnet`).
 
     <dt class="property-"
             title="">
-        <span>routing_<wbr>weight</span>
+        <span id="routing_weight_python">
+<a href="#routing_weight_python" style="color: inherit; text-decoration: inherit;">routing_<wbr>weight</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -952,7 +1127,9 @@ is `Vnet2Vnet`).
 
     <dt class="property-"
             title="">
-        <span>shared_<wbr>key</span>
+        <span id="shared_key_python">
+<a href="#shared_key_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -961,7 +1138,9 @@ is `Vnet2Vnet`).
 
     <dt class="property-"
             title="">
-        <span>tags</span>
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -970,7 +1149,9 @@ is `Vnet2Vnet`).
 
     <dt class="property-"
             title="">
-        <span>type</span>
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -980,7 +1161,9 @@ is `Vnet2Vnet`).
 
     <dt class="property-"
             title="">
-        <span>use_<wbr>policy_<wbr>based_<wbr>traffic_<wbr>selectors</span>
+        <span id="use_policy_based_traffic_selectors_python">
+<a href="#use_policy_based_traffic_selectors_python" style="color: inherit; text-decoration: inherit;">use_<wbr>policy_<wbr>based_<wbr>traffic_<wbr>selectors</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -991,7 +1174,9 @@ selectors requires an `ipsec_policy` block.
 
     <dt class="property-"
             title="">
-        <span>virtual_<wbr>network_<wbr>gateway_<wbr>id</span>
+        <span id="virtual_network_gateway_id_python">
+<a href="#virtual_network_gateway_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>gateway_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1032,7 +1217,9 @@ in which the connection is created.
 
     <dt class="property-required"
             title="Required">
-        <span>Dh<wbr>Group</span>
+        <span id="dhgroup_csharp">
+<a href="#dhgroup_csharp" style="color: inherit; text-decoration: inherit;">Dh<wbr>Group</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1043,7 +1230,9 @@ options are `DHGroup1`, `DHGroup14`, `DHGroup2`, `DHGroup2048`, `DHGroup24`,
 
     <dt class="property-required"
             title="Required">
-        <span>Ike<wbr>Encryption</span>
+        <span id="ikeencryption_csharp">
+<a href="#ikeencryption_csharp" style="color: inherit; text-decoration: inherit;">Ike<wbr>Encryption</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1053,7 +1242,9 @@ options are `AES128`, `AES192`, `AES256`, `DES`, or `DES3`.
 
     <dt class="property-required"
             title="Required">
-        <span>Ike<wbr>Integrity</span>
+        <span id="ikeintegrity_csharp">
+<a href="#ikeintegrity_csharp" style="color: inherit; text-decoration: inherit;">Ike<wbr>Integrity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1063,7 +1254,9 @@ options are `MD5`, `SHA1`, `SHA256`, or `SHA384`.
 
     <dt class="property-required"
             title="Required">
-        <span>Ipsec<wbr>Encryption</span>
+        <span id="ipsecencryption_csharp">
+<a href="#ipsecencryption_csharp" style="color: inherit; text-decoration: inherit;">Ipsec<wbr>Encryption</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1073,7 +1266,9 @@ options are `AES128`, `AES192`, `AES256`, `DES`, `DES3`, `GCMAES128`, `GCMAES192
 
     <dt class="property-required"
             title="Required">
-        <span>Ipsec<wbr>Integrity</span>
+        <span id="ipsecintegrity_csharp">
+<a href="#ipsecintegrity_csharp" style="color: inherit; text-decoration: inherit;">Ipsec<wbr>Integrity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1083,7 +1278,9 @@ options are `GCMAES128`, `GCMAES192`, `GCMAES256`, `MD5`, `SHA1`, or `SHA256`.
 
     <dt class="property-required"
             title="Required">
-        <span>Pfs<wbr>Group</span>
+        <span id="pfsgroup_csharp">
+<a href="#pfsgroup_csharp" style="color: inherit; text-decoration: inherit;">Pfs<wbr>Group</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1094,7 +1291,9 @@ or `None`.
 
     <dt class="property-required"
             title="Required">
-        <span>Sa<wbr>Datasize</span>
+        <span id="sadatasize_csharp">
+<a href="#sadatasize_csharp" style="color: inherit; text-decoration: inherit;">Sa<wbr>Datasize</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1104,7 +1303,9 @@ or `None`.
 
     <dt class="property-required"
             title="Required">
-        <span>Sa<wbr>Lifetime</span>
+        <span id="salifetime_csharp">
+<a href="#salifetime_csharp" style="color: inherit; text-decoration: inherit;">Sa<wbr>Lifetime</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1121,7 +1322,9 @@ or `None`.
 
     <dt class="property-required"
             title="Required">
-        <span>Dh<wbr>Group</span>
+        <span id="dhgroup_go">
+<a href="#dhgroup_go" style="color: inherit; text-decoration: inherit;">Dh<wbr>Group</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1132,7 +1335,9 @@ options are `DHGroup1`, `DHGroup14`, `DHGroup2`, `DHGroup2048`, `DHGroup24`,
 
     <dt class="property-required"
             title="Required">
-        <span>Ike<wbr>Encryption</span>
+        <span id="ikeencryption_go">
+<a href="#ikeencryption_go" style="color: inherit; text-decoration: inherit;">Ike<wbr>Encryption</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1142,7 +1347,9 @@ options are `AES128`, `AES192`, `AES256`, `DES`, or `DES3`.
 
     <dt class="property-required"
             title="Required">
-        <span>Ike<wbr>Integrity</span>
+        <span id="ikeintegrity_go">
+<a href="#ikeintegrity_go" style="color: inherit; text-decoration: inherit;">Ike<wbr>Integrity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1152,7 +1359,9 @@ options are `MD5`, `SHA1`, `SHA256`, or `SHA384`.
 
     <dt class="property-required"
             title="Required">
-        <span>Ipsec<wbr>Encryption</span>
+        <span id="ipsecencryption_go">
+<a href="#ipsecencryption_go" style="color: inherit; text-decoration: inherit;">Ipsec<wbr>Encryption</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1162,7 +1371,9 @@ options are `AES128`, `AES192`, `AES256`, `DES`, `DES3`, `GCMAES128`, `GCMAES192
 
     <dt class="property-required"
             title="Required">
-        <span>Ipsec<wbr>Integrity</span>
+        <span id="ipsecintegrity_go">
+<a href="#ipsecintegrity_go" style="color: inherit; text-decoration: inherit;">Ipsec<wbr>Integrity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1172,7 +1383,9 @@ options are `GCMAES128`, `GCMAES192`, `GCMAES256`, `MD5`, `SHA1`, or `SHA256`.
 
     <dt class="property-required"
             title="Required">
-        <span>Pfs<wbr>Group</span>
+        <span id="pfsgroup_go">
+<a href="#pfsgroup_go" style="color: inherit; text-decoration: inherit;">Pfs<wbr>Group</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1183,7 +1396,9 @@ or `None`.
 
     <dt class="property-required"
             title="Required">
-        <span>Sa<wbr>Datasize</span>
+        <span id="sadatasize_go">
+<a href="#sadatasize_go" style="color: inherit; text-decoration: inherit;">Sa<wbr>Datasize</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1193,7 +1408,9 @@ or `None`.
 
     <dt class="property-required"
             title="Required">
-        <span>Sa<wbr>Lifetime</span>
+        <span id="salifetime_go">
+<a href="#salifetime_go" style="color: inherit; text-decoration: inherit;">Sa<wbr>Lifetime</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1210,7 +1427,9 @@ or `None`.
 
     <dt class="property-required"
             title="Required">
-        <span>dh<wbr>Group</span>
+        <span id="dhgroup_nodejs">
+<a href="#dhgroup_nodejs" style="color: inherit; text-decoration: inherit;">dh<wbr>Group</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1221,7 +1440,9 @@ options are `DHGroup1`, `DHGroup14`, `DHGroup2`, `DHGroup2048`, `DHGroup24`,
 
     <dt class="property-required"
             title="Required">
-        <span>ike<wbr>Encryption</span>
+        <span id="ikeencryption_nodejs">
+<a href="#ikeencryption_nodejs" style="color: inherit; text-decoration: inherit;">ike<wbr>Encryption</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1231,7 +1452,9 @@ options are `AES128`, `AES192`, `AES256`, `DES`, or `DES3`.
 
     <dt class="property-required"
             title="Required">
-        <span>ike<wbr>Integrity</span>
+        <span id="ikeintegrity_nodejs">
+<a href="#ikeintegrity_nodejs" style="color: inherit; text-decoration: inherit;">ike<wbr>Integrity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1241,7 +1464,9 @@ options are `MD5`, `SHA1`, `SHA256`, or `SHA384`.
 
     <dt class="property-required"
             title="Required">
-        <span>ipsec<wbr>Encryption</span>
+        <span id="ipsecencryption_nodejs">
+<a href="#ipsecencryption_nodejs" style="color: inherit; text-decoration: inherit;">ipsec<wbr>Encryption</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1251,7 +1476,9 @@ options are `AES128`, `AES192`, `AES256`, `DES`, `DES3`, `GCMAES128`, `GCMAES192
 
     <dt class="property-required"
             title="Required">
-        <span>ipsec<wbr>Integrity</span>
+        <span id="ipsecintegrity_nodejs">
+<a href="#ipsecintegrity_nodejs" style="color: inherit; text-decoration: inherit;">ipsec<wbr>Integrity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1261,7 +1488,9 @@ options are `GCMAES128`, `GCMAES192`, `GCMAES256`, `MD5`, `SHA1`, or `SHA256`.
 
     <dt class="property-required"
             title="Required">
-        <span>pfs<wbr>Group</span>
+        <span id="pfsgroup_nodejs">
+<a href="#pfsgroup_nodejs" style="color: inherit; text-decoration: inherit;">pfs<wbr>Group</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1272,7 +1501,9 @@ or `None`.
 
     <dt class="property-required"
             title="Required">
-        <span>sa<wbr>Datasize</span>
+        <span id="sadatasize_nodejs">
+<a href="#sadatasize_nodejs" style="color: inherit; text-decoration: inherit;">sa<wbr>Datasize</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1282,7 +1513,9 @@ or `None`.
 
     <dt class="property-required"
             title="Required">
-        <span>sa<wbr>Lifetime</span>
+        <span id="salifetime_nodejs">
+<a href="#salifetime_nodejs" style="color: inherit; text-decoration: inherit;">sa<wbr>Lifetime</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1299,7 +1532,9 @@ or `None`.
 
     <dt class="property-required"
             title="Required">
-        <span>dh<wbr>Group</span>
+        <span id="dhgroup_python">
+<a href="#dhgroup_python" style="color: inherit; text-decoration: inherit;">dh<wbr>Group</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1310,7 +1545,9 @@ options are `DHGroup1`, `DHGroup14`, `DHGroup2`, `DHGroup2048`, `DHGroup24`,
 
     <dt class="property-required"
             title="Required">
-        <span>ike<wbr>Encryption</span>
+        <span id="ikeencryption_python">
+<a href="#ikeencryption_python" style="color: inherit; text-decoration: inherit;">ike<wbr>Encryption</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1320,7 +1557,9 @@ options are `AES128`, `AES192`, `AES256`, `DES`, or `DES3`.
 
     <dt class="property-required"
             title="Required">
-        <span>ike<wbr>Integrity</span>
+        <span id="ikeintegrity_python">
+<a href="#ikeintegrity_python" style="color: inherit; text-decoration: inherit;">ike<wbr>Integrity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1330,7 +1569,9 @@ options are `MD5`, `SHA1`, `SHA256`, or `SHA384`.
 
     <dt class="property-required"
             title="Required">
-        <span>ipsec<wbr>Encryption</span>
+        <span id="ipsecencryption_python">
+<a href="#ipsecencryption_python" style="color: inherit; text-decoration: inherit;">ipsec<wbr>Encryption</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1340,7 +1581,9 @@ options are `AES128`, `AES192`, `AES256`, `DES`, `DES3`, `GCMAES128`, `GCMAES192
 
     <dt class="property-required"
             title="Required">
-        <span>ipsec<wbr>Integrity</span>
+        <span id="ipsecintegrity_python">
+<a href="#ipsecintegrity_python" style="color: inherit; text-decoration: inherit;">ipsec<wbr>Integrity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1350,7 +1593,9 @@ options are `GCMAES128`, `GCMAES192`, `GCMAES256`, `MD5`, `SHA1`, or `SHA256`.
 
     <dt class="property-required"
             title="Required">
-        <span>pfs<wbr>Group</span>
+        <span id="pfsgroup_python">
+<a href="#pfsgroup_python" style="color: inherit; text-decoration: inherit;">pfs<wbr>Group</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1361,7 +1606,9 @@ or `None`.
 
     <dt class="property-required"
             title="Required">
-        <span>sa<wbr>Datasize</span>
+        <span id="sadatasize_python">
+<a href="#sadatasize_python" style="color: inherit; text-decoration: inherit;">sa<wbr>Datasize</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1371,7 +1618,9 @@ or `None`.
 
     <dt class="property-required"
             title="Required">
-        <span>sa<wbr>Lifetime</span>
+        <span id="salifetime_python">
+<a href="#salifetime_python" style="color: inherit; text-decoration: inherit;">sa<wbr>Lifetime</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>

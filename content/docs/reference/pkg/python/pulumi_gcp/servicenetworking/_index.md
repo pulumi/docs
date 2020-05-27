@@ -20,6 +20,21 @@ anything, please consult the source <a class="reference external" href="https://
 <a class="reference external" href="https://cloud.google.com/vpc/docs/configure-private-services-access#creating-connection">the official documentation</a>
 and
 <a class="reference external" href="https://cloud.google.com/service-infrastructure/docs/service-networking/reference/rest/v1/services.connections">API</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">peering_network</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Network</span><span class="p">(</span><span class="s2">&quot;peeringNetwork&quot;</span><span class="p">)</span>
+<span class="n">private_ip_alloc</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">GlobalAddress</span><span class="p">(</span><span class="s2">&quot;privateIpAlloc&quot;</span><span class="p">,</span>
+    <span class="n">purpose</span><span class="o">=</span><span class="s2">&quot;VPC_PEERING&quot;</span><span class="p">,</span>
+    <span class="n">address_type</span><span class="o">=</span><span class="s2">&quot;INTERNAL&quot;</span><span class="p">,</span>
+    <span class="n">prefix_length</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span>
+    <span class="n">network</span><span class="o">=</span><span class="n">peering_network</span><span class="o">.</span><span class="n">self_link</span><span class="p">)</span>
+<span class="n">foobar</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">servicenetworking</span><span class="o">.</span><span class="n">Connection</span><span class="p">(</span><span class="s2">&quot;foobar&quot;</span><span class="p">,</span>
+    <span class="n">network</span><span class="o">=</span><span class="n">peering_network</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="n">service</span><span class="o">=</span><span class="s2">&quot;servicenetworking.googleapis.com&quot;</span><span class="p">,</span>
+    <span class="n">reserved_peering_ranges</span><span class="o">=</span><span class="p">[</span><span class="n">private_ip_alloc</span><span class="o">.</span><span class="n">name</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

@@ -85,7 +85,7 @@ import pulumi_gcp as gcp
 bar = gcp.compute.ResourcePolicy("bar",
     region="us-central1",
     snapshot_schedule_policy={
-        "retentionPolicy": {
+        "retention_policy": {
             "maxRetentionDays": 10,
             "onSourceDiskDelete": "KEEP_AUTO_SNAPSHOTS",
         },
@@ -112,10 +112,10 @@ import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
 const baz = new gcp.compute.ResourcePolicy("baz", {
-    groupPlacementPolicy: [{
+    groupPlacementPolicy: {
         collocation: "COLLOCATED",
         vmCount: 2,
-    }],
+    },
     region: "us-central1",
 });
 ```
@@ -124,10 +124,10 @@ import pulumi
 import pulumi_gcp as gcp
 
 baz = gcp.compute.ResourcePolicy("baz",
-    group_placement_policy=[{
+    group_placement_policy={
         "collocation": "COLLOCATED",
         "vmCount": 2,
-    }],
+    },
     region="us-central1")
 ```
 
@@ -138,19 +138,19 @@ baz = gcp.compute.ResourcePolicy("baz",
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#ResourcePolicy">ResourcePolicy</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#ResourcePolicyArgs">ResourcePolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#ResourcePolicy">ResourcePolicy</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#ResourcePolicyArgs">ResourcePolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ResourcePolicy</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>group_placement_policy=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>region=None<span class="p">, </span>snapshot_schedule_policy=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#ResourcePolicy">ResourcePolicy</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>group_placement_policy=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>region=None<span class="p">, </span>snapshot_schedule_policy=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewResourcePolicy<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#ResourcePolicyArgs">ResourcePolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#ResourcePolicy">ResourcePolicy</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#ResourcePolicy">NewResourcePolicy</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#ResourcePolicyArgs">ResourcePolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#ResourcePolicy">ResourcePolicy</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.ResourcePolicy.html">ResourcePolicy</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.ResourcePolicyArgs.html">ResourcePolicyArgs</a></span>? <span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.ResourcePolicy.html">ResourcePolicy</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.ResourcePolicyArgs.html">ResourcePolicyArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -316,7 +316,9 @@ The ResourcePolicy resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>Group<wbr>Placement<wbr>Policy</span>
+        <span id="groupplacementpolicy_csharp">
+<a href="#groupplacementpolicy_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Placement<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicygroupplacementpolicy">Resource<wbr>Policy<wbr>Group<wbr>Placement<wbr>Policy<wbr>Args</a></span>
     </dt>
@@ -325,7 +327,9 @@ The ResourcePolicy resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -340,7 +344,9 @@ which cannot be a dash.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project</span>
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -350,7 +356,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="region_csharp">
+<a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -359,7 +367,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Snapshot<wbr>Schedule<wbr>Policy</span>
+        <span id="snapshotschedulepolicy_csharp">
+<a href="#snapshotschedulepolicy_csharp" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Schedule<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicy">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Args</a></span>
     </dt>
@@ -375,7 +385,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Group<wbr>Placement<wbr>Policy</span>
+        <span id="groupplacementpolicy_go">
+<a href="#groupplacementpolicy_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Placement<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicygroupplacementpolicy">Resource<wbr>Policy<wbr>Group<wbr>Placement<wbr>Policy</a></span>
     </dt>
@@ -384,7 +396,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -399,7 +413,9 @@ which cannot be a dash.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project</span>
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -409,7 +425,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="region_go">
+<a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -418,7 +436,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Snapshot<wbr>Schedule<wbr>Policy</span>
+        <span id="snapshotschedulepolicy_go">
+<a href="#snapshotschedulepolicy_go" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Schedule<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicy">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy</a></span>
     </dt>
@@ -434,7 +454,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>group<wbr>Placement<wbr>Policy</span>
+        <span id="groupplacementpolicy_nodejs">
+<a href="#groupplacementpolicy_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Placement<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicygroupplacementpolicy">Resource<wbr>Policy<wbr>Group<wbr>Placement<wbr>Policy</a></span>
     </dt>
@@ -443,7 +465,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -458,7 +482,9 @@ which cannot be a dash.
 
     <dt class="property-optional"
             title="Optional">
-        <span>project</span>
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -468,7 +494,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="region_nodejs">
+<a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -477,7 +505,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>snapshot<wbr>Schedule<wbr>Policy</span>
+        <span id="snapshotschedulepolicy_nodejs">
+<a href="#snapshotschedulepolicy_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Schedule<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicy">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy</a></span>
     </dt>
@@ -493,7 +523,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>group_<wbr>placement_<wbr>policy</span>
+        <span id="group_placement_policy_python">
+<a href="#group_placement_policy_python" style="color: inherit; text-decoration: inherit;">group_<wbr>placement_<wbr>policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicygroupplacementpolicy">Dict[Resource<wbr>Policy<wbr>Group<wbr>Placement<wbr>Policy]</a></span>
     </dt>
@@ -502,7 +534,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -517,7 +551,9 @@ which cannot be a dash.
 
     <dt class="property-optional"
             title="Optional">
-        <span>project</span>
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -527,7 +563,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="region_python">
+<a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -536,7 +574,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>snapshot_<wbr>schedule_<wbr>policy</span>
+        <span id="snapshot_schedule_policy_python">
+<a href="#snapshot_schedule_policy_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>schedule_<wbr>policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicy">Dict[Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy]</a></span>
     </dt>
@@ -563,7 +603,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -571,7 +613,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Self<wbr>Link</span>
+        <span id="selflink_csharp">
+<a href="#selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -587,7 +631,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -595,7 +641,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Self<wbr>Link</span>
+        <span id="selflink_go">
+<a href="#selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -611,7 +659,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -619,7 +669,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>self<wbr>Link</span>
+        <span id="selflink_nodejs">
+<a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -635,7 +687,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -643,7 +697,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>self_<wbr>link</span>
+        <span id="self_link_python">
+<a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -665,7 +721,7 @@ Get an existing ResourcePolicy resource's state with the given name, ID, and opt
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#ResourcePolicyState">ResourcePolicyState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#ResourcePolicy">ResourcePolicy</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#ResourcePolicyState">ResourcePolicyState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#ResourcePolicy">ResourcePolicy</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -673,11 +729,11 @@ Get an existing ResourcePolicy resource's state with the given name, ID, and opt
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetResourcePolicy<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#ResourcePolicyState">ResourcePolicyState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#ResourcePolicy">ResourcePolicy</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetResourcePolicy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#ResourcePolicyState">ResourcePolicyState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#ResourcePolicy">ResourcePolicy</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.ResourcePolicy.html">ResourcePolicy</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.ResourcePolicyState.html">ResourcePolicyState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.ResourcePolicy.html">ResourcePolicy</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.ResourcePolicyState.html">ResourcePolicyState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -785,7 +841,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Group<wbr>Placement<wbr>Policy</span>
+        <span id="state_groupplacementpolicy_csharp">
+<a href="#state_groupplacementpolicy_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Placement<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicygroupplacementpolicy">Resource<wbr>Policy<wbr>Group<wbr>Placement<wbr>Policy<wbr>Args</a></span>
     </dt>
@@ -794,7 +852,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -809,7 +869,9 @@ which cannot be a dash.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project</span>
+        <span id="state_project_csharp">
+<a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -819,7 +881,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="state_region_csharp">
+<a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -828,7 +892,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Self<wbr>Link</span>
+        <span id="state_selflink_csharp">
+<a href="#state_selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -837,7 +903,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Snapshot<wbr>Schedule<wbr>Policy</span>
+        <span id="state_snapshotschedulepolicy_csharp">
+<a href="#state_snapshotschedulepolicy_csharp" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Schedule<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicy">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Args</a></span>
     </dt>
@@ -853,7 +921,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Group<wbr>Placement<wbr>Policy</span>
+        <span id="state_groupplacementpolicy_go">
+<a href="#state_groupplacementpolicy_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Placement<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicygroupplacementpolicy">Resource<wbr>Policy<wbr>Group<wbr>Placement<wbr>Policy</a></span>
     </dt>
@@ -862,7 +932,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -877,7 +949,9 @@ which cannot be a dash.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project</span>
+        <span id="state_project_go">
+<a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -887,7 +961,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="state_region_go">
+<a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -896,7 +972,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Self<wbr>Link</span>
+        <span id="state_selflink_go">
+<a href="#state_selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -905,7 +983,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Snapshot<wbr>Schedule<wbr>Policy</span>
+        <span id="state_snapshotschedulepolicy_go">
+<a href="#state_snapshotschedulepolicy_go" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Schedule<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicy">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy</a></span>
     </dt>
@@ -921,7 +1001,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>group<wbr>Placement<wbr>Policy</span>
+        <span id="state_groupplacementpolicy_nodejs">
+<a href="#state_groupplacementpolicy_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Placement<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicygroupplacementpolicy">Resource<wbr>Policy<wbr>Group<wbr>Placement<wbr>Policy</a></span>
     </dt>
@@ -930,7 +1012,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -945,7 +1029,9 @@ which cannot be a dash.
 
     <dt class="property-optional"
             title="Optional">
-        <span>project</span>
+        <span id="state_project_nodejs">
+<a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -955,7 +1041,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="state_region_nodejs">
+<a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -964,7 +1052,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>self<wbr>Link</span>
+        <span id="state_selflink_nodejs">
+<a href="#state_selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -973,7 +1063,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>snapshot<wbr>Schedule<wbr>Policy</span>
+        <span id="state_snapshotschedulepolicy_nodejs">
+<a href="#state_snapshotschedulepolicy_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Schedule<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicy">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy</a></span>
     </dt>
@@ -989,7 +1081,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>group_<wbr>placement_<wbr>policy</span>
+        <span id="state_group_placement_policy_python">
+<a href="#state_group_placement_policy_python" style="color: inherit; text-decoration: inherit;">group_<wbr>placement_<wbr>policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicygroupplacementpolicy">Dict[Resource<wbr>Policy<wbr>Group<wbr>Placement<wbr>Policy]</a></span>
     </dt>
@@ -998,7 +1092,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1013,7 +1109,9 @@ which cannot be a dash.
 
     <dt class="property-optional"
             title="Optional">
-        <span>project</span>
+        <span id="state_project_python">
+<a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1023,7 +1121,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="state_region_python">
+<a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1032,7 +1132,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>self_<wbr>link</span>
+        <span id="state_self_link_python">
+<a href="#state_self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1041,7 +1143,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>snapshot_<wbr>schedule_<wbr>policy</span>
+        <span id="state_snapshot_schedule_policy_python">
+<a href="#state_snapshot_schedule_policy_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>schedule_<wbr>policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicy">Dict[Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy]</a></span>
     </dt>
@@ -1083,7 +1187,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Availability<wbr>Domain<wbr>Count</span>
+        <span id="availabilitydomaincount_csharp">
+<a href="#availabilitydomaincount_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Domain<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1093,7 +1199,9 @@ availability domain, they will not be put in the same low latency network
 
     <dt class="property-optional"
             title="Optional">
-        <span>Collocation</span>
+        <span id="collocation_csharp">
+<a href="#collocation_csharp" style="color: inherit; text-decoration: inherit;">Collocation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1105,7 +1213,9 @@ attached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vm<wbr>Count</span>
+        <span id="vmcount_csharp">
+<a href="#vmcount_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1121,7 +1231,9 @@ attached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Availability<wbr>Domain<wbr>Count</span>
+        <span id="availabilitydomaincount_go">
+<a href="#availabilitydomaincount_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Domain<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1131,7 +1243,9 @@ availability domain, they will not be put in the same low latency network
 
     <dt class="property-optional"
             title="Optional">
-        <span>Collocation</span>
+        <span id="collocation_go">
+<a href="#collocation_go" style="color: inherit; text-decoration: inherit;">Collocation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1143,7 +1257,9 @@ attached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vm<wbr>Count</span>
+        <span id="vmcount_go">
+<a href="#vmcount_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1159,7 +1275,9 @@ attached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>availability<wbr>Domain<wbr>Count</span>
+        <span id="availabilitydomaincount_nodejs">
+<a href="#availabilitydomaincount_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Domain<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1169,7 +1287,9 @@ availability domain, they will not be put in the same low latency network
 
     <dt class="property-optional"
             title="Optional">
-        <span>collocation</span>
+        <span id="collocation_nodejs">
+<a href="#collocation_nodejs" style="color: inherit; text-decoration: inherit;">collocation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1181,7 +1301,9 @@ attached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>vm<wbr>Count</span>
+        <span id="vmcount_nodejs">
+<a href="#vmcount_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1197,7 +1319,9 @@ attached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>availability<wbr>Domain<wbr>Count</span>
+        <span id="availabilitydomaincount_python">
+<a href="#availabilitydomaincount_python" style="color: inherit; text-decoration: inherit;">availability<wbr>Domain<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1207,7 +1331,9 @@ availability domain, they will not be put in the same low latency network
 
     <dt class="property-optional"
             title="Optional">
-        <span>collocation</span>
+        <span id="collocation_python">
+<a href="#collocation_python" style="color: inherit; text-decoration: inherit;">collocation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1219,7 +1345,9 @@ attached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>vm<wbr>Count</span>
+        <span id="vmcount_python">
+<a href="#vmcount_python" style="color: inherit; text-decoration: inherit;">vm<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1253,7 +1381,9 @@ attached.
 
     <dt class="property-required"
             title="Required">
-        <span>Schedule</span>
+        <span id="schedule_csharp">
+<a href="#schedule_csharp" style="color: inherit; text-decoration: inherit;">Schedule</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyschedule">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Args</a></span>
     </dt>
@@ -1262,7 +1392,9 @@ attached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Retention<wbr>Policy</span>
+        <span id="retentionpolicy_csharp">
+<a href="#retentionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyretentionpolicy">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Retention<wbr>Policy<wbr>Args</a></span>
     </dt>
@@ -1271,7 +1403,9 @@ attached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Snapshot<wbr>Properties</span>
+        <span id="snapshotproperties_csharp">
+<a href="#snapshotproperties_csharp" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicysnapshotproperties">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Snapshot<wbr>Properties<wbr>Args</a></span>
     </dt>
@@ -1287,7 +1421,9 @@ attached.
 
     <dt class="property-required"
             title="Required">
-        <span>Schedule</span>
+        <span id="schedule_go">
+<a href="#schedule_go" style="color: inherit; text-decoration: inherit;">Schedule</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyschedule">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule</a></span>
     </dt>
@@ -1296,7 +1432,9 @@ attached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Retention<wbr>Policy</span>
+        <span id="retentionpolicy_go">
+<a href="#retentionpolicy_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyretentionpolicy">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Retention<wbr>Policy</a></span>
     </dt>
@@ -1305,7 +1443,9 @@ attached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Snapshot<wbr>Properties</span>
+        <span id="snapshotproperties_go">
+<a href="#snapshotproperties_go" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicysnapshotproperties">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Snapshot<wbr>Properties</a></span>
     </dt>
@@ -1321,7 +1461,9 @@ attached.
 
     <dt class="property-required"
             title="Required">
-        <span>schedule</span>
+        <span id="schedule_nodejs">
+<a href="#schedule_nodejs" style="color: inherit; text-decoration: inherit;">schedule</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyschedule">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule</a></span>
     </dt>
@@ -1330,7 +1472,9 @@ attached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>retention<wbr>Policy</span>
+        <span id="retentionpolicy_nodejs">
+<a href="#retentionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyretentionpolicy">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Retention<wbr>Policy</a></span>
     </dt>
@@ -1339,7 +1483,9 @@ attached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>snapshot<wbr>Properties</span>
+        <span id="snapshotproperties_nodejs">
+<a href="#snapshotproperties_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicysnapshotproperties">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Snapshot<wbr>Properties</a></span>
     </dt>
@@ -1355,7 +1501,9 @@ attached.
 
     <dt class="property-required"
             title="Required">
-        <span>schedule</span>
+        <span id="schedule_python">
+<a href="#schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyschedule">Dict[Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule]</a></span>
     </dt>
@@ -1364,7 +1512,9 @@ attached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>retention_<wbr>policy</span>
+        <span id="retention_policy_python">
+<a href="#retention_policy_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyretentionpolicy">Dict[Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Retention<wbr>Policy]</a></span>
     </dt>
@@ -1373,7 +1523,9 @@ attached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>snapshot<wbr>Properties</span>
+        <span id="snapshotproperties_python">
+<a href="#snapshotproperties_python" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicysnapshotproperties">Dict[Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Snapshot<wbr>Properties]</a></span>
     </dt>
@@ -1407,7 +1559,9 @@ attached.
 
     <dt class="property-required"
             title="Required">
-        <span>Max<wbr>Retention<wbr>Days</span>
+        <span id="maxretentiondays_csharp">
+<a href="#maxretentiondays_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Retention<wbr>Days</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1416,7 +1570,9 @@ attached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>On<wbr>Source<wbr>Disk<wbr>Delete</span>
+        <span id="onsourcediskdelete_csharp">
+<a href="#onsourcediskdelete_csharp" style="color: inherit; text-decoration: inherit;">On<wbr>Source<wbr>Disk<wbr>Delete</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1433,7 +1589,9 @@ the source disk is deleted.
 
     <dt class="property-required"
             title="Required">
-        <span>Max<wbr>Retention<wbr>Days</span>
+        <span id="maxretentiondays_go">
+<a href="#maxretentiondays_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Retention<wbr>Days</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1442,7 +1600,9 @@ the source disk is deleted.
 
     <dt class="property-optional"
             title="Optional">
-        <span>On<wbr>Source<wbr>Disk<wbr>Delete</span>
+        <span id="onsourcediskdelete_go">
+<a href="#onsourcediskdelete_go" style="color: inherit; text-decoration: inherit;">On<wbr>Source<wbr>Disk<wbr>Delete</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1459,7 +1619,9 @@ the source disk is deleted.
 
     <dt class="property-required"
             title="Required">
-        <span>max<wbr>Retention<wbr>Days</span>
+        <span id="maxretentiondays_nodejs">
+<a href="#maxretentiondays_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Retention<wbr>Days</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1468,7 +1630,9 @@ the source disk is deleted.
 
     <dt class="property-optional"
             title="Optional">
-        <span>on<wbr>Source<wbr>Disk<wbr>Delete</span>
+        <span id="onsourcediskdelete_nodejs">
+<a href="#onsourcediskdelete_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Source<wbr>Disk<wbr>Delete</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1485,7 +1649,9 @@ the source disk is deleted.
 
     <dt class="property-required"
             title="Required">
-        <span>max<wbr>Retention<wbr>Days</span>
+        <span id="maxretentiondays_python">
+<a href="#maxretentiondays_python" style="color: inherit; text-decoration: inherit;">max<wbr>Retention<wbr>Days</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1494,7 +1660,9 @@ the source disk is deleted.
 
     <dt class="property-optional"
             title="Optional">
-        <span>on<wbr>Source<wbr>Disk<wbr>Delete</span>
+        <span id="onsourcediskdelete_python">
+<a href="#onsourcediskdelete_python" style="color: inherit; text-decoration: inherit;">on<wbr>Source<wbr>Disk<wbr>Delete</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1529,7 +1697,9 @@ the source disk is deleted.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Daily<wbr>Schedule</span>
+        <span id="dailyschedule_csharp">
+<a href="#dailyschedule_csharp" style="color: inherit; text-decoration: inherit;">Daily<wbr>Schedule</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyscheduledailyschedule">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Daily<wbr>Schedule<wbr>Args</a></span>
     </dt>
@@ -1538,7 +1708,9 @@ the source disk is deleted.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Hourly<wbr>Schedule</span>
+        <span id="hourlyschedule_csharp">
+<a href="#hourlyschedule_csharp" style="color: inherit; text-decoration: inherit;">Hourly<wbr>Schedule</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyschedulehourlyschedule">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Hourly<wbr>Schedule<wbr>Args</a></span>
     </dt>
@@ -1547,7 +1719,9 @@ the source disk is deleted.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Weekly<wbr>Schedule</span>
+        <span id="weeklyschedule_csharp">
+<a href="#weeklyschedule_csharp" style="color: inherit; text-decoration: inherit;">Weekly<wbr>Schedule</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyscheduleweeklyschedule">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Weekly<wbr>Schedule<wbr>Args</a></span>
     </dt>
@@ -1563,7 +1737,9 @@ the source disk is deleted.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Daily<wbr>Schedule</span>
+        <span id="dailyschedule_go">
+<a href="#dailyschedule_go" style="color: inherit; text-decoration: inherit;">Daily<wbr>Schedule</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyscheduledailyschedule">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Daily<wbr>Schedule</a></span>
     </dt>
@@ -1572,7 +1748,9 @@ the source disk is deleted.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Hourly<wbr>Schedule</span>
+        <span id="hourlyschedule_go">
+<a href="#hourlyschedule_go" style="color: inherit; text-decoration: inherit;">Hourly<wbr>Schedule</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyschedulehourlyschedule">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Hourly<wbr>Schedule</a></span>
     </dt>
@@ -1581,7 +1759,9 @@ the source disk is deleted.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Weekly<wbr>Schedule</span>
+        <span id="weeklyschedule_go">
+<a href="#weeklyschedule_go" style="color: inherit; text-decoration: inherit;">Weekly<wbr>Schedule</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyscheduleweeklyschedule">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Weekly<wbr>Schedule</a></span>
     </dt>
@@ -1597,7 +1777,9 @@ the source disk is deleted.
 
     <dt class="property-optional"
             title="Optional">
-        <span>daily<wbr>Schedule</span>
+        <span id="dailyschedule_nodejs">
+<a href="#dailyschedule_nodejs" style="color: inherit; text-decoration: inherit;">daily<wbr>Schedule</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyscheduledailyschedule">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Daily<wbr>Schedule</a></span>
     </dt>
@@ -1606,7 +1788,9 @@ the source disk is deleted.
 
     <dt class="property-optional"
             title="Optional">
-        <span>hourly<wbr>Schedule</span>
+        <span id="hourlyschedule_nodejs">
+<a href="#hourlyschedule_nodejs" style="color: inherit; text-decoration: inherit;">hourly<wbr>Schedule</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyschedulehourlyschedule">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Hourly<wbr>Schedule</a></span>
     </dt>
@@ -1615,7 +1799,9 @@ the source disk is deleted.
 
     <dt class="property-optional"
             title="Optional">
-        <span>weekly<wbr>Schedule</span>
+        <span id="weeklyschedule_nodejs">
+<a href="#weeklyschedule_nodejs" style="color: inherit; text-decoration: inherit;">weekly<wbr>Schedule</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyscheduleweeklyschedule">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Weekly<wbr>Schedule</a></span>
     </dt>
@@ -1631,7 +1817,9 @@ the source disk is deleted.
 
     <dt class="property-optional"
             title="Optional">
-        <span>daily<wbr>Schedule</span>
+        <span id="dailyschedule_python">
+<a href="#dailyschedule_python" style="color: inherit; text-decoration: inherit;">daily<wbr>Schedule</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyscheduledailyschedule">Dict[Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Daily<wbr>Schedule]</a></span>
     </dt>
@@ -1640,7 +1828,9 @@ the source disk is deleted.
 
     <dt class="property-optional"
             title="Optional">
-        <span>hourly<wbr>Schedule</span>
+        <span id="hourlyschedule_python">
+<a href="#hourlyschedule_python" style="color: inherit; text-decoration: inherit;">hourly<wbr>Schedule</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyschedulehourlyschedule">Dict[Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Hourly<wbr>Schedule]</a></span>
     </dt>
@@ -1649,7 +1839,9 @@ the source disk is deleted.
 
     <dt class="property-optional"
             title="Optional">
-        <span>weekly<wbr>Schedule</span>
+        <span id="weeklyschedule_python">
+<a href="#weeklyschedule_python" style="color: inherit; text-decoration: inherit;">weekly<wbr>Schedule</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyscheduleweeklyschedule">Dict[Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Weekly<wbr>Schedule]</a></span>
     </dt>
@@ -1683,7 +1875,9 @@ the source disk is deleted.
 
     <dt class="property-required"
             title="Required">
-        <span>Days<wbr>In<wbr>Cycle</span>
+        <span id="daysincycle_csharp">
+<a href="#daysincycle_csharp" style="color: inherit; text-decoration: inherit;">Days<wbr>In<wbr>Cycle</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1692,7 +1886,9 @@ the source disk is deleted.
 
     <dt class="property-required"
             title="Required">
-        <span>Start<wbr>Time</span>
+        <span id="starttime_csharp">
+<a href="#starttime_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1709,7 +1905,9 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
 
     <dt class="property-required"
             title="Required">
-        <span>Days<wbr>In<wbr>Cycle</span>
+        <span id="daysincycle_go">
+<a href="#daysincycle_go" style="color: inherit; text-decoration: inherit;">Days<wbr>In<wbr>Cycle</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1718,7 +1916,9 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
 
     <dt class="property-required"
             title="Required">
-        <span>Start<wbr>Time</span>
+        <span id="starttime_go">
+<a href="#starttime_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1735,7 +1935,9 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
 
     <dt class="property-required"
             title="Required">
-        <span>days<wbr>In<wbr>Cycle</span>
+        <span id="daysincycle_nodejs">
+<a href="#daysincycle_nodejs" style="color: inherit; text-decoration: inherit;">days<wbr>In<wbr>Cycle</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1744,7 +1946,9 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
 
     <dt class="property-required"
             title="Required">
-        <span>start<wbr>Time</span>
+        <span id="starttime_nodejs">
+<a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1761,7 +1965,9 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
 
     <dt class="property-required"
             title="Required">
-        <span>days<wbr>In<wbr>Cycle</span>
+        <span id="daysincycle_python">
+<a href="#daysincycle_python" style="color: inherit; text-decoration: inherit;">days<wbr>In<wbr>Cycle</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1770,7 +1976,9 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
 
     <dt class="property-required"
             title="Required">
-        <span>start<wbr>Time</span>
+        <span id="starttime_python">
+<a href="#starttime_python" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1805,7 +2013,9 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
 
     <dt class="property-required"
             title="Required">
-        <span>Hours<wbr>In<wbr>Cycle</span>
+        <span id="hoursincycle_csharp">
+<a href="#hoursincycle_csharp" style="color: inherit; text-decoration: inherit;">Hours<wbr>In<wbr>Cycle</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1814,7 +2024,9 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
 
     <dt class="property-required"
             title="Required">
-        <span>Start<wbr>Time</span>
+        <span id="starttime_csharp">
+<a href="#starttime_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1831,7 +2043,9 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
 
     <dt class="property-required"
             title="Required">
-        <span>Hours<wbr>In<wbr>Cycle</span>
+        <span id="hoursincycle_go">
+<a href="#hoursincycle_go" style="color: inherit; text-decoration: inherit;">Hours<wbr>In<wbr>Cycle</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1840,7 +2054,9 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
 
     <dt class="property-required"
             title="Required">
-        <span>Start<wbr>Time</span>
+        <span id="starttime_go">
+<a href="#starttime_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1857,7 +2073,9 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
 
     <dt class="property-required"
             title="Required">
-        <span>hours<wbr>In<wbr>Cycle</span>
+        <span id="hoursincycle_nodejs">
+<a href="#hoursincycle_nodejs" style="color: inherit; text-decoration: inherit;">hours<wbr>In<wbr>Cycle</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1866,7 +2084,9 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
 
     <dt class="property-required"
             title="Required">
-        <span>start<wbr>Time</span>
+        <span id="starttime_nodejs">
+<a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1883,7 +2103,9 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
 
     <dt class="property-required"
             title="Required">
-        <span>hours<wbr>In<wbr>Cycle</span>
+        <span id="hoursincycle_python">
+<a href="#hoursincycle_python" style="color: inherit; text-decoration: inherit;">hours<wbr>In<wbr>Cycle</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1892,7 +2114,9 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
 
     <dt class="property-required"
             title="Required">
-        <span>start<wbr>Time</span>
+        <span id="starttime_python">
+<a href="#starttime_python" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1927,7 +2151,9 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
 
     <dt class="property-required"
             title="Required">
-        <span>Day<wbr>Of<wbr>Weeks</span>
+        <span id="dayofweeks_csharp">
+<a href="#dayofweeks_csharp" style="color: inherit; text-decoration: inherit;">Day<wbr>Of<wbr>Weeks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyscheduleweeklyscheduledayofweek">List&lt;Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Weekly<wbr>Schedule<wbr>Day<wbr>Of<wbr>Week<wbr>Args&gt;</a></span>
     </dt>
@@ -1943,7 +2169,9 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
 
     <dt class="property-required"
             title="Required">
-        <span>Day<wbr>Of<wbr>Weeks</span>
+        <span id="dayofweeks_go">
+<a href="#dayofweeks_go" style="color: inherit; text-decoration: inherit;">Day<wbr>Of<wbr>Weeks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyscheduleweeklyscheduledayofweek">[]Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Weekly<wbr>Schedule<wbr>Day<wbr>Of<wbr>Week</a></span>
     </dt>
@@ -1959,7 +2187,9 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
 
     <dt class="property-required"
             title="Required">
-        <span>day<wbr>Of<wbr>Weeks</span>
+        <span id="dayofweeks_nodejs">
+<a href="#dayofweeks_nodejs" style="color: inherit; text-decoration: inherit;">day<wbr>Of<wbr>Weeks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyscheduleweeklyscheduledayofweek">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Weekly<wbr>Schedule<wbr>Day<wbr>Of<wbr>Week[]</a></span>
     </dt>
@@ -1975,7 +2205,9 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
 
     <dt class="property-required"
             title="Required">
-        <span>day<wbr>Of<wbr>Weeks</span>
+        <span id="dayofweeks_python">
+<a href="#dayofweeks_python" style="color: inherit; text-decoration: inherit;">day<wbr>Of<wbr>Weeks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyscheduleweeklyscheduledayofweek">List[Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Weekly<wbr>Schedule<wbr>Day<wbr>Of<wbr>Week]</a></span>
     </dt>
@@ -2009,7 +2241,9 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
 
     <dt class="property-required"
             title="Required">
-        <span>Day</span>
+        <span id="day_csharp">
+<a href="#day_csharp" style="color: inherit; text-decoration: inherit;">Day</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2018,7 +2252,9 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
 
     <dt class="property-required"
             title="Required">
-        <span>Start<wbr>Time</span>
+        <span id="starttime_csharp">
+<a href="#starttime_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2035,7 +2271,9 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
 
     <dt class="property-required"
             title="Required">
-        <span>Day</span>
+        <span id="day_go">
+<a href="#day_go" style="color: inherit; text-decoration: inherit;">Day</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2044,7 +2282,9 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
 
     <dt class="property-required"
             title="Required">
-        <span>Start<wbr>Time</span>
+        <span id="starttime_go">
+<a href="#starttime_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2061,7 +2301,9 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
 
     <dt class="property-required"
             title="Required">
-        <span>day</span>
+        <span id="day_nodejs">
+<a href="#day_nodejs" style="color: inherit; text-decoration: inherit;">day</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2070,7 +2312,9 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
 
     <dt class="property-required"
             title="Required">
-        <span>start<wbr>Time</span>
+        <span id="starttime_nodejs">
+<a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2087,7 +2331,9 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
 
     <dt class="property-required"
             title="Required">
-        <span>day</span>
+        <span id="day_python">
+<a href="#day_python" style="color: inherit; text-decoration: inherit;">day</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2096,7 +2342,9 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
 
     <dt class="property-required"
             title="Required">
-        <span>start<wbr>Time</span>
+        <span id="starttime_python">
+<a href="#starttime_python" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2131,7 +2379,9 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Guest<wbr>Flush</span>
+        <span id="guestflush_csharp">
+<a href="#guestflush_csharp" style="color: inherit; text-decoration: inherit;">Guest<wbr>Flush</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -2140,7 +2390,9 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Labels</span>
+        <span id="labels_csharp">
+<a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -2149,7 +2401,9 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Storage<wbr>Locations</span>
+        <span id="storagelocations_csharp">
+<a href="#storagelocations_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Locations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2166,7 +2420,9 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Guest<wbr>Flush</span>
+        <span id="guestflush_go">
+<a href="#guestflush_go" style="color: inherit; text-decoration: inherit;">Guest<wbr>Flush</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -2175,7 +2431,9 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Labels</span>
+        <span id="labels_go">
+<a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -2184,7 +2442,9 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Storage<wbr>Locations</span>
+        <span id="storagelocations_go">
+<a href="#storagelocations_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Locations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2201,7 +2461,9 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
 
     <dt class="property-optional"
             title="Optional">
-        <span>guest<wbr>Flush</span>
+        <span id="guestflush_nodejs">
+<a href="#guestflush_nodejs" style="color: inherit; text-decoration: inherit;">guest<wbr>Flush</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -2210,7 +2472,9 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
 
     <dt class="property-optional"
             title="Optional">
-        <span>labels</span>
+        <span id="labels_nodejs">
+<a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -2219,7 +2483,9 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
 
     <dt class="property-optional"
             title="Optional">
-        <span>storage<wbr>Locations</span>
+        <span id="storagelocations_nodejs">
+<a href="#storagelocations_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Locations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2236,7 +2502,9 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
 
     <dt class="property-optional"
             title="Optional">
-        <span>guest<wbr>Flush</span>
+        <span id="guestflush_python">
+<a href="#guestflush_python" style="color: inherit; text-decoration: inherit;">guest<wbr>Flush</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2245,7 +2513,9 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
 
     <dt class="property-optional"
             title="Optional">
-        <span>labels</span>
+        <span id="labels_python">
+<a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -2254,7 +2524,9 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
 
     <dt class="property-optional"
             title="Optional">
-        <span>storage<wbr>Locations</span>
+        <span id="storagelocations_python">
+<a href="#storagelocations_python" style="color: inherit; text-decoration: inherit;">storage<wbr>Locations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

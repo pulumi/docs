@@ -22,6 +22,7 @@ Explore the resources and functions of the compute module in the Azure package.
     <li><a href="linuxvirtualmachine" title="LinuxVirtualMachine"><span class="symbol resource"></span>LinuxVirtualMachine</a></li>
     <li><a href="linuxvirtualmachinescaleset" title="LinuxVirtualMachineScaleSet"><span class="symbol resource"></span>LinuxVirtualMachineScaleSet</a></li>
     <li><a href="manageddisk" title="ManagedDisk"><span class="symbol resource"></span>ManagedDisk</a></li>
+    <li><a href="orchestratedvirtualmachinescaleset" title="OrchestratedVirtualMachineScaleSet"><span class="symbol resource"></span>OrchestratedVirtualMachineScaleSet</a></li>
     <li><a href="scaleset" title="ScaleSet"><span class="symbol resource"></span>ScaleSet</a></li>
     <li><a href="sharedimage" title="SharedImage"><span class="symbol resource"></span>SharedImage</a></li>
     <li><a href="sharedimagegallery" title="SharedImageGallery"><span class="symbol resource"></span>SharedImageGallery</a></li>
@@ -59,6 +60,24 @@ Explore the resources and functions of the compute module in the Azure package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 	<dt>Version</dt>
-	<dd>3.5.0</dd>
+	<dd>3.6.0</dd>
+</dl>
+
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Compute.html" title="Pulumi.Azure.Compute">Pulumi.Azure.Compute</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/compute?tab=doc#" title="azure/compute">azure/compute</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure/compute/#" title="@pulumi/azure/compute">@pulumi/azure/compute</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure/compute" title="pulumi_azure/compute">pulumi_azure/compute</a></dd>
+
 </dl>
 

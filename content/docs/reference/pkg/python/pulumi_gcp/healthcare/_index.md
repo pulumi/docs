@@ -26,6 +26,14 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">default</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">healthcare</span><span class="o">.</span><span class="n">Dataset</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">time_zone</span><span class="o">=</span><span class="s2">&quot;UTC&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -149,6 +157,36 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">healthcare.DatasetIamPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">healthcare.DatasetIamBinding</span></code> and <code class="docutils literal notranslate"><span class="pre">healthcare.DatasetIamMember</span></code> or they will fight over what your policy should be.</p>
 <p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">healthcare.DatasetIamBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">healthcare.DatasetIamMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">admin</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">organizations</span><span class="o">.</span><span class="n">get_iam_policy</span><span class="p">(</span><span class="n">binding</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;roles/editor&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;members&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">],</span>
+<span class="p">}])</span>
+<span class="n">dataset</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">healthcare</span><span class="o">.</span><span class="n">DatasetIamPolicy</span><span class="p">(</span><span class="s2">&quot;dataset&quot;</span><span class="p">,</span>
+    <span class="n">dataset_id</span><span class="o">=</span><span class="s2">&quot;your-dataset-id&quot;</span><span class="p">,</span>
+    <span class="n">policy_data</span><span class="o">=</span><span class="n">admin</span><span class="o">.</span><span class="n">policy_data</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">dataset</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">healthcare</span><span class="o">.</span><span class="n">DatasetIamBinding</span><span class="p">(</span><span class="s2">&quot;dataset&quot;</span><span class="p">,</span>
+    <span class="n">dataset_id</span><span class="o">=</span><span class="s2">&quot;your-dataset-id&quot;</span><span class="p">,</span>
+    <span class="n">members</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">],</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/editor&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">dataset</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">healthcare</span><span class="o">.</span><span class="n">DatasetIamMember</span><span class="p">(</span><span class="s2">&quot;dataset&quot;</span><span class="p">,</span>
+    <span class="n">dataset_id</span><span class="o">=</span><span class="s2">&quot;your-dataset-id&quot;</span><span class="p">,</span>
+    <span class="n">member</span><span class="o">=</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">,</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/editor&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -274,6 +312,36 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">healthcare.DatasetIamPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">healthcare.DatasetIamBinding</span></code> and <code class="docutils literal notranslate"><span class="pre">healthcare.DatasetIamMember</span></code> or they will fight over what your policy should be.</p>
 <p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">healthcare.DatasetIamBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">healthcare.DatasetIamMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">admin</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">organizations</span><span class="o">.</span><span class="n">get_iam_policy</span><span class="p">(</span><span class="n">binding</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;roles/editor&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;members&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">],</span>
+<span class="p">}])</span>
+<span class="n">dataset</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">healthcare</span><span class="o">.</span><span class="n">DatasetIamPolicy</span><span class="p">(</span><span class="s2">&quot;dataset&quot;</span><span class="p">,</span>
+    <span class="n">dataset_id</span><span class="o">=</span><span class="s2">&quot;your-dataset-id&quot;</span><span class="p">,</span>
+    <span class="n">policy_data</span><span class="o">=</span><span class="n">admin</span><span class="o">.</span><span class="n">policy_data</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">dataset</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">healthcare</span><span class="o">.</span><span class="n">DatasetIamBinding</span><span class="p">(</span><span class="s2">&quot;dataset&quot;</span><span class="p">,</span>
+    <span class="n">dataset_id</span><span class="o">=</span><span class="s2">&quot;your-dataset-id&quot;</span><span class="p">,</span>
+    <span class="n">members</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">],</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/editor&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">dataset</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">healthcare</span><span class="o">.</span><span class="n">DatasetIamMember</span><span class="p">(</span><span class="s2">&quot;dataset&quot;</span><span class="p">,</span>
+    <span class="n">dataset_id</span><span class="o">=</span><span class="s2">&quot;your-dataset-id&quot;</span><span class="p">,</span>
+    <span class="n">member</span><span class="o">=</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">,</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/editor&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -399,6 +467,36 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">healthcare.DatasetIamPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">healthcare.DatasetIamBinding</span></code> and <code class="docutils literal notranslate"><span class="pre">healthcare.DatasetIamMember</span></code> or they will fight over what your policy should be.</p>
 <p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">healthcare.DatasetIamBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">healthcare.DatasetIamMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">admin</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">organizations</span><span class="o">.</span><span class="n">get_iam_policy</span><span class="p">(</span><span class="n">binding</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;roles/editor&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;members&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">],</span>
+<span class="p">}])</span>
+<span class="n">dataset</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">healthcare</span><span class="o">.</span><span class="n">DatasetIamPolicy</span><span class="p">(</span><span class="s2">&quot;dataset&quot;</span><span class="p">,</span>
+    <span class="n">dataset_id</span><span class="o">=</span><span class="s2">&quot;your-dataset-id&quot;</span><span class="p">,</span>
+    <span class="n">policy_data</span><span class="o">=</span><span class="n">admin</span><span class="o">.</span><span class="n">policy_data</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">dataset</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">healthcare</span><span class="o">.</span><span class="n">DatasetIamBinding</span><span class="p">(</span><span class="s2">&quot;dataset&quot;</span><span class="p">,</span>
+    <span class="n">dataset_id</span><span class="o">=</span><span class="s2">&quot;your-dataset-id&quot;</span><span class="p">,</span>
+    <span class="n">members</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">],</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/editor&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">dataset</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">healthcare</span><span class="o">.</span><span class="n">DatasetIamMember</span><span class="p">(</span><span class="s2">&quot;dataset&quot;</span><span class="p">,</span>
+    <span class="n">dataset_id</span><span class="o">=</span><span class="s2">&quot;your-dataset-id&quot;</span><span class="p">,</span>
+    <span class="n">member</span><span class="o">=</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">,</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/editor&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -510,6 +608,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">topic</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">pubsub</span><span class="o">.</span><span class="n">Topic</span><span class="p">(</span><span class="s2">&quot;topic&quot;</span><span class="p">)</span>
+<span class="n">dataset</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">healthcare</span><span class="o">.</span><span class="n">Dataset</span><span class="p">(</span><span class="s2">&quot;dataset&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">)</span>
+<span class="n">default</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">healthcare</span><span class="o">.</span><span class="n">DicomStore</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
+    <span class="n">dataset</span><span class="o">=</span><span class="n">dataset</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">notification_config</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;pubsubTopic&quot;</span><span class="p">:</span> <span class="n">topic</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">labels</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;label1&quot;</span><span class="p">:</span> <span class="s2">&quot;labelvalue1&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -679,6 +792,36 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">healthcare.DicomStoreIamPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">healthcare.DicomStoreIamBinding</span></code> and <code class="docutils literal notranslate"><span class="pre">healthcare.DicomStoreIamMember</span></code> or they will fight over what your policy should be.</p>
 <p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">healthcare.DicomStoreIamBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">healthcare.DicomStoreIamMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">admin</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">organizations</span><span class="o">.</span><span class="n">get_iam_policy</span><span class="p">(</span><span class="n">binding</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;roles/editor&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;members&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">],</span>
+<span class="p">}])</span>
+<span class="n">dicom_store</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">healthcare</span><span class="o">.</span><span class="n">DicomStoreIamPolicy</span><span class="p">(</span><span class="s2">&quot;dicomStore&quot;</span><span class="p">,</span>
+    <span class="n">dicom_store_id</span><span class="o">=</span><span class="s2">&quot;your-dicom-store-id&quot;</span><span class="p">,</span>
+    <span class="n">policy_data</span><span class="o">=</span><span class="n">admin</span><span class="o">.</span><span class="n">policy_data</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">dicom_store</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">healthcare</span><span class="o">.</span><span class="n">DicomStoreIamBinding</span><span class="p">(</span><span class="s2">&quot;dicomStore&quot;</span><span class="p">,</span>
+    <span class="n">dicom_store_id</span><span class="o">=</span><span class="s2">&quot;your-dicom-store-id&quot;</span><span class="p">,</span>
+    <span class="n">members</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">],</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/editor&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">dicom_store</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">healthcare</span><span class="o">.</span><span class="n">DicomStoreIamMember</span><span class="p">(</span><span class="s2">&quot;dicomStore&quot;</span><span class="p">,</span>
+    <span class="n">dicom_store_id</span><span class="o">=</span><span class="s2">&quot;your-dicom-store-id&quot;</span><span class="p">,</span>
+    <span class="n">member</span><span class="o">=</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">,</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/editor&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -804,6 +947,36 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">healthcare.DicomStoreIamPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">healthcare.DicomStoreIamBinding</span></code> and <code class="docutils literal notranslate"><span class="pre">healthcare.DicomStoreIamMember</span></code> or they will fight over what your policy should be.</p>
 <p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">healthcare.DicomStoreIamBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">healthcare.DicomStoreIamMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">admin</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">organizations</span><span class="o">.</span><span class="n">get_iam_policy</span><span class="p">(</span><span class="n">binding</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;roles/editor&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;members&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">],</span>
+<span class="p">}])</span>
+<span class="n">dicom_store</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">healthcare</span><span class="o">.</span><span class="n">DicomStoreIamPolicy</span><span class="p">(</span><span class="s2">&quot;dicomStore&quot;</span><span class="p">,</span>
+    <span class="n">dicom_store_id</span><span class="o">=</span><span class="s2">&quot;your-dicom-store-id&quot;</span><span class="p">,</span>
+    <span class="n">policy_data</span><span class="o">=</span><span class="n">admin</span><span class="o">.</span><span class="n">policy_data</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">dicom_store</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">healthcare</span><span class="o">.</span><span class="n">DicomStoreIamBinding</span><span class="p">(</span><span class="s2">&quot;dicomStore&quot;</span><span class="p">,</span>
+    <span class="n">dicom_store_id</span><span class="o">=</span><span class="s2">&quot;your-dicom-store-id&quot;</span><span class="p">,</span>
+    <span class="n">members</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">],</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/editor&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">dicom_store</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">healthcare</span><span class="o">.</span><span class="n">DicomStoreIamMember</span><span class="p">(</span><span class="s2">&quot;dicomStore&quot;</span><span class="p">,</span>
+    <span class="n">dicom_store_id</span><span class="o">=</span><span class="s2">&quot;your-dicom-store-id&quot;</span><span class="p">,</span>
+    <span class="n">member</span><span class="o">=</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">,</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/editor&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -929,6 +1102,36 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">healthcare.DicomStoreIamPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">healthcare.DicomStoreIamBinding</span></code> and <code class="docutils literal notranslate"><span class="pre">healthcare.DicomStoreIamMember</span></code> or they will fight over what your policy should be.</p>
 <p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">healthcare.DicomStoreIamBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">healthcare.DicomStoreIamMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">admin</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">organizations</span><span class="o">.</span><span class="n">get_iam_policy</span><span class="p">(</span><span class="n">binding</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;roles/editor&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;members&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">],</span>
+<span class="p">}])</span>
+<span class="n">dicom_store</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">healthcare</span><span class="o">.</span><span class="n">DicomStoreIamPolicy</span><span class="p">(</span><span class="s2">&quot;dicomStore&quot;</span><span class="p">,</span>
+    <span class="n">dicom_store_id</span><span class="o">=</span><span class="s2">&quot;your-dicom-store-id&quot;</span><span class="p">,</span>
+    <span class="n">policy_data</span><span class="o">=</span><span class="n">admin</span><span class="o">.</span><span class="n">policy_data</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">dicom_store</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">healthcare</span><span class="o">.</span><span class="n">DicomStoreIamBinding</span><span class="p">(</span><span class="s2">&quot;dicomStore&quot;</span><span class="p">,</span>
+    <span class="n">dicom_store_id</span><span class="o">=</span><span class="s2">&quot;your-dicom-store-id&quot;</span><span class="p">,</span>
+    <span class="n">members</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">],</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/editor&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">dicom_store</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">healthcare</span><span class="o">.</span><span class="n">DicomStoreIamMember</span><span class="p">(</span><span class="s2">&quot;dicomStore&quot;</span><span class="p">,</span>
+    <span class="n">dicom_store_id</span><span class="o">=</span><span class="s2">&quot;your-dicom-store-id&quot;</span><span class="p">,</span>
+    <span class="n">member</span><span class="o">=</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">,</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/editor&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1040,6 +1243,26 @@ standard for Healthcare information exchange</p>
 </ul>
 </li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">topic</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">pubsub</span><span class="o">.</span><span class="n">Topic</span><span class="p">(</span><span class="s2">&quot;topic&quot;</span><span class="p">)</span>
+<span class="n">dataset</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">healthcare</span><span class="o">.</span><span class="n">Dataset</span><span class="p">(</span><span class="s2">&quot;dataset&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">)</span>
+<span class="n">default</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">healthcare</span><span class="o">.</span><span class="n">FhirStore</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
+    <span class="n">dataset</span><span class="o">=</span><span class="n">dataset</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">version</span><span class="o">=</span><span class="s2">&quot;R4&quot;</span><span class="p">,</span>
+    <span class="n">enable_update_create</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">disable_referential_integrity</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">disable_resource_versioning</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">enable_history_import</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">notification_config</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;pubsubTopic&quot;</span><span class="p">:</span> <span class="n">topic</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">labels</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;label1&quot;</span><span class="p">:</span> <span class="s2">&quot;labelvalue1&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1083,7 +1306,7 @@ Example: { “name”: “wrench”, “mass”: “1.3kg”, “count”: “3�
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The resource name for the FhirStore.
 ** Changing this property may recreate the FHIR store (removing all data) **</p></li>
 <li><p><strong>notification_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A nested object resource  Structure is documented below.</p></li>
-<li><p><strong>version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The FHIR specification version. Supported values include DSTU2, STU3 and R4. Defaults to STU3.</p></li>
+<li><p><strong>version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The FHIR specification version.</p></li>
 </ul>
 </dd>
 </dl>
@@ -1190,7 +1413,7 @@ Cloud Pub/Sub topic. Not having adequate permissions will cause the calls that s
 <dl class="py attribute">
 <dt id="pulumi_gcp.healthcare.FhirStore.version">
 <code class="sig-name descname">version</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.healthcare.FhirStore.version" title="Permalink to this definition">¶</a></dt>
-<dd><p>The FHIR specification version. Supported values include DSTU2, STU3 and R4. Defaults to STU3.</p>
+<dd><p>The FHIR specification version.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -1243,7 +1466,7 @@ Example: { “name”: “wrench”, “mass”: “1.3kg”, “count”: “3�
 ** Changing this property may recreate the FHIR store (removing all data) **</p></li>
 <li><p><strong>notification_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A nested object resource  Structure is documented below.</p></li>
 <li><p><strong>self_link</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The fully qualified name of this dataset</p></li>
-<li><p><strong>version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The FHIR specification version. Supported values include DSTU2, STU3 and R4. Defaults to STU3.</p></li>
+<li><p><strong>version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The FHIR specification version.</p></li>
 </ul>
 </dd>
 </dl>
@@ -1309,6 +1532,36 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">healthcare.FhirStoreIamPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">healthcare.FhirStoreIamBinding</span></code> and <code class="docutils literal notranslate"><span class="pre">healthcare.FhirStoreIamMember</span></code> or they will fight over what your policy should be.</p>
 <p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">healthcare.FhirStoreIamBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">healthcare.FhirStoreIamMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">admin</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">organizations</span><span class="o">.</span><span class="n">get_iam_policy</span><span class="p">(</span><span class="n">binding</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;roles/editor&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;members&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">],</span>
+<span class="p">}])</span>
+<span class="n">fhir_store</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">healthcare</span><span class="o">.</span><span class="n">FhirStoreIamPolicy</span><span class="p">(</span><span class="s2">&quot;fhirStore&quot;</span><span class="p">,</span>
+    <span class="n">fhir_store_id</span><span class="o">=</span><span class="s2">&quot;your-fhir-store-id&quot;</span><span class="p">,</span>
+    <span class="n">policy_data</span><span class="o">=</span><span class="n">admin</span><span class="o">.</span><span class="n">policy_data</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">fhir_store</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">healthcare</span><span class="o">.</span><span class="n">FhirStoreIamBinding</span><span class="p">(</span><span class="s2">&quot;fhirStore&quot;</span><span class="p">,</span>
+    <span class="n">fhir_store_id</span><span class="o">=</span><span class="s2">&quot;your-fhir-store-id&quot;</span><span class="p">,</span>
+    <span class="n">members</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">],</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/editor&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">fhir_store</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">healthcare</span><span class="o">.</span><span class="n">FhirStoreIamMember</span><span class="p">(</span><span class="s2">&quot;fhirStore&quot;</span><span class="p">,</span>
+    <span class="n">fhir_store_id</span><span class="o">=</span><span class="s2">&quot;your-fhir-store-id&quot;</span><span class="p">,</span>
+    <span class="n">member</span><span class="o">=</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">,</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/editor&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1434,6 +1687,36 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">healthcare.FhirStoreIamPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">healthcare.FhirStoreIamBinding</span></code> and <code class="docutils literal notranslate"><span class="pre">healthcare.FhirStoreIamMember</span></code> or they will fight over what your policy should be.</p>
 <p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">healthcare.FhirStoreIamBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">healthcare.FhirStoreIamMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">admin</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">organizations</span><span class="o">.</span><span class="n">get_iam_policy</span><span class="p">(</span><span class="n">binding</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;roles/editor&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;members&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">],</span>
+<span class="p">}])</span>
+<span class="n">fhir_store</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">healthcare</span><span class="o">.</span><span class="n">FhirStoreIamPolicy</span><span class="p">(</span><span class="s2">&quot;fhirStore&quot;</span><span class="p">,</span>
+    <span class="n">fhir_store_id</span><span class="o">=</span><span class="s2">&quot;your-fhir-store-id&quot;</span><span class="p">,</span>
+    <span class="n">policy_data</span><span class="o">=</span><span class="n">admin</span><span class="o">.</span><span class="n">policy_data</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">fhir_store</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">healthcare</span><span class="o">.</span><span class="n">FhirStoreIamBinding</span><span class="p">(</span><span class="s2">&quot;fhirStore&quot;</span><span class="p">,</span>
+    <span class="n">fhir_store_id</span><span class="o">=</span><span class="s2">&quot;your-fhir-store-id&quot;</span><span class="p">,</span>
+    <span class="n">members</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">],</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/editor&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">fhir_store</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">healthcare</span><span class="o">.</span><span class="n">FhirStoreIamMember</span><span class="p">(</span><span class="s2">&quot;fhirStore&quot;</span><span class="p">,</span>
+    <span class="n">fhir_store_id</span><span class="o">=</span><span class="s2">&quot;your-fhir-store-id&quot;</span><span class="p">,</span>
+    <span class="n">member</span><span class="o">=</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">,</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/editor&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1559,6 +1842,36 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">healthcare.FhirStoreIamPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">healthcare.FhirStoreIamBinding</span></code> and <code class="docutils literal notranslate"><span class="pre">healthcare.FhirStoreIamMember</span></code> or they will fight over what your policy should be.</p>
 <p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">healthcare.FhirStoreIamBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">healthcare.FhirStoreIamMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">admin</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">organizations</span><span class="o">.</span><span class="n">get_iam_policy</span><span class="p">(</span><span class="n">binding</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;roles/editor&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;members&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">],</span>
+<span class="p">}])</span>
+<span class="n">fhir_store</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">healthcare</span><span class="o">.</span><span class="n">FhirStoreIamPolicy</span><span class="p">(</span><span class="s2">&quot;fhirStore&quot;</span><span class="p">,</span>
+    <span class="n">fhir_store_id</span><span class="o">=</span><span class="s2">&quot;your-fhir-store-id&quot;</span><span class="p">,</span>
+    <span class="n">policy_data</span><span class="o">=</span><span class="n">admin</span><span class="o">.</span><span class="n">policy_data</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">fhir_store</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">healthcare</span><span class="o">.</span><span class="n">FhirStoreIamBinding</span><span class="p">(</span><span class="s2">&quot;fhirStore&quot;</span><span class="p">,</span>
+    <span class="n">fhir_store_id</span><span class="o">=</span><span class="s2">&quot;your-fhir-store-id&quot;</span><span class="p">,</span>
+    <span class="n">members</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">],</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/editor&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">fhir_store</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">healthcare</span><span class="o">.</span><span class="n">FhirStoreIamMember</span><span class="p">(</span><span class="s2">&quot;fhirStore&quot;</span><span class="p">,</span>
+    <span class="n">fhir_store_id</span><span class="o">=</span><span class="s2">&quot;your-fhir-store-id&quot;</span><span class="p">,</span>
+    <span class="n">member</span><span class="o">=</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">,</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/editor&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1658,7 +1971,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_gcp.healthcare.Hl7Store">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.healthcare.</code><code class="sig-name descname">Hl7Store</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dataset</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">notification_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">parser_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.healthcare.Hl7Store" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.healthcare.</code><code class="sig-name descname">Hl7Store</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dataset</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">notification_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">notification_configs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">parser_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.healthcare.Hl7Store" title="Permalink to this definition">¶</a></dt>
 <dd><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>A Hl7V2Store is a datastore inside a Healthcare dataset that conforms to the FHIR (https://www.hl7.org/hl7V2/STU3/)
 standard for Healthcare information exchange
 
@@ -1667,6 +1980,119 @@ To get more information about Hl7V2Store, see:
 * [API documentation](https://cloud.google.com/healthcare/docs/reference/rest/v1/projects.locations.datasets.hl7V2Stores)
 * How-to Guides
     * [Creating a HL7v2 Store](https://cloud.google.com/healthcare/docs/how-tos/hl7v2)
+
+## Example Usage - Healthcare Hl7 V2 Store Basic
+
+
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+topic = gcp.pubsub.Topic(&quot;topic&quot;)
+dataset = gcp.healthcare.Dataset(&quot;dataset&quot;, location=&quot;us-central1&quot;)
+default = gcp.healthcare.Hl7Store(&quot;default&quot;,
+    dataset=dataset.id,
+    notification_configs=[{
+        &quot;pubsubTopic&quot;: topic.id,
+    }],
+    labels={
+        &quot;label1&quot;: &quot;labelvalue1&quot;,
+    })
+```
+## Example Usage - Healthcare Hl7 V2 Store Parser Config
+
+
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+dataset = gcp.healthcare.Dataset(&quot;dataset&quot;, location=&quot;us-central1&quot;)
+default = gcp.healthcare.Hl7Store(&quot;default&quot;,
+    dataset=dataset.id,
+    parser_config={
+        &quot;allowNullHeader&quot;: False,
+        &quot;segmentTerminator&quot;: &quot;Jw==&quot;,
+        &quot;schema&quot;: &quot;&quot;&quot;{
+  &quot;schemas&quot;: [{
+    &quot;messageSchemaConfigs&quot;: {
+      &quot;ADT_A01&quot;: {
+        &quot;name&quot;: &quot;ADT_A01&quot;,
+        &quot;minOccurs&quot;: 1,
+        &quot;maxOccurs&quot;: 1,
+        &quot;members&quot;: [{
+            &quot;segment&quot;: {
+              &quot;type&quot;: &quot;MSH&quot;,
+              &quot;minOccurs&quot;: 1,
+              &quot;maxOccurs&quot;: 1
+            }
+          },
+          {
+            &quot;segment&quot;: {
+              &quot;type&quot;: &quot;EVN&quot;,
+              &quot;minOccurs&quot;: 1,
+              &quot;maxOccurs&quot;: 1
+            }
+          },
+          {
+            &quot;segment&quot;: {
+              &quot;type&quot;: &quot;PID&quot;,
+              &quot;minOccurs&quot;: 1,
+              &quot;maxOccurs&quot;: 1
+            }
+          },
+          {
+            &quot;segment&quot;: {
+              &quot;type&quot;: &quot;ZPD&quot;,
+              &quot;minOccurs&quot;: 1,
+              &quot;maxOccurs&quot;: 1
+            }
+          },
+          {
+            &quot;segment&quot;: {
+              &quot;type&quot;: &quot;OBX&quot;
+            }
+          },
+          {
+            &quot;group&quot;: {
+              &quot;name&quot;: &quot;PROCEDURE&quot;,
+              &quot;members&quot;: [{
+                  &quot;segment&quot;: {
+                    &quot;type&quot;: &quot;PR1&quot;,
+                    &quot;minOccurs&quot;: 1,
+                    &quot;maxOccurs&quot;: 1
+                  }
+                },
+                {
+                  &quot;segment&quot;: {
+                    &quot;type&quot;: &quot;ROL&quot;
+                  }
+                }
+              ]
+            }
+          },
+          {
+            &quot;segment&quot;: {
+              &quot;type&quot;: &quot;PDA&quot;,
+              &quot;maxOccurs&quot;: 1
+            }
+          }
+        ]
+      }
+    }
+  }],
+  &quot;types&quot;: [{
+    &quot;type&quot;: [{
+        &quot;name&quot;: &quot;ZPD&quot;,
+        &quot;primitive&quot;: &quot;VARIES&quot;
+      }
+
+    ]
+  }],
+  &quot;ignoreMinOccurs&quot;: true
+}
+&quot;&quot;&quot;,
+    })
+```
 
 :param str resource_name: The name of the resource.
 :param pulumi.ResourceOptions opts: Options for the resource.
@@ -1682,11 +2108,34 @@ To get more information about Hl7V2Store, see:
        Example: { &quot;name&quot;: &quot;wrench&quot;, &quot;mass&quot;: &quot;1.3kg&quot;, &quot;count&quot;: &quot;3&quot; }.
 :param pulumi.Input[str] name: The resource name for the Hl7V2Store.
        ** Changing this property may recreate the Hl7v2 store (removing all data) **
-:param pulumi.Input[dict] notification_config: A nested object resource  Structure is documented below.
+:param pulumi.Input[dict] notification_config: -
+       (Optional, Deprecated)
+       A nested object resource  Structure is documented below.
+:param pulumi.Input[list] notification_configs: A list of notification configs. Each configuration uses a filter to determine whether to publish a
+       message (both Ingest &amp; Create) on the corresponding notification destination. Only the message name
+       is sent as part of the notification. Supplied by the client.  Structure is documented below.
 :param pulumi.Input[dict] parser_config: A nested object resource  Structure is documented below.
 
 The **notification_config** object supports the following:
 
+  * `pubsubTopic` (`pulumi.Input[str]`) - The Cloud Pub/Sub topic that notifications of changes are published on. Supplied by the client.
+    PubsubMessage.Data will contain the resource name. PubsubMessage.MessageId is the ID of this message.
+    It is guaranteed to be unique within the topic. PubsubMessage.PublishTime is the time at which the message
+    was published. Notifications are only sent if the topic is non-empty. Topic names must be scoped to a
+    project. cloud-healthcare@system.gserviceaccount.com must have publisher permissions on the given
+    Cloud Pub/Sub topic. Not having adequate permissions will cause the calls that send notifications to fail.
+
+The **notification_configs** object supports the following:
+
+  * `filter` (`pulumi.Input[str]`) - Restricts notifications sent for messages matching a filter. If this is empty, all messages
+    are matched. Syntax: https://cloud.google.com/appengine/docs/standard/python/search/query_strings
+    Fields/functions available for filtering are:
+    * messageType, from the MSH-9.1 field. For example, NOT messageType = &quot;ADT&quot;.
+    * send_date or sendDate, the YYYY-MM-DD date the message was sent in the dataset&#39;s timeZone, from the MSH-7 segment. For example, send_date &lt; &quot;2017-01-02&quot;.
+    * sendTime, the timestamp when the message was sent, using the RFC3339 time format for comparisons, from the MSH-7 segment. For example, sendTime &lt; &quot;2017-01-02T00:00:00-05:00&quot;.
+    * sendFacility, the care center that the message came from, from the MSH-4 segment. For example, sendFacility = &quot;ABC&quot;.
+    * PatientId(value, type), which matches if the message lists a patient having an ID of the given value and type in the PID-2, PID-3, or PID-4 segments. For example, PatientId(&quot;123456&quot;, &quot;MRN&quot;).
+    * labels.x, a string value of the label with key x as set using the Message.labels map. For example, labels.&quot;priority&quot;=&quot;high&quot;. The operator :* can be used to assert the existence of a label. For example, labels.&quot;priority&quot;:*.
   * `pubsubTopic` (`pulumi.Input[str]`) - The Cloud Pub/Sub topic that notifications of changes are published on. Supplied by the client.
     PubsubMessage.Data will contain the resource name. PubsubMessage.MessageId is the ID of this message.
     It is guaranteed to be unique within the topic. PubsubMessage.PublishTime is the time at which the message
@@ -1736,8 +2185,40 @@ Example: { “name”: “wrench”, “mass”: “1.3kg”, “count”: “3�
 <dl class="py attribute">
 <dt id="pulumi_gcp.healthcare.Hl7Store.notification_config">
 <code class="sig-name descname">notification_config</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.healthcare.Hl7Store.notification_config" title="Permalink to this definition">¶</a></dt>
-<dd><p>A nested object resource  Structure is documented below.</p>
+<dd><ul class="simple">
+<li></li>
+</ul>
+<p>(Optional, Deprecated)
+A nested object resource  Structure is documented below.</p>
 <ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">pubsubTopic</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Cloud Pub/Sub topic that notifications of changes are published on. Supplied by the client.
+PubsubMessage.Data will contain the resource name. PubsubMessage.MessageId is the ID of this message.
+It is guaranteed to be unique within the topic. PubsubMessage.PublishTime is the time at which the message
+was published. Notifications are only sent if the topic is non-empty. Topic names must be scoped to a
+project. <a class="reference external" href="mailto:cloud-healthcare&#37;&#52;&#48;system&#46;gserviceaccount&#46;com">cloud-healthcare<span>&#64;</span>system<span>&#46;</span>gserviceaccount<span>&#46;</span>com</a> must have publisher permissions on the given
+Cloud Pub/Sub topic. Not having adequate permissions will cause the calls that send notifications to fail.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_gcp.healthcare.Hl7Store.notification_configs">
+<code class="sig-name descname">notification_configs</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.healthcare.Hl7Store.notification_configs" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of notification configs. Each configuration uses a filter to determine whether to publish a
+message (both Ingest &amp; Create) on the corresponding notification destination. Only the message name
+is sent as part of the notification. Supplied by the client.  Structure is documented below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">filter</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Restricts notifications sent for messages matching a filter. If this is empty, all messages
+are matched. Syntax: <a class="reference external" href="https://cloud.google.com/appengine/docs/standard/python/search/query_strings">https://cloud.google.com/appengine/docs/standard/python/search/query_strings</a>
+Fields/functions available for filtering are:</p>
+<ul>
+<li><p>messageType, from the MSH-9.1 field. For example, NOT messageType = “ADT”.</p></li>
+<li><p>send_date or sendDate, the YYYY-MM-DD date the message was sent in the dataset’s timeZone, from the MSH-7 segment. For example, send_date &lt; “2017-01-02”.</p></li>
+<li><p>sendTime, the timestamp when the message was sent, using the RFC3339 time format for comparisons, from the MSH-7 segment. For example, sendTime &lt; “2017-01-02T00:00:00-05:00”.</p></li>
+<li><p>sendFacility, the care center that the message came from, from the MSH-4 segment. For example, sendFacility = “ABC”.</p></li>
+<li><p>PatientId(value, type), which matches if the message lists a patient having an ID of the given value and type in the PID-2, PID-3, or PID-4 segments. For example, PatientId(“123456”, “MRN”).</p></li>
+<li><p>labels.x, a string value of the label with key x as set using the Message.labels map. For example, labels.”priority”=”high”. The operator :* can be used to assert the existence of a label. For example, labels.”priority”:<a href="#id11"><span class="problematic" id="id12">*</span></a>.</p></li>
+</ul>
+</li>
 <li><p><code class="docutils literal notranslate"><span class="pre">pubsubTopic</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Cloud Pub/Sub topic that notifications of changes are published on. Supplied by the client.
 PubsubMessage.Data will contain the resource name. PubsubMessage.MessageId is the ID of this message.
 It is guaranteed to be unique within the topic. PubsubMessage.PublishTime is the time at which the message
@@ -1769,7 +2250,7 @@ A base64-encoded string.</p></li>
 
 <dl class="py method">
 <dt id="pulumi_gcp.healthcare.Hl7Store.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dataset</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">notification_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">parser_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">self_link</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.healthcare.Hl7Store.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dataset</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">notification_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">notification_configs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">parser_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">self_link</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.healthcare.Hl7Store.get" title="Permalink to this definition">¶</a></dt>
 <dd><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Get an existing Hl7Store resource&#39;s state with the given name, id, and optional extra
 properties used to qualify the lookup.
 
@@ -1788,12 +2269,35 @@ properties used to qualify the lookup.
        Example: { &quot;name&quot;: &quot;wrench&quot;, &quot;mass&quot;: &quot;1.3kg&quot;, &quot;count&quot;: &quot;3&quot; }.
 :param pulumi.Input[str] name: The resource name for the Hl7V2Store.
        ** Changing this property may recreate the Hl7v2 store (removing all data) **
-:param pulumi.Input[dict] notification_config: A nested object resource  Structure is documented below.
+:param pulumi.Input[dict] notification_config: -
+       (Optional, Deprecated)
+       A nested object resource  Structure is documented below.
+:param pulumi.Input[list] notification_configs: A list of notification configs. Each configuration uses a filter to determine whether to publish a
+       message (both Ingest &amp; Create) on the corresponding notification destination. Only the message name
+       is sent as part of the notification. Supplied by the client.  Structure is documented below.
 :param pulumi.Input[dict] parser_config: A nested object resource  Structure is documented below.
 :param pulumi.Input[str] self_link: The fully qualified name of this dataset
 
 The **notification_config** object supports the following:
 
+  * `pubsubTopic` (`pulumi.Input[str]`) - The Cloud Pub/Sub topic that notifications of changes are published on. Supplied by the client.
+    PubsubMessage.Data will contain the resource name. PubsubMessage.MessageId is the ID of this message.
+    It is guaranteed to be unique within the topic. PubsubMessage.PublishTime is the time at which the message
+    was published. Notifications are only sent if the topic is non-empty. Topic names must be scoped to a
+    project. cloud-healthcare@system.gserviceaccount.com must have publisher permissions on the given
+    Cloud Pub/Sub topic. Not having adequate permissions will cause the calls that send notifications to fail.
+
+The **notification_configs** object supports the following:
+
+  * `filter` (`pulumi.Input[str]`) - Restricts notifications sent for messages matching a filter. If this is empty, all messages
+    are matched. Syntax: https://cloud.google.com/appengine/docs/standard/python/search/query_strings
+    Fields/functions available for filtering are:
+    * messageType, from the MSH-9.1 field. For example, NOT messageType = &quot;ADT&quot;.
+    * send_date or sendDate, the YYYY-MM-DD date the message was sent in the dataset&#39;s timeZone, from the MSH-7 segment. For example, send_date &lt; &quot;2017-01-02&quot;.
+    * sendTime, the timestamp when the message was sent, using the RFC3339 time format for comparisons, from the MSH-7 segment. For example, sendTime &lt; &quot;2017-01-02T00:00:00-05:00&quot;.
+    * sendFacility, the care center that the message came from, from the MSH-4 segment. For example, sendFacility = &quot;ABC&quot;.
+    * PatientId(value, type), which matches if the message lists a patient having an ID of the given value and type in the PID-2, PID-3, or PID-4 segments. For example, PatientId(&quot;123456&quot;, &quot;MRN&quot;).
+    * labels.x, a string value of the label with key x as set using the Message.labels map. For example, labels.&quot;priority&quot;=&quot;high&quot;. The operator :* can be used to assert the existence of a label. For example, labels.&quot;priority&quot;:*.
   * `pubsubTopic` (`pulumi.Input[str]`) - The Cloud Pub/Sub topic that notifications of changes are published on. Supplied by the client.
     PubsubMessage.Data will contain the resource name. PubsubMessage.MessageId is the ID of this message.
     It is guaranteed to be unique within the topic. PubsubMessage.PublishTime is the time at which the message
@@ -1866,6 +2370,36 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">healthcare.Hl7StoreIamPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">healthcare.Hl7StoreIamBinding</span></code> and <code class="docutils literal notranslate"><span class="pre">healthcare.Hl7StoreIamMember</span></code> or they will fight over what your policy should be.</p>
 <p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">healthcare.Hl7StoreIamBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">healthcare.Hl7StoreIamMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">admin</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">organizations</span><span class="o">.</span><span class="n">get_iam_policy</span><span class="p">(</span><span class="n">binding</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;roles/editor&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;members&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">],</span>
+<span class="p">}])</span>
+<span class="n">hl7_v2_store</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">healthcare</span><span class="o">.</span><span class="n">Hl7StoreIamPolicy</span><span class="p">(</span><span class="s2">&quot;hl7V2Store&quot;</span><span class="p">,</span>
+    <span class="n">hl7_v2_store_id</span><span class="o">=</span><span class="s2">&quot;your-hl7-v2-store-id&quot;</span><span class="p">,</span>
+    <span class="n">policy_data</span><span class="o">=</span><span class="n">admin</span><span class="o">.</span><span class="n">policy_data</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">hl7_v2_store</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">healthcare</span><span class="o">.</span><span class="n">Hl7StoreIamBinding</span><span class="p">(</span><span class="s2">&quot;hl7V2Store&quot;</span><span class="p">,</span>
+    <span class="n">hl7_v2_store_id</span><span class="o">=</span><span class="s2">&quot;your-hl7-v2-store-id&quot;</span><span class="p">,</span>
+    <span class="n">members</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">],</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/editor&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">hl7_v2_store</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">healthcare</span><span class="o">.</span><span class="n">Hl7StoreIamMember</span><span class="p">(</span><span class="s2">&quot;hl7V2Store&quot;</span><span class="p">,</span>
+    <span class="n">hl7_v2_store_id</span><span class="o">=</span><span class="s2">&quot;your-hl7-v2-store-id&quot;</span><span class="p">,</span>
+    <span class="n">member</span><span class="o">=</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">,</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/editor&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1991,6 +2525,36 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">healthcare.Hl7StoreIamPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">healthcare.Hl7StoreIamBinding</span></code> and <code class="docutils literal notranslate"><span class="pre">healthcare.Hl7StoreIamMember</span></code> or they will fight over what your policy should be.</p>
 <p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">healthcare.Hl7StoreIamBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">healthcare.Hl7StoreIamMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">admin</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">organizations</span><span class="o">.</span><span class="n">get_iam_policy</span><span class="p">(</span><span class="n">binding</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;roles/editor&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;members&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">],</span>
+<span class="p">}])</span>
+<span class="n">hl7_v2_store</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">healthcare</span><span class="o">.</span><span class="n">Hl7StoreIamPolicy</span><span class="p">(</span><span class="s2">&quot;hl7V2Store&quot;</span><span class="p">,</span>
+    <span class="n">hl7_v2_store_id</span><span class="o">=</span><span class="s2">&quot;your-hl7-v2-store-id&quot;</span><span class="p">,</span>
+    <span class="n">policy_data</span><span class="o">=</span><span class="n">admin</span><span class="o">.</span><span class="n">policy_data</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">hl7_v2_store</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">healthcare</span><span class="o">.</span><span class="n">Hl7StoreIamBinding</span><span class="p">(</span><span class="s2">&quot;hl7V2Store&quot;</span><span class="p">,</span>
+    <span class="n">hl7_v2_store_id</span><span class="o">=</span><span class="s2">&quot;your-hl7-v2-store-id&quot;</span><span class="p">,</span>
+    <span class="n">members</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">],</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/editor&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">hl7_v2_store</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">healthcare</span><span class="o">.</span><span class="n">Hl7StoreIamMember</span><span class="p">(</span><span class="s2">&quot;hl7V2Store&quot;</span><span class="p">,</span>
+    <span class="n">hl7_v2_store_id</span><span class="o">=</span><span class="s2">&quot;your-hl7-v2-store-id&quot;</span><span class="p">,</span>
+    <span class="n">member</span><span class="o">=</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">,</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/editor&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2116,6 +2680,36 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">healthcare.Hl7StoreIamPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">healthcare.Hl7StoreIamBinding</span></code> and <code class="docutils literal notranslate"><span class="pre">healthcare.Hl7StoreIamMember</span></code> or they will fight over what your policy should be.</p>
 <p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">healthcare.Hl7StoreIamBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">healthcare.Hl7StoreIamMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">admin</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">organizations</span><span class="o">.</span><span class="n">get_iam_policy</span><span class="p">(</span><span class="n">binding</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;roles/editor&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;members&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">],</span>
+<span class="p">}])</span>
+<span class="n">hl7_v2_store</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">healthcare</span><span class="o">.</span><span class="n">Hl7StoreIamPolicy</span><span class="p">(</span><span class="s2">&quot;hl7V2Store&quot;</span><span class="p">,</span>
+    <span class="n">hl7_v2_store_id</span><span class="o">=</span><span class="s2">&quot;your-hl7-v2-store-id&quot;</span><span class="p">,</span>
+    <span class="n">policy_data</span><span class="o">=</span><span class="n">admin</span><span class="o">.</span><span class="n">policy_data</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">hl7_v2_store</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">healthcare</span><span class="o">.</span><span class="n">Hl7StoreIamBinding</span><span class="p">(</span><span class="s2">&quot;hl7V2Store&quot;</span><span class="p">,</span>
+    <span class="n">hl7_v2_store_id</span><span class="o">=</span><span class="s2">&quot;your-hl7-v2-store-id&quot;</span><span class="p">,</span>
+    <span class="n">members</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">],</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/editor&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">hl7_v2_store</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">healthcare</span><span class="o">.</span><span class="n">Hl7StoreIamMember</span><span class="p">(</span><span class="s2">&quot;hl7V2Store&quot;</span><span class="p">,</span>
+    <span class="n">hl7_v2_store_id</span><span class="o">=</span><span class="s2">&quot;your-hl7-v2-store-id&quot;</span><span class="p">,</span>
+    <span class="n">member</span><span class="o">=</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">,</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/editor&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

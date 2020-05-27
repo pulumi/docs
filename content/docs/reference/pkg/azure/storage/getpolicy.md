@@ -62,7 +62,7 @@ const examplePolicy = azure.storage.getPolicy({
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getPolicy<span class="p">(</span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/storage/#GetPolicyArgs">GetPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/storage/#GetPolicyResult">GetPolicyResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getPolicy<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/storage/#GetPolicyArgs">GetPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/storage/#GetPolicyResult">GetPolicyResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -72,13 +72,14 @@ const examplePolicy = azure.storage.getPolicy({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPolicy<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/storage?tab=doc#GetPolicyArgs">GetPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/storage?tab=doc#GetPolicyResult">GetPolicyResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPolicy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/storage?tab=doc#GetPolicyArgs">GetPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/storage?tab=doc#GetPolicyResult">GetPolicyResult</a></span>, error)</span></code></pre></div>
+
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetPolicy </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Storage.GetPolicyResult.html">GetPolicyResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Storage.GetPolicyArgs.html">GetPolicyArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Storage.GetPolicyResult.html">GetPolicyResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Storage.GetPolicyArgs.html">GetPolicyArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -93,7 +94,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Storage<wbr>Account<wbr>Id</span>
+        <span id="storageaccountid_csharp">
+<a href="#storageaccountid_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -109,7 +112,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Storage<wbr>Account<wbr>Id</span>
+        <span id="storageaccountid_go">
+<a href="#storageaccountid_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -125,7 +130,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>storage<wbr>Account<wbr>Id</span>
+        <span id="storageaccountid_nodejs">
+<a href="#storageaccountid_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -141,7 +148,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>storage_<wbr>account_<wbr>id</span>
+        <span id="storage_account_id_python">
+<a href="#storage_account_id_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -170,7 +179,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -179,7 +190,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Rules</span>
+        <span id="rules_csharp">
+<a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getpolicyrule">List&lt;Get<wbr>Policy<wbr>Rule&gt;</a></span>
     </dt>
@@ -188,7 +201,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Storage<wbr>Account<wbr>Id</span>
+        <span id="storageaccountid_csharp">
+<a href="#storageaccountid_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -203,7 +218,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -212,7 +229,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Rules</span>
+        <span id="rules_go">
+<a href="#rules_go" style="color: inherit; text-decoration: inherit;">Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getpolicyrule">[]Get<wbr>Policy<wbr>Rule</a></span>
     </dt>
@@ -221,7 +240,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Storage<wbr>Account<wbr>Id</span>
+        <span id="storageaccountid_go">
+<a href="#storageaccountid_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -236,7 +257,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -245,7 +268,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>rules</span>
+        <span id="rules_nodejs">
+<a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getpolicyrule">Get<wbr>Policy<wbr>Rule[]</a></span>
     </dt>
@@ -254,7 +279,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>storage<wbr>Account<wbr>Id</span>
+        <span id="storageaccountid_nodejs">
+<a href="#storageaccountid_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -269,7 +296,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -278,7 +307,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>rules</span>
+        <span id="rules_python">
+<a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getpolicyrule">List[Get<wbr>Policy<wbr>Rule]</a></span>
     </dt>
@@ -287,7 +318,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>storage_<wbr>account_<wbr>id</span>
+        <span id="storage_account_id_python">
+<a href="#storage_account_id_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -326,7 +359,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Actions</span>
+        <span id="actions_csharp">
+<a href="#actions_csharp" style="color: inherit; text-decoration: inherit;">Actions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getpolicyruleaction">List&lt;Get<wbr>Policy<wbr>Rule<wbr>Action<wbr>Args&gt;</a></span>
     </dt>
@@ -335,7 +370,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Enabled</span>
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -344,7 +381,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Filters</span>
+        <span id="filters_csharp">
+<a href="#filters_csharp" style="color: inherit; text-decoration: inherit;">Filters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getpolicyrulefilter">List&lt;Get<wbr>Policy<wbr>Rule<wbr>Filter<wbr>Args&gt;</a></span>
     </dt>
@@ -353,7 +392,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -369,7 +410,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Actions</span>
+        <span id="actions_go">
+<a href="#actions_go" style="color: inherit; text-decoration: inherit;">Actions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getpolicyruleaction">[]Get<wbr>Policy<wbr>Rule<wbr>Action</a></span>
     </dt>
@@ -378,7 +421,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Enabled</span>
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -387,7 +432,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Filters</span>
+        <span id="filters_go">
+<a href="#filters_go" style="color: inherit; text-decoration: inherit;">Filters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getpolicyrulefilter">[]Get<wbr>Policy<wbr>Rule<wbr>Filter</a></span>
     </dt>
@@ -396,7 +443,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -412,7 +461,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>actions</span>
+        <span id="actions_nodejs">
+<a href="#actions_nodejs" style="color: inherit; text-decoration: inherit;">actions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getpolicyruleaction">Get<wbr>Policy<wbr>Rule<wbr>Action[]</a></span>
     </dt>
@@ -421,7 +472,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>enabled</span>
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -430,7 +483,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>filters</span>
+        <span id="filters_nodejs">
+<a href="#filters_nodejs" style="color: inherit; text-decoration: inherit;">filters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getpolicyrulefilter">Get<wbr>Policy<wbr>Rule<wbr>Filter[]</a></span>
     </dt>
@@ -439,7 +494,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -455,7 +512,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>actions</span>
+        <span id="actions_python">
+<a href="#actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getpolicyruleaction">List[Get<wbr>Policy<wbr>Rule<wbr>Action]</a></span>
     </dt>
@@ -464,7 +523,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>enabled</span>
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -473,7 +534,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>filters</span>
+        <span id="filters_python">
+<a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getpolicyrulefilter">List[Get<wbr>Policy<wbr>Rule<wbr>Filter]</a></span>
     </dt>
@@ -482,7 +545,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -516,7 +581,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Base<wbr>Blobs</span>
+        <span id="baseblobs_csharp">
+<a href="#baseblobs_csharp" style="color: inherit; text-decoration: inherit;">Base<wbr>Blobs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getpolicyruleactionbaseblob">List&lt;Get<wbr>Policy<wbr>Rule<wbr>Action<wbr>Base<wbr>Blob<wbr>Args&gt;</a></span>
     </dt>
@@ -525,7 +592,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Snapshots</span>
+        <span id="snapshots_csharp">
+<a href="#snapshots_csharp" style="color: inherit; text-decoration: inherit;">Snapshots</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getpolicyruleactionsnapshot">List&lt;Get<wbr>Policy<wbr>Rule<wbr>Action<wbr>Snapshot<wbr>Args&gt;</a></span>
     </dt>
@@ -541,7 +610,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Base<wbr>Blobs</span>
+        <span id="baseblobs_go">
+<a href="#baseblobs_go" style="color: inherit; text-decoration: inherit;">Base<wbr>Blobs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getpolicyruleactionbaseblob">[]Get<wbr>Policy<wbr>Rule<wbr>Action<wbr>Base<wbr>Blob</a></span>
     </dt>
@@ -550,7 +621,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Snapshots</span>
+        <span id="snapshots_go">
+<a href="#snapshots_go" style="color: inherit; text-decoration: inherit;">Snapshots</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getpolicyruleactionsnapshot">[]Get<wbr>Policy<wbr>Rule<wbr>Action<wbr>Snapshot</a></span>
     </dt>
@@ -566,7 +639,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>base<wbr>Blobs</span>
+        <span id="baseblobs_nodejs">
+<a href="#baseblobs_nodejs" style="color: inherit; text-decoration: inherit;">base<wbr>Blobs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getpolicyruleactionbaseblob">Get<wbr>Policy<wbr>Rule<wbr>Action<wbr>Base<wbr>Blob[]</a></span>
     </dt>
@@ -575,7 +650,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>snapshots</span>
+        <span id="snapshots_nodejs">
+<a href="#snapshots_nodejs" style="color: inherit; text-decoration: inherit;">snapshots</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getpolicyruleactionsnapshot">Get<wbr>Policy<wbr>Rule<wbr>Action<wbr>Snapshot[]</a></span>
     </dt>
@@ -591,7 +668,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>base<wbr>Blobs</span>
+        <span id="baseblobs_python">
+<a href="#baseblobs_python" style="color: inherit; text-decoration: inherit;">base<wbr>Blobs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getpolicyruleactionbaseblob">List[Get<wbr>Policy<wbr>Rule<wbr>Action<wbr>Base<wbr>Blob]</a></span>
     </dt>
@@ -600,7 +679,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>snapshots</span>
+        <span id="snapshots_python">
+<a href="#snapshots_python" style="color: inherit; text-decoration: inherit;">snapshots</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getpolicyruleactionsnapshot">List[Get<wbr>Policy<wbr>Rule<wbr>Action<wbr>Snapshot]</a></span>
     </dt>
@@ -634,7 +715,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Delete<wbr>After<wbr>Days<wbr>Since<wbr>Modification<wbr>Greater<wbr>Than</span>
+        <span id="deleteafterdayssincemodificationgreaterthan_csharp">
+<a href="#deleteafterdayssincemodificationgreaterthan_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>After<wbr>Days<wbr>Since<wbr>Modification<wbr>Greater<wbr>Than</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -643,7 +726,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Tier<wbr>To<wbr>Archive<wbr>After<wbr>Days<wbr>Since<wbr>Modification<wbr>Greater<wbr>Than</span>
+        <span id="tiertoarchiveafterdayssincemodificationgreaterthan_csharp">
+<a href="#tiertoarchiveafterdayssincemodificationgreaterthan_csharp" style="color: inherit; text-decoration: inherit;">Tier<wbr>To<wbr>Archive<wbr>After<wbr>Days<wbr>Since<wbr>Modification<wbr>Greater<wbr>Than</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -652,7 +737,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Tier<wbr>To<wbr>Cool<wbr>After<wbr>Days<wbr>Since<wbr>Modification<wbr>Greater<wbr>Than</span>
+        <span id="tiertocoolafterdayssincemodificationgreaterthan_csharp">
+<a href="#tiertocoolafterdayssincemodificationgreaterthan_csharp" style="color: inherit; text-decoration: inherit;">Tier<wbr>To<wbr>Cool<wbr>After<wbr>Days<wbr>Since<wbr>Modification<wbr>Greater<wbr>Than</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -668,7 +755,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Delete<wbr>After<wbr>Days<wbr>Since<wbr>Modification<wbr>Greater<wbr>Than</span>
+        <span id="deleteafterdayssincemodificationgreaterthan_go">
+<a href="#deleteafterdayssincemodificationgreaterthan_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>After<wbr>Days<wbr>Since<wbr>Modification<wbr>Greater<wbr>Than</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -677,7 +766,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Tier<wbr>To<wbr>Archive<wbr>After<wbr>Days<wbr>Since<wbr>Modification<wbr>Greater<wbr>Than</span>
+        <span id="tiertoarchiveafterdayssincemodificationgreaterthan_go">
+<a href="#tiertoarchiveafterdayssincemodificationgreaterthan_go" style="color: inherit; text-decoration: inherit;">Tier<wbr>To<wbr>Archive<wbr>After<wbr>Days<wbr>Since<wbr>Modification<wbr>Greater<wbr>Than</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -686,7 +777,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Tier<wbr>To<wbr>Cool<wbr>After<wbr>Days<wbr>Since<wbr>Modification<wbr>Greater<wbr>Than</span>
+        <span id="tiertocoolafterdayssincemodificationgreaterthan_go">
+<a href="#tiertocoolafterdayssincemodificationgreaterthan_go" style="color: inherit; text-decoration: inherit;">Tier<wbr>To<wbr>Cool<wbr>After<wbr>Days<wbr>Since<wbr>Modification<wbr>Greater<wbr>Than</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -702,7 +795,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>delete<wbr>After<wbr>Days<wbr>Since<wbr>Modification<wbr>Greater<wbr>Than</span>
+        <span id="deleteafterdayssincemodificationgreaterthan_nodejs">
+<a href="#deleteafterdayssincemodificationgreaterthan_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>After<wbr>Days<wbr>Since<wbr>Modification<wbr>Greater<wbr>Than</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -711,7 +806,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>tier<wbr>To<wbr>Archive<wbr>After<wbr>Days<wbr>Since<wbr>Modification<wbr>Greater<wbr>Than</span>
+        <span id="tiertoarchiveafterdayssincemodificationgreaterthan_nodejs">
+<a href="#tiertoarchiveafterdayssincemodificationgreaterthan_nodejs" style="color: inherit; text-decoration: inherit;">tier<wbr>To<wbr>Archive<wbr>After<wbr>Days<wbr>Since<wbr>Modification<wbr>Greater<wbr>Than</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -720,7 +817,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>tier<wbr>To<wbr>Cool<wbr>After<wbr>Days<wbr>Since<wbr>Modification<wbr>Greater<wbr>Than</span>
+        <span id="tiertocoolafterdayssincemodificationgreaterthan_nodejs">
+<a href="#tiertocoolafterdayssincemodificationgreaterthan_nodejs" style="color: inherit; text-decoration: inherit;">tier<wbr>To<wbr>Cool<wbr>After<wbr>Days<wbr>Since<wbr>Modification<wbr>Greater<wbr>Than</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -736,7 +835,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>delete<wbr>After<wbr>Days<wbr>Since<wbr>Modification<wbr>Greater<wbr>Than</span>
+        <span id="deleteafterdayssincemodificationgreaterthan_python">
+<a href="#deleteafterdayssincemodificationgreaterthan_python" style="color: inherit; text-decoration: inherit;">delete<wbr>After<wbr>Days<wbr>Since<wbr>Modification<wbr>Greater<wbr>Than</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -745,7 +846,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>tier<wbr>To<wbr>Archive<wbr>After<wbr>Days<wbr>Since<wbr>Modification<wbr>Greater<wbr>Than</span>
+        <span id="tiertoarchiveafterdayssincemodificationgreaterthan_python">
+<a href="#tiertoarchiveafterdayssincemodificationgreaterthan_python" style="color: inherit; text-decoration: inherit;">tier<wbr>To<wbr>Archive<wbr>After<wbr>Days<wbr>Since<wbr>Modification<wbr>Greater<wbr>Than</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -754,7 +857,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>tier<wbr>To<wbr>Cool<wbr>After<wbr>Days<wbr>Since<wbr>Modification<wbr>Greater<wbr>Than</span>
+        <span id="tiertocoolafterdayssincemodificationgreaterthan_python">
+<a href="#tiertocoolafterdayssincemodificationgreaterthan_python" style="color: inherit; text-decoration: inherit;">tier<wbr>To<wbr>Cool<wbr>After<wbr>Days<wbr>Since<wbr>Modification<wbr>Greater<wbr>Than</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -788,7 +893,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Delete<wbr>After<wbr>Days<wbr>Since<wbr>Creation<wbr>Greater<wbr>Than</span>
+        <span id="deleteafterdayssincecreationgreaterthan_csharp">
+<a href="#deleteafterdayssincecreationgreaterthan_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>After<wbr>Days<wbr>Since<wbr>Creation<wbr>Greater<wbr>Than</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -804,7 +911,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Delete<wbr>After<wbr>Days<wbr>Since<wbr>Creation<wbr>Greater<wbr>Than</span>
+        <span id="deleteafterdayssincecreationgreaterthan_go">
+<a href="#deleteafterdayssincecreationgreaterthan_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>After<wbr>Days<wbr>Since<wbr>Creation<wbr>Greater<wbr>Than</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -820,7 +929,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>delete<wbr>After<wbr>Days<wbr>Since<wbr>Creation<wbr>Greater<wbr>Than</span>
+        <span id="deleteafterdayssincecreationgreaterthan_nodejs">
+<a href="#deleteafterdayssincecreationgreaterthan_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>After<wbr>Days<wbr>Since<wbr>Creation<wbr>Greater<wbr>Than</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -836,7 +947,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>delete<wbr>After<wbr>Days<wbr>Since<wbr>Creation<wbr>Greater<wbr>Than</span>
+        <span id="deleteafterdayssincecreationgreaterthan_python">
+<a href="#deleteafterdayssincecreationgreaterthan_python" style="color: inherit; text-decoration: inherit;">delete<wbr>After<wbr>Days<wbr>Since<wbr>Creation<wbr>Greater<wbr>Than</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -870,7 +983,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Blob<wbr>Types</span>
+        <span id="blobtypes_csharp">
+<a href="#blobtypes_csharp" style="color: inherit; text-decoration: inherit;">Blob<wbr>Types</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -879,7 +994,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Prefix<wbr>Matches</span>
+        <span id="prefixmatches_csharp">
+<a href="#prefixmatches_csharp" style="color: inherit; text-decoration: inherit;">Prefix<wbr>Matches</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -895,7 +1012,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Blob<wbr>Types</span>
+        <span id="blobtypes_go">
+<a href="#blobtypes_go" style="color: inherit; text-decoration: inherit;">Blob<wbr>Types</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -904,7 +1023,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Prefix<wbr>Matches</span>
+        <span id="prefixmatches_go">
+<a href="#prefixmatches_go" style="color: inherit; text-decoration: inherit;">Prefix<wbr>Matches</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -920,7 +1041,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>blob<wbr>Types</span>
+        <span id="blobtypes_nodejs">
+<a href="#blobtypes_nodejs" style="color: inherit; text-decoration: inherit;">blob<wbr>Types</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -929,7 +1052,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>prefix<wbr>Matches</span>
+        <span id="prefixmatches_nodejs">
+<a href="#prefixmatches_nodejs" style="color: inherit; text-decoration: inherit;">prefix<wbr>Matches</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -945,7 +1070,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>blob<wbr>Types</span>
+        <span id="blobtypes_python">
+<a href="#blobtypes_python" style="color: inherit; text-decoration: inherit;">blob<wbr>Types</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -954,7 +1081,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>prefix<wbr>Matches</span>
+        <span id="prefixmatches_python">
+<a href="#prefixmatches_python" style="color: inherit; text-decoration: inherit;">prefix<wbr>Matches</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>

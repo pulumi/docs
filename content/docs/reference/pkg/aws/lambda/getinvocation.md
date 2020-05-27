@@ -25,7 +25,7 @@ invocation type.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getInvocation<span class="p">(</span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/lambda/#GetInvocationArgs">GetInvocationArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/lambda/#GetInvocationResult">GetInvocationResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getInvocation<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/lambda/#GetInvocationArgs">GetInvocationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/lambda/#GetInvocationResult">GetInvocationResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -35,13 +35,14 @@ invocation type.
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetInvocation<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lambda?tab=doc#GetInvocationArgs">GetInvocationArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lambda?tab=doc#GetInvocationResult">GetInvocationResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetInvocation<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lambda?tab=doc#GetInvocationArgs">GetInvocationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lambda?tab=doc#GetInvocationResult">GetInvocationResult</a></span>, error)</span></code></pre></div>
+
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetInvocation </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lambda.GetInvocationResult.html">GetInvocationResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lambda.GetInvocationArgs.html">GetInvocationArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lambda.GetInvocationResult.html">GetInvocationResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lambda.GetInvocationArgs.html">GetInvocationArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -56,7 +57,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Function<wbr>Name</span>
+        <span id="functionname_csharp">
+<a href="#functionname_csharp" style="color: inherit; text-decoration: inherit;">Function<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -65,7 +68,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Input</span>
+        <span id="input_csharp">
+<a href="#input_csharp" style="color: inherit; text-decoration: inherit;">Input</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -74,7 +79,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Qualifier</span>
+        <span id="qualifier_csharp">
+<a href="#qualifier_csharp" style="color: inherit; text-decoration: inherit;">Qualifier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -91,7 +98,9 @@ to `$LATEST`.
 
     <dt class="property-required"
             title="Required">
-        <span>Function<wbr>Name</span>
+        <span id="functionname_go">
+<a href="#functionname_go" style="color: inherit; text-decoration: inherit;">Function<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -100,7 +109,9 @@ to `$LATEST`.
 
     <dt class="property-required"
             title="Required">
-        <span>Input</span>
+        <span id="input_go">
+<a href="#input_go" style="color: inherit; text-decoration: inherit;">Input</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -109,7 +120,9 @@ to `$LATEST`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Qualifier</span>
+        <span id="qualifier_go">
+<a href="#qualifier_go" style="color: inherit; text-decoration: inherit;">Qualifier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -126,7 +139,9 @@ to `$LATEST`.
 
     <dt class="property-required"
             title="Required">
-        <span>function<wbr>Name</span>
+        <span id="functionname_nodejs">
+<a href="#functionname_nodejs" style="color: inherit; text-decoration: inherit;">function<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -135,7 +150,9 @@ to `$LATEST`.
 
     <dt class="property-required"
             title="Required">
-        <span>input</span>
+        <span id="input_nodejs">
+<a href="#input_nodejs" style="color: inherit; text-decoration: inherit;">input</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -144,7 +161,9 @@ to `$LATEST`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>qualifier</span>
+        <span id="qualifier_nodejs">
+<a href="#qualifier_nodejs" style="color: inherit; text-decoration: inherit;">qualifier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -161,7 +180,9 @@ to `$LATEST`.
 
     <dt class="property-required"
             title="Required">
-        <span>function_<wbr>name</span>
+        <span id="function_name_python">
+<a href="#function_name_python" style="color: inherit; text-decoration: inherit;">function_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -170,7 +191,9 @@ to `$LATEST`.
 
     <dt class="property-required"
             title="Required">
-        <span>input</span>
+        <span id="input_python">
+<a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -179,7 +202,9 @@ to `$LATEST`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>qualifier</span>
+        <span id="qualifier_python">
+<a href="#qualifier_python" style="color: inherit; text-decoration: inherit;">qualifier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -209,7 +234,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Function<wbr>Name</span>
+        <span id="functionname_csharp">
+<a href="#functionname_csharp" style="color: inherit; text-decoration: inherit;">Function<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -217,7 +244,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -226,7 +255,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Input</span>
+        <span id="input_csharp">
+<a href="#input_csharp" style="color: inherit; text-decoration: inherit;">Input</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -234,7 +265,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Result</span>
+        <span id="result_csharp">
+<a href="#result_csharp" style="color: inherit; text-decoration: inherit;">Result</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -243,7 +276,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Result<wbr>Map</span>
+        <span id="resultmap_csharp">
+<a href="#resultmap_csharp" style="color: inherit; text-decoration: inherit;">Result<wbr>Map</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -252,7 +287,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Qualifier</span>
+        <span id="qualifier_csharp">
+<a href="#qualifier_csharp" style="color: inherit; text-decoration: inherit;">Qualifier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -267,7 +304,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Function<wbr>Name</span>
+        <span id="functionname_go">
+<a href="#functionname_go" style="color: inherit; text-decoration: inherit;">Function<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -275,7 +314,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -284,7 +325,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Input</span>
+        <span id="input_go">
+<a href="#input_go" style="color: inherit; text-decoration: inherit;">Input</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -292,7 +335,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Result</span>
+        <span id="result_go">
+<a href="#result_go" style="color: inherit; text-decoration: inherit;">Result</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -301,7 +346,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Result<wbr>Map</span>
+        <span id="resultmap_go">
+<a href="#resultmap_go" style="color: inherit; text-decoration: inherit;">Result<wbr>Map</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -310,7 +357,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Qualifier</span>
+        <span id="qualifier_go">
+<a href="#qualifier_go" style="color: inherit; text-decoration: inherit;">Qualifier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -325,7 +374,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>function<wbr>Name</span>
+        <span id="functionname_nodejs">
+<a href="#functionname_nodejs" style="color: inherit; text-decoration: inherit;">function<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -333,7 +384,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -342,7 +395,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>input</span>
+        <span id="input_nodejs">
+<a href="#input_nodejs" style="color: inherit; text-decoration: inherit;">input</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -350,7 +405,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>result</span>
+        <span id="result_nodejs">
+<a href="#result_nodejs" style="color: inherit; text-decoration: inherit;">result</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -359,7 +416,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>result<wbr>Map</span>
+        <span id="resultmap_nodejs">
+<a href="#resultmap_nodejs" style="color: inherit; text-decoration: inherit;">result<wbr>Map</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -368,7 +427,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>qualifier</span>
+        <span id="qualifier_nodejs">
+<a href="#qualifier_nodejs" style="color: inherit; text-decoration: inherit;">qualifier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -383,7 +444,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>function_<wbr>name</span>
+        <span id="function_name_python">
+<a href="#function_name_python" style="color: inherit; text-decoration: inherit;">function_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -391,7 +454,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -400,7 +465,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>input</span>
+        <span id="input_python">
+<a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -408,7 +475,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>result</span>
+        <span id="result_python">
+<a href="#result_python" style="color: inherit; text-decoration: inherit;">result</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -417,7 +486,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>result_<wbr>map</span>
+        <span id="result_map_python">
+<a href="#result_map_python" style="color: inherit; text-decoration: inherit;">result_<wbr>map</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -426,7 +497,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>qualifier</span>
+        <span id="qualifier_python">
+<a href="#qualifier_python" style="color: inherit; text-decoration: inherit;">qualifier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

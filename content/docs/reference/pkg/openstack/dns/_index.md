@@ -32,3 +32,21 @@ Explore the resources and functions of the dns module in the Open Stack package.
 	<dd>2.2.1</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.OpenStack/Pulumi.OpenStack.Dns.html" title="Pulumi.OpenStack.Dns">Pulumi.OpenStack.Dns</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/dns?tab=doc#" title="openstack/dns">openstack/dns</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/openstack/dns/#" title="@pulumi/openstack/dns">@pulumi/openstack/dns</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_openstack/dns" title="pulumi_openstack/dns">pulumi_openstack/dns</a></dd>
+
+</dl>
+

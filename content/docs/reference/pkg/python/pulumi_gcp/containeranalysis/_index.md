@@ -26,6 +26,16 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">note</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">containeranalysis</span><span class="o">.</span><span class="n">Note</span><span class="p">(</span><span class="s2">&quot;note&quot;</span><span class="p">,</span> <span class="n">attestation_authority</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">&quot;hint&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;humanReadableName&quot;</span><span class="p">:</span> <span class="s2">&quot;Attestor Note&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+<span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

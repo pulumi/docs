@@ -14,12 +14,10 @@ The `vsphere..NasDatastore` resource can be used to create and manage NAS
 datastores on an ESXi host or a set of hosts. The resource supports mounting
 NFS v3 and v4.1 shares to be used as datastores.
 
-> **NOTE:** Unlike [`vsphere..VmfsDatastore`][resource-vmfs-datastore], a NAS
+> **NOTE:** Unlike `vsphere..VmfsDatastore`, a NAS
 datastore is only mounted on the hosts you choose to mount it on. To mount on
 multiple hosts, you must specify each host that you want to add in the
 `host_system_ids` argument.
-
-[resource-vmfs-datastore]: /docs/providers/vsphere/r/vmfs_datastore.html
 
 {{% examples %}}
 {{% /examples %}}
@@ -43,7 +41,7 @@ multiple hosts, you must specify each host that you want to add in the
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.Vsphere.NasDatastore.html">NasDatastore</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.VSphere.NasDatastoreArgs.html">NasDatastoreArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.NasDatastore.html">NasDatastore</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.NasDatastoreArgs.html">NasDatastoreArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -172,7 +170,7 @@ multiple hosts, you must specify each host that you want to add in the
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.VSphere.NasDatastoreArgs.html">NasDatastoreArgs</a></span>
+        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.NasDatastoreArgs.html">NasDatastoreArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -213,7 +211,7 @@ The NasDatastore resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object IDs][docs-about-morefs] of
+    <dd>{{% md %}}The managed object IDs of
 the hosts to mount the datastore on.
 {{% /md %}}</dd>
 
@@ -257,9 +255,7 @@ actual share. Default: `readWrite`. Forces a new resource if changed.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Map of custom attribute ids to attribute 
-value strings to set on datasource resource. See
-[here][docs-setting-custom-attributes] for a reference on how to set values
-for custom attributes.
+value strings to set on datasource resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -268,8 +264,8 @@ for custom attributes.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object
-ID][docs-about-morefs] of a datastore cluster to put this datastore in.
+    <dd>{{% md %}}The managed object
+ID of a datastore cluster to put this datastore in.
 Conflicts with `folder`.
 {{% /md %}}</dd>
 
@@ -279,7 +275,13 @@ Conflicts with `folder`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The path to the datastore folder to put the datastore in.
+    <dd>{{% md %}}The relative path to a folder to put this datastore in.
+This is a path relative to the datacenter you are deploying the datastore to.
+Example: for the `dc1` datacenter, and a provided `folder` of `foo/bar`,
+The provider will place a datastore named `test` in a datastore folder
+located at `/dc1/datastore/foo/bar`, with the final inventory path being
+`/dc1/datastore/foo/bar/test`. Conflicts with
+`datastore_cluster_id`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -309,8 +311,7 @@ if changed.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The IDs of any tags to attach to this resource. See
-[here][docs-applying-tags] for a reference on how to apply tags.
+    <dd>{{% md %}}The IDs of any tags to attach to this resource. 
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -337,7 +338,7 @@ changed.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object IDs][docs-about-morefs] of
+    <dd>{{% md %}}The managed object IDs of
 the hosts to mount the datastore on.
 {{% /md %}}</dd>
 
@@ -381,9 +382,7 @@ actual share. Default: `readWrite`. Forces a new resource if changed.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Map of custom attribute ids to attribute 
-value strings to set on datasource resource. See
-[here][docs-setting-custom-attributes] for a reference on how to set values
-for custom attributes.
+value strings to set on datasource resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -392,8 +391,8 @@ for custom attributes.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object
-ID][docs-about-morefs] of a datastore cluster to put this datastore in.
+    <dd>{{% md %}}The managed object
+ID of a datastore cluster to put this datastore in.
 Conflicts with `folder`.
 {{% /md %}}</dd>
 
@@ -403,7 +402,13 @@ Conflicts with `folder`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The path to the datastore folder to put the datastore in.
+    <dd>{{% md %}}The relative path to a folder to put this datastore in.
+This is a path relative to the datacenter you are deploying the datastore to.
+Example: for the `dc1` datacenter, and a provided `folder` of `foo/bar`,
+The provider will place a datastore named `test` in a datastore folder
+located at `/dc1/datastore/foo/bar`, with the final inventory path being
+`/dc1/datastore/foo/bar/test`. Conflicts with
+`datastore_cluster_id`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -433,8 +438,7 @@ if changed.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}The IDs of any tags to attach to this resource. See
-[here][docs-applying-tags] for a reference on how to apply tags.
+    <dd>{{% md %}}The IDs of any tags to attach to this resource. 
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -461,7 +465,7 @@ changed.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object IDs][docs-about-morefs] of
+    <dd>{{% md %}}The managed object IDs of
 the hosts to mount the datastore on.
 {{% /md %}}</dd>
 
@@ -505,9 +509,7 @@ actual share. Default: `readWrite`. Forces a new resource if changed.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Map of custom attribute ids to attribute 
-value strings to set on datasource resource. See
-[here][docs-setting-custom-attributes] for a reference on how to set values
-for custom attributes.
+value strings to set on datasource resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -516,8 +518,8 @@ for custom attributes.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object
-ID][docs-about-morefs] of a datastore cluster to put this datastore in.
+    <dd>{{% md %}}The managed object
+ID of a datastore cluster to put this datastore in.
 Conflicts with `folder`.
 {{% /md %}}</dd>
 
@@ -527,7 +529,13 @@ Conflicts with `folder`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The path to the datastore folder to put the datastore in.
+    <dd>{{% md %}}The relative path to a folder to put this datastore in.
+This is a path relative to the datacenter you are deploying the datastore to.
+Example: for the `dc1` datacenter, and a provided `folder` of `foo/bar`,
+The provider will place a datastore named `test` in a datastore folder
+located at `/dc1/datastore/foo/bar`, with the final inventory path being
+`/dc1/datastore/foo/bar/test`. Conflicts with
+`datastore_cluster_id`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -557,8 +565,7 @@ if changed.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}The IDs of any tags to attach to this resource. See
-[here][docs-applying-tags] for a reference on how to apply tags.
+    <dd>{{% md %}}The IDs of any tags to attach to this resource. 
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -585,7 +592,7 @@ changed.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object IDs][docs-about-morefs] of
+    <dd>{{% md %}}The managed object IDs of
 the hosts to mount the datastore on.
 {{% /md %}}</dd>
 
@@ -629,9 +636,7 @@ actual share. Default: `readWrite`. Forces a new resource if changed.
         <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}Map of custom attribute ids to attribute 
-value strings to set on datasource resource. See
-[here][docs-setting-custom-attributes] for a reference on how to set values
-for custom attributes.
+value strings to set on datasource resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -640,8 +645,8 @@ for custom attributes.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object
-ID][docs-about-morefs] of a datastore cluster to put this datastore in.
+    <dd>{{% md %}}The managed object
+ID of a datastore cluster to put this datastore in.
 Conflicts with `folder`.
 {{% /md %}}</dd>
 
@@ -651,7 +656,13 @@ Conflicts with `folder`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The path to the datastore folder to put the datastore in.
+    <dd>{{% md %}}The relative path to a folder to put this datastore in.
+This is a path relative to the datacenter you are deploying the datastore to.
+Example: for the `dc1` datacenter, and a provided `folder` of `foo/bar`,
+The provider will place a datastore named `test` in a datastore folder
+located at `/dc1/datastore/foo/bar`, with the final inventory path being
+`/dc1/datastore/foo/bar/test`. Conflicts with
+`datastore_cluster_id`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -681,8 +692,7 @@ if changed.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}The IDs of any tags to attach to this resource. See
-[here][docs-applying-tags] for a reference on how to apply tags.
+    <dd>{{% md %}}The IDs of any tags to attach to this resource. 
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1098,7 +1108,7 @@ Get an existing NasDatastore resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.Vsphere.NasDatastore.html">NasDatastore</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.Vsphere..NasDatastoreState.html">NasDatastoreState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.NasDatastore.html">NasDatastore</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere..NasDatastoreState.html">NasDatastoreState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1242,9 +1252,7 @@ some other computed attributes may be out of date.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Map of custom attribute ids to attribute 
-value strings to set on datasource resource. See
-[here][docs-setting-custom-attributes] for a reference on how to set values
-for custom attributes.
+value strings to set on datasource resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1253,8 +1261,8 @@ for custom attributes.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object
-ID][docs-about-morefs] of a datastore cluster to put this datastore in.
+    <dd>{{% md %}}The managed object
+ID of a datastore cluster to put this datastore in.
 Conflicts with `folder`.
 {{% /md %}}</dd>
 
@@ -1264,7 +1272,13 @@ Conflicts with `folder`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The path to the datastore folder to put the datastore in.
+    <dd>{{% md %}}The relative path to a folder to put this datastore in.
+This is a path relative to the datacenter you are deploying the datastore to.
+Example: for the `dc1` datacenter, and a provided `folder` of `foo/bar`,
+The provider will place a datastore named `test` in a datastore folder
+located at `/dc1/datastore/foo/bar`, with the final inventory path being
+`/dc1/datastore/foo/bar/test`. Conflicts with
+`datastore_cluster_id`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1282,7 +1296,7 @@ Conflicts with `folder`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object IDs][docs-about-morefs] of
+    <dd>{{% md %}}The managed object IDs of
 the hosts to mount the datastore on.
 {{% /md %}}</dd>
 
@@ -1363,8 +1377,7 @@ if changed.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The IDs of any tags to attach to this resource. See
-[here][docs-applying-tags] for a reference on how to apply tags.
+    <dd>{{% md %}}The IDs of any tags to attach to this resource. 
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1442,9 +1455,7 @@ some other computed attributes may be out of date.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Map of custom attribute ids to attribute 
-value strings to set on datasource resource. See
-[here][docs-setting-custom-attributes] for a reference on how to set values
-for custom attributes.
+value strings to set on datasource resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1453,8 +1464,8 @@ for custom attributes.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object
-ID][docs-about-morefs] of a datastore cluster to put this datastore in.
+    <dd>{{% md %}}The managed object
+ID of a datastore cluster to put this datastore in.
 Conflicts with `folder`.
 {{% /md %}}</dd>
 
@@ -1464,7 +1475,13 @@ Conflicts with `folder`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The path to the datastore folder to put the datastore in.
+    <dd>{{% md %}}The relative path to a folder to put this datastore in.
+This is a path relative to the datacenter you are deploying the datastore to.
+Example: for the `dc1` datacenter, and a provided `folder` of `foo/bar`,
+The provider will place a datastore named `test` in a datastore folder
+located at `/dc1/datastore/foo/bar`, with the final inventory path being
+`/dc1/datastore/foo/bar/test`. Conflicts with
+`datastore_cluster_id`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1482,7 +1499,7 @@ Conflicts with `folder`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object IDs][docs-about-morefs] of
+    <dd>{{% md %}}The managed object IDs of
 the hosts to mount the datastore on.
 {{% /md %}}</dd>
 
@@ -1563,8 +1580,7 @@ if changed.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}The IDs of any tags to attach to this resource. See
-[here][docs-applying-tags] for a reference on how to apply tags.
+    <dd>{{% md %}}The IDs of any tags to attach to this resource. 
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1642,9 +1658,7 @@ some other computed attributes may be out of date.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Map of custom attribute ids to attribute 
-value strings to set on datasource resource. See
-[here][docs-setting-custom-attributes] for a reference on how to set values
-for custom attributes.
+value strings to set on datasource resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1653,8 +1667,8 @@ for custom attributes.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object
-ID][docs-about-morefs] of a datastore cluster to put this datastore in.
+    <dd>{{% md %}}The managed object
+ID of a datastore cluster to put this datastore in.
 Conflicts with `folder`.
 {{% /md %}}</dd>
 
@@ -1664,7 +1678,13 @@ Conflicts with `folder`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The path to the datastore folder to put the datastore in.
+    <dd>{{% md %}}The relative path to a folder to put this datastore in.
+This is a path relative to the datacenter you are deploying the datastore to.
+Example: for the `dc1` datacenter, and a provided `folder` of `foo/bar`,
+The provider will place a datastore named `test` in a datastore folder
+located at `/dc1/datastore/foo/bar`, with the final inventory path being
+`/dc1/datastore/foo/bar/test`. Conflicts with
+`datastore_cluster_id`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1682,7 +1702,7 @@ Conflicts with `folder`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object IDs][docs-about-morefs] of
+    <dd>{{% md %}}The managed object IDs of
 the hosts to mount the datastore on.
 {{% /md %}}</dd>
 
@@ -1763,8 +1783,7 @@ if changed.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}The IDs of any tags to attach to this resource. See
-[here][docs-applying-tags] for a reference on how to apply tags.
+    <dd>{{% md %}}The IDs of any tags to attach to this resource. 
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1842,9 +1861,7 @@ some other computed attributes may be out of date.
         <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}Map of custom attribute ids to attribute 
-value strings to set on datasource resource. See
-[here][docs-setting-custom-attributes] for a reference on how to set values
-for custom attributes.
+value strings to set on datasource resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1853,8 +1870,8 @@ for custom attributes.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object
-ID][docs-about-morefs] of a datastore cluster to put this datastore in.
+    <dd>{{% md %}}The managed object
+ID of a datastore cluster to put this datastore in.
 Conflicts with `folder`.
 {{% /md %}}</dd>
 
@@ -1864,7 +1881,13 @@ Conflicts with `folder`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The path to the datastore folder to put the datastore in.
+    <dd>{{% md %}}The relative path to a folder to put this datastore in.
+This is a path relative to the datacenter you are deploying the datastore to.
+Example: for the `dc1` datacenter, and a provided `folder` of `foo/bar`,
+The provider will place a datastore named `test` in a datastore folder
+located at `/dc1/datastore/foo/bar`, with the final inventory path being
+`/dc1/datastore/foo/bar/test`. Conflicts with
+`datastore_cluster_id`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1882,7 +1905,7 @@ Conflicts with `folder`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object IDs][docs-about-morefs] of
+    <dd>{{% md %}}The managed object IDs of
 the hosts to mount the datastore on.
 {{% /md %}}</dd>
 
@@ -1963,8 +1986,7 @@ if changed.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}The IDs of any tags to attach to this resource. See
-[here][docs-applying-tags] for a reference on how to apply tags.
+    <dd>{{% md %}}The IDs of any tags to attach to this resource. 
 {{% /md %}}</dd>
 
     <dt class="property-optional"

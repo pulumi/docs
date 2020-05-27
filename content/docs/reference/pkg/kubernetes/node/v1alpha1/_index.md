@@ -22,6 +22,21 @@ Explore the resources and functions of the node/v1alpha1 module in the Kubernete
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>2.1.1</dd>
+	<dd>2.2.0</dd>
+</dl>
+
+
+
+<dl class="tabular">
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/node/v1alpha1?tab=doc#" title="kubernetes/node/v1alpha1">kubernetes/node/v1alpha1</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/node/v1alpha1/#" title="@pulumi/kubernetes/node/v1alpha1">@pulumi/kubernetes/node/v1alpha1</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_kubernetes/node.k8s.io/v1alpha1" title="pulumi_kubernetes/node.k8s.io/v1alpha1">pulumi_kubernetes/node.k8s.io/v1alpha1</a></dd>
+
 </dl>
 

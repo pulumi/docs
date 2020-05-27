@@ -327,19 +327,19 @@ const fooSpotFleetRequest = new aws.ec2.SpotFleetRequest("fooSpotFleetRequest", 
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#SpotFleetRequest">SpotFleetRequest</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#SpotFleetRequestArgs">SpotFleetRequestArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#SpotFleetRequest">SpotFleetRequest</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#SpotFleetRequestArgs">SpotFleetRequestArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">SpotFleetRequest</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>allocation_strategy=None<span class="p">, </span>excess_capacity_termination_policy=None<span class="p">, </span>fleet_type=None<span class="p">, </span>iam_fleet_role=None<span class="p">, </span>instance_interruption_behaviour=None<span class="p">, </span>instance_pools_to_use_count=None<span class="p">, </span>launch_specifications=None<span class="p">, </span>launch_template_configs=None<span class="p">, </span>load_balancers=None<span class="p">, </span>replace_unhealthy_instances=None<span class="p">, </span>spot_price=None<span class="p">, </span>tags=None<span class="p">, </span>target_capacity=None<span class="p">, </span>target_group_arns=None<span class="p">, </span>terminate_instances_with_expiration=None<span class="p">, </span>valid_from=None<span class="p">, </span>valid_until=None<span class="p">, </span>wait_for_fulfillment=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/ec2/#SpotFleetRequest">SpotFleetRequest</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>allocation_strategy=None<span class="p">, </span>excess_capacity_termination_policy=None<span class="p">, </span>fleet_type=None<span class="p">, </span>iam_fleet_role=None<span class="p">, </span>instance_interruption_behaviour=None<span class="p">, </span>instance_pools_to_use_count=None<span class="p">, </span>launch_specifications=None<span class="p">, </span>launch_template_configs=None<span class="p">, </span>load_balancers=None<span class="p">, </span>replace_unhealthy_instances=None<span class="p">, </span>spot_price=None<span class="p">, </span>tags=None<span class="p">, </span>target_capacity=None<span class="p">, </span>target_group_arns=None<span class="p">, </span>terminate_instances_with_expiration=None<span class="p">, </span>valid_from=None<span class="p">, </span>valid_until=None<span class="p">, </span>wait_for_fulfillment=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewSpotFleetRequest<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#SpotFleetRequestArgs">SpotFleetRequestArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#SpotFleetRequest">SpotFleetRequest</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#SpotFleetRequest">NewSpotFleetRequest</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#SpotFleetRequestArgs">SpotFleetRequestArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#SpotFleetRequest">SpotFleetRequest</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.SpotFleetRequest.html">SpotFleetRequest</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.SpotFleetRequestArgs.html">SpotFleetRequestArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.SpotFleetRequest.html">SpotFleetRequest</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.SpotFleetRequestArgs.html">SpotFleetRequestArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -505,7 +505,9 @@ The SpotFleetRequest resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-required"
             title="Required">
-        <span>Iam<wbr>Fleet<wbr>Role</span>
+        <span id="iamfleetrole_csharp">
+<a href="#iamfleetrole_csharp" style="color: inherit; text-decoration: inherit;">Iam<wbr>Fleet<wbr>Role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -517,7 +519,9 @@ terminateInstancesWithExpiration.
 
     <dt class="property-required"
             title="Required">
-        <span>Target<wbr>Capacity</span>
+        <span id="targetcapacity_csharp">
+<a href="#targetcapacity_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -528,7 +532,9 @@ important to your application workload, such as vCPUs, memory, or I/O.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allocation<wbr>Strategy</span>
+        <span id="allocationstrategy_csharp">
+<a href="#allocationstrategy_csharp" style="color: inherit; text-decoration: inherit;">Allocation<wbr>Strategy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -539,7 +545,9 @@ the Spot pools specified by the Spot fleet request. The default is
 
     <dt class="property-optional"
             title="Optional">
-        <span>Excess<wbr>Capacity<wbr>Termination<wbr>Policy</span>
+        <span id="excesscapacityterminationpolicy_csharp">
+<a href="#excesscapacityterminationpolicy_csharp" style="color: inherit; text-decoration: inherit;">Excess<wbr>Capacity<wbr>Termination<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -550,7 +558,9 @@ request is decreased below the current size of the Spot fleet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Fleet<wbr>Type</span>
+        <span id="fleettype_csharp">
+<a href="#fleettype_csharp" style="color: inherit; text-decoration: inherit;">Fleet<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -560,7 +570,9 @@ capacity or also attempts to maintain it. Default is `maintain`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Instance<wbr>Interruption<wbr>Behaviour</span>
+        <span id="instanceinterruptionbehaviour_csharp">
+<a href="#instanceinterruptionbehaviour_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Interruption<wbr>Behaviour</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -571,7 +583,9 @@ instance stops or terminates when it is interrupted. Default is
 
     <dt class="property-optional"
             title="Optional">
-        <span>Instance<wbr>Pools<wbr>To<wbr>Use<wbr>Count</span>
+        <span id="instancepoolstousecount_csharp">
+<a href="#instancepoolstousecount_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Pools<wbr>To<wbr>Use<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -584,7 +598,9 @@ the number of Spot pools that you specify.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Launch<wbr>Specifications</span>
+        <span id="launchspecifications_csharp">
+<a href="#launchspecifications_csharp" style="color: inherit; text-decoration: inherit;">Launch<wbr>Specifications</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotfleetrequestlaunchspecification">List&lt;Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification<wbr>Args&gt;</a></span>
     </dt>
@@ -595,7 +611,9 @@ across different markets and instance types. Conflicts with `launch_template_con
 
     <dt class="property-optional"
             title="Optional">
-        <span>Launch<wbr>Template<wbr>Configs</span>
+        <span id="launchtemplateconfigs_csharp">
+<a href="#launchtemplateconfigs_csharp" style="color: inherit; text-decoration: inherit;">Launch<wbr>Template<wbr>Configs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotfleetrequestlaunchtemplateconfig">List&lt;Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Template<wbr>Config<wbr>Args&gt;</a></span>
     </dt>
@@ -604,7 +622,9 @@ across different markets and instance types. Conflicts with `launch_template_con
 
     <dt class="property-optional"
             title="Optional">
-        <span>Load<wbr>Balancers</span>
+        <span id="loadbalancers_csharp">
+<a href="#loadbalancers_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -613,7 +633,9 @@ across different markets and instance types. Conflicts with `launch_template_con
 
     <dt class="property-optional"
             title="Optional">
-        <span>Replace<wbr>Unhealthy<wbr>Instances</span>
+        <span id="replaceunhealthyinstances_csharp">
+<a href="#replaceunhealthyinstances_csharp" style="color: inherit; text-decoration: inherit;">Replace<wbr>Unhealthy<wbr>Instances</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -622,7 +644,9 @@ across different markets and instance types. Conflicts with `launch_template_con
 
     <dt class="property-optional"
             title="Optional">
-        <span>Spot<wbr>Price</span>
+        <span id="spotprice_csharp">
+<a href="#spotprice_csharp" style="color: inherit; text-decoration: inherit;">Spot<wbr>Price</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -631,7 +655,9 @@ across different markets and instance types. Conflicts with `launch_template_con
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -640,7 +666,9 @@ across different markets and instance types. Conflicts with `launch_template_con
 
     <dt class="property-optional"
             title="Optional">
-        <span>Target<wbr>Group<wbr>Arns</span>
+        <span id="targetgrouparns_csharp">
+<a href="#targetgrouparns_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Group<wbr>Arns</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -649,7 +677,9 @@ across different markets and instance types. Conflicts with `launch_template_con
 
     <dt class="property-optional"
             title="Optional">
-        <span>Terminate<wbr>Instances<wbr>With<wbr>Expiration</span>
+        <span id="terminateinstanceswithexpiration_csharp">
+<a href="#terminateinstanceswithexpiration_csharp" style="color: inherit; text-decoration: inherit;">Terminate<wbr>Instances<wbr>With<wbr>Expiration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -659,7 +689,9 @@ instances should be terminated when the Spot fleet request expires.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Valid<wbr>From</span>
+        <span id="validfrom_csharp">
+<a href="#validfrom_csharp" style="color: inherit; text-decoration: inherit;">Valid<wbr>From</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -668,7 +700,9 @@ instances should be terminated when the Spot fleet request expires.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Valid<wbr>Until</span>
+        <span id="validuntil_csharp">
+<a href="#validuntil_csharp" style="color: inherit; text-decoration: inherit;">Valid<wbr>Until</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -677,7 +711,9 @@ instances should be terminated when the Spot fleet request expires.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Wait<wbr>For<wbr>Fulfillment</span>
+        <span id="waitforfulfillment_csharp">
+<a href="#waitforfulfillment_csharp" style="color: inherit; text-decoration: inherit;">Wait<wbr>For<wbr>Fulfillment</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -695,7 +731,9 @@ timeout of 10m is reached.
 
     <dt class="property-required"
             title="Required">
-        <span>Iam<wbr>Fleet<wbr>Role</span>
+        <span id="iamfleetrole_go">
+<a href="#iamfleetrole_go" style="color: inherit; text-decoration: inherit;">Iam<wbr>Fleet<wbr>Role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -707,7 +745,9 @@ terminateInstancesWithExpiration.
 
     <dt class="property-required"
             title="Required">
-        <span>Target<wbr>Capacity</span>
+        <span id="targetcapacity_go">
+<a href="#targetcapacity_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -718,7 +758,9 @@ important to your application workload, such as vCPUs, memory, or I/O.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allocation<wbr>Strategy</span>
+        <span id="allocationstrategy_go">
+<a href="#allocationstrategy_go" style="color: inherit; text-decoration: inherit;">Allocation<wbr>Strategy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -729,7 +771,9 @@ the Spot pools specified by the Spot fleet request. The default is
 
     <dt class="property-optional"
             title="Optional">
-        <span>Excess<wbr>Capacity<wbr>Termination<wbr>Policy</span>
+        <span id="excesscapacityterminationpolicy_go">
+<a href="#excesscapacityterminationpolicy_go" style="color: inherit; text-decoration: inherit;">Excess<wbr>Capacity<wbr>Termination<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -740,7 +784,9 @@ request is decreased below the current size of the Spot fleet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Fleet<wbr>Type</span>
+        <span id="fleettype_go">
+<a href="#fleettype_go" style="color: inherit; text-decoration: inherit;">Fleet<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -750,7 +796,9 @@ capacity or also attempts to maintain it. Default is `maintain`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Instance<wbr>Interruption<wbr>Behaviour</span>
+        <span id="instanceinterruptionbehaviour_go">
+<a href="#instanceinterruptionbehaviour_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Interruption<wbr>Behaviour</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -761,7 +809,9 @@ instance stops or terminates when it is interrupted. Default is
 
     <dt class="property-optional"
             title="Optional">
-        <span>Instance<wbr>Pools<wbr>To<wbr>Use<wbr>Count</span>
+        <span id="instancepoolstousecount_go">
+<a href="#instancepoolstousecount_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Pools<wbr>To<wbr>Use<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -774,7 +824,9 @@ the number of Spot pools that you specify.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Launch<wbr>Specifications</span>
+        <span id="launchspecifications_go">
+<a href="#launchspecifications_go" style="color: inherit; text-decoration: inherit;">Launch<wbr>Specifications</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotfleetrequestlaunchspecification">[]Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification</a></span>
     </dt>
@@ -785,7 +837,9 @@ across different markets and instance types. Conflicts with `launch_template_con
 
     <dt class="property-optional"
             title="Optional">
-        <span>Launch<wbr>Template<wbr>Configs</span>
+        <span id="launchtemplateconfigs_go">
+<a href="#launchtemplateconfigs_go" style="color: inherit; text-decoration: inherit;">Launch<wbr>Template<wbr>Configs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotfleetrequestlaunchtemplateconfig">[]Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Template<wbr>Config</a></span>
     </dt>
@@ -794,7 +848,9 @@ across different markets and instance types. Conflicts with `launch_template_con
 
     <dt class="property-optional"
             title="Optional">
-        <span>Load<wbr>Balancers</span>
+        <span id="loadbalancers_go">
+<a href="#loadbalancers_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -803,7 +859,9 @@ across different markets and instance types. Conflicts with `launch_template_con
 
     <dt class="property-optional"
             title="Optional">
-        <span>Replace<wbr>Unhealthy<wbr>Instances</span>
+        <span id="replaceunhealthyinstances_go">
+<a href="#replaceunhealthyinstances_go" style="color: inherit; text-decoration: inherit;">Replace<wbr>Unhealthy<wbr>Instances</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -812,7 +870,9 @@ across different markets and instance types. Conflicts with `launch_template_con
 
     <dt class="property-optional"
             title="Optional">
-        <span>Spot<wbr>Price</span>
+        <span id="spotprice_go">
+<a href="#spotprice_go" style="color: inherit; text-decoration: inherit;">Spot<wbr>Price</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -821,7 +881,9 @@ across different markets and instance types. Conflicts with `launch_template_con
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -830,7 +892,9 @@ across different markets and instance types. Conflicts with `launch_template_con
 
     <dt class="property-optional"
             title="Optional">
-        <span>Target<wbr>Group<wbr>Arns</span>
+        <span id="targetgrouparns_go">
+<a href="#targetgrouparns_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Group<wbr>Arns</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -839,7 +903,9 @@ across different markets and instance types. Conflicts with `launch_template_con
 
     <dt class="property-optional"
             title="Optional">
-        <span>Terminate<wbr>Instances<wbr>With<wbr>Expiration</span>
+        <span id="terminateinstanceswithexpiration_go">
+<a href="#terminateinstanceswithexpiration_go" style="color: inherit; text-decoration: inherit;">Terminate<wbr>Instances<wbr>With<wbr>Expiration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -849,7 +915,9 @@ instances should be terminated when the Spot fleet request expires.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Valid<wbr>From</span>
+        <span id="validfrom_go">
+<a href="#validfrom_go" style="color: inherit; text-decoration: inherit;">Valid<wbr>From</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -858,7 +926,9 @@ instances should be terminated when the Spot fleet request expires.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Valid<wbr>Until</span>
+        <span id="validuntil_go">
+<a href="#validuntil_go" style="color: inherit; text-decoration: inherit;">Valid<wbr>Until</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -867,7 +937,9 @@ instances should be terminated when the Spot fleet request expires.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Wait<wbr>For<wbr>Fulfillment</span>
+        <span id="waitforfulfillment_go">
+<a href="#waitforfulfillment_go" style="color: inherit; text-decoration: inherit;">Wait<wbr>For<wbr>Fulfillment</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -885,7 +957,9 @@ timeout of 10m is reached.
 
     <dt class="property-required"
             title="Required">
-        <span>iam<wbr>Fleet<wbr>Role</span>
+        <span id="iamfleetrole_nodejs">
+<a href="#iamfleetrole_nodejs" style="color: inherit; text-decoration: inherit;">iam<wbr>Fleet<wbr>Role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -897,7 +971,9 @@ terminateInstancesWithExpiration.
 
     <dt class="property-required"
             title="Required">
-        <span>target<wbr>Capacity</span>
+        <span id="targetcapacity_nodejs">
+<a href="#targetcapacity_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -908,7 +984,9 @@ important to your application workload, such as vCPUs, memory, or I/O.
 
     <dt class="property-optional"
             title="Optional">
-        <span>allocation<wbr>Strategy</span>
+        <span id="allocationstrategy_nodejs">
+<a href="#allocationstrategy_nodejs" style="color: inherit; text-decoration: inherit;">allocation<wbr>Strategy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -919,7 +997,9 @@ the Spot pools specified by the Spot fleet request. The default is
 
     <dt class="property-optional"
             title="Optional">
-        <span>excess<wbr>Capacity<wbr>Termination<wbr>Policy</span>
+        <span id="excesscapacityterminationpolicy_nodejs">
+<a href="#excesscapacityterminationpolicy_nodejs" style="color: inherit; text-decoration: inherit;">excess<wbr>Capacity<wbr>Termination<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -930,7 +1010,9 @@ request is decreased below the current size of the Spot fleet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>fleet<wbr>Type</span>
+        <span id="fleettype_nodejs">
+<a href="#fleettype_nodejs" style="color: inherit; text-decoration: inherit;">fleet<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -940,7 +1022,9 @@ capacity or also attempts to maintain it. Default is `maintain`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>instance<wbr>Interruption<wbr>Behaviour</span>
+        <span id="instanceinterruptionbehaviour_nodejs">
+<a href="#instanceinterruptionbehaviour_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Interruption<wbr>Behaviour</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -951,7 +1035,9 @@ instance stops or terminates when it is interrupted. Default is
 
     <dt class="property-optional"
             title="Optional">
-        <span>instance<wbr>Pools<wbr>To<wbr>Use<wbr>Count</span>
+        <span id="instancepoolstousecount_nodejs">
+<a href="#instancepoolstousecount_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Pools<wbr>To<wbr>Use<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -964,7 +1050,9 @@ the number of Spot pools that you specify.
 
     <dt class="property-optional"
             title="Optional">
-        <span>launch<wbr>Specifications</span>
+        <span id="launchspecifications_nodejs">
+<a href="#launchspecifications_nodejs" style="color: inherit; text-decoration: inherit;">launch<wbr>Specifications</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotfleetrequestlaunchspecification">Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification[]</a></span>
     </dt>
@@ -975,7 +1063,9 @@ across different markets and instance types. Conflicts with `launch_template_con
 
     <dt class="property-optional"
             title="Optional">
-        <span>launch<wbr>Template<wbr>Configs</span>
+        <span id="launchtemplateconfigs_nodejs">
+<a href="#launchtemplateconfigs_nodejs" style="color: inherit; text-decoration: inherit;">launch<wbr>Template<wbr>Configs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotfleetrequestlaunchtemplateconfig">Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Template<wbr>Config[]</a></span>
     </dt>
@@ -984,7 +1074,9 @@ across different markets and instance types. Conflicts with `launch_template_con
 
     <dt class="property-optional"
             title="Optional">
-        <span>load<wbr>Balancers</span>
+        <span id="loadbalancers_nodejs">
+<a href="#loadbalancers_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -993,7 +1085,9 @@ across different markets and instance types. Conflicts with `launch_template_con
 
     <dt class="property-optional"
             title="Optional">
-        <span>replace<wbr>Unhealthy<wbr>Instances</span>
+        <span id="replaceunhealthyinstances_nodejs">
+<a href="#replaceunhealthyinstances_nodejs" style="color: inherit; text-decoration: inherit;">replace<wbr>Unhealthy<wbr>Instances</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1002,7 +1096,9 @@ across different markets and instance types. Conflicts with `launch_template_con
 
     <dt class="property-optional"
             title="Optional">
-        <span>spot<wbr>Price</span>
+        <span id="spotprice_nodejs">
+<a href="#spotprice_nodejs" style="color: inherit; text-decoration: inherit;">spot<wbr>Price</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1011,7 +1107,9 @@ across different markets and instance types. Conflicts with `launch_template_con
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -1020,7 +1118,9 @@ across different markets and instance types. Conflicts with `launch_template_con
 
     <dt class="property-optional"
             title="Optional">
-        <span>target<wbr>Group<wbr>Arns</span>
+        <span id="targetgrouparns_nodejs">
+<a href="#targetgrouparns_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Group<wbr>Arns</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1029,7 +1129,9 @@ across different markets and instance types. Conflicts with `launch_template_con
 
     <dt class="property-optional"
             title="Optional">
-        <span>terminate<wbr>Instances<wbr>With<wbr>Expiration</span>
+        <span id="terminateinstanceswithexpiration_nodejs">
+<a href="#terminateinstanceswithexpiration_nodejs" style="color: inherit; text-decoration: inherit;">terminate<wbr>Instances<wbr>With<wbr>Expiration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1039,7 +1141,9 @@ instances should be terminated when the Spot fleet request expires.
 
     <dt class="property-optional"
             title="Optional">
-        <span>valid<wbr>From</span>
+        <span id="validfrom_nodejs">
+<a href="#validfrom_nodejs" style="color: inherit; text-decoration: inherit;">valid<wbr>From</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1048,7 +1152,9 @@ instances should be terminated when the Spot fleet request expires.
 
     <dt class="property-optional"
             title="Optional">
-        <span>valid<wbr>Until</span>
+        <span id="validuntil_nodejs">
+<a href="#validuntil_nodejs" style="color: inherit; text-decoration: inherit;">valid<wbr>Until</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1057,7 +1163,9 @@ instances should be terminated when the Spot fleet request expires.
 
     <dt class="property-optional"
             title="Optional">
-        <span>wait<wbr>For<wbr>Fulfillment</span>
+        <span id="waitforfulfillment_nodejs">
+<a href="#waitforfulfillment_nodejs" style="color: inherit; text-decoration: inherit;">wait<wbr>For<wbr>Fulfillment</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1075,7 +1183,9 @@ timeout of 10m is reached.
 
     <dt class="property-required"
             title="Required">
-        <span>iam_<wbr>fleet_<wbr>role</span>
+        <span id="iam_fleet_role_python">
+<a href="#iam_fleet_role_python" style="color: inherit; text-decoration: inherit;">iam_<wbr>fleet_<wbr>role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1087,7 +1197,9 @@ terminateInstancesWithExpiration.
 
     <dt class="property-required"
             title="Required">
-        <span>target_<wbr>capacity</span>
+        <span id="target_capacity_python">
+<a href="#target_capacity_python" style="color: inherit; text-decoration: inherit;">target_<wbr>capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1098,7 +1210,9 @@ important to your application workload, such as vCPUs, memory, or I/O.
 
     <dt class="property-optional"
             title="Optional">
-        <span>allocation_<wbr>strategy</span>
+        <span id="allocation_strategy_python">
+<a href="#allocation_strategy_python" style="color: inherit; text-decoration: inherit;">allocation_<wbr>strategy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1109,7 +1223,9 @@ the Spot pools specified by the Spot fleet request. The default is
 
     <dt class="property-optional"
             title="Optional">
-        <span>excess_<wbr>capacity_<wbr>termination_<wbr>policy</span>
+        <span id="excess_capacity_termination_policy_python">
+<a href="#excess_capacity_termination_policy_python" style="color: inherit; text-decoration: inherit;">excess_<wbr>capacity_<wbr>termination_<wbr>policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1120,7 +1236,9 @@ request is decreased below the current size of the Spot fleet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>fleet_<wbr>type</span>
+        <span id="fleet_type_python">
+<a href="#fleet_type_python" style="color: inherit; text-decoration: inherit;">fleet_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1130,7 +1248,9 @@ capacity or also attempts to maintain it. Default is `maintain`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>instance_<wbr>interruption_<wbr>behaviour</span>
+        <span id="instance_interruption_behaviour_python">
+<a href="#instance_interruption_behaviour_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>interruption_<wbr>behaviour</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1141,7 +1261,9 @@ instance stops or terminates when it is interrupted. Default is
 
     <dt class="property-optional"
             title="Optional">
-        <span>instance_<wbr>pools_<wbr>to_<wbr>use_<wbr>count</span>
+        <span id="instance_pools_to_use_count_python">
+<a href="#instance_pools_to_use_count_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>pools_<wbr>to_<wbr>use_<wbr>count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1154,7 +1276,9 @@ the number of Spot pools that you specify.
 
     <dt class="property-optional"
             title="Optional">
-        <span>launch_<wbr>specifications</span>
+        <span id="launch_specifications_python">
+<a href="#launch_specifications_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>specifications</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotfleetrequestlaunchspecification">List[Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification]</a></span>
     </dt>
@@ -1165,7 +1289,9 @@ across different markets and instance types. Conflicts with `launch_template_con
 
     <dt class="property-optional"
             title="Optional">
-        <span>launch_<wbr>template_<wbr>configs</span>
+        <span id="launch_template_configs_python">
+<a href="#launch_template_configs_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>template_<wbr>configs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotfleetrequestlaunchtemplateconfig">List[Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Template<wbr>Config]</a></span>
     </dt>
@@ -1174,7 +1300,9 @@ across different markets and instance types. Conflicts with `launch_template_con
 
     <dt class="property-optional"
             title="Optional">
-        <span>load_<wbr>balancers</span>
+        <span id="load_balancers_python">
+<a href="#load_balancers_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1183,7 +1311,9 @@ across different markets and instance types. Conflicts with `launch_template_con
 
     <dt class="property-optional"
             title="Optional">
-        <span>replace_<wbr>unhealthy_<wbr>instances</span>
+        <span id="replace_unhealthy_instances_python">
+<a href="#replace_unhealthy_instances_python" style="color: inherit; text-decoration: inherit;">replace_<wbr>unhealthy_<wbr>instances</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1192,7 +1322,9 @@ across different markets and instance types. Conflicts with `launch_template_con
 
     <dt class="property-optional"
             title="Optional">
-        <span>spot_<wbr>price</span>
+        <span id="spot_price_python">
+<a href="#spot_price_python" style="color: inherit; text-decoration: inherit;">spot_<wbr>price</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1201,7 +1333,9 @@ across different markets and instance types. Conflicts with `launch_template_con
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -1210,7 +1344,9 @@ across different markets and instance types. Conflicts with `launch_template_con
 
     <dt class="property-optional"
             title="Optional">
-        <span>target_<wbr>group_<wbr>arns</span>
+        <span id="target_group_arns_python">
+<a href="#target_group_arns_python" style="color: inherit; text-decoration: inherit;">target_<wbr>group_<wbr>arns</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1219,7 +1355,9 @@ across different markets and instance types. Conflicts with `launch_template_con
 
     <dt class="property-optional"
             title="Optional">
-        <span>terminate_<wbr>instances_<wbr>with_<wbr>expiration</span>
+        <span id="terminate_instances_with_expiration_python">
+<a href="#terminate_instances_with_expiration_python" style="color: inherit; text-decoration: inherit;">terminate_<wbr>instances_<wbr>with_<wbr>expiration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1229,7 +1367,9 @@ instances should be terminated when the Spot fleet request expires.
 
     <dt class="property-optional"
             title="Optional">
-        <span>valid_<wbr>from</span>
+        <span id="valid_from_python">
+<a href="#valid_from_python" style="color: inherit; text-decoration: inherit;">valid_<wbr>from</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1238,7 +1378,9 @@ instances should be terminated when the Spot fleet request expires.
 
     <dt class="property-optional"
             title="Optional">
-        <span>valid_<wbr>until</span>
+        <span id="valid_until_python">
+<a href="#valid_until_python" style="color: inherit; text-decoration: inherit;">valid_<wbr>until</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1247,7 +1389,9 @@ instances should be terminated when the Spot fleet request expires.
 
     <dt class="property-optional"
             title="Optional">
-        <span>wait_<wbr>for_<wbr>fulfillment</span>
+        <span id="wait_for_fulfillment_python">
+<a href="#wait_for_fulfillment_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>for_<wbr>fulfillment</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1276,7 +1420,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Client<wbr>Token</span>
+        <span id="clienttoken_csharp">
+<a href="#clienttoken_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1284,7 +1430,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1292,7 +1440,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Spot<wbr>Request<wbr>State</span>
+        <span id="spotrequeststate_csharp">
+<a href="#spotrequeststate_csharp" style="color: inherit; text-decoration: inherit;">Spot<wbr>Request<wbr>State</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1308,7 +1458,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Client<wbr>Token</span>
+        <span id="clienttoken_go">
+<a href="#clienttoken_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1316,7 +1468,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1324,7 +1478,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Spot<wbr>Request<wbr>State</span>
+        <span id="spotrequeststate_go">
+<a href="#spotrequeststate_go" style="color: inherit; text-decoration: inherit;">Spot<wbr>Request<wbr>State</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1340,7 +1496,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>client<wbr>Token</span>
+        <span id="clienttoken_nodejs">
+<a href="#clienttoken_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1348,7 +1506,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1356,7 +1516,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>spot<wbr>Request<wbr>State</span>
+        <span id="spotrequeststate_nodejs">
+<a href="#spotrequeststate_nodejs" style="color: inherit; text-decoration: inherit;">spot<wbr>Request<wbr>State</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1372,7 +1534,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>client_<wbr>token</span>
+        <span id="client_token_python">
+<a href="#client_token_python" style="color: inherit; text-decoration: inherit;">client_<wbr>token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1380,7 +1544,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1388,7 +1554,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>spot_<wbr>request_<wbr>state</span>
+        <span id="spot_request_state_python">
+<a href="#spot_request_state_python" style="color: inherit; text-decoration: inherit;">spot_<wbr>request_<wbr>state</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1410,7 +1578,7 @@ Get an existing SpotFleetRequest resource's state with the given name, ID, and o
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#SpotFleetRequestState">SpotFleetRequestState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#SpotFleetRequest">SpotFleetRequest</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#SpotFleetRequestState">SpotFleetRequestState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#SpotFleetRequest">SpotFleetRequest</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1418,11 +1586,11 @@ Get an existing SpotFleetRequest resource's state with the given name, ID, and o
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSpotFleetRequest<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#SpotFleetRequestState">SpotFleetRequestState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#SpotFleetRequest">SpotFleetRequest</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSpotFleetRequest<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#SpotFleetRequestState">SpotFleetRequestState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#SpotFleetRequest">SpotFleetRequest</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.SpotFleetRequest.html">SpotFleetRequest</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.SpotFleetRequestState.html">SpotFleetRequestState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.SpotFleetRequest.html">SpotFleetRequest</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.SpotFleetRequestState.html">SpotFleetRequestState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1530,7 +1698,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allocation<wbr>Strategy</span>
+        <span id="state_allocationstrategy_csharp">
+<a href="#state_allocationstrategy_csharp" style="color: inherit; text-decoration: inherit;">Allocation<wbr>Strategy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1541,7 +1711,9 @@ the Spot pools specified by the Spot fleet request. The default is
 
     <dt class="property-optional"
             title="Optional">
-        <span>Client<wbr>Token</span>
+        <span id="state_clienttoken_csharp">
+<a href="#state_clienttoken_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1549,7 +1721,9 @@ the Spot pools specified by the Spot fleet request. The default is
 
     <dt class="property-optional"
             title="Optional">
-        <span>Excess<wbr>Capacity<wbr>Termination<wbr>Policy</span>
+        <span id="state_excesscapacityterminationpolicy_csharp">
+<a href="#state_excesscapacityterminationpolicy_csharp" style="color: inherit; text-decoration: inherit;">Excess<wbr>Capacity<wbr>Termination<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1560,7 +1734,9 @@ request is decreased below the current size of the Spot fleet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Fleet<wbr>Type</span>
+        <span id="state_fleettype_csharp">
+<a href="#state_fleettype_csharp" style="color: inherit; text-decoration: inherit;">Fleet<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1570,7 +1746,9 @@ capacity or also attempts to maintain it. Default is `maintain`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Iam<wbr>Fleet<wbr>Role</span>
+        <span id="state_iamfleetrole_csharp">
+<a href="#state_iamfleetrole_csharp" style="color: inherit; text-decoration: inherit;">Iam<wbr>Fleet<wbr>Role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1582,7 +1760,9 @@ terminateInstancesWithExpiration.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Instance<wbr>Interruption<wbr>Behaviour</span>
+        <span id="state_instanceinterruptionbehaviour_csharp">
+<a href="#state_instanceinterruptionbehaviour_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Interruption<wbr>Behaviour</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1593,7 +1773,9 @@ instance stops or terminates when it is interrupted. Default is
 
     <dt class="property-optional"
             title="Optional">
-        <span>Instance<wbr>Pools<wbr>To<wbr>Use<wbr>Count</span>
+        <span id="state_instancepoolstousecount_csharp">
+<a href="#state_instancepoolstousecount_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Pools<wbr>To<wbr>Use<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1606,7 +1788,9 @@ the number of Spot pools that you specify.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Launch<wbr>Specifications</span>
+        <span id="state_launchspecifications_csharp">
+<a href="#state_launchspecifications_csharp" style="color: inherit; text-decoration: inherit;">Launch<wbr>Specifications</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotfleetrequestlaunchspecification">List&lt;Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification<wbr>Args&gt;</a></span>
     </dt>
@@ -1617,7 +1801,9 @@ across different markets and instance types. Conflicts with `launch_template_con
 
     <dt class="property-optional"
             title="Optional">
-        <span>Launch<wbr>Template<wbr>Configs</span>
+        <span id="state_launchtemplateconfigs_csharp">
+<a href="#state_launchtemplateconfigs_csharp" style="color: inherit; text-decoration: inherit;">Launch<wbr>Template<wbr>Configs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotfleetrequestlaunchtemplateconfig">List&lt;Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Template<wbr>Config<wbr>Args&gt;</a></span>
     </dt>
@@ -1626,7 +1812,9 @@ across different markets and instance types. Conflicts with `launch_template_con
 
     <dt class="property-optional"
             title="Optional">
-        <span>Load<wbr>Balancers</span>
+        <span id="state_loadbalancers_csharp">
+<a href="#state_loadbalancers_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1635,7 +1823,9 @@ across different markets and instance types. Conflicts with `launch_template_con
 
     <dt class="property-optional"
             title="Optional">
-        <span>Replace<wbr>Unhealthy<wbr>Instances</span>
+        <span id="state_replaceunhealthyinstances_csharp">
+<a href="#state_replaceunhealthyinstances_csharp" style="color: inherit; text-decoration: inherit;">Replace<wbr>Unhealthy<wbr>Instances</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1644,7 +1834,9 @@ across different markets and instance types. Conflicts with `launch_template_con
 
     <dt class="property-optional"
             title="Optional">
-        <span>Spot<wbr>Price</span>
+        <span id="state_spotprice_csharp">
+<a href="#state_spotprice_csharp" style="color: inherit; text-decoration: inherit;">Spot<wbr>Price</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1653,7 +1845,9 @@ across different markets and instance types. Conflicts with `launch_template_con
 
     <dt class="property-optional"
             title="Optional">
-        <span>Spot<wbr>Request<wbr>State</span>
+        <span id="state_spotrequeststate_csharp">
+<a href="#state_spotrequeststate_csharp" style="color: inherit; text-decoration: inherit;">Spot<wbr>Request<wbr>State</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1662,7 +1856,9 @@ across different markets and instance types. Conflicts with `launch_template_con
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_csharp">
+<a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -1671,7 +1867,9 @@ across different markets and instance types. Conflicts with `launch_template_con
 
     <dt class="property-optional"
             title="Optional">
-        <span>Target<wbr>Capacity</span>
+        <span id="state_targetcapacity_csharp">
+<a href="#state_targetcapacity_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1682,7 +1880,9 @@ important to your application workload, such as vCPUs, memory, or I/O.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Target<wbr>Group<wbr>Arns</span>
+        <span id="state_targetgrouparns_csharp">
+<a href="#state_targetgrouparns_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Group<wbr>Arns</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1691,7 +1891,9 @@ important to your application workload, such as vCPUs, memory, or I/O.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Terminate<wbr>Instances<wbr>With<wbr>Expiration</span>
+        <span id="state_terminateinstanceswithexpiration_csharp">
+<a href="#state_terminateinstanceswithexpiration_csharp" style="color: inherit; text-decoration: inherit;">Terminate<wbr>Instances<wbr>With<wbr>Expiration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1701,7 +1903,9 @@ instances should be terminated when the Spot fleet request expires.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Valid<wbr>From</span>
+        <span id="state_validfrom_csharp">
+<a href="#state_validfrom_csharp" style="color: inherit; text-decoration: inherit;">Valid<wbr>From</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1710,7 +1914,9 @@ instances should be terminated when the Spot fleet request expires.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Valid<wbr>Until</span>
+        <span id="state_validuntil_csharp">
+<a href="#state_validuntil_csharp" style="color: inherit; text-decoration: inherit;">Valid<wbr>Until</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1719,7 +1925,9 @@ instances should be terminated when the Spot fleet request expires.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Wait<wbr>For<wbr>Fulfillment</span>
+        <span id="state_waitforfulfillment_csharp">
+<a href="#state_waitforfulfillment_csharp" style="color: inherit; text-decoration: inherit;">Wait<wbr>For<wbr>Fulfillment</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1737,7 +1945,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allocation<wbr>Strategy</span>
+        <span id="state_allocationstrategy_go">
+<a href="#state_allocationstrategy_go" style="color: inherit; text-decoration: inherit;">Allocation<wbr>Strategy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1748,7 +1958,9 @@ the Spot pools specified by the Spot fleet request. The default is
 
     <dt class="property-optional"
             title="Optional">
-        <span>Client<wbr>Token</span>
+        <span id="state_clienttoken_go">
+<a href="#state_clienttoken_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1756,7 +1968,9 @@ the Spot pools specified by the Spot fleet request. The default is
 
     <dt class="property-optional"
             title="Optional">
-        <span>Excess<wbr>Capacity<wbr>Termination<wbr>Policy</span>
+        <span id="state_excesscapacityterminationpolicy_go">
+<a href="#state_excesscapacityterminationpolicy_go" style="color: inherit; text-decoration: inherit;">Excess<wbr>Capacity<wbr>Termination<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1767,7 +1981,9 @@ request is decreased below the current size of the Spot fleet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Fleet<wbr>Type</span>
+        <span id="state_fleettype_go">
+<a href="#state_fleettype_go" style="color: inherit; text-decoration: inherit;">Fleet<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1777,7 +1993,9 @@ capacity or also attempts to maintain it. Default is `maintain`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Iam<wbr>Fleet<wbr>Role</span>
+        <span id="state_iamfleetrole_go">
+<a href="#state_iamfleetrole_go" style="color: inherit; text-decoration: inherit;">Iam<wbr>Fleet<wbr>Role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1789,7 +2007,9 @@ terminateInstancesWithExpiration.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Instance<wbr>Interruption<wbr>Behaviour</span>
+        <span id="state_instanceinterruptionbehaviour_go">
+<a href="#state_instanceinterruptionbehaviour_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Interruption<wbr>Behaviour</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1800,7 +2020,9 @@ instance stops or terminates when it is interrupted. Default is
 
     <dt class="property-optional"
             title="Optional">
-        <span>Instance<wbr>Pools<wbr>To<wbr>Use<wbr>Count</span>
+        <span id="state_instancepoolstousecount_go">
+<a href="#state_instancepoolstousecount_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Pools<wbr>To<wbr>Use<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1813,7 +2035,9 @@ the number of Spot pools that you specify.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Launch<wbr>Specifications</span>
+        <span id="state_launchspecifications_go">
+<a href="#state_launchspecifications_go" style="color: inherit; text-decoration: inherit;">Launch<wbr>Specifications</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotfleetrequestlaunchspecification">[]Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification</a></span>
     </dt>
@@ -1824,7 +2048,9 @@ across different markets and instance types. Conflicts with `launch_template_con
 
     <dt class="property-optional"
             title="Optional">
-        <span>Launch<wbr>Template<wbr>Configs</span>
+        <span id="state_launchtemplateconfigs_go">
+<a href="#state_launchtemplateconfigs_go" style="color: inherit; text-decoration: inherit;">Launch<wbr>Template<wbr>Configs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotfleetrequestlaunchtemplateconfig">[]Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Template<wbr>Config</a></span>
     </dt>
@@ -1833,7 +2059,9 @@ across different markets and instance types. Conflicts with `launch_template_con
 
     <dt class="property-optional"
             title="Optional">
-        <span>Load<wbr>Balancers</span>
+        <span id="state_loadbalancers_go">
+<a href="#state_loadbalancers_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1842,7 +2070,9 @@ across different markets and instance types. Conflicts with `launch_template_con
 
     <dt class="property-optional"
             title="Optional">
-        <span>Replace<wbr>Unhealthy<wbr>Instances</span>
+        <span id="state_replaceunhealthyinstances_go">
+<a href="#state_replaceunhealthyinstances_go" style="color: inherit; text-decoration: inherit;">Replace<wbr>Unhealthy<wbr>Instances</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1851,7 +2081,9 @@ across different markets and instance types. Conflicts with `launch_template_con
 
     <dt class="property-optional"
             title="Optional">
-        <span>Spot<wbr>Price</span>
+        <span id="state_spotprice_go">
+<a href="#state_spotprice_go" style="color: inherit; text-decoration: inherit;">Spot<wbr>Price</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1860,7 +2092,9 @@ across different markets and instance types. Conflicts with `launch_template_con
 
     <dt class="property-optional"
             title="Optional">
-        <span>Spot<wbr>Request<wbr>State</span>
+        <span id="state_spotrequeststate_go">
+<a href="#state_spotrequeststate_go" style="color: inherit; text-decoration: inherit;">Spot<wbr>Request<wbr>State</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1869,7 +2103,9 @@ across different markets and instance types. Conflicts with `launch_template_con
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_go">
+<a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -1878,7 +2114,9 @@ across different markets and instance types. Conflicts with `launch_template_con
 
     <dt class="property-optional"
             title="Optional">
-        <span>Target<wbr>Capacity</span>
+        <span id="state_targetcapacity_go">
+<a href="#state_targetcapacity_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1889,7 +2127,9 @@ important to your application workload, such as vCPUs, memory, or I/O.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Target<wbr>Group<wbr>Arns</span>
+        <span id="state_targetgrouparns_go">
+<a href="#state_targetgrouparns_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Group<wbr>Arns</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1898,7 +2138,9 @@ important to your application workload, such as vCPUs, memory, or I/O.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Terminate<wbr>Instances<wbr>With<wbr>Expiration</span>
+        <span id="state_terminateinstanceswithexpiration_go">
+<a href="#state_terminateinstanceswithexpiration_go" style="color: inherit; text-decoration: inherit;">Terminate<wbr>Instances<wbr>With<wbr>Expiration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1908,7 +2150,9 @@ instances should be terminated when the Spot fleet request expires.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Valid<wbr>From</span>
+        <span id="state_validfrom_go">
+<a href="#state_validfrom_go" style="color: inherit; text-decoration: inherit;">Valid<wbr>From</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1917,7 +2161,9 @@ instances should be terminated when the Spot fleet request expires.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Valid<wbr>Until</span>
+        <span id="state_validuntil_go">
+<a href="#state_validuntil_go" style="color: inherit; text-decoration: inherit;">Valid<wbr>Until</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1926,7 +2172,9 @@ instances should be terminated when the Spot fleet request expires.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Wait<wbr>For<wbr>Fulfillment</span>
+        <span id="state_waitforfulfillment_go">
+<a href="#state_waitforfulfillment_go" style="color: inherit; text-decoration: inherit;">Wait<wbr>For<wbr>Fulfillment</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1944,7 +2192,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>allocation<wbr>Strategy</span>
+        <span id="state_allocationstrategy_nodejs">
+<a href="#state_allocationstrategy_nodejs" style="color: inherit; text-decoration: inherit;">allocation<wbr>Strategy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1955,7 +2205,9 @@ the Spot pools specified by the Spot fleet request. The default is
 
     <dt class="property-optional"
             title="Optional">
-        <span>client<wbr>Token</span>
+        <span id="state_clienttoken_nodejs">
+<a href="#state_clienttoken_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1963,7 +2215,9 @@ the Spot pools specified by the Spot fleet request. The default is
 
     <dt class="property-optional"
             title="Optional">
-        <span>excess<wbr>Capacity<wbr>Termination<wbr>Policy</span>
+        <span id="state_excesscapacityterminationpolicy_nodejs">
+<a href="#state_excesscapacityterminationpolicy_nodejs" style="color: inherit; text-decoration: inherit;">excess<wbr>Capacity<wbr>Termination<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1974,7 +2228,9 @@ request is decreased below the current size of the Spot fleet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>fleet<wbr>Type</span>
+        <span id="state_fleettype_nodejs">
+<a href="#state_fleettype_nodejs" style="color: inherit; text-decoration: inherit;">fleet<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1984,7 +2240,9 @@ capacity or also attempts to maintain it. Default is `maintain`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>iam<wbr>Fleet<wbr>Role</span>
+        <span id="state_iamfleetrole_nodejs">
+<a href="#state_iamfleetrole_nodejs" style="color: inherit; text-decoration: inherit;">iam<wbr>Fleet<wbr>Role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1996,7 +2254,9 @@ terminateInstancesWithExpiration.
 
     <dt class="property-optional"
             title="Optional">
-        <span>instance<wbr>Interruption<wbr>Behaviour</span>
+        <span id="state_instanceinterruptionbehaviour_nodejs">
+<a href="#state_instanceinterruptionbehaviour_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Interruption<wbr>Behaviour</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2007,7 +2267,9 @@ instance stops or terminates when it is interrupted. Default is
 
     <dt class="property-optional"
             title="Optional">
-        <span>instance<wbr>Pools<wbr>To<wbr>Use<wbr>Count</span>
+        <span id="state_instancepoolstousecount_nodejs">
+<a href="#state_instancepoolstousecount_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Pools<wbr>To<wbr>Use<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -2020,7 +2282,9 @@ the number of Spot pools that you specify.
 
     <dt class="property-optional"
             title="Optional">
-        <span>launch<wbr>Specifications</span>
+        <span id="state_launchspecifications_nodejs">
+<a href="#state_launchspecifications_nodejs" style="color: inherit; text-decoration: inherit;">launch<wbr>Specifications</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotfleetrequestlaunchspecification">Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification[]</a></span>
     </dt>
@@ -2031,7 +2295,9 @@ across different markets and instance types. Conflicts with `launch_template_con
 
     <dt class="property-optional"
             title="Optional">
-        <span>launch<wbr>Template<wbr>Configs</span>
+        <span id="state_launchtemplateconfigs_nodejs">
+<a href="#state_launchtemplateconfigs_nodejs" style="color: inherit; text-decoration: inherit;">launch<wbr>Template<wbr>Configs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotfleetrequestlaunchtemplateconfig">Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Template<wbr>Config[]</a></span>
     </dt>
@@ -2040,7 +2306,9 @@ across different markets and instance types. Conflicts with `launch_template_con
 
     <dt class="property-optional"
             title="Optional">
-        <span>load<wbr>Balancers</span>
+        <span id="state_loadbalancers_nodejs">
+<a href="#state_loadbalancers_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -2049,7 +2317,9 @@ across different markets and instance types. Conflicts with `launch_template_con
 
     <dt class="property-optional"
             title="Optional">
-        <span>replace<wbr>Unhealthy<wbr>Instances</span>
+        <span id="state_replaceunhealthyinstances_nodejs">
+<a href="#state_replaceunhealthyinstances_nodejs" style="color: inherit; text-decoration: inherit;">replace<wbr>Unhealthy<wbr>Instances</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -2058,7 +2328,9 @@ across different markets and instance types. Conflicts with `launch_template_con
 
     <dt class="property-optional"
             title="Optional">
-        <span>spot<wbr>Price</span>
+        <span id="state_spotprice_nodejs">
+<a href="#state_spotprice_nodejs" style="color: inherit; text-decoration: inherit;">spot<wbr>Price</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2067,7 +2339,9 @@ across different markets and instance types. Conflicts with `launch_template_con
 
     <dt class="property-optional"
             title="Optional">
-        <span>spot<wbr>Request<wbr>State</span>
+        <span id="state_spotrequeststate_nodejs">
+<a href="#state_spotrequeststate_nodejs" style="color: inherit; text-decoration: inherit;">spot<wbr>Request<wbr>State</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2076,7 +2350,9 @@ across different markets and instance types. Conflicts with `launch_template_con
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_nodejs">
+<a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -2085,7 +2361,9 @@ across different markets and instance types. Conflicts with `launch_template_con
 
     <dt class="property-optional"
             title="Optional">
-        <span>target<wbr>Capacity</span>
+        <span id="state_targetcapacity_nodejs">
+<a href="#state_targetcapacity_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -2096,7 +2374,9 @@ important to your application workload, such as vCPUs, memory, or I/O.
 
     <dt class="property-optional"
             title="Optional">
-        <span>target<wbr>Group<wbr>Arns</span>
+        <span id="state_targetgrouparns_nodejs">
+<a href="#state_targetgrouparns_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Group<wbr>Arns</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -2105,7 +2385,9 @@ important to your application workload, such as vCPUs, memory, or I/O.
 
     <dt class="property-optional"
             title="Optional">
-        <span>terminate<wbr>Instances<wbr>With<wbr>Expiration</span>
+        <span id="state_terminateinstanceswithexpiration_nodejs">
+<a href="#state_terminateinstanceswithexpiration_nodejs" style="color: inherit; text-decoration: inherit;">terminate<wbr>Instances<wbr>With<wbr>Expiration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -2115,7 +2397,9 @@ instances should be terminated when the Spot fleet request expires.
 
     <dt class="property-optional"
             title="Optional">
-        <span>valid<wbr>From</span>
+        <span id="state_validfrom_nodejs">
+<a href="#state_validfrom_nodejs" style="color: inherit; text-decoration: inherit;">valid<wbr>From</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2124,7 +2408,9 @@ instances should be terminated when the Spot fleet request expires.
 
     <dt class="property-optional"
             title="Optional">
-        <span>valid<wbr>Until</span>
+        <span id="state_validuntil_nodejs">
+<a href="#state_validuntil_nodejs" style="color: inherit; text-decoration: inherit;">valid<wbr>Until</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2133,7 +2419,9 @@ instances should be terminated when the Spot fleet request expires.
 
     <dt class="property-optional"
             title="Optional">
-        <span>wait<wbr>For<wbr>Fulfillment</span>
+        <span id="state_waitforfulfillment_nodejs">
+<a href="#state_waitforfulfillment_nodejs" style="color: inherit; text-decoration: inherit;">wait<wbr>For<wbr>Fulfillment</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -2151,7 +2439,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>allocation_<wbr>strategy</span>
+        <span id="state_allocation_strategy_python">
+<a href="#state_allocation_strategy_python" style="color: inherit; text-decoration: inherit;">allocation_<wbr>strategy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2162,7 +2452,9 @@ the Spot pools specified by the Spot fleet request. The default is
 
     <dt class="property-optional"
             title="Optional">
-        <span>client_<wbr>token</span>
+        <span id="state_client_token_python">
+<a href="#state_client_token_python" style="color: inherit; text-decoration: inherit;">client_<wbr>token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2170,7 +2462,9 @@ the Spot pools specified by the Spot fleet request. The default is
 
     <dt class="property-optional"
             title="Optional">
-        <span>excess_<wbr>capacity_<wbr>termination_<wbr>policy</span>
+        <span id="state_excess_capacity_termination_policy_python">
+<a href="#state_excess_capacity_termination_policy_python" style="color: inherit; text-decoration: inherit;">excess_<wbr>capacity_<wbr>termination_<wbr>policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2181,7 +2475,9 @@ request is decreased below the current size of the Spot fleet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>fleet_<wbr>type</span>
+        <span id="state_fleet_type_python">
+<a href="#state_fleet_type_python" style="color: inherit; text-decoration: inherit;">fleet_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2191,7 +2487,9 @@ capacity or also attempts to maintain it. Default is `maintain`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>iam_<wbr>fleet_<wbr>role</span>
+        <span id="state_iam_fleet_role_python">
+<a href="#state_iam_fleet_role_python" style="color: inherit; text-decoration: inherit;">iam_<wbr>fleet_<wbr>role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2203,7 +2501,9 @@ terminateInstancesWithExpiration.
 
     <dt class="property-optional"
             title="Optional">
-        <span>instance_<wbr>interruption_<wbr>behaviour</span>
+        <span id="state_instance_interruption_behaviour_python">
+<a href="#state_instance_interruption_behaviour_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>interruption_<wbr>behaviour</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2214,7 +2514,9 @@ instance stops or terminates when it is interrupted. Default is
 
     <dt class="property-optional"
             title="Optional">
-        <span>instance_<wbr>pools_<wbr>to_<wbr>use_<wbr>count</span>
+        <span id="state_instance_pools_to_use_count_python">
+<a href="#state_instance_pools_to_use_count_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>pools_<wbr>to_<wbr>use_<wbr>count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2227,7 +2529,9 @@ the number of Spot pools that you specify.
 
     <dt class="property-optional"
             title="Optional">
-        <span>launch_<wbr>specifications</span>
+        <span id="state_launch_specifications_python">
+<a href="#state_launch_specifications_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>specifications</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotfleetrequestlaunchspecification">List[Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification]</a></span>
     </dt>
@@ -2238,7 +2542,9 @@ across different markets and instance types. Conflicts with `launch_template_con
 
     <dt class="property-optional"
             title="Optional">
-        <span>launch_<wbr>template_<wbr>configs</span>
+        <span id="state_launch_template_configs_python">
+<a href="#state_launch_template_configs_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>template_<wbr>configs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotfleetrequestlaunchtemplateconfig">List[Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Template<wbr>Config]</a></span>
     </dt>
@@ -2247,7 +2553,9 @@ across different markets and instance types. Conflicts with `launch_template_con
 
     <dt class="property-optional"
             title="Optional">
-        <span>load_<wbr>balancers</span>
+        <span id="state_load_balancers_python">
+<a href="#state_load_balancers_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -2256,7 +2564,9 @@ across different markets and instance types. Conflicts with `launch_template_con
 
     <dt class="property-optional"
             title="Optional">
-        <span>replace_<wbr>unhealthy_<wbr>instances</span>
+        <span id="state_replace_unhealthy_instances_python">
+<a href="#state_replace_unhealthy_instances_python" style="color: inherit; text-decoration: inherit;">replace_<wbr>unhealthy_<wbr>instances</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2265,7 +2575,9 @@ across different markets and instance types. Conflicts with `launch_template_con
 
     <dt class="property-optional"
             title="Optional">
-        <span>spot_<wbr>price</span>
+        <span id="state_spot_price_python">
+<a href="#state_spot_price_python" style="color: inherit; text-decoration: inherit;">spot_<wbr>price</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2274,7 +2586,9 @@ across different markets and instance types. Conflicts with `launch_template_con
 
     <dt class="property-optional"
             title="Optional">
-        <span>spot_<wbr>request_<wbr>state</span>
+        <span id="state_spot_request_state_python">
+<a href="#state_spot_request_state_python" style="color: inherit; text-decoration: inherit;">spot_<wbr>request_<wbr>state</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2283,7 +2597,9 @@ across different markets and instance types. Conflicts with `launch_template_con
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_python">
+<a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -2292,7 +2608,9 @@ across different markets and instance types. Conflicts with `launch_template_con
 
     <dt class="property-optional"
             title="Optional">
-        <span>target_<wbr>capacity</span>
+        <span id="state_target_capacity_python">
+<a href="#state_target_capacity_python" style="color: inherit; text-decoration: inherit;">target_<wbr>capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2303,7 +2621,9 @@ important to your application workload, such as vCPUs, memory, or I/O.
 
     <dt class="property-optional"
             title="Optional">
-        <span>target_<wbr>group_<wbr>arns</span>
+        <span id="state_target_group_arns_python">
+<a href="#state_target_group_arns_python" style="color: inherit; text-decoration: inherit;">target_<wbr>group_<wbr>arns</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -2312,7 +2632,9 @@ important to your application workload, such as vCPUs, memory, or I/O.
 
     <dt class="property-optional"
             title="Optional">
-        <span>terminate_<wbr>instances_<wbr>with_<wbr>expiration</span>
+        <span id="state_terminate_instances_with_expiration_python">
+<a href="#state_terminate_instances_with_expiration_python" style="color: inherit; text-decoration: inherit;">terminate_<wbr>instances_<wbr>with_<wbr>expiration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2322,7 +2644,9 @@ instances should be terminated when the Spot fleet request expires.
 
     <dt class="property-optional"
             title="Optional">
-        <span>valid_<wbr>from</span>
+        <span id="state_valid_from_python">
+<a href="#state_valid_from_python" style="color: inherit; text-decoration: inherit;">valid_<wbr>from</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2331,7 +2655,9 @@ instances should be terminated when the Spot fleet request expires.
 
     <dt class="property-optional"
             title="Optional">
-        <span>valid_<wbr>until</span>
+        <span id="state_valid_until_python">
+<a href="#state_valid_until_python" style="color: inherit; text-decoration: inherit;">valid_<wbr>until</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2340,7 +2666,9 @@ instances should be terminated when the Spot fleet request expires.
 
     <dt class="property-optional"
             title="Optional">
-        <span>wait_<wbr>for_<wbr>fulfillment</span>
+        <span id="state_wait_for_fulfillment_python">
+<a href="#state_wait_for_fulfillment_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>for_<wbr>fulfillment</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2384,7 +2712,9 @@ timeout of 10m is reached.
 
     <dt class="property-required"
             title="Required">
-        <span>Ami</span>
+        <span id="ami_csharp">
+<a href="#ami_csharp" style="color: inherit; text-decoration: inherit;">Ami</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2392,7 +2722,9 @@ timeout of 10m is reached.
 
     <dt class="property-required"
             title="Required">
-        <span>Instance<wbr>Type</span>
+        <span id="instancetype_csharp">
+<a href="#instancetype_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2401,7 +2733,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Associate<wbr>Public<wbr>Ip<wbr>Address</span>
+        <span id="associatepublicipaddress_csharp">
+<a href="#associatepublicipaddress_csharp" style="color: inherit; text-decoration: inherit;">Associate<wbr>Public<wbr>Ip<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -2409,7 +2743,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Availability<wbr>Zone</span>
+        <span id="availabilityzone_csharp">
+<a href="#availabilityzone_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2418,7 +2754,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ebs<wbr>Block<wbr>Devices</span>
+        <span id="ebsblockdevices_csharp">
+<a href="#ebsblockdevices_csharp" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Block<wbr>Devices</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotfleetrequestlaunchspecificationebsblockdevice">List&lt;Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args&gt;</a></span>
     </dt>
@@ -2426,7 +2764,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ebs<wbr>Optimized</span>
+        <span id="ebsoptimized_csharp">
+<a href="#ebsoptimized_csharp" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Optimized</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -2434,7 +2774,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ephemeral<wbr>Block<wbr>Devices</span>
+        <span id="ephemeralblockdevices_csharp">
+<a href="#ephemeralblockdevices_csharp" style="color: inherit; text-decoration: inherit;">Ephemeral<wbr>Block<wbr>Devices</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotfleetrequestlaunchspecificationephemeralblockdevice">List&lt;Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification<wbr>Ephemeral<wbr>Block<wbr>Device<wbr>Args&gt;</a></span>
     </dt>
@@ -2442,7 +2784,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Iam<wbr>Instance<wbr>Profile</span>
+        <span id="iaminstanceprofile_csharp">
+<a href="#iaminstanceprofile_csharp" style="color: inherit; text-decoration: inherit;">Iam<wbr>Instance<wbr>Profile</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2450,7 +2794,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Iam<wbr>Instance<wbr>Profile<wbr>Arn</span>
+        <span id="iaminstanceprofilearn_csharp">
+<a href="#iaminstanceprofilearn_csharp" style="color: inherit; text-decoration: inherit;">Iam<wbr>Instance<wbr>Profile<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2458,7 +2804,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Key<wbr>Name</span>
+        <span id="keyname_csharp">
+<a href="#keyname_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2466,7 +2814,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Monitoring</span>
+        <span id="monitoring_csharp">
+<a href="#monitoring_csharp" style="color: inherit; text-decoration: inherit;">Monitoring</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -2474,7 +2824,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Placement<wbr>Group</span>
+        <span id="placementgroup_csharp">
+<a href="#placementgroup_csharp" style="color: inherit; text-decoration: inherit;">Placement<wbr>Group</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2482,7 +2834,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Placement<wbr>Tenancy</span>
+        <span id="placementtenancy_csharp">
+<a href="#placementtenancy_csharp" style="color: inherit; text-decoration: inherit;">Placement<wbr>Tenancy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2490,7 +2844,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Root<wbr>Block<wbr>Devices</span>
+        <span id="rootblockdevices_csharp">
+<a href="#rootblockdevices_csharp" style="color: inherit; text-decoration: inherit;">Root<wbr>Block<wbr>Devices</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotfleetrequestlaunchspecificationrootblockdevice">List&lt;Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification<wbr>Root<wbr>Block<wbr>Device<wbr>Args&gt;</a></span>
     </dt>
@@ -2498,7 +2854,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Spot<wbr>Price</span>
+        <span id="spotprice_csharp">
+<a href="#spotprice_csharp" style="color: inherit; text-decoration: inherit;">Spot<wbr>Price</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2507,7 +2865,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Subnet<wbr>Id</span>
+        <span id="subnetid_csharp">
+<a href="#subnetid_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2516,7 +2876,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -2525,7 +2887,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>User<wbr>Data</span>
+        <span id="userdata_csharp">
+<a href="#userdata_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2533,7 +2897,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vpc<wbr>Security<wbr>Group<wbr>Ids</span>
+        <span id="vpcsecuritygroupids_csharp">
+<a href="#vpcsecuritygroupids_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Security<wbr>Group<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -2541,7 +2907,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Weighted<wbr>Capacity</span>
+        <span id="weightedcapacity_csharp">
+<a href="#weightedcapacity_csharp" style="color: inherit; text-decoration: inherit;">Weighted<wbr>Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2557,7 +2925,9 @@ timeout of 10m is reached.
 
     <dt class="property-required"
             title="Required">
-        <span>Ami</span>
+        <span id="ami_go">
+<a href="#ami_go" style="color: inherit; text-decoration: inherit;">Ami</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2565,7 +2935,9 @@ timeout of 10m is reached.
 
     <dt class="property-required"
             title="Required">
-        <span>Instance<wbr>Type</span>
+        <span id="instancetype_go">
+<a href="#instancetype_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2574,7 +2946,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Associate<wbr>Public<wbr>Ip<wbr>Address</span>
+        <span id="associatepublicipaddress_go">
+<a href="#associatepublicipaddress_go" style="color: inherit; text-decoration: inherit;">Associate<wbr>Public<wbr>Ip<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -2582,7 +2956,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Availability<wbr>Zone</span>
+        <span id="availabilityzone_go">
+<a href="#availabilityzone_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2591,7 +2967,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ebs<wbr>Block<wbr>Devices</span>
+        <span id="ebsblockdevices_go">
+<a href="#ebsblockdevices_go" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Block<wbr>Devices</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotfleetrequestlaunchspecificationebsblockdevice">[]Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification<wbr>Ebs<wbr>Block<wbr>Device</a></span>
     </dt>
@@ -2599,7 +2977,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ebs<wbr>Optimized</span>
+        <span id="ebsoptimized_go">
+<a href="#ebsoptimized_go" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Optimized</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -2607,7 +2987,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ephemeral<wbr>Block<wbr>Devices</span>
+        <span id="ephemeralblockdevices_go">
+<a href="#ephemeralblockdevices_go" style="color: inherit; text-decoration: inherit;">Ephemeral<wbr>Block<wbr>Devices</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotfleetrequestlaunchspecificationephemeralblockdevice">[]Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification<wbr>Ephemeral<wbr>Block<wbr>Device</a></span>
     </dt>
@@ -2615,7 +2997,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Iam<wbr>Instance<wbr>Profile</span>
+        <span id="iaminstanceprofile_go">
+<a href="#iaminstanceprofile_go" style="color: inherit; text-decoration: inherit;">Iam<wbr>Instance<wbr>Profile</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2623,7 +3007,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Iam<wbr>Instance<wbr>Profile<wbr>Arn</span>
+        <span id="iaminstanceprofilearn_go">
+<a href="#iaminstanceprofilearn_go" style="color: inherit; text-decoration: inherit;">Iam<wbr>Instance<wbr>Profile<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2631,7 +3017,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Key<wbr>Name</span>
+        <span id="keyname_go">
+<a href="#keyname_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2639,7 +3027,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Monitoring</span>
+        <span id="monitoring_go">
+<a href="#monitoring_go" style="color: inherit; text-decoration: inherit;">Monitoring</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -2647,7 +3037,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Placement<wbr>Group</span>
+        <span id="placementgroup_go">
+<a href="#placementgroup_go" style="color: inherit; text-decoration: inherit;">Placement<wbr>Group</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2655,7 +3047,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Placement<wbr>Tenancy</span>
+        <span id="placementtenancy_go">
+<a href="#placementtenancy_go" style="color: inherit; text-decoration: inherit;">Placement<wbr>Tenancy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2663,7 +3057,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Root<wbr>Block<wbr>Devices</span>
+        <span id="rootblockdevices_go">
+<a href="#rootblockdevices_go" style="color: inherit; text-decoration: inherit;">Root<wbr>Block<wbr>Devices</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotfleetrequestlaunchspecificationrootblockdevice">[]Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification<wbr>Root<wbr>Block<wbr>Device</a></span>
     </dt>
@@ -2671,7 +3067,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Spot<wbr>Price</span>
+        <span id="spotprice_go">
+<a href="#spotprice_go" style="color: inherit; text-decoration: inherit;">Spot<wbr>Price</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2680,7 +3078,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Subnet<wbr>Id</span>
+        <span id="subnetid_go">
+<a href="#subnetid_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2689,7 +3089,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -2698,7 +3100,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>User<wbr>Data</span>
+        <span id="userdata_go">
+<a href="#userdata_go" style="color: inherit; text-decoration: inherit;">User<wbr>Data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2706,7 +3110,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vpc<wbr>Security<wbr>Group<wbr>Ids</span>
+        <span id="vpcsecuritygroupids_go">
+<a href="#vpcsecuritygroupids_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Security<wbr>Group<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -2714,7 +3120,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Weighted<wbr>Capacity</span>
+        <span id="weightedcapacity_go">
+<a href="#weightedcapacity_go" style="color: inherit; text-decoration: inherit;">Weighted<wbr>Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2730,7 +3138,9 @@ timeout of 10m is reached.
 
     <dt class="property-required"
             title="Required">
-        <span>ami</span>
+        <span id="ami_nodejs">
+<a href="#ami_nodejs" style="color: inherit; text-decoration: inherit;">ami</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2738,7 +3148,9 @@ timeout of 10m is reached.
 
     <dt class="property-required"
             title="Required">
-        <span>instance<wbr>Type</span>
+        <span id="instancetype_nodejs">
+<a href="#instancetype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2747,7 +3159,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>associate<wbr>Public<wbr>Ip<wbr>Address</span>
+        <span id="associatepublicipaddress_nodejs">
+<a href="#associatepublicipaddress_nodejs" style="color: inherit; text-decoration: inherit;">associate<wbr>Public<wbr>Ip<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -2755,7 +3169,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>availability<wbr>Zone</span>
+        <span id="availabilityzone_nodejs">
+<a href="#availabilityzone_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2764,7 +3180,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ebs<wbr>Block<wbr>Devices</span>
+        <span id="ebsblockdevices_nodejs">
+<a href="#ebsblockdevices_nodejs" style="color: inherit; text-decoration: inherit;">ebs<wbr>Block<wbr>Devices</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotfleetrequestlaunchspecificationebsblockdevice">Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification<wbr>Ebs<wbr>Block<wbr>Device[]</a></span>
     </dt>
@@ -2772,7 +3190,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ebs<wbr>Optimized</span>
+        <span id="ebsoptimized_nodejs">
+<a href="#ebsoptimized_nodejs" style="color: inherit; text-decoration: inherit;">ebs<wbr>Optimized</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -2780,7 +3200,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ephemeral<wbr>Block<wbr>Devices</span>
+        <span id="ephemeralblockdevices_nodejs">
+<a href="#ephemeralblockdevices_nodejs" style="color: inherit; text-decoration: inherit;">ephemeral<wbr>Block<wbr>Devices</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotfleetrequestlaunchspecificationephemeralblockdevice">Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification<wbr>Ephemeral<wbr>Block<wbr>Device[]</a></span>
     </dt>
@@ -2788,7 +3210,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>iam<wbr>Instance<wbr>Profile</span>
+        <span id="iaminstanceprofile_nodejs">
+<a href="#iaminstanceprofile_nodejs" style="color: inherit; text-decoration: inherit;">iam<wbr>Instance<wbr>Profile</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2796,7 +3220,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>iam<wbr>Instance<wbr>Profile<wbr>Arn</span>
+        <span id="iaminstanceprofilearn_nodejs">
+<a href="#iaminstanceprofilearn_nodejs" style="color: inherit; text-decoration: inherit;">iam<wbr>Instance<wbr>Profile<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2804,7 +3230,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>key<wbr>Name</span>
+        <span id="keyname_nodejs">
+<a href="#keyname_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2812,7 +3240,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>monitoring</span>
+        <span id="monitoring_nodejs">
+<a href="#monitoring_nodejs" style="color: inherit; text-decoration: inherit;">monitoring</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -2820,7 +3250,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>placement<wbr>Group</span>
+        <span id="placementgroup_nodejs">
+<a href="#placementgroup_nodejs" style="color: inherit; text-decoration: inherit;">placement<wbr>Group</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2828,7 +3260,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>placement<wbr>Tenancy</span>
+        <span id="placementtenancy_nodejs">
+<a href="#placementtenancy_nodejs" style="color: inherit; text-decoration: inherit;">placement<wbr>Tenancy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2836,7 +3270,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>root<wbr>Block<wbr>Devices</span>
+        <span id="rootblockdevices_nodejs">
+<a href="#rootblockdevices_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Block<wbr>Devices</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotfleetrequestlaunchspecificationrootblockdevice">Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification<wbr>Root<wbr>Block<wbr>Device[]</a></span>
     </dt>
@@ -2844,7 +3280,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>spot<wbr>Price</span>
+        <span id="spotprice_nodejs">
+<a href="#spotprice_nodejs" style="color: inherit; text-decoration: inherit;">spot<wbr>Price</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2853,7 +3291,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>subnet<wbr>Id</span>
+        <span id="subnetid_nodejs">
+<a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2862,7 +3302,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -2871,7 +3313,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>user<wbr>Data</span>
+        <span id="userdata_nodejs">
+<a href="#userdata_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2879,7 +3323,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>vpc<wbr>Security<wbr>Group<wbr>Ids</span>
+        <span id="vpcsecuritygroupids_nodejs">
+<a href="#vpcsecuritygroupids_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Security<wbr>Group<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -2887,7 +3333,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>weighted<wbr>Capacity</span>
+        <span id="weightedcapacity_nodejs">
+<a href="#weightedcapacity_nodejs" style="color: inherit; text-decoration: inherit;">weighted<wbr>Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2903,7 +3351,9 @@ timeout of 10m is reached.
 
     <dt class="property-required"
             title="Required">
-        <span>ami</span>
+        <span id="ami_python">
+<a href="#ami_python" style="color: inherit; text-decoration: inherit;">ami</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2911,7 +3361,9 @@ timeout of 10m is reached.
 
     <dt class="property-required"
             title="Required">
-        <span>instance_<wbr>type</span>
+        <span id="instance_type_python">
+<a href="#instance_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2920,7 +3372,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>associate_<wbr>public_<wbr>ip_<wbr>address</span>
+        <span id="associate_public_ip_address_python">
+<a href="#associate_public_ip_address_python" style="color: inherit; text-decoration: inherit;">associate_<wbr>public_<wbr>ip_<wbr>address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2928,7 +3382,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>availability_<wbr>zone</span>
+        <span id="availability_zone_python">
+<a href="#availability_zone_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2937,7 +3393,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ebs_<wbr>block_<wbr>devices</span>
+        <span id="ebs_block_devices_python">
+<a href="#ebs_block_devices_python" style="color: inherit; text-decoration: inherit;">ebs_<wbr>block_<wbr>devices</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotfleetrequestlaunchspecificationebsblockdevice">List[Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification<wbr>Ebs<wbr>Block<wbr>Device]</a></span>
     </dt>
@@ -2945,7 +3403,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ebs_<wbr>optimized</span>
+        <span id="ebs_optimized_python">
+<a href="#ebs_optimized_python" style="color: inherit; text-decoration: inherit;">ebs_<wbr>optimized</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2953,7 +3413,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ephemeral_<wbr>block_<wbr>devices</span>
+        <span id="ephemeral_block_devices_python">
+<a href="#ephemeral_block_devices_python" style="color: inherit; text-decoration: inherit;">ephemeral_<wbr>block_<wbr>devices</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotfleetrequestlaunchspecificationephemeralblockdevice">List[Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification<wbr>Ephemeral<wbr>Block<wbr>Device]</a></span>
     </dt>
@@ -2961,7 +3423,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>iam<wbr>Instance<wbr>Profile<wbr>Arn</span>
+        <span id="iaminstanceprofilearn_python">
+<a href="#iaminstanceprofilearn_python" style="color: inherit; text-decoration: inherit;">iam<wbr>Instance<wbr>Profile<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2969,7 +3433,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>iam_<wbr>instance_<wbr>profile</span>
+        <span id="iam_instance_profile_python">
+<a href="#iam_instance_profile_python" style="color: inherit; text-decoration: inherit;">iam_<wbr>instance_<wbr>profile</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2977,7 +3443,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>key_<wbr>name</span>
+        <span id="key_name_python">
+<a href="#key_name_python" style="color: inherit; text-decoration: inherit;">key_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2985,7 +3453,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>monitoring</span>
+        <span id="monitoring_python">
+<a href="#monitoring_python" style="color: inherit; text-decoration: inherit;">monitoring</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2993,7 +3463,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>placement_<wbr>group</span>
+        <span id="placement_group_python">
+<a href="#placement_group_python" style="color: inherit; text-decoration: inherit;">placement_<wbr>group</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3001,7 +3473,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>placement_<wbr>tenancy</span>
+        <span id="placement_tenancy_python">
+<a href="#placement_tenancy_python" style="color: inherit; text-decoration: inherit;">placement_<wbr>tenancy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3009,7 +3483,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>root_<wbr>block_<wbr>devices</span>
+        <span id="root_block_devices_python">
+<a href="#root_block_devices_python" style="color: inherit; text-decoration: inherit;">root_<wbr>block_<wbr>devices</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotfleetrequestlaunchspecificationrootblockdevice">List[Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification<wbr>Root<wbr>Block<wbr>Device]</a></span>
     </dt>
@@ -3017,7 +3493,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>spot_<wbr>price</span>
+        <span id="spot_price_python">
+<a href="#spot_price_python" style="color: inherit; text-decoration: inherit;">spot_<wbr>price</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3026,7 +3504,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>subnet_<wbr>id</span>
+        <span id="subnet_id_python">
+<a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3035,7 +3515,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -3044,7 +3526,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>user_<wbr>data</span>
+        <span id="user_data_python">
+<a href="#user_data_python" style="color: inherit; text-decoration: inherit;">user_<wbr>data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3052,7 +3536,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>vpc_<wbr>security_<wbr>group_<wbr>ids</span>
+        <span id="vpc_security_group_ids_python">
+<a href="#vpc_security_group_ids_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>security_<wbr>group_<wbr>ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -3060,7 +3546,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>weighted<wbr>Capacity</span>
+        <span id="weightedcapacity_python">
+<a href="#weightedcapacity_python" style="color: inherit; text-decoration: inherit;">weighted<wbr>Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3094,7 +3582,9 @@ timeout of 10m is reached.
 
     <dt class="property-required"
             title="Required">
-        <span>Device<wbr>Name</span>
+        <span id="devicename_csharp">
+<a href="#devicename_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3102,7 +3592,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Delete<wbr>On<wbr>Termination</span>
+        <span id="deleteontermination_csharp">
+<a href="#deleteontermination_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>On<wbr>Termination</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -3110,7 +3602,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Encrypted</span>
+        <span id="encrypted_csharp">
+<a href="#encrypted_csharp" style="color: inherit; text-decoration: inherit;">Encrypted</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -3118,7 +3612,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Iops</span>
+        <span id="iops_csharp">
+<a href="#iops_csharp" style="color: inherit; text-decoration: inherit;">Iops</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -3126,7 +3622,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Kms<wbr>Key<wbr>Id</span>
+        <span id="kmskeyid_csharp">
+<a href="#kmskeyid_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3134,7 +3632,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Snapshot<wbr>Id</span>
+        <span id="snapshotid_csharp">
+<a href="#snapshotid_csharp" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3142,7 +3642,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Volume<wbr>Size</span>
+        <span id="volumesize_csharp">
+<a href="#volumesize_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -3150,7 +3652,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Volume<wbr>Type</span>
+        <span id="volumetype_csharp">
+<a href="#volumetype_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3165,7 +3669,9 @@ timeout of 10m is reached.
 
     <dt class="property-required"
             title="Required">
-        <span>Device<wbr>Name</span>
+        <span id="devicename_go">
+<a href="#devicename_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3173,7 +3679,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Delete<wbr>On<wbr>Termination</span>
+        <span id="deleteontermination_go">
+<a href="#deleteontermination_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>On<wbr>Termination</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -3181,7 +3689,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Encrypted</span>
+        <span id="encrypted_go">
+<a href="#encrypted_go" style="color: inherit; text-decoration: inherit;">Encrypted</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -3189,7 +3699,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Iops</span>
+        <span id="iops_go">
+<a href="#iops_go" style="color: inherit; text-decoration: inherit;">Iops</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -3197,7 +3709,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Kms<wbr>Key<wbr>Id</span>
+        <span id="kmskeyid_go">
+<a href="#kmskeyid_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3205,7 +3719,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Snapshot<wbr>Id</span>
+        <span id="snapshotid_go">
+<a href="#snapshotid_go" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3213,7 +3729,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Volume<wbr>Size</span>
+        <span id="volumesize_go">
+<a href="#volumesize_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -3221,7 +3739,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Volume<wbr>Type</span>
+        <span id="volumetype_go">
+<a href="#volumetype_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3236,7 +3756,9 @@ timeout of 10m is reached.
 
     <dt class="property-required"
             title="Required">
-        <span>device<wbr>Name</span>
+        <span id="devicename_nodejs">
+<a href="#devicename_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3244,7 +3766,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>delete<wbr>On<wbr>Termination</span>
+        <span id="deleteontermination_nodejs">
+<a href="#deleteontermination_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>On<wbr>Termination</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -3252,7 +3776,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>encrypted</span>
+        <span id="encrypted_nodejs">
+<a href="#encrypted_nodejs" style="color: inherit; text-decoration: inherit;">encrypted</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -3260,7 +3786,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>iops</span>
+        <span id="iops_nodejs">
+<a href="#iops_nodejs" style="color: inherit; text-decoration: inherit;">iops</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -3268,7 +3796,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>kms<wbr>Key<wbr>Id</span>
+        <span id="kmskeyid_nodejs">
+<a href="#kmskeyid_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3276,7 +3806,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>snapshot<wbr>Id</span>
+        <span id="snapshotid_nodejs">
+<a href="#snapshotid_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3284,7 +3816,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>volume<wbr>Size</span>
+        <span id="volumesize_nodejs">
+<a href="#volumesize_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -3292,7 +3826,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>volume<wbr>Type</span>
+        <span id="volumetype_nodejs">
+<a href="#volumetype_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3307,7 +3843,9 @@ timeout of 10m is reached.
 
     <dt class="property-required"
             title="Required">
-        <span>device_<wbr>name</span>
+        <span id="device_name_python">
+<a href="#device_name_python" style="color: inherit; text-decoration: inherit;">device_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3315,7 +3853,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>delete<wbr>On<wbr>Termination</span>
+        <span id="deleteontermination_python">
+<a href="#deleteontermination_python" style="color: inherit; text-decoration: inherit;">delete<wbr>On<wbr>Termination</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -3323,7 +3863,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>encrypted</span>
+        <span id="encrypted_python">
+<a href="#encrypted_python" style="color: inherit; text-decoration: inherit;">encrypted</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -3331,7 +3873,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>iops</span>
+        <span id="iops_python">
+<a href="#iops_python" style="color: inherit; text-decoration: inherit;">iops</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -3339,7 +3883,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>kms_<wbr>key_<wbr>id</span>
+        <span id="kms_key_id_python">
+<a href="#kms_key_id_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3347,7 +3893,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>snapshot_<wbr>id</span>
+        <span id="snapshot_id_python">
+<a href="#snapshot_id_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3355,7 +3903,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>volume<wbr>Type</span>
+        <span id="volumetype_python">
+<a href="#volumetype_python" style="color: inherit; text-decoration: inherit;">volume<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3363,7 +3913,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>volume_<wbr>size</span>
+        <span id="volume_size_python">
+<a href="#volume_size_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -3396,7 +3948,9 @@ timeout of 10m is reached.
 
     <dt class="property-required"
             title="Required">
-        <span>Device<wbr>Name</span>
+        <span id="devicename_csharp">
+<a href="#devicename_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3404,7 +3958,9 @@ timeout of 10m is reached.
 
     <dt class="property-required"
             title="Required">
-        <span>Virtual<wbr>Name</span>
+        <span id="virtualname_csharp">
+<a href="#virtualname_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3419,7 +3975,9 @@ timeout of 10m is reached.
 
     <dt class="property-required"
             title="Required">
-        <span>Device<wbr>Name</span>
+        <span id="devicename_go">
+<a href="#devicename_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3427,7 +3985,9 @@ timeout of 10m is reached.
 
     <dt class="property-required"
             title="Required">
-        <span>Virtual<wbr>Name</span>
+        <span id="virtualname_go">
+<a href="#virtualname_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3442,7 +4002,9 @@ timeout of 10m is reached.
 
     <dt class="property-required"
             title="Required">
-        <span>device<wbr>Name</span>
+        <span id="devicename_nodejs">
+<a href="#devicename_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3450,7 +4012,9 @@ timeout of 10m is reached.
 
     <dt class="property-required"
             title="Required">
-        <span>virtual<wbr>Name</span>
+        <span id="virtualname_nodejs">
+<a href="#virtualname_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3465,7 +4029,9 @@ timeout of 10m is reached.
 
     <dt class="property-required"
             title="Required">
-        <span>device_<wbr>name</span>
+        <span id="device_name_python">
+<a href="#device_name_python" style="color: inherit; text-decoration: inherit;">device_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3473,7 +4039,9 @@ timeout of 10m is reached.
 
     <dt class="property-required"
             title="Required">
-        <span>virtual<wbr>Name</span>
+        <span id="virtualname_python">
+<a href="#virtualname_python" style="color: inherit; text-decoration: inherit;">virtual<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3506,7 +4074,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Delete<wbr>On<wbr>Termination</span>
+        <span id="deleteontermination_csharp">
+<a href="#deleteontermination_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>On<wbr>Termination</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -3514,7 +4084,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Encrypted</span>
+        <span id="encrypted_csharp">
+<a href="#encrypted_csharp" style="color: inherit; text-decoration: inherit;">Encrypted</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -3522,7 +4094,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Iops</span>
+        <span id="iops_csharp">
+<a href="#iops_csharp" style="color: inherit; text-decoration: inherit;">Iops</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -3530,7 +4104,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Kms<wbr>Key<wbr>Id</span>
+        <span id="kmskeyid_csharp">
+<a href="#kmskeyid_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3538,7 +4114,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Volume<wbr>Size</span>
+        <span id="volumesize_csharp">
+<a href="#volumesize_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -3546,7 +4124,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Volume<wbr>Type</span>
+        <span id="volumetype_csharp">
+<a href="#volumetype_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3561,7 +4141,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Delete<wbr>On<wbr>Termination</span>
+        <span id="deleteontermination_go">
+<a href="#deleteontermination_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>On<wbr>Termination</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -3569,7 +4151,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Encrypted</span>
+        <span id="encrypted_go">
+<a href="#encrypted_go" style="color: inherit; text-decoration: inherit;">Encrypted</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -3577,7 +4161,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Iops</span>
+        <span id="iops_go">
+<a href="#iops_go" style="color: inherit; text-decoration: inherit;">Iops</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -3585,7 +4171,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Kms<wbr>Key<wbr>Id</span>
+        <span id="kmskeyid_go">
+<a href="#kmskeyid_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3593,7 +4181,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Volume<wbr>Size</span>
+        <span id="volumesize_go">
+<a href="#volumesize_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -3601,7 +4191,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Volume<wbr>Type</span>
+        <span id="volumetype_go">
+<a href="#volumetype_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3616,7 +4208,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>delete<wbr>On<wbr>Termination</span>
+        <span id="deleteontermination_nodejs">
+<a href="#deleteontermination_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>On<wbr>Termination</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -3624,7 +4218,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>encrypted</span>
+        <span id="encrypted_nodejs">
+<a href="#encrypted_nodejs" style="color: inherit; text-decoration: inherit;">encrypted</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -3632,7 +4228,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>iops</span>
+        <span id="iops_nodejs">
+<a href="#iops_nodejs" style="color: inherit; text-decoration: inherit;">iops</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -3640,7 +4238,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>kms<wbr>Key<wbr>Id</span>
+        <span id="kmskeyid_nodejs">
+<a href="#kmskeyid_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3648,7 +4248,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>volume<wbr>Size</span>
+        <span id="volumesize_nodejs">
+<a href="#volumesize_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -3656,7 +4258,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>volume<wbr>Type</span>
+        <span id="volumetype_nodejs">
+<a href="#volumetype_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3671,7 +4275,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>delete<wbr>On<wbr>Termination</span>
+        <span id="deleteontermination_python">
+<a href="#deleteontermination_python" style="color: inherit; text-decoration: inherit;">delete<wbr>On<wbr>Termination</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -3679,7 +4285,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>encrypted</span>
+        <span id="encrypted_python">
+<a href="#encrypted_python" style="color: inherit; text-decoration: inherit;">encrypted</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -3687,7 +4295,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>iops</span>
+        <span id="iops_python">
+<a href="#iops_python" style="color: inherit; text-decoration: inherit;">iops</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -3695,7 +4305,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>kms_<wbr>key_<wbr>id</span>
+        <span id="kms_key_id_python">
+<a href="#kms_key_id_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3703,7 +4315,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>volume<wbr>Type</span>
+        <span id="volumetype_python">
+<a href="#volumetype_python" style="color: inherit; text-decoration: inherit;">volume<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3711,7 +4325,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>volume_<wbr>size</span>
+        <span id="volume_size_python">
+<a href="#volume_size_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -3744,7 +4360,9 @@ timeout of 10m is reached.
 
     <dt class="property-required"
             title="Required">
-        <span>Launch<wbr>Template<wbr>Specification</span>
+        <span id="launchtemplatespecification_csharp">
+<a href="#launchtemplatespecification_csharp" style="color: inherit; text-decoration: inherit;">Launch<wbr>Template<wbr>Specification</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotfleetrequestlaunchtemplateconfiglaunchtemplatespecification">Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Template<wbr>Config<wbr>Launch<wbr>Template<wbr>Specification<wbr>Args</a></span>
     </dt>
@@ -3753,7 +4371,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Overrides</span>
+        <span id="overrides_csharp">
+<a href="#overrides_csharp" style="color: inherit; text-decoration: inherit;">Overrides</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotfleetrequestlaunchtemplateconfigoverride">List&lt;Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Template<wbr>Config<wbr>Override<wbr>Args&gt;</a></span>
     </dt>
@@ -3769,7 +4389,9 @@ timeout of 10m is reached.
 
     <dt class="property-required"
             title="Required">
-        <span>Launch<wbr>Template<wbr>Specification</span>
+        <span id="launchtemplatespecification_go">
+<a href="#launchtemplatespecification_go" style="color: inherit; text-decoration: inherit;">Launch<wbr>Template<wbr>Specification</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotfleetrequestlaunchtemplateconfiglaunchtemplatespecification">Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Template<wbr>Config<wbr>Launch<wbr>Template<wbr>Specification</a></span>
     </dt>
@@ -3778,7 +4400,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Overrides</span>
+        <span id="overrides_go">
+<a href="#overrides_go" style="color: inherit; text-decoration: inherit;">Overrides</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotfleetrequestlaunchtemplateconfigoverride">[]Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Template<wbr>Config<wbr>Override</a></span>
     </dt>
@@ -3794,7 +4418,9 @@ timeout of 10m is reached.
 
     <dt class="property-required"
             title="Required">
-        <span>launch<wbr>Template<wbr>Specification</span>
+        <span id="launchtemplatespecification_nodejs">
+<a href="#launchtemplatespecification_nodejs" style="color: inherit; text-decoration: inherit;">launch<wbr>Template<wbr>Specification</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotfleetrequestlaunchtemplateconfiglaunchtemplatespecification">Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Template<wbr>Config<wbr>Launch<wbr>Template<wbr>Specification</a></span>
     </dt>
@@ -3803,7 +4429,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>overrides</span>
+        <span id="overrides_nodejs">
+<a href="#overrides_nodejs" style="color: inherit; text-decoration: inherit;">overrides</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotfleetrequestlaunchtemplateconfigoverride">Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Template<wbr>Config<wbr>Override[]</a></span>
     </dt>
@@ -3819,7 +4447,9 @@ timeout of 10m is reached.
 
     <dt class="property-required"
             title="Required">
-        <span>launch<wbr>Template<wbr>Specification</span>
+        <span id="launchtemplatespecification_python">
+<a href="#launchtemplatespecification_python" style="color: inherit; text-decoration: inherit;">launch<wbr>Template<wbr>Specification</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotfleetrequestlaunchtemplateconfiglaunchtemplatespecification">Dict[Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Template<wbr>Config<wbr>Launch<wbr>Template<wbr>Specification]</a></span>
     </dt>
@@ -3828,7 +4458,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>overrides</span>
+        <span id="overrides_python">
+<a href="#overrides_python" style="color: inherit; text-decoration: inherit;">overrides</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotfleetrequestlaunchtemplateconfigoverride">List[Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Template<wbr>Config<wbr>Override]</a></span>
     </dt>
@@ -3862,7 +4494,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3871,7 +4505,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3880,7 +4516,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Version</span>
+        <span id="version_csharp">
+<a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3896,7 +4534,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3905,7 +4545,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3914,7 +4556,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Version</span>
+        <span id="version_go">
+<a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3930,7 +4574,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3939,7 +4585,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3948,7 +4596,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>version</span>
+        <span id="version_nodejs">
+<a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3964,7 +4614,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3973,7 +4625,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3982,7 +4636,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>version</span>
+        <span id="version_python">
+<a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4016,7 +4672,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Availability<wbr>Zone</span>
+        <span id="availabilityzone_csharp">
+<a href="#availabilityzone_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4025,7 +4683,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Instance<wbr>Type</span>
+        <span id="instancetype_csharp">
+<a href="#instancetype_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4034,7 +4694,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Priority</span>
+        <span id="priority_csharp">
+<a href="#priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
@@ -4043,7 +4705,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Spot<wbr>Price</span>
+        <span id="spotprice_csharp">
+<a href="#spotprice_csharp" style="color: inherit; text-decoration: inherit;">Spot<wbr>Price</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4052,7 +4716,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Subnet<wbr>Id</span>
+        <span id="subnetid_csharp">
+<a href="#subnetid_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4061,7 +4727,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Weighted<wbr>Capacity</span>
+        <span id="weightedcapacity_csharp">
+<a href="#weightedcapacity_csharp" style="color: inherit; text-decoration: inherit;">Weighted<wbr>Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
@@ -4077,7 +4745,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Availability<wbr>Zone</span>
+        <span id="availabilityzone_go">
+<a href="#availabilityzone_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -4086,7 +4756,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Instance<wbr>Type</span>
+        <span id="instancetype_go">
+<a href="#instancetype_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -4095,7 +4767,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Priority</span>
+        <span id="priority_go">
+<a href="#priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
@@ -4104,7 +4778,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Spot<wbr>Price</span>
+        <span id="spotprice_go">
+<a href="#spotprice_go" style="color: inherit; text-decoration: inherit;">Spot<wbr>Price</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -4113,7 +4789,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Subnet<wbr>Id</span>
+        <span id="subnetid_go">
+<a href="#subnetid_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -4122,7 +4800,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Weighted<wbr>Capacity</span>
+        <span id="weightedcapacity_go">
+<a href="#weightedcapacity_go" style="color: inherit; text-decoration: inherit;">Weighted<wbr>Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
@@ -4138,7 +4818,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>availability<wbr>Zone</span>
+        <span id="availabilityzone_nodejs">
+<a href="#availabilityzone_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4147,7 +4829,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>instance<wbr>Type</span>
+        <span id="instancetype_nodejs">
+<a href="#instancetype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4156,7 +4840,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>priority</span>
+        <span id="priority_nodejs">
+<a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
@@ -4165,7 +4851,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>spot<wbr>Price</span>
+        <span id="spotprice_nodejs">
+<a href="#spotprice_nodejs" style="color: inherit; text-decoration: inherit;">spot<wbr>Price</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4174,7 +4862,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>subnet<wbr>Id</span>
+        <span id="subnetid_nodejs">
+<a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4183,7 +4873,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>weighted<wbr>Capacity</span>
+        <span id="weightedcapacity_nodejs">
+<a href="#weightedcapacity_nodejs" style="color: inherit; text-decoration: inherit;">weighted<wbr>Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
@@ -4199,7 +4891,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>availability_<wbr>zone</span>
+        <span id="availability_zone_python">
+<a href="#availability_zone_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4208,7 +4902,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>instance_<wbr>type</span>
+        <span id="instance_type_python">
+<a href="#instance_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4217,7 +4913,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>priority</span>
+        <span id="priority_python">
+<a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -4226,7 +4924,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>spot_<wbr>price</span>
+        <span id="spot_price_python">
+<a href="#spot_price_python" style="color: inherit; text-decoration: inherit;">spot_<wbr>price</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4235,7 +4935,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>subnet_<wbr>id</span>
+        <span id="subnet_id_python">
+<a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4244,7 +4946,9 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>weighted<wbr>Capacity</span>
+        <span id="weightedcapacity_python">
+<a href="#weightedcapacity_python" style="color: inherit; text-decoration: inherit;">weighted<wbr>Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>

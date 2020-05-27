@@ -31,6 +31,24 @@ Explore the resources and functions of the folder module in the GCP package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
 	<dt>Version</dt>
-	<dd>3.4.0</dd>
+	<dd>3.7.0</dd>
+</dl>
+
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Folder.html" title="Pulumi.Gcp.Folder">Pulumi.Gcp.Folder</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/folder?tab=doc#" title="gcp/folder">gcp/folder</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/gcp/folder/#" title="@pulumi/gcp/folder">@pulumi/gcp/folder</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_gcp/folder" title="pulumi_gcp/folder">pulumi_gcp/folder</a></dd>
+
 </dl>
 

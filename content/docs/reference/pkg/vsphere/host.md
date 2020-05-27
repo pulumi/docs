@@ -13,10 +13,52 @@ meta_desc: "Explore the Host resource of the vSphere package, including examples
 Provides a VMware vSphere host resource. This represents an ESXi host that
 can be used either as part of a Compute Cluster or Standalone.
 
-## Example Usages
 
-**Create a standalone host:**
+## Importing 
 
+An existing host can be [imported][docs-import] into this resource
+via supplying the host's ID. An example is below:
+
+[docs-import]: /docs/import/index.html
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+```
+```python
+import pulumi
+```
+
+The above would import the host with ID `host-123`.
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create a standalone host
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_vsphere as vsphere
+
+dc = vsphere.get_datacenter(name="my-datacenter")
+h1 = vsphere.Host("h1",
+    hostname="10.10.10.1",
+    username="root",
+    password="password",
+    license="00000-00000-00000-00000i-00000",
+    datacenter=dc.id)
+```
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
@@ -32,21 +74,35 @@ const h1 = new vsphere.Host("h1", {
     datacenter: dc.then(dc => dc.id),
 });
 ```
+{{% /example %}}
+
+### Create host in a compute cluster
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
 ```python
 import pulumi
 import pulumi_vsphere as vsphere
 
-dc = vsphere.get_datacenter(name="my-datacenter")
+dc = vsphere.get_datacenter(name="TfDatacenter")
+c1 = vsphere.get_compute_cluster(name="DC0_C0",
+    datacenter_id=dc.id)
 h1 = vsphere.Host("h1",
     hostname="10.10.10.1",
     username="root",
     password="password",
     license="00000-00000-00000-00000i-00000",
-    datacenter=dc.id)
+    cluster=c1.id)
 ```
+{{% /example %}}
 
-**Create host in a compute cluster:**
-
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
@@ -66,37 +122,9 @@ const h1 = new vsphere.Host("h1", {
     cluster: c1.then(c1 => c1.id),
 });
 ```
-```python
-import pulumi
-import pulumi_vsphere as vsphere
+{{% /example %}}
 
-dc = vsphere.get_datacenter(name="TfDatacenter")
-c1 = vsphere.get_compute_cluster(name="DC0_C0",
-    datacenter_id=dc.id)
-h1 = vsphere.Host("h1",
-    hostname="10.10.10.1",
-    username="root",
-    password="password",
-    license="00000-00000-00000-00000i-00000",
-    cluster=c1.id)
-```
-
-## Importing 
-
-An existing host can be [imported][docs-import] into this resource
-via supplying the host's ID. An example is below:
-
-[docs-import]: /docs/import/index.html
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-```
-```python
-import pulumi
-```
-
-The above would import the host with ID `host-123`.
-
+{{% /examples %}}
 
 
 ## Create a Host Resource {#create}
@@ -116,7 +144,7 @@ The above would import the host with ID `host-123`.
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.Vsphere.Host.html">Host</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.VSphere.HostArgs.html">HostArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.Host.html">Host</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.HostArgs.html">HostArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -245,7 +273,7 @@ The above would import the host with ID `host-123`.
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.VSphere.HostArgs.html">HostArgs</a></span>
+        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.HostArgs.html">HostArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -835,7 +863,7 @@ Get an existing Host resource's state with the given name, ID, and optional extr
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.Vsphere.Host.html">Host</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.Vsphere..HostState.html">HostState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.Host.html">Host</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere..HostState.html">HostState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}

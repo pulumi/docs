@@ -13,7 +13,7 @@ meta_desc: "Explore the DistributedPortGroup resource of the vSphere package, in
 The `vsphere..DistributedPortGroup` resource can be used to manage vSphere
 distributed virtual port groups. These port groups are connected to distributed
 virtual switches, which can be managed by the
-[`vsphere..DistributedVirtualSwitch`][distributed-virtual-switch] resource.
+`vsphere..DistributedVirtualSwitch` resource.
 
 Distributed port groups can be used as networks for virtual machines, allowing
 VMs to use the networking supplied by a distributed virtual switch (DVS), with
@@ -23,7 +23,6 @@ For an overview on vSphere networking concepts, see [this
 page][ref-vsphere-net-concepts]. For more information on vSphere DVS
 portgroups, see [this page][ref-vsphere-dvportgroup].
 
-[distributed-virtual-switch]: /docs/providers/vsphere/r/distributed_virtual_switch.html
 [ref-vsphere-net-concepts]: https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.networking.doc/GUID-2B11DBB8-CB3C-4AFF-8885-EFEA0FC562F4.html
 [ref-vsphere-dvportgroup]: https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.networking.doc/GUID-69933F6E-2442-46CF-AA17-1196CB9A0A09.html
 
@@ -115,7 +114,7 @@ const pg = new vsphere.DistributedPortGroup("pg", {
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.Vsphere.DistributedPortGroup.html">DistributedPortGroup</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.VSphere.DistributedPortGroupArgs.html">DistributedPortGroupArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.DistributedPortGroup.html">DistributedPortGroup</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.DistributedPortGroupArgs.html">DistributedPortGroupArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -244,7 +243,7 @@ const pg = new vsphere.DistributedPortGroup("pg", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.VSphere.DistributedPortGroupArgs.html">DistributedPortGroupArgs</a></span>
+        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.DistributedPortGroupArgs.html">DistributedPortGroupArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -351,8 +350,8 @@ past the limit specified in `number_of_ports` if necessary. Default: `true`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Allow the [port shutdown
-policy][port-shutdown-policy] to be overridden on an individual port.
+    <dd>{{% md %}}Allow the port shutdown
+policy to be overridden on an individual port.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -371,8 +370,7 @@ policy][port-shutdown-policy] to be overridden on an individual port.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Map of custom attribute ids to attribute
-value string to set for port group. See [here][docs-setting-custom-attributes]
-for a reference on how to set values for custom attributes.
+value string to set for port group.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -526,8 +524,8 @@ moved to another port group while it is connected.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Allow the [Netflow
-policy][netflow-policy] on this port group to be overridden on an individual
+    <dd>{{% md %}}Allow the Netflow
+policy on this port group to be overridden on an individual
 port.
 {{% /md %}}</dd>
 
@@ -607,8 +605,8 @@ the ports in this port group. See the `portNameFormat` attribute listed
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Allow the [security policy
-settings][sec-policy-settings] defined in this port group policy to be
+    <dd>{{% md %}}Allow the security policy
+settings defined in this port group policy to be
 overridden on an individual port.
 {{% /md %}}</dd>
 
@@ -618,8 +616,8 @@ overridden on an individual port.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Allow the [traffic shaping
-options][traffic-shaping-settings] on this port group policy to be overridden
+    <dd>{{% md %}}Allow the traffic shaping
+options on this port group policy to be overridden
 on an individual port.
 {{% /md %}}</dd>
 
@@ -687,8 +685,8 @@ binding) or `ephemeral`. Default: `earlyBinding`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Allow the [uplink teaming
-options][uplink-teaming-settings] on this port group to be overridden on an
+    <dd>{{% md %}}Allow the uplink teaming
+options on this port group to be overridden on an
 individual port.
 {{% /md %}}</dd>
 
@@ -707,7 +705,7 @@ individual port.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Allow the [VLAN settings][vlan-settings]
+    <dd>{{% md %}}Allow the VLAN settings
 on this port group to be overridden on an individual port.
 {{% /md %}}</dd>
 
@@ -799,8 +797,8 @@ past the limit specified in `number_of_ports` if necessary. Default: `true`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Allow the [port shutdown
-policy][port-shutdown-policy] to be overridden on an individual port.
+    <dd>{{% md %}}Allow the port shutdown
+policy to be overridden on an individual port.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -819,8 +817,7 @@ policy][port-shutdown-policy] to be overridden on an individual port.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Map of custom attribute ids to attribute
-value string to set for port group. See [here][docs-setting-custom-attributes]
-for a reference on how to set values for custom attributes.
+value string to set for port group.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -974,8 +971,8 @@ moved to another port group while it is connected.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Allow the [Netflow
-policy][netflow-policy] on this port group to be overridden on an individual
+    <dd>{{% md %}}Allow the Netflow
+policy on this port group to be overridden on an individual
 port.
 {{% /md %}}</dd>
 
@@ -1055,8 +1052,8 @@ the ports in this port group. See the `portNameFormat` attribute listed
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Allow the [security policy
-settings][sec-policy-settings] defined in this port group policy to be
+    <dd>{{% md %}}Allow the security policy
+settings defined in this port group policy to be
 overridden on an individual port.
 {{% /md %}}</dd>
 
@@ -1066,8 +1063,8 @@ overridden on an individual port.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Allow the [traffic shaping
-options][traffic-shaping-settings] on this port group policy to be overridden
+    <dd>{{% md %}}Allow the traffic shaping
+options on this port group policy to be overridden
 on an individual port.
 {{% /md %}}</dd>
 
@@ -1135,8 +1132,8 @@ binding) or `ephemeral`. Default: `earlyBinding`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Allow the [uplink teaming
-options][uplink-teaming-settings] on this port group to be overridden on an
+    <dd>{{% md %}}Allow the uplink teaming
+options on this port group to be overridden on an
 individual port.
 {{% /md %}}</dd>
 
@@ -1155,7 +1152,7 @@ individual port.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Allow the [VLAN settings][vlan-settings]
+    <dd>{{% md %}}Allow the VLAN settings
 on this port group to be overridden on an individual port.
 {{% /md %}}</dd>
 
@@ -1247,8 +1244,8 @@ past the limit specified in `number_of_ports` if necessary. Default: `true`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Allow the [port shutdown
-policy][port-shutdown-policy] to be overridden on an individual port.
+    <dd>{{% md %}}Allow the port shutdown
+policy to be overridden on an individual port.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1267,8 +1264,7 @@ policy][port-shutdown-policy] to be overridden on an individual port.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Map of custom attribute ids to attribute
-value string to set for port group. See [here][docs-setting-custom-attributes]
-for a reference on how to set values for custom attributes.
+value string to set for port group.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1422,8 +1418,8 @@ moved to another port group while it is connected.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Allow the [Netflow
-policy][netflow-policy] on this port group to be overridden on an individual
+    <dd>{{% md %}}Allow the Netflow
+policy on this port group to be overridden on an individual
 port.
 {{% /md %}}</dd>
 
@@ -1503,8 +1499,8 @@ the ports in this port group. See the `portNameFormat` attribute listed
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Allow the [security policy
-settings][sec-policy-settings] defined in this port group policy to be
+    <dd>{{% md %}}Allow the security policy
+settings defined in this port group policy to be
 overridden on an individual port.
 {{% /md %}}</dd>
 
@@ -1514,8 +1510,8 @@ overridden on an individual port.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Allow the [traffic shaping
-options][traffic-shaping-settings] on this port group policy to be overridden
+    <dd>{{% md %}}Allow the traffic shaping
+options on this port group policy to be overridden
 on an individual port.
 {{% /md %}}</dd>
 
@@ -1583,8 +1579,8 @@ binding) or `ephemeral`. Default: `earlyBinding`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Allow the [uplink teaming
-options][uplink-teaming-settings] on this port group to be overridden on an
+    <dd>{{% md %}}Allow the uplink teaming
+options on this port group to be overridden on an
 individual port.
 {{% /md %}}</dd>
 
@@ -1603,7 +1599,7 @@ individual port.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Allow the [VLAN settings][vlan-settings]
+    <dd>{{% md %}}Allow the VLAN settings
 on this port group to be overridden on an individual port.
 {{% /md %}}</dd>
 
@@ -1695,8 +1691,8 @@ past the limit specified in `number_of_ports` if necessary. Default: `true`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Allow the [port shutdown
-policy][port-shutdown-policy] to be overridden on an individual port.
+    <dd>{{% md %}}Allow the port shutdown
+policy to be overridden on an individual port.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1715,8 +1711,7 @@ policy][port-shutdown-policy] to be overridden on an individual port.
         <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}Map of custom attribute ids to attribute
-value string to set for port group. See [here][docs-setting-custom-attributes]
-for a reference on how to set values for custom attributes.
+value string to set for port group.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1870,8 +1865,8 @@ moved to another port group while it is connected.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Allow the [Netflow
-policy][netflow-policy] on this port group to be overridden on an individual
+    <dd>{{% md %}}Allow the Netflow
+policy on this port group to be overridden on an individual
 port.
 {{% /md %}}</dd>
 
@@ -1951,8 +1946,8 @@ the ports in this port group. See the `portNameFormat` attribute listed
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Allow the [security policy
-settings][sec-policy-settings] defined in this port group policy to be
+    <dd>{{% md %}}Allow the security policy
+settings defined in this port group policy to be
 overridden on an individual port.
 {{% /md %}}</dd>
 
@@ -1962,8 +1957,8 @@ overridden on an individual port.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Allow the [traffic shaping
-options][traffic-shaping-settings] on this port group policy to be overridden
+    <dd>{{% md %}}Allow the traffic shaping
+options on this port group policy to be overridden
 on an individual port.
 {{% /md %}}</dd>
 
@@ -2031,8 +2026,8 @@ binding) or `ephemeral`. Default: `earlyBinding`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Allow the [uplink teaming
-options][uplink-teaming-settings] on this port group to be overridden on an
+    <dd>{{% md %}}Allow the uplink teaming
+options on this port group to be overridden on an
 individual port.
 {{% /md %}}</dd>
 
@@ -2051,7 +2046,7 @@ individual port.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Allow the [VLAN settings][vlan-settings]
+    <dd>{{% md %}}Allow the VLAN settings
 on this port group to be overridden on an individual port.
 {{% /md %}}</dd>
 
@@ -2234,7 +2229,7 @@ Get an existing DistributedPortGroup resource's state with the given name, ID, a
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.Vsphere.DistributedPortGroup.html">DistributedPortGroup</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.Vsphere..DistributedPortGroupState.html">DistributedPortGroupState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.DistributedPortGroup.html">DistributedPortGroup</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere..DistributedPortGroupState.html">DistributedPortGroupState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2402,8 +2397,8 @@ past the limit specified in `number_of_ports` if necessary. Default: `true`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Allow the [port shutdown
-policy][port-shutdown-policy] to be overridden on an individual port.
+    <dd>{{% md %}}Allow the port shutdown
+policy to be overridden on an individual port.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2431,8 +2426,7 @@ policy][port-shutdown-policy] to be overridden on an individual port.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Map of custom attribute ids to attribute
-value string to set for port group. See [here][docs-setting-custom-attributes]
-for a reference on how to set values for custom attributes.
+value string to set for port group.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2605,8 +2599,8 @@ moved to another port group while it is connected.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Allow the [Netflow
-policy][netflow-policy] on this port group to be overridden on an individual
+    <dd>{{% md %}}Allow the Netflow
+policy on this port group to be overridden on an individual
 port.
 {{% /md %}}</dd>
 
@@ -2686,8 +2680,8 @@ the ports in this port group. See the `portNameFormat` attribute listed
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Allow the [security policy
-settings][sec-policy-settings] defined in this port group policy to be
+    <dd>{{% md %}}Allow the security policy
+settings defined in this port group policy to be
 overridden on an individual port.
 {{% /md %}}</dd>
 
@@ -2697,8 +2691,8 @@ overridden on an individual port.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Allow the [traffic shaping
-options][traffic-shaping-settings] on this port group policy to be overridden
+    <dd>{{% md %}}Allow the traffic shaping
+options on this port group policy to be overridden
 on an individual port.
 {{% /md %}}</dd>
 
@@ -2766,8 +2760,8 @@ binding) or `ephemeral`. Default: `earlyBinding`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Allow the [uplink teaming
-options][uplink-teaming-settings] on this port group to be overridden on an
+    <dd>{{% md %}}Allow the uplink teaming
+options on this port group to be overridden on an
 individual port.
 {{% /md %}}</dd>
 
@@ -2786,7 +2780,7 @@ individual port.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Allow the [VLAN settings][vlan-settings]
+    <dd>{{% md %}}Allow the VLAN settings
 on this port group to be overridden on an individual port.
 {{% /md %}}</dd>
 
@@ -2868,8 +2862,8 @@ past the limit specified in `number_of_ports` if necessary. Default: `true`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Allow the [port shutdown
-policy][port-shutdown-policy] to be overridden on an individual port.
+    <dd>{{% md %}}Allow the port shutdown
+policy to be overridden on an individual port.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2897,8 +2891,7 @@ policy][port-shutdown-policy] to be overridden on an individual port.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Map of custom attribute ids to attribute
-value string to set for port group. See [here][docs-setting-custom-attributes]
-for a reference on how to set values for custom attributes.
+value string to set for port group.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3071,8 +3064,8 @@ moved to another port group while it is connected.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Allow the [Netflow
-policy][netflow-policy] on this port group to be overridden on an individual
+    <dd>{{% md %}}Allow the Netflow
+policy on this port group to be overridden on an individual
 port.
 {{% /md %}}</dd>
 
@@ -3152,8 +3145,8 @@ the ports in this port group. See the `portNameFormat` attribute listed
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Allow the [security policy
-settings][sec-policy-settings] defined in this port group policy to be
+    <dd>{{% md %}}Allow the security policy
+settings defined in this port group policy to be
 overridden on an individual port.
 {{% /md %}}</dd>
 
@@ -3163,8 +3156,8 @@ overridden on an individual port.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Allow the [traffic shaping
-options][traffic-shaping-settings] on this port group policy to be overridden
+    <dd>{{% md %}}Allow the traffic shaping
+options on this port group policy to be overridden
 on an individual port.
 {{% /md %}}</dd>
 
@@ -3232,8 +3225,8 @@ binding) or `ephemeral`. Default: `earlyBinding`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Allow the [uplink teaming
-options][uplink-teaming-settings] on this port group to be overridden on an
+    <dd>{{% md %}}Allow the uplink teaming
+options on this port group to be overridden on an
 individual port.
 {{% /md %}}</dd>
 
@@ -3252,7 +3245,7 @@ individual port.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Allow the [VLAN settings][vlan-settings]
+    <dd>{{% md %}}Allow the VLAN settings
 on this port group to be overridden on an individual port.
 {{% /md %}}</dd>
 
@@ -3334,8 +3327,8 @@ past the limit specified in `number_of_ports` if necessary. Default: `true`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Allow the [port shutdown
-policy][port-shutdown-policy] to be overridden on an individual port.
+    <dd>{{% md %}}Allow the port shutdown
+policy to be overridden on an individual port.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3363,8 +3356,7 @@ policy][port-shutdown-policy] to be overridden on an individual port.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Map of custom attribute ids to attribute
-value string to set for port group. See [here][docs-setting-custom-attributes]
-for a reference on how to set values for custom attributes.
+value string to set for port group.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3537,8 +3529,8 @@ moved to another port group while it is connected.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Allow the [Netflow
-policy][netflow-policy] on this port group to be overridden on an individual
+    <dd>{{% md %}}Allow the Netflow
+policy on this port group to be overridden on an individual
 port.
 {{% /md %}}</dd>
 
@@ -3618,8 +3610,8 @@ the ports in this port group. See the `portNameFormat` attribute listed
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Allow the [security policy
-settings][sec-policy-settings] defined in this port group policy to be
+    <dd>{{% md %}}Allow the security policy
+settings defined in this port group policy to be
 overridden on an individual port.
 {{% /md %}}</dd>
 
@@ -3629,8 +3621,8 @@ overridden on an individual port.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Allow the [traffic shaping
-options][traffic-shaping-settings] on this port group policy to be overridden
+    <dd>{{% md %}}Allow the traffic shaping
+options on this port group policy to be overridden
 on an individual port.
 {{% /md %}}</dd>
 
@@ -3698,8 +3690,8 @@ binding) or `ephemeral`. Default: `earlyBinding`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Allow the [uplink teaming
-options][uplink-teaming-settings] on this port group to be overridden on an
+    <dd>{{% md %}}Allow the uplink teaming
+options on this port group to be overridden on an
 individual port.
 {{% /md %}}</dd>
 
@@ -3718,7 +3710,7 @@ individual port.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Allow the [VLAN settings][vlan-settings]
+    <dd>{{% md %}}Allow the VLAN settings
 on this port group to be overridden on an individual port.
 {{% /md %}}</dd>
 
@@ -3800,8 +3792,8 @@ past the limit specified in `number_of_ports` if necessary. Default: `true`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Allow the [port shutdown
-policy][port-shutdown-policy] to be overridden on an individual port.
+    <dd>{{% md %}}Allow the port shutdown
+policy to be overridden on an individual port.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3829,8 +3821,7 @@ policy][port-shutdown-policy] to be overridden on an individual port.
         <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}Map of custom attribute ids to attribute
-value string to set for port group. See [here][docs-setting-custom-attributes]
-for a reference on how to set values for custom attributes.
+value string to set for port group.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4003,8 +3994,8 @@ moved to another port group while it is connected.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Allow the [Netflow
-policy][netflow-policy] on this port group to be overridden on an individual
+    <dd>{{% md %}}Allow the Netflow
+policy on this port group to be overridden on an individual
 port.
 {{% /md %}}</dd>
 
@@ -4084,8 +4075,8 @@ the ports in this port group. See the `portNameFormat` attribute listed
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Allow the [security policy
-settings][sec-policy-settings] defined in this port group policy to be
+    <dd>{{% md %}}Allow the security policy
+settings defined in this port group policy to be
 overridden on an individual port.
 {{% /md %}}</dd>
 
@@ -4095,8 +4086,8 @@ overridden on an individual port.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Allow the [traffic shaping
-options][traffic-shaping-settings] on this port group policy to be overridden
+    <dd>{{% md %}}Allow the traffic shaping
+options on this port group policy to be overridden
 on an individual port.
 {{% /md %}}</dd>
 
@@ -4164,8 +4155,8 @@ binding) or `ephemeral`. Default: `earlyBinding`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Allow the [uplink teaming
-options][uplink-teaming-settings] on this port group to be overridden on an
+    <dd>{{% md %}}Allow the uplink teaming
+options on this port group to be overridden on an
 individual port.
 {{% /md %}}</dd>
 
@@ -4184,7 +4175,7 @@ individual port.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Allow the [VLAN settings][vlan-settings]
+    <dd>{{% md %}}Allow the VLAN settings
 on this port group to be overridden on an individual port.
 {{% /md %}}</dd>
 
@@ -4221,7 +4212,7 @@ on this port group to be overridden on an individual port.
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#DistributedPortGroupVlanRangeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#DistributedPortGroupVlanRangeOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.VSphere.Inputs.DistributedPortGroupVlanRangeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.VSphere.Outputs.DistributedPortGroupVlanRange.html">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.Inputs.DistributedPortGroupVlanRangeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.Outputs.DistributedPortGroupVlanRange.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

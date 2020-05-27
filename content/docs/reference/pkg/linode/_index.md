@@ -16,6 +16,7 @@ A Pulumi package for creating and managing linode cloud resources.
 <ul class="api">
     <li><a href="domain" title="Domain"><span class="symbol resource"></span>Domain</a></li>
     <li><a href="domainrecord" title="DomainRecord"><span class="symbol resource"></span>DomainRecord</a></li>
+    <li><a href="firewall" title="Firewall"><span class="symbol resource"></span>Firewall</a></li>
     <li><a href="image" title="Image"><span class="symbol resource"></span>Image</a></li>
     <li><a href="instance" title="Instance"><span class="symbol resource"></span>Instance</a></li>
     <li><a href="lkecluster" title="LkeCluster"><span class="symbol resource"></span>LkeCluster</a></li>
@@ -58,6 +59,24 @@ A Pulumi package for creating and managing linode cloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`linode` Terraform Provider](https://github.com/terraform-providers/terraform-provider-linode).</dd>
 	<dt>Version</dt>
-	<dd>2.3.1</dd>
+	<dd>2.4.0</dd>
+</dl>
+
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode.html" title="Pulumi.Linode">Pulumi.Linode</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/v2/go/linode/?tab=doc#" title="linode">linode</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/linode/#" title="@pulumi/linode">@pulumi/linode</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_linode" title="pulumi_linode">pulumi_linode</a></dd>
+
 </dl>
 

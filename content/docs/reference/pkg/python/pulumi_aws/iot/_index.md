@@ -852,7 +852,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_aws.iot.TopicRule">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.iot.</code><code class="sig-name descname">TopicRule</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cloudwatch_alarm</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cloudwatch_metric</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dynamodb</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">elasticsearch</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">firehose</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kinesis</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">lambda_</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">republish</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">s3</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sns</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sql</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sql_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sqs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iot.TopicRule" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.iot.</code><code class="sig-name descname">TopicRule</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cloudwatch_alarm</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cloudwatch_metric</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dynamodb</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dynamodbv2s</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">elasticsearch</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">firehose</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">iot_analytics</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">iot_events</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kinesis</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">lambda_</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">republish</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">s3</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sns</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sql</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sql_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sqs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iot.TopicRule" title="Permalink to this definition">¶</a></dt>
 <dd><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>## Example Usage
 
 
@@ -912,6 +912,7 @@ iam_policy_for_lambda = aws.iam.RolePolicy(&quot;iamPolicyForLambda&quot;,
 :param pulumi.Input[str] name: The name of the rule.
 :param pulumi.Input[str] sql: The SQL statement used to query the topic. For more information, see AWS IoT SQL Reference (http://docs.aws.amazon.com/iot/latest/developerguide/iot-rules.html#aws-iot-sql-reference) in the AWS IoT Developer Guide.
 :param pulumi.Input[str] sql_version: The version of the SQL rules engine to use when evaluating the rule.
+:param pulumi.Input[dict] tags: Key-value map of resource tags
 
 The **cloudwatch_alarm** object supports the following:
 
@@ -934,12 +935,20 @@ The **dynamodb** object supports the following:
   * `hashKeyField` (`pulumi.Input[str]`) - The hash key name.
   * `hashKeyType` (`pulumi.Input[str]`) - The hash key type. Valid values are &quot;STRING&quot; or &quot;NUMBER&quot;.
   * `hashKeyValue` (`pulumi.Input[str]`) - The hash key value.
+  * `operation` (`pulumi.Input[str]`) - The operation. Valid values are &quot;INSERT&quot;, &quot;UPDATE&quot;, or &quot;DELETE&quot;.
   * `payloadField` (`pulumi.Input[str]`) - The action payload.
   * `rangeKeyField` (`pulumi.Input[str]`) - The range key name.
   * `rangeKeyType` (`pulumi.Input[str]`) - The range key type. Valid values are &quot;STRING&quot; or &quot;NUMBER&quot;.
   * `rangeKeyValue` (`pulumi.Input[str]`) - The range key value.
   * `role_arn` (`pulumi.Input[str]`) - The ARN of the IAM role that grants access to the DynamoDB table.
   * `table_name` (`pulumi.Input[str]`) - The name of the DynamoDB table.
+
+The **dynamodbv2s** object supports the following:
+
+  * `putItem` (`pulumi.Input[dict]`) - Configuration block with DynamoDB Table to which the message will be written. Nested arguments below.
+    * `table_name` (`pulumi.Input[str]`) - The name of the DynamoDB table.
+
+  * `role_arn` (`pulumi.Input[str]`) - The IAM role ARN that allows access to the CloudWatch alarm.
 
 The **elasticsearch** object supports the following:
 
@@ -958,7 +967,18 @@ The **firehose** object supports the following:
 </div>
 <p>‘ (newline), ‘  ‘ (tab), ‘
 ‘ (Windows newline), ‘,’ (comma).</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>The **kinesis** object supports the following:
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>The **iot_analytics** object supports the following:
+
+  * `channelName` (`pulumi.Input[str]`) - Name of AWS IOT Analytics channel.
+  * `role_arn` (`pulumi.Input[str]`) - The ARN of the IAM role that grants access.
+
+The **iot_events** object supports the following:
+
+  * `inputName` (`pulumi.Input[str]`) - The name of the AWS IoT Events input.
+  * `messageId` (`pulumi.Input[str]`) - Use this to ensure that only one input (message) with a given messageId is processed by an AWS IoT Events detector. 
+  * `role_arn` (`pulumi.Input[str]`) - The ARN of the IAM role that grants access.
+
+The **kinesis** object supports the following:
 
   * `partitionKey` (`pulumi.Input[str]`) - The partition key.
   * `role_arn` (`pulumi.Input[str]`) - The ARN of the IAM role that grants access to the Amazon Kinesis stream.
@@ -970,6 +990,7 @@ The **lambda_** object supports the following:
 
 The **republish** object supports the following:
 
+  * `qos` (`pulumi.Input[float]`) - The Quality of Service (QoS) level to use when republishing messages. Valid values are 0 or 1. The default value is 0. 
   * `role_arn` (`pulumi.Input[str]`) - The ARN of the IAM role that grants access.
   * `topic` (`pulumi.Input[str]`) - The name of the MQTT topic the message should be republished to.
 
@@ -1028,9 +1049,15 @@ The **sqs** object supports the following:
 <dd><p>The version of the SQL rules engine to use when evaluating the rule.</p>
 </dd></dl>
 
+<dl class="py attribute">
+<dt id="pulumi_aws.iot.TopicRule.tags">
+<code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.iot.TopicRule.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>Key-value map of resource tags</p>
+</dd></dl>
+
 <dl class="py method">
 <dt id="pulumi_aws.iot.TopicRule.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cloudwatch_alarm</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cloudwatch_metric</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dynamodb</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">elasticsearch</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">firehose</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kinesis</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">lambda_</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">republish</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">s3</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sns</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sql</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sql_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sqs</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iot.TopicRule.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cloudwatch_alarm</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cloudwatch_metric</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dynamodb</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dynamodbv2s</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">elasticsearch</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">firehose</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">iot_analytics</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">iot_events</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kinesis</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">lambda_</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">republish</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">s3</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sns</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sql</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sql_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sqs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iot.TopicRule.get" title="Permalink to this definition">¶</a></dt>
 <dd><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Get an existing TopicRule resource&#39;s state with the given name, id, and optional extra
 properties used to qualify the lookup.
 
@@ -1043,6 +1070,7 @@ properties used to qualify the lookup.
 :param pulumi.Input[str] name: The name of the rule.
 :param pulumi.Input[str] sql: The SQL statement used to query the topic. For more information, see AWS IoT SQL Reference (http://docs.aws.amazon.com/iot/latest/developerguide/iot-rules.html#aws-iot-sql-reference) in the AWS IoT Developer Guide.
 :param pulumi.Input[str] sql_version: The version of the SQL rules engine to use when evaluating the rule.
+:param pulumi.Input[dict] tags: Key-value map of resource tags
 
 The **cloudwatch_alarm** object supports the following:
 
@@ -1065,12 +1093,20 @@ The **dynamodb** object supports the following:
   * `hashKeyField` (`pulumi.Input[str]`) - The hash key name.
   * `hashKeyType` (`pulumi.Input[str]`) - The hash key type. Valid values are &quot;STRING&quot; or &quot;NUMBER&quot;.
   * `hashKeyValue` (`pulumi.Input[str]`) - The hash key value.
+  * `operation` (`pulumi.Input[str]`) - The operation. Valid values are &quot;INSERT&quot;, &quot;UPDATE&quot;, or &quot;DELETE&quot;.
   * `payloadField` (`pulumi.Input[str]`) - The action payload.
   * `rangeKeyField` (`pulumi.Input[str]`) - The range key name.
   * `rangeKeyType` (`pulumi.Input[str]`) - The range key type. Valid values are &quot;STRING&quot; or &quot;NUMBER&quot;.
   * `rangeKeyValue` (`pulumi.Input[str]`) - The range key value.
   * `role_arn` (`pulumi.Input[str]`) - The ARN of the IAM role that grants access to the DynamoDB table.
   * `table_name` (`pulumi.Input[str]`) - The name of the DynamoDB table.
+
+The **dynamodbv2s** object supports the following:
+
+  * `putItem` (`pulumi.Input[dict]`) - Configuration block with DynamoDB Table to which the message will be written. Nested arguments below.
+    * `table_name` (`pulumi.Input[str]`) - The name of the DynamoDB table.
+
+  * `role_arn` (`pulumi.Input[str]`) - The IAM role ARN that allows access to the CloudWatch alarm.
 
 The **elasticsearch** object supports the following:
 
@@ -1089,7 +1125,18 @@ The **firehose** object supports the following:
 </div>
 <p>‘ (newline), ‘  ‘ (tab), ‘
 ‘ (Windows newline), ‘,’ (comma).</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>The **kinesis** object supports the following:
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>The **iot_analytics** object supports the following:
+
+  * `channelName` (`pulumi.Input[str]`) - Name of AWS IOT Analytics channel.
+  * `role_arn` (`pulumi.Input[str]`) - The ARN of the IAM role that grants access.
+
+The **iot_events** object supports the following:
+
+  * `inputName` (`pulumi.Input[str]`) - The name of the AWS IoT Events input.
+  * `messageId` (`pulumi.Input[str]`) - Use this to ensure that only one input (message) with a given messageId is processed by an AWS IoT Events detector. 
+  * `role_arn` (`pulumi.Input[str]`) - The ARN of the IAM role that grants access.
+
+The **kinesis** object supports the following:
 
   * `partitionKey` (`pulumi.Input[str]`) - The partition key.
   * `role_arn` (`pulumi.Input[str]`) - The ARN of the IAM role that grants access to the Amazon Kinesis stream.
@@ -1101,6 +1148,7 @@ The **lambda_** object supports the following:
 
 The **republish** object supports the following:
 
+  * `qos` (`pulumi.Input[float]`) - The Quality of Service (QoS) level to use when republishing messages. Valid values are 0 or 1. The default value is 0. 
   * `role_arn` (`pulumi.Input[str]`) - The ARN of the IAM role that grants access.
   * `topic` (`pulumi.Input[str]`) - The name of the MQTT topic the message should be republished to.
 

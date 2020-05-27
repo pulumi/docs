@@ -26,3 +26,21 @@ Explore the resources and functions of the aws module in the Datadog package.
 	<dd>2.1.1</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Aws.html" title="Pulumi.Datadog.Aws">Pulumi.Datadog.Aws</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/aws?tab=doc#" title="datadog/aws">datadog/aws</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/datadog/aws/#" title="@pulumi/datadog/aws">@pulumi/datadog/aws</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_datadog/aws" title="pulumi_datadog/aws">pulumi_datadog/aws</a></dd>
+
+</dl>
+

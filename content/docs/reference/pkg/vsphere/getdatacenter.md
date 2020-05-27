@@ -12,10 +12,8 @@ meta_desc: "Explore the GetDatacenter function of the vSphere package, including
 
 The `vsphere..Datacenter` data source can be used to discover the ID of a
 vSphere datacenter. This can then be used with resources or data sources that
-require a datacenter, such as the [`vsphere..Host`][data-source-vsphere-host]
+require a datacenter, such as the `vsphere..Host`
 data source.
-
-[data-source-vsphere-host]: /docs/providers/vsphere/d/host.html
 
 
 
@@ -77,7 +75,7 @@ const datacenter = pulumi.output(vsphere.getDatacenter({
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetDatacenter </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.Vsphere.GetDatacenterResult.html">GetDatacenterResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.VSphere.GetDatacenterArgs.html">GetDatacenterArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.GetDatacenterResult.html">GetDatacenterResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.GetDatacenterArgs.html">GetDatacenterArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 

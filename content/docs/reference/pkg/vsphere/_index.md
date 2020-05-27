@@ -84,6 +84,24 @@ A Pulumi package for creating vsphere resources
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`vsphere` Terraform Provider](https://github.com/terraform-providers/terraform-provider-vsphere).</dd>
 	<dt>Version</dt>
-	<dd>2.3.1</dd>
+	<dd>2.3.2</dd>
+</dl>
+
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.html" title="Pulumi.VSphere">Pulumi.VSphere</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#" title="vsphere">vsphere</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#" title="@pulumi/vsphere">@pulumi/vsphere</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_vsphere" title="pulumi_vsphere">pulumi_vsphere</a></dd>
+
 </dl>
 

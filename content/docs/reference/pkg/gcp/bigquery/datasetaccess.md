@@ -93,9 +93,9 @@ public_table = gcp.bigquery.Table("publicTable",
 access = gcp.bigquery.DatasetAccess("access",
     dataset_id=private.dataset_id,
     view={
-        "projectId": public_table.project,
-        "datasetId": public_dataset.dataset_id,
-        "tableId": public_table.table_id,
+        "project_id": public_table.project,
+        "dataset_id": public_dataset.dataset_id,
+        "table_id": public_table.table_id,
     })
 ```
 
@@ -106,19 +106,19 @@ access = gcp.bigquery.DatasetAccess("access",
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/bigquery/#DatasetAccess">DatasetAccess</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/bigquery/#DatasetAccessArgs">DatasetAccessArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/bigquery/#DatasetAccess">DatasetAccess</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/bigquery/#DatasetAccessArgs">DatasetAccessArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">DatasetAccess</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>dataset_id=None<span class="p">, </span>domain=None<span class="p">, </span>group_by_email=None<span class="p">, </span>iam_member=None<span class="p">, </span>project=None<span class="p">, </span>role=None<span class="p">, </span>special_group=None<span class="p">, </span>user_by_email=None<span class="p">, </span>view=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/bigquery/#DatasetAccess">DatasetAccess</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>dataset_id=None<span class="p">, </span>domain=None<span class="p">, </span>group_by_email=None<span class="p">, </span>iam_member=None<span class="p">, </span>project=None<span class="p">, </span>role=None<span class="p">, </span>special_group=None<span class="p">, </span>user_by_email=None<span class="p">, </span>view=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewDatasetAccess<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#DatasetAccessArgs">DatasetAccessArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#DatasetAccess">DatasetAccess</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#DatasetAccess">NewDatasetAccess</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#DatasetAccessArgs">DatasetAccessArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#DatasetAccess">DatasetAccess</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.DatasetAccess.html">DatasetAccess</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.DatasetAccessArgs.html">DatasetAccessArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.DatasetAccess.html">DatasetAccess</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.DatasetAccessArgs.html">DatasetAccessArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -284,7 +284,9 @@ The DatasetAccess resource accepts the following [input]({{< relref "/docs/intro
 
     <dt class="property-required"
             title="Required">
-        <span>Dataset<wbr>Id</span>
+        <span id="datasetid_csharp">
+<a href="#datasetid_csharp" style="color: inherit; text-decoration: inherit;">Dataset<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -293,7 +295,9 @@ The DatasetAccess resource accepts the following [input]({{< relref "/docs/intro
 
     <dt class="property-optional"
             title="Optional">
-        <span>Domain</span>
+        <span id="domain_csharp">
+<a href="#domain_csharp" style="color: inherit; text-decoration: inherit;">Domain</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -303,7 +307,9 @@ domain specified will be granted the specified access
 
     <dt class="property-optional"
             title="Optional">
-        <span>Group<wbr>By<wbr>Email</span>
+        <span id="groupbyemail_csharp">
+<a href="#groupbyemail_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>By<wbr>Email</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -312,7 +318,9 @@ domain specified will be granted the specified access
 
     <dt class="property-optional"
             title="Optional">
-        <span>Iam<wbr>Member</span>
+        <span id="iammember_csharp">
+<a href="#iammember_csharp" style="color: inherit; text-decoration: inherit;">Iam<wbr>Member</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -322,7 +330,9 @@ group, domain, or special group. For example: `allUsers`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project</span>
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -332,7 +342,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Role</span>
+        <span id="role_csharp">
+<a href="#role_csharp" style="color: inherit; text-decoration: inherit;">Role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -346,7 +358,9 @@ counterparts, and will show a diff post-create. See
 
     <dt class="property-optional"
             title="Optional">
-        <span>Special<wbr>Group</span>
+        <span id="specialgroup_csharp">
+<a href="#specialgroup_csharp" style="color: inherit; text-decoration: inherit;">Special<wbr>Group</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -355,7 +369,9 @@ counterparts, and will show a diff post-create. See
 
     <dt class="property-optional"
             title="Optional">
-        <span>User<wbr>By<wbr>Email</span>
+        <span id="userbyemail_csharp">
+<a href="#userbyemail_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>By<wbr>Email</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -365,7 +381,9 @@ fred@example.com
 
     <dt class="property-optional"
             title="Optional">
-        <span>View</span>
+        <span id="view_csharp">
+<a href="#view_csharp" style="color: inherit; text-decoration: inherit;">View</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetaccessview">Dataset<wbr>Access<wbr>View<wbr>Args</a></span>
     </dt>
@@ -385,7 +403,9 @@ needs to be granted again via an update operation.  Structure is documented belo
 
     <dt class="property-required"
             title="Required">
-        <span>Dataset<wbr>Id</span>
+        <span id="datasetid_go">
+<a href="#datasetid_go" style="color: inherit; text-decoration: inherit;">Dataset<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -394,7 +414,9 @@ needs to be granted again via an update operation.  Structure is documented belo
 
     <dt class="property-optional"
             title="Optional">
-        <span>Domain</span>
+        <span id="domain_go">
+<a href="#domain_go" style="color: inherit; text-decoration: inherit;">Domain</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -404,7 +426,9 @@ domain specified will be granted the specified access
 
     <dt class="property-optional"
             title="Optional">
-        <span>Group<wbr>By<wbr>Email</span>
+        <span id="groupbyemail_go">
+<a href="#groupbyemail_go" style="color: inherit; text-decoration: inherit;">Group<wbr>By<wbr>Email</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -413,7 +437,9 @@ domain specified will be granted the specified access
 
     <dt class="property-optional"
             title="Optional">
-        <span>Iam<wbr>Member</span>
+        <span id="iammember_go">
+<a href="#iammember_go" style="color: inherit; text-decoration: inherit;">Iam<wbr>Member</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -423,7 +449,9 @@ group, domain, or special group. For example: `allUsers`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project</span>
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -433,7 +461,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Role</span>
+        <span id="role_go">
+<a href="#role_go" style="color: inherit; text-decoration: inherit;">Role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -447,7 +477,9 @@ counterparts, and will show a diff post-create. See
 
     <dt class="property-optional"
             title="Optional">
-        <span>Special<wbr>Group</span>
+        <span id="specialgroup_go">
+<a href="#specialgroup_go" style="color: inherit; text-decoration: inherit;">Special<wbr>Group</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -456,7 +488,9 @@ counterparts, and will show a diff post-create. See
 
     <dt class="property-optional"
             title="Optional">
-        <span>User<wbr>By<wbr>Email</span>
+        <span id="userbyemail_go">
+<a href="#userbyemail_go" style="color: inherit; text-decoration: inherit;">User<wbr>By<wbr>Email</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -466,7 +500,9 @@ fred@example.com
 
     <dt class="property-optional"
             title="Optional">
-        <span>View</span>
+        <span id="view_go">
+<a href="#view_go" style="color: inherit; text-decoration: inherit;">View</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetaccessview">Dataset<wbr>Access<wbr>View</a></span>
     </dt>
@@ -486,7 +522,9 @@ needs to be granted again via an update operation.  Structure is documented belo
 
     <dt class="property-required"
             title="Required">
-        <span>dataset<wbr>Id</span>
+        <span id="datasetid_nodejs">
+<a href="#datasetid_nodejs" style="color: inherit; text-decoration: inherit;">dataset<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -495,7 +533,9 @@ needs to be granted again via an update operation.  Structure is documented belo
 
     <dt class="property-optional"
             title="Optional">
-        <span>domain</span>
+        <span id="domain_nodejs">
+<a href="#domain_nodejs" style="color: inherit; text-decoration: inherit;">domain</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -505,7 +545,9 @@ domain specified will be granted the specified access
 
     <dt class="property-optional"
             title="Optional">
-        <span>group<wbr>By<wbr>Email</span>
+        <span id="groupbyemail_nodejs">
+<a href="#groupbyemail_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>By<wbr>Email</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -514,7 +556,9 @@ domain specified will be granted the specified access
 
     <dt class="property-optional"
             title="Optional">
-        <span>iam<wbr>Member</span>
+        <span id="iammember_nodejs">
+<a href="#iammember_nodejs" style="color: inherit; text-decoration: inherit;">iam<wbr>Member</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -524,7 +568,9 @@ group, domain, or special group. For example: `allUsers`
 
     <dt class="property-optional"
             title="Optional">
-        <span>project</span>
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -534,7 +580,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>role</span>
+        <span id="role_nodejs">
+<a href="#role_nodejs" style="color: inherit; text-decoration: inherit;">role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -548,7 +596,9 @@ counterparts, and will show a diff post-create. See
 
     <dt class="property-optional"
             title="Optional">
-        <span>special<wbr>Group</span>
+        <span id="specialgroup_nodejs">
+<a href="#specialgroup_nodejs" style="color: inherit; text-decoration: inherit;">special<wbr>Group</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -557,7 +607,9 @@ counterparts, and will show a diff post-create. See
 
     <dt class="property-optional"
             title="Optional">
-        <span>user<wbr>By<wbr>Email</span>
+        <span id="userbyemail_nodejs">
+<a href="#userbyemail_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>By<wbr>Email</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -567,7 +619,9 @@ fred@example.com
 
     <dt class="property-optional"
             title="Optional">
-        <span>view</span>
+        <span id="view_nodejs">
+<a href="#view_nodejs" style="color: inherit; text-decoration: inherit;">view</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetaccessview">Dataset<wbr>Access<wbr>View</a></span>
     </dt>
@@ -587,7 +641,9 @@ needs to be granted again via an update operation.  Structure is documented belo
 
     <dt class="property-required"
             title="Required">
-        <span>dataset_<wbr>id</span>
+        <span id="dataset_id_python">
+<a href="#dataset_id_python" style="color: inherit; text-decoration: inherit;">dataset_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -596,7 +652,9 @@ needs to be granted again via an update operation.  Structure is documented belo
 
     <dt class="property-optional"
             title="Optional">
-        <span>domain</span>
+        <span id="domain_python">
+<a href="#domain_python" style="color: inherit; text-decoration: inherit;">domain</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -606,7 +664,9 @@ domain specified will be granted the specified access
 
     <dt class="property-optional"
             title="Optional">
-        <span>group_<wbr>by_<wbr>email</span>
+        <span id="group_by_email_python">
+<a href="#group_by_email_python" style="color: inherit; text-decoration: inherit;">group_<wbr>by_<wbr>email</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -615,7 +675,9 @@ domain specified will be granted the specified access
 
     <dt class="property-optional"
             title="Optional">
-        <span>iam_<wbr>member</span>
+        <span id="iam_member_python">
+<a href="#iam_member_python" style="color: inherit; text-decoration: inherit;">iam_<wbr>member</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -625,7 +687,9 @@ group, domain, or special group. For example: `allUsers`
 
     <dt class="property-optional"
             title="Optional">
-        <span>project</span>
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -635,7 +699,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>role</span>
+        <span id="role_python">
+<a href="#role_python" style="color: inherit; text-decoration: inherit;">role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -649,7 +715,9 @@ counterparts, and will show a diff post-create. See
 
     <dt class="property-optional"
             title="Optional">
-        <span>special_<wbr>group</span>
+        <span id="special_group_python">
+<a href="#special_group_python" style="color: inherit; text-decoration: inherit;">special_<wbr>group</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -658,7 +726,9 @@ counterparts, and will show a diff post-create. See
 
     <dt class="property-optional"
             title="Optional">
-        <span>user_<wbr>by_<wbr>email</span>
+        <span id="user_by_email_python">
+<a href="#user_by_email_python" style="color: inherit; text-decoration: inherit;">user_<wbr>by_<wbr>email</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -668,7 +738,9 @@ fred@example.com
 
     <dt class="property-optional"
             title="Optional">
-        <span>view</span>
+        <span id="view_python">
+<a href="#view_python" style="color: inherit; text-decoration: inherit;">view</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetaccessview">Dict[Dataset<wbr>Access<wbr>View]</a></span>
     </dt>
@@ -699,7 +771,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -714,7 +788,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -729,7 +805,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -744,7 +822,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -765,7 +845,7 @@ Get an existing DatasetAccess resource's state with the given name, ID, and opti
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/bigquery/#DatasetAccessState">DatasetAccessState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/bigquery/#DatasetAccess">DatasetAccess</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/bigquery/#DatasetAccessState">DatasetAccessState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/bigquery/#DatasetAccess">DatasetAccess</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -773,11 +853,11 @@ Get an existing DatasetAccess resource's state with the given name, ID, and opti
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDatasetAccess<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#DatasetAccessState">DatasetAccessState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#DatasetAccess">DatasetAccess</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDatasetAccess<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#DatasetAccessState">DatasetAccessState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#DatasetAccess">DatasetAccess</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.DatasetAccess.html">DatasetAccess</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.DatasetAccessState.html">DatasetAccessState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.DatasetAccess.html">DatasetAccess</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.DatasetAccessState.html">DatasetAccessState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -885,7 +965,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dataset<wbr>Id</span>
+        <span id="state_datasetid_csharp">
+<a href="#state_datasetid_csharp" style="color: inherit; text-decoration: inherit;">Dataset<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -894,7 +976,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Domain</span>
+        <span id="state_domain_csharp">
+<a href="#state_domain_csharp" style="color: inherit; text-decoration: inherit;">Domain</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -904,7 +988,9 @@ domain specified will be granted the specified access
 
     <dt class="property-optional"
             title="Optional">
-        <span>Group<wbr>By<wbr>Email</span>
+        <span id="state_groupbyemail_csharp">
+<a href="#state_groupbyemail_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>By<wbr>Email</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -913,7 +999,9 @@ domain specified will be granted the specified access
 
     <dt class="property-optional"
             title="Optional">
-        <span>Iam<wbr>Member</span>
+        <span id="state_iammember_csharp">
+<a href="#state_iammember_csharp" style="color: inherit; text-decoration: inherit;">Iam<wbr>Member</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -923,7 +1011,9 @@ group, domain, or special group. For example: `allUsers`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project</span>
+        <span id="state_project_csharp">
+<a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -933,7 +1023,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Role</span>
+        <span id="state_role_csharp">
+<a href="#state_role_csharp" style="color: inherit; text-decoration: inherit;">Role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -947,7 +1039,9 @@ counterparts, and will show a diff post-create. See
 
     <dt class="property-optional"
             title="Optional">
-        <span>Special<wbr>Group</span>
+        <span id="state_specialgroup_csharp">
+<a href="#state_specialgroup_csharp" style="color: inherit; text-decoration: inherit;">Special<wbr>Group</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -956,7 +1050,9 @@ counterparts, and will show a diff post-create. See
 
     <dt class="property-optional"
             title="Optional">
-        <span>User<wbr>By<wbr>Email</span>
+        <span id="state_userbyemail_csharp">
+<a href="#state_userbyemail_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>By<wbr>Email</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -966,7 +1062,9 @@ fred@example.com
 
     <dt class="property-optional"
             title="Optional">
-        <span>View</span>
+        <span id="state_view_csharp">
+<a href="#state_view_csharp" style="color: inherit; text-decoration: inherit;">View</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetaccessview">Dataset<wbr>Access<wbr>View<wbr>Args</a></span>
     </dt>
@@ -986,7 +1084,9 @@ needs to be granted again via an update operation.  Structure is documented belo
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dataset<wbr>Id</span>
+        <span id="state_datasetid_go">
+<a href="#state_datasetid_go" style="color: inherit; text-decoration: inherit;">Dataset<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -995,7 +1095,9 @@ needs to be granted again via an update operation.  Structure is documented belo
 
     <dt class="property-optional"
             title="Optional">
-        <span>Domain</span>
+        <span id="state_domain_go">
+<a href="#state_domain_go" style="color: inherit; text-decoration: inherit;">Domain</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1005,7 +1107,9 @@ domain specified will be granted the specified access
 
     <dt class="property-optional"
             title="Optional">
-        <span>Group<wbr>By<wbr>Email</span>
+        <span id="state_groupbyemail_go">
+<a href="#state_groupbyemail_go" style="color: inherit; text-decoration: inherit;">Group<wbr>By<wbr>Email</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1014,7 +1118,9 @@ domain specified will be granted the specified access
 
     <dt class="property-optional"
             title="Optional">
-        <span>Iam<wbr>Member</span>
+        <span id="state_iammember_go">
+<a href="#state_iammember_go" style="color: inherit; text-decoration: inherit;">Iam<wbr>Member</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1024,7 +1130,9 @@ group, domain, or special group. For example: `allUsers`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project</span>
+        <span id="state_project_go">
+<a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1034,7 +1142,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Role</span>
+        <span id="state_role_go">
+<a href="#state_role_go" style="color: inherit; text-decoration: inherit;">Role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1048,7 +1158,9 @@ counterparts, and will show a diff post-create. See
 
     <dt class="property-optional"
             title="Optional">
-        <span>Special<wbr>Group</span>
+        <span id="state_specialgroup_go">
+<a href="#state_specialgroup_go" style="color: inherit; text-decoration: inherit;">Special<wbr>Group</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1057,7 +1169,9 @@ counterparts, and will show a diff post-create. See
 
     <dt class="property-optional"
             title="Optional">
-        <span>User<wbr>By<wbr>Email</span>
+        <span id="state_userbyemail_go">
+<a href="#state_userbyemail_go" style="color: inherit; text-decoration: inherit;">User<wbr>By<wbr>Email</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1067,7 +1181,9 @@ fred@example.com
 
     <dt class="property-optional"
             title="Optional">
-        <span>View</span>
+        <span id="state_view_go">
+<a href="#state_view_go" style="color: inherit; text-decoration: inherit;">View</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetaccessview">Dataset<wbr>Access<wbr>View</a></span>
     </dt>
@@ -1087,7 +1203,9 @@ needs to be granted again via an update operation.  Structure is documented belo
 
     <dt class="property-optional"
             title="Optional">
-        <span>dataset<wbr>Id</span>
+        <span id="state_datasetid_nodejs">
+<a href="#state_datasetid_nodejs" style="color: inherit; text-decoration: inherit;">dataset<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1096,7 +1214,9 @@ needs to be granted again via an update operation.  Structure is documented belo
 
     <dt class="property-optional"
             title="Optional">
-        <span>domain</span>
+        <span id="state_domain_nodejs">
+<a href="#state_domain_nodejs" style="color: inherit; text-decoration: inherit;">domain</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1106,7 +1226,9 @@ domain specified will be granted the specified access
 
     <dt class="property-optional"
             title="Optional">
-        <span>group<wbr>By<wbr>Email</span>
+        <span id="state_groupbyemail_nodejs">
+<a href="#state_groupbyemail_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>By<wbr>Email</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1115,7 +1237,9 @@ domain specified will be granted the specified access
 
     <dt class="property-optional"
             title="Optional">
-        <span>iam<wbr>Member</span>
+        <span id="state_iammember_nodejs">
+<a href="#state_iammember_nodejs" style="color: inherit; text-decoration: inherit;">iam<wbr>Member</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1125,7 +1249,9 @@ group, domain, or special group. For example: `allUsers`
 
     <dt class="property-optional"
             title="Optional">
-        <span>project</span>
+        <span id="state_project_nodejs">
+<a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1135,7 +1261,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>role</span>
+        <span id="state_role_nodejs">
+<a href="#state_role_nodejs" style="color: inherit; text-decoration: inherit;">role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1149,7 +1277,9 @@ counterparts, and will show a diff post-create. See
 
     <dt class="property-optional"
             title="Optional">
-        <span>special<wbr>Group</span>
+        <span id="state_specialgroup_nodejs">
+<a href="#state_specialgroup_nodejs" style="color: inherit; text-decoration: inherit;">special<wbr>Group</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1158,7 +1288,9 @@ counterparts, and will show a diff post-create. See
 
     <dt class="property-optional"
             title="Optional">
-        <span>user<wbr>By<wbr>Email</span>
+        <span id="state_userbyemail_nodejs">
+<a href="#state_userbyemail_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>By<wbr>Email</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1168,7 +1300,9 @@ fred@example.com
 
     <dt class="property-optional"
             title="Optional">
-        <span>view</span>
+        <span id="state_view_nodejs">
+<a href="#state_view_nodejs" style="color: inherit; text-decoration: inherit;">view</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetaccessview">Dataset<wbr>Access<wbr>View</a></span>
     </dt>
@@ -1188,7 +1322,9 @@ needs to be granted again via an update operation.  Structure is documented belo
 
     <dt class="property-optional"
             title="Optional">
-        <span>dataset_<wbr>id</span>
+        <span id="state_dataset_id_python">
+<a href="#state_dataset_id_python" style="color: inherit; text-decoration: inherit;">dataset_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1197,7 +1333,9 @@ needs to be granted again via an update operation.  Structure is documented belo
 
     <dt class="property-optional"
             title="Optional">
-        <span>domain</span>
+        <span id="state_domain_python">
+<a href="#state_domain_python" style="color: inherit; text-decoration: inherit;">domain</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1207,7 +1345,9 @@ domain specified will be granted the specified access
 
     <dt class="property-optional"
             title="Optional">
-        <span>group_<wbr>by_<wbr>email</span>
+        <span id="state_group_by_email_python">
+<a href="#state_group_by_email_python" style="color: inherit; text-decoration: inherit;">group_<wbr>by_<wbr>email</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1216,7 +1356,9 @@ domain specified will be granted the specified access
 
     <dt class="property-optional"
             title="Optional">
-        <span>iam_<wbr>member</span>
+        <span id="state_iam_member_python">
+<a href="#state_iam_member_python" style="color: inherit; text-decoration: inherit;">iam_<wbr>member</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1226,7 +1368,9 @@ group, domain, or special group. For example: `allUsers`
 
     <dt class="property-optional"
             title="Optional">
-        <span>project</span>
+        <span id="state_project_python">
+<a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1236,7 +1380,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>role</span>
+        <span id="state_role_python">
+<a href="#state_role_python" style="color: inherit; text-decoration: inherit;">role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1250,7 +1396,9 @@ counterparts, and will show a diff post-create. See
 
     <dt class="property-optional"
             title="Optional">
-        <span>special_<wbr>group</span>
+        <span id="state_special_group_python">
+<a href="#state_special_group_python" style="color: inherit; text-decoration: inherit;">special_<wbr>group</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1259,7 +1407,9 @@ counterparts, and will show a diff post-create. See
 
     <dt class="property-optional"
             title="Optional">
-        <span>user_<wbr>by_<wbr>email</span>
+        <span id="state_user_by_email_python">
+<a href="#state_user_by_email_python" style="color: inherit; text-decoration: inherit;">user_<wbr>by_<wbr>email</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1269,7 +1419,9 @@ fred@example.com
 
     <dt class="property-optional"
             title="Optional">
-        <span>view</span>
+        <span id="state_view_python">
+<a href="#state_view_python" style="color: inherit; text-decoration: inherit;">view</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetaccessview">Dict[Dataset<wbr>Access<wbr>View]</a></span>
     </dt>
@@ -1315,7 +1467,9 @@ needs to be granted again via an update operation.  Structure is documented belo
 
     <dt class="property-required"
             title="Required">
-        <span>Dataset<wbr>Id</span>
+        <span id="datasetid_csharp">
+<a href="#datasetid_csharp" style="color: inherit; text-decoration: inherit;">Dataset<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1324,7 +1478,9 @@ needs to be granted again via an update operation.  Structure is documented belo
 
     <dt class="property-required"
             title="Required">
-        <span>Project<wbr>Id</span>
+        <span id="projectid_csharp">
+<a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1333,7 +1489,9 @@ needs to be granted again via an update operation.  Structure is documented belo
 
     <dt class="property-required"
             title="Required">
-        <span>Table<wbr>Id</span>
+        <span id="tableid_csharp">
+<a href="#tableid_csharp" style="color: inherit; text-decoration: inherit;">Table<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1351,7 +1509,9 @@ is 1,024 characters.
 
     <dt class="property-required"
             title="Required">
-        <span>Dataset<wbr>Id</span>
+        <span id="datasetid_go">
+<a href="#datasetid_go" style="color: inherit; text-decoration: inherit;">Dataset<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1360,7 +1520,9 @@ is 1,024 characters.
 
     <dt class="property-required"
             title="Required">
-        <span>Project<wbr>Id</span>
+        <span id="projectid_go">
+<a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1369,7 +1531,9 @@ is 1,024 characters.
 
     <dt class="property-required"
             title="Required">
-        <span>Table<wbr>Id</span>
+        <span id="tableid_go">
+<a href="#tableid_go" style="color: inherit; text-decoration: inherit;">Table<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1387,7 +1551,9 @@ is 1,024 characters.
 
     <dt class="property-required"
             title="Required">
-        <span>dataset<wbr>Id</span>
+        <span id="datasetid_nodejs">
+<a href="#datasetid_nodejs" style="color: inherit; text-decoration: inherit;">dataset<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1396,7 +1562,9 @@ is 1,024 characters.
 
     <dt class="property-required"
             title="Required">
-        <span>project<wbr>Id</span>
+        <span id="projectid_nodejs">
+<a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1405,7 +1573,9 @@ is 1,024 characters.
 
     <dt class="property-required"
             title="Required">
-        <span>table<wbr>Id</span>
+        <span id="tableid_nodejs">
+<a href="#tableid_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1423,7 +1593,9 @@ is 1,024 characters.
 
     <dt class="property-required"
             title="Required">
-        <span>dataset_<wbr>id</span>
+        <span id="dataset_id_python">
+<a href="#dataset_id_python" style="color: inherit; text-decoration: inherit;">dataset_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1432,7 +1604,9 @@ is 1,024 characters.
 
     <dt class="property-required"
             title="Required">
-        <span>project_<wbr>id</span>
+        <span id="project_id_python">
+<a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1441,7 +1615,9 @@ is 1,024 characters.
 
     <dt class="property-required"
             title="Required">
-        <span>table_<wbr>id</span>
+        <span id="table_id_python">
+<a href="#table_id_python" style="color: inherit; text-decoration: inherit;">table_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

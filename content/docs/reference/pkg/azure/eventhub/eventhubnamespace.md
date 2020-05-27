@@ -70,19 +70,19 @@ const exampleEventHubNamespace = new azure.eventhub.EventHubNamespace("exampleEv
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/eventhub/#EventHubNamespace">EventHubNamespace</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/eventhub/#EventHubNamespaceArgs">EventHubNamespaceArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/eventhub/#EventHubNamespace">EventHubNamespace</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/eventhub/#EventHubNamespaceArgs">EventHubNamespaceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">EventHubNamespace</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>auto_inflate_enabled=None<span class="p">, </span>capacity=None<span class="p">, </span>location=None<span class="p">, </span>maximum_throughput_units=None<span class="p">, </span>name=None<span class="p">, </span>network_rulesets=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>sku=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/eventhub/#EventHubNamespace">EventHubNamespace</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>auto_inflate_enabled=None<span class="p">, </span>capacity=None<span class="p">, </span>location=None<span class="p">, </span>maximum_throughput_units=None<span class="p">, </span>name=None<span class="p">, </span>network_rulesets=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>sku=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewEventHubNamespace<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventhub?tab=doc#EventHubNamespaceArgs">EventHubNamespaceArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventhub?tab=doc#EventHubNamespace">EventHubNamespace</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventhub?tab=doc#EventHubNamespace">NewEventHubNamespace</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventhub?tab=doc#EventHubNamespaceArgs">EventHubNamespaceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventhub?tab=doc#EventHubNamespace">EventHubNamespace</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.EventHub.EventHubNamespace.html">EventHubNamespace</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.EventHub.EventHubNamespaceArgs.html">EventHubNamespaceArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.EventHub.EventHubNamespace.html">EventHubNamespace</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.EventHub.EventHubNamespaceArgs.html">EventHubNamespaceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -248,7 +248,9 @@ The EventHubNamespace resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_csharp">
+<a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -257,7 +259,9 @@ The EventHubNamespace resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span>Sku</span>
+        <span id="sku_csharp">
+<a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -266,7 +270,9 @@ The EventHubNamespace resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Auto<wbr>Inflate<wbr>Enabled</span>
+        <span id="autoinflateenabled_csharp">
+<a href="#autoinflateenabled_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Inflate<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -275,7 +281,9 @@ The EventHubNamespace resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Capacity</span>
+        <span id="capacity_csharp">
+<a href="#capacity_csharp" style="color: inherit; text-decoration: inherit;">Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -284,7 +292,9 @@ The EventHubNamespace resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Location</span>
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -293,7 +303,9 @@ The EventHubNamespace resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Maximum<wbr>Throughput<wbr>Units</span>
+        <span id="maximumthroughputunits_csharp">
+<a href="#maximumthroughputunits_csharp" style="color: inherit; text-decoration: inherit;">Maximum<wbr>Throughput<wbr>Units</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -302,7 +314,9 @@ The EventHubNamespace resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -311,7 +325,9 @@ The EventHubNamespace resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Network<wbr>Rulesets</span>
+        <span id="networkrulesets_csharp">
+<a href="#networkrulesets_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Rulesets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventhubnamespacenetworkrulesets">Event<wbr>Hub<wbr>Namespace<wbr>Network<wbr>Rulesets<wbr>Args</a></span>
     </dt>
@@ -320,7 +336,9 @@ The EventHubNamespace resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -336,7 +354,9 @@ The EventHubNamespace resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_go">
+<a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -345,7 +365,9 @@ The EventHubNamespace resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span>Sku</span>
+        <span id="sku_go">
+<a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -354,7 +376,9 @@ The EventHubNamespace resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Auto<wbr>Inflate<wbr>Enabled</span>
+        <span id="autoinflateenabled_go">
+<a href="#autoinflateenabled_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Inflate<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -363,7 +387,9 @@ The EventHubNamespace resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Capacity</span>
+        <span id="capacity_go">
+<a href="#capacity_go" style="color: inherit; text-decoration: inherit;">Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -372,7 +398,9 @@ The EventHubNamespace resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Location</span>
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -381,7 +409,9 @@ The EventHubNamespace resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Maximum<wbr>Throughput<wbr>Units</span>
+        <span id="maximumthroughputunits_go">
+<a href="#maximumthroughputunits_go" style="color: inherit; text-decoration: inherit;">Maximum<wbr>Throughput<wbr>Units</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -390,7 +420,9 @@ The EventHubNamespace resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -399,7 +431,9 @@ The EventHubNamespace resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Network<wbr>Rulesets</span>
+        <span id="networkrulesets_go">
+<a href="#networkrulesets_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Rulesets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventhubnamespacenetworkrulesets">Event<wbr>Hub<wbr>Namespace<wbr>Network<wbr>Rulesets</a></span>
     </dt>
@@ -408,7 +442,9 @@ The EventHubNamespace resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -424,7 +460,9 @@ The EventHubNamespace resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span>resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_nodejs">
+<a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -433,7 +471,9 @@ The EventHubNamespace resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span>sku</span>
+        <span id="sku_nodejs">
+<a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -442,7 +482,9 @@ The EventHubNamespace resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>auto<wbr>Inflate<wbr>Enabled</span>
+        <span id="autoinflateenabled_nodejs">
+<a href="#autoinflateenabled_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Inflate<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -451,7 +493,9 @@ The EventHubNamespace resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>capacity</span>
+        <span id="capacity_nodejs">
+<a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -460,7 +504,9 @@ The EventHubNamespace resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>location</span>
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -469,7 +515,9 @@ The EventHubNamespace resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>maximum<wbr>Throughput<wbr>Units</span>
+        <span id="maximumthroughputunits_nodejs">
+<a href="#maximumthroughputunits_nodejs" style="color: inherit; text-decoration: inherit;">maximum<wbr>Throughput<wbr>Units</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -478,7 +526,9 @@ The EventHubNamespace resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -487,7 +537,9 @@ The EventHubNamespace resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>network<wbr>Rulesets</span>
+        <span id="networkrulesets_nodejs">
+<a href="#networkrulesets_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Rulesets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventhubnamespacenetworkrulesets">Event<wbr>Hub<wbr>Namespace<wbr>Network<wbr>Rulesets</a></span>
     </dt>
@@ -496,7 +548,9 @@ The EventHubNamespace resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -512,7 +566,9 @@ The EventHubNamespace resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span>resource_<wbr>group_<wbr>name</span>
+        <span id="resource_group_name_python">
+<a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -521,7 +577,9 @@ The EventHubNamespace resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span>sku</span>
+        <span id="sku_python">
+<a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -530,7 +588,9 @@ The EventHubNamespace resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>auto_<wbr>inflate_<wbr>enabled</span>
+        <span id="auto_inflate_enabled_python">
+<a href="#auto_inflate_enabled_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>inflate_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -539,7 +599,9 @@ The EventHubNamespace resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>capacity</span>
+        <span id="capacity_python">
+<a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -548,7 +610,9 @@ The EventHubNamespace resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>location</span>
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -557,7 +621,9 @@ The EventHubNamespace resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>maximum_<wbr>throughput_<wbr>units</span>
+        <span id="maximum_throughput_units_python">
+<a href="#maximum_throughput_units_python" style="color: inherit; text-decoration: inherit;">maximum_<wbr>throughput_<wbr>units</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -566,7 +632,9 @@ The EventHubNamespace resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -575,7 +643,9 @@ The EventHubNamespace resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>network_<wbr>rulesets</span>
+        <span id="network_rulesets_python">
+<a href="#network_rulesets_python" style="color: inherit; text-decoration: inherit;">network_<wbr>rulesets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventhubnamespacenetworkrulesets">Dict[Event<wbr>Hub<wbr>Namespace<wbr>Network<wbr>Rulesets]</a></span>
     </dt>
@@ -584,7 +654,9 @@ The EventHubNamespace resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -611,7 +683,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Default<wbr>Primary<wbr>Connection<wbr>String</span>
+        <span id="defaultprimaryconnectionstring_csharp">
+<a href="#defaultprimaryconnectionstring_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Primary<wbr>Connection<wbr>String</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -621,7 +695,9 @@ rule `RootManageSharedAccessKey`.
 
     <dt class="property-"
             title="">
-        <span>Default<wbr>Primary<wbr>Connection<wbr>String<wbr>Alias</span>
+        <span id="defaultprimaryconnectionstringalias_csharp">
+<a href="#defaultprimaryconnectionstringalias_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Primary<wbr>Connection<wbr>String<wbr>Alias</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -631,7 +707,9 @@ rule `RootManageSharedAccessKey`, which is generated when disaster recovery is e
 
     <dt class="property-"
             title="">
-        <span>Default<wbr>Primary<wbr>Key</span>
+        <span id="defaultprimarykey_csharp">
+<a href="#defaultprimarykey_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Primary<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -640,7 +718,9 @@ rule `RootManageSharedAccessKey`, which is generated when disaster recovery is e
 
     <dt class="property-"
             title="">
-        <span>Default<wbr>Secondary<wbr>Connection<wbr>String</span>
+        <span id="defaultsecondaryconnectionstring_csharp">
+<a href="#defaultsecondaryconnectionstring_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Secondary<wbr>Connection<wbr>String</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -650,7 +730,9 @@ authorization rule `RootManageSharedAccessKey`.
 
     <dt class="property-"
             title="">
-        <span>Default<wbr>Secondary<wbr>Connection<wbr>String<wbr>Alias</span>
+        <span id="defaultsecondaryconnectionstringalias_csharp">
+<a href="#defaultsecondaryconnectionstringalias_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Secondary<wbr>Connection<wbr>String<wbr>Alias</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -660,7 +742,9 @@ authorization rule `RootManageSharedAccessKey`, which is generated when disaster
 
     <dt class="property-"
             title="">
-        <span>Default<wbr>Secondary<wbr>Key</span>
+        <span id="defaultsecondarykey_csharp">
+<a href="#defaultsecondarykey_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Secondary<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -669,7 +753,9 @@ authorization rule `RootManageSharedAccessKey`, which is generated when disaster
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -684,7 +770,9 @@ authorization rule `RootManageSharedAccessKey`, which is generated when disaster
 
     <dt class="property-"
             title="">
-        <span>Default<wbr>Primary<wbr>Connection<wbr>String</span>
+        <span id="defaultprimaryconnectionstring_go">
+<a href="#defaultprimaryconnectionstring_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Primary<wbr>Connection<wbr>String</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -694,7 +782,9 @@ rule `RootManageSharedAccessKey`.
 
     <dt class="property-"
             title="">
-        <span>Default<wbr>Primary<wbr>Connection<wbr>String<wbr>Alias</span>
+        <span id="defaultprimaryconnectionstringalias_go">
+<a href="#defaultprimaryconnectionstringalias_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Primary<wbr>Connection<wbr>String<wbr>Alias</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -704,7 +794,9 @@ rule `RootManageSharedAccessKey`, which is generated when disaster recovery is e
 
     <dt class="property-"
             title="">
-        <span>Default<wbr>Primary<wbr>Key</span>
+        <span id="defaultprimarykey_go">
+<a href="#defaultprimarykey_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Primary<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -713,7 +805,9 @@ rule `RootManageSharedAccessKey`, which is generated when disaster recovery is e
 
     <dt class="property-"
             title="">
-        <span>Default<wbr>Secondary<wbr>Connection<wbr>String</span>
+        <span id="defaultsecondaryconnectionstring_go">
+<a href="#defaultsecondaryconnectionstring_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Secondary<wbr>Connection<wbr>String</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -723,7 +817,9 @@ authorization rule `RootManageSharedAccessKey`.
 
     <dt class="property-"
             title="">
-        <span>Default<wbr>Secondary<wbr>Connection<wbr>String<wbr>Alias</span>
+        <span id="defaultsecondaryconnectionstringalias_go">
+<a href="#defaultsecondaryconnectionstringalias_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Secondary<wbr>Connection<wbr>String<wbr>Alias</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -733,7 +829,9 @@ authorization rule `RootManageSharedAccessKey`, which is generated when disaster
 
     <dt class="property-"
             title="">
-        <span>Default<wbr>Secondary<wbr>Key</span>
+        <span id="defaultsecondarykey_go">
+<a href="#defaultsecondarykey_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Secondary<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -742,7 +840,9 @@ authorization rule `RootManageSharedAccessKey`, which is generated when disaster
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -757,7 +857,9 @@ authorization rule `RootManageSharedAccessKey`, which is generated when disaster
 
     <dt class="property-"
             title="">
-        <span>default<wbr>Primary<wbr>Connection<wbr>String</span>
+        <span id="defaultprimaryconnectionstring_nodejs">
+<a href="#defaultprimaryconnectionstring_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Primary<wbr>Connection<wbr>String</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -767,7 +869,9 @@ rule `RootManageSharedAccessKey`.
 
     <dt class="property-"
             title="">
-        <span>default<wbr>Primary<wbr>Connection<wbr>String<wbr>Alias</span>
+        <span id="defaultprimaryconnectionstringalias_nodejs">
+<a href="#defaultprimaryconnectionstringalias_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Primary<wbr>Connection<wbr>String<wbr>Alias</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -777,7 +881,9 @@ rule `RootManageSharedAccessKey`, which is generated when disaster recovery is e
 
     <dt class="property-"
             title="">
-        <span>default<wbr>Primary<wbr>Key</span>
+        <span id="defaultprimarykey_nodejs">
+<a href="#defaultprimarykey_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Primary<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -786,7 +892,9 @@ rule `RootManageSharedAccessKey`, which is generated when disaster recovery is e
 
     <dt class="property-"
             title="">
-        <span>default<wbr>Secondary<wbr>Connection<wbr>String</span>
+        <span id="defaultsecondaryconnectionstring_nodejs">
+<a href="#defaultsecondaryconnectionstring_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Secondary<wbr>Connection<wbr>String</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -796,7 +904,9 @@ authorization rule `RootManageSharedAccessKey`.
 
     <dt class="property-"
             title="">
-        <span>default<wbr>Secondary<wbr>Connection<wbr>String<wbr>Alias</span>
+        <span id="defaultsecondaryconnectionstringalias_nodejs">
+<a href="#defaultsecondaryconnectionstringalias_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Secondary<wbr>Connection<wbr>String<wbr>Alias</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -806,7 +916,9 @@ authorization rule `RootManageSharedAccessKey`, which is generated when disaster
 
     <dt class="property-"
             title="">
-        <span>default<wbr>Secondary<wbr>Key</span>
+        <span id="defaultsecondarykey_nodejs">
+<a href="#defaultsecondarykey_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Secondary<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -815,7 +927,9 @@ authorization rule `RootManageSharedAccessKey`, which is generated when disaster
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -830,7 +944,9 @@ authorization rule `RootManageSharedAccessKey`, which is generated when disaster
 
     <dt class="property-"
             title="">
-        <span>default_<wbr>primary_<wbr>connection_<wbr>string</span>
+        <span id="default_primary_connection_string_python">
+<a href="#default_primary_connection_string_python" style="color: inherit; text-decoration: inherit;">default_<wbr>primary_<wbr>connection_<wbr>string</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -840,7 +956,9 @@ rule `RootManageSharedAccessKey`.
 
     <dt class="property-"
             title="">
-        <span>default_<wbr>primary_<wbr>connection_<wbr>string_<wbr>alias</span>
+        <span id="default_primary_connection_string_alias_python">
+<a href="#default_primary_connection_string_alias_python" style="color: inherit; text-decoration: inherit;">default_<wbr>primary_<wbr>connection_<wbr>string_<wbr>alias</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -850,7 +968,9 @@ rule `RootManageSharedAccessKey`, which is generated when disaster recovery is e
 
     <dt class="property-"
             title="">
-        <span>default_<wbr>primary_<wbr>key</span>
+        <span id="default_primary_key_python">
+<a href="#default_primary_key_python" style="color: inherit; text-decoration: inherit;">default_<wbr>primary_<wbr>key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -859,7 +979,9 @@ rule `RootManageSharedAccessKey`, which is generated when disaster recovery is e
 
     <dt class="property-"
             title="">
-        <span>default_<wbr>secondary_<wbr>connection_<wbr>string</span>
+        <span id="default_secondary_connection_string_python">
+<a href="#default_secondary_connection_string_python" style="color: inherit; text-decoration: inherit;">default_<wbr>secondary_<wbr>connection_<wbr>string</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -869,7 +991,9 @@ authorization rule `RootManageSharedAccessKey`.
 
     <dt class="property-"
             title="">
-        <span>default_<wbr>secondary_<wbr>connection_<wbr>string_<wbr>alias</span>
+        <span id="default_secondary_connection_string_alias_python">
+<a href="#default_secondary_connection_string_alias_python" style="color: inherit; text-decoration: inherit;">default_<wbr>secondary_<wbr>connection_<wbr>string_<wbr>alias</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -879,7 +1003,9 @@ authorization rule `RootManageSharedAccessKey`, which is generated when disaster
 
     <dt class="property-"
             title="">
-        <span>default_<wbr>secondary_<wbr>key</span>
+        <span id="default_secondary_key_python">
+<a href="#default_secondary_key_python" style="color: inherit; text-decoration: inherit;">default_<wbr>secondary_<wbr>key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -888,7 +1014,9 @@ authorization rule `RootManageSharedAccessKey`, which is generated when disaster
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -909,7 +1037,7 @@ Get an existing EventHubNamespace resource's state with the given name, ID, and 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/eventhub/#EventHubNamespaceState">EventHubNamespaceState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/eventhub/#EventHubNamespace">EventHubNamespace</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/eventhub/#EventHubNamespaceState">EventHubNamespaceState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/eventhub/#EventHubNamespace">EventHubNamespace</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -917,11 +1045,11 @@ Get an existing EventHubNamespace resource's state with the given name, ID, and 
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetEventHubNamespace<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventhub?tab=doc#EventHubNamespaceState">EventHubNamespaceState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventhub?tab=doc#EventHubNamespace">EventHubNamespace</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetEventHubNamespace<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventhub?tab=doc#EventHubNamespaceState">EventHubNamespaceState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventhub?tab=doc#EventHubNamespace">EventHubNamespace</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.EventHub.EventHubNamespace.html">EventHubNamespace</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.EventHub.EventHubNamespaceState.html">EventHubNamespaceState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.EventHub.EventHubNamespace.html">EventHubNamespace</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.EventHub.EventHubNamespaceState.html">EventHubNamespaceState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1029,7 +1157,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Auto<wbr>Inflate<wbr>Enabled</span>
+        <span id="state_autoinflateenabled_csharp">
+<a href="#state_autoinflateenabled_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Inflate<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1038,7 +1168,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Capacity</span>
+        <span id="state_capacity_csharp">
+<a href="#state_capacity_csharp" style="color: inherit; text-decoration: inherit;">Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1047,7 +1179,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default<wbr>Primary<wbr>Connection<wbr>String</span>
+        <span id="state_defaultprimaryconnectionstring_csharp">
+<a href="#state_defaultprimaryconnectionstring_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Primary<wbr>Connection<wbr>String</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1057,7 +1191,9 @@ rule `RootManageSharedAccessKey`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default<wbr>Primary<wbr>Connection<wbr>String<wbr>Alias</span>
+        <span id="state_defaultprimaryconnectionstringalias_csharp">
+<a href="#state_defaultprimaryconnectionstringalias_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Primary<wbr>Connection<wbr>String<wbr>Alias</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1067,7 +1203,9 @@ rule `RootManageSharedAccessKey`, which is generated when disaster recovery is e
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default<wbr>Primary<wbr>Key</span>
+        <span id="state_defaultprimarykey_csharp">
+<a href="#state_defaultprimarykey_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Primary<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1076,7 +1214,9 @@ rule `RootManageSharedAccessKey`, which is generated when disaster recovery is e
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default<wbr>Secondary<wbr>Connection<wbr>String</span>
+        <span id="state_defaultsecondaryconnectionstring_csharp">
+<a href="#state_defaultsecondaryconnectionstring_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Secondary<wbr>Connection<wbr>String</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1086,7 +1226,9 @@ authorization rule `RootManageSharedAccessKey`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default<wbr>Secondary<wbr>Connection<wbr>String<wbr>Alias</span>
+        <span id="state_defaultsecondaryconnectionstringalias_csharp">
+<a href="#state_defaultsecondaryconnectionstringalias_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Secondary<wbr>Connection<wbr>String<wbr>Alias</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1096,7 +1238,9 @@ authorization rule `RootManageSharedAccessKey`, which is generated when disaster
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default<wbr>Secondary<wbr>Key</span>
+        <span id="state_defaultsecondarykey_csharp">
+<a href="#state_defaultsecondarykey_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Secondary<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1105,7 +1249,9 @@ authorization rule `RootManageSharedAccessKey`, which is generated when disaster
 
     <dt class="property-optional"
             title="Optional">
-        <span>Location</span>
+        <span id="state_location_csharp">
+<a href="#state_location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1114,7 +1260,9 @@ authorization rule `RootManageSharedAccessKey`, which is generated when disaster
 
     <dt class="property-optional"
             title="Optional">
-        <span>Maximum<wbr>Throughput<wbr>Units</span>
+        <span id="state_maximumthroughputunits_csharp">
+<a href="#state_maximumthroughputunits_csharp" style="color: inherit; text-decoration: inherit;">Maximum<wbr>Throughput<wbr>Units</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1123,7 +1271,9 @@ authorization rule `RootManageSharedAccessKey`, which is generated when disaster
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1132,7 +1282,9 @@ authorization rule `RootManageSharedAccessKey`, which is generated when disaster
 
     <dt class="property-optional"
             title="Optional">
-        <span>Network<wbr>Rulesets</span>
+        <span id="state_networkrulesets_csharp">
+<a href="#state_networkrulesets_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Rulesets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventhubnamespacenetworkrulesets">Event<wbr>Hub<wbr>Namespace<wbr>Network<wbr>Rulesets<wbr>Args</a></span>
     </dt>
@@ -1141,7 +1293,9 @@ authorization rule `RootManageSharedAccessKey`, which is generated when disaster
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="state_resourcegroupname_csharp">
+<a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1150,7 +1304,9 @@ authorization rule `RootManageSharedAccessKey`, which is generated when disaster
 
     <dt class="property-optional"
             title="Optional">
-        <span>Sku</span>
+        <span id="state_sku_csharp">
+<a href="#state_sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1159,7 +1315,9 @@ authorization rule `RootManageSharedAccessKey`, which is generated when disaster
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_csharp">
+<a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -1175,7 +1333,9 @@ authorization rule `RootManageSharedAccessKey`, which is generated when disaster
 
     <dt class="property-optional"
             title="Optional">
-        <span>Auto<wbr>Inflate<wbr>Enabled</span>
+        <span id="state_autoinflateenabled_go">
+<a href="#state_autoinflateenabled_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Inflate<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1184,7 +1344,9 @@ authorization rule `RootManageSharedAccessKey`, which is generated when disaster
 
     <dt class="property-optional"
             title="Optional">
-        <span>Capacity</span>
+        <span id="state_capacity_go">
+<a href="#state_capacity_go" style="color: inherit; text-decoration: inherit;">Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1193,7 +1355,9 @@ authorization rule `RootManageSharedAccessKey`, which is generated when disaster
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default<wbr>Primary<wbr>Connection<wbr>String</span>
+        <span id="state_defaultprimaryconnectionstring_go">
+<a href="#state_defaultprimaryconnectionstring_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Primary<wbr>Connection<wbr>String</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1203,7 +1367,9 @@ rule `RootManageSharedAccessKey`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default<wbr>Primary<wbr>Connection<wbr>String<wbr>Alias</span>
+        <span id="state_defaultprimaryconnectionstringalias_go">
+<a href="#state_defaultprimaryconnectionstringalias_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Primary<wbr>Connection<wbr>String<wbr>Alias</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1213,7 +1379,9 @@ rule `RootManageSharedAccessKey`, which is generated when disaster recovery is e
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default<wbr>Primary<wbr>Key</span>
+        <span id="state_defaultprimarykey_go">
+<a href="#state_defaultprimarykey_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Primary<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1222,7 +1390,9 @@ rule `RootManageSharedAccessKey`, which is generated when disaster recovery is e
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default<wbr>Secondary<wbr>Connection<wbr>String</span>
+        <span id="state_defaultsecondaryconnectionstring_go">
+<a href="#state_defaultsecondaryconnectionstring_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Secondary<wbr>Connection<wbr>String</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1232,7 +1402,9 @@ authorization rule `RootManageSharedAccessKey`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default<wbr>Secondary<wbr>Connection<wbr>String<wbr>Alias</span>
+        <span id="state_defaultsecondaryconnectionstringalias_go">
+<a href="#state_defaultsecondaryconnectionstringalias_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Secondary<wbr>Connection<wbr>String<wbr>Alias</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1242,7 +1414,9 @@ authorization rule `RootManageSharedAccessKey`, which is generated when disaster
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default<wbr>Secondary<wbr>Key</span>
+        <span id="state_defaultsecondarykey_go">
+<a href="#state_defaultsecondarykey_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Secondary<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1251,7 +1425,9 @@ authorization rule `RootManageSharedAccessKey`, which is generated when disaster
 
     <dt class="property-optional"
             title="Optional">
-        <span>Location</span>
+        <span id="state_location_go">
+<a href="#state_location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1260,7 +1436,9 @@ authorization rule `RootManageSharedAccessKey`, which is generated when disaster
 
     <dt class="property-optional"
             title="Optional">
-        <span>Maximum<wbr>Throughput<wbr>Units</span>
+        <span id="state_maximumthroughputunits_go">
+<a href="#state_maximumthroughputunits_go" style="color: inherit; text-decoration: inherit;">Maximum<wbr>Throughput<wbr>Units</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1269,7 +1447,9 @@ authorization rule `RootManageSharedAccessKey`, which is generated when disaster
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1278,7 +1458,9 @@ authorization rule `RootManageSharedAccessKey`, which is generated when disaster
 
     <dt class="property-optional"
             title="Optional">
-        <span>Network<wbr>Rulesets</span>
+        <span id="state_networkrulesets_go">
+<a href="#state_networkrulesets_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Rulesets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventhubnamespacenetworkrulesets">Event<wbr>Hub<wbr>Namespace<wbr>Network<wbr>Rulesets</a></span>
     </dt>
@@ -1287,7 +1469,9 @@ authorization rule `RootManageSharedAccessKey`, which is generated when disaster
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="state_resourcegroupname_go">
+<a href="#state_resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1296,7 +1480,9 @@ authorization rule `RootManageSharedAccessKey`, which is generated when disaster
 
     <dt class="property-optional"
             title="Optional">
-        <span>Sku</span>
+        <span id="state_sku_go">
+<a href="#state_sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1305,7 +1491,9 @@ authorization rule `RootManageSharedAccessKey`, which is generated when disaster
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_go">
+<a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -1321,7 +1509,9 @@ authorization rule `RootManageSharedAccessKey`, which is generated when disaster
 
     <dt class="property-optional"
             title="Optional">
-        <span>auto<wbr>Inflate<wbr>Enabled</span>
+        <span id="state_autoinflateenabled_nodejs">
+<a href="#state_autoinflateenabled_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Inflate<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1330,7 +1520,9 @@ authorization rule `RootManageSharedAccessKey`, which is generated when disaster
 
     <dt class="property-optional"
             title="Optional">
-        <span>capacity</span>
+        <span id="state_capacity_nodejs">
+<a href="#state_capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1339,7 +1531,9 @@ authorization rule `RootManageSharedAccessKey`, which is generated when disaster
 
     <dt class="property-optional"
             title="Optional">
-        <span>default<wbr>Primary<wbr>Connection<wbr>String</span>
+        <span id="state_defaultprimaryconnectionstring_nodejs">
+<a href="#state_defaultprimaryconnectionstring_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Primary<wbr>Connection<wbr>String</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1349,7 +1543,9 @@ rule `RootManageSharedAccessKey`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>default<wbr>Primary<wbr>Connection<wbr>String<wbr>Alias</span>
+        <span id="state_defaultprimaryconnectionstringalias_nodejs">
+<a href="#state_defaultprimaryconnectionstringalias_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Primary<wbr>Connection<wbr>String<wbr>Alias</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1359,7 +1555,9 @@ rule `RootManageSharedAccessKey`, which is generated when disaster recovery is e
 
     <dt class="property-optional"
             title="Optional">
-        <span>default<wbr>Primary<wbr>Key</span>
+        <span id="state_defaultprimarykey_nodejs">
+<a href="#state_defaultprimarykey_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Primary<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1368,7 +1566,9 @@ rule `RootManageSharedAccessKey`, which is generated when disaster recovery is e
 
     <dt class="property-optional"
             title="Optional">
-        <span>default<wbr>Secondary<wbr>Connection<wbr>String</span>
+        <span id="state_defaultsecondaryconnectionstring_nodejs">
+<a href="#state_defaultsecondaryconnectionstring_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Secondary<wbr>Connection<wbr>String</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1378,7 +1578,9 @@ authorization rule `RootManageSharedAccessKey`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>default<wbr>Secondary<wbr>Connection<wbr>String<wbr>Alias</span>
+        <span id="state_defaultsecondaryconnectionstringalias_nodejs">
+<a href="#state_defaultsecondaryconnectionstringalias_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Secondary<wbr>Connection<wbr>String<wbr>Alias</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1388,7 +1590,9 @@ authorization rule `RootManageSharedAccessKey`, which is generated when disaster
 
     <dt class="property-optional"
             title="Optional">
-        <span>default<wbr>Secondary<wbr>Key</span>
+        <span id="state_defaultsecondarykey_nodejs">
+<a href="#state_defaultsecondarykey_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Secondary<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1397,7 +1601,9 @@ authorization rule `RootManageSharedAccessKey`, which is generated when disaster
 
     <dt class="property-optional"
             title="Optional">
-        <span>location</span>
+        <span id="state_location_nodejs">
+<a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1406,7 +1612,9 @@ authorization rule `RootManageSharedAccessKey`, which is generated when disaster
 
     <dt class="property-optional"
             title="Optional">
-        <span>maximum<wbr>Throughput<wbr>Units</span>
+        <span id="state_maximumthroughputunits_nodejs">
+<a href="#state_maximumthroughputunits_nodejs" style="color: inherit; text-decoration: inherit;">maximum<wbr>Throughput<wbr>Units</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1415,7 +1623,9 @@ authorization rule `RootManageSharedAccessKey`, which is generated when disaster
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1424,7 +1634,9 @@ authorization rule `RootManageSharedAccessKey`, which is generated when disaster
 
     <dt class="property-optional"
             title="Optional">
-        <span>network<wbr>Rulesets</span>
+        <span id="state_networkrulesets_nodejs">
+<a href="#state_networkrulesets_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Rulesets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventhubnamespacenetworkrulesets">Event<wbr>Hub<wbr>Namespace<wbr>Network<wbr>Rulesets</a></span>
     </dt>
@@ -1433,7 +1645,9 @@ authorization rule `RootManageSharedAccessKey`, which is generated when disaster
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource<wbr>Group<wbr>Name</span>
+        <span id="state_resourcegroupname_nodejs">
+<a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1442,7 +1656,9 @@ authorization rule `RootManageSharedAccessKey`, which is generated when disaster
 
     <dt class="property-optional"
             title="Optional">
-        <span>sku</span>
+        <span id="state_sku_nodejs">
+<a href="#state_sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1451,7 +1667,9 @@ authorization rule `RootManageSharedAccessKey`, which is generated when disaster
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_nodejs">
+<a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -1467,7 +1685,9 @@ authorization rule `RootManageSharedAccessKey`, which is generated when disaster
 
     <dt class="property-optional"
             title="Optional">
-        <span>auto_<wbr>inflate_<wbr>enabled</span>
+        <span id="state_auto_inflate_enabled_python">
+<a href="#state_auto_inflate_enabled_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>inflate_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1476,7 +1696,9 @@ authorization rule `RootManageSharedAccessKey`, which is generated when disaster
 
     <dt class="property-optional"
             title="Optional">
-        <span>capacity</span>
+        <span id="state_capacity_python">
+<a href="#state_capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1485,7 +1707,9 @@ authorization rule `RootManageSharedAccessKey`, which is generated when disaster
 
     <dt class="property-optional"
             title="Optional">
-        <span>default_<wbr>primary_<wbr>connection_<wbr>string</span>
+        <span id="state_default_primary_connection_string_python">
+<a href="#state_default_primary_connection_string_python" style="color: inherit; text-decoration: inherit;">default_<wbr>primary_<wbr>connection_<wbr>string</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1495,7 +1719,9 @@ rule `RootManageSharedAccessKey`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>default_<wbr>primary_<wbr>connection_<wbr>string_<wbr>alias</span>
+        <span id="state_default_primary_connection_string_alias_python">
+<a href="#state_default_primary_connection_string_alias_python" style="color: inherit; text-decoration: inherit;">default_<wbr>primary_<wbr>connection_<wbr>string_<wbr>alias</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1505,7 +1731,9 @@ rule `RootManageSharedAccessKey`, which is generated when disaster recovery is e
 
     <dt class="property-optional"
             title="Optional">
-        <span>default_<wbr>primary_<wbr>key</span>
+        <span id="state_default_primary_key_python">
+<a href="#state_default_primary_key_python" style="color: inherit; text-decoration: inherit;">default_<wbr>primary_<wbr>key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1514,7 +1742,9 @@ rule `RootManageSharedAccessKey`, which is generated when disaster recovery is e
 
     <dt class="property-optional"
             title="Optional">
-        <span>default_<wbr>secondary_<wbr>connection_<wbr>string</span>
+        <span id="state_default_secondary_connection_string_python">
+<a href="#state_default_secondary_connection_string_python" style="color: inherit; text-decoration: inherit;">default_<wbr>secondary_<wbr>connection_<wbr>string</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1524,7 +1754,9 @@ authorization rule `RootManageSharedAccessKey`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>default_<wbr>secondary_<wbr>connection_<wbr>string_<wbr>alias</span>
+        <span id="state_default_secondary_connection_string_alias_python">
+<a href="#state_default_secondary_connection_string_alias_python" style="color: inherit; text-decoration: inherit;">default_<wbr>secondary_<wbr>connection_<wbr>string_<wbr>alias</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1534,7 +1766,9 @@ authorization rule `RootManageSharedAccessKey`, which is generated when disaster
 
     <dt class="property-optional"
             title="Optional">
-        <span>default_<wbr>secondary_<wbr>key</span>
+        <span id="state_default_secondary_key_python">
+<a href="#state_default_secondary_key_python" style="color: inherit; text-decoration: inherit;">default_<wbr>secondary_<wbr>key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1543,7 +1777,9 @@ authorization rule `RootManageSharedAccessKey`, which is generated when disaster
 
     <dt class="property-optional"
             title="Optional">
-        <span>location</span>
+        <span id="state_location_python">
+<a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1552,7 +1788,9 @@ authorization rule `RootManageSharedAccessKey`, which is generated when disaster
 
     <dt class="property-optional"
             title="Optional">
-        <span>maximum_<wbr>throughput_<wbr>units</span>
+        <span id="state_maximum_throughput_units_python">
+<a href="#state_maximum_throughput_units_python" style="color: inherit; text-decoration: inherit;">maximum_<wbr>throughput_<wbr>units</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1561,7 +1799,9 @@ authorization rule `RootManageSharedAccessKey`, which is generated when disaster
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1570,7 +1810,9 @@ authorization rule `RootManageSharedAccessKey`, which is generated when disaster
 
     <dt class="property-optional"
             title="Optional">
-        <span>network_<wbr>rulesets</span>
+        <span id="state_network_rulesets_python">
+<a href="#state_network_rulesets_python" style="color: inherit; text-decoration: inherit;">network_<wbr>rulesets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventhubnamespacenetworkrulesets">Dict[Event<wbr>Hub<wbr>Namespace<wbr>Network<wbr>Rulesets]</a></span>
     </dt>
@@ -1579,7 +1821,9 @@ authorization rule `RootManageSharedAccessKey`, which is generated when disaster
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource_<wbr>group_<wbr>name</span>
+        <span id="state_resource_group_name_python">
+<a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1588,7 +1832,9 @@ authorization rule `RootManageSharedAccessKey`, which is generated when disaster
 
     <dt class="property-optional"
             title="Optional">
-        <span>sku</span>
+        <span id="state_sku_python">
+<a href="#state_sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1597,7 +1843,9 @@ authorization rule `RootManageSharedAccessKey`, which is generated when disaster
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_python">
+<a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -1639,7 +1887,9 @@ authorization rule `RootManageSharedAccessKey`, which is generated when disaster
 
     <dt class="property-required"
             title="Required">
-        <span>Default<wbr>Action</span>
+        <span id="defaultaction_csharp">
+<a href="#defaultaction_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1648,7 +1898,9 @@ authorization rule `RootManageSharedAccessKey`, which is generated when disaster
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ip<wbr>Rules</span>
+        <span id="iprules_csharp">
+<a href="#iprules_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventhubnamespacenetworkrulesetsiprule">List&lt;Event<wbr>Hub<wbr>Namespace<wbr>Network<wbr>Rulesets<wbr>Ip<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
@@ -1657,7 +1909,9 @@ authorization rule `RootManageSharedAccessKey`, which is generated when disaster
 
     <dt class="property-optional"
             title="Optional">
-        <span>Virtual<wbr>Network<wbr>Rules</span>
+        <span id="virtualnetworkrules_csharp">
+<a href="#virtualnetworkrules_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventhubnamespacenetworkrulesetsvirtualnetworkrule">List&lt;Event<wbr>Hub<wbr>Namespace<wbr>Network<wbr>Rulesets<wbr>Virtual<wbr>Network<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
@@ -1673,7 +1927,9 @@ authorization rule `RootManageSharedAccessKey`, which is generated when disaster
 
     <dt class="property-required"
             title="Required">
-        <span>Default<wbr>Action</span>
+        <span id="defaultaction_go">
+<a href="#defaultaction_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1682,7 +1938,9 @@ authorization rule `RootManageSharedAccessKey`, which is generated when disaster
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ip<wbr>Rules</span>
+        <span id="iprules_go">
+<a href="#iprules_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventhubnamespacenetworkrulesetsiprule">[]Event<wbr>Hub<wbr>Namespace<wbr>Network<wbr>Rulesets<wbr>Ip<wbr>Rule</a></span>
     </dt>
@@ -1691,7 +1949,9 @@ authorization rule `RootManageSharedAccessKey`, which is generated when disaster
 
     <dt class="property-optional"
             title="Optional">
-        <span>Virtual<wbr>Network<wbr>Rules</span>
+        <span id="virtualnetworkrules_go">
+<a href="#virtualnetworkrules_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventhubnamespacenetworkrulesetsvirtualnetworkrule">[]Event<wbr>Hub<wbr>Namespace<wbr>Network<wbr>Rulesets<wbr>Virtual<wbr>Network<wbr>Rule</a></span>
     </dt>
@@ -1707,7 +1967,9 @@ authorization rule `RootManageSharedAccessKey`, which is generated when disaster
 
     <dt class="property-required"
             title="Required">
-        <span>default<wbr>Action</span>
+        <span id="defaultaction_nodejs">
+<a href="#defaultaction_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1716,7 +1978,9 @@ authorization rule `RootManageSharedAccessKey`, which is generated when disaster
 
     <dt class="property-optional"
             title="Optional">
-        <span>ip<wbr>Rules</span>
+        <span id="iprules_nodejs">
+<a href="#iprules_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventhubnamespacenetworkrulesetsiprule">Event<wbr>Hub<wbr>Namespace<wbr>Network<wbr>Rulesets<wbr>Ip<wbr>Rule[]</a></span>
     </dt>
@@ -1725,7 +1989,9 @@ authorization rule `RootManageSharedAccessKey`, which is generated when disaster
 
     <dt class="property-optional"
             title="Optional">
-        <span>virtual<wbr>Network<wbr>Rules</span>
+        <span id="virtualnetworkrules_nodejs">
+<a href="#virtualnetworkrules_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventhubnamespacenetworkrulesetsvirtualnetworkrule">Event<wbr>Hub<wbr>Namespace<wbr>Network<wbr>Rulesets<wbr>Virtual<wbr>Network<wbr>Rule[]</a></span>
     </dt>
@@ -1741,7 +2007,9 @@ authorization rule `RootManageSharedAccessKey`, which is generated when disaster
 
     <dt class="property-required"
             title="Required">
-        <span>default_<wbr>action</span>
+        <span id="default_action_python">
+<a href="#default_action_python" style="color: inherit; text-decoration: inherit;">default_<wbr>action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1750,7 +2018,9 @@ authorization rule `RootManageSharedAccessKey`, which is generated when disaster
 
     <dt class="property-optional"
             title="Optional">
-        <span>ip_<wbr>rules</span>
+        <span id="ip_rules_python">
+<a href="#ip_rules_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventhubnamespacenetworkrulesetsiprule">List[Event<wbr>Hub<wbr>Namespace<wbr>Network<wbr>Rulesets<wbr>Ip<wbr>Rule]</a></span>
     </dt>
@@ -1759,7 +2029,9 @@ authorization rule `RootManageSharedAccessKey`, which is generated when disaster
 
     <dt class="property-optional"
             title="Optional">
-        <span>virtual_<wbr>network_<wbr>rules</span>
+        <span id="virtual_network_rules_python">
+<a href="#virtual_network_rules_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventhubnamespacenetworkrulesetsvirtualnetworkrule">List[Event<wbr>Hub<wbr>Namespace<wbr>Network<wbr>Rulesets<wbr>Virtual<wbr>Network<wbr>Rule]</a></span>
     </dt>
@@ -1793,7 +2065,9 @@ authorization rule `RootManageSharedAccessKey`, which is generated when disaster
 
     <dt class="property-required"
             title="Required">
-        <span>Ip<wbr>Mask</span>
+        <span id="ipmask_csharp">
+<a href="#ipmask_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Mask</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1802,7 +2076,9 @@ authorization rule `RootManageSharedAccessKey`, which is generated when disaster
 
     <dt class="property-optional"
             title="Optional">
-        <span>Action</span>
+        <span id="action_csharp">
+<a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1818,7 +2094,9 @@ authorization rule `RootManageSharedAccessKey`, which is generated when disaster
 
     <dt class="property-required"
             title="Required">
-        <span>Ip<wbr>Mask</span>
+        <span id="ipmask_go">
+<a href="#ipmask_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Mask</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1827,7 +2105,9 @@ authorization rule `RootManageSharedAccessKey`, which is generated when disaster
 
     <dt class="property-optional"
             title="Optional">
-        <span>Action</span>
+        <span id="action_go">
+<a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1843,7 +2123,9 @@ authorization rule `RootManageSharedAccessKey`, which is generated when disaster
 
     <dt class="property-required"
             title="Required">
-        <span>ip<wbr>Mask</span>
+        <span id="ipmask_nodejs">
+<a href="#ipmask_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Mask</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1852,7 +2134,9 @@ authorization rule `RootManageSharedAccessKey`, which is generated when disaster
 
     <dt class="property-optional"
             title="Optional">
-        <span>action</span>
+        <span id="action_nodejs">
+<a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1868,7 +2152,9 @@ authorization rule `RootManageSharedAccessKey`, which is generated when disaster
 
     <dt class="property-required"
             title="Required">
-        <span>ip<wbr>Mask</span>
+        <span id="ipmask_python">
+<a href="#ipmask_python" style="color: inherit; text-decoration: inherit;">ip<wbr>Mask</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1877,7 +2163,9 @@ authorization rule `RootManageSharedAccessKey`, which is generated when disaster
 
     <dt class="property-optional"
             title="Optional">
-        <span>action</span>
+        <span id="action_python">
+<a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1911,7 +2199,9 @@ authorization rule `RootManageSharedAccessKey`, which is generated when disaster
 
     <dt class="property-required"
             title="Required">
-        <span>Subnet<wbr>Id</span>
+        <span id="subnetid_csharp">
+<a href="#subnetid_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1920,7 +2210,9 @@ authorization rule `RootManageSharedAccessKey`, which is generated when disaster
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ignore<wbr>Missing<wbr>Virtual<wbr>Network<wbr>Service<wbr>Endpoint</span>
+        <span id="ignoremissingvirtualnetworkserviceendpoint_csharp">
+<a href="#ignoremissingvirtualnetworkserviceendpoint_csharp" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Missing<wbr>Virtual<wbr>Network<wbr>Service<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1936,7 +2228,9 @@ authorization rule `RootManageSharedAccessKey`, which is generated when disaster
 
     <dt class="property-required"
             title="Required">
-        <span>Subnet<wbr>Id</span>
+        <span id="subnetid_go">
+<a href="#subnetid_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1945,7 +2239,9 @@ authorization rule `RootManageSharedAccessKey`, which is generated when disaster
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ignore<wbr>Missing<wbr>Virtual<wbr>Network<wbr>Service<wbr>Endpoint</span>
+        <span id="ignoremissingvirtualnetworkserviceendpoint_go">
+<a href="#ignoremissingvirtualnetworkserviceendpoint_go" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Missing<wbr>Virtual<wbr>Network<wbr>Service<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1961,7 +2257,9 @@ authorization rule `RootManageSharedAccessKey`, which is generated when disaster
 
     <dt class="property-required"
             title="Required">
-        <span>subnet<wbr>Id</span>
+        <span id="subnetid_nodejs">
+<a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1970,7 +2268,9 @@ authorization rule `RootManageSharedAccessKey`, which is generated when disaster
 
     <dt class="property-optional"
             title="Optional">
-        <span>ignore<wbr>Missing<wbr>Virtual<wbr>Network<wbr>Service<wbr>Endpoint</span>
+        <span id="ignoremissingvirtualnetworkserviceendpoint_nodejs">
+<a href="#ignoremissingvirtualnetworkserviceendpoint_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Missing<wbr>Virtual<wbr>Network<wbr>Service<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1986,7 +2286,9 @@ authorization rule `RootManageSharedAccessKey`, which is generated when disaster
 
     <dt class="property-required"
             title="Required">
-        <span>subnet_<wbr>id</span>
+        <span id="subnet_id_python">
+<a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1995,7 +2297,9 @@ authorization rule `RootManageSharedAccessKey`, which is generated when disaster
 
     <dt class="property-optional"
             title="Optional">
-        <span>ignore<wbr>Missing<wbr>Virtual<wbr>Network<wbr>Service<wbr>Endpoint</span>
+        <span id="ignoremissingvirtualnetworkserviceendpoint_python">
+<a href="#ignoremissingvirtualnetworkserviceendpoint_python" style="color: inherit; text-decoration: inherit;">ignore<wbr>Missing<wbr>Virtual<wbr>Network<wbr>Service<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>

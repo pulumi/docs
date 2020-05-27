@@ -20,6 +20,23 @@ anything, please consult the source <a class="reference external" href="https://
 <blockquote>
 <div><p><strong>NOTE</strong> When managing integrations you’ll need to use an admin token to authenticate the SignalFx provider. Otherwise you’ll receive a 4xx error.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_signalfx</span> <span class="k">as</span> <span class="nn">signalfx</span>
+
+<span class="n">jira_myteam_xx</span> <span class="o">=</span> <span class="n">signalfx</span><span class="o">.</span><span class="n">jira</span><span class="o">.</span><span class="n">Integration</span><span class="p">(</span><span class="s2">&quot;jiraMyteamXX&quot;</span><span class="p">,</span>
+    <span class="n">api_token</span><span class="o">=</span><span class="s2">&quot;abc123&quot;</span><span class="p">,</span>
+    <span class="n">assignee_display_name</span><span class="o">=</span><span class="s2">&quot;Testy Testerson&quot;</span><span class="p">,</span>
+    <span class="n">assignee_name</span><span class="o">=</span><span class="s2">&quot;testytesterson&quot;</span><span class="p">,</span>
+    <span class="n">auth_method</span><span class="o">=</span><span class="s2">&quot;EmailAndToken&quot;</span><span class="p">,</span>
+    <span class="n">base_url</span><span class="o">=</span><span class="s2">&quot;https://www.example.com&quot;</span><span class="p">,</span>
+    <span class="n">enabled</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">issue_type</span><span class="o">=</span><span class="s2">&quot;Story&quot;</span><span class="p">,</span>
+    <span class="n">password</span><span class="o">=</span><span class="s2">&quot;paasword&quot;</span><span class="p">,</span>
+    <span class="n">project_key</span><span class="o">=</span><span class="s2">&quot;TEST&quot;</span><span class="p">,</span>
+    <span class="n">user_email</span><span class="o">=</span><span class="s2">&quot;yoosername@example.com&quot;</span><span class="p">,</span>
+    <span class="n">username</span><span class="o">=</span><span class="s2">&quot;yoosername&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

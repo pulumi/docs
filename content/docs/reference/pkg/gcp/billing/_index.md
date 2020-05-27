@@ -26,6 +26,24 @@ Explore the resources and functions of the billing module in the GCP package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
 	<dt>Version</dt>
-	<dd>3.4.0</dd>
+	<dd>3.7.0</dd>
+</dl>
+
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Billing.html" title="Pulumi.Gcp.Billing">Pulumi.Gcp.Billing</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/billing?tab=doc#" title="gcp/billing">gcp/billing</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/gcp/billing/#" title="@pulumi/gcp/billing">@pulumi/gcp/billing</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_gcp/billing" title="pulumi_gcp/billing">pulumi_gcp/billing</a></dd>
+
 </dl>
 

@@ -72,3 +72,21 @@ A Pulumi package for creating and managing Aiven cloud resources.
 	<dd>2.1.1</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.html" title="Pulumi.Aiven">Pulumi.Aiven</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#" title="aiven">aiven</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aiven/#" title="@pulumi/aiven">@pulumi/aiven</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_aiven" title="pulumi_aiven">pulumi_aiven</a></dd>
+
+</dl>
+

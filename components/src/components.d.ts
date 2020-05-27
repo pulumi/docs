@@ -37,6 +37,7 @@ export namespace Components {
   interface PulumiExample {}
   interface PulumiExamples {}
   interface PulumiRoot {}
+  interface PulumiTopButton {}
 }
 
 declare global {
@@ -71,12 +72,19 @@ declare global {
     prototype: HTMLPulumiRootElement;
     new (): HTMLPulumiRootElement;
   };
+
+  interface HTMLPulumiTopButtonElement extends Components.PulumiTopButton, HTMLStencilElement {}
+  var HTMLPulumiTopButtonElement: {
+    prototype: HTMLPulumiTopButtonElement;
+    new (): HTMLPulumiTopButtonElement;
+  };
   interface HTMLElementTagNameMap {
     'pulumi-choosable': HTMLPulumiChoosableElement;
     'pulumi-chooser': HTMLPulumiChooserElement;
     'pulumi-example': HTMLPulumiExampleElement;
     'pulumi-examples': HTMLPulumiExamplesElement;
     'pulumi-root': HTMLPulumiRootElement;
+    'pulumi-top-button': HTMLPulumiTopButtonElement;
   }
 }
 
@@ -100,6 +108,7 @@ declare namespace LocalJSX {
   interface PulumiRoot {
     'onRendered'?: (event: CustomEvent<any>) => void;
   }
+  interface PulumiTopButton {}
 
   interface IntrinsicElements {
     'pulumi-choosable': PulumiChoosable;
@@ -107,6 +116,7 @@ declare namespace LocalJSX {
     'pulumi-example': PulumiExample;
     'pulumi-examples': PulumiExamples;
     'pulumi-root': PulumiRoot;
+    'pulumi-top-button': PulumiTopButton;
   }
 }
 
@@ -121,6 +131,7 @@ declare module "@stencil/core" {
       'pulumi-example': LocalJSX.PulumiExample & JSXBase.HTMLAttributes<HTMLPulumiExampleElement>;
       'pulumi-examples': LocalJSX.PulumiExamples & JSXBase.HTMLAttributes<HTMLPulumiExamplesElement>;
       'pulumi-root': LocalJSX.PulumiRoot & JSXBase.HTMLAttributes<HTMLPulumiRootElement>;
+      'pulumi-top-button': LocalJSX.PulumiTopButton & JSXBase.HTMLAttributes<HTMLPulumiTopButtonElement>;
     }
   }
 }

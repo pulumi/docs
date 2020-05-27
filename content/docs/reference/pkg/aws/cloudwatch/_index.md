@@ -39,6 +39,24 @@ Explore the resources and functions of the cloudwatch module in the AWS package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>2.4.0</dd>
+	<dd>2.6.0</dd>
+</dl>
+
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudWatch.html" title="Pulumi.Aws.CloudWatch">Pulumi.Aws.CloudWatch</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudwatch?tab=doc#" title="aws/cloudwatch">aws/cloudwatch</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/cloudwatch/#" title="@pulumi/aws/cloudwatch">@pulumi/aws/cloudwatch</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_aws/cloudwatch" title="pulumi_aws/cloudwatch">pulumi_aws/cloudwatch</a></dd>
+
 </dl>
 

@@ -21,6 +21,32 @@ anything, please consult the source <a class="reference external" href="https://
 </div></blockquote>
 <p><a class="reference external" href="https://cloud.google.com/iot/docs/">the official documentation</a> and
 <a class="reference external" href="https://cloud.google.com/iot/docs/reference/cloudiot/rest/v1/projects.locations.registries">API</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">default_devicestatus</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">pubsub</span><span class="o">.</span><span class="n">Topic</span><span class="p">(</span><span class="s2">&quot;default-devicestatus&quot;</span><span class="p">)</span>
+<span class="n">default_telemetry</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">pubsub</span><span class="o">.</span><span class="n">Topic</span><span class="p">(</span><span class="s2">&quot;default-telemetry&quot;</span><span class="p">)</span>
+<span class="n">default_registry</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">iot</span><span class="o">.</span><span class="n">Registry</span><span class="p">(</span><span class="s2">&quot;default-registry&quot;</span><span class="p">,</span>
+    <span class="n">event_notification_configs</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;pubsub_topic_name&quot;</span><span class="p">:</span> <span class="n">default_telemetry</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">state_notification_config</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;pubsub_topic_name&quot;</span><span class="p">:</span> <span class="n">default_devicestatus</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">http_config</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;http_enabled_state&quot;</span><span class="p">:</span> <span class="s2">&quot;HTTP_ENABLED&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">mqtt_config</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;mqtt_enabled_state&quot;</span><span class="p">:</span> <span class="s2">&quot;MQTT_ENABLED&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">credentials</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;publicKeyCertificate&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;format&quot;</span><span class="p">:</span> <span class="s2">&quot;X509_CERTIFICATE_PEM&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;certificate&quot;</span><span class="p">:</span> <span class="p">(</span><span class="k">lambda</span> <span class="n">path</span><span class="p">:</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())(</span><span class="s2">&quot;rsa_cert.pem&quot;</span><span class="p">),</span>
+        <span class="p">},</span>
+    <span class="p">}])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

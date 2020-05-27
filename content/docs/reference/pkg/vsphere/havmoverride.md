@@ -132,7 +132,7 @@ const haVmOverride = new vsphere.HaVmOverride("ha_vm_override", {
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.Vsphere.HaVmOverride.html">HaVmOverride</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.VSphere.HaVmOverrideArgs.html">HaVmOverrideArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.HaVmOverride.html">HaVmOverride</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.HaVmOverrideArgs.html">HaVmOverrideArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -261,7 +261,7 @@ const haVmOverride = new vsphere.HaVmOverride("ha_vm_override", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.VSphere.HaVmOverrideArgs.html">HaVmOverrideArgs</a></span>
+        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.HaVmOverrideArgs.html">HaVmOverrideArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -302,8 +302,8 @@ The HaVmOverride resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object reference
-ID][docs-about-morefs] of the cluster to put the override in.  Forces a new
+    <dd>{{% md %}}The managed object reference
+ID of the cluster to put the override in.  Forces a new
 resource if changed.
 {{% /md %}}</dd>
 
@@ -327,7 +327,6 @@ the override for.  Forces a new resource if changed.
 on this virtual machine if an APD status on an affected datastore clears in
 the middle of an APD event. Can be one of `useClusterDefault`, `none` or
 `reset`.  Default: `useClusterDefault`.
-<sup>[\*][tf-vsphere-cluster-resource-version-restrictions]</sup>
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -340,7 +339,6 @@ the middle of an APD event. Can be one of `useClusterDefault`, `none` or
 virtual machine when the cluster has detected loss to all paths to a relevant
 datastore. Can be one of `clusterDefault`, `disabled`, `warning`,
 `restartConservative`, or `restartAggressive`.  Default: `clusterDefault`.
-<sup>[\*][tf-vsphere-cluster-resource-version-restrictions]</sup>
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -353,7 +351,6 @@ datastore. Can be one of `clusterDefault`, `disabled`, `warning`,
 to wait after an APD timeout event to execute the response action defined in
 `ha_datastore_apd_response`. Use `-1` to use
 the cluster default. Default: `-1`.
-<sup>[\*][tf-vsphere-cluster-resource-version-restrictions]</sup>
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -366,7 +363,6 @@ the cluster default. Default: `-1`.
 virtual machine when the cluster has detected a permanent device loss to a
 relevant datastore. Can be one of `clusterDefault`, `disabled`, `warning`, or
 `restartAggressive`. Default: `clusterDefault`.
-<sup>[\*][tf-vsphere-cluster-resource-version-restrictions]</sup>
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -472,7 +468,6 @@ Default: `clusterRestartPriority`.
     <dd>{{% md %}}The maximum time, in seconds, that
 vSphere HA will wait for this virtual machine to be ready. Use `-1` to
 specify the cluster default.  Default: `-1`.
-<sup>[\*][tf-vsphere-cluster-resource-version-restrictions]</sup>
 {{% /md %}}</dd>
 
 </dl>
@@ -488,8 +483,8 @@ specify the cluster default.  Default: `-1`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object reference
-ID][docs-about-morefs] of the cluster to put the override in.  Forces a new
+    <dd>{{% md %}}The managed object reference
+ID of the cluster to put the override in.  Forces a new
 resource if changed.
 {{% /md %}}</dd>
 
@@ -513,7 +508,6 @@ the override for.  Forces a new resource if changed.
 on this virtual machine if an APD status on an affected datastore clears in
 the middle of an APD event. Can be one of `useClusterDefault`, `none` or
 `reset`.  Default: `useClusterDefault`.
-<sup>[\*][tf-vsphere-cluster-resource-version-restrictions]</sup>
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -526,7 +520,6 @@ the middle of an APD event. Can be one of `useClusterDefault`, `none` or
 virtual machine when the cluster has detected loss to all paths to a relevant
 datastore. Can be one of `clusterDefault`, `disabled`, `warning`,
 `restartConservative`, or `restartAggressive`.  Default: `clusterDefault`.
-<sup>[\*][tf-vsphere-cluster-resource-version-restrictions]</sup>
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -539,7 +532,6 @@ datastore. Can be one of `clusterDefault`, `disabled`, `warning`,
 to wait after an APD timeout event to execute the response action defined in
 `ha_datastore_apd_response`. Use `-1` to use
 the cluster default. Default: `-1`.
-<sup>[\*][tf-vsphere-cluster-resource-version-restrictions]</sup>
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -552,7 +544,6 @@ the cluster default. Default: `-1`.
 virtual machine when the cluster has detected a permanent device loss to a
 relevant datastore. Can be one of `clusterDefault`, `disabled`, `warning`, or
 `restartAggressive`. Default: `clusterDefault`.
-<sup>[\*][tf-vsphere-cluster-resource-version-restrictions]</sup>
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -658,7 +649,6 @@ Default: `clusterRestartPriority`.
     <dd>{{% md %}}The maximum time, in seconds, that
 vSphere HA will wait for this virtual machine to be ready. Use `-1` to
 specify the cluster default.  Default: `-1`.
-<sup>[\*][tf-vsphere-cluster-resource-version-restrictions]</sup>
 {{% /md %}}</dd>
 
 </dl>
@@ -674,8 +664,8 @@ specify the cluster default.  Default: `-1`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object reference
-ID][docs-about-morefs] of the cluster to put the override in.  Forces a new
+    <dd>{{% md %}}The managed object reference
+ID of the cluster to put the override in.  Forces a new
 resource if changed.
 {{% /md %}}</dd>
 
@@ -699,7 +689,6 @@ the override for.  Forces a new resource if changed.
 on this virtual machine if an APD status on an affected datastore clears in
 the middle of an APD event. Can be one of `useClusterDefault`, `none` or
 `reset`.  Default: `useClusterDefault`.
-<sup>[\*][tf-vsphere-cluster-resource-version-restrictions]</sup>
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -712,7 +701,6 @@ the middle of an APD event. Can be one of `useClusterDefault`, `none` or
 virtual machine when the cluster has detected loss to all paths to a relevant
 datastore. Can be one of `clusterDefault`, `disabled`, `warning`,
 `restartConservative`, or `restartAggressive`.  Default: `clusterDefault`.
-<sup>[\*][tf-vsphere-cluster-resource-version-restrictions]</sup>
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -725,7 +713,6 @@ datastore. Can be one of `clusterDefault`, `disabled`, `warning`,
 to wait after an APD timeout event to execute the response action defined in
 `ha_datastore_apd_response`. Use `-1` to use
 the cluster default. Default: `-1`.
-<sup>[\*][tf-vsphere-cluster-resource-version-restrictions]</sup>
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -738,7 +725,6 @@ the cluster default. Default: `-1`.
 virtual machine when the cluster has detected a permanent device loss to a
 relevant datastore. Can be one of `clusterDefault`, `disabled`, `warning`, or
 `restartAggressive`. Default: `clusterDefault`.
-<sup>[\*][tf-vsphere-cluster-resource-version-restrictions]</sup>
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -844,7 +830,6 @@ Default: `clusterRestartPriority`.
     <dd>{{% md %}}The maximum time, in seconds, that
 vSphere HA will wait for this virtual machine to be ready. Use `-1` to
 specify the cluster default.  Default: `-1`.
-<sup>[\*][tf-vsphere-cluster-resource-version-restrictions]</sup>
 {{% /md %}}</dd>
 
 </dl>
@@ -860,8 +845,8 @@ specify the cluster default.  Default: `-1`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object reference
-ID][docs-about-morefs] of the cluster to put the override in.  Forces a new
+    <dd>{{% md %}}The managed object reference
+ID of the cluster to put the override in.  Forces a new
 resource if changed.
 {{% /md %}}</dd>
 
@@ -885,7 +870,6 @@ the override for.  Forces a new resource if changed.
 on this virtual machine if an APD status on an affected datastore clears in
 the middle of an APD event. Can be one of `useClusterDefault`, `none` or
 `reset`.  Default: `useClusterDefault`.
-<sup>[\*][tf-vsphere-cluster-resource-version-restrictions]</sup>
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -898,7 +882,6 @@ the middle of an APD event. Can be one of `useClusterDefault`, `none` or
 virtual machine when the cluster has detected loss to all paths to a relevant
 datastore. Can be one of `clusterDefault`, `disabled`, `warning`,
 `restartConservative`, or `restartAggressive`.  Default: `clusterDefault`.
-<sup>[\*][tf-vsphere-cluster-resource-version-restrictions]</sup>
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -911,7 +894,6 @@ datastore. Can be one of `clusterDefault`, `disabled`, `warning`,
 to wait after an APD timeout event to execute the response action defined in
 `ha_datastore_apd_response`. Use `-1` to use
 the cluster default. Default: `-1`.
-<sup>[\*][tf-vsphere-cluster-resource-version-restrictions]</sup>
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -924,7 +906,6 @@ the cluster default. Default: `-1`.
 virtual machine when the cluster has detected a permanent device loss to a
 relevant datastore. Can be one of `clusterDefault`, `disabled`, `warning`, or
 `restartAggressive`. Default: `clusterDefault`.
-<sup>[\*][tf-vsphere-cluster-resource-version-restrictions]</sup>
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1030,7 +1011,6 @@ Default: `clusterRestartPriority`.
     <dd>{{% md %}}The maximum time, in seconds, that
 vSphere HA will wait for this virtual machine to be ready. Use `-1` to
 specify the cluster default.  Default: `-1`.
-<sup>[\*][tf-vsphere-cluster-resource-version-restrictions]</sup>
 {{% /md %}}</dd>
 
 </dl>
@@ -1131,7 +1111,7 @@ Get an existing HaVmOverride resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.Vsphere.HaVmOverride.html">HaVmOverride</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.Vsphere..HaVmOverrideState.html">HaVmOverrideState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.HaVmOverride.html">HaVmOverride</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere..HaVmOverrideState.html">HaVmOverrideState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1243,8 +1223,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object reference
-ID][docs-about-morefs] of the cluster to put the override in.  Forces a new
+    <dd>{{% md %}}The managed object reference
+ID of the cluster to put the override in.  Forces a new
 resource if changed.
 {{% /md %}}</dd>
 
@@ -1258,7 +1238,6 @@ resource if changed.
 on this virtual machine if an APD status on an affected datastore clears in
 the middle of an APD event. Can be one of `useClusterDefault`, `none` or
 `reset`.  Default: `useClusterDefault`.
-<sup>[\*][tf-vsphere-cluster-resource-version-restrictions]</sup>
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1271,7 +1250,6 @@ the middle of an APD event. Can be one of `useClusterDefault`, `none` or
 virtual machine when the cluster has detected loss to all paths to a relevant
 datastore. Can be one of `clusterDefault`, `disabled`, `warning`,
 `restartConservative`, or `restartAggressive`.  Default: `clusterDefault`.
-<sup>[\*][tf-vsphere-cluster-resource-version-restrictions]</sup>
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1284,7 +1262,6 @@ datastore. Can be one of `clusterDefault`, `disabled`, `warning`,
 to wait after an APD timeout event to execute the response action defined in
 `ha_datastore_apd_response`. Use `-1` to use
 the cluster default. Default: `-1`.
-<sup>[\*][tf-vsphere-cluster-resource-version-restrictions]</sup>
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1297,7 +1274,6 @@ the cluster default. Default: `-1`.
 virtual machine when the cluster has detected a permanent device loss to a
 relevant datastore. Can be one of `clusterDefault`, `disabled`, `warning`, or
 `restartAggressive`. Default: `clusterDefault`.
-<sup>[\*][tf-vsphere-cluster-resource-version-restrictions]</sup>
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1403,7 +1379,6 @@ Default: `clusterRestartPriority`.
     <dd>{{% md %}}The maximum time, in seconds, that
 vSphere HA will wait for this virtual machine to be ready. Use `-1` to
 specify the cluster default.  Default: `-1`.
-<sup>[\*][tf-vsphere-cluster-resource-version-restrictions]</sup>
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1429,8 +1404,8 @@ the override for.  Forces a new resource if changed.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object reference
-ID][docs-about-morefs] of the cluster to put the override in.  Forces a new
+    <dd>{{% md %}}The managed object reference
+ID of the cluster to put the override in.  Forces a new
 resource if changed.
 {{% /md %}}</dd>
 
@@ -1444,7 +1419,6 @@ resource if changed.
 on this virtual machine if an APD status on an affected datastore clears in
 the middle of an APD event. Can be one of `useClusterDefault`, `none` or
 `reset`.  Default: `useClusterDefault`.
-<sup>[\*][tf-vsphere-cluster-resource-version-restrictions]</sup>
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1457,7 +1431,6 @@ the middle of an APD event. Can be one of `useClusterDefault`, `none` or
 virtual machine when the cluster has detected loss to all paths to a relevant
 datastore. Can be one of `clusterDefault`, `disabled`, `warning`,
 `restartConservative`, or `restartAggressive`.  Default: `clusterDefault`.
-<sup>[\*][tf-vsphere-cluster-resource-version-restrictions]</sup>
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1470,7 +1443,6 @@ datastore. Can be one of `clusterDefault`, `disabled`, `warning`,
 to wait after an APD timeout event to execute the response action defined in
 `ha_datastore_apd_response`. Use `-1` to use
 the cluster default. Default: `-1`.
-<sup>[\*][tf-vsphere-cluster-resource-version-restrictions]</sup>
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1483,7 +1455,6 @@ the cluster default. Default: `-1`.
 virtual machine when the cluster has detected a permanent device loss to a
 relevant datastore. Can be one of `clusterDefault`, `disabled`, `warning`, or
 `restartAggressive`. Default: `clusterDefault`.
-<sup>[\*][tf-vsphere-cluster-resource-version-restrictions]</sup>
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1589,7 +1560,6 @@ Default: `clusterRestartPriority`.
     <dd>{{% md %}}The maximum time, in seconds, that
 vSphere HA will wait for this virtual machine to be ready. Use `-1` to
 specify the cluster default.  Default: `-1`.
-<sup>[\*][tf-vsphere-cluster-resource-version-restrictions]</sup>
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1615,8 +1585,8 @@ the override for.  Forces a new resource if changed.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object reference
-ID][docs-about-morefs] of the cluster to put the override in.  Forces a new
+    <dd>{{% md %}}The managed object reference
+ID of the cluster to put the override in.  Forces a new
 resource if changed.
 {{% /md %}}</dd>
 
@@ -1630,7 +1600,6 @@ resource if changed.
 on this virtual machine if an APD status on an affected datastore clears in
 the middle of an APD event. Can be one of `useClusterDefault`, `none` or
 `reset`.  Default: `useClusterDefault`.
-<sup>[\*][tf-vsphere-cluster-resource-version-restrictions]</sup>
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1643,7 +1612,6 @@ the middle of an APD event. Can be one of `useClusterDefault`, `none` or
 virtual machine when the cluster has detected loss to all paths to a relevant
 datastore. Can be one of `clusterDefault`, `disabled`, `warning`,
 `restartConservative`, or `restartAggressive`.  Default: `clusterDefault`.
-<sup>[\*][tf-vsphere-cluster-resource-version-restrictions]</sup>
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1656,7 +1624,6 @@ datastore. Can be one of `clusterDefault`, `disabled`, `warning`,
 to wait after an APD timeout event to execute the response action defined in
 `ha_datastore_apd_response`. Use `-1` to use
 the cluster default. Default: `-1`.
-<sup>[\*][tf-vsphere-cluster-resource-version-restrictions]</sup>
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1669,7 +1636,6 @@ the cluster default. Default: `-1`.
 virtual machine when the cluster has detected a permanent device loss to a
 relevant datastore. Can be one of `clusterDefault`, `disabled`, `warning`, or
 `restartAggressive`. Default: `clusterDefault`.
-<sup>[\*][tf-vsphere-cluster-resource-version-restrictions]</sup>
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1775,7 +1741,6 @@ Default: `clusterRestartPriority`.
     <dd>{{% md %}}The maximum time, in seconds, that
 vSphere HA will wait for this virtual machine to be ready. Use `-1` to
 specify the cluster default.  Default: `-1`.
-<sup>[\*][tf-vsphere-cluster-resource-version-restrictions]</sup>
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1801,8 +1766,8 @@ the override for.  Forces a new resource if changed.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object reference
-ID][docs-about-morefs] of the cluster to put the override in.  Forces a new
+    <dd>{{% md %}}The managed object reference
+ID of the cluster to put the override in.  Forces a new
 resource if changed.
 {{% /md %}}</dd>
 
@@ -1816,7 +1781,6 @@ resource if changed.
 on this virtual machine if an APD status on an affected datastore clears in
 the middle of an APD event. Can be one of `useClusterDefault`, `none` or
 `reset`.  Default: `useClusterDefault`.
-<sup>[\*][tf-vsphere-cluster-resource-version-restrictions]</sup>
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1829,7 +1793,6 @@ the middle of an APD event. Can be one of `useClusterDefault`, `none` or
 virtual machine when the cluster has detected loss to all paths to a relevant
 datastore. Can be one of `clusterDefault`, `disabled`, `warning`,
 `restartConservative`, or `restartAggressive`.  Default: `clusterDefault`.
-<sup>[\*][tf-vsphere-cluster-resource-version-restrictions]</sup>
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1842,7 +1805,6 @@ datastore. Can be one of `clusterDefault`, `disabled`, `warning`,
 to wait after an APD timeout event to execute the response action defined in
 `ha_datastore_apd_response`. Use `-1` to use
 the cluster default. Default: `-1`.
-<sup>[\*][tf-vsphere-cluster-resource-version-restrictions]</sup>
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1855,7 +1817,6 @@ the cluster default. Default: `-1`.
 virtual machine when the cluster has detected a permanent device loss to a
 relevant datastore. Can be one of `clusterDefault`, `disabled`, `warning`, or
 `restartAggressive`. Default: `clusterDefault`.
-<sup>[\*][tf-vsphere-cluster-resource-version-restrictions]</sup>
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1961,7 +1922,6 @@ Default: `clusterRestartPriority`.
     <dd>{{% md %}}The maximum time, in seconds, that
 vSphere HA will wait for this virtual machine to be ready. Use `-1` to
 specify the cluster default.  Default: `-1`.
-<sup>[\*][tf-vsphere-cluster-resource-version-restrictions]</sup>
 {{% /md %}}</dd>
 
     <dt class="property-optional"

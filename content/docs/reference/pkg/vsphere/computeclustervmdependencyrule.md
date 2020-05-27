@@ -12,19 +12,14 @@ meta_desc: "Explore the ComputeClusterVmDependencyRule resource of the vSphere p
 
 The `vsphere..ComputeClusterVmDependencyRule` resource can be used to manage
 VM dependency rules in a cluster, either created by the
-[`vsphere..ComputeCluster`][tf-vsphere-cluster-resource] resource or looked up
-by the [`vsphere..ComputeCluster`][tf-vsphere-cluster-data-source] data source.
-
-[tf-vsphere-cluster-resource]: /docs/providers/vsphere/r/compute_cluster.html
-[tf-vsphere-cluster-data-source]: /docs/providers/vsphere/d/compute_cluster.html
+`vsphere..ComputeCluster` resource or looked up
+by the `vsphere..ComputeCluster` data source.
 
 A virtual machine dependency rule applies to vSphere HA, and allows
 user-defined startup orders for virtual machines in the case of host failure.
 Virtual machines are supplied via groups, which can be managed via the
-[`vsphere..ComputeClusterVmGroup`][tf-vsphere-cluster-vm-group-resource]
+`vsphere..ComputeClusterVmGroup`
 resource.
-
-[tf-vsphere-cluster-vm-group-resource]: /docs/providers/vsphere/r/compute_cluster_vm_group.html
 
 > **NOTE:** This resource requires vCenter and is not available on direct ESXi
 connections.
@@ -179,7 +174,7 @@ const clusterVmDependencyRule = new vsphere.ComputeClusterVmDependencyRule("clus
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.Vsphere.ComputeClusterVmDependencyRule.html">ComputeClusterVmDependencyRule</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.VSphere.ComputeClusterVmDependencyRuleArgs.html">ComputeClusterVmDependencyRuleArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.ComputeClusterVmDependencyRule.html">ComputeClusterVmDependencyRule</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.ComputeClusterVmDependencyRuleArgs.html">ComputeClusterVmDependencyRuleArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -308,7 +303,7 @@ const clusterVmDependencyRule = new vsphere.ComputeClusterVmDependencyRule("clus
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.VSphere.ComputeClusterVmDependencyRuleArgs.html">ComputeClusterVmDependencyRuleArgs</a></span>
+        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.ComputeClusterVmDependencyRuleArgs.html">ComputeClusterVmDependencyRuleArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -349,8 +344,8 @@ The ComputeClusterVmDependencyRule resource accepts the following [input]({{< re
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object reference
-ID][docs-about-morefs] of the cluster to put the group in.  Forces a new
+    <dd>{{% md %}}The managed object reference
+ID of the cluster to put the group in.  Forces a new
 resource if changed.
 {{% /md %}}</dd>
 
@@ -420,8 +415,8 @@ cluster.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object reference
-ID][docs-about-morefs] of the cluster to put the group in.  Forces a new
+    <dd>{{% md %}}The managed object reference
+ID of the cluster to put the group in.  Forces a new
 resource if changed.
 {{% /md %}}</dd>
 
@@ -491,8 +486,8 @@ cluster.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object reference
-ID][docs-about-morefs] of the cluster to put the group in.  Forces a new
+    <dd>{{% md %}}The managed object reference
+ID of the cluster to put the group in.  Forces a new
 resource if changed.
 {{% /md %}}</dd>
 
@@ -562,8 +557,8 @@ cluster.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object reference
-ID][docs-about-morefs] of the cluster to put the group in.  Forces a new
+    <dd>{{% md %}}The managed object reference
+ID of the cluster to put the group in.  Forces a new
 resource if changed.
 {{% /md %}}</dd>
 
@@ -718,7 +713,7 @@ Get an existing ComputeClusterVmDependencyRule resource's state with the given n
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.Vsphere.ComputeClusterVmDependencyRule.html">ComputeClusterVmDependencyRule</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.Vsphere..ComputeClusterVmDependencyRuleState.html">ComputeClusterVmDependencyRuleState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.ComputeClusterVmDependencyRule.html">ComputeClusterVmDependencyRule</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere..ComputeClusterVmDependencyRuleState.html">ComputeClusterVmDependencyRuleState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -830,8 +825,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object reference
-ID][docs-about-morefs] of the cluster to put the group in.  Forces a new
+    <dd>{{% md %}}The managed object reference
+ID of the cluster to put the group in.  Forces a new
 resource if changed.
 {{% /md %}}</dd>
 
@@ -901,8 +896,8 @@ the group specified by
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object reference
-ID][docs-about-morefs] of the cluster to put the group in.  Forces a new
+    <dd>{{% md %}}The managed object reference
+ID of the cluster to put the group in.  Forces a new
 resource if changed.
 {{% /md %}}</dd>
 
@@ -972,8 +967,8 @@ the group specified by
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object reference
-ID][docs-about-morefs] of the cluster to put the group in.  Forces a new
+    <dd>{{% md %}}The managed object reference
+ID of the cluster to put the group in.  Forces a new
 resource if changed.
 {{% /md %}}</dd>
 
@@ -1043,8 +1038,8 @@ the group specified by
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object reference
-ID][docs-about-morefs] of the cluster to put the group in.  Forces a new
+    <dd>{{% md %}}The managed object reference
+ID of the cluster to put the group in.  Forces a new
 resource if changed.
 {{% /md %}}</dd>
 

@@ -67,7 +67,7 @@ for (let i = 0; i < myObjects.apply(myObjects => myObjects.keys.length); i++) {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getBucketObjects<span class="p">(</span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/s3/#GetBucketObjectsArgs">GetBucketObjectsArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/s3/#GetBucketObjectsResult">GetBucketObjectsResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getBucketObjects<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/s3/#GetBucketObjectsArgs">GetBucketObjectsArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/s3/#GetBucketObjectsResult">GetBucketObjectsResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -77,13 +77,14 @@ for (let i = 0; i < myObjects.apply(myObjects => myObjects.keys.length); i++) {
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetBucketObjects<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3?tab=doc#GetBucketObjectsArgs">GetBucketObjectsArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3?tab=doc#GetBucketObjectsResult">GetBucketObjectsResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetBucketObjects<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3?tab=doc#GetBucketObjectsArgs">GetBucketObjectsArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3?tab=doc#GetBucketObjectsResult">GetBucketObjectsResult</a></span>, error)</span></code></pre></div>
+
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetBucketObjects </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.GetBucketObjectsResult.html">GetBucketObjectsResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.GetBucketObjectsArgs.html">GetBucketObjectsArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.GetBucketObjectsResult.html">GetBucketObjectsResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.GetBucketObjectsArgs.html">GetBucketObjectsArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -98,7 +99,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Bucket</span>
+        <span id="bucket_csharp">
+<a href="#bucket_csharp" style="color: inherit; text-decoration: inherit;">Bucket</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -107,7 +110,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Delimiter</span>
+        <span id="delimiter_csharp">
+<a href="#delimiter_csharp" style="color: inherit; text-decoration: inherit;">Delimiter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -116,7 +121,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Encoding<wbr>Type</span>
+        <span id="encodingtype_csharp">
+<a href="#encodingtype_csharp" style="color: inherit; text-decoration: inherit;">Encoding<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -125,7 +132,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Fetch<wbr>Owner</span>
+        <span id="fetchowner_csharp">
+<a href="#fetchowner_csharp" style="color: inherit; text-decoration: inherit;">Fetch<wbr>Owner</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -134,7 +143,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Keys</span>
+        <span id="maxkeys_csharp">
+<a href="#maxkeys_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Keys</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -143,7 +154,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Prefix</span>
+        <span id="prefix_csharp">
+<a href="#prefix_csharp" style="color: inherit; text-decoration: inherit;">Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -152,7 +165,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Start<wbr>After</span>
+        <span id="startafter_csharp">
+<a href="#startafter_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>After</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -168,7 +183,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Bucket</span>
+        <span id="bucket_go">
+<a href="#bucket_go" style="color: inherit; text-decoration: inherit;">Bucket</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -177,7 +194,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Delimiter</span>
+        <span id="delimiter_go">
+<a href="#delimiter_go" style="color: inherit; text-decoration: inherit;">Delimiter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -186,7 +205,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Encoding<wbr>Type</span>
+        <span id="encodingtype_go">
+<a href="#encodingtype_go" style="color: inherit; text-decoration: inherit;">Encoding<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -195,7 +216,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Fetch<wbr>Owner</span>
+        <span id="fetchowner_go">
+<a href="#fetchowner_go" style="color: inherit; text-decoration: inherit;">Fetch<wbr>Owner</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -204,7 +227,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Keys</span>
+        <span id="maxkeys_go">
+<a href="#maxkeys_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Keys</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -213,7 +238,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Prefix</span>
+        <span id="prefix_go">
+<a href="#prefix_go" style="color: inherit; text-decoration: inherit;">Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -222,7 +249,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Start<wbr>After</span>
+        <span id="startafter_go">
+<a href="#startafter_go" style="color: inherit; text-decoration: inherit;">Start<wbr>After</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -238,7 +267,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>bucket</span>
+        <span id="bucket_nodejs">
+<a href="#bucket_nodejs" style="color: inherit; text-decoration: inherit;">bucket</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -247,7 +278,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>delimiter</span>
+        <span id="delimiter_nodejs">
+<a href="#delimiter_nodejs" style="color: inherit; text-decoration: inherit;">delimiter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -256,7 +289,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>encoding<wbr>Type</span>
+        <span id="encodingtype_nodejs">
+<a href="#encodingtype_nodejs" style="color: inherit; text-decoration: inherit;">encoding<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -265,7 +300,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>fetch<wbr>Owner</span>
+        <span id="fetchowner_nodejs">
+<a href="#fetchowner_nodejs" style="color: inherit; text-decoration: inherit;">fetch<wbr>Owner</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -274,7 +311,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Keys</span>
+        <span id="maxkeys_nodejs">
+<a href="#maxkeys_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Keys</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -283,7 +322,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>prefix</span>
+        <span id="prefix_nodejs">
+<a href="#prefix_nodejs" style="color: inherit; text-decoration: inherit;">prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -292,7 +333,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>start<wbr>After</span>
+        <span id="startafter_nodejs">
+<a href="#startafter_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>After</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -308,7 +351,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>bucket</span>
+        <span id="bucket_python">
+<a href="#bucket_python" style="color: inherit; text-decoration: inherit;">bucket</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -317,7 +362,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>delimiter</span>
+        <span id="delimiter_python">
+<a href="#delimiter_python" style="color: inherit; text-decoration: inherit;">delimiter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -326,7 +373,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>encoding_<wbr>type</span>
+        <span id="encoding_type_python">
+<a href="#encoding_type_python" style="color: inherit; text-decoration: inherit;">encoding_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -335,7 +384,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>fetch_<wbr>owner</span>
+        <span id="fetch_owner_python">
+<a href="#fetch_owner_python" style="color: inherit; text-decoration: inherit;">fetch_<wbr>owner</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -344,7 +395,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>max_<wbr>keys</span>
+        <span id="max_keys_python">
+<a href="#max_keys_python" style="color: inherit; text-decoration: inherit;">max_<wbr>keys</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -353,7 +406,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>prefix</span>
+        <span id="prefix_python">
+<a href="#prefix_python" style="color: inherit; text-decoration: inherit;">prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -362,7 +417,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>start_<wbr>after</span>
+        <span id="start_after_python">
+<a href="#start_after_python" style="color: inherit; text-decoration: inherit;">start_<wbr>after</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -391,7 +448,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Bucket</span>
+        <span id="bucket_csharp">
+<a href="#bucket_csharp" style="color: inherit; text-decoration: inherit;">Bucket</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -399,7 +458,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Common<wbr>Prefixes</span>
+        <span id="commonprefixes_csharp">
+<a href="#commonprefixes_csharp" style="color: inherit; text-decoration: inherit;">Common<wbr>Prefixes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -408,7 +469,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -417,7 +480,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Keys</span>
+        <span id="keys_csharp">
+<a href="#keys_csharp" style="color: inherit; text-decoration: inherit;">Keys</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -426,7 +491,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Owners</span>
+        <span id="owners_csharp">
+<a href="#owners_csharp" style="color: inherit; text-decoration: inherit;">Owners</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -435,7 +502,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Delimiter</span>
+        <span id="delimiter_csharp">
+<a href="#delimiter_csharp" style="color: inherit; text-decoration: inherit;">Delimiter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -443,7 +512,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Encoding<wbr>Type</span>
+        <span id="encodingtype_csharp">
+<a href="#encodingtype_csharp" style="color: inherit; text-decoration: inherit;">Encoding<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -451,7 +522,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Fetch<wbr>Owner</span>
+        <span id="fetchowner_csharp">
+<a href="#fetchowner_csharp" style="color: inherit; text-decoration: inherit;">Fetch<wbr>Owner</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -459,7 +532,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Max<wbr>Keys</span>
+        <span id="maxkeys_csharp">
+<a href="#maxkeys_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Keys</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -467,7 +542,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Prefix</span>
+        <span id="prefix_csharp">
+<a href="#prefix_csharp" style="color: inherit; text-decoration: inherit;">Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -475,7 +552,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Start<wbr>After</span>
+        <span id="startafter_csharp">
+<a href="#startafter_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>After</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -490,7 +569,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Bucket</span>
+        <span id="bucket_go">
+<a href="#bucket_go" style="color: inherit; text-decoration: inherit;">Bucket</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -498,7 +579,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Common<wbr>Prefixes</span>
+        <span id="commonprefixes_go">
+<a href="#commonprefixes_go" style="color: inherit; text-decoration: inherit;">Common<wbr>Prefixes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -507,7 +590,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -516,7 +601,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Keys</span>
+        <span id="keys_go">
+<a href="#keys_go" style="color: inherit; text-decoration: inherit;">Keys</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -525,7 +612,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Owners</span>
+        <span id="owners_go">
+<a href="#owners_go" style="color: inherit; text-decoration: inherit;">Owners</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -534,7 +623,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Delimiter</span>
+        <span id="delimiter_go">
+<a href="#delimiter_go" style="color: inherit; text-decoration: inherit;">Delimiter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -542,7 +633,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Encoding<wbr>Type</span>
+        <span id="encodingtype_go">
+<a href="#encodingtype_go" style="color: inherit; text-decoration: inherit;">Encoding<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -550,7 +643,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Fetch<wbr>Owner</span>
+        <span id="fetchowner_go">
+<a href="#fetchowner_go" style="color: inherit; text-decoration: inherit;">Fetch<wbr>Owner</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -558,7 +653,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Max<wbr>Keys</span>
+        <span id="maxkeys_go">
+<a href="#maxkeys_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Keys</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -566,7 +663,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Prefix</span>
+        <span id="prefix_go">
+<a href="#prefix_go" style="color: inherit; text-decoration: inherit;">Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -574,7 +673,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Start<wbr>After</span>
+        <span id="startafter_go">
+<a href="#startafter_go" style="color: inherit; text-decoration: inherit;">Start<wbr>After</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -589,7 +690,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>bucket</span>
+        <span id="bucket_nodejs">
+<a href="#bucket_nodejs" style="color: inherit; text-decoration: inherit;">bucket</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -597,7 +700,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>common<wbr>Prefixes</span>
+        <span id="commonprefixes_nodejs">
+<a href="#commonprefixes_nodejs" style="color: inherit; text-decoration: inherit;">common<wbr>Prefixes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -606,7 +711,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -615,7 +722,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>keys</span>
+        <span id="keys_nodejs">
+<a href="#keys_nodejs" style="color: inherit; text-decoration: inherit;">keys</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -624,7 +733,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>owners</span>
+        <span id="owners_nodejs">
+<a href="#owners_nodejs" style="color: inherit; text-decoration: inherit;">owners</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -633,7 +744,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>delimiter</span>
+        <span id="delimiter_nodejs">
+<a href="#delimiter_nodejs" style="color: inherit; text-decoration: inherit;">delimiter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -641,7 +754,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>encoding<wbr>Type</span>
+        <span id="encodingtype_nodejs">
+<a href="#encodingtype_nodejs" style="color: inherit; text-decoration: inherit;">encoding<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -649,7 +764,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>fetch<wbr>Owner</span>
+        <span id="fetchowner_nodejs">
+<a href="#fetchowner_nodejs" style="color: inherit; text-decoration: inherit;">fetch<wbr>Owner</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -657,7 +774,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>max<wbr>Keys</span>
+        <span id="maxkeys_nodejs">
+<a href="#maxkeys_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Keys</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -665,7 +784,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>prefix</span>
+        <span id="prefix_nodejs">
+<a href="#prefix_nodejs" style="color: inherit; text-decoration: inherit;">prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -673,7 +794,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>start<wbr>After</span>
+        <span id="startafter_nodejs">
+<a href="#startafter_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>After</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -688,7 +811,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>bucket</span>
+        <span id="bucket_python">
+<a href="#bucket_python" style="color: inherit; text-decoration: inherit;">bucket</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -696,7 +821,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>common_<wbr>prefixes</span>
+        <span id="common_prefixes_python">
+<a href="#common_prefixes_python" style="color: inherit; text-decoration: inherit;">common_<wbr>prefixes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -705,7 +832,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -714,7 +843,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>keys</span>
+        <span id="keys_python">
+<a href="#keys_python" style="color: inherit; text-decoration: inherit;">keys</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -723,7 +854,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>owners</span>
+        <span id="owners_python">
+<a href="#owners_python" style="color: inherit; text-decoration: inherit;">owners</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -732,7 +865,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>delimiter</span>
+        <span id="delimiter_python">
+<a href="#delimiter_python" style="color: inherit; text-decoration: inherit;">delimiter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -740,7 +875,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>encoding_<wbr>type</span>
+        <span id="encoding_type_python">
+<a href="#encoding_type_python" style="color: inherit; text-decoration: inherit;">encoding_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -748,7 +885,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>fetch_<wbr>owner</span>
+        <span id="fetch_owner_python">
+<a href="#fetch_owner_python" style="color: inherit; text-decoration: inherit;">fetch_<wbr>owner</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -756,7 +895,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>max_<wbr>keys</span>
+        <span id="max_keys_python">
+<a href="#max_keys_python" style="color: inherit; text-decoration: inherit;">max_<wbr>keys</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -764,7 +905,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>prefix</span>
+        <span id="prefix_python">
+<a href="#prefix_python" style="color: inherit; text-decoration: inherit;">prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -772,7 +915,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>start_<wbr>after</span>
+        <span id="start_after_python">
+<a href="#start_after_python" style="color: inherit; text-decoration: inherit;">start_<wbr>after</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

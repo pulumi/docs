@@ -53,6 +53,7 @@ Explore the resources and functions of the compute module in the GCP package.
     <li><a href="nodegroup" title="NodeGroup"><span class="symbol resource"></span>NodeGroup</a></li>
     <li><a href="nodetemplate" title="NodeTemplate"><span class="symbol resource"></span>NodeTemplate</a></li>
     <li><a href="packetmirroring" title="PacketMirroring"><span class="symbol resource"></span>PacketMirroring</a></li>
+    <li><a href="perinstanceconfig" title="PerInstanceConfig"><span class="symbol resource"></span>PerInstanceConfig</a></li>
     <li><a href="projectdefaultnetworktier" title="ProjectDefaultNetworkTier"><span class="symbol resource"></span>ProjectDefaultNetworkTier</a></li>
     <li><a href="projectmetadata" title="ProjectMetadata"><span class="symbol resource"></span>ProjectMetadata</a></li>
     <li><a href="projectmetadataitem" title="ProjectMetadataItem"><span class="symbol resource"></span>ProjectMetadataItem</a></li>
@@ -62,6 +63,7 @@ Explore the resources and functions of the compute module in the GCP package.
     <li><a href="regiondiskresourcepolicyattachment" title="RegionDiskResourcePolicyAttachment"><span class="symbol resource"></span>RegionDiskResourcePolicyAttachment</a></li>
     <li><a href="regionhealthcheck" title="RegionHealthCheck"><span class="symbol resource"></span>RegionHealthCheck</a></li>
     <li><a href="regioninstancegroupmanager" title="RegionInstanceGroupManager"><span class="symbol resource"></span>RegionInstanceGroupManager</a></li>
+    <li><a href="regionperinstanceconfig" title="RegionPerInstanceConfig"><span class="symbol resource"></span>RegionPerInstanceConfig</a></li>
     <li><a href="regionsslcertificate" title="RegionSslCertificate"><span class="symbol resource"></span>RegionSslCertificate</a></li>
     <li><a href="regiontargethttpproxy" title="RegionTargetHttpProxy"><span class="symbol resource"></span>RegionTargetHttpProxy</a></li>
     <li><a href="regiontargethttpsproxy" title="RegionTargetHttpsProxy"><span class="symbol resource"></span>RegionTargetHttpsProxy</a></li>
@@ -132,6 +134,24 @@ Explore the resources and functions of the compute module in the GCP package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
 	<dt>Version</dt>
-	<dd>3.4.0</dd>
+	<dd>3.7.0</dd>
+</dl>
+
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.html" title="Pulumi.Gcp.Compute">Pulumi.Gcp.Compute</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#" title="gcp/compute">gcp/compute</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#" title="@pulumi/gcp/compute">@pulumi/gcp/compute</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_gcp/compute" title="pulumi_gcp/compute">pulumi_gcp/compute</a></dd>
+
 </dl>
 

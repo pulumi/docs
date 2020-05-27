@@ -31,6 +31,24 @@ Explore the resources and functions of the servicedirectory module in the GCP pa
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
 	<dt>Version</dt>
-	<dd>3.4.0</dd>
+	<dd>3.7.0</dd>
+</dl>
+
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.ServiceDirectory.html" title="Pulumi.Gcp.ServiceDirectory">Pulumi.Gcp.ServiceDirectory</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/servicedirectory?tab=doc#" title="gcp/servicedirectory">gcp/servicedirectory</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/gcp/servicedirectory/#" title="@pulumi/gcp/servicedirectory">@pulumi/gcp/servicedirectory</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_gcp/servicedirectory" title="pulumi_gcp/servicedirectory">pulumi_gcp/servicedirectory</a></dd>
+
 </dl>
 

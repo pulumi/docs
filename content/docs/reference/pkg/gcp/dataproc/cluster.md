@@ -115,14 +115,14 @@ mycluster = gcp.dataproc.Cluster("mycluster",
         },
         "initializationAction": [{
             "script": "gs://dataproc-initialization-actions/stackdriver/stackdriver.sh",
-            "timeoutSec": 500,
+            "timeout_sec": 500,
         }],
         "masterConfig": {
             "diskConfig": {
                 "bootDiskSizeGb": 15,
                 "bootDiskType": "pd-ssd",
             },
-            "machineType": "n1-standard-1",
+            "machine_type": "n1-standard-1",
             "numInstances": 1,
         },
         "preemptibleWorkerConfig": {
@@ -135,13 +135,13 @@ mycluster = gcp.dataproc.Cluster("mycluster",
             },
         },
         "stagingBucket": "dataproc-staging-bucket",
-        "workerConfig": {
+        "worker_config": {
             "diskConfig": {
                 "bootDiskSizeGb": 15,
                 "numLocalSsds": 1,
             },
-            "machineType": "n1-standard-1",
-            "minCpuPlatform": "Intel Skylake",
+            "machine_type": "n1-standard-1",
+            "min_cpu_platform": "Intel Skylake",
             "numInstances": 2,
         },
     },
@@ -184,7 +184,7 @@ accelerated_cluster = gcp.dataproc.Cluster("acceleratedCluster",
         "masterConfig": {
             "accelerators": [{
                 "acceleratorCount": "1",
-                "acceleratorType": "nvidia-tesla-k80",
+                "accelerator_type": "nvidia-tesla-k80",
             }],
         },
     },
@@ -198,19 +198,19 @@ accelerated_cluster = gcp.dataproc.Cluster("acceleratedCluster",
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/dataproc/#Cluster">Cluster</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/dataproc/#ClusterArgs">ClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/dataproc/#Cluster">Cluster</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/dataproc/#ClusterArgs">ClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Cluster</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>cluster_config=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>region=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/dataproc/#Cluster">Cluster</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>cluster_config=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>region=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewCluster<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterArgs">ClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#Cluster">Cluster</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#Cluster">NewCluster</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterArgs">ClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#Cluster">Cluster</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Cluster.html">Cluster</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.ClusterArgs.html">ClusterArgs</a></span>? <span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Cluster.html">Cluster</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.ClusterArgs.html">ClusterArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -376,7 +376,9 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cluster<wbr>Config</span>
+        <span id="clusterconfig_csharp">
+<a href="#clusterconfig_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Args</a></span>
     </dt>
@@ -386,7 +388,9 @@ Structure defined below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Labels</span>
+        <span id="labels_csharp">
+<a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -397,7 +401,9 @@ which is the name of the cluster.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -407,7 +413,9 @@ zone.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project</span>
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -417,7 +425,9 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="region_csharp">
+<a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -434,7 +444,9 @@ Defaults to `global`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cluster<wbr>Config</span>
+        <span id="clusterconfig_go">
+<a href="#clusterconfig_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfig">Cluster<wbr>Cluster<wbr>Config</a></span>
     </dt>
@@ -444,7 +456,9 @@ Structure defined below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Labels</span>
+        <span id="labels_go">
+<a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -455,7 +469,9 @@ which is the name of the cluster.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -465,7 +481,9 @@ zone.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project</span>
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -475,7 +493,9 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="region_go">
+<a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -492,7 +512,9 @@ Defaults to `global`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>cluster<wbr>Config</span>
+        <span id="clusterconfig_nodejs">
+<a href="#clusterconfig_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfig">Cluster<wbr>Cluster<wbr>Config</a></span>
     </dt>
@@ -502,7 +524,9 @@ Structure defined below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>labels</span>
+        <span id="labels_nodejs">
+<a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -513,7 +537,9 @@ which is the name of the cluster.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -523,7 +549,9 @@ zone.
 
     <dt class="property-optional"
             title="Optional">
-        <span>project</span>
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -533,7 +561,9 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="region_nodejs">
+<a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -550,7 +580,9 @@ Defaults to `global`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>cluster_<wbr>config</span>
+        <span id="cluster_config_python">
+<a href="#cluster_config_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfig">Dict[Cluster<wbr>Cluster<wbr>Config]</a></span>
     </dt>
@@ -560,7 +592,9 @@ Structure defined below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>labels</span>
+        <span id="labels_python">
+<a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -571,7 +605,9 @@ which is the name of the cluster.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -581,7 +617,9 @@ zone.
 
     <dt class="property-optional"
             title="Optional">
-        <span>project</span>
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -591,7 +629,9 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="region_python">
+<a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -619,7 +659,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -634,7 +676,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -649,7 +693,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -664,7 +710,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -685,7 +733,7 @@ Get an existing Cluster resource's state with the given name, ID, and optional e
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/dataproc/#ClusterState">ClusterState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/dataproc/#Cluster">Cluster</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/dataproc/#ClusterState">ClusterState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/dataproc/#Cluster">Cluster</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -693,11 +741,11 @@ Get an existing Cluster resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCluster<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterState">ClusterState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#Cluster">Cluster</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCluster<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterState">ClusterState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#Cluster">Cluster</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Cluster.html">Cluster</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.ClusterState.html">ClusterState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Cluster.html">Cluster</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.ClusterState.html">ClusterState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -805,7 +853,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cluster<wbr>Config</span>
+        <span id="state_clusterconfig_csharp">
+<a href="#state_clusterconfig_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Args</a></span>
     </dt>
@@ -815,7 +865,9 @@ Structure defined below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Labels</span>
+        <span id="state_labels_csharp">
+<a href="#state_labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -826,7 +878,9 @@ which is the name of the cluster.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -836,7 +890,9 @@ zone.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project</span>
+        <span id="state_project_csharp">
+<a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -846,7 +902,9 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="state_region_csharp">
+<a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -863,7 +921,9 @@ Defaults to `global`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cluster<wbr>Config</span>
+        <span id="state_clusterconfig_go">
+<a href="#state_clusterconfig_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfig">Cluster<wbr>Cluster<wbr>Config</a></span>
     </dt>
@@ -873,7 +933,9 @@ Structure defined below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Labels</span>
+        <span id="state_labels_go">
+<a href="#state_labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -884,7 +946,9 @@ which is the name of the cluster.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -894,7 +958,9 @@ zone.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project</span>
+        <span id="state_project_go">
+<a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -904,7 +970,9 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="state_region_go">
+<a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -921,7 +989,9 @@ Defaults to `global`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>cluster<wbr>Config</span>
+        <span id="state_clusterconfig_nodejs">
+<a href="#state_clusterconfig_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfig">Cluster<wbr>Cluster<wbr>Config</a></span>
     </dt>
@@ -931,7 +1001,9 @@ Structure defined below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>labels</span>
+        <span id="state_labels_nodejs">
+<a href="#state_labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -942,7 +1014,9 @@ which is the name of the cluster.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -952,7 +1026,9 @@ zone.
 
     <dt class="property-optional"
             title="Optional">
-        <span>project</span>
+        <span id="state_project_nodejs">
+<a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -962,7 +1038,9 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="state_region_nodejs">
+<a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -979,7 +1057,9 @@ Defaults to `global`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>cluster_<wbr>config</span>
+        <span id="state_cluster_config_python">
+<a href="#state_cluster_config_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfig">Dict[Cluster<wbr>Cluster<wbr>Config]</a></span>
     </dt>
@@ -989,7 +1069,9 @@ Structure defined below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>labels</span>
+        <span id="state_labels_python">
+<a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -1000,7 +1082,9 @@ which is the name of the cluster.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1010,7 +1094,9 @@ zone.
 
     <dt class="property-optional"
             title="Optional">
-        <span>project</span>
+        <span id="state_project_python">
+<a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1020,7 +1106,9 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="state_region_python">
+<a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1063,7 +1151,9 @@ Defaults to `global`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Autoscaling<wbr>Config</span>
+        <span id="autoscalingconfig_csharp">
+<a href="#autoscalingconfig_csharp" style="color: inherit; text-decoration: inherit;">Autoscaling<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfigautoscalingconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Autoscaling<wbr>Config<wbr>Args</a></span>
     </dt>
@@ -1073,7 +1163,9 @@ Structure defined below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Bucket</span>
+        <span id="bucket_csharp">
+<a href="#bucket_csharp" style="color: inherit; text-decoration: inherit;">Bucket</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1081,7 +1173,9 @@ Structure defined below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Encryption<wbr>Config</span>
+        <span id="encryptionconfig_csharp">
+<a href="#encryptionconfig_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfigencryptionconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Encryption<wbr>Config<wbr>Args</a></span>
     </dt>
@@ -1091,7 +1185,22 @@ Structure defined below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Gce<wbr>Cluster<wbr>Config</span>
+        <span id="endpointconfig_csharp">
+<a href="#endpointconfig_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterclusterconfigendpointconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Endpoint<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The config settings for port access on the cluster.
+Structure defined below.
+- - -
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gceclusterconfig_csharp">
+<a href="#gceclusterconfig_csharp" style="color: inherit; text-decoration: inherit;">Gce<wbr>Cluster<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfiggceclusterconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Gce<wbr>Cluster<wbr>Config<wbr>Args</a></span>
     </dt>
@@ -1101,7 +1210,9 @@ instances, applicable to all instances in the cluster. Structure defined below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Initialization<wbr>Actions</span>
+        <span id="initializationactions_csharp">
+<a href="#initializationactions_csharp" style="color: inherit; text-decoration: inherit;">Initialization<wbr>Actions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfiginitializationaction">List&lt;Cluster<wbr>Cluster<wbr>Config<wbr>Initialization<wbr>Action<wbr>Args&gt;</a></span>
     </dt>
@@ -1111,7 +1222,9 @@ You can specify multiple versions of these. Structure defined below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Lifecycle<wbr>Config</span>
+        <span id="lifecycleconfig_csharp">
+<a href="#lifecycleconfig_csharp" style="color: inherit; text-decoration: inherit;">Lifecycle<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfiglifecycleconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Lifecycle<wbr>Config<wbr>Args</a></span>
     </dt>
@@ -1121,7 +1234,9 @@ Structure defined below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Master<wbr>Config</span>
+        <span id="masterconfig_csharp">
+<a href="#masterconfig_csharp" style="color: inherit; text-decoration: inherit;">Master<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfigmasterconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Master<wbr>Config<wbr>Args</a></span>
     </dt>
@@ -1131,7 +1246,9 @@ in a cluster.. Structure defined below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Preemptible<wbr>Worker<wbr>Config</span>
+        <span id="preemptibleworkerconfig_csharp">
+<a href="#preemptibleworkerconfig_csharp" style="color: inherit; text-decoration: inherit;">Preemptible<wbr>Worker<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfigpreemptibleworkerconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Preemptible<wbr>Worker<wbr>Config<wbr>Args</a></span>
     </dt>
@@ -1141,7 +1258,9 @@ preemptible) instances in a cluster. Structure defined below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Security<wbr>Config</span>
+        <span id="securityconfig_csharp">
+<a href="#securityconfig_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfigsecurityconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Security<wbr>Config<wbr>Args</a></span>
     </dt>
@@ -1150,7 +1269,9 @@ preemptible) instances in a cluster. Structure defined below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Software<wbr>Config</span>
+        <span id="softwareconfig_csharp">
+<a href="#softwareconfig_csharp" style="color: inherit; text-decoration: inherit;">Software<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfigsoftwareconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Software<wbr>Config<wbr>Args</a></span>
     </dt>
@@ -1160,7 +1281,9 @@ Structure defined below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Staging<wbr>Bucket</span>
+        <span id="stagingbucket_csharp">
+<a href="#stagingbucket_csharp" style="color: inherit; text-decoration: inherit;">Staging<wbr>Bucket</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1175,7 +1298,9 @@ option.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Worker<wbr>Config</span>
+        <span id="workerconfig_csharp">
+<a href="#workerconfig_csharp" style="color: inherit; text-decoration: inherit;">Worker<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfigworkerconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Worker<wbr>Config<wbr>Args</a></span>
     </dt>
@@ -1192,7 +1317,9 @@ in a cluster.. Structure defined below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Autoscaling<wbr>Config</span>
+        <span id="autoscalingconfig_go">
+<a href="#autoscalingconfig_go" style="color: inherit; text-decoration: inherit;">Autoscaling<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfigautoscalingconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Autoscaling<wbr>Config</a></span>
     </dt>
@@ -1202,7 +1329,9 @@ Structure defined below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Bucket</span>
+        <span id="bucket_go">
+<a href="#bucket_go" style="color: inherit; text-decoration: inherit;">Bucket</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1210,7 +1339,9 @@ Structure defined below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Encryption<wbr>Config</span>
+        <span id="encryptionconfig_go">
+<a href="#encryptionconfig_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfigencryptionconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Encryption<wbr>Config</a></span>
     </dt>
@@ -1220,7 +1351,22 @@ Structure defined below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Gce<wbr>Cluster<wbr>Config</span>
+        <span id="endpointconfig_go">
+<a href="#endpointconfig_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterclusterconfigendpointconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Endpoint<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The config settings for port access on the cluster.
+Structure defined below.
+- - -
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gceclusterconfig_go">
+<a href="#gceclusterconfig_go" style="color: inherit; text-decoration: inherit;">Gce<wbr>Cluster<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfiggceclusterconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Gce<wbr>Cluster<wbr>Config</a></span>
     </dt>
@@ -1230,7 +1376,9 @@ instances, applicable to all instances in the cluster. Structure defined below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Initialization<wbr>Actions</span>
+        <span id="initializationactions_go">
+<a href="#initializationactions_go" style="color: inherit; text-decoration: inherit;">Initialization<wbr>Actions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfiginitializationaction">[]Cluster<wbr>Cluster<wbr>Config<wbr>Initialization<wbr>Action</a></span>
     </dt>
@@ -1240,7 +1388,9 @@ You can specify multiple versions of these. Structure defined below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Lifecycle<wbr>Config</span>
+        <span id="lifecycleconfig_go">
+<a href="#lifecycleconfig_go" style="color: inherit; text-decoration: inherit;">Lifecycle<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfiglifecycleconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Lifecycle<wbr>Config</a></span>
     </dt>
@@ -1250,7 +1400,9 @@ Structure defined below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Master<wbr>Config</span>
+        <span id="masterconfig_go">
+<a href="#masterconfig_go" style="color: inherit; text-decoration: inherit;">Master<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfigmasterconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Master<wbr>Config</a></span>
     </dt>
@@ -1260,7 +1412,9 @@ in a cluster.. Structure defined below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Preemptible<wbr>Worker<wbr>Config</span>
+        <span id="preemptibleworkerconfig_go">
+<a href="#preemptibleworkerconfig_go" style="color: inherit; text-decoration: inherit;">Preemptible<wbr>Worker<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfigpreemptibleworkerconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Preemptible<wbr>Worker<wbr>Config</a></span>
     </dt>
@@ -1270,7 +1424,9 @@ preemptible) instances in a cluster. Structure defined below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Security<wbr>Config</span>
+        <span id="securityconfig_go">
+<a href="#securityconfig_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfigsecurityconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Security<wbr>Config</a></span>
     </dt>
@@ -1279,7 +1435,9 @@ preemptible) instances in a cluster. Structure defined below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Software<wbr>Config</span>
+        <span id="softwareconfig_go">
+<a href="#softwareconfig_go" style="color: inherit; text-decoration: inherit;">Software<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfigsoftwareconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Software<wbr>Config</a></span>
     </dt>
@@ -1289,7 +1447,9 @@ Structure defined below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Staging<wbr>Bucket</span>
+        <span id="stagingbucket_go">
+<a href="#stagingbucket_go" style="color: inherit; text-decoration: inherit;">Staging<wbr>Bucket</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1304,7 +1464,9 @@ option.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Worker<wbr>Config</span>
+        <span id="workerconfig_go">
+<a href="#workerconfig_go" style="color: inherit; text-decoration: inherit;">Worker<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfigworkerconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Worker<wbr>Config</a></span>
     </dt>
@@ -1321,7 +1483,9 @@ in a cluster.. Structure defined below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>autoscaling<wbr>Config</span>
+        <span id="autoscalingconfig_nodejs">
+<a href="#autoscalingconfig_nodejs" style="color: inherit; text-decoration: inherit;">autoscaling<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfigautoscalingconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Autoscaling<wbr>Config</a></span>
     </dt>
@@ -1331,7 +1495,9 @@ Structure defined below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>bucket</span>
+        <span id="bucket_nodejs">
+<a href="#bucket_nodejs" style="color: inherit; text-decoration: inherit;">bucket</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1339,7 +1505,9 @@ Structure defined below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>encryption<wbr>Config</span>
+        <span id="encryptionconfig_nodejs">
+<a href="#encryptionconfig_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfigencryptionconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Encryption<wbr>Config</a></span>
     </dt>
@@ -1349,7 +1517,22 @@ Structure defined below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>gce<wbr>Cluster<wbr>Config</span>
+        <span id="endpointconfig_nodejs">
+<a href="#endpointconfig_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterclusterconfigendpointconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Endpoint<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The config settings for port access on the cluster.
+Structure defined below.
+- - -
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gceclusterconfig_nodejs">
+<a href="#gceclusterconfig_nodejs" style="color: inherit; text-decoration: inherit;">gce<wbr>Cluster<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfiggceclusterconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Gce<wbr>Cluster<wbr>Config</a></span>
     </dt>
@@ -1359,7 +1542,9 @@ instances, applicable to all instances in the cluster. Structure defined below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>initialization<wbr>Actions</span>
+        <span id="initializationactions_nodejs">
+<a href="#initializationactions_nodejs" style="color: inherit; text-decoration: inherit;">initialization<wbr>Actions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfiginitializationaction">Cluster<wbr>Cluster<wbr>Config<wbr>Initialization<wbr>Action[]</a></span>
     </dt>
@@ -1369,7 +1554,9 @@ You can specify multiple versions of these. Structure defined below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>lifecycle<wbr>Config</span>
+        <span id="lifecycleconfig_nodejs">
+<a href="#lifecycleconfig_nodejs" style="color: inherit; text-decoration: inherit;">lifecycle<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfiglifecycleconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Lifecycle<wbr>Config</a></span>
     </dt>
@@ -1379,7 +1566,9 @@ Structure defined below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>master<wbr>Config</span>
+        <span id="masterconfig_nodejs">
+<a href="#masterconfig_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfigmasterconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Master<wbr>Config</a></span>
     </dt>
@@ -1389,7 +1578,9 @@ in a cluster.. Structure defined below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>preemptible<wbr>Worker<wbr>Config</span>
+        <span id="preemptibleworkerconfig_nodejs">
+<a href="#preemptibleworkerconfig_nodejs" style="color: inherit; text-decoration: inherit;">preemptible<wbr>Worker<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfigpreemptibleworkerconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Preemptible<wbr>Worker<wbr>Config</a></span>
     </dt>
@@ -1399,7 +1590,9 @@ preemptible) instances in a cluster. Structure defined below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>security<wbr>Config</span>
+        <span id="securityconfig_nodejs">
+<a href="#securityconfig_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfigsecurityconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Security<wbr>Config</a></span>
     </dt>
@@ -1408,7 +1601,9 @@ preemptible) instances in a cluster. Structure defined below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>software<wbr>Config</span>
+        <span id="softwareconfig_nodejs">
+<a href="#softwareconfig_nodejs" style="color: inherit; text-decoration: inherit;">software<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfigsoftwareconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Software<wbr>Config</a></span>
     </dt>
@@ -1418,7 +1613,9 @@ Structure defined below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>staging<wbr>Bucket</span>
+        <span id="stagingbucket_nodejs">
+<a href="#stagingbucket_nodejs" style="color: inherit; text-decoration: inherit;">staging<wbr>Bucket</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1433,7 +1630,9 @@ option.
 
     <dt class="property-optional"
             title="Optional">
-        <span>worker<wbr>Config</span>
+        <span id="workerconfig_nodejs">
+<a href="#workerconfig_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfigworkerconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Worker<wbr>Config</a></span>
     </dt>
@@ -1450,7 +1649,9 @@ in a cluster.. Structure defined below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>autoscaling<wbr>Config</span>
+        <span id="autoscalingconfig_python">
+<a href="#autoscalingconfig_python" style="color: inherit; text-decoration: inherit;">autoscaling<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfigautoscalingconfig">Dict[Cluster<wbr>Cluster<wbr>Config<wbr>Autoscaling<wbr>Config]</a></span>
     </dt>
@@ -1460,7 +1661,9 @@ Structure defined below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>bucket</span>
+        <span id="bucket_python">
+<a href="#bucket_python" style="color: inherit; text-decoration: inherit;">bucket</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1468,7 +1671,9 @@ Structure defined below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>encryption<wbr>Config</span>
+        <span id="encryptionconfig_python">
+<a href="#encryptionconfig_python" style="color: inherit; text-decoration: inherit;">encryption<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfigencryptionconfig">Dict[Cluster<wbr>Cluster<wbr>Config<wbr>Encryption<wbr>Config]</a></span>
     </dt>
@@ -1478,7 +1683,22 @@ Structure defined below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>gce<wbr>Cluster<wbr>Config</span>
+        <span id="endpointconfig_python">
+<a href="#endpointconfig_python" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterclusterconfigendpointconfig">Dict[Cluster<wbr>Cluster<wbr>Config<wbr>Endpoint<wbr>Config]</a></span>
+    </dt>
+    <dd>{{% md %}}The config settings for port access on the cluster.
+Structure defined below.
+- - -
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gceclusterconfig_python">
+<a href="#gceclusterconfig_python" style="color: inherit; text-decoration: inherit;">gce<wbr>Cluster<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfiggceclusterconfig">Dict[Cluster<wbr>Cluster<wbr>Config<wbr>Gce<wbr>Cluster<wbr>Config]</a></span>
     </dt>
@@ -1488,7 +1708,9 @@ instances, applicable to all instances in the cluster. Structure defined below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>initialization<wbr>Actions</span>
+        <span id="initializationactions_python">
+<a href="#initializationactions_python" style="color: inherit; text-decoration: inherit;">initialization<wbr>Actions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfiginitializationaction">List[Cluster<wbr>Cluster<wbr>Config<wbr>Initialization<wbr>Action]</a></span>
     </dt>
@@ -1498,7 +1720,9 @@ You can specify multiple versions of these. Structure defined below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>lifecycle<wbr>Config</span>
+        <span id="lifecycleconfig_python">
+<a href="#lifecycleconfig_python" style="color: inherit; text-decoration: inherit;">lifecycle<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfiglifecycleconfig">Dict[Cluster<wbr>Cluster<wbr>Config<wbr>Lifecycle<wbr>Config]</a></span>
     </dt>
@@ -1508,7 +1732,9 @@ Structure defined below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>master<wbr>Config</span>
+        <span id="masterconfig_python">
+<a href="#masterconfig_python" style="color: inherit; text-decoration: inherit;">master<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfigmasterconfig">Dict[Cluster<wbr>Cluster<wbr>Config<wbr>Master<wbr>Config]</a></span>
     </dt>
@@ -1518,7 +1744,9 @@ in a cluster.. Structure defined below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>preemptible<wbr>Worker<wbr>Config</span>
+        <span id="preemptibleworkerconfig_python">
+<a href="#preemptibleworkerconfig_python" style="color: inherit; text-decoration: inherit;">preemptible<wbr>Worker<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfigpreemptibleworkerconfig">Dict[Cluster<wbr>Cluster<wbr>Config<wbr>Preemptible<wbr>Worker<wbr>Config]</a></span>
     </dt>
@@ -1528,7 +1756,9 @@ preemptible) instances in a cluster. Structure defined below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>security<wbr>Config</span>
+        <span id="securityconfig_python">
+<a href="#securityconfig_python" style="color: inherit; text-decoration: inherit;">security<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfigsecurityconfig">Dict[Cluster<wbr>Cluster<wbr>Config<wbr>Security<wbr>Config]</a></span>
     </dt>
@@ -1537,7 +1767,9 @@ preemptible) instances in a cluster. Structure defined below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>software<wbr>Config</span>
+        <span id="softwareconfig_python">
+<a href="#softwareconfig_python" style="color: inherit; text-decoration: inherit;">software<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfigsoftwareconfig">Dict[Cluster<wbr>Cluster<wbr>Config<wbr>Software<wbr>Config]</a></span>
     </dt>
@@ -1547,7 +1779,9 @@ Structure defined below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>staging<wbr>Bucket</span>
+        <span id="stagingbucket_python">
+<a href="#stagingbucket_python" style="color: inherit; text-decoration: inherit;">staging<wbr>Bucket</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1562,7 +1796,9 @@ option.
 
     <dt class="property-optional"
             title="Optional">
-        <span>worker_<wbr>config</span>
+        <span id="worker_config_python">
+<a href="#worker_config_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfigworkerconfig">Dict[Cluster<wbr>Cluster<wbr>Config<wbr>Worker<wbr>Config]</a></span>
     </dt>
@@ -1597,7 +1833,9 @@ in a cluster.. Structure defined below.
 
     <dt class="property-required"
             title="Required">
-        <span>Policy<wbr>Uri</span>
+        <span id="policyuri_csharp">
+<a href="#policyuri_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1613,7 +1851,9 @@ in a cluster.. Structure defined below.
 
     <dt class="property-required"
             title="Required">
-        <span>Policy<wbr>Uri</span>
+        <span id="policyuri_go">
+<a href="#policyuri_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1629,7 +1869,9 @@ in a cluster.. Structure defined below.
 
     <dt class="property-required"
             title="Required">
-        <span>policy<wbr>Uri</span>
+        <span id="policyuri_nodejs">
+<a href="#policyuri_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1645,7 +1887,9 @@ in a cluster.. Structure defined below.
 
     <dt class="property-required"
             title="Required">
-        <span>policy<wbr>Uri</span>
+        <span id="policyuri_python">
+<a href="#policyuri_python" style="color: inherit; text-decoration: inherit;">policy<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1679,7 +1923,9 @@ in a cluster.. Structure defined below.
 
     <dt class="property-required"
             title="Required">
-        <span>Kms<wbr>Key<wbr>Name</span>
+        <span id="kmskeyname_csharp">
+<a href="#kmskeyname_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1696,7 +1942,9 @@ all instances in the cluster.
 
     <dt class="property-required"
             title="Required">
-        <span>Kms<wbr>Key<wbr>Name</span>
+        <span id="kmskeyname_go">
+<a href="#kmskeyname_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1713,7 +1961,9 @@ all instances in the cluster.
 
     <dt class="property-required"
             title="Required">
-        <span>kms<wbr>Key<wbr>Name</span>
+        <span id="kmskeyname_nodejs">
+<a href="#kmskeyname_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1730,13 +1980,149 @@ all instances in the cluster.
 
     <dt class="property-required"
             title="Required">
-        <span>kms_<wbr>key_<wbr>name</span>
+        <span id="kms_key_name_python">
+<a href="#kms_key_name_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Cloud KMS key name to use for PD disk encryption for
 all instances in the cluster.
 {{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="clusterclusterconfigendpointconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Endpoint<wbr>Config</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterClusterConfigEndpointConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterClusterConfigEndpointConfig">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigEndpointConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigEndpointConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Inputs.ClusterClusterConfigEndpointConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Outputs.ClusterClusterConfigEndpointConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="enablehttpportaccess_csharp">
+<a href="#enablehttpportaccess_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Http<wbr>Port<wbr>Access</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}The flag to enable http access to specific ports
+on the cluster from external sources (aka Component Gateway). Defaults to false.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="httpports_csharp">
+<a href="#httpports_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Ports</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="enablehttpportaccess_go">
+<a href="#enablehttpportaccess_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Http<wbr>Port<wbr>Access</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}The flag to enable http access to specific ports
+on the cluster from external sources (aka Component Gateway). Defaults to false.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="httpports_go">
+<a href="#httpports_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Ports</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="enablehttpportaccess_nodejs">
+<a href="#enablehttpportaccess_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Http<wbr>Port<wbr>Access</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}The flag to enable http access to specific ports
+on the cluster from external sources (aka Component Gateway). Defaults to false.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="httpports_nodejs">
+<a href="#httpports_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Ports</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="enablehttpportaccess_python">
+<a href="#enablehttpportaccess_python" style="color: inherit; text-decoration: inherit;">enable<wbr>Http<wbr>Port<wbr>Access</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}The flag to enable http access to specific ports
+on the cluster from external sources (aka Component Gateway). Defaults to false.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="httpports_python">
+<a href="#httpports_python" style="color: inherit; text-decoration: inherit;">http<wbr>Ports</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1765,7 +2151,9 @@ all instances in the cluster.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Internal<wbr>Ip<wbr>Only</span>
+        <span id="internaliponly_csharp">
+<a href="#internaliponly_csharp" style="color: inherit; text-decoration: inherit;">Internal<wbr>Ip<wbr>Only</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1778,7 +2166,9 @@ will be launched in.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Metadata</span>
+        <span id="metadata_csharp">
+<a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -1788,7 +2178,9 @@ will be launched in.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Network</span>
+        <span id="network_csharp">
+<a href="#network_csharp" style="color: inherit; text-decoration: inherit;">Network</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1799,7 +2191,9 @@ If neither is specified, this defaults to the "default" network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Service<wbr>Account</span>
+        <span id="serviceaccount_csharp">
+<a href="#serviceaccount_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Account</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1809,7 +2203,9 @@ If not specified, the "default" service account is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Service<wbr>Account<wbr>Scopes</span>
+        <span id="serviceaccountscopes_csharp">
+<a href="#serviceaccountscopes_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Account<wbr>Scopes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1822,7 +2218,9 @@ correct functioning ofthe cluster, and are set automatically by the API:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Subnetwork</span>
+        <span id="subnetwork_csharp">
+<a href="#subnetwork_csharp" style="color: inherit; text-decoration: inherit;">Subnetwork</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1832,7 +2230,9 @@ subnetwork the cluster will be part of. Conflicts with `network`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1842,7 +2242,9 @@ Tags are used to identify valid sources or targets for network firewalls.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Zone</span>
+        <span id="zone_csharp">
+<a href="#zone_csharp" style="color: inherit; text-decoration: inherit;">Zone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1864,7 +2266,9 @@ which computing resources are available for use with other configs such as
 
     <dt class="property-optional"
             title="Optional">
-        <span>Internal<wbr>Ip<wbr>Only</span>
+        <span id="internaliponly_go">
+<a href="#internaliponly_go" style="color: inherit; text-decoration: inherit;">Internal<wbr>Ip<wbr>Only</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1877,7 +2281,9 @@ will be launched in.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Metadata</span>
+        <span id="metadata_go">
+<a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -1887,7 +2293,9 @@ will be launched in.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Network</span>
+        <span id="network_go">
+<a href="#network_go" style="color: inherit; text-decoration: inherit;">Network</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1898,7 +2306,9 @@ If neither is specified, this defaults to the "default" network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Service<wbr>Account</span>
+        <span id="serviceaccount_go">
+<a href="#serviceaccount_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Account</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1908,7 +2318,9 @@ If not specified, the "default" service account is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Service<wbr>Account<wbr>Scopes</span>
+        <span id="serviceaccountscopes_go">
+<a href="#serviceaccountscopes_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Account<wbr>Scopes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1921,7 +2333,9 @@ correct functioning ofthe cluster, and are set automatically by the API:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Subnetwork</span>
+        <span id="subnetwork_go">
+<a href="#subnetwork_go" style="color: inherit; text-decoration: inherit;">Subnetwork</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1931,7 +2345,9 @@ subnetwork the cluster will be part of. Conflicts with `network`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1941,7 +2357,9 @@ Tags are used to identify valid sources or targets for network firewalls.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Zone</span>
+        <span id="zone_go">
+<a href="#zone_go" style="color: inherit; text-decoration: inherit;">Zone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1963,7 +2381,9 @@ which computing resources are available for use with other configs such as
 
     <dt class="property-optional"
             title="Optional">
-        <span>internal<wbr>Ip<wbr>Only</span>
+        <span id="internaliponly_nodejs">
+<a href="#internaliponly_nodejs" style="color: inherit; text-decoration: inherit;">internal<wbr>Ip<wbr>Only</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1976,7 +2396,9 @@ will be launched in.
 
     <dt class="property-optional"
             title="Optional">
-        <span>metadata</span>
+        <span id="metadata_nodejs">
+<a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -1986,7 +2408,9 @@ will be launched in.
 
     <dt class="property-optional"
             title="Optional">
-        <span>network</span>
+        <span id="network_nodejs">
+<a href="#network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1997,7 +2421,9 @@ If neither is specified, this defaults to the "default" network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>service<wbr>Account</span>
+        <span id="serviceaccount_nodejs">
+<a href="#serviceaccount_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2007,7 +2433,9 @@ If not specified, the "default" service account is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>service<wbr>Account<wbr>Scopes</span>
+        <span id="serviceaccountscopes_nodejs">
+<a href="#serviceaccountscopes_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account<wbr>Scopes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -2020,7 +2448,9 @@ correct functioning ofthe cluster, and are set automatically by the API:
 
     <dt class="property-optional"
             title="Optional">
-        <span>subnetwork</span>
+        <span id="subnetwork_nodejs">
+<a href="#subnetwork_nodejs" style="color: inherit; text-decoration: inherit;">subnetwork</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2030,7 +2460,9 @@ subnetwork the cluster will be part of. Conflicts with `network`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -2040,7 +2472,9 @@ Tags are used to identify valid sources or targets for network firewalls.
 
     <dt class="property-optional"
             title="Optional">
-        <span>zone</span>
+        <span id="zone_nodejs">
+<a href="#zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2062,7 +2496,9 @@ which computing resources are available for use with other configs such as
 
     <dt class="property-optional"
             title="Optional">
-        <span>internal<wbr>Ip<wbr>Only</span>
+        <span id="internaliponly_python">
+<a href="#internaliponly_python" style="color: inherit; text-decoration: inherit;">internal<wbr>Ip<wbr>Only</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2075,7 +2511,9 @@ will be launched in.
 
     <dt class="property-optional"
             title="Optional">
-        <span>metadata</span>
+        <span id="metadata_python">
+<a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -2085,7 +2523,9 @@ will be launched in.
 
     <dt class="property-optional"
             title="Optional">
-        <span>network</span>
+        <span id="network_python">
+<a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2096,7 +2536,9 @@ If neither is specified, this defaults to the "default" network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>service<wbr>Account<wbr>Scopes</span>
+        <span id="serviceaccountscopes_python">
+<a href="#serviceaccountscopes_python" style="color: inherit; text-decoration: inherit;">service<wbr>Account<wbr>Scopes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -2109,7 +2551,9 @@ correct functioning ofthe cluster, and are set automatically by the API:
 
     <dt class="property-optional"
             title="Optional">
-        <span>service_<wbr>account</span>
+        <span id="service_account_python">
+<a href="#service_account_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2119,7 +2563,9 @@ If not specified, the "default" service account is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>subnetwork</span>
+        <span id="subnetwork_python">
+<a href="#subnetwork_python" style="color: inherit; text-decoration: inherit;">subnetwork</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2129,7 +2575,9 @@ subnetwork the cluster will be part of. Conflicts with `network`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -2139,7 +2587,9 @@ Tags are used to identify valid sources or targets for network firewalls.
 
     <dt class="property-optional"
             title="Optional">
-        <span>zone</span>
+        <span id="zone_python">
+<a href="#zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2179,7 +2629,9 @@ which computing resources are available for use with other configs such as
 
     <dt class="property-required"
             title="Required">
-        <span>Script</span>
+        <span id="script_csharp">
+<a href="#script_csharp" style="color: inherit; text-decoration: inherit;">Script</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2189,7 +2641,9 @@ The script must be a GCS file with a gs:// prefix.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Timeout<wbr>Sec</span>
+        <span id="timeoutsec_csharp">
+<a href="#timeoutsec_csharp" style="color: inherit; text-decoration: inherit;">Timeout<wbr>Sec</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -2207,7 +2661,9 @@ computed value if not set (currently 300).
 
     <dt class="property-required"
             title="Required">
-        <span>Script</span>
+        <span id="script_go">
+<a href="#script_go" style="color: inherit; text-decoration: inherit;">Script</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2217,7 +2673,9 @@ The script must be a GCS file with a gs:// prefix.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Timeout<wbr>Sec</span>
+        <span id="timeoutsec_go">
+<a href="#timeoutsec_go" style="color: inherit; text-decoration: inherit;">Timeout<wbr>Sec</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -2235,7 +2693,9 @@ computed value if not set (currently 300).
 
     <dt class="property-required"
             title="Required">
-        <span>script</span>
+        <span id="script_nodejs">
+<a href="#script_nodejs" style="color: inherit; text-decoration: inherit;">script</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2245,7 +2705,9 @@ The script must be a GCS file with a gs:// prefix.
 
     <dt class="property-optional"
             title="Optional">
-        <span>timeout<wbr>Sec</span>
+        <span id="timeoutsec_nodejs">
+<a href="#timeoutsec_nodejs" style="color: inherit; text-decoration: inherit;">timeout<wbr>Sec</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -2263,7 +2725,9 @@ computed value if not set (currently 300).
 
     <dt class="property-required"
             title="Required">
-        <span>script</span>
+        <span id="script_python">
+<a href="#script_python" style="color: inherit; text-decoration: inherit;">script</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2273,7 +2737,9 @@ The script must be a GCS file with a gs:// prefix.
 
     <dt class="property-optional"
             title="Optional">
-        <span>timeout_<wbr>sec</span>
+        <span id="timeout_sec_python">
+<a href="#timeout_sec_python" style="color: inherit; text-decoration: inherit;">timeout_<wbr>sec</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2309,7 +2775,9 @@ computed value if not set (currently 300).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Auto<wbr>Delete<wbr>Time</span>
+        <span id="autodeletetime_csharp">
+<a href="#autodeletetime_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Delete<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2320,7 +2788,9 @@ Example: "2014-10-02T15:01:23.045123456Z".
 
     <dt class="property-optional"
             title="Optional">
-        <span>Idle<wbr>Delete<wbr>Ttl</span>
+        <span id="idledeletettl_csharp">
+<a href="#idledeletettl_csharp" style="color: inherit; text-decoration: inherit;">Idle<wbr>Delete<wbr>Ttl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2330,7 +2800,9 @@ Example: "2014-10-02T15:01:23.045123456Z".
 
     <dt class="property-optional"
             title="Optional">
-        <span>Idle<wbr>Start<wbr>Time</span>
+        <span id="idlestarttime_csharp">
+<a href="#idlestarttime_csharp" style="color: inherit; text-decoration: inherit;">Idle<wbr>Start<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2345,7 +2817,9 @@ Example: "2014-10-02T15:01:23.045123456Z".
 
     <dt class="property-optional"
             title="Optional">
-        <span>Auto<wbr>Delete<wbr>Time</span>
+        <span id="autodeletetime_go">
+<a href="#autodeletetime_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Delete<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2356,7 +2830,9 @@ Example: "2014-10-02T15:01:23.045123456Z".
 
     <dt class="property-optional"
             title="Optional">
-        <span>Idle<wbr>Delete<wbr>Ttl</span>
+        <span id="idledeletettl_go">
+<a href="#idledeletettl_go" style="color: inherit; text-decoration: inherit;">Idle<wbr>Delete<wbr>Ttl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2366,7 +2842,9 @@ Example: "2014-10-02T15:01:23.045123456Z".
 
     <dt class="property-optional"
             title="Optional">
-        <span>Idle<wbr>Start<wbr>Time</span>
+        <span id="idlestarttime_go">
+<a href="#idlestarttime_go" style="color: inherit; text-decoration: inherit;">Idle<wbr>Start<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2381,7 +2859,9 @@ Example: "2014-10-02T15:01:23.045123456Z".
 
     <dt class="property-optional"
             title="Optional">
-        <span>auto<wbr>Delete<wbr>Time</span>
+        <span id="autodeletetime_nodejs">
+<a href="#autodeletetime_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Delete<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2392,7 +2872,9 @@ Example: "2014-10-02T15:01:23.045123456Z".
 
     <dt class="property-optional"
             title="Optional">
-        <span>idle<wbr>Delete<wbr>Ttl</span>
+        <span id="idledeletettl_nodejs">
+<a href="#idledeletettl_nodejs" style="color: inherit; text-decoration: inherit;">idle<wbr>Delete<wbr>Ttl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2402,7 +2884,9 @@ Example: "2014-10-02T15:01:23.045123456Z".
 
     <dt class="property-optional"
             title="Optional">
-        <span>idle<wbr>Start<wbr>Time</span>
+        <span id="idlestarttime_nodejs">
+<a href="#idlestarttime_nodejs" style="color: inherit; text-decoration: inherit;">idle<wbr>Start<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2417,7 +2901,9 @@ Example: "2014-10-02T15:01:23.045123456Z".
 
     <dt class="property-optional"
             title="Optional">
-        <span>auto<wbr>Delete<wbr>Time</span>
+        <span id="autodeletetime_python">
+<a href="#autodeletetime_python" style="color: inherit; text-decoration: inherit;">auto<wbr>Delete<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2428,7 +2914,9 @@ Example: "2014-10-02T15:01:23.045123456Z".
 
     <dt class="property-optional"
             title="Optional">
-        <span>idle<wbr>Delete<wbr>Ttl</span>
+        <span id="idledeletettl_python">
+<a href="#idledeletettl_python" style="color: inherit; text-decoration: inherit;">idle<wbr>Delete<wbr>Ttl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2438,7 +2926,9 @@ Example: "2014-10-02T15:01:23.045123456Z".
 
     <dt class="property-optional"
             title="Optional">
-        <span>idle<wbr>Start<wbr>Time</span>
+        <span id="idlestarttime_python">
+<a href="#idlestarttime_python" style="color: inherit; text-decoration: inherit;">idle<wbr>Start<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2471,7 +2961,9 @@ Example: "2014-10-02T15:01:23.045123456Z".
 
     <dt class="property-optional"
             title="Optional">
-        <span>Accelerators</span>
+        <span id="accelerators_csharp">
+<a href="#accelerators_csharp" style="color: inherit; text-decoration: inherit;">Accelerators</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfigmasterconfigaccelerator">List&lt;Cluster<wbr>Cluster<wbr>Config<wbr>Master<wbr>Config<wbr>Accelerator<wbr>Args&gt;</a></span>
     </dt>
@@ -2480,7 +2972,9 @@ Example: "2014-10-02T15:01:23.045123456Z".
 
     <dt class="property-optional"
             title="Optional">
-        <span>Disk<wbr>Config</span>
+        <span id="diskconfig_csharp">
+<a href="#diskconfig_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfigmasterconfigdiskconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Master<wbr>Config<wbr>Disk<wbr>Config<wbr>Args</a></span>
     </dt>
@@ -2489,7 +2983,9 @@ Example: "2014-10-02T15:01:23.045123456Z".
 
     <dt class="property-optional"
             title="Optional">
-        <span>Image<wbr>Uri</span>
+        <span id="imageuri_csharp">
+<a href="#imageuri_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2499,7 +2995,9 @@ for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Instance<wbr>Names</span>
+        <span id="instancenames_csharp">
+<a href="#instancenames_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Names</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -2507,7 +3005,9 @@ for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Machine<wbr>Type</span>
+        <span id="machinetype_csharp">
+<a href="#machinetype_csharp" style="color: inherit; text-decoration: inherit;">Machine<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2518,7 +3018,9 @@ computed value (currently `n1-standard-4`).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Min<wbr>Cpu<wbr>Platform</span>
+        <span id="mincpuplatform_csharp">
+<a href="#mincpuplatform_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Cpu<wbr>Platform</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2530,7 +3032,9 @@ for details about which CPU families are available (and defaulted) for each zone
 
     <dt class="property-optional"
             title="Optional">
-        <span>Num<wbr>Instances</span>
+        <span id="numinstances_csharp">
+<a href="#numinstances_csharp" style="color: inherit; text-decoration: inherit;">Num<wbr>Instances</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -2547,7 +3051,9 @@ Defaults to 0.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Accelerators</span>
+        <span id="accelerators_go">
+<a href="#accelerators_go" style="color: inherit; text-decoration: inherit;">Accelerators</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfigmasterconfigaccelerator">[]Cluster<wbr>Cluster<wbr>Config<wbr>Master<wbr>Config<wbr>Accelerator</a></span>
     </dt>
@@ -2556,7 +3062,9 @@ Defaults to 0.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Disk<wbr>Config</span>
+        <span id="diskconfig_go">
+<a href="#diskconfig_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfigmasterconfigdiskconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Master<wbr>Config<wbr>Disk<wbr>Config</a></span>
     </dt>
@@ -2565,7 +3073,9 @@ Defaults to 0.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Image<wbr>Uri</span>
+        <span id="imageuri_go">
+<a href="#imageuri_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2575,7 +3085,9 @@ for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Instance<wbr>Names</span>
+        <span id="instancenames_go">
+<a href="#instancenames_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Names</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -2583,7 +3095,9 @@ for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Machine<wbr>Type</span>
+        <span id="machinetype_go">
+<a href="#machinetype_go" style="color: inherit; text-decoration: inherit;">Machine<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2594,7 +3108,9 @@ computed value (currently `n1-standard-4`).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Min<wbr>Cpu<wbr>Platform</span>
+        <span id="mincpuplatform_go">
+<a href="#mincpuplatform_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Cpu<wbr>Platform</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2606,7 +3122,9 @@ for details about which CPU families are available (and defaulted) for each zone
 
     <dt class="property-optional"
             title="Optional">
-        <span>Num<wbr>Instances</span>
+        <span id="numinstances_go">
+<a href="#numinstances_go" style="color: inherit; text-decoration: inherit;">Num<wbr>Instances</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -2623,7 +3141,9 @@ Defaults to 0.
 
     <dt class="property-optional"
             title="Optional">
-        <span>accelerators</span>
+        <span id="accelerators_nodejs">
+<a href="#accelerators_nodejs" style="color: inherit; text-decoration: inherit;">accelerators</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfigmasterconfigaccelerator">Cluster<wbr>Cluster<wbr>Config<wbr>Master<wbr>Config<wbr>Accelerator[]</a></span>
     </dt>
@@ -2632,7 +3152,9 @@ Defaults to 0.
 
     <dt class="property-optional"
             title="Optional">
-        <span>disk<wbr>Config</span>
+        <span id="diskconfig_nodejs">
+<a href="#diskconfig_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfigmasterconfigdiskconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Master<wbr>Config<wbr>Disk<wbr>Config</a></span>
     </dt>
@@ -2641,7 +3163,9 @@ Defaults to 0.
 
     <dt class="property-optional"
             title="Optional">
-        <span>image<wbr>Uri</span>
+        <span id="imageuri_nodejs">
+<a href="#imageuri_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2651,7 +3175,9 @@ for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>instance<wbr>Names</span>
+        <span id="instancenames_nodejs">
+<a href="#instancenames_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Names</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -2659,7 +3185,9 @@ for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>machine<wbr>Type</span>
+        <span id="machinetype_nodejs">
+<a href="#machinetype_nodejs" style="color: inherit; text-decoration: inherit;">machine<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2670,7 +3198,9 @@ computed value (currently `n1-standard-4`).
 
     <dt class="property-optional"
             title="Optional">
-        <span>min<wbr>Cpu<wbr>Platform</span>
+        <span id="mincpuplatform_nodejs">
+<a href="#mincpuplatform_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Cpu<wbr>Platform</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2682,7 +3212,9 @@ for details about which CPU families are available (and defaulted) for each zone
 
     <dt class="property-optional"
             title="Optional">
-        <span>num<wbr>Instances</span>
+        <span id="numinstances_nodejs">
+<a href="#numinstances_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Instances</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -2699,7 +3231,9 @@ Defaults to 0.
 
     <dt class="property-optional"
             title="Optional">
-        <span>accelerators</span>
+        <span id="accelerators_python">
+<a href="#accelerators_python" style="color: inherit; text-decoration: inherit;">accelerators</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfigmasterconfigaccelerator">List[Cluster<wbr>Cluster<wbr>Config<wbr>Master<wbr>Config<wbr>Accelerator]</a></span>
     </dt>
@@ -2708,7 +3242,9 @@ Defaults to 0.
 
     <dt class="property-optional"
             title="Optional">
-        <span>disk<wbr>Config</span>
+        <span id="diskconfig_python">
+<a href="#diskconfig_python" style="color: inherit; text-decoration: inherit;">disk<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfigmasterconfigdiskconfig">Dict[Cluster<wbr>Cluster<wbr>Config<wbr>Master<wbr>Config<wbr>Disk<wbr>Config]</a></span>
     </dt>
@@ -2717,7 +3253,9 @@ Defaults to 0.
 
     <dt class="property-optional"
             title="Optional">
-        <span>image<wbr>Uri</span>
+        <span id="imageuri_python">
+<a href="#imageuri_python" style="color: inherit; text-decoration: inherit;">image<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2727,7 +3265,9 @@ for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>instance<wbr>Names</span>
+        <span id="instancenames_python">
+<a href="#instancenames_python" style="color: inherit; text-decoration: inherit;">instance<wbr>Names</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -2735,7 +3275,9 @@ for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>machine_<wbr>type</span>
+        <span id="machine_type_python">
+<a href="#machine_type_python" style="color: inherit; text-decoration: inherit;">machine_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2746,7 +3288,9 @@ computed value (currently `n1-standard-4`).
 
     <dt class="property-optional"
             title="Optional">
-        <span>min_<wbr>cpu_<wbr>platform</span>
+        <span id="min_cpu_platform_python">
+<a href="#min_cpu_platform_python" style="color: inherit; text-decoration: inherit;">min_<wbr>cpu_<wbr>platform</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2758,7 +3302,9 @@ for details about which CPU families are available (and defaulted) for each zone
 
     <dt class="property-optional"
             title="Optional">
-        <span>num<wbr>Instances</span>
+        <span id="numinstances_python">
+<a href="#numinstances_python" style="color: inherit; text-decoration: inherit;">num<wbr>Instances</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2793,7 +3339,9 @@ Defaults to 0.
 
     <dt class="property-required"
             title="Required">
-        <span>Accelerator<wbr>Count</span>
+        <span id="acceleratorcount_csharp">
+<a href="#acceleratorcount_csharp" style="color: inherit; text-decoration: inherit;">Accelerator<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -2802,7 +3350,9 @@ Defaults to 0.
 
     <dt class="property-required"
             title="Required">
-        <span>Accelerator<wbr>Type</span>
+        <span id="acceleratortype_csharp">
+<a href="#acceleratortype_csharp" style="color: inherit; text-decoration: inherit;">Accelerator<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2818,7 +3368,9 @@ Defaults to 0.
 
     <dt class="property-required"
             title="Required">
-        <span>Accelerator<wbr>Count</span>
+        <span id="acceleratorcount_go">
+<a href="#acceleratorcount_go" style="color: inherit; text-decoration: inherit;">Accelerator<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -2827,7 +3379,9 @@ Defaults to 0.
 
     <dt class="property-required"
             title="Required">
-        <span>Accelerator<wbr>Type</span>
+        <span id="acceleratortype_go">
+<a href="#acceleratortype_go" style="color: inherit; text-decoration: inherit;">Accelerator<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2843,7 +3397,9 @@ Defaults to 0.
 
     <dt class="property-required"
             title="Required">
-        <span>accelerator<wbr>Count</span>
+        <span id="acceleratorcount_nodejs">
+<a href="#acceleratorcount_nodejs" style="color: inherit; text-decoration: inherit;">accelerator<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -2852,7 +3408,9 @@ Defaults to 0.
 
     <dt class="property-required"
             title="Required">
-        <span>accelerator<wbr>Type</span>
+        <span id="acceleratortype_nodejs">
+<a href="#acceleratortype_nodejs" style="color: inherit; text-decoration: inherit;">accelerator<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2868,7 +3426,9 @@ Defaults to 0.
 
     <dt class="property-required"
             title="Required">
-        <span>accelerator<wbr>Count</span>
+        <span id="acceleratorcount_python">
+<a href="#acceleratorcount_python" style="color: inherit; text-decoration: inherit;">accelerator<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2877,7 +3437,9 @@ Defaults to 0.
 
     <dt class="property-required"
             title="Required">
-        <span>accelerator_<wbr>type</span>
+        <span id="accelerator_type_python">
+<a href="#accelerator_type_python" style="color: inherit; text-decoration: inherit;">accelerator_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2911,7 +3473,9 @@ Defaults to 0.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Boot<wbr>Disk<wbr>Size<wbr>Gb</span>
+        <span id="bootdisksizegb_csharp">
+<a href="#bootdisksizegb_csharp" style="color: inherit; text-decoration: inherit;">Boot<wbr>Disk<wbr>Size<wbr>Gb</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -2923,7 +3487,9 @@ attached, it also contains the HDFS data blocks and Hadoop working directories.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Boot<wbr>Disk<wbr>Type</span>
+        <span id="bootdisktype_csharp">
+<a href="#bootdisktype_csharp" style="color: inherit; text-decoration: inherit;">Boot<wbr>Disk<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2933,7 +3499,9 @@ One of `"pd-ssd"` or `"pd-standard"`. Defaults to `"pd-standard"`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Num<wbr>Local<wbr>Ssds</span>
+        <span id="numlocalssds_csharp">
+<a href="#numlocalssds_csharp" style="color: inherit; text-decoration: inherit;">Num<wbr>Local<wbr>Ssds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -2950,7 +3518,9 @@ attached to each preemptible worker node. Defaults to 0.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Boot<wbr>Disk<wbr>Size<wbr>Gb</span>
+        <span id="bootdisksizegb_go">
+<a href="#bootdisksizegb_go" style="color: inherit; text-decoration: inherit;">Boot<wbr>Disk<wbr>Size<wbr>Gb</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -2962,7 +3532,9 @@ attached, it also contains the HDFS data blocks and Hadoop working directories.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Boot<wbr>Disk<wbr>Type</span>
+        <span id="bootdisktype_go">
+<a href="#bootdisktype_go" style="color: inherit; text-decoration: inherit;">Boot<wbr>Disk<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2972,7 +3544,9 @@ One of `"pd-ssd"` or `"pd-standard"`. Defaults to `"pd-standard"`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Num<wbr>Local<wbr>Ssds</span>
+        <span id="numlocalssds_go">
+<a href="#numlocalssds_go" style="color: inherit; text-decoration: inherit;">Num<wbr>Local<wbr>Ssds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -2989,7 +3563,9 @@ attached to each preemptible worker node. Defaults to 0.
 
     <dt class="property-optional"
             title="Optional">
-        <span>boot<wbr>Disk<wbr>Size<wbr>Gb</span>
+        <span id="bootdisksizegb_nodejs">
+<a href="#bootdisksizegb_nodejs" style="color: inherit; text-decoration: inherit;">boot<wbr>Disk<wbr>Size<wbr>Gb</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -3001,7 +3577,9 @@ attached, it also contains the HDFS data blocks and Hadoop working directories.
 
     <dt class="property-optional"
             title="Optional">
-        <span>boot<wbr>Disk<wbr>Type</span>
+        <span id="bootdisktype_nodejs">
+<a href="#bootdisktype_nodejs" style="color: inherit; text-decoration: inherit;">boot<wbr>Disk<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3011,7 +3589,9 @@ One of `"pd-ssd"` or `"pd-standard"`. Defaults to `"pd-standard"`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>num<wbr>Local<wbr>Ssds</span>
+        <span id="numlocalssds_nodejs">
+<a href="#numlocalssds_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Local<wbr>Ssds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -3028,7 +3608,9 @@ attached to each preemptible worker node. Defaults to 0.
 
     <dt class="property-optional"
             title="Optional">
-        <span>boot<wbr>Disk<wbr>Size<wbr>Gb</span>
+        <span id="bootdisksizegb_python">
+<a href="#bootdisksizegb_python" style="color: inherit; text-decoration: inherit;">boot<wbr>Disk<wbr>Size<wbr>Gb</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -3040,7 +3622,9 @@ attached, it also contains the HDFS data blocks and Hadoop working directories.
 
     <dt class="property-optional"
             title="Optional">
-        <span>boot<wbr>Disk<wbr>Type</span>
+        <span id="bootdisktype_python">
+<a href="#bootdisktype_python" style="color: inherit; text-decoration: inherit;">boot<wbr>Disk<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3050,7 +3634,9 @@ One of `"pd-ssd"` or `"pd-standard"`. Defaults to `"pd-standard"`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>num<wbr>Local<wbr>Ssds</span>
+        <span id="numlocalssds_python">
+<a href="#numlocalssds_python" style="color: inherit; text-decoration: inherit;">num<wbr>Local<wbr>Ssds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -3085,7 +3671,9 @@ attached to each preemptible worker node. Defaults to 0.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Disk<wbr>Config</span>
+        <span id="diskconfig_csharp">
+<a href="#diskconfig_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfigpreemptibleworkerconfigdiskconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Preemptible<wbr>Worker<wbr>Config<wbr>Disk<wbr>Config<wbr>Args</a></span>
     </dt>
@@ -3094,7 +3682,9 @@ attached to each preemptible worker node. Defaults to 0.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Instance<wbr>Names</span>
+        <span id="instancenames_csharp">
+<a href="#instancenames_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Names</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -3102,7 +3692,9 @@ attached to each preemptible worker node. Defaults to 0.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Num<wbr>Instances</span>
+        <span id="numinstances_csharp">
+<a href="#numinstances_csharp" style="color: inherit; text-decoration: inherit;">Num<wbr>Instances</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -3119,7 +3711,9 @@ Defaults to 0.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Disk<wbr>Config</span>
+        <span id="diskconfig_go">
+<a href="#diskconfig_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfigpreemptibleworkerconfigdiskconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Preemptible<wbr>Worker<wbr>Config<wbr>Disk<wbr>Config</a></span>
     </dt>
@@ -3128,7 +3722,9 @@ Defaults to 0.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Instance<wbr>Names</span>
+        <span id="instancenames_go">
+<a href="#instancenames_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Names</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -3136,7 +3732,9 @@ Defaults to 0.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Num<wbr>Instances</span>
+        <span id="numinstances_go">
+<a href="#numinstances_go" style="color: inherit; text-decoration: inherit;">Num<wbr>Instances</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -3153,7 +3751,9 @@ Defaults to 0.
 
     <dt class="property-optional"
             title="Optional">
-        <span>disk<wbr>Config</span>
+        <span id="diskconfig_nodejs">
+<a href="#diskconfig_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfigpreemptibleworkerconfigdiskconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Preemptible<wbr>Worker<wbr>Config<wbr>Disk<wbr>Config</a></span>
     </dt>
@@ -3162,7 +3762,9 @@ Defaults to 0.
 
     <dt class="property-optional"
             title="Optional">
-        <span>instance<wbr>Names</span>
+        <span id="instancenames_nodejs">
+<a href="#instancenames_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Names</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -3170,7 +3772,9 @@ Defaults to 0.
 
     <dt class="property-optional"
             title="Optional">
-        <span>num<wbr>Instances</span>
+        <span id="numinstances_nodejs">
+<a href="#numinstances_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Instances</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -3187,7 +3791,9 @@ Defaults to 0.
 
     <dt class="property-optional"
             title="Optional">
-        <span>disk<wbr>Config</span>
+        <span id="diskconfig_python">
+<a href="#diskconfig_python" style="color: inherit; text-decoration: inherit;">disk<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfigpreemptibleworkerconfigdiskconfig">Dict[Cluster<wbr>Cluster<wbr>Config<wbr>Preemptible<wbr>Worker<wbr>Config<wbr>Disk<wbr>Config]</a></span>
     </dt>
@@ -3196,7 +3802,9 @@ Defaults to 0.
 
     <dt class="property-optional"
             title="Optional">
-        <span>instance<wbr>Names</span>
+        <span id="instancenames_python">
+<a href="#instancenames_python" style="color: inherit; text-decoration: inherit;">instance<wbr>Names</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -3204,7 +3812,9 @@ Defaults to 0.
 
     <dt class="property-optional"
             title="Optional">
-        <span>num<wbr>Instances</span>
+        <span id="numinstances_python">
+<a href="#numinstances_python" style="color: inherit; text-decoration: inherit;">num<wbr>Instances</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -3239,7 +3849,9 @@ Defaults to 0.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Boot<wbr>Disk<wbr>Size<wbr>Gb</span>
+        <span id="bootdisksizegb_csharp">
+<a href="#bootdisksizegb_csharp" style="color: inherit; text-decoration: inherit;">Boot<wbr>Disk<wbr>Size<wbr>Gb</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -3251,7 +3863,9 @@ attached, it also contains the HDFS data blocks and Hadoop working directories.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Boot<wbr>Disk<wbr>Type</span>
+        <span id="bootdisktype_csharp">
+<a href="#bootdisktype_csharp" style="color: inherit; text-decoration: inherit;">Boot<wbr>Disk<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3261,7 +3875,9 @@ One of `"pd-ssd"` or `"pd-standard"`. Defaults to `"pd-standard"`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Num<wbr>Local<wbr>Ssds</span>
+        <span id="numlocalssds_csharp">
+<a href="#numlocalssds_csharp" style="color: inherit; text-decoration: inherit;">Num<wbr>Local<wbr>Ssds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -3278,7 +3894,9 @@ attached to each preemptible worker node. Defaults to 0.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Boot<wbr>Disk<wbr>Size<wbr>Gb</span>
+        <span id="bootdisksizegb_go">
+<a href="#bootdisksizegb_go" style="color: inherit; text-decoration: inherit;">Boot<wbr>Disk<wbr>Size<wbr>Gb</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -3290,7 +3908,9 @@ attached, it also contains the HDFS data blocks and Hadoop working directories.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Boot<wbr>Disk<wbr>Type</span>
+        <span id="bootdisktype_go">
+<a href="#bootdisktype_go" style="color: inherit; text-decoration: inherit;">Boot<wbr>Disk<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3300,7 +3920,9 @@ One of `"pd-ssd"` or `"pd-standard"`. Defaults to `"pd-standard"`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Num<wbr>Local<wbr>Ssds</span>
+        <span id="numlocalssds_go">
+<a href="#numlocalssds_go" style="color: inherit; text-decoration: inherit;">Num<wbr>Local<wbr>Ssds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -3317,7 +3939,9 @@ attached to each preemptible worker node. Defaults to 0.
 
     <dt class="property-optional"
             title="Optional">
-        <span>boot<wbr>Disk<wbr>Size<wbr>Gb</span>
+        <span id="bootdisksizegb_nodejs">
+<a href="#bootdisksizegb_nodejs" style="color: inherit; text-decoration: inherit;">boot<wbr>Disk<wbr>Size<wbr>Gb</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -3329,7 +3953,9 @@ attached, it also contains the HDFS data blocks and Hadoop working directories.
 
     <dt class="property-optional"
             title="Optional">
-        <span>boot<wbr>Disk<wbr>Type</span>
+        <span id="bootdisktype_nodejs">
+<a href="#bootdisktype_nodejs" style="color: inherit; text-decoration: inherit;">boot<wbr>Disk<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3339,7 +3965,9 @@ One of `"pd-ssd"` or `"pd-standard"`. Defaults to `"pd-standard"`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>num<wbr>Local<wbr>Ssds</span>
+        <span id="numlocalssds_nodejs">
+<a href="#numlocalssds_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Local<wbr>Ssds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -3356,7 +3984,9 @@ attached to each preemptible worker node. Defaults to 0.
 
     <dt class="property-optional"
             title="Optional">
-        <span>boot<wbr>Disk<wbr>Size<wbr>Gb</span>
+        <span id="bootdisksizegb_python">
+<a href="#bootdisksizegb_python" style="color: inherit; text-decoration: inherit;">boot<wbr>Disk<wbr>Size<wbr>Gb</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -3368,7 +3998,9 @@ attached, it also contains the HDFS data blocks and Hadoop working directories.
 
     <dt class="property-optional"
             title="Optional">
-        <span>boot<wbr>Disk<wbr>Type</span>
+        <span id="bootdisktype_python">
+<a href="#bootdisktype_python" style="color: inherit; text-decoration: inherit;">boot<wbr>Disk<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3378,7 +4010,9 @@ One of `"pd-ssd"` or `"pd-standard"`. Defaults to `"pd-standard"`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>num<wbr>Local<wbr>Ssds</span>
+        <span id="numlocalssds_python">
+<a href="#numlocalssds_python" style="color: inherit; text-decoration: inherit;">num<wbr>Local<wbr>Ssds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -3413,7 +4047,9 @@ attached to each preemptible worker node. Defaults to 0.
 
     <dt class="property-required"
             title="Required">
-        <span>Kerberos<wbr>Config</span>
+        <span id="kerberosconfig_csharp">
+<a href="#kerberosconfig_csharp" style="color: inherit; text-decoration: inherit;">Kerberos<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfigsecurityconfigkerberosconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Security<wbr>Config<wbr>Kerberos<wbr>Config<wbr>Args</a></span>
     </dt>
@@ -3429,7 +4065,9 @@ attached to each preemptible worker node. Defaults to 0.
 
     <dt class="property-required"
             title="Required">
-        <span>Kerberos<wbr>Config</span>
+        <span id="kerberosconfig_go">
+<a href="#kerberosconfig_go" style="color: inherit; text-decoration: inherit;">Kerberos<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfigsecurityconfigkerberosconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Security<wbr>Config<wbr>Kerberos<wbr>Config</a></span>
     </dt>
@@ -3445,7 +4083,9 @@ attached to each preemptible worker node. Defaults to 0.
 
     <dt class="property-required"
             title="Required">
-        <span>kerberos<wbr>Config</span>
+        <span id="kerberosconfig_nodejs">
+<a href="#kerberosconfig_nodejs" style="color: inherit; text-decoration: inherit;">kerberos<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfigsecurityconfigkerberosconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Security<wbr>Config<wbr>Kerberos<wbr>Config</a></span>
     </dt>
@@ -3461,7 +4101,9 @@ attached to each preemptible worker node. Defaults to 0.
 
     <dt class="property-required"
             title="Required">
-        <span>kerberos<wbr>Config</span>
+        <span id="kerberosconfig_python">
+<a href="#kerberosconfig_python" style="color: inherit; text-decoration: inherit;">kerberos<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfigsecurityconfigkerberosconfig">Dict[Cluster<wbr>Cluster<wbr>Config<wbr>Security<wbr>Config<wbr>Kerberos<wbr>Config]</a></span>
     </dt>
@@ -3495,7 +4137,9 @@ attached to each preemptible worker node. Defaults to 0.
 
     <dt class="property-required"
             title="Required">
-        <span>Kms<wbr>Key<wbr>Uri</span>
+        <span id="kmskeyuri_csharp">
+<a href="#kmskeyuri_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3504,7 +4148,9 @@ attached to each preemptible worker node. Defaults to 0.
 
     <dt class="property-required"
             title="Required">
-        <span>Root<wbr>Principal<wbr>Password<wbr>Uri</span>
+        <span id="rootprincipalpassworduri_csharp">
+<a href="#rootprincipalpassworduri_csharp" style="color: inherit; text-decoration: inherit;">Root<wbr>Principal<wbr>Password<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3514,7 +4160,9 @@ containing the root principal password.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cross<wbr>Realm<wbr>Trust<wbr>Admin<wbr>Server</span>
+        <span id="crossrealmtrustadminserver_csharp">
+<a href="#crossrealmtrustadminserver_csharp" style="color: inherit; text-decoration: inherit;">Cross<wbr>Realm<wbr>Trust<wbr>Admin<wbr>Server</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3524,7 +4172,9 @@ remote trusted realm in a cross realm trust relationship.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cross<wbr>Realm<wbr>Trust<wbr>Kdc</span>
+        <span id="crossrealmtrustkdc_csharp">
+<a href="#crossrealmtrustkdc_csharp" style="color: inherit; text-decoration: inherit;">Cross<wbr>Realm<wbr>Trust<wbr>Kdc</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3534,7 +4184,9 @@ remote trusted realm in a cross realm trust relationship.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cross<wbr>Realm<wbr>Trust<wbr>Realm</span>
+        <span id="crossrealmtrustrealm_csharp">
+<a href="#crossrealmtrustrealm_csharp" style="color: inherit; text-decoration: inherit;">Cross<wbr>Realm<wbr>Trust<wbr>Realm</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3544,7 +4196,9 @@ trust, should the user enable cross realm trust.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cross<wbr>Realm<wbr>Trust<wbr>Shared<wbr>Password<wbr>Uri</span>
+        <span id="crossrealmtrustsharedpassworduri_csharp">
+<a href="#crossrealmtrustsharedpassworduri_csharp" style="color: inherit; text-decoration: inherit;">Cross<wbr>Realm<wbr>Trust<wbr>Shared<wbr>Password<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3555,7 +4209,9 @@ and the remote trusted realm, in a cross realm trust relationship.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enable<wbr>Kerberos</span>
+        <span id="enablekerberos_csharp">
+<a href="#enablekerberos_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Kerberos</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -3564,7 +4220,9 @@ and the remote trusted realm, in a cross realm trust relationship.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Kdc<wbr>Db<wbr>Key<wbr>Uri</span>
+        <span id="kdcdbkeyuri_csharp">
+<a href="#kdcdbkeyuri_csharp" style="color: inherit; text-decoration: inherit;">Kdc<wbr>Db<wbr>Key<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3574,7 +4232,9 @@ the master key of the KDC database.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Key<wbr>Password<wbr>Uri</span>
+        <span id="keypassworduri_csharp">
+<a href="#keypassworduri_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Password<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3585,7 +4245,9 @@ is generated by Dataproc.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Keystore<wbr>Password<wbr>Uri</span>
+        <span id="keystorepassworduri_csharp">
+<a href="#keystorepassworduri_csharp" style="color: inherit; text-decoration: inherit;">Keystore<wbr>Password<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3596,7 +4258,9 @@ is generated by Dataproc.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Keystore<wbr>Uri</span>
+        <span id="keystoreuri_csharp">
+<a href="#keystoreuri_csharp" style="color: inherit; text-decoration: inherit;">Keystore<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3606,7 +4270,9 @@ If not provided, Dataproc will provide a self-signed certificate.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Realm</span>
+        <span id="realm_csharp">
+<a href="#realm_csharp" style="color: inherit; text-decoration: inherit;">Realm</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3616,7 +4282,9 @@ uppercased domain of hostnames will be the realm.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tgt<wbr>Lifetime<wbr>Hours</span>
+        <span id="tgtlifetimehours_csharp">
+<a href="#tgtlifetimehours_csharp" style="color: inherit; text-decoration: inherit;">Tgt<wbr>Lifetime<wbr>Hours</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -3625,7 +4293,9 @@ uppercased domain of hostnames will be the realm.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Truststore<wbr>Password<wbr>Uri</span>
+        <span id="truststorepassworduri_csharp">
+<a href="#truststorepassworduri_csharp" style="color: inherit; text-decoration: inherit;">Truststore<wbr>Password<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3636,7 +4306,9 @@ certificate, this password is generated by Dataproc.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Truststore<wbr>Uri</span>
+        <span id="truststoreuri_csharp">
+<a href="#truststoreuri_csharp" style="color: inherit; text-decoration: inherit;">Truststore<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3653,7 +4325,9 @@ SSL encryption. If not provided, Dataproc will provide a self-signed certificate
 
     <dt class="property-required"
             title="Required">
-        <span>Kms<wbr>Key<wbr>Uri</span>
+        <span id="kmskeyuri_go">
+<a href="#kmskeyuri_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3662,7 +4336,9 @@ SSL encryption. If not provided, Dataproc will provide a self-signed certificate
 
     <dt class="property-required"
             title="Required">
-        <span>Root<wbr>Principal<wbr>Password<wbr>Uri</span>
+        <span id="rootprincipalpassworduri_go">
+<a href="#rootprincipalpassworduri_go" style="color: inherit; text-decoration: inherit;">Root<wbr>Principal<wbr>Password<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3672,7 +4348,9 @@ containing the root principal password.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cross<wbr>Realm<wbr>Trust<wbr>Admin<wbr>Server</span>
+        <span id="crossrealmtrustadminserver_go">
+<a href="#crossrealmtrustadminserver_go" style="color: inherit; text-decoration: inherit;">Cross<wbr>Realm<wbr>Trust<wbr>Admin<wbr>Server</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3682,7 +4360,9 @@ remote trusted realm in a cross realm trust relationship.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cross<wbr>Realm<wbr>Trust<wbr>Kdc</span>
+        <span id="crossrealmtrustkdc_go">
+<a href="#crossrealmtrustkdc_go" style="color: inherit; text-decoration: inherit;">Cross<wbr>Realm<wbr>Trust<wbr>Kdc</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3692,7 +4372,9 @@ remote trusted realm in a cross realm trust relationship.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cross<wbr>Realm<wbr>Trust<wbr>Realm</span>
+        <span id="crossrealmtrustrealm_go">
+<a href="#crossrealmtrustrealm_go" style="color: inherit; text-decoration: inherit;">Cross<wbr>Realm<wbr>Trust<wbr>Realm</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3702,7 +4384,9 @@ trust, should the user enable cross realm trust.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cross<wbr>Realm<wbr>Trust<wbr>Shared<wbr>Password<wbr>Uri</span>
+        <span id="crossrealmtrustsharedpassworduri_go">
+<a href="#crossrealmtrustsharedpassworduri_go" style="color: inherit; text-decoration: inherit;">Cross<wbr>Realm<wbr>Trust<wbr>Shared<wbr>Password<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3713,7 +4397,9 @@ and the remote trusted realm, in a cross realm trust relationship.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enable<wbr>Kerberos</span>
+        <span id="enablekerberos_go">
+<a href="#enablekerberos_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Kerberos</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -3722,7 +4408,9 @@ and the remote trusted realm, in a cross realm trust relationship.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Kdc<wbr>Db<wbr>Key<wbr>Uri</span>
+        <span id="kdcdbkeyuri_go">
+<a href="#kdcdbkeyuri_go" style="color: inherit; text-decoration: inherit;">Kdc<wbr>Db<wbr>Key<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3732,7 +4420,9 @@ the master key of the KDC database.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Key<wbr>Password<wbr>Uri</span>
+        <span id="keypassworduri_go">
+<a href="#keypassworduri_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Password<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3743,7 +4433,9 @@ is generated by Dataproc.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Keystore<wbr>Password<wbr>Uri</span>
+        <span id="keystorepassworduri_go">
+<a href="#keystorepassworduri_go" style="color: inherit; text-decoration: inherit;">Keystore<wbr>Password<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3754,7 +4446,9 @@ is generated by Dataproc.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Keystore<wbr>Uri</span>
+        <span id="keystoreuri_go">
+<a href="#keystoreuri_go" style="color: inherit; text-decoration: inherit;">Keystore<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3764,7 +4458,9 @@ If not provided, Dataproc will provide a self-signed certificate.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Realm</span>
+        <span id="realm_go">
+<a href="#realm_go" style="color: inherit; text-decoration: inherit;">Realm</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3774,7 +4470,9 @@ uppercased domain of hostnames will be the realm.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tgt<wbr>Lifetime<wbr>Hours</span>
+        <span id="tgtlifetimehours_go">
+<a href="#tgtlifetimehours_go" style="color: inherit; text-decoration: inherit;">Tgt<wbr>Lifetime<wbr>Hours</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -3783,7 +4481,9 @@ uppercased domain of hostnames will be the realm.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Truststore<wbr>Password<wbr>Uri</span>
+        <span id="truststorepassworduri_go">
+<a href="#truststorepassworduri_go" style="color: inherit; text-decoration: inherit;">Truststore<wbr>Password<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3794,7 +4494,9 @@ certificate, this password is generated by Dataproc.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Truststore<wbr>Uri</span>
+        <span id="truststoreuri_go">
+<a href="#truststoreuri_go" style="color: inherit; text-decoration: inherit;">Truststore<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3811,7 +4513,9 @@ SSL encryption. If not provided, Dataproc will provide a self-signed certificate
 
     <dt class="property-required"
             title="Required">
-        <span>kms<wbr>Key<wbr>Uri</span>
+        <span id="kmskeyuri_nodejs">
+<a href="#kmskeyuri_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3820,7 +4524,9 @@ SSL encryption. If not provided, Dataproc will provide a self-signed certificate
 
     <dt class="property-required"
             title="Required">
-        <span>root<wbr>Principal<wbr>Password<wbr>Uri</span>
+        <span id="rootprincipalpassworduri_nodejs">
+<a href="#rootprincipalpassworduri_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Principal<wbr>Password<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3830,7 +4536,9 @@ containing the root principal password.
 
     <dt class="property-optional"
             title="Optional">
-        <span>cross<wbr>Realm<wbr>Trust<wbr>Admin<wbr>Server</span>
+        <span id="crossrealmtrustadminserver_nodejs">
+<a href="#crossrealmtrustadminserver_nodejs" style="color: inherit; text-decoration: inherit;">cross<wbr>Realm<wbr>Trust<wbr>Admin<wbr>Server</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3840,7 +4548,9 @@ remote trusted realm in a cross realm trust relationship.
 
     <dt class="property-optional"
             title="Optional">
-        <span>cross<wbr>Realm<wbr>Trust<wbr>Kdc</span>
+        <span id="crossrealmtrustkdc_nodejs">
+<a href="#crossrealmtrustkdc_nodejs" style="color: inherit; text-decoration: inherit;">cross<wbr>Realm<wbr>Trust<wbr>Kdc</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3850,7 +4560,9 @@ remote trusted realm in a cross realm trust relationship.
 
     <dt class="property-optional"
             title="Optional">
-        <span>cross<wbr>Realm<wbr>Trust<wbr>Realm</span>
+        <span id="crossrealmtrustrealm_nodejs">
+<a href="#crossrealmtrustrealm_nodejs" style="color: inherit; text-decoration: inherit;">cross<wbr>Realm<wbr>Trust<wbr>Realm</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3860,7 +4572,9 @@ trust, should the user enable cross realm trust.
 
     <dt class="property-optional"
             title="Optional">
-        <span>cross<wbr>Realm<wbr>Trust<wbr>Shared<wbr>Password<wbr>Uri</span>
+        <span id="crossrealmtrustsharedpassworduri_nodejs">
+<a href="#crossrealmtrustsharedpassworduri_nodejs" style="color: inherit; text-decoration: inherit;">cross<wbr>Realm<wbr>Trust<wbr>Shared<wbr>Password<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3871,7 +4585,9 @@ and the remote trusted realm, in a cross realm trust relationship.
 
     <dt class="property-optional"
             title="Optional">
-        <span>enable<wbr>Kerberos</span>
+        <span id="enablekerberos_nodejs">
+<a href="#enablekerberos_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Kerberos</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -3880,7 +4596,9 @@ and the remote trusted realm, in a cross realm trust relationship.
 
     <dt class="property-optional"
             title="Optional">
-        <span>kdc<wbr>Db<wbr>Key<wbr>Uri</span>
+        <span id="kdcdbkeyuri_nodejs">
+<a href="#kdcdbkeyuri_nodejs" style="color: inherit; text-decoration: inherit;">kdc<wbr>Db<wbr>Key<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3890,7 +4608,9 @@ the master key of the KDC database.
 
     <dt class="property-optional"
             title="Optional">
-        <span>key<wbr>Password<wbr>Uri</span>
+        <span id="keypassworduri_nodejs">
+<a href="#keypassworduri_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Password<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3901,7 +4621,9 @@ is generated by Dataproc.
 
     <dt class="property-optional"
             title="Optional">
-        <span>keystore<wbr>Password<wbr>Uri</span>
+        <span id="keystorepassworduri_nodejs">
+<a href="#keystorepassworduri_nodejs" style="color: inherit; text-decoration: inherit;">keystore<wbr>Password<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3912,7 +4634,9 @@ is generated by Dataproc.
 
     <dt class="property-optional"
             title="Optional">
-        <span>keystore<wbr>Uri</span>
+        <span id="keystoreuri_nodejs">
+<a href="#keystoreuri_nodejs" style="color: inherit; text-decoration: inherit;">keystore<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3922,7 +4646,9 @@ If not provided, Dataproc will provide a self-signed certificate.
 
     <dt class="property-optional"
             title="Optional">
-        <span>realm</span>
+        <span id="realm_nodejs">
+<a href="#realm_nodejs" style="color: inherit; text-decoration: inherit;">realm</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3932,7 +4658,9 @@ uppercased domain of hostnames will be the realm.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tgt<wbr>Lifetime<wbr>Hours</span>
+        <span id="tgtlifetimehours_nodejs">
+<a href="#tgtlifetimehours_nodejs" style="color: inherit; text-decoration: inherit;">tgt<wbr>Lifetime<wbr>Hours</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -3941,7 +4669,9 @@ uppercased domain of hostnames will be the realm.
 
     <dt class="property-optional"
             title="Optional">
-        <span>truststore<wbr>Password<wbr>Uri</span>
+        <span id="truststorepassworduri_nodejs">
+<a href="#truststorepassworduri_nodejs" style="color: inherit; text-decoration: inherit;">truststore<wbr>Password<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3952,7 +4682,9 @@ certificate, this password is generated by Dataproc.
 
     <dt class="property-optional"
             title="Optional">
-        <span>truststore<wbr>Uri</span>
+        <span id="truststoreuri_nodejs">
+<a href="#truststoreuri_nodejs" style="color: inherit; text-decoration: inherit;">truststore<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3969,7 +4701,9 @@ SSL encryption. If not provided, Dataproc will provide a self-signed certificate
 
     <dt class="property-required"
             title="Required">
-        <span>kms<wbr>Key<wbr>Uri</span>
+        <span id="kmskeyuri_python">
+<a href="#kmskeyuri_python" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3978,7 +4712,9 @@ SSL encryption. If not provided, Dataproc will provide a self-signed certificate
 
     <dt class="property-required"
             title="Required">
-        <span>root<wbr>Principal<wbr>Password<wbr>Uri</span>
+        <span id="rootprincipalpassworduri_python">
+<a href="#rootprincipalpassworduri_python" style="color: inherit; text-decoration: inherit;">root<wbr>Principal<wbr>Password<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3988,7 +4724,9 @@ containing the root principal password.
 
     <dt class="property-optional"
             title="Optional">
-        <span>cross<wbr>Realm<wbr>Trust<wbr>Admin<wbr>Server</span>
+        <span id="crossrealmtrustadminserver_python">
+<a href="#crossrealmtrustadminserver_python" style="color: inherit; text-decoration: inherit;">cross<wbr>Realm<wbr>Trust<wbr>Admin<wbr>Server</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3998,7 +4736,9 @@ remote trusted realm in a cross realm trust relationship.
 
     <dt class="property-optional"
             title="Optional">
-        <span>cross<wbr>Realm<wbr>Trust<wbr>Kdc</span>
+        <span id="crossrealmtrustkdc_python">
+<a href="#crossrealmtrustkdc_python" style="color: inherit; text-decoration: inherit;">cross<wbr>Realm<wbr>Trust<wbr>Kdc</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4008,7 +4748,9 @@ remote trusted realm in a cross realm trust relationship.
 
     <dt class="property-optional"
             title="Optional">
-        <span>cross<wbr>Realm<wbr>Trust<wbr>Realm</span>
+        <span id="crossrealmtrustrealm_python">
+<a href="#crossrealmtrustrealm_python" style="color: inherit; text-decoration: inherit;">cross<wbr>Realm<wbr>Trust<wbr>Realm</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4018,7 +4760,9 @@ trust, should the user enable cross realm trust.
 
     <dt class="property-optional"
             title="Optional">
-        <span>cross<wbr>Realm<wbr>Trust<wbr>Shared<wbr>Password<wbr>Uri</span>
+        <span id="crossrealmtrustsharedpassworduri_python">
+<a href="#crossrealmtrustsharedpassworduri_python" style="color: inherit; text-decoration: inherit;">cross<wbr>Realm<wbr>Trust<wbr>Shared<wbr>Password<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4029,7 +4773,9 @@ and the remote trusted realm, in a cross realm trust relationship.
 
     <dt class="property-optional"
             title="Optional">
-        <span>enable<wbr>Kerberos</span>
+        <span id="enablekerberos_python">
+<a href="#enablekerberos_python" style="color: inherit; text-decoration: inherit;">enable<wbr>Kerberos</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -4038,7 +4784,9 @@ and the remote trusted realm, in a cross realm trust relationship.
 
     <dt class="property-optional"
             title="Optional">
-        <span>kdc<wbr>Db<wbr>Key<wbr>Uri</span>
+        <span id="kdcdbkeyuri_python">
+<a href="#kdcdbkeyuri_python" style="color: inherit; text-decoration: inherit;">kdc<wbr>Db<wbr>Key<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4048,7 +4796,9 @@ the master key of the KDC database.
 
     <dt class="property-optional"
             title="Optional">
-        <span>key<wbr>Password<wbr>Uri</span>
+        <span id="keypassworduri_python">
+<a href="#keypassworduri_python" style="color: inherit; text-decoration: inherit;">key<wbr>Password<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4059,7 +4809,9 @@ is generated by Dataproc.
 
     <dt class="property-optional"
             title="Optional">
-        <span>keystore<wbr>Password<wbr>Uri</span>
+        <span id="keystorepassworduri_python">
+<a href="#keystorepassworduri_python" style="color: inherit; text-decoration: inherit;">keystore<wbr>Password<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4070,7 +4822,9 @@ is generated by Dataproc.
 
     <dt class="property-optional"
             title="Optional">
-        <span>keystore<wbr>Uri</span>
+        <span id="keystoreuri_python">
+<a href="#keystoreuri_python" style="color: inherit; text-decoration: inherit;">keystore<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4080,7 +4834,9 @@ If not provided, Dataproc will provide a self-signed certificate.
 
     <dt class="property-optional"
             title="Optional">
-        <span>realm</span>
+        <span id="realm_python">
+<a href="#realm_python" style="color: inherit; text-decoration: inherit;">realm</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4090,7 +4846,9 @@ uppercased domain of hostnames will be the realm.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tgt<wbr>Lifetime<wbr>Hours</span>
+        <span id="tgtlifetimehours_python">
+<a href="#tgtlifetimehours_python" style="color: inherit; text-decoration: inherit;">tgt<wbr>Lifetime<wbr>Hours</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -4099,7 +4857,9 @@ uppercased domain of hostnames will be the realm.
 
     <dt class="property-optional"
             title="Optional">
-        <span>truststore<wbr>Password<wbr>Uri</span>
+        <span id="truststorepassworduri_python">
+<a href="#truststorepassworduri_python" style="color: inherit; text-decoration: inherit;">truststore<wbr>Password<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4110,7 +4870,9 @@ certificate, this password is generated by Dataproc.
 
     <dt class="property-optional"
             title="Optional">
-        <span>truststore<wbr>Uri</span>
+        <span id="truststoreuri_python">
+<a href="#truststoreuri_python" style="color: inherit; text-decoration: inherit;">truststore<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4145,7 +4907,9 @@ SSL encryption. If not provided, Dataproc will provide a self-signed certificate
 
     <dt class="property-optional"
             title="Optional">
-        <span>Image<wbr>Version</span>
+        <span id="imageversion_csharp">
+<a href="#imageversion_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4158,7 +4922,9 @@ latest version. For a list of valid versions see
 
     <dt class="property-optional"
             title="Optional">
-        <span>Optional<wbr>Components</span>
+        <span id="optionalcomponents_csharp">
+<a href="#optionalcomponents_csharp" style="color: inherit; text-decoration: inherit;">Optional<wbr>Components</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -4166,17 +4932,22 @@ latest version. For a list of valid versions see
 Accepted values are:
 * ANACONDA
 * DRUID
+* HBASE
 * HIVE_WEBHCAT
 * JUPYTER
 * KERBEROS
 * PRESTO
+* RANGER
+* SOLR
 * ZEPPELIN
 * ZOOKEEPER
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Override<wbr>Properties</span>
+        <span id="overrideproperties_csharp">
+<a href="#overrideproperties_csharp" style="color: inherit; text-decoration: inherit;">Override<wbr>Properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -4188,7 +4959,9 @@ a cluster. For a list of valid properties please see
 
     <dt class="property-optional"
             title="Optional">
-        <span>Properties</span>
+        <span id="properties_csharp">
+<a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -4203,7 +4976,9 @@ a cluster. For a list of valid properties please see
 
     <dt class="property-optional"
             title="Optional">
-        <span>Image<wbr>Version</span>
+        <span id="imageversion_go">
+<a href="#imageversion_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -4216,7 +4991,9 @@ latest version. For a list of valid versions see
 
     <dt class="property-optional"
             title="Optional">
-        <span>Optional<wbr>Components</span>
+        <span id="optionalcomponents_go">
+<a href="#optionalcomponents_go" style="color: inherit; text-decoration: inherit;">Optional<wbr>Components</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -4224,17 +5001,22 @@ latest version. For a list of valid versions see
 Accepted values are:
 * ANACONDA
 * DRUID
+* HBASE
 * HIVE_WEBHCAT
 * JUPYTER
 * KERBEROS
 * PRESTO
+* RANGER
+* SOLR
 * ZEPPELIN
 * ZOOKEEPER
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Override<wbr>Properties</span>
+        <span id="overrideproperties_go">
+<a href="#overrideproperties_go" style="color: inherit; text-decoration: inherit;">Override<wbr>Properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -4246,7 +5028,9 @@ a cluster. For a list of valid properties please see
 
     <dt class="property-optional"
             title="Optional">
-        <span>Properties</span>
+        <span id="properties_go">
+<a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -4261,7 +5045,9 @@ a cluster. For a list of valid properties please see
 
     <dt class="property-optional"
             title="Optional">
-        <span>image<wbr>Version</span>
+        <span id="imageversion_nodejs">
+<a href="#imageversion_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4274,7 +5060,9 @@ latest version. For a list of valid versions see
 
     <dt class="property-optional"
             title="Optional">
-        <span>optional<wbr>Components</span>
+        <span id="optionalcomponents_nodejs">
+<a href="#optionalcomponents_nodejs" style="color: inherit; text-decoration: inherit;">optional<wbr>Components</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -4282,17 +5070,22 @@ latest version. For a list of valid versions see
 Accepted values are:
 * ANACONDA
 * DRUID
+* HBASE
 * HIVE_WEBHCAT
 * JUPYTER
 * KERBEROS
 * PRESTO
+* RANGER
+* SOLR
 * ZEPPELIN
 * ZOOKEEPER
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>override<wbr>Properties</span>
+        <span id="overrideproperties_nodejs">
+<a href="#overrideproperties_nodejs" style="color: inherit; text-decoration: inherit;">override<wbr>Properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -4304,7 +5097,9 @@ a cluster. For a list of valid properties please see
 
     <dt class="property-optional"
             title="Optional">
-        <span>properties</span>
+        <span id="properties_nodejs">
+<a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -4319,7 +5114,9 @@ a cluster. For a list of valid properties please see
 
     <dt class="property-optional"
             title="Optional">
-        <span>image<wbr>Version</span>
+        <span id="imageversion_python">
+<a href="#imageversion_python" style="color: inherit; text-decoration: inherit;">image<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4332,7 +5129,9 @@ latest version. For a list of valid versions see
 
     <dt class="property-optional"
             title="Optional">
-        <span>optional<wbr>Components</span>
+        <span id="optionalcomponents_python">
+<a href="#optionalcomponents_python" style="color: inherit; text-decoration: inherit;">optional<wbr>Components</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -4340,17 +5139,22 @@ latest version. For a list of valid versions see
 Accepted values are:
 * ANACONDA
 * DRUID
+* HBASE
 * HIVE_WEBHCAT
 * JUPYTER
 * KERBEROS
 * PRESTO
+* RANGER
+* SOLR
 * ZEPPELIN
 * ZOOKEEPER
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>override<wbr>Properties</span>
+        <span id="overrideproperties_python">
+<a href="#overrideproperties_python" style="color: inherit; text-decoration: inherit;">override<wbr>Properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -4362,7 +5166,9 @@ a cluster. For a list of valid properties please see
 
     <dt class="property-optional"
             title="Optional">
-        <span>properties</span>
+        <span id="properties_python">
+<a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -4395,7 +5201,9 @@ a cluster. For a list of valid properties please see
 
     <dt class="property-optional"
             title="Optional">
-        <span>Accelerators</span>
+        <span id="accelerators_csharp">
+<a href="#accelerators_csharp" style="color: inherit; text-decoration: inherit;">Accelerators</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfigworkerconfigaccelerator">List&lt;Cluster<wbr>Cluster<wbr>Config<wbr>Worker<wbr>Config<wbr>Accelerator<wbr>Args&gt;</a></span>
     </dt>
@@ -4404,7 +5212,9 @@ a cluster. For a list of valid properties please see
 
     <dt class="property-optional"
             title="Optional">
-        <span>Disk<wbr>Config</span>
+        <span id="diskconfig_csharp">
+<a href="#diskconfig_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfigworkerconfigdiskconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Worker<wbr>Config<wbr>Disk<wbr>Config<wbr>Args</a></span>
     </dt>
@@ -4413,7 +5223,9 @@ a cluster. For a list of valid properties please see
 
     <dt class="property-optional"
             title="Optional">
-        <span>Image<wbr>Uri</span>
+        <span id="imageuri_csharp">
+<a href="#imageuri_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4423,7 +5235,9 @@ for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Instance<wbr>Names</span>
+        <span id="instancenames_csharp">
+<a href="#instancenames_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Names</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -4431,7 +5245,9 @@ for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Machine<wbr>Type</span>
+        <span id="machinetype_csharp">
+<a href="#machinetype_csharp" style="color: inherit; text-decoration: inherit;">Machine<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4442,7 +5258,9 @@ computed value (currently `n1-standard-4`).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Min<wbr>Cpu<wbr>Platform</span>
+        <span id="mincpuplatform_csharp">
+<a href="#mincpuplatform_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Cpu<wbr>Platform</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4454,7 +5272,9 @@ for details about which CPU families are available (and defaulted) for each zone
 
     <dt class="property-optional"
             title="Optional">
-        <span>Num<wbr>Instances</span>
+        <span id="numinstances_csharp">
+<a href="#numinstances_csharp" style="color: inherit; text-decoration: inherit;">Num<wbr>Instances</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -4471,7 +5291,9 @@ Defaults to 0.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Accelerators</span>
+        <span id="accelerators_go">
+<a href="#accelerators_go" style="color: inherit; text-decoration: inherit;">Accelerators</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfigworkerconfigaccelerator">[]Cluster<wbr>Cluster<wbr>Config<wbr>Worker<wbr>Config<wbr>Accelerator</a></span>
     </dt>
@@ -4480,7 +5302,9 @@ Defaults to 0.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Disk<wbr>Config</span>
+        <span id="diskconfig_go">
+<a href="#diskconfig_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfigworkerconfigdiskconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Worker<wbr>Config<wbr>Disk<wbr>Config</a></span>
     </dt>
@@ -4489,7 +5313,9 @@ Defaults to 0.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Image<wbr>Uri</span>
+        <span id="imageuri_go">
+<a href="#imageuri_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -4499,7 +5325,9 @@ for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Instance<wbr>Names</span>
+        <span id="instancenames_go">
+<a href="#instancenames_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Names</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -4507,7 +5335,9 @@ for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Machine<wbr>Type</span>
+        <span id="machinetype_go">
+<a href="#machinetype_go" style="color: inherit; text-decoration: inherit;">Machine<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -4518,7 +5348,9 @@ computed value (currently `n1-standard-4`).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Min<wbr>Cpu<wbr>Platform</span>
+        <span id="mincpuplatform_go">
+<a href="#mincpuplatform_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Cpu<wbr>Platform</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -4530,7 +5362,9 @@ for details about which CPU families are available (and defaulted) for each zone
 
     <dt class="property-optional"
             title="Optional">
-        <span>Num<wbr>Instances</span>
+        <span id="numinstances_go">
+<a href="#numinstances_go" style="color: inherit; text-decoration: inherit;">Num<wbr>Instances</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -4547,7 +5381,9 @@ Defaults to 0.
 
     <dt class="property-optional"
             title="Optional">
-        <span>accelerators</span>
+        <span id="accelerators_nodejs">
+<a href="#accelerators_nodejs" style="color: inherit; text-decoration: inherit;">accelerators</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfigworkerconfigaccelerator">Cluster<wbr>Cluster<wbr>Config<wbr>Worker<wbr>Config<wbr>Accelerator[]</a></span>
     </dt>
@@ -4556,7 +5392,9 @@ Defaults to 0.
 
     <dt class="property-optional"
             title="Optional">
-        <span>disk<wbr>Config</span>
+        <span id="diskconfig_nodejs">
+<a href="#diskconfig_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfigworkerconfigdiskconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Worker<wbr>Config<wbr>Disk<wbr>Config</a></span>
     </dt>
@@ -4565,7 +5403,9 @@ Defaults to 0.
 
     <dt class="property-optional"
             title="Optional">
-        <span>image<wbr>Uri</span>
+        <span id="imageuri_nodejs">
+<a href="#imageuri_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4575,7 +5415,9 @@ for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>instance<wbr>Names</span>
+        <span id="instancenames_nodejs">
+<a href="#instancenames_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Names</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -4583,7 +5425,9 @@ for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>machine<wbr>Type</span>
+        <span id="machinetype_nodejs">
+<a href="#machinetype_nodejs" style="color: inherit; text-decoration: inherit;">machine<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4594,7 +5438,9 @@ computed value (currently `n1-standard-4`).
 
     <dt class="property-optional"
             title="Optional">
-        <span>min<wbr>Cpu<wbr>Platform</span>
+        <span id="mincpuplatform_nodejs">
+<a href="#mincpuplatform_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Cpu<wbr>Platform</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4606,7 +5452,9 @@ for details about which CPU families are available (and defaulted) for each zone
 
     <dt class="property-optional"
             title="Optional">
-        <span>num<wbr>Instances</span>
+        <span id="numinstances_nodejs">
+<a href="#numinstances_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Instances</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -4623,7 +5471,9 @@ Defaults to 0.
 
     <dt class="property-optional"
             title="Optional">
-        <span>accelerators</span>
+        <span id="accelerators_python">
+<a href="#accelerators_python" style="color: inherit; text-decoration: inherit;">accelerators</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfigworkerconfigaccelerator">List[Cluster<wbr>Cluster<wbr>Config<wbr>Worker<wbr>Config<wbr>Accelerator]</a></span>
     </dt>
@@ -4632,7 +5482,9 @@ Defaults to 0.
 
     <dt class="property-optional"
             title="Optional">
-        <span>disk<wbr>Config</span>
+        <span id="diskconfig_python">
+<a href="#diskconfig_python" style="color: inherit; text-decoration: inherit;">disk<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfigworkerconfigdiskconfig">Dict[Cluster<wbr>Cluster<wbr>Config<wbr>Worker<wbr>Config<wbr>Disk<wbr>Config]</a></span>
     </dt>
@@ -4641,7 +5493,9 @@ Defaults to 0.
 
     <dt class="property-optional"
             title="Optional">
-        <span>image<wbr>Uri</span>
+        <span id="imageuri_python">
+<a href="#imageuri_python" style="color: inherit; text-decoration: inherit;">image<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4651,7 +5505,9 @@ for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>instance<wbr>Names</span>
+        <span id="instancenames_python">
+<a href="#instancenames_python" style="color: inherit; text-decoration: inherit;">instance<wbr>Names</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -4659,7 +5515,9 @@ for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>machine_<wbr>type</span>
+        <span id="machine_type_python">
+<a href="#machine_type_python" style="color: inherit; text-decoration: inherit;">machine_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4670,7 +5528,9 @@ computed value (currently `n1-standard-4`).
 
     <dt class="property-optional"
             title="Optional">
-        <span>min_<wbr>cpu_<wbr>platform</span>
+        <span id="min_cpu_platform_python">
+<a href="#min_cpu_platform_python" style="color: inherit; text-decoration: inherit;">min_<wbr>cpu_<wbr>platform</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4682,7 +5542,9 @@ for details about which CPU families are available (and defaulted) for each zone
 
     <dt class="property-optional"
             title="Optional">
-        <span>num<wbr>Instances</span>
+        <span id="numinstances_python">
+<a href="#numinstances_python" style="color: inherit; text-decoration: inherit;">num<wbr>Instances</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -4717,7 +5579,9 @@ Defaults to 0.
 
     <dt class="property-required"
             title="Required">
-        <span>Accelerator<wbr>Count</span>
+        <span id="acceleratorcount_csharp">
+<a href="#acceleratorcount_csharp" style="color: inherit; text-decoration: inherit;">Accelerator<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -4726,7 +5590,9 @@ Defaults to 0.
 
     <dt class="property-required"
             title="Required">
-        <span>Accelerator<wbr>Type</span>
+        <span id="acceleratortype_csharp">
+<a href="#acceleratortype_csharp" style="color: inherit; text-decoration: inherit;">Accelerator<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4742,7 +5608,9 @@ Defaults to 0.
 
     <dt class="property-required"
             title="Required">
-        <span>Accelerator<wbr>Count</span>
+        <span id="acceleratorcount_go">
+<a href="#acceleratorcount_go" style="color: inherit; text-decoration: inherit;">Accelerator<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -4751,7 +5619,9 @@ Defaults to 0.
 
     <dt class="property-required"
             title="Required">
-        <span>Accelerator<wbr>Type</span>
+        <span id="acceleratortype_go">
+<a href="#acceleratortype_go" style="color: inherit; text-decoration: inherit;">Accelerator<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -4767,7 +5637,9 @@ Defaults to 0.
 
     <dt class="property-required"
             title="Required">
-        <span>accelerator<wbr>Count</span>
+        <span id="acceleratorcount_nodejs">
+<a href="#acceleratorcount_nodejs" style="color: inherit; text-decoration: inherit;">accelerator<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -4776,7 +5648,9 @@ Defaults to 0.
 
     <dt class="property-required"
             title="Required">
-        <span>accelerator<wbr>Type</span>
+        <span id="acceleratortype_nodejs">
+<a href="#acceleratortype_nodejs" style="color: inherit; text-decoration: inherit;">accelerator<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4792,7 +5666,9 @@ Defaults to 0.
 
     <dt class="property-required"
             title="Required">
-        <span>accelerator<wbr>Count</span>
+        <span id="acceleratorcount_python">
+<a href="#acceleratorcount_python" style="color: inherit; text-decoration: inherit;">accelerator<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -4801,7 +5677,9 @@ Defaults to 0.
 
     <dt class="property-required"
             title="Required">
-        <span>accelerator_<wbr>type</span>
+        <span id="accelerator_type_python">
+<a href="#accelerator_type_python" style="color: inherit; text-decoration: inherit;">accelerator_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4835,7 +5713,9 @@ Defaults to 0.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Boot<wbr>Disk<wbr>Size<wbr>Gb</span>
+        <span id="bootdisksizegb_csharp">
+<a href="#bootdisksizegb_csharp" style="color: inherit; text-decoration: inherit;">Boot<wbr>Disk<wbr>Size<wbr>Gb</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -4847,7 +5727,9 @@ attached, it also contains the HDFS data blocks and Hadoop working directories.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Boot<wbr>Disk<wbr>Type</span>
+        <span id="bootdisktype_csharp">
+<a href="#bootdisktype_csharp" style="color: inherit; text-decoration: inherit;">Boot<wbr>Disk<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4857,7 +5739,9 @@ One of `"pd-ssd"` or `"pd-standard"`. Defaults to `"pd-standard"`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Num<wbr>Local<wbr>Ssds</span>
+        <span id="numlocalssds_csharp">
+<a href="#numlocalssds_csharp" style="color: inherit; text-decoration: inherit;">Num<wbr>Local<wbr>Ssds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -4874,7 +5758,9 @@ attached to each preemptible worker node. Defaults to 0.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Boot<wbr>Disk<wbr>Size<wbr>Gb</span>
+        <span id="bootdisksizegb_go">
+<a href="#bootdisksizegb_go" style="color: inherit; text-decoration: inherit;">Boot<wbr>Disk<wbr>Size<wbr>Gb</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -4886,7 +5772,9 @@ attached, it also contains the HDFS data blocks and Hadoop working directories.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Boot<wbr>Disk<wbr>Type</span>
+        <span id="bootdisktype_go">
+<a href="#bootdisktype_go" style="color: inherit; text-decoration: inherit;">Boot<wbr>Disk<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -4896,7 +5784,9 @@ One of `"pd-ssd"` or `"pd-standard"`. Defaults to `"pd-standard"`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Num<wbr>Local<wbr>Ssds</span>
+        <span id="numlocalssds_go">
+<a href="#numlocalssds_go" style="color: inherit; text-decoration: inherit;">Num<wbr>Local<wbr>Ssds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -4913,7 +5803,9 @@ attached to each preemptible worker node. Defaults to 0.
 
     <dt class="property-optional"
             title="Optional">
-        <span>boot<wbr>Disk<wbr>Size<wbr>Gb</span>
+        <span id="bootdisksizegb_nodejs">
+<a href="#bootdisksizegb_nodejs" style="color: inherit; text-decoration: inherit;">boot<wbr>Disk<wbr>Size<wbr>Gb</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -4925,7 +5817,9 @@ attached, it also contains the HDFS data blocks and Hadoop working directories.
 
     <dt class="property-optional"
             title="Optional">
-        <span>boot<wbr>Disk<wbr>Type</span>
+        <span id="bootdisktype_nodejs">
+<a href="#bootdisktype_nodejs" style="color: inherit; text-decoration: inherit;">boot<wbr>Disk<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4935,7 +5829,9 @@ One of `"pd-ssd"` or `"pd-standard"`. Defaults to `"pd-standard"`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>num<wbr>Local<wbr>Ssds</span>
+        <span id="numlocalssds_nodejs">
+<a href="#numlocalssds_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Local<wbr>Ssds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -4952,7 +5848,9 @@ attached to each preemptible worker node. Defaults to 0.
 
     <dt class="property-optional"
             title="Optional">
-        <span>boot<wbr>Disk<wbr>Size<wbr>Gb</span>
+        <span id="bootdisksizegb_python">
+<a href="#bootdisksizegb_python" style="color: inherit; text-decoration: inherit;">boot<wbr>Disk<wbr>Size<wbr>Gb</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -4964,7 +5862,9 @@ attached, it also contains the HDFS data blocks and Hadoop working directories.
 
     <dt class="property-optional"
             title="Optional">
-        <span>boot<wbr>Disk<wbr>Type</span>
+        <span id="bootdisktype_python">
+<a href="#bootdisktype_python" style="color: inherit; text-decoration: inherit;">boot<wbr>Disk<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4974,7 +5874,9 @@ One of `"pd-ssd"` or `"pd-standard"`. Defaults to `"pd-standard"`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>num<wbr>Local<wbr>Ssds</span>
+        <span id="numlocalssds_python">
+<a href="#numlocalssds_python" style="color: inherit; text-decoration: inherit;">num<wbr>Local<wbr>Ssds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>

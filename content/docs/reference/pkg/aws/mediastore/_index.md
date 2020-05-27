@@ -24,6 +24,24 @@ Explore the resources and functions of the mediastore module in the AWS package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>2.4.0</dd>
+	<dd>2.6.0</dd>
+</dl>
+
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.MediaStore.html" title="Pulumi.Aws.MediaStore">Pulumi.Aws.MediaStore</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/mediastore?tab=doc#" title="aws/mediastore">aws/mediastore</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/mediastore/#" title="@pulumi/aws/mediastore">@pulumi/aws/mediastore</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_aws/mediastore" title="pulumi_aws/mediastore">pulumi_aws/mediastore</a></dd>
+
 </dl>
 

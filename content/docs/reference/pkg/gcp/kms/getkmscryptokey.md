@@ -70,7 +70,7 @@ const myCryptoKey = myKeyRing.then(myKeyRing => gcp.kms.getKMSCryptoKey({
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getKMSCryptoKey<span class="p">(</span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/kms/#GetKMSCryptoKeyArgs">GetKMSCryptoKeyArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/kms/#GetKMSCryptoKeyResult">GetKMSCryptoKeyResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getKMSCryptoKey<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/kms/#GetKMSCryptoKeyArgs">GetKMSCryptoKeyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/kms/#GetKMSCryptoKeyResult">GetKMSCryptoKeyResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -80,13 +80,14 @@ const myCryptoKey = myKeyRing.then(myKeyRing => gcp.kms.getKMSCryptoKey({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetKMSCryptoKey<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/kms?tab=doc#GetKMSCryptoKeyArgs">GetKMSCryptoKeyArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/kms?tab=doc#GetKMSCryptoKeyResult">GetKMSCryptoKeyResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetKMSCryptoKey<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/kms?tab=doc#GetKMSCryptoKeyArgs">GetKMSCryptoKeyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/kms?tab=doc#GetKMSCryptoKeyResult">GetKMSCryptoKeyResult</a></span>, error)</span></code></pre></div>
+
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetKMSCryptoKey </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Kms.GetKMSCryptoKeyResult.html">GetKMSCryptoKeyResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Kms.GetKMSCryptoKeyArgs.html">GetKMSCryptoKeyArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Kms.GetKMSCryptoKeyResult.html">GetKMSCryptoKeyResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Kms.GetKMSCryptoKeyArgs.html">GetKMSCryptoKeyArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -101,7 +102,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Key<wbr>Ring</span>
+        <span id="keyring_csharp">
+<a href="#keyring_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Ring</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -110,7 +113,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -127,7 +132,9 @@ A CryptoKey’s name belonging to the specified Google Cloud Platform KeyRing an
 
     <dt class="property-required"
             title="Required">
-        <span>Key<wbr>Ring</span>
+        <span id="keyring_go">
+<a href="#keyring_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Ring</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -136,7 +143,9 @@ A CryptoKey’s name belonging to the specified Google Cloud Platform KeyRing an
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -153,7 +162,9 @@ A CryptoKey’s name belonging to the specified Google Cloud Platform KeyRing an
 
     <dt class="property-required"
             title="Required">
-        <span>key<wbr>Ring</span>
+        <span id="keyring_nodejs">
+<a href="#keyring_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Ring</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -162,7 +173,9 @@ A CryptoKey’s name belonging to the specified Google Cloud Platform KeyRing an
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -179,7 +192,9 @@ A CryptoKey’s name belonging to the specified Google Cloud Platform KeyRing an
 
     <dt class="property-required"
             title="Required">
-        <span>key_<wbr>ring</span>
+        <span id="key_ring_python">
+<a href="#key_ring_python" style="color: inherit; text-decoration: inherit;">key_<wbr>ring</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -188,7 +203,9 @@ A CryptoKey’s name belonging to the specified Google Cloud Platform KeyRing an
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -218,7 +235,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -227,7 +246,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Key<wbr>Ring</span>
+        <span id="keyring_csharp">
+<a href="#keyring_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Ring</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -235,7 +256,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Labels</span>
+        <span id="labels_csharp">
+<a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -243,7 +266,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -251,7 +276,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Purpose</span>
+        <span id="purpose_csharp">
+<a href="#purpose_csharp" style="color: inherit; text-decoration: inherit;">Purpose</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -260,7 +287,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Rotation<wbr>Period</span>
+        <span id="rotationperiod_csharp">
+<a href="#rotationperiod_csharp" style="color: inherit; text-decoration: inherit;">Rotation<wbr>Period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -271,7 +300,9 @@ of a decimal number with up to 9 fractional digits, followed by the letter s (se
 
     <dt class="property-"
             title="">
-        <span>Self<wbr>Link</span>
+        <span id="selflink_csharp">
+<a href="#selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -280,7 +311,9 @@ of a decimal number with up to 9 fractional digits, followed by the letter s (se
 
     <dt class="property-"
             title="">
-        <span>Version<wbr>Templates</span>
+        <span id="versiontemplates_csharp">
+<a href="#versiontemplates_csharp" style="color: inherit; text-decoration: inherit;">Version<wbr>Templates</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getkmscryptokeyversiontemplate">List&lt;Get<wbr>KMSCrypto<wbr>Key<wbr>Version<wbr>Template&gt;</a></span>
     </dt>
@@ -295,7 +328,9 @@ of a decimal number with up to 9 fractional digits, followed by the letter s (se
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -304,7 +339,9 @@ of a decimal number with up to 9 fractional digits, followed by the letter s (se
 
     <dt class="property-"
             title="">
-        <span>Key<wbr>Ring</span>
+        <span id="keyring_go">
+<a href="#keyring_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Ring</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -312,7 +349,9 @@ of a decimal number with up to 9 fractional digits, followed by the letter s (se
 
     <dt class="property-"
             title="">
-        <span>Labels</span>
+        <span id="labels_go">
+<a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -320,7 +359,9 @@ of a decimal number with up to 9 fractional digits, followed by the letter s (se
 
     <dt class="property-"
             title="">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -328,7 +369,9 @@ of a decimal number with up to 9 fractional digits, followed by the letter s (se
 
     <dt class="property-"
             title="">
-        <span>Purpose</span>
+        <span id="purpose_go">
+<a href="#purpose_go" style="color: inherit; text-decoration: inherit;">Purpose</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -337,7 +380,9 @@ of a decimal number with up to 9 fractional digits, followed by the letter s (se
 
     <dt class="property-"
             title="">
-        <span>Rotation<wbr>Period</span>
+        <span id="rotationperiod_go">
+<a href="#rotationperiod_go" style="color: inherit; text-decoration: inherit;">Rotation<wbr>Period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -348,7 +393,9 @@ of a decimal number with up to 9 fractional digits, followed by the letter s (se
 
     <dt class="property-"
             title="">
-        <span>Self<wbr>Link</span>
+        <span id="selflink_go">
+<a href="#selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -357,7 +404,9 @@ of a decimal number with up to 9 fractional digits, followed by the letter s (se
 
     <dt class="property-"
             title="">
-        <span>Version<wbr>Templates</span>
+        <span id="versiontemplates_go">
+<a href="#versiontemplates_go" style="color: inherit; text-decoration: inherit;">Version<wbr>Templates</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getkmscryptokeyversiontemplate">[]Get<wbr>KMSCrypto<wbr>Key<wbr>Version<wbr>Template</a></span>
     </dt>
@@ -372,7 +421,9 @@ of a decimal number with up to 9 fractional digits, followed by the letter s (se
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -381,7 +432,9 @@ of a decimal number with up to 9 fractional digits, followed by the letter s (se
 
     <dt class="property-"
             title="">
-        <span>key<wbr>Ring</span>
+        <span id="keyring_nodejs">
+<a href="#keyring_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Ring</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -389,7 +442,9 @@ of a decimal number with up to 9 fractional digits, followed by the letter s (se
 
     <dt class="property-"
             title="">
-        <span>labels</span>
+        <span id="labels_nodejs">
+<a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -397,7 +452,9 @@ of a decimal number with up to 9 fractional digits, followed by the letter s (se
 
     <dt class="property-"
             title="">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -405,7 +462,9 @@ of a decimal number with up to 9 fractional digits, followed by the letter s (se
 
     <dt class="property-"
             title="">
-        <span>purpose</span>
+        <span id="purpose_nodejs">
+<a href="#purpose_nodejs" style="color: inherit; text-decoration: inherit;">purpose</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -414,7 +473,9 @@ of a decimal number with up to 9 fractional digits, followed by the letter s (se
 
     <dt class="property-"
             title="">
-        <span>rotation<wbr>Period</span>
+        <span id="rotationperiod_nodejs">
+<a href="#rotationperiod_nodejs" style="color: inherit; text-decoration: inherit;">rotation<wbr>Period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -425,7 +486,9 @@ of a decimal number with up to 9 fractional digits, followed by the letter s (se
 
     <dt class="property-"
             title="">
-        <span>self<wbr>Link</span>
+        <span id="selflink_nodejs">
+<a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -434,7 +497,9 @@ of a decimal number with up to 9 fractional digits, followed by the letter s (se
 
     <dt class="property-"
             title="">
-        <span>version<wbr>Templates</span>
+        <span id="versiontemplates_nodejs">
+<a href="#versiontemplates_nodejs" style="color: inherit; text-decoration: inherit;">version<wbr>Templates</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getkmscryptokeyversiontemplate">Get<wbr>KMSCrypto<wbr>Key<wbr>Version<wbr>Template[]</a></span>
     </dt>
@@ -449,7 +514,9 @@ of a decimal number with up to 9 fractional digits, followed by the letter s (se
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -458,7 +525,9 @@ of a decimal number with up to 9 fractional digits, followed by the letter s (se
 
     <dt class="property-"
             title="">
-        <span>key_<wbr>ring</span>
+        <span id="key_ring_python">
+<a href="#key_ring_python" style="color: inherit; text-decoration: inherit;">key_<wbr>ring</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -466,7 +535,9 @@ of a decimal number with up to 9 fractional digits, followed by the letter s (se
 
     <dt class="property-"
             title="">
-        <span>labels</span>
+        <span id="labels_python">
+<a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -474,7 +545,9 @@ of a decimal number with up to 9 fractional digits, followed by the letter s (se
 
     <dt class="property-"
             title="">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -482,7 +555,9 @@ of a decimal number with up to 9 fractional digits, followed by the letter s (se
 
     <dt class="property-"
             title="">
-        <span>purpose</span>
+        <span id="purpose_python">
+<a href="#purpose_python" style="color: inherit; text-decoration: inherit;">purpose</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -491,7 +566,9 @@ of a decimal number with up to 9 fractional digits, followed by the letter s (se
 
     <dt class="property-"
             title="">
-        <span>rotation_<wbr>period</span>
+        <span id="rotation_period_python">
+<a href="#rotation_period_python" style="color: inherit; text-decoration: inherit;">rotation_<wbr>period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -502,7 +579,9 @@ of a decimal number with up to 9 fractional digits, followed by the letter s (se
 
     <dt class="property-"
             title="">
-        <span>self_<wbr>link</span>
+        <span id="self_link_python">
+<a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -511,7 +590,9 @@ of a decimal number with up to 9 fractional digits, followed by the letter s (se
 
     <dt class="property-"
             title="">
-        <span>version_<wbr>templates</span>
+        <span id="version_templates_python">
+<a href="#version_templates_python" style="color: inherit; text-decoration: inherit;">version_<wbr>templates</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getkmscryptokeyversiontemplate">List[Get<wbr>KMSCrypto<wbr>Key<wbr>Version<wbr>Template]</a></span>
     </dt>
@@ -550,7 +631,9 @@ of a decimal number with up to 9 fractional digits, followed by the letter s (se
 
     <dt class="property-required"
             title="Required">
-        <span>Algorithm</span>
+        <span id="algorithm_csharp">
+<a href="#algorithm_csharp" style="color: inherit; text-decoration: inherit;">Algorithm</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -558,7 +641,9 @@ of a decimal number with up to 9 fractional digits, followed by the letter s (se
 
     <dt class="property-required"
             title="Required">
-        <span>Protection<wbr>Level</span>
+        <span id="protectionlevel_csharp">
+<a href="#protectionlevel_csharp" style="color: inherit; text-decoration: inherit;">Protection<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -573,7 +658,9 @@ of a decimal number with up to 9 fractional digits, followed by the letter s (se
 
     <dt class="property-required"
             title="Required">
-        <span>Algorithm</span>
+        <span id="algorithm_go">
+<a href="#algorithm_go" style="color: inherit; text-decoration: inherit;">Algorithm</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -581,7 +668,9 @@ of a decimal number with up to 9 fractional digits, followed by the letter s (se
 
     <dt class="property-required"
             title="Required">
-        <span>Protection<wbr>Level</span>
+        <span id="protectionlevel_go">
+<a href="#protectionlevel_go" style="color: inherit; text-decoration: inherit;">Protection<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -596,7 +685,9 @@ of a decimal number with up to 9 fractional digits, followed by the letter s (se
 
     <dt class="property-required"
             title="Required">
-        <span>algorithm</span>
+        <span id="algorithm_nodejs">
+<a href="#algorithm_nodejs" style="color: inherit; text-decoration: inherit;">algorithm</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -604,7 +695,9 @@ of a decimal number with up to 9 fractional digits, followed by the letter s (se
 
     <dt class="property-required"
             title="Required">
-        <span>protection<wbr>Level</span>
+        <span id="protectionlevel_nodejs">
+<a href="#protectionlevel_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -619,7 +712,9 @@ of a decimal number with up to 9 fractional digits, followed by the letter s (se
 
     <dt class="property-required"
             title="Required">
-        <span>algorithm</span>
+        <span id="algorithm_python">
+<a href="#algorithm_python" style="color: inherit; text-decoration: inherit;">algorithm</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -627,7 +722,9 @@ of a decimal number with up to 9 fractional digits, followed by the letter s (se
 
     <dt class="property-required"
             title="Required">
-        <span>protection<wbr>Level</span>
+        <span id="protectionlevel_python">
+<a href="#protectionlevel_python" style="color: inherit; text-decoration: inherit;">protection<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

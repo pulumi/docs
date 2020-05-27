@@ -64,3 +64,21 @@ Explore the resources and functions of the networking module in the Open Stack p
 	<dd>2.2.1</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.OpenStack/Pulumi.OpenStack.Networking.html" title="Pulumi.OpenStack.Networking">Pulumi.OpenStack.Networking</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/networking?tab=doc#" title="openstack/networking">openstack/networking</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/openstack/networking/#" title="@pulumi/openstack/networking">@pulumi/openstack/networking</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_openstack/networking" title="pulumi_openstack/networking">pulumi_openstack/networking</a></dd>
+
+</dl>
+

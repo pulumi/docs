@@ -12,11 +12,13 @@ Explore the resources and functions of the datashare module in the Azure package
 <h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="account" title="Account"><span class="symbol resource"></span>Account</a></li>
+    <li><a href="share" title="Share"><span class="symbol resource"></span>Share</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getaccount" title="GetAccount"><span class="symbol function"></span>GetAccount</a></li>
+    <li><a href="getshare" title="GetShare"><span class="symbol function"></span>GetShare</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -28,6 +30,24 @@ Explore the resources and functions of the datashare module in the Azure package
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 	<dt>Version</dt>
-	<dd>3.5.0</dd>
+	<dd>3.6.0</dd>
+</dl>
+
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.DataShare.html" title="Pulumi.Azure.DataShare">Pulumi.Azure.DataShare</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/datashare?tab=doc#" title="azure/datashare">azure/datashare</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure/datashare/#" title="@pulumi/azure/datashare">@pulumi/azure/datashare</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure/datashare" title="pulumi_azure/datashare">pulumi_azure/datashare</a></dd>
+
 </dl>
 

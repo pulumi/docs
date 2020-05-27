@@ -151,7 +151,7 @@ anything, please consult the source <a class="reference external" href="https://
         <span class="s2">&quot;Domain&quot;</span><span class="p">:</span> <span class="s2">&quot;TestDomain&quot;</span><span class="p">,</span>
     <span class="p">},</span>
     <span class="n">vpc_options</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;securityGroupIds&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">aws_security_group</span><span class="p">[</span><span class="s2">&quot;elasticsearch&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">]],</span>
+        <span class="s2">&quot;securityGroupIds&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">es_security_group</span><span class="o">.</span><span class="n">id</span><span class="p">],</span>
         <span class="s2">&quot;subnetIds&quot;</span><span class="p">:</span> <span class="p">[</span>
             <span class="n">selected_subnet_ids</span><span class="o">.</span><span class="n">ids</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
             <span class="n">selected_subnet_ids</span><span class="o">.</span><span class="n">ids</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>

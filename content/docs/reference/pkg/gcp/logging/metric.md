@@ -80,7 +80,7 @@ logging_metric = gcp.logging.Metric("loggingMetric",
         "sku": "EXTRACT(jsonPayload.id)",
     },
     metric_descriptor={
-        "displayName": "My metric",
+        "display_name": "My metric",
         "labels": [
             {
                 "description": "amount of matter",
@@ -175,19 +175,19 @@ logging_metric = gcp.logging.Metric("loggingMetric",
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/logging/#Metric">Metric</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/logging/#MetricArgs">MetricArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/logging/#Metric">Metric</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/logging/#MetricArgs">MetricArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Metric</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>bucket_options=None<span class="p">, </span>description=None<span class="p">, </span>filter=None<span class="p">, </span>label_extractors=None<span class="p">, </span>metric_descriptor=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>value_extractor=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/logging/#Metric">Metric</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>bucket_options=None<span class="p">, </span>description=None<span class="p">, </span>filter=None<span class="p">, </span>label_extractors=None<span class="p">, </span>metric_descriptor=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>value_extractor=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewMetric<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/logging?tab=doc#MetricArgs">MetricArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/logging?tab=doc#Metric">Metric</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/logging?tab=doc#Metric">NewMetric</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/logging?tab=doc#MetricArgs">MetricArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/logging?tab=doc#Metric">Metric</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Logging.Metric.html">Metric</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Logging.MetricArgs.html">MetricArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Logging.Metric.html">Metric</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Logging.MetricArgs.html">MetricArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -353,7 +353,9 @@ The Metric resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>Filter</span>
+        <span id="filter_csharp">
+<a href="#filter_csharp" style="color: inherit; text-decoration: inherit;">Filter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -363,7 +365,9 @@ is used to match log entries.
 
     <dt class="property-required"
             title="Required">
-        <span>Metric<wbr>Descriptor</span>
+        <span id="metricdescriptor_csharp">
+<a href="#metricdescriptor_csharp" style="color: inherit; text-decoration: inherit;">Metric<wbr>Descriptor</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricmetricdescriptor">Metric<wbr>Metric<wbr>Descriptor<wbr>Args</a></span>
     </dt>
@@ -372,7 +376,9 @@ is used to match log entries.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Bucket<wbr>Options</span>
+        <span id="bucketoptions_csharp">
+<a href="#bucketoptions_csharp" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricbucketoptions">Metric<wbr>Bucket<wbr>Options<wbr>Args</a></span>
     </dt>
@@ -382,7 +388,9 @@ describes the bucket boundaries used to create a histogram of the extracted valu
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -392,7 +400,9 @@ description is 8000 characters.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Label<wbr>Extractors</span>
+        <span id="labelextractors_csharp">
+<a href="#labelextractors_csharp" style="color: inherit; text-decoration: inherit;">Label<wbr>Extractors</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -404,7 +414,9 @@ the same as for the valueExtractor field.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -417,7 +429,9 @@ of the name.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project</span>
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -427,7 +441,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Value<wbr>Extractor</span>
+        <span id="valueextractor_csharp">
+<a href="#valueextractor_csharp" style="color: inherit; text-decoration: inherit;">Value<wbr>Extractor</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -449,7 +465,9 @@ error to specify a regex that does not include exactly one capture group.
 
     <dt class="property-required"
             title="Required">
-        <span>Filter</span>
+        <span id="filter_go">
+<a href="#filter_go" style="color: inherit; text-decoration: inherit;">Filter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -459,7 +477,9 @@ is used to match log entries.
 
     <dt class="property-required"
             title="Required">
-        <span>Metric<wbr>Descriptor</span>
+        <span id="metricdescriptor_go">
+<a href="#metricdescriptor_go" style="color: inherit; text-decoration: inherit;">Metric<wbr>Descriptor</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricmetricdescriptor">Metric<wbr>Metric<wbr>Descriptor</a></span>
     </dt>
@@ -468,7 +488,9 @@ is used to match log entries.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Bucket<wbr>Options</span>
+        <span id="bucketoptions_go">
+<a href="#bucketoptions_go" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricbucketoptions">Metric<wbr>Bucket<wbr>Options</a></span>
     </dt>
@@ -478,7 +500,9 @@ describes the bucket boundaries used to create a histogram of the extracted valu
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -488,7 +512,9 @@ description is 8000 characters.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Label<wbr>Extractors</span>
+        <span id="labelextractors_go">
+<a href="#labelextractors_go" style="color: inherit; text-decoration: inherit;">Label<wbr>Extractors</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -500,7 +526,9 @@ the same as for the valueExtractor field.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -513,7 +541,9 @@ of the name.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project</span>
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -523,7 +553,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Value<wbr>Extractor</span>
+        <span id="valueextractor_go">
+<a href="#valueextractor_go" style="color: inherit; text-decoration: inherit;">Value<wbr>Extractor</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -545,7 +577,9 @@ error to specify a regex that does not include exactly one capture group.
 
     <dt class="property-required"
             title="Required">
-        <span>filter</span>
+        <span id="filter_nodejs">
+<a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -555,7 +589,9 @@ is used to match log entries.
 
     <dt class="property-required"
             title="Required">
-        <span>metric<wbr>Descriptor</span>
+        <span id="metricdescriptor_nodejs">
+<a href="#metricdescriptor_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Descriptor</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricmetricdescriptor">Metric<wbr>Metric<wbr>Descriptor</a></span>
     </dt>
@@ -564,7 +600,9 @@ is used to match log entries.
 
     <dt class="property-optional"
             title="Optional">
-        <span>bucket<wbr>Options</span>
+        <span id="bucketoptions_nodejs">
+<a href="#bucketoptions_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricbucketoptions">Metric<wbr>Bucket<wbr>Options</a></span>
     </dt>
@@ -574,7 +612,9 @@ describes the bucket boundaries used to create a histogram of the extracted valu
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -584,7 +624,9 @@ description is 8000 characters.
 
     <dt class="property-optional"
             title="Optional">
-        <span>label<wbr>Extractors</span>
+        <span id="labelextractors_nodejs">
+<a href="#labelextractors_nodejs" style="color: inherit; text-decoration: inherit;">label<wbr>Extractors</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -596,7 +638,9 @@ the same as for the valueExtractor field.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -609,7 +653,9 @@ of the name.
 
     <dt class="property-optional"
             title="Optional">
-        <span>project</span>
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -619,7 +665,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>value<wbr>Extractor</span>
+        <span id="valueextractor_nodejs">
+<a href="#valueextractor_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>Extractor</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -641,7 +689,9 @@ error to specify a regex that does not include exactly one capture group.
 
     <dt class="property-required"
             title="Required">
-        <span>filter</span>
+        <span id="filter_python">
+<a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -651,7 +701,9 @@ is used to match log entries.
 
     <dt class="property-required"
             title="Required">
-        <span>metric_<wbr>descriptor</span>
+        <span id="metric_descriptor_python">
+<a href="#metric_descriptor_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>descriptor</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricmetricdescriptor">Dict[Metric<wbr>Metric<wbr>Descriptor]</a></span>
     </dt>
@@ -660,7 +712,9 @@ is used to match log entries.
 
     <dt class="property-optional"
             title="Optional">
-        <span>bucket_<wbr>options</span>
+        <span id="bucket_options_python">
+<a href="#bucket_options_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricbucketoptions">Dict[Metric<wbr>Bucket<wbr>Options]</a></span>
     </dt>
@@ -670,7 +724,9 @@ describes the bucket boundaries used to create a histogram of the extracted valu
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -680,7 +736,9 @@ description is 8000 characters.
 
     <dt class="property-optional"
             title="Optional">
-        <span>label_<wbr>extractors</span>
+        <span id="label_extractors_python">
+<a href="#label_extractors_python" style="color: inherit; text-decoration: inherit;">label_<wbr>extractors</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -692,7 +750,9 @@ the same as for the valueExtractor field.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -705,7 +765,9 @@ of the name.
 
     <dt class="property-optional"
             title="Optional">
-        <span>project</span>
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -715,7 +777,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>value_<wbr>extractor</span>
+        <span id="value_extractor_python">
+<a href="#value_extractor_python" style="color: inherit; text-decoration: inherit;">value_<wbr>extractor</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -748,7 +812,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -763,7 +829,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -778,7 +846,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -793,7 +863,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -814,7 +886,7 @@ Get an existing Metric resource's state with the given name, ID, and optional ex
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/logging/#MetricState">MetricState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/logging/#Metric">Metric</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/logging/#MetricState">MetricState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/logging/#Metric">Metric</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -822,11 +894,11 @@ Get an existing Metric resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetMetric<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/logging?tab=doc#MetricState">MetricState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/logging?tab=doc#Metric">Metric</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetMetric<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/logging?tab=doc#MetricState">MetricState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/logging?tab=doc#Metric">Metric</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Logging.Metric.html">Metric</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Logging.MetricState.html">MetricState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Logging.Metric.html">Metric</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Logging.MetricState.html">MetricState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -934,7 +1006,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Bucket<wbr>Options</span>
+        <span id="state_bucketoptions_csharp">
+<a href="#state_bucketoptions_csharp" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricbucketoptions">Metric<wbr>Bucket<wbr>Options<wbr>Args</a></span>
     </dt>
@@ -944,7 +1018,9 @@ describes the bucket boundaries used to create a histogram of the extracted valu
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_csharp">
+<a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -954,7 +1030,9 @@ description is 8000 characters.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Filter</span>
+        <span id="state_filter_csharp">
+<a href="#state_filter_csharp" style="color: inherit; text-decoration: inherit;">Filter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -964,7 +1042,9 @@ is used to match log entries.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Label<wbr>Extractors</span>
+        <span id="state_labelextractors_csharp">
+<a href="#state_labelextractors_csharp" style="color: inherit; text-decoration: inherit;">Label<wbr>Extractors</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -976,7 +1056,9 @@ the same as for the valueExtractor field.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Metric<wbr>Descriptor</span>
+        <span id="state_metricdescriptor_csharp">
+<a href="#state_metricdescriptor_csharp" style="color: inherit; text-decoration: inherit;">Metric<wbr>Descriptor</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricmetricdescriptor">Metric<wbr>Metric<wbr>Descriptor<wbr>Args</a></span>
     </dt>
@@ -985,7 +1067,9 @@ the same as for the valueExtractor field.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -998,7 +1082,9 @@ of the name.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project</span>
+        <span id="state_project_csharp">
+<a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1008,7 +1094,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Value<wbr>Extractor</span>
+        <span id="state_valueextractor_csharp">
+<a href="#state_valueextractor_csharp" style="color: inherit; text-decoration: inherit;">Value<wbr>Extractor</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1030,7 +1118,9 @@ error to specify a regex that does not include exactly one capture group.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Bucket<wbr>Options</span>
+        <span id="state_bucketoptions_go">
+<a href="#state_bucketoptions_go" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricbucketoptions">Metric<wbr>Bucket<wbr>Options</a></span>
     </dt>
@@ -1040,7 +1130,9 @@ describes the bucket boundaries used to create a histogram of the extracted valu
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_go">
+<a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1050,7 +1142,9 @@ description is 8000 characters.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Filter</span>
+        <span id="state_filter_go">
+<a href="#state_filter_go" style="color: inherit; text-decoration: inherit;">Filter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1060,7 +1154,9 @@ is used to match log entries.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Label<wbr>Extractors</span>
+        <span id="state_labelextractors_go">
+<a href="#state_labelextractors_go" style="color: inherit; text-decoration: inherit;">Label<wbr>Extractors</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -1072,7 +1168,9 @@ the same as for the valueExtractor field.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Metric<wbr>Descriptor</span>
+        <span id="state_metricdescriptor_go">
+<a href="#state_metricdescriptor_go" style="color: inherit; text-decoration: inherit;">Metric<wbr>Descriptor</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricmetricdescriptor">Metric<wbr>Metric<wbr>Descriptor</a></span>
     </dt>
@@ -1081,7 +1179,9 @@ the same as for the valueExtractor field.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1094,7 +1194,9 @@ of the name.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project</span>
+        <span id="state_project_go">
+<a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1104,7 +1206,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Value<wbr>Extractor</span>
+        <span id="state_valueextractor_go">
+<a href="#state_valueextractor_go" style="color: inherit; text-decoration: inherit;">Value<wbr>Extractor</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1126,7 +1230,9 @@ error to specify a regex that does not include exactly one capture group.
 
     <dt class="property-optional"
             title="Optional">
-        <span>bucket<wbr>Options</span>
+        <span id="state_bucketoptions_nodejs">
+<a href="#state_bucketoptions_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricbucketoptions">Metric<wbr>Bucket<wbr>Options</a></span>
     </dt>
@@ -1136,7 +1242,9 @@ describes the bucket boundaries used to create a histogram of the extracted valu
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_nodejs">
+<a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1146,7 +1254,9 @@ description is 8000 characters.
 
     <dt class="property-optional"
             title="Optional">
-        <span>filter</span>
+        <span id="state_filter_nodejs">
+<a href="#state_filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1156,7 +1266,9 @@ is used to match log entries.
 
     <dt class="property-optional"
             title="Optional">
-        <span>label<wbr>Extractors</span>
+        <span id="state_labelextractors_nodejs">
+<a href="#state_labelextractors_nodejs" style="color: inherit; text-decoration: inherit;">label<wbr>Extractors</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -1168,7 +1280,9 @@ the same as for the valueExtractor field.
 
     <dt class="property-optional"
             title="Optional">
-        <span>metric<wbr>Descriptor</span>
+        <span id="state_metricdescriptor_nodejs">
+<a href="#state_metricdescriptor_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Descriptor</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricmetricdescriptor">Metric<wbr>Metric<wbr>Descriptor</a></span>
     </dt>
@@ -1177,7 +1291,9 @@ the same as for the valueExtractor field.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1190,7 +1306,9 @@ of the name.
 
     <dt class="property-optional"
             title="Optional">
-        <span>project</span>
+        <span id="state_project_nodejs">
+<a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1200,7 +1318,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>value<wbr>Extractor</span>
+        <span id="state_valueextractor_nodejs">
+<a href="#state_valueextractor_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>Extractor</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1222,7 +1342,9 @@ error to specify a regex that does not include exactly one capture group.
 
     <dt class="property-optional"
             title="Optional">
-        <span>bucket_<wbr>options</span>
+        <span id="state_bucket_options_python">
+<a href="#state_bucket_options_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricbucketoptions">Dict[Metric<wbr>Bucket<wbr>Options]</a></span>
     </dt>
@@ -1232,7 +1354,9 @@ describes the bucket boundaries used to create a histogram of the extracted valu
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_python">
+<a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1242,7 +1366,9 @@ description is 8000 characters.
 
     <dt class="property-optional"
             title="Optional">
-        <span>filter</span>
+        <span id="state_filter_python">
+<a href="#state_filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1252,7 +1378,9 @@ is used to match log entries.
 
     <dt class="property-optional"
             title="Optional">
-        <span>label_<wbr>extractors</span>
+        <span id="state_label_extractors_python">
+<a href="#state_label_extractors_python" style="color: inherit; text-decoration: inherit;">label_<wbr>extractors</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -1264,7 +1392,9 @@ the same as for the valueExtractor field.
 
     <dt class="property-optional"
             title="Optional">
-        <span>metric_<wbr>descriptor</span>
+        <span id="state_metric_descriptor_python">
+<a href="#state_metric_descriptor_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>descriptor</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricmetricdescriptor">Dict[Metric<wbr>Metric<wbr>Descriptor]</a></span>
     </dt>
@@ -1273,7 +1403,9 @@ the same as for the valueExtractor field.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1286,7 +1418,9 @@ of the name.
 
     <dt class="property-optional"
             title="Optional">
-        <span>project</span>
+        <span id="state_project_python">
+<a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1296,7 +1430,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>value_<wbr>extractor</span>
+        <span id="state_value_extractor_python">
+<a href="#state_value_extractor_python" style="color: inherit; text-decoration: inherit;">value_<wbr>extractor</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1344,7 +1480,9 @@ error to specify a regex that does not include exactly one capture group.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Explicit<wbr>Buckets</span>
+        <span id="explicitbuckets_csharp">
+<a href="#explicitbuckets_csharp" style="color: inherit; text-decoration: inherit;">Explicit<wbr>Buckets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricbucketoptionsexplicitbuckets">Metric<wbr>Bucket<wbr>Options<wbr>Explicit<wbr>Buckets<wbr>Args</a></span>
     </dt>
@@ -1353,7 +1491,9 @@ error to specify a regex that does not include exactly one capture group.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Exponential<wbr>Buckets</span>
+        <span id="exponentialbuckets_csharp">
+<a href="#exponentialbuckets_csharp" style="color: inherit; text-decoration: inherit;">Exponential<wbr>Buckets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricbucketoptionsexponentialbuckets">Metric<wbr>Bucket<wbr>Options<wbr>Exponential<wbr>Buckets<wbr>Args</a></span>
     </dt>
@@ -1363,7 +1503,9 @@ the lower bound. Each bucket represents a constant relative uncertainty on a spe
 
     <dt class="property-optional"
             title="Optional">
-        <span>Linear<wbr>Buckets</span>
+        <span id="linearbuckets_csharp">
+<a href="#linearbuckets_csharp" style="color: inherit; text-decoration: inherit;">Linear<wbr>Buckets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricbucketoptionslinearbuckets">Metric<wbr>Bucket<wbr>Options<wbr>Linear<wbr>Buckets<wbr>Args</a></span>
     </dt>
@@ -1380,7 +1522,9 @@ Each bucket represents a constant absolute uncertainty on the specific value in 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Explicit<wbr>Buckets</span>
+        <span id="explicitbuckets_go">
+<a href="#explicitbuckets_go" style="color: inherit; text-decoration: inherit;">Explicit<wbr>Buckets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricbucketoptionsexplicitbuckets">Metric<wbr>Bucket<wbr>Options<wbr>Explicit<wbr>Buckets</a></span>
     </dt>
@@ -1389,7 +1533,9 @@ Each bucket represents a constant absolute uncertainty on the specific value in 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Exponential<wbr>Buckets</span>
+        <span id="exponentialbuckets_go">
+<a href="#exponentialbuckets_go" style="color: inherit; text-decoration: inherit;">Exponential<wbr>Buckets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricbucketoptionsexponentialbuckets">Metric<wbr>Bucket<wbr>Options<wbr>Exponential<wbr>Buckets</a></span>
     </dt>
@@ -1399,7 +1545,9 @@ the lower bound. Each bucket represents a constant relative uncertainty on a spe
 
     <dt class="property-optional"
             title="Optional">
-        <span>Linear<wbr>Buckets</span>
+        <span id="linearbuckets_go">
+<a href="#linearbuckets_go" style="color: inherit; text-decoration: inherit;">Linear<wbr>Buckets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricbucketoptionslinearbuckets">Metric<wbr>Bucket<wbr>Options<wbr>Linear<wbr>Buckets</a></span>
     </dt>
@@ -1416,7 +1564,9 @@ Each bucket represents a constant absolute uncertainty on the specific value in 
 
     <dt class="property-optional"
             title="Optional">
-        <span>explicit<wbr>Buckets</span>
+        <span id="explicitbuckets_nodejs">
+<a href="#explicitbuckets_nodejs" style="color: inherit; text-decoration: inherit;">explicit<wbr>Buckets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricbucketoptionsexplicitbuckets">Metric<wbr>Bucket<wbr>Options<wbr>Explicit<wbr>Buckets</a></span>
     </dt>
@@ -1425,7 +1575,9 @@ Each bucket represents a constant absolute uncertainty on the specific value in 
 
     <dt class="property-optional"
             title="Optional">
-        <span>exponential<wbr>Buckets</span>
+        <span id="exponentialbuckets_nodejs">
+<a href="#exponentialbuckets_nodejs" style="color: inherit; text-decoration: inherit;">exponential<wbr>Buckets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricbucketoptionsexponentialbuckets">Metric<wbr>Bucket<wbr>Options<wbr>Exponential<wbr>Buckets</a></span>
     </dt>
@@ -1435,7 +1587,9 @@ the lower bound. Each bucket represents a constant relative uncertainty on a spe
 
     <dt class="property-optional"
             title="Optional">
-        <span>linear<wbr>Buckets</span>
+        <span id="linearbuckets_nodejs">
+<a href="#linearbuckets_nodejs" style="color: inherit; text-decoration: inherit;">linear<wbr>Buckets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricbucketoptionslinearbuckets">Metric<wbr>Bucket<wbr>Options<wbr>Linear<wbr>Buckets</a></span>
     </dt>
@@ -1452,7 +1606,9 @@ Each bucket represents a constant absolute uncertainty on the specific value in 
 
     <dt class="property-optional"
             title="Optional">
-        <span>explicit<wbr>Buckets</span>
+        <span id="explicitbuckets_python">
+<a href="#explicitbuckets_python" style="color: inherit; text-decoration: inherit;">explicit<wbr>Buckets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricbucketoptionsexplicitbuckets">Dict[Metric<wbr>Bucket<wbr>Options<wbr>Explicit<wbr>Buckets]</a></span>
     </dt>
@@ -1461,7 +1617,9 @@ Each bucket represents a constant absolute uncertainty on the specific value in 
 
     <dt class="property-optional"
             title="Optional">
-        <span>exponential<wbr>Buckets</span>
+        <span id="exponentialbuckets_python">
+<a href="#exponentialbuckets_python" style="color: inherit; text-decoration: inherit;">exponential<wbr>Buckets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricbucketoptionsexponentialbuckets">Dict[Metric<wbr>Bucket<wbr>Options<wbr>Exponential<wbr>Buckets]</a></span>
     </dt>
@@ -1471,7 +1629,9 @@ the lower bound. Each bucket represents a constant relative uncertainty on a spe
 
     <dt class="property-optional"
             title="Optional">
-        <span>linear<wbr>Buckets</span>
+        <span id="linearbuckets_python">
+<a href="#linearbuckets_python" style="color: inherit; text-decoration: inherit;">linear<wbr>Buckets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricbucketoptionslinearbuckets">Dict[Metric<wbr>Bucket<wbr>Options<wbr>Linear<wbr>Buckets]</a></span>
     </dt>
@@ -1506,7 +1666,9 @@ Each bucket represents a constant absolute uncertainty on the specific value in 
 
     <dt class="property-required"
             title="Required">
-        <span>Bounds</span>
+        <span id="bounds_csharp">
+<a href="#bounds_csharp" style="color: inherit; text-decoration: inherit;">Bounds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;double&gt;</a></span>
     </dt>
@@ -1522,7 +1684,9 @@ Each bucket represents a constant absolute uncertainty on the specific value in 
 
     <dt class="property-required"
             title="Required">
-        <span>Bounds</span>
+        <span id="bounds_go">
+<a href="#bounds_go" style="color: inherit; text-decoration: inherit;">Bounds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">[]float64</a></span>
     </dt>
@@ -1538,7 +1702,9 @@ Each bucket represents a constant absolute uncertainty on the specific value in 
 
     <dt class="property-required"
             title="Required">
-        <span>bounds</span>
+        <span id="bounds_nodejs">
+<a href="#bounds_nodejs" style="color: inherit; text-decoration: inherit;">bounds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number[]</a></span>
     </dt>
@@ -1554,7 +1720,9 @@ Each bucket represents a constant absolute uncertainty on the specific value in 
 
     <dt class="property-required"
             title="Required">
-        <span>bounds</span>
+        <span id="bounds_python">
+<a href="#bounds_python" style="color: inherit; text-decoration: inherit;">bounds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Number]</a></span>
     </dt>
@@ -1588,7 +1756,9 @@ Each bucket represents a constant absolute uncertainty on the specific value in 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Growth<wbr>Factor</span>
+        <span id="growthfactor_csharp">
+<a href="#growthfactor_csharp" style="color: inherit; text-decoration: inherit;">Growth<wbr>Factor</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
@@ -1597,7 +1767,9 @@ Each bucket represents a constant absolute uncertainty on the specific value in 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Num<wbr>Finite<wbr>Buckets</span>
+        <span id="numfinitebuckets_csharp">
+<a href="#numfinitebuckets_csharp" style="color: inherit; text-decoration: inherit;">Num<wbr>Finite<wbr>Buckets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1606,7 +1778,9 @@ Each bucket represents a constant absolute uncertainty on the specific value in 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Scale</span>
+        <span id="scale_csharp">
+<a href="#scale_csharp" style="color: inherit; text-decoration: inherit;">Scale</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
@@ -1622,7 +1796,9 @@ Each bucket represents a constant absolute uncertainty on the specific value in 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Growth<wbr>Factor</span>
+        <span id="growthfactor_go">
+<a href="#growthfactor_go" style="color: inherit; text-decoration: inherit;">Growth<wbr>Factor</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
@@ -1631,7 +1807,9 @@ Each bucket represents a constant absolute uncertainty on the specific value in 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Num<wbr>Finite<wbr>Buckets</span>
+        <span id="numfinitebuckets_go">
+<a href="#numfinitebuckets_go" style="color: inherit; text-decoration: inherit;">Num<wbr>Finite<wbr>Buckets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1640,7 +1818,9 @@ Each bucket represents a constant absolute uncertainty on the specific value in 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Scale</span>
+        <span id="scale_go">
+<a href="#scale_go" style="color: inherit; text-decoration: inherit;">Scale</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
@@ -1656,7 +1836,9 @@ Each bucket represents a constant absolute uncertainty on the specific value in 
 
     <dt class="property-optional"
             title="Optional">
-        <span>growth<wbr>Factor</span>
+        <span id="growthfactor_nodejs">
+<a href="#growthfactor_nodejs" style="color: inherit; text-decoration: inherit;">growth<wbr>Factor</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
@@ -1665,7 +1847,9 @@ Each bucket represents a constant absolute uncertainty on the specific value in 
 
     <dt class="property-optional"
             title="Optional">
-        <span>num<wbr>Finite<wbr>Buckets</span>
+        <span id="numfinitebuckets_nodejs">
+<a href="#numfinitebuckets_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Finite<wbr>Buckets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1674,7 +1858,9 @@ Each bucket represents a constant absolute uncertainty on the specific value in 
 
     <dt class="property-optional"
             title="Optional">
-        <span>scale</span>
+        <span id="scale_nodejs">
+<a href="#scale_nodejs" style="color: inherit; text-decoration: inherit;">scale</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
@@ -1690,7 +1876,9 @@ Each bucket represents a constant absolute uncertainty on the specific value in 
 
     <dt class="property-optional"
             title="Optional">
-        <span>growth<wbr>Factor</span>
+        <span id="growthfactor_python">
+<a href="#growthfactor_python" style="color: inherit; text-decoration: inherit;">growth<wbr>Factor</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1699,7 +1887,9 @@ Each bucket represents a constant absolute uncertainty on the specific value in 
 
     <dt class="property-optional"
             title="Optional">
-        <span>num<wbr>Finite<wbr>Buckets</span>
+        <span id="numfinitebuckets_python">
+<a href="#numfinitebuckets_python" style="color: inherit; text-decoration: inherit;">num<wbr>Finite<wbr>Buckets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1708,7 +1898,9 @@ Each bucket represents a constant absolute uncertainty on the specific value in 
 
     <dt class="property-optional"
             title="Optional">
-        <span>scale</span>
+        <span id="scale_python">
+<a href="#scale_python" style="color: inherit; text-decoration: inherit;">scale</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1742,7 +1934,9 @@ Each bucket represents a constant absolute uncertainty on the specific value in 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Num<wbr>Finite<wbr>Buckets</span>
+        <span id="numfinitebuckets_csharp">
+<a href="#numfinitebuckets_csharp" style="color: inherit; text-decoration: inherit;">Num<wbr>Finite<wbr>Buckets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1751,7 +1945,9 @@ Each bucket represents a constant absolute uncertainty on the specific value in 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Offset</span>
+        <span id="offset_csharp">
+<a href="#offset_csharp" style="color: inherit; text-decoration: inherit;">Offset</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
@@ -1760,7 +1956,9 @@ Each bucket represents a constant absolute uncertainty on the specific value in 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Width</span>
+        <span id="width_csharp">
+<a href="#width_csharp" style="color: inherit; text-decoration: inherit;">Width</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1776,7 +1974,9 @@ Each bucket represents a constant absolute uncertainty on the specific value in 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Num<wbr>Finite<wbr>Buckets</span>
+        <span id="numfinitebuckets_go">
+<a href="#numfinitebuckets_go" style="color: inherit; text-decoration: inherit;">Num<wbr>Finite<wbr>Buckets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1785,7 +1985,9 @@ Each bucket represents a constant absolute uncertainty on the specific value in 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Offset</span>
+        <span id="offset_go">
+<a href="#offset_go" style="color: inherit; text-decoration: inherit;">Offset</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
@@ -1794,7 +1996,9 @@ Each bucket represents a constant absolute uncertainty on the specific value in 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Width</span>
+        <span id="width_go">
+<a href="#width_go" style="color: inherit; text-decoration: inherit;">Width</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1810,7 +2014,9 @@ Each bucket represents a constant absolute uncertainty on the specific value in 
 
     <dt class="property-optional"
             title="Optional">
-        <span>num<wbr>Finite<wbr>Buckets</span>
+        <span id="numfinitebuckets_nodejs">
+<a href="#numfinitebuckets_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Finite<wbr>Buckets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1819,7 +2025,9 @@ Each bucket represents a constant absolute uncertainty on the specific value in 
 
     <dt class="property-optional"
             title="Optional">
-        <span>offset</span>
+        <span id="offset_nodejs">
+<a href="#offset_nodejs" style="color: inherit; text-decoration: inherit;">offset</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
@@ -1828,7 +2036,9 @@ Each bucket represents a constant absolute uncertainty on the specific value in 
 
     <dt class="property-optional"
             title="Optional">
-        <span>width</span>
+        <span id="width_nodejs">
+<a href="#width_nodejs" style="color: inherit; text-decoration: inherit;">width</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1844,7 +2054,9 @@ Each bucket represents a constant absolute uncertainty on the specific value in 
 
     <dt class="property-optional"
             title="Optional">
-        <span>num<wbr>Finite<wbr>Buckets</span>
+        <span id="numfinitebuckets_python">
+<a href="#numfinitebuckets_python" style="color: inherit; text-decoration: inherit;">num<wbr>Finite<wbr>Buckets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1853,7 +2065,9 @@ Each bucket represents a constant absolute uncertainty on the specific value in 
 
     <dt class="property-optional"
             title="Optional">
-        <span>offset</span>
+        <span id="offset_python">
+<a href="#offset_python" style="color: inherit; text-decoration: inherit;">offset</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1862,7 +2076,9 @@ Each bucket represents a constant absolute uncertainty on the specific value in 
 
     <dt class="property-optional"
             title="Optional">
-        <span>width</span>
+        <span id="width_python">
+<a href="#width_python" style="color: inherit; text-decoration: inherit;">width</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1896,7 +2112,9 @@ Each bucket represents a constant absolute uncertainty on the specific value in 
 
     <dt class="property-required"
             title="Required">
-        <span>Metric<wbr>Kind</span>
+        <span id="metrickind_csharp">
+<a href="#metrickind_csharp" style="color: inherit; text-decoration: inherit;">Metric<wbr>Kind</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1907,7 +2125,9 @@ For counter metrics, set this to DELTA.
 
     <dt class="property-required"
             title="Required">
-        <span>Value<wbr>Type</span>
+        <span id="valuetype_csharp">
+<a href="#valuetype_csharp" style="color: inherit; text-decoration: inherit;">Value<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1916,7 +2136,9 @@ For counter metrics, set this to DELTA.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Display<wbr>Name</span>
+        <span id="displayname_csharp">
+<a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1927,7 +2149,9 @@ recommended to be set for any metrics associated with user-visible concepts, suc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Labels</span>
+        <span id="labels_csharp">
+<a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricmetricdescriptorlabel">List&lt;Metric<wbr>Metric<wbr>Descriptor<wbr>Label<wbr>Args&gt;</a></span>
     </dt>
@@ -1939,7 +2163,9 @@ or just for responses that failed.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Unit</span>
+        <span id="unit_csharp">
+<a href="#unit_csharp" style="color: inherit; text-decoration: inherit;">Unit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1957,7 +2183,9 @@ or just for responses that failed.  Structure is documented below.
 
     <dt class="property-required"
             title="Required">
-        <span>Metric<wbr>Kind</span>
+        <span id="metrickind_go">
+<a href="#metrickind_go" style="color: inherit; text-decoration: inherit;">Metric<wbr>Kind</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1968,7 +2196,9 @@ For counter metrics, set this to DELTA.
 
     <dt class="property-required"
             title="Required">
-        <span>Value<wbr>Type</span>
+        <span id="valuetype_go">
+<a href="#valuetype_go" style="color: inherit; text-decoration: inherit;">Value<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1977,7 +2207,9 @@ For counter metrics, set this to DELTA.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Display<wbr>Name</span>
+        <span id="displayname_go">
+<a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1988,7 +2220,9 @@ recommended to be set for any metrics associated with user-visible concepts, suc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Labels</span>
+        <span id="labels_go">
+<a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricmetricdescriptorlabel">[]Metric<wbr>Metric<wbr>Descriptor<wbr>Label</a></span>
     </dt>
@@ -2000,7 +2234,9 @@ or just for responses that failed.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Unit</span>
+        <span id="unit_go">
+<a href="#unit_go" style="color: inherit; text-decoration: inherit;">Unit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2018,7 +2254,9 @@ or just for responses that failed.  Structure is documented below.
 
     <dt class="property-required"
             title="Required">
-        <span>metric<wbr>Kind</span>
+        <span id="metrickind_nodejs">
+<a href="#metrickind_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Kind</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2029,7 +2267,9 @@ For counter metrics, set this to DELTA.
 
     <dt class="property-required"
             title="Required">
-        <span>value<wbr>Type</span>
+        <span id="valuetype_nodejs">
+<a href="#valuetype_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2038,7 +2278,9 @@ For counter metrics, set this to DELTA.
 
     <dt class="property-optional"
             title="Optional">
-        <span>display<wbr>Name</span>
+        <span id="displayname_nodejs">
+<a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2049,7 +2291,9 @@ recommended to be set for any metrics associated with user-visible concepts, suc
 
     <dt class="property-optional"
             title="Optional">
-        <span>labels</span>
+        <span id="labels_nodejs">
+<a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricmetricdescriptorlabel">Metric<wbr>Metric<wbr>Descriptor<wbr>Label[]</a></span>
     </dt>
@@ -2061,7 +2305,9 @@ or just for responses that failed.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>unit</span>
+        <span id="unit_nodejs">
+<a href="#unit_nodejs" style="color: inherit; text-decoration: inherit;">unit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2079,7 +2325,9 @@ or just for responses that failed.  Structure is documented below.
 
     <dt class="property-required"
             title="Required">
-        <span>metric<wbr>Kind</span>
+        <span id="metrickind_python">
+<a href="#metrickind_python" style="color: inherit; text-decoration: inherit;">metric<wbr>Kind</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2090,7 +2338,9 @@ For counter metrics, set this to DELTA.
 
     <dt class="property-required"
             title="Required">
-        <span>value<wbr>Type</span>
+        <span id="valuetype_python">
+<a href="#valuetype_python" style="color: inherit; text-decoration: inherit;">value<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2099,7 +2349,9 @@ For counter metrics, set this to DELTA.
 
     <dt class="property-optional"
             title="Optional">
-        <span>display_<wbr>name</span>
+        <span id="display_name_python">
+<a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2110,7 +2362,9 @@ recommended to be set for any metrics associated with user-visible concepts, suc
 
     <dt class="property-optional"
             title="Optional">
-        <span>labels</span>
+        <span id="labels_python">
+<a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricmetricdescriptorlabel">List[Metric<wbr>Metric<wbr>Descriptor<wbr>Label]</a></span>
     </dt>
@@ -2122,7 +2376,9 @@ or just for responses that failed.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>unit</span>
+        <span id="unit_python">
+<a href="#unit_python" style="color: inherit; text-decoration: inherit;">unit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2158,7 +2414,9 @@ or just for responses that failed.  Structure is documented below.
 
     <dt class="property-required"
             title="Required">
-        <span>Key</span>
+        <span id="key_csharp">
+<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2167,7 +2425,9 @@ or just for responses that failed.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2177,7 +2437,9 @@ description is 8000 characters.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Value<wbr>Type</span>
+        <span id="valuetype_csharp">
+<a href="#valuetype_csharp" style="color: inherit; text-decoration: inherit;">Value<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2193,7 +2455,9 @@ description is 8000 characters.
 
     <dt class="property-required"
             title="Required">
-        <span>Key</span>
+        <span id="key_go">
+<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2202,7 +2466,9 @@ description is 8000 characters.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2212,7 +2478,9 @@ description is 8000 characters.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Value<wbr>Type</span>
+        <span id="valuetype_go">
+<a href="#valuetype_go" style="color: inherit; text-decoration: inherit;">Value<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2228,7 +2496,9 @@ description is 8000 characters.
 
     <dt class="property-required"
             title="Required">
-        <span>key</span>
+        <span id="key_nodejs">
+<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2237,7 +2507,9 @@ description is 8000 characters.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2247,7 +2519,9 @@ description is 8000 characters.
 
     <dt class="property-optional"
             title="Optional">
-        <span>value<wbr>Type</span>
+        <span id="valuetype_nodejs">
+<a href="#valuetype_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2263,7 +2537,9 @@ description is 8000 characters.
 
     <dt class="property-required"
             title="Required">
-        <span>key</span>
+        <span id="key_python">
+<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2272,7 +2548,9 @@ description is 8000 characters.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2282,7 +2560,9 @@ description is 8000 characters.
 
     <dt class="property-optional"
             title="Optional">
-        <span>value<wbr>Type</span>
+        <span id="valuetype_python">
+<a href="#valuetype_python" style="color: inherit; text-decoration: inherit;">value<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

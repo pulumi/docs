@@ -62,7 +62,7 @@ export const labSubnetName = example.then(example => example.allowedSubnets[0].l
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getVirtualNetwork<span class="p">(</span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/devtest/#GetVirtualNetworkArgs">GetVirtualNetworkArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/devtest/#GetVirtualNetworkResult">GetVirtualNetworkResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getVirtualNetwork<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/devtest/#GetVirtualNetworkArgs">GetVirtualNetworkArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/devtest/#GetVirtualNetworkResult">GetVirtualNetworkResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -72,13 +72,16 @@ export const labSubnetName = example.then(example => example.allowedSubnets[0].l
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupVirtualNetwork<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/devtest?tab=doc#LookupVirtualNetworkArgs">LookupVirtualNetworkArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/devtest?tab=doc#LookupVirtualNetworkResult">LookupVirtualNetworkResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupVirtualNetwork<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/devtest?tab=doc#LookupVirtualNetworkArgs">LookupVirtualNetworkArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/devtest?tab=doc#LookupVirtualNetworkResult">LookupVirtualNetworkResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `LookupVirtualNetwork` in the Go SDK.
+
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetVirtualNetwork </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Devtest.GetVirtualNetworkResult.html">GetVirtualNetworkResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.DevTest.GetVirtualNetworkArgs.html">GetVirtualNetworkArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Devtest.GetVirtualNetworkResult.html">GetVirtualNetworkResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.DevTest.GetVirtualNetworkArgs.html">GetVirtualNetworkArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -93,7 +96,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Lab<wbr>Name</span>
+        <span id="labname_csharp">
+<a href="#labname_csharp" style="color: inherit; text-decoration: inherit;">Lab<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -102,7 +107,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -111,7 +118,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_csharp">
+<a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -127,7 +136,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Lab<wbr>Name</span>
+        <span id="labname_go">
+<a href="#labname_go" style="color: inherit; text-decoration: inherit;">Lab<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -136,7 +147,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -145,7 +158,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_go">
+<a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -161,7 +176,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>lab<wbr>Name</span>
+        <span id="labname_nodejs">
+<a href="#labname_nodejs" style="color: inherit; text-decoration: inherit;">lab<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -170,7 +187,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -179,7 +198,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_nodejs">
+<a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -195,7 +216,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>lab_<wbr>name</span>
+        <span id="lab_name_python">
+<a href="#lab_name_python" style="color: inherit; text-decoration: inherit;">lab_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -204,7 +227,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -213,7 +238,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>resource_<wbr>group_<wbr>name</span>
+        <span id="resource_group_name_python">
+<a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -242,7 +269,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Allowed<wbr>Subnets</span>
+        <span id="allowedsubnets_csharp">
+<a href="#allowedsubnets_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Subnets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getvirtualnetworkallowedsubnet">List&lt;Get<wbr>Virtual<wbr>Network<wbr>Allowed<wbr>Subnet&gt;</a></span>
     </dt>
@@ -251,7 +280,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -260,7 +291,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Lab<wbr>Name</span>
+        <span id="labname_csharp">
+<a href="#labname_csharp" style="color: inherit; text-decoration: inherit;">Lab<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -268,7 +301,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -276,7 +311,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_csharp">
+<a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -284,7 +321,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Subnet<wbr>Overrides</span>
+        <span id="subnetoverrides_csharp">
+<a href="#subnetoverrides_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Overrides</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getvirtualnetworksubnetoverride">List&lt;Get<wbr>Virtual<wbr>Network<wbr>Subnet<wbr>Override&gt;</a></span>
     </dt>
@@ -293,7 +332,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Unique<wbr>Identifier</span>
+        <span id="uniqueidentifier_csharp">
+<a href="#uniqueidentifier_csharp" style="color: inherit; text-decoration: inherit;">Unique<wbr>Identifier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -309,7 +350,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Allowed<wbr>Subnets</span>
+        <span id="allowedsubnets_go">
+<a href="#allowedsubnets_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Subnets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getvirtualnetworkallowedsubnet">[]Get<wbr>Virtual<wbr>Network<wbr>Allowed<wbr>Subnet</a></span>
     </dt>
@@ -318,7 +361,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -327,7 +372,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Lab<wbr>Name</span>
+        <span id="labname_go">
+<a href="#labname_go" style="color: inherit; text-decoration: inherit;">Lab<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -335,7 +382,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -343,7 +392,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_go">
+<a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -351,7 +402,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Subnet<wbr>Overrides</span>
+        <span id="subnetoverrides_go">
+<a href="#subnetoverrides_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Overrides</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getvirtualnetworksubnetoverride">[]Get<wbr>Virtual<wbr>Network<wbr>Subnet<wbr>Override</a></span>
     </dt>
@@ -360,7 +413,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Unique<wbr>Identifier</span>
+        <span id="uniqueidentifier_go">
+<a href="#uniqueidentifier_go" style="color: inherit; text-decoration: inherit;">Unique<wbr>Identifier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -376,7 +431,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>allowed<wbr>Subnets</span>
+        <span id="allowedsubnets_nodejs">
+<a href="#allowedsubnets_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Subnets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getvirtualnetworkallowedsubnet">Get<wbr>Virtual<wbr>Network<wbr>Allowed<wbr>Subnet[]</a></span>
     </dt>
@@ -385,7 +442,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -394,7 +453,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>lab<wbr>Name</span>
+        <span id="labname_nodejs">
+<a href="#labname_nodejs" style="color: inherit; text-decoration: inherit;">lab<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -402,7 +463,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -410,7 +473,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_nodejs">
+<a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -418,7 +483,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>subnet<wbr>Overrides</span>
+        <span id="subnetoverrides_nodejs">
+<a href="#subnetoverrides_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Overrides</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getvirtualnetworksubnetoverride">Get<wbr>Virtual<wbr>Network<wbr>Subnet<wbr>Override[]</a></span>
     </dt>
@@ -427,7 +494,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>unique<wbr>Identifier</span>
+        <span id="uniqueidentifier_nodejs">
+<a href="#uniqueidentifier_nodejs" style="color: inherit; text-decoration: inherit;">unique<wbr>Identifier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -443,7 +512,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>allowed_<wbr>subnets</span>
+        <span id="allowed_subnets_python">
+<a href="#allowed_subnets_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>subnets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getvirtualnetworkallowedsubnet">List[Get<wbr>Virtual<wbr>Network<wbr>Allowed<wbr>Subnet]</a></span>
     </dt>
@@ -452,7 +523,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -461,7 +534,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>lab_<wbr>name</span>
+        <span id="lab_name_python">
+<a href="#lab_name_python" style="color: inherit; text-decoration: inherit;">lab_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -469,7 +544,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -477,7 +554,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>resource_<wbr>group_<wbr>name</span>
+        <span id="resource_group_name_python">
+<a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -485,7 +564,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>subnet_<wbr>overrides</span>
+        <span id="subnet_overrides_python">
+<a href="#subnet_overrides_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>overrides</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getvirtualnetworksubnetoverride">List[Get<wbr>Virtual<wbr>Network<wbr>Subnet<wbr>Override]</a></span>
     </dt>
@@ -494,7 +575,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>unique_<wbr>identifier</span>
+        <span id="unique_identifier_python">
+<a href="#unique_identifier_python" style="color: inherit; text-decoration: inherit;">unique_<wbr>identifier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -534,7 +617,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Allow<wbr>Public<wbr>Ip</span>
+        <span id="allowpublicip_csharp">
+<a href="#allowpublicip_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Public<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -543,7 +628,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Lab<wbr>Subnet<wbr>Name</span>
+        <span id="labsubnetname_csharp">
+<a href="#labsubnetname_csharp" style="color: inherit; text-decoration: inherit;">Lab<wbr>Subnet<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -552,7 +639,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Resource<wbr>Id</span>
+        <span id="resourceid_csharp">
+<a href="#resourceid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -568,7 +657,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Allow<wbr>Public<wbr>Ip</span>
+        <span id="allowpublicip_go">
+<a href="#allowpublicip_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Public<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -577,7 +668,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Lab<wbr>Subnet<wbr>Name</span>
+        <span id="labsubnetname_go">
+<a href="#labsubnetname_go" style="color: inherit; text-decoration: inherit;">Lab<wbr>Subnet<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -586,7 +679,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Resource<wbr>Id</span>
+        <span id="resourceid_go">
+<a href="#resourceid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -602,7 +697,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>allow<wbr>Public<wbr>Ip</span>
+        <span id="allowpublicip_nodejs">
+<a href="#allowpublicip_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Public<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -611,7 +708,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>lab<wbr>Subnet<wbr>Name</span>
+        <span id="labsubnetname_nodejs">
+<a href="#labsubnetname_nodejs" style="color: inherit; text-decoration: inherit;">lab<wbr>Subnet<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -620,7 +719,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>resource<wbr>Id</span>
+        <span id="resourceid_nodejs">
+<a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -636,7 +737,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>allow<wbr>Public<wbr>Ip</span>
+        <span id="allowpublicip_python">
+<a href="#allowpublicip_python" style="color: inherit; text-decoration: inherit;">allow<wbr>Public<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -645,7 +748,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>lab_<wbr>subnet_<wbr>name</span>
+        <span id="lab_subnet_name_python">
+<a href="#lab_subnet_name_python" style="color: inherit; text-decoration: inherit;">lab_<wbr>subnet_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -654,7 +759,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>resource_<wbr>id</span>
+        <span id="resource_id_python">
+<a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -688,7 +795,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Lab<wbr>Subnet<wbr>Name</span>
+        <span id="labsubnetname_csharp">
+<a href="#labsubnetname_csharp" style="color: inherit; text-decoration: inherit;">Lab<wbr>Subnet<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -697,7 +806,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Resource<wbr>Id</span>
+        <span id="resourceid_csharp">
+<a href="#resourceid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -706,7 +817,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Use<wbr>In<wbr>Vm<wbr>Creation<wbr>Permission</span>
+        <span id="useinvmcreationpermission_csharp">
+<a href="#useinvmcreationpermission_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>In<wbr>Vm<wbr>Creation<wbr>Permission</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -715,7 +828,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Use<wbr>Public<wbr>Ip<wbr>Address<wbr>Permission</span>
+        <span id="usepublicipaddresspermission_csharp">
+<a href="#usepublicipaddresspermission_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Public<wbr>Ip<wbr>Address<wbr>Permission</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -723,7 +838,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Virtual<wbr>Network<wbr>Pool<wbr>Name</span>
+        <span id="virtualnetworkpoolname_csharp">
+<a href="#virtualnetworkpoolname_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Pool<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -739,7 +856,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Lab<wbr>Subnet<wbr>Name</span>
+        <span id="labsubnetname_go">
+<a href="#labsubnetname_go" style="color: inherit; text-decoration: inherit;">Lab<wbr>Subnet<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -748,7 +867,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Resource<wbr>Id</span>
+        <span id="resourceid_go">
+<a href="#resourceid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -757,7 +878,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Use<wbr>In<wbr>Vm<wbr>Creation<wbr>Permission</span>
+        <span id="useinvmcreationpermission_go">
+<a href="#useinvmcreationpermission_go" style="color: inherit; text-decoration: inherit;">Use<wbr>In<wbr>Vm<wbr>Creation<wbr>Permission</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -766,7 +889,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Use<wbr>Public<wbr>Ip<wbr>Address<wbr>Permission</span>
+        <span id="usepublicipaddresspermission_go">
+<a href="#usepublicipaddresspermission_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Public<wbr>Ip<wbr>Address<wbr>Permission</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -774,7 +899,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Virtual<wbr>Network<wbr>Pool<wbr>Name</span>
+        <span id="virtualnetworkpoolname_go">
+<a href="#virtualnetworkpoolname_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Pool<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -790,7 +917,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>lab<wbr>Subnet<wbr>Name</span>
+        <span id="labsubnetname_nodejs">
+<a href="#labsubnetname_nodejs" style="color: inherit; text-decoration: inherit;">lab<wbr>Subnet<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -799,7 +928,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>resource<wbr>Id</span>
+        <span id="resourceid_nodejs">
+<a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -808,7 +939,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>use<wbr>In<wbr>Vm<wbr>Creation<wbr>Permission</span>
+        <span id="useinvmcreationpermission_nodejs">
+<a href="#useinvmcreationpermission_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>In<wbr>Vm<wbr>Creation<wbr>Permission</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -817,7 +950,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>use<wbr>Public<wbr>Ip<wbr>Address<wbr>Permission</span>
+        <span id="usepublicipaddresspermission_nodejs">
+<a href="#usepublicipaddresspermission_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Public<wbr>Ip<wbr>Address<wbr>Permission</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -825,7 +960,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>virtual<wbr>Network<wbr>Pool<wbr>Name</span>
+        <span id="virtualnetworkpoolname_nodejs">
+<a href="#virtualnetworkpoolname_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Pool<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -841,7 +978,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>lab_<wbr>subnet_<wbr>name</span>
+        <span id="lab_subnet_name_python">
+<a href="#lab_subnet_name_python" style="color: inherit; text-decoration: inherit;">lab_<wbr>subnet_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -850,7 +989,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>resource_<wbr>id</span>
+        <span id="resource_id_python">
+<a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -859,7 +1000,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>use<wbr>In<wbr>Vm<wbr>Creation<wbr>Permission</span>
+        <span id="useinvmcreationpermission_python">
+<a href="#useinvmcreationpermission_python" style="color: inherit; text-decoration: inherit;">use<wbr>In<wbr>Vm<wbr>Creation<wbr>Permission</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -868,7 +1011,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>use<wbr>Public<wbr>Ip<wbr>Address<wbr>Permission</span>
+        <span id="usepublicipaddresspermission_python">
+<a href="#usepublicipaddresspermission_python" style="color: inherit; text-decoration: inherit;">use<wbr>Public<wbr>Ip<wbr>Address<wbr>Permission</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -876,7 +1021,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>virtual<wbr>Network<wbr>Pool<wbr>Name</span>
+        <span id="virtualnetworkpoolname_python">
+<a href="#virtualnetworkpoolname_python" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Pool<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

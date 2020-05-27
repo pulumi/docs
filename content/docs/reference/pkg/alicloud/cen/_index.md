@@ -18,6 +18,7 @@ Explore the resources and functions of the cen module in the AliCloud package.
     <li><a href="instance" title="Instance"><span class="symbol resource"></span>Instance</a></li>
     <li><a href="instanceattachment" title="InstanceAttachment"><span class="symbol resource"></span>InstanceAttachment</a></li>
     <li><a href="instancegrant" title="InstanceGrant"><span class="symbol resource"></span>InstanceGrant</a></li>
+    <li><a href="privatezone" title="PrivateZone"><span class="symbol resource"></span>PrivateZone</a></li>
     <li><a href="routeentry" title="RouteEntry"><span class="symbol resource"></span>RouteEntry</a></li>
     <li><a href="routemap" title="RouteMap"><span class="symbol resource"></span>RouteMap</a></li>
 </ul>
@@ -41,6 +42,24 @@ Explore the resources and functions of the cen module in the AliCloud package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
 	<dt>Version</dt>
-	<dd>2.4.0</dd>
+	<dd>2.5.0</dd>
+</dl>
+
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Cen.html" title="Pulumi.AliCloud.Cen">Pulumi.AliCloud.Cen</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cen?tab=doc#" title="alicloud/cen">alicloud/cen</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cen/#" title="@pulumi/alicloud/cen">@pulumi/alicloud/cen</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_alicloud/cen" title="pulumi_alicloud/cen">pulumi_alicloud/cen</a></dd>
+
 </dl>
 

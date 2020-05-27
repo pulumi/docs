@@ -45,3 +45,21 @@ Explore the resources and functions of the app module in the Okta package.
 	<dd>2.1.1</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.App.html" title="Pulumi.Okta.App">Pulumi.Okta.App</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/app?tab=doc#" title="okta/app">okta/app</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/okta/app/#" title="@pulumi/okta/app">@pulumi/okta/app</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_okta/app" title="pulumi_okta/app">pulumi_okta/app</a></dd>
+
+</dl>
+

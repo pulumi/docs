@@ -17,6 +17,45 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_gcp.bigquery.AppProfile">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.bigquery.</code><code class="sig-name descname">AppProfile</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">app_profile_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ignore_warnings</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">multi_cluster_routing_use_any</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">single_cluster_routing</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.AppProfile" title="Permalink to this definition">¶</a></dt>
 <dd><p>App profile is a configuration object describing how Cloud Bigtable should treat traffic from a particular end user application.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">instance</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">bigtable</span><span class="o">.</span><span class="n">Instance</span><span class="p">(</span><span class="s2">&quot;instance&quot;</span><span class="p">,</span>
+    <span class="n">cluster</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;cluster_id&quot;</span><span class="p">:</span> <span class="s2">&quot;bt-instance&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;zone&quot;</span><span class="p">:</span> <span class="s2">&quot;us-central1-b&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;num_nodes&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+        <span class="s2">&quot;storageType&quot;</span><span class="p">:</span> <span class="s2">&quot;HDD&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">deletion_protection</span><span class="o">=</span><span class="s2">&quot;true&quot;</span><span class="p">)</span>
+<span class="n">ap</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">bigquery</span><span class="o">.</span><span class="n">AppProfile</span><span class="p">(</span><span class="s2">&quot;ap&quot;</span><span class="p">,</span>
+    <span class="n">instance</span><span class="o">=</span><span class="n">instance</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">app_profile_id</span><span class="o">=</span><span class="s2">&quot;bt-profile&quot;</span><span class="p">,</span>
+    <span class="n">multi_cluster_routing_use_any</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">ignore_warnings</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">instance</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">bigtable</span><span class="o">.</span><span class="n">Instance</span><span class="p">(</span><span class="s2">&quot;instance&quot;</span><span class="p">,</span>
+    <span class="n">cluster</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;cluster_id&quot;</span><span class="p">:</span> <span class="s2">&quot;bt-instance&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;zone&quot;</span><span class="p">:</span> <span class="s2">&quot;us-central1-b&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;num_nodes&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+        <span class="s2">&quot;storageType&quot;</span><span class="p">:</span> <span class="s2">&quot;HDD&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">deletion_protection</span><span class="o">=</span><span class="s2">&quot;true&quot;</span><span class="p">)</span>
+<span class="n">ap</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">bigquery</span><span class="o">.</span><span class="n">AppProfile</span><span class="p">(</span><span class="s2">&quot;ap&quot;</span><span class="p">,</span>
+    <span class="n">instance</span><span class="o">=</span><span class="n">instance</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">app_profile_id</span><span class="o">=</span><span class="s2">&quot;bt-profile&quot;</span><span class="p">,</span>
+    <span class="n">single_cluster_routing</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;cluster_id&quot;</span><span class="p">:</span> <span class="s2">&quot;bt-instance&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;allowTransactionalWrites&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">ignore_warnings</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -176,8 +215,218 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd></dd></dl>
 
 <dl class="py class">
+<dt id="pulumi_gcp.bigquery.Connection">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.bigquery.</code><code class="sig-name descname">Connection</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cloud_sql</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">connection_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">friendly_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.Connection" title="Permalink to this definition">¶</a></dt>
+<dd><p>A connection allows BigQuery connections to external data sources..</p>
+<p>To get more information about Connection, see:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://cloud.google.com/bigquery/docs/reference/bigqueryconnection/rest/v1beta1/projects.locations.connections/create">API documentation</a></p></li>
+<li><p>How-to Guides</p>
+<ul>
+<li><p><a class="reference external" href="https://cloud.google.com/bigquery/docs/cloud-sql-federated-queries">Cloud SQL federated queries</a></p></li>
+</ul>
+</li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">instance</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">sql</span><span class="o">.</span><span class="n">DatabaseInstance</span><span class="p">(</span><span class="s2">&quot;instance&quot;</span><span class="p">,</span>
+    <span class="n">database_version</span><span class="o">=</span><span class="s2">&quot;POSTGRES_11&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">settings</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;tier&quot;</span><span class="p">:</span> <span class="s2">&quot;db-f1-micro&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+<span class="n">db</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">sql</span><span class="o">.</span><span class="n">Database</span><span class="p">(</span><span class="s2">&quot;db&quot;</span><span class="p">,</span> <span class="n">instance</span><span class="o">=</span><span class="n">instance</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="n">connection</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">bigquery</span><span class="o">.</span><span class="n">Connection</span><span class="p">(</span><span class="s2">&quot;connection&quot;</span><span class="p">,</span>
+    <span class="n">friendly_name</span><span class="o">=</span><span class="s2">&quot;👋&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;a riveting description&quot;</span><span class="p">,</span>
+    <span class="n">cloud_sql</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;instance_id&quot;</span><span class="p">:</span> <span class="n">instance</span><span class="o">.</span><span class="n">connection_name</span><span class="p">,</span>
+        <span class="s2">&quot;database&quot;</span><span class="p">:</span> <span class="n">db</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;POSTGRES&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">instance</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">sql</span><span class="o">.</span><span class="n">DatabaseInstance</span><span class="p">(</span><span class="s2">&quot;instance&quot;</span><span class="p">,</span>
+    <span class="n">database_version</span><span class="o">=</span><span class="s2">&quot;POSTGRES_11&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">settings</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;tier&quot;</span><span class="p">:</span> <span class="s2">&quot;db-f1-micro&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+<span class="n">db</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">sql</span><span class="o">.</span><span class="n">Database</span><span class="p">(</span><span class="s2">&quot;db&quot;</span><span class="p">,</span> <span class="n">instance</span><span class="o">=</span><span class="n">instance</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="n">connection</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">bigquery</span><span class="o">.</span><span class="n">Connection</span><span class="p">(</span><span class="s2">&quot;connection&quot;</span><span class="p">,</span>
+    <span class="n">connection_id</span><span class="o">=</span><span class="s2">&quot;my-connection&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="s2">&quot;US&quot;</span><span class="p">,</span>
+    <span class="n">friendly_name</span><span class="o">=</span><span class="s2">&quot;👋&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;a riveting description&quot;</span><span class="p">,</span>
+    <span class="n">cloud_sql</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;instance_id&quot;</span><span class="p">:</span> <span class="n">instance</span><span class="o">.</span><span class="n">connection_name</span><span class="p">,</span>
+        <span class="s2">&quot;database&quot;</span><span class="p">:</span> <span class="n">db</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;POSTGRES&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>cloud_sql</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Cloud SQL properties.  Structure is documented below.</p></li>
+<li><p><strong>connection_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Optional connection id that should be assigned to the created connection.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A descriptive description for the connection</p></li>
+<li><p><strong>friendly_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A descriptive name for the connection</p></li>
+<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The geographic location where the connection should reside.
+Cloud SQL instance must be in the same location as the connection
+with following exceptions: Cloud SQL us-central1 maps to BigQuery US, Cloud SQL europe-west1 maps to BigQuery EU.
+Examples: US, EU, asia-northeast1, us-central1, europe-west1. The default value is US.</p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>cloud_sql</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">database</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Database name.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">instance_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Cloud SQL instance ID in the form project:location:instance.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Type of the Cloud SQL database.</p></li>
+</ul>
+<dl class="py attribute">
+<dt id="pulumi_gcp.bigquery.Connection.cloud_sql">
+<code class="sig-name descname">cloud_sql</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Connection.cloud_sql" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cloud SQL properties.  Structure is documented below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">database</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Database name.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">instance_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Cloud SQL instance ID in the form project:location:instance.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Type of the Cloud SQL database.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_gcp.bigquery.Connection.connection_id">
+<code class="sig-name descname">connection_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Connection.connection_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Optional connection id that should be assigned to the created connection.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_gcp.bigquery.Connection.description">
+<code class="sig-name descname">description</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Connection.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>A descriptive description for the connection</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_gcp.bigquery.Connection.friendly_name">
+<code class="sig-name descname">friendly_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Connection.friendly_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>A descriptive name for the connection</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_gcp.bigquery.Connection.has_credential">
+<code class="sig-name descname">has_credential</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Connection.has_credential" title="Permalink to this definition">¶</a></dt>
+<dd><p>True if the connection has credential assigned.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_gcp.bigquery.Connection.location">
+<code class="sig-name descname">location</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Connection.location" title="Permalink to this definition">¶</a></dt>
+<dd><p>The geographic location where the connection should reside.
+Cloud SQL instance must be in the same location as the connection
+with following exceptions: Cloud SQL us-central1 maps to BigQuery US, Cloud SQL europe-west1 maps to BigQuery EU.
+Examples: US, EU, asia-northeast1, us-central1, europe-west1. The default value is US.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_gcp.bigquery.Connection.name">
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Connection.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The resource name of the connection in the form of:
+“projects/{project_id}/locations/{location_id}/connections/{connectionId}”</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_gcp.bigquery.Connection.project">
+<code class="sig-name descname">project</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Connection.project" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_gcp.bigquery.Connection.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cloud_sql</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">connection_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">friendly_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">has_credential</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.Connection.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Connection resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>cloud_sql</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Cloud SQL properties.  Structure is documented below.</p></li>
+<li><p><strong>connection_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Optional connection id that should be assigned to the created connection.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A descriptive description for the connection</p></li>
+<li><p><strong>friendly_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A descriptive name for the connection</p></li>
+<li><p><strong>has_credential</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – True if the connection has credential assigned.</p></li>
+<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The geographic location where the connection should reside.
+Cloud SQL instance must be in the same location as the connection
+with following exceptions: Cloud SQL us-central1 maps to BigQuery US, Cloud SQL europe-west1 maps to BigQuery EU.
+Examples: US, EU, asia-northeast1, us-central1, europe-west1. The default value is US.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The resource name of the connection in the form of:
+“projects/{project_id}/locations/{location_id}/connections/{connectionId}”</p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>cloud_sql</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">database</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Database name.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">instance_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Cloud SQL instance ID in the form project:location:instance.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Type of the Cloud SQL database.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_gcp.bigquery.Connection.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.Connection.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_gcp.bigquery.Connection.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.Connection.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_gcp.bigquery.DataTransferConfig">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.bigquery.</code><code class="sig-name descname">DataTransferConfig</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">data_refresh_window_days</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">data_source_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">destination_dataset_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">disabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">display_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">params</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">schedule</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.DataTransferConfig" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.bigquery.</code><code class="sig-name descname">DataTransferConfig</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">data_refresh_window_days</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">data_source_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">destination_dataset_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">disabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">display_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">params</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">schedule</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_account_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.DataTransferConfig" title="Permalink to this definition">¶</a></dt>
 <dd><p>Represents a data transfer configuration. A transfer configuration
 contains all metadata needed to perform a data transfer.</p>
 <p>To get more information about Config, see:</p>
@@ -189,6 +438,31 @@ contains all metadata needed to perform a data transfer.</p>
 </ul>
 </li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">project</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">organizations</span><span class="o">.</span><span class="n">get_project</span><span class="p">()</span>
+<span class="n">permissions</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">projects</span><span class="o">.</span><span class="n">IAMMember</span><span class="p">(</span><span class="s2">&quot;permissions&quot;</span><span class="p">,</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/iam.serviceAccountShortTermTokenMinter&quot;</span><span class="p">,</span>
+    <span class="n">member</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;serviceAccount:service-</span><span class="si">{</span><span class="n">project</span><span class="o">.</span><span class="n">number</span><span class="si">}</span><span class="s2">@gcp-sa-bigquerydatatransfer.iam.gserviceaccount.com&quot;</span><span class="p">)</span>
+<span class="n">my_dataset</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">bigquery</span><span class="o">.</span><span class="n">Dataset</span><span class="p">(</span><span class="s2">&quot;myDataset&quot;</span><span class="p">,</span>
+    <span class="n">dataset_id</span><span class="o">=</span><span class="s2">&quot;my_dataset&quot;</span><span class="p">,</span>
+    <span class="n">friendly_name</span><span class="o">=</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;bar&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="s2">&quot;asia-northeast1&quot;</span><span class="p">)</span>
+<span class="n">query_config</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">bigquery</span><span class="o">.</span><span class="n">DataTransferConfig</span><span class="p">(</span><span class="s2">&quot;queryConfig&quot;</span><span class="p">,</span>
+    <span class="n">display_name</span><span class="o">=</span><span class="s2">&quot;my-query&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="s2">&quot;asia-northeast1&quot;</span><span class="p">,</span>
+    <span class="n">data_source_id</span><span class="o">=</span><span class="s2">&quot;scheduled_query&quot;</span><span class="p">,</span>
+    <span class="n">schedule</span><span class="o">=</span><span class="s2">&quot;first sunday of quarter 00:00&quot;</span><span class="p">,</span>
+    <span class="n">destination_dataset_id</span><span class="o">=</span><span class="n">my_dataset</span><span class="o">.</span><span class="n">dataset_id</span><span class="p">,</span>
+    <span class="n">params</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;destination_table_name_template&quot;</span><span class="p">:</span> <span class="s2">&quot;my-table&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;write_disposition&quot;</span><span class="p">:</span> <span class="s2">&quot;WRITE_APPEND&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;query&quot;</span><span class="p">:</span> <span class="s2">&quot;SELECT name FROM tabl WHERE x = &#39;y&#39;&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -216,6 +490,9 @@ jun 13:15, and first sunday of quarter 00:00. See more explanation
 about the format here:
 <a class="reference external" href="https://cloud.google.com/appengine/docs/flexible/python/scheduling-jobs-with-cron-yaml#the_schedule_format">https://cloud.google.com/appengine/docs/flexible/python/scheduling-jobs-with-cron-yaml#the_schedule_format</a>
 NOTE: the granularity should be at least 8 hours, or less frequent.</p></li>
+<li><p><strong>service_account_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Optional service account name. If this field is set, transfer config will
+be created with this service account credentials. It requires that
+requesting user calling this API has permissions to act as this service account.</p></li>
 </ul>
 </dd>
 </dl>
@@ -294,9 +571,17 @@ about the format here:
 NOTE: the granularity should be at least 8 hours, or less frequent.</p>
 </dd></dl>
 
+<dl class="py attribute">
+<dt id="pulumi_gcp.bigquery.DataTransferConfig.service_account_name">
+<code class="sig-name descname">service_account_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.DataTransferConfig.service_account_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Optional service account name. If this field is set, transfer config will
+be created with this service account credentials. It requires that
+requesting user calling this API has permissions to act as this service account.</p>
+</dd></dl>
+
 <dl class="py method">
 <dt id="pulumi_gcp.bigquery.DataTransferConfig.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">data_refresh_window_days</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">data_source_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">destination_dataset_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">disabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">display_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">params</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">schedule</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.DataTransferConfig.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">data_refresh_window_days</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">data_source_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">destination_dataset_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">disabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">display_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">params</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">schedule</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_account_name</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.DataTransferConfig.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing DataTransferConfig resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -330,6 +615,9 @@ jun 13:15, and first sunday of quarter 00:00. See more explanation
 about the format here:
 <a class="reference external" href="https://cloud.google.com/appengine/docs/flexible/python/scheduling-jobs-with-cron-yaml#the_schedule_format">https://cloud.google.com/appengine/docs/flexible/python/scheduling-jobs-with-cron-yaml#the_schedule_format</a>
 NOTE: the granularity should be at least 8 hours, or less frequent.</p></li>
+<li><p><strong>service_account_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Optional service account name. If this field is set, transfer config will
+be created with this service account credentials. It requires that
+requesting user calling this API has permissions to act as this service account.</p></li>
 </ul>
 </dd>
 </dl>
@@ -386,6 +674,47 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">bqowner</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">service_account</span><span class="o">.</span><span class="n">Account</span><span class="p">(</span><span class="s2">&quot;bqowner&quot;</span><span class="p">,</span> <span class="n">account_id</span><span class="o">=</span><span class="s2">&quot;bqowner&quot;</span><span class="p">)</span>
+<span class="n">dataset</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">bigquery</span><span class="o">.</span><span class="n">Dataset</span><span class="p">(</span><span class="s2">&quot;dataset&quot;</span><span class="p">,</span>
+    <span class="n">dataset_id</span><span class="o">=</span><span class="s2">&quot;example_dataset&quot;</span><span class="p">,</span>
+    <span class="n">friendly_name</span><span class="o">=</span><span class="s2">&quot;test&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;This is a test description&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="s2">&quot;EU&quot;</span><span class="p">,</span>
+    <span class="n">default_table_expiration_ms</span><span class="o">=</span><span class="mi">3600000</span><span class="p">,</span>
+    <span class="n">labels</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;env&quot;</span><span class="p">:</span> <span class="s2">&quot;default&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">access</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;OWNER&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;user_by_email&quot;</span><span class="p">:</span> <span class="n">bqowner</span><span class="o">.</span><span class="n">email</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;READER&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;domain&quot;</span><span class="p">:</span> <span class="s2">&quot;hashicorp.com&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">])</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">key_ring</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">kms</span><span class="o">.</span><span class="n">KeyRing</span><span class="p">(</span><span class="s2">&quot;keyRing&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;us&quot;</span><span class="p">)</span>
+<span class="n">crypto_key</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">kms</span><span class="o">.</span><span class="n">CryptoKey</span><span class="p">(</span><span class="s2">&quot;cryptoKey&quot;</span><span class="p">,</span> <span class="n">key_ring</span><span class="o">=</span><span class="n">key_ring</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">dataset</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">bigquery</span><span class="o">.</span><span class="n">Dataset</span><span class="p">(</span><span class="s2">&quot;dataset&quot;</span><span class="p">,</span>
+    <span class="n">dataset_id</span><span class="o">=</span><span class="s2">&quot;example_dataset&quot;</span><span class="p">,</span>
+    <span class="n">friendly_name</span><span class="o">=</span><span class="s2">&quot;test&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;This is a test description&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="s2">&quot;US&quot;</span><span class="p">,</span>
+    <span class="n">default_table_expiration_ms</span><span class="o">=</span><span class="mi">3600000</span><span class="p">,</span>
+    <span class="n">default_encryption_configuration</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;kms_key_name&quot;</span><span class="p">:</span> <span class="n">crypto_key</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -423,7 +752,7 @@ domain specified will be granted the specified access</p></li>
 member of the access object. Primitive, Predefined and custom
 roles are supported. Predefined roles that have equivalent
 primitive roles are swapped by the API to their Primitive
-counterparts, and will show a diff post-create. See
+counterparts. See
 <a class="reference external" href="https://cloud.google.com/bigquery/docs/access-control">official docs</a>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">special_group</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A special group to grant access to. Possible values include:</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">user_by_email</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - An email address of a user to grant access to. For example:
@@ -460,7 +789,7 @@ domain specified will be granted the specified access</p></li>
 member of the access object. Primitive, Predefined and custom
 roles are supported. Predefined roles that have equivalent
 primitive roles are swapped by the API to their Primitive
-counterparts, and will show a diff post-create. See
+counterparts. See
 <a class="reference external" href="https://cloud.google.com/bigquery/docs/access-control">official docs</a>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">special_group</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A special group to grant access to. Possible values include:</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">user_by_email</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - An email address of a user to grant access to. For example:
@@ -627,7 +956,7 @@ domain specified will be granted the specified access</p></li>
 member of the access object. Primitive, Predefined and custom
 roles are supported. Predefined roles that have equivalent
 primitive roles are swapped by the API to their Primitive
-counterparts, and will show a diff post-create. See
+counterparts. See
 <a class="reference external" href="https://cloud.google.com/bigquery/docs/access-control">official docs</a>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">special_group</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A special group to grant access to. Possible values include:</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">user_by_email</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - An email address of a user to grant access to. For example:
@@ -712,6 +1041,38 @@ dataset resource must either have no defined <code class="docutils literal notra
 </ul>
 </li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">dataset</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">bigquery</span><span class="o">.</span><span class="n">Dataset</span><span class="p">(</span><span class="s2">&quot;dataset&quot;</span><span class="p">,</span> <span class="n">dataset_id</span><span class="o">=</span><span class="s2">&quot;example_dataset&quot;</span><span class="p">)</span>
+<span class="n">bqowner</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">service_account</span><span class="o">.</span><span class="n">Account</span><span class="p">(</span><span class="s2">&quot;bqowner&quot;</span><span class="p">,</span> <span class="n">account_id</span><span class="o">=</span><span class="s2">&quot;bqowner&quot;</span><span class="p">)</span>
+<span class="n">access</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">bigquery</span><span class="o">.</span><span class="n">DatasetAccess</span><span class="p">(</span><span class="s2">&quot;access&quot;</span><span class="p">,</span>
+    <span class="n">dataset_id</span><span class="o">=</span><span class="n">dataset</span><span class="o">.</span><span class="n">dataset_id</span><span class="p">,</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;OWNER&quot;</span><span class="p">,</span>
+    <span class="n">user_by_email</span><span class="o">=</span><span class="n">bqowner</span><span class="o">.</span><span class="n">email</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">private</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">bigquery</span><span class="o">.</span><span class="n">Dataset</span><span class="p">(</span><span class="s2">&quot;private&quot;</span><span class="p">,</span> <span class="n">dataset_id</span><span class="o">=</span><span class="s2">&quot;example_dataset&quot;</span><span class="p">)</span>
+<span class="n">public_dataset</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">bigquery</span><span class="o">.</span><span class="n">Dataset</span><span class="p">(</span><span class="s2">&quot;publicDataset&quot;</span><span class="p">,</span> <span class="n">dataset_id</span><span class="o">=</span><span class="s2">&quot;example_dataset2&quot;</span><span class="p">)</span>
+<span class="n">public_table</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">bigquery</span><span class="o">.</span><span class="n">Table</span><span class="p">(</span><span class="s2">&quot;publicTable&quot;</span><span class="p">,</span>
+    <span class="n">dataset_id</span><span class="o">=</span><span class="n">public_dataset</span><span class="o">.</span><span class="n">dataset_id</span><span class="p">,</span>
+    <span class="n">table_id</span><span class="o">=</span><span class="s2">&quot;example_table&quot;</span><span class="p">,</span>
+    <span class="n">view</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;query&quot;</span><span class="p">:</span> <span class="s2">&quot;SELECT state FROM [lookerdata:cdc.project_tycho_reports]&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;useLegacySql&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="p">})</span>
+<span class="n">access</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">bigquery</span><span class="o">.</span><span class="n">DatasetAccess</span><span class="p">(</span><span class="s2">&quot;access&quot;</span><span class="p">,</span>
+    <span class="n">dataset_id</span><span class="o">=</span><span class="n">private</span><span class="o">.</span><span class="n">dataset_id</span><span class="p">,</span>
+    <span class="n">view</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;project_id&quot;</span><span class="p">:</span> <span class="n">public_table</span><span class="o">.</span><span class="n">project</span><span class="p">,</span>
+        <span class="s2">&quot;dataset_id&quot;</span><span class="p">:</span> <span class="n">public_dataset</span><span class="o">.</span><span class="n">dataset_id</span><span class="p">,</span>
+        <span class="s2">&quot;table_id&quot;</span><span class="p">:</span> <span class="n">public_table</span><span class="o">.</span><span class="n">table_id</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -934,6 +1295,146 @@ in order to grant IAM permissions.</p>
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.bigquery.</code><code class="sig-name descname">Job</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">copy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">extract</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">job_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">job_timeout_ms</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">load</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">query</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.Job" title="Permalink to this definition">¶</a></dt>
 <dd><p>Jobs are actions that BigQuery runs on your behalf to load data, export data, query data, or copy data.
 Once a BigQuery job is created, it cannot be changed or deleted.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">bar</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">bigquery</span><span class="o">.</span><span class="n">Dataset</span><span class="p">(</span><span class="s2">&quot;bar&quot;</span><span class="p">,</span>
+    <span class="n">dataset_id</span><span class="o">=</span><span class="s2">&quot;job_query_dataset&quot;</span><span class="p">,</span>
+    <span class="n">friendly_name</span><span class="o">=</span><span class="s2">&quot;test&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;This is a test description&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="s2">&quot;US&quot;</span><span class="p">)</span>
+<span class="n">foo</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">bigquery</span><span class="o">.</span><span class="n">Table</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+    <span class="n">dataset_id</span><span class="o">=</span><span class="n">bar</span><span class="o">.</span><span class="n">dataset_id</span><span class="p">,</span>
+    <span class="n">table_id</span><span class="o">=</span><span class="s2">&quot;job_query_table&quot;</span><span class="p">)</span>
+<span class="n">job</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">bigquery</span><span class="o">.</span><span class="n">Job</span><span class="p">(</span><span class="s2">&quot;job&quot;</span><span class="p">,</span>
+    <span class="n">job_id</span><span class="o">=</span><span class="s2">&quot;job_query&quot;</span><span class="p">,</span>
+    <span class="n">labels</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;example-label&quot;</span><span class="p">:</span> <span class="s2">&quot;example-value&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">query</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;query&quot;</span><span class="p">:</span> <span class="s2">&quot;SELECT state FROM [lookerdata:cdc.project_tycho_reports]&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;destination_table&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;project_id&quot;</span><span class="p">:</span> <span class="n">foo</span><span class="o">.</span><span class="n">project</span><span class="p">,</span>
+            <span class="s2">&quot;dataset_id&quot;</span><span class="p">:</span> <span class="n">foo</span><span class="o">.</span><span class="n">dataset_id</span><span class="p">,</span>
+            <span class="s2">&quot;table_id&quot;</span><span class="p">:</span> <span class="n">foo</span><span class="o">.</span><span class="n">table_id</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;allowLargeResults&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;flattenResults&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;script_options&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;keyResultStatement&quot;</span><span class="p">:</span> <span class="s2">&quot;LAST&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">bar</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">bigquery</span><span class="o">.</span><span class="n">Dataset</span><span class="p">(</span><span class="s2">&quot;bar&quot;</span><span class="p">,</span>
+    <span class="n">dataset_id</span><span class="o">=</span><span class="s2">&quot;job_query_dataset&quot;</span><span class="p">,</span>
+    <span class="n">friendly_name</span><span class="o">=</span><span class="s2">&quot;test&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;This is a test description&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="s2">&quot;US&quot;</span><span class="p">)</span>
+<span class="n">foo</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">bigquery</span><span class="o">.</span><span class="n">Table</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+    <span class="n">dataset_id</span><span class="o">=</span><span class="n">bar</span><span class="o">.</span><span class="n">dataset_id</span><span class="p">,</span>
+    <span class="n">table_id</span><span class="o">=</span><span class="s2">&quot;job_query_table&quot;</span><span class="p">)</span>
+<span class="n">job</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">bigquery</span><span class="o">.</span><span class="n">Job</span><span class="p">(</span><span class="s2">&quot;job&quot;</span><span class="p">,</span>
+    <span class="n">job_id</span><span class="o">=</span><span class="s2">&quot;job_query&quot;</span><span class="p">,</span>
+    <span class="n">labels</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;example-label&quot;</span><span class="p">:</span> <span class="s2">&quot;example-value&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">query</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;query&quot;</span><span class="p">:</span> <span class="s2">&quot;SELECT state FROM [lookerdata:cdc.project_tycho_reports]&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;destination_table&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;table_id&quot;</span><span class="p">:</span> <span class="n">foo</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;default_dataset&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;dataset_id&quot;</span><span class="p">:</span> <span class="n">bar</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;allowLargeResults&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;flattenResults&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;script_options&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;keyResultStatement&quot;</span><span class="p">:</span> <span class="s2">&quot;LAST&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">bar</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">bigquery</span><span class="o">.</span><span class="n">Dataset</span><span class="p">(</span><span class="s2">&quot;bar&quot;</span><span class="p">,</span>
+    <span class="n">dataset_id</span><span class="o">=</span><span class="s2">&quot;job_load_dataset&quot;</span><span class="p">,</span>
+    <span class="n">friendly_name</span><span class="o">=</span><span class="s2">&quot;test&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;This is a test description&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="s2">&quot;US&quot;</span><span class="p">)</span>
+<span class="n">foo</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">bigquery</span><span class="o">.</span><span class="n">Table</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+    <span class="n">dataset_id</span><span class="o">=</span><span class="n">bar</span><span class="o">.</span><span class="n">dataset_id</span><span class="p">,</span>
+    <span class="n">table_id</span><span class="o">=</span><span class="s2">&quot;job_load_table&quot;</span><span class="p">)</span>
+<span class="n">job</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">bigquery</span><span class="o">.</span><span class="n">Job</span><span class="p">(</span><span class="s2">&quot;job&quot;</span><span class="p">,</span>
+    <span class="n">job_id</span><span class="o">=</span><span class="s2">&quot;job_load&quot;</span><span class="p">,</span>
+    <span class="n">labels</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;my_job&quot;</span><span class="p">:</span> <span class="s2">&quot;load&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">load</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;sourceUris&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;gs://cloud-samples-data/bigquery/us-states/us-states-by-date.csv&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;destination_table&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;project_id&quot;</span><span class="p">:</span> <span class="n">foo</span><span class="o">.</span><span class="n">project</span><span class="p">,</span>
+            <span class="s2">&quot;dataset_id&quot;</span><span class="p">:</span> <span class="n">foo</span><span class="o">.</span><span class="n">dataset_id</span><span class="p">,</span>
+            <span class="s2">&quot;table_id&quot;</span><span class="p">:</span> <span class="n">foo</span><span class="o">.</span><span class="n">table_id</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;skipLeadingRows&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s2">&quot;schemaUpdateOptions&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;ALLOW_FIELD_RELAXATION&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;ALLOW_FIELD_ADDITION&quot;</span><span class="p">,</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;writeDisposition&quot;</span><span class="p">:</span> <span class="s2">&quot;WRITE_APPEND&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;autodetect&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">source_one_dataset</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">bigquery</span><span class="o">.</span><span class="n">Dataset</span><span class="p">(</span><span class="s2">&quot;source-oneDataset&quot;</span><span class="p">,</span>
+    <span class="n">dataset_id</span><span class="o">=</span><span class="s2">&quot;job_extract_dataset&quot;</span><span class="p">,</span>
+    <span class="n">friendly_name</span><span class="o">=</span><span class="s2">&quot;test&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;This is a test description&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="s2">&quot;US&quot;</span><span class="p">)</span>
+<span class="n">source_one_table</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">bigquery</span><span class="o">.</span><span class="n">Table</span><span class="p">(</span><span class="s2">&quot;source-oneTable&quot;</span><span class="p">,</span>
+    <span class="n">dataset_id</span><span class="o">=</span><span class="n">source_one_dataset</span><span class="o">.</span><span class="n">dataset_id</span><span class="p">,</span>
+    <span class="n">table_id</span><span class="o">=</span><span class="s2">&quot;job_extract_table&quot;</span><span class="p">,</span>
+    <span class="n">schema</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;[</span>
+<span class="s2">  {</span>
+<span class="s2">    &quot;name&quot;: &quot;name&quot;,</span>
+<span class="s2">    &quot;type&quot;: &quot;STRING&quot;,</span>
+<span class="s2">    &quot;mode&quot;: &quot;NULLABLE&quot;</span>
+<span class="s2">  },</span>
+<span class="s2">  {</span>
+<span class="s2">    &quot;name&quot;: &quot;post_abbr&quot;,</span>
+<span class="s2">    &quot;type&quot;: &quot;STRING&quot;,</span>
+<span class="s2">    &quot;mode&quot;: &quot;NULLABLE&quot;</span>
+<span class="s2">  },</span>
+<span class="s2">  {</span>
+<span class="s2">    &quot;name&quot;: &quot;date&quot;,</span>
+<span class="s2">    &quot;type&quot;: &quot;DATE&quot;,</span>
+<span class="s2">    &quot;mode&quot;: &quot;NULLABLE&quot;</span>
+<span class="s2">  }</span>
+<span class="s2">]</span>
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+<span class="n">dest</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">Bucket</span><span class="p">(</span><span class="s2">&quot;dest&quot;</span><span class="p">,</span> <span class="n">force_destroy</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">job</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">bigquery</span><span class="o">.</span><span class="n">Job</span><span class="p">(</span><span class="s2">&quot;job&quot;</span><span class="p">,</span>
+    <span class="n">job_id</span><span class="o">=</span><span class="s2">&quot;job_extract&quot;</span><span class="p">,</span>
+    <span class="n">extract</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;destinationUris&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">dest</span><span class="o">.</span><span class="n">url</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">url</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">url</span><span class="si">}</span><span class="s2">/extract&quot;</span><span class="p">)],</span>
+        <span class="s2">&quot;source_table&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;project_id&quot;</span><span class="p">:</span> <span class="n">source_one_table</span><span class="o">.</span><span class="n">project</span><span class="p">,</span>
+            <span class="s2">&quot;dataset_id&quot;</span><span class="p">:</span> <span class="n">source_one_table</span><span class="o">.</span><span class="n">dataset_id</span><span class="p">,</span>
+            <span class="s2">&quot;table_id&quot;</span><span class="p">:</span> <span class="n">source_one_table</span><span class="o">.</span><span class="n">table_id</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;destinationFormat&quot;</span><span class="p">:</span> <span class="s2">&quot;NEWLINE_DELIMITED_JSON&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;compression&quot;</span><span class="p">:</span> <span class="s2">&quot;GZIP&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -941,7 +1442,7 @@ Once a BigQuery job is created, it cannot be changed or deleted.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>copy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Copies a table.  Structure is documented below.</p></li>
 <li><p><strong>extract</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configures an extract job.  Structure is documented below.</p></li>
-<li><p><strong>job*id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The ID of the job. The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores (<a href="#id13"><span class="problematic" id="id14">*</span></a>), or dashes (-). The maximum length is 1,024 characters.</p>
+<li><p><strong>job*id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The ID of the job. The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores (<a href="#id14"><span class="problematic" id="id15">*</span></a>), or dashes (-). The maximum length is 1,024 characters.</p>
 </p></li>
 <li><p><strong>job_timeout_ms</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Job timeout in milliseconds. If this time limit is exceeded, BigQuery may attempt to terminate the job.</p></li>
 <li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The labels associated with this job. You can use these to organize and group your jobs.</p></li>
@@ -958,7 +1459,7 @@ If it is not provided, the provider project is used.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">createDisposition</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies whether the job is allowed to create new tables. The following values are supported:
 CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table.
 CREATE_NEVER: The table must already exist. If it does not, a ‘notFound’ error is returned in the job result.
-The default value is CREATE_IF_NEEDED. Creation, truncation and append actions occur as one atomic update upon job completion</p></li>
+Creation, truncation and append actions occur as one atomic update upon job completion</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">destinationEncryptionConfiguration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Custom encryption configuration (e.g., Cloud KMS keys)  Structure is documented below.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">kms_key_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table.
@@ -969,21 +1470,23 @@ The BigQuery Service Account associated with your project requires access to thi
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">dataset_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the dataset containing this model.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">project_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the project containing this model.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">table_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the table.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">table_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The table. Can be specified <code class="docutils literal notranslate"><span class="pre">{{table_id}}</span></code> if <code class="docutils literal notranslate"><span class="pre">project_id</span></code> and <code class="docutils literal notranslate"><span class="pre">dataset_id</span></code> are also set,
+or of the form <code class="docutils literal notranslate"><span class="pre">projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}</span></code> if not.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sourceTables</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Source tables to copy.  Structure is documented below.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">dataset_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the dataset containing this model.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">project_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the project containing this model.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">table_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the table.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">table_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The table. Can be specified <code class="docutils literal notranslate"><span class="pre">{{table_id}}</span></code> if <code class="docutils literal notranslate"><span class="pre">project_id</span></code> and <code class="docutils literal notranslate"><span class="pre">dataset_id</span></code> are also set,
+or of the form <code class="docutils literal notranslate"><span class="pre">projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}</span></code> if not.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">writeDisposition</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the action that occurs if the destination table already exists. The following values are supported:
 WRITE_TRUNCATE: If the table already exists, BigQuery overwrites the table data and uses the schema from the query result.
 WRITE_APPEND: If the table already exists, BigQuery appends the data to the table.
 WRITE_EMPTY: If the table already exists and contains data, a ‘duplicate’ error is returned in the job result.
-The default value is WRITE_EMPTY. Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
+Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
 Creation, truncation and append actions occur as one atomic update upon job completion.</p></li>
 </ul>
 <p>The <strong>extract</strong> object supports the following:</p>
@@ -1008,7 +1511,8 @@ Default is ‘,’</p></li>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">dataset_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the dataset containing this model.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">project_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the project containing this model.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">table_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the table.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">table_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The table. Can be specified <code class="docutils literal notranslate"><span class="pre">{{table_id}}</span></code> if <code class="docutils literal notranslate"><span class="pre">project_id</span></code> and <code class="docutils literal notranslate"><span class="pre">dataset_id</span></code> are also set,
+or of the form <code class="docutils literal notranslate"><span class="pre">projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}</span></code> if not.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">useAvroLogicalTypes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether to use logical types when extracting to AVRO format.</p></li>
@@ -1024,7 +1528,7 @@ The default value is false.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">createDisposition</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies whether the job is allowed to create new tables. The following values are supported:
 CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table.
 CREATE_NEVER: The table must already exist. If it does not, a ‘notFound’ error is returned in the job result.
-The default value is CREATE_IF_NEEDED. Creation, truncation and append actions occur as one atomic update upon job completion</p></li>
+Creation, truncation and append actions occur as one atomic update upon job completion</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">destinationEncryptionConfiguration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Custom encryption configuration (e.g., Cloud KMS keys)  Structure is documented below.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">kms_key_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table.
@@ -1035,7 +1539,8 @@ The BigQuery Service Account associated with your project requires access to thi
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">dataset_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the dataset containing this model.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">project_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the project containing this model.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">table_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the table.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">table_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The table. Can be specified <code class="docutils literal notranslate"><span class="pre">{{table_id}}</span></code> if <code class="docutils literal notranslate"><span class="pre">project_id</span></code> and <code class="docutils literal notranslate"><span class="pre">dataset_id</span></code> are also set,
+or of the form <code class="docutils literal notranslate"><span class="pre">projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}</span></code> if not.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">encoding</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The character encoding of the data. The supported values are UTF-8 or ISO-8859-1.
@@ -1099,7 +1604,7 @@ but in OnePlatform the field will be treated as unset.</p></li>
 WRITE_TRUNCATE: If the table already exists, BigQuery overwrites the table data and uses the schema from the query result.
 WRITE_APPEND: If the table already exists, BigQuery appends the data to the table.
 WRITE_EMPTY: If the table already exists and contains data, a ‘duplicate’ error is returned in the job result.
-The default value is WRITE_EMPTY. Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
+Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
 Creation, truncation and append actions occur as one atomic update upon job completion.</p></li>
 </ul>
 <p>The <strong>query</strong> object supports the following:</p>
@@ -1110,7 +1615,7 @@ However, you must still set destinationTable when result size exceeds the allowe
 <li><p><code class="docutils literal notranslate"><span class="pre">createDisposition</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies whether the job is allowed to create new tables. The following values are supported:
 CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table.
 CREATE_NEVER: The table must already exist. If it does not, a ‘notFound’ error is returned in the job result.
-The default value is CREATE_IF_NEEDED. Creation, truncation and append actions occur as one atomic update upon job completion</p></li>
+Creation, truncation and append actions occur as one atomic update upon job completion</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">defaultDataset</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies the default dataset to use for unqualified table names in the query. Note that this does not alter behavior of unqualified dataset names.  Structure is documented below.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">dataset_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the dataset containing this model.</p></li>
@@ -1127,7 +1632,8 @@ The BigQuery Service Account associated with your project requires access to thi
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">dataset_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the dataset containing this model.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">project_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the project containing this model.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">table_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the table.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">table_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The table. Can be specified <code class="docutils literal notranslate"><span class="pre">{{table_id}}</span></code> if <code class="docutils literal notranslate"><span class="pre">project_id</span></code> and <code class="docutils literal notranslate"><span class="pre">dataset_id</span></code> are also set,
+or of the form <code class="docutils literal notranslate"><span class="pre">projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}</span></code> if not.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">flattenResults</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If true and query uses legacy SQL dialect, flattens all nested and repeated fields in the query results.
@@ -1137,7 +1643,7 @@ If unspecified, this will be set to your project default.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">maximumBytesBilled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Limits the bytes billed for this job. Queries that will have bytes billed beyond this limit will fail (without incurring a charge).
 If unspecified, this will be set to your project default.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">parameterMode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Standard SQL only. Set to POSITIONAL to use positional (?) query parameters or to NAMED to use named (&#64;myparam) query parameters in this query.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">priority</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies a priority for the query. Possible values include INTERACTIVE and BATCH. The default value is INTERACTIVE.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">priority</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies a priority for the query.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">query</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Configures a query job.  Structure is documented below.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">schemaUpdateOptions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Allows the schema of the destination table to be updated as a side effect of the load job if a schema is autodetected or
 supplied in the job configuration. Schema update options are supported in two cases: when writeDisposition is WRITE_APPEND;
@@ -1148,7 +1654,7 @@ ALLOW_FIELD_RELAXATION: allow relaxing a required field in the original schema t
 <li><p><code class="docutils literal notranslate"><span class="pre">scriptOptions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Options controlling the execution of scripts.  Structure is documented below.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">keyResultStatement</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Determines which statement in the script represents the “key result”,
-used to populate the schema and query results of the script job. Default is LAST.</p></li>
+used to populate the schema and query results of the script job.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">statementByteBudget</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Limit on the number of bytes billed per statement. Exceeding this budget results in an error.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">statementTimeoutMs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Timeout period for each statement in a script.</p></li>
 </ul>
@@ -1169,7 +1675,7 @@ Providing a inline code resource is equivalent to providing a URI for a file con
 WRITE_TRUNCATE: If the table already exists, BigQuery overwrites the table data and uses the schema from the query result.
 WRITE_APPEND: If the table already exists, BigQuery appends the data to the table.
 WRITE_EMPTY: If the table already exists and contains data, a ‘duplicate’ error is returned in the job result.
-The default value is WRITE_EMPTY. Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
+Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
 Creation, truncation and append actions occur as one atomic update upon job completion.</p></li>
 </ul>
 <dl class="py attribute">
@@ -1180,7 +1686,7 @@ Creation, truncation and append actions occur as one atomic update upon job comp
 <li><p><code class="docutils literal notranslate"><span class="pre">createDisposition</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies whether the job is allowed to create new tables. The following values are supported:
 CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table.
 CREATE_NEVER: The table must already exist. If it does not, a ‘notFound’ error is returned in the job result.
-The default value is CREATE_IF_NEEDED. Creation, truncation and append actions occur as one atomic update upon job completion</p></li>
+Creation, truncation and append actions occur as one atomic update upon job completion</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">destinationEncryptionConfiguration</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Custom encryption configuration (e.g., Cloud KMS keys)  Structure is documented below.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">kms_key_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table.
@@ -1191,21 +1697,23 @@ The BigQuery Service Account associated with your project requires access to thi
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">dataset_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the dataset containing this model.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">project_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the project containing this model.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">table_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the table.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">table_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The table. Can be specified <code class="docutils literal notranslate"><span class="pre">{{table_id}}</span></code> if <code class="docutils literal notranslate"><span class="pre">project_id</span></code> and <code class="docutils literal notranslate"><span class="pre">dataset_id</span></code> are also set,
+or of the form <code class="docutils literal notranslate"><span class="pre">projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}</span></code> if not.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sourceTables</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Source tables to copy.  Structure is documented below.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">dataset_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the dataset containing this model.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">project_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the project containing this model.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">table_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the table.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">table_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The table. Can be specified <code class="docutils literal notranslate"><span class="pre">{{table_id}}</span></code> if <code class="docutils literal notranslate"><span class="pre">project_id</span></code> and <code class="docutils literal notranslate"><span class="pre">dataset_id</span></code> are also set,
+or of the form <code class="docutils literal notranslate"><span class="pre">projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}</span></code> if not.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">writeDisposition</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the action that occurs if the destination table already exists. The following values are supported:
 WRITE_TRUNCATE: If the table already exists, BigQuery overwrites the table data and uses the schema from the query result.
 WRITE_APPEND: If the table already exists, BigQuery appends the data to the table.
 WRITE_EMPTY: If the table already exists and contains data, a ‘duplicate’ error is returned in the job result.
-The default value is WRITE_EMPTY. Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
+Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
 Creation, truncation and append actions occur as one atomic update upon job completion.</p></li>
 </ul>
 </dd></dl>
@@ -1235,7 +1743,8 @@ Default is ‘,’</p></li>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">dataset_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the dataset containing this model.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">project_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the project containing this model.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">table_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the table.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">table_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The table. Can be specified <code class="docutils literal notranslate"><span class="pre">{{table_id}}</span></code> if <code class="docutils literal notranslate"><span class="pre">project_id</span></code> and <code class="docutils literal notranslate"><span class="pre">dataset_id</span></code> are also set,
+or of the form <code class="docutils literal notranslate"><span class="pre">projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}</span></code> if not.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">useAvroLogicalTypes</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Whether to use logical types when extracting to AVRO format.</p></li>
@@ -1280,7 +1789,7 @@ The default value is false.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">createDisposition</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies whether the job is allowed to create new tables. The following values are supported:
 CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table.
 CREATE_NEVER: The table must already exist. If it does not, a ‘notFound’ error is returned in the job result.
-The default value is CREATE_IF_NEEDED. Creation, truncation and append actions occur as one atomic update upon job completion</p></li>
+Creation, truncation and append actions occur as one atomic update upon job completion</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">destinationEncryptionConfiguration</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Custom encryption configuration (e.g., Cloud KMS keys)  Structure is documented below.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">kms_key_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table.
@@ -1291,7 +1800,8 @@ The BigQuery Service Account associated with your project requires access to thi
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">dataset_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the dataset containing this model.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">project_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the project containing this model.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">table_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the table.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">table_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The table. Can be specified <code class="docutils literal notranslate"><span class="pre">{{table_id}}</span></code> if <code class="docutils literal notranslate"><span class="pre">project_id</span></code> and <code class="docutils literal notranslate"><span class="pre">dataset_id</span></code> are also set,
+or of the form <code class="docutils literal notranslate"><span class="pre">projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}</span></code> if not.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">encoding</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The character encoding of the data. The supported values are UTF-8 or ISO-8859-1.
@@ -1355,7 +1865,7 @@ but in OnePlatform the field will be treated as unset.</p></li>
 WRITE_TRUNCATE: If the table already exists, BigQuery overwrites the table data and uses the schema from the query result.
 WRITE_APPEND: If the table already exists, BigQuery appends the data to the table.
 WRITE_EMPTY: If the table already exists and contains data, a ‘duplicate’ error is returned in the job result.
-The default value is WRITE_EMPTY. Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
+Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
 Creation, truncation and append actions occur as one atomic update upon job completion.</p></li>
 </ul>
 </dd></dl>
@@ -1384,7 +1894,7 @@ However, you must still set destinationTable when result size exceeds the allowe
 <li><p><code class="docutils literal notranslate"><span class="pre">createDisposition</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies whether the job is allowed to create new tables. The following values are supported:
 CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table.
 CREATE_NEVER: The table must already exist. If it does not, a ‘notFound’ error is returned in the job result.
-The default value is CREATE_IF_NEEDED. Creation, truncation and append actions occur as one atomic update upon job completion</p></li>
+Creation, truncation and append actions occur as one atomic update upon job completion</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">defaultDataset</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Specifies the default dataset to use for unqualified table names in the query. Note that this does not alter behavior of unqualified dataset names.  Structure is documented below.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">dataset_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the dataset containing this model.</p></li>
@@ -1401,7 +1911,8 @@ The BigQuery Service Account associated with your project requires access to thi
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">dataset_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the dataset containing this model.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">project_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the project containing this model.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">table_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the table.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">table_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The table. Can be specified <code class="docutils literal notranslate"><span class="pre">{{table_id}}</span></code> if <code class="docutils literal notranslate"><span class="pre">project_id</span></code> and <code class="docutils literal notranslate"><span class="pre">dataset_id</span></code> are also set,
+or of the form <code class="docutils literal notranslate"><span class="pre">projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}</span></code> if not.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">flattenResults</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - If true and query uses legacy SQL dialect, flattens all nested and repeated fields in the query results.
@@ -1411,7 +1922,7 @@ If unspecified, this will be set to your project default.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">maximumBytesBilled</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Limits the bytes billed for this job. Queries that will have bytes billed beyond this limit will fail (without incurring a charge).
 If unspecified, this will be set to your project default.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">parameterMode</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Standard SQL only. Set to POSITIONAL to use positional (?) query parameters or to NAMED to use named (&#64;myparam) query parameters in this query.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">priority</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies a priority for the query. Possible values include INTERACTIVE and BATCH. The default value is INTERACTIVE.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">priority</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies a priority for the query.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">query</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Configures a query job.  Structure is documented below.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">schemaUpdateOptions</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Allows the schema of the destination table to be updated as a side effect of the load job if a schema is autodetected or
 supplied in the job configuration. Schema update options are supported in two cases: when writeDisposition is WRITE_APPEND;
@@ -1422,7 +1933,7 @@ ALLOW_FIELD_RELAXATION: allow relaxing a required field in the original schema t
 <li><p><code class="docutils literal notranslate"><span class="pre">scriptOptions</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Options controlling the execution of scripts.  Structure is documented below.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">keyResultStatement</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Determines which statement in the script represents the “key result”,
-used to populate the schema and query results of the script job. Default is LAST.</p></li>
+used to populate the schema and query results of the script job.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">statementByteBudget</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Limit on the number of bytes billed per statement. Exceeding this budget results in an error.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">statementTimeoutMs</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Timeout period for each statement in a script.</p></li>
 </ul>
@@ -1443,7 +1954,7 @@ Providing a inline code resource is equivalent to providing a URI for a file con
 WRITE_TRUNCATE: If the table already exists, BigQuery overwrites the table data and uses the schema from the query result.
 WRITE_APPEND: If the table already exists, BigQuery appends the data to the table.
 WRITE_EMPTY: If the table already exists and contains data, a ‘duplicate’ error is returned in the job result.
-The default value is WRITE_EMPTY. Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
+Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
 Creation, truncation and append actions occur as one atomic update upon job completion.</p></li>
 </ul>
 </dd></dl>
@@ -1467,7 +1978,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>copy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Copies a table.  Structure is documented below.</p></li>
 <li><p><strong>extract</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configures an extract job.  Structure is documented below.</p></li>
-<li><p><strong>job*id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The ID of the job. The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores (<a href="#id17"><span class="problematic" id="id18">*</span></a>), or dashes (-). The maximum length is 1,024 characters.</p>
+<li><p><strong>job*id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The ID of the job. The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores (<a href="#id18"><span class="problematic" id="id19">*</span></a>), or dashes (-). The maximum length is 1,024 characters.</p>
 </p></li>
 <li><p><strong>job_timeout_ms</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Job timeout in milliseconds. If this time limit is exceeded, BigQuery may attempt to terminate the job.</p></li>
 <li><p><strong>job_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of the job.</p></li>
@@ -1486,7 +1997,7 @@ If it is not provided, the provider project is used.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">createDisposition</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies whether the job is allowed to create new tables. The following values are supported:
 CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table.
 CREATE_NEVER: The table must already exist. If it does not, a ‘notFound’ error is returned in the job result.
-The default value is CREATE_IF_NEEDED. Creation, truncation and append actions occur as one atomic update upon job completion</p></li>
+Creation, truncation and append actions occur as one atomic update upon job completion</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">destinationEncryptionConfiguration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Custom encryption configuration (e.g., Cloud KMS keys)  Structure is documented below.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">kms_key_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table.
@@ -1497,21 +2008,23 @@ The BigQuery Service Account associated with your project requires access to thi
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">dataset_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the dataset containing this model.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">project_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the project containing this model.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">table_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the table.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">table_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The table. Can be specified <code class="docutils literal notranslate"><span class="pre">{{table_id}}</span></code> if <code class="docutils literal notranslate"><span class="pre">project_id</span></code> and <code class="docutils literal notranslate"><span class="pre">dataset_id</span></code> are also set,
+or of the form <code class="docutils literal notranslate"><span class="pre">projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}</span></code> if not.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sourceTables</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Source tables to copy.  Structure is documented below.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">dataset_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the dataset containing this model.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">project_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the project containing this model.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">table_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the table.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">table_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The table. Can be specified <code class="docutils literal notranslate"><span class="pre">{{table_id}}</span></code> if <code class="docutils literal notranslate"><span class="pre">project_id</span></code> and <code class="docutils literal notranslate"><span class="pre">dataset_id</span></code> are also set,
+or of the form <code class="docutils literal notranslate"><span class="pre">projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}</span></code> if not.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">writeDisposition</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the action that occurs if the destination table already exists. The following values are supported:
 WRITE_TRUNCATE: If the table already exists, BigQuery overwrites the table data and uses the schema from the query result.
 WRITE_APPEND: If the table already exists, BigQuery appends the data to the table.
 WRITE_EMPTY: If the table already exists and contains data, a ‘duplicate’ error is returned in the job result.
-The default value is WRITE_EMPTY. Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
+Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
 Creation, truncation and append actions occur as one atomic update upon job completion.</p></li>
 </ul>
 <p>The <strong>extract</strong> object supports the following:</p>
@@ -1536,7 +2049,8 @@ Default is ‘,’</p></li>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">dataset_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the dataset containing this model.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">project_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the project containing this model.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">table_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the table.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">table_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The table. Can be specified <code class="docutils literal notranslate"><span class="pre">{{table_id}}</span></code> if <code class="docutils literal notranslate"><span class="pre">project_id</span></code> and <code class="docutils literal notranslate"><span class="pre">dataset_id</span></code> are also set,
+or of the form <code class="docutils literal notranslate"><span class="pre">projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}</span></code> if not.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">useAvroLogicalTypes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether to use logical types when extracting to AVRO format.</p></li>
@@ -1552,7 +2066,7 @@ The default value is false.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">createDisposition</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies whether the job is allowed to create new tables. The following values are supported:
 CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table.
 CREATE_NEVER: The table must already exist. If it does not, a ‘notFound’ error is returned in the job result.
-The default value is CREATE_IF_NEEDED. Creation, truncation and append actions occur as one atomic update upon job completion</p></li>
+Creation, truncation and append actions occur as one atomic update upon job completion</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">destinationEncryptionConfiguration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Custom encryption configuration (e.g., Cloud KMS keys)  Structure is documented below.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">kms_key_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table.
@@ -1563,7 +2077,8 @@ The BigQuery Service Account associated with your project requires access to thi
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">dataset_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the dataset containing this model.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">project_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the project containing this model.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">table_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the table.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">table_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The table. Can be specified <code class="docutils literal notranslate"><span class="pre">{{table_id}}</span></code> if <code class="docutils literal notranslate"><span class="pre">project_id</span></code> and <code class="docutils literal notranslate"><span class="pre">dataset_id</span></code> are also set,
+or of the form <code class="docutils literal notranslate"><span class="pre">projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}</span></code> if not.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">encoding</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The character encoding of the data. The supported values are UTF-8 or ISO-8859-1.
@@ -1627,7 +2142,7 @@ but in OnePlatform the field will be treated as unset.</p></li>
 WRITE_TRUNCATE: If the table already exists, BigQuery overwrites the table data and uses the schema from the query result.
 WRITE_APPEND: If the table already exists, BigQuery appends the data to the table.
 WRITE_EMPTY: If the table already exists and contains data, a ‘duplicate’ error is returned in the job result.
-The default value is WRITE_EMPTY. Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
+Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
 Creation, truncation and append actions occur as one atomic update upon job completion.</p></li>
 </ul>
 <p>The <strong>query</strong> object supports the following:</p>
@@ -1638,7 +2153,7 @@ However, you must still set destinationTable when result size exceeds the allowe
 <li><p><code class="docutils literal notranslate"><span class="pre">createDisposition</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies whether the job is allowed to create new tables. The following values are supported:
 CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table.
 CREATE_NEVER: The table must already exist. If it does not, a ‘notFound’ error is returned in the job result.
-The default value is CREATE_IF_NEEDED. Creation, truncation and append actions occur as one atomic update upon job completion</p></li>
+Creation, truncation and append actions occur as one atomic update upon job completion</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">defaultDataset</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies the default dataset to use for unqualified table names in the query. Note that this does not alter behavior of unqualified dataset names.  Structure is documented below.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">dataset_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the dataset containing this model.</p></li>
@@ -1655,7 +2170,8 @@ The BigQuery Service Account associated with your project requires access to thi
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">dataset_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the dataset containing this model.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">project_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the project containing this model.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">table_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the table.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">table_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The table. Can be specified <code class="docutils literal notranslate"><span class="pre">{{table_id}}</span></code> if <code class="docutils literal notranslate"><span class="pre">project_id</span></code> and <code class="docutils literal notranslate"><span class="pre">dataset_id</span></code> are also set,
+or of the form <code class="docutils literal notranslate"><span class="pre">projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}</span></code> if not.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">flattenResults</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If true and query uses legacy SQL dialect, flattens all nested and repeated fields in the query results.
@@ -1665,7 +2181,7 @@ If unspecified, this will be set to your project default.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">maximumBytesBilled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Limits the bytes billed for this job. Queries that will have bytes billed beyond this limit will fail (without incurring a charge).
 If unspecified, this will be set to your project default.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">parameterMode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Standard SQL only. Set to POSITIONAL to use positional (?) query parameters or to NAMED to use named (&#64;myparam) query parameters in this query.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">priority</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies a priority for the query. Possible values include INTERACTIVE and BATCH. The default value is INTERACTIVE.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">priority</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies a priority for the query.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">query</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Configures a query job.  Structure is documented below.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">schemaUpdateOptions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Allows the schema of the destination table to be updated as a side effect of the load job if a schema is autodetected or
 supplied in the job configuration. Schema update options are supported in two cases: when writeDisposition is WRITE_APPEND;
@@ -1676,7 +2192,7 @@ ALLOW_FIELD_RELAXATION: allow relaxing a required field in the original schema t
 <li><p><code class="docutils literal notranslate"><span class="pre">scriptOptions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Options controlling the execution of scripts.  Structure is documented below.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">keyResultStatement</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Determines which statement in the script represents the “key result”,
-used to populate the schema and query results of the script job. Default is LAST.</p></li>
+used to populate the schema and query results of the script job.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">statementByteBudget</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Limit on the number of bytes billed per statement. Exceeding this budget results in an error.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">statementTimeoutMs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Timeout period for each statement in a script.</p></li>
 </ul>
@@ -1697,7 +2213,7 @@ Providing a inline code resource is equivalent to providing a URI for a file con
 WRITE_TRUNCATE: If the table already exists, BigQuery overwrites the table data and uses the schema from the query result.
 WRITE_APPEND: If the table already exists, BigQuery appends the data to the table.
 WRITE_EMPTY: If the table already exists and contains data, a ‘duplicate’ error is returned in the job result.
-The default value is WRITE_EMPTY. Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
+Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
 Creation, truncation and append actions occur as one atomic update upon job completion.</p></li>
 </ul>
 </dd></dl>
@@ -1753,6 +2269,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">reservation</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">bigquery</span><span class="o">.</span><span class="n">Reservation</span><span class="p">(</span><span class="s2">&quot;reservation&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="s2">&quot;asia-northeast1&quot;</span><span class="p">,</span>
+    <span class="n">slot_capacity</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">ignore_idle_slots</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1876,6 +2401,55 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Creates a table resource in a dataset for Google BigQuery. For more information see
 <a class="reference external" href="https://cloud.google.com/bigquery/docs/">the official documentation</a> and
 <a class="reference external" href="https://cloud.google.com/bigquery/docs/reference/rest/v2/tables">API</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">default_dataset</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">bigquery</span><span class="o">.</span><span class="n">Dataset</span><span class="p">(</span><span class="s2">&quot;defaultDataset&quot;</span><span class="p">,</span>
+    <span class="n">dataset_id</span><span class="o">=</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+    <span class="n">friendly_name</span><span class="o">=</span><span class="s2">&quot;test&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;This is a test description&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="s2">&quot;EU&quot;</span><span class="p">,</span>
+    <span class="n">default_table_expiration_ms</span><span class="o">=</span><span class="mi">3600000</span><span class="p">,</span>
+    <span class="n">labels</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;env&quot;</span><span class="p">:</span> <span class="s2">&quot;default&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+<span class="n">default_table</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">bigquery</span><span class="o">.</span><span class="n">Table</span><span class="p">(</span><span class="s2">&quot;defaultTable&quot;</span><span class="p">,</span>
+    <span class="n">dataset_id</span><span class="o">=</span><span class="n">default_dataset</span><span class="o">.</span><span class="n">dataset_id</span><span class="p">,</span>
+    <span class="n">table_id</span><span class="o">=</span><span class="s2">&quot;bar&quot;</span><span class="p">,</span>
+    <span class="n">time_partitioning</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;DAY&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">labels</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;env&quot;</span><span class="p">:</span> <span class="s2">&quot;default&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">schema</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;[</span>
+<span class="s2">  {</span>
+<span class="s2">    &quot;name&quot;: &quot;permalink&quot;,</span>
+<span class="s2">    &quot;type&quot;: &quot;STRING&quot;,</span>
+<span class="s2">    &quot;mode&quot;: &quot;NULLABLE&quot;,</span>
+<span class="s2">    &quot;description&quot;: &quot;The Permalink&quot;</span>
+<span class="s2">  },</span>
+<span class="s2">  {</span>
+<span class="s2">    &quot;name&quot;: &quot;state&quot;,</span>
+<span class="s2">    &quot;type&quot;: &quot;STRING&quot;,</span>
+<span class="s2">    &quot;mode&quot;: &quot;NULLABLE&quot;,</span>
+<span class="s2">    &quot;description&quot;: &quot;State where the head office is located&quot;</span>
+<span class="s2">  }</span>
+<span class="s2">]</span>
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+<span class="n">sheet</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">bigquery</span><span class="o">.</span><span class="n">Table</span><span class="p">(</span><span class="s2">&quot;sheet&quot;</span><span class="p">,</span>
+    <span class="n">dataset_id</span><span class="o">=</span><span class="n">default_dataset</span><span class="o">.</span><span class="n">dataset_id</span><span class="p">,</span>
+    <span class="n">table_id</span><span class="o">=</span><span class="s2">&quot;sheet&quot;</span><span class="p">,</span>
+    <span class="n">external_data_configuration</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;autodetect&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;sourceFormat&quot;</span><span class="p">:</span> <span class="s2">&quot;GOOGLE_SHEETS&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;google_sheets_options&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;skipLeadingRows&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;sourceUris&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;https://docs.google.com/spreadsheets/d/123456789012345&quot;</span><span class="p">],</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2484,6 +3058,16 @@ this account needs to be granted the
 <code class="docutils literal notranslate"><span class="pre">cloudkms.cryptoKeyEncrypterDecrypter</span></code> IAM role on the customer-managed Cloud KMS key used to protect the data.</p>
 <p>For more information see
 <a class="reference external" href="https://cloud.google.com/bigquery/docs/reference/rest/v2/projects/getServiceAccount">the API reference</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">bq_sa</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">bigquery</span><span class="o">.</span><span class="n">get_default_service_account</span><span class="p">()</span>
+<span class="n">key_sa_user</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">kms</span><span class="o">.</span><span class="n">CryptoKeyIAMMember</span><span class="p">(</span><span class="s2">&quot;keySaUser&quot;</span><span class="p">,</span>
+    <span class="n">crypto_key_id</span><span class="o">=</span><span class="n">google_kms_crypto_key</span><span class="p">[</span><span class="s2">&quot;key&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/cloudkms.cryptoKeyEncrypterDecrypter&quot;</span><span class="p">,</span>
+    <span class="n">member</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;serviceAccount:</span><span class="si">{</span><span class="n">bq_sa</span><span class="o">.</span><span class="n">email</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>project</strong> (<em>str</em>) – The project the unique service account was created for. If it is not provided, the provider project is used.</p>

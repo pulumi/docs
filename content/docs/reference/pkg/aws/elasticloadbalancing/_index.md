@@ -37,6 +37,24 @@ Explore the resources and functions of the elasticloadbalancing module in the AW
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>2.4.0</dd>
+	<dd>2.6.0</dd>
+</dl>
+
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticLoadBalancing.html" title="Pulumi.Aws.ElasticLoadBalancing">Pulumi.Aws.ElasticLoadBalancing</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticloadbalancing?tab=doc#" title="aws/elasticloadbalancing">aws/elasticloadbalancing</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/elasticloadbalancing/#" title="@pulumi/aws/elasticloadbalancing">@pulumi/aws/elasticloadbalancing</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_aws/elasticloadbalancing" title="pulumi_aws/elasticloadbalancing">pulumi_aws/elasticloadbalancing</a></dd>
+
 </dl>
 

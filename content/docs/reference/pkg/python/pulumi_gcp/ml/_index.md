@@ -19,6 +19,27 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>Represents a machine learning solution.</p>
 <p>A model can have multiple versions, each of which is a deployed, trained model
 ready to receive prediction requests. The model itself is just a container.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">default</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">ml</span><span class="o">.</span><span class="n">EngineModel</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;My model&quot;</span><span class="p">,</span>
+    <span class="n">regions</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">default</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">ml</span><span class="o">.</span><span class="n">EngineModel</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;My model&quot;</span><span class="p">,</span>
+    <span class="n">labels</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;my_model&quot;</span><span class="p">:</span> <span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">online_prediction_console_logging</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">online_prediction_logging</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">regions</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

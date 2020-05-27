@@ -49,6 +49,36 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">available</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">tpu</span><span class="o">.</span><span class="n">get_tensorflow_versions</span><span class="p">()</span>
+<span class="n">tpu</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">tpu</span><span class="o">.</span><span class="n">Node</span><span class="p">(</span><span class="s2">&quot;tpu&quot;</span><span class="p">,</span>
+    <span class="n">zone</span><span class="o">=</span><span class="s2">&quot;us-central1-b&quot;</span><span class="p">,</span>
+    <span class="n">accelerator_type</span><span class="o">=</span><span class="s2">&quot;v3-8&quot;</span><span class="p">,</span>
+    <span class="n">tensorflow_version</span><span class="o">=</span><span class="n">available</span><span class="o">.</span><span class="n">versions</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+    <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;10.2.0.0/29&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">available</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">tpu</span><span class="o">.</span><span class="n">get_tensorflow_versions</span><span class="p">()</span>
+<span class="n">tpu</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">tpu</span><span class="o">.</span><span class="n">Node</span><span class="p">(</span><span class="s2">&quot;tpu&quot;</span><span class="p">,</span>
+    <span class="n">zone</span><span class="o">=</span><span class="s2">&quot;us-central1-b&quot;</span><span class="p">,</span>
+    <span class="n">accelerator_type</span><span class="o">=</span><span class="s2">&quot;v3-8&quot;</span><span class="p">,</span>
+    <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;10.3.0.0/29&quot;</span><span class="p">,</span>
+    <span class="n">tensorflow_version</span><span class="o">=</span><span class="n">available</span><span class="o">.</span><span class="n">versions</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Google Provider test TPU&quot;</span><span class="p">,</span>
+    <span class="n">network</span><span class="o">=</span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
+    <span class="n">labels</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;foo&quot;</span><span class="p">:</span> <span class="s2">&quot;bar&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">scheduling_config</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;preemptible&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -266,6 +296,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_gcp.tpu.get_tensorflow_versions">
 <code class="sig-prename descclassname">pulumi_gcp.tpu.</code><code class="sig-name descname">get_tensorflow_versions</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.tpu.get_tensorflow_versions" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get TensorFlow versions available for a project. For more information see the <a class="reference external" href="https://cloud.google.com/tpu/docs/">official documentation</a> and <a class="reference external" href="https://cloud.google.com/tpu/docs/reference/rest/v1/projects.locations.tensorflowVersions">API</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">available</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">tpu</span><span class="o">.</span><span class="n">get_tensorflow_versions</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">available</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">tpu</span><span class="o">.</span><span class="n">get_tensorflow_versions</span><span class="p">()</span>
+<span class="n">tpu</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">tpu</span><span class="o">.</span><span class="n">Node</span><span class="p">(</span><span class="s2">&quot;tpu&quot;</span><span class="p">,</span>
+    <span class="n">zone</span><span class="o">=</span><span class="s2">&quot;us-central1-b&quot;</span><span class="p">,</span>
+    <span class="n">accelerator_type</span><span class="o">=</span><span class="s2">&quot;v3-8&quot;</span><span class="p">,</span>
+    <span class="n">tensorflow_version</span><span class="o">=</span><span class="n">available</span><span class="o">.</span><span class="n">versions</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+    <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;10.2.0.0/29&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

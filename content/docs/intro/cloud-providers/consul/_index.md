@@ -59,11 +59,12 @@ node = consul.Node("compute",
 
 ```go
 import (
+  "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
   consul "github.com/pulumi/pulumi-consul/sdk/v2/go/consul"
 )
 
 node, _ := consul.NewNode(ctx, "compute", &consul.NodeArgs{
-  Address: "www.google.com",
+  Address: pulumi.String("www.google.com"),
 })
 ```
 

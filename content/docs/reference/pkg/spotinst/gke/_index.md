@@ -34,7 +34,7 @@ Explore the resources and functions of the gke module in the Spotinst package.
 <dl class="tabular">
 
     <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.Spotinst.Gke.html" title="Pulumi.Spotinst.Gke">Pulumi.Spotinst.Gke</a></dd>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gke.html" title="Pulumi.SpotInst.Gke">Pulumi.SpotInst.Gke</a></dd>
 
     <dt>Go</dt>
     <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gke?tab=doc#" title="spotinst/gke">spotinst/gke</a></dd>

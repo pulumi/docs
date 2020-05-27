@@ -123,6 +123,7 @@ anything, please consult the source <a class="reference external" href="https://
 <li class="toctree-l1"><a class="reference internal" href="transfer/">transfer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="waf/">waf</a></li>
 <li class="toctree-l1"><a class="reference internal" href="wafregional/">wafregional</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wafv2/">wafv2</a></li>
 <li class="toctree-l1"><a class="reference internal" href="worklink/">worklink</a></li>
 <li class="toctree-l1"><a class="reference internal" href="workspaces/">workspaces</a></li>
 <li class="toctree-l1"><a class="reference internal" href="xray/">xray</a></li>

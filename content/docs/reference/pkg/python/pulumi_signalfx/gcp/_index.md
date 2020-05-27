@@ -20,6 +20,25 @@ anything, please consult the source <a class="reference external" href="https://
 <blockquote>
 <div><p><strong>NOTE</strong> When managing integrations you’ll need to use an admin token to authenticate the SignalFx provider. Otherwise you’ll receive a 4xx error.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_signalfx</span> <span class="k">as</span> <span class="nn">signalfx</span>
+
+<span class="n">gcp_myteam</span> <span class="o">=</span> <span class="n">signalfx</span><span class="o">.</span><span class="n">gcp</span><span class="o">.</span><span class="n">Integration</span><span class="p">(</span><span class="s2">&quot;gcpMyteam&quot;</span><span class="p">,</span>
+    <span class="n">enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">poll_rate</span><span class="o">=</span><span class="mi">300000</span><span class="p">,</span>
+    <span class="n">project_service_keys</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;projectId&quot;</span><span class="p">:</span> <span class="s2">&quot;gcp_project_id_1&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;projectKey&quot;</span><span class="p">:</span> <span class="p">(</span><span class="k">lambda</span> <span class="n">path</span><span class="p">:</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())(</span><span class="s2">&quot;/path/to/gcp_credentials_1.json&quot;</span><span class="p">),</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;projectId&quot;</span><span class="p">:</span> <span class="s2">&quot;gcp_project_id_2&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;projectKey&quot;</span><span class="p">:</span> <span class="p">(</span><span class="k">lambda</span> <span class="n">path</span><span class="p">:</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())(</span><span class="s2">&quot;/path/to/gcp_credentials_2.json&quot;</span><span class="p">),</span>
+        <span class="p">},</span>
+    <span class="p">],</span>
+    <span class="n">services</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;compute&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -29,7 +48,7 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the integration.</p></li>
 <li><p><strong>poll_rate</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – GCP integration poll rate in seconds. Can be set to either 60 or 300 (1 minute or 5 minutes).</p></li>
 <li><p><strong>project_service_keys</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – GCP projects to add.</p></li>
-<li><p><strong>services</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – GCP service metrics to import. Can be an empty list, or not included, to import ‘All services’.</p></li>
+<li><p><strong>services</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – GCP service metrics to import. Can be an empty list, or not included, to import ‘All services’. See the documentation for <a class="reference external" href="https://developers.signalfx.com/integrations_reference.html#operation/Create%20Integration">Creating Integrations</a> for valida values.</p></li>
 </ul>
 </dd>
 </dl>
@@ -69,7 +88,7 @@ anything, please consult the source <a class="reference external" href="https://
 <dl class="py attribute">
 <dt id="pulumi_signalfx.gcp.Integration.services">
 <code class="sig-name descname">services</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_signalfx.gcp.Integration.services" title="Permalink to this definition">¶</a></dt>
-<dd><p>GCP service metrics to import. Can be an empty list, or not included, to import ‘All services’.</p>
+<dd><p>GCP service metrics to import. Can be an empty list, or not included, to import ‘All services’. See the documentation for <a class="reference external" href="https://developers.signalfx.com/integrations_reference.html#operation/Create%20Integration">Creating Integrations</a> for valida values.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -87,7 +106,8 @@ properties used to qualify the lookup.</p>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the integration.</p></li>
 <li><p><strong>poll_rate</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – GCP integration poll rate in seconds. Can be set to either 60 or 300 (1 minute or 5 minutes).</p></li>
 <li><p><strong>project_service_keys</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – GCP projects to add.</p></li>
-<li><p><strong>services</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – GCP service metrics to import. Can be an empty list, or not included, to import ‘All services’.</p></li>
+<li><p><strong>services</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <p>GCP service metrics to import. Can be an empty list, or not included, to import ‘All services’. See the documentation for <a class="reference external" href="https://developers.signalfx.com/integrations_reference.html#operation/Create%20Integration">Creating Integrations</a> for valida values.</p>
+</p></li>
 </ul>
 </dd>
 </dl>

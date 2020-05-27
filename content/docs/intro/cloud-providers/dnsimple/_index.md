@@ -69,14 +69,15 @@ record = dnsimple.Record("test",
 
 ```go
 import (
+  "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
   dnsimple "github.com/pulumi/pulumi-dnsimple/sdk/v2/go/dnsimple"
 )
 
 record, _ := dnsimple.NewRecord(ctx, "test", &dnsimple.RecordArgs{
-  Name: "test",
-  Domain: "mydomain.dev",
-  Type: "CNAME",
-  Value: "api.devflix.watch.herokudns.com",
+  Name:   pulumi.String("test"),
+  Domain: pulumi.String("mydomain.dev"),
+  Type:   pulumi.String("CNAME"),
+  Value:  pulumi.String("api.devflix.watch.herokudns.com"),
 })
 ```
 

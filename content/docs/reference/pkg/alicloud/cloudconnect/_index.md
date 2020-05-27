@@ -30,6 +30,24 @@ Explore the resources and functions of the cloudconnect module in the AliCloud p
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
 	<dt>Version</dt>
-	<dd>2.4.0</dd>
+	<dd>2.5.0</dd>
+</dl>
+
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.CloudConnect.html" title="Pulumi.AliCloud.CloudConnect">Pulumi.AliCloud.CloudConnect</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cloudconnect?tab=doc#" title="alicloud/cloudconnect">alicloud/cloudconnect</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cloudconnect/#" title="@pulumi/alicloud/cloudconnect">@pulumi/alicloud/cloudconnect</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_alicloud/cloudconnect" title="pulumi_alicloud/cloudconnect">pulumi_alicloud/cloudconnect</a></dd>
+
 </dl>
 

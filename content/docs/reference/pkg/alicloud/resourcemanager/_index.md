@@ -11,8 +11,10 @@ Explore the resources and functions of the resourcemanager module in the AliClou
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="account" title="Account"><span class="symbol resource"></span>Account</a></li>
     <li><a href="folder" title="Folder"><span class="symbol resource"></span>Folder</a></li>
     <li><a href="handshake" title="Handshake"><span class="symbol resource"></span>Handshake</a></li>
+    <li><a href="policy" title="Policy"><span class="symbol resource"></span>Policy</a></li>
     <li><a href="resourcegroup" title="ResourceGroup"><span class="symbol resource"></span>ResourceGroup</a></li>
     <li><a href="role" title="Role"><span class="symbol resource"></span>Role</a></li>
 </ul>
@@ -26,6 +28,24 @@ Explore the resources and functions of the resourcemanager module in the AliClou
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
 	<dt>Version</dt>
-	<dd>2.4.0</dd>
+	<dd>2.5.0</dd>
+</dl>
+
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.ResourceManager.html" title="Pulumi.AliCloud.ResourceManager">Pulumi.AliCloud.ResourceManager</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/resourcemanager?tab=doc#" title="alicloud/resourcemanager">alicloud/resourcemanager</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/resourcemanager/#" title="@pulumi/alicloud/resourcemanager">@pulumi/alicloud/resourcemanager</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_alicloud/resourcemanager" title="pulumi_alicloud/resourcemanager">pulumi_alicloud/resourcemanager</a></dd>
+
 </dl>
 

@@ -13,9 +13,8 @@ meta_desc: "Explore the GetDatastore function of the vSphere package, including 
 The `vsphere..getDatastore` data source can be used to discover the ID of a
 datastore in vSphere. This is useful to fetch the ID of a datastore that you
 want to use to create virtual machines in using the
-[`vsphere..VirtualMachine`][docs-virtual-machine-resource] resource. 
+`vsphere..VirtualMachine` resource. 
 
-[docs-virtual-machine-resource]: /docs/providers/vsphere/r/virtual_machine.html
 
 
 
@@ -83,7 +82,7 @@ const datastore = datacenter.apply(datacenter => vsphere.getDatastore({
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetDatastore </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.Vsphere.GetDatastoreResult.html">GetDatastoreResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.VSphere.GetDatastoreArgs.html">GetDatastoreArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.GetDatastoreResult.html">GetDatastoreResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.GetDatastoreArgs.html">GetDatastoreArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -111,8 +110,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object reference
-ID][docs-about-morefs] of the datacenter the datastore is located in. This
+    <dd>{{% md %}}The managed object reference
+ID of the datacenter the datastore is located in. This
 can be omitted if the search path used in `name` is an absolute path. For
 default datacenters, use the id attribute from an empty `vsphere..Datacenter`
 data source.
@@ -140,8 +139,8 @@ data source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object reference
-ID][docs-about-morefs] of the datacenter the datastore is located in. This
+    <dd>{{% md %}}The managed object reference
+ID of the datacenter the datastore is located in. This
 can be omitted if the search path used in `name` is an absolute path. For
 default datacenters, use the id attribute from an empty `vsphere..Datacenter`
 data source.
@@ -169,8 +168,8 @@ data source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object reference
-ID][docs-about-morefs] of the datacenter the datastore is located in. This
+    <dd>{{% md %}}The managed object reference
+ID of the datacenter the datastore is located in. This
 can be omitted if the search path used in `name` is an absolute path. For
 default datacenters, use the id attribute from an empty `vsphere..Datacenter`
 data source.
@@ -198,8 +197,8 @@ data source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object reference
-ID][docs-about-morefs] of the datacenter the datastore is located in. This
+    <dd>{{% md %}}The managed object reference
+ID of the datacenter the datastore is located in. This
 can be omitted if the search path used in `name` is an absolute path. For
 default datacenters, use the id attribute from an empty `vsphere..Datacenter`
 data source.

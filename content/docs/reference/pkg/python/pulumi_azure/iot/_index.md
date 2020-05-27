@@ -2183,6 +2183,149 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
+<dl class="py class">
+<dt id="pulumi_azure.iot.TimeSeriesInsightsStandardEnvironment">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.iot.</code><code class="sig-name descname">TimeSeriesInsightsStandardEnvironment</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">data_retention_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">partition_key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sku_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">storage_limit_exceeded_behavior</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.iot.TimeSeriesInsightsStandardEnvironment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manages an Azure IoT Time Series Insights Standard Environment.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;northeurope&quot;</span><span class="p">)</span>
+<span class="n">example_time_series_insights_standard_environment</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">iot</span><span class="o">.</span><span class="n">TimeSeriesInsightsStandardEnvironment</span><span class="p">(</span><span class="s2">&quot;exampleTimeSeriesInsightsStandardEnvironment&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">sku_name</span><span class="o">=</span><span class="s2">&quot;S1_1&quot;</span><span class="p">,</span>
+    <span class="n">data_retention_time</span><span class="o">=</span><span class="s2">&quot;P30D&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>data_retention_time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the ISO8601 timespan specifying the minimum number of days the environment’s events will be available for query. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Azure IoT Time Series Insights Standard Environment. Changing this forces a new resource to be created. Must be globally unique.</p></li>
+<li><p><strong>partition_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the event property which will be used to partition data. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the Azure IoT Time Series Insights Standard Environment.</p></li>
+<li><p><strong>sku*name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Specifies the SKU Name for this IoT Time Series Insights Standard Environment. It is string consisting of two parts separated by an underscore(*).The fist part is the <code class="docutils literal notranslate"><span class="pre">name</span></code>, valid values include: <code class="docutils literal notranslate"><span class="pre">S1</span></code> and <code class="docutils literal notranslate"><span class="pre">S2</span></code>. The second part is the <code class="docutils literal notranslate"><span class="pre">capacity</span></code> (e.g. the number of deployed units of the <code class="docutils literal notranslate"><span class="pre">sku</span></code>), which must be a positive <code class="docutils literal notranslate"><span class="pre">integer</span></code> (e.g. <code class="docutils literal notranslate"><span class="pre">S1_1</span></code>). Changing this forces a new resource to be created.</p>
+</p></li>
+<li><p><strong>storage_limit_exceeded_behavior</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the behavior the IoT Time Series Insights service should take when the environment’s capacity has been exceeded. Valid values include <code class="docutils literal notranslate"><span class="pre">PauseIngress</span></code> and <code class="docutils literal notranslate"><span class="pre">PurgeOldData</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">PurgeOldData</span></code>.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt id="pulumi_azure.iot.TimeSeriesInsightsStandardEnvironment.data_retention_time">
+<code class="sig-name descname">data_retention_time</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.iot.TimeSeriesInsightsStandardEnvironment.data_retention_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the ISO8601 timespan specifying the minimum number of days the environment’s events will be available for query. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_azure.iot.TimeSeriesInsightsStandardEnvironment.location">
+<code class="sig-name descname">location</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.iot.TimeSeriesInsightsStandardEnvironment.location" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_azure.iot.TimeSeriesInsightsStandardEnvironment.name">
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.iot.TimeSeriesInsightsStandardEnvironment.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the name of the Azure IoT Time Series Insights Standard Environment. Changing this forces a new resource to be created. Must be globally unique.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_azure.iot.TimeSeriesInsightsStandardEnvironment.partition_key">
+<code class="sig-name descname">partition_key</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.iot.TimeSeriesInsightsStandardEnvironment.partition_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the event property which will be used to partition data. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_azure.iot.TimeSeriesInsightsStandardEnvironment.resource_group_name">
+<code class="sig-name descname">resource_group_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.iot.TimeSeriesInsightsStandardEnvironment.resource_group_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the resource group in which to create the Azure IoT Time Series Insights Standard Environment.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_azure.iot.TimeSeriesInsightsStandardEnvironment.sku_name">
+<code class="sig-name descname">sku_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.iot.TimeSeriesInsightsStandardEnvironment.sku_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the SKU Name for this IoT Time Series Insights Standard Environment. It is string consisting of two parts separated by an underscore(_).The fist part is the <code class="docutils literal notranslate"><span class="pre">name</span></code>, valid values include: <code class="docutils literal notranslate"><span class="pre">S1</span></code> and <code class="docutils literal notranslate"><span class="pre">S2</span></code>. The second part is the <code class="docutils literal notranslate"><span class="pre">capacity</span></code> (e.g. the number of deployed units of the <code class="docutils literal notranslate"><span class="pre">sku</span></code>), which must be a positive <code class="docutils literal notranslate"><span class="pre">integer</span></code> (e.g. <code class="docutils literal notranslate"><span class="pre">S1_1</span></code>). Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_azure.iot.TimeSeriesInsightsStandardEnvironment.storage_limit_exceeded_behavior">
+<code class="sig-name descname">storage_limit_exceeded_behavior</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.iot.TimeSeriesInsightsStandardEnvironment.storage_limit_exceeded_behavior" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the behavior the IoT Time Series Insights service should take when the environment’s capacity has been exceeded. Valid values include <code class="docutils literal notranslate"><span class="pre">PauseIngress</span></code> and <code class="docutils literal notranslate"><span class="pre">PurgeOldData</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">PurgeOldData</span></code>.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_azure.iot.TimeSeriesInsightsStandardEnvironment.tags">
+<code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.iot.TimeSeriesInsightsStandardEnvironment.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>A mapping of tags to assign to the resource.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_azure.iot.TimeSeriesInsightsStandardEnvironment.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">data_retention_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">partition_key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sku_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">storage_limit_exceeded_behavior</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.iot.TimeSeriesInsightsStandardEnvironment.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing TimeSeriesInsightsStandardEnvironment resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>data_retention_time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the ISO8601 timespan specifying the minimum number of days the environment’s events will be available for query. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Azure IoT Time Series Insights Standard Environment. Changing this forces a new resource to be created. Must be globally unique.</p></li>
+<li><p><strong>partition_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the event property which will be used to partition data. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the Azure IoT Time Series Insights Standard Environment.</p></li>
+<li><p><strong>sku*name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Specifies the SKU Name for this IoT Time Series Insights Standard Environment. It is string consisting of two parts separated by an underscore(*).The fist part is the <code class="docutils literal notranslate"><span class="pre">name</span></code>, valid values include: <code class="docutils literal notranslate"><span class="pre">S1</span></code> and <code class="docutils literal notranslate"><span class="pre">S2</span></code>. The second part is the <code class="docutils literal notranslate"><span class="pre">capacity</span></code> (e.g. the number of deployed units of the <code class="docutils literal notranslate"><span class="pre">sku</span></code>), which must be a positive <code class="docutils literal notranslate"><span class="pre">integer</span></code> (e.g. <code class="docutils literal notranslate"><span class="pre">S1_1</span></code>). Changing this forces a new resource to be created.</p>
+</p></li>
+<li><p><strong>storage_limit_exceeded_behavior</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the behavior the IoT Time Series Insights service should take when the environment’s capacity has been exceeded. Valid values include <code class="docutils literal notranslate"><span class="pre">PauseIngress</span></code> and <code class="docutils literal notranslate"><span class="pre">PurgeOldData</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">PurgeOldData</span></code>.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_azure.iot.TimeSeriesInsightsStandardEnvironment.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.iot.TimeSeriesInsightsStandardEnvironment.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_azure.iot.TimeSeriesInsightsStandardEnvironment.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.iot.TimeSeriesInsightsStandardEnvironment.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 <dl class="py function">
 <dt id="pulumi_azure.iot.get_dps">
 <code class="sig-prename descclassname">pulumi_azure.iot.</code><code class="sig-name descname">get_dps</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.iot.get_dps" title="Permalink to this definition">¶</a></dt>

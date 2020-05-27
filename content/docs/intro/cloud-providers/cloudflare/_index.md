@@ -71,15 +71,16 @@ record = cloudflare.Record("sample-record",
 
 ```go
 import (
+  "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
   cloudflare "github.com/pulumi/pulumi-cloudflare/sdk/v2/go/cloudflare"
 )
 
 record, _ := cloudflare.NewRecord(ctx, "sample-record", &cloudflare.RecordArgs{
-  Name: "my-record",
-  ZoneId: "xxsdfhsfkashadf",
-  Type: "A",
-  Value: "192.168.0.11",
-  Ttl: 3600,
+  Name:   pulumi.String("my-record"),
+  ZoneId: pulumi.String("xxsdfhsfkashadf"),
+  Type:   pulumi.String("A"),
+  Value:  pulumi.String("192.168.0.11"),
+  Ttl:    pulumi.Int(3600),
 })
 ```
 

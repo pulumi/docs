@@ -52,7 +52,7 @@ asp = gcp.dataproc.AutoscalingPolicy("asp",
     policy_id="dataproc-policy",
     location="us-central1",
     worker_config={
-        "maxInstances": 3,
+        "max_instances": 3,
     },
     basic_algorithm={
         "yarn_config": {
@@ -77,19 +77,19 @@ basic = gcp.dataproc.Cluster("basic",
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/dataproc/#AutoscalingPolicy">AutoscalingPolicy</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/dataproc/#AutoscalingPolicyArgs">AutoscalingPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/dataproc/#AutoscalingPolicy">AutoscalingPolicy</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/dataproc/#AutoscalingPolicyArgs">AutoscalingPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">AutoscalingPolicy</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>basic_algorithm=None<span class="p">, </span>location=None<span class="p">, </span>policy_id=None<span class="p">, </span>project=None<span class="p">, </span>secondary_worker_config=None<span class="p">, </span>worker_config=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/dataproc/#AutoscalingPolicy">AutoscalingPolicy</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>basic_algorithm=None<span class="p">, </span>location=None<span class="p">, </span>policy_id=None<span class="p">, </span>project=None<span class="p">, </span>secondary_worker_config=None<span class="p">, </span>worker_config=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewAutoscalingPolicy<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#AutoscalingPolicyArgs">AutoscalingPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#AutoscalingPolicy">AutoscalingPolicy</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#AutoscalingPolicy">NewAutoscalingPolicy</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#AutoscalingPolicyArgs">AutoscalingPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#AutoscalingPolicy">AutoscalingPolicy</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.AutoscalingPolicy.html">AutoscalingPolicy</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.AutoscalingPolicyArgs.html">AutoscalingPolicyArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.AutoscalingPolicy.html">AutoscalingPolicy</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.AutoscalingPolicyArgs.html">AutoscalingPolicyArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -255,7 +255,9 @@ The AutoscalingPolicy resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span>Policy<wbr>Id</span>
+        <span id="policyid_csharp">
+<a href="#policyid_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -266,7 +268,9 @@ and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Basic<wbr>Algorithm</span>
+        <span id="basicalgorithm_csharp">
+<a href="#basicalgorithm_csharp" style="color: inherit; text-decoration: inherit;">Basic<wbr>Algorithm</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalingpolicybasicalgorithm">Autoscaling<wbr>Policy<wbr>Basic<wbr>Algorithm<wbr>Args</a></span>
     </dt>
@@ -275,7 +279,9 @@ and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Location</span>
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -285,7 +291,9 @@ The default value is `global`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project</span>
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -295,7 +303,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Secondary<wbr>Worker<wbr>Config</span>
+        <span id="secondaryworkerconfig_csharp">
+<a href="#secondaryworkerconfig_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Worker<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalingpolicysecondaryworkerconfig">Autoscaling<wbr>Policy<wbr>Secondary<wbr>Worker<wbr>Config<wbr>Args</a></span>
     </dt>
@@ -304,7 +314,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Worker<wbr>Config</span>
+        <span id="workerconfig_csharp">
+<a href="#workerconfig_csharp" style="color: inherit; text-decoration: inherit;">Worker<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalingpolicyworkerconfig">Autoscaling<wbr>Policy<wbr>Worker<wbr>Config<wbr>Args</a></span>
     </dt>
@@ -320,7 +332,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>Policy<wbr>Id</span>
+        <span id="policyid_go">
+<a href="#policyid_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -331,7 +345,9 @@ and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Basic<wbr>Algorithm</span>
+        <span id="basicalgorithm_go">
+<a href="#basicalgorithm_go" style="color: inherit; text-decoration: inherit;">Basic<wbr>Algorithm</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalingpolicybasicalgorithm">Autoscaling<wbr>Policy<wbr>Basic<wbr>Algorithm</a></span>
     </dt>
@@ -340,7 +356,9 @@ and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Location</span>
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -350,7 +368,9 @@ The default value is `global`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project</span>
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -360,7 +380,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Secondary<wbr>Worker<wbr>Config</span>
+        <span id="secondaryworkerconfig_go">
+<a href="#secondaryworkerconfig_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Worker<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalingpolicysecondaryworkerconfig">Autoscaling<wbr>Policy<wbr>Secondary<wbr>Worker<wbr>Config</a></span>
     </dt>
@@ -369,7 +391,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Worker<wbr>Config</span>
+        <span id="workerconfig_go">
+<a href="#workerconfig_go" style="color: inherit; text-decoration: inherit;">Worker<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalingpolicyworkerconfig">Autoscaling<wbr>Policy<wbr>Worker<wbr>Config</a></span>
     </dt>
@@ -385,7 +409,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>policy<wbr>Id</span>
+        <span id="policyid_nodejs">
+<a href="#policyid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -396,7 +422,9 @@ and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>basic<wbr>Algorithm</span>
+        <span id="basicalgorithm_nodejs">
+<a href="#basicalgorithm_nodejs" style="color: inherit; text-decoration: inherit;">basic<wbr>Algorithm</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalingpolicybasicalgorithm">Autoscaling<wbr>Policy<wbr>Basic<wbr>Algorithm</a></span>
     </dt>
@@ -405,7 +433,9 @@ and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>location</span>
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -415,7 +445,9 @@ The default value is `global`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>project</span>
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -425,7 +457,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>secondary<wbr>Worker<wbr>Config</span>
+        <span id="secondaryworkerconfig_nodejs">
+<a href="#secondaryworkerconfig_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Worker<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalingpolicysecondaryworkerconfig">Autoscaling<wbr>Policy<wbr>Secondary<wbr>Worker<wbr>Config</a></span>
     </dt>
@@ -434,7 +468,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>worker<wbr>Config</span>
+        <span id="workerconfig_nodejs">
+<a href="#workerconfig_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalingpolicyworkerconfig">Autoscaling<wbr>Policy<wbr>Worker<wbr>Config</a></span>
     </dt>
@@ -450,7 +486,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>policy_<wbr>id</span>
+        <span id="policy_id_python">
+<a href="#policy_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -461,7 +499,9 @@ and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>basic_<wbr>algorithm</span>
+        <span id="basic_algorithm_python">
+<a href="#basic_algorithm_python" style="color: inherit; text-decoration: inherit;">basic_<wbr>algorithm</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalingpolicybasicalgorithm">Dict[Autoscaling<wbr>Policy<wbr>Basic<wbr>Algorithm]</a></span>
     </dt>
@@ -470,7 +510,9 @@ and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>location</span>
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -480,7 +522,9 @@ The default value is `global`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>project</span>
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -490,7 +534,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>secondary_<wbr>worker_<wbr>config</span>
+        <span id="secondary_worker_config_python">
+<a href="#secondary_worker_config_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>worker_<wbr>config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalingpolicysecondaryworkerconfig">Dict[Autoscaling<wbr>Policy<wbr>Secondary<wbr>Worker<wbr>Config]</a></span>
     </dt>
@@ -499,7 +545,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>worker_<wbr>config</span>
+        <span id="worker_config_python">
+<a href="#worker_config_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalingpolicyworkerconfig">Dict[Autoscaling<wbr>Policy<wbr>Worker<wbr>Config]</a></span>
     </dt>
@@ -526,7 +574,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -534,7 +584,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -550,7 +602,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -558,7 +612,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -574,7 +630,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -582,7 +640,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -598,7 +658,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -606,7 +668,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -628,7 +692,7 @@ Get an existing AutoscalingPolicy resource's state with the given name, ID, and 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/dataproc/#AutoscalingPolicyState">AutoscalingPolicyState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/dataproc/#AutoscalingPolicy">AutoscalingPolicy</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/dataproc/#AutoscalingPolicyState">AutoscalingPolicyState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/dataproc/#AutoscalingPolicy">AutoscalingPolicy</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -636,11 +700,11 @@ Get an existing AutoscalingPolicy resource's state with the given name, ID, and 
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAutoscalingPolicy<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#AutoscalingPolicyState">AutoscalingPolicyState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#AutoscalingPolicy">AutoscalingPolicy</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAutoscalingPolicy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#AutoscalingPolicyState">AutoscalingPolicyState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#AutoscalingPolicy">AutoscalingPolicy</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.AutoscalingPolicy.html">AutoscalingPolicy</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.AutoscalingPolicyState.html">AutoscalingPolicyState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.AutoscalingPolicy.html">AutoscalingPolicy</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.AutoscalingPolicyState.html">AutoscalingPolicyState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -748,7 +812,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Basic<wbr>Algorithm</span>
+        <span id="state_basicalgorithm_csharp">
+<a href="#state_basicalgorithm_csharp" style="color: inherit; text-decoration: inherit;">Basic<wbr>Algorithm</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalingpolicybasicalgorithm">Autoscaling<wbr>Policy<wbr>Basic<wbr>Algorithm<wbr>Args</a></span>
     </dt>
@@ -757,7 +823,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Location</span>
+        <span id="state_location_csharp">
+<a href="#state_location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -767,7 +835,9 @@ The default value is `global`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -776,7 +846,9 @@ The default value is `global`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Policy<wbr>Id</span>
+        <span id="state_policyid_csharp">
+<a href="#state_policyid_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -787,7 +859,9 @@ and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project</span>
+        <span id="state_project_csharp">
+<a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -797,7 +871,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Secondary<wbr>Worker<wbr>Config</span>
+        <span id="state_secondaryworkerconfig_csharp">
+<a href="#state_secondaryworkerconfig_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Worker<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalingpolicysecondaryworkerconfig">Autoscaling<wbr>Policy<wbr>Secondary<wbr>Worker<wbr>Config<wbr>Args</a></span>
     </dt>
@@ -806,7 +882,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Worker<wbr>Config</span>
+        <span id="state_workerconfig_csharp">
+<a href="#state_workerconfig_csharp" style="color: inherit; text-decoration: inherit;">Worker<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalingpolicyworkerconfig">Autoscaling<wbr>Policy<wbr>Worker<wbr>Config<wbr>Args</a></span>
     </dt>
@@ -822,7 +900,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Basic<wbr>Algorithm</span>
+        <span id="state_basicalgorithm_go">
+<a href="#state_basicalgorithm_go" style="color: inherit; text-decoration: inherit;">Basic<wbr>Algorithm</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalingpolicybasicalgorithm">Autoscaling<wbr>Policy<wbr>Basic<wbr>Algorithm</a></span>
     </dt>
@@ -831,7 +911,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Location</span>
+        <span id="state_location_go">
+<a href="#state_location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -841,7 +923,9 @@ The default value is `global`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -850,7 +934,9 @@ The default value is `global`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Policy<wbr>Id</span>
+        <span id="state_policyid_go">
+<a href="#state_policyid_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -861,7 +947,9 @@ and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project</span>
+        <span id="state_project_go">
+<a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -871,7 +959,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Secondary<wbr>Worker<wbr>Config</span>
+        <span id="state_secondaryworkerconfig_go">
+<a href="#state_secondaryworkerconfig_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Worker<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalingpolicysecondaryworkerconfig">Autoscaling<wbr>Policy<wbr>Secondary<wbr>Worker<wbr>Config</a></span>
     </dt>
@@ -880,7 +970,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Worker<wbr>Config</span>
+        <span id="state_workerconfig_go">
+<a href="#state_workerconfig_go" style="color: inherit; text-decoration: inherit;">Worker<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalingpolicyworkerconfig">Autoscaling<wbr>Policy<wbr>Worker<wbr>Config</a></span>
     </dt>
@@ -896,7 +988,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>basic<wbr>Algorithm</span>
+        <span id="state_basicalgorithm_nodejs">
+<a href="#state_basicalgorithm_nodejs" style="color: inherit; text-decoration: inherit;">basic<wbr>Algorithm</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalingpolicybasicalgorithm">Autoscaling<wbr>Policy<wbr>Basic<wbr>Algorithm</a></span>
     </dt>
@@ -905,7 +999,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>location</span>
+        <span id="state_location_nodejs">
+<a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -915,7 +1011,9 @@ The default value is `global`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -924,7 +1022,9 @@ The default value is `global`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>policy<wbr>Id</span>
+        <span id="state_policyid_nodejs">
+<a href="#state_policyid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -935,7 +1035,9 @@ and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>project</span>
+        <span id="state_project_nodejs">
+<a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -945,7 +1047,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>secondary<wbr>Worker<wbr>Config</span>
+        <span id="state_secondaryworkerconfig_nodejs">
+<a href="#state_secondaryworkerconfig_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Worker<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalingpolicysecondaryworkerconfig">Autoscaling<wbr>Policy<wbr>Secondary<wbr>Worker<wbr>Config</a></span>
     </dt>
@@ -954,7 +1058,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>worker<wbr>Config</span>
+        <span id="state_workerconfig_nodejs">
+<a href="#state_workerconfig_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalingpolicyworkerconfig">Autoscaling<wbr>Policy<wbr>Worker<wbr>Config</a></span>
     </dt>
@@ -970,7 +1076,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>basic_<wbr>algorithm</span>
+        <span id="state_basic_algorithm_python">
+<a href="#state_basic_algorithm_python" style="color: inherit; text-decoration: inherit;">basic_<wbr>algorithm</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalingpolicybasicalgorithm">Dict[Autoscaling<wbr>Policy<wbr>Basic<wbr>Algorithm]</a></span>
     </dt>
@@ -979,7 +1087,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>location</span>
+        <span id="state_location_python">
+<a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -989,7 +1099,9 @@ The default value is `global`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -998,7 +1110,9 @@ The default value is `global`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>policy_<wbr>id</span>
+        <span id="state_policy_id_python">
+<a href="#state_policy_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1009,7 +1123,9 @@ and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>project</span>
+        <span id="state_project_python">
+<a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1019,7 +1135,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>secondary_<wbr>worker_<wbr>config</span>
+        <span id="state_secondary_worker_config_python">
+<a href="#state_secondary_worker_config_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>worker_<wbr>config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalingpolicysecondaryworkerconfig">Dict[Autoscaling<wbr>Policy<wbr>Secondary<wbr>Worker<wbr>Config]</a></span>
     </dt>
@@ -1028,7 +1146,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>worker_<wbr>config</span>
+        <span id="state_worker_config_python">
+<a href="#state_worker_config_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalingpolicyworkerconfig">Dict[Autoscaling<wbr>Policy<wbr>Worker<wbr>Config]</a></span>
     </dt>
@@ -1070,7 +1190,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>Yarn<wbr>Config</span>
+        <span id="yarnconfig_csharp">
+<a href="#yarnconfig_csharp" style="color: inherit; text-decoration: inherit;">Yarn<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalingpolicybasicalgorithmyarnconfig">Autoscaling<wbr>Policy<wbr>Basic<wbr>Algorithm<wbr>Yarn<wbr>Config<wbr>Args</a></span>
     </dt>
@@ -1079,7 +1201,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cooldown<wbr>Period</span>
+        <span id="cooldownperiod_csharp">
+<a href="#cooldownperiod_csharp" style="color: inherit; text-decoration: inherit;">Cooldown<wbr>Period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1097,7 +1221,9 @@ Bounds: [2m, 1d]. Default: 2m.
 
     <dt class="property-required"
             title="Required">
-        <span>Yarn<wbr>Config</span>
+        <span id="yarnconfig_go">
+<a href="#yarnconfig_go" style="color: inherit; text-decoration: inherit;">Yarn<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalingpolicybasicalgorithmyarnconfig">Autoscaling<wbr>Policy<wbr>Basic<wbr>Algorithm<wbr>Yarn<wbr>Config</a></span>
     </dt>
@@ -1106,7 +1232,9 @@ Bounds: [2m, 1d]. Default: 2m.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cooldown<wbr>Period</span>
+        <span id="cooldownperiod_go">
+<a href="#cooldownperiod_go" style="color: inherit; text-decoration: inherit;">Cooldown<wbr>Period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1124,7 +1252,9 @@ Bounds: [2m, 1d]. Default: 2m.
 
     <dt class="property-required"
             title="Required">
-        <span>yarn<wbr>Config</span>
+        <span id="yarnconfig_nodejs">
+<a href="#yarnconfig_nodejs" style="color: inherit; text-decoration: inherit;">yarn<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalingpolicybasicalgorithmyarnconfig">Autoscaling<wbr>Policy<wbr>Basic<wbr>Algorithm<wbr>Yarn<wbr>Config</a></span>
     </dt>
@@ -1133,7 +1263,9 @@ Bounds: [2m, 1d]. Default: 2m.
 
     <dt class="property-optional"
             title="Optional">
-        <span>cooldown<wbr>Period</span>
+        <span id="cooldownperiod_nodejs">
+<a href="#cooldownperiod_nodejs" style="color: inherit; text-decoration: inherit;">cooldown<wbr>Period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1151,7 +1283,9 @@ Bounds: [2m, 1d]. Default: 2m.
 
     <dt class="property-required"
             title="Required">
-        <span>yarn<wbr>Config</span>
+        <span id="yarnconfig_python">
+<a href="#yarnconfig_python" style="color: inherit; text-decoration: inherit;">yarn<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalingpolicybasicalgorithmyarnconfig">Dict[Autoscaling<wbr>Policy<wbr>Basic<wbr>Algorithm<wbr>Yarn<wbr>Config]</a></span>
     </dt>
@@ -1160,7 +1294,9 @@ Bounds: [2m, 1d]. Default: 2m.
 
     <dt class="property-optional"
             title="Optional">
-        <span>cooldown<wbr>Period</span>
+        <span id="cooldownperiod_python">
+<a href="#cooldownperiod_python" style="color: inherit; text-decoration: inherit;">cooldown<wbr>Period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1196,7 +1332,9 @@ Bounds: [2m, 1d]. Default: 2m.
 
     <dt class="property-required"
             title="Required">
-        <span>Graceful<wbr>Decommission<wbr>Timeout</span>
+        <span id="gracefuldecommissiontimeout_csharp">
+<a href="#gracefuldecommissiontimeout_csharp" style="color: inherit; text-decoration: inherit;">Graceful<wbr>Decommission<wbr>Timeout</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1208,7 +1346,9 @@ Bounds: [0s, 1d].
 
     <dt class="property-required"
             title="Required">
-        <span>Scale<wbr>Down<wbr>Factor</span>
+        <span id="scaledownfactor_csharp">
+<a href="#scaledownfactor_csharp" style="color: inherit; text-decoration: inherit;">Scale<wbr>Down<wbr>Factor</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
@@ -1222,7 +1362,9 @@ Bounds: [0.0, 1.0].
 
     <dt class="property-required"
             title="Required">
-        <span>Scale<wbr>Up<wbr>Factor</span>
+        <span id="scaleupfactor_csharp">
+<a href="#scaleupfactor_csharp" style="color: inherit; text-decoration: inherit;">Scale<wbr>Up<wbr>Factor</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
@@ -1236,7 +1378,9 @@ Bounds: [0.0, 1.0].
 
     <dt class="property-optional"
             title="Optional">
-        <span>Scale<wbr>Down<wbr>Min<wbr>Worker<wbr>Fraction</span>
+        <span id="scaledownminworkerfraction_csharp">
+<a href="#scaledownminworkerfraction_csharp" style="color: inherit; text-decoration: inherit;">Scale<wbr>Down<wbr>Min<wbr>Worker<wbr>Fraction</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
@@ -1249,7 +1393,9 @@ Bounds: [0.0, 1.0]. Default: 0.0.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Scale<wbr>Up<wbr>Min<wbr>Worker<wbr>Fraction</span>
+        <span id="scaleupminworkerfraction_csharp">
+<a href="#scaleupminworkerfraction_csharp" style="color: inherit; text-decoration: inherit;">Scale<wbr>Up<wbr>Min<wbr>Worker<wbr>Fraction</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
@@ -1269,7 +1415,9 @@ Bounds: [0.0, 1.0]. Default: 0.0.
 
     <dt class="property-required"
             title="Required">
-        <span>Graceful<wbr>Decommission<wbr>Timeout</span>
+        <span id="gracefuldecommissiontimeout_go">
+<a href="#gracefuldecommissiontimeout_go" style="color: inherit; text-decoration: inherit;">Graceful<wbr>Decommission<wbr>Timeout</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1281,7 +1429,9 @@ Bounds: [0s, 1d].
 
     <dt class="property-required"
             title="Required">
-        <span>Scale<wbr>Down<wbr>Factor</span>
+        <span id="scaledownfactor_go">
+<a href="#scaledownfactor_go" style="color: inherit; text-decoration: inherit;">Scale<wbr>Down<wbr>Factor</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
@@ -1295,7 +1445,9 @@ Bounds: [0.0, 1.0].
 
     <dt class="property-required"
             title="Required">
-        <span>Scale<wbr>Up<wbr>Factor</span>
+        <span id="scaleupfactor_go">
+<a href="#scaleupfactor_go" style="color: inherit; text-decoration: inherit;">Scale<wbr>Up<wbr>Factor</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
@@ -1309,7 +1461,9 @@ Bounds: [0.0, 1.0].
 
     <dt class="property-optional"
             title="Optional">
-        <span>Scale<wbr>Down<wbr>Min<wbr>Worker<wbr>Fraction</span>
+        <span id="scaledownminworkerfraction_go">
+<a href="#scaledownminworkerfraction_go" style="color: inherit; text-decoration: inherit;">Scale<wbr>Down<wbr>Min<wbr>Worker<wbr>Fraction</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
@@ -1322,7 +1476,9 @@ Bounds: [0.0, 1.0]. Default: 0.0.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Scale<wbr>Up<wbr>Min<wbr>Worker<wbr>Fraction</span>
+        <span id="scaleupminworkerfraction_go">
+<a href="#scaleupminworkerfraction_go" style="color: inherit; text-decoration: inherit;">Scale<wbr>Up<wbr>Min<wbr>Worker<wbr>Fraction</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
@@ -1342,7 +1498,9 @@ Bounds: [0.0, 1.0]. Default: 0.0.
 
     <dt class="property-required"
             title="Required">
-        <span>graceful<wbr>Decommission<wbr>Timeout</span>
+        <span id="gracefuldecommissiontimeout_nodejs">
+<a href="#gracefuldecommissiontimeout_nodejs" style="color: inherit; text-decoration: inherit;">graceful<wbr>Decommission<wbr>Timeout</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1354,7 +1512,9 @@ Bounds: [0s, 1d].
 
     <dt class="property-required"
             title="Required">
-        <span>scale<wbr>Down<wbr>Factor</span>
+        <span id="scaledownfactor_nodejs">
+<a href="#scaledownfactor_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Down<wbr>Factor</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
@@ -1368,7 +1528,9 @@ Bounds: [0.0, 1.0].
 
     <dt class="property-required"
             title="Required">
-        <span>scale<wbr>Up<wbr>Factor</span>
+        <span id="scaleupfactor_nodejs">
+<a href="#scaleupfactor_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Up<wbr>Factor</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
@@ -1382,7 +1544,9 @@ Bounds: [0.0, 1.0].
 
     <dt class="property-optional"
             title="Optional">
-        <span>scale<wbr>Down<wbr>Min<wbr>Worker<wbr>Fraction</span>
+        <span id="scaledownminworkerfraction_nodejs">
+<a href="#scaledownminworkerfraction_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Down<wbr>Min<wbr>Worker<wbr>Fraction</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
@@ -1395,7 +1559,9 @@ Bounds: [0.0, 1.0]. Default: 0.0.
 
     <dt class="property-optional"
             title="Optional">
-        <span>scale<wbr>Up<wbr>Min<wbr>Worker<wbr>Fraction</span>
+        <span id="scaleupminworkerfraction_nodejs">
+<a href="#scaleupminworkerfraction_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Up<wbr>Min<wbr>Worker<wbr>Fraction</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
@@ -1415,7 +1581,9 @@ Bounds: [0.0, 1.0]. Default: 0.0.
 
     <dt class="property-required"
             title="Required">
-        <span>graceful<wbr>Decommission<wbr>Timeout</span>
+        <span id="gracefuldecommissiontimeout_python">
+<a href="#gracefuldecommissiontimeout_python" style="color: inherit; text-decoration: inherit;">graceful<wbr>Decommission<wbr>Timeout</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1427,7 +1595,9 @@ Bounds: [0s, 1d].
 
     <dt class="property-required"
             title="Required">
-        <span>scale<wbr>Down<wbr>Factor</span>
+        <span id="scaledownfactor_python">
+<a href="#scaledownfactor_python" style="color: inherit; text-decoration: inherit;">scale<wbr>Down<wbr>Factor</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1441,7 +1611,9 @@ Bounds: [0.0, 1.0].
 
     <dt class="property-required"
             title="Required">
-        <span>scale<wbr>Up<wbr>Factor</span>
+        <span id="scaleupfactor_python">
+<a href="#scaleupfactor_python" style="color: inherit; text-decoration: inherit;">scale<wbr>Up<wbr>Factor</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1455,7 +1627,9 @@ Bounds: [0.0, 1.0].
 
     <dt class="property-optional"
             title="Optional">
-        <span>scale<wbr>Down<wbr>Min<wbr>Worker<wbr>Fraction</span>
+        <span id="scaledownminworkerfraction_python">
+<a href="#scaledownminworkerfraction_python" style="color: inherit; text-decoration: inherit;">scale<wbr>Down<wbr>Min<wbr>Worker<wbr>Fraction</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1468,7 +1642,9 @@ Bounds: [0.0, 1.0]. Default: 0.0.
 
     <dt class="property-optional"
             title="Optional">
-        <span>scale<wbr>Up<wbr>Min<wbr>Worker<wbr>Fraction</span>
+        <span id="scaleupminworkerfraction_python">
+<a href="#scaleupminworkerfraction_python" style="color: inherit; text-decoration: inherit;">scale<wbr>Up<wbr>Min<wbr>Worker<wbr>Fraction</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1506,7 +1682,9 @@ Bounds: [0.0, 1.0]. Default: 0.0.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Instances</span>
+        <span id="maxinstances_csharp">
+<a href="#maxinstances_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Instances</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1517,7 +1695,9 @@ Bounds: [minInstances, ). Defaults to 0.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Min<wbr>Instances</span>
+        <span id="mininstances_csharp">
+<a href="#mininstances_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Instances</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1526,7 +1706,9 @@ Bounds: [minInstances, ). Defaults to 0.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Weight</span>
+        <span id="weight_csharp">
+<a href="#weight_csharp" style="color: inherit; text-decoration: inherit;">Weight</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1553,7 +1735,9 @@ only on primary workers, the cluster will use primary workers only and no second
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Instances</span>
+        <span id="maxinstances_go">
+<a href="#maxinstances_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Instances</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1564,7 +1748,9 @@ Bounds: [minInstances, ). Defaults to 0.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Min<wbr>Instances</span>
+        <span id="mininstances_go">
+<a href="#mininstances_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Instances</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1573,7 +1759,9 @@ Bounds: [minInstances, ). Defaults to 0.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Weight</span>
+        <span id="weight_go">
+<a href="#weight_go" style="color: inherit; text-decoration: inherit;">Weight</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1600,7 +1788,9 @@ only on primary workers, the cluster will use primary workers only and no second
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Instances</span>
+        <span id="maxinstances_nodejs">
+<a href="#maxinstances_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Instances</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1611,7 +1801,9 @@ Bounds: [minInstances, ). Defaults to 0.
 
     <dt class="property-optional"
             title="Optional">
-        <span>min<wbr>Instances</span>
+        <span id="mininstances_nodejs">
+<a href="#mininstances_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Instances</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1620,7 +1812,9 @@ Bounds: [minInstances, ). Defaults to 0.
 
     <dt class="property-optional"
             title="Optional">
-        <span>weight</span>
+        <span id="weight_nodejs">
+<a href="#weight_nodejs" style="color: inherit; text-decoration: inherit;">weight</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1647,7 +1841,9 @@ only on primary workers, the cluster will use primary workers only and no second
 
     <dt class="property-optional"
             title="Optional">
-        <span>max_<wbr>instances</span>
+        <span id="max_instances_python">
+<a href="#max_instances_python" style="color: inherit; text-decoration: inherit;">max_<wbr>instances</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1658,7 +1854,9 @@ Bounds: [minInstances, ). Defaults to 0.
 
     <dt class="property-optional"
             title="Optional">
-        <span>min<wbr>Instances</span>
+        <span id="mininstances_python">
+<a href="#mininstances_python" style="color: inherit; text-decoration: inherit;">min<wbr>Instances</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1667,7 +1865,9 @@ Bounds: [minInstances, ). Defaults to 0.
 
     <dt class="property-optional"
             title="Optional">
-        <span>weight</span>
+        <span id="weight_python">
+<a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1712,7 +1912,9 @@ only on primary workers, the cluster will use primary workers only and no second
 
     <dt class="property-required"
             title="Required">
-        <span>Max<wbr>Instances</span>
+        <span id="maxinstances_csharp">
+<a href="#maxinstances_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Instances</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1723,7 +1925,9 @@ Bounds: [minInstances, ). Defaults to 0.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Min<wbr>Instances</span>
+        <span id="mininstances_csharp">
+<a href="#mininstances_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Instances</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1732,7 +1936,9 @@ Bounds: [minInstances, ). Defaults to 0.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Weight</span>
+        <span id="weight_csharp">
+<a href="#weight_csharp" style="color: inherit; text-decoration: inherit;">Weight</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1759,7 +1965,9 @@ only on primary workers, the cluster will use primary workers only and no second
 
     <dt class="property-required"
             title="Required">
-        <span>Max<wbr>Instances</span>
+        <span id="maxinstances_go">
+<a href="#maxinstances_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Instances</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1770,7 +1978,9 @@ Bounds: [minInstances, ). Defaults to 0.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Min<wbr>Instances</span>
+        <span id="mininstances_go">
+<a href="#mininstances_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Instances</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1779,7 +1989,9 @@ Bounds: [minInstances, ). Defaults to 0.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Weight</span>
+        <span id="weight_go">
+<a href="#weight_go" style="color: inherit; text-decoration: inherit;">Weight</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1806,7 +2018,9 @@ only on primary workers, the cluster will use primary workers only and no second
 
     <dt class="property-required"
             title="Required">
-        <span>max<wbr>Instances</span>
+        <span id="maxinstances_nodejs">
+<a href="#maxinstances_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Instances</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1817,7 +2031,9 @@ Bounds: [minInstances, ). Defaults to 0.
 
     <dt class="property-optional"
             title="Optional">
-        <span>min<wbr>Instances</span>
+        <span id="mininstances_nodejs">
+<a href="#mininstances_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Instances</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1826,7 +2042,9 @@ Bounds: [minInstances, ). Defaults to 0.
 
     <dt class="property-optional"
             title="Optional">
-        <span>weight</span>
+        <span id="weight_nodejs">
+<a href="#weight_nodejs" style="color: inherit; text-decoration: inherit;">weight</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1853,7 +2071,9 @@ only on primary workers, the cluster will use primary workers only and no second
 
     <dt class="property-required"
             title="Required">
-        <span>max_<wbr>instances</span>
+        <span id="max_instances_python">
+<a href="#max_instances_python" style="color: inherit; text-decoration: inherit;">max_<wbr>instances</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1864,7 +2084,9 @@ Bounds: [minInstances, ). Defaults to 0.
 
     <dt class="property-optional"
             title="Optional">
-        <span>min<wbr>Instances</span>
+        <span id="mininstances_python">
+<a href="#mininstances_python" style="color: inherit; text-decoration: inherit;">min<wbr>Instances</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1873,7 +2095,9 @@ Bounds: [minInstances, ). Defaults to 0.
 
     <dt class="property-optional"
             title="Optional">
-        <span>weight</span>
+        <span id="weight_python">
+<a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>

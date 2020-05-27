@@ -26,6 +26,15 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">connector</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">vpcaccess</span><span class="o">.</span><span class="n">Connector</span><span class="p">(</span><span class="s2">&quot;connector&quot;</span><span class="p">,</span>
+    <span class="n">ip_cidr_range</span><span class="o">=</span><span class="s2">&quot;10.8.0.0/28&quot;</span><span class="p">,</span>
+    <span class="n">network</span><span class="o">=</span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

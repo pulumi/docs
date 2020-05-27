@@ -16,7 +16,10 @@ anything, please consult the source <a class="reference external" href="https://
 <span class="target" id="module-pulumi_aws.macie"></span><dl class="py class">
 <dt id="pulumi_aws.macie.MemberAccountAssociation">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.macie.</code><code class="sig-name descname">MemberAccountAssociation</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">member_account_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.macie.MemberAccountAssociation" title="Permalink to this definition">¶</a></dt>
-<dd><p>Associates an AWS account with Amazon Macie as a member account.</p>
+<dd><blockquote>
+<div><p><strong>NOTE:</strong> This resource interacts with <a class="reference external" href="https://docs.aws.amazon.com/macie/latest/userguide/what-is-macie.html">Amazon Macie Classic</a>. Macie Classic cannot be activated in new accounts. See the <a class="reference external" href="https://aws.amazon.com/macie/classic-faqs/">FAQ</a> for more details.</p>
+</div></blockquote>
+<p>Associates an AWS account with Amazon Macie as a member account.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Before using Amazon Macie for the first time it must be enabled manually. Instructions are <a class="reference external" href="https://docs.aws.amazon.com/macie/latest/userguide/macie-setting-up.html#macie-setting-up-enable">here</a>.</p>
 </div></blockquote>
@@ -99,7 +102,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_aws.macie.S3BucketAssociation">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.macie.</code><code class="sig-name descname">S3BucketAssociation</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bucket_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">classification_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">member_account_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">prefix</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.macie.S3BucketAssociation" title="Permalink to this definition">¶</a></dt>
-<dd><p>Associates an S3 resource with Amazon Macie for monitoring and data classification.</p>
+<dd><blockquote>
+<div><p><strong>NOTE:</strong> This resource interacts with <a class="reference external" href="https://docs.aws.amazon.com/macie/latest/userguide/what-is-macie.html">Amazon Macie Classic</a>. Macie Classic cannot be activated in new accounts. See the <a class="reference external" href="https://aws.amazon.com/macie/classic-faqs/">FAQ</a> for more details.</p>
+</div></blockquote>
+<p>Associates an S3 resource with Amazon Macie for monitoring and data classification.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Before using Amazon Macie for the first time it must be enabled manually. Instructions are <a class="reference external" href="https://docs.aws.amazon.com/macie/latest/userguide/macie-setting-up.html#macie-setting-up-enable">here</a>.</p>
 </div></blockquote>

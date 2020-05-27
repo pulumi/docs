@@ -25,6 +25,7 @@
             {{ if .Params.gated }}
                 {{ $buttonText := (cond (eq .Params.pre_recorded true) "WATCH NOW" "REGISTER NOW") }}
                 <div class="md:w-1/2 md:mx-8">
+                    {{ $preRecorded := .Params.pre_recorded }}
                     {{ with .Params.main }}
                         <h2>{{ .title }}</h2>
                         <p><a href="#webinarRegistrationForm" class="btn md:hidden">{{ $buttonText }}</a></p>

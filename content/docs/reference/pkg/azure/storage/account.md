@@ -137,19 +137,19 @@ const exampleAccount = new azure.storage.Account("exampleAccount", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/storage/#Account">Account</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/storage/#AccountArgs">AccountArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/storage/#Account">Account</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/storage/#AccountArgs">AccountArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Account</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>access_tier=None<span class="p">, </span>account_kind=None<span class="p">, </span>account_replication_type=None<span class="p">, </span>account_tier=None<span class="p">, </span>blob_properties=None<span class="p">, </span>custom_domain=None<span class="p">, </span>enable_https_traffic_only=None<span class="p">, </span>identity=None<span class="p">, </span>is_hns_enabled=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>network_rules=None<span class="p">, </span>queue_properties=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>static_website=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/storage/#Account">Account</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>access_tier=None<span class="p">, </span>account_kind=None<span class="p">, </span>account_replication_type=None<span class="p">, </span>account_tier=None<span class="p">, </span>blob_properties=None<span class="p">, </span>custom_domain=None<span class="p">, </span>enable_https_traffic_only=None<span class="p">, </span>identity=None<span class="p">, </span>is_hns_enabled=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>network_rules=None<span class="p">, </span>queue_properties=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>static_website=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewAccount<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/storage?tab=doc#AccountArgs">AccountArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/storage?tab=doc#Account">Account</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/storage?tab=doc#Account">NewAccount</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/storage?tab=doc#AccountArgs">AccountArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/storage?tab=doc#Account">Account</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Storage.Account.html">Account</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Storage.AccountArgs.html">AccountArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Storage.Account.html">Account</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Storage.AccountArgs.html">AccountArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -315,7 +315,9 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-required"
             title="Required">
-        <span>Account<wbr>Replication<wbr>Type</span>
+        <span id="accountreplicationtype_csharp">
+<a href="#accountreplicationtype_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Replication<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -324,7 +326,9 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-required"
             title="Required">
-        <span>Account<wbr>Tier</span>
+        <span id="accounttier_csharp">
+<a href="#accounttier_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Tier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -333,7 +337,9 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-required"
             title="Required">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_csharp">
+<a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -342,7 +348,9 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Access<wbr>Tier</span>
+        <span id="accesstier_csharp">
+<a href="#accesstier_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Tier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -351,7 +359,9 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Account<wbr>Kind</span>
+        <span id="accountkind_csharp">
+<a href="#accountkind_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Kind</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -360,7 +370,9 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Blob<wbr>Properties</span>
+        <span id="blobproperties_csharp">
+<a href="#blobproperties_csharp" style="color: inherit; text-decoration: inherit;">Blob<wbr>Properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountblobproperties">Account<wbr>Blob<wbr>Properties<wbr>Args</a></span>
     </dt>
@@ -369,7 +381,9 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Custom<wbr>Domain</span>
+        <span id="customdomain_csharp">
+<a href="#customdomain_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Domain</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountcustomdomain">Account<wbr>Custom<wbr>Domain<wbr>Args</a></span>
     </dt>
@@ -378,7 +392,9 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enable<wbr>Https<wbr>Traffic<wbr>Only</span>
+        <span id="enablehttpstrafficonly_csharp">
+<a href="#enablehttpstrafficonly_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Https<wbr>Traffic<wbr>Only</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -388,7 +404,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Identity</span>
+        <span id="identity_csharp">
+<a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountidentity">Account<wbr>Identity<wbr>Args</a></span>
     </dt>
@@ -397,7 +415,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Is<wbr>Hns<wbr>Enabled</span>
+        <span id="ishnsenabled_csharp">
+<a href="#ishnsenabled_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Hns<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -406,7 +426,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Location</span>
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -415,7 +437,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -424,7 +448,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Network<wbr>Rules</span>
+        <span id="networkrules_csharp">
+<a href="#networkrules_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountnetworkrules">Account<wbr>Network<wbr>Rules<wbr>Args</a></span>
     </dt>
@@ -433,7 +459,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Queue<wbr>Properties</span>
+        <span id="queueproperties_csharp">
+<a href="#queueproperties_csharp" style="color: inherit; text-decoration: inherit;">Queue<wbr>Properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountqueueproperties">Account<wbr>Queue<wbr>Properties<wbr>Args</a></span>
     </dt>
@@ -442,7 +470,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Static<wbr>Website</span>
+        <span id="staticwebsite_csharp">
+<a href="#staticwebsite_csharp" style="color: inherit; text-decoration: inherit;">Static<wbr>Website</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountstaticwebsite">Account<wbr>Static<wbr>Website<wbr>Args</a></span>
     </dt>
@@ -451,7 +481,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -467,7 +499,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-required"
             title="Required">
-        <span>Account<wbr>Replication<wbr>Type</span>
+        <span id="accountreplicationtype_go">
+<a href="#accountreplicationtype_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Replication<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -476,7 +510,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-required"
             title="Required">
-        <span>Account<wbr>Tier</span>
+        <span id="accounttier_go">
+<a href="#accounttier_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Tier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -485,7 +521,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-required"
             title="Required">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_go">
+<a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -494,7 +532,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Access<wbr>Tier</span>
+        <span id="accesstier_go">
+<a href="#accesstier_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Tier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -503,7 +543,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Account<wbr>Kind</span>
+        <span id="accountkind_go">
+<a href="#accountkind_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Kind</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -512,7 +554,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Blob<wbr>Properties</span>
+        <span id="blobproperties_go">
+<a href="#blobproperties_go" style="color: inherit; text-decoration: inherit;">Blob<wbr>Properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountblobproperties">Account<wbr>Blob<wbr>Properties</a></span>
     </dt>
@@ -521,7 +565,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Custom<wbr>Domain</span>
+        <span id="customdomain_go">
+<a href="#customdomain_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Domain</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountcustomdomain">Account<wbr>Custom<wbr>Domain</a></span>
     </dt>
@@ -530,7 +576,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enable<wbr>Https<wbr>Traffic<wbr>Only</span>
+        <span id="enablehttpstrafficonly_go">
+<a href="#enablehttpstrafficonly_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Https<wbr>Traffic<wbr>Only</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -540,7 +588,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Identity</span>
+        <span id="identity_go">
+<a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountidentity">Account<wbr>Identity</a></span>
     </dt>
@@ -549,7 +599,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Is<wbr>Hns<wbr>Enabled</span>
+        <span id="ishnsenabled_go">
+<a href="#ishnsenabled_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Hns<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -558,7 +610,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Location</span>
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -567,7 +621,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -576,7 +632,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Network<wbr>Rules</span>
+        <span id="networkrules_go">
+<a href="#networkrules_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountnetworkrules">Account<wbr>Network<wbr>Rules<wbr>Type</a></span>
     </dt>
@@ -585,7 +643,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Queue<wbr>Properties</span>
+        <span id="queueproperties_go">
+<a href="#queueproperties_go" style="color: inherit; text-decoration: inherit;">Queue<wbr>Properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountqueueproperties">Account<wbr>Queue<wbr>Properties</a></span>
     </dt>
@@ -594,7 +654,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Static<wbr>Website</span>
+        <span id="staticwebsite_go">
+<a href="#staticwebsite_go" style="color: inherit; text-decoration: inherit;">Static<wbr>Website</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountstaticwebsite">Account<wbr>Static<wbr>Website</a></span>
     </dt>
@@ -603,7 +665,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -619,7 +683,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-required"
             title="Required">
-        <span>account<wbr>Replication<wbr>Type</span>
+        <span id="accountreplicationtype_nodejs">
+<a href="#accountreplicationtype_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Replication<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -628,7 +694,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-required"
             title="Required">
-        <span>account<wbr>Tier</span>
+        <span id="accounttier_nodejs">
+<a href="#accounttier_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Tier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -637,7 +705,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-required"
             title="Required">
-        <span>resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_nodejs">
+<a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -646,7 +716,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>access<wbr>Tier</span>
+        <span id="accesstier_nodejs">
+<a href="#accesstier_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Tier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -655,7 +727,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>account<wbr>Kind</span>
+        <span id="accountkind_nodejs">
+<a href="#accountkind_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Kind</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -664,7 +738,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>blob<wbr>Properties</span>
+        <span id="blobproperties_nodejs">
+<a href="#blobproperties_nodejs" style="color: inherit; text-decoration: inherit;">blob<wbr>Properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountblobproperties">Account<wbr>Blob<wbr>Properties</a></span>
     </dt>
@@ -673,7 +749,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>custom<wbr>Domain</span>
+        <span id="customdomain_nodejs">
+<a href="#customdomain_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Domain</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountcustomdomain">Account<wbr>Custom<wbr>Domain</a></span>
     </dt>
@@ -682,7 +760,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>enable<wbr>Https<wbr>Traffic<wbr>Only</span>
+        <span id="enablehttpstrafficonly_nodejs">
+<a href="#enablehttpstrafficonly_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Https<wbr>Traffic<wbr>Only</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -692,7 +772,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>identity</span>
+        <span id="identity_nodejs">
+<a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountidentity">Account<wbr>Identity</a></span>
     </dt>
@@ -701,7 +783,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>is<wbr>Hns<wbr>Enabled</span>
+        <span id="ishnsenabled_nodejs">
+<a href="#ishnsenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Hns<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -710,7 +794,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>location</span>
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -719,7 +805,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -728,7 +816,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>network<wbr>Rules</span>
+        <span id="networkrules_nodejs">
+<a href="#networkrules_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountnetworkrules">Account<wbr>Network<wbr>Rules</a></span>
     </dt>
@@ -737,7 +827,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>queue<wbr>Properties</span>
+        <span id="queueproperties_nodejs">
+<a href="#queueproperties_nodejs" style="color: inherit; text-decoration: inherit;">queue<wbr>Properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountqueueproperties">Account<wbr>Queue<wbr>Properties</a></span>
     </dt>
@@ -746,7 +838,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>static<wbr>Website</span>
+        <span id="staticwebsite_nodejs">
+<a href="#staticwebsite_nodejs" style="color: inherit; text-decoration: inherit;">static<wbr>Website</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountstaticwebsite">Account<wbr>Static<wbr>Website</a></span>
     </dt>
@@ -755,7 +849,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -771,7 +867,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-required"
             title="Required">
-        <span>account_<wbr>replication_<wbr>type</span>
+        <span id="account_replication_type_python">
+<a href="#account_replication_type_python" style="color: inherit; text-decoration: inherit;">account_<wbr>replication_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -780,7 +878,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-required"
             title="Required">
-        <span>account_<wbr>tier</span>
+        <span id="account_tier_python">
+<a href="#account_tier_python" style="color: inherit; text-decoration: inherit;">account_<wbr>tier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -789,7 +889,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-required"
             title="Required">
-        <span>resource_<wbr>group_<wbr>name</span>
+        <span id="resource_group_name_python">
+<a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -798,7 +900,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>access_<wbr>tier</span>
+        <span id="access_tier_python">
+<a href="#access_tier_python" style="color: inherit; text-decoration: inherit;">access_<wbr>tier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -807,7 +911,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>account_<wbr>kind</span>
+        <span id="account_kind_python">
+<a href="#account_kind_python" style="color: inherit; text-decoration: inherit;">account_<wbr>kind</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -816,7 +922,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>blob_<wbr>properties</span>
+        <span id="blob_properties_python">
+<a href="#blob_properties_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountblobproperties">Dict[Account<wbr>Blob<wbr>Properties]</a></span>
     </dt>
@@ -825,7 +933,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>custom_<wbr>domain</span>
+        <span id="custom_domain_python">
+<a href="#custom_domain_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>domain</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountcustomdomain">Dict[Account<wbr>Custom<wbr>Domain]</a></span>
     </dt>
@@ -834,7 +944,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>enable_<wbr>https_<wbr>traffic_<wbr>only</span>
+        <span id="enable_https_traffic_only_python">
+<a href="#enable_https_traffic_only_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>https_<wbr>traffic_<wbr>only</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -844,7 +956,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>identity</span>
+        <span id="identity_python">
+<a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountidentity">Dict[Account<wbr>Identity]</a></span>
     </dt>
@@ -853,7 +967,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>is_<wbr>hns_<wbr>enabled</span>
+        <span id="is_hns_enabled_python">
+<a href="#is_hns_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>hns_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -862,7 +978,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>location</span>
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -871,7 +989,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -880,7 +1000,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>network_<wbr>rules</span>
+        <span id="network_rules_python">
+<a href="#network_rules_python" style="color: inherit; text-decoration: inherit;">network_<wbr>rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountnetworkrules">Dict[Account<wbr>Network<wbr>Rules]</a></span>
     </dt>
@@ -889,7 +1011,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>queue_<wbr>properties</span>
+        <span id="queue_properties_python">
+<a href="#queue_properties_python" style="color: inherit; text-decoration: inherit;">queue_<wbr>properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountqueueproperties">Dict[Account<wbr>Queue<wbr>Properties]</a></span>
     </dt>
@@ -898,7 +1022,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>static_<wbr>website</span>
+        <span id="static_website_python">
+<a href="#static_website_python" style="color: inherit; text-decoration: inherit;">static_<wbr>website</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountstaticwebsite">Dict[Account<wbr>Static<wbr>Website]</a></span>
     </dt>
@@ -907,7 +1033,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -934,7 +1062,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -942,7 +1072,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Primary<wbr>Access<wbr>Key</span>
+        <span id="primaryaccesskey_csharp">
+<a href="#primaryaccesskey_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Access<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -951,7 +1083,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Primary<wbr>Blob<wbr>Connection<wbr>String</span>
+        <span id="primaryblobconnectionstring_csharp">
+<a href="#primaryblobconnectionstring_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Blob<wbr>Connection<wbr>String</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -960,7 +1094,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Primary<wbr>Blob<wbr>Endpoint</span>
+        <span id="primaryblobendpoint_csharp">
+<a href="#primaryblobendpoint_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Blob<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -969,7 +1105,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Primary<wbr>Blob<wbr>Host</span>
+        <span id="primaryblobhost_csharp">
+<a href="#primaryblobhost_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Blob<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -978,7 +1116,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Primary<wbr>Connection<wbr>String</span>
+        <span id="primaryconnectionstring_csharp">
+<a href="#primaryconnectionstring_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Connection<wbr>String</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -987,7 +1127,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Primary<wbr>Dfs<wbr>Endpoint</span>
+        <span id="primarydfsendpoint_csharp">
+<a href="#primarydfsendpoint_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Dfs<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -996,7 +1138,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Primary<wbr>Dfs<wbr>Host</span>
+        <span id="primarydfshost_csharp">
+<a href="#primarydfshost_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Dfs<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1005,7 +1149,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Primary<wbr>File<wbr>Endpoint</span>
+        <span id="primaryfileendpoint_csharp">
+<a href="#primaryfileendpoint_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>File<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1014,7 +1160,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Primary<wbr>File<wbr>Host</span>
+        <span id="primaryfilehost_csharp">
+<a href="#primaryfilehost_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>File<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1023,7 +1171,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Primary<wbr>Location</span>
+        <span id="primarylocation_csharp">
+<a href="#primarylocation_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1032,7 +1182,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Primary<wbr>Queue<wbr>Endpoint</span>
+        <span id="primaryqueueendpoint_csharp">
+<a href="#primaryqueueendpoint_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Queue<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1041,7 +1193,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Primary<wbr>Queue<wbr>Host</span>
+        <span id="primaryqueuehost_csharp">
+<a href="#primaryqueuehost_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Queue<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1050,7 +1204,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Primary<wbr>Table<wbr>Endpoint</span>
+        <span id="primarytableendpoint_csharp">
+<a href="#primarytableendpoint_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Table<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1059,7 +1215,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Primary<wbr>Table<wbr>Host</span>
+        <span id="primarytablehost_csharp">
+<a href="#primarytablehost_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Table<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1068,7 +1226,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Primary<wbr>Web<wbr>Endpoint</span>
+        <span id="primarywebendpoint_csharp">
+<a href="#primarywebendpoint_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Web<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1077,7 +1237,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Primary<wbr>Web<wbr>Host</span>
+        <span id="primarywebhost_csharp">
+<a href="#primarywebhost_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Web<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1086,7 +1248,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Secondary<wbr>Access<wbr>Key</span>
+        <span id="secondaryaccesskey_csharp">
+<a href="#secondaryaccesskey_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Access<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1095,7 +1259,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Secondary<wbr>Blob<wbr>Connection<wbr>String</span>
+        <span id="secondaryblobconnectionstring_csharp">
+<a href="#secondaryblobconnectionstring_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Blob<wbr>Connection<wbr>String</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1104,7 +1270,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Secondary<wbr>Blob<wbr>Endpoint</span>
+        <span id="secondaryblobendpoint_csharp">
+<a href="#secondaryblobendpoint_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Blob<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1113,7 +1281,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Secondary<wbr>Blob<wbr>Host</span>
+        <span id="secondaryblobhost_csharp">
+<a href="#secondaryblobhost_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Blob<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1122,7 +1292,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Secondary<wbr>Connection<wbr>String</span>
+        <span id="secondaryconnectionstring_csharp">
+<a href="#secondaryconnectionstring_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Connection<wbr>String</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1131,7 +1303,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Secondary<wbr>Dfs<wbr>Endpoint</span>
+        <span id="secondarydfsendpoint_csharp">
+<a href="#secondarydfsendpoint_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Dfs<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1140,7 +1314,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Secondary<wbr>Dfs<wbr>Host</span>
+        <span id="secondarydfshost_csharp">
+<a href="#secondarydfshost_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Dfs<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1149,7 +1325,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Secondary<wbr>File<wbr>Endpoint</span>
+        <span id="secondaryfileendpoint_csharp">
+<a href="#secondaryfileendpoint_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>File<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1158,7 +1336,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Secondary<wbr>File<wbr>Host</span>
+        <span id="secondaryfilehost_csharp">
+<a href="#secondaryfilehost_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>File<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1167,7 +1347,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Secondary<wbr>Location</span>
+        <span id="secondarylocation_csharp">
+<a href="#secondarylocation_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1176,7 +1358,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Secondary<wbr>Queue<wbr>Endpoint</span>
+        <span id="secondaryqueueendpoint_csharp">
+<a href="#secondaryqueueendpoint_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Queue<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1185,7 +1369,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Secondary<wbr>Queue<wbr>Host</span>
+        <span id="secondaryqueuehost_csharp">
+<a href="#secondaryqueuehost_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Queue<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1194,7 +1380,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Secondary<wbr>Table<wbr>Endpoint</span>
+        <span id="secondarytableendpoint_csharp">
+<a href="#secondarytableendpoint_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Table<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1203,7 +1391,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Secondary<wbr>Table<wbr>Host</span>
+        <span id="secondarytablehost_csharp">
+<a href="#secondarytablehost_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Table<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1212,7 +1402,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Secondary<wbr>Web<wbr>Endpoint</span>
+        <span id="secondarywebendpoint_csharp">
+<a href="#secondarywebendpoint_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Web<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1221,7 +1413,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Secondary<wbr>Web<wbr>Host</span>
+        <span id="secondarywebhost_csharp">
+<a href="#secondarywebhost_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Web<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1237,7 +1431,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1245,7 +1441,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Primary<wbr>Access<wbr>Key</span>
+        <span id="primaryaccesskey_go">
+<a href="#primaryaccesskey_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Access<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1254,7 +1452,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Primary<wbr>Blob<wbr>Connection<wbr>String</span>
+        <span id="primaryblobconnectionstring_go">
+<a href="#primaryblobconnectionstring_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Blob<wbr>Connection<wbr>String</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1263,7 +1463,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Primary<wbr>Blob<wbr>Endpoint</span>
+        <span id="primaryblobendpoint_go">
+<a href="#primaryblobendpoint_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Blob<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1272,7 +1474,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Primary<wbr>Blob<wbr>Host</span>
+        <span id="primaryblobhost_go">
+<a href="#primaryblobhost_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Blob<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1281,7 +1485,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Primary<wbr>Connection<wbr>String</span>
+        <span id="primaryconnectionstring_go">
+<a href="#primaryconnectionstring_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Connection<wbr>String</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1290,7 +1496,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Primary<wbr>Dfs<wbr>Endpoint</span>
+        <span id="primarydfsendpoint_go">
+<a href="#primarydfsendpoint_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Dfs<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1299,7 +1507,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Primary<wbr>Dfs<wbr>Host</span>
+        <span id="primarydfshost_go">
+<a href="#primarydfshost_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Dfs<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1308,7 +1518,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Primary<wbr>File<wbr>Endpoint</span>
+        <span id="primaryfileendpoint_go">
+<a href="#primaryfileendpoint_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>File<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1317,7 +1529,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Primary<wbr>File<wbr>Host</span>
+        <span id="primaryfilehost_go">
+<a href="#primaryfilehost_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>File<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1326,7 +1540,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Primary<wbr>Location</span>
+        <span id="primarylocation_go">
+<a href="#primarylocation_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1335,7 +1551,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Primary<wbr>Queue<wbr>Endpoint</span>
+        <span id="primaryqueueendpoint_go">
+<a href="#primaryqueueendpoint_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Queue<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1344,7 +1562,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Primary<wbr>Queue<wbr>Host</span>
+        <span id="primaryqueuehost_go">
+<a href="#primaryqueuehost_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Queue<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1353,7 +1573,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Primary<wbr>Table<wbr>Endpoint</span>
+        <span id="primarytableendpoint_go">
+<a href="#primarytableendpoint_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Table<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1362,7 +1584,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Primary<wbr>Table<wbr>Host</span>
+        <span id="primarytablehost_go">
+<a href="#primarytablehost_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Table<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1371,7 +1595,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Primary<wbr>Web<wbr>Endpoint</span>
+        <span id="primarywebendpoint_go">
+<a href="#primarywebendpoint_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Web<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1380,7 +1606,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Primary<wbr>Web<wbr>Host</span>
+        <span id="primarywebhost_go">
+<a href="#primarywebhost_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Web<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1389,7 +1617,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Secondary<wbr>Access<wbr>Key</span>
+        <span id="secondaryaccesskey_go">
+<a href="#secondaryaccesskey_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Access<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1398,7 +1628,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Secondary<wbr>Blob<wbr>Connection<wbr>String</span>
+        <span id="secondaryblobconnectionstring_go">
+<a href="#secondaryblobconnectionstring_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Blob<wbr>Connection<wbr>String</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1407,7 +1639,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Secondary<wbr>Blob<wbr>Endpoint</span>
+        <span id="secondaryblobendpoint_go">
+<a href="#secondaryblobendpoint_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Blob<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1416,7 +1650,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Secondary<wbr>Blob<wbr>Host</span>
+        <span id="secondaryblobhost_go">
+<a href="#secondaryblobhost_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Blob<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1425,7 +1661,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Secondary<wbr>Connection<wbr>String</span>
+        <span id="secondaryconnectionstring_go">
+<a href="#secondaryconnectionstring_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Connection<wbr>String</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1434,7 +1672,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Secondary<wbr>Dfs<wbr>Endpoint</span>
+        <span id="secondarydfsendpoint_go">
+<a href="#secondarydfsendpoint_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Dfs<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1443,7 +1683,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Secondary<wbr>Dfs<wbr>Host</span>
+        <span id="secondarydfshost_go">
+<a href="#secondarydfshost_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Dfs<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1452,7 +1694,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Secondary<wbr>File<wbr>Endpoint</span>
+        <span id="secondaryfileendpoint_go">
+<a href="#secondaryfileendpoint_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>File<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1461,7 +1705,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Secondary<wbr>File<wbr>Host</span>
+        <span id="secondaryfilehost_go">
+<a href="#secondaryfilehost_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>File<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1470,7 +1716,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Secondary<wbr>Location</span>
+        <span id="secondarylocation_go">
+<a href="#secondarylocation_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1479,7 +1727,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Secondary<wbr>Queue<wbr>Endpoint</span>
+        <span id="secondaryqueueendpoint_go">
+<a href="#secondaryqueueendpoint_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Queue<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1488,7 +1738,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Secondary<wbr>Queue<wbr>Host</span>
+        <span id="secondaryqueuehost_go">
+<a href="#secondaryqueuehost_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Queue<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1497,7 +1749,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Secondary<wbr>Table<wbr>Endpoint</span>
+        <span id="secondarytableendpoint_go">
+<a href="#secondarytableendpoint_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Table<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1506,7 +1760,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Secondary<wbr>Table<wbr>Host</span>
+        <span id="secondarytablehost_go">
+<a href="#secondarytablehost_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Table<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1515,7 +1771,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Secondary<wbr>Web<wbr>Endpoint</span>
+        <span id="secondarywebendpoint_go">
+<a href="#secondarywebendpoint_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Web<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1524,7 +1782,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Secondary<wbr>Web<wbr>Host</span>
+        <span id="secondarywebhost_go">
+<a href="#secondarywebhost_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Web<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1540,7 +1800,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1548,7 +1810,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>primary<wbr>Access<wbr>Key</span>
+        <span id="primaryaccesskey_nodejs">
+<a href="#primaryaccesskey_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Access<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1557,7 +1821,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>primary<wbr>Blob<wbr>Connection<wbr>String</span>
+        <span id="primaryblobconnectionstring_nodejs">
+<a href="#primaryblobconnectionstring_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Blob<wbr>Connection<wbr>String</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1566,7 +1832,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>primary<wbr>Blob<wbr>Endpoint</span>
+        <span id="primaryblobendpoint_nodejs">
+<a href="#primaryblobendpoint_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Blob<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1575,7 +1843,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>primary<wbr>Blob<wbr>Host</span>
+        <span id="primaryblobhost_nodejs">
+<a href="#primaryblobhost_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Blob<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1584,7 +1854,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>primary<wbr>Connection<wbr>String</span>
+        <span id="primaryconnectionstring_nodejs">
+<a href="#primaryconnectionstring_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Connection<wbr>String</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1593,7 +1865,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>primary<wbr>Dfs<wbr>Endpoint</span>
+        <span id="primarydfsendpoint_nodejs">
+<a href="#primarydfsendpoint_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Dfs<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1602,7 +1876,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>primary<wbr>Dfs<wbr>Host</span>
+        <span id="primarydfshost_nodejs">
+<a href="#primarydfshost_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Dfs<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1611,7 +1887,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>primary<wbr>File<wbr>Endpoint</span>
+        <span id="primaryfileendpoint_nodejs">
+<a href="#primaryfileendpoint_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>File<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1620,7 +1898,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>primary<wbr>File<wbr>Host</span>
+        <span id="primaryfilehost_nodejs">
+<a href="#primaryfilehost_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>File<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1629,7 +1909,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>primary<wbr>Location</span>
+        <span id="primarylocation_nodejs">
+<a href="#primarylocation_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1638,7 +1920,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>primary<wbr>Queue<wbr>Endpoint</span>
+        <span id="primaryqueueendpoint_nodejs">
+<a href="#primaryqueueendpoint_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Queue<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1647,7 +1931,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>primary<wbr>Queue<wbr>Host</span>
+        <span id="primaryqueuehost_nodejs">
+<a href="#primaryqueuehost_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Queue<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1656,7 +1942,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>primary<wbr>Table<wbr>Endpoint</span>
+        <span id="primarytableendpoint_nodejs">
+<a href="#primarytableendpoint_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Table<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1665,7 +1953,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>primary<wbr>Table<wbr>Host</span>
+        <span id="primarytablehost_nodejs">
+<a href="#primarytablehost_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Table<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1674,7 +1964,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>primary<wbr>Web<wbr>Endpoint</span>
+        <span id="primarywebendpoint_nodejs">
+<a href="#primarywebendpoint_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Web<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1683,7 +1975,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>primary<wbr>Web<wbr>Host</span>
+        <span id="primarywebhost_nodejs">
+<a href="#primarywebhost_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Web<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1692,7 +1986,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>secondary<wbr>Access<wbr>Key</span>
+        <span id="secondaryaccesskey_nodejs">
+<a href="#secondaryaccesskey_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Access<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1701,7 +1997,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>secondary<wbr>Blob<wbr>Connection<wbr>String</span>
+        <span id="secondaryblobconnectionstring_nodejs">
+<a href="#secondaryblobconnectionstring_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Blob<wbr>Connection<wbr>String</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1710,7 +2008,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>secondary<wbr>Blob<wbr>Endpoint</span>
+        <span id="secondaryblobendpoint_nodejs">
+<a href="#secondaryblobendpoint_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Blob<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1719,7 +2019,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>secondary<wbr>Blob<wbr>Host</span>
+        <span id="secondaryblobhost_nodejs">
+<a href="#secondaryblobhost_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Blob<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1728,7 +2030,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>secondary<wbr>Connection<wbr>String</span>
+        <span id="secondaryconnectionstring_nodejs">
+<a href="#secondaryconnectionstring_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Connection<wbr>String</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1737,7 +2041,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>secondary<wbr>Dfs<wbr>Endpoint</span>
+        <span id="secondarydfsendpoint_nodejs">
+<a href="#secondarydfsendpoint_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Dfs<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1746,7 +2052,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>secondary<wbr>Dfs<wbr>Host</span>
+        <span id="secondarydfshost_nodejs">
+<a href="#secondarydfshost_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Dfs<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1755,7 +2063,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>secondary<wbr>File<wbr>Endpoint</span>
+        <span id="secondaryfileendpoint_nodejs">
+<a href="#secondaryfileendpoint_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>File<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1764,7 +2074,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>secondary<wbr>File<wbr>Host</span>
+        <span id="secondaryfilehost_nodejs">
+<a href="#secondaryfilehost_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>File<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1773,7 +2085,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>secondary<wbr>Location</span>
+        <span id="secondarylocation_nodejs">
+<a href="#secondarylocation_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1782,7 +2096,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>secondary<wbr>Queue<wbr>Endpoint</span>
+        <span id="secondaryqueueendpoint_nodejs">
+<a href="#secondaryqueueendpoint_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Queue<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1791,7 +2107,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>secondary<wbr>Queue<wbr>Host</span>
+        <span id="secondaryqueuehost_nodejs">
+<a href="#secondaryqueuehost_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Queue<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1800,7 +2118,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>secondary<wbr>Table<wbr>Endpoint</span>
+        <span id="secondarytableendpoint_nodejs">
+<a href="#secondarytableendpoint_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Table<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1809,7 +2129,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>secondary<wbr>Table<wbr>Host</span>
+        <span id="secondarytablehost_nodejs">
+<a href="#secondarytablehost_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Table<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1818,7 +2140,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>secondary<wbr>Web<wbr>Endpoint</span>
+        <span id="secondarywebendpoint_nodejs">
+<a href="#secondarywebendpoint_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Web<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1827,7 +2151,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>secondary<wbr>Web<wbr>Host</span>
+        <span id="secondarywebhost_nodejs">
+<a href="#secondarywebhost_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Web<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1843,7 +2169,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1851,7 +2179,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>primary_<wbr>access_<wbr>key</span>
+        <span id="primary_access_key_python">
+<a href="#primary_access_key_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>access_<wbr>key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1860,7 +2190,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>primary_<wbr>blob_<wbr>connection_<wbr>string</span>
+        <span id="primary_blob_connection_string_python">
+<a href="#primary_blob_connection_string_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>blob_<wbr>connection_<wbr>string</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1869,7 +2201,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>primary_<wbr>blob_<wbr>endpoint</span>
+        <span id="primary_blob_endpoint_python">
+<a href="#primary_blob_endpoint_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>blob_<wbr>endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1878,7 +2212,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>primary_<wbr>blob_<wbr>host</span>
+        <span id="primary_blob_host_python">
+<a href="#primary_blob_host_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>blob_<wbr>host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1887,7 +2223,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>primary_<wbr>connection_<wbr>string</span>
+        <span id="primary_connection_string_python">
+<a href="#primary_connection_string_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>connection_<wbr>string</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1896,7 +2234,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>primary_<wbr>dfs_<wbr>endpoint</span>
+        <span id="primary_dfs_endpoint_python">
+<a href="#primary_dfs_endpoint_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>dfs_<wbr>endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1905,7 +2245,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>primary_<wbr>dfs_<wbr>host</span>
+        <span id="primary_dfs_host_python">
+<a href="#primary_dfs_host_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>dfs_<wbr>host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1914,7 +2256,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>primary_<wbr>file_<wbr>endpoint</span>
+        <span id="primary_file_endpoint_python">
+<a href="#primary_file_endpoint_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>file_<wbr>endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1923,7 +2267,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>primary_<wbr>file_<wbr>host</span>
+        <span id="primary_file_host_python">
+<a href="#primary_file_host_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>file_<wbr>host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1932,7 +2278,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>primary_<wbr>location</span>
+        <span id="primary_location_python">
+<a href="#primary_location_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1941,7 +2289,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>primary_<wbr>queue_<wbr>endpoint</span>
+        <span id="primary_queue_endpoint_python">
+<a href="#primary_queue_endpoint_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>queue_<wbr>endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1950,7 +2300,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>primary_<wbr>queue_<wbr>host</span>
+        <span id="primary_queue_host_python">
+<a href="#primary_queue_host_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>queue_<wbr>host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1959,7 +2311,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>primary_<wbr>table_<wbr>endpoint</span>
+        <span id="primary_table_endpoint_python">
+<a href="#primary_table_endpoint_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>table_<wbr>endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1968,7 +2322,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>primary_<wbr>table_<wbr>host</span>
+        <span id="primary_table_host_python">
+<a href="#primary_table_host_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>table_<wbr>host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1977,7 +2333,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>primary_<wbr>web_<wbr>endpoint</span>
+        <span id="primary_web_endpoint_python">
+<a href="#primary_web_endpoint_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>web_<wbr>endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1986,7 +2344,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>primary_<wbr>web_<wbr>host</span>
+        <span id="primary_web_host_python">
+<a href="#primary_web_host_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>web_<wbr>host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1995,7 +2355,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>secondary_<wbr>access_<wbr>key</span>
+        <span id="secondary_access_key_python">
+<a href="#secondary_access_key_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>access_<wbr>key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2004,7 +2366,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>secondary_<wbr>blob_<wbr>connection_<wbr>string</span>
+        <span id="secondary_blob_connection_string_python">
+<a href="#secondary_blob_connection_string_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>blob_<wbr>connection_<wbr>string</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2013,7 +2377,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>secondary_<wbr>blob_<wbr>endpoint</span>
+        <span id="secondary_blob_endpoint_python">
+<a href="#secondary_blob_endpoint_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>blob_<wbr>endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2022,7 +2388,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>secondary_<wbr>blob_<wbr>host</span>
+        <span id="secondary_blob_host_python">
+<a href="#secondary_blob_host_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>blob_<wbr>host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2031,7 +2399,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>secondary_<wbr>connection_<wbr>string</span>
+        <span id="secondary_connection_string_python">
+<a href="#secondary_connection_string_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>connection_<wbr>string</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2040,7 +2410,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>secondary_<wbr>dfs_<wbr>endpoint</span>
+        <span id="secondary_dfs_endpoint_python">
+<a href="#secondary_dfs_endpoint_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>dfs_<wbr>endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2049,7 +2421,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>secondary_<wbr>dfs_<wbr>host</span>
+        <span id="secondary_dfs_host_python">
+<a href="#secondary_dfs_host_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>dfs_<wbr>host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2058,7 +2432,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>secondary_<wbr>file_<wbr>endpoint</span>
+        <span id="secondary_file_endpoint_python">
+<a href="#secondary_file_endpoint_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>file_<wbr>endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2067,7 +2443,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>secondary_<wbr>file_<wbr>host</span>
+        <span id="secondary_file_host_python">
+<a href="#secondary_file_host_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>file_<wbr>host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2076,7 +2454,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>secondary_<wbr>location</span>
+        <span id="secondary_location_python">
+<a href="#secondary_location_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2085,7 +2465,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>secondary_<wbr>queue_<wbr>endpoint</span>
+        <span id="secondary_queue_endpoint_python">
+<a href="#secondary_queue_endpoint_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>queue_<wbr>endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2094,7 +2476,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>secondary_<wbr>queue_<wbr>host</span>
+        <span id="secondary_queue_host_python">
+<a href="#secondary_queue_host_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>queue_<wbr>host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2103,7 +2487,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>secondary_<wbr>table_<wbr>endpoint</span>
+        <span id="secondary_table_endpoint_python">
+<a href="#secondary_table_endpoint_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>table_<wbr>endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2112,7 +2498,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>secondary_<wbr>table_<wbr>host</span>
+        <span id="secondary_table_host_python">
+<a href="#secondary_table_host_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>table_<wbr>host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2121,7 +2509,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>secondary_<wbr>web_<wbr>endpoint</span>
+        <span id="secondary_web_endpoint_python">
+<a href="#secondary_web_endpoint_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>web_<wbr>endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2130,7 +2520,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>secondary_<wbr>web_<wbr>host</span>
+        <span id="secondary_web_host_python">
+<a href="#secondary_web_host_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>web_<wbr>host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2152,7 +2544,7 @@ Get an existing Account resource's state with the given name, ID, and optional e
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/storage/#AccountState">AccountState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/storage/#Account">Account</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/storage/#AccountState">AccountState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/storage/#Account">Account</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -2160,11 +2552,11 @@ Get an existing Account resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAccount<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/storage?tab=doc#AccountState">AccountState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/storage?tab=doc#Account">Account</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAccount<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/storage?tab=doc#AccountState">AccountState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/storage?tab=doc#Account">Account</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Storage.Account.html">Account</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Storage.AccountState.html">AccountState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Storage.Account.html">Account</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Storage.AccountState.html">AccountState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2272,7 +2664,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Access<wbr>Tier</span>
+        <span id="state_accesstier_csharp">
+<a href="#state_accesstier_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Tier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2281,7 +2675,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Account<wbr>Kind</span>
+        <span id="state_accountkind_csharp">
+<a href="#state_accountkind_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Kind</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2290,7 +2686,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Account<wbr>Replication<wbr>Type</span>
+        <span id="state_accountreplicationtype_csharp">
+<a href="#state_accountreplicationtype_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Replication<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2299,7 +2697,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Account<wbr>Tier</span>
+        <span id="state_accounttier_csharp">
+<a href="#state_accounttier_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Tier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2308,7 +2708,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Blob<wbr>Properties</span>
+        <span id="state_blobproperties_csharp">
+<a href="#state_blobproperties_csharp" style="color: inherit; text-decoration: inherit;">Blob<wbr>Properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountblobproperties">Account<wbr>Blob<wbr>Properties<wbr>Args</a></span>
     </dt>
@@ -2317,7 +2719,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Custom<wbr>Domain</span>
+        <span id="state_customdomain_csharp">
+<a href="#state_customdomain_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Domain</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountcustomdomain">Account<wbr>Custom<wbr>Domain<wbr>Args</a></span>
     </dt>
@@ -2326,7 +2730,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enable<wbr>Https<wbr>Traffic<wbr>Only</span>
+        <span id="state_enablehttpstrafficonly_csharp">
+<a href="#state_enablehttpstrafficonly_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Https<wbr>Traffic<wbr>Only</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -2336,7 +2742,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Identity</span>
+        <span id="state_identity_csharp">
+<a href="#state_identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountidentity">Account<wbr>Identity<wbr>Args</a></span>
     </dt>
@@ -2345,7 +2753,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Is<wbr>Hns<wbr>Enabled</span>
+        <span id="state_ishnsenabled_csharp">
+<a href="#state_ishnsenabled_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Hns<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -2354,7 +2764,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Location</span>
+        <span id="state_location_csharp">
+<a href="#state_location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2363,7 +2775,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2372,7 +2786,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Network<wbr>Rules</span>
+        <span id="state_networkrules_csharp">
+<a href="#state_networkrules_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountnetworkrules">Account<wbr>Network<wbr>Rules<wbr>Args</a></span>
     </dt>
@@ -2381,7 +2797,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Primary<wbr>Access<wbr>Key</span>
+        <span id="state_primaryaccesskey_csharp">
+<a href="#state_primaryaccesskey_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Access<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2390,7 +2808,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Primary<wbr>Blob<wbr>Connection<wbr>String</span>
+        <span id="state_primaryblobconnectionstring_csharp">
+<a href="#state_primaryblobconnectionstring_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Blob<wbr>Connection<wbr>String</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2399,7 +2819,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Primary<wbr>Blob<wbr>Endpoint</span>
+        <span id="state_primaryblobendpoint_csharp">
+<a href="#state_primaryblobendpoint_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Blob<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2408,7 +2830,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Primary<wbr>Blob<wbr>Host</span>
+        <span id="state_primaryblobhost_csharp">
+<a href="#state_primaryblobhost_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Blob<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2417,7 +2841,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Primary<wbr>Connection<wbr>String</span>
+        <span id="state_primaryconnectionstring_csharp">
+<a href="#state_primaryconnectionstring_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Connection<wbr>String</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2426,7 +2852,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Primary<wbr>Dfs<wbr>Endpoint</span>
+        <span id="state_primarydfsendpoint_csharp">
+<a href="#state_primarydfsendpoint_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Dfs<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2435,7 +2863,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Primary<wbr>Dfs<wbr>Host</span>
+        <span id="state_primarydfshost_csharp">
+<a href="#state_primarydfshost_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Dfs<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2444,7 +2874,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Primary<wbr>File<wbr>Endpoint</span>
+        <span id="state_primaryfileendpoint_csharp">
+<a href="#state_primaryfileendpoint_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>File<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2453,7 +2885,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Primary<wbr>File<wbr>Host</span>
+        <span id="state_primaryfilehost_csharp">
+<a href="#state_primaryfilehost_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>File<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2462,7 +2896,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Primary<wbr>Location</span>
+        <span id="state_primarylocation_csharp">
+<a href="#state_primarylocation_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2471,7 +2907,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Primary<wbr>Queue<wbr>Endpoint</span>
+        <span id="state_primaryqueueendpoint_csharp">
+<a href="#state_primaryqueueendpoint_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Queue<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2480,7 +2918,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Primary<wbr>Queue<wbr>Host</span>
+        <span id="state_primaryqueuehost_csharp">
+<a href="#state_primaryqueuehost_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Queue<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2489,7 +2929,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Primary<wbr>Table<wbr>Endpoint</span>
+        <span id="state_primarytableendpoint_csharp">
+<a href="#state_primarytableendpoint_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Table<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2498,7 +2940,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Primary<wbr>Table<wbr>Host</span>
+        <span id="state_primarytablehost_csharp">
+<a href="#state_primarytablehost_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Table<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2507,7 +2951,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Primary<wbr>Web<wbr>Endpoint</span>
+        <span id="state_primarywebendpoint_csharp">
+<a href="#state_primarywebendpoint_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Web<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2516,7 +2962,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Primary<wbr>Web<wbr>Host</span>
+        <span id="state_primarywebhost_csharp">
+<a href="#state_primarywebhost_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Web<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2525,7 +2973,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Queue<wbr>Properties</span>
+        <span id="state_queueproperties_csharp">
+<a href="#state_queueproperties_csharp" style="color: inherit; text-decoration: inherit;">Queue<wbr>Properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountqueueproperties">Account<wbr>Queue<wbr>Properties<wbr>Args</a></span>
     </dt>
@@ -2534,7 +2984,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="state_resourcegroupname_csharp">
+<a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2543,7 +2995,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Secondary<wbr>Access<wbr>Key</span>
+        <span id="state_secondaryaccesskey_csharp">
+<a href="#state_secondaryaccesskey_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Access<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2552,7 +3006,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Secondary<wbr>Blob<wbr>Connection<wbr>String</span>
+        <span id="state_secondaryblobconnectionstring_csharp">
+<a href="#state_secondaryblobconnectionstring_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Blob<wbr>Connection<wbr>String</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2561,7 +3017,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Secondary<wbr>Blob<wbr>Endpoint</span>
+        <span id="state_secondaryblobendpoint_csharp">
+<a href="#state_secondaryblobendpoint_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Blob<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2570,7 +3028,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Secondary<wbr>Blob<wbr>Host</span>
+        <span id="state_secondaryblobhost_csharp">
+<a href="#state_secondaryblobhost_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Blob<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2579,7 +3039,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Secondary<wbr>Connection<wbr>String</span>
+        <span id="state_secondaryconnectionstring_csharp">
+<a href="#state_secondaryconnectionstring_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Connection<wbr>String</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2588,7 +3050,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Secondary<wbr>Dfs<wbr>Endpoint</span>
+        <span id="state_secondarydfsendpoint_csharp">
+<a href="#state_secondarydfsendpoint_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Dfs<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2597,7 +3061,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Secondary<wbr>Dfs<wbr>Host</span>
+        <span id="state_secondarydfshost_csharp">
+<a href="#state_secondarydfshost_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Dfs<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2606,7 +3072,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Secondary<wbr>File<wbr>Endpoint</span>
+        <span id="state_secondaryfileendpoint_csharp">
+<a href="#state_secondaryfileendpoint_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>File<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2615,7 +3083,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Secondary<wbr>File<wbr>Host</span>
+        <span id="state_secondaryfilehost_csharp">
+<a href="#state_secondaryfilehost_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>File<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2624,7 +3094,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Secondary<wbr>Location</span>
+        <span id="state_secondarylocation_csharp">
+<a href="#state_secondarylocation_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2633,7 +3105,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Secondary<wbr>Queue<wbr>Endpoint</span>
+        <span id="state_secondaryqueueendpoint_csharp">
+<a href="#state_secondaryqueueendpoint_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Queue<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2642,7 +3116,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Secondary<wbr>Queue<wbr>Host</span>
+        <span id="state_secondaryqueuehost_csharp">
+<a href="#state_secondaryqueuehost_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Queue<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2651,7 +3127,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Secondary<wbr>Table<wbr>Endpoint</span>
+        <span id="state_secondarytableendpoint_csharp">
+<a href="#state_secondarytableendpoint_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Table<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2660,7 +3138,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Secondary<wbr>Table<wbr>Host</span>
+        <span id="state_secondarytablehost_csharp">
+<a href="#state_secondarytablehost_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Table<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2669,7 +3149,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Secondary<wbr>Web<wbr>Endpoint</span>
+        <span id="state_secondarywebendpoint_csharp">
+<a href="#state_secondarywebendpoint_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Web<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2678,7 +3160,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Secondary<wbr>Web<wbr>Host</span>
+        <span id="state_secondarywebhost_csharp">
+<a href="#state_secondarywebhost_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Web<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2687,7 +3171,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Static<wbr>Website</span>
+        <span id="state_staticwebsite_csharp">
+<a href="#state_staticwebsite_csharp" style="color: inherit; text-decoration: inherit;">Static<wbr>Website</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountstaticwebsite">Account<wbr>Static<wbr>Website<wbr>Args</a></span>
     </dt>
@@ -2696,7 +3182,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_csharp">
+<a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -2712,7 +3200,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Access<wbr>Tier</span>
+        <span id="state_accesstier_go">
+<a href="#state_accesstier_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Tier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2721,7 +3211,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Account<wbr>Kind</span>
+        <span id="state_accountkind_go">
+<a href="#state_accountkind_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Kind</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2730,7 +3222,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Account<wbr>Replication<wbr>Type</span>
+        <span id="state_accountreplicationtype_go">
+<a href="#state_accountreplicationtype_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Replication<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2739,7 +3233,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Account<wbr>Tier</span>
+        <span id="state_accounttier_go">
+<a href="#state_accounttier_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Tier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2748,7 +3244,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Blob<wbr>Properties</span>
+        <span id="state_blobproperties_go">
+<a href="#state_blobproperties_go" style="color: inherit; text-decoration: inherit;">Blob<wbr>Properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountblobproperties">Account<wbr>Blob<wbr>Properties</a></span>
     </dt>
@@ -2757,7 +3255,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Custom<wbr>Domain</span>
+        <span id="state_customdomain_go">
+<a href="#state_customdomain_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Domain</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountcustomdomain">Account<wbr>Custom<wbr>Domain</a></span>
     </dt>
@@ -2766,7 +3266,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enable<wbr>Https<wbr>Traffic<wbr>Only</span>
+        <span id="state_enablehttpstrafficonly_go">
+<a href="#state_enablehttpstrafficonly_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Https<wbr>Traffic<wbr>Only</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -2776,7 +3278,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Identity</span>
+        <span id="state_identity_go">
+<a href="#state_identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountidentity">Account<wbr>Identity</a></span>
     </dt>
@@ -2785,7 +3289,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Is<wbr>Hns<wbr>Enabled</span>
+        <span id="state_ishnsenabled_go">
+<a href="#state_ishnsenabled_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Hns<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -2794,7 +3300,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Location</span>
+        <span id="state_location_go">
+<a href="#state_location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2803,7 +3311,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2812,7 +3322,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Network<wbr>Rules</span>
+        <span id="state_networkrules_go">
+<a href="#state_networkrules_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountnetworkrules">Account<wbr>Network<wbr>Rules<wbr>Type</a></span>
     </dt>
@@ -2821,7 +3333,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Primary<wbr>Access<wbr>Key</span>
+        <span id="state_primaryaccesskey_go">
+<a href="#state_primaryaccesskey_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Access<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2830,7 +3344,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Primary<wbr>Blob<wbr>Connection<wbr>String</span>
+        <span id="state_primaryblobconnectionstring_go">
+<a href="#state_primaryblobconnectionstring_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Blob<wbr>Connection<wbr>String</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2839,7 +3355,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Primary<wbr>Blob<wbr>Endpoint</span>
+        <span id="state_primaryblobendpoint_go">
+<a href="#state_primaryblobendpoint_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Blob<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2848,7 +3366,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Primary<wbr>Blob<wbr>Host</span>
+        <span id="state_primaryblobhost_go">
+<a href="#state_primaryblobhost_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Blob<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2857,7 +3377,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Primary<wbr>Connection<wbr>String</span>
+        <span id="state_primaryconnectionstring_go">
+<a href="#state_primaryconnectionstring_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Connection<wbr>String</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2866,7 +3388,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Primary<wbr>Dfs<wbr>Endpoint</span>
+        <span id="state_primarydfsendpoint_go">
+<a href="#state_primarydfsendpoint_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Dfs<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2875,7 +3399,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Primary<wbr>Dfs<wbr>Host</span>
+        <span id="state_primarydfshost_go">
+<a href="#state_primarydfshost_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Dfs<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2884,7 +3410,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Primary<wbr>File<wbr>Endpoint</span>
+        <span id="state_primaryfileendpoint_go">
+<a href="#state_primaryfileendpoint_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>File<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2893,7 +3421,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Primary<wbr>File<wbr>Host</span>
+        <span id="state_primaryfilehost_go">
+<a href="#state_primaryfilehost_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>File<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2902,7 +3432,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Primary<wbr>Location</span>
+        <span id="state_primarylocation_go">
+<a href="#state_primarylocation_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2911,7 +3443,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Primary<wbr>Queue<wbr>Endpoint</span>
+        <span id="state_primaryqueueendpoint_go">
+<a href="#state_primaryqueueendpoint_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Queue<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2920,7 +3454,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Primary<wbr>Queue<wbr>Host</span>
+        <span id="state_primaryqueuehost_go">
+<a href="#state_primaryqueuehost_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Queue<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2929,7 +3465,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Primary<wbr>Table<wbr>Endpoint</span>
+        <span id="state_primarytableendpoint_go">
+<a href="#state_primarytableendpoint_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Table<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2938,7 +3476,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Primary<wbr>Table<wbr>Host</span>
+        <span id="state_primarytablehost_go">
+<a href="#state_primarytablehost_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Table<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2947,7 +3487,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Primary<wbr>Web<wbr>Endpoint</span>
+        <span id="state_primarywebendpoint_go">
+<a href="#state_primarywebendpoint_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Web<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2956,7 +3498,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Primary<wbr>Web<wbr>Host</span>
+        <span id="state_primarywebhost_go">
+<a href="#state_primarywebhost_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Web<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2965,7 +3509,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Queue<wbr>Properties</span>
+        <span id="state_queueproperties_go">
+<a href="#state_queueproperties_go" style="color: inherit; text-decoration: inherit;">Queue<wbr>Properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountqueueproperties">Account<wbr>Queue<wbr>Properties</a></span>
     </dt>
@@ -2974,7 +3520,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="state_resourcegroupname_go">
+<a href="#state_resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2983,7 +3531,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Secondary<wbr>Access<wbr>Key</span>
+        <span id="state_secondaryaccesskey_go">
+<a href="#state_secondaryaccesskey_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Access<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2992,7 +3542,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Secondary<wbr>Blob<wbr>Connection<wbr>String</span>
+        <span id="state_secondaryblobconnectionstring_go">
+<a href="#state_secondaryblobconnectionstring_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Blob<wbr>Connection<wbr>String</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3001,7 +3553,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Secondary<wbr>Blob<wbr>Endpoint</span>
+        <span id="state_secondaryblobendpoint_go">
+<a href="#state_secondaryblobendpoint_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Blob<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3010,7 +3564,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Secondary<wbr>Blob<wbr>Host</span>
+        <span id="state_secondaryblobhost_go">
+<a href="#state_secondaryblobhost_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Blob<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3019,7 +3575,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Secondary<wbr>Connection<wbr>String</span>
+        <span id="state_secondaryconnectionstring_go">
+<a href="#state_secondaryconnectionstring_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Connection<wbr>String</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3028,7 +3586,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Secondary<wbr>Dfs<wbr>Endpoint</span>
+        <span id="state_secondarydfsendpoint_go">
+<a href="#state_secondarydfsendpoint_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Dfs<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3037,7 +3597,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Secondary<wbr>Dfs<wbr>Host</span>
+        <span id="state_secondarydfshost_go">
+<a href="#state_secondarydfshost_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Dfs<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3046,7 +3608,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Secondary<wbr>File<wbr>Endpoint</span>
+        <span id="state_secondaryfileendpoint_go">
+<a href="#state_secondaryfileendpoint_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>File<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3055,7 +3619,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Secondary<wbr>File<wbr>Host</span>
+        <span id="state_secondaryfilehost_go">
+<a href="#state_secondaryfilehost_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>File<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3064,7 +3630,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Secondary<wbr>Location</span>
+        <span id="state_secondarylocation_go">
+<a href="#state_secondarylocation_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3073,7 +3641,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Secondary<wbr>Queue<wbr>Endpoint</span>
+        <span id="state_secondaryqueueendpoint_go">
+<a href="#state_secondaryqueueendpoint_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Queue<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3082,7 +3652,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Secondary<wbr>Queue<wbr>Host</span>
+        <span id="state_secondaryqueuehost_go">
+<a href="#state_secondaryqueuehost_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Queue<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3091,7 +3663,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Secondary<wbr>Table<wbr>Endpoint</span>
+        <span id="state_secondarytableendpoint_go">
+<a href="#state_secondarytableendpoint_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Table<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3100,7 +3674,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Secondary<wbr>Table<wbr>Host</span>
+        <span id="state_secondarytablehost_go">
+<a href="#state_secondarytablehost_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Table<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3109,7 +3685,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Secondary<wbr>Web<wbr>Endpoint</span>
+        <span id="state_secondarywebendpoint_go">
+<a href="#state_secondarywebendpoint_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Web<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3118,7 +3696,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Secondary<wbr>Web<wbr>Host</span>
+        <span id="state_secondarywebhost_go">
+<a href="#state_secondarywebhost_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Web<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3127,7 +3707,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Static<wbr>Website</span>
+        <span id="state_staticwebsite_go">
+<a href="#state_staticwebsite_go" style="color: inherit; text-decoration: inherit;">Static<wbr>Website</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountstaticwebsite">Account<wbr>Static<wbr>Website</a></span>
     </dt>
@@ -3136,7 +3718,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_go">
+<a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -3152,7 +3736,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>access<wbr>Tier</span>
+        <span id="state_accesstier_nodejs">
+<a href="#state_accesstier_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Tier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3161,7 +3747,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>account<wbr>Kind</span>
+        <span id="state_accountkind_nodejs">
+<a href="#state_accountkind_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Kind</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3170,7 +3758,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>account<wbr>Replication<wbr>Type</span>
+        <span id="state_accountreplicationtype_nodejs">
+<a href="#state_accountreplicationtype_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Replication<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3179,7 +3769,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>account<wbr>Tier</span>
+        <span id="state_accounttier_nodejs">
+<a href="#state_accounttier_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Tier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3188,7 +3780,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>blob<wbr>Properties</span>
+        <span id="state_blobproperties_nodejs">
+<a href="#state_blobproperties_nodejs" style="color: inherit; text-decoration: inherit;">blob<wbr>Properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountblobproperties">Account<wbr>Blob<wbr>Properties</a></span>
     </dt>
@@ -3197,7 +3791,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>custom<wbr>Domain</span>
+        <span id="state_customdomain_nodejs">
+<a href="#state_customdomain_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Domain</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountcustomdomain">Account<wbr>Custom<wbr>Domain</a></span>
     </dt>
@@ -3206,7 +3802,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>enable<wbr>Https<wbr>Traffic<wbr>Only</span>
+        <span id="state_enablehttpstrafficonly_nodejs">
+<a href="#state_enablehttpstrafficonly_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Https<wbr>Traffic<wbr>Only</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -3216,7 +3814,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>identity</span>
+        <span id="state_identity_nodejs">
+<a href="#state_identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountidentity">Account<wbr>Identity</a></span>
     </dt>
@@ -3225,7 +3825,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>is<wbr>Hns<wbr>Enabled</span>
+        <span id="state_ishnsenabled_nodejs">
+<a href="#state_ishnsenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Hns<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -3234,7 +3836,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>location</span>
+        <span id="state_location_nodejs">
+<a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3243,7 +3847,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3252,7 +3858,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>network<wbr>Rules</span>
+        <span id="state_networkrules_nodejs">
+<a href="#state_networkrules_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountnetworkrules">Account<wbr>Network<wbr>Rules</a></span>
     </dt>
@@ -3261,7 +3869,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>primary<wbr>Access<wbr>Key</span>
+        <span id="state_primaryaccesskey_nodejs">
+<a href="#state_primaryaccesskey_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Access<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3270,7 +3880,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>primary<wbr>Blob<wbr>Connection<wbr>String</span>
+        <span id="state_primaryblobconnectionstring_nodejs">
+<a href="#state_primaryblobconnectionstring_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Blob<wbr>Connection<wbr>String</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3279,7 +3891,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>primary<wbr>Blob<wbr>Endpoint</span>
+        <span id="state_primaryblobendpoint_nodejs">
+<a href="#state_primaryblobendpoint_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Blob<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3288,7 +3902,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>primary<wbr>Blob<wbr>Host</span>
+        <span id="state_primaryblobhost_nodejs">
+<a href="#state_primaryblobhost_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Blob<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3297,7 +3913,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>primary<wbr>Connection<wbr>String</span>
+        <span id="state_primaryconnectionstring_nodejs">
+<a href="#state_primaryconnectionstring_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Connection<wbr>String</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3306,7 +3924,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>primary<wbr>Dfs<wbr>Endpoint</span>
+        <span id="state_primarydfsendpoint_nodejs">
+<a href="#state_primarydfsendpoint_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Dfs<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3315,7 +3935,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>primary<wbr>Dfs<wbr>Host</span>
+        <span id="state_primarydfshost_nodejs">
+<a href="#state_primarydfshost_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Dfs<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3324,7 +3946,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>primary<wbr>File<wbr>Endpoint</span>
+        <span id="state_primaryfileendpoint_nodejs">
+<a href="#state_primaryfileendpoint_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>File<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3333,7 +3957,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>primary<wbr>File<wbr>Host</span>
+        <span id="state_primaryfilehost_nodejs">
+<a href="#state_primaryfilehost_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>File<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3342,7 +3968,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>primary<wbr>Location</span>
+        <span id="state_primarylocation_nodejs">
+<a href="#state_primarylocation_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3351,7 +3979,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>primary<wbr>Queue<wbr>Endpoint</span>
+        <span id="state_primaryqueueendpoint_nodejs">
+<a href="#state_primaryqueueendpoint_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Queue<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3360,7 +3990,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>primary<wbr>Queue<wbr>Host</span>
+        <span id="state_primaryqueuehost_nodejs">
+<a href="#state_primaryqueuehost_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Queue<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3369,7 +4001,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>primary<wbr>Table<wbr>Endpoint</span>
+        <span id="state_primarytableendpoint_nodejs">
+<a href="#state_primarytableendpoint_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Table<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3378,7 +4012,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>primary<wbr>Table<wbr>Host</span>
+        <span id="state_primarytablehost_nodejs">
+<a href="#state_primarytablehost_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Table<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3387,7 +4023,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>primary<wbr>Web<wbr>Endpoint</span>
+        <span id="state_primarywebendpoint_nodejs">
+<a href="#state_primarywebendpoint_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Web<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3396,7 +4034,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>primary<wbr>Web<wbr>Host</span>
+        <span id="state_primarywebhost_nodejs">
+<a href="#state_primarywebhost_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Web<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3405,7 +4045,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>queue<wbr>Properties</span>
+        <span id="state_queueproperties_nodejs">
+<a href="#state_queueproperties_nodejs" style="color: inherit; text-decoration: inherit;">queue<wbr>Properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountqueueproperties">Account<wbr>Queue<wbr>Properties</a></span>
     </dt>
@@ -3414,7 +4056,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource<wbr>Group<wbr>Name</span>
+        <span id="state_resourcegroupname_nodejs">
+<a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3423,7 +4067,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>secondary<wbr>Access<wbr>Key</span>
+        <span id="state_secondaryaccesskey_nodejs">
+<a href="#state_secondaryaccesskey_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Access<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3432,7 +4078,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>secondary<wbr>Blob<wbr>Connection<wbr>String</span>
+        <span id="state_secondaryblobconnectionstring_nodejs">
+<a href="#state_secondaryblobconnectionstring_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Blob<wbr>Connection<wbr>String</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3441,7 +4089,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>secondary<wbr>Blob<wbr>Endpoint</span>
+        <span id="state_secondaryblobendpoint_nodejs">
+<a href="#state_secondaryblobendpoint_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Blob<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3450,7 +4100,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>secondary<wbr>Blob<wbr>Host</span>
+        <span id="state_secondaryblobhost_nodejs">
+<a href="#state_secondaryblobhost_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Blob<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3459,7 +4111,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>secondary<wbr>Connection<wbr>String</span>
+        <span id="state_secondaryconnectionstring_nodejs">
+<a href="#state_secondaryconnectionstring_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Connection<wbr>String</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3468,7 +4122,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>secondary<wbr>Dfs<wbr>Endpoint</span>
+        <span id="state_secondarydfsendpoint_nodejs">
+<a href="#state_secondarydfsendpoint_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Dfs<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3477,7 +4133,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>secondary<wbr>Dfs<wbr>Host</span>
+        <span id="state_secondarydfshost_nodejs">
+<a href="#state_secondarydfshost_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Dfs<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3486,7 +4144,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>secondary<wbr>File<wbr>Endpoint</span>
+        <span id="state_secondaryfileendpoint_nodejs">
+<a href="#state_secondaryfileendpoint_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>File<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3495,7 +4155,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>secondary<wbr>File<wbr>Host</span>
+        <span id="state_secondaryfilehost_nodejs">
+<a href="#state_secondaryfilehost_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>File<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3504,7 +4166,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>secondary<wbr>Location</span>
+        <span id="state_secondarylocation_nodejs">
+<a href="#state_secondarylocation_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3513,7 +4177,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>secondary<wbr>Queue<wbr>Endpoint</span>
+        <span id="state_secondaryqueueendpoint_nodejs">
+<a href="#state_secondaryqueueendpoint_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Queue<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3522,7 +4188,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>secondary<wbr>Queue<wbr>Host</span>
+        <span id="state_secondaryqueuehost_nodejs">
+<a href="#state_secondaryqueuehost_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Queue<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3531,7 +4199,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>secondary<wbr>Table<wbr>Endpoint</span>
+        <span id="state_secondarytableendpoint_nodejs">
+<a href="#state_secondarytableendpoint_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Table<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3540,7 +4210,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>secondary<wbr>Table<wbr>Host</span>
+        <span id="state_secondarytablehost_nodejs">
+<a href="#state_secondarytablehost_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Table<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3549,7 +4221,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>secondary<wbr>Web<wbr>Endpoint</span>
+        <span id="state_secondarywebendpoint_nodejs">
+<a href="#state_secondarywebendpoint_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Web<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3558,7 +4232,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>secondary<wbr>Web<wbr>Host</span>
+        <span id="state_secondarywebhost_nodejs">
+<a href="#state_secondarywebhost_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Web<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3567,7 +4243,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>static<wbr>Website</span>
+        <span id="state_staticwebsite_nodejs">
+<a href="#state_staticwebsite_nodejs" style="color: inherit; text-decoration: inherit;">static<wbr>Website</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountstaticwebsite">Account<wbr>Static<wbr>Website</a></span>
     </dt>
@@ -3576,7 +4254,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_nodejs">
+<a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -3592,7 +4272,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>access_<wbr>tier</span>
+        <span id="state_access_tier_python">
+<a href="#state_access_tier_python" style="color: inherit; text-decoration: inherit;">access_<wbr>tier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3601,7 +4283,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>account_<wbr>kind</span>
+        <span id="state_account_kind_python">
+<a href="#state_account_kind_python" style="color: inherit; text-decoration: inherit;">account_<wbr>kind</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3610,7 +4294,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>account_<wbr>replication_<wbr>type</span>
+        <span id="state_account_replication_type_python">
+<a href="#state_account_replication_type_python" style="color: inherit; text-decoration: inherit;">account_<wbr>replication_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3619,7 +4305,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>account_<wbr>tier</span>
+        <span id="state_account_tier_python">
+<a href="#state_account_tier_python" style="color: inherit; text-decoration: inherit;">account_<wbr>tier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3628,7 +4316,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>blob_<wbr>properties</span>
+        <span id="state_blob_properties_python">
+<a href="#state_blob_properties_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountblobproperties">Dict[Account<wbr>Blob<wbr>Properties]</a></span>
     </dt>
@@ -3637,7 +4327,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>custom_<wbr>domain</span>
+        <span id="state_custom_domain_python">
+<a href="#state_custom_domain_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>domain</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountcustomdomain">Dict[Account<wbr>Custom<wbr>Domain]</a></span>
     </dt>
@@ -3646,7 +4338,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>enable_<wbr>https_<wbr>traffic_<wbr>only</span>
+        <span id="state_enable_https_traffic_only_python">
+<a href="#state_enable_https_traffic_only_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>https_<wbr>traffic_<wbr>only</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -3656,7 +4350,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>identity</span>
+        <span id="state_identity_python">
+<a href="#state_identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountidentity">Dict[Account<wbr>Identity]</a></span>
     </dt>
@@ -3665,7 +4361,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>is_<wbr>hns_<wbr>enabled</span>
+        <span id="state_is_hns_enabled_python">
+<a href="#state_is_hns_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>hns_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -3674,7 +4372,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>location</span>
+        <span id="state_location_python">
+<a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3683,7 +4383,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3692,7 +4394,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>network_<wbr>rules</span>
+        <span id="state_network_rules_python">
+<a href="#state_network_rules_python" style="color: inherit; text-decoration: inherit;">network_<wbr>rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountnetworkrules">Dict[Account<wbr>Network<wbr>Rules]</a></span>
     </dt>
@@ -3701,7 +4405,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>primary_<wbr>access_<wbr>key</span>
+        <span id="state_primary_access_key_python">
+<a href="#state_primary_access_key_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>access_<wbr>key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3710,7 +4416,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>primary_<wbr>blob_<wbr>connection_<wbr>string</span>
+        <span id="state_primary_blob_connection_string_python">
+<a href="#state_primary_blob_connection_string_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>blob_<wbr>connection_<wbr>string</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3719,7 +4427,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>primary_<wbr>blob_<wbr>endpoint</span>
+        <span id="state_primary_blob_endpoint_python">
+<a href="#state_primary_blob_endpoint_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>blob_<wbr>endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3728,7 +4438,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>primary_<wbr>blob_<wbr>host</span>
+        <span id="state_primary_blob_host_python">
+<a href="#state_primary_blob_host_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>blob_<wbr>host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3737,7 +4449,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>primary_<wbr>connection_<wbr>string</span>
+        <span id="state_primary_connection_string_python">
+<a href="#state_primary_connection_string_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>connection_<wbr>string</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3746,7 +4460,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>primary_<wbr>dfs_<wbr>endpoint</span>
+        <span id="state_primary_dfs_endpoint_python">
+<a href="#state_primary_dfs_endpoint_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>dfs_<wbr>endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3755,7 +4471,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>primary_<wbr>dfs_<wbr>host</span>
+        <span id="state_primary_dfs_host_python">
+<a href="#state_primary_dfs_host_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>dfs_<wbr>host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3764,7 +4482,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>primary_<wbr>file_<wbr>endpoint</span>
+        <span id="state_primary_file_endpoint_python">
+<a href="#state_primary_file_endpoint_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>file_<wbr>endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3773,7 +4493,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>primary_<wbr>file_<wbr>host</span>
+        <span id="state_primary_file_host_python">
+<a href="#state_primary_file_host_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>file_<wbr>host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3782,7 +4504,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>primary_<wbr>location</span>
+        <span id="state_primary_location_python">
+<a href="#state_primary_location_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3791,7 +4515,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>primary_<wbr>queue_<wbr>endpoint</span>
+        <span id="state_primary_queue_endpoint_python">
+<a href="#state_primary_queue_endpoint_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>queue_<wbr>endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3800,7 +4526,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>primary_<wbr>queue_<wbr>host</span>
+        <span id="state_primary_queue_host_python">
+<a href="#state_primary_queue_host_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>queue_<wbr>host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3809,7 +4537,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>primary_<wbr>table_<wbr>endpoint</span>
+        <span id="state_primary_table_endpoint_python">
+<a href="#state_primary_table_endpoint_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>table_<wbr>endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3818,7 +4548,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>primary_<wbr>table_<wbr>host</span>
+        <span id="state_primary_table_host_python">
+<a href="#state_primary_table_host_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>table_<wbr>host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3827,7 +4559,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>primary_<wbr>web_<wbr>endpoint</span>
+        <span id="state_primary_web_endpoint_python">
+<a href="#state_primary_web_endpoint_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>web_<wbr>endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3836,7 +4570,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>primary_<wbr>web_<wbr>host</span>
+        <span id="state_primary_web_host_python">
+<a href="#state_primary_web_host_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>web_<wbr>host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3845,7 +4581,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>queue_<wbr>properties</span>
+        <span id="state_queue_properties_python">
+<a href="#state_queue_properties_python" style="color: inherit; text-decoration: inherit;">queue_<wbr>properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountqueueproperties">Dict[Account<wbr>Queue<wbr>Properties]</a></span>
     </dt>
@@ -3854,7 +4592,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource_<wbr>group_<wbr>name</span>
+        <span id="state_resource_group_name_python">
+<a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3863,7 +4603,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>secondary_<wbr>access_<wbr>key</span>
+        <span id="state_secondary_access_key_python">
+<a href="#state_secondary_access_key_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>access_<wbr>key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3872,7 +4614,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>secondary_<wbr>blob_<wbr>connection_<wbr>string</span>
+        <span id="state_secondary_blob_connection_string_python">
+<a href="#state_secondary_blob_connection_string_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>blob_<wbr>connection_<wbr>string</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3881,7 +4625,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>secondary_<wbr>blob_<wbr>endpoint</span>
+        <span id="state_secondary_blob_endpoint_python">
+<a href="#state_secondary_blob_endpoint_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>blob_<wbr>endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3890,7 +4636,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>secondary_<wbr>blob_<wbr>host</span>
+        <span id="state_secondary_blob_host_python">
+<a href="#state_secondary_blob_host_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>blob_<wbr>host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3899,7 +4647,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>secondary_<wbr>connection_<wbr>string</span>
+        <span id="state_secondary_connection_string_python">
+<a href="#state_secondary_connection_string_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>connection_<wbr>string</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3908,7 +4658,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>secondary_<wbr>dfs_<wbr>endpoint</span>
+        <span id="state_secondary_dfs_endpoint_python">
+<a href="#state_secondary_dfs_endpoint_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>dfs_<wbr>endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3917,7 +4669,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>secondary_<wbr>dfs_<wbr>host</span>
+        <span id="state_secondary_dfs_host_python">
+<a href="#state_secondary_dfs_host_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>dfs_<wbr>host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3926,7 +4680,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>secondary_<wbr>file_<wbr>endpoint</span>
+        <span id="state_secondary_file_endpoint_python">
+<a href="#state_secondary_file_endpoint_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>file_<wbr>endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3935,7 +4691,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>secondary_<wbr>file_<wbr>host</span>
+        <span id="state_secondary_file_host_python">
+<a href="#state_secondary_file_host_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>file_<wbr>host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3944,7 +4702,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>secondary_<wbr>location</span>
+        <span id="state_secondary_location_python">
+<a href="#state_secondary_location_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3953,7 +4713,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>secondary_<wbr>queue_<wbr>endpoint</span>
+        <span id="state_secondary_queue_endpoint_python">
+<a href="#state_secondary_queue_endpoint_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>queue_<wbr>endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3962,7 +4724,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>secondary_<wbr>queue_<wbr>host</span>
+        <span id="state_secondary_queue_host_python">
+<a href="#state_secondary_queue_host_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>queue_<wbr>host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3971,7 +4735,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>secondary_<wbr>table_<wbr>endpoint</span>
+        <span id="state_secondary_table_endpoint_python">
+<a href="#state_secondary_table_endpoint_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>table_<wbr>endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3980,7 +4746,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>secondary_<wbr>table_<wbr>host</span>
+        <span id="state_secondary_table_host_python">
+<a href="#state_secondary_table_host_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>table_<wbr>host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3989,7 +4757,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>secondary_<wbr>web_<wbr>endpoint</span>
+        <span id="state_secondary_web_endpoint_python">
+<a href="#state_secondary_web_endpoint_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>web_<wbr>endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3998,7 +4768,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>secondary_<wbr>web_<wbr>host</span>
+        <span id="state_secondary_web_host_python">
+<a href="#state_secondary_web_host_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>web_<wbr>host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4007,7 +4779,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>static_<wbr>website</span>
+        <span id="state_static_website_python">
+<a href="#state_static_website_python" style="color: inherit; text-decoration: inherit;">static_<wbr>website</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountstaticwebsite">Dict[Account<wbr>Static<wbr>Website]</a></span>
     </dt>
@@ -4016,7 +4790,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_python">
+<a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -4058,7 +4834,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cors<wbr>Rules</span>
+        <span id="corsrules_csharp">
+<a href="#corsrules_csharp" style="color: inherit; text-decoration: inherit;">Cors<wbr>Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountblobpropertiescorsrule">List&lt;Account<wbr>Blob<wbr>Properties<wbr>Cors<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
@@ -4067,7 +4845,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Delete<wbr>Retention<wbr>Policy</span>
+        <span id="deleteretentionpolicy_csharp">
+<a href="#deleteretentionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>Retention<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountblobpropertiesdeleteretentionpolicy">Account<wbr>Blob<wbr>Properties<wbr>Delete<wbr>Retention<wbr>Policy<wbr>Args</a></span>
     </dt>
@@ -4083,7 +4863,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cors<wbr>Rules</span>
+        <span id="corsrules_go">
+<a href="#corsrules_go" style="color: inherit; text-decoration: inherit;">Cors<wbr>Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountblobpropertiescorsrule">[]Account<wbr>Blob<wbr>Properties<wbr>Cors<wbr>Rule</a></span>
     </dt>
@@ -4092,7 +4874,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Delete<wbr>Retention<wbr>Policy</span>
+        <span id="deleteretentionpolicy_go">
+<a href="#deleteretentionpolicy_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>Retention<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountblobpropertiesdeleteretentionpolicy">Account<wbr>Blob<wbr>Properties<wbr>Delete<wbr>Retention<wbr>Policy</a></span>
     </dt>
@@ -4108,7 +4892,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>cors<wbr>Rules</span>
+        <span id="corsrules_nodejs">
+<a href="#corsrules_nodejs" style="color: inherit; text-decoration: inherit;">cors<wbr>Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountblobpropertiescorsrule">Account<wbr>Blob<wbr>Properties<wbr>Cors<wbr>Rule[]</a></span>
     </dt>
@@ -4117,7 +4903,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>delete<wbr>Retention<wbr>Policy</span>
+        <span id="deleteretentionpolicy_nodejs">
+<a href="#deleteretentionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Retention<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountblobpropertiesdeleteretentionpolicy">Account<wbr>Blob<wbr>Properties<wbr>Delete<wbr>Retention<wbr>Policy</a></span>
     </dt>
@@ -4133,7 +4921,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>cors<wbr>Rules</span>
+        <span id="corsrules_python">
+<a href="#corsrules_python" style="color: inherit; text-decoration: inherit;">cors<wbr>Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountblobpropertiescorsrule">List[Account<wbr>Blob<wbr>Properties<wbr>Cors<wbr>Rule]</a></span>
     </dt>
@@ -4142,7 +4932,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>delete<wbr>Retention<wbr>Policy</span>
+        <span id="deleteretentionpolicy_python">
+<a href="#deleteretentionpolicy_python" style="color: inherit; text-decoration: inherit;">delete<wbr>Retention<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountblobpropertiesdeleteretentionpolicy">Dict[Account<wbr>Blob<wbr>Properties<wbr>Delete<wbr>Retention<wbr>Policy]</a></span>
     </dt>
@@ -4176,7 +4968,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-required"
             title="Required">
-        <span>Allowed<wbr>Headers</span>
+        <span id="allowedheaders_csharp">
+<a href="#allowedheaders_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Headers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -4185,17 +4979,21 @@ for more information. Defaults to `true`.
 
     <dt class="property-required"
             title="Required">
-        <span>Allowed<wbr>Methods</span>
+        <span id="allowedmethods_csharp">
+<a href="#allowedmethods_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Methods</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of http headers that are allowed to be executed by the origin. Valid options are
-`DELETE`, `GET`, `HEAD`, `MERGE`, `POST`, `OPTIONS` or `PUT`.
+`DELETE`, `GET`, `HEAD`, `MERGE`, `POST`, `OPTIONS`, `PUT` or `PATCH`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span>Allowed<wbr>Origins</span>
+        <span id="allowedorigins_csharp">
+<a href="#allowedorigins_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Origins</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -4204,7 +5002,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-required"
             title="Required">
-        <span>Exposed<wbr>Headers</span>
+        <span id="exposedheaders_csharp">
+<a href="#exposedheaders_csharp" style="color: inherit; text-decoration: inherit;">Exposed<wbr>Headers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -4213,7 +5013,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-required"
             title="Required">
-        <span>Max<wbr>Age<wbr>In<wbr>Seconds</span>
+        <span id="maxageinseconds_csharp">
+<a href="#maxageinseconds_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Age<wbr>In<wbr>Seconds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -4229,7 +5031,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-required"
             title="Required">
-        <span>Allowed<wbr>Headers</span>
+        <span id="allowedheaders_go">
+<a href="#allowedheaders_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Headers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -4238,17 +5042,21 @@ for more information. Defaults to `true`.
 
     <dt class="property-required"
             title="Required">
-        <span>Allowed<wbr>Methods</span>
+        <span id="allowedmethods_go">
+<a href="#allowedmethods_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Methods</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}A list of http headers that are allowed to be executed by the origin. Valid options are
-`DELETE`, `GET`, `HEAD`, `MERGE`, `POST`, `OPTIONS` or `PUT`.
+`DELETE`, `GET`, `HEAD`, `MERGE`, `POST`, `OPTIONS`, `PUT` or `PATCH`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span>Allowed<wbr>Origins</span>
+        <span id="allowedorigins_go">
+<a href="#allowedorigins_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Origins</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -4257,7 +5065,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-required"
             title="Required">
-        <span>Exposed<wbr>Headers</span>
+        <span id="exposedheaders_go">
+<a href="#exposedheaders_go" style="color: inherit; text-decoration: inherit;">Exposed<wbr>Headers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -4266,7 +5076,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-required"
             title="Required">
-        <span>Max<wbr>Age<wbr>In<wbr>Seconds</span>
+        <span id="maxageinseconds_go">
+<a href="#maxageinseconds_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Age<wbr>In<wbr>Seconds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -4282,7 +5094,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-required"
             title="Required">
-        <span>allowed<wbr>Headers</span>
+        <span id="allowedheaders_nodejs">
+<a href="#allowedheaders_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Headers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -4291,17 +5105,21 @@ for more information. Defaults to `true`.
 
     <dt class="property-required"
             title="Required">
-        <span>allowed<wbr>Methods</span>
+        <span id="allowedmethods_nodejs">
+<a href="#allowedmethods_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Methods</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}A list of http headers that are allowed to be executed by the origin. Valid options are
-`DELETE`, `GET`, `HEAD`, `MERGE`, `POST`, `OPTIONS` or `PUT`.
+`DELETE`, `GET`, `HEAD`, `MERGE`, `POST`, `OPTIONS`, `PUT` or `PATCH`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span>allowed<wbr>Origins</span>
+        <span id="allowedorigins_nodejs">
+<a href="#allowedorigins_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Origins</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -4310,7 +5128,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-required"
             title="Required">
-        <span>exposed<wbr>Headers</span>
+        <span id="exposedheaders_nodejs">
+<a href="#exposedheaders_nodejs" style="color: inherit; text-decoration: inherit;">exposed<wbr>Headers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -4319,7 +5139,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-required"
             title="Required">
-        <span>max<wbr>Age<wbr>In<wbr>Seconds</span>
+        <span id="maxageinseconds_nodejs">
+<a href="#maxageinseconds_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Age<wbr>In<wbr>Seconds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -4335,7 +5157,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-required"
             title="Required">
-        <span>allowed<wbr>Headers</span>
+        <span id="allowedheaders_python">
+<a href="#allowedheaders_python" style="color: inherit; text-decoration: inherit;">allowed<wbr>Headers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -4344,17 +5168,21 @@ for more information. Defaults to `true`.
 
     <dt class="property-required"
             title="Required">
-        <span>allowed<wbr>Methods</span>
+        <span id="allowedmethods_python">
+<a href="#allowedmethods_python" style="color: inherit; text-decoration: inherit;">allowed<wbr>Methods</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of http headers that are allowed to be executed by the origin. Valid options are
-`DELETE`, `GET`, `HEAD`, `MERGE`, `POST`, `OPTIONS` or `PUT`.
+`DELETE`, `GET`, `HEAD`, `MERGE`, `POST`, `OPTIONS`, `PUT` or `PATCH`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span>allowed<wbr>Origins</span>
+        <span id="allowedorigins_python">
+<a href="#allowedorigins_python" style="color: inherit; text-decoration: inherit;">allowed<wbr>Origins</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -4363,7 +5191,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-required"
             title="Required">
-        <span>exposed<wbr>Headers</span>
+        <span id="exposedheaders_python">
+<a href="#exposedheaders_python" style="color: inherit; text-decoration: inherit;">exposed<wbr>Headers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -4372,7 +5202,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-required"
             title="Required">
-        <span>max<wbr>Age<wbr>In<wbr>Seconds</span>
+        <span id="maxageinseconds_python">
+<a href="#maxageinseconds_python" style="color: inherit; text-decoration: inherit;">max<wbr>Age<wbr>In<wbr>Seconds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -4406,7 +5238,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Days</span>
+        <span id="days_csharp">
+<a href="#days_csharp" style="color: inherit; text-decoration: inherit;">Days</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -4422,7 +5256,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Days</span>
+        <span id="days_go">
+<a href="#days_go" style="color: inherit; text-decoration: inherit;">Days</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -4438,7 +5274,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>days</span>
+        <span id="days_nodejs">
+<a href="#days_nodejs" style="color: inherit; text-decoration: inherit;">days</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -4454,7 +5292,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>days</span>
+        <span id="days_python">
+<a href="#days_python" style="color: inherit; text-decoration: inherit;">days</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -4488,7 +5328,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4497,7 +5339,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Use<wbr>Subdomain</span>
+        <span id="usesubdomain_csharp">
+<a href="#usesubdomain_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Subdomain</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -4513,7 +5357,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -4522,7 +5368,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Use<wbr>Subdomain</span>
+        <span id="usesubdomain_go">
+<a href="#usesubdomain_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Subdomain</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -4538,7 +5386,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4547,7 +5397,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>use<wbr>Subdomain</span>
+        <span id="usesubdomain_nodejs">
+<a href="#usesubdomain_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Subdomain</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -4563,7 +5415,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4572,7 +5426,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>use<wbr>Subdomain</span>
+        <span id="usesubdomain_python">
+<a href="#usesubdomain_python" style="color: inherit; text-decoration: inherit;">use<wbr>Subdomain</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -4606,7 +5462,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-required"
             title="Required">
-        <span>Type</span>
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4615,7 +5473,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Principal<wbr>Id</span>
+        <span id="principalid_csharp">
+<a href="#principalid_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4624,7 +5484,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tenant<wbr>Id</span>
+        <span id="tenantid_csharp">
+<a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4640,7 +5502,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-required"
             title="Required">
-        <span>Type</span>
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -4649,7 +5513,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Principal<wbr>Id</span>
+        <span id="principalid_go">
+<a href="#principalid_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -4658,7 +5524,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tenant<wbr>Id</span>
+        <span id="tenantid_go">
+<a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -4674,7 +5542,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-required"
             title="Required">
-        <span>type</span>
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4683,7 +5553,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>principal<wbr>Id</span>
+        <span id="principalid_nodejs">
+<a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4692,7 +5564,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tenant<wbr>Id</span>
+        <span id="tenantid_nodejs">
+<a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4708,7 +5582,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-required"
             title="Required">
-        <span>type</span>
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4717,7 +5593,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>principal_<wbr>id</span>
+        <span id="principal_id_python">
+<a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4726,7 +5604,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tenant_<wbr>id</span>
+        <span id="tenant_id_python">
+<a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4760,7 +5640,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-required"
             title="Required">
-        <span>Default<wbr>Action</span>
+        <span id="defaultaction_csharp">
+<a href="#defaultaction_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4769,7 +5651,9 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Bypasses</span>
+        <span id="bypasses_csharp">
+<a href="#bypasses_csharp" style="color: inherit; text-decoration: inherit;">Bypasses</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -4779,7 +5663,9 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ip<wbr>Rules</span>
+        <span id="iprules_csharp">
+<a href="#iprules_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -4788,7 +5674,9 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Virtual<wbr>Network<wbr>Subnet<wbr>Ids</span>
+        <span id="virtualnetworksubnetids_csharp">
+<a href="#virtualnetworksubnetids_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Subnet<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -4804,7 +5692,9 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-required"
             title="Required">
-        <span>Default<wbr>Action</span>
+        <span id="defaultaction_go">
+<a href="#defaultaction_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -4813,7 +5703,9 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Bypasses</span>
+        <span id="bypasses_go">
+<a href="#bypasses_go" style="color: inherit; text-decoration: inherit;">Bypasses</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -4823,7 +5715,9 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ip<wbr>Rules</span>
+        <span id="iprules_go">
+<a href="#iprules_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -4832,7 +5726,9 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Virtual<wbr>Network<wbr>Subnet<wbr>Ids</span>
+        <span id="virtualnetworksubnetids_go">
+<a href="#virtualnetworksubnetids_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Subnet<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -4848,7 +5744,9 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-required"
             title="Required">
-        <span>default<wbr>Action</span>
+        <span id="defaultaction_nodejs">
+<a href="#defaultaction_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4857,7 +5755,9 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>bypasses</span>
+        <span id="bypasses_nodejs">
+<a href="#bypasses_nodejs" style="color: inherit; text-decoration: inherit;">bypasses</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -4867,7 +5767,9 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ip<wbr>Rules</span>
+        <span id="iprules_nodejs">
+<a href="#iprules_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -4876,7 +5778,9 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>virtual<wbr>Network<wbr>Subnet<wbr>Ids</span>
+        <span id="virtualnetworksubnetids_nodejs">
+<a href="#virtualnetworksubnetids_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Subnet<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -4892,7 +5796,9 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-required"
             title="Required">
-        <span>default_<wbr>action</span>
+        <span id="default_action_python">
+<a href="#default_action_python" style="color: inherit; text-decoration: inherit;">default_<wbr>action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4901,7 +5807,9 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>bypasses</span>
+        <span id="bypasses_python">
+<a href="#bypasses_python" style="color: inherit; text-decoration: inherit;">bypasses</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -4911,7 +5819,9 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ip_<wbr>rules</span>
+        <span id="ip_rules_python">
+<a href="#ip_rules_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -4920,7 +5830,9 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>virtual_<wbr>network_<wbr>subnet_<wbr>ids</span>
+        <span id="virtual_network_subnet_ids_python">
+<a href="#virtual_network_subnet_ids_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>subnet_<wbr>ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -4954,7 +5866,9 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cors<wbr>Rules</span>
+        <span id="corsrules_csharp">
+<a href="#corsrules_csharp" style="color: inherit; text-decoration: inherit;">Cors<wbr>Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountqueuepropertiescorsrule">List&lt;Account<wbr>Queue<wbr>Properties<wbr>Cors<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
@@ -4963,7 +5877,9 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Hour<wbr>Metrics</span>
+        <span id="hourmetrics_csharp">
+<a href="#hourmetrics_csharp" style="color: inherit; text-decoration: inherit;">Hour<wbr>Metrics</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountqueuepropertieshourmetrics">Account<wbr>Queue<wbr>Properties<wbr>Hour<wbr>Metrics<wbr>Args</a></span>
     </dt>
@@ -4972,7 +5888,9 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Logging</span>
+        <span id="logging_csharp">
+<a href="#logging_csharp" style="color: inherit; text-decoration: inherit;">Logging</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountqueuepropertieslogging">Account<wbr>Queue<wbr>Properties<wbr>Logging<wbr>Args</a></span>
     </dt>
@@ -4981,7 +5899,9 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Minute<wbr>Metrics</span>
+        <span id="minutemetrics_csharp">
+<a href="#minutemetrics_csharp" style="color: inherit; text-decoration: inherit;">Minute<wbr>Metrics</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountqueuepropertiesminutemetrics">Account<wbr>Queue<wbr>Properties<wbr>Minute<wbr>Metrics<wbr>Args</a></span>
     </dt>
@@ -4997,7 +5917,9 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cors<wbr>Rules</span>
+        <span id="corsrules_go">
+<a href="#corsrules_go" style="color: inherit; text-decoration: inherit;">Cors<wbr>Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountqueuepropertiescorsrule">[]Account<wbr>Queue<wbr>Properties<wbr>Cors<wbr>Rule</a></span>
     </dt>
@@ -5006,7 +5928,9 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Hour<wbr>Metrics</span>
+        <span id="hourmetrics_go">
+<a href="#hourmetrics_go" style="color: inherit; text-decoration: inherit;">Hour<wbr>Metrics</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountqueuepropertieshourmetrics">Account<wbr>Queue<wbr>Properties<wbr>Hour<wbr>Metrics</a></span>
     </dt>
@@ -5015,7 +5939,9 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Logging</span>
+        <span id="logging_go">
+<a href="#logging_go" style="color: inherit; text-decoration: inherit;">Logging</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountqueuepropertieslogging">Account<wbr>Queue<wbr>Properties<wbr>Logging</a></span>
     </dt>
@@ -5024,7 +5950,9 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Minute<wbr>Metrics</span>
+        <span id="minutemetrics_go">
+<a href="#minutemetrics_go" style="color: inherit; text-decoration: inherit;">Minute<wbr>Metrics</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountqueuepropertiesminutemetrics">Account<wbr>Queue<wbr>Properties<wbr>Minute<wbr>Metrics</a></span>
     </dt>
@@ -5040,7 +5968,9 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>cors<wbr>Rules</span>
+        <span id="corsrules_nodejs">
+<a href="#corsrules_nodejs" style="color: inherit; text-decoration: inherit;">cors<wbr>Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountqueuepropertiescorsrule">Account<wbr>Queue<wbr>Properties<wbr>Cors<wbr>Rule[]</a></span>
     </dt>
@@ -5049,7 +5979,9 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>hour<wbr>Metrics</span>
+        <span id="hourmetrics_nodejs">
+<a href="#hourmetrics_nodejs" style="color: inherit; text-decoration: inherit;">hour<wbr>Metrics</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountqueuepropertieshourmetrics">Account<wbr>Queue<wbr>Properties<wbr>Hour<wbr>Metrics</a></span>
     </dt>
@@ -5058,7 +5990,9 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>logging</span>
+        <span id="logging_nodejs">
+<a href="#logging_nodejs" style="color: inherit; text-decoration: inherit;">logging</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountqueuepropertieslogging">Account<wbr>Queue<wbr>Properties<wbr>Logging</a></span>
     </dt>
@@ -5067,7 +6001,9 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>minute<wbr>Metrics</span>
+        <span id="minutemetrics_nodejs">
+<a href="#minutemetrics_nodejs" style="color: inherit; text-decoration: inherit;">minute<wbr>Metrics</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountqueuepropertiesminutemetrics">Account<wbr>Queue<wbr>Properties<wbr>Minute<wbr>Metrics</a></span>
     </dt>
@@ -5083,7 +6019,9 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>cors<wbr>Rules</span>
+        <span id="corsrules_python">
+<a href="#corsrules_python" style="color: inherit; text-decoration: inherit;">cors<wbr>Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountqueuepropertiescorsrule">List[Account<wbr>Queue<wbr>Properties<wbr>Cors<wbr>Rule]</a></span>
     </dt>
@@ -5092,7 +6030,9 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>hour<wbr>Metrics</span>
+        <span id="hourmetrics_python">
+<a href="#hourmetrics_python" style="color: inherit; text-decoration: inherit;">hour<wbr>Metrics</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountqueuepropertieshourmetrics">Dict[Account<wbr>Queue<wbr>Properties<wbr>Hour<wbr>Metrics]</a></span>
     </dt>
@@ -5101,7 +6041,9 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>logging</span>
+        <span id="logging_python">
+<a href="#logging_python" style="color: inherit; text-decoration: inherit;">logging</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountqueuepropertieslogging">Dict[Account<wbr>Queue<wbr>Properties<wbr>Logging]</a></span>
     </dt>
@@ -5110,7 +6052,9 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>minute<wbr>Metrics</span>
+        <span id="minutemetrics_python">
+<a href="#minutemetrics_python" style="color: inherit; text-decoration: inherit;">minute<wbr>Metrics</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountqueuepropertiesminutemetrics">Dict[Account<wbr>Queue<wbr>Properties<wbr>Minute<wbr>Metrics]</a></span>
     </dt>
@@ -5144,7 +6088,9 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-required"
             title="Required">
-        <span>Allowed<wbr>Headers</span>
+        <span id="allowedheaders_csharp">
+<a href="#allowedheaders_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Headers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -5153,17 +6099,21 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-required"
             title="Required">
-        <span>Allowed<wbr>Methods</span>
+        <span id="allowedmethods_csharp">
+<a href="#allowedmethods_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Methods</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of http headers that are allowed to be executed by the origin. Valid options are
-`DELETE`, `GET`, `HEAD`, `MERGE`, `POST`, `OPTIONS` or `PUT`.
+`DELETE`, `GET`, `HEAD`, `MERGE`, `POST`, `OPTIONS`, `PUT` or `PATCH`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span>Allowed<wbr>Origins</span>
+        <span id="allowedorigins_csharp">
+<a href="#allowedorigins_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Origins</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -5172,7 +6122,9 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-required"
             title="Required">
-        <span>Exposed<wbr>Headers</span>
+        <span id="exposedheaders_csharp">
+<a href="#exposedheaders_csharp" style="color: inherit; text-decoration: inherit;">Exposed<wbr>Headers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -5181,7 +6133,9 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-required"
             title="Required">
-        <span>Max<wbr>Age<wbr>In<wbr>Seconds</span>
+        <span id="maxageinseconds_csharp">
+<a href="#maxageinseconds_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Age<wbr>In<wbr>Seconds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -5197,7 +6151,9 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-required"
             title="Required">
-        <span>Allowed<wbr>Headers</span>
+        <span id="allowedheaders_go">
+<a href="#allowedheaders_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Headers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -5206,17 +6162,21 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-required"
             title="Required">
-        <span>Allowed<wbr>Methods</span>
+        <span id="allowedmethods_go">
+<a href="#allowedmethods_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Methods</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}A list of http headers that are allowed to be executed by the origin. Valid options are
-`DELETE`, `GET`, `HEAD`, `MERGE`, `POST`, `OPTIONS` or `PUT`.
+`DELETE`, `GET`, `HEAD`, `MERGE`, `POST`, `OPTIONS`, `PUT` or `PATCH`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span>Allowed<wbr>Origins</span>
+        <span id="allowedorigins_go">
+<a href="#allowedorigins_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Origins</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -5225,7 +6185,9 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-required"
             title="Required">
-        <span>Exposed<wbr>Headers</span>
+        <span id="exposedheaders_go">
+<a href="#exposedheaders_go" style="color: inherit; text-decoration: inherit;">Exposed<wbr>Headers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -5234,7 +6196,9 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-required"
             title="Required">
-        <span>Max<wbr>Age<wbr>In<wbr>Seconds</span>
+        <span id="maxageinseconds_go">
+<a href="#maxageinseconds_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Age<wbr>In<wbr>Seconds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -5250,7 +6214,9 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-required"
             title="Required">
-        <span>allowed<wbr>Headers</span>
+        <span id="allowedheaders_nodejs">
+<a href="#allowedheaders_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Headers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -5259,17 +6225,21 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-required"
             title="Required">
-        <span>allowed<wbr>Methods</span>
+        <span id="allowedmethods_nodejs">
+<a href="#allowedmethods_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Methods</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}A list of http headers that are allowed to be executed by the origin. Valid options are
-`DELETE`, `GET`, `HEAD`, `MERGE`, `POST`, `OPTIONS` or `PUT`.
+`DELETE`, `GET`, `HEAD`, `MERGE`, `POST`, `OPTIONS`, `PUT` or `PATCH`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span>allowed<wbr>Origins</span>
+        <span id="allowedorigins_nodejs">
+<a href="#allowedorigins_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Origins</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -5278,7 +6248,9 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-required"
             title="Required">
-        <span>exposed<wbr>Headers</span>
+        <span id="exposedheaders_nodejs">
+<a href="#exposedheaders_nodejs" style="color: inherit; text-decoration: inherit;">exposed<wbr>Headers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -5287,7 +6259,9 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-required"
             title="Required">
-        <span>max<wbr>Age<wbr>In<wbr>Seconds</span>
+        <span id="maxageinseconds_nodejs">
+<a href="#maxageinseconds_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Age<wbr>In<wbr>Seconds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -5303,7 +6277,9 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-required"
             title="Required">
-        <span>allowed<wbr>Headers</span>
+        <span id="allowedheaders_python">
+<a href="#allowedheaders_python" style="color: inherit; text-decoration: inherit;">allowed<wbr>Headers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -5312,17 +6288,21 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-required"
             title="Required">
-        <span>allowed<wbr>Methods</span>
+        <span id="allowedmethods_python">
+<a href="#allowedmethods_python" style="color: inherit; text-decoration: inherit;">allowed<wbr>Methods</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of http headers that are allowed to be executed by the origin. Valid options are
-`DELETE`, `GET`, `HEAD`, `MERGE`, `POST`, `OPTIONS` or `PUT`.
+`DELETE`, `GET`, `HEAD`, `MERGE`, `POST`, `OPTIONS`, `PUT` or `PATCH`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span>allowed<wbr>Origins</span>
+        <span id="allowedorigins_python">
+<a href="#allowedorigins_python" style="color: inherit; text-decoration: inherit;">allowed<wbr>Origins</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -5331,7 +6311,9 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-required"
             title="Required">
-        <span>exposed<wbr>Headers</span>
+        <span id="exposedheaders_python">
+<a href="#exposedheaders_python" style="color: inherit; text-decoration: inherit;">exposed<wbr>Headers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -5340,7 +6322,9 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-required"
             title="Required">
-        <span>max<wbr>Age<wbr>In<wbr>Seconds</span>
+        <span id="maxageinseconds_python">
+<a href="#maxageinseconds_python" style="color: inherit; text-decoration: inherit;">max<wbr>Age<wbr>In<wbr>Seconds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -5374,7 +6358,9 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-required"
             title="Required">
-        <span>Enabled</span>
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -5383,7 +6369,9 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-required"
             title="Required">
-        <span>Version</span>
+        <span id="version_csharp">
+<a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -5392,7 +6380,9 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Include<wbr>Apis</span>
+        <span id="includeapis_csharp">
+<a href="#includeapis_csharp" style="color: inherit; text-decoration: inherit;">Include<wbr>Apis</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -5401,7 +6391,9 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Retention<wbr>Policy<wbr>Days</span>
+        <span id="retentionpolicydays_csharp">
+<a href="#retentionpolicydays_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Policy<wbr>Days</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -5417,7 +6409,9 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-required"
             title="Required">
-        <span>Enabled</span>
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -5426,7 +6420,9 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-required"
             title="Required">
-        <span>Version</span>
+        <span id="version_go">
+<a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -5435,7 +6431,9 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Include<wbr>Apis</span>
+        <span id="includeapis_go">
+<a href="#includeapis_go" style="color: inherit; text-decoration: inherit;">Include<wbr>Apis</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -5444,7 +6442,9 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Retention<wbr>Policy<wbr>Days</span>
+        <span id="retentionpolicydays_go">
+<a href="#retentionpolicydays_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Policy<wbr>Days</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -5460,7 +6460,9 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-required"
             title="Required">
-        <span>enabled</span>
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -5469,7 +6471,9 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-required"
             title="Required">
-        <span>version</span>
+        <span id="version_nodejs">
+<a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -5478,7 +6482,9 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>include<wbr>Apis</span>
+        <span id="includeapis_nodejs">
+<a href="#includeapis_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Apis</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -5487,7 +6493,9 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>retention<wbr>Policy<wbr>Days</span>
+        <span id="retentionpolicydays_nodejs">
+<a href="#retentionpolicydays_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Policy<wbr>Days</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -5503,7 +6511,9 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-required"
             title="Required">
-        <span>enabled</span>
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -5512,7 +6522,9 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-required"
             title="Required">
-        <span>version</span>
+        <span id="version_python">
+<a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -5521,7 +6533,9 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>include<wbr>Apis</span>
+        <span id="includeapis_python">
+<a href="#includeapis_python" style="color: inherit; text-decoration: inherit;">include<wbr>Apis</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -5530,7 +6544,9 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>retention<wbr>Policy<wbr>Days</span>
+        <span id="retentionpolicydays_python">
+<a href="#retentionpolicydays_python" style="color: inherit; text-decoration: inherit;">retention<wbr>Policy<wbr>Days</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -5564,7 +6580,9 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-required"
             title="Required">
-        <span>Delete</span>
+        <span id="delete_csharp">
+<a href="#delete_csharp" style="color: inherit; text-decoration: inherit;">Delete</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -5573,7 +6591,9 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-required"
             title="Required">
-        <span>Read</span>
+        <span id="read_csharp">
+<a href="#read_csharp" style="color: inherit; text-decoration: inherit;">Read</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -5582,7 +6602,9 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-required"
             title="Required">
-        <span>Version</span>
+        <span id="version_csharp">
+<a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -5591,7 +6613,9 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-required"
             title="Required">
-        <span>Write</span>
+        <span id="write_csharp">
+<a href="#write_csharp" style="color: inherit; text-decoration: inherit;">Write</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -5600,7 +6624,9 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Retention<wbr>Policy<wbr>Days</span>
+        <span id="retentionpolicydays_csharp">
+<a href="#retentionpolicydays_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Policy<wbr>Days</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -5616,7 +6642,9 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-required"
             title="Required">
-        <span>Delete</span>
+        <span id="delete_go">
+<a href="#delete_go" style="color: inherit; text-decoration: inherit;">Delete</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -5625,7 +6653,9 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-required"
             title="Required">
-        <span>Read</span>
+        <span id="read_go">
+<a href="#read_go" style="color: inherit; text-decoration: inherit;">Read</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -5634,7 +6664,9 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-required"
             title="Required">
-        <span>Version</span>
+        <span id="version_go">
+<a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -5643,7 +6675,9 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-required"
             title="Required">
-        <span>Write</span>
+        <span id="write_go">
+<a href="#write_go" style="color: inherit; text-decoration: inherit;">Write</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -5652,7 +6686,9 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Retention<wbr>Policy<wbr>Days</span>
+        <span id="retentionpolicydays_go">
+<a href="#retentionpolicydays_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Policy<wbr>Days</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -5668,7 +6704,9 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-required"
             title="Required">
-        <span>delete</span>
+        <span id="delete_nodejs">
+<a href="#delete_nodejs" style="color: inherit; text-decoration: inherit;">delete</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -5677,7 +6715,9 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-required"
             title="Required">
-        <span>read</span>
+        <span id="read_nodejs">
+<a href="#read_nodejs" style="color: inherit; text-decoration: inherit;">read</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -5686,7 +6726,9 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-required"
             title="Required">
-        <span>version</span>
+        <span id="version_nodejs">
+<a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -5695,7 +6737,9 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-required"
             title="Required">
-        <span>write</span>
+        <span id="write_nodejs">
+<a href="#write_nodejs" style="color: inherit; text-decoration: inherit;">write</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -5704,7 +6748,9 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>retention<wbr>Policy<wbr>Days</span>
+        <span id="retentionpolicydays_nodejs">
+<a href="#retentionpolicydays_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Policy<wbr>Days</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -5720,7 +6766,9 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-required"
             title="Required">
-        <span>delete</span>
+        <span id="delete_python">
+<a href="#delete_python" style="color: inherit; text-decoration: inherit;">delete</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -5729,7 +6777,9 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-required"
             title="Required">
-        <span>read</span>
+        <span id="read_python">
+<a href="#read_python" style="color: inherit; text-decoration: inherit;">read</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -5738,7 +6788,9 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-required"
             title="Required">
-        <span>version</span>
+        <span id="version_python">
+<a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -5747,7 +6799,9 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-required"
             title="Required">
-        <span>write</span>
+        <span id="write_python">
+<a href="#write_python" style="color: inherit; text-decoration: inherit;">write</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -5756,7 +6810,9 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>retention<wbr>Policy<wbr>Days</span>
+        <span id="retentionpolicydays_python">
+<a href="#retentionpolicydays_python" style="color: inherit; text-decoration: inherit;">retention<wbr>Policy<wbr>Days</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -5790,7 +6846,9 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-required"
             title="Required">
-        <span>Enabled</span>
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -5799,7 +6857,9 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-required"
             title="Required">
-        <span>Version</span>
+        <span id="version_csharp">
+<a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -5808,7 +6868,9 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Include<wbr>Apis</span>
+        <span id="includeapis_csharp">
+<a href="#includeapis_csharp" style="color: inherit; text-decoration: inherit;">Include<wbr>Apis</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -5817,7 +6879,9 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Retention<wbr>Policy<wbr>Days</span>
+        <span id="retentionpolicydays_csharp">
+<a href="#retentionpolicydays_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Policy<wbr>Days</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -5833,7 +6897,9 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-required"
             title="Required">
-        <span>Enabled</span>
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -5842,7 +6908,9 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-required"
             title="Required">
-        <span>Version</span>
+        <span id="version_go">
+<a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -5851,7 +6919,9 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Include<wbr>Apis</span>
+        <span id="includeapis_go">
+<a href="#includeapis_go" style="color: inherit; text-decoration: inherit;">Include<wbr>Apis</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -5860,7 +6930,9 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Retention<wbr>Policy<wbr>Days</span>
+        <span id="retentionpolicydays_go">
+<a href="#retentionpolicydays_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Policy<wbr>Days</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -5876,7 +6948,9 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-required"
             title="Required">
-        <span>enabled</span>
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -5885,7 +6959,9 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-required"
             title="Required">
-        <span>version</span>
+        <span id="version_nodejs">
+<a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -5894,7 +6970,9 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>include<wbr>Apis</span>
+        <span id="includeapis_nodejs">
+<a href="#includeapis_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Apis</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -5903,7 +6981,9 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>retention<wbr>Policy<wbr>Days</span>
+        <span id="retentionpolicydays_nodejs">
+<a href="#retentionpolicydays_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Policy<wbr>Days</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -5919,7 +6999,9 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-required"
             title="Required">
-        <span>enabled</span>
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -5928,7 +7010,9 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-required"
             title="Required">
-        <span>version</span>
+        <span id="version_python">
+<a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -5937,7 +7021,9 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>include<wbr>Apis</span>
+        <span id="includeapis_python">
+<a href="#includeapis_python" style="color: inherit; text-decoration: inherit;">include<wbr>Apis</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -5946,7 +7032,9 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>retention<wbr>Policy<wbr>Days</span>
+        <span id="retentionpolicydays_python">
+<a href="#retentionpolicydays_python" style="color: inherit; text-decoration: inherit;">retention<wbr>Policy<wbr>Days</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -5980,7 +7068,9 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Error404Document</span>
+        <span id="error404document_csharp">
+<a href="#error404document_csharp" style="color: inherit; text-decoration: inherit;">Error404Document</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -5989,7 +7079,9 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Index<wbr>Document</span>
+        <span id="indexdocument_csharp">
+<a href="#indexdocument_csharp" style="color: inherit; text-decoration: inherit;">Index<wbr>Document</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -6005,7 +7097,9 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Error404Document</span>
+        <span id="error404document_go">
+<a href="#error404document_go" style="color: inherit; text-decoration: inherit;">Error404Document</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -6014,7 +7108,9 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Index<wbr>Document</span>
+        <span id="indexdocument_go">
+<a href="#indexdocument_go" style="color: inherit; text-decoration: inherit;">Index<wbr>Document</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -6030,7 +7126,9 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>error404Document</span>
+        <span id="error404document_nodejs">
+<a href="#error404document_nodejs" style="color: inherit; text-decoration: inherit;">error404Document</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -6039,7 +7137,9 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>index<wbr>Document</span>
+        <span id="indexdocument_nodejs">
+<a href="#indexdocument_nodejs" style="color: inherit; text-decoration: inherit;">index<wbr>Document</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -6055,7 +7155,9 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>error404Document</span>
+        <span id="error404document_python">
+<a href="#error404document_python" style="color: inherit; text-decoration: inherit;">error404Document</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -6064,7 +7166,9 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>index<wbr>Document</span>
+        <span id="indexdocument_python">
+<a href="#indexdocument_python" style="color: inherit; text-decoration: inherit;">index<wbr>Document</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

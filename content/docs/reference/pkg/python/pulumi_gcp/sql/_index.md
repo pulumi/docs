@@ -23,6 +23,17 @@ anything, please consult the source <a class="reference external" href="https://
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.sql.</code><code class="sig-name descname">Database</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">charset</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">collation</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.sql.Database" title="Permalink to this definition">¶</a></dt>
 <dd><p>Represents a SQL database inside the Cloud SQL instance, hosted in
 Google’s cloud.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">instance</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">sql</span><span class="o">.</span><span class="n">DatabaseInstance</span><span class="p">(</span><span class="s2">&quot;instance&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">settings</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;tier&quot;</span><span class="p">:</span> <span class="s2">&quot;db-f1-micro&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+<span class="n">database</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">sql</span><span class="o">.</span><span class="n">Database</span><span class="p">(</span><span class="s2">&quot;database&quot;</span><span class="p">,</span> <span class="n">instance</span><span class="o">=</span><span class="n">instance</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -202,6 +213,43 @@ default ‘root’&#64;’%’ user with no password. This user will be deleted 
 instance creation. You should use <code class="docutils literal notranslate"><span class="pre">sql.User</span></code> to define a custom user with
 a restricted host and strong password.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">master</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">sql</span><span class="o">.</span><span class="n">DatabaseInstance</span><span class="p">(</span><span class="s2">&quot;master&quot;</span><span class="p">,</span>
+    <span class="n">database_version</span><span class="o">=</span><span class="s2">&quot;POSTGRES_11&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">settings</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;tier&quot;</span><span class="p">:</span> <span class="s2">&quot;db-f1-micro&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+<span class="kn">import</span> <span class="nn">pulumi_random</span> <span class="k">as</span> <span class="nn">random</span>
+
+<span class="n">private_network</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Network</span><span class="p">(</span><span class="s2">&quot;privateNetwork&quot;</span><span class="p">)</span>
+<span class="n">private_ip_address</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">GlobalAddress</span><span class="p">(</span><span class="s2">&quot;privateIpAddress&quot;</span><span class="p">,</span>
+    <span class="n">purpose</span><span class="o">=</span><span class="s2">&quot;VPC_PEERING&quot;</span><span class="p">,</span>
+    <span class="n">address_type</span><span class="o">=</span><span class="s2">&quot;INTERNAL&quot;</span><span class="p">,</span>
+    <span class="n">prefix_length</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span>
+    <span class="n">network</span><span class="o">=</span><span class="n">private_network</span><span class="o">.</span><span class="n">self_link</span><span class="p">)</span>
+<span class="n">private_vpc_connection</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">servicenetworking</span><span class="o">.</span><span class="n">Connection</span><span class="p">(</span><span class="s2">&quot;privateVpcConnection&quot;</span><span class="p">,</span>
+    <span class="n">network</span><span class="o">=</span><span class="n">private_network</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="n">service</span><span class="o">=</span><span class="s2">&quot;servicenetworking.googleapis.com&quot;</span><span class="p">,</span>
+    <span class="n">reserved_peering_ranges</span><span class="o">=</span><span class="p">[</span><span class="n">private_ip_address</span><span class="o">.</span><span class="n">name</span><span class="p">])</span>
+<span class="n">db_name_suffix</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">RandomId</span><span class="p">(</span><span class="s2">&quot;dbNameSuffix&quot;</span><span class="p">,</span> <span class="n">byte_length</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">instance</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">sql</span><span class="o">.</span><span class="n">DatabaseInstance</span><span class="p">(</span><span class="s2">&quot;instance&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">settings</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;tier&quot;</span><span class="p">:</span> <span class="s2">&quot;db-f1-micro&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;ip_configuration&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;ipv4Enabled&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+            <span class="s2">&quot;privateNetwork&quot;</span><span class="p">:</span> <span class="n">private_network</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -274,8 +322,7 @@ active. Can be either <code class="docutils literal notranslate"><span class="pr
 First Generation instances are now deprecated, see <a class="reference external" href="https://cloud.google.com/sql/docs/mysql/upgrade-2nd-gen">here</a>
 for information on how to upgrade to Second Generation instances.
 A list of Google App Engine (GAE) project names that are allowed to access this instance.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">availabilityType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - This specifies whether a PostgreSQL instance
-should be set up for high availability (<code class="docutils literal notranslate"><span class="pre">REGIONAL</span></code>) or single zone (<code class="docutils literal notranslate"><span class="pre">ZONAL</span></code>).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">availabilityType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The availability type of the Cloud SQL instance, high availability (<code class="docutils literal notranslate"><span class="pre">REGIONAL</span></code>) or single zone (<code class="docutils literal notranslate"><span class="pre">ZONAL</span></code>).’</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">backupConfiguration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">binaryLogEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - True if binary logging is enabled. If
@@ -496,8 +543,7 @@ active. Can be either <code class="docutils literal notranslate"><span class="pr
 First Generation instances are now deprecated, see <a class="reference external" href="https://cloud.google.com/sql/docs/mysql/upgrade-2nd-gen">here</a>
 for information on how to upgrade to Second Generation instances.
 A list of Google App Engine (GAE) project names that are allowed to access this instance.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">availabilityType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - This specifies whether a PostgreSQL instance
-should be set up for high availability (<code class="docutils literal notranslate"><span class="pre">REGIONAL</span></code>) or single zone (<code class="docutils literal notranslate"><span class="pre">ZONAL</span></code>).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">availabilityType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The availability type of the Cloud SQL instance, high availability (<code class="docutils literal notranslate"><span class="pre">REGIONAL</span></code>) or single zone (<code class="docutils literal notranslate"><span class="pre">ZONAL</span></code>).’</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">backupConfiguration</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">binaryLogEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - True if binary logging is enabled. If
@@ -682,8 +728,7 @@ active. Can be either <code class="docutils literal notranslate"><span class="pr
 First Generation instances are now deprecated, see <a class="reference external" href="https://cloud.google.com/sql/docs/mysql/upgrade-2nd-gen">here</a>
 for information on how to upgrade to Second Generation instances.
 A list of Google App Engine (GAE) project names that are allowed to access this instance.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">availabilityType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - This specifies whether a PostgreSQL instance
-should be set up for high availability (<code class="docutils literal notranslate"><span class="pre">REGIONAL</span></code>) or single zone (<code class="docutils literal notranslate"><span class="pre">ZONAL</span></code>).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">availabilityType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The availability type of the Cloud SQL instance, high availability (<code class="docutils literal notranslate"><span class="pre">REGIONAL</span></code>) or single zone (<code class="docutils literal notranslate"><span class="pre">ZONAL</span></code>).’</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">backupConfiguration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">binaryLogEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - True if binary logging is enabled. If
@@ -834,12 +879,22 @@ the source database server to the Cloud SQL replica. It is visible in the
 Cloud Console and appears the same as a regular Cloud SQL instance, but it
 contains no data, requires no configuration or maintenance, and does not
 affect billing. You cannot update the source representation instance.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">instance</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">sql</span><span class="o">.</span><span class="n">SourceRepresentationInstance</span><span class="p">(</span><span class="s2">&quot;instance&quot;</span><span class="p">,</span>
+    <span class="n">database_version</span><span class="o">=</span><span class="s2">&quot;MYSQL_5_7&quot;</span><span class="p">,</span>
+    <span class="n">host</span><span class="o">=</span><span class="s2">&quot;10.20.30.40&quot;</span><span class="p">,</span>
+    <span class="n">port</span><span class="o">=</span><span class="mi">3306</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>database_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The MySQL version running on your source database server: MYSQL_5_6 or MYSQL_5_7.</p></li>
+<li><p><strong>database_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The MySQL version running on your source database server.</p></li>
 <li><p><strong>host</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The externally accessible IPv4 address for the source database server.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the source representation instance. Use any valid Cloud SQL instance name.</p></li>
 <li><p><strong>port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The externally accessible port for the source database server.
@@ -854,7 +909,7 @@ If it is not provided, the provider region is used.</p></li>
 <dl class="py attribute">
 <dt id="pulumi_gcp.sql.SourceRepresentationInstance.database_version">
 <code class="sig-name descname">database_version</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.sql.SourceRepresentationInstance.database_version" title="Permalink to this definition">¶</a></dt>
-<dd><p>The MySQL version running on your source database server: MYSQL_5_6 or MYSQL_5_7.</p>
+<dd><p>The MySQL version running on your source database server.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -901,7 +956,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>database_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The MySQL version running on your source database server: MYSQL_5_6 or MYSQL_5_7.</p></li>
+<li><p><strong>database_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The MySQL version running on your source database server.</p></li>
 <li><p><strong>host</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The externally accessible IPv4 address for the source database server.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the source representation instance. Use any valid Cloud SQL instance name.</p></li>
 <li><p><strong>port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The externally accessible port for the source database server.
@@ -957,6 +1012,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_gcp.sql.SslCert">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.sql.</code><code class="sig-name descname">SslCert</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">common_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.sql.SslCert" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a new Google SQL SSL Cert on a Google SQL Instance. For more information, see the <a class="reference external" href="https://cloud.google.com/sql/">official documentation</a>, or the <a class="reference external" href="https://cloud.google.com/sql/docs/mysql/admin-api/v1beta4/sslCerts">JSON API</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+<span class="kn">import</span> <span class="nn">pulumi_random</span> <span class="k">as</span> <span class="nn">random</span>
+
+<span class="n">db_name_suffix</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">RandomId</span><span class="p">(</span><span class="s2">&quot;dbNameSuffix&quot;</span><span class="p">,</span> <span class="n">byte_length</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">master</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">sql</span><span class="o">.</span><span class="n">DatabaseInstance</span><span class="p">(</span><span class="s2">&quot;master&quot;</span><span class="p">,</span> <span class="n">settings</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">&quot;tier&quot;</span><span class="p">:</span> <span class="s2">&quot;db-f1-micro&quot;</span><span class="p">,</span>
+<span class="p">})</span>
+<span class="n">client_cert</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">sql</span><span class="o">.</span><span class="n">SslCert</span><span class="p">(</span><span class="s2">&quot;clientCert&quot;</span><span class="p">,</span>
+    <span class="n">common_name</span><span class="o">=</span><span class="s2">&quot;client-name&quot;</span><span class="p">,</span>
+    <span class="n">instance</span><span class="o">=</span><span class="n">master</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1111,6 +1179,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_gcp.sql.User">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.sql.</code><code class="sig-name descname">User</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">host</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">password</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.sql.User" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a new Google SQL User on a Google SQL User Instance. For more information, see the <a class="reference external" href="https://cloud.google.com/sql/">official documentation</a>, or the <a class="reference external" href="https://cloud.google.com/sql/docs/admin-api/v1beta4/users">JSON API</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+<span class="kn">import</span> <span class="nn">pulumi_random</span> <span class="k">as</span> <span class="nn">random</span>
+
+<span class="n">db_name_suffix</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">RandomId</span><span class="p">(</span><span class="s2">&quot;dbNameSuffix&quot;</span><span class="p">,</span> <span class="n">byte_length</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">master</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">sql</span><span class="o">.</span><span class="n">DatabaseInstance</span><span class="p">(</span><span class="s2">&quot;master&quot;</span><span class="p">,</span> <span class="n">settings</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">&quot;tier&quot;</span><span class="p">:</span> <span class="s2">&quot;db-f1-micro&quot;</span><span class="p">,</span>
+<span class="p">})</span>
+<span class="n">users</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">sql</span><span class="o">.</span><span class="n">User</span><span class="p">(</span><span class="s2">&quot;users&quot;</span><span class="p">,</span>
+    <span class="n">instance</span><span class="o">=</span><span class="n">master</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">host</span><span class="o">=</span><span class="s2">&quot;me.com&quot;</span><span class="p">,</span>
+    <span class="n">password</span><span class="o">=</span><span class="s2">&quot;changeme&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

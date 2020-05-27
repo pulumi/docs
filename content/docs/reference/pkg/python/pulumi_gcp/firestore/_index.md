@@ -30,6 +30,28 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">my_index</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">firestore</span><span class="o">.</span><span class="n">Index</span><span class="p">(</span><span class="s2">&quot;my-index&quot;</span><span class="p">,</span>
+    <span class="n">collection</span><span class="o">=</span><span class="s2">&quot;chatrooms&quot;</span><span class="p">,</span>
+    <span class="n">fields</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;fieldPath&quot;</span><span class="p">:</span> <span class="s2">&quot;name&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;order&quot;</span><span class="p">:</span> <span class="s2">&quot;ASCENDING&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;fieldPath&quot;</span><span class="p">:</span> <span class="s2">&quot;description&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;order&quot;</span><span class="p">:</span> <span class="s2">&quot;DESCENDING&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;fieldPath&quot;</span><span class="p">:</span> <span class="s2">&quot;__name__&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;order&quot;</span><span class="p">:</span> <span class="s2">&quot;DESCENDING&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">],</span>
+    <span class="n">project</span><span class="o">=</span><span class="s2">&quot;my-project-name&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -45,8 +67,7 @@ in a composite index is not directional, the <code class="docutils literal notra
 ordered <code class="docutils literal notranslate"><span class="pre">&quot;ASCENDING&quot;</span></code> (unless explicitly specified otherwise).  Structure is documented below.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
-<li><p><strong>query_scope</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The scope at which a query is run. One of <code class="docutils literal notranslate"><span class="pre">&quot;COLLECTION&quot;</span></code> or
-<code class="docutils literal notranslate"><span class="pre">&quot;COLLECTION_GROUP&quot;</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">&quot;COLLECTION&quot;</span></code>.</p></li>
+<li><p><strong>query_scope</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The scope at which a query is run.</p></li>
 </ul>
 </dd>
 </dl>
@@ -105,8 +126,7 @@ If it is not provided, the provider project is used.</p>
 <dl class="py attribute">
 <dt id="pulumi_gcp.firestore.Index.query_scope">
 <code class="sig-name descname">query_scope</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.firestore.Index.query_scope" title="Permalink to this definition">¶</a></dt>
-<dd><p>The scope at which a query is run. One of <code class="docutils literal notranslate"><span class="pre">&quot;COLLECTION&quot;</span></code> or
-<code class="docutils literal notranslate"><span class="pre">&quot;COLLECTION_GROUP&quot;</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">&quot;COLLECTION&quot;</span></code>.</p>
+<dd><p>The scope at which a query is run.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -132,8 +152,7 @@ ordered <code class="docutils literal notranslate"><span class="pre">&quot;ASCEN
 ‘projects/{{project}}/databases/{{database}}/collectionGroups/{{collection}}/indexes/{{server_generated_id}}’</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
-<li><p><strong>query_scope</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The scope at which a query is run. One of <code class="docutils literal notranslate"><span class="pre">&quot;COLLECTION&quot;</span></code> or
-<code class="docutils literal notranslate"><span class="pre">&quot;COLLECTION_GROUP&quot;</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">&quot;COLLECTION&quot;</span></code>.</p></li>
+<li><p><strong>query_scope</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The scope at which a query is run.</p></li>
 </ul>
 </dd>
 </dl>

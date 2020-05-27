@@ -20,6 +20,12 @@
       "terraform_provider_name": "alicloud"
     },
     {
+      "name": "Pulumi Auth0",
+      "package_name": "pulumi_auth0",
+      "pulumi_provider_name": "auth0",
+      "terraform_provider_name": "auth0"
+    },
+    {
       "name": "Pulumi Random",
       "package_name": "pulumi_random",
       "pulumi_provider_name": "random",
@@ -180,6 +186,12 @@
       "package_name": "pulumi_packet",
       "pulumi_provider_name": "packet",
       "terraform_provider_name": "packet"
+    },
+    {
+      "name": "Pulumi Pagerduty",
+      "package_name": "pulumi_pagerduty",
+      "pulumi_provider_name": "pagerduty",
+      "terraform_provider_name": "pagerduty"
     },
     {
       "name": "Pulumi PostgreSQL",

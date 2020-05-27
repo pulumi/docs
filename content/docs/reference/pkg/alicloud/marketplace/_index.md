@@ -29,6 +29,24 @@ Explore the resources and functions of the marketplace module in the AliCloud pa
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
 	<dt>Version</dt>
-	<dd>2.4.0</dd>
+	<dd>2.5.0</dd>
+</dl>
+
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.MarketPlace.html" title="Pulumi.AliCloud.MarketPlace">Pulumi.AliCloud.MarketPlace</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/marketplace?tab=doc#" title="alicloud/marketplace">alicloud/marketplace</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/marketplace/#" title="@pulumi/alicloud/marketplace">@pulumi/alicloud/marketplace</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_alicloud/marketplace" title="pulumi_alicloud/marketplace">pulumi_alicloud/marketplace</a></dd>
+
 </dl>
 

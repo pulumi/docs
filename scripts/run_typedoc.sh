@@ -78,6 +78,7 @@ generate_docs() {
 REPOS=(
     "aiven,pulumi-aiven,sdk/nodejs"
     "alicloud,pulumi-alicloud,sdk/nodejs"
+    "auth0,pulumi-auth0,sdk/nodejs"
     "aws,pulumi-aws,sdk/nodejs"
     "awsx,pulumi-awsx/nodejs/awsx"
     "azure,pulumi-azure,sdk/nodejs"
@@ -109,6 +110,7 @@ REPOS=(
     "okta,pulumi-okta,sdk/nodejs"
     "openstack,pulumi-openstack,sdk/nodejs"
     "packet,pulumi-packet,sdk/nodejs"
+    "pagerduty,pulumi-pagerduty,sdk/nodejs"
     "policy,pulumi-policy,sdk/nodejs/policy"
     "postgresql,pulumi-postgresql,sdk/nodejs"
     "pulumi,pulumi/sdk/nodejs"

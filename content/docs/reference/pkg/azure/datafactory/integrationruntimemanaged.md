@@ -71,19 +71,19 @@ const exampleIntegrationRuntimeManaged = new azure.datafactory.IntegrationRuntim
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/datafactory/#IntegrationRuntimeManaged">IntegrationRuntimeManaged</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/datafactory/#IntegrationRuntimeManagedArgs">IntegrationRuntimeManagedArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/datafactory/#IntegrationRuntimeManaged">IntegrationRuntimeManaged</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/datafactory/#IntegrationRuntimeManagedArgs">IntegrationRuntimeManagedArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">IntegrationRuntimeManaged</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>catalog_info=None<span class="p">, </span>custom_setup_script=None<span class="p">, </span>data_factory_name=None<span class="p">, </span>description=None<span class="p">, </span>edition=None<span class="p">, </span>license_type=None<span class="p">, </span>location=None<span class="p">, </span>max_parallel_executions_per_node=None<span class="p">, </span>name=None<span class="p">, </span>node_size=None<span class="p">, </span>number_of_nodes=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>vnet_integration=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/datafactory/#IntegrationRuntimeManaged">IntegrationRuntimeManaged</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>catalog_info=None<span class="p">, </span>custom_setup_script=None<span class="p">, </span>data_factory_name=None<span class="p">, </span>description=None<span class="p">, </span>edition=None<span class="p">, </span>license_type=None<span class="p">, </span>location=None<span class="p">, </span>max_parallel_executions_per_node=None<span class="p">, </span>name=None<span class="p">, </span>node_size=None<span class="p">, </span>number_of_nodes=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>vnet_integration=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewIntegrationRuntimeManaged<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/datafactory?tab=doc#IntegrationRuntimeManagedArgs">IntegrationRuntimeManagedArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/datafactory?tab=doc#IntegrationRuntimeManaged">IntegrationRuntimeManaged</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/datafactory?tab=doc#IntegrationRuntimeManaged">NewIntegrationRuntimeManaged</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/datafactory?tab=doc#IntegrationRuntimeManagedArgs">IntegrationRuntimeManagedArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/datafactory?tab=doc#IntegrationRuntimeManaged">IntegrationRuntimeManaged</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.DataFactory.IntegrationRuntimeManaged.html">IntegrationRuntimeManaged</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.DataFactory.IntegrationRuntimeManagedArgs.html">IntegrationRuntimeManagedArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.DataFactory.IntegrationRuntimeManaged.html">IntegrationRuntimeManaged</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.DataFactory.IntegrationRuntimeManagedArgs.html">IntegrationRuntimeManagedArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -249,7 +249,9 @@ The IntegrationRuntimeManaged resource accepts the following [input]({{< relref 
 
     <dt class="property-required"
             title="Required">
-        <span>Data<wbr>Factory<wbr>Name</span>
+        <span id="datafactoryname_csharp">
+<a href="#datafactoryname_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Factory<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -258,7 +260,9 @@ The IntegrationRuntimeManaged resource accepts the following [input]({{< relref 
 
     <dt class="property-required"
             title="Required">
-        <span>Node<wbr>Size</span>
+        <span id="nodesize_csharp">
+<a href="#nodesize_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -267,7 +271,9 @@ The IntegrationRuntimeManaged resource accepts the following [input]({{< relref 
 
     <dt class="property-required"
             title="Required">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_csharp">
+<a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -276,7 +282,9 @@ The IntegrationRuntimeManaged resource accepts the following [input]({{< relref 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Catalog<wbr>Info</span>
+        <span id="cataloginfo_csharp">
+<a href="#cataloginfo_csharp" style="color: inherit; text-decoration: inherit;">Catalog<wbr>Info</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#integrationruntimemanagedcataloginfo">Integration<wbr>Runtime<wbr>Managed<wbr>Catalog<wbr>Info<wbr>Args</a></span>
     </dt>
@@ -285,7 +293,9 @@ The IntegrationRuntimeManaged resource accepts the following [input]({{< relref 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Custom<wbr>Setup<wbr>Script</span>
+        <span id="customsetupscript_csharp">
+<a href="#customsetupscript_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Setup<wbr>Script</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#integrationruntimemanagedcustomsetupscript">Integration<wbr>Runtime<wbr>Managed<wbr>Custom<wbr>Setup<wbr>Script<wbr>Args</a></span>
     </dt>
@@ -294,7 +304,9 @@ The IntegrationRuntimeManaged resource accepts the following [input]({{< relref 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -302,7 +314,9 @@ The IntegrationRuntimeManaged resource accepts the following [input]({{< relref 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Edition</span>
+        <span id="edition_csharp">
+<a href="#edition_csharp" style="color: inherit; text-decoration: inherit;">Edition</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -311,7 +325,9 @@ The IntegrationRuntimeManaged resource accepts the following [input]({{< relref 
 
     <dt class="property-optional"
             title="Optional">
-        <span>License<wbr>Type</span>
+        <span id="licensetype_csharp">
+<a href="#licensetype_csharp" style="color: inherit; text-decoration: inherit;">License<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -320,7 +336,9 @@ The IntegrationRuntimeManaged resource accepts the following [input]({{< relref 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Location</span>
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -329,7 +347,9 @@ The IntegrationRuntimeManaged resource accepts the following [input]({{< relref 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Parallel<wbr>Executions<wbr>Per<wbr>Node</span>
+        <span id="maxparallelexecutionspernode_csharp">
+<a href="#maxparallelexecutionspernode_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Parallel<wbr>Executions<wbr>Per<wbr>Node</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -338,7 +358,9 @@ The IntegrationRuntimeManaged resource accepts the following [input]({{< relref 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -347,7 +369,9 @@ The IntegrationRuntimeManaged resource accepts the following [input]({{< relref 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Number<wbr>Of<wbr>Nodes</span>
+        <span id="numberofnodes_csharp">
+<a href="#numberofnodes_csharp" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Nodes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -356,7 +380,9 @@ The IntegrationRuntimeManaged resource accepts the following [input]({{< relref 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vnet<wbr>Integration</span>
+        <span id="vnetintegration_csharp">
+<a href="#vnetintegration_csharp" style="color: inherit; text-decoration: inherit;">Vnet<wbr>Integration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#integrationruntimemanagedvnetintegration">Integration<wbr>Runtime<wbr>Managed<wbr>Vnet<wbr>Integration<wbr>Args</a></span>
     </dt>
@@ -372,7 +398,9 @@ The IntegrationRuntimeManaged resource accepts the following [input]({{< relref 
 
     <dt class="property-required"
             title="Required">
-        <span>Data<wbr>Factory<wbr>Name</span>
+        <span id="datafactoryname_go">
+<a href="#datafactoryname_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Factory<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -381,7 +409,9 @@ The IntegrationRuntimeManaged resource accepts the following [input]({{< relref 
 
     <dt class="property-required"
             title="Required">
-        <span>Node<wbr>Size</span>
+        <span id="nodesize_go">
+<a href="#nodesize_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -390,7 +420,9 @@ The IntegrationRuntimeManaged resource accepts the following [input]({{< relref 
 
     <dt class="property-required"
             title="Required">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_go">
+<a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -399,7 +431,9 @@ The IntegrationRuntimeManaged resource accepts the following [input]({{< relref 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Catalog<wbr>Info</span>
+        <span id="cataloginfo_go">
+<a href="#cataloginfo_go" style="color: inherit; text-decoration: inherit;">Catalog<wbr>Info</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#integrationruntimemanagedcataloginfo">Integration<wbr>Runtime<wbr>Managed<wbr>Catalog<wbr>Info</a></span>
     </dt>
@@ -408,7 +442,9 @@ The IntegrationRuntimeManaged resource accepts the following [input]({{< relref 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Custom<wbr>Setup<wbr>Script</span>
+        <span id="customsetupscript_go">
+<a href="#customsetupscript_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Setup<wbr>Script</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#integrationruntimemanagedcustomsetupscript">Integration<wbr>Runtime<wbr>Managed<wbr>Custom<wbr>Setup<wbr>Script</a></span>
     </dt>
@@ -417,7 +453,9 @@ The IntegrationRuntimeManaged resource accepts the following [input]({{< relref 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -425,7 +463,9 @@ The IntegrationRuntimeManaged resource accepts the following [input]({{< relref 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Edition</span>
+        <span id="edition_go">
+<a href="#edition_go" style="color: inherit; text-decoration: inherit;">Edition</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -434,7 +474,9 @@ The IntegrationRuntimeManaged resource accepts the following [input]({{< relref 
 
     <dt class="property-optional"
             title="Optional">
-        <span>License<wbr>Type</span>
+        <span id="licensetype_go">
+<a href="#licensetype_go" style="color: inherit; text-decoration: inherit;">License<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -443,7 +485,9 @@ The IntegrationRuntimeManaged resource accepts the following [input]({{< relref 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Location</span>
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -452,7 +496,9 @@ The IntegrationRuntimeManaged resource accepts the following [input]({{< relref 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Parallel<wbr>Executions<wbr>Per<wbr>Node</span>
+        <span id="maxparallelexecutionspernode_go">
+<a href="#maxparallelexecutionspernode_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Parallel<wbr>Executions<wbr>Per<wbr>Node</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -461,7 +507,9 @@ The IntegrationRuntimeManaged resource accepts the following [input]({{< relref 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -470,7 +518,9 @@ The IntegrationRuntimeManaged resource accepts the following [input]({{< relref 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Number<wbr>Of<wbr>Nodes</span>
+        <span id="numberofnodes_go">
+<a href="#numberofnodes_go" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Nodes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -479,7 +529,9 @@ The IntegrationRuntimeManaged resource accepts the following [input]({{< relref 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vnet<wbr>Integration</span>
+        <span id="vnetintegration_go">
+<a href="#vnetintegration_go" style="color: inherit; text-decoration: inherit;">Vnet<wbr>Integration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#integrationruntimemanagedvnetintegration">Integration<wbr>Runtime<wbr>Managed<wbr>Vnet<wbr>Integration</a></span>
     </dt>
@@ -495,7 +547,9 @@ The IntegrationRuntimeManaged resource accepts the following [input]({{< relref 
 
     <dt class="property-required"
             title="Required">
-        <span>data<wbr>Factory<wbr>Name</span>
+        <span id="datafactoryname_nodejs">
+<a href="#datafactoryname_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Factory<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -504,7 +558,9 @@ The IntegrationRuntimeManaged resource accepts the following [input]({{< relref 
 
     <dt class="property-required"
             title="Required">
-        <span>node<wbr>Size</span>
+        <span id="nodesize_nodejs">
+<a href="#nodesize_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -513,7 +569,9 @@ The IntegrationRuntimeManaged resource accepts the following [input]({{< relref 
 
     <dt class="property-required"
             title="Required">
-        <span>resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_nodejs">
+<a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -522,7 +580,9 @@ The IntegrationRuntimeManaged resource accepts the following [input]({{< relref 
 
     <dt class="property-optional"
             title="Optional">
-        <span>catalog<wbr>Info</span>
+        <span id="cataloginfo_nodejs">
+<a href="#cataloginfo_nodejs" style="color: inherit; text-decoration: inherit;">catalog<wbr>Info</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#integrationruntimemanagedcataloginfo">Integration<wbr>Runtime<wbr>Managed<wbr>Catalog<wbr>Info</a></span>
     </dt>
@@ -531,7 +591,9 @@ The IntegrationRuntimeManaged resource accepts the following [input]({{< relref 
 
     <dt class="property-optional"
             title="Optional">
-        <span>custom<wbr>Setup<wbr>Script</span>
+        <span id="customsetupscript_nodejs">
+<a href="#customsetupscript_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Setup<wbr>Script</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#integrationruntimemanagedcustomsetupscript">Integration<wbr>Runtime<wbr>Managed<wbr>Custom<wbr>Setup<wbr>Script</a></span>
     </dt>
@@ -540,7 +602,9 @@ The IntegrationRuntimeManaged resource accepts the following [input]({{< relref 
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -548,7 +612,9 @@ The IntegrationRuntimeManaged resource accepts the following [input]({{< relref 
 
     <dt class="property-optional"
             title="Optional">
-        <span>edition</span>
+        <span id="edition_nodejs">
+<a href="#edition_nodejs" style="color: inherit; text-decoration: inherit;">edition</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -557,7 +623,9 @@ The IntegrationRuntimeManaged resource accepts the following [input]({{< relref 
 
     <dt class="property-optional"
             title="Optional">
-        <span>license<wbr>Type</span>
+        <span id="licensetype_nodejs">
+<a href="#licensetype_nodejs" style="color: inherit; text-decoration: inherit;">license<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -566,7 +634,9 @@ The IntegrationRuntimeManaged resource accepts the following [input]({{< relref 
 
     <dt class="property-optional"
             title="Optional">
-        <span>location</span>
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -575,7 +645,9 @@ The IntegrationRuntimeManaged resource accepts the following [input]({{< relref 
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Parallel<wbr>Executions<wbr>Per<wbr>Node</span>
+        <span id="maxparallelexecutionspernode_nodejs">
+<a href="#maxparallelexecutionspernode_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Parallel<wbr>Executions<wbr>Per<wbr>Node</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -584,7 +656,9 @@ The IntegrationRuntimeManaged resource accepts the following [input]({{< relref 
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -593,7 +667,9 @@ The IntegrationRuntimeManaged resource accepts the following [input]({{< relref 
 
     <dt class="property-optional"
             title="Optional">
-        <span>number<wbr>Of<wbr>Nodes</span>
+        <span id="numberofnodes_nodejs">
+<a href="#numberofnodes_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Of<wbr>Nodes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -602,7 +678,9 @@ The IntegrationRuntimeManaged resource accepts the following [input]({{< relref 
 
     <dt class="property-optional"
             title="Optional">
-        <span>vnet<wbr>Integration</span>
+        <span id="vnetintegration_nodejs">
+<a href="#vnetintegration_nodejs" style="color: inherit; text-decoration: inherit;">vnet<wbr>Integration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#integrationruntimemanagedvnetintegration">Integration<wbr>Runtime<wbr>Managed<wbr>Vnet<wbr>Integration</a></span>
     </dt>
@@ -618,7 +696,9 @@ The IntegrationRuntimeManaged resource accepts the following [input]({{< relref 
 
     <dt class="property-required"
             title="Required">
-        <span>data_<wbr>factory_<wbr>name</span>
+        <span id="data_factory_name_python">
+<a href="#data_factory_name_python" style="color: inherit; text-decoration: inherit;">data_<wbr>factory_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -627,7 +707,9 @@ The IntegrationRuntimeManaged resource accepts the following [input]({{< relref 
 
     <dt class="property-required"
             title="Required">
-        <span>node_<wbr>size</span>
+        <span id="node_size_python">
+<a href="#node_size_python" style="color: inherit; text-decoration: inherit;">node_<wbr>size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -636,7 +718,9 @@ The IntegrationRuntimeManaged resource accepts the following [input]({{< relref 
 
     <dt class="property-required"
             title="Required">
-        <span>resource_<wbr>group_<wbr>name</span>
+        <span id="resource_group_name_python">
+<a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -645,7 +729,9 @@ The IntegrationRuntimeManaged resource accepts the following [input]({{< relref 
 
     <dt class="property-optional"
             title="Optional">
-        <span>catalog_<wbr>info</span>
+        <span id="catalog_info_python">
+<a href="#catalog_info_python" style="color: inherit; text-decoration: inherit;">catalog_<wbr>info</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#integrationruntimemanagedcataloginfo">Dict[Integration<wbr>Runtime<wbr>Managed<wbr>Catalog<wbr>Info]</a></span>
     </dt>
@@ -654,7 +740,9 @@ The IntegrationRuntimeManaged resource accepts the following [input]({{< relref 
 
     <dt class="property-optional"
             title="Optional">
-        <span>custom_<wbr>setup_<wbr>script</span>
+        <span id="custom_setup_script_python">
+<a href="#custom_setup_script_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>setup_<wbr>script</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#integrationruntimemanagedcustomsetupscript">Dict[Integration<wbr>Runtime<wbr>Managed<wbr>Custom<wbr>Setup<wbr>Script]</a></span>
     </dt>
@@ -663,7 +751,9 @@ The IntegrationRuntimeManaged resource accepts the following [input]({{< relref 
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -671,7 +761,9 @@ The IntegrationRuntimeManaged resource accepts the following [input]({{< relref 
 
     <dt class="property-optional"
             title="Optional">
-        <span>edition</span>
+        <span id="edition_python">
+<a href="#edition_python" style="color: inherit; text-decoration: inherit;">edition</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -680,7 +772,9 @@ The IntegrationRuntimeManaged resource accepts the following [input]({{< relref 
 
     <dt class="property-optional"
             title="Optional">
-        <span>license_<wbr>type</span>
+        <span id="license_type_python">
+<a href="#license_type_python" style="color: inherit; text-decoration: inherit;">license_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -689,7 +783,9 @@ The IntegrationRuntimeManaged resource accepts the following [input]({{< relref 
 
     <dt class="property-optional"
             title="Optional">
-        <span>location</span>
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -698,7 +794,9 @@ The IntegrationRuntimeManaged resource accepts the following [input]({{< relref 
 
     <dt class="property-optional"
             title="Optional">
-        <span>max_<wbr>parallel_<wbr>executions_<wbr>per_<wbr>node</span>
+        <span id="max_parallel_executions_per_node_python">
+<a href="#max_parallel_executions_per_node_python" style="color: inherit; text-decoration: inherit;">max_<wbr>parallel_<wbr>executions_<wbr>per_<wbr>node</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -707,7 +805,9 @@ The IntegrationRuntimeManaged resource accepts the following [input]({{< relref 
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -716,7 +816,9 @@ The IntegrationRuntimeManaged resource accepts the following [input]({{< relref 
 
     <dt class="property-optional"
             title="Optional">
-        <span>number_<wbr>of_<wbr>nodes</span>
+        <span id="number_of_nodes_python">
+<a href="#number_of_nodes_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>nodes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -725,7 +827,9 @@ The IntegrationRuntimeManaged resource accepts the following [input]({{< relref 
 
     <dt class="property-optional"
             title="Optional">
-        <span>vnet_<wbr>integration</span>
+        <span id="vnet_integration_python">
+<a href="#vnet_integration_python" style="color: inherit; text-decoration: inherit;">vnet_<wbr>integration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#integrationruntimemanagedvnetintegration">Dict[Integration<wbr>Runtime<wbr>Managed<wbr>Vnet<wbr>Integration]</a></span>
     </dt>
@@ -752,7 +856,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -767,7 +873,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -782,7 +890,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -797,7 +907,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -818,7 +930,7 @@ Get an existing IntegrationRuntimeManaged resource's state with the given name, 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/datafactory/#IntegrationRuntimeManagedState">IntegrationRuntimeManagedState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/datafactory/#IntegrationRuntimeManaged">IntegrationRuntimeManaged</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/datafactory/#IntegrationRuntimeManagedState">IntegrationRuntimeManagedState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/datafactory/#IntegrationRuntimeManaged">IntegrationRuntimeManaged</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -826,11 +938,11 @@ Get an existing IntegrationRuntimeManaged resource's state with the given name, 
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetIntegrationRuntimeManaged<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/datafactory?tab=doc#IntegrationRuntimeManagedState">IntegrationRuntimeManagedState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/datafactory?tab=doc#IntegrationRuntimeManaged">IntegrationRuntimeManaged</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetIntegrationRuntimeManaged<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/datafactory?tab=doc#IntegrationRuntimeManagedState">IntegrationRuntimeManagedState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/datafactory?tab=doc#IntegrationRuntimeManaged">IntegrationRuntimeManaged</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.DataFactory.IntegrationRuntimeManaged.html">IntegrationRuntimeManaged</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.DataFactory.IntegrationRuntimeManagedState.html">IntegrationRuntimeManagedState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.DataFactory.IntegrationRuntimeManaged.html">IntegrationRuntimeManaged</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.DataFactory.IntegrationRuntimeManagedState.html">IntegrationRuntimeManagedState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -938,7 +1050,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Catalog<wbr>Info</span>
+        <span id="state_cataloginfo_csharp">
+<a href="#state_cataloginfo_csharp" style="color: inherit; text-decoration: inherit;">Catalog<wbr>Info</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#integrationruntimemanagedcataloginfo">Integration<wbr>Runtime<wbr>Managed<wbr>Catalog<wbr>Info<wbr>Args</a></span>
     </dt>
@@ -947,7 +1061,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Custom<wbr>Setup<wbr>Script</span>
+        <span id="state_customsetupscript_csharp">
+<a href="#state_customsetupscript_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Setup<wbr>Script</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#integrationruntimemanagedcustomsetupscript">Integration<wbr>Runtime<wbr>Managed<wbr>Custom<wbr>Setup<wbr>Script<wbr>Args</a></span>
     </dt>
@@ -956,7 +1072,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Data<wbr>Factory<wbr>Name</span>
+        <span id="state_datafactoryname_csharp">
+<a href="#state_datafactoryname_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Factory<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -965,7 +1083,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_csharp">
+<a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -973,7 +1093,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Edition</span>
+        <span id="state_edition_csharp">
+<a href="#state_edition_csharp" style="color: inherit; text-decoration: inherit;">Edition</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -982,7 +1104,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>License<wbr>Type</span>
+        <span id="state_licensetype_csharp">
+<a href="#state_licensetype_csharp" style="color: inherit; text-decoration: inherit;">License<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -991,7 +1115,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Location</span>
+        <span id="state_location_csharp">
+<a href="#state_location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1000,7 +1126,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Parallel<wbr>Executions<wbr>Per<wbr>Node</span>
+        <span id="state_maxparallelexecutionspernode_csharp">
+<a href="#state_maxparallelexecutionspernode_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Parallel<wbr>Executions<wbr>Per<wbr>Node</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1009,7 +1137,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1018,7 +1148,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Node<wbr>Size</span>
+        <span id="state_nodesize_csharp">
+<a href="#state_nodesize_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1027,7 +1159,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Number<wbr>Of<wbr>Nodes</span>
+        <span id="state_numberofnodes_csharp">
+<a href="#state_numberofnodes_csharp" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Nodes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1036,7 +1170,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="state_resourcegroupname_csharp">
+<a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1045,7 +1181,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vnet<wbr>Integration</span>
+        <span id="state_vnetintegration_csharp">
+<a href="#state_vnetintegration_csharp" style="color: inherit; text-decoration: inherit;">Vnet<wbr>Integration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#integrationruntimemanagedvnetintegration">Integration<wbr>Runtime<wbr>Managed<wbr>Vnet<wbr>Integration<wbr>Args</a></span>
     </dt>
@@ -1061,7 +1199,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Catalog<wbr>Info</span>
+        <span id="state_cataloginfo_go">
+<a href="#state_cataloginfo_go" style="color: inherit; text-decoration: inherit;">Catalog<wbr>Info</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#integrationruntimemanagedcataloginfo">Integration<wbr>Runtime<wbr>Managed<wbr>Catalog<wbr>Info</a></span>
     </dt>
@@ -1070,7 +1210,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Custom<wbr>Setup<wbr>Script</span>
+        <span id="state_customsetupscript_go">
+<a href="#state_customsetupscript_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Setup<wbr>Script</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#integrationruntimemanagedcustomsetupscript">Integration<wbr>Runtime<wbr>Managed<wbr>Custom<wbr>Setup<wbr>Script</a></span>
     </dt>
@@ -1079,7 +1221,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Data<wbr>Factory<wbr>Name</span>
+        <span id="state_datafactoryname_go">
+<a href="#state_datafactoryname_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Factory<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1088,7 +1232,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_go">
+<a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1096,7 +1242,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Edition</span>
+        <span id="state_edition_go">
+<a href="#state_edition_go" style="color: inherit; text-decoration: inherit;">Edition</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1105,7 +1253,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>License<wbr>Type</span>
+        <span id="state_licensetype_go">
+<a href="#state_licensetype_go" style="color: inherit; text-decoration: inherit;">License<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1114,7 +1264,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Location</span>
+        <span id="state_location_go">
+<a href="#state_location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1123,7 +1275,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Parallel<wbr>Executions<wbr>Per<wbr>Node</span>
+        <span id="state_maxparallelexecutionspernode_go">
+<a href="#state_maxparallelexecutionspernode_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Parallel<wbr>Executions<wbr>Per<wbr>Node</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1132,7 +1286,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1141,7 +1297,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Node<wbr>Size</span>
+        <span id="state_nodesize_go">
+<a href="#state_nodesize_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1150,7 +1308,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Number<wbr>Of<wbr>Nodes</span>
+        <span id="state_numberofnodes_go">
+<a href="#state_numberofnodes_go" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Nodes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1159,7 +1319,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="state_resourcegroupname_go">
+<a href="#state_resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1168,7 +1330,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vnet<wbr>Integration</span>
+        <span id="state_vnetintegration_go">
+<a href="#state_vnetintegration_go" style="color: inherit; text-decoration: inherit;">Vnet<wbr>Integration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#integrationruntimemanagedvnetintegration">Integration<wbr>Runtime<wbr>Managed<wbr>Vnet<wbr>Integration</a></span>
     </dt>
@@ -1184,7 +1348,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>catalog<wbr>Info</span>
+        <span id="state_cataloginfo_nodejs">
+<a href="#state_cataloginfo_nodejs" style="color: inherit; text-decoration: inherit;">catalog<wbr>Info</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#integrationruntimemanagedcataloginfo">Integration<wbr>Runtime<wbr>Managed<wbr>Catalog<wbr>Info</a></span>
     </dt>
@@ -1193,7 +1359,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>custom<wbr>Setup<wbr>Script</span>
+        <span id="state_customsetupscript_nodejs">
+<a href="#state_customsetupscript_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Setup<wbr>Script</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#integrationruntimemanagedcustomsetupscript">Integration<wbr>Runtime<wbr>Managed<wbr>Custom<wbr>Setup<wbr>Script</a></span>
     </dt>
@@ -1202,7 +1370,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>data<wbr>Factory<wbr>Name</span>
+        <span id="state_datafactoryname_nodejs">
+<a href="#state_datafactoryname_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Factory<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1211,7 +1381,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_nodejs">
+<a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1219,7 +1391,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>edition</span>
+        <span id="state_edition_nodejs">
+<a href="#state_edition_nodejs" style="color: inherit; text-decoration: inherit;">edition</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1228,7 +1402,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>license<wbr>Type</span>
+        <span id="state_licensetype_nodejs">
+<a href="#state_licensetype_nodejs" style="color: inherit; text-decoration: inherit;">license<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1237,7 +1413,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>location</span>
+        <span id="state_location_nodejs">
+<a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1246,7 +1424,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Parallel<wbr>Executions<wbr>Per<wbr>Node</span>
+        <span id="state_maxparallelexecutionspernode_nodejs">
+<a href="#state_maxparallelexecutionspernode_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Parallel<wbr>Executions<wbr>Per<wbr>Node</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1255,7 +1435,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1264,7 +1446,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>node<wbr>Size</span>
+        <span id="state_nodesize_nodejs">
+<a href="#state_nodesize_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1273,7 +1457,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>number<wbr>Of<wbr>Nodes</span>
+        <span id="state_numberofnodes_nodejs">
+<a href="#state_numberofnodes_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Of<wbr>Nodes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1282,7 +1468,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource<wbr>Group<wbr>Name</span>
+        <span id="state_resourcegroupname_nodejs">
+<a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1291,7 +1479,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>vnet<wbr>Integration</span>
+        <span id="state_vnetintegration_nodejs">
+<a href="#state_vnetintegration_nodejs" style="color: inherit; text-decoration: inherit;">vnet<wbr>Integration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#integrationruntimemanagedvnetintegration">Integration<wbr>Runtime<wbr>Managed<wbr>Vnet<wbr>Integration</a></span>
     </dt>
@@ -1307,7 +1497,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>catalog_<wbr>info</span>
+        <span id="state_catalog_info_python">
+<a href="#state_catalog_info_python" style="color: inherit; text-decoration: inherit;">catalog_<wbr>info</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#integrationruntimemanagedcataloginfo">Dict[Integration<wbr>Runtime<wbr>Managed<wbr>Catalog<wbr>Info]</a></span>
     </dt>
@@ -1316,7 +1508,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>custom_<wbr>setup_<wbr>script</span>
+        <span id="state_custom_setup_script_python">
+<a href="#state_custom_setup_script_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>setup_<wbr>script</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#integrationruntimemanagedcustomsetupscript">Dict[Integration<wbr>Runtime<wbr>Managed<wbr>Custom<wbr>Setup<wbr>Script]</a></span>
     </dt>
@@ -1325,7 +1519,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>data_<wbr>factory_<wbr>name</span>
+        <span id="state_data_factory_name_python">
+<a href="#state_data_factory_name_python" style="color: inherit; text-decoration: inherit;">data_<wbr>factory_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1334,7 +1530,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_python">
+<a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1342,7 +1540,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>edition</span>
+        <span id="state_edition_python">
+<a href="#state_edition_python" style="color: inherit; text-decoration: inherit;">edition</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1351,7 +1551,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>license_<wbr>type</span>
+        <span id="state_license_type_python">
+<a href="#state_license_type_python" style="color: inherit; text-decoration: inherit;">license_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1360,7 +1562,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>location</span>
+        <span id="state_location_python">
+<a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1369,7 +1573,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>max_<wbr>parallel_<wbr>executions_<wbr>per_<wbr>node</span>
+        <span id="state_max_parallel_executions_per_node_python">
+<a href="#state_max_parallel_executions_per_node_python" style="color: inherit; text-decoration: inherit;">max_<wbr>parallel_<wbr>executions_<wbr>per_<wbr>node</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1378,7 +1584,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1387,7 +1595,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>node_<wbr>size</span>
+        <span id="state_node_size_python">
+<a href="#state_node_size_python" style="color: inherit; text-decoration: inherit;">node_<wbr>size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1396,7 +1606,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>number_<wbr>of_<wbr>nodes</span>
+        <span id="state_number_of_nodes_python">
+<a href="#state_number_of_nodes_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>nodes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1405,7 +1617,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource_<wbr>group_<wbr>name</span>
+        <span id="state_resource_group_name_python">
+<a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1414,7 +1628,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>vnet_<wbr>integration</span>
+        <span id="state_vnet_integration_python">
+<a href="#state_vnet_integration_python" style="color: inherit; text-decoration: inherit;">vnet_<wbr>integration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#integrationruntimemanagedvnetintegration">Dict[Integration<wbr>Runtime<wbr>Managed<wbr>Vnet<wbr>Integration]</a></span>
     </dt>
@@ -1456,7 +1672,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Administrator<wbr>Login</span>
+        <span id="administratorlogin_csharp">
+<a href="#administratorlogin_csharp" style="color: inherit; text-decoration: inherit;">Administrator<wbr>Login</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1465,7 +1683,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Administrator<wbr>Password</span>
+        <span id="administratorpassword_csharp">
+<a href="#administratorpassword_csharp" style="color: inherit; text-decoration: inherit;">Administrator<wbr>Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1474,7 +1694,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Server<wbr>Endpoint</span>
+        <span id="serverendpoint_csharp">
+<a href="#serverendpoint_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1483,7 +1705,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Pricing<wbr>Tier</span>
+        <span id="pricingtier_csharp">
+<a href="#pricingtier_csharp" style="color: inherit; text-decoration: inherit;">Pricing<wbr>Tier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1499,7 +1723,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Administrator<wbr>Login</span>
+        <span id="administratorlogin_go">
+<a href="#administratorlogin_go" style="color: inherit; text-decoration: inherit;">Administrator<wbr>Login</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1508,7 +1734,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Administrator<wbr>Password</span>
+        <span id="administratorpassword_go">
+<a href="#administratorpassword_go" style="color: inherit; text-decoration: inherit;">Administrator<wbr>Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1517,7 +1745,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Server<wbr>Endpoint</span>
+        <span id="serverendpoint_go">
+<a href="#serverendpoint_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1526,7 +1756,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Pricing<wbr>Tier</span>
+        <span id="pricingtier_go">
+<a href="#pricingtier_go" style="color: inherit; text-decoration: inherit;">Pricing<wbr>Tier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1542,7 +1774,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>administrator<wbr>Login</span>
+        <span id="administratorlogin_nodejs">
+<a href="#administratorlogin_nodejs" style="color: inherit; text-decoration: inherit;">administrator<wbr>Login</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1551,7 +1785,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>administrator<wbr>Password</span>
+        <span id="administratorpassword_nodejs">
+<a href="#administratorpassword_nodejs" style="color: inherit; text-decoration: inherit;">administrator<wbr>Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1560,7 +1796,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>server<wbr>Endpoint</span>
+        <span id="serverendpoint_nodejs">
+<a href="#serverendpoint_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1569,7 +1807,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>pricing<wbr>Tier</span>
+        <span id="pricingtier_nodejs">
+<a href="#pricingtier_nodejs" style="color: inherit; text-decoration: inherit;">pricing<wbr>Tier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1585,7 +1825,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>administrator<wbr>Password</span>
+        <span id="administratorpassword_python">
+<a href="#administratorpassword_python" style="color: inherit; text-decoration: inherit;">administrator<wbr>Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1594,7 +1836,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>administrator_<wbr>login</span>
+        <span id="administrator_login_python">
+<a href="#administrator_login_python" style="color: inherit; text-decoration: inherit;">administrator_<wbr>login</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1603,7 +1847,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>server<wbr>Endpoint</span>
+        <span id="serverendpoint_python">
+<a href="#serverendpoint_python" style="color: inherit; text-decoration: inherit;">server<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1612,7 +1858,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>pricing_<wbr>tier</span>
+        <span id="pricing_tier_python">
+<a href="#pricing_tier_python" style="color: inherit; text-decoration: inherit;">pricing_<wbr>tier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1646,7 +1894,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Blob<wbr>Container<wbr>Uri</span>
+        <span id="blobcontaineruri_csharp">
+<a href="#blobcontaineruri_csharp" style="color: inherit; text-decoration: inherit;">Blob<wbr>Container<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1655,7 +1905,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Sas<wbr>Token</span>
+        <span id="sastoken_csharp">
+<a href="#sastoken_csharp" style="color: inherit; text-decoration: inherit;">Sas<wbr>Token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1671,7 +1923,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Blob<wbr>Container<wbr>Uri</span>
+        <span id="blobcontaineruri_go">
+<a href="#blobcontaineruri_go" style="color: inherit; text-decoration: inherit;">Blob<wbr>Container<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1680,7 +1934,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Sas<wbr>Token</span>
+        <span id="sastoken_go">
+<a href="#sastoken_go" style="color: inherit; text-decoration: inherit;">Sas<wbr>Token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1696,7 +1952,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>blob<wbr>Container<wbr>Uri</span>
+        <span id="blobcontaineruri_nodejs">
+<a href="#blobcontaineruri_nodejs" style="color: inherit; text-decoration: inherit;">blob<wbr>Container<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1705,7 +1963,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>sas<wbr>Token</span>
+        <span id="sastoken_nodejs">
+<a href="#sastoken_nodejs" style="color: inherit; text-decoration: inherit;">sas<wbr>Token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1721,7 +1981,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>blob<wbr>Container<wbr>Uri</span>
+        <span id="blobcontaineruri_python">
+<a href="#blobcontaineruri_python" style="color: inherit; text-decoration: inherit;">blob<wbr>Container<wbr>Uri</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1730,7 +1992,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>sas<wbr>Token</span>
+        <span id="sastoken_python">
+<a href="#sastoken_python" style="color: inherit; text-decoration: inherit;">sas<wbr>Token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1764,7 +2028,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Subnet<wbr>Name</span>
+        <span id="subnetname_csharp">
+<a href="#subnetname_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1773,7 +2039,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Vnet<wbr>Id</span>
+        <span id="vnetid_csharp">
+<a href="#vnetid_csharp" style="color: inherit; text-decoration: inherit;">Vnet<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1789,7 +2057,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Subnet<wbr>Name</span>
+        <span id="subnetname_go">
+<a href="#subnetname_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1798,7 +2068,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Vnet<wbr>Id</span>
+        <span id="vnetid_go">
+<a href="#vnetid_go" style="color: inherit; text-decoration: inherit;">Vnet<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1814,7 +2086,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>subnet<wbr>Name</span>
+        <span id="subnetname_nodejs">
+<a href="#subnetname_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1823,7 +2097,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>vnet<wbr>Id</span>
+        <span id="vnetid_nodejs">
+<a href="#vnetid_nodejs" style="color: inherit; text-decoration: inherit;">vnet<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1839,7 +2115,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>subnet<wbr>Name</span>
+        <span id="subnetname_python">
+<a href="#subnetname_python" style="color: inherit; text-decoration: inherit;">subnet<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1848,7 +2126,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>vnet<wbr>Id</span>
+        <span id="vnetid_python">
+<a href="#vnetid_python" style="color: inherit; text-decoration: inherit;">vnet<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

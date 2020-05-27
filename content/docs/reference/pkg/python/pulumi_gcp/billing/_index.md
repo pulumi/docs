@@ -28,6 +28,15 @@ your existing members are preserved.</p>
 </dd>
 </dl>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">binding</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">billing</span><span class="o">.</span><span class="n">AccountIamBinding</span><span class="p">(</span><span class="s2">&quot;binding&quot;</span><span class="p">,</span>
+    <span class="n">billing_account_id</span><span class="o">=</span><span class="s2">&quot;00AA00-000AAA-00AA0A&quot;</span><span class="p">,</span>
+    <span class="n">members</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;user:alice@gmail.com&quot;</span><span class="p">],</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/billing.viewer&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -145,6 +154,15 @@ what your policy should be.</p>
 </dd>
 </dl>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">binding</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">billing</span><span class="o">.</span><span class="n">AccountIamMember</span><span class="p">(</span><span class="s2">&quot;binding&quot;</span><span class="p">,</span>
+    <span class="n">billing_account_id</span><span class="o">=</span><span class="s2">&quot;00AA00-000AAA-00AA0A&quot;</span><span class="p">,</span>
+    <span class="n">member</span><span class="o">=</span><span class="s2">&quot;user:alice@gmail.com&quot;</span><span class="p">,</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/billing.viewer&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -268,6 +286,18 @@ or they will fight over what your policy should be.</p>
 </dd>
 </dl>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">admin</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">organizations</span><span class="o">.</span><span class="n">get_iam_policy</span><span class="p">(</span><span class="n">binding</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;roles/billing.viewer&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;members&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">],</span>
+<span class="p">}])</span>
+<span class="n">policy</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">billing</span><span class="o">.</span><span class="n">AccountIamPolicy</span><span class="p">(</span><span class="s2">&quot;policy&quot;</span><span class="p">,</span>
+    <span class="n">billing_account_id</span><span class="o">=</span><span class="s2">&quot;00AA00-000AAA-00AA0A&quot;</span><span class="p">,</span>
+    <span class="n">policy_data</span><span class="o">=</span><span class="n">admin</span><span class="o">.</span><span class="n">policy_data</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -365,6 +395,53 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">account</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">organizations</span><span class="o">.</span><span class="n">get_billing_account</span><span class="p">(</span><span class="n">billing_account</span><span class="o">=</span><span class="s2">&quot;000000-0000000-0000000-000000&quot;</span><span class="p">)</span>
+<span class="n">budget</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">billing</span><span class="o">.</span><span class="n">Budget</span><span class="p">(</span><span class="s2">&quot;budget&quot;</span><span class="p">,</span>
+    <span class="n">billing_account</span><span class="o">=</span><span class="n">account</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">display_name</span><span class="o">=</span><span class="s2">&quot;Example Billing Budget&quot;</span><span class="p">,</span>
+    <span class="n">amount</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;specified_amount&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;currencyCode&quot;</span><span class="p">:</span> <span class="s2">&quot;USD&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;units&quot;</span><span class="p">:</span> <span class="s2">&quot;100000&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
+    <span class="n">threshold_rules</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;thresholdPercent&quot;</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">,</span>
+    <span class="p">}])</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">account</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">organizations</span><span class="o">.</span><span class="n">get_billing_account</span><span class="p">(</span><span class="n">billing_account</span><span class="o">=</span><span class="s2">&quot;000000-0000000-0000000-000000&quot;</span><span class="p">)</span>
+<span class="n">budget</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">billing</span><span class="o">.</span><span class="n">Budget</span><span class="p">(</span><span class="s2">&quot;budget&quot;</span><span class="p">,</span>
+    <span class="n">billing_account</span><span class="o">=</span><span class="n">account</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">display_name</span><span class="o">=</span><span class="s2">&quot;Example Billing Budget&quot;</span><span class="p">,</span>
+    <span class="n">budget_filter</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;projects&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;projects/my-project-name&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;creditTypesTreatment&quot;</span><span class="p">:</span> <span class="s2">&quot;EXCLUDE_ALL_CREDITS&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;services&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;services/24E6-581D-38E5&quot;</span><span class="p">],</span>
+    <span class="p">},</span>
+    <span class="n">amount</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;specified_amount&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;currencyCode&quot;</span><span class="p">:</span> <span class="s2">&quot;USD&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;units&quot;</span><span class="p">:</span> <span class="s2">&quot;100000&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
+    <span class="n">threshold_rules</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;thresholdPercent&quot;</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;thresholdPercent&quot;</span><span class="p">:</span> <span class="mf">0.9</span><span class="p">,</span>
+            <span class="s2">&quot;spendBasis&quot;</span><span class="p">:</span> <span class="s2">&quot;FORECASTED_SPEND&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

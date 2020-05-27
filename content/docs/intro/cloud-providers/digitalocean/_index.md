@@ -65,12 +65,13 @@ instance = do.Domain("test",
 
 ```go
 import (
+  "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
   do "github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean"
 )
 
 domain, _ := do.NewDomain(ctx, "test", &do.DomainArgs{
-  Name: "mydomain.com",
-  IpAddress: "192.168.10.10",
+  Name:      pulumi.String("mydomain.com"),
+  IpAddress: pulumi.String("192.168.10.10"),
 })
 ```
 

@@ -65,7 +65,7 @@ dataset = gcp.bigquery.Dataset("dataset",
     access=[
         {
             "role": "OWNER",
-            "userByEmail": bqowner.email,
+            "user_by_email": bqowner.email,
         },
         {
             "role": "READER",
@@ -81,7 +81,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
 const keyRing = new gcp.kms.KeyRing("keyRing", {location: "us"});
-const cryptoKey = new gcp.kms.CryptoKey("cryptoKey", {keyRing: keyRing.selfLink});
+const cryptoKey = new gcp.kms.CryptoKey("cryptoKey", {keyRing: keyRing.id});
 const dataset = new gcp.bigquery.Dataset("dataset", {
     datasetId: "example_dataset",
     friendlyName: "test",
@@ -89,7 +89,7 @@ const dataset = new gcp.bigquery.Dataset("dataset", {
     location: "US",
     defaultTableExpirationMs: 3600000,
     default_encryption_configuration: {
-        kmsKeyName: cryptoKey.selfLink,
+        kmsKeyName: cryptoKey.id,
     },
 });
 ```
@@ -98,7 +98,7 @@ import pulumi
 import pulumi_gcp as gcp
 
 key_ring = gcp.kms.KeyRing("keyRing", location="us")
-crypto_key = gcp.kms.CryptoKey("cryptoKey", key_ring=key_ring.self_link)
+crypto_key = gcp.kms.CryptoKey("cryptoKey", key_ring=key_ring.id)
 dataset = gcp.bigquery.Dataset("dataset",
     dataset_id="example_dataset",
     friendly_name="test",
@@ -106,7 +106,7 @@ dataset = gcp.bigquery.Dataset("dataset",
     location="US",
     default_table_expiration_ms=3600000,
     default_encryption_configuration={
-        "kmsKeyName": crypto_key.self_link,
+        "kms_key_name": crypto_key.id,
     })
 ```
 
@@ -117,19 +117,19 @@ dataset = gcp.bigquery.Dataset("dataset",
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/bigquery/#Dataset">Dataset</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/bigquery/#DatasetArgs">DatasetArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/bigquery/#Dataset">Dataset</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/bigquery/#DatasetArgs">DatasetArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Dataset</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>accesses=None<span class="p">, </span>dataset_id=None<span class="p">, </span>default_encryption_configuration=None<span class="p">, </span>default_partition_expiration_ms=None<span class="p">, </span>default_table_expiration_ms=None<span class="p">, </span>delete_contents_on_destroy=None<span class="p">, </span>description=None<span class="p">, </span>friendly_name=None<span class="p">, </span>labels=None<span class="p">, </span>location=None<span class="p">, </span>project=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/bigquery/#Dataset">Dataset</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>accesses=None<span class="p">, </span>dataset_id=None<span class="p">, </span>default_encryption_configuration=None<span class="p">, </span>default_partition_expiration_ms=None<span class="p">, </span>default_table_expiration_ms=None<span class="p">, </span>delete_contents_on_destroy=None<span class="p">, </span>description=None<span class="p">, </span>friendly_name=None<span class="p">, </span>labels=None<span class="p">, </span>location=None<span class="p">, </span>project=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewDataset<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#DatasetArgs">DatasetArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#Dataset">Dataset</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#Dataset">NewDataset</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#DatasetArgs">DatasetArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#Dataset">Dataset</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Dataset.html">Dataset</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.DatasetArgs.html">DatasetArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Dataset.html">Dataset</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.DatasetArgs.html">DatasetArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -295,7 +295,9 @@ The Dataset resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-required"
             title="Required">
-        <span>Dataset<wbr>Id</span>
+        <span id="datasetid_csharp">
+<a href="#datasetid_csharp" style="color: inherit; text-decoration: inherit;">Dataset<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -304,7 +306,9 @@ The Dataset resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Accesses</span>
+        <span id="accesses_csharp">
+<a href="#accesses_csharp" style="color: inherit; text-decoration: inherit;">Accesses</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetaccess">List&lt;Dataset<wbr>Access<wbr>Args&gt;</a></span>
     </dt>
@@ -313,7 +317,9 @@ The Dataset resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default<wbr>Encryption<wbr>Configuration</span>
+        <span id="defaultencryptionconfiguration_csharp">
+<a href="#defaultencryptionconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Encryption<wbr>Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetdefaultencryptionconfiguration">Dataset<wbr>Default<wbr>Encryption<wbr>Configuration<wbr>Args</a></span>
     </dt>
@@ -324,7 +330,9 @@ this value, unless table creation request (or query) overrides the key.  Structu
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default<wbr>Partition<wbr>Expiration<wbr>Ms</span>
+        <span id="defaultpartitionexpirationms_csharp">
+<a href="#defaultpartitionexpirationms_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Partition<wbr>Expiration<wbr>Ms</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -334,7 +342,9 @@ the dataset, in milliseconds.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default<wbr>Table<wbr>Expiration<wbr>Ms</span>
+        <span id="defaulttableexpirationms_csharp">
+<a href="#defaulttableexpirationms_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Table<wbr>Expiration<wbr>Ms</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -344,7 +354,9 @@ The minimum value is 3600000 milliseconds (one hour).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Delete<wbr>Contents<wbr>On<wbr>Destroy</span>
+        <span id="deletecontentsondestroy_csharp">
+<a href="#deletecontentsondestroy_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>Contents<wbr>On<wbr>Destroy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -355,7 +367,9 @@ destroying the resource will fail if tables are present.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -364,7 +378,9 @@ destroying the resource will fail if tables are present.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Friendly<wbr>Name</span>
+        <span id="friendlyname_csharp">
+<a href="#friendlyname_csharp" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -373,7 +389,9 @@ destroying the resource will fail if tables are present.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Labels</span>
+        <span id="labels_csharp">
+<a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -383,7 +401,9 @@ organize and group your datasets
 
     <dt class="property-optional"
             title="Optional">
-        <span>Location</span>
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -393,7 +413,9 @@ See [official docs](https://cloud.google.com/bigquery/docs/dataset-locations).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project</span>
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -410,7 +432,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>Dataset<wbr>Id</span>
+        <span id="datasetid_go">
+<a href="#datasetid_go" style="color: inherit; text-decoration: inherit;">Dataset<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -419,7 +443,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Accesses</span>
+        <span id="accesses_go">
+<a href="#accesses_go" style="color: inherit; text-decoration: inherit;">Accesses</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetaccess">[]Dataset<wbr>Access<wbr>Type</a></span>
     </dt>
@@ -428,7 +454,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default<wbr>Encryption<wbr>Configuration</span>
+        <span id="defaultencryptionconfiguration_go">
+<a href="#defaultencryptionconfiguration_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Encryption<wbr>Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetdefaultencryptionconfiguration">Dataset<wbr>Default<wbr>Encryption<wbr>Configuration</a></span>
     </dt>
@@ -439,7 +467,9 @@ this value, unless table creation request (or query) overrides the key.  Structu
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default<wbr>Partition<wbr>Expiration<wbr>Ms</span>
+        <span id="defaultpartitionexpirationms_go">
+<a href="#defaultpartitionexpirationms_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Partition<wbr>Expiration<wbr>Ms</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -449,7 +479,9 @@ the dataset, in milliseconds.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default<wbr>Table<wbr>Expiration<wbr>Ms</span>
+        <span id="defaulttableexpirationms_go">
+<a href="#defaulttableexpirationms_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Table<wbr>Expiration<wbr>Ms</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -459,7 +491,9 @@ The minimum value is 3600000 milliseconds (one hour).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Delete<wbr>Contents<wbr>On<wbr>Destroy</span>
+        <span id="deletecontentsondestroy_go">
+<a href="#deletecontentsondestroy_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>Contents<wbr>On<wbr>Destroy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -470,7 +504,9 @@ destroying the resource will fail if tables are present.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -479,7 +515,9 @@ destroying the resource will fail if tables are present.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Friendly<wbr>Name</span>
+        <span id="friendlyname_go">
+<a href="#friendlyname_go" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -488,7 +526,9 @@ destroying the resource will fail if tables are present.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Labels</span>
+        <span id="labels_go">
+<a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -498,7 +538,9 @@ organize and group your datasets
 
     <dt class="property-optional"
             title="Optional">
-        <span>Location</span>
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -508,7 +550,9 @@ See [official docs](https://cloud.google.com/bigquery/docs/dataset-locations).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project</span>
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -525,7 +569,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>dataset<wbr>Id</span>
+        <span id="datasetid_nodejs">
+<a href="#datasetid_nodejs" style="color: inherit; text-decoration: inherit;">dataset<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -534,7 +580,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>accesses</span>
+        <span id="accesses_nodejs">
+<a href="#accesses_nodejs" style="color: inherit; text-decoration: inherit;">accesses</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetaccess">Dataset<wbr>Access[]</a></span>
     </dt>
@@ -543,7 +591,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>default<wbr>Encryption<wbr>Configuration</span>
+        <span id="defaultencryptionconfiguration_nodejs">
+<a href="#defaultencryptionconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Encryption<wbr>Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetdefaultencryptionconfiguration">Dataset<wbr>Default<wbr>Encryption<wbr>Configuration</a></span>
     </dt>
@@ -554,7 +604,9 @@ this value, unless table creation request (or query) overrides the key.  Structu
 
     <dt class="property-optional"
             title="Optional">
-        <span>default<wbr>Partition<wbr>Expiration<wbr>Ms</span>
+        <span id="defaultpartitionexpirationms_nodejs">
+<a href="#defaultpartitionexpirationms_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Partition<wbr>Expiration<wbr>Ms</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -564,7 +616,9 @@ the dataset, in milliseconds.
 
     <dt class="property-optional"
             title="Optional">
-        <span>default<wbr>Table<wbr>Expiration<wbr>Ms</span>
+        <span id="defaulttableexpirationms_nodejs">
+<a href="#defaulttableexpirationms_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Table<wbr>Expiration<wbr>Ms</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -574,7 +628,9 @@ The minimum value is 3600000 milliseconds (one hour).
 
     <dt class="property-optional"
             title="Optional">
-        <span>delete<wbr>Contents<wbr>On<wbr>Destroy</span>
+        <span id="deletecontentsondestroy_nodejs">
+<a href="#deletecontentsondestroy_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Contents<wbr>On<wbr>Destroy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -585,7 +641,9 @@ destroying the resource will fail if tables are present.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -594,7 +652,9 @@ destroying the resource will fail if tables are present.
 
     <dt class="property-optional"
             title="Optional">
-        <span>friendly<wbr>Name</span>
+        <span id="friendlyname_nodejs">
+<a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -603,7 +663,9 @@ destroying the resource will fail if tables are present.
 
     <dt class="property-optional"
             title="Optional">
-        <span>labels</span>
+        <span id="labels_nodejs">
+<a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -613,7 +675,9 @@ organize and group your datasets
 
     <dt class="property-optional"
             title="Optional">
-        <span>location</span>
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -623,7 +687,9 @@ See [official docs](https://cloud.google.com/bigquery/docs/dataset-locations).
 
     <dt class="property-optional"
             title="Optional">
-        <span>project</span>
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -640,7 +706,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>dataset_<wbr>id</span>
+        <span id="dataset_id_python">
+<a href="#dataset_id_python" style="color: inherit; text-decoration: inherit;">dataset_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -649,7 +717,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>accesses</span>
+        <span id="accesses_python">
+<a href="#accesses_python" style="color: inherit; text-decoration: inherit;">accesses</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetaccess">List[Dataset<wbr>Access]</a></span>
     </dt>
@@ -658,7 +728,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>default_<wbr>encryption_<wbr>configuration</span>
+        <span id="default_encryption_configuration_python">
+<a href="#default_encryption_configuration_python" style="color: inherit; text-decoration: inherit;">default_<wbr>encryption_<wbr>configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetdefaultencryptionconfiguration">Dict[Dataset<wbr>Default<wbr>Encryption<wbr>Configuration]</a></span>
     </dt>
@@ -669,7 +741,9 @@ this value, unless table creation request (or query) overrides the key.  Structu
 
     <dt class="property-optional"
             title="Optional">
-        <span>default_<wbr>partition_<wbr>expiration_<wbr>ms</span>
+        <span id="default_partition_expiration_ms_python">
+<a href="#default_partition_expiration_ms_python" style="color: inherit; text-decoration: inherit;">default_<wbr>partition_<wbr>expiration_<wbr>ms</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -679,7 +753,9 @@ the dataset, in milliseconds.
 
     <dt class="property-optional"
             title="Optional">
-        <span>default_<wbr>table_<wbr>expiration_<wbr>ms</span>
+        <span id="default_table_expiration_ms_python">
+<a href="#default_table_expiration_ms_python" style="color: inherit; text-decoration: inherit;">default_<wbr>table_<wbr>expiration_<wbr>ms</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -689,7 +765,9 @@ The minimum value is 3600000 milliseconds (one hour).
 
     <dt class="property-optional"
             title="Optional">
-        <span>delete_<wbr>contents_<wbr>on_<wbr>destroy</span>
+        <span id="delete_contents_on_destroy_python">
+<a href="#delete_contents_on_destroy_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>contents_<wbr>on_<wbr>destroy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -700,7 +778,9 @@ destroying the resource will fail if tables are present.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -709,7 +789,9 @@ destroying the resource will fail if tables are present.
 
     <dt class="property-optional"
             title="Optional">
-        <span>friendly_<wbr>name</span>
+        <span id="friendly_name_python">
+<a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -718,7 +800,9 @@ destroying the resource will fail if tables are present.
 
     <dt class="property-optional"
             title="Optional">
-        <span>labels</span>
+        <span id="labels_python">
+<a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -728,7 +812,9 @@ organize and group your datasets
 
     <dt class="property-optional"
             title="Optional">
-        <span>location</span>
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -738,7 +824,9 @@ See [official docs](https://cloud.google.com/bigquery/docs/dataset-locations).
 
     <dt class="property-optional"
             title="Optional">
-        <span>project</span>
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -766,7 +854,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Creation<wbr>Time</span>
+        <span id="creationtime_csharp">
+<a href="#creationtime_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -775,7 +865,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Etag</span>
+        <span id="etag_csharp">
+<a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -784,7 +876,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -792,7 +886,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Last<wbr>Modified<wbr>Time</span>
+        <span id="lastmodifiedtime_csharp">
+<a href="#lastmodifiedtime_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -801,7 +897,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Self<wbr>Link</span>
+        <span id="selflink_csharp">
+<a href="#selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -817,7 +915,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Creation<wbr>Time</span>
+        <span id="creationtime_go">
+<a href="#creationtime_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -826,7 +926,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Etag</span>
+        <span id="etag_go">
+<a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -835,7 +937,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -843,7 +947,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Last<wbr>Modified<wbr>Time</span>
+        <span id="lastmodifiedtime_go">
+<a href="#lastmodifiedtime_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -852,7 +958,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Self<wbr>Link</span>
+        <span id="selflink_go">
+<a href="#selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -868,7 +976,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>creation<wbr>Time</span>
+        <span id="creationtime_nodejs">
+<a href="#creationtime_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -877,7 +987,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>etag</span>
+        <span id="etag_nodejs">
+<a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -886,7 +998,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -894,7 +1008,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>last<wbr>Modified<wbr>Time</span>
+        <span id="lastmodifiedtime_nodejs">
+<a href="#lastmodifiedtime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -903,7 +1019,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>self<wbr>Link</span>
+        <span id="selflink_nodejs">
+<a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -919,7 +1037,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>creation_<wbr>time</span>
+        <span id="creation_time_python">
+<a href="#creation_time_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -928,7 +1048,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>etag</span>
+        <span id="etag_python">
+<a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -937,7 +1059,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -945,7 +1069,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>last_<wbr>modified_<wbr>time</span>
+        <span id="last_modified_time_python">
+<a href="#last_modified_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -954,7 +1080,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>self_<wbr>link</span>
+        <span id="self_link_python">
+<a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -976,7 +1104,7 @@ Get an existing Dataset resource's state with the given name, ID, and optional e
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/bigquery/#DatasetState">DatasetState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/bigquery/#Dataset">Dataset</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/bigquery/#DatasetState">DatasetState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/bigquery/#Dataset">Dataset</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -984,11 +1112,11 @@ Get an existing Dataset resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDataset<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#DatasetState">DatasetState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#Dataset">Dataset</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDataset<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#DatasetState">DatasetState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#Dataset">Dataset</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Dataset.html">Dataset</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.DatasetState.html">DatasetState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Dataset.html">Dataset</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.DatasetState.html">DatasetState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1096,7 +1224,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Accesses</span>
+        <span id="state_accesses_csharp">
+<a href="#state_accesses_csharp" style="color: inherit; text-decoration: inherit;">Accesses</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetaccess">List&lt;Dataset<wbr>Access<wbr>Args&gt;</a></span>
     </dt>
@@ -1105,7 +1235,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Creation<wbr>Time</span>
+        <span id="state_creationtime_csharp">
+<a href="#state_creationtime_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1114,7 +1246,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dataset<wbr>Id</span>
+        <span id="state_datasetid_csharp">
+<a href="#state_datasetid_csharp" style="color: inherit; text-decoration: inherit;">Dataset<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1123,7 +1257,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default<wbr>Encryption<wbr>Configuration</span>
+        <span id="state_defaultencryptionconfiguration_csharp">
+<a href="#state_defaultencryptionconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Encryption<wbr>Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetdefaultencryptionconfiguration">Dataset<wbr>Default<wbr>Encryption<wbr>Configuration<wbr>Args</a></span>
     </dt>
@@ -1134,7 +1270,9 @@ this value, unless table creation request (or query) overrides the key.  Structu
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default<wbr>Partition<wbr>Expiration<wbr>Ms</span>
+        <span id="state_defaultpartitionexpirationms_csharp">
+<a href="#state_defaultpartitionexpirationms_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Partition<wbr>Expiration<wbr>Ms</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1144,7 +1282,9 @@ the dataset, in milliseconds.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default<wbr>Table<wbr>Expiration<wbr>Ms</span>
+        <span id="state_defaulttableexpirationms_csharp">
+<a href="#state_defaulttableexpirationms_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Table<wbr>Expiration<wbr>Ms</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1154,7 +1294,9 @@ The minimum value is 3600000 milliseconds (one hour).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Delete<wbr>Contents<wbr>On<wbr>Destroy</span>
+        <span id="state_deletecontentsondestroy_csharp">
+<a href="#state_deletecontentsondestroy_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>Contents<wbr>On<wbr>Destroy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1165,7 +1307,9 @@ destroying the resource will fail if tables are present.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_csharp">
+<a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1174,7 +1318,9 @@ destroying the resource will fail if tables are present.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Etag</span>
+        <span id="state_etag_csharp">
+<a href="#state_etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1183,7 +1329,9 @@ destroying the resource will fail if tables are present.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Friendly<wbr>Name</span>
+        <span id="state_friendlyname_csharp">
+<a href="#state_friendlyname_csharp" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1192,7 +1340,9 @@ destroying the resource will fail if tables are present.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Labels</span>
+        <span id="state_labels_csharp">
+<a href="#state_labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -1202,7 +1352,9 @@ organize and group your datasets
 
     <dt class="property-optional"
             title="Optional">
-        <span>Last<wbr>Modified<wbr>Time</span>
+        <span id="state_lastmodifiedtime_csharp">
+<a href="#state_lastmodifiedtime_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1211,7 +1363,9 @@ organize and group your datasets
 
     <dt class="property-optional"
             title="Optional">
-        <span>Location</span>
+        <span id="state_location_csharp">
+<a href="#state_location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1221,7 +1375,9 @@ See [official docs](https://cloud.google.com/bigquery/docs/dataset-locations).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project</span>
+        <span id="state_project_csharp">
+<a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1231,7 +1387,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Self<wbr>Link</span>
+        <span id="state_selflink_csharp">
+<a href="#state_selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1247,7 +1405,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Accesses</span>
+        <span id="state_accesses_go">
+<a href="#state_accesses_go" style="color: inherit; text-decoration: inherit;">Accesses</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetaccess">[]Dataset<wbr>Access<wbr>Type</a></span>
     </dt>
@@ -1256,7 +1416,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Creation<wbr>Time</span>
+        <span id="state_creationtime_go">
+<a href="#state_creationtime_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1265,7 +1427,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dataset<wbr>Id</span>
+        <span id="state_datasetid_go">
+<a href="#state_datasetid_go" style="color: inherit; text-decoration: inherit;">Dataset<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1274,7 +1438,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default<wbr>Encryption<wbr>Configuration</span>
+        <span id="state_defaultencryptionconfiguration_go">
+<a href="#state_defaultencryptionconfiguration_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Encryption<wbr>Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetdefaultencryptionconfiguration">Dataset<wbr>Default<wbr>Encryption<wbr>Configuration</a></span>
     </dt>
@@ -1285,7 +1451,9 @@ this value, unless table creation request (or query) overrides the key.  Structu
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default<wbr>Partition<wbr>Expiration<wbr>Ms</span>
+        <span id="state_defaultpartitionexpirationms_go">
+<a href="#state_defaultpartitionexpirationms_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Partition<wbr>Expiration<wbr>Ms</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1295,7 +1463,9 @@ the dataset, in milliseconds.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default<wbr>Table<wbr>Expiration<wbr>Ms</span>
+        <span id="state_defaulttableexpirationms_go">
+<a href="#state_defaulttableexpirationms_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Table<wbr>Expiration<wbr>Ms</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1305,7 +1475,9 @@ The minimum value is 3600000 milliseconds (one hour).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Delete<wbr>Contents<wbr>On<wbr>Destroy</span>
+        <span id="state_deletecontentsondestroy_go">
+<a href="#state_deletecontentsondestroy_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>Contents<wbr>On<wbr>Destroy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1316,7 +1488,9 @@ destroying the resource will fail if tables are present.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_go">
+<a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1325,7 +1499,9 @@ destroying the resource will fail if tables are present.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Etag</span>
+        <span id="state_etag_go">
+<a href="#state_etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1334,7 +1510,9 @@ destroying the resource will fail if tables are present.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Friendly<wbr>Name</span>
+        <span id="state_friendlyname_go">
+<a href="#state_friendlyname_go" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1343,7 +1521,9 @@ destroying the resource will fail if tables are present.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Labels</span>
+        <span id="state_labels_go">
+<a href="#state_labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -1353,7 +1533,9 @@ organize and group your datasets
 
     <dt class="property-optional"
             title="Optional">
-        <span>Last<wbr>Modified<wbr>Time</span>
+        <span id="state_lastmodifiedtime_go">
+<a href="#state_lastmodifiedtime_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1362,7 +1544,9 @@ organize and group your datasets
 
     <dt class="property-optional"
             title="Optional">
-        <span>Location</span>
+        <span id="state_location_go">
+<a href="#state_location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1372,7 +1556,9 @@ See [official docs](https://cloud.google.com/bigquery/docs/dataset-locations).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project</span>
+        <span id="state_project_go">
+<a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1382,7 +1568,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Self<wbr>Link</span>
+        <span id="state_selflink_go">
+<a href="#state_selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1398,7 +1586,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>accesses</span>
+        <span id="state_accesses_nodejs">
+<a href="#state_accesses_nodejs" style="color: inherit; text-decoration: inherit;">accesses</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetaccess">Dataset<wbr>Access[]</a></span>
     </dt>
@@ -1407,7 +1597,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>creation<wbr>Time</span>
+        <span id="state_creationtime_nodejs">
+<a href="#state_creationtime_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1416,7 +1608,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>dataset<wbr>Id</span>
+        <span id="state_datasetid_nodejs">
+<a href="#state_datasetid_nodejs" style="color: inherit; text-decoration: inherit;">dataset<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1425,7 +1619,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>default<wbr>Encryption<wbr>Configuration</span>
+        <span id="state_defaultencryptionconfiguration_nodejs">
+<a href="#state_defaultencryptionconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Encryption<wbr>Configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetdefaultencryptionconfiguration">Dataset<wbr>Default<wbr>Encryption<wbr>Configuration</a></span>
     </dt>
@@ -1436,7 +1632,9 @@ this value, unless table creation request (or query) overrides the key.  Structu
 
     <dt class="property-optional"
             title="Optional">
-        <span>default<wbr>Partition<wbr>Expiration<wbr>Ms</span>
+        <span id="state_defaultpartitionexpirationms_nodejs">
+<a href="#state_defaultpartitionexpirationms_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Partition<wbr>Expiration<wbr>Ms</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1446,7 +1644,9 @@ the dataset, in milliseconds.
 
     <dt class="property-optional"
             title="Optional">
-        <span>default<wbr>Table<wbr>Expiration<wbr>Ms</span>
+        <span id="state_defaulttableexpirationms_nodejs">
+<a href="#state_defaulttableexpirationms_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Table<wbr>Expiration<wbr>Ms</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1456,7 +1656,9 @@ The minimum value is 3600000 milliseconds (one hour).
 
     <dt class="property-optional"
             title="Optional">
-        <span>delete<wbr>Contents<wbr>On<wbr>Destroy</span>
+        <span id="state_deletecontentsondestroy_nodejs">
+<a href="#state_deletecontentsondestroy_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Contents<wbr>On<wbr>Destroy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1467,7 +1669,9 @@ destroying the resource will fail if tables are present.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_nodejs">
+<a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1476,7 +1680,9 @@ destroying the resource will fail if tables are present.
 
     <dt class="property-optional"
             title="Optional">
-        <span>etag</span>
+        <span id="state_etag_nodejs">
+<a href="#state_etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1485,7 +1691,9 @@ destroying the resource will fail if tables are present.
 
     <dt class="property-optional"
             title="Optional">
-        <span>friendly<wbr>Name</span>
+        <span id="state_friendlyname_nodejs">
+<a href="#state_friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1494,7 +1702,9 @@ destroying the resource will fail if tables are present.
 
     <dt class="property-optional"
             title="Optional">
-        <span>labels</span>
+        <span id="state_labels_nodejs">
+<a href="#state_labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -1504,7 +1714,9 @@ organize and group your datasets
 
     <dt class="property-optional"
             title="Optional">
-        <span>last<wbr>Modified<wbr>Time</span>
+        <span id="state_lastmodifiedtime_nodejs">
+<a href="#state_lastmodifiedtime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1513,7 +1725,9 @@ organize and group your datasets
 
     <dt class="property-optional"
             title="Optional">
-        <span>location</span>
+        <span id="state_location_nodejs">
+<a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1523,7 +1737,9 @@ See [official docs](https://cloud.google.com/bigquery/docs/dataset-locations).
 
     <dt class="property-optional"
             title="Optional">
-        <span>project</span>
+        <span id="state_project_nodejs">
+<a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1533,7 +1749,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>self<wbr>Link</span>
+        <span id="state_selflink_nodejs">
+<a href="#state_selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1549,7 +1767,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>accesses</span>
+        <span id="state_accesses_python">
+<a href="#state_accesses_python" style="color: inherit; text-decoration: inherit;">accesses</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetaccess">List[Dataset<wbr>Access]</a></span>
     </dt>
@@ -1558,7 +1778,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>creation_<wbr>time</span>
+        <span id="state_creation_time_python">
+<a href="#state_creation_time_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1567,7 +1789,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>dataset_<wbr>id</span>
+        <span id="state_dataset_id_python">
+<a href="#state_dataset_id_python" style="color: inherit; text-decoration: inherit;">dataset_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1576,7 +1800,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>default_<wbr>encryption_<wbr>configuration</span>
+        <span id="state_default_encryption_configuration_python">
+<a href="#state_default_encryption_configuration_python" style="color: inherit; text-decoration: inherit;">default_<wbr>encryption_<wbr>configuration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetdefaultencryptionconfiguration">Dict[Dataset<wbr>Default<wbr>Encryption<wbr>Configuration]</a></span>
     </dt>
@@ -1587,7 +1813,9 @@ this value, unless table creation request (or query) overrides the key.  Structu
 
     <dt class="property-optional"
             title="Optional">
-        <span>default_<wbr>partition_<wbr>expiration_<wbr>ms</span>
+        <span id="state_default_partition_expiration_ms_python">
+<a href="#state_default_partition_expiration_ms_python" style="color: inherit; text-decoration: inherit;">default_<wbr>partition_<wbr>expiration_<wbr>ms</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1597,7 +1825,9 @@ the dataset, in milliseconds.
 
     <dt class="property-optional"
             title="Optional">
-        <span>default_<wbr>table_<wbr>expiration_<wbr>ms</span>
+        <span id="state_default_table_expiration_ms_python">
+<a href="#state_default_table_expiration_ms_python" style="color: inherit; text-decoration: inherit;">default_<wbr>table_<wbr>expiration_<wbr>ms</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1607,7 +1837,9 @@ The minimum value is 3600000 milliseconds (one hour).
 
     <dt class="property-optional"
             title="Optional">
-        <span>delete_<wbr>contents_<wbr>on_<wbr>destroy</span>
+        <span id="state_delete_contents_on_destroy_python">
+<a href="#state_delete_contents_on_destroy_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>contents_<wbr>on_<wbr>destroy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1618,7 +1850,9 @@ destroying the resource will fail if tables are present.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_python">
+<a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1627,7 +1861,9 @@ destroying the resource will fail if tables are present.
 
     <dt class="property-optional"
             title="Optional">
-        <span>etag</span>
+        <span id="state_etag_python">
+<a href="#state_etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1636,7 +1872,9 @@ destroying the resource will fail if tables are present.
 
     <dt class="property-optional"
             title="Optional">
-        <span>friendly_<wbr>name</span>
+        <span id="state_friendly_name_python">
+<a href="#state_friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1645,7 +1883,9 @@ destroying the resource will fail if tables are present.
 
     <dt class="property-optional"
             title="Optional">
-        <span>labels</span>
+        <span id="state_labels_python">
+<a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -1655,7 +1895,9 @@ organize and group your datasets
 
     <dt class="property-optional"
             title="Optional">
-        <span>last_<wbr>modified_<wbr>time</span>
+        <span id="state_last_modified_time_python">
+<a href="#state_last_modified_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1664,7 +1906,9 @@ organize and group your datasets
 
     <dt class="property-optional"
             title="Optional">
-        <span>location</span>
+        <span id="state_location_python">
+<a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1674,7 +1918,9 @@ See [official docs](https://cloud.google.com/bigquery/docs/dataset-locations).
 
     <dt class="property-optional"
             title="Optional">
-        <span>project</span>
+        <span id="state_project_python">
+<a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1684,7 +1930,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>self_<wbr>link</span>
+        <span id="state_self_link_python">
+<a href="#state_self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1726,7 +1974,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Domain</span>
+        <span id="domain_csharp">
+<a href="#domain_csharp" style="color: inherit; text-decoration: inherit;">Domain</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1736,7 +1986,9 @@ domain specified will be granted the specified access
 
     <dt class="property-optional"
             title="Optional">
-        <span>Group<wbr>By<wbr>Email</span>
+        <span id="groupbyemail_csharp">
+<a href="#groupbyemail_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>By<wbr>Email</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1745,7 +1997,9 @@ domain specified will be granted the specified access
 
     <dt class="property-optional"
             title="Optional">
-        <span>Role</span>
+        <span id="role_csharp">
+<a href="#role_csharp" style="color: inherit; text-decoration: inherit;">Role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1753,13 +2007,15 @@ domain specified will be granted the specified access
 member of the access object. Primitive, Predefined and custom
 roles are supported. Predefined roles that have equivalent
 primitive roles are swapped by the API to their Primitive
-counterparts, and will show a diff post-create. See
+counterparts. See
 [official docs](https://cloud.google.com/bigquery/docs/access-control).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Special<wbr>Group</span>
+        <span id="specialgroup_csharp">
+<a href="#specialgroup_csharp" style="color: inherit; text-decoration: inherit;">Special<wbr>Group</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1768,7 +2024,9 @@ counterparts, and will show a diff post-create. See
 
     <dt class="property-optional"
             title="Optional">
-        <span>User<wbr>By<wbr>Email</span>
+        <span id="userbyemail_csharp">
+<a href="#userbyemail_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>By<wbr>Email</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1778,7 +2036,9 @@ fred@example.com
 
     <dt class="property-optional"
             title="Optional">
-        <span>View</span>
+        <span id="view_csharp">
+<a href="#view_csharp" style="color: inherit; text-decoration: inherit;">View</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetaccessview">Dataset<wbr>Access<wbr>View<wbr>Args</a></span>
     </dt>
@@ -1798,7 +2058,9 @@ needs to be granted again via an update operation.  Structure is documented belo
 
     <dt class="property-optional"
             title="Optional">
-        <span>Domain</span>
+        <span id="domain_go">
+<a href="#domain_go" style="color: inherit; text-decoration: inherit;">Domain</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1808,7 +2070,9 @@ domain specified will be granted the specified access
 
     <dt class="property-optional"
             title="Optional">
-        <span>Group<wbr>By<wbr>Email</span>
+        <span id="groupbyemail_go">
+<a href="#groupbyemail_go" style="color: inherit; text-decoration: inherit;">Group<wbr>By<wbr>Email</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1817,7 +2081,9 @@ domain specified will be granted the specified access
 
     <dt class="property-optional"
             title="Optional">
-        <span>Role</span>
+        <span id="role_go">
+<a href="#role_go" style="color: inherit; text-decoration: inherit;">Role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1825,13 +2091,15 @@ domain specified will be granted the specified access
 member of the access object. Primitive, Predefined and custom
 roles are supported. Predefined roles that have equivalent
 primitive roles are swapped by the API to their Primitive
-counterparts, and will show a diff post-create. See
+counterparts. See
 [official docs](https://cloud.google.com/bigquery/docs/access-control).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Special<wbr>Group</span>
+        <span id="specialgroup_go">
+<a href="#specialgroup_go" style="color: inherit; text-decoration: inherit;">Special<wbr>Group</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1840,7 +2108,9 @@ counterparts, and will show a diff post-create. See
 
     <dt class="property-optional"
             title="Optional">
-        <span>User<wbr>By<wbr>Email</span>
+        <span id="userbyemail_go">
+<a href="#userbyemail_go" style="color: inherit; text-decoration: inherit;">User<wbr>By<wbr>Email</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1850,7 +2120,9 @@ fred@example.com
 
     <dt class="property-optional"
             title="Optional">
-        <span>View</span>
+        <span id="view_go">
+<a href="#view_go" style="color: inherit; text-decoration: inherit;">View</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetaccessview">Dataset<wbr>Access<wbr>View</a></span>
     </dt>
@@ -1870,7 +2142,9 @@ needs to be granted again via an update operation.  Structure is documented belo
 
     <dt class="property-optional"
             title="Optional">
-        <span>domain</span>
+        <span id="domain_nodejs">
+<a href="#domain_nodejs" style="color: inherit; text-decoration: inherit;">domain</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1880,7 +2154,9 @@ domain specified will be granted the specified access
 
     <dt class="property-optional"
             title="Optional">
-        <span>group<wbr>By<wbr>Email</span>
+        <span id="groupbyemail_nodejs">
+<a href="#groupbyemail_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>By<wbr>Email</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1889,7 +2165,9 @@ domain specified will be granted the specified access
 
     <dt class="property-optional"
             title="Optional">
-        <span>role</span>
+        <span id="role_nodejs">
+<a href="#role_nodejs" style="color: inherit; text-decoration: inherit;">role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1897,13 +2175,15 @@ domain specified will be granted the specified access
 member of the access object. Primitive, Predefined and custom
 roles are supported. Predefined roles that have equivalent
 primitive roles are swapped by the API to their Primitive
-counterparts, and will show a diff post-create. See
+counterparts. See
 [official docs](https://cloud.google.com/bigquery/docs/access-control).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>special<wbr>Group</span>
+        <span id="specialgroup_nodejs">
+<a href="#specialgroup_nodejs" style="color: inherit; text-decoration: inherit;">special<wbr>Group</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1912,7 +2192,9 @@ counterparts, and will show a diff post-create. See
 
     <dt class="property-optional"
             title="Optional">
-        <span>user<wbr>By<wbr>Email</span>
+        <span id="userbyemail_nodejs">
+<a href="#userbyemail_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>By<wbr>Email</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1922,7 +2204,9 @@ fred@example.com
 
     <dt class="property-optional"
             title="Optional">
-        <span>view</span>
+        <span id="view_nodejs">
+<a href="#view_nodejs" style="color: inherit; text-decoration: inherit;">view</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetaccessview">Dataset<wbr>Access<wbr>View</a></span>
     </dt>
@@ -1942,7 +2226,9 @@ needs to be granted again via an update operation.  Structure is documented belo
 
     <dt class="property-optional"
             title="Optional">
-        <span>domain</span>
+        <span id="domain_python">
+<a href="#domain_python" style="color: inherit; text-decoration: inherit;">domain</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1952,7 +2238,9 @@ domain specified will be granted the specified access
 
     <dt class="property-optional"
             title="Optional">
-        <span>group_<wbr>by_<wbr>email</span>
+        <span id="group_by_email_python">
+<a href="#group_by_email_python" style="color: inherit; text-decoration: inherit;">group_<wbr>by_<wbr>email</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1961,7 +2249,9 @@ domain specified will be granted the specified access
 
     <dt class="property-optional"
             title="Optional">
-        <span>role</span>
+        <span id="role_python">
+<a href="#role_python" style="color: inherit; text-decoration: inherit;">role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1969,13 +2259,15 @@ domain specified will be granted the specified access
 member of the access object. Primitive, Predefined and custom
 roles are supported. Predefined roles that have equivalent
 primitive roles are swapped by the API to their Primitive
-counterparts, and will show a diff post-create. See
+counterparts. See
 [official docs](https://cloud.google.com/bigquery/docs/access-control).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>special_<wbr>group</span>
+        <span id="special_group_python">
+<a href="#special_group_python" style="color: inherit; text-decoration: inherit;">special_<wbr>group</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1984,7 +2276,9 @@ counterparts, and will show a diff post-create. See
 
     <dt class="property-optional"
             title="Optional">
-        <span>user_<wbr>by_<wbr>email</span>
+        <span id="user_by_email_python">
+<a href="#user_by_email_python" style="color: inherit; text-decoration: inherit;">user_<wbr>by_<wbr>email</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1994,7 +2288,9 @@ fred@example.com
 
     <dt class="property-optional"
             title="Optional">
-        <span>view</span>
+        <span id="view_python">
+<a href="#view_python" style="color: inherit; text-decoration: inherit;">view</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetaccessview">Dict[Dataset<wbr>Access<wbr>View]</a></span>
     </dt>
@@ -2032,7 +2328,9 @@ needs to be granted again via an update operation.  Structure is documented belo
 
     <dt class="property-required"
             title="Required">
-        <span>Dataset<wbr>Id</span>
+        <span id="datasetid_csharp">
+<a href="#datasetid_csharp" style="color: inherit; text-decoration: inherit;">Dataset<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2041,7 +2339,9 @@ needs to be granted again via an update operation.  Structure is documented belo
 
     <dt class="property-required"
             title="Required">
-        <span>Project<wbr>Id</span>
+        <span id="projectid_csharp">
+<a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2050,7 +2350,9 @@ needs to be granted again via an update operation.  Structure is documented belo
 
     <dt class="property-required"
             title="Required">
-        <span>Table<wbr>Id</span>
+        <span id="tableid_csharp">
+<a href="#tableid_csharp" style="color: inherit; text-decoration: inherit;">Table<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2068,7 +2370,9 @@ is 1,024 characters.
 
     <dt class="property-required"
             title="Required">
-        <span>Dataset<wbr>Id</span>
+        <span id="datasetid_go">
+<a href="#datasetid_go" style="color: inherit; text-decoration: inherit;">Dataset<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2077,7 +2381,9 @@ is 1,024 characters.
 
     <dt class="property-required"
             title="Required">
-        <span>Project<wbr>Id</span>
+        <span id="projectid_go">
+<a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2086,7 +2392,9 @@ is 1,024 characters.
 
     <dt class="property-required"
             title="Required">
-        <span>Table<wbr>Id</span>
+        <span id="tableid_go">
+<a href="#tableid_go" style="color: inherit; text-decoration: inherit;">Table<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2104,7 +2412,9 @@ is 1,024 characters.
 
     <dt class="property-required"
             title="Required">
-        <span>dataset<wbr>Id</span>
+        <span id="datasetid_nodejs">
+<a href="#datasetid_nodejs" style="color: inherit; text-decoration: inherit;">dataset<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2113,7 +2423,9 @@ is 1,024 characters.
 
     <dt class="property-required"
             title="Required">
-        <span>project<wbr>Id</span>
+        <span id="projectid_nodejs">
+<a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2122,7 +2434,9 @@ is 1,024 characters.
 
     <dt class="property-required"
             title="Required">
-        <span>table<wbr>Id</span>
+        <span id="tableid_nodejs">
+<a href="#tableid_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2140,7 +2454,9 @@ is 1,024 characters.
 
     <dt class="property-required"
             title="Required">
-        <span>dataset_<wbr>id</span>
+        <span id="dataset_id_python">
+<a href="#dataset_id_python" style="color: inherit; text-decoration: inherit;">dataset_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2149,7 +2465,9 @@ is 1,024 characters.
 
     <dt class="property-required"
             title="Required">
-        <span>project_<wbr>id</span>
+        <span id="project_id_python">
+<a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2158,7 +2476,9 @@ is 1,024 characters.
 
     <dt class="property-required"
             title="Required">
-        <span>table_<wbr>id</span>
+        <span id="table_id_python">
+<a href="#table_id_python" style="color: inherit; text-decoration: inherit;">table_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2194,7 +2514,9 @@ is 1,024 characters.
 
     <dt class="property-required"
             title="Required">
-        <span>Kms<wbr>Key<wbr>Name</span>
+        <span id="kmskeyname_csharp">
+<a href="#kmskeyname_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2212,7 +2534,9 @@ access to this encryption key.
 
     <dt class="property-required"
             title="Required">
-        <span>Kms<wbr>Key<wbr>Name</span>
+        <span id="kmskeyname_go">
+<a href="#kmskeyname_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2230,7 +2554,9 @@ access to this encryption key.
 
     <dt class="property-required"
             title="Required">
-        <span>kms<wbr>Key<wbr>Name</span>
+        <span id="kmskeyname_nodejs">
+<a href="#kmskeyname_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2248,7 +2574,9 @@ access to this encryption key.
 
     <dt class="property-required"
             title="Required">
-        <span>kms_<wbr>key_<wbr>name</span>
+        <span id="kms_key_name_python">
+<a href="#kms_key_name_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

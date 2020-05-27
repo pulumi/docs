@@ -28,13 +28,13 @@ import * as gcp from "@pulumi/gcp";
 
 const net = new gcp.compute.Network("net", {});
 const subnet = new gcp.compute.Subnetwork("subnet", {
-    network: net.selfLink,
+    network: net.id,
     ipCidrRange: "10.0.0.0/16",
     region: "us-central1",
 });
 const router = new gcp.compute.Router("router", {
     region: subnet.region,
-    network: net.selfLink,
+    network: net.id,
     bgp: {
         asn: 64514,
     },
@@ -56,12 +56,12 @@ import pulumi_gcp as gcp
 
 net = gcp.compute.Network("net")
 subnet = gcp.compute.Subnetwork("subnet",
-    network=net.self_link,
+    network=net.id,
     ip_cidr_range="10.0.0.0/16",
     region="us-central1")
 router = gcp.compute.Router("router",
     region=subnet.region,
-    network=net.self_link,
+    network=net.id,
     bgp={
         "asn": 64514,
     })
@@ -84,13 +84,13 @@ import * as gcp from "@pulumi/gcp";
 
 const net = new gcp.compute.Network("net", {});
 const subnet = new gcp.compute.Subnetwork("subnet", {
-    network: net.selfLink,
+    network: net.id,
     ipCidrRange: "10.0.0.0/16",
     region: "us-central1",
 });
 const router = new gcp.compute.Router("router", {
     region: subnet.region,
-    network: net.selfLink,
+    network: net.id,
 });
 const address: gcp.compute.Address[];
 for (const range = {value: 0}; range.value < 2; range.value++) {
@@ -100,10 +100,10 @@ const natManual = new gcp.compute.RouterNat("natManual", {
     router: router.name,
     region: router.region,
     natIpAllocateOption: "MANUAL_ONLY",
-    natIps: address.map(__item => __item.selfLink),
+    natIps: address.map(__item => __item.id),
     sourceSubnetworkIpRangesToNat: "LIST_OF_SUBNETWORKS",
     subnetwork: [{
-        name: google_compute_subnetwork["default"].self_link,
+        name: google_compute_subnetwork["default"].id,
         sourceIpRangesToNats: ["ALL_IP_RANGES"],
     }],
 });
@@ -114,12 +114,12 @@ import pulumi_gcp as gcp
 
 net = gcp.compute.Network("net")
 subnet = gcp.compute.Subnetwork("subnet",
-    network=net.self_link,
+    network=net.id,
     ip_cidr_range="10.0.0.0/16",
     region="us-central1")
 router = gcp.compute.Router("router",
     region=subnet.region,
-    network=net.self_link)
+    network=net.id)
 address = []
 for range in [{"value": i} for i in range(0, 2)]:
     address.append(gcp.compute.Address(f"address-{range['value']}", region=subnet.region))
@@ -127,10 +127,10 @@ nat_manual = gcp.compute.RouterNat("natManual",
     router=router.name,
     region=router.region,
     nat_ip_allocate_option="MANUAL_ONLY",
-    nat_ips=[__item.self_link for __item in address],
+    nat_ips=[__item.id for __item in address],
     source_subnetwork_ip_ranges_to_nat="LIST_OF_SUBNETWORKS",
     subnetwork=[{
-        "name": google_compute_subnetwork["default"]["self_link"],
+        "name": google_compute_subnetwork["default"]["id"],
         "sourceIpRangesToNats": ["ALL_IP_RANGES"],
     }])
 ```
@@ -142,19 +142,19 @@ nat_manual = gcp.compute.RouterNat("natManual",
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#RouterNat">RouterNat</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#RouterNatArgs">RouterNatArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#RouterNat">RouterNat</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#RouterNatArgs">RouterNatArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">RouterNat</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>drain_nat_ips=None<span class="p">, </span>icmp_idle_timeout_sec=None<span class="p">, </span>log_config=None<span class="p">, </span>min_ports_per_vm=None<span class="p">, </span>name=None<span class="p">, </span>nat_ip_allocate_option=None<span class="p">, </span>nat_ips=None<span class="p">, </span>project=None<span class="p">, </span>region=None<span class="p">, </span>router=None<span class="p">, </span>source_subnetwork_ip_ranges_to_nat=None<span class="p">, </span>subnetworks=None<span class="p">, </span>tcp_established_idle_timeout_sec=None<span class="p">, </span>tcp_transitory_idle_timeout_sec=None<span class="p">, </span>udp_idle_timeout_sec=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#RouterNat">RouterNat</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>drain_nat_ips=None<span class="p">, </span>icmp_idle_timeout_sec=None<span class="p">, </span>log_config=None<span class="p">, </span>min_ports_per_vm=None<span class="p">, </span>name=None<span class="p">, </span>nat_ip_allocate_option=None<span class="p">, </span>nat_ips=None<span class="p">, </span>project=None<span class="p">, </span>region=None<span class="p">, </span>router=None<span class="p">, </span>source_subnetwork_ip_ranges_to_nat=None<span class="p">, </span>subnetworks=None<span class="p">, </span>tcp_established_idle_timeout_sec=None<span class="p">, </span>tcp_transitory_idle_timeout_sec=None<span class="p">, </span>udp_idle_timeout_sec=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewRouterNat<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RouterNatArgs">RouterNatArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RouterNat">RouterNat</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RouterNat">NewRouterNat</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RouterNatArgs">RouterNatArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RouterNat">RouterNat</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.RouterNat.html">RouterNat</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.RouterNatArgs.html">RouterNatArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.RouterNat.html">RouterNat</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.RouterNatArgs.html">RouterNatArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -320,7 +320,9 @@ The RouterNat resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-required"
             title="Required">
-        <span>Nat<wbr>Ip<wbr>Allocate<wbr>Option</span>
+        <span id="natipallocateoption_csharp">
+<a href="#natipallocateoption_csharp" style="color: inherit; text-decoration: inherit;">Nat<wbr>Ip<wbr>Allocate<wbr>Option</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -331,7 +333,9 @@ Platform, or `MANUAL_ONLY` for only user-allocated NAT IP addresses.
 
     <dt class="property-required"
             title="Required">
-        <span>Router</span>
+        <span id="router_csharp">
+<a href="#router_csharp" style="color: inherit; text-decoration: inherit;">Router</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -340,7 +344,9 @@ Platform, or `MANUAL_ONLY` for only user-allocated NAT IP addresses.
 
     <dt class="property-required"
             title="Required">
-        <span>Source<wbr>Subnetwork<wbr>Ip<wbr>Ranges<wbr>To<wbr>Nat</span>
+        <span id="sourcesubnetworkiprangestonat_csharp">
+<a href="#sourcesubnetworkiprangestonat_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Subnetwork<wbr>Ip<wbr>Ranges<wbr>To<wbr>Nat</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -358,7 +364,9 @@ other RouterNat section in any Router for this network in this region.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Drain<wbr>Nat<wbr>Ips</span>
+        <span id="drainnatips_csharp">
+<a href="#drainnatips_csharp" style="color: inherit; text-decoration: inherit;">Drain<wbr>Nat<wbr>Ips</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -368,7 +376,9 @@ valid static external IPs that have been assigned to the NAT.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Icmp<wbr>Idle<wbr>Timeout<wbr>Sec</span>
+        <span id="icmpidletimeoutsec_csharp">
+<a href="#icmpidletimeoutsec_csharp" style="color: inherit; text-decoration: inherit;">Icmp<wbr>Idle<wbr>Timeout<wbr>Sec</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -377,7 +387,9 @@ valid static external IPs that have been assigned to the NAT.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Log<wbr>Config</span>
+        <span id="logconfig_csharp">
+<a href="#logconfig_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routernatlogconfig">Router<wbr>Nat<wbr>Log<wbr>Config<wbr>Args</a></span>
     </dt>
@@ -386,7 +398,9 @@ valid static external IPs that have been assigned to the NAT.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Min<wbr>Ports<wbr>Per<wbr>Vm</span>
+        <span id="minportspervm_csharp">
+<a href="#minportspervm_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Ports<wbr>Per<wbr>Vm</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -395,7 +409,9 @@ valid static external IPs that have been assigned to the NAT.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -404,7 +420,9 @@ valid static external IPs that have been assigned to the NAT.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Nat<wbr>Ips</span>
+        <span id="natips_csharp">
+<a href="#natips_csharp" style="color: inherit; text-decoration: inherit;">Nat<wbr>Ips</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -414,7 +432,9 @@ is set to MANUAL_ONLY.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project</span>
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -424,7 +444,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="region_csharp">
+<a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -433,7 +455,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Subnetworks</span>
+        <span id="subnetworks_csharp">
+<a href="#subnetworks_csharp" style="color: inherit; text-decoration: inherit;">Subnetworks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routernatsubnetwork">List&lt;Router<wbr>Nat<wbr>Subnetwork<wbr>Args&gt;</a></span>
     </dt>
@@ -443,7 +467,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tcp<wbr>Established<wbr>Idle<wbr>Timeout<wbr>Sec</span>
+        <span id="tcpestablishedidletimeoutsec_csharp">
+<a href="#tcpestablishedidletimeoutsec_csharp" style="color: inherit; text-decoration: inherit;">Tcp<wbr>Established<wbr>Idle<wbr>Timeout<wbr>Sec</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -453,7 +479,9 @@ Defaults to 1200s if not set.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tcp<wbr>Transitory<wbr>Idle<wbr>Timeout<wbr>Sec</span>
+        <span id="tcptransitoryidletimeoutsec_csharp">
+<a href="#tcptransitoryidletimeoutsec_csharp" style="color: inherit; text-decoration: inherit;">Tcp<wbr>Transitory<wbr>Idle<wbr>Timeout<wbr>Sec</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -463,7 +491,9 @@ Defaults to 30s if not set.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Udp<wbr>Idle<wbr>Timeout<wbr>Sec</span>
+        <span id="udpidletimeoutsec_csharp">
+<a href="#udpidletimeoutsec_csharp" style="color: inherit; text-decoration: inherit;">Udp<wbr>Idle<wbr>Timeout<wbr>Sec</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -479,7 +509,9 @@ Defaults to 30s if not set.
 
     <dt class="property-required"
             title="Required">
-        <span>Nat<wbr>Ip<wbr>Allocate<wbr>Option</span>
+        <span id="natipallocateoption_go">
+<a href="#natipallocateoption_go" style="color: inherit; text-decoration: inherit;">Nat<wbr>Ip<wbr>Allocate<wbr>Option</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -490,7 +522,9 @@ Platform, or `MANUAL_ONLY` for only user-allocated NAT IP addresses.
 
     <dt class="property-required"
             title="Required">
-        <span>Router</span>
+        <span id="router_go">
+<a href="#router_go" style="color: inherit; text-decoration: inherit;">Router</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -499,7 +533,9 @@ Platform, or `MANUAL_ONLY` for only user-allocated NAT IP addresses.
 
     <dt class="property-required"
             title="Required">
-        <span>Source<wbr>Subnetwork<wbr>Ip<wbr>Ranges<wbr>To<wbr>Nat</span>
+        <span id="sourcesubnetworkiprangestonat_go">
+<a href="#sourcesubnetworkiprangestonat_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Subnetwork<wbr>Ip<wbr>Ranges<wbr>To<wbr>Nat</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -517,7 +553,9 @@ other RouterNat section in any Router for this network in this region.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Drain<wbr>Nat<wbr>Ips</span>
+        <span id="drainnatips_go">
+<a href="#drainnatips_go" style="color: inherit; text-decoration: inherit;">Drain<wbr>Nat<wbr>Ips</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -527,7 +565,9 @@ valid static external IPs that have been assigned to the NAT.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Icmp<wbr>Idle<wbr>Timeout<wbr>Sec</span>
+        <span id="icmpidletimeoutsec_go">
+<a href="#icmpidletimeoutsec_go" style="color: inherit; text-decoration: inherit;">Icmp<wbr>Idle<wbr>Timeout<wbr>Sec</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -536,7 +576,9 @@ valid static external IPs that have been assigned to the NAT.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Log<wbr>Config</span>
+        <span id="logconfig_go">
+<a href="#logconfig_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routernatlogconfig">Router<wbr>Nat<wbr>Log<wbr>Config</a></span>
     </dt>
@@ -545,7 +587,9 @@ valid static external IPs that have been assigned to the NAT.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Min<wbr>Ports<wbr>Per<wbr>Vm</span>
+        <span id="minportspervm_go">
+<a href="#minportspervm_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Ports<wbr>Per<wbr>Vm</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -554,7 +598,9 @@ valid static external IPs that have been assigned to the NAT.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -563,7 +609,9 @@ valid static external IPs that have been assigned to the NAT.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Nat<wbr>Ips</span>
+        <span id="natips_go">
+<a href="#natips_go" style="color: inherit; text-decoration: inherit;">Nat<wbr>Ips</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -573,7 +621,9 @@ is set to MANUAL_ONLY.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project</span>
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -583,7 +633,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="region_go">
+<a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -592,7 +644,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Subnetworks</span>
+        <span id="subnetworks_go">
+<a href="#subnetworks_go" style="color: inherit; text-decoration: inherit;">Subnetworks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routernatsubnetwork">[]Router<wbr>Nat<wbr>Subnetwork</a></span>
     </dt>
@@ -602,7 +656,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tcp<wbr>Established<wbr>Idle<wbr>Timeout<wbr>Sec</span>
+        <span id="tcpestablishedidletimeoutsec_go">
+<a href="#tcpestablishedidletimeoutsec_go" style="color: inherit; text-decoration: inherit;">Tcp<wbr>Established<wbr>Idle<wbr>Timeout<wbr>Sec</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -612,7 +668,9 @@ Defaults to 1200s if not set.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tcp<wbr>Transitory<wbr>Idle<wbr>Timeout<wbr>Sec</span>
+        <span id="tcptransitoryidletimeoutsec_go">
+<a href="#tcptransitoryidletimeoutsec_go" style="color: inherit; text-decoration: inherit;">Tcp<wbr>Transitory<wbr>Idle<wbr>Timeout<wbr>Sec</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -622,7 +680,9 @@ Defaults to 30s if not set.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Udp<wbr>Idle<wbr>Timeout<wbr>Sec</span>
+        <span id="udpidletimeoutsec_go">
+<a href="#udpidletimeoutsec_go" style="color: inherit; text-decoration: inherit;">Udp<wbr>Idle<wbr>Timeout<wbr>Sec</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -638,7 +698,9 @@ Defaults to 30s if not set.
 
     <dt class="property-required"
             title="Required">
-        <span>nat<wbr>Ip<wbr>Allocate<wbr>Option</span>
+        <span id="natipallocateoption_nodejs">
+<a href="#natipallocateoption_nodejs" style="color: inherit; text-decoration: inherit;">nat<wbr>Ip<wbr>Allocate<wbr>Option</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -649,7 +711,9 @@ Platform, or `MANUAL_ONLY` for only user-allocated NAT IP addresses.
 
     <dt class="property-required"
             title="Required">
-        <span>router</span>
+        <span id="router_nodejs">
+<a href="#router_nodejs" style="color: inherit; text-decoration: inherit;">router</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -658,7 +722,9 @@ Platform, or `MANUAL_ONLY` for only user-allocated NAT IP addresses.
 
     <dt class="property-required"
             title="Required">
-        <span>source<wbr>Subnetwork<wbr>Ip<wbr>Ranges<wbr>To<wbr>Nat</span>
+        <span id="sourcesubnetworkiprangestonat_nodejs">
+<a href="#sourcesubnetworkiprangestonat_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Subnetwork<wbr>Ip<wbr>Ranges<wbr>To<wbr>Nat</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -676,7 +742,9 @@ other RouterNat section in any Router for this network in this region.
 
     <dt class="property-optional"
             title="Optional">
-        <span>drain<wbr>Nat<wbr>Ips</span>
+        <span id="drainnatips_nodejs">
+<a href="#drainnatips_nodejs" style="color: inherit; text-decoration: inherit;">drain<wbr>Nat<wbr>Ips</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -686,7 +754,9 @@ valid static external IPs that have been assigned to the NAT.
 
     <dt class="property-optional"
             title="Optional">
-        <span>icmp<wbr>Idle<wbr>Timeout<wbr>Sec</span>
+        <span id="icmpidletimeoutsec_nodejs">
+<a href="#icmpidletimeoutsec_nodejs" style="color: inherit; text-decoration: inherit;">icmp<wbr>Idle<wbr>Timeout<wbr>Sec</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -695,7 +765,9 @@ valid static external IPs that have been assigned to the NAT.
 
     <dt class="property-optional"
             title="Optional">
-        <span>log<wbr>Config</span>
+        <span id="logconfig_nodejs">
+<a href="#logconfig_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routernatlogconfig">Router<wbr>Nat<wbr>Log<wbr>Config</a></span>
     </dt>
@@ -704,7 +776,9 @@ valid static external IPs that have been assigned to the NAT.
 
     <dt class="property-optional"
             title="Optional">
-        <span>min<wbr>Ports<wbr>Per<wbr>Vm</span>
+        <span id="minportspervm_nodejs">
+<a href="#minportspervm_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Ports<wbr>Per<wbr>Vm</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -713,7 +787,9 @@ valid static external IPs that have been assigned to the NAT.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -722,7 +798,9 @@ valid static external IPs that have been assigned to the NAT.
 
     <dt class="property-optional"
             title="Optional">
-        <span>nat<wbr>Ips</span>
+        <span id="natips_nodejs">
+<a href="#natips_nodejs" style="color: inherit; text-decoration: inherit;">nat<wbr>Ips</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -732,7 +810,9 @@ is set to MANUAL_ONLY.
 
     <dt class="property-optional"
             title="Optional">
-        <span>project</span>
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -742,7 +822,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="region_nodejs">
+<a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -751,7 +833,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>subnetworks</span>
+        <span id="subnetworks_nodejs">
+<a href="#subnetworks_nodejs" style="color: inherit; text-decoration: inherit;">subnetworks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routernatsubnetwork">Router<wbr>Nat<wbr>Subnetwork[]</a></span>
     </dt>
@@ -761,7 +845,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tcp<wbr>Established<wbr>Idle<wbr>Timeout<wbr>Sec</span>
+        <span id="tcpestablishedidletimeoutsec_nodejs">
+<a href="#tcpestablishedidletimeoutsec_nodejs" style="color: inherit; text-decoration: inherit;">tcp<wbr>Established<wbr>Idle<wbr>Timeout<wbr>Sec</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -771,7 +857,9 @@ Defaults to 1200s if not set.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tcp<wbr>Transitory<wbr>Idle<wbr>Timeout<wbr>Sec</span>
+        <span id="tcptransitoryidletimeoutsec_nodejs">
+<a href="#tcptransitoryidletimeoutsec_nodejs" style="color: inherit; text-decoration: inherit;">tcp<wbr>Transitory<wbr>Idle<wbr>Timeout<wbr>Sec</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -781,7 +869,9 @@ Defaults to 30s if not set.
 
     <dt class="property-optional"
             title="Optional">
-        <span>udp<wbr>Idle<wbr>Timeout<wbr>Sec</span>
+        <span id="udpidletimeoutsec_nodejs">
+<a href="#udpidletimeoutsec_nodejs" style="color: inherit; text-decoration: inherit;">udp<wbr>Idle<wbr>Timeout<wbr>Sec</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -797,7 +887,9 @@ Defaults to 30s if not set.
 
     <dt class="property-required"
             title="Required">
-        <span>nat_<wbr>ip_<wbr>allocate_<wbr>option</span>
+        <span id="nat_ip_allocate_option_python">
+<a href="#nat_ip_allocate_option_python" style="color: inherit; text-decoration: inherit;">nat_<wbr>ip_<wbr>allocate_<wbr>option</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -808,7 +900,9 @@ Platform, or `MANUAL_ONLY` for only user-allocated NAT IP addresses.
 
     <dt class="property-required"
             title="Required">
-        <span>router</span>
+        <span id="router_python">
+<a href="#router_python" style="color: inherit; text-decoration: inherit;">router</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -817,7 +911,9 @@ Platform, or `MANUAL_ONLY` for only user-allocated NAT IP addresses.
 
     <dt class="property-required"
             title="Required">
-        <span>source_<wbr>subnetwork_<wbr>ip_<wbr>ranges_<wbr>to_<wbr>nat</span>
+        <span id="source_subnetwork_ip_ranges_to_nat_python">
+<a href="#source_subnetwork_ip_ranges_to_nat_python" style="color: inherit; text-decoration: inherit;">source_<wbr>subnetwork_<wbr>ip_<wbr>ranges_<wbr>to_<wbr>nat</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -835,7 +931,9 @@ other RouterNat section in any Router for this network in this region.
 
     <dt class="property-optional"
             title="Optional">
-        <span>drain_<wbr>nat_<wbr>ips</span>
+        <span id="drain_nat_ips_python">
+<a href="#drain_nat_ips_python" style="color: inherit; text-decoration: inherit;">drain_<wbr>nat_<wbr>ips</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -845,7 +943,9 @@ valid static external IPs that have been assigned to the NAT.
 
     <dt class="property-optional"
             title="Optional">
-        <span>icmp_<wbr>idle_<wbr>timeout_<wbr>sec</span>
+        <span id="icmp_idle_timeout_sec_python">
+<a href="#icmp_idle_timeout_sec_python" style="color: inherit; text-decoration: inherit;">icmp_<wbr>idle_<wbr>timeout_<wbr>sec</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -854,7 +954,9 @@ valid static external IPs that have been assigned to the NAT.
 
     <dt class="property-optional"
             title="Optional">
-        <span>log_<wbr>config</span>
+        <span id="log_config_python">
+<a href="#log_config_python" style="color: inherit; text-decoration: inherit;">log_<wbr>config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routernatlogconfig">Dict[Router<wbr>Nat<wbr>Log<wbr>Config]</a></span>
     </dt>
@@ -863,7 +965,9 @@ valid static external IPs that have been assigned to the NAT.
 
     <dt class="property-optional"
             title="Optional">
-        <span>min_<wbr>ports_<wbr>per_<wbr>vm</span>
+        <span id="min_ports_per_vm_python">
+<a href="#min_ports_per_vm_python" style="color: inherit; text-decoration: inherit;">min_<wbr>ports_<wbr>per_<wbr>vm</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -872,7 +976,9 @@ valid static external IPs that have been assigned to the NAT.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -881,7 +987,9 @@ valid static external IPs that have been assigned to the NAT.
 
     <dt class="property-optional"
             title="Optional">
-        <span>nat_<wbr>ips</span>
+        <span id="nat_ips_python">
+<a href="#nat_ips_python" style="color: inherit; text-decoration: inherit;">nat_<wbr>ips</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -891,7 +999,9 @@ is set to MANUAL_ONLY.
 
     <dt class="property-optional"
             title="Optional">
-        <span>project</span>
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -901,7 +1011,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="region_python">
+<a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -910,7 +1022,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>subnetworks</span>
+        <span id="subnetworks_python">
+<a href="#subnetworks_python" style="color: inherit; text-decoration: inherit;">subnetworks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routernatsubnetwork">List[Router<wbr>Nat<wbr>Subnetwork]</a></span>
     </dt>
@@ -920,7 +1034,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tcp_<wbr>established_<wbr>idle_<wbr>timeout_<wbr>sec</span>
+        <span id="tcp_established_idle_timeout_sec_python">
+<a href="#tcp_established_idle_timeout_sec_python" style="color: inherit; text-decoration: inherit;">tcp_<wbr>established_<wbr>idle_<wbr>timeout_<wbr>sec</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -930,7 +1046,9 @@ Defaults to 1200s if not set.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tcp_<wbr>transitory_<wbr>idle_<wbr>timeout_<wbr>sec</span>
+        <span id="tcp_transitory_idle_timeout_sec_python">
+<a href="#tcp_transitory_idle_timeout_sec_python" style="color: inherit; text-decoration: inherit;">tcp_<wbr>transitory_<wbr>idle_<wbr>timeout_<wbr>sec</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -940,7 +1058,9 @@ Defaults to 30s if not set.
 
     <dt class="property-optional"
             title="Optional">
-        <span>udp_<wbr>idle_<wbr>timeout_<wbr>sec</span>
+        <span id="udp_idle_timeout_sec_python">
+<a href="#udp_idle_timeout_sec_python" style="color: inherit; text-decoration: inherit;">udp_<wbr>idle_<wbr>timeout_<wbr>sec</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -967,7 +1087,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -982,7 +1104,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -997,7 +1121,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1012,7 +1138,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1033,7 +1161,7 @@ Get an existing RouterNat resource's state with the given name, ID, and optional
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#RouterNatState">RouterNatState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#RouterNat">RouterNat</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#RouterNatState">RouterNatState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#RouterNat">RouterNat</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1041,11 +1169,11 @@ Get an existing RouterNat resource's state with the given name, ID, and optional
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRouterNat<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RouterNatState">RouterNatState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RouterNat">RouterNat</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRouterNat<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RouterNatState">RouterNatState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RouterNat">RouterNat</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.RouterNat.html">RouterNat</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.RouterNatState.html">RouterNatState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.RouterNat.html">RouterNat</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.RouterNatState.html">RouterNatState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1153,7 +1281,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Drain<wbr>Nat<wbr>Ips</span>
+        <span id="state_drainnatips_csharp">
+<a href="#state_drainnatips_csharp" style="color: inherit; text-decoration: inherit;">Drain<wbr>Nat<wbr>Ips</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1163,7 +1293,9 @@ valid static external IPs that have been assigned to the NAT.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Icmp<wbr>Idle<wbr>Timeout<wbr>Sec</span>
+        <span id="state_icmpidletimeoutsec_csharp">
+<a href="#state_icmpidletimeoutsec_csharp" style="color: inherit; text-decoration: inherit;">Icmp<wbr>Idle<wbr>Timeout<wbr>Sec</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1172,7 +1304,9 @@ valid static external IPs that have been assigned to the NAT.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Log<wbr>Config</span>
+        <span id="state_logconfig_csharp">
+<a href="#state_logconfig_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routernatlogconfig">Router<wbr>Nat<wbr>Log<wbr>Config<wbr>Args</a></span>
     </dt>
@@ -1181,7 +1315,9 @@ valid static external IPs that have been assigned to the NAT.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Min<wbr>Ports<wbr>Per<wbr>Vm</span>
+        <span id="state_minportspervm_csharp">
+<a href="#state_minportspervm_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Ports<wbr>Per<wbr>Vm</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1190,7 +1326,9 @@ valid static external IPs that have been assigned to the NAT.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1199,7 +1337,9 @@ valid static external IPs that have been assigned to the NAT.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Nat<wbr>Ip<wbr>Allocate<wbr>Option</span>
+        <span id="state_natipallocateoption_csharp">
+<a href="#state_natipallocateoption_csharp" style="color: inherit; text-decoration: inherit;">Nat<wbr>Ip<wbr>Allocate<wbr>Option</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1210,7 +1350,9 @@ Platform, or `MANUAL_ONLY` for only user-allocated NAT IP addresses.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Nat<wbr>Ips</span>
+        <span id="state_natips_csharp">
+<a href="#state_natips_csharp" style="color: inherit; text-decoration: inherit;">Nat<wbr>Ips</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1220,7 +1362,9 @@ is set to MANUAL_ONLY.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project</span>
+        <span id="state_project_csharp">
+<a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1230,7 +1374,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="state_region_csharp">
+<a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1239,7 +1385,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Router</span>
+        <span id="state_router_csharp">
+<a href="#state_router_csharp" style="color: inherit; text-decoration: inherit;">Router</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1248,7 +1396,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>Subnetwork<wbr>Ip<wbr>Ranges<wbr>To<wbr>Nat</span>
+        <span id="state_sourcesubnetworkiprangestonat_csharp">
+<a href="#state_sourcesubnetworkiprangestonat_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Subnetwork<wbr>Ip<wbr>Ranges<wbr>To<wbr>Nat</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1266,7 +1416,9 @@ other RouterNat section in any Router for this network in this region.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Subnetworks</span>
+        <span id="state_subnetworks_csharp">
+<a href="#state_subnetworks_csharp" style="color: inherit; text-decoration: inherit;">Subnetworks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routernatsubnetwork">List&lt;Router<wbr>Nat<wbr>Subnetwork<wbr>Args&gt;</a></span>
     </dt>
@@ -1276,7 +1428,9 @@ other RouterNat section in any Router for this network in this region.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tcp<wbr>Established<wbr>Idle<wbr>Timeout<wbr>Sec</span>
+        <span id="state_tcpestablishedidletimeoutsec_csharp">
+<a href="#state_tcpestablishedidletimeoutsec_csharp" style="color: inherit; text-decoration: inherit;">Tcp<wbr>Established<wbr>Idle<wbr>Timeout<wbr>Sec</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1286,7 +1440,9 @@ Defaults to 1200s if not set.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tcp<wbr>Transitory<wbr>Idle<wbr>Timeout<wbr>Sec</span>
+        <span id="state_tcptransitoryidletimeoutsec_csharp">
+<a href="#state_tcptransitoryidletimeoutsec_csharp" style="color: inherit; text-decoration: inherit;">Tcp<wbr>Transitory<wbr>Idle<wbr>Timeout<wbr>Sec</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1296,7 +1452,9 @@ Defaults to 30s if not set.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Udp<wbr>Idle<wbr>Timeout<wbr>Sec</span>
+        <span id="state_udpidletimeoutsec_csharp">
+<a href="#state_udpidletimeoutsec_csharp" style="color: inherit; text-decoration: inherit;">Udp<wbr>Idle<wbr>Timeout<wbr>Sec</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1312,7 +1470,9 @@ Defaults to 30s if not set.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Drain<wbr>Nat<wbr>Ips</span>
+        <span id="state_drainnatips_go">
+<a href="#state_drainnatips_go" style="color: inherit; text-decoration: inherit;">Drain<wbr>Nat<wbr>Ips</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1322,7 +1482,9 @@ valid static external IPs that have been assigned to the NAT.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Icmp<wbr>Idle<wbr>Timeout<wbr>Sec</span>
+        <span id="state_icmpidletimeoutsec_go">
+<a href="#state_icmpidletimeoutsec_go" style="color: inherit; text-decoration: inherit;">Icmp<wbr>Idle<wbr>Timeout<wbr>Sec</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1331,7 +1493,9 @@ valid static external IPs that have been assigned to the NAT.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Log<wbr>Config</span>
+        <span id="state_logconfig_go">
+<a href="#state_logconfig_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routernatlogconfig">Router<wbr>Nat<wbr>Log<wbr>Config</a></span>
     </dt>
@@ -1340,7 +1504,9 @@ valid static external IPs that have been assigned to the NAT.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Min<wbr>Ports<wbr>Per<wbr>Vm</span>
+        <span id="state_minportspervm_go">
+<a href="#state_minportspervm_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Ports<wbr>Per<wbr>Vm</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1349,7 +1515,9 @@ valid static external IPs that have been assigned to the NAT.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1358,7 +1526,9 @@ valid static external IPs that have been assigned to the NAT.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Nat<wbr>Ip<wbr>Allocate<wbr>Option</span>
+        <span id="state_natipallocateoption_go">
+<a href="#state_natipallocateoption_go" style="color: inherit; text-decoration: inherit;">Nat<wbr>Ip<wbr>Allocate<wbr>Option</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1369,7 +1539,9 @@ Platform, or `MANUAL_ONLY` for only user-allocated NAT IP addresses.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Nat<wbr>Ips</span>
+        <span id="state_natips_go">
+<a href="#state_natips_go" style="color: inherit; text-decoration: inherit;">Nat<wbr>Ips</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1379,7 +1551,9 @@ is set to MANUAL_ONLY.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project</span>
+        <span id="state_project_go">
+<a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1389,7 +1563,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="state_region_go">
+<a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1398,7 +1574,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Router</span>
+        <span id="state_router_go">
+<a href="#state_router_go" style="color: inherit; text-decoration: inherit;">Router</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1407,7 +1585,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>Subnetwork<wbr>Ip<wbr>Ranges<wbr>To<wbr>Nat</span>
+        <span id="state_sourcesubnetworkiprangestonat_go">
+<a href="#state_sourcesubnetworkiprangestonat_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Subnetwork<wbr>Ip<wbr>Ranges<wbr>To<wbr>Nat</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1425,7 +1605,9 @@ other RouterNat section in any Router for this network in this region.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Subnetworks</span>
+        <span id="state_subnetworks_go">
+<a href="#state_subnetworks_go" style="color: inherit; text-decoration: inherit;">Subnetworks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routernatsubnetwork">[]Router<wbr>Nat<wbr>Subnetwork</a></span>
     </dt>
@@ -1435,7 +1617,9 @@ other RouterNat section in any Router for this network in this region.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tcp<wbr>Established<wbr>Idle<wbr>Timeout<wbr>Sec</span>
+        <span id="state_tcpestablishedidletimeoutsec_go">
+<a href="#state_tcpestablishedidletimeoutsec_go" style="color: inherit; text-decoration: inherit;">Tcp<wbr>Established<wbr>Idle<wbr>Timeout<wbr>Sec</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1445,7 +1629,9 @@ Defaults to 1200s if not set.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tcp<wbr>Transitory<wbr>Idle<wbr>Timeout<wbr>Sec</span>
+        <span id="state_tcptransitoryidletimeoutsec_go">
+<a href="#state_tcptransitoryidletimeoutsec_go" style="color: inherit; text-decoration: inherit;">Tcp<wbr>Transitory<wbr>Idle<wbr>Timeout<wbr>Sec</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1455,7 +1641,9 @@ Defaults to 30s if not set.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Udp<wbr>Idle<wbr>Timeout<wbr>Sec</span>
+        <span id="state_udpidletimeoutsec_go">
+<a href="#state_udpidletimeoutsec_go" style="color: inherit; text-decoration: inherit;">Udp<wbr>Idle<wbr>Timeout<wbr>Sec</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1471,7 +1659,9 @@ Defaults to 30s if not set.
 
     <dt class="property-optional"
             title="Optional">
-        <span>drain<wbr>Nat<wbr>Ips</span>
+        <span id="state_drainnatips_nodejs">
+<a href="#state_drainnatips_nodejs" style="color: inherit; text-decoration: inherit;">drain<wbr>Nat<wbr>Ips</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1481,7 +1671,9 @@ valid static external IPs that have been assigned to the NAT.
 
     <dt class="property-optional"
             title="Optional">
-        <span>icmp<wbr>Idle<wbr>Timeout<wbr>Sec</span>
+        <span id="state_icmpidletimeoutsec_nodejs">
+<a href="#state_icmpidletimeoutsec_nodejs" style="color: inherit; text-decoration: inherit;">icmp<wbr>Idle<wbr>Timeout<wbr>Sec</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1490,7 +1682,9 @@ valid static external IPs that have been assigned to the NAT.
 
     <dt class="property-optional"
             title="Optional">
-        <span>log<wbr>Config</span>
+        <span id="state_logconfig_nodejs">
+<a href="#state_logconfig_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routernatlogconfig">Router<wbr>Nat<wbr>Log<wbr>Config</a></span>
     </dt>
@@ -1499,7 +1693,9 @@ valid static external IPs that have been assigned to the NAT.
 
     <dt class="property-optional"
             title="Optional">
-        <span>min<wbr>Ports<wbr>Per<wbr>Vm</span>
+        <span id="state_minportspervm_nodejs">
+<a href="#state_minportspervm_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Ports<wbr>Per<wbr>Vm</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1508,7 +1704,9 @@ valid static external IPs that have been assigned to the NAT.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1517,7 +1715,9 @@ valid static external IPs that have been assigned to the NAT.
 
     <dt class="property-optional"
             title="Optional">
-        <span>nat<wbr>Ip<wbr>Allocate<wbr>Option</span>
+        <span id="state_natipallocateoption_nodejs">
+<a href="#state_natipallocateoption_nodejs" style="color: inherit; text-decoration: inherit;">nat<wbr>Ip<wbr>Allocate<wbr>Option</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1528,7 +1728,9 @@ Platform, or `MANUAL_ONLY` for only user-allocated NAT IP addresses.
 
     <dt class="property-optional"
             title="Optional">
-        <span>nat<wbr>Ips</span>
+        <span id="state_natips_nodejs">
+<a href="#state_natips_nodejs" style="color: inherit; text-decoration: inherit;">nat<wbr>Ips</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1538,7 +1740,9 @@ is set to MANUAL_ONLY.
 
     <dt class="property-optional"
             title="Optional">
-        <span>project</span>
+        <span id="state_project_nodejs">
+<a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1548,7 +1752,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="state_region_nodejs">
+<a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1557,7 +1763,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>router</span>
+        <span id="state_router_nodejs">
+<a href="#state_router_nodejs" style="color: inherit; text-decoration: inherit;">router</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1566,7 +1774,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>source<wbr>Subnetwork<wbr>Ip<wbr>Ranges<wbr>To<wbr>Nat</span>
+        <span id="state_sourcesubnetworkiprangestonat_nodejs">
+<a href="#state_sourcesubnetworkiprangestonat_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Subnetwork<wbr>Ip<wbr>Ranges<wbr>To<wbr>Nat</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1584,7 +1794,9 @@ other RouterNat section in any Router for this network in this region.
 
     <dt class="property-optional"
             title="Optional">
-        <span>subnetworks</span>
+        <span id="state_subnetworks_nodejs">
+<a href="#state_subnetworks_nodejs" style="color: inherit; text-decoration: inherit;">subnetworks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routernatsubnetwork">Router<wbr>Nat<wbr>Subnetwork[]</a></span>
     </dt>
@@ -1594,7 +1806,9 @@ other RouterNat section in any Router for this network in this region.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tcp<wbr>Established<wbr>Idle<wbr>Timeout<wbr>Sec</span>
+        <span id="state_tcpestablishedidletimeoutsec_nodejs">
+<a href="#state_tcpestablishedidletimeoutsec_nodejs" style="color: inherit; text-decoration: inherit;">tcp<wbr>Established<wbr>Idle<wbr>Timeout<wbr>Sec</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1604,7 +1818,9 @@ Defaults to 1200s if not set.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tcp<wbr>Transitory<wbr>Idle<wbr>Timeout<wbr>Sec</span>
+        <span id="state_tcptransitoryidletimeoutsec_nodejs">
+<a href="#state_tcptransitoryidletimeoutsec_nodejs" style="color: inherit; text-decoration: inherit;">tcp<wbr>Transitory<wbr>Idle<wbr>Timeout<wbr>Sec</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1614,7 +1830,9 @@ Defaults to 30s if not set.
 
     <dt class="property-optional"
             title="Optional">
-        <span>udp<wbr>Idle<wbr>Timeout<wbr>Sec</span>
+        <span id="state_udpidletimeoutsec_nodejs">
+<a href="#state_udpidletimeoutsec_nodejs" style="color: inherit; text-decoration: inherit;">udp<wbr>Idle<wbr>Timeout<wbr>Sec</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1630,7 +1848,9 @@ Defaults to 30s if not set.
 
     <dt class="property-optional"
             title="Optional">
-        <span>drain_<wbr>nat_<wbr>ips</span>
+        <span id="state_drain_nat_ips_python">
+<a href="#state_drain_nat_ips_python" style="color: inherit; text-decoration: inherit;">drain_<wbr>nat_<wbr>ips</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1640,7 +1860,9 @@ valid static external IPs that have been assigned to the NAT.
 
     <dt class="property-optional"
             title="Optional">
-        <span>icmp_<wbr>idle_<wbr>timeout_<wbr>sec</span>
+        <span id="state_icmp_idle_timeout_sec_python">
+<a href="#state_icmp_idle_timeout_sec_python" style="color: inherit; text-decoration: inherit;">icmp_<wbr>idle_<wbr>timeout_<wbr>sec</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1649,7 +1871,9 @@ valid static external IPs that have been assigned to the NAT.
 
     <dt class="property-optional"
             title="Optional">
-        <span>log_<wbr>config</span>
+        <span id="state_log_config_python">
+<a href="#state_log_config_python" style="color: inherit; text-decoration: inherit;">log_<wbr>config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routernatlogconfig">Dict[Router<wbr>Nat<wbr>Log<wbr>Config]</a></span>
     </dt>
@@ -1658,7 +1882,9 @@ valid static external IPs that have been assigned to the NAT.
 
     <dt class="property-optional"
             title="Optional">
-        <span>min_<wbr>ports_<wbr>per_<wbr>vm</span>
+        <span id="state_min_ports_per_vm_python">
+<a href="#state_min_ports_per_vm_python" style="color: inherit; text-decoration: inherit;">min_<wbr>ports_<wbr>per_<wbr>vm</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1667,7 +1893,9 @@ valid static external IPs that have been assigned to the NAT.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1676,7 +1904,9 @@ valid static external IPs that have been assigned to the NAT.
 
     <dt class="property-optional"
             title="Optional">
-        <span>nat_<wbr>ip_<wbr>allocate_<wbr>option</span>
+        <span id="state_nat_ip_allocate_option_python">
+<a href="#state_nat_ip_allocate_option_python" style="color: inherit; text-decoration: inherit;">nat_<wbr>ip_<wbr>allocate_<wbr>option</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1687,7 +1917,9 @@ Platform, or `MANUAL_ONLY` for only user-allocated NAT IP addresses.
 
     <dt class="property-optional"
             title="Optional">
-        <span>nat_<wbr>ips</span>
+        <span id="state_nat_ips_python">
+<a href="#state_nat_ips_python" style="color: inherit; text-decoration: inherit;">nat_<wbr>ips</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1697,7 +1929,9 @@ is set to MANUAL_ONLY.
 
     <dt class="property-optional"
             title="Optional">
-        <span>project</span>
+        <span id="state_project_python">
+<a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1707,7 +1941,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="state_region_python">
+<a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1716,7 +1952,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>router</span>
+        <span id="state_router_python">
+<a href="#state_router_python" style="color: inherit; text-decoration: inherit;">router</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1725,7 +1963,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>source_<wbr>subnetwork_<wbr>ip_<wbr>ranges_<wbr>to_<wbr>nat</span>
+        <span id="state_source_subnetwork_ip_ranges_to_nat_python">
+<a href="#state_source_subnetwork_ip_ranges_to_nat_python" style="color: inherit; text-decoration: inherit;">source_<wbr>subnetwork_<wbr>ip_<wbr>ranges_<wbr>to_<wbr>nat</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1743,7 +1983,9 @@ other RouterNat section in any Router for this network in this region.
 
     <dt class="property-optional"
             title="Optional">
-        <span>subnetworks</span>
+        <span id="state_subnetworks_python">
+<a href="#state_subnetworks_python" style="color: inherit; text-decoration: inherit;">subnetworks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routernatsubnetwork">List[Router<wbr>Nat<wbr>Subnetwork]</a></span>
     </dt>
@@ -1753,7 +1995,9 @@ other RouterNat section in any Router for this network in this region.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tcp_<wbr>established_<wbr>idle_<wbr>timeout_<wbr>sec</span>
+        <span id="state_tcp_established_idle_timeout_sec_python">
+<a href="#state_tcp_established_idle_timeout_sec_python" style="color: inherit; text-decoration: inherit;">tcp_<wbr>established_<wbr>idle_<wbr>timeout_<wbr>sec</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1763,7 +2007,9 @@ Defaults to 1200s if not set.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tcp_<wbr>transitory_<wbr>idle_<wbr>timeout_<wbr>sec</span>
+        <span id="state_tcp_transitory_idle_timeout_sec_python">
+<a href="#state_tcp_transitory_idle_timeout_sec_python" style="color: inherit; text-decoration: inherit;">tcp_<wbr>transitory_<wbr>idle_<wbr>timeout_<wbr>sec</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1773,7 +2019,9 @@ Defaults to 30s if not set.
 
     <dt class="property-optional"
             title="Optional">
-        <span>udp_<wbr>idle_<wbr>timeout_<wbr>sec</span>
+        <span id="state_udp_idle_timeout_sec_python">
+<a href="#state_udp_idle_timeout_sec_python" style="color: inherit; text-decoration: inherit;">udp_<wbr>idle_<wbr>timeout_<wbr>sec</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1815,7 +2063,9 @@ Defaults to 30s if not set.
 
     <dt class="property-required"
             title="Required">
-        <span>Enable</span>
+        <span id="enable_csharp">
+<a href="#enable_csharp" style="color: inherit; text-decoration: inherit;">Enable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1824,7 +2074,9 @@ Defaults to 30s if not set.
 
     <dt class="property-required"
             title="Required">
-        <span>Filter</span>
+        <span id="filter_csharp">
+<a href="#filter_csharp" style="color: inherit; text-decoration: inherit;">Filter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1840,7 +2092,9 @@ Defaults to 30s if not set.
 
     <dt class="property-required"
             title="Required">
-        <span>Enable</span>
+        <span id="enable_go">
+<a href="#enable_go" style="color: inherit; text-decoration: inherit;">Enable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1849,7 +2103,9 @@ Defaults to 30s if not set.
 
     <dt class="property-required"
             title="Required">
-        <span>Filter</span>
+        <span id="filter_go">
+<a href="#filter_go" style="color: inherit; text-decoration: inherit;">Filter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1865,7 +2121,9 @@ Defaults to 30s if not set.
 
     <dt class="property-required"
             title="Required">
-        <span>enable</span>
+        <span id="enable_nodejs">
+<a href="#enable_nodejs" style="color: inherit; text-decoration: inherit;">enable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1874,7 +2132,9 @@ Defaults to 30s if not set.
 
     <dt class="property-required"
             title="Required">
-        <span>filter</span>
+        <span id="filter_nodejs">
+<a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1890,7 +2150,9 @@ Defaults to 30s if not set.
 
     <dt class="property-required"
             title="Required">
-        <span>enable</span>
+        <span id="enable_python">
+<a href="#enable_python" style="color: inherit; text-decoration: inherit;">enable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1899,7 +2161,9 @@ Defaults to 30s if not set.
 
     <dt class="property-required"
             title="Required">
-        <span>filter</span>
+        <span id="filter_python">
+<a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1933,7 +2197,9 @@ Defaults to 30s if not set.
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1942,7 +2208,9 @@ Defaults to 30s if not set.
 
     <dt class="property-required"
             title="Required">
-        <span>Source<wbr>Ip<wbr>Ranges<wbr>To<wbr>Nats</span>
+        <span id="sourceiprangestonats_csharp">
+<a href="#sourceiprangestonats_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Ip<wbr>Ranges<wbr>To<wbr>Nats</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1954,7 +2222,9 @@ should have NAT enabled. Supported values include:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Secondary<wbr>Ip<wbr>Range<wbr>Names</span>
+        <span id="secondaryiprangenames_csharp">
+<a href="#secondaryiprangenames_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Ip<wbr>Range<wbr>Names</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1973,7 +2243,9 @@ sourceIpRangesToNat
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1982,7 +2254,9 @@ sourceIpRangesToNat
 
     <dt class="property-required"
             title="Required">
-        <span>Source<wbr>Ip<wbr>Ranges<wbr>To<wbr>Nats</span>
+        <span id="sourceiprangestonats_go">
+<a href="#sourceiprangestonats_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Ip<wbr>Ranges<wbr>To<wbr>Nats</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1994,7 +2268,9 @@ should have NAT enabled. Supported values include:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Secondary<wbr>Ip<wbr>Range<wbr>Names</span>
+        <span id="secondaryiprangenames_go">
+<a href="#secondaryiprangenames_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Ip<wbr>Range<wbr>Names</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -2013,7 +2289,9 @@ sourceIpRangesToNat
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2022,7 +2300,9 @@ sourceIpRangesToNat
 
     <dt class="property-required"
             title="Required">
-        <span>source<wbr>Ip<wbr>Ranges<wbr>To<wbr>Nats</span>
+        <span id="sourceiprangestonats_nodejs">
+<a href="#sourceiprangestonats_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Ip<wbr>Ranges<wbr>To<wbr>Nats</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -2034,7 +2314,9 @@ should have NAT enabled. Supported values include:
 
     <dt class="property-optional"
             title="Optional">
-        <span>secondary<wbr>Ip<wbr>Range<wbr>Names</span>
+        <span id="secondaryiprangenames_nodejs">
+<a href="#secondaryiprangenames_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Ip<wbr>Range<wbr>Names</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -2053,7 +2335,9 @@ sourceIpRangesToNat
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2062,7 +2346,9 @@ sourceIpRangesToNat
 
     <dt class="property-required"
             title="Required">
-        <span>source<wbr>Ip<wbr>Ranges<wbr>To<wbr>Nats</span>
+        <span id="sourceiprangestonats_python">
+<a href="#sourceiprangestonats_python" style="color: inherit; text-decoration: inherit;">source<wbr>Ip<wbr>Ranges<wbr>To<wbr>Nats</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -2074,7 +2360,9 @@ should have NAT enabled. Supported values include:
 
     <dt class="property-optional"
             title="Optional">
-        <span>secondary<wbr>Ip<wbr>Range<wbr>Names</span>
+        <span id="secondaryiprangenames_python">
+<a href="#secondaryiprangenames_python" style="color: inherit; text-decoration: inherit;">secondary<wbr>Ip<wbr>Range<wbr>Names</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>

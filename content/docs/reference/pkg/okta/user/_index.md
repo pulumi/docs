@@ -35,3 +35,21 @@ Explore the resources and functions of the user module in the Okta package.
 	<dd>2.1.1</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.User.html" title="Pulumi.Okta.User">Pulumi.Okta.User</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/user?tab=doc#" title="okta/user">okta/user</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/okta/user/#" title="@pulumi/okta/user">@pulumi/okta/user</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_okta/user" title="pulumi_okta/user">pulumi_okta/user</a></dd>
+
+</dl>
+

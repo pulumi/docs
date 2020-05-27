@@ -22,6 +22,21 @@ Explore the resources and functions of the apiregistration/v1 module in the Kube
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>2.1.1</dd>
+	<dd>2.2.0</dd>
+</dl>
+
+
+
+<dl class="tabular">
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apiregistration/v1?tab=doc#" title="kubernetes/apiregistration/v1">kubernetes/apiregistration/v1</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/apiregistration/v1/#" title="@pulumi/kubernetes/apiregistration/v1">@pulumi/kubernetes/apiregistration/v1</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_kubernetes/apiregistration.k8s.io/v1" title="pulumi_kubernetes/apiregistration.k8s.io/v1">pulumi_kubernetes/apiregistration.k8s.io/v1</a></dd>
+
 </dl>
 

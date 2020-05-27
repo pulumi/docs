@@ -28,6 +28,29 @@ about this state.</p>
 </ul>
 </li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">alert_policy</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">monitoring</span><span class="o">.</span><span class="n">AlertPolicy</span><span class="p">(</span><span class="s2">&quot;alertPolicy&quot;</span><span class="p">,</span>
+    <span class="n">combiner</span><span class="o">=</span><span class="s2">&quot;OR&quot;</span><span class="p">,</span>
+    <span class="n">conditions</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;conditionThreshold&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;aggregations&quot;</span><span class="p">:</span> <span class="p">[{</span>
+                <span class="s2">&quot;alignmentPeriod&quot;</span><span class="p">:</span> <span class="s2">&quot;60s&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;perSeriesAligner&quot;</span><span class="p">:</span> <span class="s2">&quot;ALIGN_RATE&quot;</span><span class="p">,</span>
+            <span class="p">}],</span>
+            <span class="s2">&quot;comparison&quot;</span><span class="p">:</span> <span class="s2">&quot;COMPARISON_GT&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;duration&quot;</span><span class="p">:</span> <span class="s2">&quot;60s&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;filter&quot;</span><span class="p">:</span> <span class="s2">&quot;metric.type=&quot;</span><span class="n">compute</span><span class="o">.</span><span class="n">googleapis</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">instance</span><span class="o">/</span><span class="n">disk</span><span class="o">/</span><span class="n">write_bytes_count</span><span class="s2">&quot; AND resource.type=&quot;</span><span class="n">gce_instance</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;display_name&quot;</span><span class="p">:</span> <span class="s2">&quot;test condition&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">display_name</span><span class="o">=</span><span class="s2">&quot;My Alert Policy&quot;</span><span class="p">,</span>
+    <span class="n">user_labels</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;foo&quot;</span><span class="p">:</span> <span class="s2">&quot;bar&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1548,6 +1571,17 @@ the service are accessible</p>
 </ul>
 </li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">custom</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">monitoring</span><span class="o">.</span><span class="n">CustomService</span><span class="p">(</span><span class="s2">&quot;custom&quot;</span><span class="p">,</span>
+    <span class="n">display_name</span><span class="o">=</span><span class="s2">&quot;My Custom Service custom-srv&quot;</span><span class="p">,</span>
+    <span class="n">service_id</span><span class="o">=</span><span class="s2">&quot;custom-srv&quot;</span><span class="p">,</span>
+    <span class="n">telemetry</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;resourceName&quot;</span><span class="p">:</span> <span class="s2">&quot;//product.googleapis.com/foo/foo/services/test&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1673,6 +1707,188 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="py class">
+<dt id="pulumi_gcp.monitoring.Dashboard">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.monitoring.</code><code class="sig-name descname">Dashboard</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dashboard_json</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.monitoring.Dashboard" title="Permalink to this definition">¶</a></dt>
+<dd><p>A Google Stackdriver dashboard. Dashboards define the content and layout of pages in the Stackdriver web application.</p>
+<p>To get more information about Dashboards, see:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://cloud.google.com/monitoring/api/ref_v3/rest/v1/projects.dashboards">API documentation</a></p></li>
+<li><p>How-to Guides</p>
+<ul>
+<li><p><a class="reference external" href="https://cloud.google.com/monitoring/dashboards">Official Documentation</a></p></li>
+</ul>
+</li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">dashboard</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">monitoring</span><span class="o">.</span><span class="n">Dashboard</span><span class="p">(</span><span class="s2">&quot;dashboard&quot;</span><span class="p">,</span> <span class="n">dashboard_json</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;{</span>
+<span class="s2">  &quot;displayName&quot;: &quot;Demo Dashboard&quot;,</span>
+<span class="s2">  &quot;gridLayout&quot;: {</span>
+<span class="s2">    &quot;widgets&quot;: [</span>
+<span class="s2">      {</span>
+<span class="s2">        &quot;blank&quot;: </span><span class="si">{}</span><span class="s2"></span>
+<span class="s2">      }</span>
+<span class="s2">    ]</span>
+<span class="s2">  }</span>
+<span class="s2">}</span>
+
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">dashboard</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">monitoring</span><span class="o">.</span><span class="n">Dashboard</span><span class="p">(</span><span class="s2">&quot;dashboard&quot;</span><span class="p">,</span> <span class="n">dashboard_json</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;{</span>
+<span class="s2">  &quot;displayName&quot;: &quot;Grid Layout Example&quot;,</span>
+<span class="s2">  &quot;gridLayout&quot;: {</span>
+<span class="s2">    &quot;columns&quot;: &quot;2&quot;,</span>
+<span class="s2">    &quot;widgets&quot;: [</span>
+<span class="s2">      {</span>
+<span class="s2">        &quot;title&quot;: &quot;Widget 1&quot;,</span>
+<span class="s2">        &quot;xyChart&quot;: {</span>
+<span class="s2">          &quot;dataSets&quot;: [{</span>
+<span class="s2">            &quot;timeSeriesQuery&quot;: {</span>
+<span class="s2">              &quot;timeSeriesFilter&quot;: {</span>
+<span class="s2">                &quot;filter&quot;: &quot;metric.type=&quot;agent.googleapis.com/nginx/connections/accepted_count&quot;&quot;,</span>
+<span class="s2">                &quot;aggregation&quot;: {</span>
+<span class="s2">                  &quot;perSeriesAligner&quot;: &quot;ALIGN_RATE&quot;</span>
+<span class="s2">                }</span>
+<span class="s2">              },</span>
+<span class="s2">              &quot;unitOverride&quot;: &quot;1&quot;</span>
+<span class="s2">            },</span>
+<span class="s2">            &quot;plotType&quot;: &quot;LINE&quot;</span>
+<span class="s2">          }],</span>
+<span class="s2">          &quot;timeshiftDuration&quot;: &quot;0s&quot;,</span>
+<span class="s2">          &quot;yAxis&quot;: {</span>
+<span class="s2">            &quot;label&quot;: &quot;y1Axis&quot;,</span>
+<span class="s2">            &quot;scale&quot;: &quot;LINEAR&quot;</span>
+<span class="s2">          }</span>
+<span class="s2">        }</span>
+<span class="s2">      },</span>
+<span class="s2">      {</span>
+<span class="s2">        &quot;text&quot;: {</span>
+<span class="s2">          &quot;content&quot;: &quot;Widget 2&quot;,</span>
+<span class="s2">          &quot;format&quot;: &quot;MARKDOWN&quot;</span>
+<span class="s2">        }</span>
+<span class="s2">      },</span>
+<span class="s2">      {</span>
+<span class="s2">        &quot;title&quot;: &quot;Widget 3&quot;,</span>
+<span class="s2">        &quot;xyChart&quot;: {</span>
+<span class="s2">          &quot;dataSets&quot;: [{</span>
+<span class="s2">            &quot;timeSeriesQuery&quot;: {</span>
+<span class="s2">              &quot;timeSeriesFilter&quot;: {</span>
+<span class="s2">                &quot;filter&quot;: &quot;metric.type=&quot;agent.googleapis.com/nginx/connections/accepted_count&quot;&quot;,</span>
+<span class="s2">                &quot;aggregation&quot;: {</span>
+<span class="s2">                  &quot;perSeriesAligner&quot;: &quot;ALIGN_RATE&quot;</span>
+<span class="s2">                }</span>
+<span class="s2">              },</span>
+<span class="s2">              &quot;unitOverride&quot;: &quot;1&quot;</span>
+<span class="s2">            },</span>
+<span class="s2">            &quot;plotType&quot;: &quot;STACKED_BAR&quot;</span>
+<span class="s2">          }],</span>
+<span class="s2">          &quot;timeshiftDuration&quot;: &quot;0s&quot;,</span>
+<span class="s2">          &quot;yAxis&quot;: {</span>
+<span class="s2">            &quot;label&quot;: &quot;y1Axis&quot;,</span>
+<span class="s2">            &quot;scale&quot;: &quot;LINEAR&quot;</span>
+<span class="s2">          }</span>
+<span class="s2">        }</span>
+<span class="s2">      }</span>
+<span class="s2">    ]</span>
+<span class="s2">  }</span>
+<span class="s2">}</span>
+
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>dashboard_json</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The JSON representation of a dashboard, following the format at <a class="reference external" href="https://cloud.google.com/monitoring/api/ref_v3/rest/v1/projects.dashboards">https://cloud.google.com/monitoring/api/ref_v3/rest/v1/projects.dashboards</a>.
+The representation of an existing dashboard can be found by using the <a class="reference external" href="https://cloud.google.com/monitoring/api/ref_v3/rest/v1/projects.dashboards/get">API Explorer</a></p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt id="pulumi_gcp.monitoring.Dashboard.dashboard_json">
+<code class="sig-name descname">dashboard_json</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.monitoring.Dashboard.dashboard_json" title="Permalink to this definition">¶</a></dt>
+<dd><p>The JSON representation of a dashboard, following the format at <a class="reference external" href="https://cloud.google.com/monitoring/api/ref_v3/rest/v1/projects.dashboards">https://cloud.google.com/monitoring/api/ref_v3/rest/v1/projects.dashboards</a>.
+The representation of an existing dashboard can be found by using the <a class="reference external" href="https://cloud.google.com/monitoring/api/ref_v3/rest/v1/projects.dashboards/get">API Explorer</a></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_gcp.monitoring.Dashboard.project">
+<code class="sig-name descname">project</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.monitoring.Dashboard.project" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_gcp.monitoring.Dashboard.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dashboard_json</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.monitoring.Dashboard.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Dashboard resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>dashboard_json</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The JSON representation of a dashboard, following the format at <a class="reference external" href="https://cloud.google.com/monitoring/api/ref_v3/rest/v1/projects.dashboards">https://cloud.google.com/monitoring/api/ref_v3/rest/v1/projects.dashboards</a>.
+The representation of an existing dashboard can be found by using the <a class="reference external" href="https://cloud.google.com/monitoring/api/ref_v3/rest/v1/projects.dashboards/get">API Explorer</a></p>
+</p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_gcp.monitoring.Dashboard.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.monitoring.Dashboard.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_gcp.monitoring.Dashboard.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.monitoring.Dashboard.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_gcp.monitoring.GetAppEngineServiceResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.monitoring.</code><code class="sig-name descname">GetAppEngineServiceResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">display_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">module_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">telemetries</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.monitoring.GetAppEngineServiceResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getAppEngineService.</p>
@@ -1773,6 +1989,26 @@ resource, then that resource is a member of that group.</p>
 </ul>
 </li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">basic</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">monitoring</span><span class="o">.</span><span class="n">Group</span><span class="p">(</span><span class="s2">&quot;basic&quot;</span><span class="p">,</span>
+    <span class="n">display_name</span><span class="o">=</span><span class="s2">&quot;tf-test MonitoringGroup&quot;</span><span class="p">,</span>
+    <span class="nb">filter</span><span class="o">=</span><span class="s2">&quot;resource.metadata.region=&quot;</span><span class="n">europe</span><span class="o">-</span><span class="n">west2</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">parent</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">monitoring</span><span class="o">.</span><span class="n">Group</span><span class="p">(</span><span class="s2">&quot;parent&quot;</span><span class="p">,</span>
+    <span class="n">display_name</span><span class="o">=</span><span class="s2">&quot;tf-test MonitoringParentGroup&quot;</span><span class="p">,</span>
+    <span class="nb">filter</span><span class="o">=</span><span class="s2">&quot;resource.metadata.region=&quot;</span><span class="n">europe</span><span class="o">-</span><span class="n">west2</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="n">subgroup</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">monitoring</span><span class="o">.</span><span class="n">Group</span><span class="p">(</span><span class="s2">&quot;subgroup&quot;</span><span class="p">,</span>
+    <span class="n">display_name</span><span class="o">=</span><span class="s2">&quot;tf-test MonitoringSubGroup&quot;</span><span class="p">,</span>
+    <span class="nb">filter</span><span class="o">=</span><span class="s2">&quot;resource.metadata.region=&quot;</span><span class="n">europe</span><span class="o">-</span><span class="n">west2</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="n">parent_name</span><span class="o">=</span><span class="n">parent</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1930,6 +2166,31 @@ This provides the channel type and all of the required labels that must be passe
 </ul>
 </li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">basic</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">monitoring</span><span class="o">.</span><span class="n">NotificationChannel</span><span class="p">(</span><span class="s2">&quot;basic&quot;</span><span class="p">,</span>
+    <span class="n">display_name</span><span class="o">=</span><span class="s2">&quot;Test Notification Channel&quot;</span><span class="p">,</span>
+    <span class="n">labels</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;email_address&quot;</span><span class="p">:</span> <span class="s2">&quot;fake_email@blahblah.com&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;email&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">default</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">monitoring</span><span class="o">.</span><span class="n">NotificationChannel</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
+    <span class="n">display_name</span><span class="o">=</span><span class="s2">&quot;Test Slack Channel&quot;</span><span class="p">,</span>
+    <span class="n">labels</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;channel_name&quot;</span><span class="p">:</span> <span class="s2">&quot;#foobar&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">sensitive_labels</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;authToken&quot;</span><span class="p">:</span> <span class="s2">&quot;one&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;slack&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1959,9 +2220,9 @@ to a different credential configuration in the config will require an apply to u
 </dl>
 <p>The <strong>sensitive_labels</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">authToken</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - An authorization token for a notification channel. Channel types that support this field include: slack</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - An password for a notification channel. Channel types that support this field include: webhook_basicauth</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">serviceKey</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - An servicekey token for a notification channel. Channel types that support this field include: pagerduty</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">authToken</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - An authorization token for a notification channel. Channel types that support this field include: slack  <strong>Note</strong>: This property is sensitive and will not be displayed in the plan.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - An password for a notification channel. Channel types that support this field include: webhook_basicauth  <strong>Note</strong>: This property is sensitive and will not be displayed in the plan.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">serviceKey</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - An servicekey token for a notification channel. Channel types that support this field include: pagerduty  <strong>Note</strong>: This property is sensitive and will not be displayed in the plan.</p></li>
 </ul>
 <dl class="py attribute">
 <dt id="pulumi_gcp.monitoring.NotificationChannel.description">
@@ -2016,9 +2277,9 @@ in the <code class="docutils literal notranslate"><span class="pre">labels</span
 Credentials may not be specified in both locations and will cause an error. Changing from one location
 to a different credential configuration in the config will require an apply to update state.  Structure is documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">authToken</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - An authorization token for a notification channel. Channel types that support this field include: slack</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - An password for a notification channel. Channel types that support this field include: webhook_basicauth</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">serviceKey</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - An servicekey token for a notification channel. Channel types that support this field include: pagerduty</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">authToken</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - An authorization token for a notification channel. Channel types that support this field include: slack  <strong>Note</strong>: This property is sensitive and will not be displayed in the plan.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - An password for a notification channel. Channel types that support this field include: webhook_basicauth  <strong>Note</strong>: This property is sensitive and will not be displayed in the plan.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">serviceKey</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - An servicekey token for a notification channel. Channel types that support this field include: pagerduty  <strong>Note</strong>: This property is sensitive and will not be displayed in the plan.</p></li>
 </ul>
 </dd></dl>
 
@@ -2090,9 +2351,9 @@ UpdateNotificationChannel operation. To change the value of this field, you must
 </dl>
 <p>The <strong>sensitive_labels</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">authToken</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - An authorization token for a notification channel. Channel types that support this field include: slack</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - An password for a notification channel. Channel types that support this field include: webhook_basicauth</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">serviceKey</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - An servicekey token for a notification channel. Channel types that support this field include: pagerduty</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">authToken</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - An authorization token for a notification channel. Channel types that support this field include: slack  <strong>Note</strong>: This property is sensitive and will not be displayed in the plan.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - An password for a notification channel. Channel types that support this field include: webhook_basicauth  <strong>Note</strong>: This property is sensitive and will not be displayed in the plan.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">serviceKey</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - An servicekey token for a notification channel. Channel types that support this field include: pagerduty  <strong>Note</strong>: This property is sensitive and will not be displayed in the plan.</p></li>
 </ul>
 </dd></dl>
 
@@ -2136,7 +2397,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_gcp.monitoring.Slo">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.monitoring.</code><code class="sig-name descname">Slo</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">basic_sli</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">calendar_period</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">display_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">goal</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rolling_period_days</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">slo_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.monitoring.Slo" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.monitoring.</code><code class="sig-name descname">Slo</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">basic_sli</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">calendar_period</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">display_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">goal</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">request_based_sli</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rolling_period_days</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">slo_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">windows_based_sli</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.monitoring.Slo" title="Permalink to this definition">¶</a></dt>
 <dd><p>A Service-Level Objective (SLO) describes the level of desired good
 service. It consists of a service-level indicator (SLI), a performance
 goal, and a period over which the objective is to be evaluated against
@@ -2154,6 +2415,23 @@ month return successfully.”</p>
 </ul>
 </li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">default</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">monitoring</span><span class="o">.</span><span class="n">get_app_engine_service</span><span class="p">(</span><span class="n">module_id</span><span class="o">=</span><span class="s2">&quot;default&quot;</span><span class="p">)</span>
+<span class="n">appeng_slo</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">monitoring</span><span class="o">.</span><span class="n">Slo</span><span class="p">(</span><span class="s2">&quot;appengSlo&quot;</span><span class="p">,</span>
+    <span class="n">service</span><span class="o">=</span><span class="n">default</span><span class="o">.</span><span class="n">service_id</span><span class="p">,</span>
+    <span class="n">slo_id</span><span class="o">=</span><span class="s2">&quot;ae-slo&quot;</span><span class="p">,</span>
+    <span class="n">display_name</span><span class="o">=</span><span class="s2">&quot;Test SLO for App Engine&quot;</span><span class="p">,</span>
+    <span class="n">goal</span><span class="o">=</span><span class="mf">0.9</span><span class="p">,</span>
+    <span class="n">calendar_period</span><span class="o">=</span><span class="s2">&quot;DAY&quot;</span><span class="p">,</span>
+    <span class="n">basic_sli</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;latency&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;threshold&quot;</span><span class="p">:</span> <span class="s2">&quot;1s&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2162,7 +2440,9 @@ month return successfully.”</p>
 <li><p><strong>basic_sli</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Basic Service-Level Indicator (SLI) on a well-known service type.
 Performance will be computed on the basis of pre-defined metrics.
 SLIs are used to measure and calculate the quality of the Service’s
-performance with respect to a single aspect of service quality.  Structure is documented below.</p></li>
+performance with respect to a single aspect of service quality.
+Exactly one of the following must be set:
+<code class="docutils literal notranslate"><span class="pre">basic_sli</span></code>, <code class="docutils literal notranslate"><span class="pre">request_based_sli</span></code>, <code class="docutils literal notranslate"><span class="pre">windows_based_sli</span></code>  Structure is documented below.</p></li>
 <li><p><strong>calendar_period</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A calendar period, semantically “since the start of the current
 <span class="raw-html-m2r"><calendarPeriod></span>”.</p></li>
 <li><p><strong>display_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name used for UI elements listing this SLO.</p></li>
@@ -2170,10 +2450,25 @@ performance with respect to a single aspect of service quality.  Structure is do
 to be met. 0 &lt; goal &lt;= 0.999</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
+<li><p><strong>request_based_sli</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A request-based SLI defines a SLI for which atomic units of
+service are counted directly.
+A SLI describes a good service.
+It is used to measure and calculate the quality of the Service’s
+performance with respect to a single aspect of service quality.
+Exactly one of the following must be set:
+<code class="docutils literal notranslate"><span class="pre">basic_sli</span></code>, <code class="docutils literal notranslate"><span class="pre">request_based_sli</span></code>, <code class="docutils literal notranslate"><span class="pre">windows_based_sli</span></code>  Structure is documented below.</p></li>
 <li><p><strong>rolling_period_days</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – A rolling time period, semantically “in the past X days”.
 Must be between 1 to 30 days, inclusive.</p></li>
 <li><p><strong>service</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of the service to which this SLO belongs.</p></li>
 <li><p><strong>slo_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id to use for this ServiceLevelObjective. If omitted, an id will be generated instead.</p></li>
+<li><p><strong>windows_based_sli</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A windows-based SLI defines the criteria for time windows.
+good_service is defined based off the count of these time windows
+for which the provided service was of good quality.
+A SLI describes a good service. It is used to measure and calculate
+the quality of the Service’s performance with respect to a single
+aspect of service quality.
+Exactly one of the following must be set:
+<code class="docutils literal notranslate"><span class="pre">basic_sli</span></code>, <code class="docutils literal notranslate"><span class="pre">request_based_sli</span></code>, <code class="docutils literal notranslate"><span class="pre">windows_based_sli</span></code>  Structure is documented below.</p></li>
 </ul>
 </dd>
 </dl>
@@ -2205,13 +2500,246 @@ this SLI applies to all API versions. For service types
 that don’t support breaking down by version, setting this
 field will result in an error.</p></li>
 </ul>
+<p>The <strong>request_based_sli</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">distributionCut</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Used when good_service is defined by a count of values aggregated in a
+Distribution that fall into a good range. The total_service is the
+total count of all values aggregated in the Distribution.
+Defines a distribution TimeSeries filter and thresholds used for
+measuring good service and total service.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">distributionFilter</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A TimeSeries <a class="reference external" href="https://cloud.google.com/monitoring/api/v3/filters">monitoring filter</a>
+aggregating values to quantify the good service provided.
+Must have ValueType = DISTRIBUTION and
+MetricKind = DELTA or MetricKind = CUMULATIVE.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">range</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Range of numerical values. The computed good_service
+will be the count of values x in the Distribution such
+that range.min &lt;= x &lt; range.max. inclusive of min and
+exclusive of max. Open ranges can be defined by setting
+just one of min or max. Summed value <code class="docutils literal notranslate"><span class="pre">X</span></code> should satisfy
+<code class="docutils literal notranslate"><span class="pre">range.min</span> <span class="pre">&lt;=</span> <span class="pre">X</span> <span class="pre">&lt;</span> <span class="pre">range.max</span></code> for a good window.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">max</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - max value for the range (inclusive). If not given,
+will be set to “infinity”, defining an open range
+“&gt;= range.min”</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">min</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Min value for the range (inclusive). If not given,
+will be set to “-infinity”, defining an open range
+“&lt; range.max”</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">goodTotalRatio</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A means to compute a ratio of <code class="docutils literal notranslate"><span class="pre">good_service</span></code> to <code class="docutils literal notranslate"><span class="pre">total_service</span></code>.
+Defines computing this ratio with two TimeSeries <a class="reference external" href="https://cloud.google.com/monitoring/api/v3/filters">monitoring filters</a>
+Must specify exactly two of good, bad, and total service filters.
+The relationship good_service + bad_service = total_service
+will be assumed.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">badServiceFilter</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A TimeSeries <a class="reference external" href="https://cloud.google.com/monitoring/api/v3/filters">monitoring filter</a>
+quantifying bad service provided, either demanded service that
+was not provided or demanded service that was of inadequate
+quality. Exactly two of
+good, bad, or total service filter must be defined (where
+good + bad = total is assumed)
+Must have ValueType = DOUBLE or ValueType = INT64 and
+must have MetricKind = DELTA or MetricKind = CUMULATIVE.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">goodServiceFilter</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A TimeSeries <a class="reference external" href="https://cloud.google.com/monitoring/api/v3/filters">monitoring filter</a>
+quantifying good service provided. Exactly two of
+good, bad, or total service filter must be defined (where
+good + bad = total is assumed)
+Must have ValueType = DOUBLE or ValueType = INT64 and
+must have MetricKind = DELTA or MetricKind = CUMULATIVE.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">totalServiceFilter</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A TimeSeries <a class="reference external" href="https://cloud.google.com/monitoring/api/v3/filters">monitoring filter</a>
+quantifying total demanded service. Exactly two of
+good, bad, or total service filter must be defined (where
+good + bad = total is assumed)
+Must have ValueType = DOUBLE or ValueType = INT64 and
+must have MetricKind = DELTA or MetricKind = CUMULATIVE.</p></li>
+</ul>
+</li>
+</ul>
+<p>The <strong>windows_based_sli</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">goodBadMetricFilter</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A TimeSeries <a class="reference external" href="https://cloud.google.com/monitoring/api/v3/filters">monitoring filter</a>
+with ValueType = BOOL. The window is good if any true values
+appear in the window. One of <code class="docutils literal notranslate"><span class="pre">good_bad_metric_filter</span></code>,
+<code class="docutils literal notranslate"><span class="pre">good_total_ratio_threshold</span></code>, <code class="docutils literal notranslate"><span class="pre">metric_mean_in_range</span></code>,
+<code class="docutils literal notranslate"><span class="pre">metric_sum_in_range</span></code> must be set for <code class="docutils literal notranslate"><span class="pre">windows_based_sli</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">goodTotalRatioThreshold</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Criterion that describes a window as good if its performance is
+high enough. One of <code class="docutils literal notranslate"><span class="pre">good_bad_metric_filter</span></code>,
+<code class="docutils literal notranslate"><span class="pre">good_total_ratio_threshold</span></code>, <code class="docutils literal notranslate"><span class="pre">metric_mean_in_range</span></code>,
+<code class="docutils literal notranslate"><span class="pre">metric_sum_in_range</span></code> must be set for <code class="docutils literal notranslate"><span class="pre">windows_based_sli</span></code>.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">basicSliPerformance</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Basic SLI to evaluate to judge window quality.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">latency</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Parameters for a latency threshold SLI.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">threshold</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A duration string, e.g. 10s.
+Good service is defined to be the count of requests made to
+this service that return in no more than threshold.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">locations</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - An optional set of locations to which this SLI is relevant.
+Telemetry from other locations will not be used to calculate
+performance for this SLI. If omitted, this SLI applies to all
+locations in which the Service has activity. For service types
+that don’t support breaking down by location, setting this
+field will result in an error.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">methods</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - An optional set of RPCs to which this SLI is relevant.
+Telemetry from other methods will not be used to calculate
+performance for this SLI. If omitted, this SLI applies to all
+the Service’s methods. For service types that don’t support
+breaking down by method, setting this field will result in an
+error.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">versions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The set of API versions to which this SLI is relevant.
+Telemetry from other API versions will not be used to
+calculate performance for this SLI. If omitted,
+this SLI applies to all API versions. For service types
+that don’t support breaking down by version, setting this
+field will result in an error.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">performance</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Request-based SLI to evaluate to judge window quality.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">distributionCut</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Used when good_service is defined by a count of values aggregated in a
+Distribution that fall into a good range. The total_service is the
+total count of all values aggregated in the Distribution.
+Defines a distribution TimeSeries filter and thresholds used for
+measuring good service and total service.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">distributionFilter</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A TimeSeries <a class="reference external" href="https://cloud.google.com/monitoring/api/v3/filters">monitoring filter</a>
+aggregating values to quantify the good service provided.
+Must have ValueType = DISTRIBUTION and
+MetricKind = DELTA or MetricKind = CUMULATIVE.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">range</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Range of numerical values. The computed good_service
+will be the count of values x in the Distribution such
+that range.min &lt;= x &lt; range.max. inclusive of min and
+exclusive of max. Open ranges can be defined by setting
+just one of min or max. Summed value <code class="docutils literal notranslate"><span class="pre">X</span></code> should satisfy
+<code class="docutils literal notranslate"><span class="pre">range.min</span> <span class="pre">&lt;=</span> <span class="pre">X</span> <span class="pre">&lt;</span> <span class="pre">range.max</span></code> for a good window.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">max</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - max value for the range (inclusive). If not given,
+will be set to “infinity”, defining an open range
+“&gt;= range.min”</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">min</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Min value for the range (inclusive). If not given,
+will be set to “-infinity”, defining an open range
+“&lt; range.max”</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">goodTotalRatio</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A means to compute a ratio of <code class="docutils literal notranslate"><span class="pre">good_service</span></code> to <code class="docutils literal notranslate"><span class="pre">total_service</span></code>.
+Defines computing this ratio with two TimeSeries <a class="reference external" href="https://cloud.google.com/monitoring/api/v3/filters">monitoring filters</a>
+Must specify exactly two of good, bad, and total service filters.
+The relationship good_service + bad_service = total_service
+will be assumed.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">badServiceFilter</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A TimeSeries <a class="reference external" href="https://cloud.google.com/monitoring/api/v3/filters">monitoring filter</a>
+quantifying bad service provided, either demanded service that
+was not provided or demanded service that was of inadequate
+quality. Exactly two of
+good, bad, or total service filter must be defined (where
+good + bad = total is assumed)
+Must have ValueType = DOUBLE or ValueType = INT64 and
+must have MetricKind = DELTA or MetricKind = CUMULATIVE.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">goodServiceFilter</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A TimeSeries <a class="reference external" href="https://cloud.google.com/monitoring/api/v3/filters">monitoring filter</a>
+quantifying good service provided. Exactly two of
+good, bad, or total service filter must be defined (where
+good + bad = total is assumed)
+Must have ValueType = DOUBLE or ValueType = INT64 and
+must have MetricKind = DELTA or MetricKind = CUMULATIVE.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">totalServiceFilter</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A TimeSeries <a class="reference external" href="https://cloud.google.com/monitoring/api/v3/filters">monitoring filter</a>
+quantifying total demanded service. Exactly two of
+good, bad, or total service filter must be defined (where
+good + bad = total is assumed)
+Must have ValueType = DOUBLE or ValueType = INT64 and
+must have MetricKind = DELTA or MetricKind = CUMULATIVE.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">threshold</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - A duration string, e.g. 10s.
+Good service is defined to be the count of requests made to
+this service that return in no more than threshold.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">metricMeanInRange</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Criterion that describes a window as good if the metric’s value
+is in a good range, <em>averaged</em> across returned streams.
+One of <code class="docutils literal notranslate"><span class="pre">good_bad_metric_filter</span></code>,
+<code class="docutils literal notranslate"><span class="pre">good_total_ratio_threshold</span></code>, <code class="docutils literal notranslate"><span class="pre">metric_mean_in_range</span></code>,
+<code class="docutils literal notranslate"><span class="pre">metric_sum_in_range</span></code> must be set for <code class="docutils literal notranslate"><span class="pre">windows_based_sli</span></code>.
+Average value X of <code class="docutils literal notranslate"><span class="pre">time_series</span></code> should satisfy
+<code class="docutils literal notranslate"><span class="pre">range.min</span> <span class="pre">&lt;=</span> <span class="pre">X</span> <span class="pre">&lt;</span> <span class="pre">range.max</span></code> for a good window.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">range</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Range of numerical values. The computed good_service
+will be the count of values x in the Distribution such
+that range.min &lt;= x &lt; range.max. inclusive of min and
+exclusive of max. Open ranges can be defined by setting
+just one of min or max. Summed value <code class="docutils literal notranslate"><span class="pre">X</span></code> should satisfy
+<code class="docutils literal notranslate"><span class="pre">range.min</span> <span class="pre">&lt;=</span> <span class="pre">X</span> <span class="pre">&lt;</span> <span class="pre">range.max</span></code> for a good window.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">max</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - max value for the range (inclusive). If not given,
+will be set to “infinity”, defining an open range
+“&gt;= range.min”</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">min</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Min value for the range (inclusive). If not given,
+will be set to “-infinity”, defining an open range
+“&lt; range.max”</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeSeries</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A <a class="reference external" href="https://cloud.google.com/monitoring/api/v3/filters">monitoring filter</a>
+specifying the TimeSeries to use for evaluating window
+quality. The provided TimeSeries must have
+ValueType = INT64 or ValueType = DOUBLE and
+MetricKind = GAUGE.
+Summed value <code class="docutils literal notranslate"><span class="pre">X</span></code> should satisfy
+<code class="docutils literal notranslate"><span class="pre">range.min</span> <span class="pre">&lt;=</span> <span class="pre">X</span> <span class="pre">&lt;</span> <span class="pre">range.max</span></code> for a good window.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">metricSumInRange</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Criterion that describes a window as good if the metric’s value
+is in a good range, <em>summed</em> across returned streams.
+Summed value <code class="docutils literal notranslate"><span class="pre">X</span></code> of <code class="docutils literal notranslate"><span class="pre">time_series</span></code> should satisfy
+<code class="docutils literal notranslate"><span class="pre">range.min</span> <span class="pre">&lt;=</span> <span class="pre">X</span> <span class="pre">&lt;</span> <span class="pre">range.max</span></code> for a good window.
+One of <code class="docutils literal notranslate"><span class="pre">good_bad_metric_filter</span></code>,
+<code class="docutils literal notranslate"><span class="pre">good_total_ratio_threshold</span></code>, <code class="docutils literal notranslate"><span class="pre">metric_mean_in_range</span></code>,
+<code class="docutils literal notranslate"><span class="pre">metric_sum_in_range</span></code> must be set for <code class="docutils literal notranslate"><span class="pre">windows_based_sli</span></code>.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">range</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Range of numerical values. The computed good_service
+will be the count of values x in the Distribution such
+that range.min &lt;= x &lt; range.max. inclusive of min and
+exclusive of max. Open ranges can be defined by setting
+just one of min or max. Summed value <code class="docutils literal notranslate"><span class="pre">X</span></code> should satisfy
+<code class="docutils literal notranslate"><span class="pre">range.min</span> <span class="pre">&lt;=</span> <span class="pre">X</span> <span class="pre">&lt;</span> <span class="pre">range.max</span></code> for a good window.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">max</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - max value for the range (inclusive). If not given,
+will be set to “infinity”, defining an open range
+“&gt;= range.min”</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">min</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Min value for the range (inclusive). If not given,
+will be set to “-infinity”, defining an open range
+“&lt; range.max”</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeSeries</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A <a class="reference external" href="https://cloud.google.com/monitoring/api/v3/filters">monitoring filter</a>
+specifying the TimeSeries to use for evaluating window
+quality. The provided TimeSeries must have
+ValueType = INT64 or ValueType = DOUBLE and
+MetricKind = GAUGE.
+Summed value <code class="docutils literal notranslate"><span class="pre">X</span></code> should satisfy
+<code class="docutils literal notranslate"><span class="pre">range.min</span> <span class="pre">&lt;=</span> <span class="pre">X</span> <span class="pre">&lt;</span> <span class="pre">range.max</span></code> for a good window.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">windowPeriod</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Duration over which window quality is evaluated, given as a
+duration string “{X}s” representing X seconds. Must be an
+integer fraction of a day and at least 60s.</p></li>
+</ul>
 <dl class="py attribute">
 <dt id="pulumi_gcp.monitoring.Slo.basic_sli">
 <code class="sig-name descname">basic_sli</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.monitoring.Slo.basic_sli" title="Permalink to this definition">¶</a></dt>
 <dd><p>Basic Service-Level Indicator (SLI) on a well-known service type.
 Performance will be computed on the basis of pre-defined metrics.
 SLIs are used to measure and calculate the quality of the Service’s
-performance with respect to a single aspect of service quality.  Structure is documented below.</p>
+performance with respect to a single aspect of service quality.
+Exactly one of the following must be set:
+<code class="docutils literal notranslate"><span class="pre">basic_sli</span></code>, <code class="docutils literal notranslate"><span class="pre">request_based_sli</span></code>, <code class="docutils literal notranslate"><span class="pre">windows_based_sli</span></code>  Structure is documented below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">latency</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Parameters for a latency threshold SLI.  Structure is documented below.</p>
 <ul>
@@ -2276,6 +2804,75 @@ If it is not provided, the provider project is used.</p>
 </dd></dl>
 
 <dl class="py attribute">
+<dt id="pulumi_gcp.monitoring.Slo.request_based_sli">
+<code class="sig-name descname">request_based_sli</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.monitoring.Slo.request_based_sli" title="Permalink to this definition">¶</a></dt>
+<dd><p>A request-based SLI defines a SLI for which atomic units of
+service are counted directly.
+A SLI describes a good service.
+It is used to measure and calculate the quality of the Service’s
+performance with respect to a single aspect of service quality.
+Exactly one of the following must be set:
+<code class="docutils literal notranslate"><span class="pre">basic_sli</span></code>, <code class="docutils literal notranslate"><span class="pre">request_based_sli</span></code>, <code class="docutils literal notranslate"><span class="pre">windows_based_sli</span></code>  Structure is documented below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">distributionCut</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Used when good_service is defined by a count of values aggregated in a
+Distribution that fall into a good range. The total_service is the
+total count of all values aggregated in the Distribution.
+Defines a distribution TimeSeries filter and thresholds used for
+measuring good service and total service.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">distributionFilter</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A TimeSeries <a class="reference external" href="https://cloud.google.com/monitoring/api/v3/filters">monitoring filter</a>
+aggregating values to quantify the good service provided.
+Must have ValueType = DISTRIBUTION and
+MetricKind = DELTA or MetricKind = CUMULATIVE.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">range</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Range of numerical values. The computed good_service
+will be the count of values x in the Distribution such
+that range.min &lt;= x &lt; range.max. inclusive of min and
+exclusive of max. Open ranges can be defined by setting
+just one of min or max. Summed value <code class="docutils literal notranslate"><span class="pre">X</span></code> should satisfy
+<code class="docutils literal notranslate"><span class="pre">range.min</span> <span class="pre">&lt;=</span> <span class="pre">X</span> <span class="pre">&lt;</span> <span class="pre">range.max</span></code> for a good window.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">max</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - max value for the range (inclusive). If not given,
+will be set to “infinity”, defining an open range
+“&gt;= range.min”</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">min</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Min value for the range (inclusive). If not given,
+will be set to “-infinity”, defining an open range
+“&lt; range.max”</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">goodTotalRatio</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A means to compute a ratio of <code class="docutils literal notranslate"><span class="pre">good_service</span></code> to <code class="docutils literal notranslate"><span class="pre">total_service</span></code>.
+Defines computing this ratio with two TimeSeries <a class="reference external" href="https://cloud.google.com/monitoring/api/v3/filters">monitoring filters</a>
+Must specify exactly two of good, bad, and total service filters.
+The relationship good_service + bad_service = total_service
+will be assumed.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">badServiceFilter</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A TimeSeries <a class="reference external" href="https://cloud.google.com/monitoring/api/v3/filters">monitoring filter</a>
+quantifying bad service provided, either demanded service that
+was not provided or demanded service that was of inadequate
+quality. Exactly two of
+good, bad, or total service filter must be defined (where
+good + bad = total is assumed)
+Must have ValueType = DOUBLE or ValueType = INT64 and
+must have MetricKind = DELTA or MetricKind = CUMULATIVE.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">goodServiceFilter</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A TimeSeries <a class="reference external" href="https://cloud.google.com/monitoring/api/v3/filters">monitoring filter</a>
+quantifying good service provided. Exactly two of
+good, bad, or total service filter must be defined (where
+good + bad = total is assumed)
+Must have ValueType = DOUBLE or ValueType = INT64 and
+must have MetricKind = DELTA or MetricKind = CUMULATIVE.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">totalServiceFilter</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A TimeSeries <a class="reference external" href="https://cloud.google.com/monitoring/api/v3/filters">monitoring filter</a>
+quantifying total demanded service. Exactly two of
+good, bad, or total service filter must be defined (where
+good + bad = total is assumed)
+Must have ValueType = DOUBLE or ValueType = INT64 and
+must have MetricKind = DELTA or MetricKind = CUMULATIVE.</p></li>
+</ul>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py attribute">
 <dt id="pulumi_gcp.monitoring.Slo.rolling_period_days">
 <code class="sig-name descname">rolling_period_days</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.monitoring.Slo.rolling_period_days" title="Permalink to this definition">¶</a></dt>
 <dd><p>A rolling time period, semantically “in the past X days”.
@@ -2294,9 +2891,194 @@ Must be between 1 to 30 days, inclusive.</p>
 <dd><p>The id to use for this ServiceLevelObjective. If omitted, an id will be generated instead.</p>
 </dd></dl>
 
+<dl class="py attribute">
+<dt id="pulumi_gcp.monitoring.Slo.windows_based_sli">
+<code class="sig-name descname">windows_based_sli</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.monitoring.Slo.windows_based_sli" title="Permalink to this definition">¶</a></dt>
+<dd><p>A windows-based SLI defines the criteria for time windows.
+good_service is defined based off the count of these time windows
+for which the provided service was of good quality.
+A SLI describes a good service. It is used to measure and calculate
+the quality of the Service’s performance with respect to a single
+aspect of service quality.
+Exactly one of the following must be set:
+<code class="docutils literal notranslate"><span class="pre">basic_sli</span></code>, <code class="docutils literal notranslate"><span class="pre">request_based_sli</span></code>, <code class="docutils literal notranslate"><span class="pre">windows_based_sli</span></code>  Structure is documented below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">goodBadMetricFilter</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A TimeSeries <a class="reference external" href="https://cloud.google.com/monitoring/api/v3/filters">monitoring filter</a>
+with ValueType = BOOL. The window is good if any true values
+appear in the window. One of <code class="docutils literal notranslate"><span class="pre">good_bad_metric_filter</span></code>,
+<code class="docutils literal notranslate"><span class="pre">good_total_ratio_threshold</span></code>, <code class="docutils literal notranslate"><span class="pre">metric_mean_in_range</span></code>,
+<code class="docutils literal notranslate"><span class="pre">metric_sum_in_range</span></code> must be set for <code class="docutils literal notranslate"><span class="pre">windows_based_sli</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">goodTotalRatioThreshold</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Criterion that describes a window as good if its performance is
+high enough. One of <code class="docutils literal notranslate"><span class="pre">good_bad_metric_filter</span></code>,
+<code class="docutils literal notranslate"><span class="pre">good_total_ratio_threshold</span></code>, <code class="docutils literal notranslate"><span class="pre">metric_mean_in_range</span></code>,
+<code class="docutils literal notranslate"><span class="pre">metric_sum_in_range</span></code> must be set for <code class="docutils literal notranslate"><span class="pre">windows_based_sli</span></code>.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">basicSliPerformance</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Basic SLI to evaluate to judge window quality.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">latency</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Parameters for a latency threshold SLI.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">threshold</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A duration string, e.g. 10s.
+Good service is defined to be the count of requests made to
+this service that return in no more than threshold.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">locations</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - An optional set of locations to which this SLI is relevant.
+Telemetry from other locations will not be used to calculate
+performance for this SLI. If omitted, this SLI applies to all
+locations in which the Service has activity. For service types
+that don’t support breaking down by location, setting this
+field will result in an error.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">methods</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - An optional set of RPCs to which this SLI is relevant.
+Telemetry from other methods will not be used to calculate
+performance for this SLI. If omitted, this SLI applies to all
+the Service’s methods. For service types that don’t support
+breaking down by method, setting this field will result in an
+error.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">versions</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - The set of API versions to which this SLI is relevant.
+Telemetry from other API versions will not be used to
+calculate performance for this SLI. If omitted,
+this SLI applies to all API versions. For service types
+that don’t support breaking down by version, setting this
+field will result in an error.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">performance</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Request-based SLI to evaluate to judge window quality.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">distributionCut</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Used when good_service is defined by a count of values aggregated in a
+Distribution that fall into a good range. The total_service is the
+total count of all values aggregated in the Distribution.
+Defines a distribution TimeSeries filter and thresholds used for
+measuring good service and total service.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">distributionFilter</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A TimeSeries <a class="reference external" href="https://cloud.google.com/monitoring/api/v3/filters">monitoring filter</a>
+aggregating values to quantify the good service provided.
+Must have ValueType = DISTRIBUTION and
+MetricKind = DELTA or MetricKind = CUMULATIVE.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">range</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Range of numerical values. The computed good_service
+will be the count of values x in the Distribution such
+that range.min &lt;= x &lt; range.max. inclusive of min and
+exclusive of max. Open ranges can be defined by setting
+just one of min or max. Summed value <code class="docutils literal notranslate"><span class="pre">X</span></code> should satisfy
+<code class="docutils literal notranslate"><span class="pre">range.min</span> <span class="pre">&lt;=</span> <span class="pre">X</span> <span class="pre">&lt;</span> <span class="pre">range.max</span></code> for a good window.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">max</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - max value for the range (inclusive). If not given,
+will be set to “infinity”, defining an open range
+“&gt;= range.min”</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">min</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Min value for the range (inclusive). If not given,
+will be set to “-infinity”, defining an open range
+“&lt; range.max”</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">goodTotalRatio</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A means to compute a ratio of <code class="docutils literal notranslate"><span class="pre">good_service</span></code> to <code class="docutils literal notranslate"><span class="pre">total_service</span></code>.
+Defines computing this ratio with two TimeSeries <a class="reference external" href="https://cloud.google.com/monitoring/api/v3/filters">monitoring filters</a>
+Must specify exactly two of good, bad, and total service filters.
+The relationship good_service + bad_service = total_service
+will be assumed.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">badServiceFilter</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A TimeSeries <a class="reference external" href="https://cloud.google.com/monitoring/api/v3/filters">monitoring filter</a>
+quantifying bad service provided, either demanded service that
+was not provided or demanded service that was of inadequate
+quality. Exactly two of
+good, bad, or total service filter must be defined (where
+good + bad = total is assumed)
+Must have ValueType = DOUBLE or ValueType = INT64 and
+must have MetricKind = DELTA or MetricKind = CUMULATIVE.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">goodServiceFilter</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A TimeSeries <a class="reference external" href="https://cloud.google.com/monitoring/api/v3/filters">monitoring filter</a>
+quantifying good service provided. Exactly two of
+good, bad, or total service filter must be defined (where
+good + bad = total is assumed)
+Must have ValueType = DOUBLE or ValueType = INT64 and
+must have MetricKind = DELTA or MetricKind = CUMULATIVE.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">totalServiceFilter</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A TimeSeries <a class="reference external" href="https://cloud.google.com/monitoring/api/v3/filters">monitoring filter</a>
+quantifying total demanded service. Exactly two of
+good, bad, or total service filter must be defined (where
+good + bad = total is assumed)
+Must have ValueType = DOUBLE or ValueType = INT64 and
+must have MetricKind = DELTA or MetricKind = CUMULATIVE.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">threshold</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - A duration string, e.g. 10s.
+Good service is defined to be the count of requests made to
+this service that return in no more than threshold.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">metricMeanInRange</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Criterion that describes a window as good if the metric’s value
+is in a good range, <em>averaged</em> across returned streams.
+One of <code class="docutils literal notranslate"><span class="pre">good_bad_metric_filter</span></code>,
+<code class="docutils literal notranslate"><span class="pre">good_total_ratio_threshold</span></code>, <code class="docutils literal notranslate"><span class="pre">metric_mean_in_range</span></code>,
+<code class="docutils literal notranslate"><span class="pre">metric_sum_in_range</span></code> must be set for <code class="docutils literal notranslate"><span class="pre">windows_based_sli</span></code>.
+Average value X of <code class="docutils literal notranslate"><span class="pre">time_series</span></code> should satisfy
+<code class="docutils literal notranslate"><span class="pre">range.min</span> <span class="pre">&lt;=</span> <span class="pre">X</span> <span class="pre">&lt;</span> <span class="pre">range.max</span></code> for a good window.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">range</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Range of numerical values. The computed good_service
+will be the count of values x in the Distribution such
+that range.min &lt;= x &lt; range.max. inclusive of min and
+exclusive of max. Open ranges can be defined by setting
+just one of min or max. Summed value <code class="docutils literal notranslate"><span class="pre">X</span></code> should satisfy
+<code class="docutils literal notranslate"><span class="pre">range.min</span> <span class="pre">&lt;=</span> <span class="pre">X</span> <span class="pre">&lt;</span> <span class="pre">range.max</span></code> for a good window.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">max</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - max value for the range (inclusive). If not given,
+will be set to “infinity”, defining an open range
+“&gt;= range.min”</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">min</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Min value for the range (inclusive). If not given,
+will be set to “-infinity”, defining an open range
+“&lt; range.max”</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeSeries</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A <a class="reference external" href="https://cloud.google.com/monitoring/api/v3/filters">monitoring filter</a>
+specifying the TimeSeries to use for evaluating window
+quality. The provided TimeSeries must have
+ValueType = INT64 or ValueType = DOUBLE and
+MetricKind = GAUGE.
+Summed value <code class="docutils literal notranslate"><span class="pre">X</span></code> should satisfy
+<code class="docutils literal notranslate"><span class="pre">range.min</span> <span class="pre">&lt;=</span> <span class="pre">X</span> <span class="pre">&lt;</span> <span class="pre">range.max</span></code> for a good window.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">metricSumInRange</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Criterion that describes a window as good if the metric’s value
+is in a good range, <em>summed</em> across returned streams.
+Summed value <code class="docutils literal notranslate"><span class="pre">X</span></code> of <code class="docutils literal notranslate"><span class="pre">time_series</span></code> should satisfy
+<code class="docutils literal notranslate"><span class="pre">range.min</span> <span class="pre">&lt;=</span> <span class="pre">X</span> <span class="pre">&lt;</span> <span class="pre">range.max</span></code> for a good window.
+One of <code class="docutils literal notranslate"><span class="pre">good_bad_metric_filter</span></code>,
+<code class="docutils literal notranslate"><span class="pre">good_total_ratio_threshold</span></code>, <code class="docutils literal notranslate"><span class="pre">metric_mean_in_range</span></code>,
+<code class="docutils literal notranslate"><span class="pre">metric_sum_in_range</span></code> must be set for <code class="docutils literal notranslate"><span class="pre">windows_based_sli</span></code>.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">range</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Range of numerical values. The computed good_service
+will be the count of values x in the Distribution such
+that range.min &lt;= x &lt; range.max. inclusive of min and
+exclusive of max. Open ranges can be defined by setting
+just one of min or max. Summed value <code class="docutils literal notranslate"><span class="pre">X</span></code> should satisfy
+<code class="docutils literal notranslate"><span class="pre">range.min</span> <span class="pre">&lt;=</span> <span class="pre">X</span> <span class="pre">&lt;</span> <span class="pre">range.max</span></code> for a good window.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">max</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - max value for the range (inclusive). If not given,
+will be set to “infinity”, defining an open range
+“&gt;= range.min”</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">min</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Min value for the range (inclusive). If not given,
+will be set to “-infinity”, defining an open range
+“&lt; range.max”</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeSeries</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A <a class="reference external" href="https://cloud.google.com/monitoring/api/v3/filters">monitoring filter</a>
+specifying the TimeSeries to use for evaluating window
+quality. The provided TimeSeries must have
+ValueType = INT64 or ValueType = DOUBLE and
+MetricKind = GAUGE.
+Summed value <code class="docutils literal notranslate"><span class="pre">X</span></code> should satisfy
+<code class="docutils literal notranslate"><span class="pre">range.min</span> <span class="pre">&lt;=</span> <span class="pre">X</span> <span class="pre">&lt;</span> <span class="pre">range.max</span></code> for a good window.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">windowPeriod</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Duration over which window quality is evaluated, given as a
+duration string “{X}s” representing X seconds. Must be an
+integer fraction of a day and at least 60s.</p></li>
+</ul>
+</dd></dl>
+
 <dl class="py method">
 <dt id="pulumi_gcp.monitoring.Slo.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">basic_sli</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">calendar_period</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">display_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">goal</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rolling_period_days</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">slo_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.monitoring.Slo.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">basic_sli</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">calendar_period</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">display_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">goal</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">request_based_sli</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rolling_period_days</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">slo_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">windows_based_sli</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.monitoring.Slo.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Slo resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -2308,7 +3090,9 @@ properties used to qualify the lookup.</p>
 <li><p><strong>basic_sli</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Basic Service-Level Indicator (SLI) on a well-known service type.
 Performance will be computed on the basis of pre-defined metrics.
 SLIs are used to measure and calculate the quality of the Service’s
-performance with respect to a single aspect of service quality.  Structure is documented below.</p></li>
+performance with respect to a single aspect of service quality.
+Exactly one of the following must be set:
+<code class="docutils literal notranslate"><span class="pre">basic_sli</span></code>, <code class="docutils literal notranslate"><span class="pre">request_based_sli</span></code>, <code class="docutils literal notranslate"><span class="pre">windows_based_sli</span></code>  Structure is documented below.</p></li>
 <li><p><strong>calendar_period</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A calendar period, semantically “since the start of the current
 <span class="raw-html-m2r"><calendarPeriod></span>”.</p></li>
 <li><p><strong>display_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name used for UI elements listing this SLO.</p></li>
@@ -2318,10 +3102,25 @@ to be met. 0 &lt; goal &lt;= 0.999</p></li>
 projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SLO_NAME]</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
+<li><p><strong>request_based_sli</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A request-based SLI defines a SLI for which atomic units of
+service are counted directly.
+A SLI describes a good service.
+It is used to measure and calculate the quality of the Service’s
+performance with respect to a single aspect of service quality.
+Exactly one of the following must be set:
+<code class="docutils literal notranslate"><span class="pre">basic_sli</span></code>, <code class="docutils literal notranslate"><span class="pre">request_based_sli</span></code>, <code class="docutils literal notranslate"><span class="pre">windows_based_sli</span></code>  Structure is documented below.</p></li>
 <li><p><strong>rolling_period_days</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – A rolling time period, semantically “in the past X days”.
 Must be between 1 to 30 days, inclusive.</p></li>
 <li><p><strong>service</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of the service to which this SLO belongs.</p></li>
 <li><p><strong>slo_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id to use for this ServiceLevelObjective. If omitted, an id will be generated instead.</p></li>
+<li><p><strong>windows_based_sli</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A windows-based SLI defines the criteria for time windows.
+good_service is defined based off the count of these time windows
+for which the provided service was of good quality.
+A SLI describes a good service. It is used to measure and calculate
+the quality of the Service’s performance with respect to a single
+aspect of service quality.
+Exactly one of the following must be set:
+<code class="docutils literal notranslate"><span class="pre">basic_sli</span></code>, <code class="docutils literal notranslate"><span class="pre">request_based_sli</span></code>, <code class="docutils literal notranslate"><span class="pre">windows_based_sli</span></code>  Structure is documented below.</p></li>
 </ul>
 </dd>
 </dl>
@@ -2352,6 +3151,237 @@ calculate performance for this SLI. If omitted,
 this SLI applies to all API versions. For service types
 that don’t support breaking down by version, setting this
 field will result in an error.</p></li>
+</ul>
+<p>The <strong>request_based_sli</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">distributionCut</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Used when good_service is defined by a count of values aggregated in a
+Distribution that fall into a good range. The total_service is the
+total count of all values aggregated in the Distribution.
+Defines a distribution TimeSeries filter and thresholds used for
+measuring good service and total service.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">distributionFilter</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A TimeSeries <a class="reference external" href="https://cloud.google.com/monitoring/api/v3/filters">monitoring filter</a>
+aggregating values to quantify the good service provided.
+Must have ValueType = DISTRIBUTION and
+MetricKind = DELTA or MetricKind = CUMULATIVE.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">range</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Range of numerical values. The computed good_service
+will be the count of values x in the Distribution such
+that range.min &lt;= x &lt; range.max. inclusive of min and
+exclusive of max. Open ranges can be defined by setting
+just one of min or max. Summed value <code class="docutils literal notranslate"><span class="pre">X</span></code> should satisfy
+<code class="docutils literal notranslate"><span class="pre">range.min</span> <span class="pre">&lt;=</span> <span class="pre">X</span> <span class="pre">&lt;</span> <span class="pre">range.max</span></code> for a good window.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">max</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - max value for the range (inclusive). If not given,
+will be set to “infinity”, defining an open range
+“&gt;= range.min”</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">min</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Min value for the range (inclusive). If not given,
+will be set to “-infinity”, defining an open range
+“&lt; range.max”</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">goodTotalRatio</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A means to compute a ratio of <code class="docutils literal notranslate"><span class="pre">good_service</span></code> to <code class="docutils literal notranslate"><span class="pre">total_service</span></code>.
+Defines computing this ratio with two TimeSeries <a class="reference external" href="https://cloud.google.com/monitoring/api/v3/filters">monitoring filters</a>
+Must specify exactly two of good, bad, and total service filters.
+The relationship good_service + bad_service = total_service
+will be assumed.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">badServiceFilter</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A TimeSeries <a class="reference external" href="https://cloud.google.com/monitoring/api/v3/filters">monitoring filter</a>
+quantifying bad service provided, either demanded service that
+was not provided or demanded service that was of inadequate
+quality. Exactly two of
+good, bad, or total service filter must be defined (where
+good + bad = total is assumed)
+Must have ValueType = DOUBLE or ValueType = INT64 and
+must have MetricKind = DELTA or MetricKind = CUMULATIVE.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">goodServiceFilter</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A TimeSeries <a class="reference external" href="https://cloud.google.com/monitoring/api/v3/filters">monitoring filter</a>
+quantifying good service provided. Exactly two of
+good, bad, or total service filter must be defined (where
+good + bad = total is assumed)
+Must have ValueType = DOUBLE or ValueType = INT64 and
+must have MetricKind = DELTA or MetricKind = CUMULATIVE.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">totalServiceFilter</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A TimeSeries <a class="reference external" href="https://cloud.google.com/monitoring/api/v3/filters">monitoring filter</a>
+quantifying total demanded service. Exactly two of
+good, bad, or total service filter must be defined (where
+good + bad = total is assumed)
+Must have ValueType = DOUBLE or ValueType = INT64 and
+must have MetricKind = DELTA or MetricKind = CUMULATIVE.</p></li>
+</ul>
+</li>
+</ul>
+<p>The <strong>windows_based_sli</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">goodBadMetricFilter</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A TimeSeries <a class="reference external" href="https://cloud.google.com/monitoring/api/v3/filters">monitoring filter</a>
+with ValueType = BOOL. The window is good if any true values
+appear in the window. One of <code class="docutils literal notranslate"><span class="pre">good_bad_metric_filter</span></code>,
+<code class="docutils literal notranslate"><span class="pre">good_total_ratio_threshold</span></code>, <code class="docutils literal notranslate"><span class="pre">metric_mean_in_range</span></code>,
+<code class="docutils literal notranslate"><span class="pre">metric_sum_in_range</span></code> must be set for <code class="docutils literal notranslate"><span class="pre">windows_based_sli</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">goodTotalRatioThreshold</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Criterion that describes a window as good if its performance is
+high enough. One of <code class="docutils literal notranslate"><span class="pre">good_bad_metric_filter</span></code>,
+<code class="docutils literal notranslate"><span class="pre">good_total_ratio_threshold</span></code>, <code class="docutils literal notranslate"><span class="pre">metric_mean_in_range</span></code>,
+<code class="docutils literal notranslate"><span class="pre">metric_sum_in_range</span></code> must be set for <code class="docutils literal notranslate"><span class="pre">windows_based_sli</span></code>.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">basicSliPerformance</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Basic SLI to evaluate to judge window quality.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">latency</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Parameters for a latency threshold SLI.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">threshold</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A duration string, e.g. 10s.
+Good service is defined to be the count of requests made to
+this service that return in no more than threshold.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">locations</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - An optional set of locations to which this SLI is relevant.
+Telemetry from other locations will not be used to calculate
+performance for this SLI. If omitted, this SLI applies to all
+locations in which the Service has activity. For service types
+that don’t support breaking down by location, setting this
+field will result in an error.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">methods</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - An optional set of RPCs to which this SLI is relevant.
+Telemetry from other methods will not be used to calculate
+performance for this SLI. If omitted, this SLI applies to all
+the Service’s methods. For service types that don’t support
+breaking down by method, setting this field will result in an
+error.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">versions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The set of API versions to which this SLI is relevant.
+Telemetry from other API versions will not be used to
+calculate performance for this SLI. If omitted,
+this SLI applies to all API versions. For service types
+that don’t support breaking down by version, setting this
+field will result in an error.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">performance</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Request-based SLI to evaluate to judge window quality.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">distributionCut</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Used when good_service is defined by a count of values aggregated in a
+Distribution that fall into a good range. The total_service is the
+total count of all values aggregated in the Distribution.
+Defines a distribution TimeSeries filter and thresholds used for
+measuring good service and total service.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">distributionFilter</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A TimeSeries <a class="reference external" href="https://cloud.google.com/monitoring/api/v3/filters">monitoring filter</a>
+aggregating values to quantify the good service provided.
+Must have ValueType = DISTRIBUTION and
+MetricKind = DELTA or MetricKind = CUMULATIVE.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">range</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Range of numerical values. The computed good_service
+will be the count of values x in the Distribution such
+that range.min &lt;= x &lt; range.max. inclusive of min and
+exclusive of max. Open ranges can be defined by setting
+just one of min or max. Summed value <code class="docutils literal notranslate"><span class="pre">X</span></code> should satisfy
+<code class="docutils literal notranslate"><span class="pre">range.min</span> <span class="pre">&lt;=</span> <span class="pre">X</span> <span class="pre">&lt;</span> <span class="pre">range.max</span></code> for a good window.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">max</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - max value for the range (inclusive). If not given,
+will be set to “infinity”, defining an open range
+“&gt;= range.min”</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">min</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Min value for the range (inclusive). If not given,
+will be set to “-infinity”, defining an open range
+“&lt; range.max”</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">goodTotalRatio</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A means to compute a ratio of <code class="docutils literal notranslate"><span class="pre">good_service</span></code> to <code class="docutils literal notranslate"><span class="pre">total_service</span></code>.
+Defines computing this ratio with two TimeSeries <a class="reference external" href="https://cloud.google.com/monitoring/api/v3/filters">monitoring filters</a>
+Must specify exactly two of good, bad, and total service filters.
+The relationship good_service + bad_service = total_service
+will be assumed.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">badServiceFilter</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A TimeSeries <a class="reference external" href="https://cloud.google.com/monitoring/api/v3/filters">monitoring filter</a>
+quantifying bad service provided, either demanded service that
+was not provided or demanded service that was of inadequate
+quality. Exactly two of
+good, bad, or total service filter must be defined (where
+good + bad = total is assumed)
+Must have ValueType = DOUBLE or ValueType = INT64 and
+must have MetricKind = DELTA or MetricKind = CUMULATIVE.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">goodServiceFilter</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A TimeSeries <a class="reference external" href="https://cloud.google.com/monitoring/api/v3/filters">monitoring filter</a>
+quantifying good service provided. Exactly two of
+good, bad, or total service filter must be defined (where
+good + bad = total is assumed)
+Must have ValueType = DOUBLE or ValueType = INT64 and
+must have MetricKind = DELTA or MetricKind = CUMULATIVE.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">totalServiceFilter</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A TimeSeries <a class="reference external" href="https://cloud.google.com/monitoring/api/v3/filters">monitoring filter</a>
+quantifying total demanded service. Exactly two of
+good, bad, or total service filter must be defined (where
+good + bad = total is assumed)
+Must have ValueType = DOUBLE or ValueType = INT64 and
+must have MetricKind = DELTA or MetricKind = CUMULATIVE.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">threshold</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - A duration string, e.g. 10s.
+Good service is defined to be the count of requests made to
+this service that return in no more than threshold.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">metricMeanInRange</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Criterion that describes a window as good if the metric’s value
+is in a good range, <em>averaged</em> across returned streams.
+One of <code class="docutils literal notranslate"><span class="pre">good_bad_metric_filter</span></code>,
+<code class="docutils literal notranslate"><span class="pre">good_total_ratio_threshold</span></code>, <code class="docutils literal notranslate"><span class="pre">metric_mean_in_range</span></code>,
+<code class="docutils literal notranslate"><span class="pre">metric_sum_in_range</span></code> must be set for <code class="docutils literal notranslate"><span class="pre">windows_based_sli</span></code>.
+Average value X of <code class="docutils literal notranslate"><span class="pre">time_series</span></code> should satisfy
+<code class="docutils literal notranslate"><span class="pre">range.min</span> <span class="pre">&lt;=</span> <span class="pre">X</span> <span class="pre">&lt;</span> <span class="pre">range.max</span></code> for a good window.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">range</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Range of numerical values. The computed good_service
+will be the count of values x in the Distribution such
+that range.min &lt;= x &lt; range.max. inclusive of min and
+exclusive of max. Open ranges can be defined by setting
+just one of min or max. Summed value <code class="docutils literal notranslate"><span class="pre">X</span></code> should satisfy
+<code class="docutils literal notranslate"><span class="pre">range.min</span> <span class="pre">&lt;=</span> <span class="pre">X</span> <span class="pre">&lt;</span> <span class="pre">range.max</span></code> for a good window.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">max</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - max value for the range (inclusive). If not given,
+will be set to “infinity”, defining an open range
+“&gt;= range.min”</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">min</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Min value for the range (inclusive). If not given,
+will be set to “-infinity”, defining an open range
+“&lt; range.max”</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeSeries</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A <a class="reference external" href="https://cloud.google.com/monitoring/api/v3/filters">monitoring filter</a>
+specifying the TimeSeries to use for evaluating window
+quality. The provided TimeSeries must have
+ValueType = INT64 or ValueType = DOUBLE and
+MetricKind = GAUGE.
+Summed value <code class="docutils literal notranslate"><span class="pre">X</span></code> should satisfy
+<code class="docutils literal notranslate"><span class="pre">range.min</span> <span class="pre">&lt;=</span> <span class="pre">X</span> <span class="pre">&lt;</span> <span class="pre">range.max</span></code> for a good window.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">metricSumInRange</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Criterion that describes a window as good if the metric’s value
+is in a good range, <em>summed</em> across returned streams.
+Summed value <code class="docutils literal notranslate"><span class="pre">X</span></code> of <code class="docutils literal notranslate"><span class="pre">time_series</span></code> should satisfy
+<code class="docutils literal notranslate"><span class="pre">range.min</span> <span class="pre">&lt;=</span> <span class="pre">X</span> <span class="pre">&lt;</span> <span class="pre">range.max</span></code> for a good window.
+One of <code class="docutils literal notranslate"><span class="pre">good_bad_metric_filter</span></code>,
+<code class="docutils literal notranslate"><span class="pre">good_total_ratio_threshold</span></code>, <code class="docutils literal notranslate"><span class="pre">metric_mean_in_range</span></code>,
+<code class="docutils literal notranslate"><span class="pre">metric_sum_in_range</span></code> must be set for <code class="docutils literal notranslate"><span class="pre">windows_based_sli</span></code>.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">range</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Range of numerical values. The computed good_service
+will be the count of values x in the Distribution such
+that range.min &lt;= x &lt; range.max. inclusive of min and
+exclusive of max. Open ranges can be defined by setting
+just one of min or max. Summed value <code class="docutils literal notranslate"><span class="pre">X</span></code> should satisfy
+<code class="docutils literal notranslate"><span class="pre">range.min</span> <span class="pre">&lt;=</span> <span class="pre">X</span> <span class="pre">&lt;</span> <span class="pre">range.max</span></code> for a good window.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">max</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - max value for the range (inclusive). If not given,
+will be set to “infinity”, defining an open range
+“&gt;= range.min”</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">min</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Min value for the range (inclusive). If not given,
+will be set to “-infinity”, defining an open range
+“&lt; range.max”</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeSeries</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A <a class="reference external" href="https://cloud.google.com/monitoring/api/v3/filters">monitoring filter</a>
+specifying the TimeSeries to use for evaluating window
+quality. The provided TimeSeries must have
+ValueType = INT64 or ValueType = DOUBLE and
+MetricKind = GAUGE.
+Summed value <code class="docutils literal notranslate"><span class="pre">X</span></code> should satisfy
+<code class="docutils literal notranslate"><span class="pre">range.min</span> <span class="pre">&lt;=</span> <span class="pre">X</span> <span class="pre">&lt;</span> <span class="pre">range.max</span></code> for a good window.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">windowPeriod</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Duration over which window quality is evaluated, given as a
+duration string “{X}s” representing X seconds. Must be an
+integer fraction of a day and at least 60s.</p></li>
 </ul>
 </dd></dl>
 
@@ -2406,6 +3436,74 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </li>
 </ul>
+<blockquote>
+<div><p><strong>Warning:</strong> All arguments including <code class="docutils literal notranslate"><span class="pre">http_check.auth_info.password</span></code> will be stored in the raw
+state as plain-text. <a class="reference external" href="https://www.pulumi.com/docs/intro/concepts/programming-model/#secrets">Read more about secrets in state</a>.</p>
+</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">http</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">monitoring</span><span class="o">.</span><span class="n">UptimeCheckConfig</span><span class="p">(</span><span class="s2">&quot;http&quot;</span><span class="p">,</span>
+    <span class="n">content_matchers</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;content&quot;</span><span class="p">:</span> <span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">display_name</span><span class="o">=</span><span class="s2">&quot;http-uptime-check&quot;</span><span class="p">,</span>
+    <span class="n">http_check</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;/some-path&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="s2">&quot;8010&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">monitored_resource</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;labels&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;host&quot;</span><span class="p">:</span> <span class="s2">&quot;192.168.1.1&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;project_id&quot;</span><span class="p">:</span> <span class="s2">&quot;my-project-name&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;uptime_url&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">timeout</span><span class="o">=</span><span class="s2">&quot;60s&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">https</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">monitoring</span><span class="o">.</span><span class="n">UptimeCheckConfig</span><span class="p">(</span><span class="s2">&quot;https&quot;</span><span class="p">,</span>
+    <span class="n">content_matchers</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;content&quot;</span><span class="p">:</span> <span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">display_name</span><span class="o">=</span><span class="s2">&quot;https-uptime-check&quot;</span><span class="p">,</span>
+    <span class="n">http_check</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;/some-path&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="s2">&quot;443&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;useSsl&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;validateSsl&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">monitored_resource</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;labels&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;host&quot;</span><span class="p">:</span> <span class="s2">&quot;192.168.1.1&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;project_id&quot;</span><span class="p">:</span> <span class="s2">&quot;my-project-name&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;uptime_url&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">timeout</span><span class="o">=</span><span class="s2">&quot;60s&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">check</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">monitoring</span><span class="o">.</span><span class="n">Group</span><span class="p">(</span><span class="s2">&quot;check&quot;</span><span class="p">,</span>
+    <span class="n">display_name</span><span class="o">=</span><span class="s2">&quot;uptime-check-group&quot;</span><span class="p">,</span>
+    <span class="nb">filter</span><span class="o">=</span><span class="s2">&quot;resource.metadata.name=has_substring(&quot;</span><span class="n">foo</span><span class="s2">&quot;)&quot;</span><span class="p">)</span>
+<span class="n">tcp_group</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">monitoring</span><span class="o">.</span><span class="n">UptimeCheckConfig</span><span class="p">(</span><span class="s2">&quot;tcpGroup&quot;</span><span class="p">,</span>
+    <span class="n">display_name</span><span class="o">=</span><span class="s2">&quot;tcp-uptime-check&quot;</span><span class="p">,</span>
+    <span class="n">timeout</span><span class="o">=</span><span class="s2">&quot;60s&quot;</span><span class="p">,</span>
+    <span class="n">tcp_check</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="mi">888</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">resource_group</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;resourceType&quot;</span><span class="p">:</span> <span class="s2">&quot;INSTANCE&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;groupId&quot;</span><span class="p">:</span> <span class="n">check</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2433,7 +3531,7 @@ If it is not provided, the provider project is used.</p></li>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">authInfo</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The authentication information. Optional when creating an HTTP check; defaults to empty.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The password to authenticate.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The password to authenticate.  <strong>Note</strong>: This property is sensitive and will not be displayed in the plan.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The username to authenticate.</p></li>
 </ul>
 </li>
@@ -2480,7 +3578,7 @@ If it is not provided, the provider project is used.</p></li>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">authInfo</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The authentication information. Optional when creating an HTTP check; defaults to empty.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The password to authenticate.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The password to authenticate.  <strong>Note</strong>: This property is sensitive and will not be displayed in the plan.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The username to authenticate.</p></li>
 </ul>
 </li>
@@ -2596,7 +3694,7 @@ If it is not provided, the provider project is used.</p></li>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">authInfo</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The authentication information. Optional when creating an HTTP check; defaults to empty.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The password to authenticate.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The password to authenticate.  <strong>Note</strong>: This property is sensitive and will not be displayed in the plan.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The username to authenticate.</p></li>
 </ul>
 </li>
@@ -2679,6 +3777,32 @@ App Engine services.</p>
 </ul>
 </li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">bucket</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">Bucket</span><span class="p">(</span><span class="s2">&quot;bucket&quot;</span><span class="p">)</span>
+<span class="nb">object</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">BucketObject</span><span class="p">(</span><span class="s2">&quot;object&quot;</span><span class="p">,</span>
+    <span class="n">bucket</span><span class="o">=</span><span class="n">bucket</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">source</span><span class="o">=</span><span class="n">pulumi</span><span class="o">.</span><span class="n">FileAsset</span><span class="p">(</span><span class="s2">&quot;./test-fixtures/appengine/hello-world.zip&quot;</span><span class="p">))</span>
+<span class="n">myapp</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">appengine</span><span class="o">.</span><span class="n">StandardAppVersion</span><span class="p">(</span><span class="s2">&quot;myapp&quot;</span><span class="p">,</span>
+    <span class="n">version_id</span><span class="o">=</span><span class="s2">&quot;v1&quot;</span><span class="p">,</span>
+    <span class="n">service</span><span class="o">=</span><span class="s2">&quot;myapp&quot;</span><span class="p">,</span>
+    <span class="n">runtime</span><span class="o">=</span><span class="s2">&quot;nodejs10&quot;</span><span class="p">,</span>
+    <span class="n">entrypoint</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;shell&quot;</span><span class="p">:</span> <span class="s2">&quot;node ./app.js&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">deployment</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;zip&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;sourceUrl&quot;</span><span class="p">:</span> <span class="n">pulumi</span><span class="o">.</span><span class="n">Output</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="n">bucket</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="nb">object</span><span class="o">.</span><span class="n">name</span><span class="p">)</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">bucketName</span><span class="p">,</span> <span class="n">objectName</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;https://storage.googleapis.com/</span><span class="si">{</span><span class="n">bucket_name</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">object_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">),</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
+    <span class="n">env_variables</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="s2">&quot;8080&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">delete_service_on_destroy</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">srv</span> <span class="o">=</span> <span class="n">myapp</span><span class="o">.</span><span class="n">service</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">service</span><span class="p">:</span> <span class="n">gcp</span><span class="o">.</span><span class="n">monitoring</span><span class="o">.</span><span class="n">get_app_engine_service</span><span class="p">(</span><span class="n">module_id</span><span class="o">=</span><span class="n">service</span><span class="p">))</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2708,6 +3832,28 @@ like authentication tokens or contact info are only partially populated on retri
 </ul>
 </li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">basic</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">monitoring</span><span class="o">.</span><span class="n">get_notification_channel</span><span class="p">(</span><span class="n">display_name</span><span class="o">=</span><span class="s2">&quot;Test Notification Channel&quot;</span><span class="p">)</span>
+<span class="n">alert_policy</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">monitoring</span><span class="o">.</span><span class="n">AlertPolicy</span><span class="p">(</span><span class="s2">&quot;alertPolicy&quot;</span><span class="p">,</span>
+    <span class="n">display_name</span><span class="o">=</span><span class="s2">&quot;My Alert Policy&quot;</span><span class="p">,</span>
+    <span class="n">notification_channels</span><span class="o">=</span><span class="p">[</span><span class="n">basic</span><span class="o">.</span><span class="n">name</span><span class="p">],</span>
+    <span class="n">combiner</span><span class="o">=</span><span class="s2">&quot;OR&quot;</span><span class="p">,</span>
+    <span class="n">conditions</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;display_name&quot;</span><span class="p">:</span> <span class="s2">&quot;test condition&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;condition_threshold&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;filter&quot;</span><span class="p">:</span> <span class="s2">&quot;metric.type=&quot;</span><span class="n">compute</span><span class="o">.</span><span class="n">googleapis</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">instance</span><span class="o">/</span><span class="n">disk</span><span class="o">/</span><span class="n">write_bytes_count</span><span class="s2">&quot; AND resource.type=&quot;</span><span class="n">gce_instance</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;duration&quot;</span><span class="p">:</span> <span class="s2">&quot;60s&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;comparison&quot;</span><span class="p">:</span> <span class="s2">&quot;COMPARISON_GT&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;aggregations&quot;</span><span class="p">:</span> <span class="p">[{</span>
+                <span class="s2">&quot;alignmentPeriod&quot;</span><span class="p">:</span> <span class="s2">&quot;60s&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;perSeriesAligner&quot;</span><span class="p">:</span> <span class="s2">&quot;ALIGN_RATE&quot;</span><span class="p">,</span>
+            <span class="p">}],</span>
+        <span class="p">},</span>
+    <span class="p">}])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2727,7 +3873,12 @@ If it is not provided, the provider project is used.</p></li>
 <dt id="pulumi_gcp.monitoring.get_secret_version">
 <code class="sig-prename descclassname">pulumi_gcp.monitoring.</code><code class="sig-name descname">get_secret_version</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">secret</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.monitoring.get_secret_version" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get a Secret Manager secret’s version. For more information see the <a class="reference external" href="https://cloud.google.com/secret-manager/docs/">official documentation</a> and <a class="reference external" href="https://cloud.google.com/secret-manager/docs/reference/rest/v1beta1/projects.secrets.versions">API</a>.</p>
-<p>Deprecated: gcp.getSecretVersion has been deprecated in favour of gcp.getSecretVersion</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">basic</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">secretmanager</span><span class="o">.</span><span class="n">get_secret_version</span><span class="p">(</span><span class="n">secret</span><span class="o">=</span><span class="s2">&quot;my-secret&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2746,6 +3897,13 @@ is not provided, the latest version is retrieved.</p></li>
 <code class="sig-prename descclassname">pulumi_gcp.monitoring.</code><code class="sig-name descname">get_uptime_check_i_ps</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.monitoring.get_uptime_check_i_ps" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the list of IP addresses that checkers run from. For more information see
 the <a class="reference external" href="https://cloud.google.com/monitoring/uptime-checks#get-ips">official documentation</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">ips</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">monitoring</span><span class="o">.</span><span class="n">get_uptime_check_i_ps</span><span class="p">()</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;ipList&quot;</span><span class="p">,</span> <span class="n">ips</span><span class="o">.</span><span class="n">uptime_check_ips</span><span class="p">)</span>
+</pre></div>
+</div>
 </dd></dl>
 
 </div>

@@ -12,10 +12,9 @@ meta_desc: "Explore the GetVmfsDisks function of the vSphere package, including 
 
 The `vsphere..getVmfsDisks` data source can be used to discover the storage
 devices available on an ESXi host. This data source can be combined with the
-[`vsphere..VmfsDatastore`][data-source-vmfs-datastore] resource to create VMFS
+`vsphere..VmfsDatastore` resource to create VMFS
 datastores based off a set of discovered disks.
 
-[data-source-vmfs-datastore]: /docs/providers/vsphere/r/vmfs_datastore.html
 
 
 
@@ -91,7 +90,7 @@ const available = host.apply(host => vsphere.getVmfsDisks({
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetVmfsDisks </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.Vsphere.GetVmfsDisksResult.html">GetVmfsDisksResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.VSphere.GetVmfsDisksArgs.html">GetVmfsDisksArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.GetVmfsDisksResult.html">GetVmfsDisksResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.GetVmfsDisksArgs.html">GetVmfsDisksArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -110,7 +109,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object ID][docs-about-morefs] of
+    <dd>{{% md %}}The managed object ID of
 the host to look for disks on.
 {{% /md %}}</dd>
 
@@ -148,7 +147,7 @@ search. Default: `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object ID][docs-about-morefs] of
+    <dd>{{% md %}}The managed object ID of
 the host to look for disks on.
 {{% /md %}}</dd>
 
@@ -186,7 +185,7 @@ search. Default: `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object ID][docs-about-morefs] of
+    <dd>{{% md %}}The managed object ID of
 the host to look for disks on.
 {{% /md %}}</dd>
 
@@ -224,7 +223,7 @@ search. Default: `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object ID][docs-about-morefs] of
+    <dd>{{% md %}}The managed object ID of
 the host to look for disks on.
 {{% /md %}}</dd>
 

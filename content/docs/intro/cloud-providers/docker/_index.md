@@ -12,7 +12,7 @@ menu:
 
 The Docker provider for Pulumi can be used to provision any of the resources available in [Docker](https://www.docker.com/).
 
-See the [full API documentation]({{< relref "/docs/reference/pkg/nodejs/pulumi/docker" >}}) for complete details of the available Docker provider APIs.
+See the [full API documentation]({{< relref "/docs/reference/pkg/docker" >}}) for complete details of the available Docker provider APIs.
 
 ## Setup
 
@@ -71,11 +71,12 @@ container = docker.Container("ubuntu",
 
 ```go
 import (
+  "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
   do "github.com/pulumi/pulumi-docker/sdk/v2/go/docker"
 )
 
 image, _ := docker.NewRemoteImage(ctx, "ubuntu", &docker.RemoteImageArgs{
-  Name: "ubuntu:precise",
+  Name: pulumi.String("ubuntu:precise"),
 })
 
 container, _ := docker.NewContainer(ctx, "ubuntu", &docker.ContainerArgs{

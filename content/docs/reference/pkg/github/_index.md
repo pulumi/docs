@@ -33,6 +33,7 @@ A Pulumi package for creating and managing github cloud resources.
     <li><a href="team" title="Team"><span class="symbol resource"></span>Team</a></li>
     <li><a href="teammembership" title="TeamMembership"><span class="symbol resource"></span>TeamMembership</a></li>
     <li><a href="teamrepository" title="TeamRepository"><span class="symbol resource"></span>TeamRepository</a></li>
+    <li><a href="teamsyncgroupmapping" title="TeamSyncGroupMapping"><span class="symbol resource"></span>TeamSyncGroupMapping</a></li>
     <li><a href="usergpgkey" title="UserGpgKey"><span class="symbol resource"></span>UserGpgKey</a></li>
     <li><a href="userinvitationaccepter" title="UserInvitationAccepter"><span class="symbol resource"></span>UserInvitationAccepter</a></li>
     <li><a href="usersshkey" title="UserSshKey"><span class="symbol resource"></span>UserSshKey</a></li>
@@ -45,6 +46,7 @@ A Pulumi package for creating and managing github cloud resources.
     <li><a href="getcollaborators" title="GetCollaborators"><span class="symbol function"></span>GetCollaborators</a></li>
     <li><a href="getipranges" title="GetIpRanges"><span class="symbol function"></span>GetIpRanges</a></li>
     <li><a href="getmembership" title="GetMembership"><span class="symbol function"></span>GetMembership</a></li>
+    <li><a href="getorganizationteamsyncgroups" title="GetOrganizationTeamSyncGroups"><span class="symbol function"></span>GetOrganizationTeamSyncGroups</a></li>
     <li><a href="getrelease" title="GetRelease"><span class="symbol function"></span>GetRelease</a></li>
     <li><a href="getrepositories" title="GetRepositories"><span class="symbol function"></span>GetRepositories</a></li>
     <li><a href="getrepository" title="GetRepository"><span class="symbol function"></span>GetRepository</a></li>
@@ -61,6 +63,24 @@ A Pulumi package for creating and managing github cloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`github` Terraform Provider](https://github.com/terraform-providers/terraform-provider-github).</dd>
 	<dt>Version</dt>
-	<dd>1.2.1</dd>
+	<dd>1.3.0</dd>
+</dl>
+
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Github/Pulumi.Github.html" title="Pulumi.Github">Pulumi.Github</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-github/sdk/go/github/?tab=doc#" title="github">github</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/github/#" title="@pulumi/github">@pulumi/github</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_github" title="pulumi_github">pulumi_github</a></dd>
+
 </dl>
 

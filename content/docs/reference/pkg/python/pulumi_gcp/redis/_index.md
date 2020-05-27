@@ -26,6 +26,31 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">cache</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">redis</span><span class="o">.</span><span class="n">Instance</span><span class="p">(</span><span class="s2">&quot;cache&quot;</span><span class="p">,</span> <span class="n">memory_size_gb</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">redis_network</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">get_network</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;redis-test-network&quot;</span><span class="p">)</span>
+<span class="n">cache</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">redis</span><span class="o">.</span><span class="n">Instance</span><span class="p">(</span><span class="s2">&quot;cache&quot;</span><span class="p">,</span>
+    <span class="n">tier</span><span class="o">=</span><span class="s2">&quot;STANDARD_HA&quot;</span><span class="p">,</span>
+    <span class="n">memory_size_gb</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">location_id</span><span class="o">=</span><span class="s2">&quot;us-central1-a&quot;</span><span class="p">,</span>
+    <span class="n">alternative_location_id</span><span class="o">=</span><span class="s2">&quot;us-central1-f&quot;</span><span class="p">,</span>
+    <span class="n">authorized_network</span><span class="o">=</span><span class="n">redis_network</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">redis_version</span><span class="o">=</span><span class="s2">&quot;REDIS_3_2&quot;</span><span class="p">,</span>
+    <span class="n">display_name</span><span class="o">=</span><span class="s2">&quot;Test Instance&quot;</span><span class="p">,</span>
+    <span class="n">reserved_ip_range</span><span class="o">=</span><span class="s2">&quot;192.168.0.0/29&quot;</span><span class="p">,</span>
+    <span class="n">labels</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;my_key&quot;</span><span class="p">:</span> <span class="s2">&quot;my_val&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;other_key&quot;</span><span class="p">:</span> <span class="s2">&quot;other_val&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -38,9 +63,7 @@ If provided, it must be a different zone from the one provided in
 <li><p><strong>authorized_network</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The full name of the Google Compute Engine network to which the
 instance is connected. If left unspecified, the default network
 will be used.</p></li>
-<li><p><strong>connect_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The connection mode of the Redis instance. Can be either
-<code class="docutils literal notranslate"><span class="pre">DIRECT_PEERING</span></code> or <code class="docutils literal notranslate"><span class="pre">PRIVATE_SERVICE_ACCESS</span></code>. The default
-connect mode if not provided is <code class="docutils literal notranslate"><span class="pre">DIRECT_PEERING</span></code>.</p></li>
+<li><p><strong>connect_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The connection mode of the Redis instance.</p></li>
 <li><p><strong>display_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An arbitrary and optional user-provided name for the instance.</p></li>
 <li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Resource labels to represent user provided metadata.</p></li>
 <li><p><strong>location_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The zone where the instance will be provisioned. If not provided,
@@ -101,9 +124,7 @@ will be used.</p>
 <dl class="py attribute">
 <dt id="pulumi_gcp.redis.Instance.connect_mode">
 <code class="sig-name descname">connect_mode</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.redis.Instance.connect_mode" title="Permalink to this definition">¶</a></dt>
-<dd><p>The connection mode of the Redis instance. Can be either
-<code class="docutils literal notranslate"><span class="pre">DIRECT_PEERING</span></code> or <code class="docutils literal notranslate"><span class="pre">PRIVATE_SERVICE_ACCESS</span></code>. The default
-connect mode if not provided is <code class="docutils literal notranslate"><span class="pre">DIRECT_PEERING</span></code>.</p>
+<dd><p>The connection mode of the Redis instance.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -236,9 +257,7 @@ If provided, it must be a different zone from the one provided in
 <li><p><strong>authorized_network</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The full name of the Google Compute Engine network to which the
 instance is connected. If left unspecified, the default network
 will be used.</p></li>
-<li><p><strong>connect_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The connection mode of the Redis instance. Can be either
-<code class="docutils literal notranslate"><span class="pre">DIRECT_PEERING</span></code> or <code class="docutils literal notranslate"><span class="pre">PRIVATE_SERVICE_ACCESS</span></code>. The default
-connect mode if not provided is <code class="docutils literal notranslate"><span class="pre">DIRECT_PEERING</span></code>.</p></li>
+<li><p><strong>connect_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The connection mode of the Redis instance.</p></li>
 <li><p><strong>create_time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The time the instance was created in RFC3339 UTC “Zulu” format, accurate to nanoseconds.</p></li>
 <li><p><strong>current_location_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The current zone where the Redis endpoint is placed. For Basic Tier instances, this will always be the same as the
 [locationId] provided by the user at creation time. For Standard Tier instances, this can be either [locationId] or

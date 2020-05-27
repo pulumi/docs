@@ -54,7 +54,7 @@ import pulumi
 import pulumi_gcp as gcp
 
 admin = gcp.organizations.get_iam_policy(audit_configs=[{
-        "auditLogConfigs": [
+        "audit_log_configs": [
             {
                 "exemptedMembers": ["user:you@domain.com"],
                 "logType": "DATA_READ",
@@ -92,7 +92,7 @@ from another resource is the only way to apply an IAM policy to a resource.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getIAMPolicy<span class="p">(</span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/organizations/#GetIAMPolicyArgs">GetIAMPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/organizations/#GetIAMPolicyResult">GetIAMPolicyResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getIAMPolicy<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/organizations/#GetIAMPolicyArgs">GetIAMPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/organizations/#GetIAMPolicyResult">GetIAMPolicyResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -102,13 +102,16 @@ from another resource is the only way to apply an IAM policy to a resource.
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupIAMPolicy<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/organizations?tab=doc#LookupIAMPolicyArgs">LookupIAMPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/organizations?tab=doc#LookupIAMPolicyResult">LookupIAMPolicyResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupIAMPolicy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/organizations?tab=doc#LookupIAMPolicyArgs">LookupIAMPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/organizations?tab=doc#LookupIAMPolicyResult">LookupIAMPolicyResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `LookupIAMPolicy` in the Go SDK.
+
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetIAMPolicy </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Organizations.GetIAMPolicyResult.html">GetIAMPolicyResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Organizations.GetIAMPolicyArgs.html">GetIAMPolicyArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Organizations.GetIAMPolicyResult.html">GetIAMPolicyResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Organizations.GetIAMPolicyArgs.html">GetIAMPolicyArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -123,7 +126,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Audit<wbr>Configs</span>
+        <span id="auditconfigs_csharp">
+<a href="#auditconfigs_csharp" style="color: inherit; text-decoration: inherit;">Audit<wbr>Configs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getiampolicyauditconfig">List&lt;Get<wbr>IAMPolicy<wbr>Audit<wbr>Config<wbr>Args&gt;</a></span>
     </dt>
@@ -132,7 +137,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Bindings</span>
+        <span id="bindings_csharp">
+<a href="#bindings_csharp" style="color: inherit; text-decoration: inherit;">Bindings</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getiampolicybinding">List&lt;Get<wbr>IAMPolicy<wbr>Binding<wbr>Args&gt;</a></span>
     </dt>
@@ -150,7 +157,9 @@ defining a binding to be included in the policy document. Multiple
 
     <dt class="property-optional"
             title="Optional">
-        <span>Audit<wbr>Configs</span>
+        <span id="auditconfigs_go">
+<a href="#auditconfigs_go" style="color: inherit; text-decoration: inherit;">Audit<wbr>Configs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getiampolicyauditconfig">[]Get<wbr>IAMPolicy<wbr>Audit<wbr>Config</a></span>
     </dt>
@@ -159,7 +168,9 @@ defining a binding to be included in the policy document. Multiple
 
     <dt class="property-optional"
             title="Optional">
-        <span>Bindings</span>
+        <span id="bindings_go">
+<a href="#bindings_go" style="color: inherit; text-decoration: inherit;">Bindings</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getiampolicybinding">[]Get<wbr>IAMPolicy<wbr>Binding</a></span>
     </dt>
@@ -177,7 +188,9 @@ defining a binding to be included in the policy document. Multiple
 
     <dt class="property-optional"
             title="Optional">
-        <span>audit<wbr>Configs</span>
+        <span id="auditconfigs_nodejs">
+<a href="#auditconfigs_nodejs" style="color: inherit; text-decoration: inherit;">audit<wbr>Configs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getiampolicyauditconfig">Get<wbr>IAMPolicy<wbr>Audit<wbr>Config[]</a></span>
     </dt>
@@ -186,7 +199,9 @@ defining a binding to be included in the policy document. Multiple
 
     <dt class="property-optional"
             title="Optional">
-        <span>bindings</span>
+        <span id="bindings_nodejs">
+<a href="#bindings_nodejs" style="color: inherit; text-decoration: inherit;">bindings</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getiampolicybinding">Get<wbr>IAMPolicy<wbr>Binding[]</a></span>
     </dt>
@@ -204,7 +219,9 @@ defining a binding to be included in the policy document. Multiple
 
     <dt class="property-optional"
             title="Optional">
-        <span>audit_<wbr>configs</span>
+        <span id="audit_configs_python">
+<a href="#audit_configs_python" style="color: inherit; text-decoration: inherit;">audit_<wbr>configs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getiampolicyauditconfig">List[Get<wbr>IAMPolicy<wbr>Audit<wbr>Config]</a></span>
     </dt>
@@ -213,7 +230,9 @@ defining a binding to be included in the policy document. Multiple
 
     <dt class="property-optional"
             title="Optional">
-        <span>bindings</span>
+        <span id="bindings_python">
+<a href="#bindings_python" style="color: inherit; text-decoration: inherit;">bindings</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getiampolicybinding">List[Get<wbr>IAMPolicy<wbr>Binding]</a></span>
     </dt>
@@ -244,7 +263,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -253,7 +274,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Policy<wbr>Data</span>
+        <span id="policydata_csharp">
+<a href="#policydata_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -263,7 +286,9 @@ referencing from a resource that supports IAM.
 
     <dt class="property-"
             title="">
-        <span>Audit<wbr>Configs</span>
+        <span id="auditconfigs_csharp">
+<a href="#auditconfigs_csharp" style="color: inherit; text-decoration: inherit;">Audit<wbr>Configs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getiampolicyauditconfig">List&lt;Get<wbr>IAMPolicy<wbr>Audit<wbr>Config&gt;</a></span>
     </dt>
@@ -271,7 +296,9 @@ referencing from a resource that supports IAM.
 
     <dt class="property-"
             title="">
-        <span>Bindings</span>
+        <span id="bindings_csharp">
+<a href="#bindings_csharp" style="color: inherit; text-decoration: inherit;">Bindings</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getiampolicybinding">List&lt;Get<wbr>IAMPolicy<wbr>Binding&gt;</a></span>
     </dt>
@@ -286,7 +313,9 @@ referencing from a resource that supports IAM.
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -295,7 +324,9 @@ referencing from a resource that supports IAM.
 
     <dt class="property-"
             title="">
-        <span>Policy<wbr>Data</span>
+        <span id="policydata_go">
+<a href="#policydata_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -305,7 +336,9 @@ referencing from a resource that supports IAM.
 
     <dt class="property-"
             title="">
-        <span>Audit<wbr>Configs</span>
+        <span id="auditconfigs_go">
+<a href="#auditconfigs_go" style="color: inherit; text-decoration: inherit;">Audit<wbr>Configs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getiampolicyauditconfig">[]Get<wbr>IAMPolicy<wbr>Audit<wbr>Config</a></span>
     </dt>
@@ -313,7 +346,9 @@ referencing from a resource that supports IAM.
 
     <dt class="property-"
             title="">
-        <span>Bindings</span>
+        <span id="bindings_go">
+<a href="#bindings_go" style="color: inherit; text-decoration: inherit;">Bindings</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getiampolicybinding">[]Get<wbr>IAMPolicy<wbr>Binding</a></span>
     </dt>
@@ -328,7 +363,9 @@ referencing from a resource that supports IAM.
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -337,7 +374,9 @@ referencing from a resource that supports IAM.
 
     <dt class="property-"
             title="">
-        <span>policy<wbr>Data</span>
+        <span id="policydata_nodejs">
+<a href="#policydata_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -347,7 +386,9 @@ referencing from a resource that supports IAM.
 
     <dt class="property-"
             title="">
-        <span>audit<wbr>Configs</span>
+        <span id="auditconfigs_nodejs">
+<a href="#auditconfigs_nodejs" style="color: inherit; text-decoration: inherit;">audit<wbr>Configs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getiampolicyauditconfig">Get<wbr>IAMPolicy<wbr>Audit<wbr>Config[]</a></span>
     </dt>
@@ -355,7 +396,9 @@ referencing from a resource that supports IAM.
 
     <dt class="property-"
             title="">
-        <span>bindings</span>
+        <span id="bindings_nodejs">
+<a href="#bindings_nodejs" style="color: inherit; text-decoration: inherit;">bindings</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getiampolicybinding">Get<wbr>IAMPolicy<wbr>Binding[]</a></span>
     </dt>
@@ -370,7 +413,9 @@ referencing from a resource that supports IAM.
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -379,7 +424,9 @@ referencing from a resource that supports IAM.
 
     <dt class="property-"
             title="">
-        <span>policy_<wbr>data</span>
+        <span id="policy_data_python">
+<a href="#policy_data_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -389,7 +436,9 @@ referencing from a resource that supports IAM.
 
     <dt class="property-"
             title="">
-        <span>audit_<wbr>configs</span>
+        <span id="audit_configs_python">
+<a href="#audit_configs_python" style="color: inherit; text-decoration: inherit;">audit_<wbr>configs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getiampolicyauditconfig">List[Get<wbr>IAMPolicy<wbr>Audit<wbr>Config]</a></span>
     </dt>
@@ -397,7 +446,9 @@ referencing from a resource that supports IAM.
 
     <dt class="property-"
             title="">
-        <span>bindings</span>
+        <span id="bindings_python">
+<a href="#bindings_python" style="color: inherit; text-decoration: inherit;">bindings</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getiampolicybinding">List[Get<wbr>IAMPolicy<wbr>Binding]</a></span>
     </dt>
@@ -436,7 +487,9 @@ referencing from a resource that supports IAM.
 
     <dt class="property-required"
             title="Required">
-        <span>Audit<wbr>Log<wbr>Configs</span>
+        <span id="auditlogconfigs_csharp">
+<a href="#auditlogconfigs_csharp" style="color: inherit; text-decoration: inherit;">Audit<wbr>Log<wbr>Configs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getiampolicyauditconfigauditlogconfig">List&lt;Get<wbr>IAMPolicy<wbr>Audit<wbr>Config<wbr>Audit<wbr>Log<wbr>Config<wbr>Args&gt;</a></span>
     </dt>
@@ -445,7 +498,9 @@ referencing from a resource that supports IAM.
 
     <dt class="property-required"
             title="Required">
-        <span>Service</span>
+        <span id="service_csharp">
+<a href="#service_csharp" style="color: inherit; text-decoration: inherit;">Service</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -461,7 +516,9 @@ referencing from a resource that supports IAM.
 
     <dt class="property-required"
             title="Required">
-        <span>Audit<wbr>Log<wbr>Configs</span>
+        <span id="auditlogconfigs_go">
+<a href="#auditlogconfigs_go" style="color: inherit; text-decoration: inherit;">Audit<wbr>Log<wbr>Configs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getiampolicyauditconfigauditlogconfig">[]Get<wbr>IAMPolicy<wbr>Audit<wbr>Config<wbr>Audit<wbr>Log<wbr>Config</a></span>
     </dt>
@@ -470,7 +527,9 @@ referencing from a resource that supports IAM.
 
     <dt class="property-required"
             title="Required">
-        <span>Service</span>
+        <span id="service_go">
+<a href="#service_go" style="color: inherit; text-decoration: inherit;">Service</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -486,7 +545,9 @@ referencing from a resource that supports IAM.
 
     <dt class="property-required"
             title="Required">
-        <span>audit<wbr>Log<wbr>Configs</span>
+        <span id="auditlogconfigs_nodejs">
+<a href="#auditlogconfigs_nodejs" style="color: inherit; text-decoration: inherit;">audit<wbr>Log<wbr>Configs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getiampolicyauditconfigauditlogconfig">Get<wbr>IAMPolicy<wbr>Audit<wbr>Config<wbr>Audit<wbr>Log<wbr>Config[]</a></span>
     </dt>
@@ -495,7 +556,9 @@ referencing from a resource that supports IAM.
 
     <dt class="property-required"
             title="Required">
-        <span>service</span>
+        <span id="service_nodejs">
+<a href="#service_nodejs" style="color: inherit; text-decoration: inherit;">service</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -511,7 +574,9 @@ referencing from a resource that supports IAM.
 
     <dt class="property-required"
             title="Required">
-        <span>audit_<wbr>log_<wbr>configs</span>
+        <span id="audit_log_configs_python">
+<a href="#audit_log_configs_python" style="color: inherit; text-decoration: inherit;">audit_<wbr>log_<wbr>configs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getiampolicyauditconfigauditlogconfig">List[Get<wbr>IAMPolicy<wbr>Audit<wbr>Config<wbr>Audit<wbr>Log<wbr>Config]</a></span>
     </dt>
@@ -520,7 +585,9 @@ referencing from a resource that supports IAM.
 
     <dt class="property-required"
             title="Required">
-        <span>service</span>
+        <span id="service_python">
+<a href="#service_python" style="color: inherit; text-decoration: inherit;">service</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -554,7 +621,9 @@ referencing from a resource that supports IAM.
 
     <dt class="property-required"
             title="Required">
-        <span>Log<wbr>Type</span>
+        <span id="logtype_csharp">
+<a href="#logtype_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -563,7 +632,9 @@ referencing from a resource that supports IAM.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Exempted<wbr>Members</span>
+        <span id="exemptedmembers_csharp">
+<a href="#exemptedmembers_csharp" style="color: inherit; text-decoration: inherit;">Exempted<wbr>Members</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -579,7 +650,9 @@ referencing from a resource that supports IAM.
 
     <dt class="property-required"
             title="Required">
-        <span>Log<wbr>Type</span>
+        <span id="logtype_go">
+<a href="#logtype_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -588,7 +661,9 @@ referencing from a resource that supports IAM.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Exempted<wbr>Members</span>
+        <span id="exemptedmembers_go">
+<a href="#exemptedmembers_go" style="color: inherit; text-decoration: inherit;">Exempted<wbr>Members</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -604,7 +679,9 @@ referencing from a resource that supports IAM.
 
     <dt class="property-required"
             title="Required">
-        <span>log<wbr>Type</span>
+        <span id="logtype_nodejs">
+<a href="#logtype_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -613,7 +690,9 @@ referencing from a resource that supports IAM.
 
     <dt class="property-optional"
             title="Optional">
-        <span>exempted<wbr>Members</span>
+        <span id="exemptedmembers_nodejs">
+<a href="#exemptedmembers_nodejs" style="color: inherit; text-decoration: inherit;">exempted<wbr>Members</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -629,7 +708,9 @@ referencing from a resource that supports IAM.
 
     <dt class="property-required"
             title="Required">
-        <span>log<wbr>Type</span>
+        <span id="logtype_python">
+<a href="#logtype_python" style="color: inherit; text-decoration: inherit;">log<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -638,7 +719,9 @@ referencing from a resource that supports IAM.
 
     <dt class="property-optional"
             title="Optional">
-        <span>exempted<wbr>Members</span>
+        <span id="exemptedmembers_python">
+<a href="#exemptedmembers_python" style="color: inherit; text-decoration: inherit;">exempted<wbr>Members</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -672,7 +755,9 @@ referencing from a resource that supports IAM.
 
     <dt class="property-required"
             title="Required">
-        <span>Members</span>
+        <span id="members_csharp">
+<a href="#members_csharp" style="color: inherit; text-decoration: inherit;">Members</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -688,7 +773,9 @@ Each entry can have one of the following values:
 
     <dt class="property-required"
             title="Required">
-        <span>Role</span>
+        <span id="role_csharp">
+<a href="#role_csharp" style="color: inherit; text-decoration: inherit;">Role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -699,7 +786,9 @@ Note that custom roles must be of the format `[projects|organizations]/{parent-n
 
     <dt class="property-optional"
             title="Optional">
-        <span>Condition</span>
+        <span id="condition_csharp">
+<a href="#condition_csharp" style="color: inherit; text-decoration: inherit;">Condition</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getiampolicybindingcondition">Get<wbr>IAMPolicy<wbr>Binding<wbr>Condition<wbr>Args</a></span>
     </dt>
@@ -714,7 +803,9 @@ Note that custom roles must be of the format `[projects|organizations]/{parent-n
 
     <dt class="property-required"
             title="Required">
-        <span>Members</span>
+        <span id="members_go">
+<a href="#members_go" style="color: inherit; text-decoration: inherit;">Members</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -730,7 +821,9 @@ Each entry can have one of the following values:
 
     <dt class="property-required"
             title="Required">
-        <span>Role</span>
+        <span id="role_go">
+<a href="#role_go" style="color: inherit; text-decoration: inherit;">Role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -741,7 +834,9 @@ Note that custom roles must be of the format `[projects|organizations]/{parent-n
 
     <dt class="property-optional"
             title="Optional">
-        <span>Condition</span>
+        <span id="condition_go">
+<a href="#condition_go" style="color: inherit; text-decoration: inherit;">Condition</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getiampolicybindingcondition">Get<wbr>IAMPolicy<wbr>Binding<wbr>Condition</a></span>
     </dt>
@@ -756,7 +851,9 @@ Note that custom roles must be of the format `[projects|organizations]/{parent-n
 
     <dt class="property-required"
             title="Required">
-        <span>members</span>
+        <span id="members_nodejs">
+<a href="#members_nodejs" style="color: inherit; text-decoration: inherit;">members</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -772,7 +869,9 @@ Each entry can have one of the following values:
 
     <dt class="property-required"
             title="Required">
-        <span>role</span>
+        <span id="role_nodejs">
+<a href="#role_nodejs" style="color: inherit; text-decoration: inherit;">role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -783,7 +882,9 @@ Note that custom roles must be of the format `[projects|organizations]/{parent-n
 
     <dt class="property-optional"
             title="Optional">
-        <span>condition</span>
+        <span id="condition_nodejs">
+<a href="#condition_nodejs" style="color: inherit; text-decoration: inherit;">condition</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getiampolicybindingcondition">Get<wbr>IAMPolicy<wbr>Binding<wbr>Condition</a></span>
     </dt>
@@ -798,7 +899,9 @@ Note that custom roles must be of the format `[projects|organizations]/{parent-n
 
     <dt class="property-required"
             title="Required">
-        <span>members</span>
+        <span id="members_python">
+<a href="#members_python" style="color: inherit; text-decoration: inherit;">members</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -814,7 +917,9 @@ Each entry can have one of the following values:
 
     <dt class="property-required"
             title="Required">
-        <span>role</span>
+        <span id="role_python">
+<a href="#role_python" style="color: inherit; text-decoration: inherit;">role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -825,7 +930,9 @@ Note that custom roles must be of the format `[projects|organizations]/{parent-n
 
     <dt class="property-optional"
             title="Optional">
-        <span>condition</span>
+        <span id="condition_python">
+<a href="#condition_python" style="color: inherit; text-decoration: inherit;">condition</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getiampolicybindingcondition">Dict[Get<wbr>IAMPolicy<wbr>Binding<wbr>Condition]</a></span>
     </dt>
@@ -858,7 +965,9 @@ Note that custom roles must be of the format `[projects|organizations]/{parent-n
 
     <dt class="property-required"
             title="Required">
-        <span>Expression</span>
+        <span id="expression_csharp">
+<a href="#expression_csharp" style="color: inherit; text-decoration: inherit;">Expression</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -866,7 +975,9 @@ Note that custom roles must be of the format `[projects|organizations]/{parent-n
 
     <dt class="property-required"
             title="Required">
-        <span>Title</span>
+        <span id="title_csharp">
+<a href="#title_csharp" style="color: inherit; text-decoration: inherit;">Title</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -874,7 +985,9 @@ Note that custom roles must be of the format `[projects|organizations]/{parent-n
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -889,7 +1002,9 @@ Note that custom roles must be of the format `[projects|organizations]/{parent-n
 
     <dt class="property-required"
             title="Required">
-        <span>Expression</span>
+        <span id="expression_go">
+<a href="#expression_go" style="color: inherit; text-decoration: inherit;">Expression</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -897,7 +1012,9 @@ Note that custom roles must be of the format `[projects|organizations]/{parent-n
 
     <dt class="property-required"
             title="Required">
-        <span>Title</span>
+        <span id="title_go">
+<a href="#title_go" style="color: inherit; text-decoration: inherit;">Title</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -905,7 +1022,9 @@ Note that custom roles must be of the format `[projects|organizations]/{parent-n
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -920,7 +1039,9 @@ Note that custom roles must be of the format `[projects|organizations]/{parent-n
 
     <dt class="property-required"
             title="Required">
-        <span>expression</span>
+        <span id="expression_nodejs">
+<a href="#expression_nodejs" style="color: inherit; text-decoration: inherit;">expression</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -928,7 +1049,9 @@ Note that custom roles must be of the format `[projects|organizations]/{parent-n
 
     <dt class="property-required"
             title="Required">
-        <span>title</span>
+        <span id="title_nodejs">
+<a href="#title_nodejs" style="color: inherit; text-decoration: inherit;">title</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -936,7 +1059,9 @@ Note that custom roles must be of the format `[projects|organizations]/{parent-n
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -951,7 +1076,9 @@ Note that custom roles must be of the format `[projects|organizations]/{parent-n
 
     <dt class="property-required"
             title="Required">
-        <span>expression</span>
+        <span id="expression_python">
+<a href="#expression_python" style="color: inherit; text-decoration: inherit;">expression</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -959,7 +1086,9 @@ Note that custom roles must be of the format `[projects|organizations]/{parent-n
 
     <dt class="property-required"
             title="Required">
-        <span>title</span>
+        <span id="title_python">
+<a href="#title_python" style="color: inherit; text-decoration: inherit;">title</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -967,7 +1096,9 @@ Note that custom roles must be of the format `[projects|organizations]/{parent-n
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

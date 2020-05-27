@@ -77,7 +77,7 @@ const defaultNetwork = new gcp.compute.Network("defaultNetwork", {autoCreateSubn
 const defaultSubnetwork = new gcp.compute.Subnetwork("defaultSubnetwork", {
     ipCidrRange: "10.0.1.0/24",
     region: "us-central1",
-    network: defaultNetwork.selfLink,
+    network: defaultNetwork.id,
 });
 const hc = new gcp.compute.HealthCheck("hc", {
     checkIntervalSec: 1,
@@ -88,12 +88,12 @@ const hc = new gcp.compute.HealthCheck("hc", {
 });
 const backend = new gcp.compute.RegionBackendService("backend", {
     region: "us-central1",
-    healthChecks: [hc.selfLink],
+    healthChecks: [hc.id],
 });
 const defaultForwardingRule = new gcp.compute.ForwardingRule("defaultForwardingRule", {
     region: "us-central1",
     loadBalancingScheme: "INTERNAL",
-    backendService: backend.selfLink,
+    backendService: backend.id,
     allPorts: true,
     network: defaultNetwork.name,
     subnetwork: defaultSubnetwork.name,
@@ -101,7 +101,7 @@ const defaultForwardingRule = new gcp.compute.ForwardingRule("defaultForwardingR
 const route-ilb = new gcp.compute.Route("route-ilb", {
     destRange: "0.0.0.0/0",
     network: defaultNetwork.name,
-    nextHopIlb: defaultForwardingRule.selfLink,
+    nextHopIlb: defaultForwardingRule.id,
     priority: 2000,
 });
 ```
@@ -113,7 +113,7 @@ default_network = gcp.compute.Network("defaultNetwork", auto_create_subnetworks=
 default_subnetwork = gcp.compute.Subnetwork("defaultSubnetwork",
     ip_cidr_range="10.0.1.0/24",
     region="us-central1",
-    network=default_network.self_link)
+    network=default_network.id)
 hc = gcp.compute.HealthCheck("hc",
     check_interval_sec=1,
     timeout_sec=1,
@@ -122,18 +122,18 @@ hc = gcp.compute.HealthCheck("hc",
     })
 backend = gcp.compute.RegionBackendService("backend",
     region="us-central1",
-    health_checks=[hc.self_link])
+    health_checks=[hc.id])
 default_forwarding_rule = gcp.compute.ForwardingRule("defaultForwardingRule",
     region="us-central1",
     load_balancing_scheme="INTERNAL",
-    backend_service=backend.self_link,
+    backend_service=backend.id,
     all_ports=True,
     network=default_network.name,
     subnetwork=default_subnetwork.name)
 route_ilb = gcp.compute.Route("route-ilb",
     dest_range="0.0.0.0/0",
     network=default_network.name,
-    next_hop_ilb=default_forwarding_rule.self_link,
+    next_hop_ilb=default_forwarding_rule.id,
     priority=2000)
 ```
 
@@ -144,19 +144,19 @@ route_ilb = gcp.compute.Route("route-ilb",
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#Route">Route</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#RouteArgs">RouteArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#Route">Route</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#RouteArgs">RouteArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Route</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>dest_range=None<span class="p">, </span>name=None<span class="p">, </span>network=None<span class="p">, </span>next_hop_gateway=None<span class="p">, </span>next_hop_ilb=None<span class="p">, </span>next_hop_instance=None<span class="p">, </span>next_hop_instance_zone=None<span class="p">, </span>next_hop_ip=None<span class="p">, </span>next_hop_vpn_tunnel=None<span class="p">, </span>priority=None<span class="p">, </span>project=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#Route">Route</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>dest_range=None<span class="p">, </span>name=None<span class="p">, </span>network=None<span class="p">, </span>next_hop_gateway=None<span class="p">, </span>next_hop_ilb=None<span class="p">, </span>next_hop_instance=None<span class="p">, </span>next_hop_instance_zone=None<span class="p">, </span>next_hop_ip=None<span class="p">, </span>next_hop_vpn_tunnel=None<span class="p">, </span>priority=None<span class="p">, </span>project=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewRoute<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RouteArgs">RouteArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#Route">Route</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#Route">NewRoute</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RouteArgs">RouteArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#Route">Route</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Route.html">Route</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.RouteArgs.html">RouteArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Route.html">Route</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.RouteArgs.html">RouteArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -322,7 +322,9 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
 
     <dt class="property-required"
             title="Required">
-        <span>Dest<wbr>Range</span>
+        <span id="destrange_csharp">
+<a href="#destrange_csharp" style="color: inherit; text-decoration: inherit;">Dest<wbr>Range</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -332,7 +334,9 @@ Only IPv4 is supported.
 
     <dt class="property-required"
             title="Required">
-        <span>Network</span>
+        <span id="network_csharp">
+<a href="#network_csharp" style="color: inherit; text-decoration: inherit;">Network</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -341,7 +345,9 @@ Only IPv4 is supported.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -351,7 +357,9 @@ when you create the resource.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -366,7 +374,9 @@ last character, which cannot be a dash.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Next<wbr>Hop<wbr>Gateway</span>
+        <span id="nexthopgateway_csharp">
+<a href="#nexthopgateway_csharp" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop<wbr>Gateway</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -381,7 +391,9 @@ partial valid URL:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Next<wbr>Hop<wbr>Ilb</span>
+        <span id="nexthopilb_csharp">
+<a href="#nexthopilb_csharp" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop<wbr>Ilb</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -394,7 +406,9 @@ Note that this can only be used when the destinationRange is a public (non-RFC 1
 
     <dt class="property-optional"
             title="Optional">
-        <span>Next<wbr>Hop<wbr>Instance</span>
+        <span id="nexthopinstance_csharp">
+<a href="#nexthopinstance_csharp" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop<wbr>Instance</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -408,7 +422,9 @@ You can specify this as a full or partial URL. For example:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Next<wbr>Hop<wbr>Instance<wbr>Zone</span>
+        <span id="nexthopinstancezone_csharp">
+<a href="#nexthopinstancezone_csharp" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop<wbr>Instance<wbr>Zone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -420,7 +436,9 @@ a URL.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Next<wbr>Hop<wbr>Ip</span>
+        <span id="nexthopip_csharp">
+<a href="#nexthopip_csharp" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -429,7 +447,9 @@ a URL.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Next<wbr>Hop<wbr>Vpn<wbr>Tunnel</span>
+        <span id="nexthopvpntunnel_csharp">
+<a href="#nexthopvpntunnel_csharp" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop<wbr>Vpn<wbr>Tunnel</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -438,7 +458,9 @@ a URL.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Priority</span>
+        <span id="priority_csharp">
+<a href="#priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -451,7 +473,9 @@ Default value is 1000. Valid range is 0 through 65535.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project</span>
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -461,7 +485,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -477,7 +503,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>Dest<wbr>Range</span>
+        <span id="destrange_go">
+<a href="#destrange_go" style="color: inherit; text-decoration: inherit;">Dest<wbr>Range</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -487,7 +515,9 @@ Only IPv4 is supported.
 
     <dt class="property-required"
             title="Required">
-        <span>Network</span>
+        <span id="network_go">
+<a href="#network_go" style="color: inherit; text-decoration: inherit;">Network</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -496,7 +526,9 @@ Only IPv4 is supported.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -506,7 +538,9 @@ when you create the resource.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -521,7 +555,9 @@ last character, which cannot be a dash.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Next<wbr>Hop<wbr>Gateway</span>
+        <span id="nexthopgateway_go">
+<a href="#nexthopgateway_go" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop<wbr>Gateway</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -536,7 +572,9 @@ partial valid URL:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Next<wbr>Hop<wbr>Ilb</span>
+        <span id="nexthopilb_go">
+<a href="#nexthopilb_go" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop<wbr>Ilb</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -549,7 +587,9 @@ Note that this can only be used when the destinationRange is a public (non-RFC 1
 
     <dt class="property-optional"
             title="Optional">
-        <span>Next<wbr>Hop<wbr>Instance</span>
+        <span id="nexthopinstance_go">
+<a href="#nexthopinstance_go" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop<wbr>Instance</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -563,7 +603,9 @@ You can specify this as a full or partial URL. For example:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Next<wbr>Hop<wbr>Instance<wbr>Zone</span>
+        <span id="nexthopinstancezone_go">
+<a href="#nexthopinstancezone_go" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop<wbr>Instance<wbr>Zone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -575,7 +617,9 @@ a URL.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Next<wbr>Hop<wbr>Ip</span>
+        <span id="nexthopip_go">
+<a href="#nexthopip_go" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -584,7 +628,9 @@ a URL.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Next<wbr>Hop<wbr>Vpn<wbr>Tunnel</span>
+        <span id="nexthopvpntunnel_go">
+<a href="#nexthopvpntunnel_go" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop<wbr>Vpn<wbr>Tunnel</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -593,7 +639,9 @@ a URL.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Priority</span>
+        <span id="priority_go">
+<a href="#priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -606,7 +654,9 @@ Default value is 1000. Valid range is 0 through 65535.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project</span>
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -616,7 +666,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -632,7 +684,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>dest<wbr>Range</span>
+        <span id="destrange_nodejs">
+<a href="#destrange_nodejs" style="color: inherit; text-decoration: inherit;">dest<wbr>Range</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -642,7 +696,9 @@ Only IPv4 is supported.
 
     <dt class="property-required"
             title="Required">
-        <span>network</span>
+        <span id="network_nodejs">
+<a href="#network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -651,7 +707,9 @@ Only IPv4 is supported.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -661,7 +719,9 @@ when you create the resource.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -676,7 +736,9 @@ last character, which cannot be a dash.
 
     <dt class="property-optional"
             title="Optional">
-        <span>next<wbr>Hop<wbr>Gateway</span>
+        <span id="nexthopgateway_nodejs">
+<a href="#nexthopgateway_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Hop<wbr>Gateway</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -691,7 +753,9 @@ partial valid URL:
 
     <dt class="property-optional"
             title="Optional">
-        <span>next<wbr>Hop<wbr>Ilb</span>
+        <span id="nexthopilb_nodejs">
+<a href="#nexthopilb_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Hop<wbr>Ilb</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -704,7 +768,9 @@ Note that this can only be used when the destinationRange is a public (non-RFC 1
 
     <dt class="property-optional"
             title="Optional">
-        <span>next<wbr>Hop<wbr>Instance</span>
+        <span id="nexthopinstance_nodejs">
+<a href="#nexthopinstance_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Hop<wbr>Instance</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -718,7 +784,9 @@ You can specify this as a full or partial URL. For example:
 
     <dt class="property-optional"
             title="Optional">
-        <span>next<wbr>Hop<wbr>Instance<wbr>Zone</span>
+        <span id="nexthopinstancezone_nodejs">
+<a href="#nexthopinstancezone_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Hop<wbr>Instance<wbr>Zone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -730,7 +798,9 @@ a URL.
 
     <dt class="property-optional"
             title="Optional">
-        <span>next<wbr>Hop<wbr>Ip</span>
+        <span id="nexthopip_nodejs">
+<a href="#nexthopip_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Hop<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -739,7 +809,9 @@ a URL.
 
     <dt class="property-optional"
             title="Optional">
-        <span>next<wbr>Hop<wbr>Vpn<wbr>Tunnel</span>
+        <span id="nexthopvpntunnel_nodejs">
+<a href="#nexthopvpntunnel_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Hop<wbr>Vpn<wbr>Tunnel</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -748,7 +820,9 @@ a URL.
 
     <dt class="property-optional"
             title="Optional">
-        <span>priority</span>
+        <span id="priority_nodejs">
+<a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -761,7 +835,9 @@ Default value is 1000. Valid range is 0 through 65535.
 
     <dt class="property-optional"
             title="Optional">
-        <span>project</span>
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -771,7 +847,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -787,7 +865,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span>dest_<wbr>range</span>
+        <span id="dest_range_python">
+<a href="#dest_range_python" style="color: inherit; text-decoration: inherit;">dest_<wbr>range</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -797,7 +877,9 @@ Only IPv4 is supported.
 
     <dt class="property-required"
             title="Required">
-        <span>network</span>
+        <span id="network_python">
+<a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -806,7 +888,9 @@ Only IPv4 is supported.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -816,7 +900,9 @@ when you create the resource.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -831,7 +917,9 @@ last character, which cannot be a dash.
 
     <dt class="property-optional"
             title="Optional">
-        <span>next_<wbr>hop_<wbr>gateway</span>
+        <span id="next_hop_gateway_python">
+<a href="#next_hop_gateway_python" style="color: inherit; text-decoration: inherit;">next_<wbr>hop_<wbr>gateway</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -846,7 +934,9 @@ partial valid URL:
 
     <dt class="property-optional"
             title="Optional">
-        <span>next_<wbr>hop_<wbr>ilb</span>
+        <span id="next_hop_ilb_python">
+<a href="#next_hop_ilb_python" style="color: inherit; text-decoration: inherit;">next_<wbr>hop_<wbr>ilb</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -859,7 +949,9 @@ Note that this can only be used when the destinationRange is a public (non-RFC 1
 
     <dt class="property-optional"
             title="Optional">
-        <span>next_<wbr>hop_<wbr>instance</span>
+        <span id="next_hop_instance_python">
+<a href="#next_hop_instance_python" style="color: inherit; text-decoration: inherit;">next_<wbr>hop_<wbr>instance</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -873,7 +965,9 @@ You can specify this as a full or partial URL. For example:
 
     <dt class="property-optional"
             title="Optional">
-        <span>next_<wbr>hop_<wbr>instance_<wbr>zone</span>
+        <span id="next_hop_instance_zone_python">
+<a href="#next_hop_instance_zone_python" style="color: inherit; text-decoration: inherit;">next_<wbr>hop_<wbr>instance_<wbr>zone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -885,7 +979,9 @@ a URL.
 
     <dt class="property-optional"
             title="Optional">
-        <span>next_<wbr>hop_<wbr>ip</span>
+        <span id="next_hop_ip_python">
+<a href="#next_hop_ip_python" style="color: inherit; text-decoration: inherit;">next_<wbr>hop_<wbr>ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -894,7 +990,9 @@ a URL.
 
     <dt class="property-optional"
             title="Optional">
-        <span>next_<wbr>hop_<wbr>vpn_<wbr>tunnel</span>
+        <span id="next_hop_vpn_tunnel_python">
+<a href="#next_hop_vpn_tunnel_python" style="color: inherit; text-decoration: inherit;">next_<wbr>hop_<wbr>vpn_<wbr>tunnel</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -903,7 +1001,9 @@ a URL.
 
     <dt class="property-optional"
             title="Optional">
-        <span>priority</span>
+        <span id="priority_python">
+<a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -916,7 +1016,9 @@ Default value is 1000. Valid range is 0 through 65535.
 
     <dt class="property-optional"
             title="Optional">
-        <span>project</span>
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -926,7 +1028,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -953,7 +1057,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -961,7 +1067,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Next<wbr>Hop<wbr>Network</span>
+        <span id="nexthopnetwork_csharp">
+<a href="#nexthopnetwork_csharp" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop<wbr>Network</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -970,7 +1078,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Self<wbr>Link</span>
+        <span id="selflink_csharp">
+<a href="#selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -986,7 +1096,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -994,7 +1106,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Next<wbr>Hop<wbr>Network</span>
+        <span id="nexthopnetwork_go">
+<a href="#nexthopnetwork_go" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop<wbr>Network</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1003,7 +1117,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Self<wbr>Link</span>
+        <span id="selflink_go">
+<a href="#selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1019,7 +1135,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1027,7 +1145,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>next<wbr>Hop<wbr>Network</span>
+        <span id="nexthopnetwork_nodejs">
+<a href="#nexthopnetwork_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Hop<wbr>Network</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1036,7 +1156,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>self<wbr>Link</span>
+        <span id="selflink_nodejs">
+<a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1052,7 +1174,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1060,7 +1184,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>next_<wbr>hop_<wbr>network</span>
+        <span id="next_hop_network_python">
+<a href="#next_hop_network_python" style="color: inherit; text-decoration: inherit;">next_<wbr>hop_<wbr>network</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1069,7 +1195,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>self_<wbr>link</span>
+        <span id="self_link_python">
+<a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1091,7 +1219,7 @@ Get an existing Route resource's state with the given name, ID, and optional ext
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#RouteState">RouteState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#Route">Route</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#RouteState">RouteState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#Route">Route</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1099,11 +1227,11 @@ Get an existing Route resource's state with the given name, ID, and optional ext
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRoute<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RouteState">RouteState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#Route">Route</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRoute<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RouteState">RouteState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#Route">Route</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Route.html">Route</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.RouteState.html">RouteState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Route.html">Route</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.RouteState.html">RouteState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1211,7 +1339,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_csharp">
+<a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1221,7 +1351,9 @@ when you create the resource.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dest<wbr>Range</span>
+        <span id="state_destrange_csharp">
+<a href="#state_destrange_csharp" style="color: inherit; text-decoration: inherit;">Dest<wbr>Range</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1231,7 +1363,9 @@ Only IPv4 is supported.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1246,7 +1380,9 @@ last character, which cannot be a dash.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Network</span>
+        <span id="state_network_csharp">
+<a href="#state_network_csharp" style="color: inherit; text-decoration: inherit;">Network</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1255,7 +1391,9 @@ last character, which cannot be a dash.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Next<wbr>Hop<wbr>Gateway</span>
+        <span id="state_nexthopgateway_csharp">
+<a href="#state_nexthopgateway_csharp" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop<wbr>Gateway</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1270,7 +1408,9 @@ partial valid URL:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Next<wbr>Hop<wbr>Ilb</span>
+        <span id="state_nexthopilb_csharp">
+<a href="#state_nexthopilb_csharp" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop<wbr>Ilb</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1283,7 +1423,9 @@ Note that this can only be used when the destinationRange is a public (non-RFC 1
 
     <dt class="property-optional"
             title="Optional">
-        <span>Next<wbr>Hop<wbr>Instance</span>
+        <span id="state_nexthopinstance_csharp">
+<a href="#state_nexthopinstance_csharp" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop<wbr>Instance</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1297,7 +1439,9 @@ You can specify this as a full or partial URL. For example:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Next<wbr>Hop<wbr>Instance<wbr>Zone</span>
+        <span id="state_nexthopinstancezone_csharp">
+<a href="#state_nexthopinstancezone_csharp" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop<wbr>Instance<wbr>Zone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1309,7 +1453,9 @@ a URL.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Next<wbr>Hop<wbr>Ip</span>
+        <span id="state_nexthopip_csharp">
+<a href="#state_nexthopip_csharp" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1318,7 +1464,9 @@ a URL.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Next<wbr>Hop<wbr>Network</span>
+        <span id="state_nexthopnetwork_csharp">
+<a href="#state_nexthopnetwork_csharp" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop<wbr>Network</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1327,7 +1475,9 @@ a URL.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Next<wbr>Hop<wbr>Vpn<wbr>Tunnel</span>
+        <span id="state_nexthopvpntunnel_csharp">
+<a href="#state_nexthopvpntunnel_csharp" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop<wbr>Vpn<wbr>Tunnel</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1336,7 +1486,9 @@ a URL.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Priority</span>
+        <span id="state_priority_csharp">
+<a href="#state_priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1349,7 +1501,9 @@ Default value is 1000. Valid range is 0 through 65535.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project</span>
+        <span id="state_project_csharp">
+<a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1359,7 +1513,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Self<wbr>Link</span>
+        <span id="state_selflink_csharp">
+<a href="#state_selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1368,7 +1524,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_csharp">
+<a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1384,7 +1542,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_go">
+<a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1394,7 +1554,9 @@ when you create the resource.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dest<wbr>Range</span>
+        <span id="state_destrange_go">
+<a href="#state_destrange_go" style="color: inherit; text-decoration: inherit;">Dest<wbr>Range</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1404,7 +1566,9 @@ Only IPv4 is supported.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1419,7 +1583,9 @@ last character, which cannot be a dash.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Network</span>
+        <span id="state_network_go">
+<a href="#state_network_go" style="color: inherit; text-decoration: inherit;">Network</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1428,7 +1594,9 @@ last character, which cannot be a dash.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Next<wbr>Hop<wbr>Gateway</span>
+        <span id="state_nexthopgateway_go">
+<a href="#state_nexthopgateway_go" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop<wbr>Gateway</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1443,7 +1611,9 @@ partial valid URL:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Next<wbr>Hop<wbr>Ilb</span>
+        <span id="state_nexthopilb_go">
+<a href="#state_nexthopilb_go" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop<wbr>Ilb</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1456,7 +1626,9 @@ Note that this can only be used when the destinationRange is a public (non-RFC 1
 
     <dt class="property-optional"
             title="Optional">
-        <span>Next<wbr>Hop<wbr>Instance</span>
+        <span id="state_nexthopinstance_go">
+<a href="#state_nexthopinstance_go" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop<wbr>Instance</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1470,7 +1642,9 @@ You can specify this as a full or partial URL. For example:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Next<wbr>Hop<wbr>Instance<wbr>Zone</span>
+        <span id="state_nexthopinstancezone_go">
+<a href="#state_nexthopinstancezone_go" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop<wbr>Instance<wbr>Zone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1482,7 +1656,9 @@ a URL.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Next<wbr>Hop<wbr>Ip</span>
+        <span id="state_nexthopip_go">
+<a href="#state_nexthopip_go" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1491,7 +1667,9 @@ a URL.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Next<wbr>Hop<wbr>Network</span>
+        <span id="state_nexthopnetwork_go">
+<a href="#state_nexthopnetwork_go" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop<wbr>Network</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1500,7 +1678,9 @@ a URL.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Next<wbr>Hop<wbr>Vpn<wbr>Tunnel</span>
+        <span id="state_nexthopvpntunnel_go">
+<a href="#state_nexthopvpntunnel_go" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop<wbr>Vpn<wbr>Tunnel</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1509,7 +1689,9 @@ a URL.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Priority</span>
+        <span id="state_priority_go">
+<a href="#state_priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1522,7 +1704,9 @@ Default value is 1000. Valid range is 0 through 65535.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project</span>
+        <span id="state_project_go">
+<a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1532,7 +1716,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Self<wbr>Link</span>
+        <span id="state_selflink_go">
+<a href="#state_selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1541,7 +1727,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_go">
+<a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1557,7 +1745,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_nodejs">
+<a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1567,7 +1757,9 @@ when you create the resource.
 
     <dt class="property-optional"
             title="Optional">
-        <span>dest<wbr>Range</span>
+        <span id="state_destrange_nodejs">
+<a href="#state_destrange_nodejs" style="color: inherit; text-decoration: inherit;">dest<wbr>Range</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1577,7 +1769,9 @@ Only IPv4 is supported.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1592,7 +1786,9 @@ last character, which cannot be a dash.
 
     <dt class="property-optional"
             title="Optional">
-        <span>network</span>
+        <span id="state_network_nodejs">
+<a href="#state_network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1601,7 +1797,9 @@ last character, which cannot be a dash.
 
     <dt class="property-optional"
             title="Optional">
-        <span>next<wbr>Hop<wbr>Gateway</span>
+        <span id="state_nexthopgateway_nodejs">
+<a href="#state_nexthopgateway_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Hop<wbr>Gateway</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1616,7 +1814,9 @@ partial valid URL:
 
     <dt class="property-optional"
             title="Optional">
-        <span>next<wbr>Hop<wbr>Ilb</span>
+        <span id="state_nexthopilb_nodejs">
+<a href="#state_nexthopilb_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Hop<wbr>Ilb</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1629,7 +1829,9 @@ Note that this can only be used when the destinationRange is a public (non-RFC 1
 
     <dt class="property-optional"
             title="Optional">
-        <span>next<wbr>Hop<wbr>Instance</span>
+        <span id="state_nexthopinstance_nodejs">
+<a href="#state_nexthopinstance_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Hop<wbr>Instance</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1643,7 +1845,9 @@ You can specify this as a full or partial URL. For example:
 
     <dt class="property-optional"
             title="Optional">
-        <span>next<wbr>Hop<wbr>Instance<wbr>Zone</span>
+        <span id="state_nexthopinstancezone_nodejs">
+<a href="#state_nexthopinstancezone_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Hop<wbr>Instance<wbr>Zone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1655,7 +1859,9 @@ a URL.
 
     <dt class="property-optional"
             title="Optional">
-        <span>next<wbr>Hop<wbr>Ip</span>
+        <span id="state_nexthopip_nodejs">
+<a href="#state_nexthopip_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Hop<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1664,7 +1870,9 @@ a URL.
 
     <dt class="property-optional"
             title="Optional">
-        <span>next<wbr>Hop<wbr>Network</span>
+        <span id="state_nexthopnetwork_nodejs">
+<a href="#state_nexthopnetwork_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Hop<wbr>Network</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1673,7 +1881,9 @@ a URL.
 
     <dt class="property-optional"
             title="Optional">
-        <span>next<wbr>Hop<wbr>Vpn<wbr>Tunnel</span>
+        <span id="state_nexthopvpntunnel_nodejs">
+<a href="#state_nexthopvpntunnel_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Hop<wbr>Vpn<wbr>Tunnel</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1682,7 +1892,9 @@ a URL.
 
     <dt class="property-optional"
             title="Optional">
-        <span>priority</span>
+        <span id="state_priority_nodejs">
+<a href="#state_priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1695,7 +1907,9 @@ Default value is 1000. Valid range is 0 through 65535.
 
     <dt class="property-optional"
             title="Optional">
-        <span>project</span>
+        <span id="state_project_nodejs">
+<a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1705,7 +1919,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>self<wbr>Link</span>
+        <span id="state_selflink_nodejs">
+<a href="#state_selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1714,7 +1930,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_nodejs">
+<a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1730,7 +1948,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_python">
+<a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1740,7 +1960,9 @@ when you create the resource.
 
     <dt class="property-optional"
             title="Optional">
-        <span>dest_<wbr>range</span>
+        <span id="state_dest_range_python">
+<a href="#state_dest_range_python" style="color: inherit; text-decoration: inherit;">dest_<wbr>range</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1750,7 +1972,9 @@ Only IPv4 is supported.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1765,7 +1989,9 @@ last character, which cannot be a dash.
 
     <dt class="property-optional"
             title="Optional">
-        <span>network</span>
+        <span id="state_network_python">
+<a href="#state_network_python" style="color: inherit; text-decoration: inherit;">network</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1774,7 +2000,9 @@ last character, which cannot be a dash.
 
     <dt class="property-optional"
             title="Optional">
-        <span>next_<wbr>hop_<wbr>gateway</span>
+        <span id="state_next_hop_gateway_python">
+<a href="#state_next_hop_gateway_python" style="color: inherit; text-decoration: inherit;">next_<wbr>hop_<wbr>gateway</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1789,7 +2017,9 @@ partial valid URL:
 
     <dt class="property-optional"
             title="Optional">
-        <span>next_<wbr>hop_<wbr>ilb</span>
+        <span id="state_next_hop_ilb_python">
+<a href="#state_next_hop_ilb_python" style="color: inherit; text-decoration: inherit;">next_<wbr>hop_<wbr>ilb</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1802,7 +2032,9 @@ Note that this can only be used when the destinationRange is a public (non-RFC 1
 
     <dt class="property-optional"
             title="Optional">
-        <span>next_<wbr>hop_<wbr>instance</span>
+        <span id="state_next_hop_instance_python">
+<a href="#state_next_hop_instance_python" style="color: inherit; text-decoration: inherit;">next_<wbr>hop_<wbr>instance</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1816,7 +2048,9 @@ You can specify this as a full or partial URL. For example:
 
     <dt class="property-optional"
             title="Optional">
-        <span>next_<wbr>hop_<wbr>instance_<wbr>zone</span>
+        <span id="state_next_hop_instance_zone_python">
+<a href="#state_next_hop_instance_zone_python" style="color: inherit; text-decoration: inherit;">next_<wbr>hop_<wbr>instance_<wbr>zone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1828,7 +2062,9 @@ a URL.
 
     <dt class="property-optional"
             title="Optional">
-        <span>next_<wbr>hop_<wbr>ip</span>
+        <span id="state_next_hop_ip_python">
+<a href="#state_next_hop_ip_python" style="color: inherit; text-decoration: inherit;">next_<wbr>hop_<wbr>ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1837,7 +2073,9 @@ a URL.
 
     <dt class="property-optional"
             title="Optional">
-        <span>next_<wbr>hop_<wbr>network</span>
+        <span id="state_next_hop_network_python">
+<a href="#state_next_hop_network_python" style="color: inherit; text-decoration: inherit;">next_<wbr>hop_<wbr>network</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1846,7 +2084,9 @@ a URL.
 
     <dt class="property-optional"
             title="Optional">
-        <span>next_<wbr>hop_<wbr>vpn_<wbr>tunnel</span>
+        <span id="state_next_hop_vpn_tunnel_python">
+<a href="#state_next_hop_vpn_tunnel_python" style="color: inherit; text-decoration: inherit;">next_<wbr>hop_<wbr>vpn_<wbr>tunnel</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1855,7 +2095,9 @@ a URL.
 
     <dt class="property-optional"
             title="Optional">
-        <span>priority</span>
+        <span id="state_priority_python">
+<a href="#state_priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1868,7 +2110,9 @@ Default value is 1000. Valid range is 0 through 65535.
 
     <dt class="property-optional"
             title="Optional">
-        <span>project</span>
+        <span id="state_project_python">
+<a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1878,7 +2122,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>self_<wbr>link</span>
+        <span id="state_self_link_python">
+<a href="#state_self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1887,7 +2133,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_python">
+<a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>

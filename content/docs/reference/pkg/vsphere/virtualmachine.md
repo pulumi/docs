@@ -30,7 +30,7 @@ meta_desc: "Explore the VirtualMachine resource of the vSphere package, includin
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.Vsphere.VirtualMachine.html">VirtualMachine</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.VSphere.VirtualMachineArgs.html">VirtualMachineArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.VirtualMachine.html">VirtualMachine</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.VirtualMachineArgs.html">VirtualMachineArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -159,7 +159,7 @@ meta_desc: "Explore the VirtualMachine resource of the vSphere package, includin
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.VSphere.VirtualMachineArgs.html">VirtualMachineArgs</a></span>
+        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.VirtualMachineArgs.html">VirtualMachineArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -200,8 +200,8 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object reference
-ID][docs-about-morefs] of the resource pool to put this virtual machine in.
+    <dd>{{% md %}}The managed object reference
+ID of the resource pool to put this virtual machine in.
 See the section on virtual machine migration
 for details on changing this value.
 {{% /md %}}</dd>
@@ -358,9 +358,7 @@ one of `high`, `low`, `normal`, or `custom`. Default: `custom`.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Map of custom attribute ids to attribute
-value strings to set for virtual machine. See
-[here][docs-setting-custom-attributes] for a reference on how to set values
-for custom attributes.
+value strings to set for virtual machine.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -379,8 +377,8 @@ an ovf template.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object reference
-ID][docs-about-morefs] of the datastore cluster ID to use. This setting
+    <dd>{{% md %}}The managed object reference
+ID of the datastore cluster ID to use. This setting
 applies to entire virtual machine and implies that you wish to use Storage
 DRS with this virtual machine. See the section on virtual machine
 migration for details on changing this value.
@@ -518,8 +516,8 @@ more details.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}An optional [managed object reference
-ID][docs-about-morefs] of a host to put this virtual machine on. See the
+    <dd>{{% md %}}An optional managed object reference
+ID of a host to put this virtual machine on. See the
 section on virtual machine migration for
 details on changing this value. If a `host_system_id` is not supplied,
 vSphere will select a host in the resource pool to place the virtual machine,
@@ -775,9 +773,10 @@ physicalSharing, virtualSharing, and noSharing. Default: `noSharing`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The number of SCSI controllers that Terraform manages on this virtual machine. This directly affects the amount of disks
-you can add to the virtual machine and the maximum disk unit number. Note that lowering this value does not remove
-controllers.
+    <dd>{{% md %}}The number of SCSI controllers that
+this provider manages on this virtual machine. This directly affects the amount
+of disks you can add to the virtual machine and the maximum disk unit number.
+Note that lowering this value does not remove controllers. Default: `1`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -839,8 +838,7 @@ the host. Requires VMware tools to be installed. Default: `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The IDs of any tags to attach to this resource. See
-[here][docs-applying-tags] for a reference on how to apply tags.
+    <dd>{{% md %}}The IDs of any tags to attach to this resource. 
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -910,8 +908,8 @@ instead. A value less than 1 disables the waiter. Default: 5 minutes.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object reference
-ID][docs-about-morefs] of the resource pool to put this virtual machine in.
+    <dd>{{% md %}}The managed object reference
+ID of the resource pool to put this virtual machine in.
 See the section on virtual machine migration
 for details on changing this value.
 {{% /md %}}</dd>
@@ -1068,9 +1066,7 @@ one of `high`, `low`, `normal`, or `custom`. Default: `custom`.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Map of custom attribute ids to attribute
-value strings to set for virtual machine. See
-[here][docs-setting-custom-attributes] for a reference on how to set values
-for custom attributes.
+value strings to set for virtual machine.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1089,8 +1085,8 @@ an ovf template.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object reference
-ID][docs-about-morefs] of the datastore cluster ID to use. This setting
+    <dd>{{% md %}}The managed object reference
+ID of the datastore cluster ID to use. This setting
 applies to entire virtual machine and implies that you wish to use Storage
 DRS with this virtual machine. See the section on virtual machine
 migration for details on changing this value.
@@ -1228,8 +1224,8 @@ more details.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}An optional [managed object reference
-ID][docs-about-morefs] of a host to put this virtual machine on. See the
+    <dd>{{% md %}}An optional managed object reference
+ID of a host to put this virtual machine on. See the
 section on virtual machine migration for
 details on changing this value. If a `host_system_id` is not supplied,
 vSphere will select a host in the resource pool to place the virtual machine,
@@ -1485,9 +1481,10 @@ physicalSharing, virtualSharing, and noSharing. Default: `noSharing`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The number of SCSI controllers that Terraform manages on this virtual machine. This directly affects the amount of disks
-you can add to the virtual machine and the maximum disk unit number. Note that lowering this value does not remove
-controllers.
+    <dd>{{% md %}}The number of SCSI controllers that
+this provider manages on this virtual machine. This directly affects the amount
+of disks you can add to the virtual machine and the maximum disk unit number.
+Note that lowering this value does not remove controllers. Default: `1`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1549,8 +1546,7 @@ the host. Requires VMware tools to be installed. Default: `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}The IDs of any tags to attach to this resource. See
-[here][docs-applying-tags] for a reference on how to apply tags.
+    <dd>{{% md %}}The IDs of any tags to attach to this resource. 
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1620,8 +1616,8 @@ instead. A value less than 1 disables the waiter. Default: 5 minutes.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object reference
-ID][docs-about-morefs] of the resource pool to put this virtual machine in.
+    <dd>{{% md %}}The managed object reference
+ID of the resource pool to put this virtual machine in.
 See the section on virtual machine migration
 for details on changing this value.
 {{% /md %}}</dd>
@@ -1778,9 +1774,7 @@ one of `high`, `low`, `normal`, or `custom`. Default: `custom`.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Map of custom attribute ids to attribute
-value strings to set for virtual machine. See
-[here][docs-setting-custom-attributes] for a reference on how to set values
-for custom attributes.
+value strings to set for virtual machine.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1799,8 +1793,8 @@ an ovf template.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object reference
-ID][docs-about-morefs] of the datastore cluster ID to use. This setting
+    <dd>{{% md %}}The managed object reference
+ID of the datastore cluster ID to use. This setting
 applies to entire virtual machine and implies that you wish to use Storage
 DRS with this virtual machine. See the section on virtual machine
 migration for details on changing this value.
@@ -1938,8 +1932,8 @@ more details.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}An optional [managed object reference
-ID][docs-about-morefs] of a host to put this virtual machine on. See the
+    <dd>{{% md %}}An optional managed object reference
+ID of a host to put this virtual machine on. See the
 section on virtual machine migration for
 details on changing this value. If a `host_system_id` is not supplied,
 vSphere will select a host in the resource pool to place the virtual machine,
@@ -2195,9 +2189,10 @@ physicalSharing, virtualSharing, and noSharing. Default: `noSharing`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The number of SCSI controllers that Terraform manages on this virtual machine. This directly affects the amount of disks
-you can add to the virtual machine and the maximum disk unit number. Note that lowering this value does not remove
-controllers.
+    <dd>{{% md %}}The number of SCSI controllers that
+this provider manages on this virtual machine. This directly affects the amount
+of disks you can add to the virtual machine and the maximum disk unit number.
+Note that lowering this value does not remove controllers. Default: `1`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2259,8 +2254,7 @@ the host. Requires VMware tools to be installed. Default: `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}The IDs of any tags to attach to this resource. See
-[here][docs-applying-tags] for a reference on how to apply tags.
+    <dd>{{% md %}}The IDs of any tags to attach to this resource. 
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2330,8 +2324,8 @@ instead. A value less than 1 disables the waiter. Default: 5 minutes.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object reference
-ID][docs-about-morefs] of the resource pool to put this virtual machine in.
+    <dd>{{% md %}}The managed object reference
+ID of the resource pool to put this virtual machine in.
 See the section on virtual machine migration
 for details on changing this value.
 {{% /md %}}</dd>
@@ -2488,9 +2482,7 @@ one of `high`, `low`, `normal`, or `custom`. Default: `custom`.
         <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}Map of custom attribute ids to attribute
-value strings to set for virtual machine. See
-[here][docs-setting-custom-attributes] for a reference on how to set values
-for custom attributes.
+value strings to set for virtual machine.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2509,8 +2501,8 @@ an ovf template.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object reference
-ID][docs-about-morefs] of the datastore cluster ID to use. This setting
+    <dd>{{% md %}}The managed object reference
+ID of the datastore cluster ID to use. This setting
 applies to entire virtual machine and implies that you wish to use Storage
 DRS with this virtual machine. See the section on virtual machine
 migration for details on changing this value.
@@ -2648,8 +2640,8 @@ more details.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}An optional [managed object reference
-ID][docs-about-morefs] of a host to put this virtual machine on. See the
+    <dd>{{% md %}}An optional managed object reference
+ID of a host to put this virtual machine on. See the
 section on virtual machine migration for
 details on changing this value. If a `host_system_id` is not supplied,
 vSphere will select a host in the resource pool to place the virtual machine,
@@ -2905,9 +2897,10 @@ physicalSharing, virtualSharing, and noSharing. Default: `noSharing`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}The number of SCSI controllers that Terraform manages on this virtual machine. This directly affects the amount of disks
-you can add to the virtual machine and the maximum disk unit number. Note that lowering this value does not remove
-controllers.
+    <dd>{{% md %}}The number of SCSI controllers that
+this provider manages on this virtual machine. This directly affects the amount
+of disks you can add to the virtual machine and the maximum disk unit number.
+Note that lowering this value does not remove controllers. Default: `1`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2969,8 +2962,7 @@ the host. Requires VMware tools to be installed. Default: `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}The IDs of any tags to attach to this resource. See
-[here][docs-applying-tags] for a reference on how to apply tags.
+    <dd>{{% md %}}The IDs of any tags to attach to this resource. 
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3062,7 +3054,13 @@ configuration.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The IP address selected by Terraform to be used for the provisioner.
+    <dd>{{% md %}}The IP address selected by the provider to be used with
+any provisioners configured on this resource.
+Whenever possible, this is the first IPv4 address that is reachable through
+the default gateway configured on the machine, then the first reachable IPv6
+address, and then the first general discovered address if neither exist. If
+VMware tools is not running on the virtual machine, or if the VM is powered
+off, this value will be blank.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -3074,7 +3072,7 @@ configuration.
     <dd>{{% md %}}The current list of IP addresses on this machine,
 including the value of `default_ip_address`. If VMware tools is not running
 on the virtual machine, or if the VM is powered off, this list will be empty.
-* `moid`: The [managed object reference ID][docs-about-morefs] of the created
+* `moid`: The managed object reference ID of the created
 virtual machine.
 {{% /md %}}</dd>
 
@@ -3113,7 +3111,9 @@ section on importing below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Value internal to Terraform used to determine if a configuration set change requires a reboot.
+    <dd>{{% md %}}Value internal to the provider used to determine if a
+configuration set change requires a reboot. This value is only useful during
+an update process and gets reset on refresh.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -3181,7 +3181,13 @@ configuration.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The IP address selected by Terraform to be used for the provisioner.
+    <dd>{{% md %}}The IP address selected by the provider to be used with
+any provisioners configured on this resource.
+Whenever possible, this is the first IPv4 address that is reachable through
+the default gateway configured on the machine, then the first reachable IPv6
+address, and then the first general discovered address if neither exist. If
+VMware tools is not running on the virtual machine, or if the VM is powered
+off, this value will be blank.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -3193,7 +3199,7 @@ configuration.
     <dd>{{% md %}}The current list of IP addresses on this machine,
 including the value of `default_ip_address`. If VMware tools is not running
 on the virtual machine, or if the VM is powered off, this list will be empty.
-* `moid`: The [managed object reference ID][docs-about-morefs] of the created
+* `moid`: The managed object reference ID of the created
 virtual machine.
 {{% /md %}}</dd>
 
@@ -3232,7 +3238,9 @@ section on importing below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Value internal to Terraform used to determine if a configuration set change requires a reboot.
+    <dd>{{% md %}}Value internal to the provider used to determine if a
+configuration set change requires a reboot. This value is only useful during
+an update process and gets reset on refresh.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -3300,7 +3308,13 @@ configuration.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The IP address selected by Terraform to be used for the provisioner.
+    <dd>{{% md %}}The IP address selected by the provider to be used with
+any provisioners configured on this resource.
+Whenever possible, this is the first IPv4 address that is reachable through
+the default gateway configured on the machine, then the first reachable IPv6
+address, and then the first general discovered address if neither exist. If
+VMware tools is not running on the virtual machine, or if the VM is powered
+off, this value will be blank.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -3312,7 +3326,7 @@ configuration.
     <dd>{{% md %}}The current list of IP addresses on this machine,
 including the value of `default_ip_address`. If VMware tools is not running
 on the virtual machine, or if the VM is powered off, this list will be empty.
-* `moid`: The [managed object reference ID][docs-about-morefs] of the created
+* `moid`: The managed object reference ID of the created
 virtual machine.
 {{% /md %}}</dd>
 
@@ -3351,7 +3365,9 @@ section on importing below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Value internal to Terraform used to determine if a configuration set change requires a reboot.
+    <dd>{{% md %}}Value internal to the provider used to determine if a
+configuration set change requires a reboot. This value is only useful during
+an update process and gets reset on refresh.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -3419,7 +3435,13 @@ configuration.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The IP address selected by Terraform to be used for the provisioner.
+    <dd>{{% md %}}The IP address selected by the provider to be used with
+any provisioners configured on this resource.
+Whenever possible, this is the first IPv4 address that is reachable through
+the default gateway configured on the machine, then the first reachable IPv6
+address, and then the first general discovered address if neither exist. If
+VMware tools is not running on the virtual machine, or if the VM is powered
+off, this value will be blank.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -3431,7 +3453,7 @@ configuration.
     <dd>{{% md %}}The current list of IP addresses on this machine,
 including the value of `default_ip_address`. If VMware tools is not running
 on the virtual machine, or if the VM is powered off, this list will be empty.
-* `moid`: The [managed object reference ID][docs-about-morefs] of the created
+* `moid`: The managed object reference ID of the created
 virtual machine.
 {{% /md %}}</dd>
 
@@ -3470,7 +3492,9 @@ section on importing below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Value internal to Terraform used to determine if a configuration set change requires a reboot.
+    <dd>{{% md %}}Value internal to the provider used to determine if a
+configuration set change requires a reboot. This value is only useful during
+an update process and gets reset on refresh.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -3541,7 +3565,7 @@ Get an existing VirtualMachine resource's state with the given name, ID, and opt
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.Vsphere.VirtualMachine.html">VirtualMachine</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.Vsphere..VirtualMachineState.html">VirtualMachineState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.VirtualMachine.html">VirtualMachine</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere..VirtualMachineState.html">VirtualMachineState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -3810,9 +3834,7 @@ one of `high`, `low`, `normal`, or `custom`. Default: `custom`.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Map of custom attribute ids to attribute
-value strings to set for virtual machine. See
-[here][docs-setting-custom-attributes] for a reference on how to set values
-for custom attributes.
+value strings to set for virtual machine.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3831,8 +3853,8 @@ an ovf template.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object reference
-ID][docs-about-morefs] of the datastore cluster ID to use. This setting
+    <dd>{{% md %}}The managed object reference
+ID of the datastore cluster ID to use. This setting
 applies to entire virtual machine and implies that you wish to use Storage
 DRS with this virtual machine. See the section on virtual machine
 migration for details on changing this value.
@@ -3854,7 +3876,13 @@ Requried for using a datastore ISO. Conflicts with `client_device`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The IP address selected by Terraform to be used for the provisioner.
+    <dd>{{% md %}}The IP address selected by the provider to be used with
+any provisioners configured on this resource.
+Whenever possible, this is the first IPv4 address that is reachable through
+the default gateway configured on the machine, then the first reachable IPv6
+address, and then the first general discovered address if neither exist. If
+VMware tools is not running on the virtual machine, or if the VM is powered
+off, this value will be blank.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3970,7 +3998,7 @@ full list of possible values, see [here][vmware-docs-guest-ids]. Default: `other
     <dd>{{% md %}}The current list of IP addresses on this machine,
 including the value of `default_ip_address`. If VMware tools is not running
 on the virtual machine, or if the VM is powered off, this list will be empty.
-* `moid`: The [managed object reference ID][docs-about-morefs] of the created
+* `moid`: The managed object reference ID of the created
 virtual machine.
 {{% /md %}}</dd>
 
@@ -3992,8 +4020,8 @@ more details.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}An optional [managed object reference
-ID][docs-about-morefs] of a host to put this virtual machine on. See the
+    <dd>{{% md %}}An optional managed object reference
+ID of a host to put this virtual machine on. See the
 section on virtual machine migration for
 details on changing this value. If a `host_system_id` is not supplied,
 vSphere will select a host in the resource pool to place the virtual machine,
@@ -4210,7 +4238,9 @@ ovf template for more details.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Value internal to Terraform used to determine if a configuration set change requires a reboot.
+    <dd>{{% md %}}Value internal to the provider used to determine if a
+configuration set change requires a reboot. This value is only useful during
+an update process and gets reset on refresh.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4219,8 +4249,8 @@ ovf template for more details.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object reference
-ID][docs-about-morefs] of the resource pool to put this virtual machine in.
+    <dd>{{% md %}}The managed object reference
+ID of the resource pool to put this virtual machine in.
 See the section on virtual machine migration
 for details on changing this value.
 {{% /md %}}</dd>
@@ -4291,9 +4321,10 @@ physicalSharing, virtualSharing, and noSharing. Default: `noSharing`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The number of SCSI controllers that Terraform manages on this virtual machine. This directly affects the amount of disks
-you can add to the virtual machine and the maximum disk unit number. Note that lowering this value does not remove
-controllers.
+    <dd>{{% md %}}The number of SCSI controllers that
+this provider manages on this virtual machine. This directly affects the amount
+of disks you can add to the virtual machine and the maximum disk unit number.
+Note that lowering this value does not remove controllers. Default: `1`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4355,8 +4386,7 @@ the host. Requires VMware tools to be installed. Default: `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The IDs of any tags to attach to this resource. See
-[here][docs-applying-tags] for a reference on how to apply tags.
+    <dd>{{% md %}}The IDs of any tags to attach to this resource. 
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4624,9 +4654,7 @@ one of `high`, `low`, `normal`, or `custom`. Default: `custom`.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Map of custom attribute ids to attribute
-value strings to set for virtual machine. See
-[here][docs-setting-custom-attributes] for a reference on how to set values
-for custom attributes.
+value strings to set for virtual machine.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4645,8 +4673,8 @@ an ovf template.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object reference
-ID][docs-about-morefs] of the datastore cluster ID to use. This setting
+    <dd>{{% md %}}The managed object reference
+ID of the datastore cluster ID to use. This setting
 applies to entire virtual machine and implies that you wish to use Storage
 DRS with this virtual machine. See the section on virtual machine
 migration for details on changing this value.
@@ -4668,7 +4696,13 @@ Requried for using a datastore ISO. Conflicts with `client_device`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The IP address selected by Terraform to be used for the provisioner.
+    <dd>{{% md %}}The IP address selected by the provider to be used with
+any provisioners configured on this resource.
+Whenever possible, this is the first IPv4 address that is reachable through
+the default gateway configured on the machine, then the first reachable IPv6
+address, and then the first general discovered address if neither exist. If
+VMware tools is not running on the virtual machine, or if the VM is powered
+off, this value will be blank.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4784,7 +4818,7 @@ full list of possible values, see [here][vmware-docs-guest-ids]. Default: `other
     <dd>{{% md %}}The current list of IP addresses on this machine,
 including the value of `default_ip_address`. If VMware tools is not running
 on the virtual machine, or if the VM is powered off, this list will be empty.
-* `moid`: The [managed object reference ID][docs-about-morefs] of the created
+* `moid`: The managed object reference ID of the created
 virtual machine.
 {{% /md %}}</dd>
 
@@ -4806,8 +4840,8 @@ more details.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}An optional [managed object reference
-ID][docs-about-morefs] of a host to put this virtual machine on. See the
+    <dd>{{% md %}}An optional managed object reference
+ID of a host to put this virtual machine on. See the
 section on virtual machine migration for
 details on changing this value. If a `host_system_id` is not supplied,
 vSphere will select a host in the resource pool to place the virtual machine,
@@ -5024,7 +5058,9 @@ ovf template for more details.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Value internal to Terraform used to determine if a configuration set change requires a reboot.
+    <dd>{{% md %}}Value internal to the provider used to determine if a
+configuration set change requires a reboot. This value is only useful during
+an update process and gets reset on refresh.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5033,8 +5069,8 @@ ovf template for more details.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object reference
-ID][docs-about-morefs] of the resource pool to put this virtual machine in.
+    <dd>{{% md %}}The managed object reference
+ID of the resource pool to put this virtual machine in.
 See the section on virtual machine migration
 for details on changing this value.
 {{% /md %}}</dd>
@@ -5105,9 +5141,10 @@ physicalSharing, virtualSharing, and noSharing. Default: `noSharing`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The number of SCSI controllers that Terraform manages on this virtual machine. This directly affects the amount of disks
-you can add to the virtual machine and the maximum disk unit number. Note that lowering this value does not remove
-controllers.
+    <dd>{{% md %}}The number of SCSI controllers that
+this provider manages on this virtual machine. This directly affects the amount
+of disks you can add to the virtual machine and the maximum disk unit number.
+Note that lowering this value does not remove controllers. Default: `1`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5169,8 +5206,7 @@ the host. Requires VMware tools to be installed. Default: `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}The IDs of any tags to attach to this resource. See
-[here][docs-applying-tags] for a reference on how to apply tags.
+    <dd>{{% md %}}The IDs of any tags to attach to this resource. 
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5438,9 +5474,7 @@ one of `high`, `low`, `normal`, or `custom`. Default: `custom`.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Map of custom attribute ids to attribute
-value strings to set for virtual machine. See
-[here][docs-setting-custom-attributes] for a reference on how to set values
-for custom attributes.
+value strings to set for virtual machine.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5459,8 +5493,8 @@ an ovf template.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object reference
-ID][docs-about-morefs] of the datastore cluster ID to use. This setting
+    <dd>{{% md %}}The managed object reference
+ID of the datastore cluster ID to use. This setting
 applies to entire virtual machine and implies that you wish to use Storage
 DRS with this virtual machine. See the section on virtual machine
 migration for details on changing this value.
@@ -5482,7 +5516,13 @@ Requried for using a datastore ISO. Conflicts with `client_device`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The IP address selected by Terraform to be used for the provisioner.
+    <dd>{{% md %}}The IP address selected by the provider to be used with
+any provisioners configured on this resource.
+Whenever possible, this is the first IPv4 address that is reachable through
+the default gateway configured on the machine, then the first reachable IPv6
+address, and then the first general discovered address if neither exist. If
+VMware tools is not running on the virtual machine, or if the VM is powered
+off, this value will be blank.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5598,7 +5638,7 @@ full list of possible values, see [here][vmware-docs-guest-ids]. Default: `other
     <dd>{{% md %}}The current list of IP addresses on this machine,
 including the value of `default_ip_address`. If VMware tools is not running
 on the virtual machine, or if the VM is powered off, this list will be empty.
-* `moid`: The [managed object reference ID][docs-about-morefs] of the created
+* `moid`: The managed object reference ID of the created
 virtual machine.
 {{% /md %}}</dd>
 
@@ -5620,8 +5660,8 @@ more details.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}An optional [managed object reference
-ID][docs-about-morefs] of a host to put this virtual machine on. See the
+    <dd>{{% md %}}An optional managed object reference
+ID of a host to put this virtual machine on. See the
 section on virtual machine migration for
 details on changing this value. If a `host_system_id` is not supplied,
 vSphere will select a host in the resource pool to place the virtual machine,
@@ -5838,7 +5878,9 @@ ovf template for more details.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Value internal to Terraform used to determine if a configuration set change requires a reboot.
+    <dd>{{% md %}}Value internal to the provider used to determine if a
+configuration set change requires a reboot. This value is only useful during
+an update process and gets reset on refresh.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5847,8 +5889,8 @@ ovf template for more details.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object reference
-ID][docs-about-morefs] of the resource pool to put this virtual machine in.
+    <dd>{{% md %}}The managed object reference
+ID of the resource pool to put this virtual machine in.
 See the section on virtual machine migration
 for details on changing this value.
 {{% /md %}}</dd>
@@ -5919,9 +5961,10 @@ physicalSharing, virtualSharing, and noSharing. Default: `noSharing`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The number of SCSI controllers that Terraform manages on this virtual machine. This directly affects the amount of disks
-you can add to the virtual machine and the maximum disk unit number. Note that lowering this value does not remove
-controllers.
+    <dd>{{% md %}}The number of SCSI controllers that
+this provider manages on this virtual machine. This directly affects the amount
+of disks you can add to the virtual machine and the maximum disk unit number.
+Note that lowering this value does not remove controllers. Default: `1`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5983,8 +6026,7 @@ the host. Requires VMware tools to be installed. Default: `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}The IDs of any tags to attach to this resource. See
-[here][docs-applying-tags] for a reference on how to apply tags.
+    <dd>{{% md %}}The IDs of any tags to attach to this resource. 
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6252,9 +6294,7 @@ one of `high`, `low`, `normal`, or `custom`. Default: `custom`.
         <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}Map of custom attribute ids to attribute
-value strings to set for virtual machine. See
-[here][docs-setting-custom-attributes] for a reference on how to set values
-for custom attributes.
+value strings to set for virtual machine.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6273,8 +6313,8 @@ an ovf template.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object reference
-ID][docs-about-morefs] of the datastore cluster ID to use. This setting
+    <dd>{{% md %}}The managed object reference
+ID of the datastore cluster ID to use. This setting
 applies to entire virtual machine and implies that you wish to use Storage
 DRS with this virtual machine. See the section on virtual machine
 migration for details on changing this value.
@@ -6296,7 +6336,13 @@ Requried for using a datastore ISO. Conflicts with `client_device`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The IP address selected by Terraform to be used for the provisioner.
+    <dd>{{% md %}}The IP address selected by the provider to be used with
+any provisioners configured on this resource.
+Whenever possible, this is the first IPv4 address that is reachable through
+the default gateway configured on the machine, then the first reachable IPv6
+address, and then the first general discovered address if neither exist. If
+VMware tools is not running on the virtual machine, or if the VM is powered
+off, this value will be blank.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6412,7 +6458,7 @@ full list of possible values, see [here][vmware-docs-guest-ids]. Default: `other
     <dd>{{% md %}}The current list of IP addresses on this machine,
 including the value of `default_ip_address`. If VMware tools is not running
 on the virtual machine, or if the VM is powered off, this list will be empty.
-* `moid`: The [managed object reference ID][docs-about-morefs] of the created
+* `moid`: The managed object reference ID of the created
 virtual machine.
 {{% /md %}}</dd>
 
@@ -6434,8 +6480,8 @@ more details.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}An optional [managed object reference
-ID][docs-about-morefs] of a host to put this virtual machine on. See the
+    <dd>{{% md %}}An optional managed object reference
+ID of a host to put this virtual machine on. See the
 section on virtual machine migration for
 details on changing this value. If a `host_system_id` is not supplied,
 vSphere will select a host in the resource pool to place the virtual machine,
@@ -6652,7 +6698,9 @@ ovf template for more details.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Value internal to Terraform used to determine if a configuration set change requires a reboot.
+    <dd>{{% md %}}Value internal to the provider used to determine if a
+configuration set change requires a reboot. This value is only useful during
+an update process and gets reset on refresh.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6661,8 +6709,8 @@ ovf template for more details.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object reference
-ID][docs-about-morefs] of the resource pool to put this virtual machine in.
+    <dd>{{% md %}}The managed object reference
+ID of the resource pool to put this virtual machine in.
 See the section on virtual machine migration
 for details on changing this value.
 {{% /md %}}</dd>
@@ -6733,9 +6781,10 @@ physicalSharing, virtualSharing, and noSharing. Default: `noSharing`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}The number of SCSI controllers that Terraform manages on this virtual machine. This directly affects the amount of disks
-you can add to the virtual machine and the maximum disk unit number. Note that lowering this value does not remove
-controllers.
+    <dd>{{% md %}}The number of SCSI controllers that
+this provider manages on this virtual machine. This directly affects the amount
+of disks you can add to the virtual machine and the maximum disk unit number.
+Note that lowering this value does not remove controllers. Default: `1`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6797,8 +6846,7 @@ the host. Requires VMware tools to be installed. Default: `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}The IDs of any tags to attach to this resource. See
-[here][docs-applying-tags] for a reference on how to apply tags.
+    <dd>{{% md %}}The IDs of any tags to attach to this resource. 
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6920,7 +6968,7 @@ instead. A value less than 1 disables the waiter. Default: 5 minutes.
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#VirtualMachineCdromArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#VirtualMachineCdromOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.VSphere.Inputs.VirtualMachineCdromArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.VSphere.Outputs.VirtualMachineCdrom.html">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.Inputs.VirtualMachineCdromArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.Outputs.VirtualMachineCdrom.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -6955,7 +7003,11 @@ Requried for using a datastore ISO. Conflicts with `client_device`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}An address internal to this provider that helps locate the
+device when `key` is unavailable. This follows a convention of
+`CONTROLLER_TYPE:BUS_NUMBER:UNIT_NUMBER`. Example: `scsi:0:1` means device
+unit 1 on SCSI bus 0.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7009,7 +7061,11 @@ Requried for using a datastore ISO. Conflicts with `client_device`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}An address internal to this provider that helps locate the
+device when `key` is unavailable. This follows a convention of
+`CONTROLLER_TYPE:BUS_NUMBER:UNIT_NUMBER`. Example: `scsi:0:1` means device
+unit 1 on SCSI bus 0.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7063,7 +7119,11 @@ Requried for using a datastore ISO. Conflicts with `client_device`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}An address internal to this provider that helps locate the
+device when `key` is unavailable. This follows a convention of
+`CONTROLLER_TYPE:BUS_NUMBER:UNIT_NUMBER`. Example: `scsi:0:1` means device
+unit 1 on SCSI bus 0.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7117,7 +7177,11 @@ Requried for using a datastore ISO. Conflicts with `client_device`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}An address internal to this provider that helps locate the
+device when `key` is unavailable. This follows a convention of
+`CONTROLLER_TYPE:BUS_NUMBER:UNIT_NUMBER`. Example: `scsi:0:1` means device
+unit 1 on SCSI bus 0.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7154,7 +7218,7 @@ ISO. Conflicts with `client_device`.
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#VirtualMachineCloneArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#VirtualMachineCloneOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.VSphere.Inputs.VirtualMachineCloneArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.VSphere.Outputs.VirtualMachineClone.html">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.Inputs.VirtualMachineCloneArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.Outputs.VirtualMachineClone.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -7392,7 +7456,7 @@ ISO. Conflicts with `client_device`.
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#VirtualMachineCloneCustomizeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#VirtualMachineCloneCustomizeOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.VSphere.Inputs.VirtualMachineCloneCustomizeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.VSphere.Outputs.VirtualMachineCloneCustomize.html">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.Inputs.VirtualMachineCloneCustomizeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.Outputs.VirtualMachineCloneCustomize.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -7738,7 +7802,7 @@ below.
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#VirtualMachineCloneCustomizeLinuxOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#VirtualMachineCloneCustomizeLinuxOptionsOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.VSphere.Inputs.VirtualMachineCloneCustomizeLinuxOptionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.VSphere.Outputs.VirtualMachineCloneCustomizeLinuxOptions.html">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.Inputs.VirtualMachineCloneCustomizeLinuxOptionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.Outputs.VirtualMachineCloneCustomizeLinuxOptions.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -7912,7 +7976,7 @@ below.
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#VirtualMachineCloneCustomizeNetworkInterfaceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#VirtualMachineCloneCustomizeNetworkInterfaceOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.VSphere.Inputs.VirtualMachineCloneCustomizeNetworkInterfaceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.VSphere.Outputs.VirtualMachineCloneCustomizeNetworkInterface.html">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.Inputs.VirtualMachineCloneCustomizeNetworkInterfaceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.Outputs.VirtualMachineCloneCustomizeNetworkInterface.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -8150,7 +8214,7 @@ below.
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#VirtualMachineCloneCustomizeWindowsOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#VirtualMachineCloneCustomizeWindowsOptionsOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.VSphere.Inputs.VirtualMachineCloneCustomizeWindowsOptionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.VSphere.Outputs.VirtualMachineCloneCustomizeWindowsOptions.html">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.Inputs.VirtualMachineCloneCustomizeWindowsOptionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.Outputs.VirtualMachineCloneCustomizeWindowsOptions.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -8612,7 +8676,7 @@ below.
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#VirtualMachineDiskArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#VirtualMachineDiskOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.VSphere.Inputs.VirtualMachineDiskArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.VSphere.Outputs.VirtualMachineDisk.html">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.Inputs.VirtualMachineDiskArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.Outputs.VirtualMachineDisk.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -8648,7 +8712,11 @@ Requried for using a datastore ISO. Conflicts with `client_device`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}An address internal to this provider that helps locate the
+device when `key` is unavailable. This follows a convention of
+`CONTROLLER_TYPE:BUS_NUMBER:UNIT_NUMBER`. Example: `scsi:0:1` means device
+unit 1 on SCSI bus 0.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -8881,7 +8949,11 @@ Requried for using a datastore ISO. Conflicts with `client_device`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}An address internal to this provider that helps locate the
+device when `key` is unavailable. This follows a convention of
+`CONTROLLER_TYPE:BUS_NUMBER:UNIT_NUMBER`. Example: `scsi:0:1` means device
+unit 1 on SCSI bus 0.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -9114,7 +9186,11 @@ Requried for using a datastore ISO. Conflicts with `client_device`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}An address internal to this provider that helps locate the
+device when `key` is unavailable. This follows a convention of
+`CONTROLLER_TYPE:BUS_NUMBER:UNIT_NUMBER`. Example: `scsi:0:1` means device
+unit 1 on SCSI bus 0.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -9347,7 +9423,11 @@ Requried for using a datastore ISO. Conflicts with `client_device`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}An address internal to this provider that helps locate the
+device when `key` is unavailable. This follows a convention of
+`CONTROLLER_TYPE:BUS_NUMBER:UNIT_NUMBER`. Example: `scsi:0:1` means device
+unit 1 on SCSI bus 0.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -9562,7 +9642,7 @@ directly to the filesystem immediately instead of being buffered. Default:
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#VirtualMachineNetworkInterfaceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#VirtualMachineNetworkInterfaceOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.VSphere.Inputs.VirtualMachineNetworkInterfaceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.VSphere.Outputs.VirtualMachineNetworkInterface.html">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.Inputs.VirtualMachineNetworkInterfaceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.Outputs.VirtualMachineNetworkInterface.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -9577,8 +9657,8 @@ directly to the filesystem immediately instead of being buffered. Default:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object reference
-ID][docs-about-morefs] of the network to connect this interface to.
+    <dd>{{% md %}}The managed object reference
+ID of the network to connect this interface to.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -9638,7 +9718,11 @@ this interface. Can be one of `low`, `normal`, `high`, or `custom`. Default:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}An address internal to this provider that helps locate the
+device when `key` is unavailable. This follows a convention of
+`CONTROLLER_TYPE:BUS_NUMBER:UNIT_NUMBER`. Example: `scsi:0:1` means device
+unit 1 on SCSI bus 0.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -9695,8 +9779,8 @@ a static MAC address and set accordingly. Setting this to `true` requires
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object reference
-ID][docs-about-morefs] of the network to connect this interface to.
+    <dd>{{% md %}}The managed object reference
+ID of the network to connect this interface to.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -9756,7 +9840,11 @@ this interface. Can be one of `low`, `normal`, `high`, or `custom`. Default:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}An address internal to this provider that helps locate the
+device when `key` is unavailable. This follows a convention of
+`CONTROLLER_TYPE:BUS_NUMBER:UNIT_NUMBER`. Example: `scsi:0:1` means device
+unit 1 on SCSI bus 0.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -9813,8 +9901,8 @@ a static MAC address and set accordingly. Setting this to `true` requires
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object reference
-ID][docs-about-morefs] of the network to connect this interface to.
+    <dd>{{% md %}}The managed object reference
+ID of the network to connect this interface to.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -9874,7 +9962,11 @@ this interface. Can be one of `low`, `normal`, `high`, or `custom`. Default:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}An address internal to this provider that helps locate the
+device when `key` is unavailable. This follows a convention of
+`CONTROLLER_TYPE:BUS_NUMBER:UNIT_NUMBER`. Example: `scsi:0:1` means device
+unit 1 on SCSI bus 0.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -9931,8 +10023,8 @@ a static MAC address and set accordingly. Setting this to `true` requires
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The [managed object reference
-ID][docs-about-morefs] of the network to connect this interface to.
+    <dd>{{% md %}}The managed object reference
+ID of the network to connect this interface to.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -9992,7 +10084,11 @@ this interface. Can be one of `low`, `normal`, `high`, or `custom`. Default:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}An address internal to this provider that helps locate the
+device when `key` is unavailable. This follows a convention of
+`CONTROLLER_TYPE:BUS_NUMBER:UNIT_NUMBER`. Example: `scsi:0:1` means device
+unit 1 on SCSI bus 0.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -10052,7 +10148,7 @@ a static MAC address and set accordingly. Setting this to `true` requires
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#VirtualMachineOvfDeployArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#VirtualMachineOvfDeployOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.VSphere.Inputs.VirtualMachineOvfDeployArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.VSphere.Outputs.VirtualMachineOvfDeploy.html">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.Inputs.VirtualMachineOvfDeployArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.Outputs.VirtualMachineOvfDeploy.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -10290,7 +10386,7 @@ a static MAC address and set accordingly. Setting this to `true` requires
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#VirtualMachineVappArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#VirtualMachineVappOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.VSphere.Inputs.VirtualMachineVappArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.VSphere.Outputs.VirtualMachineVapp.html">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.Inputs.VirtualMachineVappArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.Outputs.VirtualMachineVapp.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

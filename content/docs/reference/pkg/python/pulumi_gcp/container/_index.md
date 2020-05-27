@@ -20,7 +20,7 @@ anything, please consult the source <a class="reference external" href="https://
 
 <dl class="py class">
 <dt id="pulumi_gcp.container.AwaitableGetEngineVersionsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.container.</code><code class="sig-name descname">AwaitableGetEngineVersionsResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">default_cluster_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">latest_master_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">latest_node_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">valid_master_versions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">valid_node_versions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">version_prefix</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.AwaitableGetEngineVersionsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.container.</code><code class="sig-name descname">AwaitableGetEngineVersionsResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">default_cluster_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">latest_master_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">latest_node_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">release_channel_default_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">valid_master_versions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">valid_node_versions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">version_prefix</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.AwaitableGetEngineVersionsResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py class">
@@ -42,8 +42,70 @@ and <a class="reference external" href="https://cloud.google.com/kubernetes-engi
 <blockquote>
 <div><p><strong>Note:</strong> All arguments and attributes, including basic auth username and
 passwords as well as certificate outputs will be stored in the raw state as
-plaintext. <a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
+plaintext. <a class="reference external" href="https://www.pulumi.com/docs/intro/concepts/programming-model/#secrets">Read more about secrets in state</a>.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">primary</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">container</span><span class="o">.</span><span class="n">Cluster</span><span class="p">(</span><span class="s2">&quot;primary&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">remove_default_node_pool</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">initial_node_count</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">master_auth</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;client_certificate_config&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;issueClientCertificate&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">})</span>
+<span class="n">primary_preemptible_nodes</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">container</span><span class="o">.</span><span class="n">NodePool</span><span class="p">(</span><span class="s2">&quot;primaryPreemptibleNodes&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">cluster</span><span class="o">=</span><span class="n">primary</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">node_count</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">node_config</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;preemptible&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;machine_type&quot;</span><span class="p">:</span> <span class="s2">&quot;n1-standard-1&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;metadata&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;disable-legacy-endpoints&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;oauthScopes&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;https://www.googleapis.com/auth/logging.write&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;https://www.googleapis.com/auth/monitoring&quot;</span><span class="p">,</span>
+        <span class="p">],</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">primary</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">container</span><span class="o">.</span><span class="n">Cluster</span><span class="p">(</span><span class="s2">&quot;primary&quot;</span><span class="p">,</span>
+    <span class="n">initial_node_count</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="s2">&quot;us-central1-a&quot;</span><span class="p">,</span>
+    <span class="n">master_auth</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;clientCertificateConfig&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;issueClientCertificate&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">node_config</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;labels&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;foo&quot;</span><span class="p">:</span> <span class="s2">&quot;bar&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;metadata&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;disable-legacy-endpoints&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;oauthScopes&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;https://www.googleapis.com/auth/logging.write&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;https://www.googleapis.com/auth/monitoring&quot;</span><span class="p">,</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;tags&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;bar&quot;</span><span class="p">,</span>
+        <span class="p">],</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -121,8 +183,7 @@ current master version–use the read-only <code class="docutils literal notrans
 If unset, the cluster’s version will be set by GKE to the version of the most recent
 official release (which is not necessarily the latest version).  Most users will find
 the <code class="docutils literal notranslate"><span class="pre">container.getEngineVersions</span></code> data source useful - it indicates which versions
-are available, and can be use to approximate fuzzy versions in a
-provider-compatible way. If you intend to specify versions manually,
+are available. If you intend to specify versions manually,
 <a class="reference external" href="https://cloud.google.com/kubernetes-engine/versioning-and-upgrades#specifying_cluster_version">the docs</a>
 describe the various acceptable formats for this field.</p></li>
 <li><p><strong>monitoring_service</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The monitoring service that the cluster
@@ -143,8 +204,8 @@ feature. Structure is documented below.</p></li>
 <li><p><strong>node_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Parameters used in creating the default node pool.
 Generally, this field should not be used at the same time as a
 <code class="docutils literal notranslate"><span class="pre">container.NodePool</span></code> or a <code class="docutils literal notranslate"><span class="pre">node_pool</span></code> block; this configuration
-manages the default node pool, which isn’t recommended to be used with
-this provider. Structure is documented below.</p></li>
+manages the default node pool, which isn’t recommended to be used.
+Structure is documented below.</p></li>
 <li><p><strong>node_locations</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of zones in which the cluster’s nodes
 are located. Nodes must be in the region of their regional cluster or in the
 same region as their cluster’s zone for zonal clusters. If this is specified for
@@ -161,7 +222,7 @@ version set by GKE which is not necessarily the latest version. This only affect
 nodes in the default node pool. While a fuzzy version can be specified, it’s
 recommended that you specify explicit versions as the provider will see spurious diffs
 when fuzzy versions are used. See the <code class="docutils literal notranslate"><span class="pre">container.getEngineVersions</span></code> data source’s
-<code class="docutils literal notranslate"><span class="pre">version_prefix</span></code> field to approximate fuzzy versions in a provider-compatible way.
+<code class="docutils literal notranslate"><span class="pre">version_prefix</span></code> field to approximate fuzzy versions.
 To update nodes in other node pools, use the <code class="docutils literal notranslate"><span class="pre">version</span></code> attribute on the node pool.</p></li>
 <li><p><strong>pod_security_policy_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration for the
 <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/how-to/pod-security-policies">PodSecurityPolicy</a> feature.
@@ -170,9 +231,15 @@ Structure is documented below.</p></li>
 clusters with private nodes. Structure is documented below.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.</p></li>
-<li><p><strong>release_channel</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration options for the
-<a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/concepts/release-channels">Release channel</a>
-feature, which provide more control over automatic upgrades of your GKE clusters. Structure is documented below.</p></li>
+<li><p><strong>release_channel</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration options for the <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/concepts/release-channels">Release channel</a>
+feature, which provide more control over automatic upgrades of your GKE clusters.
+When updating this field, GKE imposes specific version requirements. See
+<a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/concepts/release-channels#migrating_between_release_channels">Migrating between release channels</a>
+for more details; the <code class="docutils literal notranslate"><span class="pre">container.getEngineVersions</span></code> datasource can provide
+the default version for a channel. Note that removing the <code class="docutils literal notranslate"><span class="pre">release_channel</span></code>
+field from your config will cause this provider to stop managing your cluster’s
+release channel, but will not unenroll it. Instead, use the <code class="docutils literal notranslate"><span class="pre">&quot;UNSPECIFIED&quot;</span></code>
+channel. Structure is documented below.</p></li>
 <li><p><strong>remove_default_node_pool</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If <code class="docutils literal notranslate"><span class="pre">true</span></code>, deletes the default node
 pool upon cluster creation. If you’re using <code class="docutils literal notranslate"><span class="pre">container.NodePool</span></code>
 resources with no default node pool, this should be set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, alongside
@@ -194,11 +261,18 @@ Structure is documented below.</p></li>
 <p>The <strong>addons_config</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">cloudrunConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - .
-The status of the CloudRun addon. It requires <code class="docutils literal notranslate"><span class="pre">istio_config</span></code> enabled. It is disabled by default.
-Set <code class="docutils literal notranslate"><span class="pre">disabled</span> <span class="pre">=</span> <span class="pre">false</span></code> to enable. This addon can only be enabled at cluster creation time.</p>
+The status of the CloudRun addon. It is disabled by default.
+Set <code class="docutils literal notranslate"><span class="pre">disabled</span> <span class="pre">=</span> <span class="pre">false</span></code> to enable.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">disabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - The status of the Istio addon, which makes it easy to set up Istio for services in a
 cluster. It is disabled by default. Set <code class="docutils literal notranslate"><span class="pre">disabled</span> <span class="pre">=</span> <span class="pre">false</span></code> to enable.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">configConnectorConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - .
+The status of the ConfigConnector addon. It is disabled by default; Set <code class="docutils literal notranslate"><span class="pre">enabled</span> <span class="pre">=</span> <span class="pre">true</span></code> to enable.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enable the PodSecurityPolicy controller for this cluster.
+If enabled, pods must be valid under a PodSecurityPolicy to be created.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">dnsCacheConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - .
@@ -243,6 +317,13 @@ Structure is documented below.</p>
 cluster. It is disabled by default. Set <code class="docutils literal notranslate"><span class="pre">disabled</span> <span class="pre">=</span> <span class="pre">false</span></code> to enable.</p></li>
 </ul>
 </li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kalmConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - .
+Configuration for the KALM addon, which manages the lifecycle of k8s. It is disabled by default; Set <code class="docutils literal notranslate"><span class="pre">enabled</span> <span class="pre">=</span> <span class="pre">true</span></code> to enable.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enable the PodSecurityPolicy controller for this cluster.
+If enabled, pods must be valid under a PodSecurityPolicy to be created.</p></li>
+</ul>
+</li>
 <li><p><code class="docutils literal notranslate"><span class="pre">networkPolicyConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Whether we should enable the network policy addon
 for the master.  This must be enabled in order to enable network policy for the nodes.
 To enable this, you must also define a <code class="docutils literal notranslate"><span class="pre">network_policy</span></code> block,
@@ -264,6 +345,11 @@ cluster. It is disabled by default. Set <code class="docutils literal notranslat
 <li><p><code class="docutils literal notranslate"><span class="pre">autoProvisioningDefaults</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Contains defaults for a node pool created by NAP.
 Structure is documented below.</p>
 <ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">min_cpu_platform</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Minimum CPU platform to be used by this instance.
+The instance may be scheduled on the specified or newer CPU platform. Applicable
+values are the friendly names of CPU platforms, such as <code class="docutils literal notranslate"><span class="pre">Intel</span> <span class="pre">Haswell</span></code>. See the
+<a class="reference external" href="https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform">official documentation</a>
+for more information.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">oauthScopes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The set of Google API scopes to be made available
 on all of the node VMs under the “default” service account. These can be
 either FQDNs, or scope aliases. The following scopes are necessary to ensure
@@ -275,7 +361,7 @@ In order to use the configured <code class="docutils literal notranslate"><span 
 <a class="reference external" href="https://cloud.google.com/iam/docs/understanding-roles#stackdriver_monitoring_roles">roles/monitoring.metricWriter</a> roles.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">autoscalingProfile</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Configuration
+<li><p><code class="docutils literal notranslate"><span class="pre">autoscalingProfile</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - ) Configuration
 options for the <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/concepts/cluster-autoscaler#autoscaling_profiles">Autoscaling profile</a>
 feature, which lets you choose whether the cluster autoscaler should optimize for resource utilization or resource availability
 when deciding to remove nodes from a cluster. Can be <code class="docutils literal notranslate"><span class="pre">BALANCED</span></code> or <code class="docutils literal notranslate"><span class="pre">OPTIMIZE_UTILIZATION</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">BALANCED</span></code>.</p></li>
@@ -487,8 +573,8 @@ location.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">node_config</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Parameters used in creating the default node pool.
 Generally, this field should not be used at the same time as a
 <code class="docutils literal notranslate"><span class="pre">container.NodePool</span></code> or a <code class="docutils literal notranslate"><span class="pre">node_pool</span></code> block; this configuration
-manages the default node pool, which isn’t recommended to be used with
-this provider. Structure is documented below.</p>
+manages the default node pool, which isn’t recommended to be used.
+Structure is documented below.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">bootDiskKmsKey</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Customer Managed Encryption Key used to encrypt the boot disk attached to each node in the node pool. This should be of the form projects/[KEY_PROJECT_ID]/locations/[LOCATION]/keyRings/[RING_NAME]/cryptoKeys/[KEY_NAME]. For more information about protecting resources with Cloud KMS Keys please see: <a class="reference external" href="https://cloud.google.com/compute/docs/disks/customer-managed-encryption">https://cloud.google.com/compute/docs/disks/customer-managed-encryption</a></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">disk_size_gb</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Size of the disk attached to each node, specified
@@ -659,11 +745,18 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.</p></li>
 Structure is documented below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">cloudrunConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - .
-The status of the CloudRun addon. It requires <code class="docutils literal notranslate"><span class="pre">istio_config</span></code> enabled. It is disabled by default.
-Set <code class="docutils literal notranslate"><span class="pre">disabled</span> <span class="pre">=</span> <span class="pre">false</span></code> to enable. This addon can only be enabled at cluster creation time.</p>
+The status of the CloudRun addon. It is disabled by default.
+Set <code class="docutils literal notranslate"><span class="pre">disabled</span> <span class="pre">=</span> <span class="pre">false</span></code> to enable.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">disabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - The status of the Istio addon, which makes it easy to set up Istio for services in a
 cluster. It is disabled by default. Set <code class="docutils literal notranslate"><span class="pre">disabled</span> <span class="pre">=</span> <span class="pre">false</span></code> to enable.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">configConnectorConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - .
+The status of the ConfigConnector addon. It is disabled by default; Set <code class="docutils literal notranslate"><span class="pre">enabled</span> <span class="pre">=</span> <span class="pre">true</span></code> to enable.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Enable the PodSecurityPolicy controller for this cluster.
+If enabled, pods must be valid under a PodSecurityPolicy to be created.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">dnsCacheConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - .
@@ -708,6 +801,13 @@ Structure is documented below.</p>
 cluster. It is disabled by default. Set <code class="docutils literal notranslate"><span class="pre">disabled</span> <span class="pre">=</span> <span class="pre">false</span></code> to enable.</p></li>
 </ul>
 </li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kalmConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - .
+Configuration for the KALM addon, which manages the lifecycle of k8s. It is disabled by default; Set <code class="docutils literal notranslate"><span class="pre">enabled</span> <span class="pre">=</span> <span class="pre">true</span></code> to enable.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Enable the PodSecurityPolicy controller for this cluster.
+If enabled, pods must be valid under a PodSecurityPolicy to be created.</p></li>
+</ul>
+</li>
 <li><p><code class="docutils literal notranslate"><span class="pre">networkPolicyConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Whether we should enable the network policy addon
 for the master.  This must be enabled in order to enable network policy for the nodes.
 To enable this, you must also define a <code class="docutils literal notranslate"><span class="pre">network_policy</span></code> block,
@@ -745,6 +845,11 @@ for more details. Structure is documented below.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">autoProvisioningDefaults</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Contains defaults for a node pool created by NAP.
 Structure is documented below.</p>
 <ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">min_cpu_platform</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Minimum CPU platform to be used by this instance.
+The instance may be scheduled on the specified or newer CPU platform. Applicable
+values are the friendly names of CPU platforms, such as <code class="docutils literal notranslate"><span class="pre">Intel</span> <span class="pre">Haswell</span></code>. See the
+<a class="reference external" href="https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform">official documentation</a>
+for more information.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">oauthScopes</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - The set of Google API scopes to be made available
 on all of the node VMs under the “default” service account. These can be
 either FQDNs, or scope aliases. The following scopes are necessary to ensure
@@ -756,7 +861,7 @@ In order to use the configured <code class="docutils literal notranslate"><span 
 <a class="reference external" href="https://cloud.google.com/iam/docs/understanding-roles#stackdriver_monitoring_roles">roles/monitoring.metricWriter</a> roles.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">autoscalingProfile</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Configuration
+<li><p><code class="docutils literal notranslate"><span class="pre">autoscalingProfile</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - ) Configuration
 options for the <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/concepts/cluster-autoscaler#autoscaling_profiles">Autoscaling profile</a>
 feature, which lets you choose whether the cluster autoscaler should optimize for resource utilization or resource availability
 when deciding to remove nodes from a cluster. Can be <code class="docutils literal notranslate"><span class="pre">BALANCED</span></code> or <code class="docutils literal notranslate"><span class="pre">OPTIMIZE_UTILIZATION</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">BALANCED</span></code>.</p></li>
@@ -1017,8 +1122,7 @@ current master version–use the read-only <code class="docutils literal notrans
 If unset, the cluster’s version will be set by GKE to the version of the most recent
 official release (which is not necessarily the latest version).  Most users will find
 the <code class="docutils literal notranslate"><span class="pre">container.getEngineVersions</span></code> data source useful - it indicates which versions
-are available, and can be use to approximate fuzzy versions in a
-provider-compatible way. If you intend to specify versions manually,
+are available. If you intend to specify versions manually,
 <a class="reference external" href="https://cloud.google.com/kubernetes-engine/versioning-and-upgrades#specifying_cluster_version">the docs</a>
 describe the various acceptable formats for this field.</p>
 </dd></dl>
@@ -1069,8 +1173,8 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.</p></li>
 <dd><p>Parameters used in creating the default node pool.
 Generally, this field should not be used at the same time as a
 <code class="docutils literal notranslate"><span class="pre">container.NodePool</span></code> or a <code class="docutils literal notranslate"><span class="pre">node_pool</span></code> block; this configuration
-manages the default node pool, which isn’t recommended to be used with
-this provider. Structure is documented below.</p>
+manages the default node pool, which isn’t recommended to be used.
+Structure is documented below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">bootDiskKmsKey</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Customer Managed Encryption Key used to encrypt the boot disk attached to each node in the node pool. This should be of the form projects/[KEY_PROJECT_ID]/locations/[LOCATION]/keyRings/[RING_NAME]/cryptoKeys/[KEY_NAME]. For more information about protecting resources with Cloud KMS Keys please see: <a class="reference external" href="https://cloud.google.com/compute/docs/disks/customer-managed-encryption">https://cloud.google.com/compute/docs/disks/customer-managed-encryption</a></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">disk_size_gb</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Size of the disk attached to each node, specified
@@ -1206,8 +1310,8 @@ location.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">node_config</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Parameters used in creating the default node pool.
 Generally, this field should not be used at the same time as a
 <code class="docutils literal notranslate"><span class="pre">container.NodePool</span></code> or a <code class="docutils literal notranslate"><span class="pre">node_pool</span></code> block; this configuration
-manages the default node pool, which isn’t recommended to be used with
-this provider. Structure is documented below.</p>
+manages the default node pool, which isn’t recommended to be used.
+Structure is documented below.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">bootDiskKmsKey</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Customer Managed Encryption Key used to encrypt the boot disk attached to each node in the node pool. This should be of the form projects/[KEY_PROJECT_ID]/locations/[LOCATION]/keyRings/[RING_NAME]/cryptoKeys/[KEY_NAME]. For more information about protecting resources with Cloud KMS Keys please see: <a class="reference external" href="https://cloud.google.com/compute/docs/disks/customer-managed-encryption">https://cloud.google.com/compute/docs/disks/customer-managed-encryption</a></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">disk_size_gb</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Size of the disk attached to each node, specified
@@ -1320,7 +1424,7 @@ version set by GKE which is not necessarily the latest version. This only affect
 nodes in the default node pool. While a fuzzy version can be specified, it’s
 recommended that you specify explicit versions as the provider will see spurious diffs
 when fuzzy versions are used. See the <code class="docutils literal notranslate"><span class="pre">container.getEngineVersions</span></code> data source’s
-<code class="docutils literal notranslate"><span class="pre">version_prefix</span></code> field to approximate fuzzy versions in a provider-compatible way.
+<code class="docutils literal notranslate"><span class="pre">version_prefix</span></code> field to approximate fuzzy versions.
 To update nodes in other node pools, use the <code class="docutils literal notranslate"><span class="pre">version</span></code> attribute on the node pool.</p>
 </dd></dl>
 
@@ -1373,9 +1477,15 @@ is not provided, the provider project is used.</p>
 <dl class="py attribute">
 <dt id="pulumi_gcp.container.Cluster.release_channel">
 <code class="sig-name descname">release_channel</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.release_channel" title="Permalink to this definition">¶</a></dt>
-<dd><p>Configuration options for the
-<a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/concepts/release-channels">Release channel</a>
-feature, which provide more control over automatic upgrades of your GKE clusters. Structure is documented below.</p>
+<dd><p>Configuration options for the <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/concepts/release-channels">Release channel</a>
+feature, which provide more control over automatic upgrades of your GKE clusters.
+When updating this field, GKE imposes specific version requirements. See
+<a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/concepts/release-channels#migrating_between_release_channels">Migrating between release channels</a>
+for more details; the <code class="docutils literal notranslate"><span class="pre">container.getEngineVersions</span></code> datasource can provide
+the default version for a channel. Note that removing the <code class="docutils literal notranslate"><span class="pre">release_channel</span></code>
+field from your config will cause this provider to stop managing your cluster’s
+release channel, but will not unenroll it. Instead, use the <code class="docutils literal notranslate"><span class="pre">&quot;UNSPECIFIED&quot;</span></code>
+channel. Structure is documented below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">channel</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The selected release channel.
 Accepted values are:</p>
@@ -1445,7 +1555,7 @@ subnetwork in which the cluster’s instances are launched.</p>
 <dl class="py attribute">
 <dt id="pulumi_gcp.container.Cluster.tpu_ipv4_cidr_block">
 <code class="sig-name descname">tpu_ipv4_cidr_block</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.tpu_ipv4_cidr_block" title="Permalink to this definition">¶</a></dt>
-<dd><p>(Optional) The IP address range of the Cloud TPUs in this cluster, in
+<dd><p>The IP address range of the Cloud TPUs in this cluster, in
 <a class="reference external" href="http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing">CIDR</a>
 notation (e.g. <code class="docutils literal notranslate"><span class="pre">1.2.3.4/29</span></code>).</p>
 </dd></dl>
@@ -1566,8 +1676,7 @@ current master version–use the read-only <code class="docutils literal notrans
 If unset, the cluster’s version will be set by GKE to the version of the most recent
 official release (which is not necessarily the latest version).  Most users will find
 the <code class="docutils literal notranslate"><span class="pre">container.getEngineVersions</span></code> data source useful - it indicates which versions
-are available, and can be use to approximate fuzzy versions in a
-provider-compatible way. If you intend to specify versions manually,
+are available. If you intend to specify versions manually,
 <a class="reference external" href="https://cloud.google.com/kubernetes-engine/versioning-and-upgrades#specifying_cluster_version">the docs</a>
 describe the various acceptable formats for this field.</p>
 </p></li>
@@ -1590,8 +1699,8 @@ feature. Structure is documented below.</p>
 <li><p><strong>node_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Parameters used in creating the default node pool.
 Generally, this field should not be used at the same time as a
 <code class="docutils literal notranslate"><span class="pre">container.NodePool</span></code> or a <code class="docutils literal notranslate"><span class="pre">node_pool</span></code> block; this configuration
-manages the default node pool, which isn’t recommended to be used with
-this provider. Structure is documented below.</p></li>
+manages the default node pool, which isn’t recommended to be used.
+Structure is documented below.</p></li>
 <li><p><strong>node_locations</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of zones in which the cluster’s nodes
 are located. Nodes must be in the region of their regional cluster or in the
 same region as their cluster’s zone for zonal clusters. If this is specified for
@@ -1608,7 +1717,7 @@ version set by GKE which is not necessarily the latest version. This only affect
 nodes in the default node pool. While a fuzzy version can be specified, it’s
 recommended that you specify explicit versions as the provider will see spurious diffs
 when fuzzy versions are used. See the <code class="docutils literal notranslate"><span class="pre">container.getEngineVersions</span></code> data source’s
-<code class="docutils literal notranslate"><span class="pre">version_prefix</span></code> field to approximate fuzzy versions in a provider-compatible way.
+<code class="docutils literal notranslate"><span class="pre">version_prefix</span></code> field to approximate fuzzy versions.
 To update nodes in other node pools, use the <code class="docutils literal notranslate"><span class="pre">version</span></code> attribute on the node pool.</p></li>
 <li><p><strong>pod_security_policy_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>Configuration for the
 <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/how-to/pod-security-policies">PodSecurityPolicy</a> feature.
@@ -1619,9 +1728,15 @@ clusters with private nodes. Structure is documented below.</p>
 </p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.</p></li>
-<li><p><strong>release_channel</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>Configuration options for the
-<a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/concepts/release-channels">Release channel</a>
-feature, which provide more control over automatic upgrades of your GKE clusters. Structure is documented below.</p>
+<li><p><strong>release_channel</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>Configuration options for the <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/concepts/release-channels">Release channel</a>
+feature, which provide more control over automatic upgrades of your GKE clusters.
+When updating this field, GKE imposes specific version requirements. See
+<a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/concepts/release-channels#migrating_between_release_channels">Migrating between release channels</a>
+for more details; the <code class="docutils literal notranslate"><span class="pre">container.getEngineVersions</span></code> datasource can provide
+the default version for a channel. Note that removing the <code class="docutils literal notranslate"><span class="pre">release_channel</span></code>
+field from your config will cause this provider to stop managing your cluster’s
+release channel, but will not unenroll it. Instead, use the <code class="docutils literal notranslate"><span class="pre">&quot;UNSPECIFIED&quot;</span></code>
+channel. Structure is documented below.</p>
 </p></li>
 <li><p><strong>remove_default_node_pool</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If <code class="docutils literal notranslate"><span class="pre">true</span></code>, deletes the default node
 pool upon cluster creation. If you’re using <code class="docutils literal notranslate"><span class="pre">container.NodePool</span></code>
@@ -1639,7 +1754,7 @@ notation (e.g. <code class="docutils literal notranslate"><span class="pre">1.2.
 </p></li>
 <li><p><strong>subnetwork</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name or self_link of the Google Compute Engine
 subnetwork in which the cluster’s instances are launched.</p></li>
-<li><p><strong>tpu_ipv4_cidr_block</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>(Optional) The IP address range of the Cloud TPUs in this cluster, in
+<li><p><strong>tpu_ipv4_cidr_block</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The IP address range of the Cloud TPUs in this cluster, in
 <a class="reference external" href="http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing">CIDR</a>
 notation (e.g. <code class="docutils literal notranslate"><span class="pre">1.2.3.4/29</span></code>).</p>
 </p></li>
@@ -1655,11 +1770,18 @@ Structure is documented below.</p>
 <p>The <strong>addons_config</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">cloudrunConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - .
-The status of the CloudRun addon. It requires <code class="docutils literal notranslate"><span class="pre">istio_config</span></code> enabled. It is disabled by default.
-Set <code class="docutils literal notranslate"><span class="pre">disabled</span> <span class="pre">=</span> <span class="pre">false</span></code> to enable. This addon can only be enabled at cluster creation time.</p>
+The status of the CloudRun addon. It is disabled by default.
+Set <code class="docutils literal notranslate"><span class="pre">disabled</span> <span class="pre">=</span> <span class="pre">false</span></code> to enable.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">disabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - The status of the Istio addon, which makes it easy to set up Istio for services in a
 cluster. It is disabled by default. Set <code class="docutils literal notranslate"><span class="pre">disabled</span> <span class="pre">=</span> <span class="pre">false</span></code> to enable.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">configConnectorConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - .
+The status of the ConfigConnector addon. It is disabled by default; Set <code class="docutils literal notranslate"><span class="pre">enabled</span> <span class="pre">=</span> <span class="pre">true</span></code> to enable.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enable the PodSecurityPolicy controller for this cluster.
+If enabled, pods must be valid under a PodSecurityPolicy to be created.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">dnsCacheConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - .
@@ -1704,6 +1826,13 @@ Structure is documented below.</p>
 cluster. It is disabled by default. Set <code class="docutils literal notranslate"><span class="pre">disabled</span> <span class="pre">=</span> <span class="pre">false</span></code> to enable.</p></li>
 </ul>
 </li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kalmConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - .
+Configuration for the KALM addon, which manages the lifecycle of k8s. It is disabled by default; Set <code class="docutils literal notranslate"><span class="pre">enabled</span> <span class="pre">=</span> <span class="pre">true</span></code> to enable.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enable the PodSecurityPolicy controller for this cluster.
+If enabled, pods must be valid under a PodSecurityPolicy to be created.</p></li>
+</ul>
+</li>
 <li><p><code class="docutils literal notranslate"><span class="pre">networkPolicyConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Whether we should enable the network policy addon
 for the master.  This must be enabled in order to enable network policy for the nodes.
 To enable this, you must also define a <code class="docutils literal notranslate"><span class="pre">network_policy</span></code> block,
@@ -1725,6 +1854,11 @@ cluster. It is disabled by default. Set <code class="docutils literal notranslat
 <li><p><code class="docutils literal notranslate"><span class="pre">autoProvisioningDefaults</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Contains defaults for a node pool created by NAP.
 Structure is documented below.</p>
 <ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">min_cpu_platform</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Minimum CPU platform to be used by this instance.
+The instance may be scheduled on the specified or newer CPU platform. Applicable
+values are the friendly names of CPU platforms, such as <code class="docutils literal notranslate"><span class="pre">Intel</span> <span class="pre">Haswell</span></code>. See the
+<a class="reference external" href="https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform">official documentation</a>
+for more information.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">oauthScopes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The set of Google API scopes to be made available
 on all of the node VMs under the “default” service account. These can be
 either FQDNs, or scope aliases. The following scopes are necessary to ensure
@@ -1736,7 +1870,7 @@ In order to use the configured <code class="docutils literal notranslate"><span 
 <a class="reference external" href="https://cloud.google.com/iam/docs/understanding-roles#stackdriver_monitoring_roles">roles/monitoring.metricWriter</a> roles.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">autoscalingProfile</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Configuration
+<li><p><code class="docutils literal notranslate"><span class="pre">autoscalingProfile</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - ) Configuration
 options for the <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/concepts/cluster-autoscaler#autoscaling_profiles">Autoscaling profile</a>
 feature, which lets you choose whether the cluster autoscaler should optimize for resource utilization or resource availability
 when deciding to remove nodes from a cluster. Can be <code class="docutils literal notranslate"><span class="pre">BALANCED</span></code> or <code class="docutils literal notranslate"><span class="pre">OPTIMIZE_UTILIZATION</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">BALANCED</span></code>.</p></li>
@@ -1948,8 +2082,8 @@ location.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">node_config</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Parameters used in creating the default node pool.
 Generally, this field should not be used at the same time as a
 <code class="docutils literal notranslate"><span class="pre">container.NodePool</span></code> or a <code class="docutils literal notranslate"><span class="pre">node_pool</span></code> block; this configuration
-manages the default node pool, which isn’t recommended to be used with
-this provider. Structure is documented below.</p>
+manages the default node pool, which isn’t recommended to be used.
+Structure is documented below.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">bootDiskKmsKey</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Customer Managed Encryption Key used to encrypt the boot disk attached to each node in the node pool. This should be of the form projects/[KEY_PROJECT_ID]/locations/[LOCATION]/keyRings/[RING_NAME]/cryptoKeys/[KEY_NAME]. For more information about protecting resources with Cloud KMS Keys please see: <a class="reference external" href="https://cloud.google.com/compute/docs/disks/customer-managed-encryption">https://cloud.google.com/compute/docs/disks/customer-managed-encryption</a></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">disk_size_gb</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Size of the disk attached to each node, specified
@@ -2167,7 +2301,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_gcp.container.GetEngineVersionsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.container.</code><code class="sig-name descname">GetEngineVersionsResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">default_cluster_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">latest_master_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">latest_node_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">valid_master_versions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">valid_node_versions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">version_prefix</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.GetEngineVersionsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.container.</code><code class="sig-name descname">GetEngineVersionsResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">default_cluster_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">latest_master_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">latest_node_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">release_channel_default_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">valid_master_versions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">valid_node_versions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">version_prefix</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.GetEngineVersionsResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getEngineVersions.</p>
 <dl class="py attribute">
 <dt id="pulumi_gcp.container.GetEngineVersionsResult.default_cluster_version">
@@ -2191,6 +2325,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_gcp.container.GetEngineVersionsResult.latest_node_version">
 <code class="sig-name descname">latest_node_version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.GetEngineVersionsResult.latest_node_version" title="Permalink to this definition">¶</a></dt>
 <dd><p>The latest version available in the given zone for use with node instances.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_gcp.container.GetEngineVersionsResult.release_channel_default_version">
+<code class="sig-name descname">release_channel_default_version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.GetEngineVersionsResult.release_channel_default_version" title="Permalink to this definition">¶</a></dt>
+<dd><p>A map from a release channel name to the channel’s default version.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -2237,6 +2377,64 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Manages a node pool in a Google Kubernetes Engine (GKE) cluster separately from
 the cluster control plane. For more information see <a class="reference external" href="https://cloud.google.com/container-engine/docs/node-pools">the official documentation</a>
 and <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1beta1/projects.locations.clusters.nodePools">the API reference</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">primary</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">container</span><span class="o">.</span><span class="n">Cluster</span><span class="p">(</span><span class="s2">&quot;primary&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">remove_default_node_pool</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">initial_node_count</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">primary_preemptible_nodes</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">container</span><span class="o">.</span><span class="n">NodePool</span><span class="p">(</span><span class="s2">&quot;primaryPreemptibleNodes&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">cluster</span><span class="o">=</span><span class="n">primary</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">node_count</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">node_config</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;preemptible&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;machine_type&quot;</span><span class="p">:</span> <span class="s2">&quot;n1-standard-1&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;oauthScopes&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;https://www.googleapis.com/auth/logging.write&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;https://www.googleapis.com/auth/monitoring&quot;</span><span class="p">,</span>
+        <span class="p">],</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">primary</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">container</span><span class="o">.</span><span class="n">Cluster</span><span class="p">(</span><span class="s2">&quot;primary&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="s2">&quot;us-central1-a&quot;</span><span class="p">,</span>
+    <span class="n">initial_node_count</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+    <span class="n">node_locations</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;us-central1-c&quot;</span><span class="p">],</span>
+    <span class="n">master_auth</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;client_certificate_config&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;issueClientCertificate&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
+    <span class="n">node_config</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;oauthScopes&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;https://www.googleapis.com/auth/logging.write&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;https://www.googleapis.com/auth/monitoring&quot;</span><span class="p">,</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;metadata&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;disable-legacy-endpoints&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;guest_accelerator&quot;</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;nvidia-tesla-k80&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;count&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="p">}],</span>
+    <span class="p">})</span>
+<span class="n">np</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">container</span><span class="o">.</span><span class="n">NodePool</span><span class="p">(</span><span class="s2">&quot;np&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="s2">&quot;us-central1-a&quot;</span><span class="p">,</span>
+    <span class="n">cluster</span><span class="o">=</span><span class="n">primary</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">node_count</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+    <span class="n">timeouts</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;create&quot;</span><span class="p">:</span> <span class="s2">&quot;30m&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;update&quot;</span><span class="p">:</span> <span class="s2">&quot;20m&quot;</span><span class="p">,</span>
+    <span class="p">}])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2685,6 +2883,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.container.</code><code class="sig-name descname">Registry</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.Registry" title="Permalink to this definition">¶</a></dt>
 <dd><p>Ensures that the Google Cloud Storage bucket that backs Google Container Registry exists. Creating this resource will create the backing bucket if it does not exist, or do nothing if the bucket already exists. Destroying this resource does <em>NOT</em> destroy the backing bucket. For more information see <a class="reference external" href="https://cloud.google.com/container-registry/docs/overview">the official documentation</a></p>
 <p>This resource can be used to ensure that the GCS bucket exists prior to assigning permissions. For more information see the <a class="reference external" href="https://cloud.google.com/container-registry/docs/access-control">access control page</a> for GCR.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">registry</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">container</span><span class="o">.</span><span class="n">Registry</span><span class="p">(</span><span class="s2">&quot;registry&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="s2">&quot;EU&quot;</span><span class="p">,</span>
+    <span class="n">project</span><span class="o">=</span><span class="s2">&quot;my-project&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2776,6 +2982,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_gcp.container.get_cluster">
 <code class="sig-prename descclassname">pulumi_gcp.container.</code><code class="sig-name descname">get_cluster</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.get_cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get info about a GKE cluster from its name and location.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">my_cluster</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">container</span><span class="o">.</span><span class="n">get_cluster</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;my-cluster&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="s2">&quot;us-east1-a&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;clusterUsername&quot;</span><span class="p">,</span> <span class="n">my_cluster</span><span class="o">.</span><span class="n">master_auths</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;username&quot;</span><span class="p">])</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;clusterPassword&quot;</span><span class="p">,</span> <span class="n">my_cluster</span><span class="o">.</span><span class="n">master_auths</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;password&quot;</span><span class="p">])</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;endpoint&quot;</span><span class="p">,</span> <span class="n">my_cluster</span><span class="o">.</span><span class="n">endpoint</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;instanceGroupUrls&quot;</span><span class="p">,</span> <span class="n">my_cluster</span><span class="o">.</span><span class="n">instance_group_urls</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;nodeConfig&quot;</span><span class="p">,</span> <span class="n">my_cluster</span><span class="o">.</span><span class="n">node_configs</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;nodePools&quot;</span><span class="p">,</span> <span class="n">my_cluster</span><span class="o">.</span><span class="n">node_pools</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2805,6 +3024,22 @@ the datasource. A region can have a different set of supported versions than
 its component zones, and not all zones in a region are guaranteed to
 support the same version.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">central1b</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">container</span><span class="o">.</span><span class="n">get_engine_versions</span><span class="p">(</span><span class="n">location</span><span class="o">=</span><span class="s2">&quot;us-central1-b&quot;</span><span class="p">,</span>
+    <span class="n">version_prefix</span><span class="o">=</span><span class="s2">&quot;1.12.&quot;</span><span class="p">)</span>
+<span class="n">foo</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">container</span><span class="o">.</span><span class="n">Cluster</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="s2">&quot;us-central1-b&quot;</span><span class="p">,</span>
+    <span class="n">node_version</span><span class="o">=</span><span class="n">central1b</span><span class="o">.</span><span class="n">latest_node_version</span><span class="p">,</span>
+    <span class="n">initial_node_count</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">master_auth</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;mr.yoda&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;adoy.rm&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;stableChannelVersion&quot;</span><span class="p">,</span> <span class="n">central1b</span><span class="o">.</span><span class="n">release_channel_default_version</span><span class="p">[</span><span class="s2">&quot;STABLE&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2830,6 +3065,13 @@ for full details on how version strings are formatted.</p></li>
 <code class="sig-prename descclassname">pulumi_gcp.container.</code><code class="sig-name descname">get_registry_image</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">digest</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tag</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.get_registry_image" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source fetches the project name, and provides the appropriate URLs to use for container registry for this project.</p>
 <p>The URLs are computed entirely offline - as long as the project exists, they will be valid, but this data source does not contact Google Container Registry (GCR) at any point.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">debian</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">container</span><span class="o">.</span><span class="n">get_registry_image</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;debian&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;gcrLocation&quot;</span><span class="p">,</span> <span class="n">debian</span><span class="o">.</span><span class="n">image_url</span><span class="p">)</span>
+</pre></div>
+</div>
 </dd></dl>
 
 <dl class="py function">
@@ -2837,6 +3079,13 @@ for full details on how version strings are formatted.</p></li>
 <code class="sig-prename descclassname">pulumi_gcp.container.</code><code class="sig-name descname">get_registry_repository</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.get_registry_repository" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source fetches the project name, and provides the appropriate URLs to use for container registry for this project.</p>
 <p>The URLs are computed entirely offline - as long as the project exists, they will be valid, but this data source does not contact Google Container Registry (GCR) at any point.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">foo</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">container</span><span class="o">.</span><span class="n">get_registry_repository</span><span class="p">()</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;gcrLocation&quot;</span><span class="p">,</span> <span class="n">foo</span><span class="o">.</span><span class="n">repository_url</span><span class="p">)</span>
+</pre></div>
+</div>
 </dd></dl>
 
 </div>

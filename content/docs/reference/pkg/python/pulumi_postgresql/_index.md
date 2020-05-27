@@ -19,6 +19,17 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">.Database</span></code> resource creates and manages <a class="reference external" href="https://www.postgresql.org/docs/current/static/managing-databases.html">database
 objects</a>
 within a PostgreSQL server instance.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_postgresql</span> <span class="k">as</span> <span class="nn">postgresql</span>
+
+<span class="n">my_db</span> <span class="o">=</span> <span class="n">postgresql</span><span class="o">.</span><span class="n">Database</span><span class="p">(</span><span class="s2">&quot;myDb&quot;</span><span class="p">,</span>
+    <span class="n">allow_connections</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">connection_limit</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">lc_collate</span><span class="o">=</span><span class="s2">&quot;C&quot;</span><span class="p">,</span>
+    <span class="n">owner</span><span class="o">=</span><span class="s2">&quot;my_role&quot;</span><span class="p">,</span>
+    <span class="n">template</span><span class="o">=</span><span class="s2">&quot;template0&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -203,7 +214,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_postgresql.DefaultPrivileg">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_postgresql.</code><code class="sig-name descname">DefaultPrivileg</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">database</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">object_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">owner</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">privileges</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">schema</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_postgresql.DefaultPrivileg" title="Permalink to this definition">¶</a></dt>
-<dd><p>Deprecated: postgresql.DefaultPrivileg has been deprecated in favour of postgresql.DefaultPrivileges</p>
+<dd><p>Deprecated: postgresql.DefaultPrivileg has been deprecated in favor of postgresql.DefaultPrivileges</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -321,6 +332,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>Note:</strong> This resource needs Postgresql version 9 or above.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_postgresql</span> <span class="k">as</span> <span class="nn">postgresql</span>
+
+<span class="n">read_only_tables</span> <span class="o">=</span> <span class="n">postgresql</span><span class="o">.</span><span class="n">DefaultPrivileges</span><span class="p">(</span><span class="s2">&quot;readOnlyTables&quot;</span><span class="p">,</span>
+    <span class="n">database</span><span class="o">=</span><span class="s2">&quot;test_db&quot;</span><span class="p">,</span>
+    <span class="n">object_type</span><span class="o">=</span><span class="s2">&quot;table&quot;</span><span class="p">,</span>
+    <span class="n">owner</span><span class="o">=</span><span class="s2">&quot;db_owner&quot;</span><span class="p">,</span>
+    <span class="n">privileges</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;SELECT&quot;</span><span class="p">],</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;test_role&quot;</span><span class="p">,</span>
+    <span class="n">schema</span><span class="o">=</span><span class="s2">&quot;public&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -436,6 +459,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_postgresql.</code><code class="sig-name descname">Extension</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">database</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">schema</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_postgresql.Extension" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">.Extension</span></code> resource creates and manages an extension on a PostgreSQL
 server.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_postgresql</span> <span class="k">as</span> <span class="nn">postgresql</span>
+
+<span class="n">my_extension</span> <span class="o">=</span> <span class="n">postgresql</span><span class="o">.</span><span class="n">Extension</span><span class="p">(</span><span class="s2">&quot;myExtension&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -537,6 +566,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>Note:</strong> This resource needs Postgresql version 9 or above.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_postgresql</span> <span class="k">as</span> <span class="nn">postgresql</span>
+
+<span class="n">readonly_tables</span> <span class="o">=</span> <span class="n">postgresql</span><span class="o">.</span><span class="n">Grant</span><span class="p">(</span><span class="s2">&quot;readonlyTables&quot;</span><span class="p">,</span>
+    <span class="n">database</span><span class="o">=</span><span class="s2">&quot;test_db&quot;</span><span class="p">,</span>
+    <span class="n">object_type</span><span class="o">=</span><span class="s2">&quot;table&quot;</span><span class="p">,</span>
+    <span class="n">privileges</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;SELECT&quot;</span><span class="p">],</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;test_role&quot;</span><span class="p">,</span>
+    <span class="n">schema</span><span class="o">=</span><span class="s2">&quot;public&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -723,6 +763,19 @@ and all but the final <code class="docutils literal notranslate"><span class="pr
 <div><p><strong>Note:</strong> All arguments including role name and password will be stored in the raw state as plain-text.
 <a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_postgresql</span> <span class="k">as</span> <span class="nn">postgresql</span>
+
+<span class="n">my_role</span> <span class="o">=</span> <span class="n">postgresql</span><span class="o">.</span><span class="n">Role</span><span class="p">(</span><span class="s2">&quot;myRole&quot;</span><span class="p">,</span>
+    <span class="n">login</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">password</span><span class="o">=</span><span class="s2">&quot;mypass&quot;</span><span class="p">)</span>
+<span class="n">my_replication_role</span> <span class="o">=</span> <span class="n">postgresql</span><span class="o">.</span><span class="n">Role</span><span class="p">(</span><span class="s2">&quot;myReplicationRole&quot;</span><span class="p">,</span>
+    <span class="n">connection_limit</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+    <span class="n">login</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">password</span><span class="o">=</span><span class="s2">&quot;md5c98cbfeb6a347a47eb8e96cfb4c4b890&quot;</span><span class="p">,</span>
+    <span class="n">replication</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1042,6 +1095,32 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">.Schema</span></code> resource creates and manages <a class="reference external" href="https://www.postgresql.org/docs/current/static/ddl-schemas.html">schema
 objects</a> within
 a PostgreSQL database.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_postgresql</span> <span class="k">as</span> <span class="nn">postgresql</span>
+
+<span class="n">app_www</span> <span class="o">=</span> <span class="n">postgresql</span><span class="o">.</span><span class="n">Role</span><span class="p">(</span><span class="s2">&quot;appWww&quot;</span><span class="p">)</span>
+<span class="n">app_dba</span> <span class="o">=</span> <span class="n">postgresql</span><span class="o">.</span><span class="n">Role</span><span class="p">(</span><span class="s2">&quot;appDba&quot;</span><span class="p">)</span>
+<span class="n">app_releng</span> <span class="o">=</span> <span class="n">postgresql</span><span class="o">.</span><span class="n">Role</span><span class="p">(</span><span class="s2">&quot;appReleng&quot;</span><span class="p">)</span>
+<span class="n">my_schema</span> <span class="o">=</span> <span class="n">postgresql</span><span class="o">.</span><span class="n">Schema</span><span class="p">(</span><span class="s2">&quot;mySchema&quot;</span><span class="p">,</span>
+    <span class="n">owner</span><span class="o">=</span><span class="s2">&quot;postgres&quot;</span><span class="p">,</span>
+    <span class="n">policies</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="n">app_www</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+            <span class="s2">&quot;usage&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;create&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+            <span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="n">app_releng</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+            <span class="s2">&quot;usage&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;createWithGrant&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+            <span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="n">app_dba</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+            <span class="s2">&quot;usageWithGrant&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

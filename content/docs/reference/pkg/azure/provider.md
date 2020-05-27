@@ -22,19 +22,19 @@ construction to achieve fine-grained programmatic control over provider settings
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/#Provider">Provider</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/#ProviderArgs">ProviderArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/#Provider">Provider</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/#ProviderArgs">ProviderArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Provider</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>auxiliary_tenant_ids=None<span class="p">, </span>client_certificate_password=None<span class="p">, </span>client_certificate_path=None<span class="p">, </span>client_id=None<span class="p">, </span>client_secret=None<span class="p">, </span>disable_correlation_request_id=None<span class="p">, </span>disable_terraform_partner_id=None<span class="p">, </span>environment=None<span class="p">, </span>features=None<span class="p">, </span>msi_endpoint=None<span class="p">, </span>partner_id=None<span class="p">, </span>skip_credentials_validation=None<span class="p">, </span>skip_provider_registration=None<span class="p">, </span>storage_use_azuread=None<span class="p">, </span>subscription_id=None<span class="p">, </span>tenant_id=None<span class="p">, </span>use_msi=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/azure/#Provider">Provider</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>auxiliary_tenant_ids=None<span class="p">, </span>client_certificate_password=None<span class="p">, </span>client_certificate_path=None<span class="p">, </span>client_id=None<span class="p">, </span>client_secret=None<span class="p">, </span>disable_correlation_request_id=None<span class="p">, </span>disable_terraform_partner_id=None<span class="p">, </span>environment=None<span class="p">, </span>features=None<span class="p">, </span>msi_endpoint=None<span class="p">, </span>partner_id=None<span class="p">, </span>skip_credentials_validation=None<span class="p">, </span>skip_provider_registration=None<span class="p">, </span>storage_use_azuread=None<span class="p">, </span>subscription_id=None<span class="p">, </span>tenant_id=None<span class="p">, </span>use_msi=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewProvider<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/?tab=doc#ProviderArgs">ProviderArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/?tab=doc#Provider">Provider</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/?tab=doc#Provider">NewProvider</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/?tab=doc#ProviderArgs">ProviderArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/?tab=doc#Provider">Provider</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Provider.html">Provider</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Pulumi.AzureArgs.html">ProviderArgs</a></span>? <span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Provider.html">Provider</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Pulumi.AzureArgs.html">ProviderArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -200,7 +200,9 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Auxiliary<wbr>Tenant<wbr>Ids</span>
+        <span id="auxiliarytenantids_csharp">
+<a href="#auxiliarytenantids_csharp" style="color: inherit; text-decoration: inherit;">Auxiliary<wbr>Tenant<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -208,7 +210,9 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Client<wbr>Certificate<wbr>Password</span>
+        <span id="clientcertificatepassword_csharp">
+<a href="#clientcertificatepassword_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Certificate<wbr>Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -218,7 +222,9 @@ Certificate
 
     <dt class="property-optional"
             title="Optional">
-        <span>Client<wbr>Certificate<wbr>Path</span>
+        <span id="clientcertificatepath_csharp">
+<a href="#clientcertificatepath_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Certificate<wbr>Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -228,7 +234,9 @@ Principal using a Client Certificate.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Client<wbr>Id</span>
+        <span id="clientid_csharp">
+<a href="#clientid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -237,7 +245,9 @@ Principal using a Client Certificate.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Client<wbr>Secret</span>
+        <span id="clientsecret_csharp">
+<a href="#clientsecret_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -246,7 +256,9 @@ Principal using a Client Certificate.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Disable<wbr>Correlation<wbr>Request<wbr>Id</span>
+        <span id="disablecorrelationrequestid_csharp">
+<a href="#disablecorrelationrequestid_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Correlation<wbr>Request<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -255,7 +267,9 @@ Principal using a Client Certificate.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Disable<wbr>Terraform<wbr>Partner<wbr>Id</span>
+        <span id="disableterraformpartnerid_csharp">
+<a href="#disableterraformpartnerid_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Terraform<wbr>Partner<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -264,7 +278,9 @@ Principal using a Client Certificate.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Environment</span>
+        <span id="environment_csharp">
+<a href="#environment_csharp" style="color: inherit; text-decoration: inherit;">Environment</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -274,7 +290,9 @@ public.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Features</span>
+        <span id="features_csharp">
+<a href="#features_csharp" style="color: inherit; text-decoration: inherit;">Features</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#providerfeatures">Provider<wbr>Features<wbr>Args</a></span>
     </dt>
@@ -282,7 +300,9 @@ public.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Msi<wbr>Endpoint</span>
+        <span id="msiendpoint_csharp">
+<a href="#msiendpoint_csharp" style="color: inherit; text-decoration: inherit;">Msi<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -292,7 +312,9 @@ automatically.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Partner<wbr>Id</span>
+        <span id="partnerid_csharp">
+<a href="#partnerid_csharp" style="color: inherit; text-decoration: inherit;">Partner<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -301,7 +323,9 @@ automatically.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Skip<wbr>Credentials<wbr>Validation</span>
+        <span id="skipcredentialsvalidation_csharp">
+<a href="#skipcredentialsvalidation_csharp" style="color: inherit; text-decoration: inherit;">Skip<wbr>Credentials<wbr>Validation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -310,7 +334,9 @@ automatically.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Skip<wbr>Provider<wbr>Registration</span>
+        <span id="skipproviderregistration_csharp">
+<a href="#skipproviderregistration_csharp" style="color: inherit; text-decoration: inherit;">Skip<wbr>Provider<wbr>Registration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -320,7 +346,9 @@ registered?
 
     <dt class="property-optional"
             title="Optional">
-        <span>Storage<wbr>Use<wbr>Azuread</span>
+        <span id="storageuseazuread_csharp">
+<a href="#storageuseazuread_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Use<wbr>Azuread</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -329,7 +357,9 @@ registered?
 
     <dt class="property-optional"
             title="Optional">
-        <span>Subscription<wbr>Id</span>
+        <span id="subscriptionid_csharp">
+<a href="#subscriptionid_csharp" style="color: inherit; text-decoration: inherit;">Subscription<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -338,7 +368,9 @@ registered?
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tenant<wbr>Id</span>
+        <span id="tenantid_csharp">
+<a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -347,7 +379,9 @@ registered?
 
     <dt class="property-optional"
             title="Optional">
-        <span>Use<wbr>Msi</span>
+        <span id="usemsi_csharp">
+<a href="#usemsi_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Msi</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -363,7 +397,9 @@ registered?
 
     <dt class="property-optional"
             title="Optional">
-        <span>Auxiliary<wbr>Tenant<wbr>Ids</span>
+        <span id="auxiliarytenantids_go">
+<a href="#auxiliarytenantids_go" style="color: inherit; text-decoration: inherit;">Auxiliary<wbr>Tenant<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -371,7 +407,9 @@ registered?
 
     <dt class="property-optional"
             title="Optional">
-        <span>Client<wbr>Certificate<wbr>Password</span>
+        <span id="clientcertificatepassword_go">
+<a href="#clientcertificatepassword_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Certificate<wbr>Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -381,7 +419,9 @@ Certificate
 
     <dt class="property-optional"
             title="Optional">
-        <span>Client<wbr>Certificate<wbr>Path</span>
+        <span id="clientcertificatepath_go">
+<a href="#clientcertificatepath_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Certificate<wbr>Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -391,7 +431,9 @@ Principal using a Client Certificate.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Client<wbr>Id</span>
+        <span id="clientid_go">
+<a href="#clientid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -400,7 +442,9 @@ Principal using a Client Certificate.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Client<wbr>Secret</span>
+        <span id="clientsecret_go">
+<a href="#clientsecret_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -409,7 +453,9 @@ Principal using a Client Certificate.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Disable<wbr>Correlation<wbr>Request<wbr>Id</span>
+        <span id="disablecorrelationrequestid_go">
+<a href="#disablecorrelationrequestid_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Correlation<wbr>Request<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -418,7 +464,9 @@ Principal using a Client Certificate.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Disable<wbr>Terraform<wbr>Partner<wbr>Id</span>
+        <span id="disableterraformpartnerid_go">
+<a href="#disableterraformpartnerid_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Terraform<wbr>Partner<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -427,7 +475,9 @@ Principal using a Client Certificate.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Environment</span>
+        <span id="environment_go">
+<a href="#environment_go" style="color: inherit; text-decoration: inherit;">Environment</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -437,7 +487,9 @@ public.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Features</span>
+        <span id="features_go">
+<a href="#features_go" style="color: inherit; text-decoration: inherit;">Features</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#providerfeatures">Provider<wbr>Features</a></span>
     </dt>
@@ -445,7 +497,9 @@ public.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Msi<wbr>Endpoint</span>
+        <span id="msiendpoint_go">
+<a href="#msiendpoint_go" style="color: inherit; text-decoration: inherit;">Msi<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -455,7 +509,9 @@ automatically.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Partner<wbr>Id</span>
+        <span id="partnerid_go">
+<a href="#partnerid_go" style="color: inherit; text-decoration: inherit;">Partner<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -464,7 +520,9 @@ automatically.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Skip<wbr>Credentials<wbr>Validation</span>
+        <span id="skipcredentialsvalidation_go">
+<a href="#skipcredentialsvalidation_go" style="color: inherit; text-decoration: inherit;">Skip<wbr>Credentials<wbr>Validation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -473,7 +531,9 @@ automatically.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Skip<wbr>Provider<wbr>Registration</span>
+        <span id="skipproviderregistration_go">
+<a href="#skipproviderregistration_go" style="color: inherit; text-decoration: inherit;">Skip<wbr>Provider<wbr>Registration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -483,7 +543,9 @@ registered?
 
     <dt class="property-optional"
             title="Optional">
-        <span>Storage<wbr>Use<wbr>Azuread</span>
+        <span id="storageuseazuread_go">
+<a href="#storageuseazuread_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Use<wbr>Azuread</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -492,7 +554,9 @@ registered?
 
     <dt class="property-optional"
             title="Optional">
-        <span>Subscription<wbr>Id</span>
+        <span id="subscriptionid_go">
+<a href="#subscriptionid_go" style="color: inherit; text-decoration: inherit;">Subscription<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -501,7 +565,9 @@ registered?
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tenant<wbr>Id</span>
+        <span id="tenantid_go">
+<a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -510,7 +576,9 @@ registered?
 
     <dt class="property-optional"
             title="Optional">
-        <span>Use<wbr>Msi</span>
+        <span id="usemsi_go">
+<a href="#usemsi_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Msi</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -526,7 +594,9 @@ registered?
 
     <dt class="property-optional"
             title="Optional">
-        <span>auxiliary<wbr>Tenant<wbr>Ids</span>
+        <span id="auxiliarytenantids_nodejs">
+<a href="#auxiliarytenantids_nodejs" style="color: inherit; text-decoration: inherit;">auxiliary<wbr>Tenant<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -534,7 +604,9 @@ registered?
 
     <dt class="property-optional"
             title="Optional">
-        <span>client<wbr>Certificate<wbr>Password</span>
+        <span id="clientcertificatepassword_nodejs">
+<a href="#clientcertificatepassword_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Certificate<wbr>Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -544,7 +616,9 @@ Certificate
 
     <dt class="property-optional"
             title="Optional">
-        <span>client<wbr>Certificate<wbr>Path</span>
+        <span id="clientcertificatepath_nodejs">
+<a href="#clientcertificatepath_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Certificate<wbr>Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -554,7 +628,9 @@ Principal using a Client Certificate.
 
     <dt class="property-optional"
             title="Optional">
-        <span>client<wbr>Id</span>
+        <span id="clientid_nodejs">
+<a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -563,7 +639,9 @@ Principal using a Client Certificate.
 
     <dt class="property-optional"
             title="Optional">
-        <span>client<wbr>Secret</span>
+        <span id="clientsecret_nodejs">
+<a href="#clientsecret_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Secret</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -572,7 +650,9 @@ Principal using a Client Certificate.
 
     <dt class="property-optional"
             title="Optional">
-        <span>disable<wbr>Correlation<wbr>Request<wbr>Id</span>
+        <span id="disablecorrelationrequestid_nodejs">
+<a href="#disablecorrelationrequestid_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Correlation<wbr>Request<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -581,7 +661,9 @@ Principal using a Client Certificate.
 
     <dt class="property-optional"
             title="Optional">
-        <span>disable<wbr>Terraform<wbr>Partner<wbr>Id</span>
+        <span id="disableterraformpartnerid_nodejs">
+<a href="#disableterraformpartnerid_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Terraform<wbr>Partner<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -590,7 +672,9 @@ Principal using a Client Certificate.
 
     <dt class="property-optional"
             title="Optional">
-        <span>environment</span>
+        <span id="environment_nodejs">
+<a href="#environment_nodejs" style="color: inherit; text-decoration: inherit;">environment</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -600,7 +684,9 @@ public.
 
     <dt class="property-optional"
             title="Optional">
-        <span>features</span>
+        <span id="features_nodejs">
+<a href="#features_nodejs" style="color: inherit; text-decoration: inherit;">features</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#providerfeatures">Provider<wbr>Features</a></span>
     </dt>
@@ -608,7 +694,9 @@ public.
 
     <dt class="property-optional"
             title="Optional">
-        <span>msi<wbr>Endpoint</span>
+        <span id="msiendpoint_nodejs">
+<a href="#msiendpoint_nodejs" style="color: inherit; text-decoration: inherit;">msi<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -618,7 +706,9 @@ automatically.
 
     <dt class="property-optional"
             title="Optional">
-        <span>partner<wbr>Id</span>
+        <span id="partnerid_nodejs">
+<a href="#partnerid_nodejs" style="color: inherit; text-decoration: inherit;">partner<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -627,7 +717,9 @@ automatically.
 
     <dt class="property-optional"
             title="Optional">
-        <span>skip<wbr>Credentials<wbr>Validation</span>
+        <span id="skipcredentialsvalidation_nodejs">
+<a href="#skipcredentialsvalidation_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Credentials<wbr>Validation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -636,7 +728,9 @@ automatically.
 
     <dt class="property-optional"
             title="Optional">
-        <span>skip<wbr>Provider<wbr>Registration</span>
+        <span id="skipproviderregistration_nodejs">
+<a href="#skipproviderregistration_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Provider<wbr>Registration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -646,7 +740,9 @@ registered?
 
     <dt class="property-optional"
             title="Optional">
-        <span>storage<wbr>Use<wbr>Azuread</span>
+        <span id="storageuseazuread_nodejs">
+<a href="#storageuseazuread_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Use<wbr>Azuread</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -655,7 +751,9 @@ registered?
 
     <dt class="property-optional"
             title="Optional">
-        <span>subscription<wbr>Id</span>
+        <span id="subscriptionid_nodejs">
+<a href="#subscriptionid_nodejs" style="color: inherit; text-decoration: inherit;">subscription<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -664,7 +762,9 @@ registered?
 
     <dt class="property-optional"
             title="Optional">
-        <span>tenant<wbr>Id</span>
+        <span id="tenantid_nodejs">
+<a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -673,7 +773,9 @@ registered?
 
     <dt class="property-optional"
             title="Optional">
-        <span>use<wbr>Msi</span>
+        <span id="usemsi_nodejs">
+<a href="#usemsi_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Msi</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -689,7 +791,9 @@ registered?
 
     <dt class="property-optional"
             title="Optional">
-        <span>auxiliary_<wbr>tenant_<wbr>ids</span>
+        <span id="auxiliary_tenant_ids_python">
+<a href="#auxiliary_tenant_ids_python" style="color: inherit; text-decoration: inherit;">auxiliary_<wbr>tenant_<wbr>ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -697,7 +801,9 @@ registered?
 
     <dt class="property-optional"
             title="Optional">
-        <span>client_<wbr>certificate_<wbr>password</span>
+        <span id="client_certificate_password_python">
+<a href="#client_certificate_password_python" style="color: inherit; text-decoration: inherit;">client_<wbr>certificate_<wbr>password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -707,7 +813,9 @@ Certificate
 
     <dt class="property-optional"
             title="Optional">
-        <span>client_<wbr>certificate_<wbr>path</span>
+        <span id="client_certificate_path_python">
+<a href="#client_certificate_path_python" style="color: inherit; text-decoration: inherit;">client_<wbr>certificate_<wbr>path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -717,7 +825,9 @@ Principal using a Client Certificate.
 
     <dt class="property-optional"
             title="Optional">
-        <span>client_<wbr>id</span>
+        <span id="client_id_python">
+<a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -726,7 +836,9 @@ Principal using a Client Certificate.
 
     <dt class="property-optional"
             title="Optional">
-        <span>client_<wbr>secret</span>
+        <span id="client_secret_python">
+<a href="#client_secret_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -735,7 +847,9 @@ Principal using a Client Certificate.
 
     <dt class="property-optional"
             title="Optional">
-        <span>disable_<wbr>correlation_<wbr>request_<wbr>id</span>
+        <span id="disable_correlation_request_id_python">
+<a href="#disable_correlation_request_id_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>correlation_<wbr>request_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -744,7 +858,9 @@ Principal using a Client Certificate.
 
     <dt class="property-optional"
             title="Optional">
-        <span>disable_<wbr>terraform_<wbr>partner_<wbr>id</span>
+        <span id="disable_terraform_partner_id_python">
+<a href="#disable_terraform_partner_id_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>terraform_<wbr>partner_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -753,7 +869,9 @@ Principal using a Client Certificate.
 
     <dt class="property-optional"
             title="Optional">
-        <span>environment</span>
+        <span id="environment_python">
+<a href="#environment_python" style="color: inherit; text-decoration: inherit;">environment</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -763,7 +881,9 @@ public.
 
     <dt class="property-optional"
             title="Optional">
-        <span>features</span>
+        <span id="features_python">
+<a href="#features_python" style="color: inherit; text-decoration: inherit;">features</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#providerfeatures">Dict[Provider<wbr>Features]</a></span>
     </dt>
@@ -771,7 +891,9 @@ public.
 
     <dt class="property-optional"
             title="Optional">
-        <span>msi_<wbr>endpoint</span>
+        <span id="msi_endpoint_python">
+<a href="#msi_endpoint_python" style="color: inherit; text-decoration: inherit;">msi_<wbr>endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -781,7 +903,9 @@ automatically.
 
     <dt class="property-optional"
             title="Optional">
-        <span>partner_<wbr>id</span>
+        <span id="partner_id_python">
+<a href="#partner_id_python" style="color: inherit; text-decoration: inherit;">partner_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -790,7 +914,9 @@ automatically.
 
     <dt class="property-optional"
             title="Optional">
-        <span>skip_<wbr>credentials_<wbr>validation</span>
+        <span id="skip_credentials_validation_python">
+<a href="#skip_credentials_validation_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>credentials_<wbr>validation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -799,7 +925,9 @@ automatically.
 
     <dt class="property-optional"
             title="Optional">
-        <span>skip_<wbr>provider_<wbr>registration</span>
+        <span id="skip_provider_registration_python">
+<a href="#skip_provider_registration_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>provider_<wbr>registration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -809,7 +937,9 @@ registered?
 
     <dt class="property-optional"
             title="Optional">
-        <span>storage_<wbr>use_<wbr>azuread</span>
+        <span id="storage_use_azuread_python">
+<a href="#storage_use_azuread_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>use_<wbr>azuread</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -818,7 +948,9 @@ registered?
 
     <dt class="property-optional"
             title="Optional">
-        <span>subscription_<wbr>id</span>
+        <span id="subscription_id_python">
+<a href="#subscription_id_python" style="color: inherit; text-decoration: inherit;">subscription_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -827,7 +959,9 @@ registered?
 
     <dt class="property-optional"
             title="Optional">
-        <span>tenant_<wbr>id</span>
+        <span id="tenant_id_python">
+<a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -836,7 +970,9 @@ registered?
 
     <dt class="property-optional"
             title="Optional">
-        <span>use_<wbr>msi</span>
+        <span id="use_msi_python">
+<a href="#use_msi_python" style="color: inherit; text-decoration: inherit;">use_<wbr>msi</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -863,7 +999,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -878,7 +1016,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -893,7 +1033,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -908,7 +1050,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -950,7 +1094,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Key<wbr>Vault</span>
+        <span id="keyvault_csharp">
+<a href="#keyvault_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#providerfeatureskeyvault">Provider<wbr>Features<wbr>Key<wbr>Vault<wbr>Args</a></span>
     </dt>
@@ -958,7 +1104,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Virtual<wbr>Machine</span>
+        <span id="virtualmachine_csharp">
+<a href="#virtualmachine_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#providerfeaturesvirtualmachine">Provider<wbr>Features<wbr>Virtual<wbr>Machine<wbr>Args</a></span>
     </dt>
@@ -966,7 +1114,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Virtual<wbr>Machine<wbr>Scale<wbr>Set</span>
+        <span id="virtualmachinescaleset_csharp">
+<a href="#virtualmachinescaleset_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Scale<wbr>Set</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#providerfeaturesvirtualmachinescaleset">Provider<wbr>Features<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Args</a></span>
     </dt>
@@ -981,7 +1131,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Key<wbr>Vault</span>
+        <span id="keyvault_go">
+<a href="#keyvault_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#providerfeatureskeyvault">Provider<wbr>Features<wbr>Key<wbr>Vault</a></span>
     </dt>
@@ -989,7 +1141,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Virtual<wbr>Machine</span>
+        <span id="virtualmachine_go">
+<a href="#virtualmachine_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#providerfeaturesvirtualmachine">Provider<wbr>Features<wbr>Virtual<wbr>Machine</a></span>
     </dt>
@@ -997,7 +1151,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Virtual<wbr>Machine<wbr>Scale<wbr>Set</span>
+        <span id="virtualmachinescaleset_go">
+<a href="#virtualmachinescaleset_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Scale<wbr>Set</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#providerfeaturesvirtualmachinescaleset">Provider<wbr>Features<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set</a></span>
     </dt>
@@ -1012,7 +1168,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>key<wbr>Vault</span>
+        <span id="keyvault_nodejs">
+<a href="#keyvault_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#providerfeatureskeyvault">Provider<wbr>Features<wbr>Key<wbr>Vault</a></span>
     </dt>
@@ -1020,7 +1178,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>virtual<wbr>Machine</span>
+        <span id="virtualmachine_nodejs">
+<a href="#virtualmachine_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#providerfeaturesvirtualmachine">Provider<wbr>Features<wbr>Virtual<wbr>Machine</a></span>
     </dt>
@@ -1028,7 +1188,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>virtual<wbr>Machine<wbr>Scale<wbr>Set</span>
+        <span id="virtualmachinescaleset_nodejs">
+<a href="#virtualmachinescaleset_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Scale<wbr>Set</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#providerfeaturesvirtualmachinescaleset">Provider<wbr>Features<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set</a></span>
     </dt>
@@ -1043,7 +1205,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>key<wbr>Vault</span>
+        <span id="keyvault_python">
+<a href="#keyvault_python" style="color: inherit; text-decoration: inherit;">key<wbr>Vault</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#providerfeatureskeyvault">Dict[Provider<wbr>Features<wbr>Key<wbr>Vault]</a></span>
     </dt>
@@ -1051,7 +1215,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>virtual<wbr>Machine</span>
+        <span id="virtualmachine_python">
+<a href="#virtualmachine_python" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#providerfeaturesvirtualmachine">Dict[Provider<wbr>Features<wbr>Virtual<wbr>Machine]</a></span>
     </dt>
@@ -1059,7 +1225,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>virtual<wbr>Machine<wbr>Scale<wbr>Set</span>
+        <span id="virtualmachinescaleset_python">
+<a href="#virtualmachinescaleset_python" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Scale<wbr>Set</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#providerfeaturesvirtualmachinescaleset">Dict[Provider<wbr>Features<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set]</a></span>
     </dt>
@@ -1092,7 +1260,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Purge<wbr>Soft<wbr>Delete<wbr>On<wbr>Destroy</span>
+        <span id="purgesoftdeleteondestroy_csharp">
+<a href="#purgesoftdeleteondestroy_csharp" style="color: inherit; text-decoration: inherit;">Purge<wbr>Soft<wbr>Delete<wbr>On<wbr>Destroy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1100,7 +1270,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Recover<wbr>Soft<wbr>Deleted<wbr>Key<wbr>Vaults</span>
+        <span id="recoversoftdeletedkeyvaults_csharp">
+<a href="#recoversoftdeletedkeyvaults_csharp" style="color: inherit; text-decoration: inherit;">Recover<wbr>Soft<wbr>Deleted<wbr>Key<wbr>Vaults</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1115,7 +1287,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Purge<wbr>Soft<wbr>Delete<wbr>On<wbr>Destroy</span>
+        <span id="purgesoftdeleteondestroy_go">
+<a href="#purgesoftdeleteondestroy_go" style="color: inherit; text-decoration: inherit;">Purge<wbr>Soft<wbr>Delete<wbr>On<wbr>Destroy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1123,7 +1297,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Recover<wbr>Soft<wbr>Deleted<wbr>Key<wbr>Vaults</span>
+        <span id="recoversoftdeletedkeyvaults_go">
+<a href="#recoversoftdeletedkeyvaults_go" style="color: inherit; text-decoration: inherit;">Recover<wbr>Soft<wbr>Deleted<wbr>Key<wbr>Vaults</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1138,7 +1314,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>purge<wbr>Soft<wbr>Delete<wbr>On<wbr>Destroy</span>
+        <span id="purgesoftdeleteondestroy_nodejs">
+<a href="#purgesoftdeleteondestroy_nodejs" style="color: inherit; text-decoration: inherit;">purge<wbr>Soft<wbr>Delete<wbr>On<wbr>Destroy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1146,7 +1324,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>recover<wbr>Soft<wbr>Deleted<wbr>Key<wbr>Vaults</span>
+        <span id="recoversoftdeletedkeyvaults_nodejs">
+<a href="#recoversoftdeletedkeyvaults_nodejs" style="color: inherit; text-decoration: inherit;">recover<wbr>Soft<wbr>Deleted<wbr>Key<wbr>Vaults</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1161,7 +1341,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>purge<wbr>Soft<wbr>Delete<wbr>On<wbr>Destroy</span>
+        <span id="purgesoftdeleteondestroy_python">
+<a href="#purgesoftdeleteondestroy_python" style="color: inherit; text-decoration: inherit;">purge<wbr>Soft<wbr>Delete<wbr>On<wbr>Destroy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1169,7 +1351,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>recover<wbr>Soft<wbr>Deleted<wbr>Key<wbr>Vaults</span>
+        <span id="recoversoftdeletedkeyvaults_python">
+<a href="#recoversoftdeletedkeyvaults_python" style="color: inherit; text-decoration: inherit;">recover<wbr>Soft<wbr>Deleted<wbr>Key<wbr>Vaults</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1202,7 +1386,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span>Delete<wbr>Os<wbr>Disk<wbr>On<wbr>Deletion</span>
+        <span id="deleteosdiskondeletion_csharp">
+<a href="#deleteosdiskondeletion_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>Os<wbr>Disk<wbr>On<wbr>Deletion</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1217,7 +1403,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span>Delete<wbr>Os<wbr>Disk<wbr>On<wbr>Deletion</span>
+        <span id="deleteosdiskondeletion_go">
+<a href="#deleteosdiskondeletion_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>Os<wbr>Disk<wbr>On<wbr>Deletion</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1232,7 +1420,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span>delete<wbr>Os<wbr>Disk<wbr>On<wbr>Deletion</span>
+        <span id="deleteosdiskondeletion_nodejs">
+<a href="#deleteosdiskondeletion_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Os<wbr>Disk<wbr>On<wbr>Deletion</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1247,7 +1437,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span>delete<wbr>Os<wbr>Disk<wbr>On<wbr>Deletion</span>
+        <span id="deleteosdiskondeletion_python">
+<a href="#deleteosdiskondeletion_python" style="color: inherit; text-decoration: inherit;">delete<wbr>Os<wbr>Disk<wbr>On<wbr>Deletion</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1280,7 +1472,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span>Roll<wbr>Instances<wbr>When<wbr>Required</span>
+        <span id="rollinstanceswhenrequired_csharp">
+<a href="#rollinstanceswhenrequired_csharp" style="color: inherit; text-decoration: inherit;">Roll<wbr>Instances<wbr>When<wbr>Required</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1295,7 +1489,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span>Roll<wbr>Instances<wbr>When<wbr>Required</span>
+        <span id="rollinstanceswhenrequired_go">
+<a href="#rollinstanceswhenrequired_go" style="color: inherit; text-decoration: inherit;">Roll<wbr>Instances<wbr>When<wbr>Required</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1310,7 +1506,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span>roll<wbr>Instances<wbr>When<wbr>Required</span>
+        <span id="rollinstanceswhenrequired_nodejs">
+<a href="#rollinstanceswhenrequired_nodejs" style="color: inherit; text-decoration: inherit;">roll<wbr>Instances<wbr>When<wbr>Required</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1325,7 +1523,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span>roll<wbr>Instances<wbr>When<wbr>Required</span>
+        <span id="rollinstanceswhenrequired_python">
+<a href="#rollinstanceswhenrequired_python" style="color: inherit; text-decoration: inherit;">roll<wbr>Instances<wbr>When<wbr>Required</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>

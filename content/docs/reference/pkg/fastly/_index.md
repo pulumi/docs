@@ -39,3 +39,21 @@ A Pulumi package for creating and managing fastly cloud resources.
 	<dd>2.3.1</dd>
 </dl>
 
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.html" title="Pulumi.Fastly">Pulumi.Fastly</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#" title="fastly">fastly</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/fastly/#" title="@pulumi/fastly">@pulumi/fastly</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_fastly" title="pulumi_fastly">pulumi_fastly</a></dd>
+
+</dl>
+

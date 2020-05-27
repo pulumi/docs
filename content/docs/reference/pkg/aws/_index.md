@@ -122,6 +122,7 @@ A Pulumi package for creating and managing Amazon Web Services (AWS) cloud resou
     <li><a href="transfer/" title="transfer"><span class="symbol module"></span>transfer</a></li>
     <li><a href="waf/" title="waf"><span class="symbol module"></span>waf</a></li>
     <li><a href="wafregional/" title="wafregional"><span class="symbol module"></span>wafregional</a></li>
+    <li><a href="wafv2/" title="wafv2"><span class="symbol module"></span>wafv2</a></li>
     <li><a href="worklink/" title="worklink"><span class="symbol module"></span>worklink</a></li>
     <li><a href="workspaces/" title="workspaces"><span class="symbol module"></span>workspaces</a></li>
     <li><a href="xray/" title="xray"><span class="symbol module"></span>xray</a></li>
@@ -160,6 +161,24 @@ A Pulumi package for creating and managing Amazon Web Services (AWS) cloud resou
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>2.4.0</dd>
+	<dd>2.6.0</dd>
+</dl>
+
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.html" title="Pulumi.Aws">Pulumi.Aws</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/?tab=doc#" title="aws">aws</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/#" title="@pulumi/aws">@pulumi/aws</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_aws" title="pulumi_aws">pulumi_aws</a></dd>
+
 </dl>
 

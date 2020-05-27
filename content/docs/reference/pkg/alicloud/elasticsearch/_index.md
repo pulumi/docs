@@ -29,6 +29,24 @@ Explore the resources and functions of the elasticsearch module in the AliCloud 
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
 	<dt>Version</dt>
-	<dd>2.4.0</dd>
+	<dd>2.5.0</dd>
+</dl>
+
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.ElasticSearch.html" title="Pulumi.AliCloud.ElasticSearch">Pulumi.AliCloud.ElasticSearch</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/elasticsearch?tab=doc#" title="alicloud/elasticsearch">alicloud/elasticsearch</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/elasticsearch/#" title="@pulumi/alicloud/elasticsearch">@pulumi/alicloud/elasticsearch</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_alicloud/elasticsearch" title="pulumi_alicloud/elasticsearch">pulumi_alicloud/elasticsearch</a></dd>
+
 </dl>
 

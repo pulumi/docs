@@ -30,7 +30,7 @@ meta_desc: "Explore the VappEntity resource of the vSphere package, including ex
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.Vsphere.VappEntity.html">VappEntity</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.VSphere.VappEntityArgs.html">VappEntityArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.VappEntity.html">VappEntity</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.VappEntityArgs.html">VappEntityArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -159,7 +159,7 @@ meta_desc: "Explore the VappEntity resource of the vSphere package, including ex
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.VSphere.VappEntityArgs.html">VappEntityArgs</a></span>
+        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.VappEntityArgs.html">VappEntityArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -200,7 +200,7 @@ The VappEntity resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}[Managed object ID|docs-about-morefs] of the vApp
+    <dd>{{% md %}}Managed object ID of the vApp
 container the entity is a member of.
 {{% /md %}}</dd>
 
@@ -210,7 +210,7 @@ container the entity is a member of.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}[Managed object ID|docs-about-morefs] of the entity
+    <dd>{{% md %}}Managed object ID of the entity
 to power on or power off. This can be a virtual machine or a vApp.
 {{% /md %}}</dd>
 
@@ -308,7 +308,7 @@ property has no effect for vApps. Default: false
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}[Managed object ID|docs-about-morefs] of the vApp
+    <dd>{{% md %}}Managed object ID of the vApp
 container the entity is a member of.
 {{% /md %}}</dd>
 
@@ -318,7 +318,7 @@ container the entity is a member of.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}[Managed object ID|docs-about-morefs] of the entity
+    <dd>{{% md %}}Managed object ID of the entity
 to power on or power off. This can be a virtual machine or a vApp.
 {{% /md %}}</dd>
 
@@ -416,7 +416,7 @@ property has no effect for vApps. Default: false
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}[Managed object ID|docs-about-morefs] of the vApp
+    <dd>{{% md %}}Managed object ID of the vApp
 container the entity is a member of.
 {{% /md %}}</dd>
 
@@ -426,7 +426,7 @@ container the entity is a member of.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}[Managed object ID|docs-about-morefs] of the entity
+    <dd>{{% md %}}Managed object ID of the entity
 to power on or power off. This can be a virtual machine or a vApp.
 {{% /md %}}</dd>
 
@@ -524,7 +524,7 @@ property has no effect for vApps. Default: false
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}[Managed object ID|docs-about-morefs] of the vApp
+    <dd>{{% md %}}Managed object ID of the vApp
 container the entity is a member of.
 {{% /md %}}</dd>
 
@@ -534,7 +534,7 @@ container the entity is a member of.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}[Managed object ID|docs-about-morefs] of the entity
+    <dd>{{% md %}}Managed object ID of the entity
 to power on or power off. This can be a virtual machine or a vApp.
 {{% /md %}}</dd>
 
@@ -717,7 +717,7 @@ Get an existing VappEntity resource's state with the given name, ID, and optiona
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.Vsphere.VappEntity.html">VappEntity</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.Vsphere..VappEntityState.html">VappEntityState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.VappEntity.html">VappEntity</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere..VappEntityState.html">VappEntityState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -829,7 +829,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}[Managed object ID|docs-about-morefs] of the vApp
+    <dd>{{% md %}}Managed object ID of the vApp
 container the entity is a member of.
 {{% /md %}}</dd>
 
@@ -909,7 +909,7 @@ guestShutdown. Default: 120
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}[Managed object ID|docs-about-morefs] of the entity
+    <dd>{{% md %}}Managed object ID of the entity
 to power on or power off. This can be a virtual machine or a vApp.
 {{% /md %}}</dd>
 
@@ -937,7 +937,7 @@ property has no effect for vApps. Default: false
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}[Managed object ID|docs-about-morefs] of the vApp
+    <dd>{{% md %}}Managed object ID of the vApp
 container the entity is a member of.
 {{% /md %}}</dd>
 
@@ -1017,7 +1017,7 @@ guestShutdown. Default: 120
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}[Managed object ID|docs-about-morefs] of the entity
+    <dd>{{% md %}}Managed object ID of the entity
 to power on or power off. This can be a virtual machine or a vApp.
 {{% /md %}}</dd>
 
@@ -1045,7 +1045,7 @@ property has no effect for vApps. Default: false
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}[Managed object ID|docs-about-morefs] of the vApp
+    <dd>{{% md %}}Managed object ID of the vApp
 container the entity is a member of.
 {{% /md %}}</dd>
 
@@ -1125,7 +1125,7 @@ guestShutdown. Default: 120
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}[Managed object ID|docs-about-morefs] of the entity
+    <dd>{{% md %}}Managed object ID of the entity
 to power on or power off. This can be a virtual machine or a vApp.
 {{% /md %}}</dd>
 
@@ -1153,7 +1153,7 @@ property has no effect for vApps. Default: false
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}[Managed object ID|docs-about-morefs] of the vApp
+    <dd>{{% md %}}Managed object ID of the vApp
 container the entity is a member of.
 {{% /md %}}</dd>
 
@@ -1233,7 +1233,7 @@ guestShutdown. Default: 120
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}[Managed object ID|docs-about-morefs] of the entity
+    <dd>{{% md %}}Managed object ID of the entity
 to power on or power off. This can be a virtual machine or a vApp.
 {{% /md %}}</dd>
 

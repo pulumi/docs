@@ -77,19 +77,19 @@ const exampleQueue = new azure.servicebus.Queue("exampleQueue", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/servicebus/#Queue">Queue</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/servicebus/#QueueArgs">QueueArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/servicebus/#Queue">Queue</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/servicebus/#QueueArgs">QueueArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Queue</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>auto_delete_on_idle=None<span class="p">, </span>dead_lettering_on_message_expiration=None<span class="p">, </span>default_message_ttl=None<span class="p">, </span>duplicate_detection_history_time_window=None<span class="p">, </span>enable_express=None<span class="p">, </span>enable_partitioning=None<span class="p">, </span>lock_duration=None<span class="p">, </span>max_delivery_count=None<span class="p">, </span>max_size_in_megabytes=None<span class="p">, </span>name=None<span class="p">, </span>namespace_name=None<span class="p">, </span>requires_duplicate_detection=None<span class="p">, </span>requires_session=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/servicebus/#Queue">Queue</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>auto_delete_on_idle=None<span class="p">, </span>dead_lettering_on_message_expiration=None<span class="p">, </span>default_message_ttl=None<span class="p">, </span>duplicate_detection_history_time_window=None<span class="p">, </span>enable_express=None<span class="p">, </span>enable_partitioning=None<span class="p">, </span>lock_duration=None<span class="p">, </span>max_delivery_count=None<span class="p">, </span>max_size_in_megabytes=None<span class="p">, </span>name=None<span class="p">, </span>namespace_name=None<span class="p">, </span>requires_duplicate_detection=None<span class="p">, </span>requires_session=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewQueue<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/servicebus?tab=doc#QueueArgs">QueueArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/servicebus?tab=doc#Queue">Queue</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/servicebus?tab=doc#Queue">NewQueue</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/servicebus?tab=doc#QueueArgs">QueueArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/servicebus?tab=doc#Queue">Queue</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ServiceBus.Queue.html">Queue</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ServiceBus.QueueArgs.html">QueueArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ServiceBus.Queue.html">Queue</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ServiceBus.QueueArgs.html">QueueArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -255,7 +255,9 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
 
     <dt class="property-required"
             title="Required">
-        <span>Namespace<wbr>Name</span>
+        <span id="namespacename_csharp">
+<a href="#namespacename_csharp" style="color: inherit; text-decoration: inherit;">Namespace<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -265,7 +267,9 @@ this queue in. Changing this forces a new resource to be created.
 
     <dt class="property-required"
             title="Required">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_csharp">
+<a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -275,7 +279,9 @@ create the namespace. Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Auto<wbr>Delete<wbr>On<wbr>Idle</span>
+        <span id="autodeleteonidle_csharp">
+<a href="#autodeleteonidle_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Delete<wbr>On<wbr>Idle</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -285,7 +291,9 @@ Queue is automatically deleted, minimum of 5 minutes.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dead<wbr>Lettering<wbr>On<wbr>Message<wbr>Expiration</span>
+        <span id="deadletteringonmessageexpiration_csharp">
+<a href="#deadletteringonmessageexpiration_csharp" style="color: inherit; text-decoration: inherit;">Dead<wbr>Lettering<wbr>On<wbr>Message<wbr>Expiration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -294,7 +302,9 @@ Queue is automatically deleted, minimum of 5 minutes.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default<wbr>Message<wbr>Ttl</span>
+        <span id="defaultmessagettl_csharp">
+<a href="#defaultmessagettl_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Message<wbr>Ttl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -304,7 +314,9 @@ queue. This is the default value used when TTL is not set on message itself.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Duplicate<wbr>Detection<wbr>History<wbr>Time<wbr>Window</span>
+        <span id="duplicatedetectionhistorytimewindow_csharp">
+<a href="#duplicatedetectionhistorytimewindow_csharp" style="color: inherit; text-decoration: inherit;">Duplicate<wbr>Detection<wbr>History<wbr>Time<wbr>Window</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -314,7 +326,9 @@ duplicates can be detected. Default value is 10 minutes. (`PT10M`)
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enable<wbr>Express</span>
+        <span id="enableexpress_csharp">
+<a href="#enableexpress_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Express</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -326,7 +340,9 @@ be set to `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enable<wbr>Partitioning</span>
+        <span id="enablepartitioning_csharp">
+<a href="#enablepartitioning_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Partitioning</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -338,7 +354,9 @@ be set to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Lock<wbr>Duration</span>
+        <span id="lockduration_csharp">
+<a href="#lockduration_csharp" style="color: inherit; text-decoration: inherit;">Lock<wbr>Duration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -347,7 +365,9 @@ be set to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Delivery<wbr>Count</span>
+        <span id="maxdeliverycount_csharp">
+<a href="#maxdeliverycount_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Delivery<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -356,7 +376,9 @@ be set to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Size<wbr>In<wbr>Megabytes</span>
+        <span id="maxsizeinmegabytes_csharp">
+<a href="#maxsizeinmegabytes_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Size<wbr>In<wbr>Megabytes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -367,7 +389,9 @@ section of [this document](https://docs.microsoft.com/en-us/azure/service-bus-me
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -377,7 +401,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Requires<wbr>Duplicate<wbr>Detection</span>
+        <span id="requiresduplicatedetection_csharp">
+<a href="#requiresduplicatedetection_csharp" style="color: inherit; text-decoration: inherit;">Requires<wbr>Duplicate<wbr>Detection</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -388,7 +414,9 @@ a new resource to be created. Defaults to `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Requires<wbr>Session</span>
+        <span id="requiressession_csharp">
+<a href="#requiressession_csharp" style="color: inherit; text-decoration: inherit;">Requires<wbr>Session</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -407,7 +435,9 @@ Changing this forces a new resource to be created. Defaults to `false`.
 
     <dt class="property-required"
             title="Required">
-        <span>Namespace<wbr>Name</span>
+        <span id="namespacename_go">
+<a href="#namespacename_go" style="color: inherit; text-decoration: inherit;">Namespace<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -417,7 +447,9 @@ this queue in. Changing this forces a new resource to be created.
 
     <dt class="property-required"
             title="Required">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_go">
+<a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -427,7 +459,9 @@ create the namespace. Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Auto<wbr>Delete<wbr>On<wbr>Idle</span>
+        <span id="autodeleteonidle_go">
+<a href="#autodeleteonidle_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Delete<wbr>On<wbr>Idle</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -437,7 +471,9 @@ Queue is automatically deleted, minimum of 5 minutes.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dead<wbr>Lettering<wbr>On<wbr>Message<wbr>Expiration</span>
+        <span id="deadletteringonmessageexpiration_go">
+<a href="#deadletteringonmessageexpiration_go" style="color: inherit; text-decoration: inherit;">Dead<wbr>Lettering<wbr>On<wbr>Message<wbr>Expiration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -446,7 +482,9 @@ Queue is automatically deleted, minimum of 5 minutes.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default<wbr>Message<wbr>Ttl</span>
+        <span id="defaultmessagettl_go">
+<a href="#defaultmessagettl_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Message<wbr>Ttl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -456,7 +494,9 @@ queue. This is the default value used when TTL is not set on message itself.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Duplicate<wbr>Detection<wbr>History<wbr>Time<wbr>Window</span>
+        <span id="duplicatedetectionhistorytimewindow_go">
+<a href="#duplicatedetectionhistorytimewindow_go" style="color: inherit; text-decoration: inherit;">Duplicate<wbr>Detection<wbr>History<wbr>Time<wbr>Window</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -466,7 +506,9 @@ duplicates can be detected. Default value is 10 minutes. (`PT10M`)
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enable<wbr>Express</span>
+        <span id="enableexpress_go">
+<a href="#enableexpress_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Express</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -478,7 +520,9 @@ be set to `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enable<wbr>Partitioning</span>
+        <span id="enablepartitioning_go">
+<a href="#enablepartitioning_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Partitioning</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -490,7 +534,9 @@ be set to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Lock<wbr>Duration</span>
+        <span id="lockduration_go">
+<a href="#lockduration_go" style="color: inherit; text-decoration: inherit;">Lock<wbr>Duration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -499,7 +545,9 @@ be set to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Delivery<wbr>Count</span>
+        <span id="maxdeliverycount_go">
+<a href="#maxdeliverycount_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Delivery<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -508,7 +556,9 @@ be set to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Size<wbr>In<wbr>Megabytes</span>
+        <span id="maxsizeinmegabytes_go">
+<a href="#maxsizeinmegabytes_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Size<wbr>In<wbr>Megabytes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -519,7 +569,9 @@ section of [this document](https://docs.microsoft.com/en-us/azure/service-bus-me
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -529,7 +581,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Requires<wbr>Duplicate<wbr>Detection</span>
+        <span id="requiresduplicatedetection_go">
+<a href="#requiresduplicatedetection_go" style="color: inherit; text-decoration: inherit;">Requires<wbr>Duplicate<wbr>Detection</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -540,7 +594,9 @@ a new resource to be created. Defaults to `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Requires<wbr>Session</span>
+        <span id="requiressession_go">
+<a href="#requiressession_go" style="color: inherit; text-decoration: inherit;">Requires<wbr>Session</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -559,7 +615,9 @@ Changing this forces a new resource to be created. Defaults to `false`.
 
     <dt class="property-required"
             title="Required">
-        <span>namespace<wbr>Name</span>
+        <span id="namespacename_nodejs">
+<a href="#namespacename_nodejs" style="color: inherit; text-decoration: inherit;">namespace<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -569,7 +627,9 @@ this queue in. Changing this forces a new resource to be created.
 
     <dt class="property-required"
             title="Required">
-        <span>resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_nodejs">
+<a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -579,7 +639,9 @@ create the namespace. Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>auto<wbr>Delete<wbr>On<wbr>Idle</span>
+        <span id="autodeleteonidle_nodejs">
+<a href="#autodeleteonidle_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Delete<wbr>On<wbr>Idle</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -589,7 +651,9 @@ Queue is automatically deleted, minimum of 5 minutes.
 
     <dt class="property-optional"
             title="Optional">
-        <span>dead<wbr>Lettering<wbr>On<wbr>Message<wbr>Expiration</span>
+        <span id="deadletteringonmessageexpiration_nodejs">
+<a href="#deadletteringonmessageexpiration_nodejs" style="color: inherit; text-decoration: inherit;">dead<wbr>Lettering<wbr>On<wbr>Message<wbr>Expiration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -598,7 +662,9 @@ Queue is automatically deleted, minimum of 5 minutes.
 
     <dt class="property-optional"
             title="Optional">
-        <span>default<wbr>Message<wbr>Ttl</span>
+        <span id="defaultmessagettl_nodejs">
+<a href="#defaultmessagettl_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Message<wbr>Ttl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -608,7 +674,9 @@ queue. This is the default value used when TTL is not set on message itself.
 
     <dt class="property-optional"
             title="Optional">
-        <span>duplicate<wbr>Detection<wbr>History<wbr>Time<wbr>Window</span>
+        <span id="duplicatedetectionhistorytimewindow_nodejs">
+<a href="#duplicatedetectionhistorytimewindow_nodejs" style="color: inherit; text-decoration: inherit;">duplicate<wbr>Detection<wbr>History<wbr>Time<wbr>Window</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -618,7 +686,9 @@ duplicates can be detected. Default value is 10 minutes. (`PT10M`)
 
     <dt class="property-optional"
             title="Optional">
-        <span>enable<wbr>Express</span>
+        <span id="enableexpress_nodejs">
+<a href="#enableexpress_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Express</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -630,7 +700,9 @@ be set to `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>enable<wbr>Partitioning</span>
+        <span id="enablepartitioning_nodejs">
+<a href="#enablepartitioning_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Partitioning</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -642,7 +714,9 @@ be set to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>lock<wbr>Duration</span>
+        <span id="lockduration_nodejs">
+<a href="#lockduration_nodejs" style="color: inherit; text-decoration: inherit;">lock<wbr>Duration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -651,7 +725,9 @@ be set to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Delivery<wbr>Count</span>
+        <span id="maxdeliverycount_nodejs">
+<a href="#maxdeliverycount_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Delivery<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -660,7 +736,9 @@ be set to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Size<wbr>In<wbr>Megabytes</span>
+        <span id="maxsizeinmegabytes_nodejs">
+<a href="#maxsizeinmegabytes_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Size<wbr>In<wbr>Megabytes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -671,7 +749,9 @@ section of [this document](https://docs.microsoft.com/en-us/azure/service-bus-me
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -681,7 +761,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>requires<wbr>Duplicate<wbr>Detection</span>
+        <span id="requiresduplicatedetection_nodejs">
+<a href="#requiresduplicatedetection_nodejs" style="color: inherit; text-decoration: inherit;">requires<wbr>Duplicate<wbr>Detection</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -692,7 +774,9 @@ a new resource to be created. Defaults to `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>requires<wbr>Session</span>
+        <span id="requiressession_nodejs">
+<a href="#requiressession_nodejs" style="color: inherit; text-decoration: inherit;">requires<wbr>Session</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -711,7 +795,9 @@ Changing this forces a new resource to be created. Defaults to `false`.
 
     <dt class="property-required"
             title="Required">
-        <span>namespace_<wbr>name</span>
+        <span id="namespace_name_python">
+<a href="#namespace_name_python" style="color: inherit; text-decoration: inherit;">namespace_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -721,7 +807,9 @@ this queue in. Changing this forces a new resource to be created.
 
     <dt class="property-required"
             title="Required">
-        <span>resource_<wbr>group_<wbr>name</span>
+        <span id="resource_group_name_python">
+<a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -731,7 +819,9 @@ create the namespace. Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>auto_<wbr>delete_<wbr>on_<wbr>idle</span>
+        <span id="auto_delete_on_idle_python">
+<a href="#auto_delete_on_idle_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>delete_<wbr>on_<wbr>idle</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -741,7 +831,9 @@ Queue is automatically deleted, minimum of 5 minutes.
 
     <dt class="property-optional"
             title="Optional">
-        <span>dead_<wbr>lettering_<wbr>on_<wbr>message_<wbr>expiration</span>
+        <span id="dead_lettering_on_message_expiration_python">
+<a href="#dead_lettering_on_message_expiration_python" style="color: inherit; text-decoration: inherit;">dead_<wbr>lettering_<wbr>on_<wbr>message_<wbr>expiration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -750,7 +842,9 @@ Queue is automatically deleted, minimum of 5 minutes.
 
     <dt class="property-optional"
             title="Optional">
-        <span>default_<wbr>message_<wbr>ttl</span>
+        <span id="default_message_ttl_python">
+<a href="#default_message_ttl_python" style="color: inherit; text-decoration: inherit;">default_<wbr>message_<wbr>ttl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -760,7 +854,9 @@ queue. This is the default value used when TTL is not set on message itself.
 
     <dt class="property-optional"
             title="Optional">
-        <span>duplicate_<wbr>detection_<wbr>history_<wbr>time_<wbr>window</span>
+        <span id="duplicate_detection_history_time_window_python">
+<a href="#duplicate_detection_history_time_window_python" style="color: inherit; text-decoration: inherit;">duplicate_<wbr>detection_<wbr>history_<wbr>time_<wbr>window</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -770,7 +866,9 @@ duplicates can be detected. Default value is 10 minutes. (`PT10M`)
 
     <dt class="property-optional"
             title="Optional">
-        <span>enable_<wbr>express</span>
+        <span id="enable_express_python">
+<a href="#enable_express_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>express</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -782,7 +880,9 @@ be set to `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>enable_<wbr>partitioning</span>
+        <span id="enable_partitioning_python">
+<a href="#enable_partitioning_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>partitioning</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -794,7 +894,9 @@ be set to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>lock_<wbr>duration</span>
+        <span id="lock_duration_python">
+<a href="#lock_duration_python" style="color: inherit; text-decoration: inherit;">lock_<wbr>duration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -803,7 +905,9 @@ be set to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>max_<wbr>delivery_<wbr>count</span>
+        <span id="max_delivery_count_python">
+<a href="#max_delivery_count_python" style="color: inherit; text-decoration: inherit;">max_<wbr>delivery_<wbr>count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -812,7 +916,9 @@ be set to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>max_<wbr>size_<wbr>in_<wbr>megabytes</span>
+        <span id="max_size_in_megabytes_python">
+<a href="#max_size_in_megabytes_python" style="color: inherit; text-decoration: inherit;">max_<wbr>size_<wbr>in_<wbr>megabytes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -823,7 +929,9 @@ section of [this document](https://docs.microsoft.com/en-us/azure/service-bus-me
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -833,7 +941,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>requires_<wbr>duplicate_<wbr>detection</span>
+        <span id="requires_duplicate_detection_python">
+<a href="#requires_duplicate_detection_python" style="color: inherit; text-decoration: inherit;">requires_<wbr>duplicate_<wbr>detection</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -844,7 +954,9 @@ a new resource to be created. Defaults to `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>requires_<wbr>session</span>
+        <span id="requires_session_python">
+<a href="#requires_session_python" style="color: inherit; text-decoration: inherit;">requires_<wbr>session</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -874,7 +986,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -889,7 +1003,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -904,7 +1020,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -919,7 +1037,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -940,7 +1060,7 @@ Get an existing Queue resource's state with the given name, ID, and optional ext
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/servicebus/#QueueState">QueueState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/servicebus/#Queue">Queue</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/servicebus/#QueueState">QueueState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/servicebus/#Queue">Queue</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -948,11 +1068,11 @@ Get an existing Queue resource's state with the given name, ID, and optional ext
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetQueue<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/servicebus?tab=doc#QueueState">QueueState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/servicebus?tab=doc#Queue">Queue</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetQueue<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/servicebus?tab=doc#QueueState">QueueState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/servicebus?tab=doc#Queue">Queue</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ServiceBus.Queue.html">Queue</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ServiceBus.QueueState.html">QueueState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ServiceBus.Queue.html">Queue</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ServiceBus.QueueState.html">QueueState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1060,7 +1180,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Auto<wbr>Delete<wbr>On<wbr>Idle</span>
+        <span id="state_autodeleteonidle_csharp">
+<a href="#state_autodeleteonidle_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Delete<wbr>On<wbr>Idle</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1070,7 +1192,9 @@ Queue is automatically deleted, minimum of 5 minutes.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dead<wbr>Lettering<wbr>On<wbr>Message<wbr>Expiration</span>
+        <span id="state_deadletteringonmessageexpiration_csharp">
+<a href="#state_deadletteringonmessageexpiration_csharp" style="color: inherit; text-decoration: inherit;">Dead<wbr>Lettering<wbr>On<wbr>Message<wbr>Expiration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1079,7 +1203,9 @@ Queue is automatically deleted, minimum of 5 minutes.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default<wbr>Message<wbr>Ttl</span>
+        <span id="state_defaultmessagettl_csharp">
+<a href="#state_defaultmessagettl_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Message<wbr>Ttl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1089,7 +1215,9 @@ queue. This is the default value used when TTL is not set on message itself.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Duplicate<wbr>Detection<wbr>History<wbr>Time<wbr>Window</span>
+        <span id="state_duplicatedetectionhistorytimewindow_csharp">
+<a href="#state_duplicatedetectionhistorytimewindow_csharp" style="color: inherit; text-decoration: inherit;">Duplicate<wbr>Detection<wbr>History<wbr>Time<wbr>Window</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1099,7 +1227,9 @@ duplicates can be detected. Default value is 10 minutes. (`PT10M`)
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enable<wbr>Express</span>
+        <span id="state_enableexpress_csharp">
+<a href="#state_enableexpress_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Express</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1111,7 +1241,9 @@ be set to `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enable<wbr>Partitioning</span>
+        <span id="state_enablepartitioning_csharp">
+<a href="#state_enablepartitioning_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Partitioning</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1123,7 +1255,9 @@ be set to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Lock<wbr>Duration</span>
+        <span id="state_lockduration_csharp">
+<a href="#state_lockduration_csharp" style="color: inherit; text-decoration: inherit;">Lock<wbr>Duration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1132,7 +1266,9 @@ be set to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Delivery<wbr>Count</span>
+        <span id="state_maxdeliverycount_csharp">
+<a href="#state_maxdeliverycount_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Delivery<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1141,7 +1277,9 @@ be set to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Size<wbr>In<wbr>Megabytes</span>
+        <span id="state_maxsizeinmegabytes_csharp">
+<a href="#state_maxsizeinmegabytes_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Size<wbr>In<wbr>Megabytes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1152,7 +1290,9 @@ section of [this document](https://docs.microsoft.com/en-us/azure/service-bus-me
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1162,7 +1302,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Namespace<wbr>Name</span>
+        <span id="state_namespacename_csharp">
+<a href="#state_namespacename_csharp" style="color: inherit; text-decoration: inherit;">Namespace<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1172,7 +1314,9 @@ this queue in. Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Requires<wbr>Duplicate<wbr>Detection</span>
+        <span id="state_requiresduplicatedetection_csharp">
+<a href="#state_requiresduplicatedetection_csharp" style="color: inherit; text-decoration: inherit;">Requires<wbr>Duplicate<wbr>Detection</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1183,7 +1327,9 @@ a new resource to be created. Defaults to `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Requires<wbr>Session</span>
+        <span id="state_requiressession_csharp">
+<a href="#state_requiressession_csharp" style="color: inherit; text-decoration: inherit;">Requires<wbr>Session</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1195,7 +1341,9 @@ Changing this forces a new resource to be created. Defaults to `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="state_resourcegroupname_csharp">
+<a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1212,7 +1360,9 @@ create the namespace. Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Auto<wbr>Delete<wbr>On<wbr>Idle</span>
+        <span id="state_autodeleteonidle_go">
+<a href="#state_autodeleteonidle_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Delete<wbr>On<wbr>Idle</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1222,7 +1372,9 @@ Queue is automatically deleted, minimum of 5 minutes.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dead<wbr>Lettering<wbr>On<wbr>Message<wbr>Expiration</span>
+        <span id="state_deadletteringonmessageexpiration_go">
+<a href="#state_deadletteringonmessageexpiration_go" style="color: inherit; text-decoration: inherit;">Dead<wbr>Lettering<wbr>On<wbr>Message<wbr>Expiration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1231,7 +1383,9 @@ Queue is automatically deleted, minimum of 5 minutes.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default<wbr>Message<wbr>Ttl</span>
+        <span id="state_defaultmessagettl_go">
+<a href="#state_defaultmessagettl_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Message<wbr>Ttl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1241,7 +1395,9 @@ queue. This is the default value used when TTL is not set on message itself.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Duplicate<wbr>Detection<wbr>History<wbr>Time<wbr>Window</span>
+        <span id="state_duplicatedetectionhistorytimewindow_go">
+<a href="#state_duplicatedetectionhistorytimewindow_go" style="color: inherit; text-decoration: inherit;">Duplicate<wbr>Detection<wbr>History<wbr>Time<wbr>Window</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1251,7 +1407,9 @@ duplicates can be detected. Default value is 10 minutes. (`PT10M`)
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enable<wbr>Express</span>
+        <span id="state_enableexpress_go">
+<a href="#state_enableexpress_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Express</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1263,7 +1421,9 @@ be set to `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enable<wbr>Partitioning</span>
+        <span id="state_enablepartitioning_go">
+<a href="#state_enablepartitioning_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Partitioning</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1275,7 +1435,9 @@ be set to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Lock<wbr>Duration</span>
+        <span id="state_lockduration_go">
+<a href="#state_lockduration_go" style="color: inherit; text-decoration: inherit;">Lock<wbr>Duration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1284,7 +1446,9 @@ be set to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Delivery<wbr>Count</span>
+        <span id="state_maxdeliverycount_go">
+<a href="#state_maxdeliverycount_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Delivery<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1293,7 +1457,9 @@ be set to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Size<wbr>In<wbr>Megabytes</span>
+        <span id="state_maxsizeinmegabytes_go">
+<a href="#state_maxsizeinmegabytes_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Size<wbr>In<wbr>Megabytes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1304,7 +1470,9 @@ section of [this document](https://docs.microsoft.com/en-us/azure/service-bus-me
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1314,7 +1482,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Namespace<wbr>Name</span>
+        <span id="state_namespacename_go">
+<a href="#state_namespacename_go" style="color: inherit; text-decoration: inherit;">Namespace<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1324,7 +1494,9 @@ this queue in. Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Requires<wbr>Duplicate<wbr>Detection</span>
+        <span id="state_requiresduplicatedetection_go">
+<a href="#state_requiresduplicatedetection_go" style="color: inherit; text-decoration: inherit;">Requires<wbr>Duplicate<wbr>Detection</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1335,7 +1507,9 @@ a new resource to be created. Defaults to `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Requires<wbr>Session</span>
+        <span id="state_requiressession_go">
+<a href="#state_requiressession_go" style="color: inherit; text-decoration: inherit;">Requires<wbr>Session</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1347,7 +1521,9 @@ Changing this forces a new resource to be created. Defaults to `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="state_resourcegroupname_go">
+<a href="#state_resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1364,7 +1540,9 @@ create the namespace. Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>auto<wbr>Delete<wbr>On<wbr>Idle</span>
+        <span id="state_autodeleteonidle_nodejs">
+<a href="#state_autodeleteonidle_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Delete<wbr>On<wbr>Idle</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1374,7 +1552,9 @@ Queue is automatically deleted, minimum of 5 minutes.
 
     <dt class="property-optional"
             title="Optional">
-        <span>dead<wbr>Lettering<wbr>On<wbr>Message<wbr>Expiration</span>
+        <span id="state_deadletteringonmessageexpiration_nodejs">
+<a href="#state_deadletteringonmessageexpiration_nodejs" style="color: inherit; text-decoration: inherit;">dead<wbr>Lettering<wbr>On<wbr>Message<wbr>Expiration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1383,7 +1563,9 @@ Queue is automatically deleted, minimum of 5 minutes.
 
     <dt class="property-optional"
             title="Optional">
-        <span>default<wbr>Message<wbr>Ttl</span>
+        <span id="state_defaultmessagettl_nodejs">
+<a href="#state_defaultmessagettl_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Message<wbr>Ttl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1393,7 +1575,9 @@ queue. This is the default value used when TTL is not set on message itself.
 
     <dt class="property-optional"
             title="Optional">
-        <span>duplicate<wbr>Detection<wbr>History<wbr>Time<wbr>Window</span>
+        <span id="state_duplicatedetectionhistorytimewindow_nodejs">
+<a href="#state_duplicatedetectionhistorytimewindow_nodejs" style="color: inherit; text-decoration: inherit;">duplicate<wbr>Detection<wbr>History<wbr>Time<wbr>Window</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1403,7 +1587,9 @@ duplicates can be detected. Default value is 10 minutes. (`PT10M`)
 
     <dt class="property-optional"
             title="Optional">
-        <span>enable<wbr>Express</span>
+        <span id="state_enableexpress_nodejs">
+<a href="#state_enableexpress_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Express</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1415,7 +1601,9 @@ be set to `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>enable<wbr>Partitioning</span>
+        <span id="state_enablepartitioning_nodejs">
+<a href="#state_enablepartitioning_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Partitioning</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1427,7 +1615,9 @@ be set to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>lock<wbr>Duration</span>
+        <span id="state_lockduration_nodejs">
+<a href="#state_lockduration_nodejs" style="color: inherit; text-decoration: inherit;">lock<wbr>Duration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1436,7 +1626,9 @@ be set to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Delivery<wbr>Count</span>
+        <span id="state_maxdeliverycount_nodejs">
+<a href="#state_maxdeliverycount_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Delivery<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1445,7 +1637,9 @@ be set to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Size<wbr>In<wbr>Megabytes</span>
+        <span id="state_maxsizeinmegabytes_nodejs">
+<a href="#state_maxsizeinmegabytes_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Size<wbr>In<wbr>Megabytes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1456,7 +1650,9 @@ section of [this document](https://docs.microsoft.com/en-us/azure/service-bus-me
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1466,7 +1662,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>namespace<wbr>Name</span>
+        <span id="state_namespacename_nodejs">
+<a href="#state_namespacename_nodejs" style="color: inherit; text-decoration: inherit;">namespace<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1476,7 +1674,9 @@ this queue in. Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>requires<wbr>Duplicate<wbr>Detection</span>
+        <span id="state_requiresduplicatedetection_nodejs">
+<a href="#state_requiresduplicatedetection_nodejs" style="color: inherit; text-decoration: inherit;">requires<wbr>Duplicate<wbr>Detection</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1487,7 +1687,9 @@ a new resource to be created. Defaults to `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>requires<wbr>Session</span>
+        <span id="state_requiressession_nodejs">
+<a href="#state_requiressession_nodejs" style="color: inherit; text-decoration: inherit;">requires<wbr>Session</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1499,7 +1701,9 @@ Changing this forces a new resource to be created. Defaults to `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource<wbr>Group<wbr>Name</span>
+        <span id="state_resourcegroupname_nodejs">
+<a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1516,7 +1720,9 @@ create the namespace. Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>auto_<wbr>delete_<wbr>on_<wbr>idle</span>
+        <span id="state_auto_delete_on_idle_python">
+<a href="#state_auto_delete_on_idle_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>delete_<wbr>on_<wbr>idle</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1526,7 +1732,9 @@ Queue is automatically deleted, minimum of 5 minutes.
 
     <dt class="property-optional"
             title="Optional">
-        <span>dead_<wbr>lettering_<wbr>on_<wbr>message_<wbr>expiration</span>
+        <span id="state_dead_lettering_on_message_expiration_python">
+<a href="#state_dead_lettering_on_message_expiration_python" style="color: inherit; text-decoration: inherit;">dead_<wbr>lettering_<wbr>on_<wbr>message_<wbr>expiration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1535,7 +1743,9 @@ Queue is automatically deleted, minimum of 5 minutes.
 
     <dt class="property-optional"
             title="Optional">
-        <span>default_<wbr>message_<wbr>ttl</span>
+        <span id="state_default_message_ttl_python">
+<a href="#state_default_message_ttl_python" style="color: inherit; text-decoration: inherit;">default_<wbr>message_<wbr>ttl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1545,7 +1755,9 @@ queue. This is the default value used when TTL is not set on message itself.
 
     <dt class="property-optional"
             title="Optional">
-        <span>duplicate_<wbr>detection_<wbr>history_<wbr>time_<wbr>window</span>
+        <span id="state_duplicate_detection_history_time_window_python">
+<a href="#state_duplicate_detection_history_time_window_python" style="color: inherit; text-decoration: inherit;">duplicate_<wbr>detection_<wbr>history_<wbr>time_<wbr>window</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1555,7 +1767,9 @@ duplicates can be detected. Default value is 10 minutes. (`PT10M`)
 
     <dt class="property-optional"
             title="Optional">
-        <span>enable_<wbr>express</span>
+        <span id="state_enable_express_python">
+<a href="#state_enable_express_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>express</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1567,7 +1781,9 @@ be set to `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>enable_<wbr>partitioning</span>
+        <span id="state_enable_partitioning_python">
+<a href="#state_enable_partitioning_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>partitioning</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1579,7 +1795,9 @@ be set to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>lock_<wbr>duration</span>
+        <span id="state_lock_duration_python">
+<a href="#state_lock_duration_python" style="color: inherit; text-decoration: inherit;">lock_<wbr>duration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1588,7 +1806,9 @@ be set to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>max_<wbr>delivery_<wbr>count</span>
+        <span id="state_max_delivery_count_python">
+<a href="#state_max_delivery_count_python" style="color: inherit; text-decoration: inherit;">max_<wbr>delivery_<wbr>count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1597,7 +1817,9 @@ be set to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>max_<wbr>size_<wbr>in_<wbr>megabytes</span>
+        <span id="state_max_size_in_megabytes_python">
+<a href="#state_max_size_in_megabytes_python" style="color: inherit; text-decoration: inherit;">max_<wbr>size_<wbr>in_<wbr>megabytes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1608,7 +1830,9 @@ section of [this document](https://docs.microsoft.com/en-us/azure/service-bus-me
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1618,7 +1842,9 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>namespace_<wbr>name</span>
+        <span id="state_namespace_name_python">
+<a href="#state_namespace_name_python" style="color: inherit; text-decoration: inherit;">namespace_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1628,7 +1854,9 @@ this queue in. Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>requires_<wbr>duplicate_<wbr>detection</span>
+        <span id="state_requires_duplicate_detection_python">
+<a href="#state_requires_duplicate_detection_python" style="color: inherit; text-decoration: inherit;">requires_<wbr>duplicate_<wbr>detection</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1639,7 +1867,9 @@ a new resource to be created. Defaults to `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>requires_<wbr>session</span>
+        <span id="state_requires_session_python">
+<a href="#state_requires_session_python" style="color: inherit; text-decoration: inherit;">requires_<wbr>session</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1651,7 +1881,9 @@ Changing this forces a new resource to be created. Defaults to `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource_<wbr>group_<wbr>name</span>
+        <span id="state_resource_group_name_python">
+<a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

@@ -1,7 +1,9 @@
 {{ with .File }}
     {{ if not $.Page.Params.no_on_this_page }}
         <div class="on-this-page">
-            <h4 class="no-anchor">On This Page</h4>
+            <h4 class="no-anchor">
+                <a href="#">On This Page</a>
+            </h4>
             <ul class="text-sm">
                 {{/* This will be populated dynamically with all H2s and H3s on the page; see assets/js/main.js */}}
             </ul>
@@ -25,3 +27,4 @@
         </li>
     </ul>
 {{ end }}
+<pulumi-top-button></pulumi-top-button>

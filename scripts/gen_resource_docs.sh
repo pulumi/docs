@@ -54,11 +54,6 @@ generate_docs() {
         pulumi plugin install resource "${provider}" "${plugin_version}"
     fi
 
-    TFGEN=pulumi-tfgen-${provider}
-    echo "Running pulumi-tfgen-${TFGEN} to generate provider schema..."
-    make generate_schema
-    popd
-
     if [ "$provider" = "kubernetes" ]; then
         SCHEMA_FILE="../../../pulumi-kubernetes/sdk/schema/schema.json"
         OVERLAY_SCHEMA_FILE="./overlays/kubernetes/overlays.json"
@@ -67,12 +62,20 @@ generate_docs() {
         OVERLAY_SCHEMA_FILE=""
     fi
 
-    echo "Removing the ${PACKDIR}/${provider} dir..."
-    rm -rf "${PACKDIR}/${provider}"
+    # Use a previously generated schema.json file if it exists.
+    if [ -f "${SCHEMA_FILE}" ]; then
+        echo "Will use previously generated schema.json for generating docs..."
+    else
+        echo "Could not find a schema.json file. Generating schema..."
+        make generate_schema
+    fi
+
+    # Now leave the provider repo and back to the docs repo.
+    popd
 
     echo "Running docs generator from schema for ${provider}..."
     pushd ${TOOL_RESDOCGEN}
-    go run . -logtostderr "${ABSOLUTEPACKDIR}/${provider}" "${SCHEMA_FILE}" "${OVERLAY_SCHEMA_FILE}" || exit 3
+    go run . -logtostderr "${ABSOLUTEPACKDIR}/${provider}" "${SCHEMA_FILE}" "${plugin_version}" "${OVERLAY_SCHEMA_FILE}" || exit 3
     popd
 
     echo "Done generating resource docs for ${provider}"
@@ -81,8 +84,8 @@ generate_docs() {
 
 if [ -z "${REPO_OVERRIDE:-}" ]; then
     for PROVIDER in "${PROVIDERS[@]}" ; do \
-        generate_docs $PROVIDER
+        generate_docs "$PROVIDER"
     done
 else
-    generate_docs ${REPO_OVERRIDE}
+    generate_docs "${REPO_OVERRIDE}"
 fi
