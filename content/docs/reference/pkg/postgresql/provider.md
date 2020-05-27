@@ -26,7 +26,7 @@ construction to achieve fine-grained programmatic control over provider settings
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/postgresql/#Provider">Provider</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>connect_timeout=None<span class="p">, </span>database=None<span class="p">, </span>database_username=None<span class="p">, </span>expected_version=None<span class="p">, </span>host=None<span class="p">, </span>max_connections=None<span class="p">, </span>password=None<span class="p">, </span>port=None<span class="p">, </span>ssl_mode=None<span class="p">, </span>sslmode=None<span class="p">, </span>superuser=None<span class="p">, </span>username=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/postgresql/#Provider">Provider</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>clientcert=None<span class="p">, </span>connect_timeout=None<span class="p">, </span>database=None<span class="p">, </span>database_username=None<span class="p">, </span>expected_version=None<span class="p">, </span>host=None<span class="p">, </span>max_connections=None<span class="p">, </span>password=None<span class="p">, </span>port=None<span class="p">, </span>ssl_mode=None<span class="p">, </span>sslmode=None<span class="p">, </span>sslrootcert=None<span class="p">, </span>superuser=None<span class="p">, </span>username=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -200,7 +200,20 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Connect<wbr>Timeout</span>
+        <span id="clientcert_csharp">
+<a href="#clientcert_csharp" style="color: inherit; text-decoration: inherit;">Clientcert</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#providerclientcert">Pulumi.<wbr>Postgre<wbr>Sql.<wbr>Inputs.<wbr>Provider<wbr>Clientcert<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}SSL client certificate if required by the database.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="connecttimeout_csharp">
+<a href="#connecttimeout_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Timeout</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -209,7 +222,9 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Database</span>
+        <span id="database_csharp">
+<a href="#database_csharp" style="color: inherit; text-decoration: inherit;">Database</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -218,7 +233,9 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Database<wbr>Username</span>
+        <span id="databaseusername_csharp">
+<a href="#databaseusername_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -227,7 +244,9 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Expected<wbr>Version</span>
+        <span id="expectedversion_csharp">
+<a href="#expectedversion_csharp" style="color: inherit; text-decoration: inherit;">Expected<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -236,7 +255,9 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Host</span>
+        <span id="host_csharp">
+<a href="#host_csharp" style="color: inherit; text-decoration: inherit;">Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -245,7 +266,9 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Connections</span>
+        <span id="maxconnections_csharp">
+<a href="#maxconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Connections</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -254,7 +277,9 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Password</span>
+        <span id="password_csharp">
+<a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -263,7 +288,9 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Port</span>
+        <span id="port_csharp">
+<a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -272,7 +299,9 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>Ssl<wbr>Mode</span>
+        <span id="sslmode_csharp">
+<a href="#sslmode_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -280,7 +309,9 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Sslmode</span>
+        <span id="sslmode_csharp">
+<a href="#sslmode_csharp" style="color: inherit; text-decoration: inherit;">Sslmode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -290,7 +321,20 @@ PostgreSQL server
 
     <dt class="property-optional"
             title="Optional">
-        <span>Superuser</span>
+        <span id="sslrootcert_csharp">
+<a href="#sslrootcert_csharp" style="color: inherit; text-decoration: inherit;">Sslrootcert</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The SSL server root certificate file path. The file must contain PEM encoded data.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="superuser_csharp">
+<a href="#superuser_csharp" style="color: inherit; text-decoration: inherit;">Superuser</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -300,7 +344,9 @@ Refreshing state password from Postgres)
 
     <dt class="property-optional"
             title="Optional">
-        <span>Username</span>
+        <span id="username_csharp">
+<a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -316,7 +362,20 @@ Refreshing state password from Postgres)
 
     <dt class="property-optional"
             title="Optional">
-        <span>Connect<wbr>Timeout</span>
+        <span id="clientcert_go">
+<a href="#clientcert_go" style="color: inherit; text-decoration: inherit;">Clientcert</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#providerclientcert">Provider<wbr>Clientcert</a></span>
+    </dt>
+    <dd>{{% md %}}SSL client certificate if required by the database.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="connecttimeout_go">
+<a href="#connecttimeout_go" style="color: inherit; text-decoration: inherit;">Connect<wbr>Timeout</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -325,7 +384,9 @@ Refreshing state password from Postgres)
 
     <dt class="property-optional"
             title="Optional">
-        <span>Database</span>
+        <span id="database_go">
+<a href="#database_go" style="color: inherit; text-decoration: inherit;">Database</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -334,7 +395,9 @@ Refreshing state password from Postgres)
 
     <dt class="property-optional"
             title="Optional">
-        <span>Database<wbr>Username</span>
+        <span id="databaseusername_go">
+<a href="#databaseusername_go" style="color: inherit; text-decoration: inherit;">Database<wbr>Username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -343,7 +406,9 @@ Refreshing state password from Postgres)
 
     <dt class="property-optional"
             title="Optional">
-        <span>Expected<wbr>Version</span>
+        <span id="expectedversion_go">
+<a href="#expectedversion_go" style="color: inherit; text-decoration: inherit;">Expected<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -352,7 +417,9 @@ Refreshing state password from Postgres)
 
     <dt class="property-optional"
             title="Optional">
-        <span>Host</span>
+        <span id="host_go">
+<a href="#host_go" style="color: inherit; text-decoration: inherit;">Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -361,7 +428,9 @@ Refreshing state password from Postgres)
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Connections</span>
+        <span id="maxconnections_go">
+<a href="#maxconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Connections</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -370,7 +439,9 @@ Refreshing state password from Postgres)
 
     <dt class="property-optional"
             title="Optional">
-        <span>Password</span>
+        <span id="password_go">
+<a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -379,7 +450,9 @@ Refreshing state password from Postgres)
 
     <dt class="property-optional"
             title="Optional">
-        <span>Port</span>
+        <span id="port_go">
+<a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -388,7 +461,9 @@ Refreshing state password from Postgres)
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>Ssl<wbr>Mode</span>
+        <span id="sslmode_go">
+<a href="#sslmode_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -396,7 +471,9 @@ Refreshing state password from Postgres)
 
     <dt class="property-optional"
             title="Optional">
-        <span>Sslmode</span>
+        <span id="sslmode_go">
+<a href="#sslmode_go" style="color: inherit; text-decoration: inherit;">Sslmode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -406,7 +483,20 @@ PostgreSQL server
 
     <dt class="property-optional"
             title="Optional">
-        <span>Superuser</span>
+        <span id="sslrootcert_go">
+<a href="#sslrootcert_go" style="color: inherit; text-decoration: inherit;">Sslrootcert</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The SSL server root certificate file path. The file must contain PEM encoded data.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="superuser_go">
+<a href="#superuser_go" style="color: inherit; text-decoration: inherit;">Superuser</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -416,7 +506,9 @@ Refreshing state password from Postgres)
 
     <dt class="property-optional"
             title="Optional">
-        <span>Username</span>
+        <span id="username_go">
+<a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -432,7 +524,20 @@ Refreshing state password from Postgres)
 
     <dt class="property-optional"
             title="Optional">
-        <span>connect<wbr>Timeout</span>
+        <span id="clientcert_nodejs">
+<a href="#clientcert_nodejs" style="color: inherit; text-decoration: inherit;">clientcert</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#providerclientcert">Provider<wbr>Clientcert</a></span>
+    </dt>
+    <dd>{{% md %}}SSL client certificate if required by the database.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="connecttimeout_nodejs">
+<a href="#connecttimeout_nodejs" style="color: inherit; text-decoration: inherit;">connect<wbr>Timeout</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -441,7 +546,9 @@ Refreshing state password from Postgres)
 
     <dt class="property-optional"
             title="Optional">
-        <span>database</span>
+        <span id="database_nodejs">
+<a href="#database_nodejs" style="color: inherit; text-decoration: inherit;">database</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -450,7 +557,9 @@ Refreshing state password from Postgres)
 
     <dt class="property-optional"
             title="Optional">
-        <span>database<wbr>Username</span>
+        <span id="databaseusername_nodejs">
+<a href="#databaseusername_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -459,7 +568,9 @@ Refreshing state password from Postgres)
 
     <dt class="property-optional"
             title="Optional">
-        <span>expected<wbr>Version</span>
+        <span id="expectedversion_nodejs">
+<a href="#expectedversion_nodejs" style="color: inherit; text-decoration: inherit;">expected<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -468,7 +579,9 @@ Refreshing state password from Postgres)
 
     <dt class="property-optional"
             title="Optional">
-        <span>host</span>
+        <span id="host_nodejs">
+<a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -477,7 +590,9 @@ Refreshing state password from Postgres)
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Connections</span>
+        <span id="maxconnections_nodejs">
+<a href="#maxconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Connections</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -486,7 +601,9 @@ Refreshing state password from Postgres)
 
     <dt class="property-optional"
             title="Optional">
-        <span>password</span>
+        <span id="password_nodejs">
+<a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -495,7 +612,9 @@ Refreshing state password from Postgres)
 
     <dt class="property-optional"
             title="Optional">
-        <span>port</span>
+        <span id="port_nodejs">
+<a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -504,7 +623,9 @@ Refreshing state password from Postgres)
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>ssl<wbr>Mode</span>
+        <span id="sslmode_nodejs">
+<a href="#sslmode_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -512,7 +633,9 @@ Refreshing state password from Postgres)
 
     <dt class="property-optional"
             title="Optional">
-        <span>sslmode</span>
+        <span id="sslmode_nodejs">
+<a href="#sslmode_nodejs" style="color: inherit; text-decoration: inherit;">sslmode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -522,7 +645,20 @@ PostgreSQL server
 
     <dt class="property-optional"
             title="Optional">
-        <span>superuser</span>
+        <span id="sslrootcert_nodejs">
+<a href="#sslrootcert_nodejs" style="color: inherit; text-decoration: inherit;">sslrootcert</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The SSL server root certificate file path. The file must contain PEM encoded data.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="superuser_nodejs">
+<a href="#superuser_nodejs" style="color: inherit; text-decoration: inherit;">superuser</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -532,7 +668,9 @@ Refreshing state password from Postgres)
 
     <dt class="property-optional"
             title="Optional">
-        <span>username</span>
+        <span id="username_nodejs">
+<a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -548,7 +686,20 @@ Refreshing state password from Postgres)
 
     <dt class="property-optional"
             title="Optional">
-        <span>connect_<wbr>timeout</span>
+        <span id="clientcert_python">
+<a href="#clientcert_python" style="color: inherit; text-decoration: inherit;">clientcert</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#providerclientcert">Dict[Provider<wbr>Clientcert]</a></span>
+    </dt>
+    <dd>{{% md %}}SSL client certificate if required by the database.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="connect_timeout_python">
+<a href="#connect_timeout_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>timeout</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -557,7 +708,9 @@ Refreshing state password from Postgres)
 
     <dt class="property-optional"
             title="Optional">
-        <span>database</span>
+        <span id="database_python">
+<a href="#database_python" style="color: inherit; text-decoration: inherit;">database</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -566,7 +719,9 @@ Refreshing state password from Postgres)
 
     <dt class="property-optional"
             title="Optional">
-        <span>database_<wbr>username</span>
+        <span id="database_username_python">
+<a href="#database_username_python" style="color: inherit; text-decoration: inherit;">database_<wbr>username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -575,7 +730,9 @@ Refreshing state password from Postgres)
 
     <dt class="property-optional"
             title="Optional">
-        <span>expected_<wbr>version</span>
+        <span id="expected_version_python">
+<a href="#expected_version_python" style="color: inherit; text-decoration: inherit;">expected_<wbr>version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -584,7 +741,9 @@ Refreshing state password from Postgres)
 
     <dt class="property-optional"
             title="Optional">
-        <span>host</span>
+        <span id="host_python">
+<a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -593,7 +752,9 @@ Refreshing state password from Postgres)
 
     <dt class="property-optional"
             title="Optional">
-        <span>max_<wbr>connections</span>
+        <span id="max_connections_python">
+<a href="#max_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>connections</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -602,7 +763,9 @@ Refreshing state password from Postgres)
 
     <dt class="property-optional"
             title="Optional">
-        <span>password</span>
+        <span id="password_python">
+<a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -611,7 +774,9 @@ Refreshing state password from Postgres)
 
     <dt class="property-optional"
             title="Optional">
-        <span>port</span>
+        <span id="port_python">
+<a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -620,7 +785,9 @@ Refreshing state password from Postgres)
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>ssl_<wbr>mode</span>
+        <span id="ssl_mode_python">
+<a href="#ssl_mode_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -628,7 +795,9 @@ Refreshing state password from Postgres)
 
     <dt class="property-optional"
             title="Optional">
-        <span>sslmode</span>
+        <span id="sslmode_python">
+<a href="#sslmode_python" style="color: inherit; text-decoration: inherit;">sslmode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -638,7 +807,20 @@ PostgreSQL server
 
     <dt class="property-optional"
             title="Optional">
-        <span>superuser</span>
+        <span id="sslrootcert_python">
+<a href="#sslrootcert_python" style="color: inherit; text-decoration: inherit;">sslrootcert</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The SSL server root certificate file path. The file must contain PEM encoded data.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="superuser_python">
+<a href="#superuser_python" style="color: inherit; text-decoration: inherit;">superuser</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -648,7 +830,9 @@ Refreshing state password from Postgres)
 
     <dt class="property-optional"
             title="Optional">
-        <span>username</span>
+        <span id="username_python">
+<a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -675,7 +859,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -690,7 +876,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -705,7 +893,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -720,7 +910,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -731,6 +923,138 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+
+
+
+
+
+
+
+
+## Supporting Types
+
+
+<h4 id="providerclientcert">Provider<wbr>Clientcert</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/postgresql/types/input/#ProviderClientcert">input</a>   API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-postgresql/sdk/v2/go/postgresql/?tab=doc#ProviderClientcertArgs">input</a>   API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.PostgreSql/Pulumi.PostgreSql.Inputs.ProviderClientcertArgs.html">input</a>   API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="cert_csharp">
+<a href="#cert_csharp" style="color: inherit; text-decoration: inherit;">Cert</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="key_csharp">
+<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="cert_go">
+<a href="#cert_go" style="color: inherit; text-decoration: inherit;">Cert</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="key_go">
+<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="cert_nodejs">
+<a href="#cert_nodejs" style="color: inherit; text-decoration: inherit;">cert</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="key_nodejs">
+<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="cert_python">
+<a href="#cert_python" style="color: inherit; text-decoration: inherit;">cert</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="key_python">
+<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
 
