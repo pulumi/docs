@@ -13,7 +13,7 @@ If your infrastructure was provisioned with Terraform, there are a number of opt
 * **Import** existing resources into Pulumi [in the usual way]({{< relref "import" >}}) or using the `tf2pulumi` to adopt all resources from an existing `.tfstate` file.
 * **Convert** any Terraform HCL to Pulumi code using `tf2pulumi`.
 
-This range of techniques helps to either temporarily or permenanely use Pulumi alongside Terraform, in addition to fully migrating existing infrastructure to Pulumi.
+This range of techniques helps to either temporarily or permanently use Pulumi alongside Terraform, in addition to fully migrating existing infrastructure to Pulumi.
 
 ## Referencing Terraform State
 
