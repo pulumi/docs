@@ -38,14 +38,14 @@ func main() {
 	// Grab the args.
 	flag.Parse()
 	args := flag.Args()
-	if len(args) < 2 {
-		fmt.Fprintf(os.Stderr, "error: usage: %s <out-dir> <provider-schema-file> [overlay-schema-file]>\n", os.Args[0])
+	if len(args) < 3 {
+		fmt.Fprintf(os.Stderr, "error: usage: %s <out-dir> <provider-schema-file> <version> [overlay-schema-file]>\n", os.Args[0])
 		os.Exit(1)
 	}
 
 	defer glog.Flush()
 
-	outDir, schemaFile, overlaysSchemaFile := args[0], args[1], args[2]
+	outDir, schemaFile, version, overlaysSchemaFile := args[0], args[1], args[2], args[3]
 
 	schema, err := ioutil.ReadFile(schemaFile)
 	if err != nil {
@@ -58,6 +58,7 @@ func main() {
 		glog.Infof("error unmarshalling schema into a PackageSpec: %v", err)
 		os.Exit(1)
 	}
+	mainSpec.Version = version
 
 	if overlaysSchemaFile != "" {
 		overlaySpec := &pschema.PackageSpec{}
