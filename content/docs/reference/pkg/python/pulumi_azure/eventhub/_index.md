@@ -214,6 +214,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd></dd></dl>
 
 <dl class="py class">
+<dt id="pulumi_azure.eventhub.AwaitableGetEventHubResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.eventhub.</code><code class="sig-name descname">AwaitableGetEventHubResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">namespace_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">partition_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">partition_ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.eventhub.AwaitableGetEventHubResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_azure.eventhub.AwaitableGetEventhubNamespaceResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.eventhub.</code><code class="sig-name descname">AwaitableGetEventhubNamespaceResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">auto_inflate_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">capacity</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_primary_connection_string</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_primary_connection_string_alias</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_primary_key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_secondary_connection_string</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_secondary_connection_string_alias</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_secondary_key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maximum_throughput_units</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sku</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.eventhub.AwaitableGetEventhubNamespaceResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -379,7 +384,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="p">})</span>
 </pre></div>
 </div>
-<p>Deprecated: azure.eventhub.Domain has been deprecated in favor of azure.eventgrid.Domain</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -387,7 +391,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>input_mapping_default_values</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">input_mapping_default_values</span></code> block as defined below.</p></li>
 <li><p><strong>input_mapping_fields</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">input_mapping_fields</span></code> block as defined below.</p></li>
-<li><p><strong>input_schema</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the schema in which incoming events will be published to this domain. Allowed values are <code class="docutils literal notranslate"><span class="pre">cloudeventv01schema</span></code>, <code class="docutils literal notranslate"><span class="pre">customeventschema</span></code>, or <code class="docutils literal notranslate"><span class="pre">eventgridschema</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">eventgridschema</span></code>. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>input_schema</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the schema in which incoming events will be published to this domain. Allowed values are <code class="docutils literal notranslate"><span class="pre">CloudEventSchemaV1_0</span></code>, <code class="docutils literal notranslate"><span class="pre">CustomEventSchema</span></code>, or <code class="docutils literal notranslate"><span class="pre">EventGridSchema</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">eventgridschema</span></code>. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the EventGrid Domain resource. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which the EventGrid Domain exists. Changing this forces a new resource to be created.</p></li>
@@ -444,7 +448,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py attribute">
 <dt id="pulumi_azure.eventhub.Domain.input_schema">
 <code class="sig-name descname">input_schema</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.eventhub.Domain.input_schema" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specifies the schema in which incoming events will be published to this domain. Allowed values are <code class="docutils literal notranslate"><span class="pre">cloudeventv01schema</span></code>, <code class="docutils literal notranslate"><span class="pre">customeventschema</span></code>, or <code class="docutils literal notranslate"><span class="pre">eventgridschema</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">eventgridschema</span></code>. Changing this forces a new resource to be created.</p>
+<dd><p>Specifies the schema in which incoming events will be published to this domain. Allowed values are <code class="docutils literal notranslate"><span class="pre">CloudEventSchemaV1_0</span></code>, <code class="docutils literal notranslate"><span class="pre">CustomEventSchema</span></code>, or <code class="docutils literal notranslate"><span class="pre">EventGridSchema</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">eventgridschema</span></code>. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -497,7 +501,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>endpoint</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Endpoint associated with the EventGrid Domain.</p></li>
 <li><p><strong>input_mapping_default_values</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">input_mapping_default_values</span></code> block as defined below.</p></li>
 <li><p><strong>input_mapping_fields</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">input_mapping_fields</span></code> block as defined below.</p></li>
-<li><p><strong>input_schema</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the schema in which incoming events will be published to this domain. Allowed values are <code class="docutils literal notranslate"><span class="pre">cloudeventv01schema</span></code>, <code class="docutils literal notranslate"><span class="pre">customeventschema</span></code>, or <code class="docutils literal notranslate"><span class="pre">eventgridschema</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">eventgridschema</span></code>. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>input_schema</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the schema in which incoming events will be published to this domain. Allowed values are <code class="docutils literal notranslate"><span class="pre">CloudEventSchemaV1_0</span></code>, <code class="docutils literal notranslate"><span class="pre">CustomEventSchema</span></code>, or <code class="docutils literal notranslate"><span class="pre">EventGridSchema</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">eventgridschema</span></code>. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the EventGrid Domain resource. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>primary_access_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Primary Shared Access Key associated with the EventGrid Domain.</p></li>
@@ -581,7 +585,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="p">})</span>
 </pre></div>
 </div>
-<p>Deprecated: azure.eventhub.EventGridTopic has been deprecated in favor of azure.eventgrid.Topic</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -914,7 +917,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">manage</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Deprecated: azure.eventhub.EventHubAuthorizationRule has been deprecated in favor of azure.eventhub.AuthorizationRule</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1103,7 +1105,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">user_metadata</span><span class="o">=</span><span class="s2">&quot;some-meta-data&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Deprecated: azure.eventhub.EventHubConsumerGroup has been deprecated in favor of azure.eventhub.ConsumerGroup</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1647,9 +1648,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;environment&quot;</span><span class="p">:</span> <span class="s2">&quot;staging&quot;</span><span class="p">,</span>
     <span class="p">})</span>
-<span class="n">default_queue</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">Queue</span><span class="p">(</span><span class="s2">&quot;defaultQueue&quot;</span><span class="p">,</span>
-    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">default_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
-    <span class="n">storage_account_name</span><span class="o">=</span><span class="n">default_account</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="n">default_queue</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">Queue</span><span class="p">(</span><span class="s2">&quot;defaultQueue&quot;</span><span class="p">,</span> <span class="n">storage_account_name</span><span class="o">=</span><span class="n">default_account</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
 <span class="n">default_event_subscription</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">eventgrid</span><span class="o">.</span><span class="n">EventSubscription</span><span class="p">(</span><span class="s2">&quot;defaultEventSubscription&quot;</span><span class="p">,</span>
     <span class="n">scope</span><span class="o">=</span><span class="n">default_resource_group</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="n">storage_queue_endpoint</span><span class="o">=</span><span class="p">{</span>
@@ -1658,13 +1657,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="p">})</span>
 </pre></div>
 </div>
-<p>Deprecated: azure.eventhub.EventSubscription has been deprecated in favor of azure.eventgrid.EventSubscription</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>event_delivery_schema</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the event delivery schema for the event subscription. Possible values include: <code class="docutils literal notranslate"><span class="pre">EventGridSchema</span></code>, <code class="docutils literal notranslate"><span class="pre">CloudEventV01Schema</span></code>, <code class="docutils literal notranslate"><span class="pre">CustomInputSchema</span></code>.</p></li>
+<li><p><strong>event_delivery_schema</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the event delivery schema for the event subscription. Possible values include: <code class="docutils literal notranslate"><span class="pre">EventGridSchema</span></code>, <code class="docutils literal notranslate"><span class="pre">CloudEventSchemaV1_0</span></code>, <code class="docutils literal notranslate"><span class="pre">CustomInputSchema</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">EventGridSchema</span></code>. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>eventhub_endpoint</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">eventhub_endpoint</span></code> block as defined below.</p></li>
 <li><p><strong>hybrid_connection_endpoint</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">hybrid_connection_endpoint</span></code> block as defined below.</p></li>
 <li><p><strong>included_event_types</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of applicable event types that need to be part of the event subscription.</p></li>
@@ -1675,7 +1673,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>storage_blob_dead_letter_destination</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">storage_blob_dead_letter_destination</span></code> block as defined below.</p></li>
 <li><p><strong>storage_queue_endpoint</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">storage_queue_endpoint</span></code> block as defined below.</p></li>
 <li><p><strong>subject_filter</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">subject_filter</span></code> block as defined below.</p></li>
-<li><p><strong>topic_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the topic to associate with the event subscription.</p></li>
+<li><p><strong>topic_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (Optional) Specifies the name of the topic to associate with the event subscription.</p></li>
 <li><p><strong>webhook_endpoint</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">webhook_endpoint</span></code> block as defined below.</p></li>
 </ul>
 </dd>
@@ -1700,7 +1698,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 <p>The <strong>storage_queue_endpoint</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">queue_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the storage queue where the Event Subscriptio will receive events.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">queue_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the storage queue where the Event Subscription will receive events.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">storage_account_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the id of the storage account id where the storage queue is located.</p></li>
 </ul>
 <p>The <strong>subject_filter</strong> object supports the following:</p>
@@ -1716,7 +1714,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py attribute">
 <dt id="pulumi_azure.eventhub.EventSubscription.event_delivery_schema">
 <code class="sig-name descname">event_delivery_schema</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.eventhub.EventSubscription.event_delivery_schema" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specifies the event delivery schema for the event subscription. Possible values include: <code class="docutils literal notranslate"><span class="pre">EventGridSchema</span></code>, <code class="docutils literal notranslate"><span class="pre">CloudEventV01Schema</span></code>, <code class="docutils literal notranslate"><span class="pre">CustomInputSchema</span></code>.</p>
+<dd><p>Specifies the event delivery schema for the event subscription. Possible values include: <code class="docutils literal notranslate"><span class="pre">EventGridSchema</span></code>, <code class="docutils literal notranslate"><span class="pre">CloudEventSchemaV1_0</span></code>, <code class="docutils literal notranslate"><span class="pre">CustomInputSchema</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">EventGridSchema</span></code>. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -1786,7 +1784,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">storage_queue_endpoint</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.eventhub.EventSubscription.storage_queue_endpoint" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">storage_queue_endpoint</span></code> block as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">queue_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the name of the storage queue where the Event Subscriptio will receive events.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">queue_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the name of the storage queue where the Event Subscription will receive events.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">storage_account_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the id of the storage account id where the storage queue is located.</p></li>
 </ul>
 </dd></dl>
@@ -1805,7 +1803,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py attribute">
 <dt id="pulumi_azure.eventhub.EventSubscription.topic_name">
 <code class="sig-name descname">topic_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.eventhub.EventSubscription.topic_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specifies the name of the topic to associate with the event subscription.</p>
+<dd><p>(Optional) Specifies the name of the topic to associate with the event subscription.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -1828,7 +1826,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>event_delivery_schema</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the event delivery schema for the event subscription. Possible values include: <code class="docutils literal notranslate"><span class="pre">EventGridSchema</span></code>, <code class="docutils literal notranslate"><span class="pre">CloudEventV01Schema</span></code>, <code class="docutils literal notranslate"><span class="pre">CustomInputSchema</span></code>.</p></li>
+<li><p><strong>event_delivery_schema</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the event delivery schema for the event subscription. Possible values include: <code class="docutils literal notranslate"><span class="pre">EventGridSchema</span></code>, <code class="docutils literal notranslate"><span class="pre">CloudEventSchemaV1_0</span></code>, <code class="docutils literal notranslate"><span class="pre">CustomInputSchema</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">EventGridSchema</span></code>. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>eventhub_endpoint</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">eventhub_endpoint</span></code> block as defined below.</p></li>
 <li><p><strong>hybrid_connection_endpoint</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">hybrid_connection_endpoint</span></code> block as defined below.</p></li>
 <li><p><strong>included_event_types</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of applicable event types that need to be part of the event subscription.</p></li>
@@ -1839,7 +1837,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>storage_blob_dead_letter_destination</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">storage_blob_dead_letter_destination</span></code> block as defined below.</p></li>
 <li><p><strong>storage_queue_endpoint</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">storage_queue_endpoint</span></code> block as defined below.</p></li>
 <li><p><strong>subject_filter</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">subject_filter</span></code> block as defined below.</p></li>
-<li><p><strong>topic_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the topic to associate with the event subscription.</p></li>
+<li><p><strong>topic_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (Optional) Specifies the name of the topic to associate with the event subscription.</p></li>
 <li><p><strong>webhook_endpoint</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">webhook_endpoint</span></code> block as defined below.</p></li>
 </ul>
 </dd>
@@ -1864,7 +1862,7 @@ properties used to qualify the lookup.</p>
 </ul>
 <p>The <strong>storage_queue_endpoint</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">queue_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the storage queue where the Event Subscriptio will receive events.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">queue_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the storage queue where the Event Subscription will receive events.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">storage_account_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the id of the storage account id where the storage queue is located.</p></li>
 </ul>
 <p>The <strong>subject_filter</strong> object supports the following:</p>
@@ -2103,6 +2101,30 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.eventhub.GetConsumeGroupResult.user_metadata">
 <code class="sig-name descname">user_metadata</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.eventhub.GetConsumeGroupResult.user_metadata" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies the user metadata.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_azure.eventhub.GetEventHubResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.eventhub.</code><code class="sig-name descname">GetEventHubResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">namespace_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">partition_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">partition_ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.eventhub.GetEventHubResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getEventHub.</p>
+<dl class="py attribute">
+<dt id="pulumi_azure.eventhub.GetEventHubResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.eventhub.GetEventHubResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_azure.eventhub.GetEventHubResult.partition_count">
+<code class="sig-name descname">partition_count</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.eventhub.GetEventHubResult.partition_count" title="Permalink to this definition">¶</a></dt>
+<dd><p>The number of partitions in the EventHub.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_azure.eventhub.GetEventHubResult.partition_ids">
+<code class="sig-name descname">partition_ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.eventhub.GetEventHubResult.partition_ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>The identifiers for the partitions of this EventHub.</p>
 </dd></dl>
 
 </dd></dl>
@@ -2434,7 +2456,6 @@ authorization rule <code class="docutils literal notranslate"><span class="pre">
     <span class="p">})</span>
 </pre></div>
 </div>
-<p>Deprecated: azure.eventhub.Namespace has been deprecated in favor of azure.servicebus.Namespace</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2614,7 +2635,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">manage</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Deprecated: azure.eventhub.NamespaceAuthorizationRule has been deprecated in favor of azure.servicebus.NamespaceAuthorizationRule</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2774,7 +2794,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">enable_partitioning</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Deprecated: azure.eventhub.Queue has been deprecated in favor of azure.servicebus.Queue</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3035,7 +3054,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">manage</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Deprecated: azure.eventhub.QueueAuthorizationRule has been deprecated in favor of azure.servicebus.QueueAuthorizationRule</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3208,7 +3226,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">max_delivery_count</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Deprecated: azure.eventhub.Subscription has been deprecated in favor of azure.servicebus.Subscription</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3445,7 +3462,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="p">})</span>
 </pre></div>
 </div>
-<p>Deprecated: azure.eventhub.SubscriptionRule has been deprecated in favor of azure.servicebus.SubscriptionRule</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3634,7 +3650,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">enable_partitioning</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Deprecated: azure.eventhub.Topic has been deprecated in favor of azure.servicebus.Topic</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3878,7 +3893,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">manage</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Deprecated: azure.eventhub.TopicAuthorizationRule has been deprecated in favor of azure.servicebus.TopicAuthorizationRule</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4076,6 +4090,30 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="py function">
+<dt id="pulumi_azure.eventhub.get_event_hub">
+<code class="sig-prename descclassname">pulumi_azure.eventhub.</code><code class="sig-name descname">get_event_hub</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">namespace_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.eventhub.get_event_hub" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to access information about an existing EventHub.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">eventhub</span><span class="o">.</span><span class="n">get_event_hub</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;search-eventhub&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="s2">&quot;search-service&quot;</span><span class="p">,</span>
+    <span class="n">namespace_name</span><span class="o">=</span><span class="s2">&quot;search-eventhubns&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;eventhubId&quot;</span><span class="p">,</span> <span class="n">example</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – The name of this EventHub.</p></li>
+<li><p><strong>namespace_name</strong> (<em>str</em>) – The name of the EventHub Namespace where the EventHub exists.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>str</em>) – The name of the Resource Group where the EventHub exists.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
 <dt id="pulumi_azure.eventhub.get_eventhub_namespace">
 <code class="sig-prename descclassname">pulumi_azure.eventhub.</code><code class="sig-name descname">get_eventhub_namespace</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.eventhub.get_eventhub_namespace" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing EventHub Namespace.</p>
@@ -4087,7 +4125,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;eventhubNamespaceId&quot;</span><span class="p">,</span> <span class="n">example</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Deprecated: azure.eventhub.getEventhubNamespace has been deprecated in favor of azure.eventhub.getNamespace</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4156,7 +4193,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;location&quot;</span><span class="p">,</span> <span class="n">example</span><span class="o">.</span><span class="n">location</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Deprecated: azure.eventhub.getServiceBusNamespace has been deprecated in favor of azure.servicebus.getNamespace</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

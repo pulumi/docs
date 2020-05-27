@@ -23,17 +23,17 @@ anything, please consult the source <a class="reference external" href="https://
 <span class="n">current</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">get_client_config</span><span class="p">()</span>
 <span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West US&quot;</span><span class="p">)</span>
 <span class="n">example_sql_server</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">sql</span><span class="o">.</span><span class="n">SqlServer</span><span class="p">(</span><span class="s2">&quot;exampleSqlServer&quot;</span><span class="p">,</span>
-    <span class="n">administrator_login</span><span class="o">=</span><span class="s2">&quot;4dm1n157r470r&quot;</span><span class="p">,</span>
-    <span class="n">administrator_login_password</span><span class="o">=</span><span class="s2">&quot;4-v3ry-53cr37-p455w0rd&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
     <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
-    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
-    <span class="n">version</span><span class="o">=</span><span class="s2">&quot;12.0&quot;</span><span class="p">)</span>
+    <span class="n">version</span><span class="o">=</span><span class="s2">&quot;12.0&quot;</span><span class="p">,</span>
+    <span class="n">administrator_login</span><span class="o">=</span><span class="s2">&quot;4dm1n157r470r&quot;</span><span class="p">,</span>
+    <span class="n">administrator_login_password</span><span class="o">=</span><span class="s2">&quot;4-v3ry-53cr37-p455w0rd&quot;</span><span class="p">)</span>
 <span class="n">example_active_directory_administrator</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">sql</span><span class="o">.</span><span class="n">ActiveDirectoryAdministrator</span><span class="p">(</span><span class="s2">&quot;exampleActiveDirectoryAdministrator&quot;</span><span class="p">,</span>
-    <span class="n">login</span><span class="o">=</span><span class="s2">&quot;sqladmin&quot;</span><span class="p">,</span>
-    <span class="n">object_id</span><span class="o">=</span><span class="n">current</span><span class="o">.</span><span class="n">object_id</span><span class="p">,</span>
-    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
     <span class="n">server_name</span><span class="o">=</span><span class="n">example_sql_server</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
-    <span class="n">tenant_id</span><span class="o">=</span><span class="n">current</span><span class="o">.</span><span class="n">tenant_id</span><span class="p">)</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">login</span><span class="o">=</span><span class="s2">&quot;sqladmin&quot;</span><span class="p">,</span>
+    <span class="n">tenant_id</span><span class="o">=</span><span class="n">current</span><span class="o">.</span><span class="n">tenant_id</span><span class="p">,</span>
+    <span class="n">object_id</span><span class="o">=</span><span class="n">current</span><span class="o">.</span><span class="n">object_id</span><span class="p">)</span>
 </pre></div>
 </div>
 <dl class="field-list simple">

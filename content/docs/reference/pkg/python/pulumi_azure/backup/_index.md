@@ -164,16 +164,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">resource_group_name</span><span class="o">=</span><span class="n">rg</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
     <span class="n">sku</span><span class="o">=</span><span class="s2">&quot;Standard&quot;</span><span class="p">)</span>
 <span class="n">policy</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">backup</span><span class="o">.</span><span class="n">PolicyFileShare</span><span class="p">(</span><span class="s2">&quot;policy&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">rg</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">recovery_vault_name</span><span class="o">=</span><span class="n">vault</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">timezone</span><span class="o">=</span><span class="s2">&quot;UTC&quot;</span><span class="p">,</span>
     <span class="n">backup</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;frequency&quot;</span><span class="p">:</span> <span class="s2">&quot;Daily&quot;</span><span class="p">,</span>
         <span class="s2">&quot;time&quot;</span><span class="p">:</span> <span class="s2">&quot;23:00&quot;</span><span class="p">,</span>
     <span class="p">},</span>
-    <span class="n">recovery_vault_name</span><span class="o">=</span><span class="n">vault</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
-    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">rg</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
     <span class="n">retention_daily</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;count&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
-    <span class="p">},</span>
-    <span class="n">timezone</span><span class="o">=</span><span class="s2">&quot;UTC&quot;</span><span class="p">)</span>
+    <span class="p">})</span>
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -324,14 +324,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
     <span class="n">sku</span><span class="o">=</span><span class="s2">&quot;Standard&quot;</span><span class="p">)</span>
 <span class="n">example_policy_vm</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">backup</span><span class="o">.</span><span class="n">PolicyVM</span><span class="p">(</span><span class="s2">&quot;examplePolicyVM&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">recovery_vault_name</span><span class="o">=</span><span class="n">example_vault</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">timezone</span><span class="o">=</span><span class="s2">&quot;UTC&quot;</span><span class="p">,</span>
     <span class="n">backup</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;frequency&quot;</span><span class="p">:</span> <span class="s2">&quot;Daily&quot;</span><span class="p">,</span>
         <span class="s2">&quot;time&quot;</span><span class="p">:</span> <span class="s2">&quot;23:00&quot;</span><span class="p">,</span>
     <span class="p">},</span>
-    <span class="n">recovery_vault_name</span><span class="o">=</span><span class="n">example_vault</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
-    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
     <span class="n">retention_daily</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;count&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">retention_weekly</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;count&quot;</span><span class="p">:</span> <span class="mi">42</span><span class="p">,</span>
+        <span class="s2">&quot;weekdays&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;Sunday&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;Wednesday&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;Friday&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;Saturday&quot;</span><span class="p">,</span>
+        <span class="p">],</span>
     <span class="p">},</span>
     <span class="n">retention_monthly</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;count&quot;</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span>
@@ -344,22 +354,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
             <span class="s2">&quot;Last&quot;</span><span class="p">,</span>
         <span class="p">],</span>
     <span class="p">},</span>
-    <span class="n">retention_weekly</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;count&quot;</span><span class="p">:</span> <span class="mi">42</span><span class="p">,</span>
-        <span class="s2">&quot;weekdays&quot;</span><span class="p">:</span> <span class="p">[</span>
-            <span class="s2">&quot;Sunday&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;Wednesday&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;Friday&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;Saturday&quot;</span><span class="p">,</span>
-        <span class="p">],</span>
-    <span class="p">},</span>
     <span class="n">retention_yearly</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;count&quot;</span><span class="p">:</span> <span class="mi">77</span><span class="p">,</span>
-        <span class="s2">&quot;months&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;January&quot;</span><span class="p">],</span>
         <span class="s2">&quot;weekdays&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Sunday&quot;</span><span class="p">],</span>
         <span class="s2">&quot;weeks&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Last&quot;</span><span class="p">],</span>
-    <span class="p">},</span>
-    <span class="n">timezone</span><span class="o">=</span><span class="s2">&quot;UTC&quot;</span><span class="p">)</span>
+        <span class="s2">&quot;months&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;January&quot;</span><span class="p">],</span>
+    <span class="p">})</span>
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -600,31 +600,31 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">resource_group_name</span><span class="o">=</span><span class="n">rg</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
     <span class="n">sku</span><span class="o">=</span><span class="s2">&quot;Standard&quot;</span><span class="p">)</span>
 <span class="n">sa</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">Account</span><span class="p">(</span><span class="s2">&quot;sa&quot;</span><span class="p">,</span>
-    <span class="n">account_replication_type</span><span class="o">=</span><span class="s2">&quot;LRS&quot;</span><span class="p">,</span>
-    <span class="n">account_tier</span><span class="o">=</span><span class="s2">&quot;Standard&quot;</span><span class="p">,</span>
     <span class="n">location</span><span class="o">=</span><span class="n">rg</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
-    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">rg</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">rg</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">account_tier</span><span class="o">=</span><span class="s2">&quot;Standard&quot;</span><span class="p">,</span>
+    <span class="n">account_replication_type</span><span class="o">=</span><span class="s2">&quot;LRS&quot;</span><span class="p">)</span>
 <span class="n">example_share</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">Share</span><span class="p">(</span><span class="s2">&quot;exampleShare&quot;</span><span class="p">,</span> <span class="n">storage_account_name</span><span class="o">=</span><span class="n">sa</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
 <span class="n">protection_container</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">backup</span><span class="o">.</span><span class="n">ContainerStorageAccount</span><span class="p">(</span><span class="s2">&quot;protection-container&quot;</span><span class="p">,</span>
-    <span class="n">recovery_vault_name</span><span class="o">=</span><span class="n">vault</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
     <span class="n">resource_group_name</span><span class="o">=</span><span class="n">rg</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">recovery_vault_name</span><span class="o">=</span><span class="n">vault</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
     <span class="n">storage_account_id</span><span class="o">=</span><span class="n">sa</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
 <span class="n">example_policy_file_share</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">backup</span><span class="o">.</span><span class="n">PolicyFileShare</span><span class="p">(</span><span class="s2">&quot;examplePolicyFileShare&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">rg</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">recovery_vault_name</span><span class="o">=</span><span class="n">vault</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
     <span class="n">backup</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;frequency&quot;</span><span class="p">:</span> <span class="s2">&quot;Daily&quot;</span><span class="p">,</span>
         <span class="s2">&quot;time&quot;</span><span class="p">:</span> <span class="s2">&quot;23:00&quot;</span><span class="p">,</span>
     <span class="p">},</span>
-    <span class="n">recovery_vault_name</span><span class="o">=</span><span class="n">vault</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
-    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">rg</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
     <span class="n">retention_daily</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;count&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
     <span class="p">})</span>
 <span class="n">share1</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">backup</span><span class="o">.</span><span class="n">ProtectedFileShare</span><span class="p">(</span><span class="s2">&quot;share1&quot;</span><span class="p">,</span>
-    <span class="n">backup_policy_id</span><span class="o">=</span><span class="n">example_policy_file_share</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
-    <span class="n">recovery_vault_name</span><span class="o">=</span><span class="n">vault</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
     <span class="n">resource_group_name</span><span class="o">=</span><span class="n">rg</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">recovery_vault_name</span><span class="o">=</span><span class="n">vault</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">source_storage_account_id</span><span class="o">=</span><span class="n">protection_container</span><span class="o">.</span><span class="n">storage_account_id</span><span class="p">,</span>
     <span class="n">source_file_share_name</span><span class="o">=</span><span class="n">example_share</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
-    <span class="n">source_storage_account_id</span><span class="o">=</span><span class="n">protection_container</span><span class="o">.</span><span class="n">storage_account_id</span><span class="p">)</span>
+    <span class="n">backup_policy_id</span><span class="o">=</span><span class="n">example_policy_file_share</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -742,17 +742,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
     <span class="n">sku</span><span class="o">=</span><span class="s2">&quot;Standard&quot;</span><span class="p">)</span>
 <span class="n">example_policy_vm</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">backup</span><span class="o">.</span><span class="n">PolicyVM</span><span class="p">(</span><span class="s2">&quot;examplePolicyVM&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">recovery_vault_name</span><span class="o">=</span><span class="n">example_vault</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
     <span class="n">backup</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;frequency&quot;</span><span class="p">:</span> <span class="s2">&quot;Daily&quot;</span><span class="p">,</span>
         <span class="s2">&quot;time&quot;</span><span class="p">:</span> <span class="s2">&quot;23:00&quot;</span><span class="p">,</span>
-    <span class="p">},</span>
-    <span class="n">recovery_vault_name</span><span class="o">=</span><span class="n">example_vault</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
-    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+    <span class="p">})</span>
 <span class="n">vm1</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">backup</span><span class="o">.</span><span class="n">ProtectedVM</span><span class="p">(</span><span class="s2">&quot;vm1&quot;</span><span class="p">,</span>
-    <span class="n">backup_policy_id</span><span class="o">=</span><span class="n">example_policy_vm</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
-    <span class="n">recovery_vault_name</span><span class="o">=</span><span class="n">example_vault</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
     <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
-    <span class="n">source_vm_id</span><span class="o">=</span><span class="n">azurerm_virtual_machine</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+    <span class="n">recovery_vault_name</span><span class="o">=</span><span class="n">example_vault</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">source_vm_id</span><span class="o">=</span><span class="n">azurerm_virtual_machine</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">backup_policy_id</span><span class="o">=</span><span class="n">example_policy_vm</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
 </pre></div>
 </div>
 <dl class="field-list simple">
