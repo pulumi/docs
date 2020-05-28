@@ -20,7 +20,19 @@ Use this data source to retrieve the Everyone group from Okta. The same can be a
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Okta = Pulumi.Okta;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Okta.Group.GetEveryoneGroup.InvokeAsync());
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -86,7 +98,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Include<wbr>Users</span>
+        <span id="includeusers_csharp">
+<a href="#includeusers_csharp" style="color: inherit; text-decoration: inherit;">Include<wbr>Users</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -101,7 +115,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Include<wbr>Users</span>
+        <span id="includeusers_go">
+<a href="#includeusers_go" style="color: inherit; text-decoration: inherit;">Include<wbr>Users</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -116,7 +132,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>include<wbr>Users</span>
+        <span id="includeusers_nodejs">
+<a href="#includeusers_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Users</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -131,7 +149,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>include_<wbr>users</span>
+        <span id="include_users_python">
+<a href="#include_users_python" style="color: inherit; text-decoration: inherit;">include_<wbr>users</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -159,7 +179,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -168,7 +190,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Include<wbr>Users</span>
+        <span id="includeusers_csharp">
+<a href="#includeusers_csharp" style="color: inherit; text-decoration: inherit;">Include<wbr>Users</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -183,7 +207,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -192,7 +218,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Include<wbr>Users</span>
+        <span id="includeusers_go">
+<a href="#includeusers_go" style="color: inherit; text-decoration: inherit;">Include<wbr>Users</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -207,7 +235,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -216,7 +246,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>include<wbr>Users</span>
+        <span id="includeusers_nodejs">
+<a href="#includeusers_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Users</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -231,7 +263,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -240,7 +274,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>include_<wbr>users</span>
+        <span id="include_users_python">
+<a href="#include_users_python" style="color: inherit; text-decoration: inherit;">include_<wbr>users</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>

@@ -22,7 +22,37 @@ This resource allows you to create and configure an Okta Email Template.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Okta = Pulumi.Okta;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Okta.Template.Email("example", new Okta.Template.EmailArgs
+        {
+            Translations = 
+            {
+                new Okta.Template.Inputs.EmailTranslationArgs
+                {
+                    Language = "en",
+                    Subject = "Stuff",
+                    Template = $"Hi {user.FirstName},<br/><br/>Blah blah {resetPasswordLink}",
+                },
+                new Okta.Template.Inputs.EmailTranslationArgs
+                {
+                    Language = "es",
+                    Subject = "Cosas",
+                    Template = $"Hola {user.FirstName},<br/><br/>Puedo ir al bano {resetPasswordLink}",
+                },
+            },
+            Type = "email.forgotPassword",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -260,7 +290,9 @@ The Email resource accepts the following [input]({{< relref "/docs/intro/concept
 
     <dt class="property-required"
             title="Required">
-        <span>Translations</span>
+        <span id="translations_csharp">
+<a href="#translations_csharp" style="color: inherit; text-decoration: inherit;">Translations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#emailtranslation">List&lt;Email<wbr>Translation<wbr>Args&gt;</a></span>
     </dt>
@@ -269,7 +301,9 @@ The Email resource accepts the following [input]({{< relref "/docs/intro/concept
 
     <dt class="property-required"
             title="Required">
-        <span>Type</span>
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -278,7 +312,9 @@ The Email resource accepts the following [input]({{< relref "/docs/intro/concept
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default<wbr>Language</span>
+        <span id="defaultlanguage_csharp">
+<a href="#defaultlanguage_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Language</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -294,7 +330,9 @@ The Email resource accepts the following [input]({{< relref "/docs/intro/concept
 
     <dt class="property-required"
             title="Required">
-        <span>Translations</span>
+        <span id="translations_go">
+<a href="#translations_go" style="color: inherit; text-decoration: inherit;">Translations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#emailtranslation">[]Email<wbr>Translation</a></span>
     </dt>
@@ -303,7 +341,9 @@ The Email resource accepts the following [input]({{< relref "/docs/intro/concept
 
     <dt class="property-required"
             title="Required">
-        <span>Type</span>
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -312,7 +352,9 @@ The Email resource accepts the following [input]({{< relref "/docs/intro/concept
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default<wbr>Language</span>
+        <span id="defaultlanguage_go">
+<a href="#defaultlanguage_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Language</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -328,7 +370,9 @@ The Email resource accepts the following [input]({{< relref "/docs/intro/concept
 
     <dt class="property-required"
             title="Required">
-        <span>translations</span>
+        <span id="translations_nodejs">
+<a href="#translations_nodejs" style="color: inherit; text-decoration: inherit;">translations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#emailtranslation">Email<wbr>Translation[]</a></span>
     </dt>
@@ -337,7 +381,9 @@ The Email resource accepts the following [input]({{< relref "/docs/intro/concept
 
     <dt class="property-required"
             title="Required">
-        <span>type</span>
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -346,7 +392,9 @@ The Email resource accepts the following [input]({{< relref "/docs/intro/concept
 
     <dt class="property-optional"
             title="Optional">
-        <span>default<wbr>Language</span>
+        <span id="defaultlanguage_nodejs">
+<a href="#defaultlanguage_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Language</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -362,7 +410,9 @@ The Email resource accepts the following [input]({{< relref "/docs/intro/concept
 
     <dt class="property-required"
             title="Required">
-        <span>translations</span>
+        <span id="translations_python">
+<a href="#translations_python" style="color: inherit; text-decoration: inherit;">translations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#emailtranslation">List[Email<wbr>Translation]</a></span>
     </dt>
@@ -371,7 +421,9 @@ The Email resource accepts the following [input]({{< relref "/docs/intro/concept
 
     <dt class="property-required"
             title="Required">
-        <span>type</span>
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -380,7 +432,9 @@ The Email resource accepts the following [input]({{< relref "/docs/intro/concept
 
     <dt class="property-optional"
             title="Optional">
-        <span>default_<wbr>language</span>
+        <span id="default_language_python">
+<a href="#default_language_python" style="color: inherit; text-decoration: inherit;">default_<wbr>language</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -407,7 +461,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -422,7 +478,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -437,7 +495,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -452,7 +512,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -593,7 +655,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default<wbr>Language</span>
+        <span id="state_defaultlanguage_csharp">
+<a href="#state_defaultlanguage_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Language</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -602,7 +666,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Translations</span>
+        <span id="state_translations_csharp">
+<a href="#state_translations_csharp" style="color: inherit; text-decoration: inherit;">Translations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#emailtranslation">List&lt;Email<wbr>Translation<wbr>Args&gt;</a></span>
     </dt>
@@ -611,7 +677,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Type</span>
+        <span id="state_type_csharp">
+<a href="#state_type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -627,7 +695,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default<wbr>Language</span>
+        <span id="state_defaultlanguage_go">
+<a href="#state_defaultlanguage_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Language</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -636,7 +706,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Translations</span>
+        <span id="state_translations_go">
+<a href="#state_translations_go" style="color: inherit; text-decoration: inherit;">Translations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#emailtranslation">[]Email<wbr>Translation</a></span>
     </dt>
@@ -645,7 +717,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Type</span>
+        <span id="state_type_go">
+<a href="#state_type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -661,7 +735,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>default<wbr>Language</span>
+        <span id="state_defaultlanguage_nodejs">
+<a href="#state_defaultlanguage_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Language</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -670,7 +746,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>translations</span>
+        <span id="state_translations_nodejs">
+<a href="#state_translations_nodejs" style="color: inherit; text-decoration: inherit;">translations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#emailtranslation">Email<wbr>Translation[]</a></span>
     </dt>
@@ -679,7 +757,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>type</span>
+        <span id="state_type_nodejs">
+<a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -695,7 +775,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>default_<wbr>language</span>
+        <span id="state_default_language_python">
+<a href="#state_default_language_python" style="color: inherit; text-decoration: inherit;">default_<wbr>language</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -704,7 +786,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>translations</span>
+        <span id="state_translations_python">
+<a href="#state_translations_python" style="color: inherit; text-decoration: inherit;">translations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#emailtranslation">List[Email<wbr>Translation]</a></span>
     </dt>
@@ -713,7 +797,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>type</span>
+        <span id="state_type_python">
+<a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -755,7 +841,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Language</span>
+        <span id="language_csharp">
+<a href="#language_csharp" style="color: inherit; text-decoration: inherit;">Language</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -764,7 +852,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Subject</span>
+        <span id="subject_csharp">
+<a href="#subject_csharp" style="color: inherit; text-decoration: inherit;">Subject</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -773,7 +863,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Template</span>
+        <span id="template_csharp">
+<a href="#template_csharp" style="color: inherit; text-decoration: inherit;">Template</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -789,7 +881,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Language</span>
+        <span id="language_go">
+<a href="#language_go" style="color: inherit; text-decoration: inherit;">Language</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -798,7 +892,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Subject</span>
+        <span id="subject_go">
+<a href="#subject_go" style="color: inherit; text-decoration: inherit;">Subject</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -807,7 +903,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Template</span>
+        <span id="template_go">
+<a href="#template_go" style="color: inherit; text-decoration: inherit;">Template</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -823,7 +921,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>language</span>
+        <span id="language_nodejs">
+<a href="#language_nodejs" style="color: inherit; text-decoration: inherit;">language</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -832,7 +932,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>subject</span>
+        <span id="subject_nodejs">
+<a href="#subject_nodejs" style="color: inherit; text-decoration: inherit;">subject</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -841,7 +943,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>template</span>
+        <span id="template_nodejs">
+<a href="#template_nodejs" style="color: inherit; text-decoration: inherit;">template</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -857,7 +961,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>language</span>
+        <span id="language_python">
+<a href="#language_python" style="color: inherit; text-decoration: inherit;">language</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -866,7 +972,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>subject</span>
+        <span id="subject_python">
+<a href="#subject_python" style="color: inherit; text-decoration: inherit;">subject</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -875,7 +983,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>template</span>
+        <span id="template_python">
+<a href="#template_python" style="color: inherit; text-decoration: inherit;">template</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

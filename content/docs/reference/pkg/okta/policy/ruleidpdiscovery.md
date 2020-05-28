@@ -22,7 +22,35 @@ This resource allows you to create and configure an IdP Discovery Policy Rule.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Okta = Pulumi.Okta;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Okta.Policy.RuleIdpDiscovery("example", new Okta.Policy.RuleIdpDiscoveryArgs
+        {
+            IdpId = "<idp id>",
+            IdpType = "SAML2",
+            Policyid = "<policy id>",
+            Priority = 1,
+            UserIdentifierAttribute = "company",
+            UserIdentifierPatterns = 
+            {
+                new Okta.Policy.Inputs.RuleIdpDiscoveryUserIdentifierPatternArgs
+                {
+                    MatchType = "EQUALS",
+                    Value = "Articulate",
+                },
+            },
+            UserIdentifierType = "ATTRIBUTE",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -41,7 +69,7 @@ example = okta.policy.RuleIdpDiscovery("example",
     priority=1,
     user_identifier_attribute="company",
     user_identifier_patterns=[{
-        "matchType": "EQUALS",
+        "match_type": "EQUALS",
         "value": "Articulate",
     }],
     user_identifier_type="ATTRIBUTE")
@@ -254,7 +282,9 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-required"
             title="Required">
-        <span>Policyid</span>
+        <span id="policyid_csharp">
+<a href="#policyid_csharp" style="color: inherit; text-decoration: inherit;">Policyid</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -263,7 +293,9 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>App<wbr>Excludes</span>
+        <span id="appexcludes_csharp">
+<a href="#appexcludes_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Excludes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ruleidpdiscoveryappexclude">List&lt;Rule<wbr>Idp<wbr>Discovery<wbr>App<wbr>Exclude<wbr>Args&gt;</a></span>
     </dt>
@@ -272,7 +304,9 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>App<wbr>Includes</span>
+        <span id="appincludes_csharp">
+<a href="#appincludes_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Includes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ruleidpdiscoveryappinclude">List&lt;Rule<wbr>Idp<wbr>Discovery<wbr>App<wbr>Include<wbr>Args&gt;</a></span>
     </dt>
@@ -281,7 +315,9 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Idp<wbr>Id</span>
+        <span id="idpid_csharp">
+<a href="#idpid_csharp" style="color: inherit; text-decoration: inherit;">Idp<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -289,7 +325,9 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Idp<wbr>Type</span>
+        <span id="idptype_csharp">
+<a href="#idptype_csharp" style="color: inherit; text-decoration: inherit;">Idp<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -297,7 +335,9 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -306,7 +346,9 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Network<wbr>Connection</span>
+        <span id="networkconnection_csharp">
+<a href="#networkconnection_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Connection</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -315,7 +357,9 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Network<wbr>Excludes</span>
+        <span id="networkexcludes_csharp">
+<a href="#networkexcludes_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Excludes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -324,7 +368,9 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Network<wbr>Includes</span>
+        <span id="networkincludes_csharp">
+<a href="#networkincludes_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Includes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -333,7 +379,9 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Platform<wbr>Includes</span>
+        <span id="platformincludes_csharp">
+<a href="#platformincludes_csharp" style="color: inherit; text-decoration: inherit;">Platform<wbr>Includes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ruleidpdiscoveryplatforminclude">List&lt;Rule<wbr>Idp<wbr>Discovery<wbr>Platform<wbr>Include<wbr>Args&gt;</a></span>
     </dt>
@@ -341,7 +389,9 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Priority</span>
+        <span id="priority_csharp">
+<a href="#priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -350,7 +400,9 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Status</span>
+        <span id="status_csharp">
+<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -359,7 +411,9 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>User<wbr>Identifier<wbr>Attribute</span>
+        <span id="useridentifierattribute_csharp">
+<a href="#useridentifierattribute_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Identifier<wbr>Attribute</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -367,7 +421,9 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>User<wbr>Identifier<wbr>Patterns</span>
+        <span id="useridentifierpatterns_csharp">
+<a href="#useridentifierpatterns_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Identifier<wbr>Patterns</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ruleidpdiscoveryuseridentifierpattern">List&lt;Rule<wbr>Idp<wbr>Discovery<wbr>User<wbr>Identifier<wbr>Pattern<wbr>Args&gt;</a></span>
     </dt>
@@ -375,7 +431,9 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>User<wbr>Identifier<wbr>Type</span>
+        <span id="useridentifiertype_csharp">
+<a href="#useridentifiertype_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Identifier<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -390,7 +448,9 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-required"
             title="Required">
-        <span>Policyid</span>
+        <span id="policyid_go">
+<a href="#policyid_go" style="color: inherit; text-decoration: inherit;">Policyid</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -399,7 +459,9 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>App<wbr>Excludes</span>
+        <span id="appexcludes_go">
+<a href="#appexcludes_go" style="color: inherit; text-decoration: inherit;">App<wbr>Excludes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ruleidpdiscoveryappexclude">[]Rule<wbr>Idp<wbr>Discovery<wbr>App<wbr>Exclude</a></span>
     </dt>
@@ -408,7 +470,9 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>App<wbr>Includes</span>
+        <span id="appincludes_go">
+<a href="#appincludes_go" style="color: inherit; text-decoration: inherit;">App<wbr>Includes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ruleidpdiscoveryappinclude">[]Rule<wbr>Idp<wbr>Discovery<wbr>App<wbr>Include</a></span>
     </dt>
@@ -417,7 +481,9 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Idp<wbr>Id</span>
+        <span id="idpid_go">
+<a href="#idpid_go" style="color: inherit; text-decoration: inherit;">Idp<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -425,7 +491,9 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Idp<wbr>Type</span>
+        <span id="idptype_go">
+<a href="#idptype_go" style="color: inherit; text-decoration: inherit;">Idp<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -433,7 +501,9 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -442,7 +512,9 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Network<wbr>Connection</span>
+        <span id="networkconnection_go">
+<a href="#networkconnection_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Connection</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -451,7 +523,9 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Network<wbr>Excludes</span>
+        <span id="networkexcludes_go">
+<a href="#networkexcludes_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Excludes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -460,7 +534,9 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Network<wbr>Includes</span>
+        <span id="networkincludes_go">
+<a href="#networkincludes_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Includes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -469,7 +545,9 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Platform<wbr>Includes</span>
+        <span id="platformincludes_go">
+<a href="#platformincludes_go" style="color: inherit; text-decoration: inherit;">Platform<wbr>Includes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ruleidpdiscoveryplatforminclude">[]Rule<wbr>Idp<wbr>Discovery<wbr>Platform<wbr>Include</a></span>
     </dt>
@@ -477,7 +555,9 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Priority</span>
+        <span id="priority_go">
+<a href="#priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -486,7 +566,9 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Status</span>
+        <span id="status_go">
+<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -495,7 +577,9 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>User<wbr>Identifier<wbr>Attribute</span>
+        <span id="useridentifierattribute_go">
+<a href="#useridentifierattribute_go" style="color: inherit; text-decoration: inherit;">User<wbr>Identifier<wbr>Attribute</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -503,7 +587,9 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>User<wbr>Identifier<wbr>Patterns</span>
+        <span id="useridentifierpatterns_go">
+<a href="#useridentifierpatterns_go" style="color: inherit; text-decoration: inherit;">User<wbr>Identifier<wbr>Patterns</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ruleidpdiscoveryuseridentifierpattern">[]Rule<wbr>Idp<wbr>Discovery<wbr>User<wbr>Identifier<wbr>Pattern</a></span>
     </dt>
@@ -511,7 +597,9 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>User<wbr>Identifier<wbr>Type</span>
+        <span id="useridentifiertype_go">
+<a href="#useridentifiertype_go" style="color: inherit; text-decoration: inherit;">User<wbr>Identifier<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -526,7 +614,9 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-required"
             title="Required">
-        <span>policyid</span>
+        <span id="policyid_nodejs">
+<a href="#policyid_nodejs" style="color: inherit; text-decoration: inherit;">policyid</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -535,7 +625,9 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>app<wbr>Excludes</span>
+        <span id="appexcludes_nodejs">
+<a href="#appexcludes_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Excludes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ruleidpdiscoveryappexclude">Rule<wbr>Idp<wbr>Discovery<wbr>App<wbr>Exclude[]</a></span>
     </dt>
@@ -544,7 +636,9 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>app<wbr>Includes</span>
+        <span id="appincludes_nodejs">
+<a href="#appincludes_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Includes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ruleidpdiscoveryappinclude">Rule<wbr>Idp<wbr>Discovery<wbr>App<wbr>Include[]</a></span>
     </dt>
@@ -553,7 +647,9 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>idp<wbr>Id</span>
+        <span id="idpid_nodejs">
+<a href="#idpid_nodejs" style="color: inherit; text-decoration: inherit;">idp<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -561,7 +657,9 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>idp<wbr>Type</span>
+        <span id="idptype_nodejs">
+<a href="#idptype_nodejs" style="color: inherit; text-decoration: inherit;">idp<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -569,7 +667,9 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -578,7 +678,9 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>network<wbr>Connection</span>
+        <span id="networkconnection_nodejs">
+<a href="#networkconnection_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Connection</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -587,7 +689,9 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>network<wbr>Excludes</span>
+        <span id="networkexcludes_nodejs">
+<a href="#networkexcludes_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Excludes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -596,7 +700,9 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>network<wbr>Includes</span>
+        <span id="networkincludes_nodejs">
+<a href="#networkincludes_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Includes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -605,7 +711,9 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>platform<wbr>Includes</span>
+        <span id="platformincludes_nodejs">
+<a href="#platformincludes_nodejs" style="color: inherit; text-decoration: inherit;">platform<wbr>Includes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ruleidpdiscoveryplatforminclude">Rule<wbr>Idp<wbr>Discovery<wbr>Platform<wbr>Include[]</a></span>
     </dt>
@@ -613,7 +721,9 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>priority</span>
+        <span id="priority_nodejs">
+<a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -622,7 +732,9 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>status</span>
+        <span id="status_nodejs">
+<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -631,7 +743,9 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>user<wbr>Identifier<wbr>Attribute</span>
+        <span id="useridentifierattribute_nodejs">
+<a href="#useridentifierattribute_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Identifier<wbr>Attribute</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -639,7 +753,9 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>user<wbr>Identifier<wbr>Patterns</span>
+        <span id="useridentifierpatterns_nodejs">
+<a href="#useridentifierpatterns_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Identifier<wbr>Patterns</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ruleidpdiscoveryuseridentifierpattern">Rule<wbr>Idp<wbr>Discovery<wbr>User<wbr>Identifier<wbr>Pattern[]</a></span>
     </dt>
@@ -647,7 +763,9 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>user<wbr>Identifier<wbr>Type</span>
+        <span id="useridentifiertype_nodejs">
+<a href="#useridentifiertype_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Identifier<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -662,7 +780,9 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-required"
             title="Required">
-        <span>policyid</span>
+        <span id="policyid_python">
+<a href="#policyid_python" style="color: inherit; text-decoration: inherit;">policyid</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -671,7 +791,9 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>app_<wbr>excludes</span>
+        <span id="app_excludes_python">
+<a href="#app_excludes_python" style="color: inherit; text-decoration: inherit;">app_<wbr>excludes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ruleidpdiscoveryappexclude">List[Rule<wbr>Idp<wbr>Discovery<wbr>App<wbr>Exclude]</a></span>
     </dt>
@@ -680,7 +802,9 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>app_<wbr>includes</span>
+        <span id="app_includes_python">
+<a href="#app_includes_python" style="color: inherit; text-decoration: inherit;">app_<wbr>includes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ruleidpdiscoveryappinclude">List[Rule<wbr>Idp<wbr>Discovery<wbr>App<wbr>Include]</a></span>
     </dt>
@@ -689,7 +813,9 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>idp_<wbr>id</span>
+        <span id="idp_id_python">
+<a href="#idp_id_python" style="color: inherit; text-decoration: inherit;">idp_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -697,7 +823,9 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>idp_<wbr>type</span>
+        <span id="idp_type_python">
+<a href="#idp_type_python" style="color: inherit; text-decoration: inherit;">idp_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -705,7 +833,9 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -714,7 +844,9 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>network_<wbr>connection</span>
+        <span id="network_connection_python">
+<a href="#network_connection_python" style="color: inherit; text-decoration: inherit;">network_<wbr>connection</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -723,7 +855,9 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>network_<wbr>excludes</span>
+        <span id="network_excludes_python">
+<a href="#network_excludes_python" style="color: inherit; text-decoration: inherit;">network_<wbr>excludes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -732,7 +866,9 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>network_<wbr>includes</span>
+        <span id="network_includes_python">
+<a href="#network_includes_python" style="color: inherit; text-decoration: inherit;">network_<wbr>includes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -741,7 +877,9 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>platform_<wbr>includes</span>
+        <span id="platform_includes_python">
+<a href="#platform_includes_python" style="color: inherit; text-decoration: inherit;">platform_<wbr>includes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ruleidpdiscoveryplatforminclude">List[Rule<wbr>Idp<wbr>Discovery<wbr>Platform<wbr>Include]</a></span>
     </dt>
@@ -749,7 +887,9 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>priority</span>
+        <span id="priority_python">
+<a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -758,7 +898,9 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>status</span>
+        <span id="status_python">
+<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -767,7 +909,9 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>user_<wbr>identifier_<wbr>attribute</span>
+        <span id="user_identifier_attribute_python">
+<a href="#user_identifier_attribute_python" style="color: inherit; text-decoration: inherit;">user_<wbr>identifier_<wbr>attribute</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -775,7 +919,9 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>user_<wbr>identifier_<wbr>patterns</span>
+        <span id="user_identifier_patterns_python">
+<a href="#user_identifier_patterns_python" style="color: inherit; text-decoration: inherit;">user_<wbr>identifier_<wbr>patterns</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ruleidpdiscoveryuseridentifierpattern">List[Rule<wbr>Idp<wbr>Discovery<wbr>User<wbr>Identifier<wbr>Pattern]</a></span>
     </dt>
@@ -783,7 +929,9 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>user_<wbr>identifier_<wbr>type</span>
+        <span id="user_identifier_type_python">
+<a href="#user_identifier_type_python" style="color: inherit; text-decoration: inherit;">user_<wbr>identifier_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -809,7 +957,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -824,7 +974,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -839,7 +991,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -854,7 +1008,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -995,7 +1151,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>App<wbr>Excludes</span>
+        <span id="state_appexcludes_csharp">
+<a href="#state_appexcludes_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Excludes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ruleidpdiscoveryappexclude">List&lt;Rule<wbr>Idp<wbr>Discovery<wbr>App<wbr>Exclude<wbr>Args&gt;</a></span>
     </dt>
@@ -1004,7 +1162,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>App<wbr>Includes</span>
+        <span id="state_appincludes_csharp">
+<a href="#state_appincludes_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Includes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ruleidpdiscoveryappinclude">List&lt;Rule<wbr>Idp<wbr>Discovery<wbr>App<wbr>Include<wbr>Args&gt;</a></span>
     </dt>
@@ -1013,7 +1173,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Idp<wbr>Id</span>
+        <span id="state_idpid_csharp">
+<a href="#state_idpid_csharp" style="color: inherit; text-decoration: inherit;">Idp<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1021,7 +1183,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Idp<wbr>Type</span>
+        <span id="state_idptype_csharp">
+<a href="#state_idptype_csharp" style="color: inherit; text-decoration: inherit;">Idp<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1029,7 +1193,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1038,7 +1204,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Network<wbr>Connection</span>
+        <span id="state_networkconnection_csharp">
+<a href="#state_networkconnection_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Connection</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1047,7 +1215,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Network<wbr>Excludes</span>
+        <span id="state_networkexcludes_csharp">
+<a href="#state_networkexcludes_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Excludes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1056,7 +1226,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Network<wbr>Includes</span>
+        <span id="state_networkincludes_csharp">
+<a href="#state_networkincludes_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Includes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1065,7 +1237,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Platform<wbr>Includes</span>
+        <span id="state_platformincludes_csharp">
+<a href="#state_platformincludes_csharp" style="color: inherit; text-decoration: inherit;">Platform<wbr>Includes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ruleidpdiscoveryplatforminclude">List&lt;Rule<wbr>Idp<wbr>Discovery<wbr>Platform<wbr>Include<wbr>Args&gt;</a></span>
     </dt>
@@ -1073,7 +1247,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Policyid</span>
+        <span id="state_policyid_csharp">
+<a href="#state_policyid_csharp" style="color: inherit; text-decoration: inherit;">Policyid</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1082,7 +1258,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Priority</span>
+        <span id="state_priority_csharp">
+<a href="#state_priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1091,7 +1269,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Status</span>
+        <span id="state_status_csharp">
+<a href="#state_status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1100,7 +1280,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>User<wbr>Identifier<wbr>Attribute</span>
+        <span id="state_useridentifierattribute_csharp">
+<a href="#state_useridentifierattribute_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Identifier<wbr>Attribute</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1108,7 +1290,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>User<wbr>Identifier<wbr>Patterns</span>
+        <span id="state_useridentifierpatterns_csharp">
+<a href="#state_useridentifierpatterns_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Identifier<wbr>Patterns</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ruleidpdiscoveryuseridentifierpattern">List&lt;Rule<wbr>Idp<wbr>Discovery<wbr>User<wbr>Identifier<wbr>Pattern<wbr>Args&gt;</a></span>
     </dt>
@@ -1116,7 +1300,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>User<wbr>Identifier<wbr>Type</span>
+        <span id="state_useridentifiertype_csharp">
+<a href="#state_useridentifiertype_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Identifier<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1131,7 +1317,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>App<wbr>Excludes</span>
+        <span id="state_appexcludes_go">
+<a href="#state_appexcludes_go" style="color: inherit; text-decoration: inherit;">App<wbr>Excludes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ruleidpdiscoveryappexclude">[]Rule<wbr>Idp<wbr>Discovery<wbr>App<wbr>Exclude</a></span>
     </dt>
@@ -1140,7 +1328,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>App<wbr>Includes</span>
+        <span id="state_appincludes_go">
+<a href="#state_appincludes_go" style="color: inherit; text-decoration: inherit;">App<wbr>Includes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ruleidpdiscoveryappinclude">[]Rule<wbr>Idp<wbr>Discovery<wbr>App<wbr>Include</a></span>
     </dt>
@@ -1149,7 +1339,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Idp<wbr>Id</span>
+        <span id="state_idpid_go">
+<a href="#state_idpid_go" style="color: inherit; text-decoration: inherit;">Idp<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1157,7 +1349,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Idp<wbr>Type</span>
+        <span id="state_idptype_go">
+<a href="#state_idptype_go" style="color: inherit; text-decoration: inherit;">Idp<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1165,7 +1359,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1174,7 +1370,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Network<wbr>Connection</span>
+        <span id="state_networkconnection_go">
+<a href="#state_networkconnection_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Connection</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1183,7 +1381,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Network<wbr>Excludes</span>
+        <span id="state_networkexcludes_go">
+<a href="#state_networkexcludes_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Excludes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1192,7 +1392,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Network<wbr>Includes</span>
+        <span id="state_networkincludes_go">
+<a href="#state_networkincludes_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Includes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1201,7 +1403,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Platform<wbr>Includes</span>
+        <span id="state_platformincludes_go">
+<a href="#state_platformincludes_go" style="color: inherit; text-decoration: inherit;">Platform<wbr>Includes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ruleidpdiscoveryplatforminclude">[]Rule<wbr>Idp<wbr>Discovery<wbr>Platform<wbr>Include</a></span>
     </dt>
@@ -1209,7 +1413,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Policyid</span>
+        <span id="state_policyid_go">
+<a href="#state_policyid_go" style="color: inherit; text-decoration: inherit;">Policyid</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1218,7 +1424,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Priority</span>
+        <span id="state_priority_go">
+<a href="#state_priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1227,7 +1435,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Status</span>
+        <span id="state_status_go">
+<a href="#state_status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1236,7 +1446,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>User<wbr>Identifier<wbr>Attribute</span>
+        <span id="state_useridentifierattribute_go">
+<a href="#state_useridentifierattribute_go" style="color: inherit; text-decoration: inherit;">User<wbr>Identifier<wbr>Attribute</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1244,7 +1456,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>User<wbr>Identifier<wbr>Patterns</span>
+        <span id="state_useridentifierpatterns_go">
+<a href="#state_useridentifierpatterns_go" style="color: inherit; text-decoration: inherit;">User<wbr>Identifier<wbr>Patterns</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ruleidpdiscoveryuseridentifierpattern">[]Rule<wbr>Idp<wbr>Discovery<wbr>User<wbr>Identifier<wbr>Pattern</a></span>
     </dt>
@@ -1252,7 +1466,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>User<wbr>Identifier<wbr>Type</span>
+        <span id="state_useridentifiertype_go">
+<a href="#state_useridentifiertype_go" style="color: inherit; text-decoration: inherit;">User<wbr>Identifier<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1267,7 +1483,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>app<wbr>Excludes</span>
+        <span id="state_appexcludes_nodejs">
+<a href="#state_appexcludes_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Excludes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ruleidpdiscoveryappexclude">Rule<wbr>Idp<wbr>Discovery<wbr>App<wbr>Exclude[]</a></span>
     </dt>
@@ -1276,7 +1494,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>app<wbr>Includes</span>
+        <span id="state_appincludes_nodejs">
+<a href="#state_appincludes_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Includes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ruleidpdiscoveryappinclude">Rule<wbr>Idp<wbr>Discovery<wbr>App<wbr>Include[]</a></span>
     </dt>
@@ -1285,7 +1505,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>idp<wbr>Id</span>
+        <span id="state_idpid_nodejs">
+<a href="#state_idpid_nodejs" style="color: inherit; text-decoration: inherit;">idp<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1293,7 +1515,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>idp<wbr>Type</span>
+        <span id="state_idptype_nodejs">
+<a href="#state_idptype_nodejs" style="color: inherit; text-decoration: inherit;">idp<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1301,7 +1525,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1310,7 +1536,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>network<wbr>Connection</span>
+        <span id="state_networkconnection_nodejs">
+<a href="#state_networkconnection_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Connection</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1319,7 +1547,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>network<wbr>Excludes</span>
+        <span id="state_networkexcludes_nodejs">
+<a href="#state_networkexcludes_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Excludes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1328,7 +1558,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>network<wbr>Includes</span>
+        <span id="state_networkincludes_nodejs">
+<a href="#state_networkincludes_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Includes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1337,7 +1569,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>platform<wbr>Includes</span>
+        <span id="state_platformincludes_nodejs">
+<a href="#state_platformincludes_nodejs" style="color: inherit; text-decoration: inherit;">platform<wbr>Includes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ruleidpdiscoveryplatforminclude">Rule<wbr>Idp<wbr>Discovery<wbr>Platform<wbr>Include[]</a></span>
     </dt>
@@ -1345,7 +1579,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>policyid</span>
+        <span id="state_policyid_nodejs">
+<a href="#state_policyid_nodejs" style="color: inherit; text-decoration: inherit;">policyid</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1354,7 +1590,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>priority</span>
+        <span id="state_priority_nodejs">
+<a href="#state_priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1363,7 +1601,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>status</span>
+        <span id="state_status_nodejs">
+<a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1372,7 +1612,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>user<wbr>Identifier<wbr>Attribute</span>
+        <span id="state_useridentifierattribute_nodejs">
+<a href="#state_useridentifierattribute_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Identifier<wbr>Attribute</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1380,7 +1622,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>user<wbr>Identifier<wbr>Patterns</span>
+        <span id="state_useridentifierpatterns_nodejs">
+<a href="#state_useridentifierpatterns_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Identifier<wbr>Patterns</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ruleidpdiscoveryuseridentifierpattern">Rule<wbr>Idp<wbr>Discovery<wbr>User<wbr>Identifier<wbr>Pattern[]</a></span>
     </dt>
@@ -1388,7 +1632,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>user<wbr>Identifier<wbr>Type</span>
+        <span id="state_useridentifiertype_nodejs">
+<a href="#state_useridentifiertype_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Identifier<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1403,7 +1649,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>app_<wbr>excludes</span>
+        <span id="state_app_excludes_python">
+<a href="#state_app_excludes_python" style="color: inherit; text-decoration: inherit;">app_<wbr>excludes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ruleidpdiscoveryappexclude">List[Rule<wbr>Idp<wbr>Discovery<wbr>App<wbr>Exclude]</a></span>
     </dt>
@@ -1412,7 +1660,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>app_<wbr>includes</span>
+        <span id="state_app_includes_python">
+<a href="#state_app_includes_python" style="color: inherit; text-decoration: inherit;">app_<wbr>includes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ruleidpdiscoveryappinclude">List[Rule<wbr>Idp<wbr>Discovery<wbr>App<wbr>Include]</a></span>
     </dt>
@@ -1421,7 +1671,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>idp_<wbr>id</span>
+        <span id="state_idp_id_python">
+<a href="#state_idp_id_python" style="color: inherit; text-decoration: inherit;">idp_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1429,7 +1681,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>idp_<wbr>type</span>
+        <span id="state_idp_type_python">
+<a href="#state_idp_type_python" style="color: inherit; text-decoration: inherit;">idp_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1437,7 +1691,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1446,7 +1702,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>network_<wbr>connection</span>
+        <span id="state_network_connection_python">
+<a href="#state_network_connection_python" style="color: inherit; text-decoration: inherit;">network_<wbr>connection</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1455,7 +1713,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>network_<wbr>excludes</span>
+        <span id="state_network_excludes_python">
+<a href="#state_network_excludes_python" style="color: inherit; text-decoration: inherit;">network_<wbr>excludes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1464,7 +1724,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>network_<wbr>includes</span>
+        <span id="state_network_includes_python">
+<a href="#state_network_includes_python" style="color: inherit; text-decoration: inherit;">network_<wbr>includes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1473,7 +1735,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>platform_<wbr>includes</span>
+        <span id="state_platform_includes_python">
+<a href="#state_platform_includes_python" style="color: inherit; text-decoration: inherit;">platform_<wbr>includes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ruleidpdiscoveryplatforminclude">List[Rule<wbr>Idp<wbr>Discovery<wbr>Platform<wbr>Include]</a></span>
     </dt>
@@ -1481,7 +1745,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>policyid</span>
+        <span id="state_policyid_python">
+<a href="#state_policyid_python" style="color: inherit; text-decoration: inherit;">policyid</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1490,7 +1756,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>priority</span>
+        <span id="state_priority_python">
+<a href="#state_priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1499,7 +1767,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>status</span>
+        <span id="state_status_python">
+<a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1508,7 +1778,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>user_<wbr>identifier_<wbr>attribute</span>
+        <span id="state_user_identifier_attribute_python">
+<a href="#state_user_identifier_attribute_python" style="color: inherit; text-decoration: inherit;">user_<wbr>identifier_<wbr>attribute</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1516,7 +1788,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>user_<wbr>identifier_<wbr>patterns</span>
+        <span id="state_user_identifier_patterns_python">
+<a href="#state_user_identifier_patterns_python" style="color: inherit; text-decoration: inherit;">user_<wbr>identifier_<wbr>patterns</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ruleidpdiscoveryuseridentifierpattern">List[Rule<wbr>Idp<wbr>Discovery<wbr>User<wbr>Identifier<wbr>Pattern]</a></span>
     </dt>
@@ -1524,7 +1798,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>user_<wbr>identifier_<wbr>type</span>
+        <span id="state_user_identifier_type_python">
+<a href="#state_user_identifier_type_python" style="color: inherit; text-decoration: inherit;">user_<wbr>identifier_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1565,7 +1841,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1574,7 +1852,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1583,7 +1863,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Type</span>
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1598,7 +1880,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1607,7 +1891,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1616,7 +1902,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Type</span>
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1631,7 +1919,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1640,7 +1930,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1649,7 +1941,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>type</span>
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1664,7 +1958,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1673,7 +1969,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1682,7 +1980,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>type</span>
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1715,7 +2015,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1724,7 +2026,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1733,7 +2037,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Type</span>
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1748,7 +2054,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1757,7 +2065,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1766,7 +2076,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Type</span>
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1781,7 +2093,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1790,7 +2104,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1799,7 +2115,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>type</span>
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1814,7 +2132,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1823,7 +2143,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1832,7 +2154,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>type</span>
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1865,7 +2189,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Os<wbr>Expression</span>
+        <span id="osexpression_csharp">
+<a href="#osexpression_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Expression</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1873,7 +2199,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Os<wbr>Type</span>
+        <span id="ostype_csharp">
+<a href="#ostype_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1881,7 +2209,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Type</span>
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1896,7 +2226,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Os<wbr>Expression</span>
+        <span id="osexpression_go">
+<a href="#osexpression_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Expression</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1904,7 +2236,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Os<wbr>Type</span>
+        <span id="ostype_go">
+<a href="#ostype_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1912,7 +2246,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Type</span>
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1927,7 +2263,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>os<wbr>Expression</span>
+        <span id="osexpression_nodejs">
+<a href="#osexpression_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Expression</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1935,7 +2273,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>os<wbr>Type</span>
+        <span id="ostype_nodejs">
+<a href="#ostype_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1943,7 +2283,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>type</span>
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1958,7 +2300,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>os<wbr>Expression</span>
+        <span id="osexpression_python">
+<a href="#osexpression_python" style="color: inherit; text-decoration: inherit;">os<wbr>Expression</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1966,7 +2310,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>os<wbr>Type</span>
+        <span id="ostype_python">
+<a href="#ostype_python" style="color: inherit; text-decoration: inherit;">os<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1974,7 +2320,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>type</span>
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2007,7 +2355,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Match<wbr>Type</span>
+        <span id="matchtype_csharp">
+<a href="#matchtype_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2015,7 +2365,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Value</span>
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2030,7 +2382,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Match<wbr>Type</span>
+        <span id="matchtype_go">
+<a href="#matchtype_go" style="color: inherit; text-decoration: inherit;">Match<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2038,7 +2392,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Value</span>
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2053,7 +2409,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>match<wbr>Type</span>
+        <span id="matchtype_nodejs">
+<a href="#matchtype_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2061,7 +2419,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>value</span>
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2076,7 +2436,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>match_<wbr>type</span>
+        <span id="match_type_python">
+<a href="#match_type_python" style="color: inherit; text-decoration: inherit;">match_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2084,7 +2446,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>value</span>
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

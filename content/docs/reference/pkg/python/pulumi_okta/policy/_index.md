@@ -786,7 +786,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">priority</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
     <span class="n">user_identifier_attribute</span><span class="o">=</span><span class="s2">&quot;company&quot;</span><span class="p">,</span>
     <span class="n">user_identifier_patterns</span><span class="o">=</span><span class="p">[{</span>
-        <span class="s2">&quot;matchType&quot;</span><span class="p">:</span> <span class="s2">&quot;EQUALS&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;match_type&quot;</span><span class="p">:</span> <span class="s2">&quot;EQUALS&quot;</span><span class="p">,</span>
         <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;Articulate&quot;</span><span class="p">,</span>
     <span class="p">}],</span>
     <span class="n">user_identifier_type</span><span class="o">=</span><span class="s2">&quot;ATTRIBUTE&quot;</span><span class="p">)</span>
