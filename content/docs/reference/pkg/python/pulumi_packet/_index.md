@@ -1911,8 +1911,8 @@ manage spot market requests on your account. For more detail on Spot Market, see
     <span class="n">devices_max</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
     <span class="n">instance_parameters</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;hostname&quot;</span><span class="p">:</span> <span class="s2">&quot;testspot&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;billingCycle&quot;</span><span class="p">:</span> <span class="s2">&quot;hourly&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;operatingSystem&quot;</span><span class="p">:</span> <span class="s2">&quot;coreos_stable&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;billing_cycle&quot;</span><span class="p">:</span> <span class="s2">&quot;hourly&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;operating_system&quot;</span><span class="p">:</span> <span class="s2">&quot;coreos_stable&quot;</span><span class="p">,</span>
         <span class="s2">&quot;plan&quot;</span><span class="p">:</span> <span class="s2">&quot;t1.small.x86&quot;</span><span class="p">,</span>
     <span class="p">})</span>
 </pre></div>

@@ -24,7 +24,26 @@ The datasource has 4 list attributes: `global_ipv4`, `public_ipv4`, `private_ipv
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Packet = Pulumi.Packet;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var projectId = "<UUID_of_your_project>";
+        var test = Output.Create(Packet.GetIpBlockRanges.InvokeAsync(new Packet.GetIpBlockRangesArgs
+        {
+            ProjectId = projectId,
+        }));
+        this.Out = test;
+    }
+
+    [Output("out")]
+    public Output<string> Out { get; set; }
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -96,7 +115,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Project<wbr>Id</span>
+        <span id="projectid_csharp">
+<a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -105,7 +126,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Facility</span>
+        <span id="facility_csharp">
+<a href="#facility_csharp" style="color: inherit; text-decoration: inherit;">Facility</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -121,7 +144,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Project<wbr>Id</span>
+        <span id="projectid_go">
+<a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -130,7 +155,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Facility</span>
+        <span id="facility_go">
+<a href="#facility_go" style="color: inherit; text-decoration: inherit;">Facility</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -146,7 +173,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>project<wbr>Id</span>
+        <span id="projectid_nodejs">
+<a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -155,7 +184,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>facility</span>
+        <span id="facility_nodejs">
+<a href="#facility_nodejs" style="color: inherit; text-decoration: inherit;">facility</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -171,7 +202,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>project_<wbr>id</span>
+        <span id="project_id_python">
+<a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -180,7 +213,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>facility</span>
+        <span id="facility_python">
+<a href="#facility_python" style="color: inherit; text-decoration: inherit;">facility</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -209,7 +244,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Global<wbr>Ipv4s</span>
+        <span id="globalipv4s_csharp">
+<a href="#globalipv4s_csharp" style="color: inherit; text-decoration: inherit;">Global<wbr>Ipv4s</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -218,7 +255,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -227,7 +266,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Ipv6s</span>
+        <span id="ipv6s_csharp">
+<a href="#ipv6s_csharp" style="color: inherit; text-decoration: inherit;">Ipv6s</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -236,7 +277,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Private<wbr>Ipv4s</span>
+        <span id="privateipv4s_csharp">
+<a href="#privateipv4s_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Ipv4s</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -245,7 +288,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Project<wbr>Id</span>
+        <span id="projectid_csharp">
+<a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -253,7 +298,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Public<wbr>Ipv4s</span>
+        <span id="publicipv4s_csharp">
+<a href="#publicipv4s_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Ipv4s</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -262,7 +309,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Facility</span>
+        <span id="facility_csharp">
+<a href="#facility_csharp" style="color: inherit; text-decoration: inherit;">Facility</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -277,7 +326,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Global<wbr>Ipv4s</span>
+        <span id="globalipv4s_go">
+<a href="#globalipv4s_go" style="color: inherit; text-decoration: inherit;">Global<wbr>Ipv4s</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -286,7 +337,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -295,7 +348,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Ipv6s</span>
+        <span id="ipv6s_go">
+<a href="#ipv6s_go" style="color: inherit; text-decoration: inherit;">Ipv6s</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -304,7 +359,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Private<wbr>Ipv4s</span>
+        <span id="privateipv4s_go">
+<a href="#privateipv4s_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Ipv4s</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -313,7 +370,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Project<wbr>Id</span>
+        <span id="projectid_go">
+<a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -321,7 +380,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Public<wbr>Ipv4s</span>
+        <span id="publicipv4s_go">
+<a href="#publicipv4s_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Ipv4s</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -330,7 +391,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Facility</span>
+        <span id="facility_go">
+<a href="#facility_go" style="color: inherit; text-decoration: inherit;">Facility</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -345,7 +408,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>global<wbr>Ipv4s</span>
+        <span id="globalipv4s_nodejs">
+<a href="#globalipv4s_nodejs" style="color: inherit; text-decoration: inherit;">global<wbr>Ipv4s</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -354,7 +419,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -363,7 +430,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>ipv6s</span>
+        <span id="ipv6s_nodejs">
+<a href="#ipv6s_nodejs" style="color: inherit; text-decoration: inherit;">ipv6s</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -372,7 +441,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>private<wbr>Ipv4s</span>
+        <span id="privateipv4s_nodejs">
+<a href="#privateipv4s_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Ipv4s</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -381,7 +452,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>project<wbr>Id</span>
+        <span id="projectid_nodejs">
+<a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -389,7 +462,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>public<wbr>Ipv4s</span>
+        <span id="publicipv4s_nodejs">
+<a href="#publicipv4s_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Ipv4s</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -398,7 +473,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>facility</span>
+        <span id="facility_nodejs">
+<a href="#facility_nodejs" style="color: inherit; text-decoration: inherit;">facility</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -413,7 +490,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>global_<wbr>ipv4s</span>
+        <span id="global_ipv4s_python">
+<a href="#global_ipv4s_python" style="color: inherit; text-decoration: inherit;">global_<wbr>ipv4s</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -422,7 +501,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -431,7 +512,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>ipv6s</span>
+        <span id="ipv6s_python">
+<a href="#ipv6s_python" style="color: inherit; text-decoration: inherit;">ipv6s</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -440,7 +523,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>private_<wbr>ipv4s</span>
+        <span id="private_ipv4s_python">
+<a href="#private_ipv4s_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ipv4s</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -449,7 +534,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>project_<wbr>id</span>
+        <span id="project_id_python">
+<a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -457,7 +544,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>public_<wbr>ipv4s</span>
+        <span id="public_ipv4s_python">
+<a href="#public_ipv4s_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ipv4s</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -466,7 +555,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>facility</span>
+        <span id="facility_python">
+<a href="#facility_python" style="color: inherit; text-decoration: inherit;">facility</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
