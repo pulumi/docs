@@ -56,6 +56,30 @@ my_replication_role = postgresql.Role("myReplicationRole",
     password="md5c98cbfeb6a347a47eb8e96cfb4c4b890",
     replication=True)
 ```
+```csharp
+using Pulumi;
+using PostgreSql = Pulumi.PostgreSql;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var myRole = new PostgreSql.Role("myRole", new PostgreSql.RoleArgs
+        {
+            Login = true,
+            Password = "mypass",
+        });
+        var myReplicationRole = new PostgreSql.Role("myReplicationRole", new PostgreSql.RoleArgs
+        {
+            ConnectionLimit = 5,
+            Login = true,
+            Password = "md5c98cbfeb6a347a47eb8e96cfb4c4b890",
+            Replication = true,
+        });
+    }
+
+}
+```
 
 
 

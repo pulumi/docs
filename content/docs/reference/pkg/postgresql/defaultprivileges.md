@@ -41,6 +41,30 @@ read_only_tables = postgresql.DefaultPrivileges("readOnlyTables",
     role="test_role",
     schema="public")
 ```
+```csharp
+using Pulumi;
+using PostgreSql = Pulumi.PostgreSql;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var readOnlyTables = new PostgreSql.DefaultPrivileges("readOnlyTables", new PostgreSql.DefaultPrivilegesArgs
+        {
+            Database = "test_db",
+            ObjectType = "table",
+            Owner = "db_owner",
+            Privileges = 
+            {
+                "SELECT",
+            },
+            Role = "test_role",
+            Schema = "public",
+        });
+    }
+
+}
+```
 
 
 
