@@ -196,7 +196,9 @@ The SecurityFirewall resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-required"
             title="Required">
-        <span>Instance<wbr>Id</span>
+        <span id="instanceid_csharp">
+<a href="#instanceid_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -205,7 +207,9 @@ The SecurityFirewall resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-required"
             title="Required">
-        <span>Rules</span>
+        <span id="rules_csharp">
+<a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securityfirewallrule">List&lt;Pulumi.<wbr>Cloud<wbr>Amqp.<wbr>Inputs.<wbr>Security<wbr>Firewall<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
@@ -220,7 +224,9 @@ The SecurityFirewall resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-required"
             title="Required">
-        <span>Instance<wbr>Id</span>
+        <span id="instanceid_go">
+<a href="#instanceid_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -229,7 +235,9 @@ The SecurityFirewall resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-required"
             title="Required">
-        <span>Rules</span>
+        <span id="rules_go">
+<a href="#rules_go" style="color: inherit; text-decoration: inherit;">Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securityfirewallrule">[]Security<wbr>Firewall<wbr>Rule</a></span>
     </dt>
@@ -244,7 +252,9 @@ The SecurityFirewall resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-required"
             title="Required">
-        <span>instance<wbr>Id</span>
+        <span id="instanceid_nodejs">
+<a href="#instanceid_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -253,7 +263,9 @@ The SecurityFirewall resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-required"
             title="Required">
-        <span>rules</span>
+        <span id="rules_nodejs">
+<a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securityfirewallrule">Security<wbr>Firewall<wbr>Rule[]</a></span>
     </dt>
@@ -268,7 +280,9 @@ The SecurityFirewall resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-required"
             title="Required">
-        <span>instance_<wbr>id</span>
+        <span id="instance_id_python">
+<a href="#instance_id_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -277,7 +291,9 @@ The SecurityFirewall resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-required"
             title="Required">
-        <span>rules</span>
+        <span id="rules_python">
+<a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securityfirewallrule">List[Security<wbr>Firewall<wbr>Rule]</a></span>
     </dt>
@@ -303,7 +319,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -318,7 +336,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -333,7 +353,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -348,7 +370,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -489,7 +513,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Instance<wbr>Id</span>
+        <span id="state_instanceid_csharp">
+<a href="#state_instanceid_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -498,7 +524,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Rules</span>
+        <span id="state_rules_csharp">
+<a href="#state_rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securityfirewallrule">List&lt;Pulumi.<wbr>Cloud<wbr>Amqp.<wbr>Inputs.<wbr>Security<wbr>Firewall<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
@@ -513,7 +541,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Instance<wbr>Id</span>
+        <span id="state_instanceid_go">
+<a href="#state_instanceid_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -522,7 +552,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Rules</span>
+        <span id="state_rules_go">
+<a href="#state_rules_go" style="color: inherit; text-decoration: inherit;">Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securityfirewallrule">[]Security<wbr>Firewall<wbr>Rule</a></span>
     </dt>
@@ -537,7 +569,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>instance<wbr>Id</span>
+        <span id="state_instanceid_nodejs">
+<a href="#state_instanceid_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -546,7 +580,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>rules</span>
+        <span id="state_rules_nodejs">
+<a href="#state_rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securityfirewallrule">Security<wbr>Firewall<wbr>Rule[]</a></span>
     </dt>
@@ -561,7 +597,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>instance_<wbr>id</span>
+        <span id="state_instance_id_python">
+<a href="#state_instance_id_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -570,7 +608,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>rules</span>
+        <span id="state_rules_python">
+<a href="#state_rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securityfirewallrule">List[Security<wbr>Firewall<wbr>Rule]</a></span>
     </dt>
@@ -611,7 +651,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Ip</span>
+        <span id="ip_csharp">
+<a href="#ip_csharp" style="color: inherit; text-decoration: inherit;">Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -619,7 +661,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ports</span>
+        <span id="ports_csharp">
+<a href="#ports_csharp" style="color: inherit; text-decoration: inherit;">Ports</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;int&gt;</a></span>
     </dt>
@@ -627,7 +671,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Services</span>
+        <span id="services_csharp">
+<a href="#services_csharp" style="color: inherit; text-decoration: inherit;">Services</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -642,7 +688,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Ip</span>
+        <span id="ip_go">
+<a href="#ip_go" style="color: inherit; text-decoration: inherit;">Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -650,7 +698,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ports</span>
+        <span id="ports_go">
+<a href="#ports_go" style="color: inherit; text-decoration: inherit;">Ports</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">[]int</a></span>
     </dt>
@@ -658,7 +708,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Services</span>
+        <span id="services_go">
+<a href="#services_go" style="color: inherit; text-decoration: inherit;">Services</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -673,7 +725,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>ip</span>
+        <span id="ip_nodejs">
+<a href="#ip_nodejs" style="color: inherit; text-decoration: inherit;">ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -681,7 +735,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>ports</span>
+        <span id="ports_nodejs">
+<a href="#ports_nodejs" style="color: inherit; text-decoration: inherit;">ports</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number[]</a></span>
     </dt>
@@ -689,7 +745,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>services</span>
+        <span id="services_nodejs">
+<a href="#services_nodejs" style="color: inherit; text-decoration: inherit;">services</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -704,7 +762,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>ip</span>
+        <span id="ip_python">
+<a href="#ip_python" style="color: inherit; text-decoration: inherit;">ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -712,7 +772,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>ports</span>
+        <span id="ports_python">
+<a href="#ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Integer]</a></span>
     </dt>
@@ -720,7 +782,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>services</span>
+        <span id="services_python">
+<a href="#services_python" style="color: inherit; text-decoration: inherit;">services</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
