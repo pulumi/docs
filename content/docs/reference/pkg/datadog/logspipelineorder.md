@@ -21,7 +21,27 @@ Provides a Datadog [Logs Pipeline API](https://docs.datadoghq.com/api/?lang=pyth
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Datadog = Pulumi.Datadog;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var samplePipelineOrder = new Datadog.LogsPipelineOrder("samplePipelineOrder", new Datadog.LogsPipelineOrderArgs
+        {
+            Name = "sample_pipeline_order",
+            Pipelines = 
+            {
+                datadog_logs_custom_pipeline.Sample_pipeline.Id,
+                datadog_logs_integration_pipeline.Python.Id,
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -243,7 +263,9 @@ The LogsPipelineOrder resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -253,7 +275,9 @@ No related field is available in  [Logs Pipeline API](https://docs.datadoghq.com
 
     <dt class="property-required"
             title="Required">
-        <span>Pipelines</span>
+        <span id="pipelines_csharp">
+<a href="#pipelines_csharp" style="color: inherit; text-decoration: inherit;">Pipelines</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -269,7 +293,9 @@ No related field is available in  [Logs Pipeline API](https://docs.datadoghq.com
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -279,7 +305,9 @@ No related field is available in  [Logs Pipeline API](https://docs.datadoghq.com
 
     <dt class="property-required"
             title="Required">
-        <span>Pipelines</span>
+        <span id="pipelines_go">
+<a href="#pipelines_go" style="color: inherit; text-decoration: inherit;">Pipelines</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -295,7 +323,9 @@ No related field is available in  [Logs Pipeline API](https://docs.datadoghq.com
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -305,7 +335,9 @@ No related field is available in  [Logs Pipeline API](https://docs.datadoghq.com
 
     <dt class="property-required"
             title="Required">
-        <span>pipelines</span>
+        <span id="pipelines_nodejs">
+<a href="#pipelines_nodejs" style="color: inherit; text-decoration: inherit;">pipelines</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -321,7 +353,9 @@ No related field is available in  [Logs Pipeline API](https://docs.datadoghq.com
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -331,7 +365,9 @@ No related field is available in  [Logs Pipeline API](https://docs.datadoghq.com
 
     <dt class="property-required"
             title="Required">
-        <span>pipelines</span>
+        <span id="pipelines_python">
+<a href="#pipelines_python" style="color: inherit; text-decoration: inherit;">pipelines</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -358,7 +394,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -373,7 +411,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -388,7 +428,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -403,7 +445,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -544,7 +588,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -554,7 +600,9 @@ No related field is available in  [Logs Pipeline API](https://docs.datadoghq.com
 
     <dt class="property-optional"
             title="Optional">
-        <span>Pipelines</span>
+        <span id="state_pipelines_csharp">
+<a href="#state_pipelines_csharp" style="color: inherit; text-decoration: inherit;">Pipelines</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -570,7 +618,9 @@ No related field is available in  [Logs Pipeline API](https://docs.datadoghq.com
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -580,7 +630,9 @@ No related field is available in  [Logs Pipeline API](https://docs.datadoghq.com
 
     <dt class="property-optional"
             title="Optional">
-        <span>Pipelines</span>
+        <span id="state_pipelines_go">
+<a href="#state_pipelines_go" style="color: inherit; text-decoration: inherit;">Pipelines</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -596,7 +648,9 @@ No related field is available in  [Logs Pipeline API](https://docs.datadoghq.com
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -606,7 +660,9 @@ No related field is available in  [Logs Pipeline API](https://docs.datadoghq.com
 
     <dt class="property-optional"
             title="Optional">
-        <span>pipelines</span>
+        <span id="state_pipelines_nodejs">
+<a href="#state_pipelines_nodejs" style="color: inherit; text-decoration: inherit;">pipelines</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -622,7 +678,9 @@ No related field is available in  [Logs Pipeline API](https://docs.datadoghq.com
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -632,7 +690,9 @@ No related field is available in  [Logs Pipeline API](https://docs.datadoghq.com
 
     <dt class="property-optional"
             title="Optional">
-        <span>pipelines</span>
+        <span id="state_pipelines_python">
+<a href="#state_pipelines_python" style="color: inherit; text-decoration: inherit;">pipelines</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
