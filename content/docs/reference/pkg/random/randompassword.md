@@ -29,7 +29,33 @@ This resource *does* use a cryptographic random number generator.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+using Random = Pulumi.Random;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var password = new Random.RandomPassword("password", new Random.RandomPasswordArgs
+        {
+            Length = 16,
+            Special = true,
+            OverrideSpecial = "_%@",
+        });
+        var example = new Aws.Rds.Instance("example", new Aws.Rds.InstanceArgs
+        {
+            InstanceClass = "db.t3.micro",
+            AllocatedStorage = 64,
+            Engine = "mysql",
+            Username = "someone",
+            Password = random_string.Password.Result,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -262,7 +288,9 @@ The RandomPassword resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-required"
             title="Required">
-        <span>Length</span>
+        <span id="length_csharp">
+<a href="#length_csharp" style="color: inherit; text-decoration: inherit;">Length</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -270,7 +298,9 @@ The RandomPassword resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>Keepers</span>
+        <span id="keepers_csharp">
+<a href="#keepers_csharp" style="color: inherit; text-decoration: inherit;">Keepers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -278,7 +308,9 @@ The RandomPassword resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>Lower</span>
+        <span id="lower_csharp">
+<a href="#lower_csharp" style="color: inherit; text-decoration: inherit;">Lower</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -286,7 +318,9 @@ The RandomPassword resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>Min<wbr>Lower</span>
+        <span id="minlower_csharp">
+<a href="#minlower_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Lower</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -294,7 +328,9 @@ The RandomPassword resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>Min<wbr>Numeric</span>
+        <span id="minnumeric_csharp">
+<a href="#minnumeric_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Numeric</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -302,7 +338,9 @@ The RandomPassword resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>Min<wbr>Special</span>
+        <span id="minspecial_csharp">
+<a href="#minspecial_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Special</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -310,7 +348,9 @@ The RandomPassword resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>Min<wbr>Upper</span>
+        <span id="minupper_csharp">
+<a href="#minupper_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Upper</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -318,7 +358,9 @@ The RandomPassword resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>Number</span>
+        <span id="number_csharp">
+<a href="#number_csharp" style="color: inherit; text-decoration: inherit;">Number</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -326,7 +368,9 @@ The RandomPassword resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>Override<wbr>Special</span>
+        <span id="overridespecial_csharp">
+<a href="#overridespecial_csharp" style="color: inherit; text-decoration: inherit;">Override<wbr>Special</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -334,7 +378,9 @@ The RandomPassword resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>Special</span>
+        <span id="special_csharp">
+<a href="#special_csharp" style="color: inherit; text-decoration: inherit;">Special</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -342,7 +388,9 @@ The RandomPassword resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>Upper</span>
+        <span id="upper_csharp">
+<a href="#upper_csharp" style="color: inherit; text-decoration: inherit;">Upper</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -357,7 +405,9 @@ The RandomPassword resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-required"
             title="Required">
-        <span>Length</span>
+        <span id="length_go">
+<a href="#length_go" style="color: inherit; text-decoration: inherit;">Length</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -365,7 +415,9 @@ The RandomPassword resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>Keepers</span>
+        <span id="keepers_go">
+<a href="#keepers_go" style="color: inherit; text-decoration: inherit;">Keepers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -373,7 +425,9 @@ The RandomPassword resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>Lower</span>
+        <span id="lower_go">
+<a href="#lower_go" style="color: inherit; text-decoration: inherit;">Lower</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -381,7 +435,9 @@ The RandomPassword resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>Min<wbr>Lower</span>
+        <span id="minlower_go">
+<a href="#minlower_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Lower</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -389,7 +445,9 @@ The RandomPassword resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>Min<wbr>Numeric</span>
+        <span id="minnumeric_go">
+<a href="#minnumeric_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Numeric</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -397,7 +455,9 @@ The RandomPassword resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>Min<wbr>Special</span>
+        <span id="minspecial_go">
+<a href="#minspecial_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Special</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -405,7 +465,9 @@ The RandomPassword resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>Min<wbr>Upper</span>
+        <span id="minupper_go">
+<a href="#minupper_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Upper</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -413,7 +475,9 @@ The RandomPassword resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>Number</span>
+        <span id="number_go">
+<a href="#number_go" style="color: inherit; text-decoration: inherit;">Number</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -421,7 +485,9 @@ The RandomPassword resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>Override<wbr>Special</span>
+        <span id="overridespecial_go">
+<a href="#overridespecial_go" style="color: inherit; text-decoration: inherit;">Override<wbr>Special</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -429,7 +495,9 @@ The RandomPassword resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>Special</span>
+        <span id="special_go">
+<a href="#special_go" style="color: inherit; text-decoration: inherit;">Special</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -437,7 +505,9 @@ The RandomPassword resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>Upper</span>
+        <span id="upper_go">
+<a href="#upper_go" style="color: inherit; text-decoration: inherit;">Upper</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -452,7 +522,9 @@ The RandomPassword resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-required"
             title="Required">
-        <span>length</span>
+        <span id="length_nodejs">
+<a href="#length_nodejs" style="color: inherit; text-decoration: inherit;">length</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -460,7 +532,9 @@ The RandomPassword resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>keepers</span>
+        <span id="keepers_nodejs">
+<a href="#keepers_nodejs" style="color: inherit; text-decoration: inherit;">keepers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -468,7 +542,9 @@ The RandomPassword resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>lower</span>
+        <span id="lower_nodejs">
+<a href="#lower_nodejs" style="color: inherit; text-decoration: inherit;">lower</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -476,7 +552,9 @@ The RandomPassword resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>min<wbr>Lower</span>
+        <span id="minlower_nodejs">
+<a href="#minlower_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Lower</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -484,7 +562,9 @@ The RandomPassword resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>min<wbr>Numeric</span>
+        <span id="minnumeric_nodejs">
+<a href="#minnumeric_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Numeric</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -492,7 +572,9 @@ The RandomPassword resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>min<wbr>Special</span>
+        <span id="minspecial_nodejs">
+<a href="#minspecial_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Special</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -500,7 +582,9 @@ The RandomPassword resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>min<wbr>Upper</span>
+        <span id="minupper_nodejs">
+<a href="#minupper_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Upper</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -508,7 +592,9 @@ The RandomPassword resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>number</span>
+        <span id="number_nodejs">
+<a href="#number_nodejs" style="color: inherit; text-decoration: inherit;">number</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -516,7 +602,9 @@ The RandomPassword resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>override<wbr>Special</span>
+        <span id="overridespecial_nodejs">
+<a href="#overridespecial_nodejs" style="color: inherit; text-decoration: inherit;">override<wbr>Special</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -524,7 +612,9 @@ The RandomPassword resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>special</span>
+        <span id="special_nodejs">
+<a href="#special_nodejs" style="color: inherit; text-decoration: inherit;">special</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -532,7 +622,9 @@ The RandomPassword resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>upper</span>
+        <span id="upper_nodejs">
+<a href="#upper_nodejs" style="color: inherit; text-decoration: inherit;">upper</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -547,7 +639,9 @@ The RandomPassword resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-required"
             title="Required">
-        <span>length</span>
+        <span id="length_python">
+<a href="#length_python" style="color: inherit; text-decoration: inherit;">length</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -555,7 +649,9 @@ The RandomPassword resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>keepers</span>
+        <span id="keepers_python">
+<a href="#keepers_python" style="color: inherit; text-decoration: inherit;">keepers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -563,7 +659,9 @@ The RandomPassword resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>lower</span>
+        <span id="lower_python">
+<a href="#lower_python" style="color: inherit; text-decoration: inherit;">lower</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -571,7 +669,9 @@ The RandomPassword resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>min_<wbr>lower</span>
+        <span id="min_lower_python">
+<a href="#min_lower_python" style="color: inherit; text-decoration: inherit;">min_<wbr>lower</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -579,7 +679,9 @@ The RandomPassword resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>min_<wbr>numeric</span>
+        <span id="min_numeric_python">
+<a href="#min_numeric_python" style="color: inherit; text-decoration: inherit;">min_<wbr>numeric</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -587,7 +689,9 @@ The RandomPassword resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>min_<wbr>special</span>
+        <span id="min_special_python">
+<a href="#min_special_python" style="color: inherit; text-decoration: inherit;">min_<wbr>special</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -595,7 +699,9 @@ The RandomPassword resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>min_<wbr>upper</span>
+        <span id="min_upper_python">
+<a href="#min_upper_python" style="color: inherit; text-decoration: inherit;">min_<wbr>upper</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -603,7 +709,9 @@ The RandomPassword resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>number</span>
+        <span id="number_python">
+<a href="#number_python" style="color: inherit; text-decoration: inherit;">number</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -611,7 +719,9 @@ The RandomPassword resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>override_<wbr>special</span>
+        <span id="override_special_python">
+<a href="#override_special_python" style="color: inherit; text-decoration: inherit;">override_<wbr>special</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -619,7 +729,9 @@ The RandomPassword resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>special</span>
+        <span id="special_python">
+<a href="#special_python" style="color: inherit; text-decoration: inherit;">special</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -627,7 +739,9 @@ The RandomPassword resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>upper</span>
+        <span id="upper_python">
+<a href="#upper_python" style="color: inherit; text-decoration: inherit;">upper</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -653,7 +767,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -661,7 +777,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Result</span>
+        <span id="result_csharp">
+<a href="#result_csharp" style="color: inherit; text-decoration: inherit;">Result</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -676,7 +794,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -684,7 +804,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Result</span>
+        <span id="result_go">
+<a href="#result_go" style="color: inherit; text-decoration: inherit;">Result</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -699,7 +821,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -707,7 +831,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>result</span>
+        <span id="result_nodejs">
+<a href="#result_nodejs" style="color: inherit; text-decoration: inherit;">result</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -722,7 +848,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -730,7 +858,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>result</span>
+        <span id="result_python">
+<a href="#result_python" style="color: inherit; text-decoration: inherit;">result</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -871,7 +1001,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Keepers</span>
+        <span id="state_keepers_csharp">
+<a href="#state_keepers_csharp" style="color: inherit; text-decoration: inherit;">Keepers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -879,7 +1011,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Length</span>
+        <span id="state_length_csharp">
+<a href="#state_length_csharp" style="color: inherit; text-decoration: inherit;">Length</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -887,7 +1021,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Lower</span>
+        <span id="state_lower_csharp">
+<a href="#state_lower_csharp" style="color: inherit; text-decoration: inherit;">Lower</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -895,7 +1031,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Min<wbr>Lower</span>
+        <span id="state_minlower_csharp">
+<a href="#state_minlower_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Lower</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -903,7 +1041,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Min<wbr>Numeric</span>
+        <span id="state_minnumeric_csharp">
+<a href="#state_minnumeric_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Numeric</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -911,7 +1051,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Min<wbr>Special</span>
+        <span id="state_minspecial_csharp">
+<a href="#state_minspecial_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Special</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -919,7 +1061,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Min<wbr>Upper</span>
+        <span id="state_minupper_csharp">
+<a href="#state_minupper_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Upper</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -927,7 +1071,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Number</span>
+        <span id="state_number_csharp">
+<a href="#state_number_csharp" style="color: inherit; text-decoration: inherit;">Number</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -935,7 +1081,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Override<wbr>Special</span>
+        <span id="state_overridespecial_csharp">
+<a href="#state_overridespecial_csharp" style="color: inherit; text-decoration: inherit;">Override<wbr>Special</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -943,7 +1091,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Result</span>
+        <span id="state_result_csharp">
+<a href="#state_result_csharp" style="color: inherit; text-decoration: inherit;">Result</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -951,7 +1101,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Special</span>
+        <span id="state_special_csharp">
+<a href="#state_special_csharp" style="color: inherit; text-decoration: inherit;">Special</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -959,7 +1111,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Upper</span>
+        <span id="state_upper_csharp">
+<a href="#state_upper_csharp" style="color: inherit; text-decoration: inherit;">Upper</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -974,7 +1128,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Keepers</span>
+        <span id="state_keepers_go">
+<a href="#state_keepers_go" style="color: inherit; text-decoration: inherit;">Keepers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -982,7 +1138,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Length</span>
+        <span id="state_length_go">
+<a href="#state_length_go" style="color: inherit; text-decoration: inherit;">Length</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -990,7 +1148,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Lower</span>
+        <span id="state_lower_go">
+<a href="#state_lower_go" style="color: inherit; text-decoration: inherit;">Lower</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -998,7 +1158,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Min<wbr>Lower</span>
+        <span id="state_minlower_go">
+<a href="#state_minlower_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Lower</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1006,7 +1168,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Min<wbr>Numeric</span>
+        <span id="state_minnumeric_go">
+<a href="#state_minnumeric_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Numeric</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1014,7 +1178,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Min<wbr>Special</span>
+        <span id="state_minspecial_go">
+<a href="#state_minspecial_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Special</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1022,7 +1188,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Min<wbr>Upper</span>
+        <span id="state_minupper_go">
+<a href="#state_minupper_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Upper</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1030,7 +1198,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Number</span>
+        <span id="state_number_go">
+<a href="#state_number_go" style="color: inherit; text-decoration: inherit;">Number</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1038,7 +1208,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Override<wbr>Special</span>
+        <span id="state_overridespecial_go">
+<a href="#state_overridespecial_go" style="color: inherit; text-decoration: inherit;">Override<wbr>Special</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1046,7 +1218,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Result</span>
+        <span id="state_result_go">
+<a href="#state_result_go" style="color: inherit; text-decoration: inherit;">Result</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1054,7 +1228,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Special</span>
+        <span id="state_special_go">
+<a href="#state_special_go" style="color: inherit; text-decoration: inherit;">Special</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1062,7 +1238,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Upper</span>
+        <span id="state_upper_go">
+<a href="#state_upper_go" style="color: inherit; text-decoration: inherit;">Upper</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1077,7 +1255,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>keepers</span>
+        <span id="state_keepers_nodejs">
+<a href="#state_keepers_nodejs" style="color: inherit; text-decoration: inherit;">keepers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -1085,7 +1265,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>length</span>
+        <span id="state_length_nodejs">
+<a href="#state_length_nodejs" style="color: inherit; text-decoration: inherit;">length</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1093,7 +1275,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>lower</span>
+        <span id="state_lower_nodejs">
+<a href="#state_lower_nodejs" style="color: inherit; text-decoration: inherit;">lower</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1101,7 +1285,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>min<wbr>Lower</span>
+        <span id="state_minlower_nodejs">
+<a href="#state_minlower_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Lower</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1109,7 +1295,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>min<wbr>Numeric</span>
+        <span id="state_minnumeric_nodejs">
+<a href="#state_minnumeric_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Numeric</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1117,7 +1305,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>min<wbr>Special</span>
+        <span id="state_minspecial_nodejs">
+<a href="#state_minspecial_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Special</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1125,7 +1315,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>min<wbr>Upper</span>
+        <span id="state_minupper_nodejs">
+<a href="#state_minupper_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Upper</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1133,7 +1325,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>number</span>
+        <span id="state_number_nodejs">
+<a href="#state_number_nodejs" style="color: inherit; text-decoration: inherit;">number</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1141,7 +1335,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>override<wbr>Special</span>
+        <span id="state_overridespecial_nodejs">
+<a href="#state_overridespecial_nodejs" style="color: inherit; text-decoration: inherit;">override<wbr>Special</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1149,7 +1345,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>result</span>
+        <span id="state_result_nodejs">
+<a href="#state_result_nodejs" style="color: inherit; text-decoration: inherit;">result</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1157,7 +1355,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>special</span>
+        <span id="state_special_nodejs">
+<a href="#state_special_nodejs" style="color: inherit; text-decoration: inherit;">special</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1165,7 +1365,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>upper</span>
+        <span id="state_upper_nodejs">
+<a href="#state_upper_nodejs" style="color: inherit; text-decoration: inherit;">upper</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1180,7 +1382,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>keepers</span>
+        <span id="state_keepers_python">
+<a href="#state_keepers_python" style="color: inherit; text-decoration: inherit;">keepers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -1188,7 +1392,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>length</span>
+        <span id="state_length_python">
+<a href="#state_length_python" style="color: inherit; text-decoration: inherit;">length</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1196,7 +1402,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>lower</span>
+        <span id="state_lower_python">
+<a href="#state_lower_python" style="color: inherit; text-decoration: inherit;">lower</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1204,7 +1412,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>min_<wbr>lower</span>
+        <span id="state_min_lower_python">
+<a href="#state_min_lower_python" style="color: inherit; text-decoration: inherit;">min_<wbr>lower</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1212,7 +1422,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>min_<wbr>numeric</span>
+        <span id="state_min_numeric_python">
+<a href="#state_min_numeric_python" style="color: inherit; text-decoration: inherit;">min_<wbr>numeric</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1220,7 +1432,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>min_<wbr>special</span>
+        <span id="state_min_special_python">
+<a href="#state_min_special_python" style="color: inherit; text-decoration: inherit;">min_<wbr>special</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1228,7 +1442,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>min_<wbr>upper</span>
+        <span id="state_min_upper_python">
+<a href="#state_min_upper_python" style="color: inherit; text-decoration: inherit;">min_<wbr>upper</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1236,7 +1452,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>number</span>
+        <span id="state_number_python">
+<a href="#state_number_python" style="color: inherit; text-decoration: inherit;">number</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1244,7 +1462,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>override_<wbr>special</span>
+        <span id="state_override_special_python">
+<a href="#state_override_special_python" style="color: inherit; text-decoration: inherit;">override_<wbr>special</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1252,7 +1472,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>result</span>
+        <span id="state_result_python">
+<a href="#state_result_python" style="color: inherit; text-decoration: inherit;">result</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1260,7 +1482,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>special</span>
+        <span id="state_special_python">
+<a href="#state_special_python" style="color: inherit; text-decoration: inherit;">special</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1268,7 +1492,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>upper</span>
+        <span id="state_upper_python">
+<a href="#state_upper_python" style="color: inherit; text-decoration: inherit;">upper</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>

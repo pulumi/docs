@@ -25,7 +25,26 @@ for use with services needed a unique string identifier.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+using Random = Pulumi.Random;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var testRandomUuid = new Random.RandomUuid("testRandomUuid", new Random.RandomUuidArgs
+        {
+        });
+        var testResourceGroup = new Azure.Core.ResourceGroup("testResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "Central US",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -242,7 +261,9 @@ The RandomUuid resource accepts the following [input]({{< relref "/docs/intro/co
 
     <dt class="property-optional"
             title="Optional">
-        <span>Keepers</span>
+        <span id="keepers_csharp">
+<a href="#keepers_csharp" style="color: inherit; text-decoration: inherit;">Keepers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -260,7 +281,9 @@ the main provider documentation for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Keepers</span>
+        <span id="keepers_go">
+<a href="#keepers_go" style="color: inherit; text-decoration: inherit;">Keepers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -278,7 +301,9 @@ the main provider documentation for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>keepers</span>
+        <span id="keepers_nodejs">
+<a href="#keepers_nodejs" style="color: inherit; text-decoration: inherit;">keepers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -296,7 +321,9 @@ the main provider documentation for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>keepers</span>
+        <span id="keepers_python">
+<a href="#keepers_python" style="color: inherit; text-decoration: inherit;">keepers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -325,7 +352,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -333,7 +362,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Result</span>
+        <span id="result_csharp">
+<a href="#result_csharp" style="color: inherit; text-decoration: inherit;">Result</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -349,7 +380,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -357,7 +390,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Result</span>
+        <span id="result_go">
+<a href="#result_go" style="color: inherit; text-decoration: inherit;">Result</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -373,7 +408,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -381,7 +418,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>result</span>
+        <span id="result_nodejs">
+<a href="#result_nodejs" style="color: inherit; text-decoration: inherit;">result</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -397,7 +436,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -405,7 +446,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>result</span>
+        <span id="result_python">
+<a href="#result_python" style="color: inherit; text-decoration: inherit;">result</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -547,7 +590,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Keepers</span>
+        <span id="state_keepers_csharp">
+<a href="#state_keepers_csharp" style="color: inherit; text-decoration: inherit;">Keepers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -558,7 +603,9 @@ the main provider documentation for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Result</span>
+        <span id="state_result_csharp">
+<a href="#state_result_csharp" style="color: inherit; text-decoration: inherit;">Result</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -574,7 +621,9 @@ the main provider documentation for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Keepers</span>
+        <span id="state_keepers_go">
+<a href="#state_keepers_go" style="color: inherit; text-decoration: inherit;">Keepers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -585,7 +634,9 @@ the main provider documentation for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Result</span>
+        <span id="state_result_go">
+<a href="#state_result_go" style="color: inherit; text-decoration: inherit;">Result</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -601,7 +652,9 @@ the main provider documentation for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>keepers</span>
+        <span id="state_keepers_nodejs">
+<a href="#state_keepers_nodejs" style="color: inherit; text-decoration: inherit;">keepers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -612,7 +665,9 @@ the main provider documentation for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>result</span>
+        <span id="state_result_nodejs">
+<a href="#state_result_nodejs" style="color: inherit; text-decoration: inherit;">result</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -628,7 +683,9 @@ the main provider documentation for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>keepers</span>
+        <span id="state_keepers_python">
+<a href="#state_keepers_python" style="color: inherit; text-decoration: inherit;">keepers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -639,7 +696,9 @@ the main provider documentation for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>result</span>
+        <span id="state_result_python">
+<a href="#state_result_python" style="color: inherit; text-decoration: inherit;">result</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

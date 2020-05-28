@@ -26,7 +26,34 @@ exist concurrently.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+using Random = Pulumi.Random;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var serverRandomPet = new Random.RandomPet("serverRandomPet", new Random.RandomPetArgs
+        {
+            Keepers = 
+            {
+                { "ami_id", @var.Ami_id },
+            },
+        });
+        var serverInstance = new Aws.Ec2.Instance("serverInstance", new Aws.Ec2.InstanceArgs
+        {
+            Ami = serverRandomPet.Keepers.Apply(keepers => keepers.AmiId),
+            Tags = 
+            {
+                { "Name", serverRandomPet.Id.Apply(id => $"web-server-{id}") },
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -257,7 +284,9 @@ The RandomPet resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span>Keepers</span>
+        <span id="keepers_csharp">
+<a href="#keepers_csharp" style="color: inherit; text-decoration: inherit;">Keepers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -268,7 +297,9 @@ the main provider documentation for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Length</span>
+        <span id="length_csharp">
+<a href="#length_csharp" style="color: inherit; text-decoration: inherit;">Length</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -277,7 +308,9 @@ the main provider documentation for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Prefix</span>
+        <span id="prefix_csharp">
+<a href="#prefix_csharp" style="color: inherit; text-decoration: inherit;">Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -286,7 +319,9 @@ the main provider documentation for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Separator</span>
+        <span id="separator_csharp">
+<a href="#separator_csharp" style="color: inherit; text-decoration: inherit;">Separator</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -302,7 +337,9 @@ the main provider documentation for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Keepers</span>
+        <span id="keepers_go">
+<a href="#keepers_go" style="color: inherit; text-decoration: inherit;">Keepers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -313,7 +350,9 @@ the main provider documentation for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Length</span>
+        <span id="length_go">
+<a href="#length_go" style="color: inherit; text-decoration: inherit;">Length</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -322,7 +361,9 @@ the main provider documentation for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Prefix</span>
+        <span id="prefix_go">
+<a href="#prefix_go" style="color: inherit; text-decoration: inherit;">Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -331,7 +372,9 @@ the main provider documentation for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Separator</span>
+        <span id="separator_go">
+<a href="#separator_go" style="color: inherit; text-decoration: inherit;">Separator</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -347,7 +390,9 @@ the main provider documentation for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>keepers</span>
+        <span id="keepers_nodejs">
+<a href="#keepers_nodejs" style="color: inherit; text-decoration: inherit;">keepers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -358,7 +403,9 @@ the main provider documentation for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>length</span>
+        <span id="length_nodejs">
+<a href="#length_nodejs" style="color: inherit; text-decoration: inherit;">length</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -367,7 +414,9 @@ the main provider documentation for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>prefix</span>
+        <span id="prefix_nodejs">
+<a href="#prefix_nodejs" style="color: inherit; text-decoration: inherit;">prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -376,7 +425,9 @@ the main provider documentation for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>separator</span>
+        <span id="separator_nodejs">
+<a href="#separator_nodejs" style="color: inherit; text-decoration: inherit;">separator</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -392,7 +443,9 @@ the main provider documentation for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>keepers</span>
+        <span id="keepers_python">
+<a href="#keepers_python" style="color: inherit; text-decoration: inherit;">keepers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -403,7 +456,9 @@ the main provider documentation for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>length</span>
+        <span id="length_python">
+<a href="#length_python" style="color: inherit; text-decoration: inherit;">length</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -412,7 +467,9 @@ the main provider documentation for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>prefix</span>
+        <span id="prefix_python">
+<a href="#prefix_python" style="color: inherit; text-decoration: inherit;">prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -421,7 +478,9 @@ the main provider documentation for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>separator</span>
+        <span id="separator_python">
+<a href="#separator_python" style="color: inherit; text-decoration: inherit;">separator</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -448,7 +507,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -463,7 +524,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -478,7 +541,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -493,7 +558,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -634,7 +701,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Keepers</span>
+        <span id="state_keepers_csharp">
+<a href="#state_keepers_csharp" style="color: inherit; text-decoration: inherit;">Keepers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -645,7 +714,9 @@ the main provider documentation for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Length</span>
+        <span id="state_length_csharp">
+<a href="#state_length_csharp" style="color: inherit; text-decoration: inherit;">Length</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -654,7 +725,9 @@ the main provider documentation for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Prefix</span>
+        <span id="state_prefix_csharp">
+<a href="#state_prefix_csharp" style="color: inherit; text-decoration: inherit;">Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -663,7 +736,9 @@ the main provider documentation for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Separator</span>
+        <span id="state_separator_csharp">
+<a href="#state_separator_csharp" style="color: inherit; text-decoration: inherit;">Separator</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -679,7 +754,9 @@ the main provider documentation for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Keepers</span>
+        <span id="state_keepers_go">
+<a href="#state_keepers_go" style="color: inherit; text-decoration: inherit;">Keepers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -690,7 +767,9 @@ the main provider documentation for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Length</span>
+        <span id="state_length_go">
+<a href="#state_length_go" style="color: inherit; text-decoration: inherit;">Length</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -699,7 +778,9 @@ the main provider documentation for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Prefix</span>
+        <span id="state_prefix_go">
+<a href="#state_prefix_go" style="color: inherit; text-decoration: inherit;">Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -708,7 +789,9 @@ the main provider documentation for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Separator</span>
+        <span id="state_separator_go">
+<a href="#state_separator_go" style="color: inherit; text-decoration: inherit;">Separator</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -724,7 +807,9 @@ the main provider documentation for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>keepers</span>
+        <span id="state_keepers_nodejs">
+<a href="#state_keepers_nodejs" style="color: inherit; text-decoration: inherit;">keepers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -735,7 +820,9 @@ the main provider documentation for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>length</span>
+        <span id="state_length_nodejs">
+<a href="#state_length_nodejs" style="color: inherit; text-decoration: inherit;">length</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -744,7 +831,9 @@ the main provider documentation for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>prefix</span>
+        <span id="state_prefix_nodejs">
+<a href="#state_prefix_nodejs" style="color: inherit; text-decoration: inherit;">prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -753,7 +842,9 @@ the main provider documentation for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>separator</span>
+        <span id="state_separator_nodejs">
+<a href="#state_separator_nodejs" style="color: inherit; text-decoration: inherit;">separator</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -769,7 +860,9 @@ the main provider documentation for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>keepers</span>
+        <span id="state_keepers_python">
+<a href="#state_keepers_python" style="color: inherit; text-decoration: inherit;">keepers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -780,7 +873,9 @@ the main provider documentation for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>length</span>
+        <span id="state_length_python">
+<a href="#state_length_python" style="color: inherit; text-decoration: inherit;">length</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -789,7 +884,9 @@ the main provider documentation for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>prefix</span>
+        <span id="state_prefix_python">
+<a href="#state_prefix_python" style="color: inherit; text-decoration: inherit;">prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -798,7 +895,9 @@ the main provider documentation for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>separator</span>
+        <span id="state_separator_python">
+<a href="#state_separator_python" style="color: inherit; text-decoration: inherit;">separator</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
