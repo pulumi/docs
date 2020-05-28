@@ -21,7 +21,24 @@ This resource is helpful to configure do declarative JSON on BIG-IP.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using System.IO;
+using Pulumi;
+using F5BigIP = Pulumi.F5BigIP;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var do_example = new F5BigIP.Do("do-example", new F5BigIP.DoArgs
+        {
+            DoJson = File.ReadAllText("example.json"),
+            TenantName = "sample_test1",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -238,7 +255,9 @@ The Do resource accepts the following [input]({{< relref "/docs/intro/concepts/p
 
     <dt class="property-required"
             title="Required">
-        <span>Do<wbr>Json</span>
+        <span id="dojson_csharp">
+<a href="#dojson_csharp" style="color: inherit; text-decoration: inherit;">Do<wbr>Json</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -247,7 +266,9 @@ The Do resource accepts the following [input]({{< relref "/docs/intro/concepts/p
 
     <dt class="property-required"
             title="Required">
-        <span>Tenant<wbr>Name</span>
+        <span id="tenantname_csharp">
+<a href="#tenantname_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -263,7 +284,9 @@ The Do resource accepts the following [input]({{< relref "/docs/intro/concepts/p
 
     <dt class="property-required"
             title="Required">
-        <span>Do<wbr>Json</span>
+        <span id="dojson_go">
+<a href="#dojson_go" style="color: inherit; text-decoration: inherit;">Do<wbr>Json</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -272,7 +295,9 @@ The Do resource accepts the following [input]({{< relref "/docs/intro/concepts/p
 
     <dt class="property-required"
             title="Required">
-        <span>Tenant<wbr>Name</span>
+        <span id="tenantname_go">
+<a href="#tenantname_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -288,7 +313,9 @@ The Do resource accepts the following [input]({{< relref "/docs/intro/concepts/p
 
     <dt class="property-required"
             title="Required">
-        <span>do<wbr>Json</span>
+        <span id="dojson_nodejs">
+<a href="#dojson_nodejs" style="color: inherit; text-decoration: inherit;">do<wbr>Json</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -297,7 +324,9 @@ The Do resource accepts the following [input]({{< relref "/docs/intro/concepts/p
 
     <dt class="property-required"
             title="Required">
-        <span>tenant<wbr>Name</span>
+        <span id="tenantname_nodejs">
+<a href="#tenantname_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -313,7 +342,9 @@ The Do resource accepts the following [input]({{< relref "/docs/intro/concepts/p
 
     <dt class="property-required"
             title="Required">
-        <span>do_<wbr>json</span>
+        <span id="do_json_python">
+<a href="#do_json_python" style="color: inherit; text-decoration: inherit;">do_<wbr>json</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -322,7 +353,9 @@ The Do resource accepts the following [input]({{< relref "/docs/intro/concepts/p
 
     <dt class="property-required"
             title="Required">
-        <span>tenant_<wbr>name</span>
+        <span id="tenant_name_python">
+<a href="#tenant_name_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -349,7 +382,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -364,7 +399,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -379,7 +416,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -394,7 +433,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -535,7 +576,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Do<wbr>Json</span>
+        <span id="state_dojson_csharp">
+<a href="#state_dojson_csharp" style="color: inherit; text-decoration: inherit;">Do<wbr>Json</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -544,7 +587,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tenant<wbr>Name</span>
+        <span id="state_tenantname_csharp">
+<a href="#state_tenantname_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -560,7 +605,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Do<wbr>Json</span>
+        <span id="state_dojson_go">
+<a href="#state_dojson_go" style="color: inherit; text-decoration: inherit;">Do<wbr>Json</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -569,7 +616,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tenant<wbr>Name</span>
+        <span id="state_tenantname_go">
+<a href="#state_tenantname_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -585,7 +634,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>do<wbr>Json</span>
+        <span id="state_dojson_nodejs">
+<a href="#state_dojson_nodejs" style="color: inherit; text-decoration: inherit;">do<wbr>Json</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -594,7 +645,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>tenant<wbr>Name</span>
+        <span id="state_tenantname_nodejs">
+<a href="#state_tenantname_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -610,7 +663,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>do_<wbr>json</span>
+        <span id="state_do_json_python">
+<a href="#state_do_json_python" style="color: inherit; text-decoration: inherit;">do_<wbr>json</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -619,7 +674,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>tenant_<wbr>name</span>
+        <span id="state_tenant_name_python">
+<a href="#state_tenant_name_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

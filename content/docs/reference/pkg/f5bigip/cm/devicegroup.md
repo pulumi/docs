@@ -21,7 +21,36 @@ meta_desc: "Explore the DeviceGroup resource of the cm module, including example
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using F5BigIP = Pulumi.F5BigIP;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var myNewDevicegroup = new F5BigIP.CM.DeviceGroup("myNewDevicegroup", new F5BigIP.CM.DeviceGroupArgs
+        {
+            AutoSync = "enabled",
+            Devices = 
+            {
+                new F5BigIP.CM.Inputs.DeviceGroupDeviceArgs
+                {
+                    Name = "bigip1.cisco.com",
+                },
+                new F5BigIP.CM.Inputs.DeviceGroupDeviceArgs
+                {
+                    Name = "bigip200.f5.com",
+                },
+            },
+            FullLoadOnSync = "true",
+            Name = "sanjose_devicegroup",
+            Type = "sync-only",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -257,7 +286,9 @@ The DeviceGroup resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Auto<wbr>Sync</span>
+        <span id="autosync_csharp">
+<a href="#autosync_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Sync</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -266,7 +297,9 @@ The DeviceGroup resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -275,7 +308,9 @@ The DeviceGroup resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Devices</span>
+        <span id="devices_csharp">
+<a href="#devices_csharp" style="color: inherit; text-decoration: inherit;">Devices</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#devicegroupdevice">List&lt;Pulumi.<wbr>F5Big<wbr>IP.<wbr>CM.<wbr>Inputs.<wbr>Device<wbr>Group<wbr>Device<wbr>Args&gt;</a></span>
     </dt>
@@ -284,7 +319,9 @@ The DeviceGroup resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Full<wbr>Load<wbr>On<wbr>Sync</span>
+        <span id="fullloadonsync_csharp">
+<a href="#fullloadonsync_csharp" style="color: inherit; text-decoration: inherit;">Full<wbr>Load<wbr>On<wbr>Sync</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -293,7 +330,9 @@ The DeviceGroup resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Incremental<wbr>Config</span>
+        <span id="incrementalconfig_csharp">
+<a href="#incrementalconfig_csharp" style="color: inherit; text-decoration: inherit;">Incremental<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -302,7 +341,9 @@ The DeviceGroup resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -311,7 +352,9 @@ The DeviceGroup resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Network<wbr>Failover</span>
+        <span id="networkfailover_csharp">
+<a href="#networkfailover_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Failover</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -320,7 +363,9 @@ The DeviceGroup resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Partition</span>
+        <span id="partition_csharp">
+<a href="#partition_csharp" style="color: inherit; text-decoration: inherit;">Partition</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -329,7 +374,9 @@ The DeviceGroup resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Save<wbr>On<wbr>Auto<wbr>Sync</span>
+        <span id="saveonautosync_csharp">
+<a href="#saveonautosync_csharp" style="color: inherit; text-decoration: inherit;">Save<wbr>On<wbr>Auto<wbr>Sync</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -338,7 +385,9 @@ The DeviceGroup resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Type</span>
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -354,7 +403,9 @@ The DeviceGroup resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Auto<wbr>Sync</span>
+        <span id="autosync_go">
+<a href="#autosync_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Sync</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -363,7 +414,9 @@ The DeviceGroup resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -372,7 +425,9 @@ The DeviceGroup resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Devices</span>
+        <span id="devices_go">
+<a href="#devices_go" style="color: inherit; text-decoration: inherit;">Devices</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#devicegroupdevice">[]Device<wbr>Group<wbr>Device</a></span>
     </dt>
@@ -381,7 +436,9 @@ The DeviceGroup resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Full<wbr>Load<wbr>On<wbr>Sync</span>
+        <span id="fullloadonsync_go">
+<a href="#fullloadonsync_go" style="color: inherit; text-decoration: inherit;">Full<wbr>Load<wbr>On<wbr>Sync</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -390,7 +447,9 @@ The DeviceGroup resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Incremental<wbr>Config</span>
+        <span id="incrementalconfig_go">
+<a href="#incrementalconfig_go" style="color: inherit; text-decoration: inherit;">Incremental<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -399,7 +458,9 @@ The DeviceGroup resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -408,7 +469,9 @@ The DeviceGroup resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Network<wbr>Failover</span>
+        <span id="networkfailover_go">
+<a href="#networkfailover_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Failover</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -417,7 +480,9 @@ The DeviceGroup resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Partition</span>
+        <span id="partition_go">
+<a href="#partition_go" style="color: inherit; text-decoration: inherit;">Partition</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -426,7 +491,9 @@ The DeviceGroup resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Save<wbr>On<wbr>Auto<wbr>Sync</span>
+        <span id="saveonautosync_go">
+<a href="#saveonautosync_go" style="color: inherit; text-decoration: inherit;">Save<wbr>On<wbr>Auto<wbr>Sync</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -435,7 +502,9 @@ The DeviceGroup resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Type</span>
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -451,7 +520,9 @@ The DeviceGroup resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>auto<wbr>Sync</span>
+        <span id="autosync_nodejs">
+<a href="#autosync_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Sync</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -460,7 +531,9 @@ The DeviceGroup resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -469,7 +542,9 @@ The DeviceGroup resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>devices</span>
+        <span id="devices_nodejs">
+<a href="#devices_nodejs" style="color: inherit; text-decoration: inherit;">devices</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#devicegroupdevice">Device<wbr>Group<wbr>Device[]</a></span>
     </dt>
@@ -478,7 +553,9 @@ The DeviceGroup resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>full<wbr>Load<wbr>On<wbr>Sync</span>
+        <span id="fullloadonsync_nodejs">
+<a href="#fullloadonsync_nodejs" style="color: inherit; text-decoration: inherit;">full<wbr>Load<wbr>On<wbr>Sync</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -487,7 +564,9 @@ The DeviceGroup resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>incremental<wbr>Config</span>
+        <span id="incrementalconfig_nodejs">
+<a href="#incrementalconfig_nodejs" style="color: inherit; text-decoration: inherit;">incremental<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -496,7 +575,9 @@ The DeviceGroup resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -505,7 +586,9 @@ The DeviceGroup resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>network<wbr>Failover</span>
+        <span id="networkfailover_nodejs">
+<a href="#networkfailover_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Failover</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -514,7 +597,9 @@ The DeviceGroup resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>partition</span>
+        <span id="partition_nodejs">
+<a href="#partition_nodejs" style="color: inherit; text-decoration: inherit;">partition</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -523,7 +608,9 @@ The DeviceGroup resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>save<wbr>On<wbr>Auto<wbr>Sync</span>
+        <span id="saveonautosync_nodejs">
+<a href="#saveonautosync_nodejs" style="color: inherit; text-decoration: inherit;">save<wbr>On<wbr>Auto<wbr>Sync</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -532,7 +619,9 @@ The DeviceGroup resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>type</span>
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -548,7 +637,9 @@ The DeviceGroup resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>auto_<wbr>sync</span>
+        <span id="auto_sync_python">
+<a href="#auto_sync_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>sync</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -557,7 +648,9 @@ The DeviceGroup resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -566,7 +659,9 @@ The DeviceGroup resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>devices</span>
+        <span id="devices_python">
+<a href="#devices_python" style="color: inherit; text-decoration: inherit;">devices</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#devicegroupdevice">List[Device<wbr>Group<wbr>Device]</a></span>
     </dt>
@@ -575,7 +670,9 @@ The DeviceGroup resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>full_<wbr>load_<wbr>on_<wbr>sync</span>
+        <span id="full_load_on_sync_python">
+<a href="#full_load_on_sync_python" style="color: inherit; text-decoration: inherit;">full_<wbr>load_<wbr>on_<wbr>sync</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -584,7 +681,9 @@ The DeviceGroup resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>incremental_<wbr>config</span>
+        <span id="incremental_config_python">
+<a href="#incremental_config_python" style="color: inherit; text-decoration: inherit;">incremental_<wbr>config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -593,7 +692,9 @@ The DeviceGroup resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -602,7 +703,9 @@ The DeviceGroup resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>network_<wbr>failover</span>
+        <span id="network_failover_python">
+<a href="#network_failover_python" style="color: inherit; text-decoration: inherit;">network_<wbr>failover</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -611,7 +714,9 @@ The DeviceGroup resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>partition</span>
+        <span id="partition_python">
+<a href="#partition_python" style="color: inherit; text-decoration: inherit;">partition</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -620,7 +725,9 @@ The DeviceGroup resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>save_<wbr>on_<wbr>auto_<wbr>sync</span>
+        <span id="save_on_auto_sync_python">
+<a href="#save_on_auto_sync_python" style="color: inherit; text-decoration: inherit;">save_<wbr>on_<wbr>auto_<wbr>sync</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -629,7 +736,9 @@ The DeviceGroup resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>type</span>
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -656,7 +765,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -671,7 +782,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -686,7 +799,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -701,7 +816,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -842,7 +959,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Auto<wbr>Sync</span>
+        <span id="state_autosync_csharp">
+<a href="#state_autosync_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Sync</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -851,7 +970,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_csharp">
+<a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -860,7 +981,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Devices</span>
+        <span id="state_devices_csharp">
+<a href="#state_devices_csharp" style="color: inherit; text-decoration: inherit;">Devices</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#devicegroupdevice">List&lt;Pulumi.<wbr>F5Big<wbr>IP.<wbr>CM.<wbr>Inputs.<wbr>Device<wbr>Group<wbr>Device<wbr>Args&gt;</a></span>
     </dt>
@@ -869,7 +992,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Full<wbr>Load<wbr>On<wbr>Sync</span>
+        <span id="state_fullloadonsync_csharp">
+<a href="#state_fullloadonsync_csharp" style="color: inherit; text-decoration: inherit;">Full<wbr>Load<wbr>On<wbr>Sync</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -878,7 +1003,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Incremental<wbr>Config</span>
+        <span id="state_incrementalconfig_csharp">
+<a href="#state_incrementalconfig_csharp" style="color: inherit; text-decoration: inherit;">Incremental<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -887,7 +1014,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -896,7 +1025,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Network<wbr>Failover</span>
+        <span id="state_networkfailover_csharp">
+<a href="#state_networkfailover_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Failover</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -905,7 +1036,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Partition</span>
+        <span id="state_partition_csharp">
+<a href="#state_partition_csharp" style="color: inherit; text-decoration: inherit;">Partition</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -914,7 +1047,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Save<wbr>On<wbr>Auto<wbr>Sync</span>
+        <span id="state_saveonautosync_csharp">
+<a href="#state_saveonautosync_csharp" style="color: inherit; text-decoration: inherit;">Save<wbr>On<wbr>Auto<wbr>Sync</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -923,7 +1058,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Type</span>
+        <span id="state_type_csharp">
+<a href="#state_type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -939,7 +1076,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Auto<wbr>Sync</span>
+        <span id="state_autosync_go">
+<a href="#state_autosync_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Sync</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -948,7 +1087,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_go">
+<a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -957,7 +1098,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Devices</span>
+        <span id="state_devices_go">
+<a href="#state_devices_go" style="color: inherit; text-decoration: inherit;">Devices</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#devicegroupdevice">[]Device<wbr>Group<wbr>Device</a></span>
     </dt>
@@ -966,7 +1109,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Full<wbr>Load<wbr>On<wbr>Sync</span>
+        <span id="state_fullloadonsync_go">
+<a href="#state_fullloadonsync_go" style="color: inherit; text-decoration: inherit;">Full<wbr>Load<wbr>On<wbr>Sync</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -975,7 +1120,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Incremental<wbr>Config</span>
+        <span id="state_incrementalconfig_go">
+<a href="#state_incrementalconfig_go" style="color: inherit; text-decoration: inherit;">Incremental<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -984,7 +1131,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -993,7 +1142,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Network<wbr>Failover</span>
+        <span id="state_networkfailover_go">
+<a href="#state_networkfailover_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Failover</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1002,7 +1153,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Partition</span>
+        <span id="state_partition_go">
+<a href="#state_partition_go" style="color: inherit; text-decoration: inherit;">Partition</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1011,7 +1164,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Save<wbr>On<wbr>Auto<wbr>Sync</span>
+        <span id="state_saveonautosync_go">
+<a href="#state_saveonautosync_go" style="color: inherit; text-decoration: inherit;">Save<wbr>On<wbr>Auto<wbr>Sync</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1020,7 +1175,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Type</span>
+        <span id="state_type_go">
+<a href="#state_type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1036,7 +1193,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>auto<wbr>Sync</span>
+        <span id="state_autosync_nodejs">
+<a href="#state_autosync_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Sync</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1045,7 +1204,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_nodejs">
+<a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1054,7 +1215,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>devices</span>
+        <span id="state_devices_nodejs">
+<a href="#state_devices_nodejs" style="color: inherit; text-decoration: inherit;">devices</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#devicegroupdevice">Device<wbr>Group<wbr>Device[]</a></span>
     </dt>
@@ -1063,7 +1226,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>full<wbr>Load<wbr>On<wbr>Sync</span>
+        <span id="state_fullloadonsync_nodejs">
+<a href="#state_fullloadonsync_nodejs" style="color: inherit; text-decoration: inherit;">full<wbr>Load<wbr>On<wbr>Sync</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1072,7 +1237,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>incremental<wbr>Config</span>
+        <span id="state_incrementalconfig_nodejs">
+<a href="#state_incrementalconfig_nodejs" style="color: inherit; text-decoration: inherit;">incremental<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1081,7 +1248,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1090,7 +1259,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>network<wbr>Failover</span>
+        <span id="state_networkfailover_nodejs">
+<a href="#state_networkfailover_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Failover</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1099,7 +1270,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>partition</span>
+        <span id="state_partition_nodejs">
+<a href="#state_partition_nodejs" style="color: inherit; text-decoration: inherit;">partition</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1108,7 +1281,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>save<wbr>On<wbr>Auto<wbr>Sync</span>
+        <span id="state_saveonautosync_nodejs">
+<a href="#state_saveonautosync_nodejs" style="color: inherit; text-decoration: inherit;">save<wbr>On<wbr>Auto<wbr>Sync</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1117,7 +1292,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>type</span>
+        <span id="state_type_nodejs">
+<a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1133,7 +1310,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>auto_<wbr>sync</span>
+        <span id="state_auto_sync_python">
+<a href="#state_auto_sync_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>sync</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1142,7 +1321,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_python">
+<a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1151,7 +1332,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>devices</span>
+        <span id="state_devices_python">
+<a href="#state_devices_python" style="color: inherit; text-decoration: inherit;">devices</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#devicegroupdevice">List[Device<wbr>Group<wbr>Device]</a></span>
     </dt>
@@ -1160,7 +1343,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>full_<wbr>load_<wbr>on_<wbr>sync</span>
+        <span id="state_full_load_on_sync_python">
+<a href="#state_full_load_on_sync_python" style="color: inherit; text-decoration: inherit;">full_<wbr>load_<wbr>on_<wbr>sync</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1169,7 +1354,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>incremental_<wbr>config</span>
+        <span id="state_incremental_config_python">
+<a href="#state_incremental_config_python" style="color: inherit; text-decoration: inherit;">incremental_<wbr>config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1178,7 +1365,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1187,7 +1376,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>network_<wbr>failover</span>
+        <span id="state_network_failover_python">
+<a href="#state_network_failover_python" style="color: inherit; text-decoration: inherit;">network_<wbr>failover</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1196,7 +1387,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>partition</span>
+        <span id="state_partition_python">
+<a href="#state_partition_python" style="color: inherit; text-decoration: inherit;">partition</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1205,7 +1398,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>save_<wbr>on_<wbr>auto_<wbr>sync</span>
+        <span id="state_save_on_auto_sync_python">
+<a href="#state_save_on_auto_sync_python" style="color: inherit; text-decoration: inherit;">save_<wbr>on_<wbr>auto_<wbr>sync</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1214,7 +1409,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>type</span>
+        <span id="state_type_python">
+<a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1256,7 +1453,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1265,7 +1464,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Set<wbr>Sync<wbr>Leader</span>
+        <span id="setsyncleader_csharp">
+<a href="#setsyncleader_csharp" style="color: inherit; text-decoration: inherit;">Set<wbr>Sync<wbr>Leader</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1280,7 +1481,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1289,7 +1492,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Set<wbr>Sync<wbr>Leader</span>
+        <span id="setsyncleader_go">
+<a href="#setsyncleader_go" style="color: inherit; text-decoration: inherit;">Set<wbr>Sync<wbr>Leader</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1304,7 +1509,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1313,7 +1520,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>set<wbr>Sync<wbr>Leader</span>
+        <span id="setsyncleader_nodejs">
+<a href="#setsyncleader_nodejs" style="color: inherit; text-decoration: inherit;">set<wbr>Sync<wbr>Leader</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1328,7 +1537,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1337,7 +1548,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>set<wbr>Sync<wbr>Leader</span>
+        <span id="setsyncleader_python">
+<a href="#setsyncleader_python" style="color: inherit; text-decoration: inherit;">set<wbr>Sync<wbr>Leader</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
