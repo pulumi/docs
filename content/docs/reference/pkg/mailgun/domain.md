@@ -23,7 +23,24 @@ After DNS records are set, domain verification should be triggered manually usin
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Mailgun = Pulumi.Mailgun;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        // Create a new Mailgun domain
+        var @default = new Mailgun.Domain("default", new Mailgun.DomainArgs
+        {
+            Region = "us",
+            SpamAction = "disabled",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -241,7 +258,9 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -250,7 +269,9 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="region_csharp">
+<a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -259,7 +280,9 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>Spam<wbr>Action</span>
+        <span id="spamaction_csharp">
+<a href="#spamaction_csharp" style="color: inherit; text-decoration: inherit;">Spam<wbr>Action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -270,7 +293,9 @@ will be tagged with a spam header.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Wildcard</span>
+        <span id="wildcard_csharp">
+<a href="#wildcard_csharp" style="color: inherit; text-decoration: inherit;">Wildcard</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -287,7 +312,9 @@ the domain will accept email for sub-domains.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -296,7 +323,9 @@ the domain will accept email for sub-domains.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="region_go">
+<a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -305,7 +334,9 @@ the domain will accept email for sub-domains.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Spam<wbr>Action</span>
+        <span id="spamaction_go">
+<a href="#spamaction_go" style="color: inherit; text-decoration: inherit;">Spam<wbr>Action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -316,7 +347,9 @@ will be tagged with a spam header.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Wildcard</span>
+        <span id="wildcard_go">
+<a href="#wildcard_go" style="color: inherit; text-decoration: inherit;">Wildcard</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -333,7 +366,9 @@ the domain will accept email for sub-domains.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -342,7 +377,9 @@ the domain will accept email for sub-domains.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="region_nodejs">
+<a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -351,7 +388,9 @@ the domain will accept email for sub-domains.
 
     <dt class="property-optional"
             title="Optional">
-        <span>spam<wbr>Action</span>
+        <span id="spamaction_nodejs">
+<a href="#spamaction_nodejs" style="color: inherit; text-decoration: inherit;">spam<wbr>Action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -362,7 +401,9 @@ will be tagged with a spam header.
 
     <dt class="property-optional"
             title="Optional">
-        <span>wildcard</span>
+        <span id="wildcard_nodejs">
+<a href="#wildcard_nodejs" style="color: inherit; text-decoration: inherit;">wildcard</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -379,7 +420,9 @@ the domain will accept email for sub-domains.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -388,7 +431,9 @@ the domain will accept email for sub-domains.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="region_python">
+<a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -397,7 +442,9 @@ the domain will accept email for sub-domains.
 
     <dt class="property-optional"
             title="Optional">
-        <span>spam_<wbr>action</span>
+        <span id="spam_action_python">
+<a href="#spam_action_python" style="color: inherit; text-decoration: inherit;">spam_<wbr>action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -408,7 +455,9 @@ will be tagged with a spam header.
 
     <dt class="property-optional"
             title="Optional">
-        <span>wildcard</span>
+        <span id="wildcard_python">
+<a href="#wildcard_python" style="color: inherit; text-decoration: inherit;">wildcard</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -436,7 +485,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -444,7 +495,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Receiving<wbr>Records</span>
+        <span id="receivingrecords_csharp">
+<a href="#receivingrecords_csharp" style="color: inherit; text-decoration: inherit;">Receiving<wbr>Records</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainreceivingrecord">List&lt;Domain<wbr>Receiving<wbr>Record&gt;</a></span>
     </dt>
@@ -453,7 +506,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Sending<wbr>Records</span>
+        <span id="sendingrecords_csharp">
+<a href="#sendingrecords_csharp" style="color: inherit; text-decoration: inherit;">Sending<wbr>Records</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainsendingrecord">List&lt;Domain<wbr>Sending<wbr>Record&gt;</a></span>
     </dt>
@@ -462,7 +517,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Smtp<wbr>Login</span>
+        <span id="smtplogin_csharp">
+<a href="#smtplogin_csharp" style="color: inherit; text-decoration: inherit;">Smtp<wbr>Login</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -471,7 +528,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Smtp<wbr>Password</span>
+        <span id="smtppassword_csharp">
+<a href="#smtppassword_csharp" style="color: inherit; text-decoration: inherit;">Smtp<wbr>Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -487,7 +546,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -495,7 +556,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Receiving<wbr>Records</span>
+        <span id="receivingrecords_go">
+<a href="#receivingrecords_go" style="color: inherit; text-decoration: inherit;">Receiving<wbr>Records</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainreceivingrecord">[]Domain<wbr>Receiving<wbr>Record</a></span>
     </dt>
@@ -504,7 +567,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Sending<wbr>Records</span>
+        <span id="sendingrecords_go">
+<a href="#sendingrecords_go" style="color: inherit; text-decoration: inherit;">Sending<wbr>Records</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainsendingrecord">[]Domain<wbr>Sending<wbr>Record</a></span>
     </dt>
@@ -513,7 +578,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Smtp<wbr>Login</span>
+        <span id="smtplogin_go">
+<a href="#smtplogin_go" style="color: inherit; text-decoration: inherit;">Smtp<wbr>Login</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -522,7 +589,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Smtp<wbr>Password</span>
+        <span id="smtppassword_go">
+<a href="#smtppassword_go" style="color: inherit; text-decoration: inherit;">Smtp<wbr>Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -538,7 +607,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -546,7 +617,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>receiving<wbr>Records</span>
+        <span id="receivingrecords_nodejs">
+<a href="#receivingrecords_nodejs" style="color: inherit; text-decoration: inherit;">receiving<wbr>Records</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainreceivingrecord">Domain<wbr>Receiving<wbr>Record[]</a></span>
     </dt>
@@ -555,7 +628,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>sending<wbr>Records</span>
+        <span id="sendingrecords_nodejs">
+<a href="#sendingrecords_nodejs" style="color: inherit; text-decoration: inherit;">sending<wbr>Records</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainsendingrecord">Domain<wbr>Sending<wbr>Record[]</a></span>
     </dt>
@@ -564,7 +639,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>smtp<wbr>Login</span>
+        <span id="smtplogin_nodejs">
+<a href="#smtplogin_nodejs" style="color: inherit; text-decoration: inherit;">smtp<wbr>Login</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -573,7 +650,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>smtp<wbr>Password</span>
+        <span id="smtppassword_nodejs">
+<a href="#smtppassword_nodejs" style="color: inherit; text-decoration: inherit;">smtp<wbr>Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -589,7 +668,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -597,7 +678,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>receiving_<wbr>records</span>
+        <span id="receiving_records_python">
+<a href="#receiving_records_python" style="color: inherit; text-decoration: inherit;">receiving_<wbr>records</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainreceivingrecord">List[Domain<wbr>Receiving<wbr>Record]</a></span>
     </dt>
@@ -606,7 +689,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>sending_<wbr>records</span>
+        <span id="sending_records_python">
+<a href="#sending_records_python" style="color: inherit; text-decoration: inherit;">sending_<wbr>records</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainsendingrecord">List[Domain<wbr>Sending<wbr>Record]</a></span>
     </dt>
@@ -615,7 +700,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>smtp_<wbr>login</span>
+        <span id="smtp_login_python">
+<a href="#smtp_login_python" style="color: inherit; text-decoration: inherit;">smtp_<wbr>login</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -624,7 +711,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>smtp_<wbr>password</span>
+        <span id="smtp_password_python">
+<a href="#smtp_password_python" style="color: inherit; text-decoration: inherit;">smtp_<wbr>password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -766,7 +855,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -775,7 +866,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Receiving<wbr>Records</span>
+        <span id="state_receivingrecords_csharp">
+<a href="#state_receivingrecords_csharp" style="color: inherit; text-decoration: inherit;">Receiving<wbr>Records</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainreceivingrecord">List&lt;Domain<wbr>Receiving<wbr>Record<wbr>Args&gt;</a></span>
     </dt>
@@ -784,7 +877,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="state_region_csharp">
+<a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -793,7 +888,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Sending<wbr>Records</span>
+        <span id="state_sendingrecords_csharp">
+<a href="#state_sendingrecords_csharp" style="color: inherit; text-decoration: inherit;">Sending<wbr>Records</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainsendingrecord">List&lt;Domain<wbr>Sending<wbr>Record<wbr>Args&gt;</a></span>
     </dt>
@@ -802,7 +899,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Smtp<wbr>Login</span>
+        <span id="state_smtplogin_csharp">
+<a href="#state_smtplogin_csharp" style="color: inherit; text-decoration: inherit;">Smtp<wbr>Login</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -811,7 +910,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Smtp<wbr>Password</span>
+        <span id="state_smtppassword_csharp">
+<a href="#state_smtppassword_csharp" style="color: inherit; text-decoration: inherit;">Smtp<wbr>Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -820,7 +921,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Spam<wbr>Action</span>
+        <span id="state_spamaction_csharp">
+<a href="#state_spamaction_csharp" style="color: inherit; text-decoration: inherit;">Spam<wbr>Action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -831,7 +934,9 @@ will be tagged with a spam header.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Wildcard</span>
+        <span id="state_wildcard_csharp">
+<a href="#state_wildcard_csharp" style="color: inherit; text-decoration: inherit;">Wildcard</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -848,7 +953,9 @@ the domain will accept email for sub-domains.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -857,7 +964,9 @@ the domain will accept email for sub-domains.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Receiving<wbr>Records</span>
+        <span id="state_receivingrecords_go">
+<a href="#state_receivingrecords_go" style="color: inherit; text-decoration: inherit;">Receiving<wbr>Records</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainreceivingrecord">[]Domain<wbr>Receiving<wbr>Record</a></span>
     </dt>
@@ -866,7 +975,9 @@ the domain will accept email for sub-domains.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="state_region_go">
+<a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -875,7 +986,9 @@ the domain will accept email for sub-domains.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Sending<wbr>Records</span>
+        <span id="state_sendingrecords_go">
+<a href="#state_sendingrecords_go" style="color: inherit; text-decoration: inherit;">Sending<wbr>Records</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainsendingrecord">[]Domain<wbr>Sending<wbr>Record</a></span>
     </dt>
@@ -884,7 +997,9 @@ the domain will accept email for sub-domains.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Smtp<wbr>Login</span>
+        <span id="state_smtplogin_go">
+<a href="#state_smtplogin_go" style="color: inherit; text-decoration: inherit;">Smtp<wbr>Login</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -893,7 +1008,9 @@ the domain will accept email for sub-domains.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Smtp<wbr>Password</span>
+        <span id="state_smtppassword_go">
+<a href="#state_smtppassword_go" style="color: inherit; text-decoration: inherit;">Smtp<wbr>Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -902,7 +1019,9 @@ the domain will accept email for sub-domains.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Spam<wbr>Action</span>
+        <span id="state_spamaction_go">
+<a href="#state_spamaction_go" style="color: inherit; text-decoration: inherit;">Spam<wbr>Action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -913,7 +1032,9 @@ will be tagged with a spam header.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Wildcard</span>
+        <span id="state_wildcard_go">
+<a href="#state_wildcard_go" style="color: inherit; text-decoration: inherit;">Wildcard</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -930,7 +1051,9 @@ the domain will accept email for sub-domains.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -939,7 +1062,9 @@ the domain will accept email for sub-domains.
 
     <dt class="property-optional"
             title="Optional">
-        <span>receiving<wbr>Records</span>
+        <span id="state_receivingrecords_nodejs">
+<a href="#state_receivingrecords_nodejs" style="color: inherit; text-decoration: inherit;">receiving<wbr>Records</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainreceivingrecord">Domain<wbr>Receiving<wbr>Record[]</a></span>
     </dt>
@@ -948,7 +1073,9 @@ the domain will accept email for sub-domains.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="state_region_nodejs">
+<a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -957,7 +1084,9 @@ the domain will accept email for sub-domains.
 
     <dt class="property-optional"
             title="Optional">
-        <span>sending<wbr>Records</span>
+        <span id="state_sendingrecords_nodejs">
+<a href="#state_sendingrecords_nodejs" style="color: inherit; text-decoration: inherit;">sending<wbr>Records</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainsendingrecord">Domain<wbr>Sending<wbr>Record[]</a></span>
     </dt>
@@ -966,7 +1095,9 @@ the domain will accept email for sub-domains.
 
     <dt class="property-optional"
             title="Optional">
-        <span>smtp<wbr>Login</span>
+        <span id="state_smtplogin_nodejs">
+<a href="#state_smtplogin_nodejs" style="color: inherit; text-decoration: inherit;">smtp<wbr>Login</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -975,7 +1106,9 @@ the domain will accept email for sub-domains.
 
     <dt class="property-optional"
             title="Optional">
-        <span>smtp<wbr>Password</span>
+        <span id="state_smtppassword_nodejs">
+<a href="#state_smtppassword_nodejs" style="color: inherit; text-decoration: inherit;">smtp<wbr>Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -984,7 +1117,9 @@ the domain will accept email for sub-domains.
 
     <dt class="property-optional"
             title="Optional">
-        <span>spam<wbr>Action</span>
+        <span id="state_spamaction_nodejs">
+<a href="#state_spamaction_nodejs" style="color: inherit; text-decoration: inherit;">spam<wbr>Action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -995,7 +1130,9 @@ will be tagged with a spam header.
 
     <dt class="property-optional"
             title="Optional">
-        <span>wildcard</span>
+        <span id="state_wildcard_nodejs">
+<a href="#state_wildcard_nodejs" style="color: inherit; text-decoration: inherit;">wildcard</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1012,7 +1149,9 @@ the domain will accept email for sub-domains.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1021,7 +1160,9 @@ the domain will accept email for sub-domains.
 
     <dt class="property-optional"
             title="Optional">
-        <span>receiving_<wbr>records</span>
+        <span id="state_receiving_records_python">
+<a href="#state_receiving_records_python" style="color: inherit; text-decoration: inherit;">receiving_<wbr>records</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainreceivingrecord">List[Domain<wbr>Receiving<wbr>Record]</a></span>
     </dt>
@@ -1030,7 +1171,9 @@ the domain will accept email for sub-domains.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="state_region_python">
+<a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1039,7 +1182,9 @@ the domain will accept email for sub-domains.
 
     <dt class="property-optional"
             title="Optional">
-        <span>sending_<wbr>records</span>
+        <span id="state_sending_records_python">
+<a href="#state_sending_records_python" style="color: inherit; text-decoration: inherit;">sending_<wbr>records</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainsendingrecord">List[Domain<wbr>Sending<wbr>Record]</a></span>
     </dt>
@@ -1048,7 +1193,9 @@ the domain will accept email for sub-domains.
 
     <dt class="property-optional"
             title="Optional">
-        <span>smtp_<wbr>login</span>
+        <span id="state_smtp_login_python">
+<a href="#state_smtp_login_python" style="color: inherit; text-decoration: inherit;">smtp_<wbr>login</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1057,7 +1204,9 @@ the domain will accept email for sub-domains.
 
     <dt class="property-optional"
             title="Optional">
-        <span>smtp_<wbr>password</span>
+        <span id="state_smtp_password_python">
+<a href="#state_smtp_password_python" style="color: inherit; text-decoration: inherit;">smtp_<wbr>password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1066,7 +1215,9 @@ the domain will accept email for sub-domains.
 
     <dt class="property-optional"
             title="Optional">
-        <span>spam_<wbr>action</span>
+        <span id="state_spam_action_python">
+<a href="#state_spam_action_python" style="color: inherit; text-decoration: inherit;">spam_<wbr>action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1077,7 +1228,9 @@ will be tagged with a spam header.
 
     <dt class="property-optional"
             title="Optional">
-        <span>wildcard</span>
+        <span id="state_wildcard_python">
+<a href="#state_wildcard_python" style="color: inherit; text-decoration: inherit;">wildcard</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1120,7 +1273,9 @@ the domain will accept email for sub-domains.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Priority</span>
+        <span id="priority_csharp">
+<a href="#priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1129,7 +1284,9 @@ the domain will accept email for sub-domains.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Record<wbr>Type</span>
+        <span id="recordtype_csharp">
+<a href="#recordtype_csharp" style="color: inherit; text-decoration: inherit;">Record<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1138,7 +1295,9 @@ the domain will accept email for sub-domains.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Valid</span>
+        <span id="valid_csharp">
+<a href="#valid_csharp" style="color: inherit; text-decoration: inherit;">Valid</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1147,7 +1306,9 @@ the domain will accept email for sub-domains.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Value</span>
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1163,7 +1324,9 @@ the domain will accept email for sub-domains.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Priority</span>
+        <span id="priority_go">
+<a href="#priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1172,7 +1335,9 @@ the domain will accept email for sub-domains.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Record<wbr>Type</span>
+        <span id="recordtype_go">
+<a href="#recordtype_go" style="color: inherit; text-decoration: inherit;">Record<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1181,7 +1346,9 @@ the domain will accept email for sub-domains.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Valid</span>
+        <span id="valid_go">
+<a href="#valid_go" style="color: inherit; text-decoration: inherit;">Valid</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1190,7 +1357,9 @@ the domain will accept email for sub-domains.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Value</span>
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1206,7 +1375,9 @@ the domain will accept email for sub-domains.
 
     <dt class="property-optional"
             title="Optional">
-        <span>priority</span>
+        <span id="priority_nodejs">
+<a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1215,7 +1386,9 @@ the domain will accept email for sub-domains.
 
     <dt class="property-optional"
             title="Optional">
-        <span>record<wbr>Type</span>
+        <span id="recordtype_nodejs">
+<a href="#recordtype_nodejs" style="color: inherit; text-decoration: inherit;">record<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1224,7 +1397,9 @@ the domain will accept email for sub-domains.
 
     <dt class="property-optional"
             title="Optional">
-        <span>valid</span>
+        <span id="valid_nodejs">
+<a href="#valid_nodejs" style="color: inherit; text-decoration: inherit;">valid</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1233,7 +1408,9 @@ the domain will accept email for sub-domains.
 
     <dt class="property-optional"
             title="Optional">
-        <span>value</span>
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1249,7 +1426,9 @@ the domain will accept email for sub-domains.
 
     <dt class="property-optional"
             title="Optional">
-        <span>priority</span>
+        <span id="priority_python">
+<a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1258,7 +1437,9 @@ the domain will accept email for sub-domains.
 
     <dt class="property-optional"
             title="Optional">
-        <span>record<wbr>Type</span>
+        <span id="recordtype_python">
+<a href="#recordtype_python" style="color: inherit; text-decoration: inherit;">record<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1267,7 +1448,9 @@ the domain will accept email for sub-domains.
 
     <dt class="property-optional"
             title="Optional">
-        <span>valid</span>
+        <span id="valid_python">
+<a href="#valid_python" style="color: inherit; text-decoration: inherit;">valid</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1276,7 +1459,9 @@ the domain will accept email for sub-domains.
 
     <dt class="property-optional"
             title="Optional">
-        <span>value</span>
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1310,7 +1495,9 @@ the domain will accept email for sub-domains.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1319,7 +1506,9 @@ the domain will accept email for sub-domains.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Record<wbr>Type</span>
+        <span id="recordtype_csharp">
+<a href="#recordtype_csharp" style="color: inherit; text-decoration: inherit;">Record<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1328,7 +1517,9 @@ the domain will accept email for sub-domains.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Valid</span>
+        <span id="valid_csharp">
+<a href="#valid_csharp" style="color: inherit; text-decoration: inherit;">Valid</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1337,7 +1528,9 @@ the domain will accept email for sub-domains.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Value</span>
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1353,7 +1546,9 @@ the domain will accept email for sub-domains.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1362,7 +1557,9 @@ the domain will accept email for sub-domains.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Record<wbr>Type</span>
+        <span id="recordtype_go">
+<a href="#recordtype_go" style="color: inherit; text-decoration: inherit;">Record<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1371,7 +1568,9 @@ the domain will accept email for sub-domains.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Valid</span>
+        <span id="valid_go">
+<a href="#valid_go" style="color: inherit; text-decoration: inherit;">Valid</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1380,7 +1579,9 @@ the domain will accept email for sub-domains.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Value</span>
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1396,7 +1597,9 @@ the domain will accept email for sub-domains.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1405,7 +1608,9 @@ the domain will accept email for sub-domains.
 
     <dt class="property-optional"
             title="Optional">
-        <span>record<wbr>Type</span>
+        <span id="recordtype_nodejs">
+<a href="#recordtype_nodejs" style="color: inherit; text-decoration: inherit;">record<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1414,7 +1619,9 @@ the domain will accept email for sub-domains.
 
     <dt class="property-optional"
             title="Optional">
-        <span>valid</span>
+        <span id="valid_nodejs">
+<a href="#valid_nodejs" style="color: inherit; text-decoration: inherit;">valid</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1423,7 +1630,9 @@ the domain will accept email for sub-domains.
 
     <dt class="property-optional"
             title="Optional">
-        <span>value</span>
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1439,7 +1648,9 @@ the domain will accept email for sub-domains.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1448,7 +1659,9 @@ the domain will accept email for sub-domains.
 
     <dt class="property-optional"
             title="Optional">
-        <span>record<wbr>Type</span>
+        <span id="recordtype_python">
+<a href="#recordtype_python" style="color: inherit; text-decoration: inherit;">record<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1457,7 +1670,9 @@ the domain will accept email for sub-domains.
 
     <dt class="property-optional"
             title="Optional">
-        <span>valid</span>
+        <span id="valid_python">
+<a href="#valid_python" style="color: inherit; text-decoration: inherit;">valid</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1466,7 +1681,9 @@ the domain will accept email for sub-domains.
 
     <dt class="property-optional"
             title="Optional">
-        <span>value</span>
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
