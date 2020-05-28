@@ -22,7 +22,26 @@ Gets Object IDs or UPNs for multiple Azure Active Directory users.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using AzureAD = Pulumi.AzureAD;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var users = Output.Create(AzureAD.GetUsers.InvokeAsync(new AzureAD.GetUsersArgs
+        {
+            UserPrincipalNames = 
+            {
+                "kat@hashicorp.com",
+                "byte@hashicorp.com",
+            },
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -96,7 +115,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Mail<wbr>Nicknames</span>
+        <span id="mailnicknames_csharp">
+<a href="#mailnicknames_csharp" style="color: inherit; text-decoration: inherit;">Mail<wbr>Nicknames</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -105,7 +126,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Object<wbr>Ids</span>
+        <span id="objectids_csharp">
+<a href="#objectids_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -114,7 +137,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>User<wbr>Principal<wbr>Names</span>
+        <span id="userprincipalnames_csharp">
+<a href="#userprincipalnames_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Principal<wbr>Names</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -130,7 +155,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Mail<wbr>Nicknames</span>
+        <span id="mailnicknames_go">
+<a href="#mailnicknames_go" style="color: inherit; text-decoration: inherit;">Mail<wbr>Nicknames</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -139,7 +166,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Object<wbr>Ids</span>
+        <span id="objectids_go">
+<a href="#objectids_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -148,7 +177,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>User<wbr>Principal<wbr>Names</span>
+        <span id="userprincipalnames_go">
+<a href="#userprincipalnames_go" style="color: inherit; text-decoration: inherit;">User<wbr>Principal<wbr>Names</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -164,7 +195,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>mail<wbr>Nicknames</span>
+        <span id="mailnicknames_nodejs">
+<a href="#mailnicknames_nodejs" style="color: inherit; text-decoration: inherit;">mail<wbr>Nicknames</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -173,7 +206,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>object<wbr>Ids</span>
+        <span id="objectids_nodejs">
+<a href="#objectids_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -182,7 +217,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>user<wbr>Principal<wbr>Names</span>
+        <span id="userprincipalnames_nodejs">
+<a href="#userprincipalnames_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Principal<wbr>Names</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -198,7 +235,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>mail_<wbr>nicknames</span>
+        <span id="mail_nicknames_python">
+<a href="#mail_nicknames_python" style="color: inherit; text-decoration: inherit;">mail_<wbr>nicknames</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -207,7 +246,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>object_<wbr>ids</span>
+        <span id="object_ids_python">
+<a href="#object_ids_python" style="color: inherit; text-decoration: inherit;">object_<wbr>ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -216,7 +257,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>user_<wbr>principal_<wbr>names</span>
+        <span id="user_principal_names_python">
+<a href="#user_principal_names_python" style="color: inherit; text-decoration: inherit;">user_<wbr>principal_<wbr>names</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -245,7 +288,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -254,7 +299,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Mail<wbr>Nicknames</span>
+        <span id="mailnicknames_csharp">
+<a href="#mailnicknames_csharp" style="color: inherit; text-decoration: inherit;">Mail<wbr>Nicknames</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -263,7 +310,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Object<wbr>Ids</span>
+        <span id="objectids_csharp">
+<a href="#objectids_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -272,7 +321,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>User<wbr>Principal<wbr>Names</span>
+        <span id="userprincipalnames_csharp">
+<a href="#userprincipalnames_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Principal<wbr>Names</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -288,7 +339,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -297,7 +350,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Mail<wbr>Nicknames</span>
+        <span id="mailnicknames_go">
+<a href="#mailnicknames_go" style="color: inherit; text-decoration: inherit;">Mail<wbr>Nicknames</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -306,7 +361,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Object<wbr>Ids</span>
+        <span id="objectids_go">
+<a href="#objectids_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -315,7 +372,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>User<wbr>Principal<wbr>Names</span>
+        <span id="userprincipalnames_go">
+<a href="#userprincipalnames_go" style="color: inherit; text-decoration: inherit;">User<wbr>Principal<wbr>Names</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -331,7 +390,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -340,7 +401,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>mail<wbr>Nicknames</span>
+        <span id="mailnicknames_nodejs">
+<a href="#mailnicknames_nodejs" style="color: inherit; text-decoration: inherit;">mail<wbr>Nicknames</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -349,7 +412,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>object<wbr>Ids</span>
+        <span id="objectids_nodejs">
+<a href="#objectids_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -358,7 +423,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>user<wbr>Principal<wbr>Names</span>
+        <span id="userprincipalnames_nodejs">
+<a href="#userprincipalnames_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Principal<wbr>Names</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -374,7 +441,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -383,7 +452,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>mail_<wbr>nicknames</span>
+        <span id="mail_nicknames_python">
+<a href="#mail_nicknames_python" style="color: inherit; text-decoration: inherit;">mail_<wbr>nicknames</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -392,7 +463,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>object_<wbr>ids</span>
+        <span id="object_ids_python">
+<a href="#object_ids_python" style="color: inherit; text-decoration: inherit;">object_<wbr>ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -401,7 +474,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>user_<wbr>principal_<wbr>names</span>
+        <span id="user_principal_names_python">
+<a href="#user_principal_names_python" style="color: inherit; text-decoration: inherit;">user_<wbr>principal_<wbr>names</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>

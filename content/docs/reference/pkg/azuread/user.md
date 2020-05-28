@@ -22,7 +22,25 @@ Manages a User within Azure Active Directory.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using AzureAD = Pulumi.AzureAD;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new AzureAD.User("example", new AzureAD.UserArgs
+        {
+            DisplayName = "J. Doe",
+            MailNickname = "jdoe",
+            Password = "SecretP@sswd99!",
+            UserPrincipalName = "jdo@hashicorp.com",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -242,7 +260,9 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 
     <dt class="property-required"
             title="Required">
-        <span>Display<wbr>Name</span>
+        <span id="displayname_csharp">
+<a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -251,7 +271,9 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 
     <dt class="property-required"
             title="Required">
-        <span>Password</span>
+        <span id="password_csharp">
+<a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -260,7 +282,9 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 
     <dt class="property-required"
             title="Required">
-        <span>User<wbr>Principal<wbr>Name</span>
+        <span id="userprincipalname_csharp">
+<a href="#userprincipalname_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Principal<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -269,7 +293,9 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 
     <dt class="property-optional"
             title="Optional">
-        <span>Account<wbr>Enabled</span>
+        <span id="accountenabled_csharp">
+<a href="#accountenabled_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -278,7 +304,9 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 
     <dt class="property-optional"
             title="Optional">
-        <span>Force<wbr>Password<wbr>Change</span>
+        <span id="forcepasswordchange_csharp">
+<a href="#forcepasswordchange_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Password<wbr>Change</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -287,7 +315,9 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 
     <dt class="property-optional"
             title="Optional">
-        <span>Immutable<wbr>Id</span>
+        <span id="immutableid_csharp">
+<a href="#immutableid_csharp" style="color: inherit; text-decoration: inherit;">Immutable<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -296,7 +326,9 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 
     <dt class="property-optional"
             title="Optional">
-        <span>Mail<wbr>Nickname</span>
+        <span id="mailnickname_csharp">
+<a href="#mailnickname_csharp" style="color: inherit; text-decoration: inherit;">Mail<wbr>Nickname</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -305,7 +337,9 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 
     <dt class="property-optional"
             title="Optional">
-        <span>Usage<wbr>Location</span>
+        <span id="usagelocation_csharp">
+<a href="#usagelocation_csharp" style="color: inherit; text-decoration: inherit;">Usage<wbr>Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -321,7 +355,9 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 
     <dt class="property-required"
             title="Required">
-        <span>Display<wbr>Name</span>
+        <span id="displayname_go">
+<a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -330,7 +366,9 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 
     <dt class="property-required"
             title="Required">
-        <span>Password</span>
+        <span id="password_go">
+<a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -339,7 +377,9 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 
     <dt class="property-required"
             title="Required">
-        <span>User<wbr>Principal<wbr>Name</span>
+        <span id="userprincipalname_go">
+<a href="#userprincipalname_go" style="color: inherit; text-decoration: inherit;">User<wbr>Principal<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -348,7 +388,9 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 
     <dt class="property-optional"
             title="Optional">
-        <span>Account<wbr>Enabled</span>
+        <span id="accountenabled_go">
+<a href="#accountenabled_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -357,7 +399,9 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 
     <dt class="property-optional"
             title="Optional">
-        <span>Force<wbr>Password<wbr>Change</span>
+        <span id="forcepasswordchange_go">
+<a href="#forcepasswordchange_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Password<wbr>Change</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -366,7 +410,9 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 
     <dt class="property-optional"
             title="Optional">
-        <span>Immutable<wbr>Id</span>
+        <span id="immutableid_go">
+<a href="#immutableid_go" style="color: inherit; text-decoration: inherit;">Immutable<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -375,7 +421,9 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 
     <dt class="property-optional"
             title="Optional">
-        <span>Mail<wbr>Nickname</span>
+        <span id="mailnickname_go">
+<a href="#mailnickname_go" style="color: inherit; text-decoration: inherit;">Mail<wbr>Nickname</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -384,7 +432,9 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 
     <dt class="property-optional"
             title="Optional">
-        <span>Usage<wbr>Location</span>
+        <span id="usagelocation_go">
+<a href="#usagelocation_go" style="color: inherit; text-decoration: inherit;">Usage<wbr>Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -400,7 +450,9 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 
     <dt class="property-required"
             title="Required">
-        <span>display<wbr>Name</span>
+        <span id="displayname_nodejs">
+<a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -409,7 +461,9 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 
     <dt class="property-required"
             title="Required">
-        <span>password</span>
+        <span id="password_nodejs">
+<a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -418,7 +472,9 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 
     <dt class="property-required"
             title="Required">
-        <span>user<wbr>Principal<wbr>Name</span>
+        <span id="userprincipalname_nodejs">
+<a href="#userprincipalname_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Principal<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -427,7 +483,9 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 
     <dt class="property-optional"
             title="Optional">
-        <span>account<wbr>Enabled</span>
+        <span id="accountenabled_nodejs">
+<a href="#accountenabled_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -436,7 +494,9 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 
     <dt class="property-optional"
             title="Optional">
-        <span>force<wbr>Password<wbr>Change</span>
+        <span id="forcepasswordchange_nodejs">
+<a href="#forcepasswordchange_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Password<wbr>Change</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -445,7 +505,9 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 
     <dt class="property-optional"
             title="Optional">
-        <span>immutable<wbr>Id</span>
+        <span id="immutableid_nodejs">
+<a href="#immutableid_nodejs" style="color: inherit; text-decoration: inherit;">immutable<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -454,7 +516,9 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 
     <dt class="property-optional"
             title="Optional">
-        <span>mail<wbr>Nickname</span>
+        <span id="mailnickname_nodejs">
+<a href="#mailnickname_nodejs" style="color: inherit; text-decoration: inherit;">mail<wbr>Nickname</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -463,7 +527,9 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 
     <dt class="property-optional"
             title="Optional">
-        <span>usage<wbr>Location</span>
+        <span id="usagelocation_nodejs">
+<a href="#usagelocation_nodejs" style="color: inherit; text-decoration: inherit;">usage<wbr>Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -479,7 +545,9 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 
     <dt class="property-required"
             title="Required">
-        <span>display_<wbr>name</span>
+        <span id="display_name_python">
+<a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -488,7 +556,9 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 
     <dt class="property-required"
             title="Required">
-        <span>password</span>
+        <span id="password_python">
+<a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -497,7 +567,9 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 
     <dt class="property-required"
             title="Required">
-        <span>user_<wbr>principal_<wbr>name</span>
+        <span id="user_principal_name_python">
+<a href="#user_principal_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>principal_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -506,7 +578,9 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 
     <dt class="property-optional"
             title="Optional">
-        <span>account_<wbr>enabled</span>
+        <span id="account_enabled_python">
+<a href="#account_enabled_python" style="color: inherit; text-decoration: inherit;">account_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -515,7 +589,9 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 
     <dt class="property-optional"
             title="Optional">
-        <span>force_<wbr>password_<wbr>change</span>
+        <span id="force_password_change_python">
+<a href="#force_password_change_python" style="color: inherit; text-decoration: inherit;">force_<wbr>password_<wbr>change</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -524,7 +600,9 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 
     <dt class="property-optional"
             title="Optional">
-        <span>immutable_<wbr>id</span>
+        <span id="immutable_id_python">
+<a href="#immutable_id_python" style="color: inherit; text-decoration: inherit;">immutable_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -533,7 +611,9 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 
     <dt class="property-optional"
             title="Optional">
-        <span>mail_<wbr>nickname</span>
+        <span id="mail_nickname_python">
+<a href="#mail_nickname_python" style="color: inherit; text-decoration: inherit;">mail_<wbr>nickname</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -542,7 +622,9 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 
     <dt class="property-optional"
             title="Optional">
-        <span>usage_<wbr>location</span>
+        <span id="usage_location_python">
+<a href="#usage_location_python" style="color: inherit; text-decoration: inherit;">usage_<wbr>location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -569,7 +651,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -577,7 +661,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Mail</span>
+        <span id="mail_csharp">
+<a href="#mail_csharp" style="color: inherit; text-decoration: inherit;">Mail</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -586,7 +672,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Object<wbr>Id</span>
+        <span id="objectid_csharp">
+<a href="#objectid_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -595,7 +683,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Onpremises<wbr>Sam<wbr>Account<wbr>Name</span>
+        <span id="onpremisessamaccountname_csharp">
+<a href="#onpremisessamaccountname_csharp" style="color: inherit; text-decoration: inherit;">Onpremises<wbr>Sam<wbr>Account<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -604,7 +694,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Onpremises<wbr>User<wbr>Principal<wbr>Name</span>
+        <span id="onpremisesuserprincipalname_csharp">
+<a href="#onpremisesuserprincipalname_csharp" style="color: inherit; text-decoration: inherit;">Onpremises<wbr>User<wbr>Principal<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -620,7 +712,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -628,7 +722,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Mail</span>
+        <span id="mail_go">
+<a href="#mail_go" style="color: inherit; text-decoration: inherit;">Mail</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -637,7 +733,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Object<wbr>Id</span>
+        <span id="objectid_go">
+<a href="#objectid_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -646,7 +744,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Onpremises<wbr>Sam<wbr>Account<wbr>Name</span>
+        <span id="onpremisessamaccountname_go">
+<a href="#onpremisessamaccountname_go" style="color: inherit; text-decoration: inherit;">Onpremises<wbr>Sam<wbr>Account<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -655,7 +755,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Onpremises<wbr>User<wbr>Principal<wbr>Name</span>
+        <span id="onpremisesuserprincipalname_go">
+<a href="#onpremisesuserprincipalname_go" style="color: inherit; text-decoration: inherit;">Onpremises<wbr>User<wbr>Principal<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -671,7 +773,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -679,7 +783,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>mail</span>
+        <span id="mail_nodejs">
+<a href="#mail_nodejs" style="color: inherit; text-decoration: inherit;">mail</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -688,7 +794,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>object<wbr>Id</span>
+        <span id="objectid_nodejs">
+<a href="#objectid_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -697,7 +805,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>onpremises<wbr>Sam<wbr>Account<wbr>Name</span>
+        <span id="onpremisessamaccountname_nodejs">
+<a href="#onpremisessamaccountname_nodejs" style="color: inherit; text-decoration: inherit;">onpremises<wbr>Sam<wbr>Account<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -706,7 +816,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>onpremises<wbr>User<wbr>Principal<wbr>Name</span>
+        <span id="onpremisesuserprincipalname_nodejs">
+<a href="#onpremisesuserprincipalname_nodejs" style="color: inherit; text-decoration: inherit;">onpremises<wbr>User<wbr>Principal<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -722,7 +834,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -730,7 +844,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>mail</span>
+        <span id="mail_python">
+<a href="#mail_python" style="color: inherit; text-decoration: inherit;">mail</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -739,7 +855,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>object_<wbr>id</span>
+        <span id="object_id_python">
+<a href="#object_id_python" style="color: inherit; text-decoration: inherit;">object_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -748,7 +866,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>onpremises_<wbr>sam_<wbr>account_<wbr>name</span>
+        <span id="onpremises_sam_account_name_python">
+<a href="#onpremises_sam_account_name_python" style="color: inherit; text-decoration: inherit;">onpremises_<wbr>sam_<wbr>account_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -757,7 +877,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>onpremises_<wbr>user_<wbr>principal_<wbr>name</span>
+        <span id="onpremises_user_principal_name_python">
+<a href="#onpremises_user_principal_name_python" style="color: inherit; text-decoration: inherit;">onpremises_<wbr>user_<wbr>principal_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -899,7 +1021,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Account<wbr>Enabled</span>
+        <span id="state_accountenabled_csharp">
+<a href="#state_accountenabled_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -908,7 +1032,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Display<wbr>Name</span>
+        <span id="state_displayname_csharp">
+<a href="#state_displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -917,7 +1043,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Force<wbr>Password<wbr>Change</span>
+        <span id="state_forcepasswordchange_csharp">
+<a href="#state_forcepasswordchange_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Password<wbr>Change</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -926,7 +1054,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Immutable<wbr>Id</span>
+        <span id="state_immutableid_csharp">
+<a href="#state_immutableid_csharp" style="color: inherit; text-decoration: inherit;">Immutable<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -935,7 +1065,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Mail</span>
+        <span id="state_mail_csharp">
+<a href="#state_mail_csharp" style="color: inherit; text-decoration: inherit;">Mail</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -944,7 +1076,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Mail<wbr>Nickname</span>
+        <span id="state_mailnickname_csharp">
+<a href="#state_mailnickname_csharp" style="color: inherit; text-decoration: inherit;">Mail<wbr>Nickname</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -953,7 +1087,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Object<wbr>Id</span>
+        <span id="state_objectid_csharp">
+<a href="#state_objectid_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -962,7 +1098,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Onpremises<wbr>Sam<wbr>Account<wbr>Name</span>
+        <span id="state_onpremisessamaccountname_csharp">
+<a href="#state_onpremisessamaccountname_csharp" style="color: inherit; text-decoration: inherit;">Onpremises<wbr>Sam<wbr>Account<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -971,7 +1109,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Onpremises<wbr>User<wbr>Principal<wbr>Name</span>
+        <span id="state_onpremisesuserprincipalname_csharp">
+<a href="#state_onpremisesuserprincipalname_csharp" style="color: inherit; text-decoration: inherit;">Onpremises<wbr>User<wbr>Principal<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -980,7 +1120,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Password</span>
+        <span id="state_password_csharp">
+<a href="#state_password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -989,7 +1131,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Usage<wbr>Location</span>
+        <span id="state_usagelocation_csharp">
+<a href="#state_usagelocation_csharp" style="color: inherit; text-decoration: inherit;">Usage<wbr>Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -998,7 +1142,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>User<wbr>Principal<wbr>Name</span>
+        <span id="state_userprincipalname_csharp">
+<a href="#state_userprincipalname_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Principal<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1014,7 +1160,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Account<wbr>Enabled</span>
+        <span id="state_accountenabled_go">
+<a href="#state_accountenabled_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1023,7 +1171,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Display<wbr>Name</span>
+        <span id="state_displayname_go">
+<a href="#state_displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1032,7 +1182,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Force<wbr>Password<wbr>Change</span>
+        <span id="state_forcepasswordchange_go">
+<a href="#state_forcepasswordchange_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Password<wbr>Change</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1041,7 +1193,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Immutable<wbr>Id</span>
+        <span id="state_immutableid_go">
+<a href="#state_immutableid_go" style="color: inherit; text-decoration: inherit;">Immutable<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1050,7 +1204,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Mail</span>
+        <span id="state_mail_go">
+<a href="#state_mail_go" style="color: inherit; text-decoration: inherit;">Mail</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1059,7 +1215,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Mail<wbr>Nickname</span>
+        <span id="state_mailnickname_go">
+<a href="#state_mailnickname_go" style="color: inherit; text-decoration: inherit;">Mail<wbr>Nickname</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1068,7 +1226,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Object<wbr>Id</span>
+        <span id="state_objectid_go">
+<a href="#state_objectid_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1077,7 +1237,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Onpremises<wbr>Sam<wbr>Account<wbr>Name</span>
+        <span id="state_onpremisessamaccountname_go">
+<a href="#state_onpremisessamaccountname_go" style="color: inherit; text-decoration: inherit;">Onpremises<wbr>Sam<wbr>Account<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1086,7 +1248,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Onpremises<wbr>User<wbr>Principal<wbr>Name</span>
+        <span id="state_onpremisesuserprincipalname_go">
+<a href="#state_onpremisesuserprincipalname_go" style="color: inherit; text-decoration: inherit;">Onpremises<wbr>User<wbr>Principal<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1095,7 +1259,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Password</span>
+        <span id="state_password_go">
+<a href="#state_password_go" style="color: inherit; text-decoration: inherit;">Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1104,7 +1270,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Usage<wbr>Location</span>
+        <span id="state_usagelocation_go">
+<a href="#state_usagelocation_go" style="color: inherit; text-decoration: inherit;">Usage<wbr>Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1113,7 +1281,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>User<wbr>Principal<wbr>Name</span>
+        <span id="state_userprincipalname_go">
+<a href="#state_userprincipalname_go" style="color: inherit; text-decoration: inherit;">User<wbr>Principal<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1129,7 +1299,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>account<wbr>Enabled</span>
+        <span id="state_accountenabled_nodejs">
+<a href="#state_accountenabled_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1138,7 +1310,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>display<wbr>Name</span>
+        <span id="state_displayname_nodejs">
+<a href="#state_displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1147,7 +1321,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>force<wbr>Password<wbr>Change</span>
+        <span id="state_forcepasswordchange_nodejs">
+<a href="#state_forcepasswordchange_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Password<wbr>Change</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1156,7 +1332,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>immutable<wbr>Id</span>
+        <span id="state_immutableid_nodejs">
+<a href="#state_immutableid_nodejs" style="color: inherit; text-decoration: inherit;">immutable<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1165,7 +1343,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>mail</span>
+        <span id="state_mail_nodejs">
+<a href="#state_mail_nodejs" style="color: inherit; text-decoration: inherit;">mail</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1174,7 +1354,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>mail<wbr>Nickname</span>
+        <span id="state_mailnickname_nodejs">
+<a href="#state_mailnickname_nodejs" style="color: inherit; text-decoration: inherit;">mail<wbr>Nickname</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1183,7 +1365,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>object<wbr>Id</span>
+        <span id="state_objectid_nodejs">
+<a href="#state_objectid_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1192,7 +1376,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>onpremises<wbr>Sam<wbr>Account<wbr>Name</span>
+        <span id="state_onpremisessamaccountname_nodejs">
+<a href="#state_onpremisessamaccountname_nodejs" style="color: inherit; text-decoration: inherit;">onpremises<wbr>Sam<wbr>Account<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1201,7 +1387,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>onpremises<wbr>User<wbr>Principal<wbr>Name</span>
+        <span id="state_onpremisesuserprincipalname_nodejs">
+<a href="#state_onpremisesuserprincipalname_nodejs" style="color: inherit; text-decoration: inherit;">onpremises<wbr>User<wbr>Principal<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1210,7 +1398,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>password</span>
+        <span id="state_password_nodejs">
+<a href="#state_password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1219,7 +1409,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>usage<wbr>Location</span>
+        <span id="state_usagelocation_nodejs">
+<a href="#state_usagelocation_nodejs" style="color: inherit; text-decoration: inherit;">usage<wbr>Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1228,7 +1420,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>user<wbr>Principal<wbr>Name</span>
+        <span id="state_userprincipalname_nodejs">
+<a href="#state_userprincipalname_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Principal<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1244,7 +1438,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>account_<wbr>enabled</span>
+        <span id="state_account_enabled_python">
+<a href="#state_account_enabled_python" style="color: inherit; text-decoration: inherit;">account_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1253,7 +1449,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>display_<wbr>name</span>
+        <span id="state_display_name_python">
+<a href="#state_display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1262,7 +1460,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>force_<wbr>password_<wbr>change</span>
+        <span id="state_force_password_change_python">
+<a href="#state_force_password_change_python" style="color: inherit; text-decoration: inherit;">force_<wbr>password_<wbr>change</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1271,7 +1471,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>immutable_<wbr>id</span>
+        <span id="state_immutable_id_python">
+<a href="#state_immutable_id_python" style="color: inherit; text-decoration: inherit;">immutable_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1280,7 +1482,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>mail</span>
+        <span id="state_mail_python">
+<a href="#state_mail_python" style="color: inherit; text-decoration: inherit;">mail</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1289,7 +1493,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>mail_<wbr>nickname</span>
+        <span id="state_mail_nickname_python">
+<a href="#state_mail_nickname_python" style="color: inherit; text-decoration: inherit;">mail_<wbr>nickname</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1298,7 +1504,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>object_<wbr>id</span>
+        <span id="state_object_id_python">
+<a href="#state_object_id_python" style="color: inherit; text-decoration: inherit;">object_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1307,7 +1515,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>onpremises_<wbr>sam_<wbr>account_<wbr>name</span>
+        <span id="state_onpremises_sam_account_name_python">
+<a href="#state_onpremises_sam_account_name_python" style="color: inherit; text-decoration: inherit;">onpremises_<wbr>sam_<wbr>account_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1316,7 +1526,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>onpremises_<wbr>user_<wbr>principal_<wbr>name</span>
+        <span id="state_onpremises_user_principal_name_python">
+<a href="#state_onpremises_user_principal_name_python" style="color: inherit; text-decoration: inherit;">onpremises_<wbr>user_<wbr>principal_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1325,7 +1537,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>password</span>
+        <span id="state_password_python">
+<a href="#state_password_python" style="color: inherit; text-decoration: inherit;">password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1334,7 +1548,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>usage_<wbr>location</span>
+        <span id="state_usage_location_python">
+<a href="#state_usage_location_python" style="color: inherit; text-decoration: inherit;">usage_<wbr>location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1343,7 +1559,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>user_<wbr>principal_<wbr>name</span>
+        <span id="state_user_principal_name_python">
+<a href="#state_user_principal_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>principal_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

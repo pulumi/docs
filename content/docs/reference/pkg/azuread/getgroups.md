@@ -22,7 +22,26 @@ Gets Object IDs or Display Names for multiple Azure Active Directory groups.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using AzureAD = Pulumi.AzureAD;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var groups = Output.Create(AzureAD.GetGroups.InvokeAsync(new AzureAD.GetGroupsArgs
+        {
+            Names = 
+            {
+                "group-a",
+                "group-b",
+            },
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -96,7 +115,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Names</span>
+        <span id="names_csharp">
+<a href="#names_csharp" style="color: inherit; text-decoration: inherit;">Names</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -105,7 +126,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Object<wbr>Ids</span>
+        <span id="objectids_csharp">
+<a href="#objectids_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -121,7 +144,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Names</span>
+        <span id="names_go">
+<a href="#names_go" style="color: inherit; text-decoration: inherit;">Names</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -130,7 +155,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Object<wbr>Ids</span>
+        <span id="objectids_go">
+<a href="#objectids_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -146,7 +173,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>names</span>
+        <span id="names_nodejs">
+<a href="#names_nodejs" style="color: inherit; text-decoration: inherit;">names</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -155,7 +184,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>object<wbr>Ids</span>
+        <span id="objectids_nodejs">
+<a href="#objectids_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -171,7 +202,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>names</span>
+        <span id="names_python">
+<a href="#names_python" style="color: inherit; text-decoration: inherit;">names</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -180,7 +213,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>object_<wbr>ids</span>
+        <span id="object_ids_python">
+<a href="#object_ids_python" style="color: inherit; text-decoration: inherit;">object_<wbr>ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -209,7 +244,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -218,7 +255,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Names</span>
+        <span id="names_csharp">
+<a href="#names_csharp" style="color: inherit; text-decoration: inherit;">Names</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -227,7 +266,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Object<wbr>Ids</span>
+        <span id="objectids_csharp">
+<a href="#objectids_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -243,7 +284,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -252,7 +295,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Names</span>
+        <span id="names_go">
+<a href="#names_go" style="color: inherit; text-decoration: inherit;">Names</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -261,7 +306,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Object<wbr>Ids</span>
+        <span id="objectids_go">
+<a href="#objectids_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -277,7 +324,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -286,7 +335,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>names</span>
+        <span id="names_nodejs">
+<a href="#names_nodejs" style="color: inherit; text-decoration: inherit;">names</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -295,7 +346,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>object<wbr>Ids</span>
+        <span id="objectids_nodejs">
+<a href="#objectids_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -311,7 +364,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -320,7 +375,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>names</span>
+        <span id="names_python">
+<a href="#names_python" style="color: inherit; text-decoration: inherit;">names</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -329,7 +386,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>object_<wbr>ids</span>
+        <span id="object_ids_python">
+<a href="#object_ids_python" style="color: inherit; text-decoration: inherit;">object_<wbr>ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>

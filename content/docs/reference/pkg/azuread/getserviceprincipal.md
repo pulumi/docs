@@ -30,6 +30,22 @@ import pulumi_azuread as azuread
 
 example = azuread.get_service_principal(display_name="my-awesome-application")
 ```
+```csharp
+using Pulumi;
+using AzureAD = Pulumi.AzureAD;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(AzureAD.GetServicePrincipal.InvokeAsync(new AzureAD.GetServicePrincipalArgs
+        {
+            DisplayName = "my-awesome-application",
+        }));
+    }
+
+}
+```
 
 ## Example Usage (by Application ID)
 
@@ -47,6 +63,22 @@ import pulumi_azuread as azuread
 
 example = azuread.get_service_principal(application_id="00000000-0000-0000-0000-000000000000")
 ```
+```csharp
+using Pulumi;
+using AzureAD = Pulumi.AzureAD;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(AzureAD.GetServicePrincipal.InvokeAsync(new AzureAD.GetServicePrincipalArgs
+        {
+            ApplicationId = "00000000-0000-0000-0000-000000000000",
+        }));
+    }
+
+}
+```
 
 ## Example Usage (by Object ID)
 
@@ -63,6 +95,22 @@ import pulumi
 import pulumi_azuread as azuread
 
 example = azuread.get_service_principal(object_id="00000000-0000-0000-0000-000000000000")
+```
+```csharp
+using Pulumi;
+using AzureAD = Pulumi.AzureAD;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(AzureAD.GetServicePrincipal.InvokeAsync(new AzureAD.GetServicePrincipalArgs
+        {
+            ObjectId = "00000000-0000-0000-0000-000000000000",
+        }));
+    }
+
+}
 ```
 
 
@@ -107,7 +155,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Application<wbr>Id</span>
+        <span id="applicationid_csharp">
+<a href="#applicationid_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -116,7 +166,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Display<wbr>Name</span>
+        <span id="displayname_csharp">
+<a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -125,7 +177,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Oauth2Permissions</span>
+        <span id="oauth2permissions_csharp">
+<a href="#oauth2permissions_csharp" style="color: inherit; text-decoration: inherit;">Oauth2Permissions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getserviceprincipaloauth2permission">List&lt;Pulumi.<wbr>Azure<wbr>AD.<wbr>Inputs.<wbr>Get<wbr>Service<wbr>Principal<wbr>Oauth2Permission<wbr>Args&gt;</a></span>
     </dt>
@@ -134,7 +188,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Object<wbr>Id</span>
+        <span id="objectid_csharp">
+<a href="#objectid_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -150,7 +206,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Application<wbr>Id</span>
+        <span id="applicationid_go">
+<a href="#applicationid_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -159,7 +217,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Display<wbr>Name</span>
+        <span id="displayname_go">
+<a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -168,7 +228,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Oauth2Permissions</span>
+        <span id="oauth2permissions_go">
+<a href="#oauth2permissions_go" style="color: inherit; text-decoration: inherit;">Oauth2Permissions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getserviceprincipaloauth2permission">[]Get<wbr>Service<wbr>Principal<wbr>Oauth2Permission</a></span>
     </dt>
@@ -177,7 +239,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Object<wbr>Id</span>
+        <span id="objectid_go">
+<a href="#objectid_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -193,7 +257,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>application<wbr>Id</span>
+        <span id="applicationid_nodejs">
+<a href="#applicationid_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -202,7 +268,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>display<wbr>Name</span>
+        <span id="displayname_nodejs">
+<a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -211,7 +279,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>oauth2Permissions</span>
+        <span id="oauth2permissions_nodejs">
+<a href="#oauth2permissions_nodejs" style="color: inherit; text-decoration: inherit;">oauth2Permissions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getserviceprincipaloauth2permission">Get<wbr>Service<wbr>Principal<wbr>Oauth2Permission[]</a></span>
     </dt>
@@ -220,7 +290,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>object<wbr>Id</span>
+        <span id="objectid_nodejs">
+<a href="#objectid_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -236,7 +308,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>application_<wbr>id</span>
+        <span id="application_id_python">
+<a href="#application_id_python" style="color: inherit; text-decoration: inherit;">application_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -245,7 +319,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>display_<wbr>name</span>
+        <span id="display_name_python">
+<a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -254,7 +330,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>oauth2_<wbr>permissions</span>
+        <span id="oauth2_permissions_python">
+<a href="#oauth2_permissions_python" style="color: inherit; text-decoration: inherit;">oauth2_<wbr>permissions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getserviceprincipaloauth2permission">List[Get<wbr>Service<wbr>Principal<wbr>Oauth2Permission]</a></span>
     </dt>
@@ -263,7 +341,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>object_<wbr>id</span>
+        <span id="object_id_python">
+<a href="#object_id_python" style="color: inherit; text-decoration: inherit;">object_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -292,7 +372,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>App<wbr>Roles</span>
+        <span id="approles_csharp">
+<a href="#approles_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Roles</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getserviceprincipalapprole">List&lt;Pulumi.<wbr>Azure<wbr>AD.<wbr>Outputs.<wbr>Get<wbr>Service<wbr>Principal<wbr>App<wbr>Role&gt;</a></span>
     </dt>
@@ -300,7 +382,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Application<wbr>Id</span>
+        <span id="applicationid_csharp">
+<a href="#applicationid_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -308,7 +392,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Display<wbr>Name</span>
+        <span id="displayname_csharp">
+<a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -317,7 +403,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -326,7 +414,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Oauth2Permissions</span>
+        <span id="oauth2permissions_csharp">
+<a href="#oauth2permissions_csharp" style="color: inherit; text-decoration: inherit;">Oauth2Permissions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getserviceprincipaloauth2permission">List&lt;Pulumi.<wbr>Azure<wbr>AD.<wbr>Outputs.<wbr>Get<wbr>Service<wbr>Principal<wbr>Oauth2Permission&gt;</a></span>
     </dt>
@@ -334,7 +424,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Object<wbr>Id</span>
+        <span id="objectid_csharp">
+<a href="#objectid_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -349,7 +441,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>App<wbr>Roles</span>
+        <span id="approles_go">
+<a href="#approles_go" style="color: inherit; text-decoration: inherit;">App<wbr>Roles</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getserviceprincipalapprole">[]Get<wbr>Service<wbr>Principal<wbr>App<wbr>Role</a></span>
     </dt>
@@ -357,7 +451,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Application<wbr>Id</span>
+        <span id="applicationid_go">
+<a href="#applicationid_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -365,7 +461,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Display<wbr>Name</span>
+        <span id="displayname_go">
+<a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -374,7 +472,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -383,7 +483,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Oauth2Permissions</span>
+        <span id="oauth2permissions_go">
+<a href="#oauth2permissions_go" style="color: inherit; text-decoration: inherit;">Oauth2Permissions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getserviceprincipaloauth2permission">[]Get<wbr>Service<wbr>Principal<wbr>Oauth2Permission</a></span>
     </dt>
@@ -391,7 +493,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Object<wbr>Id</span>
+        <span id="objectid_go">
+<a href="#objectid_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -406,7 +510,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>app<wbr>Roles</span>
+        <span id="approles_nodejs">
+<a href="#approles_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Roles</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getserviceprincipalapprole">Get<wbr>Service<wbr>Principal<wbr>App<wbr>Role[]</a></span>
     </dt>
@@ -414,7 +520,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>application<wbr>Id</span>
+        <span id="applicationid_nodejs">
+<a href="#applicationid_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -422,7 +530,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>display<wbr>Name</span>
+        <span id="displayname_nodejs">
+<a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -431,7 +541,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -440,7 +552,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>oauth2Permissions</span>
+        <span id="oauth2permissions_nodejs">
+<a href="#oauth2permissions_nodejs" style="color: inherit; text-decoration: inherit;">oauth2Permissions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getserviceprincipaloauth2permission">Get<wbr>Service<wbr>Principal<wbr>Oauth2Permission[]</a></span>
     </dt>
@@ -448,7 +562,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>object<wbr>Id</span>
+        <span id="objectid_nodejs">
+<a href="#objectid_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -463,7 +579,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>app_<wbr>roles</span>
+        <span id="app_roles_python">
+<a href="#app_roles_python" style="color: inherit; text-decoration: inherit;">app_<wbr>roles</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getserviceprincipalapprole">List[Get<wbr>Service<wbr>Principal<wbr>App<wbr>Role]</a></span>
     </dt>
@@ -471,7 +589,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>application_<wbr>id</span>
+        <span id="application_id_python">
+<a href="#application_id_python" style="color: inherit; text-decoration: inherit;">application_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -479,7 +599,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>display_<wbr>name</span>
+        <span id="display_name_python">
+<a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -488,7 +610,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -497,7 +621,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>oauth2_<wbr>permissions</span>
+        <span id="oauth2_permissions_python">
+<a href="#oauth2_permissions_python" style="color: inherit; text-decoration: inherit;">oauth2_<wbr>permissions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getserviceprincipaloauth2permission">List[Get<wbr>Service<wbr>Principal<wbr>Oauth2Permission]</a></span>
     </dt>
@@ -505,7 +631,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>object_<wbr>id</span>
+        <span id="object_id_python">
+<a href="#object_id_python" style="color: inherit; text-decoration: inherit;">object_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -544,7 +672,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Allowed<wbr>Member<wbr>Types</span>
+        <span id="allowedmembertypes_csharp">
+<a href="#allowedmembertypes_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Member<wbr>Types</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -553,7 +683,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Description</span>
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -562,7 +694,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Display<wbr>Name</span>
+        <span id="displayname_csharp">
+<a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -571,7 +705,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -580,7 +716,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Is<wbr>Enabled</span>
+        <span id="isenabled_csharp">
+<a href="#isenabled_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -589,7 +727,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Value</span>
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -605,7 +745,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Allowed<wbr>Member<wbr>Types</span>
+        <span id="allowedmembertypes_go">
+<a href="#allowedmembertypes_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Member<wbr>Types</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -614,7 +756,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Description</span>
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -623,7 +767,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Display<wbr>Name</span>
+        <span id="displayname_go">
+<a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -632,7 +778,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -641,7 +789,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Is<wbr>Enabled</span>
+        <span id="isenabled_go">
+<a href="#isenabled_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -650,7 +800,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Value</span>
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -666,7 +818,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>allowed<wbr>Member<wbr>Types</span>
+        <span id="allowedmembertypes_nodejs">
+<a href="#allowedmembertypes_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Member<wbr>Types</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -675,7 +829,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>description</span>
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -684,7 +840,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>display<wbr>Name</span>
+        <span id="displayname_nodejs">
+<a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -693,7 +851,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -702,7 +862,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>is<wbr>Enabled</span>
+        <span id="isenabled_nodejs">
+<a href="#isenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -711,7 +873,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>value</span>
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -727,7 +891,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>allowed<wbr>Member<wbr>Types</span>
+        <span id="allowedmembertypes_python">
+<a href="#allowedmembertypes_python" style="color: inherit; text-decoration: inherit;">allowed<wbr>Member<wbr>Types</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -736,7 +902,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>description</span>
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -745,7 +913,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>display_<wbr>name</span>
+        <span id="display_name_python">
+<a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -754,7 +924,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -763,7 +935,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>is<wbr>Enabled</span>
+        <span id="isenabled_python">
+<a href="#isenabled_python" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -772,7 +946,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>value</span>
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -806,7 +982,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Admin<wbr>Consent<wbr>Description</span>
+        <span id="adminconsentdescription_csharp">
+<a href="#adminconsentdescription_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>Consent<wbr>Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -815,7 +993,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Admin<wbr>Consent<wbr>Display<wbr>Name</span>
+        <span id="adminconsentdisplayname_csharp">
+<a href="#adminconsentdisplayname_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>Consent<wbr>Display<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -824,7 +1004,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -833,7 +1015,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Is<wbr>Enabled</span>
+        <span id="isenabled_csharp">
+<a href="#isenabled_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -842,7 +1026,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Type</span>
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -851,7 +1037,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>User<wbr>Consent<wbr>Description</span>
+        <span id="userconsentdescription_csharp">
+<a href="#userconsentdescription_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Consent<wbr>Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -860,7 +1048,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>User<wbr>Consent<wbr>Display<wbr>Name</span>
+        <span id="userconsentdisplayname_csharp">
+<a href="#userconsentdisplayname_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Consent<wbr>Display<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -869,7 +1059,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Value</span>
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -885,7 +1077,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Admin<wbr>Consent<wbr>Description</span>
+        <span id="adminconsentdescription_go">
+<a href="#adminconsentdescription_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>Consent<wbr>Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -894,7 +1088,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Admin<wbr>Consent<wbr>Display<wbr>Name</span>
+        <span id="adminconsentdisplayname_go">
+<a href="#adminconsentdisplayname_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>Consent<wbr>Display<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -903,7 +1099,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -912,7 +1110,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Is<wbr>Enabled</span>
+        <span id="isenabled_go">
+<a href="#isenabled_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -921,7 +1121,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Type</span>
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -930,7 +1132,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>User<wbr>Consent<wbr>Description</span>
+        <span id="userconsentdescription_go">
+<a href="#userconsentdescription_go" style="color: inherit; text-decoration: inherit;">User<wbr>Consent<wbr>Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -939,7 +1143,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>User<wbr>Consent<wbr>Display<wbr>Name</span>
+        <span id="userconsentdisplayname_go">
+<a href="#userconsentdisplayname_go" style="color: inherit; text-decoration: inherit;">User<wbr>Consent<wbr>Display<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -948,7 +1154,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Value</span>
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -964,7 +1172,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>admin<wbr>Consent<wbr>Description</span>
+        <span id="adminconsentdescription_nodejs">
+<a href="#adminconsentdescription_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Consent<wbr>Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -973,7 +1183,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>admin<wbr>Consent<wbr>Display<wbr>Name</span>
+        <span id="adminconsentdisplayname_nodejs">
+<a href="#adminconsentdisplayname_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Consent<wbr>Display<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -982,7 +1194,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -991,7 +1205,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>is<wbr>Enabled</span>
+        <span id="isenabled_nodejs">
+<a href="#isenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1000,7 +1216,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>type</span>
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1009,7 +1227,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>user<wbr>Consent<wbr>Description</span>
+        <span id="userconsentdescription_nodejs">
+<a href="#userconsentdescription_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Consent<wbr>Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1018,7 +1238,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>user<wbr>Consent<wbr>Display<wbr>Name</span>
+        <span id="userconsentdisplayname_nodejs">
+<a href="#userconsentdisplayname_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Consent<wbr>Display<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1027,7 +1249,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>value</span>
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1043,7 +1267,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>admin<wbr>Consent<wbr>Description</span>
+        <span id="adminconsentdescription_python">
+<a href="#adminconsentdescription_python" style="color: inherit; text-decoration: inherit;">admin<wbr>Consent<wbr>Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1052,7 +1278,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>admin<wbr>Consent<wbr>Display<wbr>Name</span>
+        <span id="adminconsentdisplayname_python">
+<a href="#adminconsentdisplayname_python" style="color: inherit; text-decoration: inherit;">admin<wbr>Consent<wbr>Display<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1061,7 +1289,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1070,7 +1300,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>is<wbr>Enabled</span>
+        <span id="isenabled_python">
+<a href="#isenabled_python" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1079,7 +1311,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>type</span>
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1088,7 +1322,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>user<wbr>Consent<wbr>Description</span>
+        <span id="userconsentdescription_python">
+<a href="#userconsentdescription_python" style="color: inherit; text-decoration: inherit;">user<wbr>Consent<wbr>Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1097,7 +1333,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>user<wbr>Consent<wbr>Display<wbr>Name</span>
+        <span id="userconsentdisplayname_python">
+<a href="#userconsentdisplayname_python" style="color: inherit; text-decoration: inherit;">user<wbr>Consent<wbr>Display<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1106,7 +1344,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>value</span>
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

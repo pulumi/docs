@@ -22,7 +22,22 @@ Use this data source to access information about an existing Domains within Azur
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using AzureAD = Pulumi.AzureAD;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var aadDomains = Output.Create(AzureAD.GetDomains.InvokeAsync());
+        this.Domains = aadDomains.Apply(aadDomains => aadDomains.Domains);
+    }
+
+    [Output("domains")]
+    public Output<string> Domains { get; set; }
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -91,7 +106,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Include<wbr>Unverified</span>
+        <span id="includeunverified_csharp">
+<a href="#includeunverified_csharp" style="color: inherit; text-decoration: inherit;">Include<wbr>Unverified</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -100,7 +117,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Only<wbr>Default</span>
+        <span id="onlydefault_csharp">
+<a href="#onlydefault_csharp" style="color: inherit; text-decoration: inherit;">Only<wbr>Default</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -109,7 +128,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Only<wbr>Initial</span>
+        <span id="onlyinitial_csharp">
+<a href="#onlyinitial_csharp" style="color: inherit; text-decoration: inherit;">Only<wbr>Initial</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -125,7 +146,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Include<wbr>Unverified</span>
+        <span id="includeunverified_go">
+<a href="#includeunverified_go" style="color: inherit; text-decoration: inherit;">Include<wbr>Unverified</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -134,7 +157,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Only<wbr>Default</span>
+        <span id="onlydefault_go">
+<a href="#onlydefault_go" style="color: inherit; text-decoration: inherit;">Only<wbr>Default</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -143,7 +168,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Only<wbr>Initial</span>
+        <span id="onlyinitial_go">
+<a href="#onlyinitial_go" style="color: inherit; text-decoration: inherit;">Only<wbr>Initial</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -159,7 +186,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>include<wbr>Unverified</span>
+        <span id="includeunverified_nodejs">
+<a href="#includeunverified_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Unverified</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -168,7 +197,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>only<wbr>Default</span>
+        <span id="onlydefault_nodejs">
+<a href="#onlydefault_nodejs" style="color: inherit; text-decoration: inherit;">only<wbr>Default</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -177,7 +208,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>only<wbr>Initial</span>
+        <span id="onlyinitial_nodejs">
+<a href="#onlyinitial_nodejs" style="color: inherit; text-decoration: inherit;">only<wbr>Initial</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -193,7 +226,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>include_<wbr>unverified</span>
+        <span id="include_unverified_python">
+<a href="#include_unverified_python" style="color: inherit; text-decoration: inherit;">include_<wbr>unverified</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -202,7 +237,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>only_<wbr>default</span>
+        <span id="only_default_python">
+<a href="#only_default_python" style="color: inherit; text-decoration: inherit;">only_<wbr>default</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -211,7 +248,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>only_<wbr>initial</span>
+        <span id="only_initial_python">
+<a href="#only_initial_python" style="color: inherit; text-decoration: inherit;">only_<wbr>initial</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -240,7 +279,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Domains</span>
+        <span id="domains_csharp">
+<a href="#domains_csharp" style="color: inherit; text-decoration: inherit;">Domains</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdomainsdomain">List&lt;Pulumi.<wbr>Azure<wbr>AD.<wbr>Outputs.<wbr>Get<wbr>Domains<wbr>Domain&gt;</a></span>
     </dt>
@@ -249,7 +290,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -258,7 +301,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Include<wbr>Unverified</span>
+        <span id="includeunverified_csharp">
+<a href="#includeunverified_csharp" style="color: inherit; text-decoration: inherit;">Include<wbr>Unverified</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -266,7 +311,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Only<wbr>Default</span>
+        <span id="onlydefault_csharp">
+<a href="#onlydefault_csharp" style="color: inherit; text-decoration: inherit;">Only<wbr>Default</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -274,7 +321,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Only<wbr>Initial</span>
+        <span id="onlyinitial_csharp">
+<a href="#onlyinitial_csharp" style="color: inherit; text-decoration: inherit;">Only<wbr>Initial</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -289,7 +338,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Domains</span>
+        <span id="domains_go">
+<a href="#domains_go" style="color: inherit; text-decoration: inherit;">Domains</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdomainsdomain">[]Get<wbr>Domains<wbr>Domain</a></span>
     </dt>
@@ -298,7 +349,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -307,7 +360,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Include<wbr>Unverified</span>
+        <span id="includeunverified_go">
+<a href="#includeunverified_go" style="color: inherit; text-decoration: inherit;">Include<wbr>Unverified</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -315,7 +370,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Only<wbr>Default</span>
+        <span id="onlydefault_go">
+<a href="#onlydefault_go" style="color: inherit; text-decoration: inherit;">Only<wbr>Default</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -323,7 +380,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Only<wbr>Initial</span>
+        <span id="onlyinitial_go">
+<a href="#onlyinitial_go" style="color: inherit; text-decoration: inherit;">Only<wbr>Initial</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -338,7 +397,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>domains</span>
+        <span id="domains_nodejs">
+<a href="#domains_nodejs" style="color: inherit; text-decoration: inherit;">domains</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdomainsdomain">Get<wbr>Domains<wbr>Domain[]</a></span>
     </dt>
@@ -347,7 +408,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -356,7 +419,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>include<wbr>Unverified</span>
+        <span id="includeunverified_nodejs">
+<a href="#includeunverified_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Unverified</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -364,7 +429,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>only<wbr>Default</span>
+        <span id="onlydefault_nodejs">
+<a href="#onlydefault_nodejs" style="color: inherit; text-decoration: inherit;">only<wbr>Default</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -372,7 +439,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>only<wbr>Initial</span>
+        <span id="onlyinitial_nodejs">
+<a href="#onlyinitial_nodejs" style="color: inherit; text-decoration: inherit;">only<wbr>Initial</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -387,7 +456,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>domains</span>
+        <span id="domains_python">
+<a href="#domains_python" style="color: inherit; text-decoration: inherit;">domains</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdomainsdomain">List[Get<wbr>Domains<wbr>Domain]</a></span>
     </dt>
@@ -396,7 +467,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -405,7 +478,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>include_<wbr>unverified</span>
+        <span id="include_unverified_python">
+<a href="#include_unverified_python" style="color: inherit; text-decoration: inherit;">include_<wbr>unverified</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -413,7 +488,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>only_<wbr>default</span>
+        <span id="only_default_python">
+<a href="#only_default_python" style="color: inherit; text-decoration: inherit;">only_<wbr>default</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -421,7 +498,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>only_<wbr>initial</span>
+        <span id="only_initial_python">
+<a href="#only_initial_python" style="color: inherit; text-decoration: inherit;">only_<wbr>initial</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -460,7 +539,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Authentication<wbr>Type</span>
+        <span id="authenticationtype_csharp">
+<a href="#authenticationtype_csharp" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -469,7 +550,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Domain<wbr>Name</span>
+        <span id="domainname_csharp">
+<a href="#domainname_csharp" style="color: inherit; text-decoration: inherit;">Domain<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -478,7 +561,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Is<wbr>Default</span>
+        <span id="isdefault_csharp">
+<a href="#isdefault_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Default</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -487,7 +572,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Is<wbr>Initial</span>
+        <span id="isinitial_csharp">
+<a href="#isinitial_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Initial</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -496,7 +583,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Is<wbr>Verified</span>
+        <span id="isverified_csharp">
+<a href="#isverified_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Verified</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -512,7 +601,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Authentication<wbr>Type</span>
+        <span id="authenticationtype_go">
+<a href="#authenticationtype_go" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -521,7 +612,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Domain<wbr>Name</span>
+        <span id="domainname_go">
+<a href="#domainname_go" style="color: inherit; text-decoration: inherit;">Domain<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -530,7 +623,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Is<wbr>Default</span>
+        <span id="isdefault_go">
+<a href="#isdefault_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Default</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -539,7 +634,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Is<wbr>Initial</span>
+        <span id="isinitial_go">
+<a href="#isinitial_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Initial</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -548,7 +645,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Is<wbr>Verified</span>
+        <span id="isverified_go">
+<a href="#isverified_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Verified</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -564,7 +663,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>authentication<wbr>Type</span>
+        <span id="authenticationtype_nodejs">
+<a href="#authenticationtype_nodejs" style="color: inherit; text-decoration: inherit;">authentication<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -573,7 +674,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>domain<wbr>Name</span>
+        <span id="domainname_nodejs">
+<a href="#domainname_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -582,7 +685,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>is<wbr>Default</span>
+        <span id="isdefault_nodejs">
+<a href="#isdefault_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Default</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -591,7 +696,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>is<wbr>Initial</span>
+        <span id="isinitial_nodejs">
+<a href="#isinitial_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Initial</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -600,7 +707,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>is<wbr>Verified</span>
+        <span id="isverified_nodejs">
+<a href="#isverified_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Verified</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -616,7 +725,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>authentication<wbr>Type</span>
+        <span id="authenticationtype_python">
+<a href="#authenticationtype_python" style="color: inherit; text-decoration: inherit;">authentication<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -625,7 +736,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>domain<wbr>Name</span>
+        <span id="domainname_python">
+<a href="#domainname_python" style="color: inherit; text-decoration: inherit;">domain<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -634,7 +747,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>is<wbr>Default</span>
+        <span id="isdefault_python">
+<a href="#isdefault_python" style="color: inherit; text-decoration: inherit;">is<wbr>Default</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -643,7 +758,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>is<wbr>Initial</span>
+        <span id="isinitial_python">
+<a href="#isinitial_python" style="color: inherit; text-decoration: inherit;">is<wbr>Initial</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -652,7 +769,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>is<wbr>Verified</span>
+        <span id="isverified_python">
+<a href="#isverified_python" style="color: inherit; text-decoration: inherit;">is<wbr>Verified</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
