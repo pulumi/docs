@@ -77,7 +77,7 @@ pulumi.runtime.setMocks({
 });
 ```
 
-infra.ts
+**infra.ts**
 
 ```ts
 export const attachment = new aws.iam.RolePolicyAttachment(
