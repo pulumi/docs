@@ -196,7 +196,9 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-required"
             title="Required">
-        <span>Image<wbr>Id</span>
+        <span id="imageid_csharp">
+<a href="#imageid_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -205,7 +207,9 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-required"
             title="Required">
-        <span>Instance<wbr>Type</span>
+        <span id="instancetype_csharp">
+<a href="#instancetype_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -214,7 +218,9 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-required"
             title="Required">
-        <span>Security<wbr>Groups</span>
+        <span id="securitygroups_csharp">
+<a href="#securitygroups_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Groups</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -223,7 +229,9 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>Allocate<wbr>Public<wbr>Ip</span>
+        <span id="allocatepublicip_csharp">
+<a href="#allocatepublicip_csharp" style="color: inherit; text-decoration: inherit;">Allocate<wbr>Public<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -232,7 +240,9 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Auto<wbr>Release<wbr>Time</span>
+        <span id="autoreleasetime_csharp">
+<a href="#autoreleasetime_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Release<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -243,7 +253,9 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Auto<wbr>Renew<wbr>Period</span>
+        <span id="autorenewperiod_csharp">
+<a href="#autorenewperiod_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Renew<wbr>Period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -254,7 +266,9 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Availability<wbr>Zone</span>
+        <span id="availabilityzone_csharp">
+<a href="#availabilityzone_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -263,7 +277,9 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Credit<wbr>Specification</span>
+        <span id="creditspecification_csharp">
+<a href="#creditspecification_csharp" style="color: inherit; text-decoration: inherit;">Credit<wbr>Specification</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -272,7 +288,9 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Data<wbr>Disks</span>
+        <span id="datadisks_csharp">
+<a href="#datadisks_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Disks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancedatadisk">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Ecs.<wbr>Inputs.<wbr>Instance<wbr>Data<wbr>Disk<wbr>Args&gt;</a></span>
     </dt>
@@ -281,7 +299,9 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Deletion<wbr>Protection</span>
+        <span id="deletionprotection_csharp">
+<a href="#deletionprotection_csharp" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Protection</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -292,7 +312,9 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -301,7 +323,9 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dry<wbr>Run</span>
+        <span id="dryrun_csharp">
+<a href="#dryrun_csharp" style="color: inherit; text-decoration: inherit;">Dry<wbr>Run</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -312,7 +336,9 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Force<wbr>Delete</span>
+        <span id="forcedelete_csharp">
+<a href="#forcedelete_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Delete</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -322,7 +348,9 @@ However, because of changing instance charge type has CPU core count quota limit
 
     <dt class="property-optional"
             title="Optional">
-        <span>Host<wbr>Name</span>
+        <span id="hostname_csharp">
+<a href="#hostname_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -332,7 +360,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Include<wbr>Data<wbr>Disks</span>
+        <span id="includedatadisks_csharp">
+<a href="#includedatadisks_csharp" style="color: inherit; text-decoration: inherit;">Include<wbr>Data<wbr>Disks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -341,7 +371,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Instance<wbr>Charge<wbr>Type</span>
+        <span id="instancechargetype_csharp">
+<a href="#instancechargetype_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Charge<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -350,7 +382,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Instance<wbr>Name</span>
+        <span id="instancename_csharp">
+<a href="#instancename_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -358,7 +392,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Internet<wbr>Charge<wbr>Type</span>
+        <span id="internetchargetype_csharp">
+<a href="#internetchargetype_csharp" style="color: inherit; text-decoration: inherit;">Internet<wbr>Charge<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -367,7 +403,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Internet<wbr>Max<wbr>Bandwidth<wbr>In</span>
+        <span id="internetmaxbandwidthin_csharp">
+<a href="#internetmaxbandwidthin_csharp" style="color: inherit; text-decoration: inherit;">Internet<wbr>Max<wbr>Bandwidth<wbr>In</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -376,7 +414,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Internet<wbr>Max<wbr>Bandwidth<wbr>Out</span>
+        <span id="internetmaxbandwidthout_csharp">
+<a href="#internetmaxbandwidthout_csharp" style="color: inherit; text-decoration: inherit;">Internet<wbr>Max<wbr>Bandwidth<wbr>Out</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -385,7 +425,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>Io<wbr>Optimized</span>
+        <span id="iooptimized_csharp">
+<a href="#iooptimized_csharp" style="color: inherit; text-decoration: inherit;">Io<wbr>Optimized</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -394,7 +436,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Is<wbr>Outdated</span>
+        <span id="isoutdated_csharp">
+<a href="#isoutdated_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Outdated</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -403,7 +447,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Key<wbr>Name</span>
+        <span id="keyname_csharp">
+<a href="#keyname_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -412,7 +458,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Kms<wbr>Encrypted<wbr>Password</span>
+        <span id="kmsencryptedpassword_csharp">
+<a href="#kmsencryptedpassword_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Encrypted<wbr>Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -421,7 +469,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Kms<wbr>Encryption<wbr>Context</span>
+        <span id="kmsencryptioncontext_csharp">
+<a href="#kmsencryptioncontext_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Encryption<wbr>Context</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -430,7 +480,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Password</span>
+        <span id="password_csharp">
+<a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -439,7 +491,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Period</span>
+        <span id="period_csharp">
+<a href="#period_csharp" style="color: inherit; text-decoration: inherit;">Period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -450,7 +504,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Period<wbr>Unit</span>
+        <span id="periodunit_csharp">
+<a href="#periodunit_csharp" style="color: inherit; text-decoration: inherit;">Period<wbr>Unit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -459,7 +515,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Private<wbr>Ip</span>
+        <span id="privateip_csharp">
+<a href="#privateip_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -468,7 +526,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Renewal<wbr>Status</span>
+        <span id="renewalstatus_csharp">
+<a href="#renewalstatus_csharp" style="color: inherit; text-decoration: inherit;">Renewal<wbr>Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -480,7 +540,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Group<wbr>Id</span>
+        <span id="resourcegroupid_csharp">
+<a href="#resourcegroupid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -489,7 +551,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Role<wbr>Name</span>
+        <span id="rolename_csharp">
+<a href="#rolename_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -498,7 +562,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Security<wbr>Enhancement<wbr>Strategy</span>
+        <span id="securityenhancementstrategy_csharp">
+<a href="#securityenhancementstrategy_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Enhancement<wbr>Strategy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -509,7 +575,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Spot<wbr>Price<wbr>Limit</span>
+        <span id="spotpricelimit_csharp">
+<a href="#spotpricelimit_csharp" style="color: inherit; text-decoration: inherit;">Spot<wbr>Price<wbr>Limit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
@@ -518,7 +586,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Spot<wbr>Strategy</span>
+        <span id="spotstrategy_csharp">
+<a href="#spotstrategy_csharp" style="color: inherit; text-decoration: inherit;">Spot<wbr>Strategy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -530,7 +600,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Subnet<wbr>Id</span>
+        <span id="subnetid_csharp">
+<a href="#subnetid_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -538,7 +610,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>System<wbr>Disk<wbr>Auto<wbr>Snapshot<wbr>Policy<wbr>Id</span>
+        <span id="systemdiskautosnapshotpolicyid_csharp">
+<a href="#systemdiskautosnapshotpolicyid_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Disk<wbr>Auto<wbr>Snapshot<wbr>Policy<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -547,7 +621,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>System<wbr>Disk<wbr>Category</span>
+        <span id="systemdiskcategory_csharp">
+<a href="#systemdiskcategory_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Disk<wbr>Category</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -556,7 +632,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>System<wbr>Disk<wbr>Size</span>
+        <span id="systemdisksize_csharp">
+<a href="#systemdisksize_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Disk<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -565,9 +643,11 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 - Key: It can be up to 64 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It cannot be a null string.
@@ -576,7 +656,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>User<wbr>Data</span>
+        <span id="userdata_csharp">
+<a href="#userdata_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -585,7 +667,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Volume<wbr>Tags</span>
+        <span id="volumetags_csharp">
+<a href="#volumetags_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -596,7 +680,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vswitch<wbr>Id</span>
+        <span id="vswitchid_csharp">
+<a href="#vswitchid_csharp" style="color: inherit; text-decoration: inherit;">Vswitch<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -612,7 +698,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-required"
             title="Required">
-        <span>Image<wbr>Id</span>
+        <span id="imageid_go">
+<a href="#imageid_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -621,7 +709,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-required"
             title="Required">
-        <span>Instance<wbr>Type</span>
+        <span id="instancetype_go">
+<a href="#instancetype_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -630,7 +720,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-required"
             title="Required">
-        <span>Security<wbr>Groups</span>
+        <span id="securitygroups_go">
+<a href="#securitygroups_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Groups</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -639,7 +731,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>Allocate<wbr>Public<wbr>Ip</span>
+        <span id="allocatepublicip_go">
+<a href="#allocatepublicip_go" style="color: inherit; text-decoration: inherit;">Allocate<wbr>Public<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -648,7 +742,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Auto<wbr>Release<wbr>Time</span>
+        <span id="autoreleasetime_go">
+<a href="#autoreleasetime_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Release<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -659,7 +755,9 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Auto<wbr>Renew<wbr>Period</span>
+        <span id="autorenewperiod_go">
+<a href="#autorenewperiod_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Renew<wbr>Period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -670,7 +768,9 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Availability<wbr>Zone</span>
+        <span id="availabilityzone_go">
+<a href="#availabilityzone_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -679,7 +779,9 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Credit<wbr>Specification</span>
+        <span id="creditspecification_go">
+<a href="#creditspecification_go" style="color: inherit; text-decoration: inherit;">Credit<wbr>Specification</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -688,7 +790,9 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Data<wbr>Disks</span>
+        <span id="datadisks_go">
+<a href="#datadisks_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Disks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancedatadisk">[]Instance<wbr>Data<wbr>Disk</a></span>
     </dt>
@@ -697,7 +801,9 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Deletion<wbr>Protection</span>
+        <span id="deletionprotection_go">
+<a href="#deletionprotection_go" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Protection</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -708,7 +814,9 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -717,7 +825,9 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dry<wbr>Run</span>
+        <span id="dryrun_go">
+<a href="#dryrun_go" style="color: inherit; text-decoration: inherit;">Dry<wbr>Run</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -728,7 +838,9 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Force<wbr>Delete</span>
+        <span id="forcedelete_go">
+<a href="#forcedelete_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Delete</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -738,7 +850,9 @@ However, because of changing instance charge type has CPU core count quota limit
 
     <dt class="property-optional"
             title="Optional">
-        <span>Host<wbr>Name</span>
+        <span id="hostname_go">
+<a href="#hostname_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -748,7 +862,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Include<wbr>Data<wbr>Disks</span>
+        <span id="includedatadisks_go">
+<a href="#includedatadisks_go" style="color: inherit; text-decoration: inherit;">Include<wbr>Data<wbr>Disks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -757,7 +873,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Instance<wbr>Charge<wbr>Type</span>
+        <span id="instancechargetype_go">
+<a href="#instancechargetype_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Charge<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -766,7 +884,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Instance<wbr>Name</span>
+        <span id="instancename_go">
+<a href="#instancename_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -774,7 +894,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Internet<wbr>Charge<wbr>Type</span>
+        <span id="internetchargetype_go">
+<a href="#internetchargetype_go" style="color: inherit; text-decoration: inherit;">Internet<wbr>Charge<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -783,7 +905,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Internet<wbr>Max<wbr>Bandwidth<wbr>In</span>
+        <span id="internetmaxbandwidthin_go">
+<a href="#internetmaxbandwidthin_go" style="color: inherit; text-decoration: inherit;">Internet<wbr>Max<wbr>Bandwidth<wbr>In</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -792,7 +916,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Internet<wbr>Max<wbr>Bandwidth<wbr>Out</span>
+        <span id="internetmaxbandwidthout_go">
+<a href="#internetmaxbandwidthout_go" style="color: inherit; text-decoration: inherit;">Internet<wbr>Max<wbr>Bandwidth<wbr>Out</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -801,7 +927,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>Io<wbr>Optimized</span>
+        <span id="iooptimized_go">
+<a href="#iooptimized_go" style="color: inherit; text-decoration: inherit;">Io<wbr>Optimized</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -810,7 +938,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Is<wbr>Outdated</span>
+        <span id="isoutdated_go">
+<a href="#isoutdated_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Outdated</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -819,7 +949,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Key<wbr>Name</span>
+        <span id="keyname_go">
+<a href="#keyname_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -828,7 +960,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Kms<wbr>Encrypted<wbr>Password</span>
+        <span id="kmsencryptedpassword_go">
+<a href="#kmsencryptedpassword_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Encrypted<wbr>Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -837,7 +971,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Kms<wbr>Encryption<wbr>Context</span>
+        <span id="kmsencryptioncontext_go">
+<a href="#kmsencryptioncontext_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Encryption<wbr>Context</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -846,7 +982,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Password</span>
+        <span id="password_go">
+<a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -855,7 +993,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Period</span>
+        <span id="period_go">
+<a href="#period_go" style="color: inherit; text-decoration: inherit;">Period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -866,7 +1006,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Period<wbr>Unit</span>
+        <span id="periodunit_go">
+<a href="#periodunit_go" style="color: inherit; text-decoration: inherit;">Period<wbr>Unit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -875,7 +1017,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Private<wbr>Ip</span>
+        <span id="privateip_go">
+<a href="#privateip_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -884,7 +1028,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Renewal<wbr>Status</span>
+        <span id="renewalstatus_go">
+<a href="#renewalstatus_go" style="color: inherit; text-decoration: inherit;">Renewal<wbr>Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -896,7 +1042,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Group<wbr>Id</span>
+        <span id="resourcegroupid_go">
+<a href="#resourcegroupid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -905,7 +1053,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Role<wbr>Name</span>
+        <span id="rolename_go">
+<a href="#rolename_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -914,7 +1064,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Security<wbr>Enhancement<wbr>Strategy</span>
+        <span id="securityenhancementstrategy_go">
+<a href="#securityenhancementstrategy_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Enhancement<wbr>Strategy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -925,7 +1077,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Spot<wbr>Price<wbr>Limit</span>
+        <span id="spotpricelimit_go">
+<a href="#spotpricelimit_go" style="color: inherit; text-decoration: inherit;">Spot<wbr>Price<wbr>Limit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
@@ -934,7 +1088,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Spot<wbr>Strategy</span>
+        <span id="spotstrategy_go">
+<a href="#spotstrategy_go" style="color: inherit; text-decoration: inherit;">Spot<wbr>Strategy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -946,7 +1102,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Subnet<wbr>Id</span>
+        <span id="subnetid_go">
+<a href="#subnetid_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -954,7 +1112,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>System<wbr>Disk<wbr>Auto<wbr>Snapshot<wbr>Policy<wbr>Id</span>
+        <span id="systemdiskautosnapshotpolicyid_go">
+<a href="#systemdiskautosnapshotpolicyid_go" style="color: inherit; text-decoration: inherit;">System<wbr>Disk<wbr>Auto<wbr>Snapshot<wbr>Policy<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -963,7 +1123,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>System<wbr>Disk<wbr>Category</span>
+        <span id="systemdiskcategory_go">
+<a href="#systemdiskcategory_go" style="color: inherit; text-decoration: inherit;">System<wbr>Disk<wbr>Category</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -972,7 +1134,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>System<wbr>Disk<wbr>Size</span>
+        <span id="systemdisksize_go">
+<a href="#systemdisksize_go" style="color: inherit; text-decoration: inherit;">System<wbr>Disk<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -981,9 +1145,11 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 - Key: It can be up to 64 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It cannot be a null string.
@@ -992,7 +1158,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>User<wbr>Data</span>
+        <span id="userdata_go">
+<a href="#userdata_go" style="color: inherit; text-decoration: inherit;">User<wbr>Data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1001,7 +1169,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Volume<wbr>Tags</span>
+        <span id="volumetags_go">
+<a href="#volumetags_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -1012,7 +1182,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vswitch<wbr>Id</span>
+        <span id="vswitchid_go">
+<a href="#vswitchid_go" style="color: inherit; text-decoration: inherit;">Vswitch<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1028,7 +1200,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-required"
             title="Required">
-        <span>image<wbr>Id</span>
+        <span id="imageid_nodejs">
+<a href="#imageid_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1037,7 +1211,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-required"
             title="Required">
-        <span>instance<wbr>Type</span>
+        <span id="instancetype_nodejs">
+<a href="#instancetype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1046,7 +1222,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-required"
             title="Required">
-        <span>security<wbr>Groups</span>
+        <span id="securitygroups_nodejs">
+<a href="#securitygroups_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Groups</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1055,7 +1233,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>allocate<wbr>Public<wbr>Ip</span>
+        <span id="allocatepublicip_nodejs">
+<a href="#allocatepublicip_nodejs" style="color: inherit; text-decoration: inherit;">allocate<wbr>Public<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1064,7 +1244,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>auto<wbr>Release<wbr>Time</span>
+        <span id="autoreleasetime_nodejs">
+<a href="#autoreleasetime_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Release<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1075,7 +1257,9 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
 
     <dt class="property-optional"
             title="Optional">
-        <span>auto<wbr>Renew<wbr>Period</span>
+        <span id="autorenewperiod_nodejs">
+<a href="#autorenewperiod_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Renew<wbr>Period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1086,7 +1270,9 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
 
     <dt class="property-optional"
             title="Optional">
-        <span>availability<wbr>Zone</span>
+        <span id="availabilityzone_nodejs">
+<a href="#availabilityzone_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1095,7 +1281,9 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
 
     <dt class="property-optional"
             title="Optional">
-        <span>credit<wbr>Specification</span>
+        <span id="creditspecification_nodejs">
+<a href="#creditspecification_nodejs" style="color: inherit; text-decoration: inherit;">credit<wbr>Specification</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1104,7 +1292,9 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
 
     <dt class="property-optional"
             title="Optional">
-        <span>data<wbr>Disks</span>
+        <span id="datadisks_nodejs">
+<a href="#datadisks_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Disks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancedatadisk">Instance<wbr>Data<wbr>Disk[]</a></span>
     </dt>
@@ -1113,7 +1303,9 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
 
     <dt class="property-optional"
             title="Optional">
-        <span>deletion<wbr>Protection</span>
+        <span id="deletionprotection_nodejs">
+<a href="#deletionprotection_nodejs" style="color: inherit; text-decoration: inherit;">deletion<wbr>Protection</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1124,7 +1316,9 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1133,7 +1327,9 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
 
     <dt class="property-optional"
             title="Optional">
-        <span>dry<wbr>Run</span>
+        <span id="dryrun_nodejs">
+<a href="#dryrun_nodejs" style="color: inherit; text-decoration: inherit;">dry<wbr>Run</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1144,7 +1340,9 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
 
     <dt class="property-optional"
             title="Optional">
-        <span>force<wbr>Delete</span>
+        <span id="forcedelete_nodejs">
+<a href="#forcedelete_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Delete</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1154,7 +1352,9 @@ However, because of changing instance charge type has CPU core count quota limit
 
     <dt class="property-optional"
             title="Optional">
-        <span>host<wbr>Name</span>
+        <span id="hostname_nodejs">
+<a href="#hostname_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1164,7 +1364,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>include<wbr>Data<wbr>Disks</span>
+        <span id="includedatadisks_nodejs">
+<a href="#includedatadisks_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Data<wbr>Disks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1173,7 +1375,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>instance<wbr>Charge<wbr>Type</span>
+        <span id="instancechargetype_nodejs">
+<a href="#instancechargetype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Charge<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1182,7 +1386,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>instance<wbr>Name</span>
+        <span id="instancename_nodejs">
+<a href="#instancename_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1190,7 +1396,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>internet<wbr>Charge<wbr>Type</span>
+        <span id="internetchargetype_nodejs">
+<a href="#internetchargetype_nodejs" style="color: inherit; text-decoration: inherit;">internet<wbr>Charge<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1199,7 +1407,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>internet<wbr>Max<wbr>Bandwidth<wbr>In</span>
+        <span id="internetmaxbandwidthin_nodejs">
+<a href="#internetmaxbandwidthin_nodejs" style="color: inherit; text-decoration: inherit;">internet<wbr>Max<wbr>Bandwidth<wbr>In</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1208,7 +1418,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>internet<wbr>Max<wbr>Bandwidth<wbr>Out</span>
+        <span id="internetmaxbandwidthout_nodejs">
+<a href="#internetmaxbandwidthout_nodejs" style="color: inherit; text-decoration: inherit;">internet<wbr>Max<wbr>Bandwidth<wbr>Out</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1217,7 +1429,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>io<wbr>Optimized</span>
+        <span id="iooptimized_nodejs">
+<a href="#iooptimized_nodejs" style="color: inherit; text-decoration: inherit;">io<wbr>Optimized</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1226,7 +1440,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>is<wbr>Outdated</span>
+        <span id="isoutdated_nodejs">
+<a href="#isoutdated_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Outdated</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1235,7 +1451,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>key<wbr>Name</span>
+        <span id="keyname_nodejs">
+<a href="#keyname_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1244,7 +1462,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>kms<wbr>Encrypted<wbr>Password</span>
+        <span id="kmsencryptedpassword_nodejs">
+<a href="#kmsencryptedpassword_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Encrypted<wbr>Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1253,7 +1473,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>kms<wbr>Encryption<wbr>Context</span>
+        <span id="kmsencryptioncontext_nodejs">
+<a href="#kmsencryptioncontext_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Encryption<wbr>Context</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -1262,7 +1484,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>password</span>
+        <span id="password_nodejs">
+<a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1271,7 +1495,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>period</span>
+        <span id="period_nodejs">
+<a href="#period_nodejs" style="color: inherit; text-decoration: inherit;">period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1282,7 +1508,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>period<wbr>Unit</span>
+        <span id="periodunit_nodejs">
+<a href="#periodunit_nodejs" style="color: inherit; text-decoration: inherit;">period<wbr>Unit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1291,7 +1519,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>private<wbr>Ip</span>
+        <span id="privateip_nodejs">
+<a href="#privateip_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1300,7 +1530,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>renewal<wbr>Status</span>
+        <span id="renewalstatus_nodejs">
+<a href="#renewalstatus_nodejs" style="color: inherit; text-decoration: inherit;">renewal<wbr>Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1312,7 +1544,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource<wbr>Group<wbr>Id</span>
+        <span id="resourcegroupid_nodejs">
+<a href="#resourcegroupid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1321,7 +1555,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>role<wbr>Name</span>
+        <span id="rolename_nodejs">
+<a href="#rolename_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1330,7 +1566,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>security<wbr>Enhancement<wbr>Strategy</span>
+        <span id="securityenhancementstrategy_nodejs">
+<a href="#securityenhancementstrategy_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Enhancement<wbr>Strategy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1341,7 +1579,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>spot<wbr>Price<wbr>Limit</span>
+        <span id="spotpricelimit_nodejs">
+<a href="#spotpricelimit_nodejs" style="color: inherit; text-decoration: inherit;">spot<wbr>Price<wbr>Limit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
@@ -1350,7 +1590,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>spot<wbr>Strategy</span>
+        <span id="spotstrategy_nodejs">
+<a href="#spotstrategy_nodejs" style="color: inherit; text-decoration: inherit;">spot<wbr>Strategy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1362,7 +1604,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>subnet<wbr>Id</span>
+        <span id="subnetid_nodejs">
+<a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1370,7 +1614,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>system<wbr>Disk<wbr>Auto<wbr>Snapshot<wbr>Policy<wbr>Id</span>
+        <span id="systemdiskautosnapshotpolicyid_nodejs">
+<a href="#systemdiskautosnapshotpolicyid_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Disk<wbr>Auto<wbr>Snapshot<wbr>Policy<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1379,7 +1625,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>system<wbr>Disk<wbr>Category</span>
+        <span id="systemdiskcategory_nodejs">
+<a href="#systemdiskcategory_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Disk<wbr>Category</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1388,7 +1636,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>system<wbr>Disk<wbr>Size</span>
+        <span id="systemdisksize_nodejs">
+<a href="#systemdisksize_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Disk<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1397,9 +1647,11 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 - Key: It can be up to 64 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It cannot be a null string.
@@ -1408,7 +1660,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>user<wbr>Data</span>
+        <span id="userdata_nodejs">
+<a href="#userdata_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1417,7 +1671,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>volume<wbr>Tags</span>
+        <span id="volumetags_nodejs">
+<a href="#volumetags_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -1428,7 +1684,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>vswitch<wbr>Id</span>
+        <span id="vswitchid_nodejs">
+<a href="#vswitchid_nodejs" style="color: inherit; text-decoration: inherit;">vswitch<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1444,7 +1702,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-required"
             title="Required">
-        <span>image_<wbr>id</span>
+        <span id="image_id_python">
+<a href="#image_id_python" style="color: inherit; text-decoration: inherit;">image_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1453,7 +1713,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-required"
             title="Required">
-        <span>instance_<wbr>type</span>
+        <span id="instance_type_python">
+<a href="#instance_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1462,7 +1724,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-required"
             title="Required">
-        <span>security_<wbr>groups</span>
+        <span id="security_groups_python">
+<a href="#security_groups_python" style="color: inherit; text-decoration: inherit;">security_<wbr>groups</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1471,7 +1735,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>allocate_<wbr>public_<wbr>ip</span>
+        <span id="allocate_public_ip_python">
+<a href="#allocate_public_ip_python" style="color: inherit; text-decoration: inherit;">allocate_<wbr>public_<wbr>ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1480,7 +1746,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>auto_<wbr>release_<wbr>time</span>
+        <span id="auto_release_time_python">
+<a href="#auto_release_time_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>release_<wbr>time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1491,7 +1759,9 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
 
     <dt class="property-optional"
             title="Optional">
-        <span>auto_<wbr>renew_<wbr>period</span>
+        <span id="auto_renew_period_python">
+<a href="#auto_renew_period_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>renew_<wbr>period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1502,7 +1772,9 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
 
     <dt class="property-optional"
             title="Optional">
-        <span>availability_<wbr>zone</span>
+        <span id="availability_zone_python">
+<a href="#availability_zone_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1511,7 +1783,9 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
 
     <dt class="property-optional"
             title="Optional">
-        <span>credit_<wbr>specification</span>
+        <span id="credit_specification_python">
+<a href="#credit_specification_python" style="color: inherit; text-decoration: inherit;">credit_<wbr>specification</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1520,7 +1794,9 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
 
     <dt class="property-optional"
             title="Optional">
-        <span>data_<wbr>disks</span>
+        <span id="data_disks_python">
+<a href="#data_disks_python" style="color: inherit; text-decoration: inherit;">data_<wbr>disks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancedatadisk">List[Instance<wbr>Data<wbr>Disk]</a></span>
     </dt>
@@ -1529,7 +1805,9 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
 
     <dt class="property-optional"
             title="Optional">
-        <span>deletion_<wbr>protection</span>
+        <span id="deletion_protection_python">
+<a href="#deletion_protection_python" style="color: inherit; text-decoration: inherit;">deletion_<wbr>protection</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1540,7 +1818,9 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1549,7 +1829,9 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
 
     <dt class="property-optional"
             title="Optional">
-        <span>dry_<wbr>run</span>
+        <span id="dry_run_python">
+<a href="#dry_run_python" style="color: inherit; text-decoration: inherit;">dry_<wbr>run</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1560,7 +1842,9 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
 
     <dt class="property-optional"
             title="Optional">
-        <span>force_<wbr>delete</span>
+        <span id="force_delete_python">
+<a href="#force_delete_python" style="color: inherit; text-decoration: inherit;">force_<wbr>delete</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1570,7 +1854,9 @@ However, because of changing instance charge type has CPU core count quota limit
 
     <dt class="property-optional"
             title="Optional">
-        <span>host_<wbr>name</span>
+        <span id="host_name_python">
+<a href="#host_name_python" style="color: inherit; text-decoration: inherit;">host_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1580,7 +1866,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>include_<wbr>data_<wbr>disks</span>
+        <span id="include_data_disks_python">
+<a href="#include_data_disks_python" style="color: inherit; text-decoration: inherit;">include_<wbr>data_<wbr>disks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1589,7 +1877,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>instance_<wbr>charge_<wbr>type</span>
+        <span id="instance_charge_type_python">
+<a href="#instance_charge_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>charge_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1598,7 +1888,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>instance_<wbr>name</span>
+        <span id="instance_name_python">
+<a href="#instance_name_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1606,7 +1898,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>internet_<wbr>charge_<wbr>type</span>
+        <span id="internet_charge_type_python">
+<a href="#internet_charge_type_python" style="color: inherit; text-decoration: inherit;">internet_<wbr>charge_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1615,7 +1909,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>internet_<wbr>max_<wbr>bandwidth_<wbr>in</span>
+        <span id="internet_max_bandwidth_in_python">
+<a href="#internet_max_bandwidth_in_python" style="color: inherit; text-decoration: inherit;">internet_<wbr>max_<wbr>bandwidth_<wbr>in</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1624,7 +1920,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>internet_<wbr>max_<wbr>bandwidth_<wbr>out</span>
+        <span id="internet_max_bandwidth_out_python">
+<a href="#internet_max_bandwidth_out_python" style="color: inherit; text-decoration: inherit;">internet_<wbr>max_<wbr>bandwidth_<wbr>out</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1633,7 +1931,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>io_<wbr>optimized</span>
+        <span id="io_optimized_python">
+<a href="#io_optimized_python" style="color: inherit; text-decoration: inherit;">io_<wbr>optimized</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1642,7 +1942,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>is_<wbr>outdated</span>
+        <span id="is_outdated_python">
+<a href="#is_outdated_python" style="color: inherit; text-decoration: inherit;">is_<wbr>outdated</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1651,7 +1953,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>key_<wbr>name</span>
+        <span id="key_name_python">
+<a href="#key_name_python" style="color: inherit; text-decoration: inherit;">key_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1660,7 +1964,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>kms_<wbr>encrypted_<wbr>password</span>
+        <span id="kms_encrypted_password_python">
+<a href="#kms_encrypted_password_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>encrypted_<wbr>password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1669,7 +1975,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>kms_<wbr>encryption_<wbr>context</span>
+        <span id="kms_encryption_context_python">
+<a href="#kms_encryption_context_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>encryption_<wbr>context</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -1678,7 +1986,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>password</span>
+        <span id="password_python">
+<a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1687,7 +1997,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>period</span>
+        <span id="period_python">
+<a href="#period_python" style="color: inherit; text-decoration: inherit;">period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1698,7 +2010,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>period_<wbr>unit</span>
+        <span id="period_unit_python">
+<a href="#period_unit_python" style="color: inherit; text-decoration: inherit;">period_<wbr>unit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1707,7 +2021,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>private_<wbr>ip</span>
+        <span id="private_ip_python">
+<a href="#private_ip_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1716,7 +2032,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>renewal_<wbr>status</span>
+        <span id="renewal_status_python">
+<a href="#renewal_status_python" style="color: inherit; text-decoration: inherit;">renewal_<wbr>status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1728,7 +2046,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource_<wbr>group_<wbr>id</span>
+        <span id="resource_group_id_python">
+<a href="#resource_group_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1737,7 +2057,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>role_<wbr>name</span>
+        <span id="role_name_python">
+<a href="#role_name_python" style="color: inherit; text-decoration: inherit;">role_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1746,7 +2068,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>security_<wbr>enhancement_<wbr>strategy</span>
+        <span id="security_enhancement_strategy_python">
+<a href="#security_enhancement_strategy_python" style="color: inherit; text-decoration: inherit;">security_<wbr>enhancement_<wbr>strategy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1757,7 +2081,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>spot_<wbr>price_<wbr>limit</span>
+        <span id="spot_price_limit_python">
+<a href="#spot_price_limit_python" style="color: inherit; text-decoration: inherit;">spot_<wbr>price_<wbr>limit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1766,7 +2092,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>spot_<wbr>strategy</span>
+        <span id="spot_strategy_python">
+<a href="#spot_strategy_python" style="color: inherit; text-decoration: inherit;">spot_<wbr>strategy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1778,7 +2106,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>subnet_<wbr>id</span>
+        <span id="subnet_id_python">
+<a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1786,7 +2116,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>system_<wbr>disk_<wbr>auto_<wbr>snapshot_<wbr>policy_<wbr>id</span>
+        <span id="system_disk_auto_snapshot_policy_id_python">
+<a href="#system_disk_auto_snapshot_policy_id_python" style="color: inherit; text-decoration: inherit;">system_<wbr>disk_<wbr>auto_<wbr>snapshot_<wbr>policy_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1795,7 +2127,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>system_<wbr>disk_<wbr>category</span>
+        <span id="system_disk_category_python">
+<a href="#system_disk_category_python" style="color: inherit; text-decoration: inherit;">system_<wbr>disk_<wbr>category</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1804,7 +2138,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>system_<wbr>disk_<wbr>size</span>
+        <span id="system_disk_size_python">
+<a href="#system_disk_size_python" style="color: inherit; text-decoration: inherit;">system_<wbr>disk_<wbr>size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1813,9 +2149,11 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 - Key: It can be up to 64 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It cannot be a null string.
@@ -1824,7 +2162,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>user_<wbr>data</span>
+        <span id="user_data_python">
+<a href="#user_data_python" style="color: inherit; text-decoration: inherit;">user_<wbr>data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1833,7 +2173,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>volume_<wbr>tags</span>
+        <span id="volume_tags_python">
+<a href="#volume_tags_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -1844,7 +2186,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>vswitch_<wbr>id</span>
+        <span id="vswitch_id_python">
+<a href="#vswitch_id_python" style="color: inherit; text-decoration: inherit;">vswitch_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1871,7 +2215,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1879,7 +2225,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Public<wbr>Ip</span>
+        <span id="publicip_csharp">
+<a href="#publicip_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1888,7 +2236,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Status</span>
+        <span id="status_csharp">
+<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1904,7 +2254,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1912,7 +2264,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Public<wbr>Ip</span>
+        <span id="publicip_go">
+<a href="#publicip_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1921,7 +2275,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Status</span>
+        <span id="status_go">
+<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1937,7 +2293,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1945,7 +2303,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>public<wbr>Ip</span>
+        <span id="publicip_nodejs">
+<a href="#publicip_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1954,7 +2314,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>status</span>
+        <span id="status_nodejs">
+<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1970,7 +2332,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1978,7 +2342,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>public_<wbr>ip</span>
+        <span id="public_ip_python">
+<a href="#public_ip_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1987,7 +2353,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>status</span>
+        <span id="status_python">
+<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2129,7 +2497,9 @@ The following state arguments are supported:
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>Allocate<wbr>Public<wbr>Ip</span>
+        <span id="state_allocatepublicip_csharp">
+<a href="#state_allocatepublicip_csharp" style="color: inherit; text-decoration: inherit;">Allocate<wbr>Public<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -2138,7 +2508,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Auto<wbr>Release<wbr>Time</span>
+        <span id="state_autoreleasetime_csharp">
+<a href="#state_autoreleasetime_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Release<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2149,7 +2521,9 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Auto<wbr>Renew<wbr>Period</span>
+        <span id="state_autorenewperiod_csharp">
+<a href="#state_autorenewperiod_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Renew<wbr>Period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -2160,7 +2534,9 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Availability<wbr>Zone</span>
+        <span id="state_availabilityzone_csharp">
+<a href="#state_availabilityzone_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2169,7 +2545,9 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Credit<wbr>Specification</span>
+        <span id="state_creditspecification_csharp">
+<a href="#state_creditspecification_csharp" style="color: inherit; text-decoration: inherit;">Credit<wbr>Specification</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2178,7 +2556,9 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Data<wbr>Disks</span>
+        <span id="state_datadisks_csharp">
+<a href="#state_datadisks_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Disks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancedatadisk">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Ecs.<wbr>Inputs.<wbr>Instance<wbr>Data<wbr>Disk<wbr>Args&gt;</a></span>
     </dt>
@@ -2187,7 +2567,9 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Deletion<wbr>Protection</span>
+        <span id="state_deletionprotection_csharp">
+<a href="#state_deletionprotection_csharp" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Protection</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -2198,7 +2580,9 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_csharp">
+<a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2207,7 +2591,9 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dry<wbr>Run</span>
+        <span id="state_dryrun_csharp">
+<a href="#state_dryrun_csharp" style="color: inherit; text-decoration: inherit;">Dry<wbr>Run</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -2218,7 +2604,9 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Force<wbr>Delete</span>
+        <span id="state_forcedelete_csharp">
+<a href="#state_forcedelete_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Delete</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -2228,7 +2616,9 @@ However, because of changing instance charge type has CPU core count quota limit
 
     <dt class="property-optional"
             title="Optional">
-        <span>Host<wbr>Name</span>
+        <span id="state_hostname_csharp">
+<a href="#state_hostname_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2238,7 +2628,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Image<wbr>Id</span>
+        <span id="state_imageid_csharp">
+<a href="#state_imageid_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2247,7 +2639,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Include<wbr>Data<wbr>Disks</span>
+        <span id="state_includedatadisks_csharp">
+<a href="#state_includedatadisks_csharp" style="color: inherit; text-decoration: inherit;">Include<wbr>Data<wbr>Disks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -2256,7 +2650,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Instance<wbr>Charge<wbr>Type</span>
+        <span id="state_instancechargetype_csharp">
+<a href="#state_instancechargetype_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Charge<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2265,7 +2661,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Instance<wbr>Name</span>
+        <span id="state_instancename_csharp">
+<a href="#state_instancename_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2273,7 +2671,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Instance<wbr>Type</span>
+        <span id="state_instancetype_csharp">
+<a href="#state_instancetype_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2282,7 +2682,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Internet<wbr>Charge<wbr>Type</span>
+        <span id="state_internetchargetype_csharp">
+<a href="#state_internetchargetype_csharp" style="color: inherit; text-decoration: inherit;">Internet<wbr>Charge<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2291,7 +2693,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Internet<wbr>Max<wbr>Bandwidth<wbr>In</span>
+        <span id="state_internetmaxbandwidthin_csharp">
+<a href="#state_internetmaxbandwidthin_csharp" style="color: inherit; text-decoration: inherit;">Internet<wbr>Max<wbr>Bandwidth<wbr>In</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -2300,7 +2704,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Internet<wbr>Max<wbr>Bandwidth<wbr>Out</span>
+        <span id="state_internetmaxbandwidthout_csharp">
+<a href="#state_internetmaxbandwidthout_csharp" style="color: inherit; text-decoration: inherit;">Internet<wbr>Max<wbr>Bandwidth<wbr>Out</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -2309,7 +2715,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>Io<wbr>Optimized</span>
+        <span id="state_iooptimized_csharp">
+<a href="#state_iooptimized_csharp" style="color: inherit; text-decoration: inherit;">Io<wbr>Optimized</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2318,7 +2726,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Is<wbr>Outdated</span>
+        <span id="state_isoutdated_csharp">
+<a href="#state_isoutdated_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Outdated</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -2327,7 +2737,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Key<wbr>Name</span>
+        <span id="state_keyname_csharp">
+<a href="#state_keyname_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2336,7 +2748,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Kms<wbr>Encrypted<wbr>Password</span>
+        <span id="state_kmsencryptedpassword_csharp">
+<a href="#state_kmsencryptedpassword_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Encrypted<wbr>Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2345,7 +2759,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Kms<wbr>Encryption<wbr>Context</span>
+        <span id="state_kmsencryptioncontext_csharp">
+<a href="#state_kmsencryptioncontext_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Encryption<wbr>Context</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -2354,7 +2770,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Password</span>
+        <span id="state_password_csharp">
+<a href="#state_password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2363,7 +2781,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Period</span>
+        <span id="state_period_csharp">
+<a href="#state_period_csharp" style="color: inherit; text-decoration: inherit;">Period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -2374,7 +2794,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Period<wbr>Unit</span>
+        <span id="state_periodunit_csharp">
+<a href="#state_periodunit_csharp" style="color: inherit; text-decoration: inherit;">Period<wbr>Unit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2383,7 +2805,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Private<wbr>Ip</span>
+        <span id="state_privateip_csharp">
+<a href="#state_privateip_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2392,7 +2816,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Public<wbr>Ip</span>
+        <span id="state_publicip_csharp">
+<a href="#state_publicip_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2401,7 +2827,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Renewal<wbr>Status</span>
+        <span id="state_renewalstatus_csharp">
+<a href="#state_renewalstatus_csharp" style="color: inherit; text-decoration: inherit;">Renewal<wbr>Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2413,7 +2841,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Group<wbr>Id</span>
+        <span id="state_resourcegroupid_csharp">
+<a href="#state_resourcegroupid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2422,7 +2852,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Role<wbr>Name</span>
+        <span id="state_rolename_csharp">
+<a href="#state_rolename_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2431,7 +2863,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Security<wbr>Enhancement<wbr>Strategy</span>
+        <span id="state_securityenhancementstrategy_csharp">
+<a href="#state_securityenhancementstrategy_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Enhancement<wbr>Strategy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2442,7 +2876,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Security<wbr>Groups</span>
+        <span id="state_securitygroups_csharp">
+<a href="#state_securitygroups_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Groups</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -2451,7 +2887,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Spot<wbr>Price<wbr>Limit</span>
+        <span id="state_spotpricelimit_csharp">
+<a href="#state_spotpricelimit_csharp" style="color: inherit; text-decoration: inherit;">Spot<wbr>Price<wbr>Limit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
@@ -2460,7 +2898,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Spot<wbr>Strategy</span>
+        <span id="state_spotstrategy_csharp">
+<a href="#state_spotstrategy_csharp" style="color: inherit; text-decoration: inherit;">Spot<wbr>Strategy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2472,7 +2912,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Status</span>
+        <span id="state_status_csharp">
+<a href="#state_status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2481,7 +2923,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Subnet<wbr>Id</span>
+        <span id="state_subnetid_csharp">
+<a href="#state_subnetid_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2489,7 +2933,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>System<wbr>Disk<wbr>Auto<wbr>Snapshot<wbr>Policy<wbr>Id</span>
+        <span id="state_systemdiskautosnapshotpolicyid_csharp">
+<a href="#state_systemdiskautosnapshotpolicyid_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Disk<wbr>Auto<wbr>Snapshot<wbr>Policy<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2498,7 +2944,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>System<wbr>Disk<wbr>Category</span>
+        <span id="state_systemdiskcategory_csharp">
+<a href="#state_systemdiskcategory_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Disk<wbr>Category</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2507,7 +2955,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>System<wbr>Disk<wbr>Size</span>
+        <span id="state_systemdisksize_csharp">
+<a href="#state_systemdisksize_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Disk<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -2516,9 +2966,11 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_csharp">
+<a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 - Key: It can be up to 64 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It cannot be a null string.
@@ -2527,7 +2979,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>User<wbr>Data</span>
+        <span id="state_userdata_csharp">
+<a href="#state_userdata_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2536,7 +2990,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Volume<wbr>Tags</span>
+        <span id="state_volumetags_csharp">
+<a href="#state_volumetags_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -2547,7 +3003,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vswitch<wbr>Id</span>
+        <span id="state_vswitchid_csharp">
+<a href="#state_vswitchid_csharp" style="color: inherit; text-decoration: inherit;">Vswitch<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2563,7 +3021,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>Allocate<wbr>Public<wbr>Ip</span>
+        <span id="state_allocatepublicip_go">
+<a href="#state_allocatepublicip_go" style="color: inherit; text-decoration: inherit;">Allocate<wbr>Public<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -2572,7 +3032,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Auto<wbr>Release<wbr>Time</span>
+        <span id="state_autoreleasetime_go">
+<a href="#state_autoreleasetime_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Release<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2583,7 +3045,9 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Auto<wbr>Renew<wbr>Period</span>
+        <span id="state_autorenewperiod_go">
+<a href="#state_autorenewperiod_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Renew<wbr>Period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -2594,7 +3058,9 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Availability<wbr>Zone</span>
+        <span id="state_availabilityzone_go">
+<a href="#state_availabilityzone_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2603,7 +3069,9 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Credit<wbr>Specification</span>
+        <span id="state_creditspecification_go">
+<a href="#state_creditspecification_go" style="color: inherit; text-decoration: inherit;">Credit<wbr>Specification</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2612,7 +3080,9 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Data<wbr>Disks</span>
+        <span id="state_datadisks_go">
+<a href="#state_datadisks_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Disks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancedatadisk">[]Instance<wbr>Data<wbr>Disk</a></span>
     </dt>
@@ -2621,7 +3091,9 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Deletion<wbr>Protection</span>
+        <span id="state_deletionprotection_go">
+<a href="#state_deletionprotection_go" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Protection</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -2632,7 +3104,9 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_go">
+<a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2641,7 +3115,9 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dry<wbr>Run</span>
+        <span id="state_dryrun_go">
+<a href="#state_dryrun_go" style="color: inherit; text-decoration: inherit;">Dry<wbr>Run</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -2652,7 +3128,9 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Force<wbr>Delete</span>
+        <span id="state_forcedelete_go">
+<a href="#state_forcedelete_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Delete</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -2662,7 +3140,9 @@ However, because of changing instance charge type has CPU core count quota limit
 
     <dt class="property-optional"
             title="Optional">
-        <span>Host<wbr>Name</span>
+        <span id="state_hostname_go">
+<a href="#state_hostname_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2672,7 +3152,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Image<wbr>Id</span>
+        <span id="state_imageid_go">
+<a href="#state_imageid_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2681,7 +3163,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Include<wbr>Data<wbr>Disks</span>
+        <span id="state_includedatadisks_go">
+<a href="#state_includedatadisks_go" style="color: inherit; text-decoration: inherit;">Include<wbr>Data<wbr>Disks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -2690,7 +3174,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Instance<wbr>Charge<wbr>Type</span>
+        <span id="state_instancechargetype_go">
+<a href="#state_instancechargetype_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Charge<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2699,7 +3185,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Instance<wbr>Name</span>
+        <span id="state_instancename_go">
+<a href="#state_instancename_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2707,7 +3195,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Instance<wbr>Type</span>
+        <span id="state_instancetype_go">
+<a href="#state_instancetype_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2716,7 +3206,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Internet<wbr>Charge<wbr>Type</span>
+        <span id="state_internetchargetype_go">
+<a href="#state_internetchargetype_go" style="color: inherit; text-decoration: inherit;">Internet<wbr>Charge<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2725,7 +3217,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Internet<wbr>Max<wbr>Bandwidth<wbr>In</span>
+        <span id="state_internetmaxbandwidthin_go">
+<a href="#state_internetmaxbandwidthin_go" style="color: inherit; text-decoration: inherit;">Internet<wbr>Max<wbr>Bandwidth<wbr>In</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -2734,7 +3228,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Internet<wbr>Max<wbr>Bandwidth<wbr>Out</span>
+        <span id="state_internetmaxbandwidthout_go">
+<a href="#state_internetmaxbandwidthout_go" style="color: inherit; text-decoration: inherit;">Internet<wbr>Max<wbr>Bandwidth<wbr>Out</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -2743,7 +3239,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>Io<wbr>Optimized</span>
+        <span id="state_iooptimized_go">
+<a href="#state_iooptimized_go" style="color: inherit; text-decoration: inherit;">Io<wbr>Optimized</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2752,7 +3250,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Is<wbr>Outdated</span>
+        <span id="state_isoutdated_go">
+<a href="#state_isoutdated_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Outdated</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -2761,7 +3261,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Key<wbr>Name</span>
+        <span id="state_keyname_go">
+<a href="#state_keyname_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2770,7 +3272,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Kms<wbr>Encrypted<wbr>Password</span>
+        <span id="state_kmsencryptedpassword_go">
+<a href="#state_kmsencryptedpassword_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Encrypted<wbr>Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2779,7 +3283,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Kms<wbr>Encryption<wbr>Context</span>
+        <span id="state_kmsencryptioncontext_go">
+<a href="#state_kmsencryptioncontext_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Encryption<wbr>Context</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -2788,7 +3294,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Password</span>
+        <span id="state_password_go">
+<a href="#state_password_go" style="color: inherit; text-decoration: inherit;">Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2797,7 +3305,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Period</span>
+        <span id="state_period_go">
+<a href="#state_period_go" style="color: inherit; text-decoration: inherit;">Period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -2808,7 +3318,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Period<wbr>Unit</span>
+        <span id="state_periodunit_go">
+<a href="#state_periodunit_go" style="color: inherit; text-decoration: inherit;">Period<wbr>Unit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2817,7 +3329,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Private<wbr>Ip</span>
+        <span id="state_privateip_go">
+<a href="#state_privateip_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2826,7 +3340,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Public<wbr>Ip</span>
+        <span id="state_publicip_go">
+<a href="#state_publicip_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2835,7 +3351,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Renewal<wbr>Status</span>
+        <span id="state_renewalstatus_go">
+<a href="#state_renewalstatus_go" style="color: inherit; text-decoration: inherit;">Renewal<wbr>Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2847,7 +3365,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Group<wbr>Id</span>
+        <span id="state_resourcegroupid_go">
+<a href="#state_resourcegroupid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2856,7 +3376,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Role<wbr>Name</span>
+        <span id="state_rolename_go">
+<a href="#state_rolename_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2865,7 +3387,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Security<wbr>Enhancement<wbr>Strategy</span>
+        <span id="state_securityenhancementstrategy_go">
+<a href="#state_securityenhancementstrategy_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Enhancement<wbr>Strategy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2876,7 +3400,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Security<wbr>Groups</span>
+        <span id="state_securitygroups_go">
+<a href="#state_securitygroups_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Groups</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -2885,7 +3411,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Spot<wbr>Price<wbr>Limit</span>
+        <span id="state_spotpricelimit_go">
+<a href="#state_spotpricelimit_go" style="color: inherit; text-decoration: inherit;">Spot<wbr>Price<wbr>Limit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
@@ -2894,7 +3422,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Spot<wbr>Strategy</span>
+        <span id="state_spotstrategy_go">
+<a href="#state_spotstrategy_go" style="color: inherit; text-decoration: inherit;">Spot<wbr>Strategy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2906,7 +3436,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Status</span>
+        <span id="state_status_go">
+<a href="#state_status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2915,7 +3447,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Subnet<wbr>Id</span>
+        <span id="state_subnetid_go">
+<a href="#state_subnetid_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2923,7 +3457,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>System<wbr>Disk<wbr>Auto<wbr>Snapshot<wbr>Policy<wbr>Id</span>
+        <span id="state_systemdiskautosnapshotpolicyid_go">
+<a href="#state_systemdiskautosnapshotpolicyid_go" style="color: inherit; text-decoration: inherit;">System<wbr>Disk<wbr>Auto<wbr>Snapshot<wbr>Policy<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2932,7 +3468,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>System<wbr>Disk<wbr>Category</span>
+        <span id="state_systemdiskcategory_go">
+<a href="#state_systemdiskcategory_go" style="color: inherit; text-decoration: inherit;">System<wbr>Disk<wbr>Category</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2941,7 +3479,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>System<wbr>Disk<wbr>Size</span>
+        <span id="state_systemdisksize_go">
+<a href="#state_systemdisksize_go" style="color: inherit; text-decoration: inherit;">System<wbr>Disk<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -2950,9 +3490,11 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_go">
+<a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 - Key: It can be up to 64 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It cannot be a null string.
@@ -2961,7 +3503,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>User<wbr>Data</span>
+        <span id="state_userdata_go">
+<a href="#state_userdata_go" style="color: inherit; text-decoration: inherit;">User<wbr>Data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2970,7 +3514,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Volume<wbr>Tags</span>
+        <span id="state_volumetags_go">
+<a href="#state_volumetags_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -2981,7 +3527,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vswitch<wbr>Id</span>
+        <span id="state_vswitchid_go">
+<a href="#state_vswitchid_go" style="color: inherit; text-decoration: inherit;">Vswitch<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2997,7 +3545,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>allocate<wbr>Public<wbr>Ip</span>
+        <span id="state_allocatepublicip_nodejs">
+<a href="#state_allocatepublicip_nodejs" style="color: inherit; text-decoration: inherit;">allocate<wbr>Public<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -3006,7 +3556,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>auto<wbr>Release<wbr>Time</span>
+        <span id="state_autoreleasetime_nodejs">
+<a href="#state_autoreleasetime_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Release<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3017,7 +3569,9 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
 
     <dt class="property-optional"
             title="Optional">
-        <span>auto<wbr>Renew<wbr>Period</span>
+        <span id="state_autorenewperiod_nodejs">
+<a href="#state_autorenewperiod_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Renew<wbr>Period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -3028,7 +3582,9 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
 
     <dt class="property-optional"
             title="Optional">
-        <span>availability<wbr>Zone</span>
+        <span id="state_availabilityzone_nodejs">
+<a href="#state_availabilityzone_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3037,7 +3593,9 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
 
     <dt class="property-optional"
             title="Optional">
-        <span>credit<wbr>Specification</span>
+        <span id="state_creditspecification_nodejs">
+<a href="#state_creditspecification_nodejs" style="color: inherit; text-decoration: inherit;">credit<wbr>Specification</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3046,7 +3604,9 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
 
     <dt class="property-optional"
             title="Optional">
-        <span>data<wbr>Disks</span>
+        <span id="state_datadisks_nodejs">
+<a href="#state_datadisks_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Disks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancedatadisk">Instance<wbr>Data<wbr>Disk[]</a></span>
     </dt>
@@ -3055,7 +3615,9 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
 
     <dt class="property-optional"
             title="Optional">
-        <span>deletion<wbr>Protection</span>
+        <span id="state_deletionprotection_nodejs">
+<a href="#state_deletionprotection_nodejs" style="color: inherit; text-decoration: inherit;">deletion<wbr>Protection</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -3066,7 +3628,9 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_nodejs">
+<a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3075,7 +3639,9 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
 
     <dt class="property-optional"
             title="Optional">
-        <span>dry<wbr>Run</span>
+        <span id="state_dryrun_nodejs">
+<a href="#state_dryrun_nodejs" style="color: inherit; text-decoration: inherit;">dry<wbr>Run</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -3086,7 +3652,9 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
 
     <dt class="property-optional"
             title="Optional">
-        <span>force<wbr>Delete</span>
+        <span id="state_forcedelete_nodejs">
+<a href="#state_forcedelete_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Delete</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -3096,7 +3664,9 @@ However, because of changing instance charge type has CPU core count quota limit
 
     <dt class="property-optional"
             title="Optional">
-        <span>host<wbr>Name</span>
+        <span id="state_hostname_nodejs">
+<a href="#state_hostname_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3106,7 +3676,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>image<wbr>Id</span>
+        <span id="state_imageid_nodejs">
+<a href="#state_imageid_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3115,7 +3687,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>include<wbr>Data<wbr>Disks</span>
+        <span id="state_includedatadisks_nodejs">
+<a href="#state_includedatadisks_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Data<wbr>Disks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -3124,7 +3698,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>instance<wbr>Charge<wbr>Type</span>
+        <span id="state_instancechargetype_nodejs">
+<a href="#state_instancechargetype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Charge<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3133,7 +3709,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>instance<wbr>Name</span>
+        <span id="state_instancename_nodejs">
+<a href="#state_instancename_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3141,7 +3719,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>instance<wbr>Type</span>
+        <span id="state_instancetype_nodejs">
+<a href="#state_instancetype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3150,7 +3730,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>internet<wbr>Charge<wbr>Type</span>
+        <span id="state_internetchargetype_nodejs">
+<a href="#state_internetchargetype_nodejs" style="color: inherit; text-decoration: inherit;">internet<wbr>Charge<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3159,7 +3741,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>internet<wbr>Max<wbr>Bandwidth<wbr>In</span>
+        <span id="state_internetmaxbandwidthin_nodejs">
+<a href="#state_internetmaxbandwidthin_nodejs" style="color: inherit; text-decoration: inherit;">internet<wbr>Max<wbr>Bandwidth<wbr>In</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -3168,7 +3752,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>internet<wbr>Max<wbr>Bandwidth<wbr>Out</span>
+        <span id="state_internetmaxbandwidthout_nodejs">
+<a href="#state_internetmaxbandwidthout_nodejs" style="color: inherit; text-decoration: inherit;">internet<wbr>Max<wbr>Bandwidth<wbr>Out</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -3177,7 +3763,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>io<wbr>Optimized</span>
+        <span id="state_iooptimized_nodejs">
+<a href="#state_iooptimized_nodejs" style="color: inherit; text-decoration: inherit;">io<wbr>Optimized</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3186,7 +3774,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>is<wbr>Outdated</span>
+        <span id="state_isoutdated_nodejs">
+<a href="#state_isoutdated_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Outdated</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -3195,7 +3785,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>key<wbr>Name</span>
+        <span id="state_keyname_nodejs">
+<a href="#state_keyname_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3204,7 +3796,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>kms<wbr>Encrypted<wbr>Password</span>
+        <span id="state_kmsencryptedpassword_nodejs">
+<a href="#state_kmsencryptedpassword_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Encrypted<wbr>Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3213,7 +3807,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>kms<wbr>Encryption<wbr>Context</span>
+        <span id="state_kmsencryptioncontext_nodejs">
+<a href="#state_kmsencryptioncontext_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Encryption<wbr>Context</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -3222,7 +3818,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>password</span>
+        <span id="state_password_nodejs">
+<a href="#state_password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3231,7 +3829,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>period</span>
+        <span id="state_period_nodejs">
+<a href="#state_period_nodejs" style="color: inherit; text-decoration: inherit;">period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -3242,7 +3842,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>period<wbr>Unit</span>
+        <span id="state_periodunit_nodejs">
+<a href="#state_periodunit_nodejs" style="color: inherit; text-decoration: inherit;">period<wbr>Unit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3251,7 +3853,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>private<wbr>Ip</span>
+        <span id="state_privateip_nodejs">
+<a href="#state_privateip_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3260,7 +3864,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>public<wbr>Ip</span>
+        <span id="state_publicip_nodejs">
+<a href="#state_publicip_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3269,7 +3875,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>renewal<wbr>Status</span>
+        <span id="state_renewalstatus_nodejs">
+<a href="#state_renewalstatus_nodejs" style="color: inherit; text-decoration: inherit;">renewal<wbr>Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3281,7 +3889,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource<wbr>Group<wbr>Id</span>
+        <span id="state_resourcegroupid_nodejs">
+<a href="#state_resourcegroupid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3290,7 +3900,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>role<wbr>Name</span>
+        <span id="state_rolename_nodejs">
+<a href="#state_rolename_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3299,7 +3911,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>security<wbr>Enhancement<wbr>Strategy</span>
+        <span id="state_securityenhancementstrategy_nodejs">
+<a href="#state_securityenhancementstrategy_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Enhancement<wbr>Strategy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3310,7 +3924,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>security<wbr>Groups</span>
+        <span id="state_securitygroups_nodejs">
+<a href="#state_securitygroups_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Groups</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -3319,7 +3935,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>spot<wbr>Price<wbr>Limit</span>
+        <span id="state_spotpricelimit_nodejs">
+<a href="#state_spotpricelimit_nodejs" style="color: inherit; text-decoration: inherit;">spot<wbr>Price<wbr>Limit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
@@ -3328,7 +3946,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>spot<wbr>Strategy</span>
+        <span id="state_spotstrategy_nodejs">
+<a href="#state_spotstrategy_nodejs" style="color: inherit; text-decoration: inherit;">spot<wbr>Strategy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3340,7 +3960,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>status</span>
+        <span id="state_status_nodejs">
+<a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3349,7 +3971,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>subnet<wbr>Id</span>
+        <span id="state_subnetid_nodejs">
+<a href="#state_subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3357,7 +3981,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>system<wbr>Disk<wbr>Auto<wbr>Snapshot<wbr>Policy<wbr>Id</span>
+        <span id="state_systemdiskautosnapshotpolicyid_nodejs">
+<a href="#state_systemdiskautosnapshotpolicyid_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Disk<wbr>Auto<wbr>Snapshot<wbr>Policy<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3366,7 +3992,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>system<wbr>Disk<wbr>Category</span>
+        <span id="state_systemdiskcategory_nodejs">
+<a href="#state_systemdiskcategory_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Disk<wbr>Category</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3375,7 +4003,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>system<wbr>Disk<wbr>Size</span>
+        <span id="state_systemdisksize_nodejs">
+<a href="#state_systemdisksize_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Disk<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -3384,9 +4014,11 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_nodejs">
+<a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 - Key: It can be up to 64 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It cannot be a null string.
@@ -3395,7 +4027,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>user<wbr>Data</span>
+        <span id="state_userdata_nodejs">
+<a href="#state_userdata_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3404,7 +4038,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>volume<wbr>Tags</span>
+        <span id="state_volumetags_nodejs">
+<a href="#state_volumetags_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -3415,7 +4051,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>vswitch<wbr>Id</span>
+        <span id="state_vswitchid_nodejs">
+<a href="#state_vswitchid_nodejs" style="color: inherit; text-decoration: inherit;">vswitch<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3431,7 +4069,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>allocate_<wbr>public_<wbr>ip</span>
+        <span id="state_allocate_public_ip_python">
+<a href="#state_allocate_public_ip_python" style="color: inherit; text-decoration: inherit;">allocate_<wbr>public_<wbr>ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -3440,7 +4080,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>auto_<wbr>release_<wbr>time</span>
+        <span id="state_auto_release_time_python">
+<a href="#state_auto_release_time_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>release_<wbr>time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3451,7 +4093,9 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
 
     <dt class="property-optional"
             title="Optional">
-        <span>auto_<wbr>renew_<wbr>period</span>
+        <span id="state_auto_renew_period_python">
+<a href="#state_auto_renew_period_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>renew_<wbr>period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -3462,7 +4106,9 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
 
     <dt class="property-optional"
             title="Optional">
-        <span>availability_<wbr>zone</span>
+        <span id="state_availability_zone_python">
+<a href="#state_availability_zone_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3471,7 +4117,9 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
 
     <dt class="property-optional"
             title="Optional">
-        <span>credit_<wbr>specification</span>
+        <span id="state_credit_specification_python">
+<a href="#state_credit_specification_python" style="color: inherit; text-decoration: inherit;">credit_<wbr>specification</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3480,7 +4128,9 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
 
     <dt class="property-optional"
             title="Optional">
-        <span>data_<wbr>disks</span>
+        <span id="state_data_disks_python">
+<a href="#state_data_disks_python" style="color: inherit; text-decoration: inherit;">data_<wbr>disks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancedatadisk">List[Instance<wbr>Data<wbr>Disk]</a></span>
     </dt>
@@ -3489,7 +4139,9 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
 
     <dt class="property-optional"
             title="Optional">
-        <span>deletion_<wbr>protection</span>
+        <span id="state_deletion_protection_python">
+<a href="#state_deletion_protection_python" style="color: inherit; text-decoration: inherit;">deletion_<wbr>protection</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -3500,7 +4152,9 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_python">
+<a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3509,7 +4163,9 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
 
     <dt class="property-optional"
             title="Optional">
-        <span>dry_<wbr>run</span>
+        <span id="state_dry_run_python">
+<a href="#state_dry_run_python" style="color: inherit; text-decoration: inherit;">dry_<wbr>run</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -3520,7 +4176,9 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
 
     <dt class="property-optional"
             title="Optional">
-        <span>force_<wbr>delete</span>
+        <span id="state_force_delete_python">
+<a href="#state_force_delete_python" style="color: inherit; text-decoration: inherit;">force_<wbr>delete</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -3530,7 +4188,9 @@ However, because of changing instance charge type has CPU core count quota limit
 
     <dt class="property-optional"
             title="Optional">
-        <span>host_<wbr>name</span>
+        <span id="state_host_name_python">
+<a href="#state_host_name_python" style="color: inherit; text-decoration: inherit;">host_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3540,7 +4200,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>image_<wbr>id</span>
+        <span id="state_image_id_python">
+<a href="#state_image_id_python" style="color: inherit; text-decoration: inherit;">image_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3549,7 +4211,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>include_<wbr>data_<wbr>disks</span>
+        <span id="state_include_data_disks_python">
+<a href="#state_include_data_disks_python" style="color: inherit; text-decoration: inherit;">include_<wbr>data_<wbr>disks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -3558,7 +4222,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>instance_<wbr>charge_<wbr>type</span>
+        <span id="state_instance_charge_type_python">
+<a href="#state_instance_charge_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>charge_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3567,7 +4233,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>instance_<wbr>name</span>
+        <span id="state_instance_name_python">
+<a href="#state_instance_name_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3575,7 +4243,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>instance_<wbr>type</span>
+        <span id="state_instance_type_python">
+<a href="#state_instance_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3584,7 +4254,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>internet_<wbr>charge_<wbr>type</span>
+        <span id="state_internet_charge_type_python">
+<a href="#state_internet_charge_type_python" style="color: inherit; text-decoration: inherit;">internet_<wbr>charge_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3593,7 +4265,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>internet_<wbr>max_<wbr>bandwidth_<wbr>in</span>
+        <span id="state_internet_max_bandwidth_in_python">
+<a href="#state_internet_max_bandwidth_in_python" style="color: inherit; text-decoration: inherit;">internet_<wbr>max_<wbr>bandwidth_<wbr>in</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -3602,7 +4276,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>internet_<wbr>max_<wbr>bandwidth_<wbr>out</span>
+        <span id="state_internet_max_bandwidth_out_python">
+<a href="#state_internet_max_bandwidth_out_python" style="color: inherit; text-decoration: inherit;">internet_<wbr>max_<wbr>bandwidth_<wbr>out</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -3611,7 +4287,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>io_<wbr>optimized</span>
+        <span id="state_io_optimized_python">
+<a href="#state_io_optimized_python" style="color: inherit; text-decoration: inherit;">io_<wbr>optimized</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3620,7 +4298,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>is_<wbr>outdated</span>
+        <span id="state_is_outdated_python">
+<a href="#state_is_outdated_python" style="color: inherit; text-decoration: inherit;">is_<wbr>outdated</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -3629,7 +4309,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>key_<wbr>name</span>
+        <span id="state_key_name_python">
+<a href="#state_key_name_python" style="color: inherit; text-decoration: inherit;">key_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3638,7 +4320,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>kms_<wbr>encrypted_<wbr>password</span>
+        <span id="state_kms_encrypted_password_python">
+<a href="#state_kms_encrypted_password_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>encrypted_<wbr>password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3647,7 +4331,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>kms_<wbr>encryption_<wbr>context</span>
+        <span id="state_kms_encryption_context_python">
+<a href="#state_kms_encryption_context_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>encryption_<wbr>context</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -3656,7 +4342,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>password</span>
+        <span id="state_password_python">
+<a href="#state_password_python" style="color: inherit; text-decoration: inherit;">password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3665,7 +4353,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>period</span>
+        <span id="state_period_python">
+<a href="#state_period_python" style="color: inherit; text-decoration: inherit;">period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -3676,7 +4366,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>period_<wbr>unit</span>
+        <span id="state_period_unit_python">
+<a href="#state_period_unit_python" style="color: inherit; text-decoration: inherit;">period_<wbr>unit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3685,7 +4377,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>private_<wbr>ip</span>
+        <span id="state_private_ip_python">
+<a href="#state_private_ip_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3694,7 +4388,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>public_<wbr>ip</span>
+        <span id="state_public_ip_python">
+<a href="#state_public_ip_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3703,7 +4399,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>renewal_<wbr>status</span>
+        <span id="state_renewal_status_python">
+<a href="#state_renewal_status_python" style="color: inherit; text-decoration: inherit;">renewal_<wbr>status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3715,7 +4413,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource_<wbr>group_<wbr>id</span>
+        <span id="state_resource_group_id_python">
+<a href="#state_resource_group_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3724,7 +4424,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>role_<wbr>name</span>
+        <span id="state_role_name_python">
+<a href="#state_role_name_python" style="color: inherit; text-decoration: inherit;">role_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3733,7 +4435,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>security_<wbr>enhancement_<wbr>strategy</span>
+        <span id="state_security_enhancement_strategy_python">
+<a href="#state_security_enhancement_strategy_python" style="color: inherit; text-decoration: inherit;">security_<wbr>enhancement_<wbr>strategy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3744,7 +4448,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>security_<wbr>groups</span>
+        <span id="state_security_groups_python">
+<a href="#state_security_groups_python" style="color: inherit; text-decoration: inherit;">security_<wbr>groups</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -3753,7 +4459,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>spot_<wbr>price_<wbr>limit</span>
+        <span id="state_spot_price_limit_python">
+<a href="#state_spot_price_limit_python" style="color: inherit; text-decoration: inherit;">spot_<wbr>price_<wbr>limit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -3762,7 +4470,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>spot_<wbr>strategy</span>
+        <span id="state_spot_strategy_python">
+<a href="#state_spot_strategy_python" style="color: inherit; text-decoration: inherit;">spot_<wbr>strategy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3774,7 +4484,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>status</span>
+        <span id="state_status_python">
+<a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3783,7 +4495,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>subnet_<wbr>id</span>
+        <span id="state_subnet_id_python">
+<a href="#state_subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3791,7 +4505,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>system_<wbr>disk_<wbr>auto_<wbr>snapshot_<wbr>policy_<wbr>id</span>
+        <span id="state_system_disk_auto_snapshot_policy_id_python">
+<a href="#state_system_disk_auto_snapshot_policy_id_python" style="color: inherit; text-decoration: inherit;">system_<wbr>disk_<wbr>auto_<wbr>snapshot_<wbr>policy_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3800,7 +4516,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>system_<wbr>disk_<wbr>category</span>
+        <span id="state_system_disk_category_python">
+<a href="#state_system_disk_category_python" style="color: inherit; text-decoration: inherit;">system_<wbr>disk_<wbr>category</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3809,7 +4527,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>system_<wbr>disk_<wbr>size</span>
+        <span id="state_system_disk_size_python">
+<a href="#state_system_disk_size_python" style="color: inherit; text-decoration: inherit;">system_<wbr>disk_<wbr>size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -3818,9 +4538,11 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_python">
+<a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 - Key: It can be up to 64 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It cannot be a null string.
@@ -3829,7 +4551,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>user_<wbr>data</span>
+        <span id="state_user_data_python">
+<a href="#state_user_data_python" style="color: inherit; text-decoration: inherit;">user_<wbr>data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3838,7 +4562,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>volume_<wbr>tags</span>
+        <span id="state_volume_tags_python">
+<a href="#state_volume_tags_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -3849,7 +4575,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>vswitch_<wbr>id</span>
+        <span id="state_vswitch_id_python">
+<a href="#state_vswitch_id_python" style="color: inherit; text-decoration: inherit;">vswitch_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3891,7 +4619,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-required"
             title="Required">
-        <span>Size</span>
+        <span id="size_csharp">
+<a href="#size_csharp" style="color: inherit; text-decoration: inherit;">Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -3905,7 +4635,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Auto<wbr>Snapshot<wbr>Policy<wbr>Id</span>
+        <span id="autosnapshotpolicyid_csharp">
+<a href="#autosnapshotpolicyid_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Snapshot<wbr>Policy<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3914,7 +4646,9 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
-        <span>Category</span>
+        <span id="category_csharp">
+<a href="#category_csharp" style="color: inherit; text-decoration: inherit;">Category</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3929,7 +4663,9 @@ Default to `cloud_efficiency`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Delete<wbr>With<wbr>Instance</span>
+        <span id="deletewithinstance_csharp">
+<a href="#deletewithinstance_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>With<wbr>Instance</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -3938,7 +4674,9 @@ Default to `cloud_efficiency`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3947,7 +4685,9 @@ Default to `cloud_efficiency`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Encrypted</span>
+        <span id="encrypted_csharp">
+<a href="#encrypted_csharp" style="color: inherit; text-decoration: inherit;">Encrypted</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -3956,7 +4696,9 @@ Default to `cloud_efficiency`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3965,7 +4707,9 @@ Default to `cloud_efficiency`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Snapshot<wbr>Id</span>
+        <span id="snapshotid_csharp">
+<a href="#snapshotid_csharp" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3981,7 +4725,9 @@ Default to `cloud_efficiency`.
 
     <dt class="property-required"
             title="Required">
-        <span>Size</span>
+        <span id="size_go">
+<a href="#size_go" style="color: inherit; text-decoration: inherit;">Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -3995,7 +4741,9 @@ Default to `cloud_efficiency`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Auto<wbr>Snapshot<wbr>Policy<wbr>Id</span>
+        <span id="autosnapshotpolicyid_go">
+<a href="#autosnapshotpolicyid_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Snapshot<wbr>Policy<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -4004,7 +4752,9 @@ Default to `cloud_efficiency`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Category</span>
+        <span id="category_go">
+<a href="#category_go" style="color: inherit; text-decoration: inherit;">Category</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -4019,7 +4769,9 @@ Default to `cloud_efficiency`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Delete<wbr>With<wbr>Instance</span>
+        <span id="deletewithinstance_go">
+<a href="#deletewithinstance_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>With<wbr>Instance</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -4028,7 +4780,9 @@ Default to `cloud_efficiency`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -4037,7 +4791,9 @@ Default to `cloud_efficiency`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Encrypted</span>
+        <span id="encrypted_go">
+<a href="#encrypted_go" style="color: inherit; text-decoration: inherit;">Encrypted</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -4046,7 +4802,9 @@ Default to `cloud_efficiency`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -4055,7 +4813,9 @@ Default to `cloud_efficiency`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Snapshot<wbr>Id</span>
+        <span id="snapshotid_go">
+<a href="#snapshotid_go" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -4071,7 +4831,9 @@ Default to `cloud_efficiency`.
 
     <dt class="property-required"
             title="Required">
-        <span>size</span>
+        <span id="size_nodejs">
+<a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -4085,7 +4847,9 @@ Default to `cloud_efficiency`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>auto<wbr>Snapshot<wbr>Policy<wbr>Id</span>
+        <span id="autosnapshotpolicyid_nodejs">
+<a href="#autosnapshotpolicyid_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Snapshot<wbr>Policy<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4094,7 +4858,9 @@ Default to `cloud_efficiency`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>category</span>
+        <span id="category_nodejs">
+<a href="#category_nodejs" style="color: inherit; text-decoration: inherit;">category</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4109,7 +4875,9 @@ Default to `cloud_efficiency`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>delete<wbr>With<wbr>Instance</span>
+        <span id="deletewithinstance_nodejs">
+<a href="#deletewithinstance_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>With<wbr>Instance</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -4118,7 +4886,9 @@ Default to `cloud_efficiency`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4127,7 +4897,9 @@ Default to `cloud_efficiency`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>encrypted</span>
+        <span id="encrypted_nodejs">
+<a href="#encrypted_nodejs" style="color: inherit; text-decoration: inherit;">encrypted</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -4136,7 +4908,9 @@ Default to `cloud_efficiency`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4145,7 +4919,9 @@ Default to `cloud_efficiency`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>snapshot<wbr>Id</span>
+        <span id="snapshotid_nodejs">
+<a href="#snapshotid_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4161,7 +4937,9 @@ Default to `cloud_efficiency`.
 
     <dt class="property-required"
             title="Required">
-        <span>size</span>
+        <span id="size_python">
+<a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -4175,7 +4953,9 @@ Default to `cloud_efficiency`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>auto<wbr>Snapshot<wbr>Policy<wbr>Id</span>
+        <span id="autosnapshotpolicyid_python">
+<a href="#autosnapshotpolicyid_python" style="color: inherit; text-decoration: inherit;">auto<wbr>Snapshot<wbr>Policy<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4184,7 +4964,9 @@ Default to `cloud_efficiency`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>category</span>
+        <span id="category_python">
+<a href="#category_python" style="color: inherit; text-decoration: inherit;">category</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4199,7 +4981,9 @@ Default to `cloud_efficiency`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>delete_<wbr>with_<wbr>instance</span>
+        <span id="delete_with_instance_python">
+<a href="#delete_with_instance_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>with_<wbr>instance</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -4208,7 +4992,9 @@ Default to `cloud_efficiency`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4217,7 +5003,9 @@ Default to `cloud_efficiency`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>encrypted</span>
+        <span id="encrypted_python">
+<a href="#encrypted_python" style="color: inherit; text-decoration: inherit;">encrypted</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -4226,7 +5014,9 @@ Default to `cloud_efficiency`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4235,7 +5025,9 @@ Default to `cloud_efficiency`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>snapshot_<wbr>id</span>
+        <span id="snapshot_id_python">
+<a href="#snapshot_id_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

@@ -23,7 +23,30 @@ Filters support regular expression for the cluster name, searches by clusterId, 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var polardbClustersDs = Output.Create(AliCloud.PolarDB.GetClusters.InvokeAsync(new AliCloud.PolarDB.GetClustersArgs
+        {
+            DescriptionRegex = "pc-\\w+",
+            Status = "Running",
+        }));
+        var @default = polardbClustersDs.Apply(polardbClustersDs => Output.Create(AliCloud.PolarDB.GetEndpoints.InvokeAsync(new AliCloud.PolarDB.GetEndpointsArgs
+        {
+            DbClusterId = polardbClustersDs.Clusters[0].Id,
+        })));
+        this.Ends = @default.Apply(@default => @default.Endpoints[0].DbEndpointId);
+    }
+
+    [Output("ends")]
+    public Output<string> Ends { get; set; }
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -54,7 +77,7 @@ const polardbClustersDs = alicloud.polardb.getClusters({
 const default = polardbClustersDs.then(polardbClustersDs => alicloud.polardb.getEndpoints({
     dbClusterId: polardbClustersDs.clusters[0].id,
 }));
-export const ends = default.then(_default => _default.endpoints[0].dbEndpointId);
+export const ends = _default.then(_default => _default.endpoints[0].dbEndpointId);
 ```
 {{% /example %}}
 
@@ -99,7 +122,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Db<wbr>Cluster<wbr>Id</span>
+        <span id="dbclusterid_csharp">
+<a href="#dbclusterid_csharp" style="color: inherit; text-decoration: inherit;">Db<wbr>Cluster<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -108,7 +133,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Db<wbr>Endpoint<wbr>Id</span>
+        <span id="dbendpointid_csharp">
+<a href="#dbendpointid_csharp" style="color: inherit; text-decoration: inherit;">Db<wbr>Endpoint<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -124,7 +151,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Db<wbr>Cluster<wbr>Id</span>
+        <span id="dbclusterid_go">
+<a href="#dbclusterid_go" style="color: inherit; text-decoration: inherit;">Db<wbr>Cluster<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -133,7 +162,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Db<wbr>Endpoint<wbr>Id</span>
+        <span id="dbendpointid_go">
+<a href="#dbendpointid_go" style="color: inherit; text-decoration: inherit;">Db<wbr>Endpoint<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -149,7 +180,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>db<wbr>Cluster<wbr>Id</span>
+        <span id="dbclusterid_nodejs">
+<a href="#dbclusterid_nodejs" style="color: inherit; text-decoration: inherit;">db<wbr>Cluster<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -158,7 +191,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>db<wbr>Endpoint<wbr>Id</span>
+        <span id="dbendpointid_nodejs">
+<a href="#dbendpointid_nodejs" style="color: inherit; text-decoration: inherit;">db<wbr>Endpoint<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -174,7 +209,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>db_<wbr>cluster_<wbr>id</span>
+        <span id="db_cluster_id_python">
+<a href="#db_cluster_id_python" style="color: inherit; text-decoration: inherit;">db_<wbr>cluster_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -183,7 +220,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>db_<wbr>endpoint_<wbr>id</span>
+        <span id="db_endpoint_id_python">
+<a href="#db_endpoint_id_python" style="color: inherit; text-decoration: inherit;">db_<wbr>endpoint_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -212,7 +251,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Db<wbr>Cluster<wbr>Id</span>
+        <span id="dbclusterid_csharp">
+<a href="#dbclusterid_csharp" style="color: inherit; text-decoration: inherit;">Db<wbr>Cluster<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -220,7 +261,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Endpoints</span>
+        <span id="endpoints_csharp">
+<a href="#endpoints_csharp" style="color: inherit; text-decoration: inherit;">Endpoints</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getendpointsendpoint">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Polar<wbr>DB.<wbr>Outputs.<wbr>Get<wbr>Endpoints<wbr>Endpoint&gt;</a></span>
     </dt>
@@ -229,7 +272,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -238,7 +283,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Db<wbr>Endpoint<wbr>Id</span>
+        <span id="dbendpointid_csharp">
+<a href="#dbendpointid_csharp" style="color: inherit; text-decoration: inherit;">Db<wbr>Endpoint<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -254,7 +301,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Db<wbr>Cluster<wbr>Id</span>
+        <span id="dbclusterid_go">
+<a href="#dbclusterid_go" style="color: inherit; text-decoration: inherit;">Db<wbr>Cluster<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -262,7 +311,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Endpoints</span>
+        <span id="endpoints_go">
+<a href="#endpoints_go" style="color: inherit; text-decoration: inherit;">Endpoints</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getendpointsendpoint">[]Get<wbr>Endpoints<wbr>Endpoint</a></span>
     </dt>
@@ -271,7 +322,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -280,7 +333,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Db<wbr>Endpoint<wbr>Id</span>
+        <span id="dbendpointid_go">
+<a href="#dbendpointid_go" style="color: inherit; text-decoration: inherit;">Db<wbr>Endpoint<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -296,7 +351,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>db<wbr>Cluster<wbr>Id</span>
+        <span id="dbclusterid_nodejs">
+<a href="#dbclusterid_nodejs" style="color: inherit; text-decoration: inherit;">db<wbr>Cluster<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -304,7 +361,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>endpoints</span>
+        <span id="endpoints_nodejs">
+<a href="#endpoints_nodejs" style="color: inherit; text-decoration: inherit;">endpoints</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getendpointsendpoint">Get<wbr>Endpoints<wbr>Endpoint[]</a></span>
     </dt>
@@ -313,7 +372,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -322,7 +383,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>db<wbr>Endpoint<wbr>Id</span>
+        <span id="dbendpointid_nodejs">
+<a href="#dbendpointid_nodejs" style="color: inherit; text-decoration: inherit;">db<wbr>Endpoint<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -338,7 +401,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>db_<wbr>cluster_<wbr>id</span>
+        <span id="db_cluster_id_python">
+<a href="#db_cluster_id_python" style="color: inherit; text-decoration: inherit;">db_<wbr>cluster_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -346,7 +411,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>endpoints</span>
+        <span id="endpoints_python">
+<a href="#endpoints_python" style="color: inherit; text-decoration: inherit;">endpoints</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getendpointsendpoint">List[Get<wbr>Endpoints<wbr>Endpoint]</a></span>
     </dt>
@@ -355,7 +422,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -364,7 +433,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>db_<wbr>endpoint_<wbr>id</span>
+        <span id="db_endpoint_id_python">
+<a href="#db_endpoint_id_python" style="color: inherit; text-decoration: inherit;">db_<wbr>endpoint_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -404,7 +475,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Address<wbr>Items</span>
+        <span id="addressitems_csharp">
+<a href="#addressitems_csharp" style="color: inherit; text-decoration: inherit;">Address<wbr>Items</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getendpointsendpointaddressitem">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Polar<wbr>DB.<wbr>Inputs.<wbr>Get<wbr>Endpoints<wbr>Endpoint<wbr>Address<wbr>Item<wbr>Args&gt;</a></span>
     </dt>
@@ -413,7 +486,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Auto<wbr>Add<wbr>New<wbr>Nodes</span>
+        <span id="autoaddnewnodes_csharp">
+<a href="#autoaddnewnodes_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Add<wbr>New<wbr>Nodes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -422,7 +497,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Db<wbr>Endpoint<wbr>Id</span>
+        <span id="dbendpointid_csharp">
+<a href="#dbendpointid_csharp" style="color: inherit; text-decoration: inherit;">Db<wbr>Endpoint<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -431,7 +508,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Endpoint<wbr>Config</span>
+        <span id="endpointconfig_csharp">
+<a href="#endpointconfig_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -440,7 +519,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Endpoint<wbr>Type</span>
+        <span id="endpointtype_csharp">
+<a href="#endpointtype_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -449,7 +530,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Nodes</span>
+        <span id="nodes_csharp">
+<a href="#nodes_csharp" style="color: inherit; text-decoration: inherit;">Nodes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -458,7 +541,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Read<wbr>Write<wbr>Mode</span>
+        <span id="readwritemode_csharp">
+<a href="#readwritemode_csharp" style="color: inherit; text-decoration: inherit;">Read<wbr>Write<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -474,7 +559,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Address<wbr>Items</span>
+        <span id="addressitems_go">
+<a href="#addressitems_go" style="color: inherit; text-decoration: inherit;">Address<wbr>Items</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getendpointsendpointaddressitem">[]Get<wbr>Endpoints<wbr>Endpoint<wbr>Address<wbr>Item</a></span>
     </dt>
@@ -483,7 +570,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Auto<wbr>Add<wbr>New<wbr>Nodes</span>
+        <span id="autoaddnewnodes_go">
+<a href="#autoaddnewnodes_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Add<wbr>New<wbr>Nodes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -492,7 +581,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Db<wbr>Endpoint<wbr>Id</span>
+        <span id="dbendpointid_go">
+<a href="#dbendpointid_go" style="color: inherit; text-decoration: inherit;">Db<wbr>Endpoint<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -501,7 +592,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Endpoint<wbr>Config</span>
+        <span id="endpointconfig_go">
+<a href="#endpointconfig_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -510,7 +603,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Endpoint<wbr>Type</span>
+        <span id="endpointtype_go">
+<a href="#endpointtype_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -519,7 +614,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Nodes</span>
+        <span id="nodes_go">
+<a href="#nodes_go" style="color: inherit; text-decoration: inherit;">Nodes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -528,7 +625,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Read<wbr>Write<wbr>Mode</span>
+        <span id="readwritemode_go">
+<a href="#readwritemode_go" style="color: inherit; text-decoration: inherit;">Read<wbr>Write<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -544,7 +643,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>address<wbr>Items</span>
+        <span id="addressitems_nodejs">
+<a href="#addressitems_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Items</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getendpointsendpointaddressitem">Get<wbr>Endpoints<wbr>Endpoint<wbr>Address<wbr>Item[]</a></span>
     </dt>
@@ -553,7 +654,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>auto<wbr>Add<wbr>New<wbr>Nodes</span>
+        <span id="autoaddnewnodes_nodejs">
+<a href="#autoaddnewnodes_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Add<wbr>New<wbr>Nodes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -562,7 +665,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>db<wbr>Endpoint<wbr>Id</span>
+        <span id="dbendpointid_nodejs">
+<a href="#dbendpointid_nodejs" style="color: inherit; text-decoration: inherit;">db<wbr>Endpoint<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -571,7 +676,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>endpoint<wbr>Config</span>
+        <span id="endpointconfig_nodejs">
+<a href="#endpointconfig_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -580,7 +687,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>endpoint<wbr>Type</span>
+        <span id="endpointtype_nodejs">
+<a href="#endpointtype_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -589,7 +698,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>nodes</span>
+        <span id="nodes_nodejs">
+<a href="#nodes_nodejs" style="color: inherit; text-decoration: inherit;">nodes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -598,7 +709,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>read<wbr>Write<wbr>Mode</span>
+        <span id="readwritemode_nodejs">
+<a href="#readwritemode_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Write<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -614,7 +727,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>address<wbr>Items</span>
+        <span id="addressitems_python">
+<a href="#addressitems_python" style="color: inherit; text-decoration: inherit;">address<wbr>Items</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getendpointsendpointaddressitem">List[Get<wbr>Endpoints<wbr>Endpoint<wbr>Address<wbr>Item]</a></span>
     </dt>
@@ -623,7 +738,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>auto_<wbr>add_<wbr>new_<wbr>nodes</span>
+        <span id="auto_add_new_nodes_python">
+<a href="#auto_add_new_nodes_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>add_<wbr>new_<wbr>nodes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -632,7 +749,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>db_<wbr>endpoint_<wbr>id</span>
+        <span id="db_endpoint_id_python">
+<a href="#db_endpoint_id_python" style="color: inherit; text-decoration: inherit;">db_<wbr>endpoint_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -641,7 +760,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>endpoint_<wbr>config</span>
+        <span id="endpoint_config_python">
+<a href="#endpoint_config_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -650,7 +771,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>endpoint_<wbr>type</span>
+        <span id="endpoint_type_python">
+<a href="#endpoint_type_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -659,7 +782,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>nodes</span>
+        <span id="nodes_python">
+<a href="#nodes_python" style="color: inherit; text-decoration: inherit;">nodes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -668,7 +793,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>read_<wbr>write_<wbr>mode</span>
+        <span id="read_write_mode_python">
+<a href="#read_write_mode_python" style="color: inherit; text-decoration: inherit;">read_<wbr>write_<wbr>mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -702,7 +829,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Connection<wbr>String</span>
+        <span id="connectionstring_csharp">
+<a href="#connectionstring_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>String</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -711,7 +840,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Ip<wbr>Address</span>
+        <span id="ipaddress_csharp">
+<a href="#ipaddress_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -720,7 +851,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Net<wbr>Type</span>
+        <span id="nettype_csharp">
+<a href="#nettype_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -729,7 +862,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Port</span>
+        <span id="port_csharp">
+<a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -738,7 +873,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Vpc<wbr>Id</span>
+        <span id="vpcid_csharp">
+<a href="#vpcid_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -747,7 +884,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Vswitch<wbr>Id</span>
+        <span id="vswitchid_csharp">
+<a href="#vswitchid_csharp" style="color: inherit; text-decoration: inherit;">Vswitch<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -763,7 +902,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Connection<wbr>String</span>
+        <span id="connectionstring_go">
+<a href="#connectionstring_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>String</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -772,7 +913,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Ip<wbr>Address</span>
+        <span id="ipaddress_go">
+<a href="#ipaddress_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -781,7 +924,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Net<wbr>Type</span>
+        <span id="nettype_go">
+<a href="#nettype_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -790,7 +935,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Port</span>
+        <span id="port_go">
+<a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -799,7 +946,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Vpc<wbr>Id</span>
+        <span id="vpcid_go">
+<a href="#vpcid_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -808,7 +957,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Vswitch<wbr>Id</span>
+        <span id="vswitchid_go">
+<a href="#vswitchid_go" style="color: inherit; text-decoration: inherit;">Vswitch<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -824,7 +975,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>connection<wbr>String</span>
+        <span id="connectionstring_nodejs">
+<a href="#connectionstring_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>String</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -833,7 +986,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>ip<wbr>Address</span>
+        <span id="ipaddress_nodejs">
+<a href="#ipaddress_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -842,7 +997,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>net<wbr>Type</span>
+        <span id="nettype_nodejs">
+<a href="#nettype_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -851,7 +1008,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>port</span>
+        <span id="port_nodejs">
+<a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -860,7 +1019,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>vpc<wbr>Id</span>
+        <span id="vpcid_nodejs">
+<a href="#vpcid_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -869,7 +1030,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>vswitch<wbr>Id</span>
+        <span id="vswitchid_nodejs">
+<a href="#vswitchid_nodejs" style="color: inherit; text-decoration: inherit;">vswitch<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -885,7 +1048,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>connection_<wbr>string</span>
+        <span id="connection_string_python">
+<a href="#connection_string_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>string</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -894,7 +1059,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>ip_<wbr>address</span>
+        <span id="ip_address_python">
+<a href="#ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -903,7 +1070,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>net_<wbr>type</span>
+        <span id="net_type_python">
+<a href="#net_type_python" style="color: inherit; text-decoration: inherit;">net_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -912,7 +1081,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>port</span>
+        <span id="port_python">
+<a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -921,7 +1092,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>vpc_<wbr>id</span>
+        <span id="vpc_id_python">
+<a href="#vpc_id_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -930,7 +1103,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>vswitch_<wbr>id</span>
+        <span id="vswitch_id_python">
+<a href="#vswitch_id_python" style="color: inherit; text-decoration: inherit;">vswitch_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

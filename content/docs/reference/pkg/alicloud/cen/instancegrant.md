@@ -22,7 +22,51 @@ For more information about how to use it, see [Attach a network in a different a
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        // Create a new instance-grant and use it to grant one child instance of account1 to a new CEN of account 2.
+        var account1 = new AliCloud.Provider("account1", new AliCloud.ProviderArgs
+        {
+            AccessKey = "access123",
+            SecretKey = "secret123",
+        });
+        var account2 = new AliCloud.Provider("account2", new AliCloud.ProviderArgs
+        {
+            AccessKey = "access456",
+            SecretKey = "secret456",
+        });
+        var config = new Config();
+        var name = config.Get("name") ?? "tf-testAccCenInstanceGrantBasic";
+        var cen = new AliCloud.Cen.Instance("cen", new AliCloud.Cen.InstanceArgs
+        {
+        });
+        var vpc = new AliCloud.Vpc.Network("vpc", new AliCloud.Vpc.NetworkArgs
+        {
+            CidrBlock = "192.168.0.0/16",
+        });
+        var fooInstanceGrant = new AliCloud.Cen.InstanceGrant("fooInstanceGrant", new AliCloud.Cen.InstanceGrantArgs
+        {
+            CenId = cen.Id,
+            CenOwnerId = "uid2",
+            ChildInstanceId = vpc.Id,
+        });
+        var fooInstanceAttachment = new AliCloud.Cen.InstanceAttachment("fooInstanceAttachment", new AliCloud.Cen.InstanceAttachmentArgs
+        {
+            ChildInstanceId = vpc.Id,
+            ChildInstanceOwnerId = "uid1",
+            ChildInstanceRegionId = "cn-qingdao",
+            InstanceId = cen.Id,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -281,7 +325,9 @@ The InstanceGrant resource accepts the following [input]({{< relref "/docs/intro
 
     <dt class="property-required"
             title="Required">
-        <span>Cen<wbr>Id</span>
+        <span id="cenid_csharp">
+<a href="#cenid_csharp" style="color: inherit; text-decoration: inherit;">Cen<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -290,7 +336,9 @@ The InstanceGrant resource accepts the following [input]({{< relref "/docs/intro
 
     <dt class="property-required"
             title="Required">
-        <span>Cen<wbr>Owner<wbr>Id</span>
+        <span id="cenownerid_csharp">
+<a href="#cenownerid_csharp" style="color: inherit; text-decoration: inherit;">Cen<wbr>Owner<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -299,7 +347,9 @@ The InstanceGrant resource accepts the following [input]({{< relref "/docs/intro
 
     <dt class="property-required"
             title="Required">
-        <span>Child<wbr>Instance<wbr>Id</span>
+        <span id="childinstanceid_csharp">
+<a href="#childinstanceid_csharp" style="color: inherit; text-decoration: inherit;">Child<wbr>Instance<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -315,7 +365,9 @@ The InstanceGrant resource accepts the following [input]({{< relref "/docs/intro
 
     <dt class="property-required"
             title="Required">
-        <span>Cen<wbr>Id</span>
+        <span id="cenid_go">
+<a href="#cenid_go" style="color: inherit; text-decoration: inherit;">Cen<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -324,7 +376,9 @@ The InstanceGrant resource accepts the following [input]({{< relref "/docs/intro
 
     <dt class="property-required"
             title="Required">
-        <span>Cen<wbr>Owner<wbr>Id</span>
+        <span id="cenownerid_go">
+<a href="#cenownerid_go" style="color: inherit; text-decoration: inherit;">Cen<wbr>Owner<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -333,7 +387,9 @@ The InstanceGrant resource accepts the following [input]({{< relref "/docs/intro
 
     <dt class="property-required"
             title="Required">
-        <span>Child<wbr>Instance<wbr>Id</span>
+        <span id="childinstanceid_go">
+<a href="#childinstanceid_go" style="color: inherit; text-decoration: inherit;">Child<wbr>Instance<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -349,7 +405,9 @@ The InstanceGrant resource accepts the following [input]({{< relref "/docs/intro
 
     <dt class="property-required"
             title="Required">
-        <span>cen<wbr>Id</span>
+        <span id="cenid_nodejs">
+<a href="#cenid_nodejs" style="color: inherit; text-decoration: inherit;">cen<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -358,7 +416,9 @@ The InstanceGrant resource accepts the following [input]({{< relref "/docs/intro
 
     <dt class="property-required"
             title="Required">
-        <span>cen<wbr>Owner<wbr>Id</span>
+        <span id="cenownerid_nodejs">
+<a href="#cenownerid_nodejs" style="color: inherit; text-decoration: inherit;">cen<wbr>Owner<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -367,7 +427,9 @@ The InstanceGrant resource accepts the following [input]({{< relref "/docs/intro
 
     <dt class="property-required"
             title="Required">
-        <span>child<wbr>Instance<wbr>Id</span>
+        <span id="childinstanceid_nodejs">
+<a href="#childinstanceid_nodejs" style="color: inherit; text-decoration: inherit;">child<wbr>Instance<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -383,7 +445,9 @@ The InstanceGrant resource accepts the following [input]({{< relref "/docs/intro
 
     <dt class="property-required"
             title="Required">
-        <span>cen_<wbr>id</span>
+        <span id="cen_id_python">
+<a href="#cen_id_python" style="color: inherit; text-decoration: inherit;">cen_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -392,7 +456,9 @@ The InstanceGrant resource accepts the following [input]({{< relref "/docs/intro
 
     <dt class="property-required"
             title="Required">
-        <span>cen_<wbr>owner_<wbr>id</span>
+        <span id="cen_owner_id_python">
+<a href="#cen_owner_id_python" style="color: inherit; text-decoration: inherit;">cen_<wbr>owner_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -401,7 +467,9 @@ The InstanceGrant resource accepts the following [input]({{< relref "/docs/intro
 
     <dt class="property-required"
             title="Required">
-        <span>child_<wbr>instance_<wbr>id</span>
+        <span id="child_instance_id_python">
+<a href="#child_instance_id_python" style="color: inherit; text-decoration: inherit;">child_<wbr>instance_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -428,7 +496,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -443,7 +513,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -458,7 +530,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -473,7 +547,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -614,7 +690,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cen<wbr>Id</span>
+        <span id="state_cenid_csharp">
+<a href="#state_cenid_csharp" style="color: inherit; text-decoration: inherit;">Cen<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -623,7 +701,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cen<wbr>Owner<wbr>Id</span>
+        <span id="state_cenownerid_csharp">
+<a href="#state_cenownerid_csharp" style="color: inherit; text-decoration: inherit;">Cen<wbr>Owner<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -632,7 +712,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Child<wbr>Instance<wbr>Id</span>
+        <span id="state_childinstanceid_csharp">
+<a href="#state_childinstanceid_csharp" style="color: inherit; text-decoration: inherit;">Child<wbr>Instance<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -648,7 +730,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cen<wbr>Id</span>
+        <span id="state_cenid_go">
+<a href="#state_cenid_go" style="color: inherit; text-decoration: inherit;">Cen<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -657,7 +741,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cen<wbr>Owner<wbr>Id</span>
+        <span id="state_cenownerid_go">
+<a href="#state_cenownerid_go" style="color: inherit; text-decoration: inherit;">Cen<wbr>Owner<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -666,7 +752,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Child<wbr>Instance<wbr>Id</span>
+        <span id="state_childinstanceid_go">
+<a href="#state_childinstanceid_go" style="color: inherit; text-decoration: inherit;">Child<wbr>Instance<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -682,7 +770,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>cen<wbr>Id</span>
+        <span id="state_cenid_nodejs">
+<a href="#state_cenid_nodejs" style="color: inherit; text-decoration: inherit;">cen<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -691,7 +781,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>cen<wbr>Owner<wbr>Id</span>
+        <span id="state_cenownerid_nodejs">
+<a href="#state_cenownerid_nodejs" style="color: inherit; text-decoration: inherit;">cen<wbr>Owner<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -700,7 +792,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>child<wbr>Instance<wbr>Id</span>
+        <span id="state_childinstanceid_nodejs">
+<a href="#state_childinstanceid_nodejs" style="color: inherit; text-decoration: inherit;">child<wbr>Instance<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -716,7 +810,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>cen_<wbr>id</span>
+        <span id="state_cen_id_python">
+<a href="#state_cen_id_python" style="color: inherit; text-decoration: inherit;">cen_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -725,7 +821,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>cen_<wbr>owner_<wbr>id</span>
+        <span id="state_cen_owner_id_python">
+<a href="#state_cen_owner_id_python" style="color: inherit; text-decoration: inherit;">cen_<wbr>owner_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -734,7 +832,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>child_<wbr>instance_<wbr>id</span>
+        <span id="state_child_instance_id_python">
+<a href="#state_child_instance_id_python" style="color: inherit; text-decoration: inherit;">child_<wbr>instance_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

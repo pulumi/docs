@@ -50,7 +50,92 @@ the vserver_group supports the following:
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using System.Collections.Generic;
+using System.Linq;
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var config = new Config();
+        var name = config.Get("name") ?? "testAccEssVserverGroupsAttachment";
+        var defaultZones = Output.Create(AliCloud.GetZones.InvokeAsync(new AliCloud.GetZonesArgs
+        {
+            AvailableDiskCategory = "cloud_efficiency",
+            AvailableResourceCreation = "VSwitch",
+        }));
+        var defaultNetwork = new AliCloud.Vpc.Network("defaultNetwork", new AliCloud.Vpc.NetworkArgs
+        {
+            CidrBlock = "172.16.0.0/16",
+        });
+        var defaultSwitch = new AliCloud.Vpc.Switch("defaultSwitch", new AliCloud.Vpc.SwitchArgs
+        {
+            AvailabilityZone = defaultZones.Apply(defaultZones => defaultZones.Zones[0].Id),
+            CidrBlock = "172.16.0.0/24",
+            VpcId = defaultNetwork.Id,
+        });
+        var defaultLoadBalancer = new AliCloud.Slb.LoadBalancer("defaultLoadBalancer", new AliCloud.Slb.LoadBalancerArgs
+        {
+            VswitchId = defaultSwitch.Id,
+        });
+        var defaultServerGroup = new AliCloud.Slb.ServerGroup("defaultServerGroup", new AliCloud.Slb.ServerGroupArgs
+        {
+            LoadBalancerId = defaultLoadBalancer.Id,
+        });
+        var defaultListener = new List<AliCloud.Slb.Listener>();
+        for (var rangeIndex = 0; rangeIndex < 2; rangeIndex++)
+        {
+            var range = new { Value = rangeIndex };
+            defaultListener.Add(new AliCloud.Slb.Listener($"defaultListener-{range.Value}", new AliCloud.Slb.ListenerArgs
+            {
+                BackendPort = "22",
+                Bandwidth = "10",
+                FrontendPort = "22",
+                HealthCheckType = "tcp",
+                LoadBalancerId = 
+                {
+                    defaultLoadBalancer,
+                }.Select(__item => __item.Id).ToList()[range.Value],
+                Protocol = "tcp",
+            }));
+        }
+        var defaultScalingGroup = new AliCloud.Ess.ScalingGroup("defaultScalingGroup", new AliCloud.Ess.ScalingGroupArgs
+        {
+            MaxSize = "2",
+            MinSize = "2",
+            ScalingGroupName = name,
+            VswitchIds = 
+            {
+                defaultSwitch.Id,
+            },
+        });
+        var defaultScalingGroupVServerGroups = new AliCloud.Ess.ScalingGroupVServerGroups("defaultScalingGroupVServerGroups", new AliCloud.Ess.ScalingGroupVServerGroupsArgs
+        {
+            ScalingGroupId = defaultScalingGroup.Id,
+            VserverGroups = 
+            {
+                new AliCloud.Ess.Inputs.ScalingGroupVServerGroupsVserverGroupArgs
+                {
+                    LoadbalancerId = defaultLoadBalancer.Id,
+                    VserverAttributes = 
+                    {
+                        new AliCloud.Ess.Inputs.ScalingGroupVServerGroupsVserverGroupVserverAttributeArgs
+                        {
+                            Port = "100",
+                            VserverGroupId = defaultServerGroup.Id,
+                            Weight = "60",
+                        },
+                    },
+                },
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -95,7 +180,7 @@ default_scaling_group_v_server_groups = alicloud.ess.ScalingGroupVServerGroups("
         "loadbalancerId": default_load_balancer.id,
         "vserverAttributes": [{
             "port": "100",
-            "vserverGroupId": default_server_group.id,
+            "vserver_group_id": default_server_group.id,
             "weight": "60",
         }],
     }])
@@ -345,7 +430,9 @@ The ScalingGroupVServerGroups resource accepts the following [input]({{< relref 
 
     <dt class="property-required"
             title="Required">
-        <span>Scaling<wbr>Group<wbr>Id</span>
+        <span id="scalinggroupid_csharp">
+<a href="#scalinggroupid_csharp" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Group<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -354,7 +441,9 @@ The ScalingGroupVServerGroups resource accepts the following [input]({{< relref 
 
     <dt class="property-required"
             title="Required">
-        <span>Vserver<wbr>Groups</span>
+        <span id="vservergroups_csharp">
+<a href="#vservergroups_csharp" style="color: inherit; text-decoration: inherit;">Vserver<wbr>Groups</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalinggroupvservergroupsvservergroup">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Ess.<wbr>Inputs.<wbr>Scaling<wbr>Group<wbr>VServer<wbr>Groups<wbr>Vserver<wbr>Group<wbr>Args&gt;</a></span>
     </dt>
@@ -363,7 +452,9 @@ The ScalingGroupVServerGroups resource accepts the following [input]({{< relref 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Force</span>
+        <span id="force_csharp">
+<a href="#force_csharp" style="color: inherit; text-decoration: inherit;">Force</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -379,7 +470,9 @@ The ScalingGroupVServerGroups resource accepts the following [input]({{< relref 
 
     <dt class="property-required"
             title="Required">
-        <span>Scaling<wbr>Group<wbr>Id</span>
+        <span id="scalinggroupid_go">
+<a href="#scalinggroupid_go" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Group<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -388,7 +481,9 @@ The ScalingGroupVServerGroups resource accepts the following [input]({{< relref 
 
     <dt class="property-required"
             title="Required">
-        <span>Vserver<wbr>Groups</span>
+        <span id="vservergroups_go">
+<a href="#vservergroups_go" style="color: inherit; text-decoration: inherit;">Vserver<wbr>Groups</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalinggroupvservergroupsvservergroup">[]Scaling<wbr>Group<wbr>VServer<wbr>Groups<wbr>Vserver<wbr>Group</a></span>
     </dt>
@@ -397,7 +492,9 @@ The ScalingGroupVServerGroups resource accepts the following [input]({{< relref 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Force</span>
+        <span id="force_go">
+<a href="#force_go" style="color: inherit; text-decoration: inherit;">Force</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -413,7 +510,9 @@ The ScalingGroupVServerGroups resource accepts the following [input]({{< relref 
 
     <dt class="property-required"
             title="Required">
-        <span>scaling<wbr>Group<wbr>Id</span>
+        <span id="scalinggroupid_nodejs">
+<a href="#scalinggroupid_nodejs" style="color: inherit; text-decoration: inherit;">scaling<wbr>Group<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -422,7 +521,9 @@ The ScalingGroupVServerGroups resource accepts the following [input]({{< relref 
 
     <dt class="property-required"
             title="Required">
-        <span>vserver<wbr>Groups</span>
+        <span id="vservergroups_nodejs">
+<a href="#vservergroups_nodejs" style="color: inherit; text-decoration: inherit;">vserver<wbr>Groups</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalinggroupvservergroupsvservergroup">Scaling<wbr>Group<wbr>VServer<wbr>Groups<wbr>Vserver<wbr>Group[]</a></span>
     </dt>
@@ -431,7 +532,9 @@ The ScalingGroupVServerGroups resource accepts the following [input]({{< relref 
 
     <dt class="property-optional"
             title="Optional">
-        <span>force</span>
+        <span id="force_nodejs">
+<a href="#force_nodejs" style="color: inherit; text-decoration: inherit;">force</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -447,7 +550,9 @@ The ScalingGroupVServerGroups resource accepts the following [input]({{< relref 
 
     <dt class="property-required"
             title="Required">
-        <span>scaling_<wbr>group_<wbr>id</span>
+        <span id="scaling_group_id_python">
+<a href="#scaling_group_id_python" style="color: inherit; text-decoration: inherit;">scaling_<wbr>group_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -456,7 +561,9 @@ The ScalingGroupVServerGroups resource accepts the following [input]({{< relref 
 
     <dt class="property-required"
             title="Required">
-        <span>vserver_<wbr>groups</span>
+        <span id="vserver_groups_python">
+<a href="#vserver_groups_python" style="color: inherit; text-decoration: inherit;">vserver_<wbr>groups</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalinggroupvservergroupsvservergroup">List[Scaling<wbr>Group<wbr>VServer<wbr>Groups<wbr>Vserver<wbr>Group]</a></span>
     </dt>
@@ -465,7 +572,9 @@ The ScalingGroupVServerGroups resource accepts the following [input]({{< relref 
 
     <dt class="property-optional"
             title="Optional">
-        <span>force</span>
+        <span id="force_python">
+<a href="#force_python" style="color: inherit; text-decoration: inherit;">force</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -492,7 +601,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -507,7 +618,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -522,7 +635,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -537,7 +652,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -678,7 +795,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Force</span>
+        <span id="state_force_csharp">
+<a href="#state_force_csharp" style="color: inherit; text-decoration: inherit;">Force</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -687,7 +806,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Scaling<wbr>Group<wbr>Id</span>
+        <span id="state_scalinggroupid_csharp">
+<a href="#state_scalinggroupid_csharp" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Group<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -696,7 +817,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vserver<wbr>Groups</span>
+        <span id="state_vservergroups_csharp">
+<a href="#state_vservergroups_csharp" style="color: inherit; text-decoration: inherit;">Vserver<wbr>Groups</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalinggroupvservergroupsvservergroup">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Ess.<wbr>Inputs.<wbr>Scaling<wbr>Group<wbr>VServer<wbr>Groups<wbr>Vserver<wbr>Group<wbr>Args&gt;</a></span>
     </dt>
@@ -712,7 +835,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Force</span>
+        <span id="state_force_go">
+<a href="#state_force_go" style="color: inherit; text-decoration: inherit;">Force</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -721,7 +846,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Scaling<wbr>Group<wbr>Id</span>
+        <span id="state_scalinggroupid_go">
+<a href="#state_scalinggroupid_go" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Group<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -730,7 +857,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vserver<wbr>Groups</span>
+        <span id="state_vservergroups_go">
+<a href="#state_vservergroups_go" style="color: inherit; text-decoration: inherit;">Vserver<wbr>Groups</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalinggroupvservergroupsvservergroup">[]Scaling<wbr>Group<wbr>VServer<wbr>Groups<wbr>Vserver<wbr>Group</a></span>
     </dt>
@@ -746,7 +875,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>force</span>
+        <span id="state_force_nodejs">
+<a href="#state_force_nodejs" style="color: inherit; text-decoration: inherit;">force</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -755,7 +886,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>scaling<wbr>Group<wbr>Id</span>
+        <span id="state_scalinggroupid_nodejs">
+<a href="#state_scalinggroupid_nodejs" style="color: inherit; text-decoration: inherit;">scaling<wbr>Group<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -764,7 +897,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>vserver<wbr>Groups</span>
+        <span id="state_vservergroups_nodejs">
+<a href="#state_vservergroups_nodejs" style="color: inherit; text-decoration: inherit;">vserver<wbr>Groups</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalinggroupvservergroupsvservergroup">Scaling<wbr>Group<wbr>VServer<wbr>Groups<wbr>Vserver<wbr>Group[]</a></span>
     </dt>
@@ -780,7 +915,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>force</span>
+        <span id="state_force_python">
+<a href="#state_force_python" style="color: inherit; text-decoration: inherit;">force</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -789,7 +926,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>scaling_<wbr>group_<wbr>id</span>
+        <span id="state_scaling_group_id_python">
+<a href="#state_scaling_group_id_python" style="color: inherit; text-decoration: inherit;">scaling_<wbr>group_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -798,7 +937,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>vserver_<wbr>groups</span>
+        <span id="state_vserver_groups_python">
+<a href="#state_vserver_groups_python" style="color: inherit; text-decoration: inherit;">vserver_<wbr>groups</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalinggroupvservergroupsvservergroup">List[Scaling<wbr>Group<wbr>VServer<wbr>Groups<wbr>Vserver<wbr>Group]</a></span>
     </dt>
@@ -840,7 +981,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Loadbalancer<wbr>Id</span>
+        <span id="loadbalancerid_csharp">
+<a href="#loadbalancerid_csharp" style="color: inherit; text-decoration: inherit;">Loadbalancer<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -848,7 +991,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Vserver<wbr>Attributes</span>
+        <span id="vserverattributes_csharp">
+<a href="#vserverattributes_csharp" style="color: inherit; text-decoration: inherit;">Vserver<wbr>Attributes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalinggroupvservergroupsvservergroupvserverattribute">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Ess.<wbr>Inputs.<wbr>Scaling<wbr>Group<wbr>VServer<wbr>Groups<wbr>Vserver<wbr>Group<wbr>Vserver<wbr>Attribute<wbr>Args&gt;</a></span>
     </dt>
@@ -863,7 +1008,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Loadbalancer<wbr>Id</span>
+        <span id="loadbalancerid_go">
+<a href="#loadbalancerid_go" style="color: inherit; text-decoration: inherit;">Loadbalancer<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -871,7 +1018,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Vserver<wbr>Attributes</span>
+        <span id="vserverattributes_go">
+<a href="#vserverattributes_go" style="color: inherit; text-decoration: inherit;">Vserver<wbr>Attributes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalinggroupvservergroupsvservergroupvserverattribute">[]Scaling<wbr>Group<wbr>VServer<wbr>Groups<wbr>Vserver<wbr>Group<wbr>Vserver<wbr>Attribute</a></span>
     </dt>
@@ -886,7 +1035,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>loadbalancer<wbr>Id</span>
+        <span id="loadbalancerid_nodejs">
+<a href="#loadbalancerid_nodejs" style="color: inherit; text-decoration: inherit;">loadbalancer<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -894,7 +1045,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>vserver<wbr>Attributes</span>
+        <span id="vserverattributes_nodejs">
+<a href="#vserverattributes_nodejs" style="color: inherit; text-decoration: inherit;">vserver<wbr>Attributes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalinggroupvservergroupsvservergroupvserverattribute">Scaling<wbr>Group<wbr>VServer<wbr>Groups<wbr>Vserver<wbr>Group<wbr>Vserver<wbr>Attribute[]</a></span>
     </dt>
@@ -909,7 +1062,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>loadbalancer<wbr>Id</span>
+        <span id="loadbalancerid_python">
+<a href="#loadbalancerid_python" style="color: inherit; text-decoration: inherit;">loadbalancer<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -917,7 +1072,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>vserver<wbr>Attributes</span>
+        <span id="vserverattributes_python">
+<a href="#vserverattributes_python" style="color: inherit; text-decoration: inherit;">vserver<wbr>Attributes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalinggroupvservergroupsvservergroupvserverattribute">List[Scaling<wbr>Group<wbr>VServer<wbr>Groups<wbr>Vserver<wbr>Group<wbr>Vserver<wbr>Attribute]</a></span>
     </dt>
@@ -950,7 +1107,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Port</span>
+        <span id="port_csharp">
+<a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -958,7 +1117,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Vserver<wbr>Group<wbr>Id</span>
+        <span id="vservergroupid_csharp">
+<a href="#vservergroupid_csharp" style="color: inherit; text-decoration: inherit;">Vserver<wbr>Group<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -966,7 +1127,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Weight</span>
+        <span id="weight_csharp">
+<a href="#weight_csharp" style="color: inherit; text-decoration: inherit;">Weight</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -981,7 +1144,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Port</span>
+        <span id="port_go">
+<a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -989,7 +1154,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Vserver<wbr>Group<wbr>Id</span>
+        <span id="vservergroupid_go">
+<a href="#vservergroupid_go" style="color: inherit; text-decoration: inherit;">Vserver<wbr>Group<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -997,7 +1164,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Weight</span>
+        <span id="weight_go">
+<a href="#weight_go" style="color: inherit; text-decoration: inherit;">Weight</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1012,7 +1181,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>port</span>
+        <span id="port_nodejs">
+<a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1020,7 +1191,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>vserver<wbr>Group<wbr>Id</span>
+        <span id="vservergroupid_nodejs">
+<a href="#vservergroupid_nodejs" style="color: inherit; text-decoration: inherit;">vserver<wbr>Group<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1028,7 +1201,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>weight</span>
+        <span id="weight_nodejs">
+<a href="#weight_nodejs" style="color: inherit; text-decoration: inherit;">weight</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1043,7 +1218,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>port</span>
+        <span id="port_python">
+<a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1051,7 +1228,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>vserver_<wbr>group_<wbr>id</span>
+        <span id="vserver_group_id_python">
+<a href="#vserver_group_id_python" style="color: inherit; text-decoration: inherit;">vserver_<wbr>group_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1059,7 +1238,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>weight</span>
+        <span id="weight_python">
+<a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>

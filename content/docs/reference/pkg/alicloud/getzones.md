@@ -23,7 +23,28 @@ This data source provides availability zones that can be accessed by an Alibaba 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var zonesDs = Output.Create(AliCloud.GetZones.InvokeAsync(new AliCloud.GetZonesArgs
+        {
+            AvailableDiskCategory = "cloud_ssd",
+            AvailableInstanceType = "ecs.n4.large",
+        }));
+        // Create an ECS instance with the first matched zone
+        var instance = new AliCloud.Ecs.Instance("instance", new AliCloud.Ecs.InstanceArgs
+        {
+            AvailabilityZone = zonesDs.Apply(zonesDs => zonesDs.Zones[0].Id),
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -100,7 +121,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Available<wbr>Disk<wbr>Category</span>
+        <span id="availablediskcategory_csharp">
+<a href="#availablediskcategory_csharp" style="color: inherit; text-decoration: inherit;">Available<wbr>Disk<wbr>Category</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -109,7 +132,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Available<wbr>Instance<wbr>Type</span>
+        <span id="availableinstancetype_csharp">
+<a href="#availableinstancetype_csharp" style="color: inherit; text-decoration: inherit;">Available<wbr>Instance<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -118,7 +143,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Available<wbr>Resource<wbr>Creation</span>
+        <span id="availableresourcecreation_csharp">
+<a href="#availableresourcecreation_csharp" style="color: inherit; text-decoration: inherit;">Available<wbr>Resource<wbr>Creation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -128,7 +155,9 @@ Valid values: `Instance`, `Disk`, `VSwitch`, `Rds`, `KVStore`, `FunctionCompute`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Available<wbr>Slb<wbr>Address<wbr>Ip<wbr>Version</span>
+        <span id="availableslbaddressipversion_csharp">
+<a href="#availableslbaddressipversion_csharp" style="color: inherit; text-decoration: inherit;">Available<wbr>Slb<wbr>Address<wbr>Ip<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -138,7 +167,9 @@ Valid values: `Instance`, `Disk`, `VSwitch`, `Rds`, `KVStore`, `FunctionCompute`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Available<wbr>Slb<wbr>Address<wbr>Type</span>
+        <span id="availableslbaddresstype_csharp">
+<a href="#availableslbaddresstype_csharp" style="color: inherit; text-decoration: inherit;">Available<wbr>Slb<wbr>Address<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -147,7 +178,9 @@ Valid values: `Instance`, `Disk`, `VSwitch`, `Rds`, `KVStore`, `FunctionCompute`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enable<wbr>Details</span>
+        <span id="enabledetails_csharp">
+<a href="#enabledetails_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Details</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -156,7 +189,9 @@ Valid values: `Instance`, `Disk`, `VSwitch`, `Rds`, `KVStore`, `FunctionCompute`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Instance<wbr>Charge<wbr>Type</span>
+        <span id="instancechargetype_csharp">
+<a href="#instancechargetype_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Charge<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -165,7 +200,9 @@ Valid values: `Instance`, `Disk`, `VSwitch`, `Rds`, `KVStore`, `FunctionCompute`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Multi</span>
+        <span id="multi_csharp">
+<a href="#multi_csharp" style="color: inherit; text-decoration: inherit;">Multi</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -174,7 +211,9 @@ Valid values: `Instance`, `Disk`, `VSwitch`, `Rds`, `KVStore`, `FunctionCompute`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Network<wbr>Type</span>
+        <span id="networktype_csharp">
+<a href="#networktype_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -183,7 +222,9 @@ Valid values: `Instance`, `Disk`, `VSwitch`, `Rds`, `KVStore`, `FunctionCompute`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Output<wbr>File</span>
+        <span id="outputfile_csharp">
+<a href="#outputfile_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>File</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -191,7 +232,9 @@ Valid values: `Instance`, `Disk`, `VSwitch`, `Rds`, `KVStore`, `FunctionCompute`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Spot<wbr>Strategy</span>
+        <span id="spotstrategy_csharp">
+<a href="#spotstrategy_csharp" style="color: inherit; text-decoration: inherit;">Spot<wbr>Strategy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -207,7 +250,9 @@ Valid values: `Instance`, `Disk`, `VSwitch`, `Rds`, `KVStore`, `FunctionCompute`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Available<wbr>Disk<wbr>Category</span>
+        <span id="availablediskcategory_go">
+<a href="#availablediskcategory_go" style="color: inherit; text-decoration: inherit;">Available<wbr>Disk<wbr>Category</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -216,7 +261,9 @@ Valid values: `Instance`, `Disk`, `VSwitch`, `Rds`, `KVStore`, `FunctionCompute`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Available<wbr>Instance<wbr>Type</span>
+        <span id="availableinstancetype_go">
+<a href="#availableinstancetype_go" style="color: inherit; text-decoration: inherit;">Available<wbr>Instance<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -225,7 +272,9 @@ Valid values: `Instance`, `Disk`, `VSwitch`, `Rds`, `KVStore`, `FunctionCompute`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Available<wbr>Resource<wbr>Creation</span>
+        <span id="availableresourcecreation_go">
+<a href="#availableresourcecreation_go" style="color: inherit; text-decoration: inherit;">Available<wbr>Resource<wbr>Creation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -235,7 +284,9 @@ Valid values: `Instance`, `Disk`, `VSwitch`, `Rds`, `KVStore`, `FunctionCompute`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Available<wbr>Slb<wbr>Address<wbr>Ip<wbr>Version</span>
+        <span id="availableslbaddressipversion_go">
+<a href="#availableslbaddressipversion_go" style="color: inherit; text-decoration: inherit;">Available<wbr>Slb<wbr>Address<wbr>Ip<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -245,7 +296,9 @@ Valid values: `Instance`, `Disk`, `VSwitch`, `Rds`, `KVStore`, `FunctionCompute`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Available<wbr>Slb<wbr>Address<wbr>Type</span>
+        <span id="availableslbaddresstype_go">
+<a href="#availableslbaddresstype_go" style="color: inherit; text-decoration: inherit;">Available<wbr>Slb<wbr>Address<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -254,7 +307,9 @@ Valid values: `Instance`, `Disk`, `VSwitch`, `Rds`, `KVStore`, `FunctionCompute`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enable<wbr>Details</span>
+        <span id="enabledetails_go">
+<a href="#enabledetails_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Details</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -263,7 +318,9 @@ Valid values: `Instance`, `Disk`, `VSwitch`, `Rds`, `KVStore`, `FunctionCompute`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Instance<wbr>Charge<wbr>Type</span>
+        <span id="instancechargetype_go">
+<a href="#instancechargetype_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Charge<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -272,7 +329,9 @@ Valid values: `Instance`, `Disk`, `VSwitch`, `Rds`, `KVStore`, `FunctionCompute`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Multi</span>
+        <span id="multi_go">
+<a href="#multi_go" style="color: inherit; text-decoration: inherit;">Multi</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -281,7 +340,9 @@ Valid values: `Instance`, `Disk`, `VSwitch`, `Rds`, `KVStore`, `FunctionCompute`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Network<wbr>Type</span>
+        <span id="networktype_go">
+<a href="#networktype_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -290,7 +351,9 @@ Valid values: `Instance`, `Disk`, `VSwitch`, `Rds`, `KVStore`, `FunctionCompute`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Output<wbr>File</span>
+        <span id="outputfile_go">
+<a href="#outputfile_go" style="color: inherit; text-decoration: inherit;">Output<wbr>File</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -298,7 +361,9 @@ Valid values: `Instance`, `Disk`, `VSwitch`, `Rds`, `KVStore`, `FunctionCompute`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Spot<wbr>Strategy</span>
+        <span id="spotstrategy_go">
+<a href="#spotstrategy_go" style="color: inherit; text-decoration: inherit;">Spot<wbr>Strategy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -314,7 +379,9 @@ Valid values: `Instance`, `Disk`, `VSwitch`, `Rds`, `KVStore`, `FunctionCompute`
 
     <dt class="property-optional"
             title="Optional">
-        <span>available<wbr>Disk<wbr>Category</span>
+        <span id="availablediskcategory_nodejs">
+<a href="#availablediskcategory_nodejs" style="color: inherit; text-decoration: inherit;">available<wbr>Disk<wbr>Category</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -323,7 +390,9 @@ Valid values: `Instance`, `Disk`, `VSwitch`, `Rds`, `KVStore`, `FunctionCompute`
 
     <dt class="property-optional"
             title="Optional">
-        <span>available<wbr>Instance<wbr>Type</span>
+        <span id="availableinstancetype_nodejs">
+<a href="#availableinstancetype_nodejs" style="color: inherit; text-decoration: inherit;">available<wbr>Instance<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -332,7 +401,9 @@ Valid values: `Instance`, `Disk`, `VSwitch`, `Rds`, `KVStore`, `FunctionCompute`
 
     <dt class="property-optional"
             title="Optional">
-        <span>available<wbr>Resource<wbr>Creation</span>
+        <span id="availableresourcecreation_nodejs">
+<a href="#availableresourcecreation_nodejs" style="color: inherit; text-decoration: inherit;">available<wbr>Resource<wbr>Creation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -342,7 +413,9 @@ Valid values: `Instance`, `Disk`, `VSwitch`, `Rds`, `KVStore`, `FunctionCompute`
 
     <dt class="property-optional"
             title="Optional">
-        <span>available<wbr>Slb<wbr>Address<wbr>Ip<wbr>Version</span>
+        <span id="availableslbaddressipversion_nodejs">
+<a href="#availableslbaddressipversion_nodejs" style="color: inherit; text-decoration: inherit;">available<wbr>Slb<wbr>Address<wbr>Ip<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -352,7 +425,9 @@ Valid values: `Instance`, `Disk`, `VSwitch`, `Rds`, `KVStore`, `FunctionCompute`
 
     <dt class="property-optional"
             title="Optional">
-        <span>available<wbr>Slb<wbr>Address<wbr>Type</span>
+        <span id="availableslbaddresstype_nodejs">
+<a href="#availableslbaddresstype_nodejs" style="color: inherit; text-decoration: inherit;">available<wbr>Slb<wbr>Address<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -361,7 +436,9 @@ Valid values: `Instance`, `Disk`, `VSwitch`, `Rds`, `KVStore`, `FunctionCompute`
 
     <dt class="property-optional"
             title="Optional">
-        <span>enable<wbr>Details</span>
+        <span id="enabledetails_nodejs">
+<a href="#enabledetails_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Details</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -370,7 +447,9 @@ Valid values: `Instance`, `Disk`, `VSwitch`, `Rds`, `KVStore`, `FunctionCompute`
 
     <dt class="property-optional"
             title="Optional">
-        <span>instance<wbr>Charge<wbr>Type</span>
+        <span id="instancechargetype_nodejs">
+<a href="#instancechargetype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Charge<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -379,7 +458,9 @@ Valid values: `Instance`, `Disk`, `VSwitch`, `Rds`, `KVStore`, `FunctionCompute`
 
     <dt class="property-optional"
             title="Optional">
-        <span>multi</span>
+        <span id="multi_nodejs">
+<a href="#multi_nodejs" style="color: inherit; text-decoration: inherit;">multi</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -388,7 +469,9 @@ Valid values: `Instance`, `Disk`, `VSwitch`, `Rds`, `KVStore`, `FunctionCompute`
 
     <dt class="property-optional"
             title="Optional">
-        <span>network<wbr>Type</span>
+        <span id="networktype_nodejs">
+<a href="#networktype_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -397,7 +480,9 @@ Valid values: `Instance`, `Disk`, `VSwitch`, `Rds`, `KVStore`, `FunctionCompute`
 
     <dt class="property-optional"
             title="Optional">
-        <span>output<wbr>File</span>
+        <span id="outputfile_nodejs">
+<a href="#outputfile_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>File</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -405,7 +490,9 @@ Valid values: `Instance`, `Disk`, `VSwitch`, `Rds`, `KVStore`, `FunctionCompute`
 
     <dt class="property-optional"
             title="Optional">
-        <span>spot<wbr>Strategy</span>
+        <span id="spotstrategy_nodejs">
+<a href="#spotstrategy_nodejs" style="color: inherit; text-decoration: inherit;">spot<wbr>Strategy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -421,7 +508,9 @@ Valid values: `Instance`, `Disk`, `VSwitch`, `Rds`, `KVStore`, `FunctionCompute`
 
     <dt class="property-optional"
             title="Optional">
-        <span>available_<wbr>disk_<wbr>category</span>
+        <span id="available_disk_category_python">
+<a href="#available_disk_category_python" style="color: inherit; text-decoration: inherit;">available_<wbr>disk_<wbr>category</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -430,7 +519,9 @@ Valid values: `Instance`, `Disk`, `VSwitch`, `Rds`, `KVStore`, `FunctionCompute`
 
     <dt class="property-optional"
             title="Optional">
-        <span>available_<wbr>instance_<wbr>type</span>
+        <span id="available_instance_type_python">
+<a href="#available_instance_type_python" style="color: inherit; text-decoration: inherit;">available_<wbr>instance_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -439,7 +530,9 @@ Valid values: `Instance`, `Disk`, `VSwitch`, `Rds`, `KVStore`, `FunctionCompute`
 
     <dt class="property-optional"
             title="Optional">
-        <span>available_<wbr>resource_<wbr>creation</span>
+        <span id="available_resource_creation_python">
+<a href="#available_resource_creation_python" style="color: inherit; text-decoration: inherit;">available_<wbr>resource_<wbr>creation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -449,7 +542,9 @@ Valid values: `Instance`, `Disk`, `VSwitch`, `Rds`, `KVStore`, `FunctionCompute`
 
     <dt class="property-optional"
             title="Optional">
-        <span>available_<wbr>slb_<wbr>address_<wbr>ip_<wbr>version</span>
+        <span id="available_slb_address_ip_version_python">
+<a href="#available_slb_address_ip_version_python" style="color: inherit; text-decoration: inherit;">available_<wbr>slb_<wbr>address_<wbr>ip_<wbr>version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -459,7 +554,9 @@ Valid values: `Instance`, `Disk`, `VSwitch`, `Rds`, `KVStore`, `FunctionCompute`
 
     <dt class="property-optional"
             title="Optional">
-        <span>available_<wbr>slb_<wbr>address_<wbr>type</span>
+        <span id="available_slb_address_type_python">
+<a href="#available_slb_address_type_python" style="color: inherit; text-decoration: inherit;">available_<wbr>slb_<wbr>address_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -468,7 +565,9 @@ Valid values: `Instance`, `Disk`, `VSwitch`, `Rds`, `KVStore`, `FunctionCompute`
 
     <dt class="property-optional"
             title="Optional">
-        <span>enable_<wbr>details</span>
+        <span id="enable_details_python">
+<a href="#enable_details_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>details</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -477,7 +576,9 @@ Valid values: `Instance`, `Disk`, `VSwitch`, `Rds`, `KVStore`, `FunctionCompute`
 
     <dt class="property-optional"
             title="Optional">
-        <span>instance_<wbr>charge_<wbr>type</span>
+        <span id="instance_charge_type_python">
+<a href="#instance_charge_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>charge_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -486,7 +587,9 @@ Valid values: `Instance`, `Disk`, `VSwitch`, `Rds`, `KVStore`, `FunctionCompute`
 
     <dt class="property-optional"
             title="Optional">
-        <span>multi</span>
+        <span id="multi_python">
+<a href="#multi_python" style="color: inherit; text-decoration: inherit;">multi</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -495,7 +598,9 @@ Valid values: `Instance`, `Disk`, `VSwitch`, `Rds`, `KVStore`, `FunctionCompute`
 
     <dt class="property-optional"
             title="Optional">
-        <span>network_<wbr>type</span>
+        <span id="network_type_python">
+<a href="#network_type_python" style="color: inherit; text-decoration: inherit;">network_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -504,7 +609,9 @@ Valid values: `Instance`, `Disk`, `VSwitch`, `Rds`, `KVStore`, `FunctionCompute`
 
     <dt class="property-optional"
             title="Optional">
-        <span>output_<wbr>file</span>
+        <span id="output_file_python">
+<a href="#output_file_python" style="color: inherit; text-decoration: inherit;">output_<wbr>file</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -512,7 +619,9 @@ Valid values: `Instance`, `Disk`, `VSwitch`, `Rds`, `KVStore`, `FunctionCompute`
 
     <dt class="property-optional"
             title="Optional">
-        <span>spot_<wbr>strategy</span>
+        <span id="spot_strategy_python">
+<a href="#spot_strategy_python" style="color: inherit; text-decoration: inherit;">spot_<wbr>strategy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -541,7 +650,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -550,7 +661,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Ids</span>
+        <span id="ids_csharp">
+<a href="#ids_csharp" style="color: inherit; text-decoration: inherit;">Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -559,7 +672,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Zones</span>
+        <span id="zones_csharp">
+<a href="#zones_csharp" style="color: inherit; text-decoration: inherit;">Zones</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getzoneszone">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Outputs.<wbr>Get<wbr>Zones<wbr>Zone&gt;</a></span>
     </dt>
@@ -568,7 +683,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Available<wbr>Disk<wbr>Category</span>
+        <span id="availablediskcategory_csharp">
+<a href="#availablediskcategory_csharp" style="color: inherit; text-decoration: inherit;">Available<wbr>Disk<wbr>Category</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -576,7 +693,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Available<wbr>Instance<wbr>Type</span>
+        <span id="availableinstancetype_csharp">
+<a href="#availableinstancetype_csharp" style="color: inherit; text-decoration: inherit;">Available<wbr>Instance<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -584,7 +703,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Available<wbr>Resource<wbr>Creation</span>
+        <span id="availableresourcecreation_csharp">
+<a href="#availableresourcecreation_csharp" style="color: inherit; text-decoration: inherit;">Available<wbr>Resource<wbr>Creation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -593,7 +714,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Available<wbr>Slb<wbr>Address<wbr>Ip<wbr>Version</span>
+        <span id="availableslbaddressipversion_csharp">
+<a href="#availableslbaddressipversion_csharp" style="color: inherit; text-decoration: inherit;">Available<wbr>Slb<wbr>Address<wbr>Ip<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -601,7 +724,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Available<wbr>Slb<wbr>Address<wbr>Type</span>
+        <span id="availableslbaddresstype_csharp">
+<a href="#availableslbaddresstype_csharp" style="color: inherit; text-decoration: inherit;">Available<wbr>Slb<wbr>Address<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -609,7 +734,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Enable<wbr>Details</span>
+        <span id="enabledetails_csharp">
+<a href="#enabledetails_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Details</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -617,7 +744,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Instance<wbr>Charge<wbr>Type</span>
+        <span id="instancechargetype_csharp">
+<a href="#instancechargetype_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Charge<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -625,7 +754,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Multi</span>
+        <span id="multi_csharp">
+<a href="#multi_csharp" style="color: inherit; text-decoration: inherit;">Multi</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -633,7 +764,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Network<wbr>Type</span>
+        <span id="networktype_csharp">
+<a href="#networktype_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -641,7 +774,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Output<wbr>File</span>
+        <span id="outputfile_csharp">
+<a href="#outputfile_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>File</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -649,7 +784,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Spot<wbr>Strategy</span>
+        <span id="spotstrategy_csharp">
+<a href="#spotstrategy_csharp" style="color: inherit; text-decoration: inherit;">Spot<wbr>Strategy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -664,7 +801,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -673,7 +812,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Ids</span>
+        <span id="ids_go">
+<a href="#ids_go" style="color: inherit; text-decoration: inherit;">Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -682,7 +823,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Zones</span>
+        <span id="zones_go">
+<a href="#zones_go" style="color: inherit; text-decoration: inherit;">Zones</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getzoneszone">[]Get<wbr>Zones<wbr>Zone</a></span>
     </dt>
@@ -691,7 +834,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Available<wbr>Disk<wbr>Category</span>
+        <span id="availablediskcategory_go">
+<a href="#availablediskcategory_go" style="color: inherit; text-decoration: inherit;">Available<wbr>Disk<wbr>Category</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -699,7 +844,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Available<wbr>Instance<wbr>Type</span>
+        <span id="availableinstancetype_go">
+<a href="#availableinstancetype_go" style="color: inherit; text-decoration: inherit;">Available<wbr>Instance<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -707,7 +854,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Available<wbr>Resource<wbr>Creation</span>
+        <span id="availableresourcecreation_go">
+<a href="#availableresourcecreation_go" style="color: inherit; text-decoration: inherit;">Available<wbr>Resource<wbr>Creation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -716,7 +865,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Available<wbr>Slb<wbr>Address<wbr>Ip<wbr>Version</span>
+        <span id="availableslbaddressipversion_go">
+<a href="#availableslbaddressipversion_go" style="color: inherit; text-decoration: inherit;">Available<wbr>Slb<wbr>Address<wbr>Ip<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -724,7 +875,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Available<wbr>Slb<wbr>Address<wbr>Type</span>
+        <span id="availableslbaddresstype_go">
+<a href="#availableslbaddresstype_go" style="color: inherit; text-decoration: inherit;">Available<wbr>Slb<wbr>Address<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -732,7 +885,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Enable<wbr>Details</span>
+        <span id="enabledetails_go">
+<a href="#enabledetails_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Details</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -740,7 +895,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Instance<wbr>Charge<wbr>Type</span>
+        <span id="instancechargetype_go">
+<a href="#instancechargetype_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Charge<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -748,7 +905,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Multi</span>
+        <span id="multi_go">
+<a href="#multi_go" style="color: inherit; text-decoration: inherit;">Multi</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -756,7 +915,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Network<wbr>Type</span>
+        <span id="networktype_go">
+<a href="#networktype_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -764,7 +925,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Output<wbr>File</span>
+        <span id="outputfile_go">
+<a href="#outputfile_go" style="color: inherit; text-decoration: inherit;">Output<wbr>File</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -772,7 +935,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Spot<wbr>Strategy</span>
+        <span id="spotstrategy_go">
+<a href="#spotstrategy_go" style="color: inherit; text-decoration: inherit;">Spot<wbr>Strategy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -787,7 +952,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -796,7 +963,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>ids</span>
+        <span id="ids_nodejs">
+<a href="#ids_nodejs" style="color: inherit; text-decoration: inherit;">ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -805,7 +974,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>zones</span>
+        <span id="zones_nodejs">
+<a href="#zones_nodejs" style="color: inherit; text-decoration: inherit;">zones</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getzoneszone">Get<wbr>Zones<wbr>Zone[]</a></span>
     </dt>
@@ -814,7 +985,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>available<wbr>Disk<wbr>Category</span>
+        <span id="availablediskcategory_nodejs">
+<a href="#availablediskcategory_nodejs" style="color: inherit; text-decoration: inherit;">available<wbr>Disk<wbr>Category</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -822,7 +995,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>available<wbr>Instance<wbr>Type</span>
+        <span id="availableinstancetype_nodejs">
+<a href="#availableinstancetype_nodejs" style="color: inherit; text-decoration: inherit;">available<wbr>Instance<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -830,7 +1005,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>available<wbr>Resource<wbr>Creation</span>
+        <span id="availableresourcecreation_nodejs">
+<a href="#availableresourcecreation_nodejs" style="color: inherit; text-decoration: inherit;">available<wbr>Resource<wbr>Creation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -839,7 +1016,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>available<wbr>Slb<wbr>Address<wbr>Ip<wbr>Version</span>
+        <span id="availableslbaddressipversion_nodejs">
+<a href="#availableslbaddressipversion_nodejs" style="color: inherit; text-decoration: inherit;">available<wbr>Slb<wbr>Address<wbr>Ip<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -847,7 +1026,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>available<wbr>Slb<wbr>Address<wbr>Type</span>
+        <span id="availableslbaddresstype_nodejs">
+<a href="#availableslbaddresstype_nodejs" style="color: inherit; text-decoration: inherit;">available<wbr>Slb<wbr>Address<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -855,7 +1036,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>enable<wbr>Details</span>
+        <span id="enabledetails_nodejs">
+<a href="#enabledetails_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Details</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -863,7 +1046,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>instance<wbr>Charge<wbr>Type</span>
+        <span id="instancechargetype_nodejs">
+<a href="#instancechargetype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Charge<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -871,7 +1056,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>multi</span>
+        <span id="multi_nodejs">
+<a href="#multi_nodejs" style="color: inherit; text-decoration: inherit;">multi</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -879,7 +1066,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>network<wbr>Type</span>
+        <span id="networktype_nodejs">
+<a href="#networktype_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -887,7 +1076,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>output<wbr>File</span>
+        <span id="outputfile_nodejs">
+<a href="#outputfile_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>File</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -895,7 +1086,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>spot<wbr>Strategy</span>
+        <span id="spotstrategy_nodejs">
+<a href="#spotstrategy_nodejs" style="color: inherit; text-decoration: inherit;">spot<wbr>Strategy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -910,7 +1103,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -919,7 +1114,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>ids</span>
+        <span id="ids_python">
+<a href="#ids_python" style="color: inherit; text-decoration: inherit;">ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -928,7 +1125,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>zones</span>
+        <span id="zones_python">
+<a href="#zones_python" style="color: inherit; text-decoration: inherit;">zones</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getzoneszone">List[Get<wbr>Zones<wbr>Zone]</a></span>
     </dt>
@@ -937,7 +1136,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>available_<wbr>disk_<wbr>category</span>
+        <span id="available_disk_category_python">
+<a href="#available_disk_category_python" style="color: inherit; text-decoration: inherit;">available_<wbr>disk_<wbr>category</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -945,7 +1146,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>available_<wbr>instance_<wbr>type</span>
+        <span id="available_instance_type_python">
+<a href="#available_instance_type_python" style="color: inherit; text-decoration: inherit;">available_<wbr>instance_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -953,7 +1156,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>available_<wbr>resource_<wbr>creation</span>
+        <span id="available_resource_creation_python">
+<a href="#available_resource_creation_python" style="color: inherit; text-decoration: inherit;">available_<wbr>resource_<wbr>creation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -962,7 +1167,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>available_<wbr>slb_<wbr>address_<wbr>ip_<wbr>version</span>
+        <span id="available_slb_address_ip_version_python">
+<a href="#available_slb_address_ip_version_python" style="color: inherit; text-decoration: inherit;">available_<wbr>slb_<wbr>address_<wbr>ip_<wbr>version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -970,7 +1177,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>available_<wbr>slb_<wbr>address_<wbr>type</span>
+        <span id="available_slb_address_type_python">
+<a href="#available_slb_address_type_python" style="color: inherit; text-decoration: inherit;">available_<wbr>slb_<wbr>address_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -978,7 +1187,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>enable_<wbr>details</span>
+        <span id="enable_details_python">
+<a href="#enable_details_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>details</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -986,7 +1197,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>instance_<wbr>charge_<wbr>type</span>
+        <span id="instance_charge_type_python">
+<a href="#instance_charge_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>charge_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -994,7 +1207,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>multi</span>
+        <span id="multi_python">
+<a href="#multi_python" style="color: inherit; text-decoration: inherit;">multi</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1002,7 +1217,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>network_<wbr>type</span>
+        <span id="network_type_python">
+<a href="#network_type_python" style="color: inherit; text-decoration: inherit;">network_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1010,7 +1227,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>output_<wbr>file</span>
+        <span id="output_file_python">
+<a href="#output_file_python" style="color: inherit; text-decoration: inherit;">output_<wbr>file</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1018,7 +1237,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>spot_<wbr>strategy</span>
+        <span id="spot_strategy_python">
+<a href="#spot_strategy_python" style="color: inherit; text-decoration: inherit;">spot_<wbr>strategy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1057,7 +1278,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Available<wbr>Disk<wbr>Categories</span>
+        <span id="availablediskcategories_csharp">
+<a href="#availablediskcategories_csharp" style="color: inherit; text-decoration: inherit;">Available<wbr>Disk<wbr>Categories</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1066,7 +1289,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Available<wbr>Instance<wbr>Types</span>
+        <span id="availableinstancetypes_csharp">
+<a href="#availableinstancetypes_csharp" style="color: inherit; text-decoration: inherit;">Available<wbr>Instance<wbr>Types</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1075,7 +1300,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Available<wbr>Resource<wbr>Creations</span>
+        <span id="availableresourcecreations_csharp">
+<a href="#availableresourcecreations_csharp" style="color: inherit; text-decoration: inherit;">Available<wbr>Resource<wbr>Creations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1085,7 +1312,9 @@ Valid values: `Instance`, `Disk`, `VSwitch`, `Rds`, `KVStore`, `FunctionCompute`
 
     <dt class="property-required"
             title="Required">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1094,7 +1323,9 @@ Valid values: `Instance`, `Disk`, `VSwitch`, `Rds`, `KVStore`, `FunctionCompute`
 
     <dt class="property-required"
             title="Required">
-        <span>Local<wbr>Name</span>
+        <span id="localname_csharp">
+<a href="#localname_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1103,7 +1334,9 @@ Valid values: `Instance`, `Disk`, `VSwitch`, `Rds`, `KVStore`, `FunctionCompute`
 
     <dt class="property-required"
             title="Required">
-        <span>Multi<wbr>Zone<wbr>Ids</span>
+        <span id="multizoneids_csharp">
+<a href="#multizoneids_csharp" style="color: inherit; text-decoration: inherit;">Multi<wbr>Zone<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1112,7 +1345,9 @@ Valid values: `Instance`, `Disk`, `VSwitch`, `Rds`, `KVStore`, `FunctionCompute`
 
     <dt class="property-required"
             title="Required">
-        <span>Slb<wbr>Slave<wbr>Zone<wbr>Ids</span>
+        <span id="slbslavezoneids_csharp">
+<a href="#slbslavezoneids_csharp" style="color: inherit; text-decoration: inherit;">Slb<wbr>Slave<wbr>Zone<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1128,7 +1363,9 @@ Valid values: `Instance`, `Disk`, `VSwitch`, `Rds`, `KVStore`, `FunctionCompute`
 
     <dt class="property-required"
             title="Required">
-        <span>Available<wbr>Disk<wbr>Categories</span>
+        <span id="availablediskcategories_go">
+<a href="#availablediskcategories_go" style="color: inherit; text-decoration: inherit;">Available<wbr>Disk<wbr>Categories</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1137,7 +1374,9 @@ Valid values: `Instance`, `Disk`, `VSwitch`, `Rds`, `KVStore`, `FunctionCompute`
 
     <dt class="property-required"
             title="Required">
-        <span>Available<wbr>Instance<wbr>Types</span>
+        <span id="availableinstancetypes_go">
+<a href="#availableinstancetypes_go" style="color: inherit; text-decoration: inherit;">Available<wbr>Instance<wbr>Types</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1146,7 +1385,9 @@ Valid values: `Instance`, `Disk`, `VSwitch`, `Rds`, `KVStore`, `FunctionCompute`
 
     <dt class="property-required"
             title="Required">
-        <span>Available<wbr>Resource<wbr>Creations</span>
+        <span id="availableresourcecreations_go">
+<a href="#availableresourcecreations_go" style="color: inherit; text-decoration: inherit;">Available<wbr>Resource<wbr>Creations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1156,7 +1397,9 @@ Valid values: `Instance`, `Disk`, `VSwitch`, `Rds`, `KVStore`, `FunctionCompute`
 
     <dt class="property-required"
             title="Required">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1165,7 +1408,9 @@ Valid values: `Instance`, `Disk`, `VSwitch`, `Rds`, `KVStore`, `FunctionCompute`
 
     <dt class="property-required"
             title="Required">
-        <span>Local<wbr>Name</span>
+        <span id="localname_go">
+<a href="#localname_go" style="color: inherit; text-decoration: inherit;">Local<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1174,7 +1419,9 @@ Valid values: `Instance`, `Disk`, `VSwitch`, `Rds`, `KVStore`, `FunctionCompute`
 
     <dt class="property-required"
             title="Required">
-        <span>Multi<wbr>Zone<wbr>Ids</span>
+        <span id="multizoneids_go">
+<a href="#multizoneids_go" style="color: inherit; text-decoration: inherit;">Multi<wbr>Zone<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1183,7 +1430,9 @@ Valid values: `Instance`, `Disk`, `VSwitch`, `Rds`, `KVStore`, `FunctionCompute`
 
     <dt class="property-required"
             title="Required">
-        <span>Slb<wbr>Slave<wbr>Zone<wbr>Ids</span>
+        <span id="slbslavezoneids_go">
+<a href="#slbslavezoneids_go" style="color: inherit; text-decoration: inherit;">Slb<wbr>Slave<wbr>Zone<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1199,7 +1448,9 @@ Valid values: `Instance`, `Disk`, `VSwitch`, `Rds`, `KVStore`, `FunctionCompute`
 
     <dt class="property-required"
             title="Required">
-        <span>available<wbr>Disk<wbr>Categories</span>
+        <span id="availablediskcategories_nodejs">
+<a href="#availablediskcategories_nodejs" style="color: inherit; text-decoration: inherit;">available<wbr>Disk<wbr>Categories</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1208,7 +1459,9 @@ Valid values: `Instance`, `Disk`, `VSwitch`, `Rds`, `KVStore`, `FunctionCompute`
 
     <dt class="property-required"
             title="Required">
-        <span>available<wbr>Instance<wbr>Types</span>
+        <span id="availableinstancetypes_nodejs">
+<a href="#availableinstancetypes_nodejs" style="color: inherit; text-decoration: inherit;">available<wbr>Instance<wbr>Types</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1217,7 +1470,9 @@ Valid values: `Instance`, `Disk`, `VSwitch`, `Rds`, `KVStore`, `FunctionCompute`
 
     <dt class="property-required"
             title="Required">
-        <span>available<wbr>Resource<wbr>Creations</span>
+        <span id="availableresourcecreations_nodejs">
+<a href="#availableresourcecreations_nodejs" style="color: inherit; text-decoration: inherit;">available<wbr>Resource<wbr>Creations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1227,7 +1482,9 @@ Valid values: `Instance`, `Disk`, `VSwitch`, `Rds`, `KVStore`, `FunctionCompute`
 
     <dt class="property-required"
             title="Required">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1236,7 +1493,9 @@ Valid values: `Instance`, `Disk`, `VSwitch`, `Rds`, `KVStore`, `FunctionCompute`
 
     <dt class="property-required"
             title="Required">
-        <span>local<wbr>Name</span>
+        <span id="localname_nodejs">
+<a href="#localname_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1245,7 +1504,9 @@ Valid values: `Instance`, `Disk`, `VSwitch`, `Rds`, `KVStore`, `FunctionCompute`
 
     <dt class="property-required"
             title="Required">
-        <span>multi<wbr>Zone<wbr>Ids</span>
+        <span id="multizoneids_nodejs">
+<a href="#multizoneids_nodejs" style="color: inherit; text-decoration: inherit;">multi<wbr>Zone<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1254,7 +1515,9 @@ Valid values: `Instance`, `Disk`, `VSwitch`, `Rds`, `KVStore`, `FunctionCompute`
 
     <dt class="property-required"
             title="Required">
-        <span>slb<wbr>Slave<wbr>Zone<wbr>Ids</span>
+        <span id="slbslavezoneids_nodejs">
+<a href="#slbslavezoneids_nodejs" style="color: inherit; text-decoration: inherit;">slb<wbr>Slave<wbr>Zone<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1270,7 +1533,9 @@ Valid values: `Instance`, `Disk`, `VSwitch`, `Rds`, `KVStore`, `FunctionCompute`
 
     <dt class="property-required"
             title="Required">
-        <span>available<wbr>Disk<wbr>Categories</span>
+        <span id="availablediskcategories_python">
+<a href="#availablediskcategories_python" style="color: inherit; text-decoration: inherit;">available<wbr>Disk<wbr>Categories</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1279,7 +1544,9 @@ Valid values: `Instance`, `Disk`, `VSwitch`, `Rds`, `KVStore`, `FunctionCompute`
 
     <dt class="property-required"
             title="Required">
-        <span>available<wbr>Instance<wbr>Types</span>
+        <span id="availableinstancetypes_python">
+<a href="#availableinstancetypes_python" style="color: inherit; text-decoration: inherit;">available<wbr>Instance<wbr>Types</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1288,7 +1555,9 @@ Valid values: `Instance`, `Disk`, `VSwitch`, `Rds`, `KVStore`, `FunctionCompute`
 
     <dt class="property-required"
             title="Required">
-        <span>available<wbr>Resource<wbr>Creations</span>
+        <span id="availableresourcecreations_python">
+<a href="#availableresourcecreations_python" style="color: inherit; text-decoration: inherit;">available<wbr>Resource<wbr>Creations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1298,7 +1567,9 @@ Valid values: `Instance`, `Disk`, `VSwitch`, `Rds`, `KVStore`, `FunctionCompute`
 
     <dt class="property-required"
             title="Required">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1307,7 +1578,9 @@ Valid values: `Instance`, `Disk`, `VSwitch`, `Rds`, `KVStore`, `FunctionCompute`
 
     <dt class="property-required"
             title="Required">
-        <span>local<wbr>Name</span>
+        <span id="localname_python">
+<a href="#localname_python" style="color: inherit; text-decoration: inherit;">local<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1316,7 +1589,9 @@ Valid values: `Instance`, `Disk`, `VSwitch`, `Rds`, `KVStore`, `FunctionCompute`
 
     <dt class="property-required"
             title="Required">
-        <span>multi<wbr>Zone<wbr>Ids</span>
+        <span id="multizoneids_python">
+<a href="#multizoneids_python" style="color: inherit; text-decoration: inherit;">multi<wbr>Zone<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1325,7 +1600,9 @@ Valid values: `Instance`, `Disk`, `VSwitch`, `Rds`, `KVStore`, `FunctionCompute`
 
     <dt class="property-required"
             title="Required">
-        <span>slb<wbr>Slave<wbr>Zone<wbr>Ids</span>
+        <span id="slbslavezoneids_python">
+<a href="#slbslavezoneids_python" style="color: inherit; text-decoration: inherit;">slb<wbr>Slave<wbr>Zone<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>

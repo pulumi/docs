@@ -15,8 +15,16 @@ Explore the resources and functions of the resourcemanager module in the AliClou
     <li><a href="folder" title="Folder"><span class="symbol resource"></span>Folder</a></li>
     <li><a href="handshake" title="Handshake"><span class="symbol resource"></span>Handshake</a></li>
     <li><a href="policy" title="Policy"><span class="symbol resource"></span>Policy</a></li>
+    <li><a href="policyversion" title="PolicyVersion"><span class="symbol resource"></span>PolicyVersion</a></li>
+    <li><a href="resourcedirectory" title="ResourceDirectory"><span class="symbol resource"></span>ResourceDirectory</a></li>
     <li><a href="resourcegroup" title="ResourceGroup"><span class="symbol resource"></span>ResourceGroup</a></li>
     <li><a href="role" title="Role"><span class="symbol resource"></span>Role</a></li>
+</ul>
+
+<h2 id="functions">Functions</h2>
+<ul class="api">
+    <li><a href="getfolders" title="GetFolders"><span class="symbol function"></span>GetFolders</a></li>
+    <li><a href="getresourcegroups" title="GetResourceGroups"><span class="symbol function"></span>GetResourceGroups</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -28,7 +36,7 @@ Explore the resources and functions of the resourcemanager module in the AliClou
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
 	<dt>Version</dt>
-	<dd>2.5.0</dd>
+	<dd>2.6.0</dd>
 </dl>
 
 

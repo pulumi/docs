@@ -1594,7 +1594,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
         <span class="s2">&quot;policy&quot;</span><span class="p">:</span> <span class="s2">&quot;accept&quot;</span><span class="p">,</span>
         <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="s2">&quot;-1/-1&quot;</span><span class="p">,</span>
         <span class="s2">&quot;protocol&quot;</span><span class="p">:</span> <span class="s2">&quot;all&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;sourceCidrIp&quot;</span><span class="p">:</span> <span class="s2">&quot;0.0.0.0/32&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;source_cidr_ip&quot;</span><span class="p">:</span> <span class="s2">&quot;0.0.0.0/32&quot;</span><span class="p">,</span>
     <span class="p">}],</span>
     <span class="n">network_acl_id</span><span class="o">=</span><span class="n">default_network_acl</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
 </pre></div>

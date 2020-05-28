@@ -24,7 +24,46 @@ For information about domain config and how to use it, see [Batch set config](ht
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        // Create a new Domain config.
+        var domain = new AliCloud.Cdn.DomainNew("domain", new AliCloud.Cdn.DomainNewArgs
+        {
+            CdnType = "web",
+            DomainName = "tf-testacc%d.xiaozhu.com",
+            Scope = "overseas",
+            Sources = new AliCloud.Cdn.Inputs.DomainNewSourcesArgs
+            {
+                Content = "1.1.1.1",
+                Port = 80,
+                Priority = "20",
+                Type = "ipaddr",
+                Weight = "15",
+            },
+        });
+        var config = new AliCloud.Cdn.DomainConfig("config", new AliCloud.Cdn.DomainConfigArgs
+        {
+            DomainName = domain.DomainName,
+            FunctionArgs = 
+            {
+                new AliCloud.Cdn.Inputs.DomainConfigFunctionArgArgs
+                {
+                    ArgName = "ip_list",
+                    ArgValue = "110.110.110.110",
+                },
+            },
+            FunctionName = "ip_allow_list_set",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -273,7 +312,9 @@ The DomainConfig resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-required"
             title="Required">
-        <span>Domain<wbr>Name</span>
+        <span id="domainname_csharp">
+<a href="#domainname_csharp" style="color: inherit; text-decoration: inherit;">Domain<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -282,7 +323,9 @@ The DomainConfig resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-required"
             title="Required">
-        <span>Function<wbr>Args</span>
+        <span id="functionargs_csharp">
+<a href="#functionargs_csharp" style="color: inherit; text-decoration: inherit;">Function<wbr>Args</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainconfigfunctionarg">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Cdn.<wbr>Inputs.<wbr>Domain<wbr>Config<wbr>Function<wbr>Arg<wbr>Args&gt;</a></span>
     </dt>
@@ -291,7 +334,9 @@ The DomainConfig resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-required"
             title="Required">
-        <span>Function<wbr>Name</span>
+        <span id="functionname_csharp">
+<a href="#functionname_csharp" style="color: inherit; text-decoration: inherit;">Function<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -307,7 +352,9 @@ The DomainConfig resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-required"
             title="Required">
-        <span>Domain<wbr>Name</span>
+        <span id="domainname_go">
+<a href="#domainname_go" style="color: inherit; text-decoration: inherit;">Domain<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -316,7 +363,9 @@ The DomainConfig resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-required"
             title="Required">
-        <span>Function<wbr>Args</span>
+        <span id="functionargs_go">
+<a href="#functionargs_go" style="color: inherit; text-decoration: inherit;">Function<wbr>Args</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainconfigfunctionarg">[]Domain<wbr>Config<wbr>Function<wbr>Arg</a></span>
     </dt>
@@ -325,7 +374,9 @@ The DomainConfig resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-required"
             title="Required">
-        <span>Function<wbr>Name</span>
+        <span id="functionname_go">
+<a href="#functionname_go" style="color: inherit; text-decoration: inherit;">Function<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -341,7 +392,9 @@ The DomainConfig resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-required"
             title="Required">
-        <span>domain<wbr>Name</span>
+        <span id="domainname_nodejs">
+<a href="#domainname_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -350,7 +403,9 @@ The DomainConfig resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-required"
             title="Required">
-        <span>function<wbr>Args</span>
+        <span id="functionargs_nodejs">
+<a href="#functionargs_nodejs" style="color: inherit; text-decoration: inherit;">function<wbr>Args</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainconfigfunctionarg">Domain<wbr>Config<wbr>Function<wbr>Arg[]</a></span>
     </dt>
@@ -359,7 +414,9 @@ The DomainConfig resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-required"
             title="Required">
-        <span>function<wbr>Name</span>
+        <span id="functionname_nodejs">
+<a href="#functionname_nodejs" style="color: inherit; text-decoration: inherit;">function<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -375,7 +432,9 @@ The DomainConfig resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-required"
             title="Required">
-        <span>domain_<wbr>name</span>
+        <span id="domain_name_python">
+<a href="#domain_name_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -384,7 +443,9 @@ The DomainConfig resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-required"
             title="Required">
-        <span>function_<wbr>args</span>
+        <span id="function_args_python">
+<a href="#function_args_python" style="color: inherit; text-decoration: inherit;">function_<wbr>args</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainconfigfunctionarg">List[Domain<wbr>Config<wbr>Function<wbr>Arg]</a></span>
     </dt>
@@ -393,7 +454,9 @@ The DomainConfig resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-required"
             title="Required">
-        <span>function_<wbr>name</span>
+        <span id="function_name_python">
+<a href="#function_name_python" style="color: inherit; text-decoration: inherit;">function_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -420,7 +483,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -435,7 +500,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -450,7 +517,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -465,7 +534,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -606,7 +677,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Domain<wbr>Name</span>
+        <span id="state_domainname_csharp">
+<a href="#state_domainname_csharp" style="color: inherit; text-decoration: inherit;">Domain<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -615,7 +688,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Function<wbr>Args</span>
+        <span id="state_functionargs_csharp">
+<a href="#state_functionargs_csharp" style="color: inherit; text-decoration: inherit;">Function<wbr>Args</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainconfigfunctionarg">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Cdn.<wbr>Inputs.<wbr>Domain<wbr>Config<wbr>Function<wbr>Arg<wbr>Args&gt;</a></span>
     </dt>
@@ -624,7 +699,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Function<wbr>Name</span>
+        <span id="state_functionname_csharp">
+<a href="#state_functionname_csharp" style="color: inherit; text-decoration: inherit;">Function<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -640,7 +717,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Domain<wbr>Name</span>
+        <span id="state_domainname_go">
+<a href="#state_domainname_go" style="color: inherit; text-decoration: inherit;">Domain<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -649,7 +728,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Function<wbr>Args</span>
+        <span id="state_functionargs_go">
+<a href="#state_functionargs_go" style="color: inherit; text-decoration: inherit;">Function<wbr>Args</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainconfigfunctionarg">[]Domain<wbr>Config<wbr>Function<wbr>Arg</a></span>
     </dt>
@@ -658,7 +739,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Function<wbr>Name</span>
+        <span id="state_functionname_go">
+<a href="#state_functionname_go" style="color: inherit; text-decoration: inherit;">Function<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -674,7 +757,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>domain<wbr>Name</span>
+        <span id="state_domainname_nodejs">
+<a href="#state_domainname_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -683,7 +768,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>function<wbr>Args</span>
+        <span id="state_functionargs_nodejs">
+<a href="#state_functionargs_nodejs" style="color: inherit; text-decoration: inherit;">function<wbr>Args</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainconfigfunctionarg">Domain<wbr>Config<wbr>Function<wbr>Arg[]</a></span>
     </dt>
@@ -692,7 +779,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>function<wbr>Name</span>
+        <span id="state_functionname_nodejs">
+<a href="#state_functionname_nodejs" style="color: inherit; text-decoration: inherit;">function<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -708,7 +797,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>domain_<wbr>name</span>
+        <span id="state_domain_name_python">
+<a href="#state_domain_name_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -717,7 +808,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>function_<wbr>args</span>
+        <span id="state_function_args_python">
+<a href="#state_function_args_python" style="color: inherit; text-decoration: inherit;">function_<wbr>args</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainconfigfunctionarg">List[Domain<wbr>Config<wbr>Function<wbr>Arg]</a></span>
     </dt>
@@ -726,7 +819,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>function_<wbr>name</span>
+        <span id="state_function_name_python">
+<a href="#state_function_name_python" style="color: inherit; text-decoration: inherit;">function_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -768,7 +863,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Arg<wbr>Name</span>
+        <span id="argname_csharp">
+<a href="#argname_csharp" style="color: inherit; text-decoration: inherit;">Arg<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -777,7 +874,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Arg<wbr>Value</span>
+        <span id="argvalue_csharp">
+<a href="#argvalue_csharp" style="color: inherit; text-decoration: inherit;">Arg<wbr>Value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -793,7 +892,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Arg<wbr>Name</span>
+        <span id="argname_go">
+<a href="#argname_go" style="color: inherit; text-decoration: inherit;">Arg<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -802,7 +903,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Arg<wbr>Value</span>
+        <span id="argvalue_go">
+<a href="#argvalue_go" style="color: inherit; text-decoration: inherit;">Arg<wbr>Value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -818,7 +921,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>arg<wbr>Name</span>
+        <span id="argname_nodejs">
+<a href="#argname_nodejs" style="color: inherit; text-decoration: inherit;">arg<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -827,7 +932,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>arg<wbr>Value</span>
+        <span id="argvalue_nodejs">
+<a href="#argvalue_nodejs" style="color: inherit; text-decoration: inherit;">arg<wbr>Value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -843,7 +950,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>arg<wbr>Name</span>
+        <span id="argname_python">
+<a href="#argname_python" style="color: inherit; text-decoration: inherit;">arg<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -852,7 +961,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>arg<wbr>Value</span>
+        <span id="argvalue_python">
+<a href="#argvalue_python" style="color: inherit; text-decoration: inherit;">arg<wbr>Value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

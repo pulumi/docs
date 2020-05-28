@@ -16,6 +16,7 @@ Explore the resources and functions of the dns module in the AliCloud package.
     <li><a href="dnsdomain" title="DnsDomain"><span class="symbol resource"></span>DnsDomain</a></li>
     <li><a href="domain" title="Domain"><span class="symbol resource"></span>Domain</a></li>
     <li><a href="domainattachment" title="DomainAttachment"><span class="symbol resource"></span>DomainAttachment</a></li>
+    <li><a href="domaingroup" title="DomainGroup"><span class="symbol resource"></span>DomainGroup</a></li>
     <li><a href="group" title="Group"><span class="symbol resource"></span>Group</a></li>
     <li><a href="instance" title="Instance"><span class="symbol resource"></span>Instance</a></li>
     <li><a href="record" title="Record"><span class="symbol resource"></span>Record</a></li>
@@ -41,7 +42,7 @@ Explore the resources and functions of the dns module in the AliCloud package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
 	<dt>Version</dt>
-	<dd>2.5.0</dd>
+	<dd>2.6.0</dd>
 </dl>
 
 

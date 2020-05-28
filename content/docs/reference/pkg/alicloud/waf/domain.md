@@ -24,7 +24,43 @@ For information about WAF and how to use it, see [What is Alibaba Cloud WAF](htt
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var domain = new AliCloud.Waf.Domain("domain", new AliCloud.Waf.DomainArgs
+        {
+            ClusterType = "PhysicalCluster",
+            Domain = "www.aliyun.com",
+            Http2Ports = 443,
+            HttpPorts = 80,
+            HttpToUserIp = "Off",
+            HttpsPorts = 443,
+            HttpsRedirect = "Off",
+            InstanceId = "waf-123455",
+            IsAccessProduct = "On",
+            LoadBalancing = "IpHash",
+            LogHeaders = 
+            {
+                new AliCloud.Waf.Inputs.DomainLogHeaderArgs
+                {
+                    Key = "foo",
+                    Value = "http",
+                },
+            },
+            SourceIps = 
+            {
+                "1.1.1.1",
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -266,7 +302,9 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>Domain<wbr>Name</span>
+        <span id="domainname_csharp">
+<a href="#domainname_csharp" style="color: inherit; text-decoration: inherit;">Domain<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -275,7 +313,9 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>Instance<wbr>Id</span>
+        <span id="instanceid_csharp">
+<a href="#instanceid_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -284,7 +324,9 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>Is<wbr>Access<wbr>Product</span>
+        <span id="isaccessproduct_csharp">
+<a href="#isaccessproduct_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Access<wbr>Product</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -293,7 +335,9 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>Source<wbr>Ips</span>
+        <span id="sourceips_csharp">
+<a href="#sourceips_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Ips</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -302,7 +346,9 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cluster<wbr>Type</span>
+        <span id="clustertype_csharp">
+<a href="#clustertype_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -311,7 +357,9 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>Connection<wbr>Time</span>
+        <span id="connectiontime_csharp">
+<a href="#connectiontime_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -320,7 +368,9 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>Http2Ports</span>
+        <span id="http2ports_csharp">
+<a href="#http2ports_csharp" style="color: inherit; text-decoration: inherit;">Http2Ports</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -329,7 +379,9 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>Http<wbr>Ports</span>
+        <span id="httpports_csharp">
+<a href="#httpports_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Ports</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -338,7 +390,9 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>Http<wbr>To<wbr>User<wbr>Ip</span>
+        <span id="httptouserip_csharp">
+<a href="#httptouserip_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>To<wbr>User<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -348,7 +402,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Https<wbr>Ports</span>
+        <span id="httpsports_csharp">
+<a href="#httpsports_csharp" style="color: inherit; text-decoration: inherit;">Https<wbr>Ports</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -357,7 +413,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Https<wbr>Redirect</span>
+        <span id="httpsredirect_csharp">
+<a href="#httpsredirect_csharp" style="color: inherit; text-decoration: inherit;">Https<wbr>Redirect</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -366,7 +424,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Load<wbr>Balancing</span>
+        <span id="loadbalancing_csharp">
+<a href="#loadbalancing_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancing</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -375,7 +435,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Log<wbr>Headers</span>
+        <span id="logheaders_csharp">
+<a href="#logheaders_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Headers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainlogheader">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Waf.<wbr>Inputs.<wbr>Domain<wbr>Log<wbr>Header<wbr>Args&gt;</a></span>
     </dt>
@@ -386,7 +448,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Read<wbr>Time</span>
+        <span id="readtime_csharp">
+<a href="#readtime_csharp" style="color: inherit; text-decoration: inherit;">Read<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -395,7 +459,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Group<wbr>Id</span>
+        <span id="resourcegroupid_csharp">
+<a href="#resourcegroupid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -404,7 +470,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Write<wbr>Time</span>
+        <span id="writetime_csharp">
+<a href="#writetime_csharp" style="color: inherit; text-decoration: inherit;">Write<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -420,7 +488,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-required"
             title="Required">
-        <span>Domain</span>
+        <span id="domain_go">
+<a href="#domain_go" style="color: inherit; text-decoration: inherit;">Domain</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -429,7 +499,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-required"
             title="Required">
-        <span>Instance<wbr>Id</span>
+        <span id="instanceid_go">
+<a href="#instanceid_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -438,7 +510,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-required"
             title="Required">
-        <span>Is<wbr>Access<wbr>Product</span>
+        <span id="isaccessproduct_go">
+<a href="#isaccessproduct_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Access<wbr>Product</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -447,7 +521,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-required"
             title="Required">
-        <span>Source<wbr>Ips</span>
+        <span id="sourceips_go">
+<a href="#sourceips_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Ips</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -456,7 +532,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cluster<wbr>Type</span>
+        <span id="clustertype_go">
+<a href="#clustertype_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -465,7 +543,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Connection<wbr>Time</span>
+        <span id="connectiontime_go">
+<a href="#connectiontime_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -474,7 +554,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Http2Ports</span>
+        <span id="http2ports_go">
+<a href="#http2ports_go" style="color: inherit; text-decoration: inherit;">Http2Ports</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -483,7 +565,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Http<wbr>Ports</span>
+        <span id="httpports_go">
+<a href="#httpports_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Ports</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -492,7 +576,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Http<wbr>To<wbr>User<wbr>Ip</span>
+        <span id="httptouserip_go">
+<a href="#httptouserip_go" style="color: inherit; text-decoration: inherit;">Http<wbr>To<wbr>User<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -502,7 +588,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Https<wbr>Ports</span>
+        <span id="httpsports_go">
+<a href="#httpsports_go" style="color: inherit; text-decoration: inherit;">Https<wbr>Ports</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -511,7 +599,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Https<wbr>Redirect</span>
+        <span id="httpsredirect_go">
+<a href="#httpsredirect_go" style="color: inherit; text-decoration: inherit;">Https<wbr>Redirect</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -520,7 +610,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Load<wbr>Balancing</span>
+        <span id="loadbalancing_go">
+<a href="#loadbalancing_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancing</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -529,7 +621,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Log<wbr>Headers</span>
+        <span id="logheaders_go">
+<a href="#logheaders_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Headers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainlogheader">[]Domain<wbr>Log<wbr>Header</a></span>
     </dt>
@@ -540,7 +634,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Read<wbr>Time</span>
+        <span id="readtime_go">
+<a href="#readtime_go" style="color: inherit; text-decoration: inherit;">Read<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -549,7 +645,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Group<wbr>Id</span>
+        <span id="resourcegroupid_go">
+<a href="#resourcegroupid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -558,7 +656,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Write<wbr>Time</span>
+        <span id="writetime_go">
+<a href="#writetime_go" style="color: inherit; text-decoration: inherit;">Write<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -574,7 +674,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-required"
             title="Required">
-        <span>domain</span>
+        <span id="domain_nodejs">
+<a href="#domain_nodejs" style="color: inherit; text-decoration: inherit;">domain</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -583,7 +685,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-required"
             title="Required">
-        <span>instance<wbr>Id</span>
+        <span id="instanceid_nodejs">
+<a href="#instanceid_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -592,7 +696,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-required"
             title="Required">
-        <span>is<wbr>Access<wbr>Product</span>
+        <span id="isaccessproduct_nodejs">
+<a href="#isaccessproduct_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Access<wbr>Product</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -601,7 +707,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-required"
             title="Required">
-        <span>source<wbr>Ips</span>
+        <span id="sourceips_nodejs">
+<a href="#sourceips_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Ips</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -610,7 +718,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>cluster<wbr>Type</span>
+        <span id="clustertype_nodejs">
+<a href="#clustertype_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -619,7 +729,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>connection<wbr>Time</span>
+        <span id="connectiontime_nodejs">
+<a href="#connectiontime_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -628,7 +740,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>http2Ports</span>
+        <span id="http2ports_nodejs">
+<a href="#http2ports_nodejs" style="color: inherit; text-decoration: inherit;">http2Ports</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -637,7 +751,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>http<wbr>Ports</span>
+        <span id="httpports_nodejs">
+<a href="#httpports_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Ports</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -646,7 +762,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>http<wbr>To<wbr>User<wbr>Ip</span>
+        <span id="httptouserip_nodejs">
+<a href="#httptouserip_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>To<wbr>User<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -656,7 +774,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>https<wbr>Ports</span>
+        <span id="httpsports_nodejs">
+<a href="#httpsports_nodejs" style="color: inherit; text-decoration: inherit;">https<wbr>Ports</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -665,7 +785,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>https<wbr>Redirect</span>
+        <span id="httpsredirect_nodejs">
+<a href="#httpsredirect_nodejs" style="color: inherit; text-decoration: inherit;">https<wbr>Redirect</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -674,7 +796,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>load<wbr>Balancing</span>
+        <span id="loadbalancing_nodejs">
+<a href="#loadbalancing_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancing</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -683,7 +807,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>log<wbr>Headers</span>
+        <span id="logheaders_nodejs">
+<a href="#logheaders_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Headers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainlogheader">Domain<wbr>Log<wbr>Header[]</a></span>
     </dt>
@@ -694,7 +820,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>read<wbr>Time</span>
+        <span id="readtime_nodejs">
+<a href="#readtime_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -703,7 +831,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource<wbr>Group<wbr>Id</span>
+        <span id="resourcegroupid_nodejs">
+<a href="#resourcegroupid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -712,7 +842,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>write<wbr>Time</span>
+        <span id="writetime_nodejs">
+<a href="#writetime_nodejs" style="color: inherit; text-decoration: inherit;">write<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -728,7 +860,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-required"
             title="Required">
-        <span>domain</span>
+        <span id="domain_python">
+<a href="#domain_python" style="color: inherit; text-decoration: inherit;">domain</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -737,7 +871,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-required"
             title="Required">
-        <span>instance_<wbr>id</span>
+        <span id="instance_id_python">
+<a href="#instance_id_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -746,7 +882,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-required"
             title="Required">
-        <span>is_<wbr>access_<wbr>product</span>
+        <span id="is_access_product_python">
+<a href="#is_access_product_python" style="color: inherit; text-decoration: inherit;">is_<wbr>access_<wbr>product</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -755,7 +893,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-required"
             title="Required">
-        <span>source_<wbr>ips</span>
+        <span id="source_ips_python">
+<a href="#source_ips_python" style="color: inherit; text-decoration: inherit;">source_<wbr>ips</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -764,7 +904,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>cluster_<wbr>type</span>
+        <span id="cluster_type_python">
+<a href="#cluster_type_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -773,7 +915,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>connection_<wbr>time</span>
+        <span id="connection_time_python">
+<a href="#connection_time_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -782,7 +926,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>http2_<wbr>ports</span>
+        <span id="http2_ports_python">
+<a href="#http2_ports_python" style="color: inherit; text-decoration: inherit;">http2_<wbr>ports</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -791,7 +937,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>http_<wbr>ports</span>
+        <span id="http_ports_python">
+<a href="#http_ports_python" style="color: inherit; text-decoration: inherit;">http_<wbr>ports</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -800,7 +948,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>http_<wbr>to_<wbr>user_<wbr>ip</span>
+        <span id="http_to_user_ip_python">
+<a href="#http_to_user_ip_python" style="color: inherit; text-decoration: inherit;">http_<wbr>to_<wbr>user_<wbr>ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -810,7 +960,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>https_<wbr>ports</span>
+        <span id="https_ports_python">
+<a href="#https_ports_python" style="color: inherit; text-decoration: inherit;">https_<wbr>ports</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -819,7 +971,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>https_<wbr>redirect</span>
+        <span id="https_redirect_python">
+<a href="#https_redirect_python" style="color: inherit; text-decoration: inherit;">https_<wbr>redirect</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -828,7 +982,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>load_<wbr>balancing</span>
+        <span id="load_balancing_python">
+<a href="#load_balancing_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancing</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -837,7 +993,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>log_<wbr>headers</span>
+        <span id="log_headers_python">
+<a href="#log_headers_python" style="color: inherit; text-decoration: inherit;">log_<wbr>headers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainlogheader">List[Domain<wbr>Log<wbr>Header]</a></span>
     </dt>
@@ -848,7 +1006,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>read_<wbr>time</span>
+        <span id="read_time_python">
+<a href="#read_time_python" style="color: inherit; text-decoration: inherit;">read_<wbr>time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -857,7 +1017,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource_<wbr>group_<wbr>id</span>
+        <span id="resource_group_id_python">
+<a href="#resource_group_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -866,7 +1028,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>write_<wbr>time</span>
+        <span id="write_time_python">
+<a href="#write_time_python" style="color: inherit; text-decoration: inherit;">write_<wbr>time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -893,7 +1057,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Cname</span>
+        <span id="cname_csharp">
+<a href="#cname_csharp" style="color: inherit; text-decoration: inherit;">Cname</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -902,7 +1068,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -910,7 +1078,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Status</span>
+        <span id="status_csharp">
+<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -925,7 +1095,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Cname</span>
+        <span id="cname_go">
+<a href="#cname_go" style="color: inherit; text-decoration: inherit;">Cname</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -934,7 +1106,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -942,7 +1116,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Status</span>
+        <span id="status_go">
+<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -957,7 +1133,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>cname</span>
+        <span id="cname_nodejs">
+<a href="#cname_nodejs" style="color: inherit; text-decoration: inherit;">cname</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -966,7 +1144,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -974,7 +1154,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>status</span>
+        <span id="status_nodejs">
+<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -989,7 +1171,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>cname</span>
+        <span id="cname_python">
+<a href="#cname_python" style="color: inherit; text-decoration: inherit;">cname</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -998,7 +1182,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1006,7 +1192,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>status</span>
+        <span id="status_python">
+<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1147,7 +1335,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cluster<wbr>Type</span>
+        <span id="state_clustertype_csharp">
+<a href="#state_clustertype_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1156,7 +1346,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cname</span>
+        <span id="state_cname_csharp">
+<a href="#state_cname_csharp" style="color: inherit; text-decoration: inherit;">Cname</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1165,7 +1357,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Connection<wbr>Time</span>
+        <span id="state_connectiontime_csharp">
+<a href="#state_connectiontime_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1174,7 +1368,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Domain<wbr>Name</span>
+        <span id="state_domainname_csharp">
+<a href="#state_domainname_csharp" style="color: inherit; text-decoration: inherit;">Domain<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1183,7 +1379,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Http2Ports</span>
+        <span id="state_http2ports_csharp">
+<a href="#state_http2ports_csharp" style="color: inherit; text-decoration: inherit;">Http2Ports</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1192,7 +1390,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Http<wbr>Ports</span>
+        <span id="state_httpports_csharp">
+<a href="#state_httpports_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Ports</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1201,7 +1401,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Http<wbr>To<wbr>User<wbr>Ip</span>
+        <span id="state_httptouserip_csharp">
+<a href="#state_httptouserip_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>To<wbr>User<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1211,7 +1413,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Https<wbr>Ports</span>
+        <span id="state_httpsports_csharp">
+<a href="#state_httpsports_csharp" style="color: inherit; text-decoration: inherit;">Https<wbr>Ports</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1220,7 +1424,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Https<wbr>Redirect</span>
+        <span id="state_httpsredirect_csharp">
+<a href="#state_httpsredirect_csharp" style="color: inherit; text-decoration: inherit;">Https<wbr>Redirect</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1229,7 +1435,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Instance<wbr>Id</span>
+        <span id="state_instanceid_csharp">
+<a href="#state_instanceid_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1238,7 +1446,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Is<wbr>Access<wbr>Product</span>
+        <span id="state_isaccessproduct_csharp">
+<a href="#state_isaccessproduct_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Access<wbr>Product</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1247,7 +1457,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Load<wbr>Balancing</span>
+        <span id="state_loadbalancing_csharp">
+<a href="#state_loadbalancing_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancing</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1256,7 +1468,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Log<wbr>Headers</span>
+        <span id="state_logheaders_csharp">
+<a href="#state_logheaders_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Headers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainlogheader">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Waf.<wbr>Inputs.<wbr>Domain<wbr>Log<wbr>Header<wbr>Args&gt;</a></span>
     </dt>
@@ -1267,7 +1481,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Read<wbr>Time</span>
+        <span id="state_readtime_csharp">
+<a href="#state_readtime_csharp" style="color: inherit; text-decoration: inherit;">Read<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1276,7 +1492,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Group<wbr>Id</span>
+        <span id="state_resourcegroupid_csharp">
+<a href="#state_resourcegroupid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1285,7 +1503,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>Ips</span>
+        <span id="state_sourceips_csharp">
+<a href="#state_sourceips_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Ips</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1294,7 +1514,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Status</span>
+        <span id="state_status_csharp">
+<a href="#state_status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1302,7 +1524,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Write<wbr>Time</span>
+        <span id="state_writetime_csharp">
+<a href="#state_writetime_csharp" style="color: inherit; text-decoration: inherit;">Write<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1318,7 +1542,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cluster<wbr>Type</span>
+        <span id="state_clustertype_go">
+<a href="#state_clustertype_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1327,7 +1553,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cname</span>
+        <span id="state_cname_go">
+<a href="#state_cname_go" style="color: inherit; text-decoration: inherit;">Cname</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1336,7 +1564,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Connection<wbr>Time</span>
+        <span id="state_connectiontime_go">
+<a href="#state_connectiontime_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1345,7 +1575,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Domain</span>
+        <span id="state_domain_go">
+<a href="#state_domain_go" style="color: inherit; text-decoration: inherit;">Domain</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1354,7 +1586,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Http2Ports</span>
+        <span id="state_http2ports_go">
+<a href="#state_http2ports_go" style="color: inherit; text-decoration: inherit;">Http2Ports</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1363,7 +1597,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Http<wbr>Ports</span>
+        <span id="state_httpports_go">
+<a href="#state_httpports_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Ports</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1372,7 +1608,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Http<wbr>To<wbr>User<wbr>Ip</span>
+        <span id="state_httptouserip_go">
+<a href="#state_httptouserip_go" style="color: inherit; text-decoration: inherit;">Http<wbr>To<wbr>User<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1382,7 +1620,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Https<wbr>Ports</span>
+        <span id="state_httpsports_go">
+<a href="#state_httpsports_go" style="color: inherit; text-decoration: inherit;">Https<wbr>Ports</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1391,7 +1631,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Https<wbr>Redirect</span>
+        <span id="state_httpsredirect_go">
+<a href="#state_httpsredirect_go" style="color: inherit; text-decoration: inherit;">Https<wbr>Redirect</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1400,7 +1642,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Instance<wbr>Id</span>
+        <span id="state_instanceid_go">
+<a href="#state_instanceid_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1409,7 +1653,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Is<wbr>Access<wbr>Product</span>
+        <span id="state_isaccessproduct_go">
+<a href="#state_isaccessproduct_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Access<wbr>Product</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1418,7 +1664,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Load<wbr>Balancing</span>
+        <span id="state_loadbalancing_go">
+<a href="#state_loadbalancing_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancing</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1427,7 +1675,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Log<wbr>Headers</span>
+        <span id="state_logheaders_go">
+<a href="#state_logheaders_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Headers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainlogheader">[]Domain<wbr>Log<wbr>Header</a></span>
     </dt>
@@ -1438,7 +1688,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Read<wbr>Time</span>
+        <span id="state_readtime_go">
+<a href="#state_readtime_go" style="color: inherit; text-decoration: inherit;">Read<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1447,7 +1699,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Group<wbr>Id</span>
+        <span id="state_resourcegroupid_go">
+<a href="#state_resourcegroupid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1456,7 +1710,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>Ips</span>
+        <span id="state_sourceips_go">
+<a href="#state_sourceips_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Ips</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1465,7 +1721,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Status</span>
+        <span id="state_status_go">
+<a href="#state_status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1473,7 +1731,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Write<wbr>Time</span>
+        <span id="state_writetime_go">
+<a href="#state_writetime_go" style="color: inherit; text-decoration: inherit;">Write<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1489,7 +1749,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>cluster<wbr>Type</span>
+        <span id="state_clustertype_nodejs">
+<a href="#state_clustertype_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1498,7 +1760,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>cname</span>
+        <span id="state_cname_nodejs">
+<a href="#state_cname_nodejs" style="color: inherit; text-decoration: inherit;">cname</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1507,7 +1771,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>connection<wbr>Time</span>
+        <span id="state_connectiontime_nodejs">
+<a href="#state_connectiontime_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1516,7 +1782,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>domain</span>
+        <span id="state_domain_nodejs">
+<a href="#state_domain_nodejs" style="color: inherit; text-decoration: inherit;">domain</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1525,7 +1793,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>http2Ports</span>
+        <span id="state_http2ports_nodejs">
+<a href="#state_http2ports_nodejs" style="color: inherit; text-decoration: inherit;">http2Ports</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1534,7 +1804,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>http<wbr>Ports</span>
+        <span id="state_httpports_nodejs">
+<a href="#state_httpports_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Ports</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1543,7 +1815,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>http<wbr>To<wbr>User<wbr>Ip</span>
+        <span id="state_httptouserip_nodejs">
+<a href="#state_httptouserip_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>To<wbr>User<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1553,7 +1827,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>https<wbr>Ports</span>
+        <span id="state_httpsports_nodejs">
+<a href="#state_httpsports_nodejs" style="color: inherit; text-decoration: inherit;">https<wbr>Ports</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1562,7 +1838,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>https<wbr>Redirect</span>
+        <span id="state_httpsredirect_nodejs">
+<a href="#state_httpsredirect_nodejs" style="color: inherit; text-decoration: inherit;">https<wbr>Redirect</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1571,7 +1849,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>instance<wbr>Id</span>
+        <span id="state_instanceid_nodejs">
+<a href="#state_instanceid_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1580,7 +1860,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>is<wbr>Access<wbr>Product</span>
+        <span id="state_isaccessproduct_nodejs">
+<a href="#state_isaccessproduct_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Access<wbr>Product</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1589,7 +1871,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>load<wbr>Balancing</span>
+        <span id="state_loadbalancing_nodejs">
+<a href="#state_loadbalancing_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancing</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1598,7 +1882,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>log<wbr>Headers</span>
+        <span id="state_logheaders_nodejs">
+<a href="#state_logheaders_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Headers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainlogheader">Domain<wbr>Log<wbr>Header[]</a></span>
     </dt>
@@ -1609,7 +1895,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>read<wbr>Time</span>
+        <span id="state_readtime_nodejs">
+<a href="#state_readtime_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1618,7 +1906,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource<wbr>Group<wbr>Id</span>
+        <span id="state_resourcegroupid_nodejs">
+<a href="#state_resourcegroupid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1627,7 +1917,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>source<wbr>Ips</span>
+        <span id="state_sourceips_nodejs">
+<a href="#state_sourceips_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Ips</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1636,7 +1928,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>status</span>
+        <span id="state_status_nodejs">
+<a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1644,7 +1938,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>write<wbr>Time</span>
+        <span id="state_writetime_nodejs">
+<a href="#state_writetime_nodejs" style="color: inherit; text-decoration: inherit;">write<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1660,7 +1956,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>cluster_<wbr>type</span>
+        <span id="state_cluster_type_python">
+<a href="#state_cluster_type_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1669,7 +1967,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>cname</span>
+        <span id="state_cname_python">
+<a href="#state_cname_python" style="color: inherit; text-decoration: inherit;">cname</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1678,7 +1978,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>connection_<wbr>time</span>
+        <span id="state_connection_time_python">
+<a href="#state_connection_time_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1687,7 +1989,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>domain</span>
+        <span id="state_domain_python">
+<a href="#state_domain_python" style="color: inherit; text-decoration: inherit;">domain</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1696,7 +2000,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>http2_<wbr>ports</span>
+        <span id="state_http2_ports_python">
+<a href="#state_http2_ports_python" style="color: inherit; text-decoration: inherit;">http2_<wbr>ports</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1705,7 +2011,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>http_<wbr>ports</span>
+        <span id="state_http_ports_python">
+<a href="#state_http_ports_python" style="color: inherit; text-decoration: inherit;">http_<wbr>ports</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1714,7 +2022,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>http_<wbr>to_<wbr>user_<wbr>ip</span>
+        <span id="state_http_to_user_ip_python">
+<a href="#state_http_to_user_ip_python" style="color: inherit; text-decoration: inherit;">http_<wbr>to_<wbr>user_<wbr>ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1724,7 +2034,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>https_<wbr>ports</span>
+        <span id="state_https_ports_python">
+<a href="#state_https_ports_python" style="color: inherit; text-decoration: inherit;">https_<wbr>ports</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1733,7 +2045,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>https_<wbr>redirect</span>
+        <span id="state_https_redirect_python">
+<a href="#state_https_redirect_python" style="color: inherit; text-decoration: inherit;">https_<wbr>redirect</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1742,7 +2056,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>instance_<wbr>id</span>
+        <span id="state_instance_id_python">
+<a href="#state_instance_id_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1751,7 +2067,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>is_<wbr>access_<wbr>product</span>
+        <span id="state_is_access_product_python">
+<a href="#state_is_access_product_python" style="color: inherit; text-decoration: inherit;">is_<wbr>access_<wbr>product</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1760,7 +2078,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>load_<wbr>balancing</span>
+        <span id="state_load_balancing_python">
+<a href="#state_load_balancing_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancing</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1769,7 +2089,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>log_<wbr>headers</span>
+        <span id="state_log_headers_python">
+<a href="#state_log_headers_python" style="color: inherit; text-decoration: inherit;">log_<wbr>headers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainlogheader">List[Domain<wbr>Log<wbr>Header]</a></span>
     </dt>
@@ -1780,7 +2102,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>read_<wbr>time</span>
+        <span id="state_read_time_python">
+<a href="#state_read_time_python" style="color: inherit; text-decoration: inherit;">read_<wbr>time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1789,7 +2113,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource_<wbr>group_<wbr>id</span>
+        <span id="state_resource_group_id_python">
+<a href="#state_resource_group_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1798,7 +2124,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>source_<wbr>ips</span>
+        <span id="state_source_ips_python">
+<a href="#state_source_ips_python" style="color: inherit; text-decoration: inherit;">source_<wbr>ips</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1807,7 +2135,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>status</span>
+        <span id="state_status_python">
+<a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1815,7 +2145,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>write_<wbr>time</span>
+        <span id="state_write_time_python">
+<a href="#state_write_time_python" style="color: inherit; text-decoration: inherit;">write_<wbr>time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1857,7 +2189,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Key</span>
+        <span id="key_csharp">
+<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1865,7 +2199,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Value</span>
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1880,7 +2216,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Key</span>
+        <span id="key_go">
+<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1888,7 +2226,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Value</span>
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1903,7 +2243,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>key</span>
+        <span id="key_nodejs">
+<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1911,7 +2253,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>value</span>
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1926,7 +2270,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>key</span>
+        <span id="key_python">
+<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1934,7 +2280,9 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span>value</span>
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

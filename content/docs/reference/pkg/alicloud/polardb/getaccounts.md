@@ -23,7 +23,30 @@ Filters support regular expression for the account name, searches by clusterId.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var polardbClustersDs = Output.Create(AliCloud.PolarDB.GetClusters.InvokeAsync(new AliCloud.PolarDB.GetClustersArgs
+        {
+            DescriptionRegex = "pc-\\w+",
+            Status = "Running",
+        }));
+        var @default = polardbClustersDs.Apply(polardbClustersDs => Output.Create(AliCloud.PolarDB.GetAccounts.InvokeAsync(new AliCloud.PolarDB.GetAccountsArgs
+        {
+            DbClusterId = polardbClustersDs.Clusters[0].Id,
+        })));
+        this.Ends = @default.Apply(@default => @default.Accounts[0].AccountName);
+    }
+
+    [Output("ends")]
+    public Output<string> Ends { get; set; }
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -54,7 +77,7 @@ const polardbClustersDs = alicloud.polardb.getClusters({
 const default = polardbClustersDs.then(polardbClustersDs => alicloud.polardb.getAccounts({
     dbClusterId: polardbClustersDs.clusters[0].id,
 }));
-export const ends = default.then(_default => _default.accounts[0].accountName);
+export const ends = _default.then(_default => _default.accounts[0].accountName);
 ```
 {{% /example %}}
 
@@ -99,7 +122,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Db<wbr>Cluster<wbr>Id</span>
+        <span id="dbclusterid_csharp">
+<a href="#dbclusterid_csharp" style="color: inherit; text-decoration: inherit;">Db<wbr>Cluster<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -108,7 +133,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name<wbr>Regex</span>
+        <span id="nameregex_csharp">
+<a href="#nameregex_csharp" style="color: inherit; text-decoration: inherit;">Name<wbr>Regex</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -124,7 +151,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Db<wbr>Cluster<wbr>Id</span>
+        <span id="dbclusterid_go">
+<a href="#dbclusterid_go" style="color: inherit; text-decoration: inherit;">Db<wbr>Cluster<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -133,7 +162,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name<wbr>Regex</span>
+        <span id="nameregex_go">
+<a href="#nameregex_go" style="color: inherit; text-decoration: inherit;">Name<wbr>Regex</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -149,7 +180,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>db<wbr>Cluster<wbr>Id</span>
+        <span id="dbclusterid_nodejs">
+<a href="#dbclusterid_nodejs" style="color: inherit; text-decoration: inherit;">db<wbr>Cluster<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -158,7 +191,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name<wbr>Regex</span>
+        <span id="nameregex_nodejs">
+<a href="#nameregex_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Regex</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -174,7 +209,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>db_<wbr>cluster_<wbr>id</span>
+        <span id="db_cluster_id_python">
+<a href="#db_cluster_id_python" style="color: inherit; text-decoration: inherit;">db_<wbr>cluster_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -183,7 +220,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name_<wbr>regex</span>
+        <span id="name_regex_python">
+<a href="#name_regex_python" style="color: inherit; text-decoration: inherit;">name_<wbr>regex</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -212,7 +251,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Accounts</span>
+        <span id="accounts_csharp">
+<a href="#accounts_csharp" style="color: inherit; text-decoration: inherit;">Accounts</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getaccountsaccount">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Polar<wbr>DB.<wbr>Outputs.<wbr>Get<wbr>Accounts<wbr>Account&gt;</a></span>
     </dt>
@@ -221,7 +262,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Db<wbr>Cluster<wbr>Id</span>
+        <span id="dbclusterid_csharp">
+<a href="#dbclusterid_csharp" style="color: inherit; text-decoration: inherit;">Db<wbr>Cluster<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -229,7 +272,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -238,7 +283,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Names</span>
+        <span id="names_csharp">
+<a href="#names_csharp" style="color: inherit; text-decoration: inherit;">Names</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -247,7 +294,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Name<wbr>Regex</span>
+        <span id="nameregex_csharp">
+<a href="#nameregex_csharp" style="color: inherit; text-decoration: inherit;">Name<wbr>Regex</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -262,7 +311,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Accounts</span>
+        <span id="accounts_go">
+<a href="#accounts_go" style="color: inherit; text-decoration: inherit;">Accounts</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getaccountsaccount">[]Get<wbr>Accounts<wbr>Account</a></span>
     </dt>
@@ -271,7 +322,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Db<wbr>Cluster<wbr>Id</span>
+        <span id="dbclusterid_go">
+<a href="#dbclusterid_go" style="color: inherit; text-decoration: inherit;">Db<wbr>Cluster<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -279,7 +332,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -288,7 +343,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Names</span>
+        <span id="names_go">
+<a href="#names_go" style="color: inherit; text-decoration: inherit;">Names</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -297,7 +354,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Name<wbr>Regex</span>
+        <span id="nameregex_go">
+<a href="#nameregex_go" style="color: inherit; text-decoration: inherit;">Name<wbr>Regex</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -312,7 +371,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>accounts</span>
+        <span id="accounts_nodejs">
+<a href="#accounts_nodejs" style="color: inherit; text-decoration: inherit;">accounts</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getaccountsaccount">Get<wbr>Accounts<wbr>Account[]</a></span>
     </dt>
@@ -321,7 +382,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>db<wbr>Cluster<wbr>Id</span>
+        <span id="dbclusterid_nodejs">
+<a href="#dbclusterid_nodejs" style="color: inherit; text-decoration: inherit;">db<wbr>Cluster<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -329,7 +392,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -338,7 +403,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>names</span>
+        <span id="names_nodejs">
+<a href="#names_nodejs" style="color: inherit; text-decoration: inherit;">names</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -347,7 +414,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>name<wbr>Regex</span>
+        <span id="nameregex_nodejs">
+<a href="#nameregex_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Regex</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -362,7 +431,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>accounts</span>
+        <span id="accounts_python">
+<a href="#accounts_python" style="color: inherit; text-decoration: inherit;">accounts</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getaccountsaccount">List[Get<wbr>Accounts<wbr>Account]</a></span>
     </dt>
@@ -371,7 +442,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>db_<wbr>cluster_<wbr>id</span>
+        <span id="db_cluster_id_python">
+<a href="#db_cluster_id_python" style="color: inherit; text-decoration: inherit;">db_<wbr>cluster_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -379,7 +452,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -388,7 +463,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>names</span>
+        <span id="names_python">
+<a href="#names_python" style="color: inherit; text-decoration: inherit;">names</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -397,7 +474,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>name_<wbr>regex</span>
+        <span id="name_regex_python">
+<a href="#name_regex_python" style="color: inherit; text-decoration: inherit;">name_<wbr>regex</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -436,7 +515,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Account<wbr>Description</span>
+        <span id="accountdescription_csharp">
+<a href="#accountdescription_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -445,7 +526,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Account<wbr>Lock<wbr>State</span>
+        <span id="accountlockstate_csharp">
+<a href="#accountlockstate_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Lock<wbr>State</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -454,7 +537,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Account<wbr>Name</span>
+        <span id="accountname_csharp">
+<a href="#accountname_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -463,7 +548,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Account<wbr>Status</span>
+        <span id="accountstatus_csharp">
+<a href="#accountstatus_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -472,7 +559,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Account<wbr>Type</span>
+        <span id="accounttype_csharp">
+<a href="#accounttype_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -481,7 +570,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Database<wbr>Privileges</span>
+        <span id="databaseprivileges_csharp">
+<a href="#databaseprivileges_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Privileges</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getaccountsaccountdatabaseprivilege">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Polar<wbr>DB.<wbr>Inputs.<wbr>Get<wbr>Accounts<wbr>Account<wbr>Database<wbr>Privilege<wbr>Args&gt;</a></span>
     </dt>
@@ -497,7 +588,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Account<wbr>Description</span>
+        <span id="accountdescription_go">
+<a href="#accountdescription_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -506,7 +599,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Account<wbr>Lock<wbr>State</span>
+        <span id="accountlockstate_go">
+<a href="#accountlockstate_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Lock<wbr>State</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -515,7 +610,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Account<wbr>Name</span>
+        <span id="accountname_go">
+<a href="#accountname_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -524,7 +621,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Account<wbr>Status</span>
+        <span id="accountstatus_go">
+<a href="#accountstatus_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -533,7 +632,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Account<wbr>Type</span>
+        <span id="accounttype_go">
+<a href="#accounttype_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -542,7 +643,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Database<wbr>Privileges</span>
+        <span id="databaseprivileges_go">
+<a href="#databaseprivileges_go" style="color: inherit; text-decoration: inherit;">Database<wbr>Privileges</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getaccountsaccountdatabaseprivilege">[]Get<wbr>Accounts<wbr>Account<wbr>Database<wbr>Privilege</a></span>
     </dt>
@@ -558,7 +661,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>account<wbr>Description</span>
+        <span id="accountdescription_nodejs">
+<a href="#accountdescription_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -567,7 +672,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>account<wbr>Lock<wbr>State</span>
+        <span id="accountlockstate_nodejs">
+<a href="#accountlockstate_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Lock<wbr>State</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -576,7 +683,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>account<wbr>Name</span>
+        <span id="accountname_nodejs">
+<a href="#accountname_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -585,7 +694,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>account<wbr>Status</span>
+        <span id="accountstatus_nodejs">
+<a href="#accountstatus_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -594,7 +705,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>account<wbr>Type</span>
+        <span id="accounttype_nodejs">
+<a href="#accounttype_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -603,7 +716,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>database<wbr>Privileges</span>
+        <span id="databaseprivileges_nodejs">
+<a href="#databaseprivileges_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Privileges</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getaccountsaccountdatabaseprivilege">Get<wbr>Accounts<wbr>Account<wbr>Database<wbr>Privilege[]</a></span>
     </dt>
@@ -619,7 +734,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>account<wbr>Lock<wbr>State</span>
+        <span id="accountlockstate_python">
+<a href="#accountlockstate_python" style="color: inherit; text-decoration: inherit;">account<wbr>Lock<wbr>State</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -628,7 +745,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>account<wbr>Status</span>
+        <span id="accountstatus_python">
+<a href="#accountstatus_python" style="color: inherit; text-decoration: inherit;">account<wbr>Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -637,7 +756,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>account_<wbr>description</span>
+        <span id="account_description_python">
+<a href="#account_description_python" style="color: inherit; text-decoration: inherit;">account_<wbr>description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -646,7 +767,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>account_<wbr>name</span>
+        <span id="account_name_python">
+<a href="#account_name_python" style="color: inherit; text-decoration: inherit;">account_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -655,7 +778,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>account_<wbr>type</span>
+        <span id="account_type_python">
+<a href="#account_type_python" style="color: inherit; text-decoration: inherit;">account_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -664,7 +789,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>database<wbr>Privileges</span>
+        <span id="databaseprivileges_python">
+<a href="#databaseprivileges_python" style="color: inherit; text-decoration: inherit;">database<wbr>Privileges</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getaccountsaccountdatabaseprivilege">List[Get<wbr>Accounts<wbr>Account<wbr>Database<wbr>Privilege]</a></span>
     </dt>
@@ -698,7 +825,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Account<wbr>Privilege</span>
+        <span id="accountprivilege_csharp">
+<a href="#accountprivilege_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Privilege</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -707,7 +836,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Db<wbr>Name</span>
+        <span id="dbname_csharp">
+<a href="#dbname_csharp" style="color: inherit; text-decoration: inherit;">Db<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -723,7 +854,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Account<wbr>Privilege</span>
+        <span id="accountprivilege_go">
+<a href="#accountprivilege_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Privilege</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -732,7 +865,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Db<wbr>Name</span>
+        <span id="dbname_go">
+<a href="#dbname_go" style="color: inherit; text-decoration: inherit;">Db<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -748,7 +883,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>account<wbr>Privilege</span>
+        <span id="accountprivilege_nodejs">
+<a href="#accountprivilege_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Privilege</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -757,7 +894,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>db<wbr>Name</span>
+        <span id="dbname_nodejs">
+<a href="#dbname_nodejs" style="color: inherit; text-decoration: inherit;">db<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -773,7 +912,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>account_<wbr>privilege</span>
+        <span id="account_privilege_python">
+<a href="#account_privilege_python" style="color: inherit; text-decoration: inherit;">account_<wbr>privilege</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -782,7 +923,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>db_<wbr>name</span>
+        <span id="db_name_python">
+<a href="#db_name_python" style="color: inherit; text-decoration: inherit;">db_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

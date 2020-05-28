@@ -196,7 +196,9 @@ The ShardingInstance resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-required"
             title="Required">
-        <span>Engine<wbr>Version</span>
+        <span id="engineversion_csharp">
+<a href="#engineversion_csharp" style="color: inherit; text-decoration: inherit;">Engine<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -205,7 +207,9 @@ The ShardingInstance resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-required"
             title="Required">
-        <span>Mongo<wbr>Lists</span>
+        <span id="mongolists_csharp">
+<a href="#mongolists_csharp" style="color: inherit; text-decoration: inherit;">Mongo<wbr>Lists</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#shardinginstancemongolist">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Mongo<wbr>DB.<wbr>Inputs.<wbr>Sharding<wbr>Instance<wbr>Mongo<wbr>List<wbr>Args&gt;</a></span>
     </dt>
@@ -214,7 +218,9 @@ The ShardingInstance resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-required"
             title="Required">
-        <span>Shard<wbr>Lists</span>
+        <span id="shardlists_csharp">
+<a href="#shardlists_csharp" style="color: inherit; text-decoration: inherit;">Shard<wbr>Lists</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#shardinginstanceshardlist">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Mongo<wbr>DB.<wbr>Inputs.<wbr>Sharding<wbr>Instance<wbr>Shard<wbr>List<wbr>Args&gt;</a></span>
     </dt>
@@ -223,7 +229,9 @@ The ShardingInstance resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Account<wbr>Password</span>
+        <span id="accountpassword_csharp">
+<a href="#accountpassword_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -232,7 +240,9 @@ The ShardingInstance resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Backup<wbr>Periods</span>
+        <span id="backupperiods_csharp">
+<a href="#backupperiods_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Periods</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -241,7 +251,9 @@ The ShardingInstance resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Backup<wbr>Time</span>
+        <span id="backuptime_csharp">
+<a href="#backuptime_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -250,7 +262,9 @@ The ShardingInstance resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Instance<wbr>Charge<wbr>Type</span>
+        <span id="instancechargetype_csharp">
+<a href="#instancechargetype_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Charge<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -259,7 +273,9 @@ The ShardingInstance resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Kms<wbr>Encrypted<wbr>Password</span>
+        <span id="kmsencryptedpassword_csharp">
+<a href="#kmsencryptedpassword_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Encrypted<wbr>Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -268,7 +284,9 @@ The ShardingInstance resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Kms<wbr>Encryption<wbr>Context</span>
+        <span id="kmsencryptioncontext_csharp">
+<a href="#kmsencryptioncontext_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Encryption<wbr>Context</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -277,7 +295,9 @@ The ShardingInstance resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -286,7 +306,9 @@ The ShardingInstance resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Period</span>
+        <span id="period_csharp">
+<a href="#period_csharp" style="color: inherit; text-decoration: inherit;">Period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -295,7 +317,9 @@ The ShardingInstance resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Security<wbr>Group<wbr>Id</span>
+        <span id="securitygroupid_csharp">
+<a href="#securitygroupid_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -304,7 +328,9 @@ The ShardingInstance resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Security<wbr>Ip<wbr>Lists</span>
+        <span id="securityiplists_csharp">
+<a href="#securityiplists_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Ip<wbr>Lists</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -313,7 +339,9 @@ The ShardingInstance resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Storage<wbr>Engine</span>
+        <span id="storageengine_csharp">
+<a href="#storageengine_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Engine</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -322,7 +350,9 @@ The ShardingInstance resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tde<wbr>Status</span>
+        <span id="tdestatus_csharp">
+<a href="#tdestatus_csharp" style="color: inherit; text-decoration: inherit;">Tde<wbr>Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -331,7 +361,9 @@ The ShardingInstance resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vswitch<wbr>Id</span>
+        <span id="vswitchid_csharp">
+<a href="#vswitchid_csharp" style="color: inherit; text-decoration: inherit;">Vswitch<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -340,7 +372,9 @@ The ShardingInstance resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Zone<wbr>Id</span>
+        <span id="zoneid_csharp">
+<a href="#zoneid_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -357,7 +391,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-required"
             title="Required">
-        <span>Engine<wbr>Version</span>
+        <span id="engineversion_go">
+<a href="#engineversion_go" style="color: inherit; text-decoration: inherit;">Engine<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -366,7 +402,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-required"
             title="Required">
-        <span>Mongo<wbr>Lists</span>
+        <span id="mongolists_go">
+<a href="#mongolists_go" style="color: inherit; text-decoration: inherit;">Mongo<wbr>Lists</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#shardinginstancemongolist">[]Sharding<wbr>Instance<wbr>Mongo<wbr>List</a></span>
     </dt>
@@ -375,7 +413,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-required"
             title="Required">
-        <span>Shard<wbr>Lists</span>
+        <span id="shardlists_go">
+<a href="#shardlists_go" style="color: inherit; text-decoration: inherit;">Shard<wbr>Lists</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#shardinginstanceshardlist">[]Sharding<wbr>Instance<wbr>Shard<wbr>List</a></span>
     </dt>
@@ -384,7 +424,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Account<wbr>Password</span>
+        <span id="accountpassword_go">
+<a href="#accountpassword_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -393,7 +435,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Backup<wbr>Periods</span>
+        <span id="backupperiods_go">
+<a href="#backupperiods_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Periods</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -402,7 +446,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Backup<wbr>Time</span>
+        <span id="backuptime_go">
+<a href="#backuptime_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -411,7 +457,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Instance<wbr>Charge<wbr>Type</span>
+        <span id="instancechargetype_go">
+<a href="#instancechargetype_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Charge<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -420,7 +468,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Kms<wbr>Encrypted<wbr>Password</span>
+        <span id="kmsencryptedpassword_go">
+<a href="#kmsencryptedpassword_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Encrypted<wbr>Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -429,7 +479,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Kms<wbr>Encryption<wbr>Context</span>
+        <span id="kmsencryptioncontext_go">
+<a href="#kmsencryptioncontext_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Encryption<wbr>Context</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -438,7 +490,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -447,7 +501,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Period</span>
+        <span id="period_go">
+<a href="#period_go" style="color: inherit; text-decoration: inherit;">Period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -456,7 +512,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Security<wbr>Group<wbr>Id</span>
+        <span id="securitygroupid_go">
+<a href="#securitygroupid_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -465,7 +523,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Security<wbr>Ip<wbr>Lists</span>
+        <span id="securityiplists_go">
+<a href="#securityiplists_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Ip<wbr>Lists</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -474,7 +534,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Storage<wbr>Engine</span>
+        <span id="storageengine_go">
+<a href="#storageengine_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Engine</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -483,7 +545,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tde<wbr>Status</span>
+        <span id="tdestatus_go">
+<a href="#tdestatus_go" style="color: inherit; text-decoration: inherit;">Tde<wbr>Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -492,7 +556,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vswitch<wbr>Id</span>
+        <span id="vswitchid_go">
+<a href="#vswitchid_go" style="color: inherit; text-decoration: inherit;">Vswitch<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -501,7 +567,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Zone<wbr>Id</span>
+        <span id="zoneid_go">
+<a href="#zoneid_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -518,7 +586,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-required"
             title="Required">
-        <span>engine<wbr>Version</span>
+        <span id="engineversion_nodejs">
+<a href="#engineversion_nodejs" style="color: inherit; text-decoration: inherit;">engine<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -527,7 +597,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-required"
             title="Required">
-        <span>mongo<wbr>Lists</span>
+        <span id="mongolists_nodejs">
+<a href="#mongolists_nodejs" style="color: inherit; text-decoration: inherit;">mongo<wbr>Lists</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#shardinginstancemongolist">Sharding<wbr>Instance<wbr>Mongo<wbr>List[]</a></span>
     </dt>
@@ -536,7 +608,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-required"
             title="Required">
-        <span>shard<wbr>Lists</span>
+        <span id="shardlists_nodejs">
+<a href="#shardlists_nodejs" style="color: inherit; text-decoration: inherit;">shard<wbr>Lists</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#shardinginstanceshardlist">Sharding<wbr>Instance<wbr>Shard<wbr>List[]</a></span>
     </dt>
@@ -545,7 +619,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>account<wbr>Password</span>
+        <span id="accountpassword_nodejs">
+<a href="#accountpassword_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -554,7 +630,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>backup<wbr>Periods</span>
+        <span id="backupperiods_nodejs">
+<a href="#backupperiods_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Periods</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -563,7 +641,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>backup<wbr>Time</span>
+        <span id="backuptime_nodejs">
+<a href="#backuptime_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -572,7 +652,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>instance<wbr>Charge<wbr>Type</span>
+        <span id="instancechargetype_nodejs">
+<a href="#instancechargetype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Charge<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -581,7 +663,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>kms<wbr>Encrypted<wbr>Password</span>
+        <span id="kmsencryptedpassword_nodejs">
+<a href="#kmsencryptedpassword_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Encrypted<wbr>Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -590,7 +674,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>kms<wbr>Encryption<wbr>Context</span>
+        <span id="kmsencryptioncontext_nodejs">
+<a href="#kmsencryptioncontext_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Encryption<wbr>Context</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -599,7 +685,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -608,7 +696,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>period</span>
+        <span id="period_nodejs">
+<a href="#period_nodejs" style="color: inherit; text-decoration: inherit;">period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -617,7 +707,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>security<wbr>Group<wbr>Id</span>
+        <span id="securitygroupid_nodejs">
+<a href="#securitygroupid_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -626,7 +718,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>security<wbr>Ip<wbr>Lists</span>
+        <span id="securityiplists_nodejs">
+<a href="#securityiplists_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Ip<wbr>Lists</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -635,7 +729,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>storage<wbr>Engine</span>
+        <span id="storageengine_nodejs">
+<a href="#storageengine_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Engine</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -644,7 +740,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>tde<wbr>Status</span>
+        <span id="tdestatus_nodejs">
+<a href="#tdestatus_nodejs" style="color: inherit; text-decoration: inherit;">tde<wbr>Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -653,7 +751,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>vswitch<wbr>Id</span>
+        <span id="vswitchid_nodejs">
+<a href="#vswitchid_nodejs" style="color: inherit; text-decoration: inherit;">vswitch<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -662,7 +762,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>zone<wbr>Id</span>
+        <span id="zoneid_nodejs">
+<a href="#zoneid_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -679,7 +781,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-required"
             title="Required">
-        <span>engine_<wbr>version</span>
+        <span id="engine_version_python">
+<a href="#engine_version_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -688,7 +792,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-required"
             title="Required">
-        <span>mongo_<wbr>lists</span>
+        <span id="mongo_lists_python">
+<a href="#mongo_lists_python" style="color: inherit; text-decoration: inherit;">mongo_<wbr>lists</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#shardinginstancemongolist">List[Sharding<wbr>Instance<wbr>Mongo<wbr>List]</a></span>
     </dt>
@@ -697,7 +803,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-required"
             title="Required">
-        <span>shard_<wbr>lists</span>
+        <span id="shard_lists_python">
+<a href="#shard_lists_python" style="color: inherit; text-decoration: inherit;">shard_<wbr>lists</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#shardinginstanceshardlist">List[Sharding<wbr>Instance<wbr>Shard<wbr>List]</a></span>
     </dt>
@@ -706,7 +814,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>account_<wbr>password</span>
+        <span id="account_password_python">
+<a href="#account_password_python" style="color: inherit; text-decoration: inherit;">account_<wbr>password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -715,7 +825,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>backup_<wbr>periods</span>
+        <span id="backup_periods_python">
+<a href="#backup_periods_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>periods</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -724,7 +836,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>backup_<wbr>time</span>
+        <span id="backup_time_python">
+<a href="#backup_time_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -733,7 +847,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>instance_<wbr>charge_<wbr>type</span>
+        <span id="instance_charge_type_python">
+<a href="#instance_charge_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>charge_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -742,7 +858,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>kms_<wbr>encrypted_<wbr>password</span>
+        <span id="kms_encrypted_password_python">
+<a href="#kms_encrypted_password_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>encrypted_<wbr>password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -751,7 +869,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>kms_<wbr>encryption_<wbr>context</span>
+        <span id="kms_encryption_context_python">
+<a href="#kms_encryption_context_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>encryption_<wbr>context</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -760,7 +880,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -769,7 +891,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>period</span>
+        <span id="period_python">
+<a href="#period_python" style="color: inherit; text-decoration: inherit;">period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -778,7 +902,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>security_<wbr>group_<wbr>id</span>
+        <span id="security_group_id_python">
+<a href="#security_group_id_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -787,7 +913,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>security_<wbr>ip_<wbr>lists</span>
+        <span id="security_ip_lists_python">
+<a href="#security_ip_lists_python" style="color: inherit; text-decoration: inherit;">security_<wbr>ip_<wbr>lists</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -796,7 +924,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>storage_<wbr>engine</span>
+        <span id="storage_engine_python">
+<a href="#storage_engine_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>engine</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -805,7 +935,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>tde_<wbr>status</span>
+        <span id="tde_status_python">
+<a href="#tde_status_python" style="color: inherit; text-decoration: inherit;">tde_<wbr>status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -814,7 +946,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>vswitch_<wbr>id</span>
+        <span id="vswitch_id_python">
+<a href="#vswitch_id_python" style="color: inherit; text-decoration: inherit;">vswitch_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -823,7 +957,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>zone_<wbr>id</span>
+        <span id="zone_id_python">
+<a href="#zone_id_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -851,7 +987,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -859,7 +997,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Retention<wbr>Period</span>
+        <span id="retentionperiod_csharp">
+<a href="#retentionperiod_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -875,7 +1015,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -883,7 +1025,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Retention<wbr>Period</span>
+        <span id="retentionperiod_go">
+<a href="#retentionperiod_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -899,7 +1043,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -907,7 +1053,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>retention<wbr>Period</span>
+        <span id="retentionperiod_nodejs">
+<a href="#retentionperiod_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -923,7 +1071,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -931,7 +1081,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>retention_<wbr>period</span>
+        <span id="retention_period_python">
+<a href="#retention_period_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1073,7 +1225,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Account<wbr>Password</span>
+        <span id="state_accountpassword_csharp">
+<a href="#state_accountpassword_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1082,7 +1236,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Backup<wbr>Periods</span>
+        <span id="state_backupperiods_csharp">
+<a href="#state_backupperiods_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Periods</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1091,7 +1247,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Backup<wbr>Time</span>
+        <span id="state_backuptime_csharp">
+<a href="#state_backuptime_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1100,7 +1258,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Engine<wbr>Version</span>
+        <span id="state_engineversion_csharp">
+<a href="#state_engineversion_csharp" style="color: inherit; text-decoration: inherit;">Engine<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1109,7 +1269,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Instance<wbr>Charge<wbr>Type</span>
+        <span id="state_instancechargetype_csharp">
+<a href="#state_instancechargetype_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Charge<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1118,7 +1280,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Kms<wbr>Encrypted<wbr>Password</span>
+        <span id="state_kmsencryptedpassword_csharp">
+<a href="#state_kmsencryptedpassword_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Encrypted<wbr>Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1127,7 +1291,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Kms<wbr>Encryption<wbr>Context</span>
+        <span id="state_kmsencryptioncontext_csharp">
+<a href="#state_kmsencryptioncontext_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Encryption<wbr>Context</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -1136,7 +1302,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Mongo<wbr>Lists</span>
+        <span id="state_mongolists_csharp">
+<a href="#state_mongolists_csharp" style="color: inherit; text-decoration: inherit;">Mongo<wbr>Lists</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#shardinginstancemongolist">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Mongo<wbr>DB.<wbr>Inputs.<wbr>Sharding<wbr>Instance<wbr>Mongo<wbr>List<wbr>Args&gt;</a></span>
     </dt>
@@ -1145,7 +1313,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1154,7 +1324,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Period</span>
+        <span id="state_period_csharp">
+<a href="#state_period_csharp" style="color: inherit; text-decoration: inherit;">Period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1163,7 +1335,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Retention<wbr>Period</span>
+        <span id="state_retentionperiod_csharp">
+<a href="#state_retentionperiod_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1172,7 +1346,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Security<wbr>Group<wbr>Id</span>
+        <span id="state_securitygroupid_csharp">
+<a href="#state_securitygroupid_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1181,7 +1357,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Security<wbr>Ip<wbr>Lists</span>
+        <span id="state_securityiplists_csharp">
+<a href="#state_securityiplists_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Ip<wbr>Lists</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1190,7 +1368,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Shard<wbr>Lists</span>
+        <span id="state_shardlists_csharp">
+<a href="#state_shardlists_csharp" style="color: inherit; text-decoration: inherit;">Shard<wbr>Lists</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#shardinginstanceshardlist">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Mongo<wbr>DB.<wbr>Inputs.<wbr>Sharding<wbr>Instance<wbr>Shard<wbr>List<wbr>Args&gt;</a></span>
     </dt>
@@ -1199,7 +1379,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Storage<wbr>Engine</span>
+        <span id="state_storageengine_csharp">
+<a href="#state_storageengine_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Engine</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1208,7 +1390,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tde<wbr>Status</span>
+        <span id="state_tdestatus_csharp">
+<a href="#state_tdestatus_csharp" style="color: inherit; text-decoration: inherit;">Tde<wbr>Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1217,7 +1401,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vswitch<wbr>Id</span>
+        <span id="state_vswitchid_csharp">
+<a href="#state_vswitchid_csharp" style="color: inherit; text-decoration: inherit;">Vswitch<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1226,7 +1412,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Zone<wbr>Id</span>
+        <span id="state_zoneid_csharp">
+<a href="#state_zoneid_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1243,7 +1431,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Account<wbr>Password</span>
+        <span id="state_accountpassword_go">
+<a href="#state_accountpassword_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1252,7 +1442,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Backup<wbr>Periods</span>
+        <span id="state_backupperiods_go">
+<a href="#state_backupperiods_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Periods</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1261,7 +1453,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Backup<wbr>Time</span>
+        <span id="state_backuptime_go">
+<a href="#state_backuptime_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1270,7 +1464,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Engine<wbr>Version</span>
+        <span id="state_engineversion_go">
+<a href="#state_engineversion_go" style="color: inherit; text-decoration: inherit;">Engine<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1279,7 +1475,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Instance<wbr>Charge<wbr>Type</span>
+        <span id="state_instancechargetype_go">
+<a href="#state_instancechargetype_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Charge<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1288,7 +1486,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Kms<wbr>Encrypted<wbr>Password</span>
+        <span id="state_kmsencryptedpassword_go">
+<a href="#state_kmsencryptedpassword_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Encrypted<wbr>Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1297,7 +1497,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Kms<wbr>Encryption<wbr>Context</span>
+        <span id="state_kmsencryptioncontext_go">
+<a href="#state_kmsencryptioncontext_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Encryption<wbr>Context</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -1306,7 +1508,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Mongo<wbr>Lists</span>
+        <span id="state_mongolists_go">
+<a href="#state_mongolists_go" style="color: inherit; text-decoration: inherit;">Mongo<wbr>Lists</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#shardinginstancemongolist">[]Sharding<wbr>Instance<wbr>Mongo<wbr>List</a></span>
     </dt>
@@ -1315,7 +1519,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1324,7 +1530,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Period</span>
+        <span id="state_period_go">
+<a href="#state_period_go" style="color: inherit; text-decoration: inherit;">Period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1333,7 +1541,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Retention<wbr>Period</span>
+        <span id="state_retentionperiod_go">
+<a href="#state_retentionperiod_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1342,7 +1552,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Security<wbr>Group<wbr>Id</span>
+        <span id="state_securitygroupid_go">
+<a href="#state_securitygroupid_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1351,7 +1563,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Security<wbr>Ip<wbr>Lists</span>
+        <span id="state_securityiplists_go">
+<a href="#state_securityiplists_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Ip<wbr>Lists</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1360,7 +1574,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Shard<wbr>Lists</span>
+        <span id="state_shardlists_go">
+<a href="#state_shardlists_go" style="color: inherit; text-decoration: inherit;">Shard<wbr>Lists</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#shardinginstanceshardlist">[]Sharding<wbr>Instance<wbr>Shard<wbr>List</a></span>
     </dt>
@@ -1369,7 +1585,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Storage<wbr>Engine</span>
+        <span id="state_storageengine_go">
+<a href="#state_storageengine_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Engine</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1378,7 +1596,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tde<wbr>Status</span>
+        <span id="state_tdestatus_go">
+<a href="#state_tdestatus_go" style="color: inherit; text-decoration: inherit;">Tde<wbr>Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1387,7 +1607,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vswitch<wbr>Id</span>
+        <span id="state_vswitchid_go">
+<a href="#state_vswitchid_go" style="color: inherit; text-decoration: inherit;">Vswitch<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1396,7 +1618,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Zone<wbr>Id</span>
+        <span id="state_zoneid_go">
+<a href="#state_zoneid_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1413,7 +1637,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>account<wbr>Password</span>
+        <span id="state_accountpassword_nodejs">
+<a href="#state_accountpassword_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1422,7 +1648,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>backup<wbr>Periods</span>
+        <span id="state_backupperiods_nodejs">
+<a href="#state_backupperiods_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Periods</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1431,7 +1659,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>backup<wbr>Time</span>
+        <span id="state_backuptime_nodejs">
+<a href="#state_backuptime_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1440,7 +1670,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>engine<wbr>Version</span>
+        <span id="state_engineversion_nodejs">
+<a href="#state_engineversion_nodejs" style="color: inherit; text-decoration: inherit;">engine<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1449,7 +1681,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>instance<wbr>Charge<wbr>Type</span>
+        <span id="state_instancechargetype_nodejs">
+<a href="#state_instancechargetype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Charge<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1458,7 +1692,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>kms<wbr>Encrypted<wbr>Password</span>
+        <span id="state_kmsencryptedpassword_nodejs">
+<a href="#state_kmsencryptedpassword_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Encrypted<wbr>Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1467,7 +1703,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>kms<wbr>Encryption<wbr>Context</span>
+        <span id="state_kmsencryptioncontext_nodejs">
+<a href="#state_kmsencryptioncontext_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Encryption<wbr>Context</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -1476,7 +1714,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>mongo<wbr>Lists</span>
+        <span id="state_mongolists_nodejs">
+<a href="#state_mongolists_nodejs" style="color: inherit; text-decoration: inherit;">mongo<wbr>Lists</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#shardinginstancemongolist">Sharding<wbr>Instance<wbr>Mongo<wbr>List[]</a></span>
     </dt>
@@ -1485,7 +1725,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1494,7 +1736,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>period</span>
+        <span id="state_period_nodejs">
+<a href="#state_period_nodejs" style="color: inherit; text-decoration: inherit;">period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1503,7 +1747,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>retention<wbr>Period</span>
+        <span id="state_retentionperiod_nodejs">
+<a href="#state_retentionperiod_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1512,7 +1758,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>security<wbr>Group<wbr>Id</span>
+        <span id="state_securitygroupid_nodejs">
+<a href="#state_securitygroupid_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1521,7 +1769,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>security<wbr>Ip<wbr>Lists</span>
+        <span id="state_securityiplists_nodejs">
+<a href="#state_securityiplists_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Ip<wbr>Lists</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1530,7 +1780,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>shard<wbr>Lists</span>
+        <span id="state_shardlists_nodejs">
+<a href="#state_shardlists_nodejs" style="color: inherit; text-decoration: inherit;">shard<wbr>Lists</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#shardinginstanceshardlist">Sharding<wbr>Instance<wbr>Shard<wbr>List[]</a></span>
     </dt>
@@ -1539,7 +1791,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>storage<wbr>Engine</span>
+        <span id="state_storageengine_nodejs">
+<a href="#state_storageengine_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Engine</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1548,7 +1802,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>tde<wbr>Status</span>
+        <span id="state_tdestatus_nodejs">
+<a href="#state_tdestatus_nodejs" style="color: inherit; text-decoration: inherit;">tde<wbr>Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1557,7 +1813,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>vswitch<wbr>Id</span>
+        <span id="state_vswitchid_nodejs">
+<a href="#state_vswitchid_nodejs" style="color: inherit; text-decoration: inherit;">vswitch<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1566,7 +1824,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>zone<wbr>Id</span>
+        <span id="state_zoneid_nodejs">
+<a href="#state_zoneid_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1583,7 +1843,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>account_<wbr>password</span>
+        <span id="state_account_password_python">
+<a href="#state_account_password_python" style="color: inherit; text-decoration: inherit;">account_<wbr>password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1592,7 +1854,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>backup_<wbr>periods</span>
+        <span id="state_backup_periods_python">
+<a href="#state_backup_periods_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>periods</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1601,7 +1865,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>backup_<wbr>time</span>
+        <span id="state_backup_time_python">
+<a href="#state_backup_time_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1610,7 +1876,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>engine_<wbr>version</span>
+        <span id="state_engine_version_python">
+<a href="#state_engine_version_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1619,7 +1887,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>instance_<wbr>charge_<wbr>type</span>
+        <span id="state_instance_charge_type_python">
+<a href="#state_instance_charge_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>charge_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1628,7 +1898,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>kms_<wbr>encrypted_<wbr>password</span>
+        <span id="state_kms_encrypted_password_python">
+<a href="#state_kms_encrypted_password_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>encrypted_<wbr>password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1637,7 +1909,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>kms_<wbr>encryption_<wbr>context</span>
+        <span id="state_kms_encryption_context_python">
+<a href="#state_kms_encryption_context_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>encryption_<wbr>context</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -1646,7 +1920,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>mongo_<wbr>lists</span>
+        <span id="state_mongo_lists_python">
+<a href="#state_mongo_lists_python" style="color: inherit; text-decoration: inherit;">mongo_<wbr>lists</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#shardinginstancemongolist">List[Sharding<wbr>Instance<wbr>Mongo<wbr>List]</a></span>
     </dt>
@@ -1655,7 +1931,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1664,7 +1942,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>period</span>
+        <span id="state_period_python">
+<a href="#state_period_python" style="color: inherit; text-decoration: inherit;">period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1673,7 +1953,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>retention_<wbr>period</span>
+        <span id="state_retention_period_python">
+<a href="#state_retention_period_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1682,7 +1964,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>security_<wbr>group_<wbr>id</span>
+        <span id="state_security_group_id_python">
+<a href="#state_security_group_id_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1691,7 +1975,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>security_<wbr>ip_<wbr>lists</span>
+        <span id="state_security_ip_lists_python">
+<a href="#state_security_ip_lists_python" style="color: inherit; text-decoration: inherit;">security_<wbr>ip_<wbr>lists</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1700,7 +1986,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>shard_<wbr>lists</span>
+        <span id="state_shard_lists_python">
+<a href="#state_shard_lists_python" style="color: inherit; text-decoration: inherit;">shard_<wbr>lists</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#shardinginstanceshardlist">List[Sharding<wbr>Instance<wbr>Shard<wbr>List]</a></span>
     </dt>
@@ -1709,7 +1997,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>storage_<wbr>engine</span>
+        <span id="state_storage_engine_python">
+<a href="#state_storage_engine_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>engine</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1718,7 +2008,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>tde_<wbr>status</span>
+        <span id="state_tde_status_python">
+<a href="#state_tde_status_python" style="color: inherit; text-decoration: inherit;">tde_<wbr>status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1727,7 +2019,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>vswitch_<wbr>id</span>
+        <span id="state_vswitch_id_python">
+<a href="#state_vswitch_id_python" style="color: inherit; text-decoration: inherit;">vswitch_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1736,7 +2030,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>zone_<wbr>id</span>
+        <span id="state_zone_id_python">
+<a href="#state_zone_id_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1779,7 +2075,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-required"
             title="Required">
-        <span>Node<wbr>Class</span>
+        <span id="nodeclass_csharp">
+<a href="#nodeclass_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Class</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1788,7 +2086,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Connect<wbr>String</span>
+        <span id="connectstring_csharp">
+<a href="#connectstring_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>String</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1797,7 +2097,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Node<wbr>Id</span>
+        <span id="nodeid_csharp">
+<a href="#nodeid_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1806,7 +2108,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Port</span>
+        <span id="port_csharp">
+<a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1823,7 +2127,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-required"
             title="Required">
-        <span>Node<wbr>Class</span>
+        <span id="nodeclass_go">
+<a href="#nodeclass_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Class</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1832,7 +2138,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Connect<wbr>String</span>
+        <span id="connectstring_go">
+<a href="#connectstring_go" style="color: inherit; text-decoration: inherit;">Connect<wbr>String</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1841,7 +2149,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Node<wbr>Id</span>
+        <span id="nodeid_go">
+<a href="#nodeid_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1850,7 +2160,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Port</span>
+        <span id="port_go">
+<a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1867,7 +2179,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-required"
             title="Required">
-        <span>node<wbr>Class</span>
+        <span id="nodeclass_nodejs">
+<a href="#nodeclass_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Class</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1876,7 +2190,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>connect<wbr>String</span>
+        <span id="connectstring_nodejs">
+<a href="#connectstring_nodejs" style="color: inherit; text-decoration: inherit;">connect<wbr>String</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1885,7 +2201,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>node<wbr>Id</span>
+        <span id="nodeid_nodejs">
+<a href="#nodeid_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1894,7 +2212,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>port</span>
+        <span id="port_nodejs">
+<a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1911,7 +2231,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-required"
             title="Required">
-        <span>node<wbr>Class</span>
+        <span id="nodeclass_python">
+<a href="#nodeclass_python" style="color: inherit; text-decoration: inherit;">node<wbr>Class</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1920,7 +2242,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>connect<wbr>String</span>
+        <span id="connectstring_python">
+<a href="#connectstring_python" style="color: inherit; text-decoration: inherit;">connect<wbr>String</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1929,7 +2253,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>node<wbr>Id</span>
+        <span id="nodeid_python">
+<a href="#nodeid_python" style="color: inherit; text-decoration: inherit;">node<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1938,7 +2264,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>port</span>
+        <span id="port_python">
+<a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1973,7 +2301,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-required"
             title="Required">
-        <span>Node<wbr>Class</span>
+        <span id="nodeclass_csharp">
+<a href="#nodeclass_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Class</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1982,7 +2312,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-required"
             title="Required">
-        <span>Node<wbr>Storage</span>
+        <span id="nodestorage_csharp">
+<a href="#nodestorage_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Storage</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1993,7 +2325,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Node<wbr>Id</span>
+        <span id="nodeid_csharp">
+<a href="#nodeid_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2009,7 +2343,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-required"
             title="Required">
-        <span>Node<wbr>Class</span>
+        <span id="nodeclass_go">
+<a href="#nodeclass_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Class</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2018,7 +2354,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-required"
             title="Required">
-        <span>Node<wbr>Storage</span>
+        <span id="nodestorage_go">
+<a href="#nodestorage_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Storage</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -2029,7 +2367,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Node<wbr>Id</span>
+        <span id="nodeid_go">
+<a href="#nodeid_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2045,7 +2385,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-required"
             title="Required">
-        <span>node<wbr>Class</span>
+        <span id="nodeclass_nodejs">
+<a href="#nodeclass_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Class</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2054,7 +2396,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-required"
             title="Required">
-        <span>node<wbr>Storage</span>
+        <span id="nodestorage_nodejs">
+<a href="#nodestorage_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Storage</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -2065,7 +2409,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>node<wbr>Id</span>
+        <span id="nodeid_nodejs">
+<a href="#nodeid_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2081,7 +2427,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-required"
             title="Required">
-        <span>node<wbr>Class</span>
+        <span id="nodeclass_python">
+<a href="#nodeclass_python" style="color: inherit; text-decoration: inherit;">node<wbr>Class</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2090,7 +2438,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-required"
             title="Required">
-        <span>node<wbr>Storage</span>
+        <span id="nodestorage_python">
+<a href="#nodestorage_python" style="color: inherit; text-decoration: inherit;">node<wbr>Storage</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2101,7 +2451,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
-        <span>node<wbr>Id</span>
+        <span id="nodeid_python">
+<a href="#nodeid_python" style="color: inherit; text-decoration: inherit;">node<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
