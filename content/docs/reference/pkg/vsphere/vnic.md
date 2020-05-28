@@ -14,66 +14,6 @@ Provides a VMware vSphere vnic resource.
 
 ## Example Usages
 
-### Create a vnic attached to a distributed virtual switch using the vmotion TCP/IP stack
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as vsphere from "@pulumi/vsphere";
-
-const dc = vsphere.getDatacenter({
-    name: "mydc",
-});
-const h1 = dc.then(dc => vsphere.getHost({
-    name: "esxi1.host.test",
-    datacenterId: dc.id,
-}));
-const d1 = new vsphere.DistributedVirtualSwitch("d1", {
-    datacenterId: dc.then(dc => dc.id),
-    host: [{
-        hostSystemId: h1.then(h1 => h1.id),
-        devices: ["vnic3"],
-    }],
-});
-const p1 = new vsphere.DistributedPortGroup("p1", {
-    vlanId: 1234,
-    distributedVirtualSwitchUuid: d1.id,
-});
-const v1 = new vsphere.Vnic("v1", {
-    host: h1.then(h1 => h1.id),
-    distributedSwitchPort: d1.id,
-    distributedPortGroup: p1.id,
-    ipv4: {
-        dhcp: true,
-    },
-    netstack: "vmotion",
-});
-```
-```python
-import pulumi
-import pulumi_vsphere as vsphere
-
-dc = vsphere.get_datacenter(name="mydc")
-h1 = vsphere.get_host(name="esxi1.host.test",
-    datacenter_id=dc.id)
-d1 = vsphere.DistributedVirtualSwitch("d1",
-    datacenter_id=dc.id,
-    host=[{
-        "hostSystemId": h1.id,
-        "devices": ["vnic3"],
-    }])
-p1 = vsphere.DistributedPortGroup("p1",
-    vlan_id=1234,
-    distributed_virtual_switch_uuid=d1.id)
-v1 = vsphere.Vnic("v1",
-    host=h1.id,
-    distributed_switch_port=d1.id,
-    distributed_port_group=p1.id,
-    ipv4={
-        "dhcp": True,
-    },
-    netstack="vmotion")
-```
-
 ### Create a vnic attached to a portgroup using the default TCP/IP stack
 
 ```typescript
@@ -133,6 +73,58 @@ v1 = vsphere.Vnic("v1",
         "dhcp": True,
     })
 ```
+```csharp
+using Pulumi;
+using VSphere = Pulumi.VSphere;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var dc = Output.Create(VSphere.GetDatacenter.InvokeAsync(new VSphere.GetDatacenterArgs
+        {
+            Name = "mydc",
+        }));
+        var h1 = dc.Apply(dc => Output.Create(VSphere.GetHost.InvokeAsync(new VSphere.GetHostArgs
+        {
+            Name = "esxi1.host.test",
+            DatacenterId = dc.Id,
+        })));
+        var hvs1 = new VSphere.HostVirtualSwitch("hvs1", new VSphere.HostVirtualSwitchArgs
+        {
+            HostSystemId = h1.Apply(h1 => h1.Id),
+            NetworkAdapters = 
+            {
+                "vmnic3",
+                "vmnic4",
+            },
+            ActiveNics = 
+            {
+                "vmnic3",
+            },
+            StandbyNics = 
+            {
+                "vmnic4",
+            },
+        });
+        var p1 = new VSphere.HostPortGroup("p1", new VSphere.HostPortGroupArgs
+        {
+            VirtualSwitchName = hvs1.Name,
+            HostSystemId = h1.Apply(h1 => h1.Id),
+        });
+        var v1 = new VSphere.Vnic("v1", new VSphere.VnicArgs
+        {
+            Host = h1.Apply(h1 => h1.Id),
+            Portgroup = p1.Name,
+            Ipv4 = new VSphere.Inputs.VnicIpv4Args
+            {
+                Dhcp = true,
+            },
+        });
+    }
+
+}
+```
 
 ## Importing 
 
@@ -147,6 +139,17 @@ import * as pulumi from "@pulumi/pulumi";
 ```python
 import pulumi
 ```
+```csharp
+using Pulumi;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+    }
+
+}
+```
 
 The above would import the the vnic `vmk2` from host with ID `host-123`.
 
@@ -157,19 +160,19 @@ The above would import the the vnic `vmk2` from host with ID `host-123`.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#Vnic">Vnic</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#VnicArgs">VnicArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#Vnic">Vnic</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#VnicArgs">VnicArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Vnic</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>distributed_port_group=None<span class="p">, </span>distributed_switch_port=None<span class="p">, </span>host=None<span class="p">, </span>ipv4=None<span class="p">, </span>ipv6=None<span class="p">, </span>mac=None<span class="p">, </span>mtu=None<span class="p">, </span>netstack=None<span class="p">, </span>portgroup=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/vsphere/#Vnic">Vnic</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>distributed_port_group=None<span class="p">, </span>distributed_switch_port=None<span class="p">, </span>host=None<span class="p">, </span>ipv4=None<span class="p">, </span>ipv6=None<span class="p">, </span>mac=None<span class="p">, </span>mtu=None<span class="p">, </span>netstack=None<span class="p">, </span>portgroup=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewVnic<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#VnicArgs">VnicArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#Vnic">Vnic</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#Vnic">NewVnic</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#VnicArgs">VnicArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#Vnic">Vnic</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.Vnic.html">Vnic</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.VnicArgs.html">VnicArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.Vnic.html">Vnic</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.VnicArgs.html">VnicArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -335,7 +338,9 @@ The Vnic resource accepts the following [input]({{< relref "/docs/intro/concepts
 
     <dt class="property-required"
             title="Required">
-        <span>Host</span>
+        <span id="host_csharp">
+<a href="#host_csharp" style="color: inherit; text-decoration: inherit;">Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -344,7 +349,9 @@ The Vnic resource accepts the following [input]({{< relref "/docs/intro/concepts
 
     <dt class="property-optional"
             title="Optional">
-        <span>Distributed<wbr>Port<wbr>Group</span>
+        <span id="distributedportgroup_csharp">
+<a href="#distributedportgroup_csharp" style="color: inherit; text-decoration: inherit;">Distributed<wbr>Port<wbr>Group</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -353,7 +360,9 @@ The Vnic resource accepts the following [input]({{< relref "/docs/intro/concepts
 
     <dt class="property-optional"
             title="Optional">
-        <span>Distributed<wbr>Switch<wbr>Port</span>
+        <span id="distributedswitchport_csharp">
+<a href="#distributedswitchport_csharp" style="color: inherit; text-decoration: inherit;">Distributed<wbr>Switch<wbr>Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -362,7 +371,9 @@ The Vnic resource accepts the following [input]({{< relref "/docs/intro/concepts
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ipv4</span>
+        <span id="ipv4_csharp">
+<a href="#ipv4_csharp" style="color: inherit; text-decoration: inherit;">Ipv4</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vnicipv4">Pulumi.<wbr>VSphere.<wbr>Inputs.<wbr>Vnic<wbr>Ipv4Args</a></span>
     </dt>
@@ -371,7 +382,9 @@ The Vnic resource accepts the following [input]({{< relref "/docs/intro/concepts
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ipv6</span>
+        <span id="ipv6_csharp">
+<a href="#ipv6_csharp" style="color: inherit; text-decoration: inherit;">Ipv6</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vnicipv6">Pulumi.<wbr>VSphere.<wbr>Inputs.<wbr>Vnic<wbr>Ipv6Args</a></span>
     </dt>
@@ -380,7 +393,9 @@ The Vnic resource accepts the following [input]({{< relref "/docs/intro/concepts
 
     <dt class="property-optional"
             title="Optional">
-        <span>Mac</span>
+        <span id="mac_csharp">
+<a href="#mac_csharp" style="color: inherit; text-decoration: inherit;">Mac</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -389,7 +404,9 @@ The Vnic resource accepts the following [input]({{< relref "/docs/intro/concepts
 
     <dt class="property-optional"
             title="Optional">
-        <span>Mtu</span>
+        <span id="mtu_csharp">
+<a href="#mtu_csharp" style="color: inherit; text-decoration: inherit;">Mtu</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -398,7 +415,9 @@ The Vnic resource accepts the following [input]({{< relref "/docs/intro/concepts
 
     <dt class="property-optional"
             title="Optional">
-        <span>Netstack</span>
+        <span id="netstack_csharp">
+<a href="#netstack_csharp" style="color: inherit; text-decoration: inherit;">Netstack</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -407,7 +426,9 @@ The Vnic resource accepts the following [input]({{< relref "/docs/intro/concepts
 
     <dt class="property-optional"
             title="Optional">
-        <span>Portgroup</span>
+        <span id="portgroup_csharp">
+<a href="#portgroup_csharp" style="color: inherit; text-decoration: inherit;">Portgroup</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -423,7 +444,9 @@ The Vnic resource accepts the following [input]({{< relref "/docs/intro/concepts
 
     <dt class="property-required"
             title="Required">
-        <span>Host</span>
+        <span id="host_go">
+<a href="#host_go" style="color: inherit; text-decoration: inherit;">Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -432,7 +455,9 @@ The Vnic resource accepts the following [input]({{< relref "/docs/intro/concepts
 
     <dt class="property-optional"
             title="Optional">
-        <span>Distributed<wbr>Port<wbr>Group</span>
+        <span id="distributedportgroup_go">
+<a href="#distributedportgroup_go" style="color: inherit; text-decoration: inherit;">Distributed<wbr>Port<wbr>Group</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -441,7 +466,9 @@ The Vnic resource accepts the following [input]({{< relref "/docs/intro/concepts
 
     <dt class="property-optional"
             title="Optional">
-        <span>Distributed<wbr>Switch<wbr>Port</span>
+        <span id="distributedswitchport_go">
+<a href="#distributedswitchport_go" style="color: inherit; text-decoration: inherit;">Distributed<wbr>Switch<wbr>Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -450,7 +477,9 @@ The Vnic resource accepts the following [input]({{< relref "/docs/intro/concepts
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ipv4</span>
+        <span id="ipv4_go">
+<a href="#ipv4_go" style="color: inherit; text-decoration: inherit;">Ipv4</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vnicipv4">Vnic<wbr>Ipv4</a></span>
     </dt>
@@ -459,7 +488,9 @@ The Vnic resource accepts the following [input]({{< relref "/docs/intro/concepts
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ipv6</span>
+        <span id="ipv6_go">
+<a href="#ipv6_go" style="color: inherit; text-decoration: inherit;">Ipv6</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vnicipv6">Vnic<wbr>Ipv6</a></span>
     </dt>
@@ -468,7 +499,9 @@ The Vnic resource accepts the following [input]({{< relref "/docs/intro/concepts
 
     <dt class="property-optional"
             title="Optional">
-        <span>Mac</span>
+        <span id="mac_go">
+<a href="#mac_go" style="color: inherit; text-decoration: inherit;">Mac</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -477,7 +510,9 @@ The Vnic resource accepts the following [input]({{< relref "/docs/intro/concepts
 
     <dt class="property-optional"
             title="Optional">
-        <span>Mtu</span>
+        <span id="mtu_go">
+<a href="#mtu_go" style="color: inherit; text-decoration: inherit;">Mtu</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -486,7 +521,9 @@ The Vnic resource accepts the following [input]({{< relref "/docs/intro/concepts
 
     <dt class="property-optional"
             title="Optional">
-        <span>Netstack</span>
+        <span id="netstack_go">
+<a href="#netstack_go" style="color: inherit; text-decoration: inherit;">Netstack</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -495,7 +532,9 @@ The Vnic resource accepts the following [input]({{< relref "/docs/intro/concepts
 
     <dt class="property-optional"
             title="Optional">
-        <span>Portgroup</span>
+        <span id="portgroup_go">
+<a href="#portgroup_go" style="color: inherit; text-decoration: inherit;">Portgroup</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -511,7 +550,9 @@ The Vnic resource accepts the following [input]({{< relref "/docs/intro/concepts
 
     <dt class="property-required"
             title="Required">
-        <span>host</span>
+        <span id="host_nodejs">
+<a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -520,7 +561,9 @@ The Vnic resource accepts the following [input]({{< relref "/docs/intro/concepts
 
     <dt class="property-optional"
             title="Optional">
-        <span>distributed<wbr>Port<wbr>Group</span>
+        <span id="distributedportgroup_nodejs">
+<a href="#distributedportgroup_nodejs" style="color: inherit; text-decoration: inherit;">distributed<wbr>Port<wbr>Group</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -529,7 +572,9 @@ The Vnic resource accepts the following [input]({{< relref "/docs/intro/concepts
 
     <dt class="property-optional"
             title="Optional">
-        <span>distributed<wbr>Switch<wbr>Port</span>
+        <span id="distributedswitchport_nodejs">
+<a href="#distributedswitchport_nodejs" style="color: inherit; text-decoration: inherit;">distributed<wbr>Switch<wbr>Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -538,7 +583,9 @@ The Vnic resource accepts the following [input]({{< relref "/docs/intro/concepts
 
     <dt class="property-optional"
             title="Optional">
-        <span>ipv4</span>
+        <span id="ipv4_nodejs">
+<a href="#ipv4_nodejs" style="color: inherit; text-decoration: inherit;">ipv4</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vnicipv4">Vnic<wbr>Ipv4</a></span>
     </dt>
@@ -547,7 +594,9 @@ The Vnic resource accepts the following [input]({{< relref "/docs/intro/concepts
 
     <dt class="property-optional"
             title="Optional">
-        <span>ipv6</span>
+        <span id="ipv6_nodejs">
+<a href="#ipv6_nodejs" style="color: inherit; text-decoration: inherit;">ipv6</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vnicipv6">Vnic<wbr>Ipv6</a></span>
     </dt>
@@ -556,7 +605,9 @@ The Vnic resource accepts the following [input]({{< relref "/docs/intro/concepts
 
     <dt class="property-optional"
             title="Optional">
-        <span>mac</span>
+        <span id="mac_nodejs">
+<a href="#mac_nodejs" style="color: inherit; text-decoration: inherit;">mac</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -565,7 +616,9 @@ The Vnic resource accepts the following [input]({{< relref "/docs/intro/concepts
 
     <dt class="property-optional"
             title="Optional">
-        <span>mtu</span>
+        <span id="mtu_nodejs">
+<a href="#mtu_nodejs" style="color: inherit; text-decoration: inherit;">mtu</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -574,7 +627,9 @@ The Vnic resource accepts the following [input]({{< relref "/docs/intro/concepts
 
     <dt class="property-optional"
             title="Optional">
-        <span>netstack</span>
+        <span id="netstack_nodejs">
+<a href="#netstack_nodejs" style="color: inherit; text-decoration: inherit;">netstack</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -583,7 +638,9 @@ The Vnic resource accepts the following [input]({{< relref "/docs/intro/concepts
 
     <dt class="property-optional"
             title="Optional">
-        <span>portgroup</span>
+        <span id="portgroup_nodejs">
+<a href="#portgroup_nodejs" style="color: inherit; text-decoration: inherit;">portgroup</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -599,7 +656,9 @@ The Vnic resource accepts the following [input]({{< relref "/docs/intro/concepts
 
     <dt class="property-required"
             title="Required">
-        <span>host</span>
+        <span id="host_python">
+<a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -608,7 +667,9 @@ The Vnic resource accepts the following [input]({{< relref "/docs/intro/concepts
 
     <dt class="property-optional"
             title="Optional">
-        <span>distributed_<wbr>port_<wbr>group</span>
+        <span id="distributed_port_group_python">
+<a href="#distributed_port_group_python" style="color: inherit; text-decoration: inherit;">distributed_<wbr>port_<wbr>group</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -617,7 +678,9 @@ The Vnic resource accepts the following [input]({{< relref "/docs/intro/concepts
 
     <dt class="property-optional"
             title="Optional">
-        <span>distributed_<wbr>switch_<wbr>port</span>
+        <span id="distributed_switch_port_python">
+<a href="#distributed_switch_port_python" style="color: inherit; text-decoration: inherit;">distributed_<wbr>switch_<wbr>port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -626,7 +689,9 @@ The Vnic resource accepts the following [input]({{< relref "/docs/intro/concepts
 
     <dt class="property-optional"
             title="Optional">
-        <span>ipv4</span>
+        <span id="ipv4_python">
+<a href="#ipv4_python" style="color: inherit; text-decoration: inherit;">ipv4</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vnicipv4">Dict[Vnic<wbr>Ipv4]</a></span>
     </dt>
@@ -635,7 +700,9 @@ The Vnic resource accepts the following [input]({{< relref "/docs/intro/concepts
 
     <dt class="property-optional"
             title="Optional">
-        <span>ipv6</span>
+        <span id="ipv6_python">
+<a href="#ipv6_python" style="color: inherit; text-decoration: inherit;">ipv6</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vnicipv6">Dict[Vnic<wbr>Ipv6]</a></span>
     </dt>
@@ -644,7 +711,9 @@ The Vnic resource accepts the following [input]({{< relref "/docs/intro/concepts
 
     <dt class="property-optional"
             title="Optional">
-        <span>mac</span>
+        <span id="mac_python">
+<a href="#mac_python" style="color: inherit; text-decoration: inherit;">mac</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -653,7 +722,9 @@ The Vnic resource accepts the following [input]({{< relref "/docs/intro/concepts
 
     <dt class="property-optional"
             title="Optional">
-        <span>mtu</span>
+        <span id="mtu_python">
+<a href="#mtu_python" style="color: inherit; text-decoration: inherit;">mtu</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -662,7 +733,9 @@ The Vnic resource accepts the following [input]({{< relref "/docs/intro/concepts
 
     <dt class="property-optional"
             title="Optional">
-        <span>netstack</span>
+        <span id="netstack_python">
+<a href="#netstack_python" style="color: inherit; text-decoration: inherit;">netstack</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -671,7 +744,9 @@ The Vnic resource accepts the following [input]({{< relref "/docs/intro/concepts
 
     <dt class="property-optional"
             title="Optional">
-        <span>portgroup</span>
+        <span id="portgroup_python">
+<a href="#portgroup_python" style="color: inherit; text-decoration: inherit;">portgroup</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -698,7 +773,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -713,7 +790,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -728,7 +807,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -743,7 +824,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -764,7 +847,7 @@ Get an existing Vnic resource's state with the given name, ID, and optional extr
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#VnicState">VnicState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#Vnic">Vnic</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#VnicState">VnicState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#Vnic">Vnic</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -772,11 +855,11 @@ Get an existing Vnic resource's state with the given name, ID, and optional extr
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVnic<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#VnicState">VnicState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#Vnic">Vnic</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVnic<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#VnicState">VnicState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#Vnic">Vnic</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.Vnic.html">Vnic</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere..VnicState.html">VnicState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.Vnic.html">Vnic</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere..VnicState.html">VnicState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -884,7 +967,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Distributed<wbr>Port<wbr>Group</span>
+        <span id="state_distributedportgroup_csharp">
+<a href="#state_distributedportgroup_csharp" style="color: inherit; text-decoration: inherit;">Distributed<wbr>Port<wbr>Group</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -893,7 +978,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Distributed<wbr>Switch<wbr>Port</span>
+        <span id="state_distributedswitchport_csharp">
+<a href="#state_distributedswitchport_csharp" style="color: inherit; text-decoration: inherit;">Distributed<wbr>Switch<wbr>Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -902,7 +989,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Host</span>
+        <span id="state_host_csharp">
+<a href="#state_host_csharp" style="color: inherit; text-decoration: inherit;">Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -911,7 +1000,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ipv4</span>
+        <span id="state_ipv4_csharp">
+<a href="#state_ipv4_csharp" style="color: inherit; text-decoration: inherit;">Ipv4</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vnicipv4">Pulumi.<wbr>VSphere.<wbr>Inputs.<wbr>Vnic<wbr>Ipv4Args</a></span>
     </dt>
@@ -920,7 +1011,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ipv6</span>
+        <span id="state_ipv6_csharp">
+<a href="#state_ipv6_csharp" style="color: inherit; text-decoration: inherit;">Ipv6</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vnicipv6">Pulumi.<wbr>VSphere.<wbr>Inputs.<wbr>Vnic<wbr>Ipv6Args</a></span>
     </dt>
@@ -929,7 +1022,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Mac</span>
+        <span id="state_mac_csharp">
+<a href="#state_mac_csharp" style="color: inherit; text-decoration: inherit;">Mac</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -938,7 +1033,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Mtu</span>
+        <span id="state_mtu_csharp">
+<a href="#state_mtu_csharp" style="color: inherit; text-decoration: inherit;">Mtu</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -947,7 +1044,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Netstack</span>
+        <span id="state_netstack_csharp">
+<a href="#state_netstack_csharp" style="color: inherit; text-decoration: inherit;">Netstack</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -956,7 +1055,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Portgroup</span>
+        <span id="state_portgroup_csharp">
+<a href="#state_portgroup_csharp" style="color: inherit; text-decoration: inherit;">Portgroup</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -972,7 +1073,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Distributed<wbr>Port<wbr>Group</span>
+        <span id="state_distributedportgroup_go">
+<a href="#state_distributedportgroup_go" style="color: inherit; text-decoration: inherit;">Distributed<wbr>Port<wbr>Group</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -981,7 +1084,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Distributed<wbr>Switch<wbr>Port</span>
+        <span id="state_distributedswitchport_go">
+<a href="#state_distributedswitchport_go" style="color: inherit; text-decoration: inherit;">Distributed<wbr>Switch<wbr>Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -990,7 +1095,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Host</span>
+        <span id="state_host_go">
+<a href="#state_host_go" style="color: inherit; text-decoration: inherit;">Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -999,7 +1106,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ipv4</span>
+        <span id="state_ipv4_go">
+<a href="#state_ipv4_go" style="color: inherit; text-decoration: inherit;">Ipv4</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vnicipv4">Vnic<wbr>Ipv4</a></span>
     </dt>
@@ -1008,7 +1117,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ipv6</span>
+        <span id="state_ipv6_go">
+<a href="#state_ipv6_go" style="color: inherit; text-decoration: inherit;">Ipv6</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vnicipv6">Vnic<wbr>Ipv6</a></span>
     </dt>
@@ -1017,7 +1128,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Mac</span>
+        <span id="state_mac_go">
+<a href="#state_mac_go" style="color: inherit; text-decoration: inherit;">Mac</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1026,7 +1139,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Mtu</span>
+        <span id="state_mtu_go">
+<a href="#state_mtu_go" style="color: inherit; text-decoration: inherit;">Mtu</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1035,7 +1150,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Netstack</span>
+        <span id="state_netstack_go">
+<a href="#state_netstack_go" style="color: inherit; text-decoration: inherit;">Netstack</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1044,7 +1161,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Portgroup</span>
+        <span id="state_portgroup_go">
+<a href="#state_portgroup_go" style="color: inherit; text-decoration: inherit;">Portgroup</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1060,7 +1179,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>distributed<wbr>Port<wbr>Group</span>
+        <span id="state_distributedportgroup_nodejs">
+<a href="#state_distributedportgroup_nodejs" style="color: inherit; text-decoration: inherit;">distributed<wbr>Port<wbr>Group</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1069,7 +1190,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>distributed<wbr>Switch<wbr>Port</span>
+        <span id="state_distributedswitchport_nodejs">
+<a href="#state_distributedswitchport_nodejs" style="color: inherit; text-decoration: inherit;">distributed<wbr>Switch<wbr>Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1078,7 +1201,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>host</span>
+        <span id="state_host_nodejs">
+<a href="#state_host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1087,7 +1212,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>ipv4</span>
+        <span id="state_ipv4_nodejs">
+<a href="#state_ipv4_nodejs" style="color: inherit; text-decoration: inherit;">ipv4</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vnicipv4">Vnic<wbr>Ipv4</a></span>
     </dt>
@@ -1096,7 +1223,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>ipv6</span>
+        <span id="state_ipv6_nodejs">
+<a href="#state_ipv6_nodejs" style="color: inherit; text-decoration: inherit;">ipv6</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vnicipv6">Vnic<wbr>Ipv6</a></span>
     </dt>
@@ -1105,7 +1234,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>mac</span>
+        <span id="state_mac_nodejs">
+<a href="#state_mac_nodejs" style="color: inherit; text-decoration: inherit;">mac</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1114,7 +1245,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>mtu</span>
+        <span id="state_mtu_nodejs">
+<a href="#state_mtu_nodejs" style="color: inherit; text-decoration: inherit;">mtu</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1123,7 +1256,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>netstack</span>
+        <span id="state_netstack_nodejs">
+<a href="#state_netstack_nodejs" style="color: inherit; text-decoration: inherit;">netstack</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1132,7 +1267,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>portgroup</span>
+        <span id="state_portgroup_nodejs">
+<a href="#state_portgroup_nodejs" style="color: inherit; text-decoration: inherit;">portgroup</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1148,7 +1285,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>distributed_<wbr>port_<wbr>group</span>
+        <span id="state_distributed_port_group_python">
+<a href="#state_distributed_port_group_python" style="color: inherit; text-decoration: inherit;">distributed_<wbr>port_<wbr>group</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1157,7 +1296,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>distributed_<wbr>switch_<wbr>port</span>
+        <span id="state_distributed_switch_port_python">
+<a href="#state_distributed_switch_port_python" style="color: inherit; text-decoration: inherit;">distributed_<wbr>switch_<wbr>port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1166,7 +1307,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>host</span>
+        <span id="state_host_python">
+<a href="#state_host_python" style="color: inherit; text-decoration: inherit;">host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1175,7 +1318,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>ipv4</span>
+        <span id="state_ipv4_python">
+<a href="#state_ipv4_python" style="color: inherit; text-decoration: inherit;">ipv4</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vnicipv4">Dict[Vnic<wbr>Ipv4]</a></span>
     </dt>
@@ -1184,7 +1329,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>ipv6</span>
+        <span id="state_ipv6_python">
+<a href="#state_ipv6_python" style="color: inherit; text-decoration: inherit;">ipv6</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vnicipv6">Dict[Vnic<wbr>Ipv6]</a></span>
     </dt>
@@ -1193,7 +1340,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>mac</span>
+        <span id="state_mac_python">
+<a href="#state_mac_python" style="color: inherit; text-decoration: inherit;">mac</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1202,7 +1351,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>mtu</span>
+        <span id="state_mtu_python">
+<a href="#state_mtu_python" style="color: inherit; text-decoration: inherit;">mtu</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1211,7 +1362,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>netstack</span>
+        <span id="state_netstack_python">
+<a href="#state_netstack_python" style="color: inherit; text-decoration: inherit;">netstack</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1220,7 +1373,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>portgroup</span>
+        <span id="state_portgroup_python">
+<a href="#state_portgroup_python" style="color: inherit; text-decoration: inherit;">portgroup</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1262,7 +1417,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dhcp</span>
+        <span id="dhcp_csharp">
+<a href="#dhcp_csharp" style="color: inherit; text-decoration: inherit;">Dhcp</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1271,7 +1428,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Gw</span>
+        <span id="gw_csharp">
+<a href="#gw_csharp" style="color: inherit; text-decoration: inherit;">Gw</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1280,7 +1439,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ip</span>
+        <span id="ip_csharp">
+<a href="#ip_csharp" style="color: inherit; text-decoration: inherit;">Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1289,7 +1450,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Netmask</span>
+        <span id="netmask_csharp">
+<a href="#netmask_csharp" style="color: inherit; text-decoration: inherit;">Netmask</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1305,7 +1468,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dhcp</span>
+        <span id="dhcp_go">
+<a href="#dhcp_go" style="color: inherit; text-decoration: inherit;">Dhcp</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1314,7 +1479,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Gw</span>
+        <span id="gw_go">
+<a href="#gw_go" style="color: inherit; text-decoration: inherit;">Gw</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1323,7 +1490,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ip</span>
+        <span id="ip_go">
+<a href="#ip_go" style="color: inherit; text-decoration: inherit;">Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1332,7 +1501,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Netmask</span>
+        <span id="netmask_go">
+<a href="#netmask_go" style="color: inherit; text-decoration: inherit;">Netmask</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1348,7 +1519,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>dhcp</span>
+        <span id="dhcp_nodejs">
+<a href="#dhcp_nodejs" style="color: inherit; text-decoration: inherit;">dhcp</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1357,7 +1530,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>gw</span>
+        <span id="gw_nodejs">
+<a href="#gw_nodejs" style="color: inherit; text-decoration: inherit;">gw</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1366,7 +1541,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>ip</span>
+        <span id="ip_nodejs">
+<a href="#ip_nodejs" style="color: inherit; text-decoration: inherit;">ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1375,7 +1552,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>netmask</span>
+        <span id="netmask_nodejs">
+<a href="#netmask_nodejs" style="color: inherit; text-decoration: inherit;">netmask</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1391,7 +1570,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>dhcp</span>
+        <span id="dhcp_python">
+<a href="#dhcp_python" style="color: inherit; text-decoration: inherit;">dhcp</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1400,7 +1581,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>gw</span>
+        <span id="gw_python">
+<a href="#gw_python" style="color: inherit; text-decoration: inherit;">gw</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1409,7 +1592,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>ip</span>
+        <span id="ip_python">
+<a href="#ip_python" style="color: inherit; text-decoration: inherit;">ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1418,7 +1603,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>netmask</span>
+        <span id="netmask_python">
+<a href="#netmask_python" style="color: inherit; text-decoration: inherit;">netmask</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1452,7 +1639,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Addresses</span>
+        <span id="addresses_csharp">
+<a href="#addresses_csharp" style="color: inherit; text-decoration: inherit;">Addresses</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1461,7 +1650,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Autoconfig</span>
+        <span id="autoconfig_csharp">
+<a href="#autoconfig_csharp" style="color: inherit; text-decoration: inherit;">Autoconfig</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1470,7 +1661,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dhcp</span>
+        <span id="dhcp_csharp">
+<a href="#dhcp_csharp" style="color: inherit; text-decoration: inherit;">Dhcp</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1479,7 +1672,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Gw</span>
+        <span id="gw_csharp">
+<a href="#gw_csharp" style="color: inherit; text-decoration: inherit;">Gw</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1495,7 +1690,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Addresses</span>
+        <span id="addresses_go">
+<a href="#addresses_go" style="color: inherit; text-decoration: inherit;">Addresses</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1504,7 +1701,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Autoconfig</span>
+        <span id="autoconfig_go">
+<a href="#autoconfig_go" style="color: inherit; text-decoration: inherit;">Autoconfig</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1513,7 +1712,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dhcp</span>
+        <span id="dhcp_go">
+<a href="#dhcp_go" style="color: inherit; text-decoration: inherit;">Dhcp</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1522,7 +1723,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Gw</span>
+        <span id="gw_go">
+<a href="#gw_go" style="color: inherit; text-decoration: inherit;">Gw</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1538,7 +1741,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>addresses</span>
+        <span id="addresses_nodejs">
+<a href="#addresses_nodejs" style="color: inherit; text-decoration: inherit;">addresses</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1547,7 +1752,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>autoconfig</span>
+        <span id="autoconfig_nodejs">
+<a href="#autoconfig_nodejs" style="color: inherit; text-decoration: inherit;">autoconfig</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1556,7 +1763,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>dhcp</span>
+        <span id="dhcp_nodejs">
+<a href="#dhcp_nodejs" style="color: inherit; text-decoration: inherit;">dhcp</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1565,7 +1774,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>gw</span>
+        <span id="gw_nodejs">
+<a href="#gw_nodejs" style="color: inherit; text-decoration: inherit;">gw</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1581,7 +1792,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>addresses</span>
+        <span id="addresses_python">
+<a href="#addresses_python" style="color: inherit; text-decoration: inherit;">addresses</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1590,7 +1803,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>autoconfig</span>
+        <span id="autoconfig_python">
+<a href="#autoconfig_python" style="color: inherit; text-decoration: inherit;">autoconfig</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1599,7 +1814,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>dhcp</span>
+        <span id="dhcp_python">
+<a href="#dhcp_python" style="color: inherit; text-decoration: inherit;">dhcp</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1608,7 +1825,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>gw</span>
+        <span id="gw_python">
+<a href="#gw_python" style="color: inherit; text-decoration: inherit;">gw</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

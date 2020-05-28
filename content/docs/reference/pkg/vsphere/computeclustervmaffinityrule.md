@@ -40,7 +40,72 @@ connections.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using System.Collections.Generic;
+using System.Linq;
+using Pulumi;
+using VSphere = Pulumi.VSphere;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var dc = Output.Create(VSphere.GetDatacenter.InvokeAsync(new VSphere.GetDatacenterArgs
+        {
+            Name = "dc1",
+        }));
+        var datastore = dc.Apply(dc => Output.Create(VSphere.GetDatastore.InvokeAsync(new VSphere.GetDatastoreArgs
+        {
+            DatacenterId = dc.Id,
+            Name = "datastore1",
+        })));
+        var cluster = dc.Apply(dc => Output.Create(VSphere.GetComputeCluster.InvokeAsync(new VSphere.GetComputeClusterArgs
+        {
+            DatacenterId = dc.Id,
+            Name = "cluster1",
+        })));
+        var network = dc.Apply(dc => Output.Create(VSphere.GetNetwork.InvokeAsync(new VSphere.GetNetworkArgs
+        {
+            DatacenterId = dc.Id,
+            Name = "network1",
+        })));
+        var vm = new List<VSphere.VirtualMachine>();
+        for (var rangeIndex = 0; rangeIndex < 2; rangeIndex++)
+        {
+            var range = new { Value = rangeIndex };
+            vm.Add(new VSphere.VirtualMachine($"vm-{range.Value}", new VSphere.VirtualMachineArgs
+            {
+                DatastoreId = datastore.Apply(datastore => datastore.Id),
+                Disks = 
+                {
+                    new VSphere.Inputs.VirtualMachineDiskArgs
+                    {
+                        Label = "disk0",
+                        Size = 20,
+                    },
+                },
+                GuestId = "other3xLinux64Guest",
+                Memory = 2048,
+                NetworkInterfaces = 
+                {
+                    new VSphere.Inputs.VirtualMachineNetworkInterfaceArgs
+                    {
+                        NetworkId = network.Apply(network => network.Id),
+                    },
+                },
+                NumCpus = 2,
+                ResourcePoolId = cluster.Apply(cluster => cluster.ResourcePoolId),
+            }));
+        }
+        var clusterVmAffinityRule = new VSphere.ComputeClusterVmAffinityRule("clusterVmAffinityRule", new VSphere.ComputeClusterVmAffinityRuleArgs
+        {
+            ComputeClusterId = cluster.Apply(cluster => cluster.Id),
+            VirtualMachineIds = vm.Select(__item => __item.Id).ToList(),
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -132,19 +197,19 @@ const clusterVmAffinityRule = new vsphere.ComputeClusterVmAffinityRule("cluster_
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#ComputeClusterVmAffinityRule">ComputeClusterVmAffinityRule</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#ComputeClusterVmAffinityRuleArgs">ComputeClusterVmAffinityRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#ComputeClusterVmAffinityRule">ComputeClusterVmAffinityRule</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#ComputeClusterVmAffinityRuleArgs">ComputeClusterVmAffinityRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ComputeClusterVmAffinityRule</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>compute_cluster_id=None<span class="p">, </span>enabled=None<span class="p">, </span>mandatory=None<span class="p">, </span>name=None<span class="p">, </span>virtual_machine_ids=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/vsphere/#ComputeClusterVmAffinityRule">ComputeClusterVmAffinityRule</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>compute_cluster_id=None<span class="p">, </span>enabled=None<span class="p">, </span>mandatory=None<span class="p">, </span>name=None<span class="p">, </span>virtual_machine_ids=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewComputeClusterVmAffinityRule<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#ComputeClusterVmAffinityRuleArgs">ComputeClusterVmAffinityRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#ComputeClusterVmAffinityRule">ComputeClusterVmAffinityRule</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#ComputeClusterVmAffinityRule">NewComputeClusterVmAffinityRule</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#ComputeClusterVmAffinityRuleArgs">ComputeClusterVmAffinityRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#ComputeClusterVmAffinityRule">ComputeClusterVmAffinityRule</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.ComputeClusterVmAffinityRule.html">ComputeClusterVmAffinityRule</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.ComputeClusterVmAffinityRuleArgs.html">ComputeClusterVmAffinityRuleArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.ComputeClusterVmAffinityRule.html">ComputeClusterVmAffinityRule</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.ComputeClusterVmAffinityRuleArgs.html">ComputeClusterVmAffinityRuleArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -310,7 +375,9 @@ The ComputeClusterVmAffinityRule resource accepts the following [input]({{< relr
 
     <dt class="property-required"
             title="Required">
-        <span>Compute<wbr>Cluster<wbr>Id</span>
+        <span id="computeclusterid_csharp">
+<a href="#computeclusterid_csharp" style="color: inherit; text-decoration: inherit;">Compute<wbr>Cluster<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -321,7 +388,9 @@ resource if changed.
 
     <dt class="property-required"
             title="Required">
-        <span>Virtual<wbr>Machine<wbr>Ids</span>
+        <span id="virtualmachineids_csharp">
+<a href="#virtualmachineids_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -331,7 +400,9 @@ on the same host together.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enabled</span>
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -340,7 +411,9 @@ on the same host together.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Mandatory</span>
+        <span id="mandatory_csharp">
+<a href="#mandatory_csharp" style="color: inherit; text-decoration: inherit;">Mandatory</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -350,7 +423,9 @@ machine operations that may violate this rule. Default: `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -366,7 +441,9 @@ machine operations that may violate this rule. Default: `false`.
 
     <dt class="property-required"
             title="Required">
-        <span>Compute<wbr>Cluster<wbr>Id</span>
+        <span id="computeclusterid_go">
+<a href="#computeclusterid_go" style="color: inherit; text-decoration: inherit;">Compute<wbr>Cluster<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -377,7 +454,9 @@ resource if changed.
 
     <dt class="property-required"
             title="Required">
-        <span>Virtual<wbr>Machine<wbr>Ids</span>
+        <span id="virtualmachineids_go">
+<a href="#virtualmachineids_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -387,7 +466,9 @@ on the same host together.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enabled</span>
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -396,7 +477,9 @@ on the same host together.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Mandatory</span>
+        <span id="mandatory_go">
+<a href="#mandatory_go" style="color: inherit; text-decoration: inherit;">Mandatory</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -406,7 +489,9 @@ machine operations that may violate this rule. Default: `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -422,7 +507,9 @@ machine operations that may violate this rule. Default: `false`.
 
     <dt class="property-required"
             title="Required">
-        <span>compute<wbr>Cluster<wbr>Id</span>
+        <span id="computeclusterid_nodejs">
+<a href="#computeclusterid_nodejs" style="color: inherit; text-decoration: inherit;">compute<wbr>Cluster<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -433,7 +520,9 @@ resource if changed.
 
     <dt class="property-required"
             title="Required">
-        <span>virtual<wbr>Machine<wbr>Ids</span>
+        <span id="virtualmachineids_nodejs">
+<a href="#virtualmachineids_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -443,7 +532,9 @@ on the same host together.
 
     <dt class="property-optional"
             title="Optional">
-        <span>enabled</span>
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -452,7 +543,9 @@ on the same host together.
 
     <dt class="property-optional"
             title="Optional">
-        <span>mandatory</span>
+        <span id="mandatory_nodejs">
+<a href="#mandatory_nodejs" style="color: inherit; text-decoration: inherit;">mandatory</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -462,7 +555,9 @@ machine operations that may violate this rule. Default: `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -478,7 +573,9 @@ machine operations that may violate this rule. Default: `false`.
 
     <dt class="property-required"
             title="Required">
-        <span>compute_<wbr>cluster_<wbr>id</span>
+        <span id="compute_cluster_id_python">
+<a href="#compute_cluster_id_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>cluster_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -489,7 +586,9 @@ resource if changed.
 
     <dt class="property-required"
             title="Required">
-        <span>virtual_<wbr>machine_<wbr>ids</span>
+        <span id="virtual_machine_ids_python">
+<a href="#virtual_machine_ids_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -499,7 +598,9 @@ on the same host together.
 
     <dt class="property-optional"
             title="Optional">
-        <span>enabled</span>
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -508,7 +609,9 @@ on the same host together.
 
     <dt class="property-optional"
             title="Optional">
-        <span>mandatory</span>
+        <span id="mandatory_python">
+<a href="#mandatory_python" style="color: inherit; text-decoration: inherit;">mandatory</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -518,7 +621,9 @@ machine operations that may violate this rule. Default: `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -545,7 +650,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -560,7 +667,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -575,7 +684,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -590,7 +701,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -611,7 +724,7 @@ Get an existing ComputeClusterVmAffinityRule resource's state with the given nam
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#ComputeClusterVmAffinityRuleState">ComputeClusterVmAffinityRuleState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#ComputeClusterVmAffinityRule">ComputeClusterVmAffinityRule</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#ComputeClusterVmAffinityRuleState">ComputeClusterVmAffinityRuleState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#ComputeClusterVmAffinityRule">ComputeClusterVmAffinityRule</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -619,11 +732,11 @@ Get an existing ComputeClusterVmAffinityRule resource's state with the given nam
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetComputeClusterVmAffinityRule<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#ComputeClusterVmAffinityRuleState">ComputeClusterVmAffinityRuleState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#ComputeClusterVmAffinityRule">ComputeClusterVmAffinityRule</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetComputeClusterVmAffinityRule<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#ComputeClusterVmAffinityRuleState">ComputeClusterVmAffinityRuleState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#ComputeClusterVmAffinityRule">ComputeClusterVmAffinityRule</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.ComputeClusterVmAffinityRule.html">ComputeClusterVmAffinityRule</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere..ComputeClusterVmAffinityRuleState.html">ComputeClusterVmAffinityRuleState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.ComputeClusterVmAffinityRule.html">ComputeClusterVmAffinityRule</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere..ComputeClusterVmAffinityRuleState.html">ComputeClusterVmAffinityRuleState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -731,7 +844,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Compute<wbr>Cluster<wbr>Id</span>
+        <span id="state_computeclusterid_csharp">
+<a href="#state_computeclusterid_csharp" style="color: inherit; text-decoration: inherit;">Compute<wbr>Cluster<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -742,7 +857,9 @@ resource if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enabled</span>
+        <span id="state_enabled_csharp">
+<a href="#state_enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -751,7 +868,9 @@ resource if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Mandatory</span>
+        <span id="state_mandatory_csharp">
+<a href="#state_mandatory_csharp" style="color: inherit; text-decoration: inherit;">Mandatory</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -761,7 +880,9 @@ machine operations that may violate this rule. Default: `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -770,7 +891,9 @@ machine operations that may violate this rule. Default: `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Virtual<wbr>Machine<wbr>Ids</span>
+        <span id="state_virtualmachineids_csharp">
+<a href="#state_virtualmachineids_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -787,7 +910,9 @@ on the same host together.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Compute<wbr>Cluster<wbr>Id</span>
+        <span id="state_computeclusterid_go">
+<a href="#state_computeclusterid_go" style="color: inherit; text-decoration: inherit;">Compute<wbr>Cluster<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -798,7 +923,9 @@ resource if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enabled</span>
+        <span id="state_enabled_go">
+<a href="#state_enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -807,7 +934,9 @@ resource if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Mandatory</span>
+        <span id="state_mandatory_go">
+<a href="#state_mandatory_go" style="color: inherit; text-decoration: inherit;">Mandatory</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -817,7 +946,9 @@ machine operations that may violate this rule. Default: `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -826,7 +957,9 @@ machine operations that may violate this rule. Default: `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Virtual<wbr>Machine<wbr>Ids</span>
+        <span id="state_virtualmachineids_go">
+<a href="#state_virtualmachineids_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -843,7 +976,9 @@ on the same host together.
 
     <dt class="property-optional"
             title="Optional">
-        <span>compute<wbr>Cluster<wbr>Id</span>
+        <span id="state_computeclusterid_nodejs">
+<a href="#state_computeclusterid_nodejs" style="color: inherit; text-decoration: inherit;">compute<wbr>Cluster<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -854,7 +989,9 @@ resource if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>enabled</span>
+        <span id="state_enabled_nodejs">
+<a href="#state_enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -863,7 +1000,9 @@ resource if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>mandatory</span>
+        <span id="state_mandatory_nodejs">
+<a href="#state_mandatory_nodejs" style="color: inherit; text-decoration: inherit;">mandatory</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -873,7 +1012,9 @@ machine operations that may violate this rule. Default: `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -882,7 +1023,9 @@ machine operations that may violate this rule. Default: `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>virtual<wbr>Machine<wbr>Ids</span>
+        <span id="state_virtualmachineids_nodejs">
+<a href="#state_virtualmachineids_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -899,7 +1042,9 @@ on the same host together.
 
     <dt class="property-optional"
             title="Optional">
-        <span>compute_<wbr>cluster_<wbr>id</span>
+        <span id="state_compute_cluster_id_python">
+<a href="#state_compute_cluster_id_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>cluster_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -910,7 +1055,9 @@ resource if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>enabled</span>
+        <span id="state_enabled_python">
+<a href="#state_enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -919,7 +1066,9 @@ resource if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>mandatory</span>
+        <span id="state_mandatory_python">
+<a href="#state_mandatory_python" style="color: inherit; text-decoration: inherit;">mandatory</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -929,7 +1078,9 @@ machine operations that may violate this rule. Default: `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -938,7 +1089,9 @@ machine operations that may violate this rule. Default: `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>virtual_<wbr>machine_<wbr>ids</span>
+        <span id="state_virtual_machine_ids_python">
+<a href="#state_virtual_machine_ids_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>

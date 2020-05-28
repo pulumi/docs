@@ -27,7 +27,49 @@ For an overview on vSphere networking concepts, see [this page][ref-vsphere-net-
 {{< chooser language "typescript,python,go,csharp" / >}}
 ### Create a virtual switch and bind a port group to it
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using VSphere = Pulumi.VSphere;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var datacenter = Output.Create(VSphere.GetDatacenter.InvokeAsync(new VSphere.GetDatacenterArgs
+        {
+            Name = "dc1",
+        }));
+        var esxiHost = datacenter.Apply(datacenter => Output.Create(VSphere.GetHost.InvokeAsync(new VSphere.GetHostArgs
+        {
+            DatacenterId = datacenter.Id,
+            Name = "esxi1",
+        })));
+        var @switch = new VSphere.HostVirtualSwitch("switch", new VSphere.HostVirtualSwitchArgs
+        {
+            ActiveNics = 
+            {
+                "vmnic0",
+            },
+            HostSystemId = esxiHost.Apply(esxiHost => esxiHost.Id),
+            NetworkAdapters = 
+            {
+                "vmnic0",
+                "vmnic1",
+            },
+            StandbyNics = 
+            {
+                "vmnic1",
+            },
+        });
+        var pg = new VSphere.HostPortGroup("pg", new VSphere.HostPortGroupArgs
+        {
+            HostSystemId = esxiHost.Apply(esxiHost => esxiHost.Id),
+            VirtualSwitchName = @switch.Name,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -86,7 +128,51 @@ const pg = new vsphere.HostPortGroup("pg", {
 
 ### Create a port group with VLAN set and some overrides
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using VSphere = Pulumi.VSphere;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var datacenter = Output.Create(VSphere.GetDatacenter.InvokeAsync(new VSphere.GetDatacenterArgs
+        {
+            Name = "dc1",
+        }));
+        var esxiHost = datacenter.Apply(datacenter => Output.Create(VSphere.GetHost.InvokeAsync(new VSphere.GetHostArgs
+        {
+            DatacenterId = datacenter.Id,
+            Name = "esxi1",
+        })));
+        var @switch = new VSphere.HostVirtualSwitch("switch", new VSphere.HostVirtualSwitchArgs
+        {
+            ActiveNics = 
+            {
+                "vmnic0",
+            },
+            HostSystemId = esxiHost.Apply(esxiHost => esxiHost.Id),
+            NetworkAdapters = 
+            {
+                "vmnic0",
+                "vmnic1",
+            },
+            StandbyNics = 
+            {
+                "vmnic1",
+            },
+        });
+        var pg = new VSphere.HostPortGroup("pg", new VSphere.HostPortGroupArgs
+        {
+            AllowPromiscuous = true,
+            HostSystemId = esxiHost.Apply(esxiHost => esxiHost.Id),
+            VirtualSwitchName = @switch.Name,
+            VlanId = 4095,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -155,19 +241,19 @@ const pg = new vsphere.HostPortGroup("pg", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#HostPortGroup">HostPortGroup</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#HostPortGroupArgs">HostPortGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#HostPortGroup">HostPortGroup</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#HostPortGroupArgs">HostPortGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">HostPortGroup</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>active_nics=None<span class="p">, </span>allow_forged_transmits=None<span class="p">, </span>allow_mac_changes=None<span class="p">, </span>allow_promiscuous=None<span class="p">, </span>check_beacon=None<span class="p">, </span>failback=None<span class="p">, </span>host_system_id=None<span class="p">, </span>name=None<span class="p">, </span>notify_switches=None<span class="p">, </span>shaping_average_bandwidth=None<span class="p">, </span>shaping_burst_size=None<span class="p">, </span>shaping_enabled=None<span class="p">, </span>shaping_peak_bandwidth=None<span class="p">, </span>standby_nics=None<span class="p">, </span>teaming_policy=None<span class="p">, </span>virtual_switch_name=None<span class="p">, </span>vlan_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/vsphere/#HostPortGroup">HostPortGroup</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>active_nics=None<span class="p">, </span>allow_forged_transmits=None<span class="p">, </span>allow_mac_changes=None<span class="p">, </span>allow_promiscuous=None<span class="p">, </span>check_beacon=None<span class="p">, </span>failback=None<span class="p">, </span>host_system_id=None<span class="p">, </span>name=None<span class="p">, </span>notify_switches=None<span class="p">, </span>shaping_average_bandwidth=None<span class="p">, </span>shaping_burst_size=None<span class="p">, </span>shaping_enabled=None<span class="p">, </span>shaping_peak_bandwidth=None<span class="p">, </span>standby_nics=None<span class="p">, </span>teaming_policy=None<span class="p">, </span>virtual_switch_name=None<span class="p">, </span>vlan_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewHostPortGroup<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#HostPortGroupArgs">HostPortGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#HostPortGroup">HostPortGroup</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#HostPortGroup">NewHostPortGroup</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#HostPortGroupArgs">HostPortGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#HostPortGroup">HostPortGroup</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.HostPortGroup.html">HostPortGroup</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.HostPortGroupArgs.html">HostPortGroupArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.HostPortGroup.html">HostPortGroup</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.HostPortGroupArgs.html">HostPortGroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -333,7 +419,9 @@ The HostPortGroup resource accepts the following [input]({{< relref "/docs/intro
 
     <dt class="property-required"
             title="Required">
-        <span>Host<wbr>System<wbr>Id</span>
+        <span id="hostsystemid_csharp">
+<a href="#hostsystemid_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>System<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -343,7 +431,9 @@ the host to set the port group up on. Forces a new resource if changed.
 
     <dt class="property-required"
             title="Required">
-        <span>Virtual<wbr>Switch<wbr>Name</span>
+        <span id="virtualswitchname_csharp">
+<a href="#virtualswitchname_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Switch<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -353,7 +443,9 @@ this port group to. Forces a new resource if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Active<wbr>Nics</span>
+        <span id="activenics_csharp">
+<a href="#activenics_csharp" style="color: inherit; text-decoration: inherit;">Active<wbr>Nics</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -362,7 +454,9 @@ this port group to. Forces a new resource if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allow<wbr>Forged<wbr>Transmits</span>
+        <span id="allowforgedtransmits_csharp">
+<a href="#allowforgedtransmits_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Forged<wbr>Transmits</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -372,7 +466,9 @@ that of its own.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allow<wbr>Mac<wbr>Changes</span>
+        <span id="allowmacchanges_csharp">
+<a href="#allowmacchanges_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Mac<wbr>Changes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -381,7 +477,9 @@ that of its own.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allow<wbr>Promiscuous</span>
+        <span id="allowpromiscuous_csharp">
+<a href="#allowpromiscuous_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Promiscuous</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -390,7 +488,9 @@ that of its own.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Check<wbr>Beacon</span>
+        <span id="checkbeacon_csharp">
+<a href="#checkbeacon_csharp" style="color: inherit; text-decoration: inherit;">Check<wbr>Beacon</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -400,7 +500,9 @@ only.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Failback</span>
+        <span id="failback_csharp">
+<a href="#failback_csharp" style="color: inherit; text-decoration: inherit;">Failback</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -409,7 +511,9 @@ only.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -419,7 +523,9 @@ changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Notify<wbr>Switches</span>
+        <span id="notifyswitches_csharp">
+<a href="#notifyswitches_csharp" style="color: inherit; text-decoration: inherit;">Notify<wbr>Switches</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -428,7 +534,9 @@ changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Shaping<wbr>Average<wbr>Bandwidth</span>
+        <span id="shapingaveragebandwidth_csharp">
+<a href="#shapingaveragebandwidth_csharp" style="color: inherit; text-decoration: inherit;">Shaping<wbr>Average<wbr>Bandwidth</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -437,7 +545,9 @@ changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Shaping<wbr>Burst<wbr>Size</span>
+        <span id="shapingburstsize_csharp">
+<a href="#shapingburstsize_csharp" style="color: inherit; text-decoration: inherit;">Shaping<wbr>Burst<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -446,7 +556,9 @@ changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Shaping<wbr>Enabled</span>
+        <span id="shapingenabled_csharp">
+<a href="#shapingenabled_csharp" style="color: inherit; text-decoration: inherit;">Shaping<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -455,7 +567,9 @@ changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Shaping<wbr>Peak<wbr>Bandwidth</span>
+        <span id="shapingpeakbandwidth_csharp">
+<a href="#shapingpeakbandwidth_csharp" style="color: inherit; text-decoration: inherit;">Shaping<wbr>Peak<wbr>Bandwidth</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -464,7 +578,9 @@ changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Standby<wbr>Nics</span>
+        <span id="standbynics_csharp">
+<a href="#standbynics_csharp" style="color: inherit; text-decoration: inherit;">Standby<wbr>Nics</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -473,7 +589,9 @@ changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Teaming<wbr>Policy</span>
+        <span id="teamingpolicy_csharp">
+<a href="#teamingpolicy_csharp" style="color: inherit; text-decoration: inherit;">Teaming<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -483,7 +601,9 @@ failover_explicit.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vlan<wbr>Id</span>
+        <span id="vlanid_csharp">
+<a href="#vlanid_csharp" style="color: inherit; text-decoration: inherit;">Vlan<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -502,7 +622,9 @@ tagging. Default: `0`.
 
     <dt class="property-required"
             title="Required">
-        <span>Host<wbr>System<wbr>Id</span>
+        <span id="hostsystemid_go">
+<a href="#hostsystemid_go" style="color: inherit; text-decoration: inherit;">Host<wbr>System<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -512,7 +634,9 @@ the host to set the port group up on. Forces a new resource if changed.
 
     <dt class="property-required"
             title="Required">
-        <span>Virtual<wbr>Switch<wbr>Name</span>
+        <span id="virtualswitchname_go">
+<a href="#virtualswitchname_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Switch<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -522,7 +646,9 @@ this port group to. Forces a new resource if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Active<wbr>Nics</span>
+        <span id="activenics_go">
+<a href="#activenics_go" style="color: inherit; text-decoration: inherit;">Active<wbr>Nics</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -531,7 +657,9 @@ this port group to. Forces a new resource if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allow<wbr>Forged<wbr>Transmits</span>
+        <span id="allowforgedtransmits_go">
+<a href="#allowforgedtransmits_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Forged<wbr>Transmits</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -541,7 +669,9 @@ that of its own.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allow<wbr>Mac<wbr>Changes</span>
+        <span id="allowmacchanges_go">
+<a href="#allowmacchanges_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Mac<wbr>Changes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -550,7 +680,9 @@ that of its own.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allow<wbr>Promiscuous</span>
+        <span id="allowpromiscuous_go">
+<a href="#allowpromiscuous_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Promiscuous</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -559,7 +691,9 @@ that of its own.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Check<wbr>Beacon</span>
+        <span id="checkbeacon_go">
+<a href="#checkbeacon_go" style="color: inherit; text-decoration: inherit;">Check<wbr>Beacon</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -569,7 +703,9 @@ only.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Failback</span>
+        <span id="failback_go">
+<a href="#failback_go" style="color: inherit; text-decoration: inherit;">Failback</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -578,7 +714,9 @@ only.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -588,7 +726,9 @@ changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Notify<wbr>Switches</span>
+        <span id="notifyswitches_go">
+<a href="#notifyswitches_go" style="color: inherit; text-decoration: inherit;">Notify<wbr>Switches</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -597,7 +737,9 @@ changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Shaping<wbr>Average<wbr>Bandwidth</span>
+        <span id="shapingaveragebandwidth_go">
+<a href="#shapingaveragebandwidth_go" style="color: inherit; text-decoration: inherit;">Shaping<wbr>Average<wbr>Bandwidth</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -606,7 +748,9 @@ changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Shaping<wbr>Burst<wbr>Size</span>
+        <span id="shapingburstsize_go">
+<a href="#shapingburstsize_go" style="color: inherit; text-decoration: inherit;">Shaping<wbr>Burst<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -615,7 +759,9 @@ changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Shaping<wbr>Enabled</span>
+        <span id="shapingenabled_go">
+<a href="#shapingenabled_go" style="color: inherit; text-decoration: inherit;">Shaping<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -624,7 +770,9 @@ changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Shaping<wbr>Peak<wbr>Bandwidth</span>
+        <span id="shapingpeakbandwidth_go">
+<a href="#shapingpeakbandwidth_go" style="color: inherit; text-decoration: inherit;">Shaping<wbr>Peak<wbr>Bandwidth</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -633,7 +781,9 @@ changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Standby<wbr>Nics</span>
+        <span id="standbynics_go">
+<a href="#standbynics_go" style="color: inherit; text-decoration: inherit;">Standby<wbr>Nics</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -642,7 +792,9 @@ changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Teaming<wbr>Policy</span>
+        <span id="teamingpolicy_go">
+<a href="#teamingpolicy_go" style="color: inherit; text-decoration: inherit;">Teaming<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -652,7 +804,9 @@ failover_explicit.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vlan<wbr>Id</span>
+        <span id="vlanid_go">
+<a href="#vlanid_go" style="color: inherit; text-decoration: inherit;">Vlan<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -671,7 +825,9 @@ tagging. Default: `0`.
 
     <dt class="property-required"
             title="Required">
-        <span>host<wbr>System<wbr>Id</span>
+        <span id="hostsystemid_nodejs">
+<a href="#hostsystemid_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>System<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -681,7 +837,9 @@ the host to set the port group up on. Forces a new resource if changed.
 
     <dt class="property-required"
             title="Required">
-        <span>virtual<wbr>Switch<wbr>Name</span>
+        <span id="virtualswitchname_nodejs">
+<a href="#virtualswitchname_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Switch<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -691,7 +849,9 @@ this port group to. Forces a new resource if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>active<wbr>Nics</span>
+        <span id="activenics_nodejs">
+<a href="#activenics_nodejs" style="color: inherit; text-decoration: inherit;">active<wbr>Nics</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -700,7 +860,9 @@ this port group to. Forces a new resource if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>allow<wbr>Forged<wbr>Transmits</span>
+        <span id="allowforgedtransmits_nodejs">
+<a href="#allowforgedtransmits_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Forged<wbr>Transmits</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -710,7 +872,9 @@ that of its own.
 
     <dt class="property-optional"
             title="Optional">
-        <span>allow<wbr>Mac<wbr>Changes</span>
+        <span id="allowmacchanges_nodejs">
+<a href="#allowmacchanges_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Mac<wbr>Changes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -719,7 +883,9 @@ that of its own.
 
     <dt class="property-optional"
             title="Optional">
-        <span>allow<wbr>Promiscuous</span>
+        <span id="allowpromiscuous_nodejs">
+<a href="#allowpromiscuous_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Promiscuous</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -728,7 +894,9 @@ that of its own.
 
     <dt class="property-optional"
             title="Optional">
-        <span>check<wbr>Beacon</span>
+        <span id="checkbeacon_nodejs">
+<a href="#checkbeacon_nodejs" style="color: inherit; text-decoration: inherit;">check<wbr>Beacon</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -738,7 +906,9 @@ only.
 
     <dt class="property-optional"
             title="Optional">
-        <span>failback</span>
+        <span id="failback_nodejs">
+<a href="#failback_nodejs" style="color: inherit; text-decoration: inherit;">failback</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -747,7 +917,9 @@ only.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -757,7 +929,9 @@ changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>notify<wbr>Switches</span>
+        <span id="notifyswitches_nodejs">
+<a href="#notifyswitches_nodejs" style="color: inherit; text-decoration: inherit;">notify<wbr>Switches</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -766,7 +940,9 @@ changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>shaping<wbr>Average<wbr>Bandwidth</span>
+        <span id="shapingaveragebandwidth_nodejs">
+<a href="#shapingaveragebandwidth_nodejs" style="color: inherit; text-decoration: inherit;">shaping<wbr>Average<wbr>Bandwidth</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -775,7 +951,9 @@ changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>shaping<wbr>Burst<wbr>Size</span>
+        <span id="shapingburstsize_nodejs">
+<a href="#shapingburstsize_nodejs" style="color: inherit; text-decoration: inherit;">shaping<wbr>Burst<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -784,7 +962,9 @@ changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>shaping<wbr>Enabled</span>
+        <span id="shapingenabled_nodejs">
+<a href="#shapingenabled_nodejs" style="color: inherit; text-decoration: inherit;">shaping<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -793,7 +973,9 @@ changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>shaping<wbr>Peak<wbr>Bandwidth</span>
+        <span id="shapingpeakbandwidth_nodejs">
+<a href="#shapingpeakbandwidth_nodejs" style="color: inherit; text-decoration: inherit;">shaping<wbr>Peak<wbr>Bandwidth</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -802,7 +984,9 @@ changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>standby<wbr>Nics</span>
+        <span id="standbynics_nodejs">
+<a href="#standbynics_nodejs" style="color: inherit; text-decoration: inherit;">standby<wbr>Nics</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -811,7 +995,9 @@ changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>teaming<wbr>Policy</span>
+        <span id="teamingpolicy_nodejs">
+<a href="#teamingpolicy_nodejs" style="color: inherit; text-decoration: inherit;">teaming<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -821,7 +1007,9 @@ failover_explicit.
 
     <dt class="property-optional"
             title="Optional">
-        <span>vlan<wbr>Id</span>
+        <span id="vlanid_nodejs">
+<a href="#vlanid_nodejs" style="color: inherit; text-decoration: inherit;">vlan<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -840,7 +1028,9 @@ tagging. Default: `0`.
 
     <dt class="property-required"
             title="Required">
-        <span>host_<wbr>system_<wbr>id</span>
+        <span id="host_system_id_python">
+<a href="#host_system_id_python" style="color: inherit; text-decoration: inherit;">host_<wbr>system_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -850,7 +1040,9 @@ the host to set the port group up on. Forces a new resource if changed.
 
     <dt class="property-required"
             title="Required">
-        <span>virtual_<wbr>switch_<wbr>name</span>
+        <span id="virtual_switch_name_python">
+<a href="#virtual_switch_name_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>switch_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -860,7 +1052,9 @@ this port group to. Forces a new resource if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>active_<wbr>nics</span>
+        <span id="active_nics_python">
+<a href="#active_nics_python" style="color: inherit; text-decoration: inherit;">active_<wbr>nics</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -869,7 +1063,9 @@ this port group to. Forces a new resource if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>allow_<wbr>forged_<wbr>transmits</span>
+        <span id="allow_forged_transmits_python">
+<a href="#allow_forged_transmits_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>forged_<wbr>transmits</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -879,7 +1075,9 @@ that of its own.
 
     <dt class="property-optional"
             title="Optional">
-        <span>allow_<wbr>mac_<wbr>changes</span>
+        <span id="allow_mac_changes_python">
+<a href="#allow_mac_changes_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>mac_<wbr>changes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -888,7 +1086,9 @@ that of its own.
 
     <dt class="property-optional"
             title="Optional">
-        <span>allow_<wbr>promiscuous</span>
+        <span id="allow_promiscuous_python">
+<a href="#allow_promiscuous_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>promiscuous</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -897,7 +1097,9 @@ that of its own.
 
     <dt class="property-optional"
             title="Optional">
-        <span>check_<wbr>beacon</span>
+        <span id="check_beacon_python">
+<a href="#check_beacon_python" style="color: inherit; text-decoration: inherit;">check_<wbr>beacon</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -907,7 +1109,9 @@ only.
 
     <dt class="property-optional"
             title="Optional">
-        <span>failback</span>
+        <span id="failback_python">
+<a href="#failback_python" style="color: inherit; text-decoration: inherit;">failback</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -916,7 +1120,9 @@ only.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -926,7 +1132,9 @@ changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>notify_<wbr>switches</span>
+        <span id="notify_switches_python">
+<a href="#notify_switches_python" style="color: inherit; text-decoration: inherit;">notify_<wbr>switches</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -935,7 +1143,9 @@ changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>shaping_<wbr>average_<wbr>bandwidth</span>
+        <span id="shaping_average_bandwidth_python">
+<a href="#shaping_average_bandwidth_python" style="color: inherit; text-decoration: inherit;">shaping_<wbr>average_<wbr>bandwidth</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -944,7 +1154,9 @@ changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>shaping_<wbr>burst_<wbr>size</span>
+        <span id="shaping_burst_size_python">
+<a href="#shaping_burst_size_python" style="color: inherit; text-decoration: inherit;">shaping_<wbr>burst_<wbr>size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -953,7 +1165,9 @@ changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>shaping_<wbr>enabled</span>
+        <span id="shaping_enabled_python">
+<a href="#shaping_enabled_python" style="color: inherit; text-decoration: inherit;">shaping_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -962,7 +1176,9 @@ changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>shaping_<wbr>peak_<wbr>bandwidth</span>
+        <span id="shaping_peak_bandwidth_python">
+<a href="#shaping_peak_bandwidth_python" style="color: inherit; text-decoration: inherit;">shaping_<wbr>peak_<wbr>bandwidth</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -971,7 +1187,9 @@ changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>standby_<wbr>nics</span>
+        <span id="standby_nics_python">
+<a href="#standby_nics_python" style="color: inherit; text-decoration: inherit;">standby_<wbr>nics</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -980,7 +1198,9 @@ changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>teaming_<wbr>policy</span>
+        <span id="teaming_policy_python">
+<a href="#teaming_policy_python" style="color: inherit; text-decoration: inherit;">teaming_<wbr>policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -990,7 +1210,9 @@ failover_explicit.
 
     <dt class="property-optional"
             title="Optional">
-        <span>vlan_<wbr>id</span>
+        <span id="vlan_id_python">
+<a href="#vlan_id_python" style="color: inherit; text-decoration: inherit;">vlan_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1020,7 +1242,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Computed<wbr>Policy</span>
+        <span id="computedpolicy_csharp">
+<a href="#computedpolicy_csharp" style="color: inherit; text-decoration: inherit;">Computed<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -1031,7 +1255,9 @@ explaining the effective policy for this port group.
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1039,7 +1265,9 @@ explaining the effective policy for this port group.
 
     <dt class="property-"
             title="">
-        <span>Key</span>
+        <span id="key_csharp">
+<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1048,7 +1276,9 @@ explaining the effective policy for this port group.
 
     <dt class="property-"
             title="">
-        <span>Ports</span>
+        <span id="ports_csharp">
+<a href="#ports_csharp" style="color: inherit; text-decoration: inherit;">Ports</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hostportgroupports">Pulumi.<wbr>VSphere.<wbr>Outputs.<wbr>Host<wbr>Port<wbr>Group<wbr>Ports</a></span>
     </dt>
@@ -1064,7 +1294,9 @@ explaining the effective policy for this port group.
 
     <dt class="property-"
             title="">
-        <span>Computed<wbr>Policy</span>
+        <span id="computedpolicy_go">
+<a href="#computedpolicy_go" style="color: inherit; text-decoration: inherit;">Computed<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -1075,7 +1307,9 @@ explaining the effective policy for this port group.
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1083,7 +1317,9 @@ explaining the effective policy for this port group.
 
     <dt class="property-"
             title="">
-        <span>Key</span>
+        <span id="key_go">
+<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1092,7 +1328,9 @@ explaining the effective policy for this port group.
 
     <dt class="property-"
             title="">
-        <span>Ports</span>
+        <span id="ports_go">
+<a href="#ports_go" style="color: inherit; text-decoration: inherit;">Ports</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hostportgroupports">Host<wbr>Port<wbr>Group<wbr>Ports</a></span>
     </dt>
@@ -1108,7 +1346,9 @@ explaining the effective policy for this port group.
 
     <dt class="property-"
             title="">
-        <span>computed<wbr>Policy</span>
+        <span id="computedpolicy_nodejs">
+<a href="#computedpolicy_nodejs" style="color: inherit; text-decoration: inherit;">computed<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -1119,7 +1359,9 @@ explaining the effective policy for this port group.
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1127,7 +1369,9 @@ explaining the effective policy for this port group.
 
     <dt class="property-"
             title="">
-        <span>key</span>
+        <span id="key_nodejs">
+<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1136,7 +1380,9 @@ explaining the effective policy for this port group.
 
     <dt class="property-"
             title="">
-        <span>ports</span>
+        <span id="ports_nodejs">
+<a href="#ports_nodejs" style="color: inherit; text-decoration: inherit;">ports</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hostportgroupports">Host<wbr>Port<wbr>Group<wbr>Ports</a></span>
     </dt>
@@ -1152,7 +1398,9 @@ explaining the effective policy for this port group.
 
     <dt class="property-"
             title="">
-        <span>computed_<wbr>policy</span>
+        <span id="computed_policy_python">
+<a href="#computed_policy_python" style="color: inherit; text-decoration: inherit;">computed_<wbr>policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -1163,7 +1411,9 @@ explaining the effective policy for this port group.
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1171,7 +1421,9 @@ explaining the effective policy for this port group.
 
     <dt class="property-"
             title="">
-        <span>key</span>
+        <span id="key_python">
+<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1180,7 +1432,9 @@ explaining the effective policy for this port group.
 
     <dt class="property-"
             title="">
-        <span>ports</span>
+        <span id="ports_python">
+<a href="#ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hostportgroupports">Dict[Host<wbr>Port<wbr>Group<wbr>Ports]</a></span>
     </dt>
@@ -1202,7 +1456,7 @@ Get an existing HostPortGroup resource's state with the given name, ID, and opti
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#HostPortGroupState">HostPortGroupState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#HostPortGroup">HostPortGroup</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#HostPortGroupState">HostPortGroupState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#HostPortGroup">HostPortGroup</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1210,11 +1464,11 @@ Get an existing HostPortGroup resource's state with the given name, ID, and opti
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetHostPortGroup<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#HostPortGroupState">HostPortGroupState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#HostPortGroup">HostPortGroup</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetHostPortGroup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#HostPortGroupState">HostPortGroupState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#HostPortGroup">HostPortGroup</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.HostPortGroup.html">HostPortGroup</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere..HostPortGroupState.html">HostPortGroupState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.HostPortGroup.html">HostPortGroup</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere..HostPortGroupState.html">HostPortGroupState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1322,7 +1576,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Active<wbr>Nics</span>
+        <span id="state_activenics_csharp">
+<a href="#state_activenics_csharp" style="color: inherit; text-decoration: inherit;">Active<wbr>Nics</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1331,7 +1587,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allow<wbr>Forged<wbr>Transmits</span>
+        <span id="state_allowforgedtransmits_csharp">
+<a href="#state_allowforgedtransmits_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Forged<wbr>Transmits</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1341,7 +1599,9 @@ that of its own.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allow<wbr>Mac<wbr>Changes</span>
+        <span id="state_allowmacchanges_csharp">
+<a href="#state_allowmacchanges_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Mac<wbr>Changes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1350,7 +1610,9 @@ that of its own.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allow<wbr>Promiscuous</span>
+        <span id="state_allowpromiscuous_csharp">
+<a href="#state_allowpromiscuous_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Promiscuous</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1359,7 +1621,9 @@ that of its own.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Check<wbr>Beacon</span>
+        <span id="state_checkbeacon_csharp">
+<a href="#state_checkbeacon_csharp" style="color: inherit; text-decoration: inherit;">Check<wbr>Beacon</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1369,7 +1633,9 @@ only.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Computed<wbr>Policy</span>
+        <span id="state_computedpolicy_csharp">
+<a href="#state_computedpolicy_csharp" style="color: inherit; text-decoration: inherit;">Computed<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -1380,7 +1646,9 @@ explaining the effective policy for this port group.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Failback</span>
+        <span id="state_failback_csharp">
+<a href="#state_failback_csharp" style="color: inherit; text-decoration: inherit;">Failback</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1389,7 +1657,9 @@ explaining the effective policy for this port group.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Host<wbr>System<wbr>Id</span>
+        <span id="state_hostsystemid_csharp">
+<a href="#state_hostsystemid_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>System<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1399,7 +1669,9 @@ the host to set the port group up on. Forces a new resource if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Key</span>
+        <span id="state_key_csharp">
+<a href="#state_key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1408,7 +1680,9 @@ the host to set the port group up on. Forces a new resource if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1418,7 +1692,9 @@ changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Notify<wbr>Switches</span>
+        <span id="state_notifyswitches_csharp">
+<a href="#state_notifyswitches_csharp" style="color: inherit; text-decoration: inherit;">Notify<wbr>Switches</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1427,7 +1703,9 @@ changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ports</span>
+        <span id="state_ports_csharp">
+<a href="#state_ports_csharp" style="color: inherit; text-decoration: inherit;">Ports</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hostportgroupports">Pulumi.<wbr>VSphere.<wbr>Inputs.<wbr>Host<wbr>Port<wbr>Group<wbr>Ports<wbr>Args</a></span>
     </dt>
@@ -1436,7 +1714,9 @@ changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Shaping<wbr>Average<wbr>Bandwidth</span>
+        <span id="state_shapingaveragebandwidth_csharp">
+<a href="#state_shapingaveragebandwidth_csharp" style="color: inherit; text-decoration: inherit;">Shaping<wbr>Average<wbr>Bandwidth</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1445,7 +1725,9 @@ changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Shaping<wbr>Burst<wbr>Size</span>
+        <span id="state_shapingburstsize_csharp">
+<a href="#state_shapingburstsize_csharp" style="color: inherit; text-decoration: inherit;">Shaping<wbr>Burst<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1454,7 +1736,9 @@ changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Shaping<wbr>Enabled</span>
+        <span id="state_shapingenabled_csharp">
+<a href="#state_shapingenabled_csharp" style="color: inherit; text-decoration: inherit;">Shaping<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1463,7 +1747,9 @@ changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Shaping<wbr>Peak<wbr>Bandwidth</span>
+        <span id="state_shapingpeakbandwidth_csharp">
+<a href="#state_shapingpeakbandwidth_csharp" style="color: inherit; text-decoration: inherit;">Shaping<wbr>Peak<wbr>Bandwidth</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1472,7 +1758,9 @@ changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Standby<wbr>Nics</span>
+        <span id="state_standbynics_csharp">
+<a href="#state_standbynics_csharp" style="color: inherit; text-decoration: inherit;">Standby<wbr>Nics</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1481,7 +1769,9 @@ changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Teaming<wbr>Policy</span>
+        <span id="state_teamingpolicy_csharp">
+<a href="#state_teamingpolicy_csharp" style="color: inherit; text-decoration: inherit;">Teaming<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1491,7 +1781,9 @@ failover_explicit.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Virtual<wbr>Switch<wbr>Name</span>
+        <span id="state_virtualswitchname_csharp">
+<a href="#state_virtualswitchname_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Switch<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1501,7 +1793,9 @@ this port group to. Forces a new resource if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vlan<wbr>Id</span>
+        <span id="state_vlanid_csharp">
+<a href="#state_vlanid_csharp" style="color: inherit; text-decoration: inherit;">Vlan<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1520,7 +1814,9 @@ tagging. Default: `0`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Active<wbr>Nics</span>
+        <span id="state_activenics_go">
+<a href="#state_activenics_go" style="color: inherit; text-decoration: inherit;">Active<wbr>Nics</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1529,7 +1825,9 @@ tagging. Default: `0`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allow<wbr>Forged<wbr>Transmits</span>
+        <span id="state_allowforgedtransmits_go">
+<a href="#state_allowforgedtransmits_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Forged<wbr>Transmits</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1539,7 +1837,9 @@ that of its own.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allow<wbr>Mac<wbr>Changes</span>
+        <span id="state_allowmacchanges_go">
+<a href="#state_allowmacchanges_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Mac<wbr>Changes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1548,7 +1848,9 @@ that of its own.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allow<wbr>Promiscuous</span>
+        <span id="state_allowpromiscuous_go">
+<a href="#state_allowpromiscuous_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Promiscuous</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1557,7 +1859,9 @@ that of its own.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Check<wbr>Beacon</span>
+        <span id="state_checkbeacon_go">
+<a href="#state_checkbeacon_go" style="color: inherit; text-decoration: inherit;">Check<wbr>Beacon</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1567,7 +1871,9 @@ only.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Computed<wbr>Policy</span>
+        <span id="state_computedpolicy_go">
+<a href="#state_computedpolicy_go" style="color: inherit; text-decoration: inherit;">Computed<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -1578,7 +1884,9 @@ explaining the effective policy for this port group.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Failback</span>
+        <span id="state_failback_go">
+<a href="#state_failback_go" style="color: inherit; text-decoration: inherit;">Failback</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1587,7 +1895,9 @@ explaining the effective policy for this port group.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Host<wbr>System<wbr>Id</span>
+        <span id="state_hostsystemid_go">
+<a href="#state_hostsystemid_go" style="color: inherit; text-decoration: inherit;">Host<wbr>System<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1597,7 +1907,9 @@ the host to set the port group up on. Forces a new resource if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Key</span>
+        <span id="state_key_go">
+<a href="#state_key_go" style="color: inherit; text-decoration: inherit;">Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1606,7 +1918,9 @@ the host to set the port group up on. Forces a new resource if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1616,7 +1930,9 @@ changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Notify<wbr>Switches</span>
+        <span id="state_notifyswitches_go">
+<a href="#state_notifyswitches_go" style="color: inherit; text-decoration: inherit;">Notify<wbr>Switches</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1625,7 +1941,9 @@ changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ports</span>
+        <span id="state_ports_go">
+<a href="#state_ports_go" style="color: inherit; text-decoration: inherit;">Ports</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hostportgroupports">Host<wbr>Port<wbr>Group<wbr>Ports</a></span>
     </dt>
@@ -1634,7 +1952,9 @@ changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Shaping<wbr>Average<wbr>Bandwidth</span>
+        <span id="state_shapingaveragebandwidth_go">
+<a href="#state_shapingaveragebandwidth_go" style="color: inherit; text-decoration: inherit;">Shaping<wbr>Average<wbr>Bandwidth</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1643,7 +1963,9 @@ changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Shaping<wbr>Burst<wbr>Size</span>
+        <span id="state_shapingburstsize_go">
+<a href="#state_shapingburstsize_go" style="color: inherit; text-decoration: inherit;">Shaping<wbr>Burst<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1652,7 +1974,9 @@ changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Shaping<wbr>Enabled</span>
+        <span id="state_shapingenabled_go">
+<a href="#state_shapingenabled_go" style="color: inherit; text-decoration: inherit;">Shaping<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1661,7 +1985,9 @@ changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Shaping<wbr>Peak<wbr>Bandwidth</span>
+        <span id="state_shapingpeakbandwidth_go">
+<a href="#state_shapingpeakbandwidth_go" style="color: inherit; text-decoration: inherit;">Shaping<wbr>Peak<wbr>Bandwidth</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1670,7 +1996,9 @@ changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Standby<wbr>Nics</span>
+        <span id="state_standbynics_go">
+<a href="#state_standbynics_go" style="color: inherit; text-decoration: inherit;">Standby<wbr>Nics</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1679,7 +2007,9 @@ changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Teaming<wbr>Policy</span>
+        <span id="state_teamingpolicy_go">
+<a href="#state_teamingpolicy_go" style="color: inherit; text-decoration: inherit;">Teaming<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1689,7 +2019,9 @@ failover_explicit.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Virtual<wbr>Switch<wbr>Name</span>
+        <span id="state_virtualswitchname_go">
+<a href="#state_virtualswitchname_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Switch<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1699,7 +2031,9 @@ this port group to. Forces a new resource if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vlan<wbr>Id</span>
+        <span id="state_vlanid_go">
+<a href="#state_vlanid_go" style="color: inherit; text-decoration: inherit;">Vlan<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1718,7 +2052,9 @@ tagging. Default: `0`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>active<wbr>Nics</span>
+        <span id="state_activenics_nodejs">
+<a href="#state_activenics_nodejs" style="color: inherit; text-decoration: inherit;">active<wbr>Nics</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1727,7 +2063,9 @@ tagging. Default: `0`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>allow<wbr>Forged<wbr>Transmits</span>
+        <span id="state_allowforgedtransmits_nodejs">
+<a href="#state_allowforgedtransmits_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Forged<wbr>Transmits</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1737,7 +2075,9 @@ that of its own.
 
     <dt class="property-optional"
             title="Optional">
-        <span>allow<wbr>Mac<wbr>Changes</span>
+        <span id="state_allowmacchanges_nodejs">
+<a href="#state_allowmacchanges_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Mac<wbr>Changes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1746,7 +2086,9 @@ that of its own.
 
     <dt class="property-optional"
             title="Optional">
-        <span>allow<wbr>Promiscuous</span>
+        <span id="state_allowpromiscuous_nodejs">
+<a href="#state_allowpromiscuous_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Promiscuous</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1755,7 +2097,9 @@ that of its own.
 
     <dt class="property-optional"
             title="Optional">
-        <span>check<wbr>Beacon</span>
+        <span id="state_checkbeacon_nodejs">
+<a href="#state_checkbeacon_nodejs" style="color: inherit; text-decoration: inherit;">check<wbr>Beacon</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1765,7 +2109,9 @@ only.
 
     <dt class="property-optional"
             title="Optional">
-        <span>computed<wbr>Policy</span>
+        <span id="state_computedpolicy_nodejs">
+<a href="#state_computedpolicy_nodejs" style="color: inherit; text-decoration: inherit;">computed<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -1776,7 +2122,9 @@ explaining the effective policy for this port group.
 
     <dt class="property-optional"
             title="Optional">
-        <span>failback</span>
+        <span id="state_failback_nodejs">
+<a href="#state_failback_nodejs" style="color: inherit; text-decoration: inherit;">failback</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1785,7 +2133,9 @@ explaining the effective policy for this port group.
 
     <dt class="property-optional"
             title="Optional">
-        <span>host<wbr>System<wbr>Id</span>
+        <span id="state_hostsystemid_nodejs">
+<a href="#state_hostsystemid_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>System<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1795,7 +2145,9 @@ the host to set the port group up on. Forces a new resource if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>key</span>
+        <span id="state_key_nodejs">
+<a href="#state_key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1804,7 +2156,9 @@ the host to set the port group up on. Forces a new resource if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1814,7 +2168,9 @@ changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>notify<wbr>Switches</span>
+        <span id="state_notifyswitches_nodejs">
+<a href="#state_notifyswitches_nodejs" style="color: inherit; text-decoration: inherit;">notify<wbr>Switches</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1823,7 +2179,9 @@ changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ports</span>
+        <span id="state_ports_nodejs">
+<a href="#state_ports_nodejs" style="color: inherit; text-decoration: inherit;">ports</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hostportgroupports">Host<wbr>Port<wbr>Group<wbr>Ports</a></span>
     </dt>
@@ -1832,7 +2190,9 @@ changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>shaping<wbr>Average<wbr>Bandwidth</span>
+        <span id="state_shapingaveragebandwidth_nodejs">
+<a href="#state_shapingaveragebandwidth_nodejs" style="color: inherit; text-decoration: inherit;">shaping<wbr>Average<wbr>Bandwidth</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1841,7 +2201,9 @@ changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>shaping<wbr>Burst<wbr>Size</span>
+        <span id="state_shapingburstsize_nodejs">
+<a href="#state_shapingburstsize_nodejs" style="color: inherit; text-decoration: inherit;">shaping<wbr>Burst<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1850,7 +2212,9 @@ changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>shaping<wbr>Enabled</span>
+        <span id="state_shapingenabled_nodejs">
+<a href="#state_shapingenabled_nodejs" style="color: inherit; text-decoration: inherit;">shaping<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1859,7 +2223,9 @@ changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>shaping<wbr>Peak<wbr>Bandwidth</span>
+        <span id="state_shapingpeakbandwidth_nodejs">
+<a href="#state_shapingpeakbandwidth_nodejs" style="color: inherit; text-decoration: inherit;">shaping<wbr>Peak<wbr>Bandwidth</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1868,7 +2234,9 @@ changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>standby<wbr>Nics</span>
+        <span id="state_standbynics_nodejs">
+<a href="#state_standbynics_nodejs" style="color: inherit; text-decoration: inherit;">standby<wbr>Nics</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1877,7 +2245,9 @@ changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>teaming<wbr>Policy</span>
+        <span id="state_teamingpolicy_nodejs">
+<a href="#state_teamingpolicy_nodejs" style="color: inherit; text-decoration: inherit;">teaming<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1887,7 +2257,9 @@ failover_explicit.
 
     <dt class="property-optional"
             title="Optional">
-        <span>virtual<wbr>Switch<wbr>Name</span>
+        <span id="state_virtualswitchname_nodejs">
+<a href="#state_virtualswitchname_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Switch<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1897,7 +2269,9 @@ this port group to. Forces a new resource if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>vlan<wbr>Id</span>
+        <span id="state_vlanid_nodejs">
+<a href="#state_vlanid_nodejs" style="color: inherit; text-decoration: inherit;">vlan<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1916,7 +2290,9 @@ tagging. Default: `0`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>active_<wbr>nics</span>
+        <span id="state_active_nics_python">
+<a href="#state_active_nics_python" style="color: inherit; text-decoration: inherit;">active_<wbr>nics</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1925,7 +2301,9 @@ tagging. Default: `0`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>allow_<wbr>forged_<wbr>transmits</span>
+        <span id="state_allow_forged_transmits_python">
+<a href="#state_allow_forged_transmits_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>forged_<wbr>transmits</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1935,7 +2313,9 @@ that of its own.
 
     <dt class="property-optional"
             title="Optional">
-        <span>allow_<wbr>mac_<wbr>changes</span>
+        <span id="state_allow_mac_changes_python">
+<a href="#state_allow_mac_changes_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>mac_<wbr>changes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1944,7 +2324,9 @@ that of its own.
 
     <dt class="property-optional"
             title="Optional">
-        <span>allow_<wbr>promiscuous</span>
+        <span id="state_allow_promiscuous_python">
+<a href="#state_allow_promiscuous_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>promiscuous</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1953,7 +2335,9 @@ that of its own.
 
     <dt class="property-optional"
             title="Optional">
-        <span>check_<wbr>beacon</span>
+        <span id="state_check_beacon_python">
+<a href="#state_check_beacon_python" style="color: inherit; text-decoration: inherit;">check_<wbr>beacon</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1963,7 +2347,9 @@ only.
 
     <dt class="property-optional"
             title="Optional">
-        <span>computed_<wbr>policy</span>
+        <span id="state_computed_policy_python">
+<a href="#state_computed_policy_python" style="color: inherit; text-decoration: inherit;">computed_<wbr>policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -1974,7 +2360,9 @@ explaining the effective policy for this port group.
 
     <dt class="property-optional"
             title="Optional">
-        <span>failback</span>
+        <span id="state_failback_python">
+<a href="#state_failback_python" style="color: inherit; text-decoration: inherit;">failback</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1983,7 +2371,9 @@ explaining the effective policy for this port group.
 
     <dt class="property-optional"
             title="Optional">
-        <span>host_<wbr>system_<wbr>id</span>
+        <span id="state_host_system_id_python">
+<a href="#state_host_system_id_python" style="color: inherit; text-decoration: inherit;">host_<wbr>system_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1993,7 +2383,9 @@ the host to set the port group up on. Forces a new resource if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>key</span>
+        <span id="state_key_python">
+<a href="#state_key_python" style="color: inherit; text-decoration: inherit;">key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2002,7 +2394,9 @@ the host to set the port group up on. Forces a new resource if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2012,7 +2406,9 @@ changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>notify_<wbr>switches</span>
+        <span id="state_notify_switches_python">
+<a href="#state_notify_switches_python" style="color: inherit; text-decoration: inherit;">notify_<wbr>switches</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2021,7 +2417,9 @@ changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ports</span>
+        <span id="state_ports_python">
+<a href="#state_ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hostportgroupports">Dict[Host<wbr>Port<wbr>Group<wbr>Ports]</a></span>
     </dt>
@@ -2030,7 +2428,9 @@ changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>shaping_<wbr>average_<wbr>bandwidth</span>
+        <span id="state_shaping_average_bandwidth_python">
+<a href="#state_shaping_average_bandwidth_python" style="color: inherit; text-decoration: inherit;">shaping_<wbr>average_<wbr>bandwidth</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2039,7 +2439,9 @@ changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>shaping_<wbr>burst_<wbr>size</span>
+        <span id="state_shaping_burst_size_python">
+<a href="#state_shaping_burst_size_python" style="color: inherit; text-decoration: inherit;">shaping_<wbr>burst_<wbr>size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2048,7 +2450,9 @@ changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>shaping_<wbr>enabled</span>
+        <span id="state_shaping_enabled_python">
+<a href="#state_shaping_enabled_python" style="color: inherit; text-decoration: inherit;">shaping_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2057,7 +2461,9 @@ changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>shaping_<wbr>peak_<wbr>bandwidth</span>
+        <span id="state_shaping_peak_bandwidth_python">
+<a href="#state_shaping_peak_bandwidth_python" style="color: inherit; text-decoration: inherit;">shaping_<wbr>peak_<wbr>bandwidth</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2066,7 +2472,9 @@ changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>standby_<wbr>nics</span>
+        <span id="state_standby_nics_python">
+<a href="#state_standby_nics_python" style="color: inherit; text-decoration: inherit;">standby_<wbr>nics</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -2075,7 +2483,9 @@ changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>teaming_<wbr>policy</span>
+        <span id="state_teaming_policy_python">
+<a href="#state_teaming_policy_python" style="color: inherit; text-decoration: inherit;">teaming_<wbr>policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2085,7 +2495,9 @@ failover_explicit.
 
     <dt class="property-optional"
             title="Optional">
-        <span>virtual_<wbr>switch_<wbr>name</span>
+        <span id="state_virtual_switch_name_python">
+<a href="#state_virtual_switch_name_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>switch_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2095,7 +2507,9 @@ this port group to. Forces a new resource if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>vlan_<wbr>id</span>
+        <span id="state_vlan_id_python">
+<a href="#state_vlan_id_python" style="color: inherit; text-decoration: inherit;">vlan_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2140,7 +2554,9 @@ tagging. Default: `0`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Key</span>
+        <span id="key_csharp">
+<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2149,7 +2565,9 @@ tagging. Default: `0`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Mac<wbr>Addresses</span>
+        <span id="macaddresses_csharp">
+<a href="#macaddresses_csharp" style="color: inherit; text-decoration: inherit;">Mac<wbr>Addresses</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -2157,7 +2575,9 @@ tagging. Default: `0`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Type</span>
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2172,7 +2592,9 @@ tagging. Default: `0`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Key</span>
+        <span id="key_go">
+<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2181,7 +2603,9 @@ tagging. Default: `0`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Mac<wbr>Addresses</span>
+        <span id="macaddresses_go">
+<a href="#macaddresses_go" style="color: inherit; text-decoration: inherit;">Mac<wbr>Addresses</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -2189,7 +2613,9 @@ tagging. Default: `0`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Type</span>
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2204,7 +2630,9 @@ tagging. Default: `0`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>key</span>
+        <span id="key_nodejs">
+<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2213,7 +2641,9 @@ tagging. Default: `0`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>mac<wbr>Addresses</span>
+        <span id="macaddresses_nodejs">
+<a href="#macaddresses_nodejs" style="color: inherit; text-decoration: inherit;">mac<wbr>Addresses</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -2221,7 +2651,9 @@ tagging. Default: `0`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>type</span>
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2236,7 +2668,9 @@ tagging. Default: `0`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>key</span>
+        <span id="key_python">
+<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2245,7 +2679,9 @@ tagging. Default: `0`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>mac<wbr>Addresses</span>
+        <span id="macaddresses_python">
+<a href="#macaddresses_python" style="color: inherit; text-decoration: inherit;">mac<wbr>Addresses</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -2253,7 +2689,9 @@ tagging. Default: `0`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>type</span>
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

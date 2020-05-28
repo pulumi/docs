@@ -24,7 +24,33 @@ datastores based off a set of discovered disks.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using VSphere = Pulumi.VSphere;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var datacenter = Output.Create(VSphere.GetDatacenter.InvokeAsync(new VSphere.GetDatacenterArgs
+        {
+            Name = "dc1",
+        }));
+        var host = datacenter.Apply(datacenter => Output.Create(VSphere.GetHost.InvokeAsync(new VSphere.GetHostArgs
+        {
+            DatacenterId = datacenter.Id,
+            Name = "esxi1",
+        })));
+        var available = host.Apply(host => Output.Create(VSphere.GetVmfsDisks.InvokeAsync(new VSphere.GetVmfsDisksArgs
+        {
+            Filter = "mpx.vmhba1:C0:T[12]:L0",
+            HostSystemId = host.Id,
+            Rescan = true,
+        })));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -74,7 +100,7 @@ const available = host.apply(host => vsphere.getVmfsDisks({
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getVmfsDisks<span class="p">(</span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#GetVmfsDisksArgs">GetVmfsDisksArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#GetVmfsDisksResult">GetVmfsDisksResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getVmfsDisks<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#GetVmfsDisksArgs">GetVmfsDisksArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#GetVmfsDisksResult">GetVmfsDisksResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -84,13 +110,14 @@ const available = host.apply(host => vsphere.getVmfsDisks({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVmfsDisks<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#GetVmfsDisksArgs">GetVmfsDisksArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#GetVmfsDisksResult">GetVmfsDisksResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVmfsDisks<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#GetVmfsDisksArgs">GetVmfsDisksArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#GetVmfsDisksResult">GetVmfsDisksResult</a></span>, error)</span></code></pre></div>
+
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetVmfsDisks </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.GetVmfsDisksResult.html">GetVmfsDisksResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.GetVmfsDisksArgs.html">GetVmfsDisksArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.GetVmfsDisksResult.html">GetVmfsDisksResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.GetVmfsDisksArgs.html">GetVmfsDisksArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -105,7 +132,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Host<wbr>System<wbr>Id</span>
+        <span id="hostsystemid_csharp">
+<a href="#hostsystemid_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>System<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -115,7 +144,9 @@ the host to look for disks on.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Filter</span>
+        <span id="filter_csharp">
+<a href="#filter_csharp" style="color: inherit; text-decoration: inherit;">Filter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -125,7 +156,9 @@ disks with canonical names that match will be included.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Rescan</span>
+        <span id="rescan_csharp">
+<a href="#rescan_csharp" style="color: inherit; text-decoration: inherit;">Rescan</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -143,7 +176,9 @@ search. Default: `false`.
 
     <dt class="property-required"
             title="Required">
-        <span>Host<wbr>System<wbr>Id</span>
+        <span id="hostsystemid_go">
+<a href="#hostsystemid_go" style="color: inherit; text-decoration: inherit;">Host<wbr>System<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -153,7 +188,9 @@ the host to look for disks on.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Filter</span>
+        <span id="filter_go">
+<a href="#filter_go" style="color: inherit; text-decoration: inherit;">Filter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -163,7 +200,9 @@ disks with canonical names that match will be included.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Rescan</span>
+        <span id="rescan_go">
+<a href="#rescan_go" style="color: inherit; text-decoration: inherit;">Rescan</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -181,7 +220,9 @@ search. Default: `false`.
 
     <dt class="property-required"
             title="Required">
-        <span>host<wbr>System<wbr>Id</span>
+        <span id="hostsystemid_nodejs">
+<a href="#hostsystemid_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>System<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -191,7 +232,9 @@ the host to look for disks on.
 
     <dt class="property-optional"
             title="Optional">
-        <span>filter</span>
+        <span id="filter_nodejs">
+<a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -201,7 +244,9 @@ disks with canonical names that match will be included.
 
     <dt class="property-optional"
             title="Optional">
-        <span>rescan</span>
+        <span id="rescan_nodejs">
+<a href="#rescan_nodejs" style="color: inherit; text-decoration: inherit;">rescan</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -219,7 +264,9 @@ search. Default: `false`.
 
     <dt class="property-required"
             title="Required">
-        <span>host_<wbr>system_<wbr>id</span>
+        <span id="host_system_id_python">
+<a href="#host_system_id_python" style="color: inherit; text-decoration: inherit;">host_<wbr>system_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -229,7 +276,9 @@ the host to look for disks on.
 
     <dt class="property-optional"
             title="Optional">
-        <span>filter</span>
+        <span id="filter_python">
+<a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -239,7 +288,9 @@ disks with canonical names that match will be included.
 
     <dt class="property-optional"
             title="Optional">
-        <span>rescan</span>
+        <span id="rescan_python">
+<a href="#rescan_python" style="color: inherit; text-decoration: inherit;">rescan</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -270,7 +321,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Disks</span>
+        <span id="disks_csharp">
+<a href="#disks_csharp" style="color: inherit; text-decoration: inherit;">Disks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -280,7 +333,9 @@ operation, matching the supplied `filter`, if provided.
 
     <dt class="property-"
             title="">
-        <span>Host<wbr>System<wbr>Id</span>
+        <span id="hostsystemid_csharp">
+<a href="#hostsystemid_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>System<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -288,7 +343,9 @@ operation, matching the supplied `filter`, if provided.
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -297,7 +354,9 @@ operation, matching the supplied `filter`, if provided.
 
     <dt class="property-"
             title="">
-        <span>Filter</span>
+        <span id="filter_csharp">
+<a href="#filter_csharp" style="color: inherit; text-decoration: inherit;">Filter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -305,7 +364,9 @@ operation, matching the supplied `filter`, if provided.
 
     <dt class="property-"
             title="">
-        <span>Rescan</span>
+        <span id="rescan_csharp">
+<a href="#rescan_csharp" style="color: inherit; text-decoration: inherit;">Rescan</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -320,7 +381,9 @@ operation, matching the supplied `filter`, if provided.
 
     <dt class="property-"
             title="">
-        <span>Disks</span>
+        <span id="disks_go">
+<a href="#disks_go" style="color: inherit; text-decoration: inherit;">Disks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -330,7 +393,9 @@ operation, matching the supplied `filter`, if provided.
 
     <dt class="property-"
             title="">
-        <span>Host<wbr>System<wbr>Id</span>
+        <span id="hostsystemid_go">
+<a href="#hostsystemid_go" style="color: inherit; text-decoration: inherit;">Host<wbr>System<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -338,7 +403,9 @@ operation, matching the supplied `filter`, if provided.
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -347,7 +414,9 @@ operation, matching the supplied `filter`, if provided.
 
     <dt class="property-"
             title="">
-        <span>Filter</span>
+        <span id="filter_go">
+<a href="#filter_go" style="color: inherit; text-decoration: inherit;">Filter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -355,7 +424,9 @@ operation, matching the supplied `filter`, if provided.
 
     <dt class="property-"
             title="">
-        <span>Rescan</span>
+        <span id="rescan_go">
+<a href="#rescan_go" style="color: inherit; text-decoration: inherit;">Rescan</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -370,7 +441,9 @@ operation, matching the supplied `filter`, if provided.
 
     <dt class="property-"
             title="">
-        <span>disks</span>
+        <span id="disks_nodejs">
+<a href="#disks_nodejs" style="color: inherit; text-decoration: inherit;">disks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -380,7 +453,9 @@ operation, matching the supplied `filter`, if provided.
 
     <dt class="property-"
             title="">
-        <span>host<wbr>System<wbr>Id</span>
+        <span id="hostsystemid_nodejs">
+<a href="#hostsystemid_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>System<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -388,7 +463,9 @@ operation, matching the supplied `filter`, if provided.
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -397,7 +474,9 @@ operation, matching the supplied `filter`, if provided.
 
     <dt class="property-"
             title="">
-        <span>filter</span>
+        <span id="filter_nodejs">
+<a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -405,7 +484,9 @@ operation, matching the supplied `filter`, if provided.
 
     <dt class="property-"
             title="">
-        <span>rescan</span>
+        <span id="rescan_nodejs">
+<a href="#rescan_nodejs" style="color: inherit; text-decoration: inherit;">rescan</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -420,7 +501,9 @@ operation, matching the supplied `filter`, if provided.
 
     <dt class="property-"
             title="">
-        <span>disks</span>
+        <span id="disks_python">
+<a href="#disks_python" style="color: inherit; text-decoration: inherit;">disks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -430,7 +513,9 @@ operation, matching the supplied `filter`, if provided.
 
     <dt class="property-"
             title="">
-        <span>host_<wbr>system_<wbr>id</span>
+        <span id="host_system_id_python">
+<a href="#host_system_id_python" style="color: inherit; text-decoration: inherit;">host_<wbr>system_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -438,7 +523,9 @@ operation, matching the supplied `filter`, if provided.
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -447,7 +534,9 @@ operation, matching the supplied `filter`, if provided.
 
     <dt class="property-"
             title="">
-        <span>filter</span>
+        <span id="filter_python">
+<a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -455,7 +544,9 @@ operation, matching the supplied `filter`, if provided.
 
     <dt class="property-"
             title="">
-        <span>rescan</span>
+        <span id="rescan_python">
+<a href="#rescan_python" style="color: inherit; text-decoration: inherit;">rescan</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>

@@ -86,19 +86,19 @@ These settings require vSphere 6.5 or higher:
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#ComputeCluster">ComputeCluster</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#ComputeClusterArgs">ComputeClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#ComputeCluster">ComputeCluster</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#ComputeClusterArgs">ComputeClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ComputeCluster</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>custom_attributes=None<span class="p">, </span>datacenter_id=None<span class="p">, </span>dpm_automation_level=None<span class="p">, </span>dpm_enabled=None<span class="p">, </span>dpm_threshold=None<span class="p">, </span>drs_advanced_options=None<span class="p">, </span>drs_automation_level=None<span class="p">, </span>drs_enable_predictive_drs=None<span class="p">, </span>drs_enable_vm_overrides=None<span class="p">, </span>drs_enabled=None<span class="p">, </span>drs_migration_threshold=None<span class="p">, </span>folder=None<span class="p">, </span>force_evacuate_on_destroy=None<span class="p">, </span>ha_admission_control_failover_host_system_ids=None<span class="p">, </span>ha_admission_control_host_failure_tolerance=None<span class="p">, </span>ha_admission_control_performance_tolerance=None<span class="p">, </span>ha_admission_control_policy=None<span class="p">, </span>ha_admission_control_resource_percentage_auto_compute=None<span class="p">, </span>ha_admission_control_resource_percentage_cpu=None<span class="p">, </span>ha_admission_control_resource_percentage_memory=None<span class="p">, </span>ha_admission_control_slot_policy_explicit_cpu=None<span class="p">, </span>ha_admission_control_slot_policy_explicit_memory=None<span class="p">, </span>ha_admission_control_slot_policy_use_explicit_size=None<span class="p">, </span>ha_advanced_options=None<span class="p">, </span>ha_datastore_apd_recovery_action=None<span class="p">, </span>ha_datastore_apd_response=None<span class="p">, </span>ha_datastore_apd_response_delay=None<span class="p">, </span>ha_datastore_pdl_response=None<span class="p">, </span>ha_enabled=None<span class="p">, </span>ha_heartbeat_datastore_ids=None<span class="p">, </span>ha_heartbeat_datastore_policy=None<span class="p">, </span>ha_host_isolation_response=None<span class="p">, </span>ha_host_monitoring=None<span class="p">, </span>ha_vm_component_protection=None<span class="p">, </span>ha_vm_dependency_restart_condition=None<span class="p">, </span>ha_vm_failure_interval=None<span class="p">, </span>ha_vm_maximum_failure_window=None<span class="p">, </span>ha_vm_maximum_resets=None<span class="p">, </span>ha_vm_minimum_uptime=None<span class="p">, </span>ha_vm_monitoring=None<span class="p">, </span>ha_vm_restart_additional_delay=None<span class="p">, </span>ha_vm_restart_priority=None<span class="p">, </span>ha_vm_restart_timeout=None<span class="p">, </span>host_cluster_exit_timeout=None<span class="p">, </span>host_system_ids=None<span class="p">, </span>name=None<span class="p">, </span>proactive_ha_automation_level=None<span class="p">, </span>proactive_ha_enabled=None<span class="p">, </span>proactive_ha_moderate_remediation=None<span class="p">, </span>proactive_ha_provider_ids=None<span class="p">, </span>proactive_ha_severe_remediation=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/vsphere/#ComputeCluster">ComputeCluster</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>custom_attributes=None<span class="p">, </span>datacenter_id=None<span class="p">, </span>dpm_automation_level=None<span class="p">, </span>dpm_enabled=None<span class="p">, </span>dpm_threshold=None<span class="p">, </span>drs_advanced_options=None<span class="p">, </span>drs_automation_level=None<span class="p">, </span>drs_enable_predictive_drs=None<span class="p">, </span>drs_enable_vm_overrides=None<span class="p">, </span>drs_enabled=None<span class="p">, </span>drs_migration_threshold=None<span class="p">, </span>folder=None<span class="p">, </span>force_evacuate_on_destroy=None<span class="p">, </span>ha_admission_control_failover_host_system_ids=None<span class="p">, </span>ha_admission_control_host_failure_tolerance=None<span class="p">, </span>ha_admission_control_performance_tolerance=None<span class="p">, </span>ha_admission_control_policy=None<span class="p">, </span>ha_admission_control_resource_percentage_auto_compute=None<span class="p">, </span>ha_admission_control_resource_percentage_cpu=None<span class="p">, </span>ha_admission_control_resource_percentage_memory=None<span class="p">, </span>ha_admission_control_slot_policy_explicit_cpu=None<span class="p">, </span>ha_admission_control_slot_policy_explicit_memory=None<span class="p">, </span>ha_admission_control_slot_policy_use_explicit_size=None<span class="p">, </span>ha_advanced_options=None<span class="p">, </span>ha_datastore_apd_recovery_action=None<span class="p">, </span>ha_datastore_apd_response=None<span class="p">, </span>ha_datastore_apd_response_delay=None<span class="p">, </span>ha_datastore_pdl_response=None<span class="p">, </span>ha_enabled=None<span class="p">, </span>ha_heartbeat_datastore_ids=None<span class="p">, </span>ha_heartbeat_datastore_policy=None<span class="p">, </span>ha_host_isolation_response=None<span class="p">, </span>ha_host_monitoring=None<span class="p">, </span>ha_vm_component_protection=None<span class="p">, </span>ha_vm_dependency_restart_condition=None<span class="p">, </span>ha_vm_failure_interval=None<span class="p">, </span>ha_vm_maximum_failure_window=None<span class="p">, </span>ha_vm_maximum_resets=None<span class="p">, </span>ha_vm_minimum_uptime=None<span class="p">, </span>ha_vm_monitoring=None<span class="p">, </span>ha_vm_restart_additional_delay=None<span class="p">, </span>ha_vm_restart_priority=None<span class="p">, </span>ha_vm_restart_timeout=None<span class="p">, </span>host_cluster_exit_timeout=None<span class="p">, </span>host_system_ids=None<span class="p">, </span>name=None<span class="p">, </span>proactive_ha_automation_level=None<span class="p">, </span>proactive_ha_enabled=None<span class="p">, </span>proactive_ha_moderate_remediation=None<span class="p">, </span>proactive_ha_provider_ids=None<span class="p">, </span>proactive_ha_severe_remediation=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewComputeCluster<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#ComputeClusterArgs">ComputeClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#ComputeCluster">ComputeCluster</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#ComputeCluster">NewComputeCluster</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#ComputeClusterArgs">ComputeClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#ComputeCluster">ComputeCluster</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.ComputeCluster.html">ComputeCluster</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.ComputeClusterArgs.html">ComputeClusterArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.ComputeCluster.html">ComputeCluster</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.ComputeClusterArgs.html">ComputeClusterArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -264,7 +264,9 @@ The ComputeCluster resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-required"
             title="Required">
-        <span>Datacenter<wbr>Id</span>
+        <span id="datacenterid_csharp">
+<a href="#datacenterid_csharp" style="color: inherit; text-decoration: inherit;">Datacenter<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -274,7 +276,9 @@ the datacenter to create the cluster in. Forces a new resource if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Custom<wbr>Attributes</span>
+        <span id="customattributes_csharp">
+<a href="#customattributes_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Attributes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -284,7 +288,9 @@ value strings to set for the datastore cluster.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dpm<wbr>Automation<wbr>Level</span>
+        <span id="dpmautomationlevel_csharp">
+<a href="#dpmautomationlevel_csharp" style="color: inherit; text-decoration: inherit;">Dpm<wbr>Automation<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -295,7 +301,9 @@ operations in this cluster. Can be one of `manual` or `automated`. Default:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dpm<wbr>Enabled</span>
+        <span id="dpmenabled_csharp">
+<a href="#dpmenabled_csharp" style="color: inherit; text-decoration: inherit;">Dpm<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -306,7 +314,9 @@ Default: `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dpm<wbr>Threshold</span>
+        <span id="dpmthreshold_csharp">
+<a href="#dpmthreshold_csharp" style="color: inherit; text-decoration: inherit;">Dpm<wbr>Threshold</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -318,7 +328,9 @@ tolerate more of a surplus/deficit than a higher setting. Default: `3`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Drs<wbr>Advanced<wbr>Options</span>
+        <span id="drsadvancedoptions_csharp">
+<a href="#drsadvancedoptions_csharp" style="color: inherit; text-decoration: inherit;">Drs<wbr>Advanced<wbr>Options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -328,7 +340,9 @@ options for DRS and DPM.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Drs<wbr>Automation<wbr>Level</span>
+        <span id="drsautomationlevel_csharp">
+<a href="#drsautomationlevel_csharp" style="color: inherit; text-decoration: inherit;">Drs<wbr>Automation<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -339,7 +353,9 @@ virtual machines in this cluster. Can be one of `manual`,
 
     <dt class="property-optional"
             title="Optional">
-        <span>Drs<wbr>Enable<wbr>Predictive<wbr>Drs</span>
+        <span id="drsenablepredictivedrs_csharp">
+<a href="#drsenablepredictivedrs_csharp" style="color: inherit; text-decoration: inherit;">Drs<wbr>Enable<wbr>Predictive<wbr>Drs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -350,7 +366,9 @@ recommendations. <sup>\*</sup>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Drs<wbr>Enable<wbr>Vm<wbr>Overrides</span>
+        <span id="drsenablevmoverrides_csharp">
+<a href="#drsenablevmoverrides_csharp" style="color: inherit; text-decoration: inherit;">Drs<wbr>Enable<wbr>Vm<wbr>Overrides</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -360,7 +378,9 @@ set for virtual machines in the cluster. Default: `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Drs<wbr>Enabled</span>
+        <span id="drsenabled_csharp">
+<a href="#drsenabled_csharp" style="color: inherit; text-decoration: inherit;">Drs<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -369,7 +389,9 @@ set for virtual machines in the cluster. Default: `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Drs<wbr>Migration<wbr>Threshold</span>
+        <span id="drsmigrationthreshold_csharp">
+<a href="#drsmigrationthreshold_csharp" style="color: inherit; text-decoration: inherit;">Drs<wbr>Migration<wbr>Threshold</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -381,7 +403,9 @@ tolerate more imbalance while a higher setting will tolerate less. Default:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Folder</span>
+        <span id="folder_csharp">
+<a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -395,7 +419,9 @@ being `/dc1/host/foo/bar/datastore-cluster-test`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Force<wbr>Evacuate<wbr>On<wbr>Destroy</span>
+        <span id="forceevacuateondestroy_csharp">
+<a href="#forceevacuateondestroy_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Evacuate<wbr>On<wbr>Destroy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -408,7 +434,9 @@ option and should only be used for testing. Default: `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Admission<wbr>Control<wbr>Failover<wbr>Host<wbr>System<wbr>Ids</span>
+        <span id="haadmissioncontrolfailoverhostsystemids_csharp">
+<a href="#haadmissioncontrolfailoverhostsystemids_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Admission<wbr>Control<wbr>Failover<wbr>Host<wbr>System<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -421,7 +449,9 @@ recommendations.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Admission<wbr>Control<wbr>Host<wbr>Failure<wbr>Tolerance</span>
+        <span id="haadmissioncontrolhostfailuretolerance_csharp">
+<a href="#haadmissioncontrolhostfailuretolerance_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Admission<wbr>Control<wbr>Host<wbr>Failure<wbr>Tolerance</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -434,7 +464,9 @@ the number of hosts in the cluster. Default: `1`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Admission<wbr>Control<wbr>Performance<wbr>Tolerance</span>
+        <span id="haadmissioncontrolperformancetolerance_csharp">
+<a href="#haadmissioncontrolperformancetolerance_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Admission<wbr>Control<wbr>Performance<wbr>Tolerance</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -446,7 +478,9 @@ disables the setting. Default: `100` (disabled).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Admission<wbr>Control<wbr>Policy</span>
+        <span id="haadmissioncontrolpolicy_csharp">
+<a href="#haadmissioncontrolpolicy_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Admission<wbr>Control<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -457,7 +491,9 @@ policy to use with vSphere HA. Can be one of `resourcePercentage`,
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Admission<wbr>Control<wbr>Resource<wbr>Percentage<wbr>Auto<wbr>Compute</span>
+        <span id="haadmissioncontrolresourcepercentageautocompute_csharp">
+<a href="#haadmissioncontrolresourcepercentageautocompute_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Admission<wbr>Control<wbr>Resource<wbr>Percentage<wbr>Auto<wbr>Compute</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -472,7 +508,9 @@ user-defined values. Default: `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Admission<wbr>Control<wbr>Resource<wbr>Percentage<wbr>Cpu</span>
+        <span id="haadmissioncontrolresourcepercentagecpu_csharp">
+<a href="#haadmissioncontrolresourcepercentagecpu_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Admission<wbr>Control<wbr>Resource<wbr>Percentage<wbr>Cpu</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -483,7 +521,9 @@ failover. Default: `100`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Admission<wbr>Control<wbr>Resource<wbr>Percentage<wbr>Memory</span>
+        <span id="haadmissioncontrolresourcepercentagememory_csharp">
+<a href="#haadmissioncontrolresourcepercentagememory_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Admission<wbr>Control<wbr>Resource<wbr>Percentage<wbr>Memory</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -494,7 +534,9 @@ failover. Default: `100`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Admission<wbr>Control<wbr>Slot<wbr>Policy<wbr>Explicit<wbr>Cpu</span>
+        <span id="haadmissioncontrolslotpolicyexplicitcpu_csharp">
+<a href="#haadmissioncontrolslotpolicyexplicitcpu_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Admission<wbr>Control<wbr>Slot<wbr>Policy<wbr>Explicit<wbr>Cpu</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -504,7 +546,9 @@ user-defined CPU slot size, in MHz. Default: `32`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Admission<wbr>Control<wbr>Slot<wbr>Policy<wbr>Explicit<wbr>Memory</span>
+        <span id="haadmissioncontrolslotpolicyexplicitmemory_csharp">
+<a href="#haadmissioncontrolslotpolicyexplicitmemory_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Admission<wbr>Control<wbr>Slot<wbr>Policy<wbr>Explicit<wbr>Memory</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -514,7 +558,9 @@ user-defined memory slot size, in MB. Default: `100`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Admission<wbr>Control<wbr>Slot<wbr>Policy<wbr>Use<wbr>Explicit<wbr>Size</span>
+        <span id="haadmissioncontrolslotpolicyuseexplicitsize_csharp">
+<a href="#haadmissioncontrolslotpolicyuseexplicitsize_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Admission<wbr>Control<wbr>Slot<wbr>Policy<wbr>Use<wbr>Explicit<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -526,7 +572,9 @@ average based on all powered-on virtual machines currently in the cluster.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Advanced<wbr>Options</span>
+        <span id="haadvancedoptions_csharp">
+<a href="#haadvancedoptions_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Advanced<wbr>Options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -536,7 +584,9 @@ options for vSphere HA.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Datastore<wbr>Apd<wbr>Recovery<wbr>Action</span>
+        <span id="hadatastoreapdrecoveryaction_csharp">
+<a href="#hadatastoreapdrecoveryaction_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Datastore<wbr>Apd<wbr>Recovery<wbr>Action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -548,7 +598,9 @@ middle of an APD event. Can be one of `none` or `reset`. Default: `none`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Datastore<wbr>Apd<wbr>Response</span>
+        <span id="hadatastoreapdresponse_csharp">
+<a href="#hadatastoreapdresponse_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Datastore<wbr>Apd<wbr>Response</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -561,7 +613,9 @@ relevant datastore. Can be one of `disabled`, `warning`,
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Datastore<wbr>Apd<wbr>Response<wbr>Delay</span>
+        <span id="hadatastoreapdresponsedelay_csharp">
+<a href="#hadatastoreapdresponsedelay_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Datastore<wbr>Apd<wbr>Response<wbr>Delay</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -573,7 +627,9 @@ minutes. <sup>\*</sup>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Datastore<wbr>Pdl<wbr>Response</span>
+        <span id="hadatastorepdlresponse_csharp">
+<a href="#hadatastorepdlresponse_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Datastore<wbr>Pdl<wbr>Response</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -586,7 +642,9 @@ relevant datastore. Can be one of `disabled`, `warning`, or
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Enabled</span>
+        <span id="haenabled_csharp">
+<a href="#haenabled_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -596,7 +654,9 @@ relevant datastore. Can be one of `disabled`, `warning`, or
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Heartbeat<wbr>Datastore<wbr>Ids</span>
+        <span id="haheartbeatdatastoreids_csharp">
+<a href="#haheartbeatdatastoreids_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Heartbeat<wbr>Datastore<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -608,7 +668,9 @@ to either `userSelectedDs` or `allFeasibleDsWithUserPreference`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Heartbeat<wbr>Datastore<wbr>Policy</span>
+        <span id="haheartbeatdatastorepolicy_csharp">
+<a href="#haheartbeatdatastorepolicy_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Heartbeat<wbr>Datastore<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -620,7 +682,9 @@ heartbeat datastores. Can be one of `allFeasibleDs`, `userSelectedDs`, or
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Host<wbr>Isolation<wbr>Response</span>
+        <span id="hahostisolationresponse_csharp">
+<a href="#hahostisolationresponse_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Host<wbr>Isolation<wbr>Response</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -632,7 +696,9 @@ the cluster. Can be one of `none`, `powerOff`, or `shutdown`. Default:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Host<wbr>Monitoring</span>
+        <span id="hahostmonitoring_csharp">
+<a href="#hahostmonitoring_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Host<wbr>Monitoring</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -643,7 +709,9 @@ or `disabled`. Default: `enabled`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Vm<wbr>Component<wbr>Protection</span>
+        <span id="havmcomponentprotection_csharp">
+<a href="#havmcomponentprotection_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Vm<wbr>Component<wbr>Protection</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -655,7 +723,9 @@ protection for virtual machines in this cluster. Can be one of `enabled` or
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Vm<wbr>Dependency<wbr>Restart<wbr>Condition</span>
+        <span id="havmdependencyrestartcondition_csharp">
+<a href="#havmdependencyrestartcondition_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Vm<wbr>Dependency<wbr>Restart<wbr>Condition</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -670,7 +740,9 @@ is considered ready immediately after a host is found to start it on.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Vm<wbr>Failure<wbr>Interval</span>
+        <span id="havmfailureinterval_csharp">
+<a href="#havmfailureinterval_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Vm<wbr>Failure<wbr>Interval</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -681,7 +753,9 @@ marked as failed. The value is in seconds. Default: `30`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Vm<wbr>Maximum<wbr>Failure<wbr>Window</span>
+        <span id="havmmaximumfailurewindow_csharp">
+<a href="#havmmaximumfailurewindow_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Vm<wbr>Maximum<wbr>Failure<wbr>Window</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -695,7 +769,9 @@ unlimited reset time is allotted. The value is specified in seconds. Default:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Vm<wbr>Maximum<wbr>Resets</span>
+        <span id="havmmaximumresets_csharp">
+<a href="#havmmaximumresets_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Vm<wbr>Maximum<wbr>Resets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -705,7 +781,9 @@ perform to a virtual machine when responding to a failure event. Default: `3`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Vm<wbr>Minimum<wbr>Uptime</span>
+        <span id="havmminimumuptime_csharp">
+<a href="#havmminimumuptime_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Vm<wbr>Minimum<wbr>Uptime</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -716,7 +794,9 @@ powering on a virtual machine before monitoring for heartbeats. Default:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Vm<wbr>Monitoring</span>
+        <span id="havmmonitoring_csharp">
+<a href="#havmmonitoring_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Vm<wbr>Monitoring</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -727,7 +807,9 @@ when HA is enabled in the cluster. Can be one of `vmMonitoringDisabled`,
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Vm<wbr>Restart<wbr>Additional<wbr>Delay</span>
+        <span id="havmrestartadditionaldelay_csharp">
+<a href="#havmrestartadditionaldelay_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Vm<wbr>Restart<wbr>Additional<wbr>Delay</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -738,7 +820,9 @@ Default: `0` (no delay). <sup>\*</sup>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Vm<wbr>Restart<wbr>Priority</span>
+        <span id="havmrestartpriority_csharp">
+<a href="#havmrestartpriority_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Vm<wbr>Restart<wbr>Priority</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -749,7 +833,9 @@ of `lowest`, `low`, `medium`, `high`, or `highest`. Default: `medium`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Vm<wbr>Restart<wbr>Timeout</span>
+        <span id="havmrestarttimeout_csharp">
+<a href="#havmrestarttimeout_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Vm<wbr>Restart<wbr>Timeout</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -761,7 +847,9 @@ before proceeding with the next priority. Default: `600` (10 minutes).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Host<wbr>Cluster<wbr>Exit<wbr>Timeout</span>
+        <span id="hostclusterexittimeout_csharp">
+<a href="#hostclusterexittimeout_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Cluster<wbr>Exit<wbr>Timeout</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -772,7 +860,9 @@ seconds. Default: `3600` (1 hour).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Host<wbr>System<wbr>Ids</span>
+        <span id="hostsystemids_csharp">
+<a href="#hostsystemids_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>System<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -782,7 +872,9 @@ the hosts to put in the cluster.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -791,7 +883,9 @@ the hosts to put in the cluster.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Proactive<wbr>Ha<wbr>Automation<wbr>Level</span>
+        <span id="proactivehaautomationlevel_csharp">
+<a href="#proactivehaautomationlevel_csharp" style="color: inherit; text-decoration: inherit;">Proactive<wbr>Ha<wbr>Automation<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -803,7 +897,9 @@ made by proactive HA are to be handled. Can be one of `Automated` or
 
     <dt class="property-optional"
             title="Optional">
-        <span>Proactive<wbr>Ha<wbr>Enabled</span>
+        <span id="proactivehaenabled_csharp">
+<a href="#proactivehaenabled_csharp" style="color: inherit; text-decoration: inherit;">Proactive<wbr>Ha<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -813,7 +909,9 @@ made by proactive HA are to be handled. Can be one of `Automated` or
 
     <dt class="property-optional"
             title="Optional">
-        <span>Proactive<wbr>Ha<wbr>Moderate<wbr>Remediation</span>
+        <span id="proactivehamoderateremediation_csharp">
+<a href="#proactivehamoderateremediation_csharp" style="color: inherit; text-decoration: inherit;">Proactive<wbr>Ha<wbr>Moderate<wbr>Remediation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -827,7 +925,9 @@ to `QuarantineMode`. Default: `QuarantineMode`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Proactive<wbr>Ha<wbr>Provider<wbr>Ids</span>
+        <span id="proactivehaproviderids_csharp">
+<a href="#proactivehaproviderids_csharp" style="color: inherit; text-decoration: inherit;">Proactive<wbr>Ha<wbr>Provider<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -838,7 +938,9 @@ providers configured for this cluster.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Proactive<wbr>Ha<wbr>Severe<wbr>Remediation</span>
+        <span id="proactivehasevereremediation_csharp">
+<a href="#proactivehasevereremediation_csharp" style="color: inherit; text-decoration: inherit;">Proactive<wbr>Ha<wbr>Severe<wbr>Remediation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -852,7 +954,9 @@ set to `MaintenanceMode`. Default: `QuarantineMode`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -868,7 +972,9 @@ set to `MaintenanceMode`. Default: `QuarantineMode`.
 
     <dt class="property-required"
             title="Required">
-        <span>Datacenter<wbr>Id</span>
+        <span id="datacenterid_go">
+<a href="#datacenterid_go" style="color: inherit; text-decoration: inherit;">Datacenter<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -878,7 +984,9 @@ the datacenter to create the cluster in. Forces a new resource if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Custom<wbr>Attributes</span>
+        <span id="customattributes_go">
+<a href="#customattributes_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Attributes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -888,7 +996,9 @@ value strings to set for the datastore cluster.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dpm<wbr>Automation<wbr>Level</span>
+        <span id="dpmautomationlevel_go">
+<a href="#dpmautomationlevel_go" style="color: inherit; text-decoration: inherit;">Dpm<wbr>Automation<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -899,7 +1009,9 @@ operations in this cluster. Can be one of `manual` or `automated`. Default:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dpm<wbr>Enabled</span>
+        <span id="dpmenabled_go">
+<a href="#dpmenabled_go" style="color: inherit; text-decoration: inherit;">Dpm<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -910,7 +1022,9 @@ Default: `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dpm<wbr>Threshold</span>
+        <span id="dpmthreshold_go">
+<a href="#dpmthreshold_go" style="color: inherit; text-decoration: inherit;">Dpm<wbr>Threshold</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -922,7 +1036,9 @@ tolerate more of a surplus/deficit than a higher setting. Default: `3`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Drs<wbr>Advanced<wbr>Options</span>
+        <span id="drsadvancedoptions_go">
+<a href="#drsadvancedoptions_go" style="color: inherit; text-decoration: inherit;">Drs<wbr>Advanced<wbr>Options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -932,7 +1048,9 @@ options for DRS and DPM.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Drs<wbr>Automation<wbr>Level</span>
+        <span id="drsautomationlevel_go">
+<a href="#drsautomationlevel_go" style="color: inherit; text-decoration: inherit;">Drs<wbr>Automation<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -943,7 +1061,9 @@ virtual machines in this cluster. Can be one of `manual`,
 
     <dt class="property-optional"
             title="Optional">
-        <span>Drs<wbr>Enable<wbr>Predictive<wbr>Drs</span>
+        <span id="drsenablepredictivedrs_go">
+<a href="#drsenablepredictivedrs_go" style="color: inherit; text-decoration: inherit;">Drs<wbr>Enable<wbr>Predictive<wbr>Drs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -954,7 +1074,9 @@ recommendations. <sup>\*</sup>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Drs<wbr>Enable<wbr>Vm<wbr>Overrides</span>
+        <span id="drsenablevmoverrides_go">
+<a href="#drsenablevmoverrides_go" style="color: inherit; text-decoration: inherit;">Drs<wbr>Enable<wbr>Vm<wbr>Overrides</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -964,7 +1086,9 @@ set for virtual machines in the cluster. Default: `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Drs<wbr>Enabled</span>
+        <span id="drsenabled_go">
+<a href="#drsenabled_go" style="color: inherit; text-decoration: inherit;">Drs<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -973,7 +1097,9 @@ set for virtual machines in the cluster. Default: `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Drs<wbr>Migration<wbr>Threshold</span>
+        <span id="drsmigrationthreshold_go">
+<a href="#drsmigrationthreshold_go" style="color: inherit; text-decoration: inherit;">Drs<wbr>Migration<wbr>Threshold</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -985,7 +1111,9 @@ tolerate more imbalance while a higher setting will tolerate less. Default:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Folder</span>
+        <span id="folder_go">
+<a href="#folder_go" style="color: inherit; text-decoration: inherit;">Folder</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -999,7 +1127,9 @@ being `/dc1/host/foo/bar/datastore-cluster-test`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Force<wbr>Evacuate<wbr>On<wbr>Destroy</span>
+        <span id="forceevacuateondestroy_go">
+<a href="#forceevacuateondestroy_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Evacuate<wbr>On<wbr>Destroy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1012,7 +1142,9 @@ option and should only be used for testing. Default: `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Admission<wbr>Control<wbr>Failover<wbr>Host<wbr>System<wbr>Ids</span>
+        <span id="haadmissioncontrolfailoverhostsystemids_go">
+<a href="#haadmissioncontrolfailoverhostsystemids_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Admission<wbr>Control<wbr>Failover<wbr>Host<wbr>System<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1025,7 +1157,9 @@ recommendations.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Admission<wbr>Control<wbr>Host<wbr>Failure<wbr>Tolerance</span>
+        <span id="haadmissioncontrolhostfailuretolerance_go">
+<a href="#haadmissioncontrolhostfailuretolerance_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Admission<wbr>Control<wbr>Host<wbr>Failure<wbr>Tolerance</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1038,7 +1172,9 @@ the number of hosts in the cluster. Default: `1`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Admission<wbr>Control<wbr>Performance<wbr>Tolerance</span>
+        <span id="haadmissioncontrolperformancetolerance_go">
+<a href="#haadmissioncontrolperformancetolerance_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Admission<wbr>Control<wbr>Performance<wbr>Tolerance</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1050,7 +1186,9 @@ disables the setting. Default: `100` (disabled).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Admission<wbr>Control<wbr>Policy</span>
+        <span id="haadmissioncontrolpolicy_go">
+<a href="#haadmissioncontrolpolicy_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Admission<wbr>Control<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1061,7 +1199,9 @@ policy to use with vSphere HA. Can be one of `resourcePercentage`,
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Admission<wbr>Control<wbr>Resource<wbr>Percentage<wbr>Auto<wbr>Compute</span>
+        <span id="haadmissioncontrolresourcepercentageautocompute_go">
+<a href="#haadmissioncontrolresourcepercentageautocompute_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Admission<wbr>Control<wbr>Resource<wbr>Percentage<wbr>Auto<wbr>Compute</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1076,7 +1216,9 @@ user-defined values. Default: `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Admission<wbr>Control<wbr>Resource<wbr>Percentage<wbr>Cpu</span>
+        <span id="haadmissioncontrolresourcepercentagecpu_go">
+<a href="#haadmissioncontrolresourcepercentagecpu_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Admission<wbr>Control<wbr>Resource<wbr>Percentage<wbr>Cpu</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1087,7 +1229,9 @@ failover. Default: `100`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Admission<wbr>Control<wbr>Resource<wbr>Percentage<wbr>Memory</span>
+        <span id="haadmissioncontrolresourcepercentagememory_go">
+<a href="#haadmissioncontrolresourcepercentagememory_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Admission<wbr>Control<wbr>Resource<wbr>Percentage<wbr>Memory</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1098,7 +1242,9 @@ failover. Default: `100`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Admission<wbr>Control<wbr>Slot<wbr>Policy<wbr>Explicit<wbr>Cpu</span>
+        <span id="haadmissioncontrolslotpolicyexplicitcpu_go">
+<a href="#haadmissioncontrolslotpolicyexplicitcpu_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Admission<wbr>Control<wbr>Slot<wbr>Policy<wbr>Explicit<wbr>Cpu</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1108,7 +1254,9 @@ user-defined CPU slot size, in MHz. Default: `32`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Admission<wbr>Control<wbr>Slot<wbr>Policy<wbr>Explicit<wbr>Memory</span>
+        <span id="haadmissioncontrolslotpolicyexplicitmemory_go">
+<a href="#haadmissioncontrolslotpolicyexplicitmemory_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Admission<wbr>Control<wbr>Slot<wbr>Policy<wbr>Explicit<wbr>Memory</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1118,7 +1266,9 @@ user-defined memory slot size, in MB. Default: `100`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Admission<wbr>Control<wbr>Slot<wbr>Policy<wbr>Use<wbr>Explicit<wbr>Size</span>
+        <span id="haadmissioncontrolslotpolicyuseexplicitsize_go">
+<a href="#haadmissioncontrolslotpolicyuseexplicitsize_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Admission<wbr>Control<wbr>Slot<wbr>Policy<wbr>Use<wbr>Explicit<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1130,7 +1280,9 @@ average based on all powered-on virtual machines currently in the cluster.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Advanced<wbr>Options</span>
+        <span id="haadvancedoptions_go">
+<a href="#haadvancedoptions_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Advanced<wbr>Options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -1140,7 +1292,9 @@ options for vSphere HA.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Datastore<wbr>Apd<wbr>Recovery<wbr>Action</span>
+        <span id="hadatastoreapdrecoveryaction_go">
+<a href="#hadatastoreapdrecoveryaction_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Datastore<wbr>Apd<wbr>Recovery<wbr>Action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1152,7 +1306,9 @@ middle of an APD event. Can be one of `none` or `reset`. Default: `none`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Datastore<wbr>Apd<wbr>Response</span>
+        <span id="hadatastoreapdresponse_go">
+<a href="#hadatastoreapdresponse_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Datastore<wbr>Apd<wbr>Response</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1165,7 +1321,9 @@ relevant datastore. Can be one of `disabled`, `warning`,
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Datastore<wbr>Apd<wbr>Response<wbr>Delay</span>
+        <span id="hadatastoreapdresponsedelay_go">
+<a href="#hadatastoreapdresponsedelay_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Datastore<wbr>Apd<wbr>Response<wbr>Delay</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1177,7 +1335,9 @@ minutes. <sup>\*</sup>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Datastore<wbr>Pdl<wbr>Response</span>
+        <span id="hadatastorepdlresponse_go">
+<a href="#hadatastorepdlresponse_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Datastore<wbr>Pdl<wbr>Response</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1190,7 +1350,9 @@ relevant datastore. Can be one of `disabled`, `warning`, or
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Enabled</span>
+        <span id="haenabled_go">
+<a href="#haenabled_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1200,7 +1362,9 @@ relevant datastore. Can be one of `disabled`, `warning`, or
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Heartbeat<wbr>Datastore<wbr>Ids</span>
+        <span id="haheartbeatdatastoreids_go">
+<a href="#haheartbeatdatastoreids_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Heartbeat<wbr>Datastore<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1212,7 +1376,9 @@ to either `userSelectedDs` or `allFeasibleDsWithUserPreference`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Heartbeat<wbr>Datastore<wbr>Policy</span>
+        <span id="haheartbeatdatastorepolicy_go">
+<a href="#haheartbeatdatastorepolicy_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Heartbeat<wbr>Datastore<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1224,7 +1390,9 @@ heartbeat datastores. Can be one of `allFeasibleDs`, `userSelectedDs`, or
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Host<wbr>Isolation<wbr>Response</span>
+        <span id="hahostisolationresponse_go">
+<a href="#hahostisolationresponse_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Host<wbr>Isolation<wbr>Response</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1236,7 +1404,9 @@ the cluster. Can be one of `none`, `powerOff`, or `shutdown`. Default:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Host<wbr>Monitoring</span>
+        <span id="hahostmonitoring_go">
+<a href="#hahostmonitoring_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Host<wbr>Monitoring</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1247,7 +1417,9 @@ or `disabled`. Default: `enabled`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Vm<wbr>Component<wbr>Protection</span>
+        <span id="havmcomponentprotection_go">
+<a href="#havmcomponentprotection_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Vm<wbr>Component<wbr>Protection</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1259,7 +1431,9 @@ protection for virtual machines in this cluster. Can be one of `enabled` or
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Vm<wbr>Dependency<wbr>Restart<wbr>Condition</span>
+        <span id="havmdependencyrestartcondition_go">
+<a href="#havmdependencyrestartcondition_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Vm<wbr>Dependency<wbr>Restart<wbr>Condition</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1274,7 +1448,9 @@ is considered ready immediately after a host is found to start it on.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Vm<wbr>Failure<wbr>Interval</span>
+        <span id="havmfailureinterval_go">
+<a href="#havmfailureinterval_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Vm<wbr>Failure<wbr>Interval</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1285,7 +1461,9 @@ marked as failed. The value is in seconds. Default: `30`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Vm<wbr>Maximum<wbr>Failure<wbr>Window</span>
+        <span id="havmmaximumfailurewindow_go">
+<a href="#havmmaximumfailurewindow_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Vm<wbr>Maximum<wbr>Failure<wbr>Window</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1299,7 +1477,9 @@ unlimited reset time is allotted. The value is specified in seconds. Default:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Vm<wbr>Maximum<wbr>Resets</span>
+        <span id="havmmaximumresets_go">
+<a href="#havmmaximumresets_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Vm<wbr>Maximum<wbr>Resets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1309,7 +1489,9 @@ perform to a virtual machine when responding to a failure event. Default: `3`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Vm<wbr>Minimum<wbr>Uptime</span>
+        <span id="havmminimumuptime_go">
+<a href="#havmminimumuptime_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Vm<wbr>Minimum<wbr>Uptime</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1320,7 +1502,9 @@ powering on a virtual machine before monitoring for heartbeats. Default:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Vm<wbr>Monitoring</span>
+        <span id="havmmonitoring_go">
+<a href="#havmmonitoring_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Vm<wbr>Monitoring</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1331,7 +1515,9 @@ when HA is enabled in the cluster. Can be one of `vmMonitoringDisabled`,
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Vm<wbr>Restart<wbr>Additional<wbr>Delay</span>
+        <span id="havmrestartadditionaldelay_go">
+<a href="#havmrestartadditionaldelay_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Vm<wbr>Restart<wbr>Additional<wbr>Delay</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1342,7 +1528,9 @@ Default: `0` (no delay). <sup>\*</sup>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Vm<wbr>Restart<wbr>Priority</span>
+        <span id="havmrestartpriority_go">
+<a href="#havmrestartpriority_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Vm<wbr>Restart<wbr>Priority</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1353,7 +1541,9 @@ of `lowest`, `low`, `medium`, `high`, or `highest`. Default: `medium`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Vm<wbr>Restart<wbr>Timeout</span>
+        <span id="havmrestarttimeout_go">
+<a href="#havmrestarttimeout_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Vm<wbr>Restart<wbr>Timeout</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1365,7 +1555,9 @@ before proceeding with the next priority. Default: `600` (10 minutes).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Host<wbr>Cluster<wbr>Exit<wbr>Timeout</span>
+        <span id="hostclusterexittimeout_go">
+<a href="#hostclusterexittimeout_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Cluster<wbr>Exit<wbr>Timeout</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1376,7 +1568,9 @@ seconds. Default: `3600` (1 hour).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Host<wbr>System<wbr>Ids</span>
+        <span id="hostsystemids_go">
+<a href="#hostsystemids_go" style="color: inherit; text-decoration: inherit;">Host<wbr>System<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1386,7 +1580,9 @@ the hosts to put in the cluster.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1395,7 +1591,9 @@ the hosts to put in the cluster.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Proactive<wbr>Ha<wbr>Automation<wbr>Level</span>
+        <span id="proactivehaautomationlevel_go">
+<a href="#proactivehaautomationlevel_go" style="color: inherit; text-decoration: inherit;">Proactive<wbr>Ha<wbr>Automation<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1407,7 +1605,9 @@ made by proactive HA are to be handled. Can be one of `Automated` or
 
     <dt class="property-optional"
             title="Optional">
-        <span>Proactive<wbr>Ha<wbr>Enabled</span>
+        <span id="proactivehaenabled_go">
+<a href="#proactivehaenabled_go" style="color: inherit; text-decoration: inherit;">Proactive<wbr>Ha<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1417,7 +1617,9 @@ made by proactive HA are to be handled. Can be one of `Automated` or
 
     <dt class="property-optional"
             title="Optional">
-        <span>Proactive<wbr>Ha<wbr>Moderate<wbr>Remediation</span>
+        <span id="proactivehamoderateremediation_go">
+<a href="#proactivehamoderateremediation_go" style="color: inherit; text-decoration: inherit;">Proactive<wbr>Ha<wbr>Moderate<wbr>Remediation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1431,7 +1633,9 @@ to `QuarantineMode`. Default: `QuarantineMode`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Proactive<wbr>Ha<wbr>Provider<wbr>Ids</span>
+        <span id="proactivehaproviderids_go">
+<a href="#proactivehaproviderids_go" style="color: inherit; text-decoration: inherit;">Proactive<wbr>Ha<wbr>Provider<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1442,7 +1646,9 @@ providers configured for this cluster.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Proactive<wbr>Ha<wbr>Severe<wbr>Remediation</span>
+        <span id="proactivehasevereremediation_go">
+<a href="#proactivehasevereremediation_go" style="color: inherit; text-decoration: inherit;">Proactive<wbr>Ha<wbr>Severe<wbr>Remediation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1456,7 +1662,9 @@ set to `MaintenanceMode`. Default: `QuarantineMode`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1472,7 +1680,9 @@ set to `MaintenanceMode`. Default: `QuarantineMode`.
 
     <dt class="property-required"
             title="Required">
-        <span>datacenter<wbr>Id</span>
+        <span id="datacenterid_nodejs">
+<a href="#datacenterid_nodejs" style="color: inherit; text-decoration: inherit;">datacenter<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1482,7 +1692,9 @@ the datacenter to create the cluster in. Forces a new resource if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>custom<wbr>Attributes</span>
+        <span id="customattributes_nodejs">
+<a href="#customattributes_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Attributes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -1492,7 +1704,9 @@ value strings to set for the datastore cluster.
 
     <dt class="property-optional"
             title="Optional">
-        <span>dpm<wbr>Automation<wbr>Level</span>
+        <span id="dpmautomationlevel_nodejs">
+<a href="#dpmautomationlevel_nodejs" style="color: inherit; text-decoration: inherit;">dpm<wbr>Automation<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1503,7 +1717,9 @@ operations in this cluster. Can be one of `manual` or `automated`. Default:
 
     <dt class="property-optional"
             title="Optional">
-        <span>dpm<wbr>Enabled</span>
+        <span id="dpmenabled_nodejs">
+<a href="#dpmenabled_nodejs" style="color: inherit; text-decoration: inherit;">dpm<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1514,7 +1730,9 @@ Default: `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>dpm<wbr>Threshold</span>
+        <span id="dpmthreshold_nodejs">
+<a href="#dpmthreshold_nodejs" style="color: inherit; text-decoration: inherit;">dpm<wbr>Threshold</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1526,7 +1744,9 @@ tolerate more of a surplus/deficit than a higher setting. Default: `3`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>drs<wbr>Advanced<wbr>Options</span>
+        <span id="drsadvancedoptions_nodejs">
+<a href="#drsadvancedoptions_nodejs" style="color: inherit; text-decoration: inherit;">drs<wbr>Advanced<wbr>Options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -1536,7 +1756,9 @@ options for DRS and DPM.
 
     <dt class="property-optional"
             title="Optional">
-        <span>drs<wbr>Automation<wbr>Level</span>
+        <span id="drsautomationlevel_nodejs">
+<a href="#drsautomationlevel_nodejs" style="color: inherit; text-decoration: inherit;">drs<wbr>Automation<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1547,7 +1769,9 @@ virtual machines in this cluster. Can be one of `manual`,
 
     <dt class="property-optional"
             title="Optional">
-        <span>drs<wbr>Enable<wbr>Predictive<wbr>Drs</span>
+        <span id="drsenablepredictivedrs_nodejs">
+<a href="#drsenablepredictivedrs_nodejs" style="color: inherit; text-decoration: inherit;">drs<wbr>Enable<wbr>Predictive<wbr>Drs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1558,7 +1782,9 @@ recommendations. <sup>\*</sup>
 
     <dt class="property-optional"
             title="Optional">
-        <span>drs<wbr>Enable<wbr>Vm<wbr>Overrides</span>
+        <span id="drsenablevmoverrides_nodejs">
+<a href="#drsenablevmoverrides_nodejs" style="color: inherit; text-decoration: inherit;">drs<wbr>Enable<wbr>Vm<wbr>Overrides</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1568,7 +1794,9 @@ set for virtual machines in the cluster. Default: `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>drs<wbr>Enabled</span>
+        <span id="drsenabled_nodejs">
+<a href="#drsenabled_nodejs" style="color: inherit; text-decoration: inherit;">drs<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1577,7 +1805,9 @@ set for virtual machines in the cluster. Default: `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>drs<wbr>Migration<wbr>Threshold</span>
+        <span id="drsmigrationthreshold_nodejs">
+<a href="#drsmigrationthreshold_nodejs" style="color: inherit; text-decoration: inherit;">drs<wbr>Migration<wbr>Threshold</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1589,7 +1819,9 @@ tolerate more imbalance while a higher setting will tolerate less. Default:
 
     <dt class="property-optional"
             title="Optional">
-        <span>folder</span>
+        <span id="folder_nodejs">
+<a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1603,7 +1835,9 @@ being `/dc1/host/foo/bar/datastore-cluster-test`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>force<wbr>Evacuate<wbr>On<wbr>Destroy</span>
+        <span id="forceevacuateondestroy_nodejs">
+<a href="#forceevacuateondestroy_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Evacuate<wbr>On<wbr>Destroy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1616,7 +1850,9 @@ option and should only be used for testing. Default: `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha<wbr>Admission<wbr>Control<wbr>Failover<wbr>Host<wbr>System<wbr>Ids</span>
+        <span id="haadmissioncontrolfailoverhostsystemids_nodejs">
+<a href="#haadmissioncontrolfailoverhostsystemids_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Admission<wbr>Control<wbr>Failover<wbr>Host<wbr>System<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1629,7 +1865,9 @@ recommendations.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha<wbr>Admission<wbr>Control<wbr>Host<wbr>Failure<wbr>Tolerance</span>
+        <span id="haadmissioncontrolhostfailuretolerance_nodejs">
+<a href="#haadmissioncontrolhostfailuretolerance_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Admission<wbr>Control<wbr>Host<wbr>Failure<wbr>Tolerance</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1642,7 +1880,9 @@ the number of hosts in the cluster. Default: `1`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha<wbr>Admission<wbr>Control<wbr>Performance<wbr>Tolerance</span>
+        <span id="haadmissioncontrolperformancetolerance_nodejs">
+<a href="#haadmissioncontrolperformancetolerance_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Admission<wbr>Control<wbr>Performance<wbr>Tolerance</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1654,7 +1894,9 @@ disables the setting. Default: `100` (disabled).
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha<wbr>Admission<wbr>Control<wbr>Policy</span>
+        <span id="haadmissioncontrolpolicy_nodejs">
+<a href="#haadmissioncontrolpolicy_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Admission<wbr>Control<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1665,7 +1907,9 @@ policy to use with vSphere HA. Can be one of `resourcePercentage`,
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha<wbr>Admission<wbr>Control<wbr>Resource<wbr>Percentage<wbr>Auto<wbr>Compute</span>
+        <span id="haadmissioncontrolresourcepercentageautocompute_nodejs">
+<a href="#haadmissioncontrolresourcepercentageautocompute_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Admission<wbr>Control<wbr>Resource<wbr>Percentage<wbr>Auto<wbr>Compute</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1680,7 +1924,9 @@ user-defined values. Default: `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha<wbr>Admission<wbr>Control<wbr>Resource<wbr>Percentage<wbr>Cpu</span>
+        <span id="haadmissioncontrolresourcepercentagecpu_nodejs">
+<a href="#haadmissioncontrolresourcepercentagecpu_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Admission<wbr>Control<wbr>Resource<wbr>Percentage<wbr>Cpu</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1691,7 +1937,9 @@ failover. Default: `100`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha<wbr>Admission<wbr>Control<wbr>Resource<wbr>Percentage<wbr>Memory</span>
+        <span id="haadmissioncontrolresourcepercentagememory_nodejs">
+<a href="#haadmissioncontrolresourcepercentagememory_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Admission<wbr>Control<wbr>Resource<wbr>Percentage<wbr>Memory</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1702,7 +1950,9 @@ failover. Default: `100`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha<wbr>Admission<wbr>Control<wbr>Slot<wbr>Policy<wbr>Explicit<wbr>Cpu</span>
+        <span id="haadmissioncontrolslotpolicyexplicitcpu_nodejs">
+<a href="#haadmissioncontrolslotpolicyexplicitcpu_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Admission<wbr>Control<wbr>Slot<wbr>Policy<wbr>Explicit<wbr>Cpu</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1712,7 +1962,9 @@ user-defined CPU slot size, in MHz. Default: `32`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha<wbr>Admission<wbr>Control<wbr>Slot<wbr>Policy<wbr>Explicit<wbr>Memory</span>
+        <span id="haadmissioncontrolslotpolicyexplicitmemory_nodejs">
+<a href="#haadmissioncontrolslotpolicyexplicitmemory_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Admission<wbr>Control<wbr>Slot<wbr>Policy<wbr>Explicit<wbr>Memory</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1722,7 +1974,9 @@ user-defined memory slot size, in MB. Default: `100`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha<wbr>Admission<wbr>Control<wbr>Slot<wbr>Policy<wbr>Use<wbr>Explicit<wbr>Size</span>
+        <span id="haadmissioncontrolslotpolicyuseexplicitsize_nodejs">
+<a href="#haadmissioncontrolslotpolicyuseexplicitsize_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Admission<wbr>Control<wbr>Slot<wbr>Policy<wbr>Use<wbr>Explicit<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1734,7 +1988,9 @@ average based on all powered-on virtual machines currently in the cluster.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha<wbr>Advanced<wbr>Options</span>
+        <span id="haadvancedoptions_nodejs">
+<a href="#haadvancedoptions_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Advanced<wbr>Options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -1744,7 +2000,9 @@ options for vSphere HA.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha<wbr>Datastore<wbr>Apd<wbr>Recovery<wbr>Action</span>
+        <span id="hadatastoreapdrecoveryaction_nodejs">
+<a href="#hadatastoreapdrecoveryaction_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Datastore<wbr>Apd<wbr>Recovery<wbr>Action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1756,7 +2014,9 @@ middle of an APD event. Can be one of `none` or `reset`. Default: `none`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha<wbr>Datastore<wbr>Apd<wbr>Response</span>
+        <span id="hadatastoreapdresponse_nodejs">
+<a href="#hadatastoreapdresponse_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Datastore<wbr>Apd<wbr>Response</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1769,7 +2029,9 @@ relevant datastore. Can be one of `disabled`, `warning`,
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha<wbr>Datastore<wbr>Apd<wbr>Response<wbr>Delay</span>
+        <span id="hadatastoreapdresponsedelay_nodejs">
+<a href="#hadatastoreapdresponsedelay_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Datastore<wbr>Apd<wbr>Response<wbr>Delay</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1781,7 +2043,9 @@ minutes. <sup>\*</sup>
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha<wbr>Datastore<wbr>Pdl<wbr>Response</span>
+        <span id="hadatastorepdlresponse_nodejs">
+<a href="#hadatastorepdlresponse_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Datastore<wbr>Pdl<wbr>Response</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1794,7 +2058,9 @@ relevant datastore. Can be one of `disabled`, `warning`, or
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha<wbr>Enabled</span>
+        <span id="haenabled_nodejs">
+<a href="#haenabled_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1804,7 +2070,9 @@ relevant datastore. Can be one of `disabled`, `warning`, or
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha<wbr>Heartbeat<wbr>Datastore<wbr>Ids</span>
+        <span id="haheartbeatdatastoreids_nodejs">
+<a href="#haheartbeatdatastoreids_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Heartbeat<wbr>Datastore<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1816,7 +2084,9 @@ to either `userSelectedDs` or `allFeasibleDsWithUserPreference`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha<wbr>Heartbeat<wbr>Datastore<wbr>Policy</span>
+        <span id="haheartbeatdatastorepolicy_nodejs">
+<a href="#haheartbeatdatastorepolicy_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Heartbeat<wbr>Datastore<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1828,7 +2098,9 @@ heartbeat datastores. Can be one of `allFeasibleDs`, `userSelectedDs`, or
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha<wbr>Host<wbr>Isolation<wbr>Response</span>
+        <span id="hahostisolationresponse_nodejs">
+<a href="#hahostisolationresponse_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Host<wbr>Isolation<wbr>Response</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1840,7 +2112,9 @@ the cluster. Can be one of `none`, `powerOff`, or `shutdown`. Default:
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha<wbr>Host<wbr>Monitoring</span>
+        <span id="hahostmonitoring_nodejs">
+<a href="#hahostmonitoring_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Host<wbr>Monitoring</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1851,7 +2125,9 @@ or `disabled`. Default: `enabled`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha<wbr>Vm<wbr>Component<wbr>Protection</span>
+        <span id="havmcomponentprotection_nodejs">
+<a href="#havmcomponentprotection_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Vm<wbr>Component<wbr>Protection</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1863,7 +2139,9 @@ protection for virtual machines in this cluster. Can be one of `enabled` or
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha<wbr>Vm<wbr>Dependency<wbr>Restart<wbr>Condition</span>
+        <span id="havmdependencyrestartcondition_nodejs">
+<a href="#havmdependencyrestartcondition_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Vm<wbr>Dependency<wbr>Restart<wbr>Condition</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1878,7 +2156,9 @@ is considered ready immediately after a host is found to start it on.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha<wbr>Vm<wbr>Failure<wbr>Interval</span>
+        <span id="havmfailureinterval_nodejs">
+<a href="#havmfailureinterval_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Vm<wbr>Failure<wbr>Interval</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1889,7 +2169,9 @@ marked as failed. The value is in seconds. Default: `30`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha<wbr>Vm<wbr>Maximum<wbr>Failure<wbr>Window</span>
+        <span id="havmmaximumfailurewindow_nodejs">
+<a href="#havmmaximumfailurewindow_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Vm<wbr>Maximum<wbr>Failure<wbr>Window</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1903,7 +2185,9 @@ unlimited reset time is allotted. The value is specified in seconds. Default:
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha<wbr>Vm<wbr>Maximum<wbr>Resets</span>
+        <span id="havmmaximumresets_nodejs">
+<a href="#havmmaximumresets_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Vm<wbr>Maximum<wbr>Resets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1913,7 +2197,9 @@ perform to a virtual machine when responding to a failure event. Default: `3`
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha<wbr>Vm<wbr>Minimum<wbr>Uptime</span>
+        <span id="havmminimumuptime_nodejs">
+<a href="#havmminimumuptime_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Vm<wbr>Minimum<wbr>Uptime</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1924,7 +2210,9 @@ powering on a virtual machine before monitoring for heartbeats. Default:
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha<wbr>Vm<wbr>Monitoring</span>
+        <span id="havmmonitoring_nodejs">
+<a href="#havmmonitoring_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Vm<wbr>Monitoring</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1935,7 +2223,9 @@ when HA is enabled in the cluster. Can be one of `vmMonitoringDisabled`,
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha<wbr>Vm<wbr>Restart<wbr>Additional<wbr>Delay</span>
+        <span id="havmrestartadditionaldelay_nodejs">
+<a href="#havmrestartadditionaldelay_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Vm<wbr>Restart<wbr>Additional<wbr>Delay</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1946,7 +2236,9 @@ Default: `0` (no delay). <sup>\*</sup>
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha<wbr>Vm<wbr>Restart<wbr>Priority</span>
+        <span id="havmrestartpriority_nodejs">
+<a href="#havmrestartpriority_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Vm<wbr>Restart<wbr>Priority</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1957,7 +2249,9 @@ of `lowest`, `low`, `medium`, `high`, or `highest`. Default: `medium`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha<wbr>Vm<wbr>Restart<wbr>Timeout</span>
+        <span id="havmrestarttimeout_nodejs">
+<a href="#havmrestarttimeout_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Vm<wbr>Restart<wbr>Timeout</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1969,7 +2263,9 @@ before proceeding with the next priority. Default: `600` (10 minutes).
 
     <dt class="property-optional"
             title="Optional">
-        <span>host<wbr>Cluster<wbr>Exit<wbr>Timeout</span>
+        <span id="hostclusterexittimeout_nodejs">
+<a href="#hostclusterexittimeout_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Cluster<wbr>Exit<wbr>Timeout</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1980,7 +2276,9 @@ seconds. Default: `3600` (1 hour).
 
     <dt class="property-optional"
             title="Optional">
-        <span>host<wbr>System<wbr>Ids</span>
+        <span id="hostsystemids_nodejs">
+<a href="#hostsystemids_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>System<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1990,7 +2288,9 @@ the hosts to put in the cluster.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1999,7 +2299,9 @@ the hosts to put in the cluster.
 
     <dt class="property-optional"
             title="Optional">
-        <span>proactive<wbr>Ha<wbr>Automation<wbr>Level</span>
+        <span id="proactivehaautomationlevel_nodejs">
+<a href="#proactivehaautomationlevel_nodejs" style="color: inherit; text-decoration: inherit;">proactive<wbr>Ha<wbr>Automation<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2011,7 +2313,9 @@ made by proactive HA are to be handled. Can be one of `Automated` or
 
     <dt class="property-optional"
             title="Optional">
-        <span>proactive<wbr>Ha<wbr>Enabled</span>
+        <span id="proactivehaenabled_nodejs">
+<a href="#proactivehaenabled_nodejs" style="color: inherit; text-decoration: inherit;">proactive<wbr>Ha<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -2021,7 +2325,9 @@ made by proactive HA are to be handled. Can be one of `Automated` or
 
     <dt class="property-optional"
             title="Optional">
-        <span>proactive<wbr>Ha<wbr>Moderate<wbr>Remediation</span>
+        <span id="proactivehamoderateremediation_nodejs">
+<a href="#proactivehamoderateremediation_nodejs" style="color: inherit; text-decoration: inherit;">proactive<wbr>Ha<wbr>Moderate<wbr>Remediation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2035,7 +2341,9 @@ to `QuarantineMode`. Default: `QuarantineMode`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>proactive<wbr>Ha<wbr>Provider<wbr>Ids</span>
+        <span id="proactivehaproviderids_nodejs">
+<a href="#proactivehaproviderids_nodejs" style="color: inherit; text-decoration: inherit;">proactive<wbr>Ha<wbr>Provider<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -2046,7 +2354,9 @@ providers configured for this cluster.
 
     <dt class="property-optional"
             title="Optional">
-        <span>proactive<wbr>Ha<wbr>Severe<wbr>Remediation</span>
+        <span id="proactivehasevereremediation_nodejs">
+<a href="#proactivehasevereremediation_nodejs" style="color: inherit; text-decoration: inherit;">proactive<wbr>Ha<wbr>Severe<wbr>Remediation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2060,7 +2370,9 @@ set to `MaintenanceMode`. Default: `QuarantineMode`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -2076,7 +2388,9 @@ set to `MaintenanceMode`. Default: `QuarantineMode`.
 
     <dt class="property-required"
             title="Required">
-        <span>datacenter_<wbr>id</span>
+        <span id="datacenter_id_python">
+<a href="#datacenter_id_python" style="color: inherit; text-decoration: inherit;">datacenter_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2086,7 +2400,9 @@ the datacenter to create the cluster in. Forces a new resource if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>custom_<wbr>attributes</span>
+        <span id="custom_attributes_python">
+<a href="#custom_attributes_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>attributes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -2096,7 +2412,9 @@ value strings to set for the datastore cluster.
 
     <dt class="property-optional"
             title="Optional">
-        <span>dpm_<wbr>automation_<wbr>level</span>
+        <span id="dpm_automation_level_python">
+<a href="#dpm_automation_level_python" style="color: inherit; text-decoration: inherit;">dpm_<wbr>automation_<wbr>level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2107,7 +2425,9 @@ operations in this cluster. Can be one of `manual` or `automated`. Default:
 
     <dt class="property-optional"
             title="Optional">
-        <span>dpm_<wbr>enabled</span>
+        <span id="dpm_enabled_python">
+<a href="#dpm_enabled_python" style="color: inherit; text-decoration: inherit;">dpm_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2118,7 +2438,9 @@ Default: `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>dpm_<wbr>threshold</span>
+        <span id="dpm_threshold_python">
+<a href="#dpm_threshold_python" style="color: inherit; text-decoration: inherit;">dpm_<wbr>threshold</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2130,7 +2452,9 @@ tolerate more of a surplus/deficit than a higher setting. Default: `3`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>drs_<wbr>advanced_<wbr>options</span>
+        <span id="drs_advanced_options_python">
+<a href="#drs_advanced_options_python" style="color: inherit; text-decoration: inherit;">drs_<wbr>advanced_<wbr>options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -2140,7 +2464,9 @@ options for DRS and DPM.
 
     <dt class="property-optional"
             title="Optional">
-        <span>drs_<wbr>automation_<wbr>level</span>
+        <span id="drs_automation_level_python">
+<a href="#drs_automation_level_python" style="color: inherit; text-decoration: inherit;">drs_<wbr>automation_<wbr>level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2151,7 +2477,9 @@ virtual machines in this cluster. Can be one of `manual`,
 
     <dt class="property-optional"
             title="Optional">
-        <span>drs_<wbr>enable_<wbr>predictive_<wbr>drs</span>
+        <span id="drs_enable_predictive_drs_python">
+<a href="#drs_enable_predictive_drs_python" style="color: inherit; text-decoration: inherit;">drs_<wbr>enable_<wbr>predictive_<wbr>drs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2162,7 +2490,9 @@ recommendations. <sup>\*</sup>
 
     <dt class="property-optional"
             title="Optional">
-        <span>drs_<wbr>enable_<wbr>vm_<wbr>overrides</span>
+        <span id="drs_enable_vm_overrides_python">
+<a href="#drs_enable_vm_overrides_python" style="color: inherit; text-decoration: inherit;">drs_<wbr>enable_<wbr>vm_<wbr>overrides</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2172,7 +2502,9 @@ set for virtual machines in the cluster. Default: `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>drs_<wbr>enabled</span>
+        <span id="drs_enabled_python">
+<a href="#drs_enabled_python" style="color: inherit; text-decoration: inherit;">drs_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2181,7 +2513,9 @@ set for virtual machines in the cluster. Default: `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>drs_<wbr>migration_<wbr>threshold</span>
+        <span id="drs_migration_threshold_python">
+<a href="#drs_migration_threshold_python" style="color: inherit; text-decoration: inherit;">drs_<wbr>migration_<wbr>threshold</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2193,7 +2527,9 @@ tolerate more imbalance while a higher setting will tolerate less. Default:
 
     <dt class="property-optional"
             title="Optional">
-        <span>folder</span>
+        <span id="folder_python">
+<a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2207,7 +2543,9 @@ being `/dc1/host/foo/bar/datastore-cluster-test`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>force_<wbr>evacuate_<wbr>on_<wbr>destroy</span>
+        <span id="force_evacuate_on_destroy_python">
+<a href="#force_evacuate_on_destroy_python" style="color: inherit; text-decoration: inherit;">force_<wbr>evacuate_<wbr>on_<wbr>destroy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2220,7 +2558,9 @@ option and should only be used for testing. Default: `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha_<wbr>admission_<wbr>control_<wbr>failover_<wbr>host_<wbr>system_<wbr>ids</span>
+        <span id="ha_admission_control_failover_host_system_ids_python">
+<a href="#ha_admission_control_failover_host_system_ids_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>admission_<wbr>control_<wbr>failover_<wbr>host_<wbr>system_<wbr>ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -2233,7 +2573,9 @@ recommendations.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha_<wbr>admission_<wbr>control_<wbr>host_<wbr>failure_<wbr>tolerance</span>
+        <span id="ha_admission_control_host_failure_tolerance_python">
+<a href="#ha_admission_control_host_failure_tolerance_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>admission_<wbr>control_<wbr>host_<wbr>failure_<wbr>tolerance</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2246,7 +2588,9 @@ the number of hosts in the cluster. Default: `1`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha_<wbr>admission_<wbr>control_<wbr>performance_<wbr>tolerance</span>
+        <span id="ha_admission_control_performance_tolerance_python">
+<a href="#ha_admission_control_performance_tolerance_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>admission_<wbr>control_<wbr>performance_<wbr>tolerance</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2258,7 +2602,9 @@ disables the setting. Default: `100` (disabled).
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha_<wbr>admission_<wbr>control_<wbr>policy</span>
+        <span id="ha_admission_control_policy_python">
+<a href="#ha_admission_control_policy_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>admission_<wbr>control_<wbr>policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2269,7 +2615,9 @@ policy to use with vSphere HA. Can be one of `resourcePercentage`,
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha_<wbr>admission_<wbr>control_<wbr>resource_<wbr>percentage_<wbr>auto_<wbr>compute</span>
+        <span id="ha_admission_control_resource_percentage_auto_compute_python">
+<a href="#ha_admission_control_resource_percentage_auto_compute_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>admission_<wbr>control_<wbr>resource_<wbr>percentage_<wbr>auto_<wbr>compute</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2284,7 +2632,9 @@ user-defined values. Default: `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha_<wbr>admission_<wbr>control_<wbr>resource_<wbr>percentage_<wbr>cpu</span>
+        <span id="ha_admission_control_resource_percentage_cpu_python">
+<a href="#ha_admission_control_resource_percentage_cpu_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>admission_<wbr>control_<wbr>resource_<wbr>percentage_<wbr>cpu</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2295,7 +2645,9 @@ failover. Default: `100`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha_<wbr>admission_<wbr>control_<wbr>resource_<wbr>percentage_<wbr>memory</span>
+        <span id="ha_admission_control_resource_percentage_memory_python">
+<a href="#ha_admission_control_resource_percentage_memory_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>admission_<wbr>control_<wbr>resource_<wbr>percentage_<wbr>memory</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2306,7 +2658,9 @@ failover. Default: `100`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha_<wbr>admission_<wbr>control_<wbr>slot_<wbr>policy_<wbr>explicit_<wbr>cpu</span>
+        <span id="ha_admission_control_slot_policy_explicit_cpu_python">
+<a href="#ha_admission_control_slot_policy_explicit_cpu_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>admission_<wbr>control_<wbr>slot_<wbr>policy_<wbr>explicit_<wbr>cpu</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2316,7 +2670,9 @@ user-defined CPU slot size, in MHz. Default: `32`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha_<wbr>admission_<wbr>control_<wbr>slot_<wbr>policy_<wbr>explicit_<wbr>memory</span>
+        <span id="ha_admission_control_slot_policy_explicit_memory_python">
+<a href="#ha_admission_control_slot_policy_explicit_memory_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>admission_<wbr>control_<wbr>slot_<wbr>policy_<wbr>explicit_<wbr>memory</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2326,7 +2682,9 @@ user-defined memory slot size, in MB. Default: `100`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha_<wbr>admission_<wbr>control_<wbr>slot_<wbr>policy_<wbr>use_<wbr>explicit_<wbr>size</span>
+        <span id="ha_admission_control_slot_policy_use_explicit_size_python">
+<a href="#ha_admission_control_slot_policy_use_explicit_size_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>admission_<wbr>control_<wbr>slot_<wbr>policy_<wbr>use_<wbr>explicit_<wbr>size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2338,7 +2696,9 @@ average based on all powered-on virtual machines currently in the cluster.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha_<wbr>advanced_<wbr>options</span>
+        <span id="ha_advanced_options_python">
+<a href="#ha_advanced_options_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>advanced_<wbr>options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -2348,7 +2708,9 @@ options for vSphere HA.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha_<wbr>datastore_<wbr>apd_<wbr>recovery_<wbr>action</span>
+        <span id="ha_datastore_apd_recovery_action_python">
+<a href="#ha_datastore_apd_recovery_action_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>datastore_<wbr>apd_<wbr>recovery_<wbr>action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2360,7 +2722,9 @@ middle of an APD event. Can be one of `none` or `reset`. Default: `none`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha_<wbr>datastore_<wbr>apd_<wbr>response</span>
+        <span id="ha_datastore_apd_response_python">
+<a href="#ha_datastore_apd_response_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>datastore_<wbr>apd_<wbr>response</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2373,7 +2737,9 @@ relevant datastore. Can be one of `disabled`, `warning`,
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha_<wbr>datastore_<wbr>apd_<wbr>response_<wbr>delay</span>
+        <span id="ha_datastore_apd_response_delay_python">
+<a href="#ha_datastore_apd_response_delay_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>datastore_<wbr>apd_<wbr>response_<wbr>delay</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2385,7 +2751,9 @@ minutes. <sup>\*</sup>
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha_<wbr>datastore_<wbr>pdl_<wbr>response</span>
+        <span id="ha_datastore_pdl_response_python">
+<a href="#ha_datastore_pdl_response_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>datastore_<wbr>pdl_<wbr>response</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2398,7 +2766,9 @@ relevant datastore. Can be one of `disabled`, `warning`, or
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha_<wbr>enabled</span>
+        <span id="ha_enabled_python">
+<a href="#ha_enabled_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2408,7 +2778,9 @@ relevant datastore. Can be one of `disabled`, `warning`, or
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha_<wbr>heartbeat_<wbr>datastore_<wbr>ids</span>
+        <span id="ha_heartbeat_datastore_ids_python">
+<a href="#ha_heartbeat_datastore_ids_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>heartbeat_<wbr>datastore_<wbr>ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -2420,7 +2792,9 @@ to either `userSelectedDs` or `allFeasibleDsWithUserPreference`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha_<wbr>heartbeat_<wbr>datastore_<wbr>policy</span>
+        <span id="ha_heartbeat_datastore_policy_python">
+<a href="#ha_heartbeat_datastore_policy_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>heartbeat_<wbr>datastore_<wbr>policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2432,7 +2806,9 @@ heartbeat datastores. Can be one of `allFeasibleDs`, `userSelectedDs`, or
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha_<wbr>host_<wbr>isolation_<wbr>response</span>
+        <span id="ha_host_isolation_response_python">
+<a href="#ha_host_isolation_response_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>host_<wbr>isolation_<wbr>response</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2444,7 +2820,9 @@ the cluster. Can be one of `none`, `powerOff`, or `shutdown`. Default:
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha_<wbr>host_<wbr>monitoring</span>
+        <span id="ha_host_monitoring_python">
+<a href="#ha_host_monitoring_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>host_<wbr>monitoring</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2455,7 +2833,9 @@ or `disabled`. Default: `enabled`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha_<wbr>vm_<wbr>component_<wbr>protection</span>
+        <span id="ha_vm_component_protection_python">
+<a href="#ha_vm_component_protection_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>vm_<wbr>component_<wbr>protection</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2467,7 +2847,9 @@ protection for virtual machines in this cluster. Can be one of `enabled` or
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha_<wbr>vm_<wbr>dependency_<wbr>restart_<wbr>condition</span>
+        <span id="ha_vm_dependency_restart_condition_python">
+<a href="#ha_vm_dependency_restart_condition_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>vm_<wbr>dependency_<wbr>restart_<wbr>condition</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2482,7 +2864,9 @@ is considered ready immediately after a host is found to start it on.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha_<wbr>vm_<wbr>failure_<wbr>interval</span>
+        <span id="ha_vm_failure_interval_python">
+<a href="#ha_vm_failure_interval_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>vm_<wbr>failure_<wbr>interval</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2493,7 +2877,9 @@ marked as failed. The value is in seconds. Default: `30`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha_<wbr>vm_<wbr>maximum_<wbr>failure_<wbr>window</span>
+        <span id="ha_vm_maximum_failure_window_python">
+<a href="#ha_vm_maximum_failure_window_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>vm_<wbr>maximum_<wbr>failure_<wbr>window</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2507,7 +2893,9 @@ unlimited reset time is allotted. The value is specified in seconds. Default:
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha_<wbr>vm_<wbr>maximum_<wbr>resets</span>
+        <span id="ha_vm_maximum_resets_python">
+<a href="#ha_vm_maximum_resets_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>vm_<wbr>maximum_<wbr>resets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2517,7 +2905,9 @@ perform to a virtual machine when responding to a failure event. Default: `3`
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha_<wbr>vm_<wbr>minimum_<wbr>uptime</span>
+        <span id="ha_vm_minimum_uptime_python">
+<a href="#ha_vm_minimum_uptime_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>vm_<wbr>minimum_<wbr>uptime</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2528,7 +2918,9 @@ powering on a virtual machine before monitoring for heartbeats. Default:
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha_<wbr>vm_<wbr>monitoring</span>
+        <span id="ha_vm_monitoring_python">
+<a href="#ha_vm_monitoring_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>vm_<wbr>monitoring</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2539,7 +2931,9 @@ when HA is enabled in the cluster. Can be one of `vmMonitoringDisabled`,
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha_<wbr>vm_<wbr>restart_<wbr>additional_<wbr>delay</span>
+        <span id="ha_vm_restart_additional_delay_python">
+<a href="#ha_vm_restart_additional_delay_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>vm_<wbr>restart_<wbr>additional_<wbr>delay</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2550,7 +2944,9 @@ Default: `0` (no delay). <sup>\*</sup>
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha_<wbr>vm_<wbr>restart_<wbr>priority</span>
+        <span id="ha_vm_restart_priority_python">
+<a href="#ha_vm_restart_priority_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>vm_<wbr>restart_<wbr>priority</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2561,7 +2957,9 @@ of `lowest`, `low`, `medium`, `high`, or `highest`. Default: `medium`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha_<wbr>vm_<wbr>restart_<wbr>timeout</span>
+        <span id="ha_vm_restart_timeout_python">
+<a href="#ha_vm_restart_timeout_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>vm_<wbr>restart_<wbr>timeout</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2573,7 +2971,9 @@ before proceeding with the next priority. Default: `600` (10 minutes).
 
     <dt class="property-optional"
             title="Optional">
-        <span>host_<wbr>cluster_<wbr>exit_<wbr>timeout</span>
+        <span id="host_cluster_exit_timeout_python">
+<a href="#host_cluster_exit_timeout_python" style="color: inherit; text-decoration: inherit;">host_<wbr>cluster_<wbr>exit_<wbr>timeout</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2584,7 +2984,9 @@ seconds. Default: `3600` (1 hour).
 
     <dt class="property-optional"
             title="Optional">
-        <span>host_<wbr>system_<wbr>ids</span>
+        <span id="host_system_ids_python">
+<a href="#host_system_ids_python" style="color: inherit; text-decoration: inherit;">host_<wbr>system_<wbr>ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -2594,7 +2996,9 @@ the hosts to put in the cluster.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2603,7 +3007,9 @@ the hosts to put in the cluster.
 
     <dt class="property-optional"
             title="Optional">
-        <span>proactive_<wbr>ha_<wbr>automation_<wbr>level</span>
+        <span id="proactive_ha_automation_level_python">
+<a href="#proactive_ha_automation_level_python" style="color: inherit; text-decoration: inherit;">proactive_<wbr>ha_<wbr>automation_<wbr>level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2615,7 +3021,9 @@ made by proactive HA are to be handled. Can be one of `Automated` or
 
     <dt class="property-optional"
             title="Optional">
-        <span>proactive_<wbr>ha_<wbr>enabled</span>
+        <span id="proactive_ha_enabled_python">
+<a href="#proactive_ha_enabled_python" style="color: inherit; text-decoration: inherit;">proactive_<wbr>ha_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2625,7 +3033,9 @@ made by proactive HA are to be handled. Can be one of `Automated` or
 
     <dt class="property-optional"
             title="Optional">
-        <span>proactive_<wbr>ha_<wbr>moderate_<wbr>remediation</span>
+        <span id="proactive_ha_moderate_remediation_python">
+<a href="#proactive_ha_moderate_remediation_python" style="color: inherit; text-decoration: inherit;">proactive_<wbr>ha_<wbr>moderate_<wbr>remediation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2639,7 +3049,9 @@ to `QuarantineMode`. Default: `QuarantineMode`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>proactive_<wbr>ha_<wbr>provider_<wbr>ids</span>
+        <span id="proactive_ha_provider_ids_python">
+<a href="#proactive_ha_provider_ids_python" style="color: inherit; text-decoration: inherit;">proactive_<wbr>ha_<wbr>provider_<wbr>ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -2650,7 +3062,9 @@ providers configured for this cluster.
 
     <dt class="property-optional"
             title="Optional">
-        <span>proactive_<wbr>ha_<wbr>severe_<wbr>remediation</span>
+        <span id="proactive_ha_severe_remediation_python">
+<a href="#proactive_ha_severe_remediation_python" style="color: inherit; text-decoration: inherit;">proactive_<wbr>ha_<wbr>severe_<wbr>remediation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2664,7 +3078,9 @@ set to `MaintenanceMode`. Default: `QuarantineMode`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -2691,7 +3107,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2699,7 +3117,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Resource<wbr>Pool<wbr>Id</span>
+        <span id="resourcepoolid_csharp">
+<a href="#resourcepoolid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Pool<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2715,7 +3135,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2723,7 +3145,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Resource<wbr>Pool<wbr>Id</span>
+        <span id="resourcepoolid_go">
+<a href="#resourcepoolid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Pool<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2739,7 +3163,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2747,7 +3173,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>resource<wbr>Pool<wbr>Id</span>
+        <span id="resourcepoolid_nodejs">
+<a href="#resourcepoolid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Pool<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2763,7 +3191,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2771,7 +3201,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>resource_<wbr>pool_<wbr>id</span>
+        <span id="resource_pool_id_python">
+<a href="#resource_pool_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>pool_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2793,7 +3225,7 @@ Get an existing ComputeCluster resource's state with the given name, ID, and opt
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#ComputeClusterState">ComputeClusterState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#ComputeCluster">ComputeCluster</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#ComputeClusterState">ComputeClusterState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#ComputeCluster">ComputeCluster</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -2801,11 +3233,11 @@ Get an existing ComputeCluster resource's state with the given name, ID, and opt
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetComputeCluster<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#ComputeClusterState">ComputeClusterState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#ComputeCluster">ComputeCluster</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetComputeCluster<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#ComputeClusterState">ComputeClusterState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#ComputeCluster">ComputeCluster</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.ComputeCluster.html">ComputeCluster</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere..ComputeClusterState.html">ComputeClusterState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.ComputeCluster.html">ComputeCluster</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere..ComputeClusterState.html">ComputeClusterState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2913,7 +3345,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Custom<wbr>Attributes</span>
+        <span id="state_customattributes_csharp">
+<a href="#state_customattributes_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Attributes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -2923,7 +3357,9 @@ value strings to set for the datastore cluster.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Datacenter<wbr>Id</span>
+        <span id="state_datacenterid_csharp">
+<a href="#state_datacenterid_csharp" style="color: inherit; text-decoration: inherit;">Datacenter<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2933,7 +3369,9 @@ the datacenter to create the cluster in. Forces a new resource if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dpm<wbr>Automation<wbr>Level</span>
+        <span id="state_dpmautomationlevel_csharp">
+<a href="#state_dpmautomationlevel_csharp" style="color: inherit; text-decoration: inherit;">Dpm<wbr>Automation<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2944,7 +3382,9 @@ operations in this cluster. Can be one of `manual` or `automated`. Default:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dpm<wbr>Enabled</span>
+        <span id="state_dpmenabled_csharp">
+<a href="#state_dpmenabled_csharp" style="color: inherit; text-decoration: inherit;">Dpm<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -2955,7 +3395,9 @@ Default: `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dpm<wbr>Threshold</span>
+        <span id="state_dpmthreshold_csharp">
+<a href="#state_dpmthreshold_csharp" style="color: inherit; text-decoration: inherit;">Dpm<wbr>Threshold</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -2967,7 +3409,9 @@ tolerate more of a surplus/deficit than a higher setting. Default: `3`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Drs<wbr>Advanced<wbr>Options</span>
+        <span id="state_drsadvancedoptions_csharp">
+<a href="#state_drsadvancedoptions_csharp" style="color: inherit; text-decoration: inherit;">Drs<wbr>Advanced<wbr>Options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -2977,7 +3421,9 @@ options for DRS and DPM.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Drs<wbr>Automation<wbr>Level</span>
+        <span id="state_drsautomationlevel_csharp">
+<a href="#state_drsautomationlevel_csharp" style="color: inherit; text-decoration: inherit;">Drs<wbr>Automation<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2988,7 +3434,9 @@ virtual machines in this cluster. Can be one of `manual`,
 
     <dt class="property-optional"
             title="Optional">
-        <span>Drs<wbr>Enable<wbr>Predictive<wbr>Drs</span>
+        <span id="state_drsenablepredictivedrs_csharp">
+<a href="#state_drsenablepredictivedrs_csharp" style="color: inherit; text-decoration: inherit;">Drs<wbr>Enable<wbr>Predictive<wbr>Drs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -2999,7 +3447,9 @@ recommendations. <sup>\*</sup>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Drs<wbr>Enable<wbr>Vm<wbr>Overrides</span>
+        <span id="state_drsenablevmoverrides_csharp">
+<a href="#state_drsenablevmoverrides_csharp" style="color: inherit; text-decoration: inherit;">Drs<wbr>Enable<wbr>Vm<wbr>Overrides</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -3009,7 +3459,9 @@ set for virtual machines in the cluster. Default: `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Drs<wbr>Enabled</span>
+        <span id="state_drsenabled_csharp">
+<a href="#state_drsenabled_csharp" style="color: inherit; text-decoration: inherit;">Drs<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -3018,7 +3470,9 @@ set for virtual machines in the cluster. Default: `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Drs<wbr>Migration<wbr>Threshold</span>
+        <span id="state_drsmigrationthreshold_csharp">
+<a href="#state_drsmigrationthreshold_csharp" style="color: inherit; text-decoration: inherit;">Drs<wbr>Migration<wbr>Threshold</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -3030,7 +3484,9 @@ tolerate more imbalance while a higher setting will tolerate less. Default:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Folder</span>
+        <span id="state_folder_csharp">
+<a href="#state_folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3044,7 +3500,9 @@ being `/dc1/host/foo/bar/datastore-cluster-test`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Force<wbr>Evacuate<wbr>On<wbr>Destroy</span>
+        <span id="state_forceevacuateondestroy_csharp">
+<a href="#state_forceevacuateondestroy_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Evacuate<wbr>On<wbr>Destroy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -3057,7 +3515,9 @@ option and should only be used for testing. Default: `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Admission<wbr>Control<wbr>Failover<wbr>Host<wbr>System<wbr>Ids</span>
+        <span id="state_haadmissioncontrolfailoverhostsystemids_csharp">
+<a href="#state_haadmissioncontrolfailoverhostsystemids_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Admission<wbr>Control<wbr>Failover<wbr>Host<wbr>System<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -3070,7 +3530,9 @@ recommendations.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Admission<wbr>Control<wbr>Host<wbr>Failure<wbr>Tolerance</span>
+        <span id="state_haadmissioncontrolhostfailuretolerance_csharp">
+<a href="#state_haadmissioncontrolhostfailuretolerance_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Admission<wbr>Control<wbr>Host<wbr>Failure<wbr>Tolerance</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -3083,7 +3545,9 @@ the number of hosts in the cluster. Default: `1`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Admission<wbr>Control<wbr>Performance<wbr>Tolerance</span>
+        <span id="state_haadmissioncontrolperformancetolerance_csharp">
+<a href="#state_haadmissioncontrolperformancetolerance_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Admission<wbr>Control<wbr>Performance<wbr>Tolerance</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -3095,7 +3559,9 @@ disables the setting. Default: `100` (disabled).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Admission<wbr>Control<wbr>Policy</span>
+        <span id="state_haadmissioncontrolpolicy_csharp">
+<a href="#state_haadmissioncontrolpolicy_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Admission<wbr>Control<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3106,7 +3572,9 @@ policy to use with vSphere HA. Can be one of `resourcePercentage`,
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Admission<wbr>Control<wbr>Resource<wbr>Percentage<wbr>Auto<wbr>Compute</span>
+        <span id="state_haadmissioncontrolresourcepercentageautocompute_csharp">
+<a href="#state_haadmissioncontrolresourcepercentageautocompute_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Admission<wbr>Control<wbr>Resource<wbr>Percentage<wbr>Auto<wbr>Compute</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -3121,7 +3589,9 @@ user-defined values. Default: `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Admission<wbr>Control<wbr>Resource<wbr>Percentage<wbr>Cpu</span>
+        <span id="state_haadmissioncontrolresourcepercentagecpu_csharp">
+<a href="#state_haadmissioncontrolresourcepercentagecpu_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Admission<wbr>Control<wbr>Resource<wbr>Percentage<wbr>Cpu</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -3132,7 +3602,9 @@ failover. Default: `100`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Admission<wbr>Control<wbr>Resource<wbr>Percentage<wbr>Memory</span>
+        <span id="state_haadmissioncontrolresourcepercentagememory_csharp">
+<a href="#state_haadmissioncontrolresourcepercentagememory_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Admission<wbr>Control<wbr>Resource<wbr>Percentage<wbr>Memory</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -3143,7 +3615,9 @@ failover. Default: `100`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Admission<wbr>Control<wbr>Slot<wbr>Policy<wbr>Explicit<wbr>Cpu</span>
+        <span id="state_haadmissioncontrolslotpolicyexplicitcpu_csharp">
+<a href="#state_haadmissioncontrolslotpolicyexplicitcpu_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Admission<wbr>Control<wbr>Slot<wbr>Policy<wbr>Explicit<wbr>Cpu</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -3153,7 +3627,9 @@ user-defined CPU slot size, in MHz. Default: `32`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Admission<wbr>Control<wbr>Slot<wbr>Policy<wbr>Explicit<wbr>Memory</span>
+        <span id="state_haadmissioncontrolslotpolicyexplicitmemory_csharp">
+<a href="#state_haadmissioncontrolslotpolicyexplicitmemory_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Admission<wbr>Control<wbr>Slot<wbr>Policy<wbr>Explicit<wbr>Memory</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -3163,7 +3639,9 @@ user-defined memory slot size, in MB. Default: `100`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Admission<wbr>Control<wbr>Slot<wbr>Policy<wbr>Use<wbr>Explicit<wbr>Size</span>
+        <span id="state_haadmissioncontrolslotpolicyuseexplicitsize_csharp">
+<a href="#state_haadmissioncontrolslotpolicyuseexplicitsize_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Admission<wbr>Control<wbr>Slot<wbr>Policy<wbr>Use<wbr>Explicit<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -3175,7 +3653,9 @@ average based on all powered-on virtual machines currently in the cluster.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Advanced<wbr>Options</span>
+        <span id="state_haadvancedoptions_csharp">
+<a href="#state_haadvancedoptions_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Advanced<wbr>Options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -3185,7 +3665,9 @@ options for vSphere HA.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Datastore<wbr>Apd<wbr>Recovery<wbr>Action</span>
+        <span id="state_hadatastoreapdrecoveryaction_csharp">
+<a href="#state_hadatastoreapdrecoveryaction_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Datastore<wbr>Apd<wbr>Recovery<wbr>Action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3197,7 +3679,9 @@ middle of an APD event. Can be one of `none` or `reset`. Default: `none`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Datastore<wbr>Apd<wbr>Response</span>
+        <span id="state_hadatastoreapdresponse_csharp">
+<a href="#state_hadatastoreapdresponse_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Datastore<wbr>Apd<wbr>Response</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3210,7 +3694,9 @@ relevant datastore. Can be one of `disabled`, `warning`,
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Datastore<wbr>Apd<wbr>Response<wbr>Delay</span>
+        <span id="state_hadatastoreapdresponsedelay_csharp">
+<a href="#state_hadatastoreapdresponsedelay_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Datastore<wbr>Apd<wbr>Response<wbr>Delay</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -3222,7 +3708,9 @@ minutes. <sup>\*</sup>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Datastore<wbr>Pdl<wbr>Response</span>
+        <span id="state_hadatastorepdlresponse_csharp">
+<a href="#state_hadatastorepdlresponse_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Datastore<wbr>Pdl<wbr>Response</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3235,7 +3723,9 @@ relevant datastore. Can be one of `disabled`, `warning`, or
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Enabled</span>
+        <span id="state_haenabled_csharp">
+<a href="#state_haenabled_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -3245,7 +3735,9 @@ relevant datastore. Can be one of `disabled`, `warning`, or
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Heartbeat<wbr>Datastore<wbr>Ids</span>
+        <span id="state_haheartbeatdatastoreids_csharp">
+<a href="#state_haheartbeatdatastoreids_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Heartbeat<wbr>Datastore<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -3257,7 +3749,9 @@ to either `userSelectedDs` or `allFeasibleDsWithUserPreference`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Heartbeat<wbr>Datastore<wbr>Policy</span>
+        <span id="state_haheartbeatdatastorepolicy_csharp">
+<a href="#state_haheartbeatdatastorepolicy_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Heartbeat<wbr>Datastore<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3269,7 +3763,9 @@ heartbeat datastores. Can be one of `allFeasibleDs`, `userSelectedDs`, or
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Host<wbr>Isolation<wbr>Response</span>
+        <span id="state_hahostisolationresponse_csharp">
+<a href="#state_hahostisolationresponse_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Host<wbr>Isolation<wbr>Response</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3281,7 +3777,9 @@ the cluster. Can be one of `none`, `powerOff`, or `shutdown`. Default:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Host<wbr>Monitoring</span>
+        <span id="state_hahostmonitoring_csharp">
+<a href="#state_hahostmonitoring_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Host<wbr>Monitoring</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3292,7 +3790,9 @@ or `disabled`. Default: `enabled`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Vm<wbr>Component<wbr>Protection</span>
+        <span id="state_havmcomponentprotection_csharp">
+<a href="#state_havmcomponentprotection_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Vm<wbr>Component<wbr>Protection</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3304,7 +3804,9 @@ protection for virtual machines in this cluster. Can be one of `enabled` or
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Vm<wbr>Dependency<wbr>Restart<wbr>Condition</span>
+        <span id="state_havmdependencyrestartcondition_csharp">
+<a href="#state_havmdependencyrestartcondition_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Vm<wbr>Dependency<wbr>Restart<wbr>Condition</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3319,7 +3821,9 @@ is considered ready immediately after a host is found to start it on.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Vm<wbr>Failure<wbr>Interval</span>
+        <span id="state_havmfailureinterval_csharp">
+<a href="#state_havmfailureinterval_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Vm<wbr>Failure<wbr>Interval</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -3330,7 +3834,9 @@ marked as failed. The value is in seconds. Default: `30`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Vm<wbr>Maximum<wbr>Failure<wbr>Window</span>
+        <span id="state_havmmaximumfailurewindow_csharp">
+<a href="#state_havmmaximumfailurewindow_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Vm<wbr>Maximum<wbr>Failure<wbr>Window</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -3344,7 +3850,9 @@ unlimited reset time is allotted. The value is specified in seconds. Default:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Vm<wbr>Maximum<wbr>Resets</span>
+        <span id="state_havmmaximumresets_csharp">
+<a href="#state_havmmaximumresets_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Vm<wbr>Maximum<wbr>Resets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -3354,7 +3862,9 @@ perform to a virtual machine when responding to a failure event. Default: `3`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Vm<wbr>Minimum<wbr>Uptime</span>
+        <span id="state_havmminimumuptime_csharp">
+<a href="#state_havmminimumuptime_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Vm<wbr>Minimum<wbr>Uptime</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -3365,7 +3875,9 @@ powering on a virtual machine before monitoring for heartbeats. Default:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Vm<wbr>Monitoring</span>
+        <span id="state_havmmonitoring_csharp">
+<a href="#state_havmmonitoring_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Vm<wbr>Monitoring</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3376,7 +3888,9 @@ when HA is enabled in the cluster. Can be one of `vmMonitoringDisabled`,
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Vm<wbr>Restart<wbr>Additional<wbr>Delay</span>
+        <span id="state_havmrestartadditionaldelay_csharp">
+<a href="#state_havmrestartadditionaldelay_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Vm<wbr>Restart<wbr>Additional<wbr>Delay</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -3387,7 +3901,9 @@ Default: `0` (no delay). <sup>\*</sup>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Vm<wbr>Restart<wbr>Priority</span>
+        <span id="state_havmrestartpriority_csharp">
+<a href="#state_havmrestartpriority_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Vm<wbr>Restart<wbr>Priority</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3398,7 +3914,9 @@ of `lowest`, `low`, `medium`, `high`, or `highest`. Default: `medium`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Vm<wbr>Restart<wbr>Timeout</span>
+        <span id="state_havmrestarttimeout_csharp">
+<a href="#state_havmrestarttimeout_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Vm<wbr>Restart<wbr>Timeout</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -3410,7 +3928,9 @@ before proceeding with the next priority. Default: `600` (10 minutes).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Host<wbr>Cluster<wbr>Exit<wbr>Timeout</span>
+        <span id="state_hostclusterexittimeout_csharp">
+<a href="#state_hostclusterexittimeout_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Cluster<wbr>Exit<wbr>Timeout</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -3421,7 +3941,9 @@ seconds. Default: `3600` (1 hour).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Host<wbr>System<wbr>Ids</span>
+        <span id="state_hostsystemids_csharp">
+<a href="#state_hostsystemids_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>System<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -3431,7 +3953,9 @@ the hosts to put in the cluster.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3440,7 +3964,9 @@ the hosts to put in the cluster.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Proactive<wbr>Ha<wbr>Automation<wbr>Level</span>
+        <span id="state_proactivehaautomationlevel_csharp">
+<a href="#state_proactivehaautomationlevel_csharp" style="color: inherit; text-decoration: inherit;">Proactive<wbr>Ha<wbr>Automation<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3452,7 +3978,9 @@ made by proactive HA are to be handled. Can be one of `Automated` or
 
     <dt class="property-optional"
             title="Optional">
-        <span>Proactive<wbr>Ha<wbr>Enabled</span>
+        <span id="state_proactivehaenabled_csharp">
+<a href="#state_proactivehaenabled_csharp" style="color: inherit; text-decoration: inherit;">Proactive<wbr>Ha<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -3462,7 +3990,9 @@ made by proactive HA are to be handled. Can be one of `Automated` or
 
     <dt class="property-optional"
             title="Optional">
-        <span>Proactive<wbr>Ha<wbr>Moderate<wbr>Remediation</span>
+        <span id="state_proactivehamoderateremediation_csharp">
+<a href="#state_proactivehamoderateremediation_csharp" style="color: inherit; text-decoration: inherit;">Proactive<wbr>Ha<wbr>Moderate<wbr>Remediation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3476,7 +4006,9 @@ to `QuarantineMode`. Default: `QuarantineMode`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Proactive<wbr>Ha<wbr>Provider<wbr>Ids</span>
+        <span id="state_proactivehaproviderids_csharp">
+<a href="#state_proactivehaproviderids_csharp" style="color: inherit; text-decoration: inherit;">Proactive<wbr>Ha<wbr>Provider<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -3487,7 +4019,9 @@ providers configured for this cluster.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Proactive<wbr>Ha<wbr>Severe<wbr>Remediation</span>
+        <span id="state_proactivehasevereremediation_csharp">
+<a href="#state_proactivehasevereremediation_csharp" style="color: inherit; text-decoration: inherit;">Proactive<wbr>Ha<wbr>Severe<wbr>Remediation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3501,7 +4035,9 @@ set to `MaintenanceMode`. Default: `QuarantineMode`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Pool<wbr>Id</span>
+        <span id="state_resourcepoolid_csharp">
+<a href="#state_resourcepoolid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Pool<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3510,7 +4046,9 @@ set to `MaintenanceMode`. Default: `QuarantineMode`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_csharp">
+<a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -3526,7 +4064,9 @@ set to `MaintenanceMode`. Default: `QuarantineMode`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Custom<wbr>Attributes</span>
+        <span id="state_customattributes_go">
+<a href="#state_customattributes_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Attributes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -3536,7 +4076,9 @@ value strings to set for the datastore cluster.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Datacenter<wbr>Id</span>
+        <span id="state_datacenterid_go">
+<a href="#state_datacenterid_go" style="color: inherit; text-decoration: inherit;">Datacenter<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3546,7 +4088,9 @@ the datacenter to create the cluster in. Forces a new resource if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dpm<wbr>Automation<wbr>Level</span>
+        <span id="state_dpmautomationlevel_go">
+<a href="#state_dpmautomationlevel_go" style="color: inherit; text-decoration: inherit;">Dpm<wbr>Automation<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3557,7 +4101,9 @@ operations in this cluster. Can be one of `manual` or `automated`. Default:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dpm<wbr>Enabled</span>
+        <span id="state_dpmenabled_go">
+<a href="#state_dpmenabled_go" style="color: inherit; text-decoration: inherit;">Dpm<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -3568,7 +4114,9 @@ Default: `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dpm<wbr>Threshold</span>
+        <span id="state_dpmthreshold_go">
+<a href="#state_dpmthreshold_go" style="color: inherit; text-decoration: inherit;">Dpm<wbr>Threshold</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -3580,7 +4128,9 @@ tolerate more of a surplus/deficit than a higher setting. Default: `3`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Drs<wbr>Advanced<wbr>Options</span>
+        <span id="state_drsadvancedoptions_go">
+<a href="#state_drsadvancedoptions_go" style="color: inherit; text-decoration: inherit;">Drs<wbr>Advanced<wbr>Options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -3590,7 +4140,9 @@ options for DRS and DPM.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Drs<wbr>Automation<wbr>Level</span>
+        <span id="state_drsautomationlevel_go">
+<a href="#state_drsautomationlevel_go" style="color: inherit; text-decoration: inherit;">Drs<wbr>Automation<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3601,7 +4153,9 @@ virtual machines in this cluster. Can be one of `manual`,
 
     <dt class="property-optional"
             title="Optional">
-        <span>Drs<wbr>Enable<wbr>Predictive<wbr>Drs</span>
+        <span id="state_drsenablepredictivedrs_go">
+<a href="#state_drsenablepredictivedrs_go" style="color: inherit; text-decoration: inherit;">Drs<wbr>Enable<wbr>Predictive<wbr>Drs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -3612,7 +4166,9 @@ recommendations. <sup>\*</sup>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Drs<wbr>Enable<wbr>Vm<wbr>Overrides</span>
+        <span id="state_drsenablevmoverrides_go">
+<a href="#state_drsenablevmoverrides_go" style="color: inherit; text-decoration: inherit;">Drs<wbr>Enable<wbr>Vm<wbr>Overrides</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -3622,7 +4178,9 @@ set for virtual machines in the cluster. Default: `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Drs<wbr>Enabled</span>
+        <span id="state_drsenabled_go">
+<a href="#state_drsenabled_go" style="color: inherit; text-decoration: inherit;">Drs<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -3631,7 +4189,9 @@ set for virtual machines in the cluster. Default: `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Drs<wbr>Migration<wbr>Threshold</span>
+        <span id="state_drsmigrationthreshold_go">
+<a href="#state_drsmigrationthreshold_go" style="color: inherit; text-decoration: inherit;">Drs<wbr>Migration<wbr>Threshold</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -3643,7 +4203,9 @@ tolerate more imbalance while a higher setting will tolerate less. Default:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Folder</span>
+        <span id="state_folder_go">
+<a href="#state_folder_go" style="color: inherit; text-decoration: inherit;">Folder</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3657,7 +4219,9 @@ being `/dc1/host/foo/bar/datastore-cluster-test`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Force<wbr>Evacuate<wbr>On<wbr>Destroy</span>
+        <span id="state_forceevacuateondestroy_go">
+<a href="#state_forceevacuateondestroy_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Evacuate<wbr>On<wbr>Destroy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -3670,7 +4234,9 @@ option and should only be used for testing. Default: `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Admission<wbr>Control<wbr>Failover<wbr>Host<wbr>System<wbr>Ids</span>
+        <span id="state_haadmissioncontrolfailoverhostsystemids_go">
+<a href="#state_haadmissioncontrolfailoverhostsystemids_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Admission<wbr>Control<wbr>Failover<wbr>Host<wbr>System<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -3683,7 +4249,9 @@ recommendations.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Admission<wbr>Control<wbr>Host<wbr>Failure<wbr>Tolerance</span>
+        <span id="state_haadmissioncontrolhostfailuretolerance_go">
+<a href="#state_haadmissioncontrolhostfailuretolerance_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Admission<wbr>Control<wbr>Host<wbr>Failure<wbr>Tolerance</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -3696,7 +4264,9 @@ the number of hosts in the cluster. Default: `1`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Admission<wbr>Control<wbr>Performance<wbr>Tolerance</span>
+        <span id="state_haadmissioncontrolperformancetolerance_go">
+<a href="#state_haadmissioncontrolperformancetolerance_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Admission<wbr>Control<wbr>Performance<wbr>Tolerance</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -3708,7 +4278,9 @@ disables the setting. Default: `100` (disabled).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Admission<wbr>Control<wbr>Policy</span>
+        <span id="state_haadmissioncontrolpolicy_go">
+<a href="#state_haadmissioncontrolpolicy_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Admission<wbr>Control<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3719,7 +4291,9 @@ policy to use with vSphere HA. Can be one of `resourcePercentage`,
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Admission<wbr>Control<wbr>Resource<wbr>Percentage<wbr>Auto<wbr>Compute</span>
+        <span id="state_haadmissioncontrolresourcepercentageautocompute_go">
+<a href="#state_haadmissioncontrolresourcepercentageautocompute_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Admission<wbr>Control<wbr>Resource<wbr>Percentage<wbr>Auto<wbr>Compute</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -3734,7 +4308,9 @@ user-defined values. Default: `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Admission<wbr>Control<wbr>Resource<wbr>Percentage<wbr>Cpu</span>
+        <span id="state_haadmissioncontrolresourcepercentagecpu_go">
+<a href="#state_haadmissioncontrolresourcepercentagecpu_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Admission<wbr>Control<wbr>Resource<wbr>Percentage<wbr>Cpu</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -3745,7 +4321,9 @@ failover. Default: `100`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Admission<wbr>Control<wbr>Resource<wbr>Percentage<wbr>Memory</span>
+        <span id="state_haadmissioncontrolresourcepercentagememory_go">
+<a href="#state_haadmissioncontrolresourcepercentagememory_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Admission<wbr>Control<wbr>Resource<wbr>Percentage<wbr>Memory</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -3756,7 +4334,9 @@ failover. Default: `100`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Admission<wbr>Control<wbr>Slot<wbr>Policy<wbr>Explicit<wbr>Cpu</span>
+        <span id="state_haadmissioncontrolslotpolicyexplicitcpu_go">
+<a href="#state_haadmissioncontrolslotpolicyexplicitcpu_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Admission<wbr>Control<wbr>Slot<wbr>Policy<wbr>Explicit<wbr>Cpu</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -3766,7 +4346,9 @@ user-defined CPU slot size, in MHz. Default: `32`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Admission<wbr>Control<wbr>Slot<wbr>Policy<wbr>Explicit<wbr>Memory</span>
+        <span id="state_haadmissioncontrolslotpolicyexplicitmemory_go">
+<a href="#state_haadmissioncontrolslotpolicyexplicitmemory_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Admission<wbr>Control<wbr>Slot<wbr>Policy<wbr>Explicit<wbr>Memory</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -3776,7 +4358,9 @@ user-defined memory slot size, in MB. Default: `100`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Admission<wbr>Control<wbr>Slot<wbr>Policy<wbr>Use<wbr>Explicit<wbr>Size</span>
+        <span id="state_haadmissioncontrolslotpolicyuseexplicitsize_go">
+<a href="#state_haadmissioncontrolslotpolicyuseexplicitsize_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Admission<wbr>Control<wbr>Slot<wbr>Policy<wbr>Use<wbr>Explicit<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -3788,7 +4372,9 @@ average based on all powered-on virtual machines currently in the cluster.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Advanced<wbr>Options</span>
+        <span id="state_haadvancedoptions_go">
+<a href="#state_haadvancedoptions_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Advanced<wbr>Options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -3798,7 +4384,9 @@ options for vSphere HA.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Datastore<wbr>Apd<wbr>Recovery<wbr>Action</span>
+        <span id="state_hadatastoreapdrecoveryaction_go">
+<a href="#state_hadatastoreapdrecoveryaction_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Datastore<wbr>Apd<wbr>Recovery<wbr>Action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3810,7 +4398,9 @@ middle of an APD event. Can be one of `none` or `reset`. Default: `none`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Datastore<wbr>Apd<wbr>Response</span>
+        <span id="state_hadatastoreapdresponse_go">
+<a href="#state_hadatastoreapdresponse_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Datastore<wbr>Apd<wbr>Response</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3823,7 +4413,9 @@ relevant datastore. Can be one of `disabled`, `warning`,
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Datastore<wbr>Apd<wbr>Response<wbr>Delay</span>
+        <span id="state_hadatastoreapdresponsedelay_go">
+<a href="#state_hadatastoreapdresponsedelay_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Datastore<wbr>Apd<wbr>Response<wbr>Delay</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -3835,7 +4427,9 @@ minutes. <sup>\*</sup>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Datastore<wbr>Pdl<wbr>Response</span>
+        <span id="state_hadatastorepdlresponse_go">
+<a href="#state_hadatastorepdlresponse_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Datastore<wbr>Pdl<wbr>Response</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3848,7 +4442,9 @@ relevant datastore. Can be one of `disabled`, `warning`, or
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Enabled</span>
+        <span id="state_haenabled_go">
+<a href="#state_haenabled_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -3858,7 +4454,9 @@ relevant datastore. Can be one of `disabled`, `warning`, or
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Heartbeat<wbr>Datastore<wbr>Ids</span>
+        <span id="state_haheartbeatdatastoreids_go">
+<a href="#state_haheartbeatdatastoreids_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Heartbeat<wbr>Datastore<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -3870,7 +4468,9 @@ to either `userSelectedDs` or `allFeasibleDsWithUserPreference`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Heartbeat<wbr>Datastore<wbr>Policy</span>
+        <span id="state_haheartbeatdatastorepolicy_go">
+<a href="#state_haheartbeatdatastorepolicy_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Heartbeat<wbr>Datastore<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3882,7 +4482,9 @@ heartbeat datastores. Can be one of `allFeasibleDs`, `userSelectedDs`, or
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Host<wbr>Isolation<wbr>Response</span>
+        <span id="state_hahostisolationresponse_go">
+<a href="#state_hahostisolationresponse_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Host<wbr>Isolation<wbr>Response</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3894,7 +4496,9 @@ the cluster. Can be one of `none`, `powerOff`, or `shutdown`. Default:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Host<wbr>Monitoring</span>
+        <span id="state_hahostmonitoring_go">
+<a href="#state_hahostmonitoring_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Host<wbr>Monitoring</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3905,7 +4509,9 @@ or `disabled`. Default: `enabled`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Vm<wbr>Component<wbr>Protection</span>
+        <span id="state_havmcomponentprotection_go">
+<a href="#state_havmcomponentprotection_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Vm<wbr>Component<wbr>Protection</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3917,7 +4523,9 @@ protection for virtual machines in this cluster. Can be one of `enabled` or
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Vm<wbr>Dependency<wbr>Restart<wbr>Condition</span>
+        <span id="state_havmdependencyrestartcondition_go">
+<a href="#state_havmdependencyrestartcondition_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Vm<wbr>Dependency<wbr>Restart<wbr>Condition</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3932,7 +4540,9 @@ is considered ready immediately after a host is found to start it on.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Vm<wbr>Failure<wbr>Interval</span>
+        <span id="state_havmfailureinterval_go">
+<a href="#state_havmfailureinterval_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Vm<wbr>Failure<wbr>Interval</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -3943,7 +4553,9 @@ marked as failed. The value is in seconds. Default: `30`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Vm<wbr>Maximum<wbr>Failure<wbr>Window</span>
+        <span id="state_havmmaximumfailurewindow_go">
+<a href="#state_havmmaximumfailurewindow_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Vm<wbr>Maximum<wbr>Failure<wbr>Window</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -3957,7 +4569,9 @@ unlimited reset time is allotted. The value is specified in seconds. Default:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Vm<wbr>Maximum<wbr>Resets</span>
+        <span id="state_havmmaximumresets_go">
+<a href="#state_havmmaximumresets_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Vm<wbr>Maximum<wbr>Resets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -3967,7 +4581,9 @@ perform to a virtual machine when responding to a failure event. Default: `3`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Vm<wbr>Minimum<wbr>Uptime</span>
+        <span id="state_havmminimumuptime_go">
+<a href="#state_havmminimumuptime_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Vm<wbr>Minimum<wbr>Uptime</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -3978,7 +4594,9 @@ powering on a virtual machine before monitoring for heartbeats. Default:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Vm<wbr>Monitoring</span>
+        <span id="state_havmmonitoring_go">
+<a href="#state_havmmonitoring_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Vm<wbr>Monitoring</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3989,7 +4607,9 @@ when HA is enabled in the cluster. Can be one of `vmMonitoringDisabled`,
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Vm<wbr>Restart<wbr>Additional<wbr>Delay</span>
+        <span id="state_havmrestartadditionaldelay_go">
+<a href="#state_havmrestartadditionaldelay_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Vm<wbr>Restart<wbr>Additional<wbr>Delay</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -4000,7 +4620,9 @@ Default: `0` (no delay). <sup>\*</sup>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Vm<wbr>Restart<wbr>Priority</span>
+        <span id="state_havmrestartpriority_go">
+<a href="#state_havmrestartpriority_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Vm<wbr>Restart<wbr>Priority</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -4011,7 +4633,9 @@ of `lowest`, `low`, `medium`, `high`, or `highest`. Default: `medium`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ha<wbr>Vm<wbr>Restart<wbr>Timeout</span>
+        <span id="state_havmrestarttimeout_go">
+<a href="#state_havmrestarttimeout_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Vm<wbr>Restart<wbr>Timeout</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -4023,7 +4647,9 @@ before proceeding with the next priority. Default: `600` (10 minutes).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Host<wbr>Cluster<wbr>Exit<wbr>Timeout</span>
+        <span id="state_hostclusterexittimeout_go">
+<a href="#state_hostclusterexittimeout_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Cluster<wbr>Exit<wbr>Timeout</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -4034,7 +4660,9 @@ seconds. Default: `3600` (1 hour).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Host<wbr>System<wbr>Ids</span>
+        <span id="state_hostsystemids_go">
+<a href="#state_hostsystemids_go" style="color: inherit; text-decoration: inherit;">Host<wbr>System<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -4044,7 +4672,9 @@ the hosts to put in the cluster.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -4053,7 +4683,9 @@ the hosts to put in the cluster.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Proactive<wbr>Ha<wbr>Automation<wbr>Level</span>
+        <span id="state_proactivehaautomationlevel_go">
+<a href="#state_proactivehaautomationlevel_go" style="color: inherit; text-decoration: inherit;">Proactive<wbr>Ha<wbr>Automation<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -4065,7 +4697,9 @@ made by proactive HA are to be handled. Can be one of `Automated` or
 
     <dt class="property-optional"
             title="Optional">
-        <span>Proactive<wbr>Ha<wbr>Enabled</span>
+        <span id="state_proactivehaenabled_go">
+<a href="#state_proactivehaenabled_go" style="color: inherit; text-decoration: inherit;">Proactive<wbr>Ha<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -4075,7 +4709,9 @@ made by proactive HA are to be handled. Can be one of `Automated` or
 
     <dt class="property-optional"
             title="Optional">
-        <span>Proactive<wbr>Ha<wbr>Moderate<wbr>Remediation</span>
+        <span id="state_proactivehamoderateremediation_go">
+<a href="#state_proactivehamoderateremediation_go" style="color: inherit; text-decoration: inherit;">Proactive<wbr>Ha<wbr>Moderate<wbr>Remediation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -4089,7 +4725,9 @@ to `QuarantineMode`. Default: `QuarantineMode`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Proactive<wbr>Ha<wbr>Provider<wbr>Ids</span>
+        <span id="state_proactivehaproviderids_go">
+<a href="#state_proactivehaproviderids_go" style="color: inherit; text-decoration: inherit;">Proactive<wbr>Ha<wbr>Provider<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -4100,7 +4738,9 @@ providers configured for this cluster.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Proactive<wbr>Ha<wbr>Severe<wbr>Remediation</span>
+        <span id="state_proactivehasevereremediation_go">
+<a href="#state_proactivehasevereremediation_go" style="color: inherit; text-decoration: inherit;">Proactive<wbr>Ha<wbr>Severe<wbr>Remediation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -4114,7 +4754,9 @@ set to `MaintenanceMode`. Default: `QuarantineMode`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Pool<wbr>Id</span>
+        <span id="state_resourcepoolid_go">
+<a href="#state_resourcepoolid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Pool<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -4123,7 +4765,9 @@ set to `MaintenanceMode`. Default: `QuarantineMode`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_go">
+<a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -4139,7 +4783,9 @@ set to `MaintenanceMode`. Default: `QuarantineMode`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>custom<wbr>Attributes</span>
+        <span id="state_customattributes_nodejs">
+<a href="#state_customattributes_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Attributes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -4149,7 +4795,9 @@ value strings to set for the datastore cluster.
 
     <dt class="property-optional"
             title="Optional">
-        <span>datacenter<wbr>Id</span>
+        <span id="state_datacenterid_nodejs">
+<a href="#state_datacenterid_nodejs" style="color: inherit; text-decoration: inherit;">datacenter<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4159,7 +4807,9 @@ the datacenter to create the cluster in. Forces a new resource if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>dpm<wbr>Automation<wbr>Level</span>
+        <span id="state_dpmautomationlevel_nodejs">
+<a href="#state_dpmautomationlevel_nodejs" style="color: inherit; text-decoration: inherit;">dpm<wbr>Automation<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4170,7 +4820,9 @@ operations in this cluster. Can be one of `manual` or `automated`. Default:
 
     <dt class="property-optional"
             title="Optional">
-        <span>dpm<wbr>Enabled</span>
+        <span id="state_dpmenabled_nodejs">
+<a href="#state_dpmenabled_nodejs" style="color: inherit; text-decoration: inherit;">dpm<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -4181,7 +4833,9 @@ Default: `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>dpm<wbr>Threshold</span>
+        <span id="state_dpmthreshold_nodejs">
+<a href="#state_dpmthreshold_nodejs" style="color: inherit; text-decoration: inherit;">dpm<wbr>Threshold</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -4193,7 +4847,9 @@ tolerate more of a surplus/deficit than a higher setting. Default: `3`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>drs<wbr>Advanced<wbr>Options</span>
+        <span id="state_drsadvancedoptions_nodejs">
+<a href="#state_drsadvancedoptions_nodejs" style="color: inherit; text-decoration: inherit;">drs<wbr>Advanced<wbr>Options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -4203,7 +4859,9 @@ options for DRS and DPM.
 
     <dt class="property-optional"
             title="Optional">
-        <span>drs<wbr>Automation<wbr>Level</span>
+        <span id="state_drsautomationlevel_nodejs">
+<a href="#state_drsautomationlevel_nodejs" style="color: inherit; text-decoration: inherit;">drs<wbr>Automation<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4214,7 +4872,9 @@ virtual machines in this cluster. Can be one of `manual`,
 
     <dt class="property-optional"
             title="Optional">
-        <span>drs<wbr>Enable<wbr>Predictive<wbr>Drs</span>
+        <span id="state_drsenablepredictivedrs_nodejs">
+<a href="#state_drsenablepredictivedrs_nodejs" style="color: inherit; text-decoration: inherit;">drs<wbr>Enable<wbr>Predictive<wbr>Drs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -4225,7 +4885,9 @@ recommendations. <sup>\*</sup>
 
     <dt class="property-optional"
             title="Optional">
-        <span>drs<wbr>Enable<wbr>Vm<wbr>Overrides</span>
+        <span id="state_drsenablevmoverrides_nodejs">
+<a href="#state_drsenablevmoverrides_nodejs" style="color: inherit; text-decoration: inherit;">drs<wbr>Enable<wbr>Vm<wbr>Overrides</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -4235,7 +4897,9 @@ set for virtual machines in the cluster. Default: `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>drs<wbr>Enabled</span>
+        <span id="state_drsenabled_nodejs">
+<a href="#state_drsenabled_nodejs" style="color: inherit; text-decoration: inherit;">drs<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -4244,7 +4908,9 @@ set for virtual machines in the cluster. Default: `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>drs<wbr>Migration<wbr>Threshold</span>
+        <span id="state_drsmigrationthreshold_nodejs">
+<a href="#state_drsmigrationthreshold_nodejs" style="color: inherit; text-decoration: inherit;">drs<wbr>Migration<wbr>Threshold</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -4256,7 +4922,9 @@ tolerate more imbalance while a higher setting will tolerate less. Default:
 
     <dt class="property-optional"
             title="Optional">
-        <span>folder</span>
+        <span id="state_folder_nodejs">
+<a href="#state_folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4270,7 +4938,9 @@ being `/dc1/host/foo/bar/datastore-cluster-test`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>force<wbr>Evacuate<wbr>On<wbr>Destroy</span>
+        <span id="state_forceevacuateondestroy_nodejs">
+<a href="#state_forceevacuateondestroy_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Evacuate<wbr>On<wbr>Destroy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -4283,7 +4953,9 @@ option and should only be used for testing. Default: `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha<wbr>Admission<wbr>Control<wbr>Failover<wbr>Host<wbr>System<wbr>Ids</span>
+        <span id="state_haadmissioncontrolfailoverhostsystemids_nodejs">
+<a href="#state_haadmissioncontrolfailoverhostsystemids_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Admission<wbr>Control<wbr>Failover<wbr>Host<wbr>System<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -4296,7 +4968,9 @@ recommendations.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha<wbr>Admission<wbr>Control<wbr>Host<wbr>Failure<wbr>Tolerance</span>
+        <span id="state_haadmissioncontrolhostfailuretolerance_nodejs">
+<a href="#state_haadmissioncontrolhostfailuretolerance_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Admission<wbr>Control<wbr>Host<wbr>Failure<wbr>Tolerance</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -4309,7 +4983,9 @@ the number of hosts in the cluster. Default: `1`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha<wbr>Admission<wbr>Control<wbr>Performance<wbr>Tolerance</span>
+        <span id="state_haadmissioncontrolperformancetolerance_nodejs">
+<a href="#state_haadmissioncontrolperformancetolerance_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Admission<wbr>Control<wbr>Performance<wbr>Tolerance</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -4321,7 +4997,9 @@ disables the setting. Default: `100` (disabled).
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha<wbr>Admission<wbr>Control<wbr>Policy</span>
+        <span id="state_haadmissioncontrolpolicy_nodejs">
+<a href="#state_haadmissioncontrolpolicy_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Admission<wbr>Control<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4332,7 +5010,9 @@ policy to use with vSphere HA. Can be one of `resourcePercentage`,
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha<wbr>Admission<wbr>Control<wbr>Resource<wbr>Percentage<wbr>Auto<wbr>Compute</span>
+        <span id="state_haadmissioncontrolresourcepercentageautocompute_nodejs">
+<a href="#state_haadmissioncontrolresourcepercentageautocompute_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Admission<wbr>Control<wbr>Resource<wbr>Percentage<wbr>Auto<wbr>Compute</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -4347,7 +5027,9 @@ user-defined values. Default: `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha<wbr>Admission<wbr>Control<wbr>Resource<wbr>Percentage<wbr>Cpu</span>
+        <span id="state_haadmissioncontrolresourcepercentagecpu_nodejs">
+<a href="#state_haadmissioncontrolresourcepercentagecpu_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Admission<wbr>Control<wbr>Resource<wbr>Percentage<wbr>Cpu</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -4358,7 +5040,9 @@ failover. Default: `100`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha<wbr>Admission<wbr>Control<wbr>Resource<wbr>Percentage<wbr>Memory</span>
+        <span id="state_haadmissioncontrolresourcepercentagememory_nodejs">
+<a href="#state_haadmissioncontrolresourcepercentagememory_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Admission<wbr>Control<wbr>Resource<wbr>Percentage<wbr>Memory</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -4369,7 +5053,9 @@ failover. Default: `100`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha<wbr>Admission<wbr>Control<wbr>Slot<wbr>Policy<wbr>Explicit<wbr>Cpu</span>
+        <span id="state_haadmissioncontrolslotpolicyexplicitcpu_nodejs">
+<a href="#state_haadmissioncontrolslotpolicyexplicitcpu_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Admission<wbr>Control<wbr>Slot<wbr>Policy<wbr>Explicit<wbr>Cpu</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -4379,7 +5065,9 @@ user-defined CPU slot size, in MHz. Default: `32`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha<wbr>Admission<wbr>Control<wbr>Slot<wbr>Policy<wbr>Explicit<wbr>Memory</span>
+        <span id="state_haadmissioncontrolslotpolicyexplicitmemory_nodejs">
+<a href="#state_haadmissioncontrolslotpolicyexplicitmemory_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Admission<wbr>Control<wbr>Slot<wbr>Policy<wbr>Explicit<wbr>Memory</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -4389,7 +5077,9 @@ user-defined memory slot size, in MB. Default: `100`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha<wbr>Admission<wbr>Control<wbr>Slot<wbr>Policy<wbr>Use<wbr>Explicit<wbr>Size</span>
+        <span id="state_haadmissioncontrolslotpolicyuseexplicitsize_nodejs">
+<a href="#state_haadmissioncontrolslotpolicyuseexplicitsize_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Admission<wbr>Control<wbr>Slot<wbr>Policy<wbr>Use<wbr>Explicit<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -4401,7 +5091,9 @@ average based on all powered-on virtual machines currently in the cluster.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha<wbr>Advanced<wbr>Options</span>
+        <span id="state_haadvancedoptions_nodejs">
+<a href="#state_haadvancedoptions_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Advanced<wbr>Options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -4411,7 +5103,9 @@ options for vSphere HA.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha<wbr>Datastore<wbr>Apd<wbr>Recovery<wbr>Action</span>
+        <span id="state_hadatastoreapdrecoveryaction_nodejs">
+<a href="#state_hadatastoreapdrecoveryaction_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Datastore<wbr>Apd<wbr>Recovery<wbr>Action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4423,7 +5117,9 @@ middle of an APD event. Can be one of `none` or `reset`. Default: `none`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha<wbr>Datastore<wbr>Apd<wbr>Response</span>
+        <span id="state_hadatastoreapdresponse_nodejs">
+<a href="#state_hadatastoreapdresponse_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Datastore<wbr>Apd<wbr>Response</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4436,7 +5132,9 @@ relevant datastore. Can be one of `disabled`, `warning`,
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha<wbr>Datastore<wbr>Apd<wbr>Response<wbr>Delay</span>
+        <span id="state_hadatastoreapdresponsedelay_nodejs">
+<a href="#state_hadatastoreapdresponsedelay_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Datastore<wbr>Apd<wbr>Response<wbr>Delay</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -4448,7 +5146,9 @@ minutes. <sup>\*</sup>
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha<wbr>Datastore<wbr>Pdl<wbr>Response</span>
+        <span id="state_hadatastorepdlresponse_nodejs">
+<a href="#state_hadatastorepdlresponse_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Datastore<wbr>Pdl<wbr>Response</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4461,7 +5161,9 @@ relevant datastore. Can be one of `disabled`, `warning`, or
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha<wbr>Enabled</span>
+        <span id="state_haenabled_nodejs">
+<a href="#state_haenabled_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -4471,7 +5173,9 @@ relevant datastore. Can be one of `disabled`, `warning`, or
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha<wbr>Heartbeat<wbr>Datastore<wbr>Ids</span>
+        <span id="state_haheartbeatdatastoreids_nodejs">
+<a href="#state_haheartbeatdatastoreids_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Heartbeat<wbr>Datastore<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -4483,7 +5187,9 @@ to either `userSelectedDs` or `allFeasibleDsWithUserPreference`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha<wbr>Heartbeat<wbr>Datastore<wbr>Policy</span>
+        <span id="state_haheartbeatdatastorepolicy_nodejs">
+<a href="#state_haheartbeatdatastorepolicy_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Heartbeat<wbr>Datastore<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4495,7 +5201,9 @@ heartbeat datastores. Can be one of `allFeasibleDs`, `userSelectedDs`, or
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha<wbr>Host<wbr>Isolation<wbr>Response</span>
+        <span id="state_hahostisolationresponse_nodejs">
+<a href="#state_hahostisolationresponse_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Host<wbr>Isolation<wbr>Response</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4507,7 +5215,9 @@ the cluster. Can be one of `none`, `powerOff`, or `shutdown`. Default:
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha<wbr>Host<wbr>Monitoring</span>
+        <span id="state_hahostmonitoring_nodejs">
+<a href="#state_hahostmonitoring_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Host<wbr>Monitoring</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4518,7 +5228,9 @@ or `disabled`. Default: `enabled`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha<wbr>Vm<wbr>Component<wbr>Protection</span>
+        <span id="state_havmcomponentprotection_nodejs">
+<a href="#state_havmcomponentprotection_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Vm<wbr>Component<wbr>Protection</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4530,7 +5242,9 @@ protection for virtual machines in this cluster. Can be one of `enabled` or
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha<wbr>Vm<wbr>Dependency<wbr>Restart<wbr>Condition</span>
+        <span id="state_havmdependencyrestartcondition_nodejs">
+<a href="#state_havmdependencyrestartcondition_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Vm<wbr>Dependency<wbr>Restart<wbr>Condition</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4545,7 +5259,9 @@ is considered ready immediately after a host is found to start it on.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha<wbr>Vm<wbr>Failure<wbr>Interval</span>
+        <span id="state_havmfailureinterval_nodejs">
+<a href="#state_havmfailureinterval_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Vm<wbr>Failure<wbr>Interval</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -4556,7 +5272,9 @@ marked as failed. The value is in seconds. Default: `30`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha<wbr>Vm<wbr>Maximum<wbr>Failure<wbr>Window</span>
+        <span id="state_havmmaximumfailurewindow_nodejs">
+<a href="#state_havmmaximumfailurewindow_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Vm<wbr>Maximum<wbr>Failure<wbr>Window</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -4570,7 +5288,9 @@ unlimited reset time is allotted. The value is specified in seconds. Default:
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha<wbr>Vm<wbr>Maximum<wbr>Resets</span>
+        <span id="state_havmmaximumresets_nodejs">
+<a href="#state_havmmaximumresets_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Vm<wbr>Maximum<wbr>Resets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -4580,7 +5300,9 @@ perform to a virtual machine when responding to a failure event. Default: `3`
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha<wbr>Vm<wbr>Minimum<wbr>Uptime</span>
+        <span id="state_havmminimumuptime_nodejs">
+<a href="#state_havmminimumuptime_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Vm<wbr>Minimum<wbr>Uptime</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -4591,7 +5313,9 @@ powering on a virtual machine before monitoring for heartbeats. Default:
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha<wbr>Vm<wbr>Monitoring</span>
+        <span id="state_havmmonitoring_nodejs">
+<a href="#state_havmmonitoring_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Vm<wbr>Monitoring</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4602,7 +5326,9 @@ when HA is enabled in the cluster. Can be one of `vmMonitoringDisabled`,
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha<wbr>Vm<wbr>Restart<wbr>Additional<wbr>Delay</span>
+        <span id="state_havmrestartadditionaldelay_nodejs">
+<a href="#state_havmrestartadditionaldelay_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Vm<wbr>Restart<wbr>Additional<wbr>Delay</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -4613,7 +5339,9 @@ Default: `0` (no delay). <sup>\*</sup>
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha<wbr>Vm<wbr>Restart<wbr>Priority</span>
+        <span id="state_havmrestartpriority_nodejs">
+<a href="#state_havmrestartpriority_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Vm<wbr>Restart<wbr>Priority</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4624,7 +5352,9 @@ of `lowest`, `low`, `medium`, `high`, or `highest`. Default: `medium`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha<wbr>Vm<wbr>Restart<wbr>Timeout</span>
+        <span id="state_havmrestarttimeout_nodejs">
+<a href="#state_havmrestarttimeout_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Vm<wbr>Restart<wbr>Timeout</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -4636,7 +5366,9 @@ before proceeding with the next priority. Default: `600` (10 minutes).
 
     <dt class="property-optional"
             title="Optional">
-        <span>host<wbr>Cluster<wbr>Exit<wbr>Timeout</span>
+        <span id="state_hostclusterexittimeout_nodejs">
+<a href="#state_hostclusterexittimeout_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Cluster<wbr>Exit<wbr>Timeout</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -4647,7 +5379,9 @@ seconds. Default: `3600` (1 hour).
 
     <dt class="property-optional"
             title="Optional">
-        <span>host<wbr>System<wbr>Ids</span>
+        <span id="state_hostsystemids_nodejs">
+<a href="#state_hostsystemids_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>System<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -4657,7 +5391,9 @@ the hosts to put in the cluster.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4666,7 +5402,9 @@ the hosts to put in the cluster.
 
     <dt class="property-optional"
             title="Optional">
-        <span>proactive<wbr>Ha<wbr>Automation<wbr>Level</span>
+        <span id="state_proactivehaautomationlevel_nodejs">
+<a href="#state_proactivehaautomationlevel_nodejs" style="color: inherit; text-decoration: inherit;">proactive<wbr>Ha<wbr>Automation<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4678,7 +5416,9 @@ made by proactive HA are to be handled. Can be one of `Automated` or
 
     <dt class="property-optional"
             title="Optional">
-        <span>proactive<wbr>Ha<wbr>Enabled</span>
+        <span id="state_proactivehaenabled_nodejs">
+<a href="#state_proactivehaenabled_nodejs" style="color: inherit; text-decoration: inherit;">proactive<wbr>Ha<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -4688,7 +5428,9 @@ made by proactive HA are to be handled. Can be one of `Automated` or
 
     <dt class="property-optional"
             title="Optional">
-        <span>proactive<wbr>Ha<wbr>Moderate<wbr>Remediation</span>
+        <span id="state_proactivehamoderateremediation_nodejs">
+<a href="#state_proactivehamoderateremediation_nodejs" style="color: inherit; text-decoration: inherit;">proactive<wbr>Ha<wbr>Moderate<wbr>Remediation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4702,7 +5444,9 @@ to `QuarantineMode`. Default: `QuarantineMode`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>proactive<wbr>Ha<wbr>Provider<wbr>Ids</span>
+        <span id="state_proactivehaproviderids_nodejs">
+<a href="#state_proactivehaproviderids_nodejs" style="color: inherit; text-decoration: inherit;">proactive<wbr>Ha<wbr>Provider<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -4713,7 +5457,9 @@ providers configured for this cluster.
 
     <dt class="property-optional"
             title="Optional">
-        <span>proactive<wbr>Ha<wbr>Severe<wbr>Remediation</span>
+        <span id="state_proactivehasevereremediation_nodejs">
+<a href="#state_proactivehasevereremediation_nodejs" style="color: inherit; text-decoration: inherit;">proactive<wbr>Ha<wbr>Severe<wbr>Remediation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4727,7 +5473,9 @@ set to `MaintenanceMode`. Default: `QuarantineMode`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource<wbr>Pool<wbr>Id</span>
+        <span id="state_resourcepoolid_nodejs">
+<a href="#state_resourcepoolid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Pool<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -4736,7 +5484,9 @@ set to `MaintenanceMode`. Default: `QuarantineMode`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_nodejs">
+<a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -4752,7 +5502,9 @@ set to `MaintenanceMode`. Default: `QuarantineMode`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>custom_<wbr>attributes</span>
+        <span id="state_custom_attributes_python">
+<a href="#state_custom_attributes_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>attributes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -4762,7 +5514,9 @@ value strings to set for the datastore cluster.
 
     <dt class="property-optional"
             title="Optional">
-        <span>datacenter_<wbr>id</span>
+        <span id="state_datacenter_id_python">
+<a href="#state_datacenter_id_python" style="color: inherit; text-decoration: inherit;">datacenter_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4772,7 +5526,9 @@ the datacenter to create the cluster in. Forces a new resource if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>dpm_<wbr>automation_<wbr>level</span>
+        <span id="state_dpm_automation_level_python">
+<a href="#state_dpm_automation_level_python" style="color: inherit; text-decoration: inherit;">dpm_<wbr>automation_<wbr>level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4783,7 +5539,9 @@ operations in this cluster. Can be one of `manual` or `automated`. Default:
 
     <dt class="property-optional"
             title="Optional">
-        <span>dpm_<wbr>enabled</span>
+        <span id="state_dpm_enabled_python">
+<a href="#state_dpm_enabled_python" style="color: inherit; text-decoration: inherit;">dpm_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -4794,7 +5552,9 @@ Default: `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>dpm_<wbr>threshold</span>
+        <span id="state_dpm_threshold_python">
+<a href="#state_dpm_threshold_python" style="color: inherit; text-decoration: inherit;">dpm_<wbr>threshold</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -4806,7 +5566,9 @@ tolerate more of a surplus/deficit than a higher setting. Default: `3`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>drs_<wbr>advanced_<wbr>options</span>
+        <span id="state_drs_advanced_options_python">
+<a href="#state_drs_advanced_options_python" style="color: inherit; text-decoration: inherit;">drs_<wbr>advanced_<wbr>options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -4816,7 +5578,9 @@ options for DRS and DPM.
 
     <dt class="property-optional"
             title="Optional">
-        <span>drs_<wbr>automation_<wbr>level</span>
+        <span id="state_drs_automation_level_python">
+<a href="#state_drs_automation_level_python" style="color: inherit; text-decoration: inherit;">drs_<wbr>automation_<wbr>level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4827,7 +5591,9 @@ virtual machines in this cluster. Can be one of `manual`,
 
     <dt class="property-optional"
             title="Optional">
-        <span>drs_<wbr>enable_<wbr>predictive_<wbr>drs</span>
+        <span id="state_drs_enable_predictive_drs_python">
+<a href="#state_drs_enable_predictive_drs_python" style="color: inherit; text-decoration: inherit;">drs_<wbr>enable_<wbr>predictive_<wbr>drs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -4838,7 +5604,9 @@ recommendations. <sup>\*</sup>
 
     <dt class="property-optional"
             title="Optional">
-        <span>drs_<wbr>enable_<wbr>vm_<wbr>overrides</span>
+        <span id="state_drs_enable_vm_overrides_python">
+<a href="#state_drs_enable_vm_overrides_python" style="color: inherit; text-decoration: inherit;">drs_<wbr>enable_<wbr>vm_<wbr>overrides</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -4848,7 +5616,9 @@ set for virtual machines in the cluster. Default: `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>drs_<wbr>enabled</span>
+        <span id="state_drs_enabled_python">
+<a href="#state_drs_enabled_python" style="color: inherit; text-decoration: inherit;">drs_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -4857,7 +5627,9 @@ set for virtual machines in the cluster. Default: `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>drs_<wbr>migration_<wbr>threshold</span>
+        <span id="state_drs_migration_threshold_python">
+<a href="#state_drs_migration_threshold_python" style="color: inherit; text-decoration: inherit;">drs_<wbr>migration_<wbr>threshold</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -4869,7 +5641,9 @@ tolerate more imbalance while a higher setting will tolerate less. Default:
 
     <dt class="property-optional"
             title="Optional">
-        <span>folder</span>
+        <span id="state_folder_python">
+<a href="#state_folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4883,7 +5657,9 @@ being `/dc1/host/foo/bar/datastore-cluster-test`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>force_<wbr>evacuate_<wbr>on_<wbr>destroy</span>
+        <span id="state_force_evacuate_on_destroy_python">
+<a href="#state_force_evacuate_on_destroy_python" style="color: inherit; text-decoration: inherit;">force_<wbr>evacuate_<wbr>on_<wbr>destroy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -4896,7 +5672,9 @@ option and should only be used for testing. Default: `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha_<wbr>admission_<wbr>control_<wbr>failover_<wbr>host_<wbr>system_<wbr>ids</span>
+        <span id="state_ha_admission_control_failover_host_system_ids_python">
+<a href="#state_ha_admission_control_failover_host_system_ids_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>admission_<wbr>control_<wbr>failover_<wbr>host_<wbr>system_<wbr>ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -4909,7 +5687,9 @@ recommendations.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha_<wbr>admission_<wbr>control_<wbr>host_<wbr>failure_<wbr>tolerance</span>
+        <span id="state_ha_admission_control_host_failure_tolerance_python">
+<a href="#state_ha_admission_control_host_failure_tolerance_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>admission_<wbr>control_<wbr>host_<wbr>failure_<wbr>tolerance</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -4922,7 +5702,9 @@ the number of hosts in the cluster. Default: `1`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha_<wbr>admission_<wbr>control_<wbr>performance_<wbr>tolerance</span>
+        <span id="state_ha_admission_control_performance_tolerance_python">
+<a href="#state_ha_admission_control_performance_tolerance_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>admission_<wbr>control_<wbr>performance_<wbr>tolerance</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -4934,7 +5716,9 @@ disables the setting. Default: `100` (disabled).
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha_<wbr>admission_<wbr>control_<wbr>policy</span>
+        <span id="state_ha_admission_control_policy_python">
+<a href="#state_ha_admission_control_policy_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>admission_<wbr>control_<wbr>policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -4945,7 +5729,9 @@ policy to use with vSphere HA. Can be one of `resourcePercentage`,
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha_<wbr>admission_<wbr>control_<wbr>resource_<wbr>percentage_<wbr>auto_<wbr>compute</span>
+        <span id="state_ha_admission_control_resource_percentage_auto_compute_python">
+<a href="#state_ha_admission_control_resource_percentage_auto_compute_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>admission_<wbr>control_<wbr>resource_<wbr>percentage_<wbr>auto_<wbr>compute</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -4960,7 +5746,9 @@ user-defined values. Default: `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha_<wbr>admission_<wbr>control_<wbr>resource_<wbr>percentage_<wbr>cpu</span>
+        <span id="state_ha_admission_control_resource_percentage_cpu_python">
+<a href="#state_ha_admission_control_resource_percentage_cpu_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>admission_<wbr>control_<wbr>resource_<wbr>percentage_<wbr>cpu</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -4971,7 +5759,9 @@ failover. Default: `100`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha_<wbr>admission_<wbr>control_<wbr>resource_<wbr>percentage_<wbr>memory</span>
+        <span id="state_ha_admission_control_resource_percentage_memory_python">
+<a href="#state_ha_admission_control_resource_percentage_memory_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>admission_<wbr>control_<wbr>resource_<wbr>percentage_<wbr>memory</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -4982,7 +5772,9 @@ failover. Default: `100`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha_<wbr>admission_<wbr>control_<wbr>slot_<wbr>policy_<wbr>explicit_<wbr>cpu</span>
+        <span id="state_ha_admission_control_slot_policy_explicit_cpu_python">
+<a href="#state_ha_admission_control_slot_policy_explicit_cpu_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>admission_<wbr>control_<wbr>slot_<wbr>policy_<wbr>explicit_<wbr>cpu</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -4992,7 +5784,9 @@ user-defined CPU slot size, in MHz. Default: `32`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha_<wbr>admission_<wbr>control_<wbr>slot_<wbr>policy_<wbr>explicit_<wbr>memory</span>
+        <span id="state_ha_admission_control_slot_policy_explicit_memory_python">
+<a href="#state_ha_admission_control_slot_policy_explicit_memory_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>admission_<wbr>control_<wbr>slot_<wbr>policy_<wbr>explicit_<wbr>memory</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -5002,7 +5796,9 @@ user-defined memory slot size, in MB. Default: `100`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha_<wbr>admission_<wbr>control_<wbr>slot_<wbr>policy_<wbr>use_<wbr>explicit_<wbr>size</span>
+        <span id="state_ha_admission_control_slot_policy_use_explicit_size_python">
+<a href="#state_ha_admission_control_slot_policy_use_explicit_size_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>admission_<wbr>control_<wbr>slot_<wbr>policy_<wbr>use_<wbr>explicit_<wbr>size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -5014,7 +5810,9 @@ average based on all powered-on virtual machines currently in the cluster.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha_<wbr>advanced_<wbr>options</span>
+        <span id="state_ha_advanced_options_python">
+<a href="#state_ha_advanced_options_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>advanced_<wbr>options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -5024,7 +5822,9 @@ options for vSphere HA.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha_<wbr>datastore_<wbr>apd_<wbr>recovery_<wbr>action</span>
+        <span id="state_ha_datastore_apd_recovery_action_python">
+<a href="#state_ha_datastore_apd_recovery_action_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>datastore_<wbr>apd_<wbr>recovery_<wbr>action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -5036,7 +5836,9 @@ middle of an APD event. Can be one of `none` or `reset`. Default: `none`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha_<wbr>datastore_<wbr>apd_<wbr>response</span>
+        <span id="state_ha_datastore_apd_response_python">
+<a href="#state_ha_datastore_apd_response_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>datastore_<wbr>apd_<wbr>response</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -5049,7 +5851,9 @@ relevant datastore. Can be one of `disabled`, `warning`,
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha_<wbr>datastore_<wbr>apd_<wbr>response_<wbr>delay</span>
+        <span id="state_ha_datastore_apd_response_delay_python">
+<a href="#state_ha_datastore_apd_response_delay_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>datastore_<wbr>apd_<wbr>response_<wbr>delay</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -5061,7 +5865,9 @@ minutes. <sup>\*</sup>
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha_<wbr>datastore_<wbr>pdl_<wbr>response</span>
+        <span id="state_ha_datastore_pdl_response_python">
+<a href="#state_ha_datastore_pdl_response_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>datastore_<wbr>pdl_<wbr>response</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -5074,7 +5880,9 @@ relevant datastore. Can be one of `disabled`, `warning`, or
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha_<wbr>enabled</span>
+        <span id="state_ha_enabled_python">
+<a href="#state_ha_enabled_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -5084,7 +5892,9 @@ relevant datastore. Can be one of `disabled`, `warning`, or
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha_<wbr>heartbeat_<wbr>datastore_<wbr>ids</span>
+        <span id="state_ha_heartbeat_datastore_ids_python">
+<a href="#state_ha_heartbeat_datastore_ids_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>heartbeat_<wbr>datastore_<wbr>ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -5096,7 +5906,9 @@ to either `userSelectedDs` or `allFeasibleDsWithUserPreference`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha_<wbr>heartbeat_<wbr>datastore_<wbr>policy</span>
+        <span id="state_ha_heartbeat_datastore_policy_python">
+<a href="#state_ha_heartbeat_datastore_policy_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>heartbeat_<wbr>datastore_<wbr>policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -5108,7 +5920,9 @@ heartbeat datastores. Can be one of `allFeasibleDs`, `userSelectedDs`, or
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha_<wbr>host_<wbr>isolation_<wbr>response</span>
+        <span id="state_ha_host_isolation_response_python">
+<a href="#state_ha_host_isolation_response_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>host_<wbr>isolation_<wbr>response</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -5120,7 +5934,9 @@ the cluster. Can be one of `none`, `powerOff`, or `shutdown`. Default:
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha_<wbr>host_<wbr>monitoring</span>
+        <span id="state_ha_host_monitoring_python">
+<a href="#state_ha_host_monitoring_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>host_<wbr>monitoring</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -5131,7 +5947,9 @@ or `disabled`. Default: `enabled`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha_<wbr>vm_<wbr>component_<wbr>protection</span>
+        <span id="state_ha_vm_component_protection_python">
+<a href="#state_ha_vm_component_protection_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>vm_<wbr>component_<wbr>protection</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -5143,7 +5961,9 @@ protection for virtual machines in this cluster. Can be one of `enabled` or
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha_<wbr>vm_<wbr>dependency_<wbr>restart_<wbr>condition</span>
+        <span id="state_ha_vm_dependency_restart_condition_python">
+<a href="#state_ha_vm_dependency_restart_condition_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>vm_<wbr>dependency_<wbr>restart_<wbr>condition</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -5158,7 +5978,9 @@ is considered ready immediately after a host is found to start it on.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha_<wbr>vm_<wbr>failure_<wbr>interval</span>
+        <span id="state_ha_vm_failure_interval_python">
+<a href="#state_ha_vm_failure_interval_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>vm_<wbr>failure_<wbr>interval</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -5169,7 +5991,9 @@ marked as failed. The value is in seconds. Default: `30`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha_<wbr>vm_<wbr>maximum_<wbr>failure_<wbr>window</span>
+        <span id="state_ha_vm_maximum_failure_window_python">
+<a href="#state_ha_vm_maximum_failure_window_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>vm_<wbr>maximum_<wbr>failure_<wbr>window</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -5183,7 +6007,9 @@ unlimited reset time is allotted. The value is specified in seconds. Default:
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha_<wbr>vm_<wbr>maximum_<wbr>resets</span>
+        <span id="state_ha_vm_maximum_resets_python">
+<a href="#state_ha_vm_maximum_resets_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>vm_<wbr>maximum_<wbr>resets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -5193,7 +6019,9 @@ perform to a virtual machine when responding to a failure event. Default: `3`
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha_<wbr>vm_<wbr>minimum_<wbr>uptime</span>
+        <span id="state_ha_vm_minimum_uptime_python">
+<a href="#state_ha_vm_minimum_uptime_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>vm_<wbr>minimum_<wbr>uptime</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -5204,7 +6032,9 @@ powering on a virtual machine before monitoring for heartbeats. Default:
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha_<wbr>vm_<wbr>monitoring</span>
+        <span id="state_ha_vm_monitoring_python">
+<a href="#state_ha_vm_monitoring_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>vm_<wbr>monitoring</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -5215,7 +6045,9 @@ when HA is enabled in the cluster. Can be one of `vmMonitoringDisabled`,
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha_<wbr>vm_<wbr>restart_<wbr>additional_<wbr>delay</span>
+        <span id="state_ha_vm_restart_additional_delay_python">
+<a href="#state_ha_vm_restart_additional_delay_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>vm_<wbr>restart_<wbr>additional_<wbr>delay</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -5226,7 +6058,9 @@ Default: `0` (no delay). <sup>\*</sup>
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha_<wbr>vm_<wbr>restart_<wbr>priority</span>
+        <span id="state_ha_vm_restart_priority_python">
+<a href="#state_ha_vm_restart_priority_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>vm_<wbr>restart_<wbr>priority</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -5237,7 +6071,9 @@ of `lowest`, `low`, `medium`, `high`, or `highest`. Default: `medium`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ha_<wbr>vm_<wbr>restart_<wbr>timeout</span>
+        <span id="state_ha_vm_restart_timeout_python">
+<a href="#state_ha_vm_restart_timeout_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>vm_<wbr>restart_<wbr>timeout</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -5249,7 +6085,9 @@ before proceeding with the next priority. Default: `600` (10 minutes).
 
     <dt class="property-optional"
             title="Optional">
-        <span>host_<wbr>cluster_<wbr>exit_<wbr>timeout</span>
+        <span id="state_host_cluster_exit_timeout_python">
+<a href="#state_host_cluster_exit_timeout_python" style="color: inherit; text-decoration: inherit;">host_<wbr>cluster_<wbr>exit_<wbr>timeout</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -5260,7 +6098,9 @@ seconds. Default: `3600` (1 hour).
 
     <dt class="property-optional"
             title="Optional">
-        <span>host_<wbr>system_<wbr>ids</span>
+        <span id="state_host_system_ids_python">
+<a href="#state_host_system_ids_python" style="color: inherit; text-decoration: inherit;">host_<wbr>system_<wbr>ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -5270,7 +6110,9 @@ the hosts to put in the cluster.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -5279,7 +6121,9 @@ the hosts to put in the cluster.
 
     <dt class="property-optional"
             title="Optional">
-        <span>proactive_<wbr>ha_<wbr>automation_<wbr>level</span>
+        <span id="state_proactive_ha_automation_level_python">
+<a href="#state_proactive_ha_automation_level_python" style="color: inherit; text-decoration: inherit;">proactive_<wbr>ha_<wbr>automation_<wbr>level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -5291,7 +6135,9 @@ made by proactive HA are to be handled. Can be one of `Automated` or
 
     <dt class="property-optional"
             title="Optional">
-        <span>proactive_<wbr>ha_<wbr>enabled</span>
+        <span id="state_proactive_ha_enabled_python">
+<a href="#state_proactive_ha_enabled_python" style="color: inherit; text-decoration: inherit;">proactive_<wbr>ha_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -5301,7 +6147,9 @@ made by proactive HA are to be handled. Can be one of `Automated` or
 
     <dt class="property-optional"
             title="Optional">
-        <span>proactive_<wbr>ha_<wbr>moderate_<wbr>remediation</span>
+        <span id="state_proactive_ha_moderate_remediation_python">
+<a href="#state_proactive_ha_moderate_remediation_python" style="color: inherit; text-decoration: inherit;">proactive_<wbr>ha_<wbr>moderate_<wbr>remediation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -5315,7 +6163,9 @@ to `QuarantineMode`. Default: `QuarantineMode`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>proactive_<wbr>ha_<wbr>provider_<wbr>ids</span>
+        <span id="state_proactive_ha_provider_ids_python">
+<a href="#state_proactive_ha_provider_ids_python" style="color: inherit; text-decoration: inherit;">proactive_<wbr>ha_<wbr>provider_<wbr>ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -5326,7 +6176,9 @@ providers configured for this cluster.
 
     <dt class="property-optional"
             title="Optional">
-        <span>proactive_<wbr>ha_<wbr>severe_<wbr>remediation</span>
+        <span id="state_proactive_ha_severe_remediation_python">
+<a href="#state_proactive_ha_severe_remediation_python" style="color: inherit; text-decoration: inherit;">proactive_<wbr>ha_<wbr>severe_<wbr>remediation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -5340,7 +6192,9 @@ set to `MaintenanceMode`. Default: `QuarantineMode`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource_<wbr>pool_<wbr>id</span>
+        <span id="state_resource_pool_id_python">
+<a href="#state_resource_pool_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>pool_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -5349,7 +6203,9 @@ set to `MaintenanceMode`. Default: `QuarantineMode`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_python">
+<a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>

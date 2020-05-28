@@ -40,7 +40,28 @@ limitation of virtual machine snapshots, see [here][ext-vm-snap-limitations].
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using VSphere = Pulumi.VSphere;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var demo1 = new VSphere.VirtualMachineSnapshot("demo1", new VSphere.VirtualMachineSnapshotArgs
+        {
+            Consolidate = "true",
+            Description = "This is Demo Snapshot",
+            Memory = "true",
+            Quiesce = "true",
+            RemoveChildren = "false",
+            SnapshotName = "Snapshot Name",
+            VirtualMachineUuid = "9aac5551-a351-4158-8c5c-15a71e8ec5c9",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -88,19 +109,19 @@ const demo1 = new vsphere.VirtualMachineSnapshot("demo1", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#VirtualMachineSnapshot">VirtualMachineSnapshot</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#VirtualMachineSnapshotArgs">VirtualMachineSnapshotArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#VirtualMachineSnapshot">VirtualMachineSnapshot</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#VirtualMachineSnapshotArgs">VirtualMachineSnapshotArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">VirtualMachineSnapshot</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>consolidate=None<span class="p">, </span>description=None<span class="p">, </span>memory=None<span class="p">, </span>quiesce=None<span class="p">, </span>remove_children=None<span class="p">, </span>snapshot_name=None<span class="p">, </span>virtual_machine_uuid=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/vsphere/#VirtualMachineSnapshot">VirtualMachineSnapshot</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>consolidate=None<span class="p">, </span>description=None<span class="p">, </span>memory=None<span class="p">, </span>quiesce=None<span class="p">, </span>remove_children=None<span class="p">, </span>snapshot_name=None<span class="p">, </span>virtual_machine_uuid=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewVirtualMachineSnapshot<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#VirtualMachineSnapshotArgs">VirtualMachineSnapshotArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#VirtualMachineSnapshot">VirtualMachineSnapshot</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#VirtualMachineSnapshot">NewVirtualMachineSnapshot</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#VirtualMachineSnapshotArgs">VirtualMachineSnapshotArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#VirtualMachineSnapshot">VirtualMachineSnapshot</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.VirtualMachineSnapshot.html">VirtualMachineSnapshot</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.VirtualMachineSnapshotArgs.html">VirtualMachineSnapshotArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.VirtualMachineSnapshot.html">VirtualMachineSnapshot</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.VirtualMachineSnapshotArgs.html">VirtualMachineSnapshotArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -266,7 +287,9 @@ The VirtualMachineSnapshot resource accepts the following [input]({{< relref "/d
 
     <dt class="property-required"
             title="Required">
-        <span>Description</span>
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -275,7 +298,9 @@ The VirtualMachineSnapshot resource accepts the following [input]({{< relref "/d
 
     <dt class="property-required"
             title="Required">
-        <span>Memory</span>
+        <span id="memory_csharp">
+<a href="#memory_csharp" style="color: inherit; text-decoration: inherit;">Memory</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -285,7 +310,9 @@ virtual machine is included in the snapshot.
 
     <dt class="property-required"
             title="Required">
-        <span>Quiesce</span>
+        <span id="quiesce_csharp">
+<a href="#quiesce_csharp" style="color: inherit; text-decoration: inherit;">Quiesce</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -296,7 +323,9 @@ system in the virtual machine.
 
     <dt class="property-required"
             title="Required">
-        <span>Snapshot<wbr>Name</span>
+        <span id="snapshotname_csharp">
+<a href="#snapshotname_csharp" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -305,7 +334,9 @@ system in the virtual machine.
 
     <dt class="property-required"
             title="Required">
-        <span>Virtual<wbr>Machine<wbr>Uuid</span>
+        <span id="virtualmachineuuid_csharp">
+<a href="#virtualmachineuuid_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Uuid</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -314,7 +345,9 @@ system in the virtual machine.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Consolidate</span>
+        <span id="consolidate_csharp">
+<a href="#consolidate_csharp" style="color: inherit; text-decoration: inherit;">Consolidate</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -325,7 +358,9 @@ destroyed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Remove<wbr>Children</span>
+        <span id="removechildren_csharp">
+<a href="#removechildren_csharp" style="color: inherit; text-decoration: inherit;">Remove<wbr>Children</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -342,7 +377,9 @@ is removed when this resource is destroyed.
 
     <dt class="property-required"
             title="Required">
-        <span>Description</span>
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -351,7 +388,9 @@ is removed when this resource is destroyed.
 
     <dt class="property-required"
             title="Required">
-        <span>Memory</span>
+        <span id="memory_go">
+<a href="#memory_go" style="color: inherit; text-decoration: inherit;">Memory</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -361,7 +400,9 @@ virtual machine is included in the snapshot.
 
     <dt class="property-required"
             title="Required">
-        <span>Quiesce</span>
+        <span id="quiesce_go">
+<a href="#quiesce_go" style="color: inherit; text-decoration: inherit;">Quiesce</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -372,7 +413,9 @@ system in the virtual machine.
 
     <dt class="property-required"
             title="Required">
-        <span>Snapshot<wbr>Name</span>
+        <span id="snapshotname_go">
+<a href="#snapshotname_go" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -381,7 +424,9 @@ system in the virtual machine.
 
     <dt class="property-required"
             title="Required">
-        <span>Virtual<wbr>Machine<wbr>Uuid</span>
+        <span id="virtualmachineuuid_go">
+<a href="#virtualmachineuuid_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Uuid</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -390,7 +435,9 @@ system in the virtual machine.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Consolidate</span>
+        <span id="consolidate_go">
+<a href="#consolidate_go" style="color: inherit; text-decoration: inherit;">Consolidate</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -401,7 +448,9 @@ destroyed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Remove<wbr>Children</span>
+        <span id="removechildren_go">
+<a href="#removechildren_go" style="color: inherit; text-decoration: inherit;">Remove<wbr>Children</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -418,7 +467,9 @@ is removed when this resource is destroyed.
 
     <dt class="property-required"
             title="Required">
-        <span>description</span>
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -427,7 +478,9 @@ is removed when this resource is destroyed.
 
     <dt class="property-required"
             title="Required">
-        <span>memory</span>
+        <span id="memory_nodejs">
+<a href="#memory_nodejs" style="color: inherit; text-decoration: inherit;">memory</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -437,7 +490,9 @@ virtual machine is included in the snapshot.
 
     <dt class="property-required"
             title="Required">
-        <span>quiesce</span>
+        <span id="quiesce_nodejs">
+<a href="#quiesce_nodejs" style="color: inherit; text-decoration: inherit;">quiesce</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -448,7 +503,9 @@ system in the virtual machine.
 
     <dt class="property-required"
             title="Required">
-        <span>snapshot<wbr>Name</span>
+        <span id="snapshotname_nodejs">
+<a href="#snapshotname_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -457,7 +514,9 @@ system in the virtual machine.
 
     <dt class="property-required"
             title="Required">
-        <span>virtual<wbr>Machine<wbr>Uuid</span>
+        <span id="virtualmachineuuid_nodejs">
+<a href="#virtualmachineuuid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Uuid</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -466,7 +525,9 @@ system in the virtual machine.
 
     <dt class="property-optional"
             title="Optional">
-        <span>consolidate</span>
+        <span id="consolidate_nodejs">
+<a href="#consolidate_nodejs" style="color: inherit; text-decoration: inherit;">consolidate</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -477,7 +538,9 @@ destroyed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>remove<wbr>Children</span>
+        <span id="removechildren_nodejs">
+<a href="#removechildren_nodejs" style="color: inherit; text-decoration: inherit;">remove<wbr>Children</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -494,7 +557,9 @@ is removed when this resource is destroyed.
 
     <dt class="property-required"
             title="Required">
-        <span>description</span>
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -503,7 +568,9 @@ is removed when this resource is destroyed.
 
     <dt class="property-required"
             title="Required">
-        <span>memory</span>
+        <span id="memory_python">
+<a href="#memory_python" style="color: inherit; text-decoration: inherit;">memory</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -513,7 +580,9 @@ virtual machine is included in the snapshot.
 
     <dt class="property-required"
             title="Required">
-        <span>quiesce</span>
+        <span id="quiesce_python">
+<a href="#quiesce_python" style="color: inherit; text-decoration: inherit;">quiesce</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -524,7 +593,9 @@ system in the virtual machine.
 
     <dt class="property-required"
             title="Required">
-        <span>snapshot_<wbr>name</span>
+        <span id="snapshot_name_python">
+<a href="#snapshot_name_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -533,7 +604,9 @@ system in the virtual machine.
 
     <dt class="property-required"
             title="Required">
-        <span>virtual_<wbr>machine_<wbr>uuid</span>
+        <span id="virtual_machine_uuid_python">
+<a href="#virtual_machine_uuid_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>uuid</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -542,7 +615,9 @@ system in the virtual machine.
 
     <dt class="property-optional"
             title="Optional">
-        <span>consolidate</span>
+        <span id="consolidate_python">
+<a href="#consolidate_python" style="color: inherit; text-decoration: inherit;">consolidate</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -553,7 +628,9 @@ destroyed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>remove_<wbr>children</span>
+        <span id="remove_children_python">
+<a href="#remove_children_python" style="color: inherit; text-decoration: inherit;">remove_<wbr>children</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -581,7 +658,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -596,7 +675,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -611,7 +692,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -626,7 +709,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -647,7 +732,7 @@ Get an existing VirtualMachineSnapshot resource's state with the given name, ID,
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#VirtualMachineSnapshotState">VirtualMachineSnapshotState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#VirtualMachineSnapshot">VirtualMachineSnapshot</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#VirtualMachineSnapshotState">VirtualMachineSnapshotState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#VirtualMachineSnapshot">VirtualMachineSnapshot</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -655,11 +740,11 @@ Get an existing VirtualMachineSnapshot resource's state with the given name, ID,
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVirtualMachineSnapshot<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#VirtualMachineSnapshotState">VirtualMachineSnapshotState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#VirtualMachineSnapshot">VirtualMachineSnapshot</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVirtualMachineSnapshot<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#VirtualMachineSnapshotState">VirtualMachineSnapshotState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#VirtualMachineSnapshot">VirtualMachineSnapshot</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.VirtualMachineSnapshot.html">VirtualMachineSnapshot</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere..VirtualMachineSnapshotState.html">VirtualMachineSnapshotState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.VirtualMachineSnapshot.html">VirtualMachineSnapshot</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere..VirtualMachineSnapshotState.html">VirtualMachineSnapshotState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -767,7 +852,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Consolidate</span>
+        <span id="state_consolidate_csharp">
+<a href="#state_consolidate_csharp" style="color: inherit; text-decoration: inherit;">Consolidate</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -778,7 +865,9 @@ destroyed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_csharp">
+<a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -787,7 +876,9 @@ destroyed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Memory</span>
+        <span id="state_memory_csharp">
+<a href="#state_memory_csharp" style="color: inherit; text-decoration: inherit;">Memory</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -797,7 +888,9 @@ virtual machine is included in the snapshot.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Quiesce</span>
+        <span id="state_quiesce_csharp">
+<a href="#state_quiesce_csharp" style="color: inherit; text-decoration: inherit;">Quiesce</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -808,7 +901,9 @@ system in the virtual machine.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Remove<wbr>Children</span>
+        <span id="state_removechildren_csharp">
+<a href="#state_removechildren_csharp" style="color: inherit; text-decoration: inherit;">Remove<wbr>Children</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -818,7 +913,9 @@ is removed when this resource is destroyed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Snapshot<wbr>Name</span>
+        <span id="state_snapshotname_csharp">
+<a href="#state_snapshotname_csharp" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -827,7 +924,9 @@ is removed when this resource is destroyed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Virtual<wbr>Machine<wbr>Uuid</span>
+        <span id="state_virtualmachineuuid_csharp">
+<a href="#state_virtualmachineuuid_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Uuid</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -843,7 +942,9 @@ is removed when this resource is destroyed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Consolidate</span>
+        <span id="state_consolidate_go">
+<a href="#state_consolidate_go" style="color: inherit; text-decoration: inherit;">Consolidate</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -854,7 +955,9 @@ destroyed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_go">
+<a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -863,7 +966,9 @@ destroyed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Memory</span>
+        <span id="state_memory_go">
+<a href="#state_memory_go" style="color: inherit; text-decoration: inherit;">Memory</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -873,7 +978,9 @@ virtual machine is included in the snapshot.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Quiesce</span>
+        <span id="state_quiesce_go">
+<a href="#state_quiesce_go" style="color: inherit; text-decoration: inherit;">Quiesce</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -884,7 +991,9 @@ system in the virtual machine.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Remove<wbr>Children</span>
+        <span id="state_removechildren_go">
+<a href="#state_removechildren_go" style="color: inherit; text-decoration: inherit;">Remove<wbr>Children</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -894,7 +1003,9 @@ is removed when this resource is destroyed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Snapshot<wbr>Name</span>
+        <span id="state_snapshotname_go">
+<a href="#state_snapshotname_go" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -903,7 +1014,9 @@ is removed when this resource is destroyed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Virtual<wbr>Machine<wbr>Uuid</span>
+        <span id="state_virtualmachineuuid_go">
+<a href="#state_virtualmachineuuid_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Uuid</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -919,7 +1032,9 @@ is removed when this resource is destroyed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>consolidate</span>
+        <span id="state_consolidate_nodejs">
+<a href="#state_consolidate_nodejs" style="color: inherit; text-decoration: inherit;">consolidate</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -930,7 +1045,9 @@ destroyed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_nodejs">
+<a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -939,7 +1056,9 @@ destroyed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>memory</span>
+        <span id="state_memory_nodejs">
+<a href="#state_memory_nodejs" style="color: inherit; text-decoration: inherit;">memory</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -949,7 +1068,9 @@ virtual machine is included in the snapshot.
 
     <dt class="property-optional"
             title="Optional">
-        <span>quiesce</span>
+        <span id="state_quiesce_nodejs">
+<a href="#state_quiesce_nodejs" style="color: inherit; text-decoration: inherit;">quiesce</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -960,7 +1081,9 @@ system in the virtual machine.
 
     <dt class="property-optional"
             title="Optional">
-        <span>remove<wbr>Children</span>
+        <span id="state_removechildren_nodejs">
+<a href="#state_removechildren_nodejs" style="color: inherit; text-decoration: inherit;">remove<wbr>Children</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -970,7 +1093,9 @@ is removed when this resource is destroyed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>snapshot<wbr>Name</span>
+        <span id="state_snapshotname_nodejs">
+<a href="#state_snapshotname_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -979,7 +1104,9 @@ is removed when this resource is destroyed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>virtual<wbr>Machine<wbr>Uuid</span>
+        <span id="state_virtualmachineuuid_nodejs">
+<a href="#state_virtualmachineuuid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Uuid</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -995,7 +1122,9 @@ is removed when this resource is destroyed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>consolidate</span>
+        <span id="state_consolidate_python">
+<a href="#state_consolidate_python" style="color: inherit; text-decoration: inherit;">consolidate</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1006,7 +1135,9 @@ destroyed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_python">
+<a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1015,7 +1146,9 @@ destroyed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>memory</span>
+        <span id="state_memory_python">
+<a href="#state_memory_python" style="color: inherit; text-decoration: inherit;">memory</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1025,7 +1158,9 @@ virtual machine is included in the snapshot.
 
     <dt class="property-optional"
             title="Optional">
-        <span>quiesce</span>
+        <span id="state_quiesce_python">
+<a href="#state_quiesce_python" style="color: inherit; text-decoration: inherit;">quiesce</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1036,7 +1171,9 @@ system in the virtual machine.
 
     <dt class="property-optional"
             title="Optional">
-        <span>remove_<wbr>children</span>
+        <span id="state_remove_children_python">
+<a href="#state_remove_children_python" style="color: inherit; text-decoration: inherit;">remove_<wbr>children</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1046,7 +1183,9 @@ is removed when this resource is destroyed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>snapshot_<wbr>name</span>
+        <span id="state_snapshot_name_python">
+<a href="#state_snapshot_name_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1055,7 +1194,9 @@ is removed when this resource is destroyed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>virtual_<wbr>machine_<wbr>uuid</span>
+        <span id="state_virtual_machine_uuid_python">
+<a href="#state_virtual_machine_uuid_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>uuid</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
