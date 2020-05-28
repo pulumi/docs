@@ -225,7 +225,9 @@ The BgpSession resource accepts the following [input]({{< relref "/docs/intro/co
 
     <dt class="property-required"
             title="Required">
-        <span>Address<wbr>Family</span>
+        <span id="addressfamily_csharp">
+<a href="#addressfamily_csharp" style="color: inherit; text-decoration: inherit;">Address<wbr>Family</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -234,7 +236,9 @@ The BgpSession resource accepts the following [input]({{< relref "/docs/intro/co
 
     <dt class="property-required"
             title="Required">
-        <span>Device<wbr>Id</span>
+        <span id="deviceid_csharp">
+<a href="#deviceid_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -243,7 +247,9 @@ The BgpSession resource accepts the following [input]({{< relref "/docs/intro/co
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default<wbr>Route</span>
+        <span id="defaultroute_csharp">
+<a href="#defaultroute_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Route</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -259,7 +265,9 @@ The BgpSession resource accepts the following [input]({{< relref "/docs/intro/co
 
     <dt class="property-required"
             title="Required">
-        <span>Address<wbr>Family</span>
+        <span id="addressfamily_go">
+<a href="#addressfamily_go" style="color: inherit; text-decoration: inherit;">Address<wbr>Family</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -268,7 +276,9 @@ The BgpSession resource accepts the following [input]({{< relref "/docs/intro/co
 
     <dt class="property-required"
             title="Required">
-        <span>Device<wbr>Id</span>
+        <span id="deviceid_go">
+<a href="#deviceid_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -277,7 +287,9 @@ The BgpSession resource accepts the following [input]({{< relref "/docs/intro/co
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default<wbr>Route</span>
+        <span id="defaultroute_go">
+<a href="#defaultroute_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Route</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -293,7 +305,9 @@ The BgpSession resource accepts the following [input]({{< relref "/docs/intro/co
 
     <dt class="property-required"
             title="Required">
-        <span>address<wbr>Family</span>
+        <span id="addressfamily_nodejs">
+<a href="#addressfamily_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Family</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -302,7 +316,9 @@ The BgpSession resource accepts the following [input]({{< relref "/docs/intro/co
 
     <dt class="property-required"
             title="Required">
-        <span>device<wbr>Id</span>
+        <span id="deviceid_nodejs">
+<a href="#deviceid_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -311,7 +327,9 @@ The BgpSession resource accepts the following [input]({{< relref "/docs/intro/co
 
     <dt class="property-optional"
             title="Optional">
-        <span>default<wbr>Route</span>
+        <span id="defaultroute_nodejs">
+<a href="#defaultroute_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Route</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -327,7 +345,9 @@ The BgpSession resource accepts the following [input]({{< relref "/docs/intro/co
 
     <dt class="property-required"
             title="Required">
-        <span>address_<wbr>family</span>
+        <span id="address_family_python">
+<a href="#address_family_python" style="color: inherit; text-decoration: inherit;">address_<wbr>family</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -336,7 +356,9 @@ The BgpSession resource accepts the following [input]({{< relref "/docs/intro/co
 
     <dt class="property-required"
             title="Required">
-        <span>device_<wbr>id</span>
+        <span id="device_id_python">
+<a href="#device_id_python" style="color: inherit; text-decoration: inherit;">device_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -345,7 +367,9 @@ The BgpSession resource accepts the following [input]({{< relref "/docs/intro/co
 
     <dt class="property-optional"
             title="Optional">
-        <span>default_<wbr>route</span>
+        <span id="default_route_python">
+<a href="#default_route_python" style="color: inherit; text-decoration: inherit;">default_<wbr>route</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -372,7 +396,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -380,7 +406,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Status</span>
+        <span id="status_csharp">
+<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -395,7 +423,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -403,7 +433,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Status</span>
+        <span id="status_go">
+<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -418,7 +450,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -426,7 +460,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>status</span>
+        <span id="status_nodejs">
+<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -441,7 +477,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -449,7 +487,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>status</span>
+        <span id="status_python">
+<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -590,7 +630,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Address<wbr>Family</span>
+        <span id="state_addressfamily_csharp">
+<a href="#state_addressfamily_csharp" style="color: inherit; text-decoration: inherit;">Address<wbr>Family</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -599,7 +641,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default<wbr>Route</span>
+        <span id="state_defaultroute_csharp">
+<a href="#state_defaultroute_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Route</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -608,7 +652,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Device<wbr>Id</span>
+        <span id="state_deviceid_csharp">
+<a href="#state_deviceid_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -617,7 +663,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Status</span>
+        <span id="state_status_csharp">
+<a href="#state_status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -632,7 +680,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Address<wbr>Family</span>
+        <span id="state_addressfamily_go">
+<a href="#state_addressfamily_go" style="color: inherit; text-decoration: inherit;">Address<wbr>Family</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -641,7 +691,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default<wbr>Route</span>
+        <span id="state_defaultroute_go">
+<a href="#state_defaultroute_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Route</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -650,7 +702,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Device<wbr>Id</span>
+        <span id="state_deviceid_go">
+<a href="#state_deviceid_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -659,7 +713,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Status</span>
+        <span id="state_status_go">
+<a href="#state_status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -674,7 +730,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>address<wbr>Family</span>
+        <span id="state_addressfamily_nodejs">
+<a href="#state_addressfamily_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Family</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -683,7 +741,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>default<wbr>Route</span>
+        <span id="state_defaultroute_nodejs">
+<a href="#state_defaultroute_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Route</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -692,7 +752,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>device<wbr>Id</span>
+        <span id="state_deviceid_nodejs">
+<a href="#state_deviceid_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -701,7 +763,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>status</span>
+        <span id="state_status_nodejs">
+<a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -716,7 +780,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>address_<wbr>family</span>
+        <span id="state_address_family_python">
+<a href="#state_address_family_python" style="color: inherit; text-decoration: inherit;">address_<wbr>family</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -725,7 +791,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>default_<wbr>route</span>
+        <span id="state_default_route_python">
+<a href="#state_default_route_python" style="color: inherit; text-decoration: inherit;">default_<wbr>route</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -734,7 +802,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>device_<wbr>id</span>
+        <span id="state_device_id_python">
+<a href="#state_device_id_python" style="color: inherit; text-decoration: inherit;">device_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -743,7 +813,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>status</span>
+        <span id="state_status_python">
+<a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

@@ -24,7 +24,25 @@ To learn more about using BGP in Packet, see the packet..BgpSession resource doc
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Packet = Pulumi.Packet;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var test = Output.Create(Packet.GetDeviceBgpNeighbors.InvokeAsync(new Packet.GetDeviceBgpNeighborsArgs
+        {
+            DeviceId = "4c641195-25e5-4c3c-b2b7-4cd7a42c7b40",
+        }));
+        this.BgpNeighborsListing = test.Apply(test => test.BgpNeighbors);
+    }
+
+    [Output("bgpNeighborsListing")]
+    public Output<string> BgpNeighborsListing { get; set; }
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -94,7 +112,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Device<wbr>Id</span>
+        <span id="deviceid_csharp">
+<a href="#deviceid_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -110,7 +130,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Device<wbr>Id</span>
+        <span id="deviceid_go">
+<a href="#deviceid_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -126,7 +148,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>device<wbr>Id</span>
+        <span id="deviceid_nodejs">
+<a href="#deviceid_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -142,7 +166,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>device_<wbr>id</span>
+        <span id="device_id_python">
+<a href="#device_id_python" style="color: inherit; text-decoration: inherit;">device_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -171,7 +197,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Bgp<wbr>Neighbors</span>
+        <span id="bgpneighbors_csharp">
+<a href="#bgpneighbors_csharp" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Neighbors</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdevicebgpneighborsbgpneighbor">List&lt;Get<wbr>Device<wbr>Bgp<wbr>Neighbors<wbr>Bgp<wbr>Neighbor&gt;</a></span>
     </dt>
@@ -180,7 +208,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Device<wbr>Id</span>
+        <span id="deviceid_csharp">
+<a href="#deviceid_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -188,7 +218,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -204,7 +236,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Bgp<wbr>Neighbors</span>
+        <span id="bgpneighbors_go">
+<a href="#bgpneighbors_go" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Neighbors</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdevicebgpneighborsbgpneighbor">[]Get<wbr>Device<wbr>Bgp<wbr>Neighbors<wbr>Bgp<wbr>Neighbor</a></span>
     </dt>
@@ -213,7 +247,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Device<wbr>Id</span>
+        <span id="deviceid_go">
+<a href="#deviceid_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -221,7 +257,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -237,7 +275,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>bgp<wbr>Neighbors</span>
+        <span id="bgpneighbors_nodejs">
+<a href="#bgpneighbors_nodejs" style="color: inherit; text-decoration: inherit;">bgp<wbr>Neighbors</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdevicebgpneighborsbgpneighbor">Get<wbr>Device<wbr>Bgp<wbr>Neighbors<wbr>Bgp<wbr>Neighbor[]</a></span>
     </dt>
@@ -246,7 +286,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>device<wbr>Id</span>
+        <span id="deviceid_nodejs">
+<a href="#deviceid_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -254,7 +296,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -270,7 +314,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>bgp_<wbr>neighbors</span>
+        <span id="bgp_neighbors_python">
+<a href="#bgp_neighbors_python" style="color: inherit; text-decoration: inherit;">bgp_<wbr>neighbors</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdevicebgpneighborsbgpneighbor">List[Get<wbr>Device<wbr>Bgp<wbr>Neighbors<wbr>Bgp<wbr>Neighbor]</a></span>
     </dt>
@@ -279,7 +325,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>device_<wbr>id</span>
+        <span id="device_id_python">
+<a href="#device_id_python" style="color: inherit; text-decoration: inherit;">device_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -287,7 +335,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -327,7 +377,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Address<wbr>Family</span>
+        <span id="addressfamily_csharp">
+<a href="#addressfamily_csharp" style="color: inherit; text-decoration: inherit;">Address<wbr>Family</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -336,7 +388,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Customer<wbr>As</span>
+        <span id="customeras_csharp">
+<a href="#customeras_csharp" style="color: inherit; text-decoration: inherit;">Customer<wbr>As</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -345,7 +399,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Customer<wbr>Ip</span>
+        <span id="customerip_csharp">
+<a href="#customerip_csharp" style="color: inherit; text-decoration: inherit;">Customer<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -354,7 +410,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Md5Enabled</span>
+        <span id="md5enabled_csharp">
+<a href="#md5enabled_csharp" style="color: inherit; text-decoration: inherit;">Md5Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -363,7 +421,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Md5Password</span>
+        <span id="md5password_csharp">
+<a href="#md5password_csharp" style="color: inherit; text-decoration: inherit;">Md5Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -372,7 +432,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Multihop</span>
+        <span id="multihop_csharp">
+<a href="#multihop_csharp" style="color: inherit; text-decoration: inherit;">Multihop</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -381,7 +443,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Peer<wbr>As</span>
+        <span id="peeras_csharp">
+<a href="#peeras_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>As</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -390,7 +454,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Routes<wbr>Ins</span>
+        <span id="routesins_csharp">
+<a href="#routesins_csharp" style="color: inherit; text-decoration: inherit;">Routes<wbr>Ins</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdevicebgpneighborsbgpneighborroutesin">List&lt;Get<wbr>Device<wbr>Bgp<wbr>Neighbors<wbr>Bgp<wbr>Neighbor<wbr>Routes<wbr>In<wbr>Args&gt;</a></span>
     </dt>
@@ -399,7 +465,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Routes<wbr>Outs</span>
+        <span id="routesouts_csharp">
+<a href="#routesouts_csharp" style="color: inherit; text-decoration: inherit;">Routes<wbr>Outs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdevicebgpneighborsbgpneighborroutesout">List&lt;Get<wbr>Device<wbr>Bgp<wbr>Neighbors<wbr>Bgp<wbr>Neighbor<wbr>Routes<wbr>Out<wbr>Args&gt;</a></span>
     </dt>
@@ -408,7 +476,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Peer<wbr>Ips</span>
+        <span id="peerips_csharp">
+<a href="#peerips_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>Ips</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -424,7 +494,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Address<wbr>Family</span>
+        <span id="addressfamily_go">
+<a href="#addressfamily_go" style="color: inherit; text-decoration: inherit;">Address<wbr>Family</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -433,7 +505,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Customer<wbr>As</span>
+        <span id="customeras_go">
+<a href="#customeras_go" style="color: inherit; text-decoration: inherit;">Customer<wbr>As</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -442,7 +516,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Customer<wbr>Ip</span>
+        <span id="customerip_go">
+<a href="#customerip_go" style="color: inherit; text-decoration: inherit;">Customer<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -451,7 +527,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Md5Enabled</span>
+        <span id="md5enabled_go">
+<a href="#md5enabled_go" style="color: inherit; text-decoration: inherit;">Md5Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -460,7 +538,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Md5Password</span>
+        <span id="md5password_go">
+<a href="#md5password_go" style="color: inherit; text-decoration: inherit;">Md5Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -469,7 +549,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Multihop</span>
+        <span id="multihop_go">
+<a href="#multihop_go" style="color: inherit; text-decoration: inherit;">Multihop</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -478,7 +560,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Peer<wbr>As</span>
+        <span id="peeras_go">
+<a href="#peeras_go" style="color: inherit; text-decoration: inherit;">Peer<wbr>As</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -487,7 +571,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Routes<wbr>Ins</span>
+        <span id="routesins_go">
+<a href="#routesins_go" style="color: inherit; text-decoration: inherit;">Routes<wbr>Ins</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdevicebgpneighborsbgpneighborroutesin">[]Get<wbr>Device<wbr>Bgp<wbr>Neighbors<wbr>Bgp<wbr>Neighbor<wbr>Routes<wbr>In</a></span>
     </dt>
@@ -496,7 +582,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Routes<wbr>Outs</span>
+        <span id="routesouts_go">
+<a href="#routesouts_go" style="color: inherit; text-decoration: inherit;">Routes<wbr>Outs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdevicebgpneighborsbgpneighborroutesout">[]Get<wbr>Device<wbr>Bgp<wbr>Neighbors<wbr>Bgp<wbr>Neighbor<wbr>Routes<wbr>Out</a></span>
     </dt>
@@ -505,7 +593,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Peer<wbr>Ips</span>
+        <span id="peerips_go">
+<a href="#peerips_go" style="color: inherit; text-decoration: inherit;">Peer<wbr>Ips</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -521,7 +611,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>address<wbr>Family</span>
+        <span id="addressfamily_nodejs">
+<a href="#addressfamily_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Family</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -530,7 +622,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>customer<wbr>As</span>
+        <span id="customeras_nodejs">
+<a href="#customeras_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>As</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -539,7 +633,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>customer<wbr>Ip</span>
+        <span id="customerip_nodejs">
+<a href="#customerip_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -548,7 +644,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>md5Enabled</span>
+        <span id="md5enabled_nodejs">
+<a href="#md5enabled_nodejs" style="color: inherit; text-decoration: inherit;">md5Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -557,7 +655,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>md5Password</span>
+        <span id="md5password_nodejs">
+<a href="#md5password_nodejs" style="color: inherit; text-decoration: inherit;">md5Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -566,7 +666,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>multihop</span>
+        <span id="multihop_nodejs">
+<a href="#multihop_nodejs" style="color: inherit; text-decoration: inherit;">multihop</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -575,7 +677,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>peer<wbr>As</span>
+        <span id="peeras_nodejs">
+<a href="#peeras_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>As</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -584,7 +688,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>routes<wbr>Ins</span>
+        <span id="routesins_nodejs">
+<a href="#routesins_nodejs" style="color: inherit; text-decoration: inherit;">routes<wbr>Ins</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdevicebgpneighborsbgpneighborroutesin">Get<wbr>Device<wbr>Bgp<wbr>Neighbors<wbr>Bgp<wbr>Neighbor<wbr>Routes<wbr>In[]</a></span>
     </dt>
@@ -593,7 +699,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>routes<wbr>Outs</span>
+        <span id="routesouts_nodejs">
+<a href="#routesouts_nodejs" style="color: inherit; text-decoration: inherit;">routes<wbr>Outs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdevicebgpneighborsbgpneighborroutesout">Get<wbr>Device<wbr>Bgp<wbr>Neighbors<wbr>Bgp<wbr>Neighbor<wbr>Routes<wbr>Out[]</a></span>
     </dt>
@@ -602,7 +710,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>peer<wbr>Ips</span>
+        <span id="peerips_nodejs">
+<a href="#peerips_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Ips</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -618,7 +728,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>address_<wbr>family</span>
+        <span id="address_family_python">
+<a href="#address_family_python" style="color: inherit; text-decoration: inherit;">address_<wbr>family</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -627,7 +739,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>customer<wbr>As</span>
+        <span id="customeras_python">
+<a href="#customeras_python" style="color: inherit; text-decoration: inherit;">customer<wbr>As</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -636,7 +750,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>customer<wbr>Ip</span>
+        <span id="customerip_python">
+<a href="#customerip_python" style="color: inherit; text-decoration: inherit;">customer<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -645,7 +761,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>md5Enabled</span>
+        <span id="md5enabled_python">
+<a href="#md5enabled_python" style="color: inherit; text-decoration: inherit;">md5Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -654,7 +772,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>md5Password</span>
+        <span id="md5password_python">
+<a href="#md5password_python" style="color: inherit; text-decoration: inherit;">md5Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -663,7 +783,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>multihop</span>
+        <span id="multihop_python">
+<a href="#multihop_python" style="color: inherit; text-decoration: inherit;">multihop</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -672,7 +794,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>peer<wbr>As</span>
+        <span id="peeras_python">
+<a href="#peeras_python" style="color: inherit; text-decoration: inherit;">peer<wbr>As</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -681,7 +805,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>routes<wbr>Ins</span>
+        <span id="routesins_python">
+<a href="#routesins_python" style="color: inherit; text-decoration: inherit;">routes<wbr>Ins</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdevicebgpneighborsbgpneighborroutesin">List[Get<wbr>Device<wbr>Bgp<wbr>Neighbors<wbr>Bgp<wbr>Neighbor<wbr>Routes<wbr>In]</a></span>
     </dt>
@@ -690,7 +816,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>routes<wbr>Outs</span>
+        <span id="routesouts_python">
+<a href="#routesouts_python" style="color: inherit; text-decoration: inherit;">routes<wbr>Outs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdevicebgpneighborsbgpneighborroutesout">List[Get<wbr>Device<wbr>Bgp<wbr>Neighbors<wbr>Bgp<wbr>Neighbor<wbr>Routes<wbr>Out]</a></span>
     </dt>
@@ -699,7 +827,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>peer<wbr>Ips</span>
+        <span id="peerips_python">
+<a href="#peerips_python" style="color: inherit; text-decoration: inherit;">peer<wbr>Ips</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -733,7 +863,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Exact</span>
+        <span id="exact_csharp">
+<a href="#exact_csharp" style="color: inherit; text-decoration: inherit;">Exact</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -742,7 +874,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Route</span>
+        <span id="route_csharp">
+<a href="#route_csharp" style="color: inherit; text-decoration: inherit;">Route</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -758,7 +892,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Exact</span>
+        <span id="exact_go">
+<a href="#exact_go" style="color: inherit; text-decoration: inherit;">Exact</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -767,7 +903,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Route</span>
+        <span id="route_go">
+<a href="#route_go" style="color: inherit; text-decoration: inherit;">Route</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -783,7 +921,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>exact</span>
+        <span id="exact_nodejs">
+<a href="#exact_nodejs" style="color: inherit; text-decoration: inherit;">exact</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -792,7 +932,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>route</span>
+        <span id="route_nodejs">
+<a href="#route_nodejs" style="color: inherit; text-decoration: inherit;">route</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -808,7 +950,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>exact</span>
+        <span id="exact_python">
+<a href="#exact_python" style="color: inherit; text-decoration: inherit;">exact</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -817,7 +961,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>route</span>
+        <span id="route_python">
+<a href="#route_python" style="color: inherit; text-decoration: inherit;">route</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -851,7 +997,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Exact</span>
+        <span id="exact_csharp">
+<a href="#exact_csharp" style="color: inherit; text-decoration: inherit;">Exact</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -860,7 +1008,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Route</span>
+        <span id="route_csharp">
+<a href="#route_csharp" style="color: inherit; text-decoration: inherit;">Route</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -876,7 +1026,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Exact</span>
+        <span id="exact_go">
+<a href="#exact_go" style="color: inherit; text-decoration: inherit;">Exact</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -885,7 +1037,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Route</span>
+        <span id="route_go">
+<a href="#route_go" style="color: inherit; text-decoration: inherit;">Route</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -901,7 +1055,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>exact</span>
+        <span id="exact_nodejs">
+<a href="#exact_nodejs" style="color: inherit; text-decoration: inherit;">exact</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -910,7 +1066,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>route</span>
+        <span id="route_nodejs">
+<a href="#route_nodejs" style="color: inherit; text-decoration: inherit;">route</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -926,7 +1084,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>exact</span>
+        <span id="exact_python">
+<a href="#exact_python" style="color: inherit; text-decoration: inherit;">exact</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -935,7 +1095,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>route</span>
+        <span id="route_python">
+<a href="#route_python" style="color: inherit; text-decoration: inherit;">route</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

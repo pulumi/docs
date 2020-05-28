@@ -18,53 +18,9 @@ modify, and delete devices.
 [Read more about sensitive data in state](https://www.terraform.io/docs/state/sensitive-data.html).
 
 
-
-
 {{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_packet as packet
-
-web1 = packet.Device("web1",
-    hostname="tf.coreos2",
-    plan="t1.small.x86",
-    facilities=["ewr1"],
-    operating_system="coreos_stable",
-    billing_cycle="hourly",
-    project_id=local["project_id"])
-```
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as packet from "@pulumi/packet";
-
-const web1 = new packet.Device("web1", {
-    hostname: "tf.coreos2",
-    plan: "t1.small.x86",
-    facilities: ["ewr1"],
-    operatingSystem: "coreos_stable",
-    billingCycle: "hourly",
-    projectId: local.project_id,
-});
-```
-{{% /example %}}
-
 {{% /examples %}}
+
 
 
 ## Create a Device Resource {#create}
@@ -250,7 +206,9 @@ The Device resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>Billing<wbr>Cycle</span>
+        <span id="billingcycle_csharp">
+<a href="#billingcycle_csharp" style="color: inherit; text-decoration: inherit;">Billing<wbr>Cycle</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -259,7 +217,9 @@ The Device resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>Facilities</span>
+        <span id="facilities_csharp">
+<a href="#facilities_csharp" style="color: inherit; text-decoration: inherit;">Facilities</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
@@ -268,7 +228,9 @@ The Device resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>Hostname</span>
+        <span id="hostname_csharp">
+<a href="#hostname_csharp" style="color: inherit; text-decoration: inherit;">Hostname</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -277,7 +239,9 @@ The Device resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>Operating<wbr>System</span>
+        <span id="operatingsystem_csharp">
+<a href="#operatingsystem_csharp" style="color: inherit; text-decoration: inherit;">Operating<wbr>System</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -286,7 +250,9 @@ The Device resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>Plan</span>
+        <span id="plan_csharp">
+<a href="#plan_csharp" style="color: inherit; text-decoration: inherit;">Plan</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -295,7 +261,9 @@ The Device resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>Project<wbr>Id</span>
+        <span id="projectid_csharp">
+<a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -304,7 +272,9 @@ The Device resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>Always<wbr>Pxe</span>
+        <span id="alwayspxe_csharp">
+<a href="#alwayspxe_csharp" style="color: inherit; text-decoration: inherit;">Always<wbr>Pxe</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -314,7 +284,9 @@ continue to boot via iPXE on reboots.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -323,7 +295,9 @@ continue to boot via iPXE on reboots.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Force<wbr>Detach<wbr>Volumes</span>
+        <span id="forcedetachvolumes_csharp">
+<a href="#forcedetachvolumes_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Detach<wbr>Volumes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -332,7 +306,9 @@ continue to boot via iPXE on reboots.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Hardware<wbr>Reservation<wbr>Id</span>
+        <span id="hardwarereservationid_csharp">
+<a href="#hardwarereservationid_csharp" style="color: inherit; text-decoration: inherit;">Hardware<wbr>Reservation<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -342,7 +318,9 @@ continue to boot via iPXE on reboots.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ip<wbr>Addresses</span>
+        <span id="ipaddresses_csharp">
+<a href="#ipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Addresses</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deviceipaddress">List&lt;Device<wbr>Ip<wbr>Address<wbr>Args&gt;</a></span>
     </dt>
@@ -351,7 +329,9 @@ continue to boot via iPXE on reboots.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ipxe<wbr>Script<wbr>Url</span>
+        <span id="ipxescripturl_csharp">
+<a href="#ipxescripturl_csharp" style="color: inherit; text-decoration: inherit;">Ipxe<wbr>Script<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -363,7 +343,9 @@ doc.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Network<wbr>Type</span>
+        <span id="networktype_csharp">
+<a href="#networktype_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -371,7 +353,9 @@ doc.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project<wbr>Ssh<wbr>Key<wbr>Ids</span>
+        <span id="projectsshkeyids_csharp">
+<a href="#projectsshkeyids_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Ssh<wbr>Key<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -379,7 +363,9 @@ doc.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Storage</span>
+        <span id="storage_csharp">
+<a href="#storage_csharp" style="color: inherit; text-decoration: inherit;">Storage</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -389,7 +375,9 @@ doc.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -398,7 +386,9 @@ doc.
 
     <dt class="property-optional"
             title="Optional">
-        <span>User<wbr>Data</span>
+        <span id="userdata_csharp">
+<a href="#userdata_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -407,7 +397,9 @@ doc.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Wait<wbr>For<wbr>Reservation<wbr>Deprovision</span>
+        <span id="waitforreservationdeprovision_csharp">
+<a href="#waitforreservationdeprovision_csharp" style="color: inherit; text-decoration: inherit;">Wait<wbr>For<wbr>Reservation<wbr>Deprovision</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -423,7 +415,9 @@ doc.
 
     <dt class="property-required"
             title="Required">
-        <span>Billing<wbr>Cycle</span>
+        <span id="billingcycle_go">
+<a href="#billingcycle_go" style="color: inherit; text-decoration: inherit;">Billing<wbr>Cycle</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -432,7 +426,9 @@ doc.
 
     <dt class="property-required"
             title="Required">
-        <span>Facilities</span>
+        <span id="facilities_go">
+<a href="#facilities_go" style="color: inherit; text-decoration: inherit;">Facilities</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
@@ -441,7 +437,9 @@ doc.
 
     <dt class="property-required"
             title="Required">
-        <span>Hostname</span>
+        <span id="hostname_go">
+<a href="#hostname_go" style="color: inherit; text-decoration: inherit;">Hostname</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -450,7 +448,9 @@ doc.
 
     <dt class="property-required"
             title="Required">
-        <span>Operating<wbr>System</span>
+        <span id="operatingsystem_go">
+<a href="#operatingsystem_go" style="color: inherit; text-decoration: inherit;">Operating<wbr>System</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -459,7 +459,9 @@ doc.
 
     <dt class="property-required"
             title="Required">
-        <span>Plan</span>
+        <span id="plan_go">
+<a href="#plan_go" style="color: inherit; text-decoration: inherit;">Plan</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -468,7 +470,9 @@ doc.
 
     <dt class="property-required"
             title="Required">
-        <span>Project<wbr>Id</span>
+        <span id="projectid_go">
+<a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -477,7 +481,9 @@ doc.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Always<wbr>Pxe</span>
+        <span id="alwayspxe_go">
+<a href="#alwayspxe_go" style="color: inherit; text-decoration: inherit;">Always<wbr>Pxe</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -487,7 +493,9 @@ continue to boot via iPXE on reboots.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -496,7 +504,9 @@ continue to boot via iPXE on reboots.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Force<wbr>Detach<wbr>Volumes</span>
+        <span id="forcedetachvolumes_go">
+<a href="#forcedetachvolumes_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Detach<wbr>Volumes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -505,7 +515,9 @@ continue to boot via iPXE on reboots.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Hardware<wbr>Reservation<wbr>Id</span>
+        <span id="hardwarereservationid_go">
+<a href="#hardwarereservationid_go" style="color: inherit; text-decoration: inherit;">Hardware<wbr>Reservation<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -515,7 +527,9 @@ continue to boot via iPXE on reboots.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ip<wbr>Addresses</span>
+        <span id="ipaddresses_go">
+<a href="#ipaddresses_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Addresses</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deviceipaddress">[]Device<wbr>Ip<wbr>Address</a></span>
     </dt>
@@ -524,7 +538,9 @@ continue to boot via iPXE on reboots.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ipxe<wbr>Script<wbr>Url</span>
+        <span id="ipxescripturl_go">
+<a href="#ipxescripturl_go" style="color: inherit; text-decoration: inherit;">Ipxe<wbr>Script<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -536,7 +552,9 @@ doc.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Network<wbr>Type</span>
+        <span id="networktype_go">
+<a href="#networktype_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -544,7 +562,9 @@ doc.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project<wbr>Ssh<wbr>Key<wbr>Ids</span>
+        <span id="projectsshkeyids_go">
+<a href="#projectsshkeyids_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Ssh<wbr>Key<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -552,7 +572,9 @@ doc.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Storage</span>
+        <span id="storage_go">
+<a href="#storage_go" style="color: inherit; text-decoration: inherit;">Storage</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -562,7 +584,9 @@ doc.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -571,7 +595,9 @@ doc.
 
     <dt class="property-optional"
             title="Optional">
-        <span>User<wbr>Data</span>
+        <span id="userdata_go">
+<a href="#userdata_go" style="color: inherit; text-decoration: inherit;">User<wbr>Data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -580,7 +606,9 @@ doc.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Wait<wbr>For<wbr>Reservation<wbr>Deprovision</span>
+        <span id="waitforreservationdeprovision_go">
+<a href="#waitforreservationdeprovision_go" style="color: inherit; text-decoration: inherit;">Wait<wbr>For<wbr>Reservation<wbr>Deprovision</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -596,7 +624,9 @@ doc.
 
     <dt class="property-required"
             title="Required">
-        <span>billing<wbr>Cycle</span>
+        <span id="billingcycle_nodejs">
+<a href="#billingcycle_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Cycle</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Billing<wbr>Cycle</span>
     </dt>
@@ -605,7 +635,9 @@ doc.
 
     <dt class="property-required"
             title="Required">
-        <span>facilities</span>
+        <span id="facilities_nodejs">
+<a href="#facilities_nodejs" style="color: inherit; text-decoration: inherit;">facilities</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Facility[]</span>
     </dt>
@@ -614,7 +646,9 @@ doc.
 
     <dt class="property-required"
             title="Required">
-        <span>hostname</span>
+        <span id="hostname_nodejs">
+<a href="#hostname_nodejs" style="color: inherit; text-decoration: inherit;">hostname</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -623,7 +657,9 @@ doc.
 
     <dt class="property-required"
             title="Required">
-        <span>operating<wbr>System</span>
+        <span id="operatingsystem_nodejs">
+<a href="#operatingsystem_nodejs" style="color: inherit; text-decoration: inherit;">operating<wbr>System</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Operating<wbr>System</span>
     </dt>
@@ -632,7 +668,9 @@ doc.
 
     <dt class="property-required"
             title="Required">
-        <span>plan</span>
+        <span id="plan_nodejs">
+<a href="#plan_nodejs" style="color: inherit; text-decoration: inherit;">plan</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Plan</span>
     </dt>
@@ -641,7 +679,9 @@ doc.
 
     <dt class="property-required"
             title="Required">
-        <span>project<wbr>Id</span>
+        <span id="projectid_nodejs">
+<a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -650,7 +690,9 @@ doc.
 
     <dt class="property-optional"
             title="Optional">
-        <span>always<wbr>Pxe</span>
+        <span id="alwayspxe_nodejs">
+<a href="#alwayspxe_nodejs" style="color: inherit; text-decoration: inherit;">always<wbr>Pxe</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -660,7 +702,9 @@ continue to boot via iPXE on reboots.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -669,7 +713,9 @@ continue to boot via iPXE on reboots.
 
     <dt class="property-optional"
             title="Optional">
-        <span>force<wbr>Detach<wbr>Volumes</span>
+        <span id="forcedetachvolumes_nodejs">
+<a href="#forcedetachvolumes_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Detach<wbr>Volumes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -678,7 +724,9 @@ continue to boot via iPXE on reboots.
 
     <dt class="property-optional"
             title="Optional">
-        <span>hardware<wbr>Reservation<wbr>Id</span>
+        <span id="hardwarereservationid_nodejs">
+<a href="#hardwarereservationid_nodejs" style="color: inherit; text-decoration: inherit;">hardware<wbr>Reservation<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -688,7 +736,9 @@ continue to boot via iPXE on reboots.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ip<wbr>Addresses</span>
+        <span id="ipaddresses_nodejs">
+<a href="#ipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Addresses</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deviceipaddress">Device<wbr>Ip<wbr>Address[]</a></span>
     </dt>
@@ -697,7 +747,9 @@ continue to boot via iPXE on reboots.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ipxe<wbr>Script<wbr>Url</span>
+        <span id="ipxescripturl_nodejs">
+<a href="#ipxescripturl_nodejs" style="color: inherit; text-decoration: inherit;">ipxe<wbr>Script<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -709,7 +761,9 @@ doc.
 
     <dt class="property-optional"
             title="Optional">
-        <span>network<wbr>Type</span>
+        <span id="networktype_nodejs">
+<a href="#networktype_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Network<wbr>Type</span>
     </dt>
@@ -717,7 +771,9 @@ doc.
 
     <dt class="property-optional"
             title="Optional">
-        <span>project<wbr>Ssh<wbr>Key<wbr>Ids</span>
+        <span id="projectsshkeyids_nodejs">
+<a href="#projectsshkeyids_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Ssh<wbr>Key<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -725,7 +781,9 @@ doc.
 
     <dt class="property-optional"
             title="Optional">
-        <span>storage</span>
+        <span id="storage_nodejs">
+<a href="#storage_nodejs" style="color: inherit; text-decoration: inherit;">storage</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -735,7 +793,9 @@ doc.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -744,7 +804,9 @@ doc.
 
     <dt class="property-optional"
             title="Optional">
-        <span>user<wbr>Data</span>
+        <span id="userdata_nodejs">
+<a href="#userdata_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -753,7 +815,9 @@ doc.
 
     <dt class="property-optional"
             title="Optional">
-        <span>wait<wbr>For<wbr>Reservation<wbr>Deprovision</span>
+        <span id="waitforreservationdeprovision_nodejs">
+<a href="#waitforreservationdeprovision_nodejs" style="color: inherit; text-decoration: inherit;">wait<wbr>For<wbr>Reservation<wbr>Deprovision</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -769,7 +833,9 @@ doc.
 
     <dt class="property-required"
             title="Required">
-        <span>billing_<wbr>cycle</span>
+        <span id="billing_cycle_python">
+<a href="#billing_cycle_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>cycle</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -778,7 +844,9 @@ doc.
 
     <dt class="property-required"
             title="Required">
-        <span>facilities</span>
+        <span id="facilities_python">
+<a href="#facilities_python" style="color: inherit; text-decoration: inherit;">facilities</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">List[Facility]</span>
     </dt>
@@ -787,7 +855,9 @@ doc.
 
     <dt class="property-required"
             title="Required">
-        <span>hostname</span>
+        <span id="hostname_python">
+<a href="#hostname_python" style="color: inherit; text-decoration: inherit;">hostname</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -796,7 +866,9 @@ doc.
 
     <dt class="property-required"
             title="Required">
-        <span>operating_<wbr>system</span>
+        <span id="operating_system_python">
+<a href="#operating_system_python" style="color: inherit; text-decoration: inherit;">operating_<wbr>system</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -805,7 +877,9 @@ doc.
 
     <dt class="property-required"
             title="Required">
-        <span>plan</span>
+        <span id="plan_python">
+<a href="#plan_python" style="color: inherit; text-decoration: inherit;">plan</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -814,7 +888,9 @@ doc.
 
     <dt class="property-required"
             title="Required">
-        <span>project_<wbr>id</span>
+        <span id="project_id_python">
+<a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -823,7 +899,9 @@ doc.
 
     <dt class="property-optional"
             title="Optional">
-        <span>always_<wbr>pxe</span>
+        <span id="always_pxe_python">
+<a href="#always_pxe_python" style="color: inherit; text-decoration: inherit;">always_<wbr>pxe</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -833,7 +911,9 @@ continue to boot via iPXE on reboots.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -842,7 +922,9 @@ continue to boot via iPXE on reboots.
 
     <dt class="property-optional"
             title="Optional">
-        <span>force_<wbr>detach_<wbr>volumes</span>
+        <span id="force_detach_volumes_python">
+<a href="#force_detach_volumes_python" style="color: inherit; text-decoration: inherit;">force_<wbr>detach_<wbr>volumes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -851,7 +933,9 @@ continue to boot via iPXE on reboots.
 
     <dt class="property-optional"
             title="Optional">
-        <span>hardware_<wbr>reservation_<wbr>id</span>
+        <span id="hardware_reservation_id_python">
+<a href="#hardware_reservation_id_python" style="color: inherit; text-decoration: inherit;">hardware_<wbr>reservation_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -861,7 +945,9 @@ continue to boot via iPXE on reboots.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ip_<wbr>addresses</span>
+        <span id="ip_addresses_python">
+<a href="#ip_addresses_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>addresses</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deviceipaddress">List[Device<wbr>Ip<wbr>Address]</a></span>
     </dt>
@@ -870,7 +956,9 @@ continue to boot via iPXE on reboots.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ipxe_<wbr>script_<wbr>url</span>
+        <span id="ipxe_script_url_python">
+<a href="#ipxe_script_url_python" style="color: inherit; text-decoration: inherit;">ipxe_<wbr>script_<wbr>url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -882,7 +970,9 @@ doc.
 
     <dt class="property-optional"
             title="Optional">
-        <span>network_<wbr>type</span>
+        <span id="network_type_python">
+<a href="#network_type_python" style="color: inherit; text-decoration: inherit;">network_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -890,7 +980,9 @@ doc.
 
     <dt class="property-optional"
             title="Optional">
-        <span>project_<wbr>ssh_<wbr>key_<wbr>ids</span>
+        <span id="project_ssh_key_ids_python">
+<a href="#project_ssh_key_ids_python" style="color: inherit; text-decoration: inherit;">project_<wbr>ssh_<wbr>key_<wbr>ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -898,7 +990,9 @@ doc.
 
     <dt class="property-optional"
             title="Optional">
-        <span>storage</span>
+        <span id="storage_python">
+<a href="#storage_python" style="color: inherit; text-decoration: inherit;">storage</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -908,7 +1002,9 @@ doc.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -917,7 +1013,9 @@ doc.
 
     <dt class="property-optional"
             title="Optional">
-        <span>user_<wbr>data</span>
+        <span id="user_data_python">
+<a href="#user_data_python" style="color: inherit; text-decoration: inherit;">user_<wbr>data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -926,7 +1024,9 @@ doc.
 
     <dt class="property-optional"
             title="Optional">
-        <span>wait_<wbr>for_<wbr>reservation_<wbr>deprovision</span>
+        <span id="wait_for_reservation_deprovision_python">
+<a href="#wait_for_reservation_deprovision_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>for_<wbr>reservation_<wbr>deprovision</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -953,7 +1053,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Access<wbr>Private<wbr>Ipv4</span>
+        <span id="accessprivateipv4_csharp">
+<a href="#accessprivateipv4_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Private<wbr>Ipv4</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -962,7 +1064,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Access<wbr>Public<wbr>Ipv4</span>
+        <span id="accesspublicipv4_csharp">
+<a href="#accesspublicipv4_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Public<wbr>Ipv4</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -971,7 +1075,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Access<wbr>Public<wbr>Ipv6</span>
+        <span id="accesspublicipv6_csharp">
+<a href="#accesspublicipv6_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Public<wbr>Ipv6</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -980,7 +1086,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Created</span>
+        <span id="created_csharp">
+<a href="#created_csharp" style="color: inherit; text-decoration: inherit;">Created</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -989,7 +1097,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Deployed<wbr>Facility</span>
+        <span id="deployedfacility_csharp">
+<a href="#deployedfacility_csharp" style="color: inherit; text-decoration: inherit;">Deployed<wbr>Facility</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -998,7 +1108,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1006,7 +1118,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Locked</span>
+        <span id="locked_csharp">
+<a href="#locked_csharp" style="color: inherit; text-decoration: inherit;">Locked</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1015,7 +1129,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Networks</span>
+        <span id="networks_csharp">
+<a href="#networks_csharp" style="color: inherit; text-decoration: inherit;">Networks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#devicenetwork">List&lt;Device<wbr>Network&gt;</a></span>
     </dt>
@@ -1029,7 +1145,9 @@ The fields of the network attributes are:
 
     <dt class="property-"
             title="">
-        <span>Ports</span>
+        <span id="ports_csharp">
+<a href="#ports_csharp" style="color: inherit; text-decoration: inherit;">Ports</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deviceport">List&lt;Device<wbr>Port&gt;</a></span>
     </dt>
@@ -1038,7 +1156,9 @@ The fields of the network attributes are:
 
     <dt class="property-"
             title="">
-        <span>Root<wbr>Password</span>
+        <span id="rootpassword_csharp">
+<a href="#rootpassword_csharp" style="color: inherit; text-decoration: inherit;">Root<wbr>Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1047,7 +1167,9 @@ The fields of the network attributes are:
 
     <dt class="property-"
             title="">
-        <span>Ssh<wbr>Key<wbr>Ids</span>
+        <span id="sshkeyids_csharp">
+<a href="#sshkeyids_csharp" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Key<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1056,7 +1178,9 @@ The fields of the network attributes are:
 
     <dt class="property-"
             title="">
-        <span>State</span>
+        <span id="state_csharp">
+<a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1065,7 +1189,9 @@ The fields of the network attributes are:
 
     <dt class="property-"
             title="">
-        <span>Updated</span>
+        <span id="updated_csharp">
+<a href="#updated_csharp" style="color: inherit; text-decoration: inherit;">Updated</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1081,7 +1207,9 @@ The fields of the network attributes are:
 
     <dt class="property-"
             title="">
-        <span>Access<wbr>Private<wbr>Ipv4</span>
+        <span id="accessprivateipv4_go">
+<a href="#accessprivateipv4_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Private<wbr>Ipv4</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1090,7 +1218,9 @@ The fields of the network attributes are:
 
     <dt class="property-"
             title="">
-        <span>Access<wbr>Public<wbr>Ipv4</span>
+        <span id="accesspublicipv4_go">
+<a href="#accesspublicipv4_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Public<wbr>Ipv4</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1099,7 +1229,9 @@ The fields of the network attributes are:
 
     <dt class="property-"
             title="">
-        <span>Access<wbr>Public<wbr>Ipv6</span>
+        <span id="accesspublicipv6_go">
+<a href="#accesspublicipv6_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Public<wbr>Ipv6</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1108,7 +1240,9 @@ The fields of the network attributes are:
 
     <dt class="property-"
             title="">
-        <span>Created</span>
+        <span id="created_go">
+<a href="#created_go" style="color: inherit; text-decoration: inherit;">Created</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1117,7 +1251,9 @@ The fields of the network attributes are:
 
     <dt class="property-"
             title="">
-        <span>Deployed<wbr>Facility</span>
+        <span id="deployedfacility_go">
+<a href="#deployedfacility_go" style="color: inherit; text-decoration: inherit;">Deployed<wbr>Facility</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1126,7 +1262,9 @@ The fields of the network attributes are:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1134,7 +1272,9 @@ The fields of the network attributes are:
 
     <dt class="property-"
             title="">
-        <span>Locked</span>
+        <span id="locked_go">
+<a href="#locked_go" style="color: inherit; text-decoration: inherit;">Locked</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1143,7 +1283,9 @@ The fields of the network attributes are:
 
     <dt class="property-"
             title="">
-        <span>Networks</span>
+        <span id="networks_go">
+<a href="#networks_go" style="color: inherit; text-decoration: inherit;">Networks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#devicenetwork">[]Device<wbr>Network</a></span>
     </dt>
@@ -1157,7 +1299,9 @@ The fields of the network attributes are:
 
     <dt class="property-"
             title="">
-        <span>Ports</span>
+        <span id="ports_go">
+<a href="#ports_go" style="color: inherit; text-decoration: inherit;">Ports</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deviceport">[]Device<wbr>Port</a></span>
     </dt>
@@ -1166,7 +1310,9 @@ The fields of the network attributes are:
 
     <dt class="property-"
             title="">
-        <span>Root<wbr>Password</span>
+        <span id="rootpassword_go">
+<a href="#rootpassword_go" style="color: inherit; text-decoration: inherit;">Root<wbr>Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1175,7 +1321,9 @@ The fields of the network attributes are:
 
     <dt class="property-"
             title="">
-        <span>Ssh<wbr>Key<wbr>Ids</span>
+        <span id="sshkeyids_go">
+<a href="#sshkeyids_go" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Key<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1184,7 +1332,9 @@ The fields of the network attributes are:
 
     <dt class="property-"
             title="">
-        <span>State</span>
+        <span id="state_go">
+<a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1193,7 +1343,9 @@ The fields of the network attributes are:
 
     <dt class="property-"
             title="">
-        <span>Updated</span>
+        <span id="updated_go">
+<a href="#updated_go" style="color: inherit; text-decoration: inherit;">Updated</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1209,7 +1361,9 @@ The fields of the network attributes are:
 
     <dt class="property-"
             title="">
-        <span>access<wbr>Private<wbr>Ipv4</span>
+        <span id="accessprivateipv4_nodejs">
+<a href="#accessprivateipv4_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Private<wbr>Ipv4</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1218,7 +1372,9 @@ The fields of the network attributes are:
 
     <dt class="property-"
             title="">
-        <span>access<wbr>Public<wbr>Ipv4</span>
+        <span id="accesspublicipv4_nodejs">
+<a href="#accesspublicipv4_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Public<wbr>Ipv4</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1227,7 +1383,9 @@ The fields of the network attributes are:
 
     <dt class="property-"
             title="">
-        <span>access<wbr>Public<wbr>Ipv6</span>
+        <span id="accesspublicipv6_nodejs">
+<a href="#accesspublicipv6_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Public<wbr>Ipv6</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1236,7 +1394,9 @@ The fields of the network attributes are:
 
     <dt class="property-"
             title="">
-        <span>created</span>
+        <span id="created_nodejs">
+<a href="#created_nodejs" style="color: inherit; text-decoration: inherit;">created</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1245,7 +1405,9 @@ The fields of the network attributes are:
 
     <dt class="property-"
             title="">
-        <span>deployed<wbr>Facility</span>
+        <span id="deployedfacility_nodejs">
+<a href="#deployedfacility_nodejs" style="color: inherit; text-decoration: inherit;">deployed<wbr>Facility</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1254,7 +1416,9 @@ The fields of the network attributes are:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1262,7 +1426,9 @@ The fields of the network attributes are:
 
     <dt class="property-"
             title="">
-        <span>locked</span>
+        <span id="locked_nodejs">
+<a href="#locked_nodejs" style="color: inherit; text-decoration: inherit;">locked</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1271,7 +1437,9 @@ The fields of the network attributes are:
 
     <dt class="property-"
             title="">
-        <span>networks</span>
+        <span id="networks_nodejs">
+<a href="#networks_nodejs" style="color: inherit; text-decoration: inherit;">networks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#devicenetwork">Device<wbr>Network[]</a></span>
     </dt>
@@ -1285,7 +1453,9 @@ The fields of the network attributes are:
 
     <dt class="property-"
             title="">
-        <span>ports</span>
+        <span id="ports_nodejs">
+<a href="#ports_nodejs" style="color: inherit; text-decoration: inherit;">ports</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deviceport">Device<wbr>Port[]</a></span>
     </dt>
@@ -1294,7 +1464,9 @@ The fields of the network attributes are:
 
     <dt class="property-"
             title="">
-        <span>root<wbr>Password</span>
+        <span id="rootpassword_nodejs">
+<a href="#rootpassword_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1303,7 +1475,9 @@ The fields of the network attributes are:
 
     <dt class="property-"
             title="">
-        <span>ssh<wbr>Key<wbr>Ids</span>
+        <span id="sshkeyids_nodejs">
+<a href="#sshkeyids_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Key<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1312,7 +1486,9 @@ The fields of the network attributes are:
 
     <dt class="property-"
             title="">
-        <span>state</span>
+        <span id="state_nodejs">
+<a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1321,7 +1497,9 @@ The fields of the network attributes are:
 
     <dt class="property-"
             title="">
-        <span>updated</span>
+        <span id="updated_nodejs">
+<a href="#updated_nodejs" style="color: inherit; text-decoration: inherit;">updated</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1337,7 +1515,9 @@ The fields of the network attributes are:
 
     <dt class="property-"
             title="">
-        <span>access_<wbr>private_<wbr>ipv4</span>
+        <span id="access_private_ipv4_python">
+<a href="#access_private_ipv4_python" style="color: inherit; text-decoration: inherit;">access_<wbr>private_<wbr>ipv4</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1346,7 +1526,9 @@ The fields of the network attributes are:
 
     <dt class="property-"
             title="">
-        <span>access_<wbr>public_<wbr>ipv4</span>
+        <span id="access_public_ipv4_python">
+<a href="#access_public_ipv4_python" style="color: inherit; text-decoration: inherit;">access_<wbr>public_<wbr>ipv4</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1355,7 +1537,9 @@ The fields of the network attributes are:
 
     <dt class="property-"
             title="">
-        <span>access_<wbr>public_<wbr>ipv6</span>
+        <span id="access_public_ipv6_python">
+<a href="#access_public_ipv6_python" style="color: inherit; text-decoration: inherit;">access_<wbr>public_<wbr>ipv6</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1364,7 +1548,9 @@ The fields of the network attributes are:
 
     <dt class="property-"
             title="">
-        <span>created</span>
+        <span id="created_python">
+<a href="#created_python" style="color: inherit; text-decoration: inherit;">created</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1373,7 +1559,9 @@ The fields of the network attributes are:
 
     <dt class="property-"
             title="">
-        <span>deployed_<wbr>facility</span>
+        <span id="deployed_facility_python">
+<a href="#deployed_facility_python" style="color: inherit; text-decoration: inherit;">deployed_<wbr>facility</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1382,7 +1570,9 @@ The fields of the network attributes are:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1390,7 +1580,9 @@ The fields of the network attributes are:
 
     <dt class="property-"
             title="">
-        <span>locked</span>
+        <span id="locked_python">
+<a href="#locked_python" style="color: inherit; text-decoration: inherit;">locked</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1399,7 +1591,9 @@ The fields of the network attributes are:
 
     <dt class="property-"
             title="">
-        <span>networks</span>
+        <span id="networks_python">
+<a href="#networks_python" style="color: inherit; text-decoration: inherit;">networks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#devicenetwork">List[Device<wbr>Network]</a></span>
     </dt>
@@ -1413,7 +1607,9 @@ The fields of the network attributes are:
 
     <dt class="property-"
             title="">
-        <span>ports</span>
+        <span id="ports_python">
+<a href="#ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deviceport">List[Device<wbr>Port]</a></span>
     </dt>
@@ -1422,7 +1618,9 @@ The fields of the network attributes are:
 
     <dt class="property-"
             title="">
-        <span>root_<wbr>password</span>
+        <span id="root_password_python">
+<a href="#root_password_python" style="color: inherit; text-decoration: inherit;">root_<wbr>password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1431,7 +1629,9 @@ The fields of the network attributes are:
 
     <dt class="property-"
             title="">
-        <span>ssh_<wbr>key_<wbr>ids</span>
+        <span id="ssh_key_ids_python">
+<a href="#ssh_key_ids_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>key_<wbr>ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1440,7 +1640,9 @@ The fields of the network attributes are:
 
     <dt class="property-"
             title="">
-        <span>state</span>
+        <span id="state_python">
+<a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1449,7 +1651,9 @@ The fields of the network attributes are:
 
     <dt class="property-"
             title="">
-        <span>updated</span>
+        <span id="updated_python">
+<a href="#updated_python" style="color: inherit; text-decoration: inherit;">updated</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1591,7 +1795,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Access<wbr>Private<wbr>Ipv4</span>
+        <span id="state_accessprivateipv4_csharp">
+<a href="#state_accessprivateipv4_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Private<wbr>Ipv4</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1600,7 +1806,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Access<wbr>Public<wbr>Ipv4</span>
+        <span id="state_accesspublicipv4_csharp">
+<a href="#state_accesspublicipv4_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Public<wbr>Ipv4</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1609,7 +1817,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Access<wbr>Public<wbr>Ipv6</span>
+        <span id="state_accesspublicipv6_csharp">
+<a href="#state_accesspublicipv6_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Public<wbr>Ipv6</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1618,7 +1828,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Always<wbr>Pxe</span>
+        <span id="state_alwayspxe_csharp">
+<a href="#state_alwayspxe_csharp" style="color: inherit; text-decoration: inherit;">Always<wbr>Pxe</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1628,7 +1840,9 @@ continue to boot via iPXE on reboots.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Billing<wbr>Cycle</span>
+        <span id="state_billingcycle_csharp">
+<a href="#state_billingcycle_csharp" style="color: inherit; text-decoration: inherit;">Billing<wbr>Cycle</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -1637,7 +1851,9 @@ continue to boot via iPXE on reboots.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Created</span>
+        <span id="state_created_csharp">
+<a href="#state_created_csharp" style="color: inherit; text-decoration: inherit;">Created</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1646,7 +1862,9 @@ continue to boot via iPXE on reboots.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Deployed<wbr>Facility</span>
+        <span id="state_deployedfacility_csharp">
+<a href="#state_deployedfacility_csharp" style="color: inherit; text-decoration: inherit;">Deployed<wbr>Facility</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1655,7 +1873,9 @@ continue to boot via iPXE on reboots.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_csharp">
+<a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1664,7 +1884,9 @@ continue to boot via iPXE on reboots.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Facilities</span>
+        <span id="state_facilities_csharp">
+<a href="#state_facilities_csharp" style="color: inherit; text-decoration: inherit;">Facilities</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
@@ -1673,7 +1895,9 @@ continue to boot via iPXE on reboots.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Force<wbr>Detach<wbr>Volumes</span>
+        <span id="state_forcedetachvolumes_csharp">
+<a href="#state_forcedetachvolumes_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Detach<wbr>Volumes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1682,7 +1906,9 @@ continue to boot via iPXE on reboots.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Hardware<wbr>Reservation<wbr>Id</span>
+        <span id="state_hardwarereservationid_csharp">
+<a href="#state_hardwarereservationid_csharp" style="color: inherit; text-decoration: inherit;">Hardware<wbr>Reservation<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1692,7 +1918,9 @@ continue to boot via iPXE on reboots.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Hostname</span>
+        <span id="state_hostname_csharp">
+<a href="#state_hostname_csharp" style="color: inherit; text-decoration: inherit;">Hostname</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1701,7 +1929,9 @@ continue to boot via iPXE on reboots.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ip<wbr>Addresses</span>
+        <span id="state_ipaddresses_csharp">
+<a href="#state_ipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Addresses</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deviceipaddress">List&lt;Device<wbr>Ip<wbr>Address<wbr>Args&gt;</a></span>
     </dt>
@@ -1710,7 +1940,9 @@ continue to boot via iPXE on reboots.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ipxe<wbr>Script<wbr>Url</span>
+        <span id="state_ipxescripturl_csharp">
+<a href="#state_ipxescripturl_csharp" style="color: inherit; text-decoration: inherit;">Ipxe<wbr>Script<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1722,7 +1954,9 @@ doc.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Locked</span>
+        <span id="state_locked_csharp">
+<a href="#state_locked_csharp" style="color: inherit; text-decoration: inherit;">Locked</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1731,7 +1965,9 @@ doc.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Network<wbr>Type</span>
+        <span id="state_networktype_csharp">
+<a href="#state_networktype_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -1739,7 +1975,9 @@ doc.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Networks</span>
+        <span id="state_networks_csharp">
+<a href="#state_networks_csharp" style="color: inherit; text-decoration: inherit;">Networks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#devicenetwork">List&lt;Device<wbr>Network<wbr>Args&gt;</a></span>
     </dt>
@@ -1753,7 +1991,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Operating<wbr>System</span>
+        <span id="state_operatingsystem_csharp">
+<a href="#state_operatingsystem_csharp" style="color: inherit; text-decoration: inherit;">Operating<wbr>System</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -1762,7 +2002,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Plan</span>
+        <span id="state_plan_csharp">
+<a href="#state_plan_csharp" style="color: inherit; text-decoration: inherit;">Plan</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -1771,7 +2013,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ports</span>
+        <span id="state_ports_csharp">
+<a href="#state_ports_csharp" style="color: inherit; text-decoration: inherit;">Ports</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deviceport">List&lt;Device<wbr>Port<wbr>Args&gt;</a></span>
     </dt>
@@ -1780,7 +2024,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project<wbr>Id</span>
+        <span id="state_projectid_csharp">
+<a href="#state_projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1789,7 +2035,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project<wbr>Ssh<wbr>Key<wbr>Ids</span>
+        <span id="state_projectsshkeyids_csharp">
+<a href="#state_projectsshkeyids_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Ssh<wbr>Key<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1797,7 +2045,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Root<wbr>Password</span>
+        <span id="state_rootpassword_csharp">
+<a href="#state_rootpassword_csharp" style="color: inherit; text-decoration: inherit;">Root<wbr>Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1806,7 +2056,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ssh<wbr>Key<wbr>Ids</span>
+        <span id="state_sshkeyids_csharp">
+<a href="#state_sshkeyids_csharp" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Key<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1815,7 +2067,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>State</span>
+        <span id="state_state_csharp">
+<a href="#state_state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1824,7 +2078,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Storage</span>
+        <span id="state_storage_csharp">
+<a href="#state_storage_csharp" style="color: inherit; text-decoration: inherit;">Storage</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1834,7 +2090,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_csharp">
+<a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1843,7 +2101,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Updated</span>
+        <span id="state_updated_csharp">
+<a href="#state_updated_csharp" style="color: inherit; text-decoration: inherit;">Updated</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1852,7 +2112,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>User<wbr>Data</span>
+        <span id="state_userdata_csharp">
+<a href="#state_userdata_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1861,7 +2123,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Wait<wbr>For<wbr>Reservation<wbr>Deprovision</span>
+        <span id="state_waitforreservationdeprovision_csharp">
+<a href="#state_waitforreservationdeprovision_csharp" style="color: inherit; text-decoration: inherit;">Wait<wbr>For<wbr>Reservation<wbr>Deprovision</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1877,7 +2141,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Access<wbr>Private<wbr>Ipv4</span>
+        <span id="state_accessprivateipv4_go">
+<a href="#state_accessprivateipv4_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Private<wbr>Ipv4</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1886,7 +2152,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Access<wbr>Public<wbr>Ipv4</span>
+        <span id="state_accesspublicipv4_go">
+<a href="#state_accesspublicipv4_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Public<wbr>Ipv4</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1895,7 +2163,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Access<wbr>Public<wbr>Ipv6</span>
+        <span id="state_accesspublicipv6_go">
+<a href="#state_accesspublicipv6_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Public<wbr>Ipv6</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1904,7 +2174,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Always<wbr>Pxe</span>
+        <span id="state_alwayspxe_go">
+<a href="#state_alwayspxe_go" style="color: inherit; text-decoration: inherit;">Always<wbr>Pxe</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1914,7 +2186,9 @@ continue to boot via iPXE on reboots.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Billing<wbr>Cycle</span>
+        <span id="state_billingcycle_go">
+<a href="#state_billingcycle_go" style="color: inherit; text-decoration: inherit;">Billing<wbr>Cycle</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -1923,7 +2197,9 @@ continue to boot via iPXE on reboots.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Created</span>
+        <span id="state_created_go">
+<a href="#state_created_go" style="color: inherit; text-decoration: inherit;">Created</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1932,7 +2208,9 @@ continue to boot via iPXE on reboots.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Deployed<wbr>Facility</span>
+        <span id="state_deployedfacility_go">
+<a href="#state_deployedfacility_go" style="color: inherit; text-decoration: inherit;">Deployed<wbr>Facility</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1941,7 +2219,9 @@ continue to boot via iPXE on reboots.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_go">
+<a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1950,7 +2230,9 @@ continue to boot via iPXE on reboots.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Facilities</span>
+        <span id="state_facilities_go">
+<a href="#state_facilities_go" style="color: inherit; text-decoration: inherit;">Facilities</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
@@ -1959,7 +2241,9 @@ continue to boot via iPXE on reboots.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Force<wbr>Detach<wbr>Volumes</span>
+        <span id="state_forcedetachvolumes_go">
+<a href="#state_forcedetachvolumes_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Detach<wbr>Volumes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1968,7 +2252,9 @@ continue to boot via iPXE on reboots.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Hardware<wbr>Reservation<wbr>Id</span>
+        <span id="state_hardwarereservationid_go">
+<a href="#state_hardwarereservationid_go" style="color: inherit; text-decoration: inherit;">Hardware<wbr>Reservation<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1978,7 +2264,9 @@ continue to boot via iPXE on reboots.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Hostname</span>
+        <span id="state_hostname_go">
+<a href="#state_hostname_go" style="color: inherit; text-decoration: inherit;">Hostname</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1987,7 +2275,9 @@ continue to boot via iPXE on reboots.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ip<wbr>Addresses</span>
+        <span id="state_ipaddresses_go">
+<a href="#state_ipaddresses_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Addresses</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deviceipaddress">[]Device<wbr>Ip<wbr>Address</a></span>
     </dt>
@@ -1996,7 +2286,9 @@ continue to boot via iPXE on reboots.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ipxe<wbr>Script<wbr>Url</span>
+        <span id="state_ipxescripturl_go">
+<a href="#state_ipxescripturl_go" style="color: inherit; text-decoration: inherit;">Ipxe<wbr>Script<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2008,7 +2300,9 @@ doc.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Locked</span>
+        <span id="state_locked_go">
+<a href="#state_locked_go" style="color: inherit; text-decoration: inherit;">Locked</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -2017,7 +2311,9 @@ doc.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Network<wbr>Type</span>
+        <span id="state_networktype_go">
+<a href="#state_networktype_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -2025,7 +2321,9 @@ doc.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Networks</span>
+        <span id="state_networks_go">
+<a href="#state_networks_go" style="color: inherit; text-decoration: inherit;">Networks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#devicenetwork">[]Device<wbr>Network</a></span>
     </dt>
@@ -2039,7 +2337,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Operating<wbr>System</span>
+        <span id="state_operatingsystem_go">
+<a href="#state_operatingsystem_go" style="color: inherit; text-decoration: inherit;">Operating<wbr>System</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -2048,7 +2348,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Plan</span>
+        <span id="state_plan_go">
+<a href="#state_plan_go" style="color: inherit; text-decoration: inherit;">Plan</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -2057,7 +2359,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ports</span>
+        <span id="state_ports_go">
+<a href="#state_ports_go" style="color: inherit; text-decoration: inherit;">Ports</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deviceport">[]Device<wbr>Port</a></span>
     </dt>
@@ -2066,7 +2370,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project<wbr>Id</span>
+        <span id="state_projectid_go">
+<a href="#state_projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2075,7 +2381,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project<wbr>Ssh<wbr>Key<wbr>Ids</span>
+        <span id="state_projectsshkeyids_go">
+<a href="#state_projectsshkeyids_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Ssh<wbr>Key<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -2083,7 +2391,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Root<wbr>Password</span>
+        <span id="state_rootpassword_go">
+<a href="#state_rootpassword_go" style="color: inherit; text-decoration: inherit;">Root<wbr>Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2092,7 +2402,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ssh<wbr>Key<wbr>Ids</span>
+        <span id="state_sshkeyids_go">
+<a href="#state_sshkeyids_go" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Key<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -2101,7 +2413,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>State</span>
+        <span id="state_state_go">
+<a href="#state_state_go" style="color: inherit; text-decoration: inherit;">State</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2110,7 +2424,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Storage</span>
+        <span id="state_storage_go">
+<a href="#state_storage_go" style="color: inherit; text-decoration: inherit;">Storage</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2120,7 +2436,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_go">
+<a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -2129,7 +2447,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Updated</span>
+        <span id="state_updated_go">
+<a href="#state_updated_go" style="color: inherit; text-decoration: inherit;">Updated</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2138,7 +2458,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>User<wbr>Data</span>
+        <span id="state_userdata_go">
+<a href="#state_userdata_go" style="color: inherit; text-decoration: inherit;">User<wbr>Data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2147,7 +2469,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Wait<wbr>For<wbr>Reservation<wbr>Deprovision</span>
+        <span id="state_waitforreservationdeprovision_go">
+<a href="#state_waitforreservationdeprovision_go" style="color: inherit; text-decoration: inherit;">Wait<wbr>For<wbr>Reservation<wbr>Deprovision</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -2163,7 +2487,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>access<wbr>Private<wbr>Ipv4</span>
+        <span id="state_accessprivateipv4_nodejs">
+<a href="#state_accessprivateipv4_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Private<wbr>Ipv4</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2172,7 +2498,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>access<wbr>Public<wbr>Ipv4</span>
+        <span id="state_accesspublicipv4_nodejs">
+<a href="#state_accesspublicipv4_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Public<wbr>Ipv4</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2181,7 +2509,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>access<wbr>Public<wbr>Ipv6</span>
+        <span id="state_accesspublicipv6_nodejs">
+<a href="#state_accesspublicipv6_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Public<wbr>Ipv6</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2190,7 +2520,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>always<wbr>Pxe</span>
+        <span id="state_alwayspxe_nodejs">
+<a href="#state_alwayspxe_nodejs" style="color: inherit; text-decoration: inherit;">always<wbr>Pxe</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -2200,7 +2532,9 @@ continue to boot via iPXE on reboots.
 
     <dt class="property-optional"
             title="Optional">
-        <span>billing<wbr>Cycle</span>
+        <span id="state_billingcycle_nodejs">
+<a href="#state_billingcycle_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Cycle</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Billing<wbr>Cycle</span>
     </dt>
@@ -2209,7 +2543,9 @@ continue to boot via iPXE on reboots.
 
     <dt class="property-optional"
             title="Optional">
-        <span>created</span>
+        <span id="state_created_nodejs">
+<a href="#state_created_nodejs" style="color: inherit; text-decoration: inherit;">created</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2218,7 +2554,9 @@ continue to boot via iPXE on reboots.
 
     <dt class="property-optional"
             title="Optional">
-        <span>deployed<wbr>Facility</span>
+        <span id="state_deployedfacility_nodejs">
+<a href="#state_deployedfacility_nodejs" style="color: inherit; text-decoration: inherit;">deployed<wbr>Facility</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2227,7 +2565,9 @@ continue to boot via iPXE on reboots.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_nodejs">
+<a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2236,7 +2576,9 @@ continue to boot via iPXE on reboots.
 
     <dt class="property-optional"
             title="Optional">
-        <span>facilities</span>
+        <span id="state_facilities_nodejs">
+<a href="#state_facilities_nodejs" style="color: inherit; text-decoration: inherit;">facilities</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Facility[]</span>
     </dt>
@@ -2245,7 +2587,9 @@ continue to boot via iPXE on reboots.
 
     <dt class="property-optional"
             title="Optional">
-        <span>force<wbr>Detach<wbr>Volumes</span>
+        <span id="state_forcedetachvolumes_nodejs">
+<a href="#state_forcedetachvolumes_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Detach<wbr>Volumes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -2254,7 +2598,9 @@ continue to boot via iPXE on reboots.
 
     <dt class="property-optional"
             title="Optional">
-        <span>hardware<wbr>Reservation<wbr>Id</span>
+        <span id="state_hardwarereservationid_nodejs">
+<a href="#state_hardwarereservationid_nodejs" style="color: inherit; text-decoration: inherit;">hardware<wbr>Reservation<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2264,7 +2610,9 @@ continue to boot via iPXE on reboots.
 
     <dt class="property-optional"
             title="Optional">
-        <span>hostname</span>
+        <span id="state_hostname_nodejs">
+<a href="#state_hostname_nodejs" style="color: inherit; text-decoration: inherit;">hostname</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2273,7 +2621,9 @@ continue to boot via iPXE on reboots.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ip<wbr>Addresses</span>
+        <span id="state_ipaddresses_nodejs">
+<a href="#state_ipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Addresses</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deviceipaddress">Device<wbr>Ip<wbr>Address[]</a></span>
     </dt>
@@ -2282,7 +2632,9 @@ continue to boot via iPXE on reboots.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ipxe<wbr>Script<wbr>Url</span>
+        <span id="state_ipxescripturl_nodejs">
+<a href="#state_ipxescripturl_nodejs" style="color: inherit; text-decoration: inherit;">ipxe<wbr>Script<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2294,7 +2646,9 @@ doc.
 
     <dt class="property-optional"
             title="Optional">
-        <span>locked</span>
+        <span id="state_locked_nodejs">
+<a href="#state_locked_nodejs" style="color: inherit; text-decoration: inherit;">locked</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -2303,7 +2657,9 @@ doc.
 
     <dt class="property-optional"
             title="Optional">
-        <span>network<wbr>Type</span>
+        <span id="state_networktype_nodejs">
+<a href="#state_networktype_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Network<wbr>Type</span>
     </dt>
@@ -2311,7 +2667,9 @@ doc.
 
     <dt class="property-optional"
             title="Optional">
-        <span>networks</span>
+        <span id="state_networks_nodejs">
+<a href="#state_networks_nodejs" style="color: inherit; text-decoration: inherit;">networks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#devicenetwork">Device<wbr>Network[]</a></span>
     </dt>
@@ -2325,7 +2683,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>operating<wbr>System</span>
+        <span id="state_operatingsystem_nodejs">
+<a href="#state_operatingsystem_nodejs" style="color: inherit; text-decoration: inherit;">operating<wbr>System</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Operating<wbr>System</span>
     </dt>
@@ -2334,7 +2694,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>plan</span>
+        <span id="state_plan_nodejs">
+<a href="#state_plan_nodejs" style="color: inherit; text-decoration: inherit;">plan</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Plan</span>
     </dt>
@@ -2343,7 +2705,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>ports</span>
+        <span id="state_ports_nodejs">
+<a href="#state_ports_nodejs" style="color: inherit; text-decoration: inherit;">ports</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deviceport">Device<wbr>Port[]</a></span>
     </dt>
@@ -2352,7 +2716,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>project<wbr>Id</span>
+        <span id="state_projectid_nodejs">
+<a href="#state_projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2361,7 +2727,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>project<wbr>Ssh<wbr>Key<wbr>Ids</span>
+        <span id="state_projectsshkeyids_nodejs">
+<a href="#state_projectsshkeyids_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Ssh<wbr>Key<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -2369,7 +2737,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>root<wbr>Password</span>
+        <span id="state_rootpassword_nodejs">
+<a href="#state_rootpassword_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2378,7 +2748,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>ssh<wbr>Key<wbr>Ids</span>
+        <span id="state_sshkeyids_nodejs">
+<a href="#state_sshkeyids_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Key<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -2387,7 +2759,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>state</span>
+        <span id="state_state_nodejs">
+<a href="#state_state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2396,7 +2770,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>storage</span>
+        <span id="state_storage_nodejs">
+<a href="#state_storage_nodejs" style="color: inherit; text-decoration: inherit;">storage</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2406,7 +2782,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_nodejs">
+<a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -2415,7 +2793,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>updated</span>
+        <span id="state_updated_nodejs">
+<a href="#state_updated_nodejs" style="color: inherit; text-decoration: inherit;">updated</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2424,7 +2804,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>user<wbr>Data</span>
+        <span id="state_userdata_nodejs">
+<a href="#state_userdata_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2433,7 +2815,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>wait<wbr>For<wbr>Reservation<wbr>Deprovision</span>
+        <span id="state_waitforreservationdeprovision_nodejs">
+<a href="#state_waitforreservationdeprovision_nodejs" style="color: inherit; text-decoration: inherit;">wait<wbr>For<wbr>Reservation<wbr>Deprovision</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -2449,7 +2833,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>access_<wbr>private_<wbr>ipv4</span>
+        <span id="state_access_private_ipv4_python">
+<a href="#state_access_private_ipv4_python" style="color: inherit; text-decoration: inherit;">access_<wbr>private_<wbr>ipv4</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2458,7 +2844,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>access_<wbr>public_<wbr>ipv4</span>
+        <span id="state_access_public_ipv4_python">
+<a href="#state_access_public_ipv4_python" style="color: inherit; text-decoration: inherit;">access_<wbr>public_<wbr>ipv4</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2467,7 +2855,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>access_<wbr>public_<wbr>ipv6</span>
+        <span id="state_access_public_ipv6_python">
+<a href="#state_access_public_ipv6_python" style="color: inherit; text-decoration: inherit;">access_<wbr>public_<wbr>ipv6</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2476,7 +2866,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>always_<wbr>pxe</span>
+        <span id="state_always_pxe_python">
+<a href="#state_always_pxe_python" style="color: inherit; text-decoration: inherit;">always_<wbr>pxe</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2486,7 +2878,9 @@ continue to boot via iPXE on reboots.
 
     <dt class="property-optional"
             title="Optional">
-        <span>billing_<wbr>cycle</span>
+        <span id="state_billing_cycle_python">
+<a href="#state_billing_cycle_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>cycle</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -2495,7 +2889,9 @@ continue to boot via iPXE on reboots.
 
     <dt class="property-optional"
             title="Optional">
-        <span>created</span>
+        <span id="state_created_python">
+<a href="#state_created_python" style="color: inherit; text-decoration: inherit;">created</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2504,7 +2900,9 @@ continue to boot via iPXE on reboots.
 
     <dt class="property-optional"
             title="Optional">
-        <span>deployed_<wbr>facility</span>
+        <span id="state_deployed_facility_python">
+<a href="#state_deployed_facility_python" style="color: inherit; text-decoration: inherit;">deployed_<wbr>facility</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2513,7 +2911,9 @@ continue to boot via iPXE on reboots.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_python">
+<a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2522,7 +2922,9 @@ continue to boot via iPXE on reboots.
 
     <dt class="property-optional"
             title="Optional">
-        <span>facilities</span>
+        <span id="state_facilities_python">
+<a href="#state_facilities_python" style="color: inherit; text-decoration: inherit;">facilities</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">List[Facility]</span>
     </dt>
@@ -2531,7 +2933,9 @@ continue to boot via iPXE on reboots.
 
     <dt class="property-optional"
             title="Optional">
-        <span>force_<wbr>detach_<wbr>volumes</span>
+        <span id="state_force_detach_volumes_python">
+<a href="#state_force_detach_volumes_python" style="color: inherit; text-decoration: inherit;">force_<wbr>detach_<wbr>volumes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2540,7 +2944,9 @@ continue to boot via iPXE on reboots.
 
     <dt class="property-optional"
             title="Optional">
-        <span>hardware_<wbr>reservation_<wbr>id</span>
+        <span id="state_hardware_reservation_id_python">
+<a href="#state_hardware_reservation_id_python" style="color: inherit; text-decoration: inherit;">hardware_<wbr>reservation_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2550,7 +2956,9 @@ continue to boot via iPXE on reboots.
 
     <dt class="property-optional"
             title="Optional">
-        <span>hostname</span>
+        <span id="state_hostname_python">
+<a href="#state_hostname_python" style="color: inherit; text-decoration: inherit;">hostname</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2559,7 +2967,9 @@ continue to boot via iPXE on reboots.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ip_<wbr>addresses</span>
+        <span id="state_ip_addresses_python">
+<a href="#state_ip_addresses_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>addresses</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deviceipaddress">List[Device<wbr>Ip<wbr>Address]</a></span>
     </dt>
@@ -2568,7 +2978,9 @@ continue to boot via iPXE on reboots.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ipxe_<wbr>script_<wbr>url</span>
+        <span id="state_ipxe_script_url_python">
+<a href="#state_ipxe_script_url_python" style="color: inherit; text-decoration: inherit;">ipxe_<wbr>script_<wbr>url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2580,7 +2992,9 @@ doc.
 
     <dt class="property-optional"
             title="Optional">
-        <span>locked</span>
+        <span id="state_locked_python">
+<a href="#state_locked_python" style="color: inherit; text-decoration: inherit;">locked</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2589,7 +3003,9 @@ doc.
 
     <dt class="property-optional"
             title="Optional">
-        <span>network_<wbr>type</span>
+        <span id="state_network_type_python">
+<a href="#state_network_type_python" style="color: inherit; text-decoration: inherit;">network_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -2597,7 +3013,9 @@ doc.
 
     <dt class="property-optional"
             title="Optional">
-        <span>networks</span>
+        <span id="state_networks_python">
+<a href="#state_networks_python" style="color: inherit; text-decoration: inherit;">networks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#devicenetwork">List[Device<wbr>Network]</a></span>
     </dt>
@@ -2611,7 +3029,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>operating_<wbr>system</span>
+        <span id="state_operating_system_python">
+<a href="#state_operating_system_python" style="color: inherit; text-decoration: inherit;">operating_<wbr>system</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -2620,7 +3040,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>plan</span>
+        <span id="state_plan_python">
+<a href="#state_plan_python" style="color: inherit; text-decoration: inherit;">plan</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -2629,7 +3051,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>ports</span>
+        <span id="state_ports_python">
+<a href="#state_ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deviceport">List[Device<wbr>Port]</a></span>
     </dt>
@@ -2638,7 +3062,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>project_<wbr>id</span>
+        <span id="state_project_id_python">
+<a href="#state_project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2647,7 +3073,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>project_<wbr>ssh_<wbr>key_<wbr>ids</span>
+        <span id="state_project_ssh_key_ids_python">
+<a href="#state_project_ssh_key_ids_python" style="color: inherit; text-decoration: inherit;">project_<wbr>ssh_<wbr>key_<wbr>ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -2655,7 +3083,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>root_<wbr>password</span>
+        <span id="state_root_password_python">
+<a href="#state_root_password_python" style="color: inherit; text-decoration: inherit;">root_<wbr>password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2664,7 +3094,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>ssh_<wbr>key_<wbr>ids</span>
+        <span id="state_ssh_key_ids_python">
+<a href="#state_ssh_key_ids_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>key_<wbr>ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -2673,7 +3105,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>state</span>
+        <span id="state_state_python">
+<a href="#state_state_python" style="color: inherit; text-decoration: inherit;">state</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2682,7 +3116,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>storage</span>
+        <span id="state_storage_python">
+<a href="#state_storage_python" style="color: inherit; text-decoration: inherit;">storage</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2692,7 +3128,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_python">
+<a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -2701,7 +3139,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>updated</span>
+        <span id="state_updated_python">
+<a href="#state_updated_python" style="color: inherit; text-decoration: inherit;">updated</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2710,7 +3150,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>user_<wbr>data</span>
+        <span id="state_user_data_python">
+<a href="#state_user_data_python" style="color: inherit; text-decoration: inherit;">user_<wbr>data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2719,7 +3161,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>wait_<wbr>for_<wbr>reservation_<wbr>deprovision</span>
+        <span id="state_wait_for_reservation_deprovision_python">
+<a href="#state_wait_for_reservation_deprovision_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>for_<wbr>reservation_<wbr>deprovision</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2761,7 +3205,9 @@ The fields of the network attributes are:
 
     <dt class="property-required"
             title="Required">
-        <span>Type</span>
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2770,7 +3216,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cidr</span>
+        <span id="cidr_csharp">
+<a href="#cidr_csharp" style="color: inherit; text-decoration: inherit;">Cidr</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -2779,7 +3227,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Reservation<wbr>Ids</span>
+        <span id="reservationids_csharp">
+<a href="#reservationids_csharp" style="color: inherit; text-decoration: inherit;">Reservation<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -2794,7 +3244,9 @@ The fields of the network attributes are:
 
     <dt class="property-required"
             title="Required">
-        <span>Type</span>
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2803,7 +3255,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cidr</span>
+        <span id="cidr_go">
+<a href="#cidr_go" style="color: inherit; text-decoration: inherit;">Cidr</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -2812,7 +3266,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Reservation<wbr>Ids</span>
+        <span id="reservationids_go">
+<a href="#reservationids_go" style="color: inherit; text-decoration: inherit;">Reservation<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -2827,7 +3283,9 @@ The fields of the network attributes are:
 
     <dt class="property-required"
             title="Required">
-        <span>type</span>
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2836,7 +3294,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>cidr</span>
+        <span id="cidr_nodejs">
+<a href="#cidr_nodejs" style="color: inherit; text-decoration: inherit;">cidr</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -2845,7 +3305,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>reservation<wbr>Ids</span>
+        <span id="reservationids_nodejs">
+<a href="#reservationids_nodejs" style="color: inherit; text-decoration: inherit;">reservation<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -2860,7 +3322,9 @@ The fields of the network attributes are:
 
     <dt class="property-required"
             title="Required">
-        <span>type</span>
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2869,7 +3333,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>cidr</span>
+        <span id="cidr_python">
+<a href="#cidr_python" style="color: inherit; text-decoration: inherit;">cidr</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2878,7 +3344,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>reservation<wbr>Ids</span>
+        <span id="reservationids_python">
+<a href="#reservationids_python" style="color: inherit; text-decoration: inherit;">reservation<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -2911,7 +3379,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Address</span>
+        <span id="address_csharp">
+<a href="#address_csharp" style="color: inherit; text-decoration: inherit;">Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2920,7 +3390,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cidr</span>
+        <span id="cidr_csharp">
+<a href="#cidr_csharp" style="color: inherit; text-decoration: inherit;">Cidr</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -2929,7 +3401,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Family</span>
+        <span id="family_csharp">
+<a href="#family_csharp" style="color: inherit; text-decoration: inherit;">Family</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -2938,7 +3412,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Gateway</span>
+        <span id="gateway_csharp">
+<a href="#gateway_csharp" style="color: inherit; text-decoration: inherit;">Gateway</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2947,7 +3423,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Public</span>
+        <span id="public_csharp">
+<a href="#public_csharp" style="color: inherit; text-decoration: inherit;">Public</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -2963,7 +3441,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Address</span>
+        <span id="address_go">
+<a href="#address_go" style="color: inherit; text-decoration: inherit;">Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2972,7 +3452,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cidr</span>
+        <span id="cidr_go">
+<a href="#cidr_go" style="color: inherit; text-decoration: inherit;">Cidr</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -2981,7 +3463,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Family</span>
+        <span id="family_go">
+<a href="#family_go" style="color: inherit; text-decoration: inherit;">Family</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -2990,7 +3474,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Gateway</span>
+        <span id="gateway_go">
+<a href="#gateway_go" style="color: inherit; text-decoration: inherit;">Gateway</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2999,7 +3485,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Public</span>
+        <span id="public_go">
+<a href="#public_go" style="color: inherit; text-decoration: inherit;">Public</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -3015,7 +3503,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>address</span>
+        <span id="address_nodejs">
+<a href="#address_nodejs" style="color: inherit; text-decoration: inherit;">address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3024,7 +3514,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>cidr</span>
+        <span id="cidr_nodejs">
+<a href="#cidr_nodejs" style="color: inherit; text-decoration: inherit;">cidr</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -3033,7 +3525,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>family</span>
+        <span id="family_nodejs">
+<a href="#family_nodejs" style="color: inherit; text-decoration: inherit;">family</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -3042,7 +3536,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>gateway</span>
+        <span id="gateway_nodejs">
+<a href="#gateway_nodejs" style="color: inherit; text-decoration: inherit;">gateway</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3051,7 +3547,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>public</span>
+        <span id="public_nodejs">
+<a href="#public_nodejs" style="color: inherit; text-decoration: inherit;">public</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -3067,7 +3565,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>address</span>
+        <span id="address_python">
+<a href="#address_python" style="color: inherit; text-decoration: inherit;">address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3076,7 +3576,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>cidr</span>
+        <span id="cidr_python">
+<a href="#cidr_python" style="color: inherit; text-decoration: inherit;">cidr</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -3085,7 +3587,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>family</span>
+        <span id="family_python">
+<a href="#family_python" style="color: inherit; text-decoration: inherit;">family</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -3094,7 +3598,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>gateway</span>
+        <span id="gateway_python">
+<a href="#gateway_python" style="color: inherit; text-decoration: inherit;">gateway</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3103,7 +3609,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>public</span>
+        <span id="public_python">
+<a href="#public_python" style="color: inherit; text-decoration: inherit;">public</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -3137,7 +3645,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Bonded</span>
+        <span id="bonded_csharp">
+<a href="#bonded_csharp" style="color: inherit; text-decoration: inherit;">Bonded</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -3147,7 +3657,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3156,7 +3668,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Mac</span>
+        <span id="mac_csharp">
+<a href="#mac_csharp" style="color: inherit; text-decoration: inherit;">Mac</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3165,7 +3679,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3174,7 +3690,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Type</span>
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3190,7 +3708,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Bonded</span>
+        <span id="bonded_go">
+<a href="#bonded_go" style="color: inherit; text-decoration: inherit;">Bonded</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -3200,7 +3720,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3209,7 +3731,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Mac</span>
+        <span id="mac_go">
+<a href="#mac_go" style="color: inherit; text-decoration: inherit;">Mac</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3218,7 +3742,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3227,7 +3753,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Type</span>
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3243,7 +3771,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>bonded</span>
+        <span id="bonded_nodejs">
+<a href="#bonded_nodejs" style="color: inherit; text-decoration: inherit;">bonded</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -3253,7 +3783,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3262,7 +3794,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>mac</span>
+        <span id="mac_nodejs">
+<a href="#mac_nodejs" style="color: inherit; text-decoration: inherit;">mac</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3271,7 +3805,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3280,7 +3816,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>type</span>
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3296,7 +3834,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>bonded</span>
+        <span id="bonded_python">
+<a href="#bonded_python" style="color: inherit; text-decoration: inherit;">bonded</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -3306,7 +3846,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3315,7 +3857,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>mac</span>
+        <span id="mac_python">
+<a href="#mac_python" style="color: inherit; text-decoration: inherit;">mac</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3324,7 +3868,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3333,7 +3879,9 @@ The fields of the network attributes are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>type</span>
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

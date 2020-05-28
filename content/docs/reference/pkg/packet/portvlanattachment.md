@@ -34,7 +34,83 @@ To learn more about Layer 2 networking in Packet, refer to
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Packet = Pulumi.Packet;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        // Hybrid network type
+        var testVlan = new Packet.Vlan("testVlan", new Packet.VlanArgs
+        {
+            Description = "VLAN in New Jersey",
+            Facility = "ewr1",
+            ProjectId = local.Project_id,
+        });
+        var testDevice = new Packet.Device("testDevice", new Packet.DeviceArgs
+        {
+            Hostname = "test",
+            Plan = "m1.xlarge.x86",
+            Facilities = 
+            {
+                "ewr1",
+            },
+            OperatingSystem = "ubuntu_16_04",
+            BillingCycle = "hourly",
+            ProjectId = local.Project_id,
+            NetworkType = "hybrid",
+        });
+        var testPortVlanAttachment = new Packet.PortVlanAttachment("testPortVlanAttachment", new Packet.PortVlanAttachmentArgs
+        {
+            DeviceId = testDevice.Id,
+            PortName = "eth1",
+            VlanVnid = testVlan.Vxlan,
+        });
+        // Layer 2 network
+        var testIndex_deviceDevice = new Packet.Device("testIndex/deviceDevice", new Packet.DeviceArgs
+        {
+            Hostname = "test",
+            Plan = "m1.xlarge.x86",
+            Facilities = 
+            {
+                "ewr1",
+            },
+            OperatingSystem = "ubuntu_16_04",
+            BillingCycle = "hourly",
+            ProjectId = local.Project_id,
+            NetworkType = "layer2-individual",
+        });
+        var test1Vlan = new Packet.Vlan("test1Vlan", new Packet.VlanArgs
+        {
+            Description = "VLAN in New Jersey",
+            Facility = "ewr1",
+            ProjectId = local.Project_id,
+        });
+        var test2Vlan = new Packet.Vlan("test2Vlan", new Packet.VlanArgs
+        {
+            Description = "VLAN in New Jersey",
+            Facility = "ewr1",
+            ProjectId = local.Project_id,
+        });
+        var test1PortVlanAttachment = new Packet.PortVlanAttachment("test1PortVlanAttachment", new Packet.PortVlanAttachmentArgs
+        {
+            DeviceId = testDevice.Id,
+            VlanVnid = test1Vlan.Vxlan,
+            PortName = "eth1",
+        });
+        var test2PortVlanAttachment = new Packet.PortVlanAttachment("test2PortVlanAttachment", new Packet.PortVlanAttachmentArgs
+        {
+            DeviceId = testDevice.Id,
+            VlanVnid = test2Vlan.Vxlan,
+            PortName = "eth1",
+            Native = true,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -118,7 +194,7 @@ const testPortVlanAttachment = new packet.PortVlanAttachment("testPortVlanAttach
     vlanVnid: testVlan.vxlan,
 });
 // Layer 2 network
-const testIndex/deviceDevice = new packet.Device("testIndex/deviceDevice", {
+const testIndex_deviceDevice = new packet.Device("testIndex/deviceDevice", {
     hostname: "test",
     plan: "m1.xlarge.x86",
     facilities: ["ewr1"],
@@ -337,7 +413,9 @@ The PortVlanAttachment resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-required"
             title="Required">
-        <span>Device<wbr>Id</span>
+        <span id="deviceid_csharp">
+<a href="#deviceid_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -346,7 +424,9 @@ The PortVlanAttachment resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-required"
             title="Required">
-        <span>Port<wbr>Name</span>
+        <span id="portname_csharp">
+<a href="#portname_csharp" style="color: inherit; text-decoration: inherit;">Port<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -355,7 +435,9 @@ The PortVlanAttachment resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-required"
             title="Required">
-        <span>Vlan<wbr>Vnid</span>
+        <span id="vlanvnid_csharp">
+<a href="#vlanvnid_csharp" style="color: inherit; text-decoration: inherit;">Vlan<wbr>Vnid</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -364,7 +446,9 @@ The PortVlanAttachment resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Force<wbr>Bond</span>
+        <span id="forcebond_csharp">
+<a href="#forcebond_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Bond</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -373,7 +457,9 @@ The PortVlanAttachment resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Native</span>
+        <span id="native_csharp">
+<a href="#native_csharp" style="color: inherit; text-decoration: inherit;">Native</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -389,7 +475,9 @@ The PortVlanAttachment resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-required"
             title="Required">
-        <span>Device<wbr>Id</span>
+        <span id="deviceid_go">
+<a href="#deviceid_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -398,7 +486,9 @@ The PortVlanAttachment resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-required"
             title="Required">
-        <span>Port<wbr>Name</span>
+        <span id="portname_go">
+<a href="#portname_go" style="color: inherit; text-decoration: inherit;">Port<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -407,7 +497,9 @@ The PortVlanAttachment resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-required"
             title="Required">
-        <span>Vlan<wbr>Vnid</span>
+        <span id="vlanvnid_go">
+<a href="#vlanvnid_go" style="color: inherit; text-decoration: inherit;">Vlan<wbr>Vnid</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -416,7 +508,9 @@ The PortVlanAttachment resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Force<wbr>Bond</span>
+        <span id="forcebond_go">
+<a href="#forcebond_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Bond</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -425,7 +519,9 @@ The PortVlanAttachment resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Native</span>
+        <span id="native_go">
+<a href="#native_go" style="color: inherit; text-decoration: inherit;">Native</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -441,7 +537,9 @@ The PortVlanAttachment resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-required"
             title="Required">
-        <span>device<wbr>Id</span>
+        <span id="deviceid_nodejs">
+<a href="#deviceid_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -450,7 +548,9 @@ The PortVlanAttachment resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-required"
             title="Required">
-        <span>port<wbr>Name</span>
+        <span id="portname_nodejs">
+<a href="#portname_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -459,7 +559,9 @@ The PortVlanAttachment resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-required"
             title="Required">
-        <span>vlan<wbr>Vnid</span>
+        <span id="vlanvnid_nodejs">
+<a href="#vlanvnid_nodejs" style="color: inherit; text-decoration: inherit;">vlan<wbr>Vnid</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -468,7 +570,9 @@ The PortVlanAttachment resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-optional"
             title="Optional">
-        <span>force<wbr>Bond</span>
+        <span id="forcebond_nodejs">
+<a href="#forcebond_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Bond</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -477,7 +581,9 @@ The PortVlanAttachment resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-optional"
             title="Optional">
-        <span>native</span>
+        <span id="native_nodejs">
+<a href="#native_nodejs" style="color: inherit; text-decoration: inherit;">native</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -493,7 +599,9 @@ The PortVlanAttachment resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-required"
             title="Required">
-        <span>device_<wbr>id</span>
+        <span id="device_id_python">
+<a href="#device_id_python" style="color: inherit; text-decoration: inherit;">device_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -502,7 +610,9 @@ The PortVlanAttachment resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-required"
             title="Required">
-        <span>port_<wbr>name</span>
+        <span id="port_name_python">
+<a href="#port_name_python" style="color: inherit; text-decoration: inherit;">port_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -511,7 +621,9 @@ The PortVlanAttachment resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-required"
             title="Required">
-        <span>vlan_<wbr>vnid</span>
+        <span id="vlan_vnid_python">
+<a href="#vlan_vnid_python" style="color: inherit; text-decoration: inherit;">vlan_<wbr>vnid</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -520,7 +632,9 @@ The PortVlanAttachment resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-optional"
             title="Optional">
-        <span>force_<wbr>bond</span>
+        <span id="force_bond_python">
+<a href="#force_bond_python" style="color: inherit; text-decoration: inherit;">force_<wbr>bond</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -529,7 +643,9 @@ The PortVlanAttachment resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-optional"
             title="Optional">
-        <span>native</span>
+        <span id="native_python">
+<a href="#native_python" style="color: inherit; text-decoration: inherit;">native</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -556,7 +672,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -564,7 +682,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Port<wbr>Id</span>
+        <span id="portid_csharp">
+<a href="#portid_csharp" style="color: inherit; text-decoration: inherit;">Port<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -572,7 +692,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Vlan<wbr>Id</span>
+        <span id="vlanid_csharp">
+<a href="#vlanid_csharp" style="color: inherit; text-decoration: inherit;">Vlan<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -587,7 +709,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -595,7 +719,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Port<wbr>Id</span>
+        <span id="portid_go">
+<a href="#portid_go" style="color: inherit; text-decoration: inherit;">Port<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -603,7 +729,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Vlan<wbr>Id</span>
+        <span id="vlanid_go">
+<a href="#vlanid_go" style="color: inherit; text-decoration: inherit;">Vlan<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -618,7 +746,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -626,7 +756,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>port<wbr>Id</span>
+        <span id="portid_nodejs">
+<a href="#portid_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -634,7 +766,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>vlan<wbr>Id</span>
+        <span id="vlanid_nodejs">
+<a href="#vlanid_nodejs" style="color: inherit; text-decoration: inherit;">vlan<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -649,7 +783,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -657,7 +793,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>port_<wbr>id</span>
+        <span id="port_id_python">
+<a href="#port_id_python" style="color: inherit; text-decoration: inherit;">port_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -665,7 +803,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>vlan_<wbr>id</span>
+        <span id="vlan_id_python">
+<a href="#vlan_id_python" style="color: inherit; text-decoration: inherit;">vlan_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -806,7 +946,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Device<wbr>Id</span>
+        <span id="state_deviceid_csharp">
+<a href="#state_deviceid_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -815,7 +957,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Force<wbr>Bond</span>
+        <span id="state_forcebond_csharp">
+<a href="#state_forcebond_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Bond</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -824,7 +968,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Native</span>
+        <span id="state_native_csharp">
+<a href="#state_native_csharp" style="color: inherit; text-decoration: inherit;">Native</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -833,7 +979,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Port<wbr>Id</span>
+        <span id="state_portid_csharp">
+<a href="#state_portid_csharp" style="color: inherit; text-decoration: inherit;">Port<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -841,7 +989,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Port<wbr>Name</span>
+        <span id="state_portname_csharp">
+<a href="#state_portname_csharp" style="color: inherit; text-decoration: inherit;">Port<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -850,7 +1000,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vlan<wbr>Id</span>
+        <span id="state_vlanid_csharp">
+<a href="#state_vlanid_csharp" style="color: inherit; text-decoration: inherit;">Vlan<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -858,7 +1010,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vlan<wbr>Vnid</span>
+        <span id="state_vlanvnid_csharp">
+<a href="#state_vlanvnid_csharp" style="color: inherit; text-decoration: inherit;">Vlan<wbr>Vnid</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -874,7 +1028,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Device<wbr>Id</span>
+        <span id="state_deviceid_go">
+<a href="#state_deviceid_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -883,7 +1039,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Force<wbr>Bond</span>
+        <span id="state_forcebond_go">
+<a href="#state_forcebond_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Bond</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -892,7 +1050,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Native</span>
+        <span id="state_native_go">
+<a href="#state_native_go" style="color: inherit; text-decoration: inherit;">Native</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -901,7 +1061,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Port<wbr>Id</span>
+        <span id="state_portid_go">
+<a href="#state_portid_go" style="color: inherit; text-decoration: inherit;">Port<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -909,7 +1071,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Port<wbr>Name</span>
+        <span id="state_portname_go">
+<a href="#state_portname_go" style="color: inherit; text-decoration: inherit;">Port<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -918,7 +1082,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vlan<wbr>Id</span>
+        <span id="state_vlanid_go">
+<a href="#state_vlanid_go" style="color: inherit; text-decoration: inherit;">Vlan<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -926,7 +1092,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vlan<wbr>Vnid</span>
+        <span id="state_vlanvnid_go">
+<a href="#state_vlanvnid_go" style="color: inherit; text-decoration: inherit;">Vlan<wbr>Vnid</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -942,7 +1110,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>device<wbr>Id</span>
+        <span id="state_deviceid_nodejs">
+<a href="#state_deviceid_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -951,7 +1121,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>force<wbr>Bond</span>
+        <span id="state_forcebond_nodejs">
+<a href="#state_forcebond_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Bond</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -960,7 +1132,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>native</span>
+        <span id="state_native_nodejs">
+<a href="#state_native_nodejs" style="color: inherit; text-decoration: inherit;">native</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -969,7 +1143,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>port<wbr>Id</span>
+        <span id="state_portid_nodejs">
+<a href="#state_portid_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -977,7 +1153,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>port<wbr>Name</span>
+        <span id="state_portname_nodejs">
+<a href="#state_portname_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -986,7 +1164,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>vlan<wbr>Id</span>
+        <span id="state_vlanid_nodejs">
+<a href="#state_vlanid_nodejs" style="color: inherit; text-decoration: inherit;">vlan<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -994,7 +1174,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>vlan<wbr>Vnid</span>
+        <span id="state_vlanvnid_nodejs">
+<a href="#state_vlanvnid_nodejs" style="color: inherit; text-decoration: inherit;">vlan<wbr>Vnid</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1010,7 +1192,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>device_<wbr>id</span>
+        <span id="state_device_id_python">
+<a href="#state_device_id_python" style="color: inherit; text-decoration: inherit;">device_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1019,7 +1203,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>force_<wbr>bond</span>
+        <span id="state_force_bond_python">
+<a href="#state_force_bond_python" style="color: inherit; text-decoration: inherit;">force_<wbr>bond</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1028,7 +1214,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>native</span>
+        <span id="state_native_python">
+<a href="#state_native_python" style="color: inherit; text-decoration: inherit;">native</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1037,7 +1225,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>port_<wbr>id</span>
+        <span id="state_port_id_python">
+<a href="#state_port_id_python" style="color: inherit; text-decoration: inherit;">port_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1045,7 +1235,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>port_<wbr>name</span>
+        <span id="state_port_name_python">
+<a href="#state_port_name_python" style="color: inherit; text-decoration: inherit;">port_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1054,7 +1246,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>vlan_<wbr>id</span>
+        <span id="state_vlan_id_python">
+<a href="#state_vlan_id_python" style="color: inherit; text-decoration: inherit;">vlan_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1062,7 +1256,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>vlan_<wbr>vnid</span>
+        <span id="state_vlan_vnid_python">
+<a href="#state_vlan_vnid_python" style="color: inherit; text-decoration: inherit;">vlan_<wbr>vnid</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>

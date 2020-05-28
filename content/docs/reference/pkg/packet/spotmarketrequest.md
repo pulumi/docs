@@ -13,65 +13,9 @@ meta_desc: "Explore the SpotMarketRequest resource of the Packet package, includ
 Provides a Packet Spot Market Request resource to allow you to
 manage spot market requests on your account. For more detail on Spot Market, see [this article in Packet documentaion](https://www.packet.com/developers/docs/getting-started/deployment-options/spot-market/).
 
-
-
 {{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_packet as packet
-
-# Create a spot market request
-req = packet.SpotMarketRequest("req",
-    project_id=local["project_id"],
-    max_bid_price=0.03,
-    facilities=["ewr1"],
-    devices_min=1,
-    devices_max=1,
-    instance_parameters={
-        "hostname": "testspot",
-        "billingCycle": "hourly",
-        "operatingSystem": "coreos_stable",
-        "plan": "t1.small.x86",
-    })
-```
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as packet from "@pulumi/packet";
-
-// Create a spot market request
-const req = new packet.SpotMarketRequest("req", {
-    projectId: local.project_id,
-    maxBidPrice: 0.03,
-    facilities: ["ewr1"],
-    devicesMin: 1,
-    devicesMax: 1,
-    instance_parameters: {
-        hostname: "testspot",
-        billingCycle: "hourly",
-        operatingSystem: "coreos_stable",
-        plan: "t1.small.x86",
-    },
-});
-```
-{{% /example %}}
-
 {{% /examples %}}
+
 
 
 ## Create a SpotMarketRequest Resource {#create}
@@ -257,7 +201,9 @@ The SpotMarketRequest resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span>Devices<wbr>Max</span>
+        <span id="devicesmax_csharp">
+<a href="#devicesmax_csharp" style="color: inherit; text-decoration: inherit;">Devices<wbr>Max</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -266,7 +212,9 @@ The SpotMarketRequest resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span>Devices<wbr>Min</span>
+        <span id="devicesmin_csharp">
+<a href="#devicesmin_csharp" style="color: inherit; text-decoration: inherit;">Devices<wbr>Min</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -275,7 +223,9 @@ The SpotMarketRequest resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span>Facilities</span>
+        <span id="facilities_csharp">
+<a href="#facilities_csharp" style="color: inherit; text-decoration: inherit;">Facilities</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -284,7 +234,9 @@ The SpotMarketRequest resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span>Instance<wbr>Parameters</span>
+        <span id="instanceparameters_csharp">
+<a href="#instanceparameters_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Parameters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotmarketrequestinstanceparameters">Spot<wbr>Market<wbr>Request<wbr>Instance<wbr>Parameters<wbr>Args</a></span>
     </dt>
@@ -293,7 +245,9 @@ The SpotMarketRequest resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span>Max<wbr>Bid<wbr>Price</span>
+        <span id="maxbidprice_csharp">
+<a href="#maxbidprice_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Bid<wbr>Price</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
@@ -302,7 +256,9 @@ The SpotMarketRequest resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span>Project<wbr>Id</span>
+        <span id="projectid_csharp">
+<a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -311,7 +267,9 @@ The SpotMarketRequest resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Wait<wbr>For<wbr>Devices</span>
+        <span id="waitfordevices_csharp">
+<a href="#waitfordevices_csharp" style="color: inherit; text-decoration: inherit;">Wait<wbr>For<wbr>Devices</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -327,7 +285,9 @@ The SpotMarketRequest resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span>Devices<wbr>Max</span>
+        <span id="devicesmax_go">
+<a href="#devicesmax_go" style="color: inherit; text-decoration: inherit;">Devices<wbr>Max</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -336,7 +296,9 @@ The SpotMarketRequest resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span>Devices<wbr>Min</span>
+        <span id="devicesmin_go">
+<a href="#devicesmin_go" style="color: inherit; text-decoration: inherit;">Devices<wbr>Min</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -345,7 +307,9 @@ The SpotMarketRequest resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span>Facilities</span>
+        <span id="facilities_go">
+<a href="#facilities_go" style="color: inherit; text-decoration: inherit;">Facilities</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -354,7 +318,9 @@ The SpotMarketRequest resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span>Instance<wbr>Parameters</span>
+        <span id="instanceparameters_go">
+<a href="#instanceparameters_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Parameters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotmarketrequestinstanceparameters">Spot<wbr>Market<wbr>Request<wbr>Instance<wbr>Parameters</a></span>
     </dt>
@@ -363,7 +329,9 @@ The SpotMarketRequest resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span>Max<wbr>Bid<wbr>Price</span>
+        <span id="maxbidprice_go">
+<a href="#maxbidprice_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Bid<wbr>Price</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
@@ -372,7 +340,9 @@ The SpotMarketRequest resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span>Project<wbr>Id</span>
+        <span id="projectid_go">
+<a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -381,7 +351,9 @@ The SpotMarketRequest resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Wait<wbr>For<wbr>Devices</span>
+        <span id="waitfordevices_go">
+<a href="#waitfordevices_go" style="color: inherit; text-decoration: inherit;">Wait<wbr>For<wbr>Devices</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -397,7 +369,9 @@ The SpotMarketRequest resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span>devices<wbr>Max</span>
+        <span id="devicesmax_nodejs">
+<a href="#devicesmax_nodejs" style="color: inherit; text-decoration: inherit;">devices<wbr>Max</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -406,7 +380,9 @@ The SpotMarketRequest resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span>devices<wbr>Min</span>
+        <span id="devicesmin_nodejs">
+<a href="#devicesmin_nodejs" style="color: inherit; text-decoration: inherit;">devices<wbr>Min</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -415,7 +391,9 @@ The SpotMarketRequest resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span>facilities</span>
+        <span id="facilities_nodejs">
+<a href="#facilities_nodejs" style="color: inherit; text-decoration: inherit;">facilities</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -424,7 +402,9 @@ The SpotMarketRequest resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span>instance<wbr>Parameters</span>
+        <span id="instanceparameters_nodejs">
+<a href="#instanceparameters_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Parameters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotmarketrequestinstanceparameters">Spot<wbr>Market<wbr>Request<wbr>Instance<wbr>Parameters</a></span>
     </dt>
@@ -433,7 +413,9 @@ The SpotMarketRequest resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span>max<wbr>Bid<wbr>Price</span>
+        <span id="maxbidprice_nodejs">
+<a href="#maxbidprice_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Bid<wbr>Price</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
@@ -442,7 +424,9 @@ The SpotMarketRequest resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span>project<wbr>Id</span>
+        <span id="projectid_nodejs">
+<a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -451,7 +435,9 @@ The SpotMarketRequest resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>wait<wbr>For<wbr>Devices</span>
+        <span id="waitfordevices_nodejs">
+<a href="#waitfordevices_nodejs" style="color: inherit; text-decoration: inherit;">wait<wbr>For<wbr>Devices</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -467,7 +453,9 @@ The SpotMarketRequest resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span>devices_<wbr>max</span>
+        <span id="devices_max_python">
+<a href="#devices_max_python" style="color: inherit; text-decoration: inherit;">devices_<wbr>max</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -476,7 +464,9 @@ The SpotMarketRequest resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span>devices_<wbr>min</span>
+        <span id="devices_min_python">
+<a href="#devices_min_python" style="color: inherit; text-decoration: inherit;">devices_<wbr>min</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -485,7 +475,9 @@ The SpotMarketRequest resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span>facilities</span>
+        <span id="facilities_python">
+<a href="#facilities_python" style="color: inherit; text-decoration: inherit;">facilities</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -494,7 +486,9 @@ The SpotMarketRequest resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span>instance_<wbr>parameters</span>
+        <span id="instance_parameters_python">
+<a href="#instance_parameters_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>parameters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotmarketrequestinstanceparameters">Dict[Spot<wbr>Market<wbr>Request<wbr>Instance<wbr>Parameters]</a></span>
     </dt>
@@ -503,7 +497,9 @@ The SpotMarketRequest resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span>max_<wbr>bid_<wbr>price</span>
+        <span id="max_bid_price_python">
+<a href="#max_bid_price_python" style="color: inherit; text-decoration: inherit;">max_<wbr>bid_<wbr>price</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -512,7 +508,9 @@ The SpotMarketRequest resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span>project_<wbr>id</span>
+        <span id="project_id_python">
+<a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -521,7 +519,9 @@ The SpotMarketRequest resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>wait_<wbr>for_<wbr>devices</span>
+        <span id="wait_for_devices_python">
+<a href="#wait_for_devices_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>for_<wbr>devices</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -548,7 +548,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -563,7 +565,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -578,7 +582,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -593,7 +599,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -734,7 +742,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Devices<wbr>Max</span>
+        <span id="state_devicesmax_csharp">
+<a href="#state_devicesmax_csharp" style="color: inherit; text-decoration: inherit;">Devices<wbr>Max</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -743,7 +753,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Devices<wbr>Min</span>
+        <span id="state_devicesmin_csharp">
+<a href="#state_devicesmin_csharp" style="color: inherit; text-decoration: inherit;">Devices<wbr>Min</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -752,7 +764,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Facilities</span>
+        <span id="state_facilities_csharp">
+<a href="#state_facilities_csharp" style="color: inherit; text-decoration: inherit;">Facilities</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -761,7 +775,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Instance<wbr>Parameters</span>
+        <span id="state_instanceparameters_csharp">
+<a href="#state_instanceparameters_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Parameters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotmarketrequestinstanceparameters">Spot<wbr>Market<wbr>Request<wbr>Instance<wbr>Parameters<wbr>Args</a></span>
     </dt>
@@ -770,7 +786,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Bid<wbr>Price</span>
+        <span id="state_maxbidprice_csharp">
+<a href="#state_maxbidprice_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Bid<wbr>Price</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
@@ -779,7 +797,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project<wbr>Id</span>
+        <span id="state_projectid_csharp">
+<a href="#state_projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -788,7 +808,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Wait<wbr>For<wbr>Devices</span>
+        <span id="state_waitfordevices_csharp">
+<a href="#state_waitfordevices_csharp" style="color: inherit; text-decoration: inherit;">Wait<wbr>For<wbr>Devices</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -804,7 +826,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Devices<wbr>Max</span>
+        <span id="state_devicesmax_go">
+<a href="#state_devicesmax_go" style="color: inherit; text-decoration: inherit;">Devices<wbr>Max</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -813,7 +837,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Devices<wbr>Min</span>
+        <span id="state_devicesmin_go">
+<a href="#state_devicesmin_go" style="color: inherit; text-decoration: inherit;">Devices<wbr>Min</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -822,7 +848,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Facilities</span>
+        <span id="state_facilities_go">
+<a href="#state_facilities_go" style="color: inherit; text-decoration: inherit;">Facilities</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -831,7 +859,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Instance<wbr>Parameters</span>
+        <span id="state_instanceparameters_go">
+<a href="#state_instanceparameters_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Parameters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotmarketrequestinstanceparameters">Spot<wbr>Market<wbr>Request<wbr>Instance<wbr>Parameters</a></span>
     </dt>
@@ -840,7 +870,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Bid<wbr>Price</span>
+        <span id="state_maxbidprice_go">
+<a href="#state_maxbidprice_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Bid<wbr>Price</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
@@ -849,7 +881,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project<wbr>Id</span>
+        <span id="state_projectid_go">
+<a href="#state_projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -858,7 +892,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Wait<wbr>For<wbr>Devices</span>
+        <span id="state_waitfordevices_go">
+<a href="#state_waitfordevices_go" style="color: inherit; text-decoration: inherit;">Wait<wbr>For<wbr>Devices</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -874,7 +910,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>devices<wbr>Max</span>
+        <span id="state_devicesmax_nodejs">
+<a href="#state_devicesmax_nodejs" style="color: inherit; text-decoration: inherit;">devices<wbr>Max</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -883,7 +921,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>devices<wbr>Min</span>
+        <span id="state_devicesmin_nodejs">
+<a href="#state_devicesmin_nodejs" style="color: inherit; text-decoration: inherit;">devices<wbr>Min</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -892,7 +932,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>facilities</span>
+        <span id="state_facilities_nodejs">
+<a href="#state_facilities_nodejs" style="color: inherit; text-decoration: inherit;">facilities</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -901,7 +943,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>instance<wbr>Parameters</span>
+        <span id="state_instanceparameters_nodejs">
+<a href="#state_instanceparameters_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Parameters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotmarketrequestinstanceparameters">Spot<wbr>Market<wbr>Request<wbr>Instance<wbr>Parameters</a></span>
     </dt>
@@ -910,7 +954,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Bid<wbr>Price</span>
+        <span id="state_maxbidprice_nodejs">
+<a href="#state_maxbidprice_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Bid<wbr>Price</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
@@ -919,7 +965,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>project<wbr>Id</span>
+        <span id="state_projectid_nodejs">
+<a href="#state_projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -928,7 +976,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>wait<wbr>For<wbr>Devices</span>
+        <span id="state_waitfordevices_nodejs">
+<a href="#state_waitfordevices_nodejs" style="color: inherit; text-decoration: inherit;">wait<wbr>For<wbr>Devices</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -944,7 +994,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>devices_<wbr>max</span>
+        <span id="state_devices_max_python">
+<a href="#state_devices_max_python" style="color: inherit; text-decoration: inherit;">devices_<wbr>max</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -953,7 +1005,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>devices_<wbr>min</span>
+        <span id="state_devices_min_python">
+<a href="#state_devices_min_python" style="color: inherit; text-decoration: inherit;">devices_<wbr>min</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -962,7 +1016,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>facilities</span>
+        <span id="state_facilities_python">
+<a href="#state_facilities_python" style="color: inherit; text-decoration: inherit;">facilities</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -971,7 +1027,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>instance_<wbr>parameters</span>
+        <span id="state_instance_parameters_python">
+<a href="#state_instance_parameters_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>parameters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotmarketrequestinstanceparameters">Dict[Spot<wbr>Market<wbr>Request<wbr>Instance<wbr>Parameters]</a></span>
     </dt>
@@ -980,7 +1038,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>max_<wbr>bid_<wbr>price</span>
+        <span id="state_max_bid_price_python">
+<a href="#state_max_bid_price_python" style="color: inherit; text-decoration: inherit;">max_<wbr>bid_<wbr>price</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -989,7 +1049,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>project_<wbr>id</span>
+        <span id="state_project_id_python">
+<a href="#state_project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -998,7 +1060,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>wait_<wbr>for_<wbr>devices</span>
+        <span id="state_wait_for_devices_python">
+<a href="#state_wait_for_devices_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>for_<wbr>devices</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1040,7 +1104,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Billing<wbr>Cycle</span>
+        <span id="billingcycle_csharp">
+<a href="#billingcycle_csharp" style="color: inherit; text-decoration: inherit;">Billing<wbr>Cycle</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1048,7 +1114,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Hostname</span>
+        <span id="hostname_csharp">
+<a href="#hostname_csharp" style="color: inherit; text-decoration: inherit;">Hostname</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1056,7 +1124,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Operating<wbr>System</span>
+        <span id="operatingsystem_csharp">
+<a href="#operatingsystem_csharp" style="color: inherit; text-decoration: inherit;">Operating<wbr>System</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1064,7 +1134,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Plan</span>
+        <span id="plan_csharp">
+<a href="#plan_csharp" style="color: inherit; text-decoration: inherit;">Plan</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1072,7 +1144,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Always<wbr>Pxe</span>
+        <span id="alwayspxe_csharp">
+<a href="#alwayspxe_csharp" style="color: inherit; text-decoration: inherit;">Always<wbr>Pxe</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1080,7 +1154,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1088,7 +1164,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Features</span>
+        <span id="features_csharp">
+<a href="#features_csharp" style="color: inherit; text-decoration: inherit;">Features</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1096,7 +1174,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Locked</span>
+        <span id="locked_csharp">
+<a href="#locked_csharp" style="color: inherit; text-decoration: inherit;">Locked</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1104,7 +1184,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project<wbr>Ssh<wbr>Keys</span>
+        <span id="projectsshkeys_csharp">
+<a href="#projectsshkeys_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Ssh<wbr>Keys</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1112,7 +1194,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Termintation<wbr>Time</span>
+        <span id="termintationtime_csharp">
+<a href="#termintationtime_csharp" style="color: inherit; text-decoration: inherit;">Termintation<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1120,7 +1204,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>User<wbr>Ssh<wbr>Keys</span>
+        <span id="usersshkeys_csharp">
+<a href="#usersshkeys_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Ssh<wbr>Keys</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1128,7 +1214,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Userdata</span>
+        <span id="userdata_csharp">
+<a href="#userdata_csharp" style="color: inherit; text-decoration: inherit;">Userdata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1143,7 +1231,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Billing<wbr>Cycle</span>
+        <span id="billingcycle_go">
+<a href="#billingcycle_go" style="color: inherit; text-decoration: inherit;">Billing<wbr>Cycle</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1151,7 +1241,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Hostname</span>
+        <span id="hostname_go">
+<a href="#hostname_go" style="color: inherit; text-decoration: inherit;">Hostname</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1159,7 +1251,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Operating<wbr>System</span>
+        <span id="operatingsystem_go">
+<a href="#operatingsystem_go" style="color: inherit; text-decoration: inherit;">Operating<wbr>System</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1167,7 +1261,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Plan</span>
+        <span id="plan_go">
+<a href="#plan_go" style="color: inherit; text-decoration: inherit;">Plan</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1175,7 +1271,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Always<wbr>Pxe</span>
+        <span id="alwayspxe_go">
+<a href="#alwayspxe_go" style="color: inherit; text-decoration: inherit;">Always<wbr>Pxe</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1183,7 +1281,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1191,7 +1291,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Features</span>
+        <span id="features_go">
+<a href="#features_go" style="color: inherit; text-decoration: inherit;">Features</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1199,7 +1301,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Locked</span>
+        <span id="locked_go">
+<a href="#locked_go" style="color: inherit; text-decoration: inherit;">Locked</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1207,7 +1311,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project<wbr>Ssh<wbr>Keys</span>
+        <span id="projectsshkeys_go">
+<a href="#projectsshkeys_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Ssh<wbr>Keys</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1215,7 +1321,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Termintation<wbr>Time</span>
+        <span id="termintationtime_go">
+<a href="#termintationtime_go" style="color: inherit; text-decoration: inherit;">Termintation<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1223,7 +1331,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>User<wbr>Ssh<wbr>Keys</span>
+        <span id="usersshkeys_go">
+<a href="#usersshkeys_go" style="color: inherit; text-decoration: inherit;">User<wbr>Ssh<wbr>Keys</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1231,7 +1341,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Userdata</span>
+        <span id="userdata_go">
+<a href="#userdata_go" style="color: inherit; text-decoration: inherit;">Userdata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1246,7 +1358,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>billing<wbr>Cycle</span>
+        <span id="billingcycle_nodejs">
+<a href="#billingcycle_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Cycle</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1254,7 +1368,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>hostname</span>
+        <span id="hostname_nodejs">
+<a href="#hostname_nodejs" style="color: inherit; text-decoration: inherit;">hostname</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1262,7 +1378,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>operating<wbr>System</span>
+        <span id="operatingsystem_nodejs">
+<a href="#operatingsystem_nodejs" style="color: inherit; text-decoration: inherit;">operating<wbr>System</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1270,7 +1388,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>plan</span>
+        <span id="plan_nodejs">
+<a href="#plan_nodejs" style="color: inherit; text-decoration: inherit;">plan</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1278,7 +1398,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>always<wbr>Pxe</span>
+        <span id="alwayspxe_nodejs">
+<a href="#alwayspxe_nodejs" style="color: inherit; text-decoration: inherit;">always<wbr>Pxe</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1286,7 +1408,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1294,7 +1418,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>features</span>
+        <span id="features_nodejs">
+<a href="#features_nodejs" style="color: inherit; text-decoration: inherit;">features</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1302,7 +1428,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>locked</span>
+        <span id="locked_nodejs">
+<a href="#locked_nodejs" style="color: inherit; text-decoration: inherit;">locked</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1310,7 +1438,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>project<wbr>Ssh<wbr>Keys</span>
+        <span id="projectsshkeys_nodejs">
+<a href="#projectsshkeys_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Ssh<wbr>Keys</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1318,7 +1448,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>termintation<wbr>Time</span>
+        <span id="termintationtime_nodejs">
+<a href="#termintationtime_nodejs" style="color: inherit; text-decoration: inherit;">termintation<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1326,7 +1458,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>user<wbr>Ssh<wbr>Keys</span>
+        <span id="usersshkeys_nodejs">
+<a href="#usersshkeys_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Ssh<wbr>Keys</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1334,7 +1468,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>userdata</span>
+        <span id="userdata_nodejs">
+<a href="#userdata_nodejs" style="color: inherit; text-decoration: inherit;">userdata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1349,7 +1485,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>billing_<wbr>cycle</span>
+        <span id="billing_cycle_python">
+<a href="#billing_cycle_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>cycle</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1357,7 +1495,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>hostname</span>
+        <span id="hostname_python">
+<a href="#hostname_python" style="color: inherit; text-decoration: inherit;">hostname</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1365,7 +1505,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>operating_<wbr>system</span>
+        <span id="operating_system_python">
+<a href="#operating_system_python" style="color: inherit; text-decoration: inherit;">operating_<wbr>system</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1373,7 +1515,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>plan</span>
+        <span id="plan_python">
+<a href="#plan_python" style="color: inherit; text-decoration: inherit;">plan</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1381,7 +1525,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>always_<wbr>pxe</span>
+        <span id="always_pxe_python">
+<a href="#always_pxe_python" style="color: inherit; text-decoration: inherit;">always_<wbr>pxe</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1389,7 +1535,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1397,7 +1545,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>features</span>
+        <span id="features_python">
+<a href="#features_python" style="color: inherit; text-decoration: inherit;">features</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1405,7 +1555,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>locked</span>
+        <span id="locked_python">
+<a href="#locked_python" style="color: inherit; text-decoration: inherit;">locked</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1413,7 +1565,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>project<wbr>Ssh<wbr>Keys</span>
+        <span id="projectsshkeys_python">
+<a href="#projectsshkeys_python" style="color: inherit; text-decoration: inherit;">project<wbr>Ssh<wbr>Keys</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1421,7 +1575,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>termintation<wbr>Time</span>
+        <span id="termintationtime_python">
+<a href="#termintationtime_python" style="color: inherit; text-decoration: inherit;">termintation<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1429,7 +1585,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>user<wbr>Ssh<wbr>Keys</span>
+        <span id="usersshkeys_python">
+<a href="#usersshkeys_python" style="color: inherit; text-decoration: inherit;">user<wbr>Ssh<wbr>Keys</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1437,7 +1595,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>userdata</span>
+        <span id="userdata_python">
+<a href="#userdata_python" style="color: inherit; text-decoration: inherit;">userdata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
