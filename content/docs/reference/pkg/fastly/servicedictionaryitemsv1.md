@@ -196,7 +196,9 @@ The ServiceDictionaryItemsv1 resource accepts the following [input]({{< relref "
 
     <dt class="property-required"
             title="Required">
-        <span>Dictionary<wbr>Id</span>
+        <span id="dictionaryid_csharp">
+<a href="#dictionaryid_csharp" style="color: inherit; text-decoration: inherit;">Dictionary<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -205,7 +207,9 @@ The ServiceDictionaryItemsv1 resource accepts the following [input]({{< relref "
 
     <dt class="property-required"
             title="Required">
-        <span>Service<wbr>Id</span>
+        <span id="serviceid_csharp">
+<a href="#serviceid_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -214,7 +218,9 @@ The ServiceDictionaryItemsv1 resource accepts the following [input]({{< relref "
 
     <dt class="property-optional"
             title="Optional">
-        <span>Items</span>
+        <span id="items_csharp">
+<a href="#items_csharp" style="color: inherit; text-decoration: inherit;">Items</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -230,7 +236,9 @@ The ServiceDictionaryItemsv1 resource accepts the following [input]({{< relref "
 
     <dt class="property-required"
             title="Required">
-        <span>Dictionary<wbr>Id</span>
+        <span id="dictionaryid_go">
+<a href="#dictionaryid_go" style="color: inherit; text-decoration: inherit;">Dictionary<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -239,7 +247,9 @@ The ServiceDictionaryItemsv1 resource accepts the following [input]({{< relref "
 
     <dt class="property-required"
             title="Required">
-        <span>Service<wbr>Id</span>
+        <span id="serviceid_go">
+<a href="#serviceid_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -248,7 +258,9 @@ The ServiceDictionaryItemsv1 resource accepts the following [input]({{< relref "
 
     <dt class="property-optional"
             title="Optional">
-        <span>Items</span>
+        <span id="items_go">
+<a href="#items_go" style="color: inherit; text-decoration: inherit;">Items</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -264,7 +276,9 @@ The ServiceDictionaryItemsv1 resource accepts the following [input]({{< relref "
 
     <dt class="property-required"
             title="Required">
-        <span>dictionary<wbr>Id</span>
+        <span id="dictionaryid_nodejs">
+<a href="#dictionaryid_nodejs" style="color: inherit; text-decoration: inherit;">dictionary<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -273,7 +287,9 @@ The ServiceDictionaryItemsv1 resource accepts the following [input]({{< relref "
 
     <dt class="property-required"
             title="Required">
-        <span>service<wbr>Id</span>
+        <span id="serviceid_nodejs">
+<a href="#serviceid_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -282,7 +298,9 @@ The ServiceDictionaryItemsv1 resource accepts the following [input]({{< relref "
 
     <dt class="property-optional"
             title="Optional">
-        <span>items</span>
+        <span id="items_nodejs">
+<a href="#items_nodejs" style="color: inherit; text-decoration: inherit;">items</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -298,7 +316,9 @@ The ServiceDictionaryItemsv1 resource accepts the following [input]({{< relref "
 
     <dt class="property-required"
             title="Required">
-        <span>dictionary_<wbr>id</span>
+        <span id="dictionary_id_python">
+<a href="#dictionary_id_python" style="color: inherit; text-decoration: inherit;">dictionary_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -307,7 +327,9 @@ The ServiceDictionaryItemsv1 resource accepts the following [input]({{< relref "
 
     <dt class="property-required"
             title="Required">
-        <span>service_<wbr>id</span>
+        <span id="service_id_python">
+<a href="#service_id_python" style="color: inherit; text-decoration: inherit;">service_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -316,7 +338,9 @@ The ServiceDictionaryItemsv1 resource accepts the following [input]({{< relref "
 
     <dt class="property-optional"
             title="Optional">
-        <span>items</span>
+        <span id="items_python">
+<a href="#items_python" style="color: inherit; text-decoration: inherit;">items</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -343,7 +367,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -358,7 +384,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -373,7 +401,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -388,7 +418,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -529,7 +561,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dictionary<wbr>Id</span>
+        <span id="state_dictionaryid_csharp">
+<a href="#state_dictionaryid_csharp" style="color: inherit; text-decoration: inherit;">Dictionary<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -538,7 +572,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Items</span>
+        <span id="state_items_csharp">
+<a href="#state_items_csharp" style="color: inherit; text-decoration: inherit;">Items</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -547,7 +583,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Service<wbr>Id</span>
+        <span id="state_serviceid_csharp">
+<a href="#state_serviceid_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -563,7 +601,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dictionary<wbr>Id</span>
+        <span id="state_dictionaryid_go">
+<a href="#state_dictionaryid_go" style="color: inherit; text-decoration: inherit;">Dictionary<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -572,7 +612,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Items</span>
+        <span id="state_items_go">
+<a href="#state_items_go" style="color: inherit; text-decoration: inherit;">Items</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -581,7 +623,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Service<wbr>Id</span>
+        <span id="state_serviceid_go">
+<a href="#state_serviceid_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -597,7 +641,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>dictionary<wbr>Id</span>
+        <span id="state_dictionaryid_nodejs">
+<a href="#state_dictionaryid_nodejs" style="color: inherit; text-decoration: inherit;">dictionary<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -606,7 +652,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>items</span>
+        <span id="state_items_nodejs">
+<a href="#state_items_nodejs" style="color: inherit; text-decoration: inherit;">items</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -615,7 +663,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>service<wbr>Id</span>
+        <span id="state_serviceid_nodejs">
+<a href="#state_serviceid_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -631,7 +681,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>dictionary_<wbr>id</span>
+        <span id="state_dictionary_id_python">
+<a href="#state_dictionary_id_python" style="color: inherit; text-decoration: inherit;">dictionary_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -640,7 +692,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>items</span>
+        <span id="state_items_python">
+<a href="#state_items_python" style="color: inherit; text-decoration: inherit;">items</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -649,7 +703,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>service_<wbr>id</span>
+        <span id="state_service_id_python">
+<a href="#state_service_id_python" style="color: inherit; text-decoration: inherit;">service_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

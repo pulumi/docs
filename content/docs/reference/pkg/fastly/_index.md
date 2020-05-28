@@ -36,7 +36,7 @@ A Pulumi package for creating and managing fastly cloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`fastly` Terraform Provider](https://github.com/terraform-providers/terraform-provider-fastly).</dd>
 	<dt>Version</dt>
-	<dd>2.3.1</dd>
+	<dd>2.3.2</dd>
 </dl>
 
 
