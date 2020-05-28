@@ -20,7 +20,32 @@ Manages policies for an Identity Entity for Vault. The [Identity secrets engine]
 {{< chooser language "typescript,python,go,csharp" / >}}
 ### Exclusive Policies
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Vault = Pulumi.Vault;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var entity = new Vault.Identity.Entity("entity", new Vault.Identity.EntityArgs
+        {
+            ExternalPolicies = true,
+        });
+        var policies = new Vault.Identity.EntityPolicies("policies", new Vault.Identity.EntityPoliciesArgs
+        {
+            Policies = 
+            {
+                "default",
+                "test",
+            },
+            Exclusive = true,
+            EntityId = entity.Id,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -62,7 +87,41 @@ const policies = new vault.identity.EntityPolicies("policies", {
 
 ### Non-exclusive Policies
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Vault = Pulumi.Vault;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var entity = new Vault.Identity.Entity("entity", new Vault.Identity.EntityArgs
+        {
+            ExternalPolicies = true,
+        });
+        var @default = new Vault.Identity.EntityPolicies("default", new Vault.Identity.EntityPoliciesArgs
+        {
+            Policies = 
+            {
+                "default",
+                "test",
+            },
+            Exclusive = false,
+            EntityId = entity.Id,
+        });
+        var others = new Vault.Identity.EntityPolicies("others", new Vault.Identity.EntityPoliciesArgs
+        {
+            Policies = 
+            {
+                "others",
+            },
+            Exclusive = false,
+            EntityId = entity.Id,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -95,7 +154,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as vault from "@pulumi/vault";
 
 const entity = new vault.identity.Entity("entity", {externalPolicies: true});
-const default = new vault.identity.EntityPolicies("default", {
+const _default = new vault.identity.EntityPolicies("default", {
     policies: [
         "default",
         "test",
@@ -297,7 +356,9 @@ The EntityPolicies resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-required"
             title="Required">
-        <span>Entity<wbr>Id</span>
+        <span id="entityid_csharp">
+<a href="#entityid_csharp" style="color: inherit; text-decoration: inherit;">Entity<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -306,7 +367,9 @@ The EntityPolicies resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-required"
             title="Required">
-        <span>Policies</span>
+        <span id="policies_csharp">
+<a href="#policies_csharp" style="color: inherit; text-decoration: inherit;">Policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -315,7 +378,9 @@ The EntityPolicies resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>Exclusive</span>
+        <span id="exclusive_csharp">
+<a href="#exclusive_csharp" style="color: inherit; text-decoration: inherit;">Exclusive</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -331,7 +396,9 @@ The EntityPolicies resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-required"
             title="Required">
-        <span>Entity<wbr>Id</span>
+        <span id="entityid_go">
+<a href="#entityid_go" style="color: inherit; text-decoration: inherit;">Entity<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -340,7 +407,9 @@ The EntityPolicies resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-required"
             title="Required">
-        <span>Policies</span>
+        <span id="policies_go">
+<a href="#policies_go" style="color: inherit; text-decoration: inherit;">Policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -349,7 +418,9 @@ The EntityPolicies resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>Exclusive</span>
+        <span id="exclusive_go">
+<a href="#exclusive_go" style="color: inherit; text-decoration: inherit;">Exclusive</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -365,7 +436,9 @@ The EntityPolicies resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-required"
             title="Required">
-        <span>entity<wbr>Id</span>
+        <span id="entityid_nodejs">
+<a href="#entityid_nodejs" style="color: inherit; text-decoration: inherit;">entity<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -374,7 +447,9 @@ The EntityPolicies resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-required"
             title="Required">
-        <span>policies</span>
+        <span id="policies_nodejs">
+<a href="#policies_nodejs" style="color: inherit; text-decoration: inherit;">policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -383,7 +458,9 @@ The EntityPolicies resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>exclusive</span>
+        <span id="exclusive_nodejs">
+<a href="#exclusive_nodejs" style="color: inherit; text-decoration: inherit;">exclusive</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -399,7 +476,9 @@ The EntityPolicies resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-required"
             title="Required">
-        <span>entity_<wbr>id</span>
+        <span id="entity_id_python">
+<a href="#entity_id_python" style="color: inherit; text-decoration: inherit;">entity_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -408,7 +487,9 @@ The EntityPolicies resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-required"
             title="Required">
-        <span>policies</span>
+        <span id="policies_python">
+<a href="#policies_python" style="color: inherit; text-decoration: inherit;">policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -417,7 +498,9 @@ The EntityPolicies resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>exclusive</span>
+        <span id="exclusive_python">
+<a href="#exclusive_python" style="color: inherit; text-decoration: inherit;">exclusive</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -444,7 +527,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Entity<wbr>Name</span>
+        <span id="entityname_csharp">
+<a href="#entityname_csharp" style="color: inherit; text-decoration: inherit;">Entity<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -453,7 +538,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -468,7 +555,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Entity<wbr>Name</span>
+        <span id="entityname_go">
+<a href="#entityname_go" style="color: inherit; text-decoration: inherit;">Entity<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -477,7 +566,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -492,7 +583,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>entity<wbr>Name</span>
+        <span id="entityname_nodejs">
+<a href="#entityname_nodejs" style="color: inherit; text-decoration: inherit;">entity<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -501,7 +594,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -516,7 +611,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>entity_<wbr>name</span>
+        <span id="entity_name_python">
+<a href="#entity_name_python" style="color: inherit; text-decoration: inherit;">entity_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -525,7 +622,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -666,7 +765,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Entity<wbr>Id</span>
+        <span id="state_entityid_csharp">
+<a href="#state_entityid_csharp" style="color: inherit; text-decoration: inherit;">Entity<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -675,7 +776,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Entity<wbr>Name</span>
+        <span id="state_entityname_csharp">
+<a href="#state_entityname_csharp" style="color: inherit; text-decoration: inherit;">Entity<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -684,7 +787,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Exclusive</span>
+        <span id="state_exclusive_csharp">
+<a href="#state_exclusive_csharp" style="color: inherit; text-decoration: inherit;">Exclusive</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -693,7 +798,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Policies</span>
+        <span id="state_policies_csharp">
+<a href="#state_policies_csharp" style="color: inherit; text-decoration: inherit;">Policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -709,7 +816,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Entity<wbr>Id</span>
+        <span id="state_entityid_go">
+<a href="#state_entityid_go" style="color: inherit; text-decoration: inherit;">Entity<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -718,7 +827,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Entity<wbr>Name</span>
+        <span id="state_entityname_go">
+<a href="#state_entityname_go" style="color: inherit; text-decoration: inherit;">Entity<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -727,7 +838,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Exclusive</span>
+        <span id="state_exclusive_go">
+<a href="#state_exclusive_go" style="color: inherit; text-decoration: inherit;">Exclusive</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -736,7 +849,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Policies</span>
+        <span id="state_policies_go">
+<a href="#state_policies_go" style="color: inherit; text-decoration: inherit;">Policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -752,7 +867,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>entity<wbr>Id</span>
+        <span id="state_entityid_nodejs">
+<a href="#state_entityid_nodejs" style="color: inherit; text-decoration: inherit;">entity<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -761,7 +878,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>entity<wbr>Name</span>
+        <span id="state_entityname_nodejs">
+<a href="#state_entityname_nodejs" style="color: inherit; text-decoration: inherit;">entity<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -770,7 +889,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>exclusive</span>
+        <span id="state_exclusive_nodejs">
+<a href="#state_exclusive_nodejs" style="color: inherit; text-decoration: inherit;">exclusive</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -779,7 +900,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>policies</span>
+        <span id="state_policies_nodejs">
+<a href="#state_policies_nodejs" style="color: inherit; text-decoration: inherit;">policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -795,7 +918,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>entity_<wbr>id</span>
+        <span id="state_entity_id_python">
+<a href="#state_entity_id_python" style="color: inherit; text-decoration: inherit;">entity_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -804,7 +929,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>entity_<wbr>name</span>
+        <span id="state_entity_name_python">
+<a href="#state_entity_name_python" style="color: inherit; text-decoration: inherit;">entity_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -813,7 +940,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>exclusive</span>
+        <span id="state_exclusive_python">
+<a href="#state_exclusive_python" style="color: inherit; text-decoration: inherit;">exclusive</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -822,7 +951,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>policies</span>
+        <span id="state_policies_python">
+<a href="#state_policies_python" style="color: inherit; text-decoration: inherit;">policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>

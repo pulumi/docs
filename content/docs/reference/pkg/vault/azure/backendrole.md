@@ -196,7 +196,9 @@ The BackendRole resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>Role</span>
+        <span id="role_csharp">
+<a href="#role_csharp" style="color: inherit; text-decoration: inherit;">Role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -205,7 +207,9 @@ The BackendRole resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Application<wbr>Object<wbr>Id</span>
+        <span id="applicationobjectid_csharp">
+<a href="#applicationobjectid_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Object<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -215,7 +219,9 @@ be used instead of creating dynamic service principals. If present, `azure_roles
 
     <dt class="property-optional"
             title="Optional">
-        <span>Azure<wbr>Roles</span>
+        <span id="azureroles_csharp">
+<a href="#azureroles_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Roles</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendroleazurerole">List&lt;Backend<wbr>Role<wbr>Azure<wbr>Role<wbr>Args&gt;</a></span>
     </dt>
@@ -224,7 +230,9 @@ be used instead of creating dynamic service principals. If present, `azure_roles
 
     <dt class="property-optional"
             title="Optional">
-        <span>Backend</span>
+        <span id="backend_csharp">
+<a href="#backend_csharp" style="color: inherit; text-decoration: inherit;">Backend</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -233,7 +241,9 @@ be used instead of creating dynamic service principals. If present, `azure_roles
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -242,7 +252,9 @@ be used instead of creating dynamic service principals. If present, `azure_roles
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Ttl</span>
+        <span id="maxttl_csharp">
+<a href="#maxttl_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Ttl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -252,7 +264,9 @@ suffixed strings ("1h") or an integer number of seconds. Defaults to the system/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ttl</span>
+        <span id="ttl_csharp">
+<a href="#ttl_csharp" style="color: inherit; text-decoration: inherit;">Ttl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -269,7 +283,9 @@ Accepts time suffixed strings ("1h") or an integer number of seconds. Defaults t
 
     <dt class="property-required"
             title="Required">
-        <span>Role</span>
+        <span id="role_go">
+<a href="#role_go" style="color: inherit; text-decoration: inherit;">Role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -278,7 +294,9 @@ Accepts time suffixed strings ("1h") or an integer number of seconds. Defaults t
 
     <dt class="property-optional"
             title="Optional">
-        <span>Application<wbr>Object<wbr>Id</span>
+        <span id="applicationobjectid_go">
+<a href="#applicationobjectid_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Object<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -288,7 +306,9 @@ be used instead of creating dynamic service principals. If present, `azure_roles
 
     <dt class="property-optional"
             title="Optional">
-        <span>Azure<wbr>Roles</span>
+        <span id="azureroles_go">
+<a href="#azureroles_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Roles</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendroleazurerole">[]Backend<wbr>Role<wbr>Azure<wbr>Role</a></span>
     </dt>
@@ -297,7 +317,9 @@ be used instead of creating dynamic service principals. If present, `azure_roles
 
     <dt class="property-optional"
             title="Optional">
-        <span>Backend</span>
+        <span id="backend_go">
+<a href="#backend_go" style="color: inherit; text-decoration: inherit;">Backend</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -306,7 +328,9 @@ be used instead of creating dynamic service principals. If present, `azure_roles
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -315,7 +339,9 @@ be used instead of creating dynamic service principals. If present, `azure_roles
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Ttl</span>
+        <span id="maxttl_go">
+<a href="#maxttl_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Ttl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -325,7 +351,9 @@ suffixed strings ("1h") or an integer number of seconds. Defaults to the system/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ttl</span>
+        <span id="ttl_go">
+<a href="#ttl_go" style="color: inherit; text-decoration: inherit;">Ttl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -342,7 +370,9 @@ Accepts time suffixed strings ("1h") or an integer number of seconds. Defaults t
 
     <dt class="property-required"
             title="Required">
-        <span>role</span>
+        <span id="role_nodejs">
+<a href="#role_nodejs" style="color: inherit; text-decoration: inherit;">role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -351,7 +381,9 @@ Accepts time suffixed strings ("1h") or an integer number of seconds. Defaults t
 
     <dt class="property-optional"
             title="Optional">
-        <span>application<wbr>Object<wbr>Id</span>
+        <span id="applicationobjectid_nodejs">
+<a href="#applicationobjectid_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Object<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -361,7 +393,9 @@ be used instead of creating dynamic service principals. If present, `azure_roles
 
     <dt class="property-optional"
             title="Optional">
-        <span>azure<wbr>Roles</span>
+        <span id="azureroles_nodejs">
+<a href="#azureroles_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Roles</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendroleazurerole">Backend<wbr>Role<wbr>Azure<wbr>Role[]</a></span>
     </dt>
@@ -370,7 +404,9 @@ be used instead of creating dynamic service principals. If present, `azure_roles
 
     <dt class="property-optional"
             title="Optional">
-        <span>backend</span>
+        <span id="backend_nodejs">
+<a href="#backend_nodejs" style="color: inherit; text-decoration: inherit;">backend</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -379,7 +415,9 @@ be used instead of creating dynamic service principals. If present, `azure_roles
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -388,7 +426,9 @@ be used instead of creating dynamic service principals. If present, `azure_roles
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Ttl</span>
+        <span id="maxttl_nodejs">
+<a href="#maxttl_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Ttl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -398,7 +438,9 @@ suffixed strings ("1h") or an integer number of seconds. Defaults to the system/
 
     <dt class="property-optional"
             title="Optional">
-        <span>ttl</span>
+        <span id="ttl_nodejs">
+<a href="#ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -415,7 +457,9 @@ Accepts time suffixed strings ("1h") or an integer number of seconds. Defaults t
 
     <dt class="property-required"
             title="Required">
-        <span>role</span>
+        <span id="role_python">
+<a href="#role_python" style="color: inherit; text-decoration: inherit;">role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -424,7 +468,9 @@ Accepts time suffixed strings ("1h") or an integer number of seconds. Defaults t
 
     <dt class="property-optional"
             title="Optional">
-        <span>application_<wbr>object_<wbr>id</span>
+        <span id="application_object_id_python">
+<a href="#application_object_id_python" style="color: inherit; text-decoration: inherit;">application_<wbr>object_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -434,7 +480,9 @@ be used instead of creating dynamic service principals. If present, `azure_roles
 
     <dt class="property-optional"
             title="Optional">
-        <span>azure_<wbr>roles</span>
+        <span id="azure_roles_python">
+<a href="#azure_roles_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>roles</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendroleazurerole">List[Backend<wbr>Role<wbr>Azure<wbr>Role]</a></span>
     </dt>
@@ -443,7 +491,9 @@ be used instead of creating dynamic service principals. If present, `azure_roles
 
     <dt class="property-optional"
             title="Optional">
-        <span>backend</span>
+        <span id="backend_python">
+<a href="#backend_python" style="color: inherit; text-decoration: inherit;">backend</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -452,7 +502,9 @@ be used instead of creating dynamic service principals. If present, `azure_roles
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -461,7 +513,9 @@ be used instead of creating dynamic service principals. If present, `azure_roles
 
     <dt class="property-optional"
             title="Optional">
-        <span>max_<wbr>ttl</span>
+        <span id="max_ttl_python">
+<a href="#max_ttl_python" style="color: inherit; text-decoration: inherit;">max_<wbr>ttl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -471,7 +525,9 @@ suffixed strings ("1h") or an integer number of seconds. Defaults to the system/
 
     <dt class="property-optional"
             title="Optional">
-        <span>ttl</span>
+        <span id="ttl_python">
+<a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -499,7 +555,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -514,7 +572,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -529,7 +589,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -544,7 +606,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -685,7 +749,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Application<wbr>Object<wbr>Id</span>
+        <span id="state_applicationobjectid_csharp">
+<a href="#state_applicationobjectid_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Object<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -695,7 +761,9 @@ be used instead of creating dynamic service principals. If present, `azure_roles
 
     <dt class="property-optional"
             title="Optional">
-        <span>Azure<wbr>Roles</span>
+        <span id="state_azureroles_csharp">
+<a href="#state_azureroles_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Roles</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendroleazurerole">List&lt;Backend<wbr>Role<wbr>Azure<wbr>Role<wbr>Args&gt;</a></span>
     </dt>
@@ -704,7 +772,9 @@ be used instead of creating dynamic service principals. If present, `azure_roles
 
     <dt class="property-optional"
             title="Optional">
-        <span>Backend</span>
+        <span id="state_backend_csharp">
+<a href="#state_backend_csharp" style="color: inherit; text-decoration: inherit;">Backend</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -713,7 +783,9 @@ be used instead of creating dynamic service principals. If present, `azure_roles
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_csharp">
+<a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -722,7 +794,9 @@ be used instead of creating dynamic service principals. If present, `azure_roles
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Ttl</span>
+        <span id="state_maxttl_csharp">
+<a href="#state_maxttl_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Ttl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -732,7 +806,9 @@ suffixed strings ("1h") or an integer number of seconds. Defaults to the system/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Role</span>
+        <span id="state_role_csharp">
+<a href="#state_role_csharp" style="color: inherit; text-decoration: inherit;">Role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -741,7 +817,9 @@ suffixed strings ("1h") or an integer number of seconds. Defaults to the system/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ttl</span>
+        <span id="state_ttl_csharp">
+<a href="#state_ttl_csharp" style="color: inherit; text-decoration: inherit;">Ttl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -758,7 +836,9 @@ Accepts time suffixed strings ("1h") or an integer number of seconds. Defaults t
 
     <dt class="property-optional"
             title="Optional">
-        <span>Application<wbr>Object<wbr>Id</span>
+        <span id="state_applicationobjectid_go">
+<a href="#state_applicationobjectid_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Object<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -768,7 +848,9 @@ be used instead of creating dynamic service principals. If present, `azure_roles
 
     <dt class="property-optional"
             title="Optional">
-        <span>Azure<wbr>Roles</span>
+        <span id="state_azureroles_go">
+<a href="#state_azureroles_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Roles</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendroleazurerole">[]Backend<wbr>Role<wbr>Azure<wbr>Role</a></span>
     </dt>
@@ -777,7 +859,9 @@ be used instead of creating dynamic service principals. If present, `azure_roles
 
     <dt class="property-optional"
             title="Optional">
-        <span>Backend</span>
+        <span id="state_backend_go">
+<a href="#state_backend_go" style="color: inherit; text-decoration: inherit;">Backend</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -786,7 +870,9 @@ be used instead of creating dynamic service principals. If present, `azure_roles
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_go">
+<a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -795,7 +881,9 @@ be used instead of creating dynamic service principals. If present, `azure_roles
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Ttl</span>
+        <span id="state_maxttl_go">
+<a href="#state_maxttl_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Ttl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -805,7 +893,9 @@ suffixed strings ("1h") or an integer number of seconds. Defaults to the system/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Role</span>
+        <span id="state_role_go">
+<a href="#state_role_go" style="color: inherit; text-decoration: inherit;">Role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -814,7 +904,9 @@ suffixed strings ("1h") or an integer number of seconds. Defaults to the system/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ttl</span>
+        <span id="state_ttl_go">
+<a href="#state_ttl_go" style="color: inherit; text-decoration: inherit;">Ttl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -831,7 +923,9 @@ Accepts time suffixed strings ("1h") or an integer number of seconds. Defaults t
 
     <dt class="property-optional"
             title="Optional">
-        <span>application<wbr>Object<wbr>Id</span>
+        <span id="state_applicationobjectid_nodejs">
+<a href="#state_applicationobjectid_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Object<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -841,7 +935,9 @@ be used instead of creating dynamic service principals. If present, `azure_roles
 
     <dt class="property-optional"
             title="Optional">
-        <span>azure<wbr>Roles</span>
+        <span id="state_azureroles_nodejs">
+<a href="#state_azureroles_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Roles</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendroleazurerole">Backend<wbr>Role<wbr>Azure<wbr>Role[]</a></span>
     </dt>
@@ -850,7 +946,9 @@ be used instead of creating dynamic service principals. If present, `azure_roles
 
     <dt class="property-optional"
             title="Optional">
-        <span>backend</span>
+        <span id="state_backend_nodejs">
+<a href="#state_backend_nodejs" style="color: inherit; text-decoration: inherit;">backend</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -859,7 +957,9 @@ be used instead of creating dynamic service principals. If present, `azure_roles
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_nodejs">
+<a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -868,7 +968,9 @@ be used instead of creating dynamic service principals. If present, `azure_roles
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Ttl</span>
+        <span id="state_maxttl_nodejs">
+<a href="#state_maxttl_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Ttl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -878,7 +980,9 @@ suffixed strings ("1h") or an integer number of seconds. Defaults to the system/
 
     <dt class="property-optional"
             title="Optional">
-        <span>role</span>
+        <span id="state_role_nodejs">
+<a href="#state_role_nodejs" style="color: inherit; text-decoration: inherit;">role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -887,7 +991,9 @@ suffixed strings ("1h") or an integer number of seconds. Defaults to the system/
 
     <dt class="property-optional"
             title="Optional">
-        <span>ttl</span>
+        <span id="state_ttl_nodejs">
+<a href="#state_ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -904,7 +1010,9 @@ Accepts time suffixed strings ("1h") or an integer number of seconds. Defaults t
 
     <dt class="property-optional"
             title="Optional">
-        <span>application_<wbr>object_<wbr>id</span>
+        <span id="state_application_object_id_python">
+<a href="#state_application_object_id_python" style="color: inherit; text-decoration: inherit;">application_<wbr>object_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -914,7 +1022,9 @@ be used instead of creating dynamic service principals. If present, `azure_roles
 
     <dt class="property-optional"
             title="Optional">
-        <span>azure_<wbr>roles</span>
+        <span id="state_azure_roles_python">
+<a href="#state_azure_roles_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>roles</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendroleazurerole">List[Backend<wbr>Role<wbr>Azure<wbr>Role]</a></span>
     </dt>
@@ -923,7 +1033,9 @@ be used instead of creating dynamic service principals. If present, `azure_roles
 
     <dt class="property-optional"
             title="Optional">
-        <span>backend</span>
+        <span id="state_backend_python">
+<a href="#state_backend_python" style="color: inherit; text-decoration: inherit;">backend</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -932,7 +1044,9 @@ be used instead of creating dynamic service principals. If present, `azure_roles
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_python">
+<a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -941,7 +1055,9 @@ be used instead of creating dynamic service principals. If present, `azure_roles
 
     <dt class="property-optional"
             title="Optional">
-        <span>max_<wbr>ttl</span>
+        <span id="state_max_ttl_python">
+<a href="#state_max_ttl_python" style="color: inherit; text-decoration: inherit;">max_<wbr>ttl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -951,7 +1067,9 @@ suffixed strings ("1h") or an integer number of seconds. Defaults to the system/
 
     <dt class="property-optional"
             title="Optional">
-        <span>role</span>
+        <span id="state_role_python">
+<a href="#state_role_python" style="color: inherit; text-decoration: inherit;">role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -960,7 +1078,9 @@ suffixed strings ("1h") or an integer number of seconds. Defaults to the system/
 
     <dt class="property-optional"
             title="Optional">
-        <span>ttl</span>
+        <span id="state_ttl_python">
+<a href="#state_ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1003,7 +1123,9 @@ Accepts time suffixed strings ("1h") or an integer number of seconds. Defaults t
 
     <dt class="property-required"
             title="Required">
-        <span>Role<wbr>Name</span>
+        <span id="rolename_csharp">
+<a href="#rolename_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1011,7 +1133,9 @@ Accepts time suffixed strings ("1h") or an integer number of seconds. Defaults t
 
     <dt class="property-required"
             title="Required">
-        <span>Scope</span>
+        <span id="scope_csharp">
+<a href="#scope_csharp" style="color: inherit; text-decoration: inherit;">Scope</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1019,7 +1143,9 @@ Accepts time suffixed strings ("1h") or an integer number of seconds. Defaults t
 
     <dt class="property-optional"
             title="Optional">
-        <span>Role<wbr>Id</span>
+        <span id="roleid_csharp">
+<a href="#roleid_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1034,7 +1160,9 @@ Accepts time suffixed strings ("1h") or an integer number of seconds. Defaults t
 
     <dt class="property-required"
             title="Required">
-        <span>Role<wbr>Name</span>
+        <span id="rolename_go">
+<a href="#rolename_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1042,7 +1170,9 @@ Accepts time suffixed strings ("1h") or an integer number of seconds. Defaults t
 
     <dt class="property-required"
             title="Required">
-        <span>Scope</span>
+        <span id="scope_go">
+<a href="#scope_go" style="color: inherit; text-decoration: inherit;">Scope</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1050,7 +1180,9 @@ Accepts time suffixed strings ("1h") or an integer number of seconds. Defaults t
 
     <dt class="property-optional"
             title="Optional">
-        <span>Role<wbr>Id</span>
+        <span id="roleid_go">
+<a href="#roleid_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1065,7 +1197,9 @@ Accepts time suffixed strings ("1h") or an integer number of seconds. Defaults t
 
     <dt class="property-required"
             title="Required">
-        <span>role<wbr>Name</span>
+        <span id="rolename_nodejs">
+<a href="#rolename_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1073,7 +1207,9 @@ Accepts time suffixed strings ("1h") or an integer number of seconds. Defaults t
 
     <dt class="property-required"
             title="Required">
-        <span>scope</span>
+        <span id="scope_nodejs">
+<a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1081,7 +1217,9 @@ Accepts time suffixed strings ("1h") or an integer number of seconds. Defaults t
 
     <dt class="property-optional"
             title="Optional">
-        <span>role<wbr>Id</span>
+        <span id="roleid_nodejs">
+<a href="#roleid_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1096,7 +1234,9 @@ Accepts time suffixed strings ("1h") or an integer number of seconds. Defaults t
 
     <dt class="property-required"
             title="Required">
-        <span>role_<wbr>name</span>
+        <span id="role_name_python">
+<a href="#role_name_python" style="color: inherit; text-decoration: inherit;">role_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1104,7 +1244,9 @@ Accepts time suffixed strings ("1h") or an integer number of seconds. Defaults t
 
     <dt class="property-required"
             title="Required">
-        <span>scope</span>
+        <span id="scope_python">
+<a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1112,7 +1254,9 @@ Accepts time suffixed strings ("1h") or an integer number of seconds. Defaults t
 
     <dt class="property-optional"
             title="Optional">
-        <span>role_<wbr>id</span>
+        <span id="role_id_python">
+<a href="#role_id_python" style="color: inherit; text-decoration: inherit;">role_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

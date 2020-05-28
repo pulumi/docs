@@ -20,7 +20,31 @@ Allows setting the duration for which the generated CRL should be marked valid. 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Vault = Pulumi.Vault;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var pki = new Vault.Mount("pki", new Vault.MountArgs
+        {
+            DefaultLeaseTtlSeconds = 3600,
+            MaxLeaseTtlSeconds = 86400,
+            Path = "%s",
+            Type = "pki",
+        });
+        var crlConfig = new Vault.PkiSecret.SecretBackendCrlConfig("crlConfig", new Vault.PkiSecret.SecretBackendCrlConfigArgs
+        {
+            Backend = pki.Path,
+            Disable = false,
+            Expiry = "72h",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -249,7 +273,9 @@ The SecretBackendCrlConfig resource accepts the following [input]({{< relref "/d
 
     <dt class="property-required"
             title="Required">
-        <span>Backend</span>
+        <span id="backend_csharp">
+<a href="#backend_csharp" style="color: inherit; text-decoration: inherit;">Backend</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -258,7 +284,9 @@ The SecretBackendCrlConfig resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
-        <span>Disable</span>
+        <span id="disable_csharp">
+<a href="#disable_csharp" style="color: inherit; text-decoration: inherit;">Disable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -267,7 +295,9 @@ The SecretBackendCrlConfig resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
-        <span>Expiry</span>
+        <span id="expiry_csharp">
+<a href="#expiry_csharp" style="color: inherit; text-decoration: inherit;">Expiry</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -283,7 +313,9 @@ The SecretBackendCrlConfig resource accepts the following [input]({{< relref "/d
 
     <dt class="property-required"
             title="Required">
-        <span>Backend</span>
+        <span id="backend_go">
+<a href="#backend_go" style="color: inherit; text-decoration: inherit;">Backend</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -292,7 +324,9 @@ The SecretBackendCrlConfig resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
-        <span>Disable</span>
+        <span id="disable_go">
+<a href="#disable_go" style="color: inherit; text-decoration: inherit;">Disable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -301,7 +335,9 @@ The SecretBackendCrlConfig resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
-        <span>Expiry</span>
+        <span id="expiry_go">
+<a href="#expiry_go" style="color: inherit; text-decoration: inherit;">Expiry</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -317,7 +353,9 @@ The SecretBackendCrlConfig resource accepts the following [input]({{< relref "/d
 
     <dt class="property-required"
             title="Required">
-        <span>backend</span>
+        <span id="backend_nodejs">
+<a href="#backend_nodejs" style="color: inherit; text-decoration: inherit;">backend</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -326,7 +364,9 @@ The SecretBackendCrlConfig resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
-        <span>disable</span>
+        <span id="disable_nodejs">
+<a href="#disable_nodejs" style="color: inherit; text-decoration: inherit;">disable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -335,7 +375,9 @@ The SecretBackendCrlConfig resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
-        <span>expiry</span>
+        <span id="expiry_nodejs">
+<a href="#expiry_nodejs" style="color: inherit; text-decoration: inherit;">expiry</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -351,7 +393,9 @@ The SecretBackendCrlConfig resource accepts the following [input]({{< relref "/d
 
     <dt class="property-required"
             title="Required">
-        <span>backend</span>
+        <span id="backend_python">
+<a href="#backend_python" style="color: inherit; text-decoration: inherit;">backend</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -360,7 +404,9 @@ The SecretBackendCrlConfig resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
-        <span>disable</span>
+        <span id="disable_python">
+<a href="#disable_python" style="color: inherit; text-decoration: inherit;">disable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -369,7 +415,9 @@ The SecretBackendCrlConfig resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
-        <span>expiry</span>
+        <span id="expiry_python">
+<a href="#expiry_python" style="color: inherit; text-decoration: inherit;">expiry</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -396,7 +444,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -411,7 +461,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -426,7 +478,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -441,7 +495,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -582,7 +638,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Backend</span>
+        <span id="state_backend_csharp">
+<a href="#state_backend_csharp" style="color: inherit; text-decoration: inherit;">Backend</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -591,7 +649,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Disable</span>
+        <span id="state_disable_csharp">
+<a href="#state_disable_csharp" style="color: inherit; text-decoration: inherit;">Disable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -600,7 +660,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Expiry</span>
+        <span id="state_expiry_csharp">
+<a href="#state_expiry_csharp" style="color: inherit; text-decoration: inherit;">Expiry</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -616,7 +678,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Backend</span>
+        <span id="state_backend_go">
+<a href="#state_backend_go" style="color: inherit; text-decoration: inherit;">Backend</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -625,7 +689,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Disable</span>
+        <span id="state_disable_go">
+<a href="#state_disable_go" style="color: inherit; text-decoration: inherit;">Disable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -634,7 +700,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Expiry</span>
+        <span id="state_expiry_go">
+<a href="#state_expiry_go" style="color: inherit; text-decoration: inherit;">Expiry</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -650,7 +718,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>backend</span>
+        <span id="state_backend_nodejs">
+<a href="#state_backend_nodejs" style="color: inherit; text-decoration: inherit;">backend</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -659,7 +729,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>disable</span>
+        <span id="state_disable_nodejs">
+<a href="#state_disable_nodejs" style="color: inherit; text-decoration: inherit;">disable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -668,7 +740,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>expiry</span>
+        <span id="state_expiry_nodejs">
+<a href="#state_expiry_nodejs" style="color: inherit; text-decoration: inherit;">expiry</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -684,7 +758,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>backend</span>
+        <span id="state_backend_python">
+<a href="#state_backend_python" style="color: inherit; text-decoration: inherit;">backend</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -693,7 +769,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>disable</span>
+        <span id="state_disable_python">
+<a href="#state_disable_python" style="color: inherit; text-decoration: inherit;">disable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -702,7 +780,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>expiry</span>
+        <span id="state_expiry_python">
+<a href="#state_expiry_python" style="color: inherit; text-decoration: inherit;">expiry</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

@@ -196,7 +196,9 @@ The OidcKey resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Algorithm</span>
+        <span id="algorithm_csharp">
+<a href="#algorithm_csharp" style="color: inherit; text-decoration: inherit;">Algorithm</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -206,7 +208,9 @@ Allowed values are: RS256 (default), RS384, RS512, ES256, ES384, ES512, EdDSA.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allowed<wbr>Client<wbr>Ids</span>
+        <span id="allowedclientids_csharp">
+<a href="#allowedclientids_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Client<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -216,7 +220,9 @@ allowed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -225,7 +231,9 @@ allowed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Rotation<wbr>Period</span>
+        <span id="rotationperiod_csharp">
+<a href="#rotationperiod_csharp" style="color: inherit; text-decoration: inherit;">Rotation<wbr>Period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -234,7 +242,9 @@ allowed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Verification<wbr>Ttl</span>
+        <span id="verificationttl_csharp">
+<a href="#verificationttl_csharp" style="color: inherit; text-decoration: inherit;">Verification<wbr>Ttl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -251,7 +261,9 @@ available for verification after being rotated in seconds.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Algorithm</span>
+        <span id="algorithm_go">
+<a href="#algorithm_go" style="color: inherit; text-decoration: inherit;">Algorithm</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -261,7 +273,9 @@ Allowed values are: RS256 (default), RS384, RS512, ES256, ES384, ES512, EdDSA.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allowed<wbr>Client<wbr>Ids</span>
+        <span id="allowedclientids_go">
+<a href="#allowedclientids_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Client<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -271,7 +285,9 @@ allowed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -280,7 +296,9 @@ allowed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Rotation<wbr>Period</span>
+        <span id="rotationperiod_go">
+<a href="#rotationperiod_go" style="color: inherit; text-decoration: inherit;">Rotation<wbr>Period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -289,7 +307,9 @@ allowed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Verification<wbr>Ttl</span>
+        <span id="verificationttl_go">
+<a href="#verificationttl_go" style="color: inherit; text-decoration: inherit;">Verification<wbr>Ttl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -306,7 +326,9 @@ available for verification after being rotated in seconds.
 
     <dt class="property-optional"
             title="Optional">
-        <span>algorithm</span>
+        <span id="algorithm_nodejs">
+<a href="#algorithm_nodejs" style="color: inherit; text-decoration: inherit;">algorithm</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -316,7 +338,9 @@ Allowed values are: RS256 (default), RS384, RS512, ES256, ES384, ES512, EdDSA.
 
     <dt class="property-optional"
             title="Optional">
-        <span>allowed<wbr>Client<wbr>Ids</span>
+        <span id="allowedclientids_nodejs">
+<a href="#allowedclientids_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Client<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -326,7 +350,9 @@ allowed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -335,7 +361,9 @@ allowed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>rotation<wbr>Period</span>
+        <span id="rotationperiod_nodejs">
+<a href="#rotationperiod_nodejs" style="color: inherit; text-decoration: inherit;">rotation<wbr>Period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -344,7 +372,9 @@ allowed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>verification<wbr>Ttl</span>
+        <span id="verificationttl_nodejs">
+<a href="#verificationttl_nodejs" style="color: inherit; text-decoration: inherit;">verification<wbr>Ttl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -361,7 +391,9 @@ available for verification after being rotated in seconds.
 
     <dt class="property-optional"
             title="Optional">
-        <span>algorithm</span>
+        <span id="algorithm_python">
+<a href="#algorithm_python" style="color: inherit; text-decoration: inherit;">algorithm</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -371,7 +403,9 @@ Allowed values are: RS256 (default), RS384, RS512, ES256, ES384, ES512, EdDSA.
 
     <dt class="property-optional"
             title="Optional">
-        <span>allowed_<wbr>client_<wbr>ids</span>
+        <span id="allowed_client_ids_python">
+<a href="#allowed_client_ids_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>client_<wbr>ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -381,7 +415,9 @@ allowed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -390,7 +426,9 @@ allowed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>rotation_<wbr>period</span>
+        <span id="rotation_period_python">
+<a href="#rotation_period_python" style="color: inherit; text-decoration: inherit;">rotation_<wbr>period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -399,7 +437,9 @@ allowed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>verification_<wbr>ttl</span>
+        <span id="verification_ttl_python">
+<a href="#verification_ttl_python" style="color: inherit; text-decoration: inherit;">verification_<wbr>ttl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -427,7 +467,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -442,7 +484,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -457,7 +501,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -472,7 +518,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -613,7 +661,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Algorithm</span>
+        <span id="state_algorithm_csharp">
+<a href="#state_algorithm_csharp" style="color: inherit; text-decoration: inherit;">Algorithm</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -623,7 +673,9 @@ Allowed values are: RS256 (default), RS384, RS512, ES256, ES384, ES512, EdDSA.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allowed<wbr>Client<wbr>Ids</span>
+        <span id="state_allowedclientids_csharp">
+<a href="#state_allowedclientids_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Client<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -633,7 +685,9 @@ allowed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -642,7 +696,9 @@ allowed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Rotation<wbr>Period</span>
+        <span id="state_rotationperiod_csharp">
+<a href="#state_rotationperiod_csharp" style="color: inherit; text-decoration: inherit;">Rotation<wbr>Period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -651,7 +707,9 @@ allowed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Verification<wbr>Ttl</span>
+        <span id="state_verificationttl_csharp">
+<a href="#state_verificationttl_csharp" style="color: inherit; text-decoration: inherit;">Verification<wbr>Ttl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -668,7 +726,9 @@ available for verification after being rotated in seconds.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Algorithm</span>
+        <span id="state_algorithm_go">
+<a href="#state_algorithm_go" style="color: inherit; text-decoration: inherit;">Algorithm</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -678,7 +738,9 @@ Allowed values are: RS256 (default), RS384, RS512, ES256, ES384, ES512, EdDSA.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allowed<wbr>Client<wbr>Ids</span>
+        <span id="state_allowedclientids_go">
+<a href="#state_allowedclientids_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Client<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -688,7 +750,9 @@ allowed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -697,7 +761,9 @@ allowed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Rotation<wbr>Period</span>
+        <span id="state_rotationperiod_go">
+<a href="#state_rotationperiod_go" style="color: inherit; text-decoration: inherit;">Rotation<wbr>Period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -706,7 +772,9 @@ allowed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Verification<wbr>Ttl</span>
+        <span id="state_verificationttl_go">
+<a href="#state_verificationttl_go" style="color: inherit; text-decoration: inherit;">Verification<wbr>Ttl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -723,7 +791,9 @@ available for verification after being rotated in seconds.
 
     <dt class="property-optional"
             title="Optional">
-        <span>algorithm</span>
+        <span id="state_algorithm_nodejs">
+<a href="#state_algorithm_nodejs" style="color: inherit; text-decoration: inherit;">algorithm</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -733,7 +803,9 @@ Allowed values are: RS256 (default), RS384, RS512, ES256, ES384, ES512, EdDSA.
 
     <dt class="property-optional"
             title="Optional">
-        <span>allowed<wbr>Client<wbr>Ids</span>
+        <span id="state_allowedclientids_nodejs">
+<a href="#state_allowedclientids_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Client<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -743,7 +815,9 @@ allowed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -752,7 +826,9 @@ allowed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>rotation<wbr>Period</span>
+        <span id="state_rotationperiod_nodejs">
+<a href="#state_rotationperiod_nodejs" style="color: inherit; text-decoration: inherit;">rotation<wbr>Period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -761,7 +837,9 @@ allowed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>verification<wbr>Ttl</span>
+        <span id="state_verificationttl_nodejs">
+<a href="#state_verificationttl_nodejs" style="color: inherit; text-decoration: inherit;">verification<wbr>Ttl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -778,7 +856,9 @@ available for verification after being rotated in seconds.
 
     <dt class="property-optional"
             title="Optional">
-        <span>algorithm</span>
+        <span id="state_algorithm_python">
+<a href="#state_algorithm_python" style="color: inherit; text-decoration: inherit;">algorithm</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -788,7 +868,9 @@ Allowed values are: RS256 (default), RS384, RS512, ES256, ES384, ES512, EdDSA.
 
     <dt class="property-optional"
             title="Optional">
-        <span>allowed_<wbr>client_<wbr>ids</span>
+        <span id="state_allowed_client_ids_python">
+<a href="#state_allowed_client_ids_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>client_<wbr>ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -798,7 +880,9 @@ allowed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -807,7 +891,9 @@ allowed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>rotation_<wbr>period</span>
+        <span id="state_rotation_period_python">
+<a href="#state_rotation_period_python" style="color: inherit; text-decoration: inherit;">rotation_<wbr>period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -816,7 +902,9 @@ allowed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>verification_<wbr>ttl</span>
+        <span id="state_verification_ttl_python">
+<a href="#state_verification_ttl_python" style="color: inherit; text-decoration: inherit;">verification_<wbr>ttl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>

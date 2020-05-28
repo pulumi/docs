@@ -196,7 +196,9 @@ The SecretBackendConnection resource accepts the following [input]({{< relref "/
 
     <dt class="property-required"
             title="Required">
-        <span>Backend</span>
+        <span id="backend_csharp">
+<a href="#backend_csharp" style="color: inherit; text-decoration: inherit;">Backend</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -205,7 +207,9 @@ The SecretBackendConnection resource accepts the following [input]({{< relref "/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allowed<wbr>Roles</span>
+        <span id="allowedroles_csharp">
+<a href="#allowedroles_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Roles</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -215,7 +219,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cassandra</span>
+        <span id="cassandra_csharp">
+<a href="#cassandra_csharp" style="color: inherit; text-decoration: inherit;">Cassandra</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretbackendconnectioncassandra">Secret<wbr>Backend<wbr>Connection<wbr>Cassandra<wbr>Args</a></span>
     </dt>
@@ -224,7 +230,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Data</span>
+        <span id="data_csharp">
+<a href="#data_csharp" style="color: inherit; text-decoration: inherit;">Data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -233,7 +241,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Elasticsearch</span>
+        <span id="elasticsearch_csharp">
+<a href="#elasticsearch_csharp" style="color: inherit; text-decoration: inherit;">Elasticsearch</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretbackendconnectionelasticsearch">Secret<wbr>Backend<wbr>Connection<wbr>Elasticsearch<wbr>Args</a></span>
     </dt>
@@ -242,7 +252,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Hana</span>
+        <span id="hana_csharp">
+<a href="#hana_csharp" style="color: inherit; text-decoration: inherit;">Hana</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretbackendconnectionhana">Secret<wbr>Backend<wbr>Connection<wbr>Hana<wbr>Args</a></span>
     </dt>
@@ -251,7 +263,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Mongodb</span>
+        <span id="mongodb_csharp">
+<a href="#mongodb_csharp" style="color: inherit; text-decoration: inherit;">Mongodb</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretbackendconnectionmongodb">Secret<wbr>Backend<wbr>Connection<wbr>Mongodb<wbr>Args</a></span>
     </dt>
@@ -260,7 +274,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Mssql</span>
+        <span id="mssql_csharp">
+<a href="#mssql_csharp" style="color: inherit; text-decoration: inherit;">Mssql</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretbackendconnectionmssql">Secret<wbr>Backend<wbr>Connection<wbr>Mssql<wbr>Args</a></span>
     </dt>
@@ -269,7 +285,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Mysql</span>
+        <span id="mysql_csharp">
+<a href="#mysql_csharp" style="color: inherit; text-decoration: inherit;">Mysql</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretbackendconnectionmysql">Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Args</a></span>
     </dt>
@@ -278,7 +296,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Mysql<wbr>Aurora</span>
+        <span id="mysqlaurora_csharp">
+<a href="#mysqlaurora_csharp" style="color: inherit; text-decoration: inherit;">Mysql<wbr>Aurora</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretbackendconnectionmysqlaurora">Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Aurora<wbr>Args</a></span>
     </dt>
@@ -287,7 +307,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Mysql<wbr>Legacy</span>
+        <span id="mysqllegacy_csharp">
+<a href="#mysqllegacy_csharp" style="color: inherit; text-decoration: inherit;">Mysql<wbr>Legacy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretbackendconnectionmysqllegacy">Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Legacy<wbr>Args</a></span>
     </dt>
@@ -296,7 +318,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Mysql<wbr>Rds</span>
+        <span id="mysqlrds_csharp">
+<a href="#mysqlrds_csharp" style="color: inherit; text-decoration: inherit;">Mysql<wbr>Rds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretbackendconnectionmysqlrds">Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Rds<wbr>Args</a></span>
     </dt>
@@ -305,7 +329,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -314,7 +340,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Oracle</span>
+        <span id="oracle_csharp">
+<a href="#oracle_csharp" style="color: inherit; text-decoration: inherit;">Oracle</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretbackendconnectionoracle">Secret<wbr>Backend<wbr>Connection<wbr>Oracle<wbr>Args</a></span>
     </dt>
@@ -323,7 +351,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Postgresql</span>
+        <span id="postgresql_csharp">
+<a href="#postgresql_csharp" style="color: inherit; text-decoration: inherit;">Postgresql</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretbackendconnectionpostgresql">Secret<wbr>Backend<wbr>Connection<wbr>Postgresql<wbr>Args</a></span>
     </dt>
@@ -332,7 +362,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Root<wbr>Rotation<wbr>Statements</span>
+        <span id="rootrotationstatements_csharp">
+<a href="#rootrotationstatements_csharp" style="color: inherit; text-decoration: inherit;">Root<wbr>Rotation<wbr>Statements</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -341,7 +373,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Verify<wbr>Connection</span>
+        <span id="verifyconnection_csharp">
+<a href="#verifyconnection_csharp" style="color: inherit; text-decoration: inherit;">Verify<wbr>Connection</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -358,7 +392,9 @@ initial configuration or not.
 
     <dt class="property-required"
             title="Required">
-        <span>Backend</span>
+        <span id="backend_go">
+<a href="#backend_go" style="color: inherit; text-decoration: inherit;">Backend</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -367,7 +403,9 @@ initial configuration or not.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allowed<wbr>Roles</span>
+        <span id="allowedroles_go">
+<a href="#allowedroles_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Roles</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -377,7 +415,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cassandra</span>
+        <span id="cassandra_go">
+<a href="#cassandra_go" style="color: inherit; text-decoration: inherit;">Cassandra</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretbackendconnectioncassandra">Secret<wbr>Backend<wbr>Connection<wbr>Cassandra</a></span>
     </dt>
@@ -386,7 +426,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Data</span>
+        <span id="data_go">
+<a href="#data_go" style="color: inherit; text-decoration: inherit;">Data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -395,7 +437,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Elasticsearch</span>
+        <span id="elasticsearch_go">
+<a href="#elasticsearch_go" style="color: inherit; text-decoration: inherit;">Elasticsearch</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretbackendconnectionelasticsearch">Secret<wbr>Backend<wbr>Connection<wbr>Elasticsearch</a></span>
     </dt>
@@ -404,7 +448,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Hana</span>
+        <span id="hana_go">
+<a href="#hana_go" style="color: inherit; text-decoration: inherit;">Hana</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretbackendconnectionhana">Secret<wbr>Backend<wbr>Connection<wbr>Hana</a></span>
     </dt>
@@ -413,7 +459,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Mongodb</span>
+        <span id="mongodb_go">
+<a href="#mongodb_go" style="color: inherit; text-decoration: inherit;">Mongodb</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretbackendconnectionmongodb">Secret<wbr>Backend<wbr>Connection<wbr>Mongodb</a></span>
     </dt>
@@ -422,7 +470,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Mssql</span>
+        <span id="mssql_go">
+<a href="#mssql_go" style="color: inherit; text-decoration: inherit;">Mssql</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretbackendconnectionmssql">Secret<wbr>Backend<wbr>Connection<wbr>Mssql</a></span>
     </dt>
@@ -431,7 +481,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Mysql</span>
+        <span id="mysql_go">
+<a href="#mysql_go" style="color: inherit; text-decoration: inherit;">Mysql</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretbackendconnectionmysql">Secret<wbr>Backend<wbr>Connection<wbr>Mysql</a></span>
     </dt>
@@ -440,7 +492,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Mysql<wbr>Aurora</span>
+        <span id="mysqlaurora_go">
+<a href="#mysqlaurora_go" style="color: inherit; text-decoration: inherit;">Mysql<wbr>Aurora</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretbackendconnectionmysqlaurora">Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Aurora</a></span>
     </dt>
@@ -449,7 +503,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Mysql<wbr>Legacy</span>
+        <span id="mysqllegacy_go">
+<a href="#mysqllegacy_go" style="color: inherit; text-decoration: inherit;">Mysql<wbr>Legacy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretbackendconnectionmysqllegacy">Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Legacy</a></span>
     </dt>
@@ -458,7 +514,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Mysql<wbr>Rds</span>
+        <span id="mysqlrds_go">
+<a href="#mysqlrds_go" style="color: inherit; text-decoration: inherit;">Mysql<wbr>Rds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretbackendconnectionmysqlrds">Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Rds</a></span>
     </dt>
@@ -467,7 +525,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -476,7 +536,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Oracle</span>
+        <span id="oracle_go">
+<a href="#oracle_go" style="color: inherit; text-decoration: inherit;">Oracle</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretbackendconnectionoracle">Secret<wbr>Backend<wbr>Connection<wbr>Oracle</a></span>
     </dt>
@@ -485,7 +547,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Postgresql</span>
+        <span id="postgresql_go">
+<a href="#postgresql_go" style="color: inherit; text-decoration: inherit;">Postgresql</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretbackendconnectionpostgresql">Secret<wbr>Backend<wbr>Connection<wbr>Postgresql</a></span>
     </dt>
@@ -494,7 +558,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Root<wbr>Rotation<wbr>Statements</span>
+        <span id="rootrotationstatements_go">
+<a href="#rootrotationstatements_go" style="color: inherit; text-decoration: inherit;">Root<wbr>Rotation<wbr>Statements</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -503,7 +569,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Verify<wbr>Connection</span>
+        <span id="verifyconnection_go">
+<a href="#verifyconnection_go" style="color: inherit; text-decoration: inherit;">Verify<wbr>Connection</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -520,7 +588,9 @@ initial configuration or not.
 
     <dt class="property-required"
             title="Required">
-        <span>backend</span>
+        <span id="backend_nodejs">
+<a href="#backend_nodejs" style="color: inherit; text-decoration: inherit;">backend</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -529,7 +599,9 @@ initial configuration or not.
 
     <dt class="property-optional"
             title="Optional">
-        <span>allowed<wbr>Roles</span>
+        <span id="allowedroles_nodejs">
+<a href="#allowedroles_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Roles</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -539,7 +611,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>cassandra</span>
+        <span id="cassandra_nodejs">
+<a href="#cassandra_nodejs" style="color: inherit; text-decoration: inherit;">cassandra</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretbackendconnectioncassandra">Secret<wbr>Backend<wbr>Connection<wbr>Cassandra</a></span>
     </dt>
@@ -548,7 +622,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>data</span>
+        <span id="data_nodejs">
+<a href="#data_nodejs" style="color: inherit; text-decoration: inherit;">data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -557,7 +633,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>elasticsearch</span>
+        <span id="elasticsearch_nodejs">
+<a href="#elasticsearch_nodejs" style="color: inherit; text-decoration: inherit;">elasticsearch</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretbackendconnectionelasticsearch">Secret<wbr>Backend<wbr>Connection<wbr>Elasticsearch</a></span>
     </dt>
@@ -566,7 +644,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>hana</span>
+        <span id="hana_nodejs">
+<a href="#hana_nodejs" style="color: inherit; text-decoration: inherit;">hana</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretbackendconnectionhana">Secret<wbr>Backend<wbr>Connection<wbr>Hana</a></span>
     </dt>
@@ -575,7 +655,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>mongodb</span>
+        <span id="mongodb_nodejs">
+<a href="#mongodb_nodejs" style="color: inherit; text-decoration: inherit;">mongodb</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretbackendconnectionmongodb">Secret<wbr>Backend<wbr>Connection<wbr>Mongodb</a></span>
     </dt>
@@ -584,7 +666,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>mssql</span>
+        <span id="mssql_nodejs">
+<a href="#mssql_nodejs" style="color: inherit; text-decoration: inherit;">mssql</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretbackendconnectionmssql">Secret<wbr>Backend<wbr>Connection<wbr>Mssql</a></span>
     </dt>
@@ -593,7 +677,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>mysql</span>
+        <span id="mysql_nodejs">
+<a href="#mysql_nodejs" style="color: inherit; text-decoration: inherit;">mysql</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretbackendconnectionmysql">Secret<wbr>Backend<wbr>Connection<wbr>Mysql</a></span>
     </dt>
@@ -602,7 +688,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>mysql<wbr>Aurora</span>
+        <span id="mysqlaurora_nodejs">
+<a href="#mysqlaurora_nodejs" style="color: inherit; text-decoration: inherit;">mysql<wbr>Aurora</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretbackendconnectionmysqlaurora">Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Aurora</a></span>
     </dt>
@@ -611,7 +699,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>mysql<wbr>Legacy</span>
+        <span id="mysqllegacy_nodejs">
+<a href="#mysqllegacy_nodejs" style="color: inherit; text-decoration: inherit;">mysql<wbr>Legacy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretbackendconnectionmysqllegacy">Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Legacy</a></span>
     </dt>
@@ -620,7 +710,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>mysql<wbr>Rds</span>
+        <span id="mysqlrds_nodejs">
+<a href="#mysqlrds_nodejs" style="color: inherit; text-decoration: inherit;">mysql<wbr>Rds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretbackendconnectionmysqlrds">Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Rds</a></span>
     </dt>
@@ -629,7 +721,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -638,7 +732,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>oracle</span>
+        <span id="oracle_nodejs">
+<a href="#oracle_nodejs" style="color: inherit; text-decoration: inherit;">oracle</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretbackendconnectionoracle">Secret<wbr>Backend<wbr>Connection<wbr>Oracle</a></span>
     </dt>
@@ -647,7 +743,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>postgresql</span>
+        <span id="postgresql_nodejs">
+<a href="#postgresql_nodejs" style="color: inherit; text-decoration: inherit;">postgresql</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretbackendconnectionpostgresql">Secret<wbr>Backend<wbr>Connection<wbr>Postgresql</a></span>
     </dt>
@@ -656,7 +754,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>root<wbr>Rotation<wbr>Statements</span>
+        <span id="rootrotationstatements_nodejs">
+<a href="#rootrotationstatements_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Rotation<wbr>Statements</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -665,7 +765,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>verify<wbr>Connection</span>
+        <span id="verifyconnection_nodejs">
+<a href="#verifyconnection_nodejs" style="color: inherit; text-decoration: inherit;">verify<wbr>Connection</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -682,7 +784,9 @@ initial configuration or not.
 
     <dt class="property-required"
             title="Required">
-        <span>backend</span>
+        <span id="backend_python">
+<a href="#backend_python" style="color: inherit; text-decoration: inherit;">backend</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -691,7 +795,9 @@ initial configuration or not.
 
     <dt class="property-optional"
             title="Optional">
-        <span>allowed_<wbr>roles</span>
+        <span id="allowed_roles_python">
+<a href="#allowed_roles_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>roles</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -701,7 +807,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>cassandra</span>
+        <span id="cassandra_python">
+<a href="#cassandra_python" style="color: inherit; text-decoration: inherit;">cassandra</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretbackendconnectioncassandra">Dict[Secret<wbr>Backend<wbr>Connection<wbr>Cassandra]</a></span>
     </dt>
@@ -710,7 +818,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>data</span>
+        <span id="data_python">
+<a href="#data_python" style="color: inherit; text-decoration: inherit;">data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -719,7 +829,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>elasticsearch</span>
+        <span id="elasticsearch_python">
+<a href="#elasticsearch_python" style="color: inherit; text-decoration: inherit;">elasticsearch</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretbackendconnectionelasticsearch">Dict[Secret<wbr>Backend<wbr>Connection<wbr>Elasticsearch]</a></span>
     </dt>
@@ -728,7 +840,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>hana</span>
+        <span id="hana_python">
+<a href="#hana_python" style="color: inherit; text-decoration: inherit;">hana</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretbackendconnectionhana">Dict[Secret<wbr>Backend<wbr>Connection<wbr>Hana]</a></span>
     </dt>
@@ -737,7 +851,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>mongodb</span>
+        <span id="mongodb_python">
+<a href="#mongodb_python" style="color: inherit; text-decoration: inherit;">mongodb</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretbackendconnectionmongodb">Dict[Secret<wbr>Backend<wbr>Connection<wbr>Mongodb]</a></span>
     </dt>
@@ -746,7 +862,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>mssql</span>
+        <span id="mssql_python">
+<a href="#mssql_python" style="color: inherit; text-decoration: inherit;">mssql</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretbackendconnectionmssql">Dict[Secret<wbr>Backend<wbr>Connection<wbr>Mssql]</a></span>
     </dt>
@@ -755,7 +873,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>mysql</span>
+        <span id="mysql_python">
+<a href="#mysql_python" style="color: inherit; text-decoration: inherit;">mysql</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretbackendconnectionmysql">Dict[Secret<wbr>Backend<wbr>Connection<wbr>Mysql]</a></span>
     </dt>
@@ -764,7 +884,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>mysql_<wbr>aurora</span>
+        <span id="mysql_aurora_python">
+<a href="#mysql_aurora_python" style="color: inherit; text-decoration: inherit;">mysql_<wbr>aurora</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretbackendconnectionmysqlaurora">Dict[Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Aurora]</a></span>
     </dt>
@@ -773,7 +895,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>mysql_<wbr>legacy</span>
+        <span id="mysql_legacy_python">
+<a href="#mysql_legacy_python" style="color: inherit; text-decoration: inherit;">mysql_<wbr>legacy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretbackendconnectionmysqllegacy">Dict[Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Legacy]</a></span>
     </dt>
@@ -782,7 +906,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>mysql_<wbr>rds</span>
+        <span id="mysql_rds_python">
+<a href="#mysql_rds_python" style="color: inherit; text-decoration: inherit;">mysql_<wbr>rds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretbackendconnectionmysqlrds">Dict[Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Rds]</a></span>
     </dt>
@@ -791,7 +917,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -800,7 +928,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>oracle</span>
+        <span id="oracle_python">
+<a href="#oracle_python" style="color: inherit; text-decoration: inherit;">oracle</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretbackendconnectionoracle">Dict[Secret<wbr>Backend<wbr>Connection<wbr>Oracle]</a></span>
     </dt>
@@ -809,7 +939,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>postgresql</span>
+        <span id="postgresql_python">
+<a href="#postgresql_python" style="color: inherit; text-decoration: inherit;">postgresql</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretbackendconnectionpostgresql">Dict[Secret<wbr>Backend<wbr>Connection<wbr>Postgresql]</a></span>
     </dt>
@@ -818,7 +950,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>root_<wbr>rotation_<wbr>statements</span>
+        <span id="root_rotation_statements_python">
+<a href="#root_rotation_statements_python" style="color: inherit; text-decoration: inherit;">root_<wbr>rotation_<wbr>statements</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -827,7 +961,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>verify_<wbr>connection</span>
+        <span id="verify_connection_python">
+<a href="#verify_connection_python" style="color: inherit; text-decoration: inherit;">verify_<wbr>connection</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -855,7 +991,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -870,7 +1008,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -885,7 +1025,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -900,7 +1042,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1041,7 +1185,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allowed<wbr>Roles</span>
+        <span id="state_allowedroles_csharp">
+<a href="#state_allowedroles_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Roles</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1051,7 +1197,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Backend</span>
+        <span id="state_backend_csharp">
+<a href="#state_backend_csharp" style="color: inherit; text-decoration: inherit;">Backend</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1060,7 +1208,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cassandra</span>
+        <span id="state_cassandra_csharp">
+<a href="#state_cassandra_csharp" style="color: inherit; text-decoration: inherit;">Cassandra</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretbackendconnectioncassandra">Secret<wbr>Backend<wbr>Connection<wbr>Cassandra<wbr>Args</a></span>
     </dt>
@@ -1069,7 +1219,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Data</span>
+        <span id="state_data_csharp">
+<a href="#state_data_csharp" style="color: inherit; text-decoration: inherit;">Data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -1078,7 +1230,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Elasticsearch</span>
+        <span id="state_elasticsearch_csharp">
+<a href="#state_elasticsearch_csharp" style="color: inherit; text-decoration: inherit;">Elasticsearch</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretbackendconnectionelasticsearch">Secret<wbr>Backend<wbr>Connection<wbr>Elasticsearch<wbr>Args</a></span>
     </dt>
@@ -1087,7 +1241,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Hana</span>
+        <span id="state_hana_csharp">
+<a href="#state_hana_csharp" style="color: inherit; text-decoration: inherit;">Hana</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretbackendconnectionhana">Secret<wbr>Backend<wbr>Connection<wbr>Hana<wbr>Args</a></span>
     </dt>
@@ -1096,7 +1252,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Mongodb</span>
+        <span id="state_mongodb_csharp">
+<a href="#state_mongodb_csharp" style="color: inherit; text-decoration: inherit;">Mongodb</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretbackendconnectionmongodb">Secret<wbr>Backend<wbr>Connection<wbr>Mongodb<wbr>Args</a></span>
     </dt>
@@ -1105,7 +1263,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Mssql</span>
+        <span id="state_mssql_csharp">
+<a href="#state_mssql_csharp" style="color: inherit; text-decoration: inherit;">Mssql</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretbackendconnectionmssql">Secret<wbr>Backend<wbr>Connection<wbr>Mssql<wbr>Args</a></span>
     </dt>
@@ -1114,7 +1274,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Mysql</span>
+        <span id="state_mysql_csharp">
+<a href="#state_mysql_csharp" style="color: inherit; text-decoration: inherit;">Mysql</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretbackendconnectionmysql">Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Args</a></span>
     </dt>
@@ -1123,7 +1285,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Mysql<wbr>Aurora</span>
+        <span id="state_mysqlaurora_csharp">
+<a href="#state_mysqlaurora_csharp" style="color: inherit; text-decoration: inherit;">Mysql<wbr>Aurora</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretbackendconnectionmysqlaurora">Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Aurora<wbr>Args</a></span>
     </dt>
@@ -1132,7 +1296,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Mysql<wbr>Legacy</span>
+        <span id="state_mysqllegacy_csharp">
+<a href="#state_mysqllegacy_csharp" style="color: inherit; text-decoration: inherit;">Mysql<wbr>Legacy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretbackendconnectionmysqllegacy">Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Legacy<wbr>Args</a></span>
     </dt>
@@ -1141,7 +1307,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Mysql<wbr>Rds</span>
+        <span id="state_mysqlrds_csharp">
+<a href="#state_mysqlrds_csharp" style="color: inherit; text-decoration: inherit;">Mysql<wbr>Rds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretbackendconnectionmysqlrds">Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Rds<wbr>Args</a></span>
     </dt>
@@ -1150,7 +1318,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1159,7 +1329,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Oracle</span>
+        <span id="state_oracle_csharp">
+<a href="#state_oracle_csharp" style="color: inherit; text-decoration: inherit;">Oracle</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretbackendconnectionoracle">Secret<wbr>Backend<wbr>Connection<wbr>Oracle<wbr>Args</a></span>
     </dt>
@@ -1168,7 +1340,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Postgresql</span>
+        <span id="state_postgresql_csharp">
+<a href="#state_postgresql_csharp" style="color: inherit; text-decoration: inherit;">Postgresql</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretbackendconnectionpostgresql">Secret<wbr>Backend<wbr>Connection<wbr>Postgresql<wbr>Args</a></span>
     </dt>
@@ -1177,7 +1351,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Root<wbr>Rotation<wbr>Statements</span>
+        <span id="state_rootrotationstatements_csharp">
+<a href="#state_rootrotationstatements_csharp" style="color: inherit; text-decoration: inherit;">Root<wbr>Rotation<wbr>Statements</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1186,7 +1362,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Verify<wbr>Connection</span>
+        <span id="state_verifyconnection_csharp">
+<a href="#state_verifyconnection_csharp" style="color: inherit; text-decoration: inherit;">Verify<wbr>Connection</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1203,7 +1381,9 @@ initial configuration or not.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allowed<wbr>Roles</span>
+        <span id="state_allowedroles_go">
+<a href="#state_allowedroles_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Roles</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1213,7 +1393,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Backend</span>
+        <span id="state_backend_go">
+<a href="#state_backend_go" style="color: inherit; text-decoration: inherit;">Backend</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1222,7 +1404,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cassandra</span>
+        <span id="state_cassandra_go">
+<a href="#state_cassandra_go" style="color: inherit; text-decoration: inherit;">Cassandra</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretbackendconnectioncassandra">Secret<wbr>Backend<wbr>Connection<wbr>Cassandra</a></span>
     </dt>
@@ -1231,7 +1415,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Data</span>
+        <span id="state_data_go">
+<a href="#state_data_go" style="color: inherit; text-decoration: inherit;">Data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -1240,7 +1426,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Elasticsearch</span>
+        <span id="state_elasticsearch_go">
+<a href="#state_elasticsearch_go" style="color: inherit; text-decoration: inherit;">Elasticsearch</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretbackendconnectionelasticsearch">Secret<wbr>Backend<wbr>Connection<wbr>Elasticsearch</a></span>
     </dt>
@@ -1249,7 +1437,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Hana</span>
+        <span id="state_hana_go">
+<a href="#state_hana_go" style="color: inherit; text-decoration: inherit;">Hana</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretbackendconnectionhana">Secret<wbr>Backend<wbr>Connection<wbr>Hana</a></span>
     </dt>
@@ -1258,7 +1448,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Mongodb</span>
+        <span id="state_mongodb_go">
+<a href="#state_mongodb_go" style="color: inherit; text-decoration: inherit;">Mongodb</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretbackendconnectionmongodb">Secret<wbr>Backend<wbr>Connection<wbr>Mongodb</a></span>
     </dt>
@@ -1267,7 +1459,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Mssql</span>
+        <span id="state_mssql_go">
+<a href="#state_mssql_go" style="color: inherit; text-decoration: inherit;">Mssql</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretbackendconnectionmssql">Secret<wbr>Backend<wbr>Connection<wbr>Mssql</a></span>
     </dt>
@@ -1276,7 +1470,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Mysql</span>
+        <span id="state_mysql_go">
+<a href="#state_mysql_go" style="color: inherit; text-decoration: inherit;">Mysql</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretbackendconnectionmysql">Secret<wbr>Backend<wbr>Connection<wbr>Mysql</a></span>
     </dt>
@@ -1285,7 +1481,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Mysql<wbr>Aurora</span>
+        <span id="state_mysqlaurora_go">
+<a href="#state_mysqlaurora_go" style="color: inherit; text-decoration: inherit;">Mysql<wbr>Aurora</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretbackendconnectionmysqlaurora">Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Aurora</a></span>
     </dt>
@@ -1294,7 +1492,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Mysql<wbr>Legacy</span>
+        <span id="state_mysqllegacy_go">
+<a href="#state_mysqllegacy_go" style="color: inherit; text-decoration: inherit;">Mysql<wbr>Legacy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretbackendconnectionmysqllegacy">Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Legacy</a></span>
     </dt>
@@ -1303,7 +1503,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Mysql<wbr>Rds</span>
+        <span id="state_mysqlrds_go">
+<a href="#state_mysqlrds_go" style="color: inherit; text-decoration: inherit;">Mysql<wbr>Rds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretbackendconnectionmysqlrds">Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Rds</a></span>
     </dt>
@@ -1312,7 +1514,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1321,7 +1525,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Oracle</span>
+        <span id="state_oracle_go">
+<a href="#state_oracle_go" style="color: inherit; text-decoration: inherit;">Oracle</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretbackendconnectionoracle">Secret<wbr>Backend<wbr>Connection<wbr>Oracle</a></span>
     </dt>
@@ -1330,7 +1536,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Postgresql</span>
+        <span id="state_postgresql_go">
+<a href="#state_postgresql_go" style="color: inherit; text-decoration: inherit;">Postgresql</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretbackendconnectionpostgresql">Secret<wbr>Backend<wbr>Connection<wbr>Postgresql</a></span>
     </dt>
@@ -1339,7 +1547,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Root<wbr>Rotation<wbr>Statements</span>
+        <span id="state_rootrotationstatements_go">
+<a href="#state_rootrotationstatements_go" style="color: inherit; text-decoration: inherit;">Root<wbr>Rotation<wbr>Statements</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1348,7 +1558,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Verify<wbr>Connection</span>
+        <span id="state_verifyconnection_go">
+<a href="#state_verifyconnection_go" style="color: inherit; text-decoration: inherit;">Verify<wbr>Connection</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1365,7 +1577,9 @@ initial configuration or not.
 
     <dt class="property-optional"
             title="Optional">
-        <span>allowed<wbr>Roles</span>
+        <span id="state_allowedroles_nodejs">
+<a href="#state_allowedroles_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Roles</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1375,7 +1589,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>backend</span>
+        <span id="state_backend_nodejs">
+<a href="#state_backend_nodejs" style="color: inherit; text-decoration: inherit;">backend</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1384,7 +1600,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>cassandra</span>
+        <span id="state_cassandra_nodejs">
+<a href="#state_cassandra_nodejs" style="color: inherit; text-decoration: inherit;">cassandra</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretbackendconnectioncassandra">Secret<wbr>Backend<wbr>Connection<wbr>Cassandra</a></span>
     </dt>
@@ -1393,7 +1611,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>data</span>
+        <span id="state_data_nodejs">
+<a href="#state_data_nodejs" style="color: inherit; text-decoration: inherit;">data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -1402,7 +1622,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>elasticsearch</span>
+        <span id="state_elasticsearch_nodejs">
+<a href="#state_elasticsearch_nodejs" style="color: inherit; text-decoration: inherit;">elasticsearch</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretbackendconnectionelasticsearch">Secret<wbr>Backend<wbr>Connection<wbr>Elasticsearch</a></span>
     </dt>
@@ -1411,7 +1633,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>hana</span>
+        <span id="state_hana_nodejs">
+<a href="#state_hana_nodejs" style="color: inherit; text-decoration: inherit;">hana</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretbackendconnectionhana">Secret<wbr>Backend<wbr>Connection<wbr>Hana</a></span>
     </dt>
@@ -1420,7 +1644,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>mongodb</span>
+        <span id="state_mongodb_nodejs">
+<a href="#state_mongodb_nodejs" style="color: inherit; text-decoration: inherit;">mongodb</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretbackendconnectionmongodb">Secret<wbr>Backend<wbr>Connection<wbr>Mongodb</a></span>
     </dt>
@@ -1429,7 +1655,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>mssql</span>
+        <span id="state_mssql_nodejs">
+<a href="#state_mssql_nodejs" style="color: inherit; text-decoration: inherit;">mssql</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretbackendconnectionmssql">Secret<wbr>Backend<wbr>Connection<wbr>Mssql</a></span>
     </dt>
@@ -1438,7 +1666,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>mysql</span>
+        <span id="state_mysql_nodejs">
+<a href="#state_mysql_nodejs" style="color: inherit; text-decoration: inherit;">mysql</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretbackendconnectionmysql">Secret<wbr>Backend<wbr>Connection<wbr>Mysql</a></span>
     </dt>
@@ -1447,7 +1677,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>mysql<wbr>Aurora</span>
+        <span id="state_mysqlaurora_nodejs">
+<a href="#state_mysqlaurora_nodejs" style="color: inherit; text-decoration: inherit;">mysql<wbr>Aurora</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretbackendconnectionmysqlaurora">Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Aurora</a></span>
     </dt>
@@ -1456,7 +1688,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>mysql<wbr>Legacy</span>
+        <span id="state_mysqllegacy_nodejs">
+<a href="#state_mysqllegacy_nodejs" style="color: inherit; text-decoration: inherit;">mysql<wbr>Legacy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretbackendconnectionmysqllegacy">Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Legacy</a></span>
     </dt>
@@ -1465,7 +1699,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>mysql<wbr>Rds</span>
+        <span id="state_mysqlrds_nodejs">
+<a href="#state_mysqlrds_nodejs" style="color: inherit; text-decoration: inherit;">mysql<wbr>Rds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretbackendconnectionmysqlrds">Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Rds</a></span>
     </dt>
@@ -1474,7 +1710,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1483,7 +1721,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>oracle</span>
+        <span id="state_oracle_nodejs">
+<a href="#state_oracle_nodejs" style="color: inherit; text-decoration: inherit;">oracle</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretbackendconnectionoracle">Secret<wbr>Backend<wbr>Connection<wbr>Oracle</a></span>
     </dt>
@@ -1492,7 +1732,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>postgresql</span>
+        <span id="state_postgresql_nodejs">
+<a href="#state_postgresql_nodejs" style="color: inherit; text-decoration: inherit;">postgresql</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretbackendconnectionpostgresql">Secret<wbr>Backend<wbr>Connection<wbr>Postgresql</a></span>
     </dt>
@@ -1501,7 +1743,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>root<wbr>Rotation<wbr>Statements</span>
+        <span id="state_rootrotationstatements_nodejs">
+<a href="#state_rootrotationstatements_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Rotation<wbr>Statements</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1510,7 +1754,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>verify<wbr>Connection</span>
+        <span id="state_verifyconnection_nodejs">
+<a href="#state_verifyconnection_nodejs" style="color: inherit; text-decoration: inherit;">verify<wbr>Connection</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1527,7 +1773,9 @@ initial configuration or not.
 
     <dt class="property-optional"
             title="Optional">
-        <span>allowed_<wbr>roles</span>
+        <span id="state_allowed_roles_python">
+<a href="#state_allowed_roles_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>roles</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1537,7 +1785,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>backend</span>
+        <span id="state_backend_python">
+<a href="#state_backend_python" style="color: inherit; text-decoration: inherit;">backend</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1546,7 +1796,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>cassandra</span>
+        <span id="state_cassandra_python">
+<a href="#state_cassandra_python" style="color: inherit; text-decoration: inherit;">cassandra</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretbackendconnectioncassandra">Dict[Secret<wbr>Backend<wbr>Connection<wbr>Cassandra]</a></span>
     </dt>
@@ -1555,7 +1807,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>data</span>
+        <span id="state_data_python">
+<a href="#state_data_python" style="color: inherit; text-decoration: inherit;">data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -1564,7 +1818,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>elasticsearch</span>
+        <span id="state_elasticsearch_python">
+<a href="#state_elasticsearch_python" style="color: inherit; text-decoration: inherit;">elasticsearch</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretbackendconnectionelasticsearch">Dict[Secret<wbr>Backend<wbr>Connection<wbr>Elasticsearch]</a></span>
     </dt>
@@ -1573,7 +1829,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>hana</span>
+        <span id="state_hana_python">
+<a href="#state_hana_python" style="color: inherit; text-decoration: inherit;">hana</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretbackendconnectionhana">Dict[Secret<wbr>Backend<wbr>Connection<wbr>Hana]</a></span>
     </dt>
@@ -1582,7 +1840,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>mongodb</span>
+        <span id="state_mongodb_python">
+<a href="#state_mongodb_python" style="color: inherit; text-decoration: inherit;">mongodb</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretbackendconnectionmongodb">Dict[Secret<wbr>Backend<wbr>Connection<wbr>Mongodb]</a></span>
     </dt>
@@ -1591,7 +1851,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>mssql</span>
+        <span id="state_mssql_python">
+<a href="#state_mssql_python" style="color: inherit; text-decoration: inherit;">mssql</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretbackendconnectionmssql">Dict[Secret<wbr>Backend<wbr>Connection<wbr>Mssql]</a></span>
     </dt>
@@ -1600,7 +1862,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>mysql</span>
+        <span id="state_mysql_python">
+<a href="#state_mysql_python" style="color: inherit; text-decoration: inherit;">mysql</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretbackendconnectionmysql">Dict[Secret<wbr>Backend<wbr>Connection<wbr>Mysql]</a></span>
     </dt>
@@ -1609,7 +1873,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>mysql_<wbr>aurora</span>
+        <span id="state_mysql_aurora_python">
+<a href="#state_mysql_aurora_python" style="color: inherit; text-decoration: inherit;">mysql_<wbr>aurora</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretbackendconnectionmysqlaurora">Dict[Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Aurora]</a></span>
     </dt>
@@ -1618,7 +1884,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>mysql_<wbr>legacy</span>
+        <span id="state_mysql_legacy_python">
+<a href="#state_mysql_legacy_python" style="color: inherit; text-decoration: inherit;">mysql_<wbr>legacy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretbackendconnectionmysqllegacy">Dict[Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Legacy]</a></span>
     </dt>
@@ -1627,7 +1895,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>mysql_<wbr>rds</span>
+        <span id="state_mysql_rds_python">
+<a href="#state_mysql_rds_python" style="color: inherit; text-decoration: inherit;">mysql_<wbr>rds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretbackendconnectionmysqlrds">Dict[Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Rds]</a></span>
     </dt>
@@ -1636,7 +1906,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1645,7 +1917,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>oracle</span>
+        <span id="state_oracle_python">
+<a href="#state_oracle_python" style="color: inherit; text-decoration: inherit;">oracle</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretbackendconnectionoracle">Dict[Secret<wbr>Backend<wbr>Connection<wbr>Oracle]</a></span>
     </dt>
@@ -1654,7 +1928,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>postgresql</span>
+        <span id="state_postgresql_python">
+<a href="#state_postgresql_python" style="color: inherit; text-decoration: inherit;">postgresql</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretbackendconnectionpostgresql">Dict[Secret<wbr>Backend<wbr>Connection<wbr>Postgresql]</a></span>
     </dt>
@@ -1663,7 +1939,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>root_<wbr>rotation_<wbr>statements</span>
+        <span id="state_root_rotation_statements_python">
+<a href="#state_root_rotation_statements_python" style="color: inherit; text-decoration: inherit;">root_<wbr>rotation_<wbr>statements</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1672,7 +1950,9 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>verify_<wbr>connection</span>
+        <span id="state_verify_connection_python">
+<a href="#state_verify_connection_python" style="color: inherit; text-decoration: inherit;">verify_<wbr>connection</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1715,7 +1995,9 @@ initial configuration or not.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Connect<wbr>Timeout</span>
+        <span id="connecttimeout_csharp">
+<a href="#connecttimeout_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Timeout</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1725,7 +2007,9 @@ timeout.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Hosts</span>
+        <span id="hosts_csharp">
+<a href="#hosts_csharp" style="color: inherit; text-decoration: inherit;">Hosts</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1734,7 +2018,9 @@ timeout.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Insecure<wbr>Tls</span>
+        <span id="insecuretls_csharp">
+<a href="#insecuretls_csharp" style="color: inherit; text-decoration: inherit;">Insecure<wbr>Tls</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1744,7 +2030,9 @@ certificate when using TLS.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Password</span>
+        <span id="password_csharp">
+<a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1753,7 +2041,9 @@ certificate when using TLS.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Pem<wbr>Bundle</span>
+        <span id="pembundle_csharp">
+<a href="#pembundle_csharp" style="color: inherit; text-decoration: inherit;">Pem<wbr>Bundle</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1763,7 +2053,9 @@ chain.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Pem<wbr>Json</span>
+        <span id="pemjson_csharp">
+<a href="#pemjson_csharp" style="color: inherit; text-decoration: inherit;">Pem<wbr>Json</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1772,7 +2064,9 @@ chain.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Port</span>
+        <span id="port_csharp">
+<a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1782,7 +2076,9 @@ part of the host.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Protocol<wbr>Version</span>
+        <span id="protocolversion_csharp">
+<a href="#protocolversion_csharp" style="color: inherit; text-decoration: inherit;">Protocol<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1791,7 +2087,9 @@ part of the host.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tls</span>
+        <span id="tls_csharp">
+<a href="#tls_csharp" style="color: inherit; text-decoration: inherit;">Tls</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1800,7 +2098,9 @@ part of the host.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Username</span>
+        <span id="username_csharp">
+<a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1816,7 +2116,9 @@ part of the host.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Connect<wbr>Timeout</span>
+        <span id="connecttimeout_go">
+<a href="#connecttimeout_go" style="color: inherit; text-decoration: inherit;">Connect<wbr>Timeout</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1826,7 +2128,9 @@ timeout.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Hosts</span>
+        <span id="hosts_go">
+<a href="#hosts_go" style="color: inherit; text-decoration: inherit;">Hosts</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1835,7 +2139,9 @@ timeout.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Insecure<wbr>Tls</span>
+        <span id="insecuretls_go">
+<a href="#insecuretls_go" style="color: inherit; text-decoration: inherit;">Insecure<wbr>Tls</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1845,7 +2151,9 @@ certificate when using TLS.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Password</span>
+        <span id="password_go">
+<a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1854,7 +2162,9 @@ certificate when using TLS.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Pem<wbr>Bundle</span>
+        <span id="pembundle_go">
+<a href="#pembundle_go" style="color: inherit; text-decoration: inherit;">Pem<wbr>Bundle</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1864,7 +2174,9 @@ chain.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Pem<wbr>Json</span>
+        <span id="pemjson_go">
+<a href="#pemjson_go" style="color: inherit; text-decoration: inherit;">Pem<wbr>Json</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1873,7 +2185,9 @@ chain.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Port</span>
+        <span id="port_go">
+<a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1883,7 +2197,9 @@ part of the host.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Protocol<wbr>Version</span>
+        <span id="protocolversion_go">
+<a href="#protocolversion_go" style="color: inherit; text-decoration: inherit;">Protocol<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1892,7 +2208,9 @@ part of the host.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tls</span>
+        <span id="tls_go">
+<a href="#tls_go" style="color: inherit; text-decoration: inherit;">Tls</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1901,7 +2219,9 @@ part of the host.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Username</span>
+        <span id="username_go">
+<a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1917,7 +2237,9 @@ part of the host.
 
     <dt class="property-optional"
             title="Optional">
-        <span>connect<wbr>Timeout</span>
+        <span id="connecttimeout_nodejs">
+<a href="#connecttimeout_nodejs" style="color: inherit; text-decoration: inherit;">connect<wbr>Timeout</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1927,7 +2249,9 @@ timeout.
 
     <dt class="property-optional"
             title="Optional">
-        <span>hosts</span>
+        <span id="hosts_nodejs">
+<a href="#hosts_nodejs" style="color: inherit; text-decoration: inherit;">hosts</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1936,7 +2260,9 @@ timeout.
 
     <dt class="property-optional"
             title="Optional">
-        <span>insecure<wbr>Tls</span>
+        <span id="insecuretls_nodejs">
+<a href="#insecuretls_nodejs" style="color: inherit; text-decoration: inherit;">insecure<wbr>Tls</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1946,7 +2272,9 @@ certificate when using TLS.
 
     <dt class="property-optional"
             title="Optional">
-        <span>password</span>
+        <span id="password_nodejs">
+<a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1955,7 +2283,9 @@ certificate when using TLS.
 
     <dt class="property-optional"
             title="Optional">
-        <span>pem<wbr>Bundle</span>
+        <span id="pembundle_nodejs">
+<a href="#pembundle_nodejs" style="color: inherit; text-decoration: inherit;">pem<wbr>Bundle</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1965,7 +2295,9 @@ chain.
 
     <dt class="property-optional"
             title="Optional">
-        <span>pem<wbr>Json</span>
+        <span id="pemjson_nodejs">
+<a href="#pemjson_nodejs" style="color: inherit; text-decoration: inherit;">pem<wbr>Json</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1974,7 +2306,9 @@ chain.
 
     <dt class="property-optional"
             title="Optional">
-        <span>port</span>
+        <span id="port_nodejs">
+<a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1984,7 +2318,9 @@ part of the host.
 
     <dt class="property-optional"
             title="Optional">
-        <span>protocol<wbr>Version</span>
+        <span id="protocolversion_nodejs">
+<a href="#protocolversion_nodejs" style="color: inherit; text-decoration: inherit;">protocol<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1993,7 +2329,9 @@ part of the host.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tls</span>
+        <span id="tls_nodejs">
+<a href="#tls_nodejs" style="color: inherit; text-decoration: inherit;">tls</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -2002,7 +2340,9 @@ part of the host.
 
     <dt class="property-optional"
             title="Optional">
-        <span>username</span>
+        <span id="username_nodejs">
+<a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2018,7 +2358,9 @@ part of the host.
 
     <dt class="property-optional"
             title="Optional">
-        <span>connect<wbr>Timeout</span>
+        <span id="connecttimeout_python">
+<a href="#connecttimeout_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Timeout</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2028,7 +2370,9 @@ timeout.
 
     <dt class="property-optional"
             title="Optional">
-        <span>hosts</span>
+        <span id="hosts_python">
+<a href="#hosts_python" style="color: inherit; text-decoration: inherit;">hosts</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -2037,7 +2381,9 @@ timeout.
 
     <dt class="property-optional"
             title="Optional">
-        <span>insecure_<wbr>tls</span>
+        <span id="insecure_tls_python">
+<a href="#insecure_tls_python" style="color: inherit; text-decoration: inherit;">insecure_<wbr>tls</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2047,7 +2393,9 @@ certificate when using TLS.
 
     <dt class="property-optional"
             title="Optional">
-        <span>password</span>
+        <span id="password_python">
+<a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2056,7 +2404,9 @@ certificate when using TLS.
 
     <dt class="property-optional"
             title="Optional">
-        <span>pem<wbr>Json</span>
+        <span id="pemjson_python">
+<a href="#pemjson_python" style="color: inherit; text-decoration: inherit;">pem<wbr>Json</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2065,7 +2415,9 @@ certificate when using TLS.
 
     <dt class="property-optional"
             title="Optional">
-        <span>pem_<wbr>bundle</span>
+        <span id="pem_bundle_python">
+<a href="#pem_bundle_python" style="color: inherit; text-decoration: inherit;">pem_<wbr>bundle</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2075,7 +2427,9 @@ chain.
 
     <dt class="property-optional"
             title="Optional">
-        <span>port</span>
+        <span id="port_python">
+<a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2085,7 +2439,9 @@ part of the host.
 
     <dt class="property-optional"
             title="Optional">
-        <span>protocol<wbr>Version</span>
+        <span id="protocolversion_python">
+<a href="#protocolversion_python" style="color: inherit; text-decoration: inherit;">protocol<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2094,7 +2450,9 @@ part of the host.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tls</span>
+        <span id="tls_python">
+<a href="#tls_python" style="color: inherit; text-decoration: inherit;">tls</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2103,7 +2461,9 @@ part of the host.
 
     <dt class="property-optional"
             title="Optional">
-        <span>username</span>
+        <span id="username_python">
+<a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2137,7 +2497,9 @@ part of the host.
 
     <dt class="property-required"
             title="Required">
-        <span>Password</span>
+        <span id="password_csharp">
+<a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2146,7 +2508,9 @@ part of the host.
 
     <dt class="property-required"
             title="Required">
-        <span>Url</span>
+        <span id="url_csharp">
+<a href="#url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2156,7 +2520,9 @@ by trusted CA if used.
 
     <dt class="property-required"
             title="Required">
-        <span>Username</span>
+        <span id="username_csharp">
+<a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2172,7 +2538,9 @@ by trusted CA if used.
 
     <dt class="property-required"
             title="Required">
-        <span>Password</span>
+        <span id="password_go">
+<a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2181,7 +2549,9 @@ by trusted CA if used.
 
     <dt class="property-required"
             title="Required">
-        <span>Url</span>
+        <span id="url_go">
+<a href="#url_go" style="color: inherit; text-decoration: inherit;">Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2191,7 +2561,9 @@ by trusted CA if used.
 
     <dt class="property-required"
             title="Required">
-        <span>Username</span>
+        <span id="username_go">
+<a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2207,7 +2579,9 @@ by trusted CA if used.
 
     <dt class="property-required"
             title="Required">
-        <span>password</span>
+        <span id="password_nodejs">
+<a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2216,7 +2590,9 @@ by trusted CA if used.
 
     <dt class="property-required"
             title="Required">
-        <span>url</span>
+        <span id="url_nodejs">
+<a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2226,7 +2602,9 @@ by trusted CA if used.
 
     <dt class="property-required"
             title="Required">
-        <span>username</span>
+        <span id="username_nodejs">
+<a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2242,7 +2620,9 @@ by trusted CA if used.
 
     <dt class="property-required"
             title="Required">
-        <span>password</span>
+        <span id="password_python">
+<a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2251,7 +2631,9 @@ by trusted CA if used.
 
     <dt class="property-required"
             title="Required">
-        <span>url</span>
+        <span id="url_python">
+<a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2261,7 +2643,9 @@ by trusted CA if used.
 
     <dt class="property-required"
             title="Required">
-        <span>username</span>
+        <span id="username_python">
+<a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2295,19 +2679,23 @@ by trusted CA if used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Connection<wbr>Url</span>
+        <span id="connectionurl_csharp">
+<a href="#connectionurl_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A URL containing connection information. See
 the [Vault
-docs](https://www.vaultproject.io/api/secret/databases/oracle.html#sample-payload)
+docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload)
 for an example.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Connection<wbr>Lifetime</span>
+        <span id="maxconnectionlifetime_csharp">
+<a href="#maxconnectionlifetime_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Connection<wbr>Lifetime</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -2317,7 +2705,9 @@ a connection alive for.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Idle<wbr>Connections</span>
+        <span id="maxidleconnections_csharp">
+<a href="#maxidleconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Idle<wbr>Connections</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -2327,7 +2717,9 @@ maintain.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Open<wbr>Connections</span>
+        <span id="maxopenconnections_csharp">
+<a href="#maxopenconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Open<wbr>Connections</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -2344,19 +2736,23 @@ use.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Connection<wbr>Url</span>
+        <span id="connectionurl_go">
+<a href="#connectionurl_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A URL containing connection information. See
 the [Vault
-docs](https://www.vaultproject.io/api/secret/databases/oracle.html#sample-payload)
+docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload)
 for an example.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Connection<wbr>Lifetime</span>
+        <span id="maxconnectionlifetime_go">
+<a href="#maxconnectionlifetime_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Connection<wbr>Lifetime</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -2366,7 +2762,9 @@ a connection alive for.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Idle<wbr>Connections</span>
+        <span id="maxidleconnections_go">
+<a href="#maxidleconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Idle<wbr>Connections</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -2376,7 +2774,9 @@ maintain.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Open<wbr>Connections</span>
+        <span id="maxopenconnections_go">
+<a href="#maxopenconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Open<wbr>Connections</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -2393,19 +2793,23 @@ use.
 
     <dt class="property-optional"
             title="Optional">
-        <span>connection<wbr>Url</span>
+        <span id="connectionurl_nodejs">
+<a href="#connectionurl_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A URL containing connection information. See
 the [Vault
-docs](https://www.vaultproject.io/api/secret/databases/oracle.html#sample-payload)
+docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload)
 for an example.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Connection<wbr>Lifetime</span>
+        <span id="maxconnectionlifetime_nodejs">
+<a href="#maxconnectionlifetime_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Connection<wbr>Lifetime</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -2415,7 +2819,9 @@ a connection alive for.
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Idle<wbr>Connections</span>
+        <span id="maxidleconnections_nodejs">
+<a href="#maxidleconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Idle<wbr>Connections</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -2425,7 +2831,9 @@ maintain.
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Open<wbr>Connections</span>
+        <span id="maxopenconnections_nodejs">
+<a href="#maxopenconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Open<wbr>Connections</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -2442,19 +2850,23 @@ use.
 
     <dt class="property-optional"
             title="Optional">
-        <span>connection<wbr>Url</span>
+        <span id="connectionurl_python">
+<a href="#connectionurl_python" style="color: inherit; text-decoration: inherit;">connection<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A URL containing connection information. See
 the [Vault
-docs](https://www.vaultproject.io/api/secret/databases/oracle.html#sample-payload)
+docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload)
 for an example.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Connection<wbr>Lifetime</span>
+        <span id="maxconnectionlifetime_python">
+<a href="#maxconnectionlifetime_python" style="color: inherit; text-decoration: inherit;">max<wbr>Connection<wbr>Lifetime</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2464,7 +2876,9 @@ a connection alive for.
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Idle<wbr>Connections</span>
+        <span id="maxidleconnections_python">
+<a href="#maxidleconnections_python" style="color: inherit; text-decoration: inherit;">max<wbr>Idle<wbr>Connections</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2474,7 +2888,9 @@ maintain.
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Open<wbr>Connections</span>
+        <span id="maxopenconnections_python">
+<a href="#maxopenconnections_python" style="color: inherit; text-decoration: inherit;">max<wbr>Open<wbr>Connections</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2509,19 +2925,23 @@ use.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Connection<wbr>Url</span>
+        <span id="connectionurl_csharp">
+<a href="#connectionurl_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A URL containing connection information. See
 the [Vault
-docs](https://www.vaultproject.io/api/secret/databases/oracle.html#sample-payload)
+docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload)
 for an example.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Connection<wbr>Lifetime</span>
+        <span id="maxconnectionlifetime_csharp">
+<a href="#maxconnectionlifetime_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Connection<wbr>Lifetime</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -2531,7 +2951,9 @@ a connection alive for.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Idle<wbr>Connections</span>
+        <span id="maxidleconnections_csharp">
+<a href="#maxidleconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Idle<wbr>Connections</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -2541,7 +2963,9 @@ maintain.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Open<wbr>Connections</span>
+        <span id="maxopenconnections_csharp">
+<a href="#maxopenconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Open<wbr>Connections</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -2558,19 +2982,23 @@ use.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Connection<wbr>Url</span>
+        <span id="connectionurl_go">
+<a href="#connectionurl_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A URL containing connection information. See
 the [Vault
-docs](https://www.vaultproject.io/api/secret/databases/oracle.html#sample-payload)
+docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload)
 for an example.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Connection<wbr>Lifetime</span>
+        <span id="maxconnectionlifetime_go">
+<a href="#maxconnectionlifetime_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Connection<wbr>Lifetime</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -2580,7 +3008,9 @@ a connection alive for.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Idle<wbr>Connections</span>
+        <span id="maxidleconnections_go">
+<a href="#maxidleconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Idle<wbr>Connections</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -2590,7 +3020,9 @@ maintain.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Open<wbr>Connections</span>
+        <span id="maxopenconnections_go">
+<a href="#maxopenconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Open<wbr>Connections</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -2607,19 +3039,23 @@ use.
 
     <dt class="property-optional"
             title="Optional">
-        <span>connection<wbr>Url</span>
+        <span id="connectionurl_nodejs">
+<a href="#connectionurl_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A URL containing connection information. See
 the [Vault
-docs](https://www.vaultproject.io/api/secret/databases/oracle.html#sample-payload)
+docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload)
 for an example.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Connection<wbr>Lifetime</span>
+        <span id="maxconnectionlifetime_nodejs">
+<a href="#maxconnectionlifetime_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Connection<wbr>Lifetime</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -2629,7 +3065,9 @@ a connection alive for.
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Idle<wbr>Connections</span>
+        <span id="maxidleconnections_nodejs">
+<a href="#maxidleconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Idle<wbr>Connections</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -2639,7 +3077,9 @@ maintain.
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Open<wbr>Connections</span>
+        <span id="maxopenconnections_nodejs">
+<a href="#maxopenconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Open<wbr>Connections</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -2656,19 +3096,23 @@ use.
 
     <dt class="property-optional"
             title="Optional">
-        <span>connection<wbr>Url</span>
+        <span id="connectionurl_python">
+<a href="#connectionurl_python" style="color: inherit; text-decoration: inherit;">connection<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A URL containing connection information. See
 the [Vault
-docs](https://www.vaultproject.io/api/secret/databases/oracle.html#sample-payload)
+docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload)
 for an example.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Connection<wbr>Lifetime</span>
+        <span id="maxconnectionlifetime_python">
+<a href="#maxconnectionlifetime_python" style="color: inherit; text-decoration: inherit;">max<wbr>Connection<wbr>Lifetime</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2678,7 +3122,9 @@ a connection alive for.
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Idle<wbr>Connections</span>
+        <span id="maxidleconnections_python">
+<a href="#maxidleconnections_python" style="color: inherit; text-decoration: inherit;">max<wbr>Idle<wbr>Connections</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2688,7 +3134,9 @@ maintain.
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Open<wbr>Connections</span>
+        <span id="maxopenconnections_python">
+<a href="#maxopenconnections_python" style="color: inherit; text-decoration: inherit;">max<wbr>Open<wbr>Connections</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2723,19 +3171,23 @@ use.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Connection<wbr>Url</span>
+        <span id="connectionurl_csharp">
+<a href="#connectionurl_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A URL containing connection information. See
 the [Vault
-docs](https://www.vaultproject.io/api/secret/databases/oracle.html#sample-payload)
+docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload)
 for an example.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Connection<wbr>Lifetime</span>
+        <span id="maxconnectionlifetime_csharp">
+<a href="#maxconnectionlifetime_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Connection<wbr>Lifetime</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -2745,7 +3197,9 @@ a connection alive for.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Idle<wbr>Connections</span>
+        <span id="maxidleconnections_csharp">
+<a href="#maxidleconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Idle<wbr>Connections</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -2755,7 +3209,9 @@ maintain.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Open<wbr>Connections</span>
+        <span id="maxopenconnections_csharp">
+<a href="#maxopenconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Open<wbr>Connections</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -2772,19 +3228,23 @@ use.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Connection<wbr>Url</span>
+        <span id="connectionurl_go">
+<a href="#connectionurl_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A URL containing connection information. See
 the [Vault
-docs](https://www.vaultproject.io/api/secret/databases/oracle.html#sample-payload)
+docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload)
 for an example.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Connection<wbr>Lifetime</span>
+        <span id="maxconnectionlifetime_go">
+<a href="#maxconnectionlifetime_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Connection<wbr>Lifetime</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -2794,7 +3254,9 @@ a connection alive for.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Idle<wbr>Connections</span>
+        <span id="maxidleconnections_go">
+<a href="#maxidleconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Idle<wbr>Connections</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -2804,7 +3266,9 @@ maintain.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Open<wbr>Connections</span>
+        <span id="maxopenconnections_go">
+<a href="#maxopenconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Open<wbr>Connections</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -2821,19 +3285,23 @@ use.
 
     <dt class="property-optional"
             title="Optional">
-        <span>connection<wbr>Url</span>
+        <span id="connectionurl_nodejs">
+<a href="#connectionurl_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A URL containing connection information. See
 the [Vault
-docs](https://www.vaultproject.io/api/secret/databases/oracle.html#sample-payload)
+docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload)
 for an example.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Connection<wbr>Lifetime</span>
+        <span id="maxconnectionlifetime_nodejs">
+<a href="#maxconnectionlifetime_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Connection<wbr>Lifetime</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -2843,7 +3311,9 @@ a connection alive for.
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Idle<wbr>Connections</span>
+        <span id="maxidleconnections_nodejs">
+<a href="#maxidleconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Idle<wbr>Connections</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -2853,7 +3323,9 @@ maintain.
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Open<wbr>Connections</span>
+        <span id="maxopenconnections_nodejs">
+<a href="#maxopenconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Open<wbr>Connections</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -2870,19 +3342,23 @@ use.
 
     <dt class="property-optional"
             title="Optional">
-        <span>connection<wbr>Url</span>
+        <span id="connectionurl_python">
+<a href="#connectionurl_python" style="color: inherit; text-decoration: inherit;">connection<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A URL containing connection information. See
 the [Vault
-docs](https://www.vaultproject.io/api/secret/databases/oracle.html#sample-payload)
+docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload)
 for an example.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Connection<wbr>Lifetime</span>
+        <span id="maxconnectionlifetime_python">
+<a href="#maxconnectionlifetime_python" style="color: inherit; text-decoration: inherit;">max<wbr>Connection<wbr>Lifetime</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2892,7 +3368,9 @@ a connection alive for.
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Idle<wbr>Connections</span>
+        <span id="maxidleconnections_python">
+<a href="#maxidleconnections_python" style="color: inherit; text-decoration: inherit;">max<wbr>Idle<wbr>Connections</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2902,7 +3380,9 @@ maintain.
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Open<wbr>Connections</span>
+        <span id="maxopenconnections_python">
+<a href="#maxopenconnections_python" style="color: inherit; text-decoration: inherit;">max<wbr>Open<wbr>Connections</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2937,19 +3417,23 @@ use.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Connection<wbr>Url</span>
+        <span id="connectionurl_csharp">
+<a href="#connectionurl_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A URL containing connection information. See
 the [Vault
-docs](https://www.vaultproject.io/api/secret/databases/oracle.html#sample-payload)
+docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload)
 for an example.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Connection<wbr>Lifetime</span>
+        <span id="maxconnectionlifetime_csharp">
+<a href="#maxconnectionlifetime_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Connection<wbr>Lifetime</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -2959,7 +3443,9 @@ a connection alive for.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Idle<wbr>Connections</span>
+        <span id="maxidleconnections_csharp">
+<a href="#maxidleconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Idle<wbr>Connections</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -2969,7 +3455,9 @@ maintain.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Open<wbr>Connections</span>
+        <span id="maxopenconnections_csharp">
+<a href="#maxopenconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Open<wbr>Connections</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -2986,19 +3474,23 @@ use.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Connection<wbr>Url</span>
+        <span id="connectionurl_go">
+<a href="#connectionurl_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A URL containing connection information. See
 the [Vault
-docs](https://www.vaultproject.io/api/secret/databases/oracle.html#sample-payload)
+docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload)
 for an example.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Connection<wbr>Lifetime</span>
+        <span id="maxconnectionlifetime_go">
+<a href="#maxconnectionlifetime_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Connection<wbr>Lifetime</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -3008,7 +3500,9 @@ a connection alive for.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Idle<wbr>Connections</span>
+        <span id="maxidleconnections_go">
+<a href="#maxidleconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Idle<wbr>Connections</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -3018,7 +3512,9 @@ maintain.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Open<wbr>Connections</span>
+        <span id="maxopenconnections_go">
+<a href="#maxopenconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Open<wbr>Connections</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -3035,19 +3531,23 @@ use.
 
     <dt class="property-optional"
             title="Optional">
-        <span>connection<wbr>Url</span>
+        <span id="connectionurl_nodejs">
+<a href="#connectionurl_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A URL containing connection information. See
 the [Vault
-docs](https://www.vaultproject.io/api/secret/databases/oracle.html#sample-payload)
+docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload)
 for an example.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Connection<wbr>Lifetime</span>
+        <span id="maxconnectionlifetime_nodejs">
+<a href="#maxconnectionlifetime_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Connection<wbr>Lifetime</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -3057,7 +3557,9 @@ a connection alive for.
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Idle<wbr>Connections</span>
+        <span id="maxidleconnections_nodejs">
+<a href="#maxidleconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Idle<wbr>Connections</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -3067,7 +3569,9 @@ maintain.
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Open<wbr>Connections</span>
+        <span id="maxopenconnections_nodejs">
+<a href="#maxopenconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Open<wbr>Connections</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -3084,19 +3588,23 @@ use.
 
     <dt class="property-optional"
             title="Optional">
-        <span>connection<wbr>Url</span>
+        <span id="connectionurl_python">
+<a href="#connectionurl_python" style="color: inherit; text-decoration: inherit;">connection<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A URL containing connection information. See
 the [Vault
-docs](https://www.vaultproject.io/api/secret/databases/oracle.html#sample-payload)
+docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload)
 for an example.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Connection<wbr>Lifetime</span>
+        <span id="maxconnectionlifetime_python">
+<a href="#maxconnectionlifetime_python" style="color: inherit; text-decoration: inherit;">max<wbr>Connection<wbr>Lifetime</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -3106,7 +3614,9 @@ a connection alive for.
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Idle<wbr>Connections</span>
+        <span id="maxidleconnections_python">
+<a href="#maxidleconnections_python" style="color: inherit; text-decoration: inherit;">max<wbr>Idle<wbr>Connections</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -3116,7 +3626,9 @@ maintain.
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Open<wbr>Connections</span>
+        <span id="maxopenconnections_python">
+<a href="#maxopenconnections_python" style="color: inherit; text-decoration: inherit;">max<wbr>Open<wbr>Connections</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -3151,19 +3663,23 @@ use.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Connection<wbr>Url</span>
+        <span id="connectionurl_csharp">
+<a href="#connectionurl_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A URL containing connection information. See
 the [Vault
-docs](https://www.vaultproject.io/api/secret/databases/oracle.html#sample-payload)
+docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload)
 for an example.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Connection<wbr>Lifetime</span>
+        <span id="maxconnectionlifetime_csharp">
+<a href="#maxconnectionlifetime_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Connection<wbr>Lifetime</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -3173,7 +3689,9 @@ a connection alive for.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Idle<wbr>Connections</span>
+        <span id="maxidleconnections_csharp">
+<a href="#maxidleconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Idle<wbr>Connections</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -3183,7 +3701,9 @@ maintain.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Open<wbr>Connections</span>
+        <span id="maxopenconnections_csharp">
+<a href="#maxopenconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Open<wbr>Connections</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -3200,19 +3720,23 @@ use.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Connection<wbr>Url</span>
+        <span id="connectionurl_go">
+<a href="#connectionurl_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A URL containing connection information. See
 the [Vault
-docs](https://www.vaultproject.io/api/secret/databases/oracle.html#sample-payload)
+docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload)
 for an example.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Connection<wbr>Lifetime</span>
+        <span id="maxconnectionlifetime_go">
+<a href="#maxconnectionlifetime_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Connection<wbr>Lifetime</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -3222,7 +3746,9 @@ a connection alive for.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Idle<wbr>Connections</span>
+        <span id="maxidleconnections_go">
+<a href="#maxidleconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Idle<wbr>Connections</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -3232,7 +3758,9 @@ maintain.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Open<wbr>Connections</span>
+        <span id="maxopenconnections_go">
+<a href="#maxopenconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Open<wbr>Connections</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -3249,19 +3777,23 @@ use.
 
     <dt class="property-optional"
             title="Optional">
-        <span>connection<wbr>Url</span>
+        <span id="connectionurl_nodejs">
+<a href="#connectionurl_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A URL containing connection information. See
 the [Vault
-docs](https://www.vaultproject.io/api/secret/databases/oracle.html#sample-payload)
+docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload)
 for an example.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Connection<wbr>Lifetime</span>
+        <span id="maxconnectionlifetime_nodejs">
+<a href="#maxconnectionlifetime_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Connection<wbr>Lifetime</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -3271,7 +3803,9 @@ a connection alive for.
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Idle<wbr>Connections</span>
+        <span id="maxidleconnections_nodejs">
+<a href="#maxidleconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Idle<wbr>Connections</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -3281,7 +3815,9 @@ maintain.
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Open<wbr>Connections</span>
+        <span id="maxopenconnections_nodejs">
+<a href="#maxopenconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Open<wbr>Connections</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -3298,19 +3834,23 @@ use.
 
     <dt class="property-optional"
             title="Optional">
-        <span>connection<wbr>Url</span>
+        <span id="connectionurl_python">
+<a href="#connectionurl_python" style="color: inherit; text-decoration: inherit;">connection<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A URL containing connection information. See
 the [Vault
-docs](https://www.vaultproject.io/api/secret/databases/oracle.html#sample-payload)
+docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload)
 for an example.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Connection<wbr>Lifetime</span>
+        <span id="maxconnectionlifetime_python">
+<a href="#maxconnectionlifetime_python" style="color: inherit; text-decoration: inherit;">max<wbr>Connection<wbr>Lifetime</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -3320,7 +3860,9 @@ a connection alive for.
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Idle<wbr>Connections</span>
+        <span id="maxidleconnections_python">
+<a href="#maxidleconnections_python" style="color: inherit; text-decoration: inherit;">max<wbr>Idle<wbr>Connections</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -3330,7 +3872,9 @@ maintain.
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Open<wbr>Connections</span>
+        <span id="maxopenconnections_python">
+<a href="#maxopenconnections_python" style="color: inherit; text-decoration: inherit;">max<wbr>Open<wbr>Connections</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -3365,19 +3909,23 @@ use.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Connection<wbr>Url</span>
+        <span id="connectionurl_csharp">
+<a href="#connectionurl_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A URL containing connection information. See
 the [Vault
-docs](https://www.vaultproject.io/api/secret/databases/oracle.html#sample-payload)
+docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload)
 for an example.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Connection<wbr>Lifetime</span>
+        <span id="maxconnectionlifetime_csharp">
+<a href="#maxconnectionlifetime_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Connection<wbr>Lifetime</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -3387,7 +3935,9 @@ a connection alive for.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Idle<wbr>Connections</span>
+        <span id="maxidleconnections_csharp">
+<a href="#maxidleconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Idle<wbr>Connections</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -3397,7 +3947,9 @@ maintain.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Open<wbr>Connections</span>
+        <span id="maxopenconnections_csharp">
+<a href="#maxopenconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Open<wbr>Connections</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -3414,19 +3966,23 @@ use.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Connection<wbr>Url</span>
+        <span id="connectionurl_go">
+<a href="#connectionurl_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A URL containing connection information. See
 the [Vault
-docs](https://www.vaultproject.io/api/secret/databases/oracle.html#sample-payload)
+docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload)
 for an example.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Connection<wbr>Lifetime</span>
+        <span id="maxconnectionlifetime_go">
+<a href="#maxconnectionlifetime_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Connection<wbr>Lifetime</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -3436,7 +3992,9 @@ a connection alive for.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Idle<wbr>Connections</span>
+        <span id="maxidleconnections_go">
+<a href="#maxidleconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Idle<wbr>Connections</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -3446,7 +4004,9 @@ maintain.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Open<wbr>Connections</span>
+        <span id="maxopenconnections_go">
+<a href="#maxopenconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Open<wbr>Connections</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -3463,19 +4023,23 @@ use.
 
     <dt class="property-optional"
             title="Optional">
-        <span>connection<wbr>Url</span>
+        <span id="connectionurl_nodejs">
+<a href="#connectionurl_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A URL containing connection information. See
 the [Vault
-docs](https://www.vaultproject.io/api/secret/databases/oracle.html#sample-payload)
+docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload)
 for an example.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Connection<wbr>Lifetime</span>
+        <span id="maxconnectionlifetime_nodejs">
+<a href="#maxconnectionlifetime_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Connection<wbr>Lifetime</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -3485,7 +4049,9 @@ a connection alive for.
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Idle<wbr>Connections</span>
+        <span id="maxidleconnections_nodejs">
+<a href="#maxidleconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Idle<wbr>Connections</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -3495,7 +4061,9 @@ maintain.
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Open<wbr>Connections</span>
+        <span id="maxopenconnections_nodejs">
+<a href="#maxopenconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Open<wbr>Connections</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -3512,19 +4080,23 @@ use.
 
     <dt class="property-optional"
             title="Optional">
-        <span>connection<wbr>Url</span>
+        <span id="connectionurl_python">
+<a href="#connectionurl_python" style="color: inherit; text-decoration: inherit;">connection<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A URL containing connection information. See
 the [Vault
-docs](https://www.vaultproject.io/api/secret/databases/oracle.html#sample-payload)
+docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload)
 for an example.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Connection<wbr>Lifetime</span>
+        <span id="maxconnectionlifetime_python">
+<a href="#maxconnectionlifetime_python" style="color: inherit; text-decoration: inherit;">max<wbr>Connection<wbr>Lifetime</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -3534,7 +4106,9 @@ a connection alive for.
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Idle<wbr>Connections</span>
+        <span id="maxidleconnections_python">
+<a href="#maxidleconnections_python" style="color: inherit; text-decoration: inherit;">max<wbr>Idle<wbr>Connections</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -3544,7 +4118,9 @@ maintain.
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Open<wbr>Connections</span>
+        <span id="maxopenconnections_python">
+<a href="#maxopenconnections_python" style="color: inherit; text-decoration: inherit;">max<wbr>Open<wbr>Connections</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -3579,19 +4155,23 @@ use.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Connection<wbr>Url</span>
+        <span id="connectionurl_csharp">
+<a href="#connectionurl_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A URL containing connection information. See
 the [Vault
-docs](https://www.vaultproject.io/api/secret/databases/oracle.html#sample-payload)
+docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload)
 for an example.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Connection<wbr>Lifetime</span>
+        <span id="maxconnectionlifetime_csharp">
+<a href="#maxconnectionlifetime_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Connection<wbr>Lifetime</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -3601,7 +4181,9 @@ a connection alive for.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Idle<wbr>Connections</span>
+        <span id="maxidleconnections_csharp">
+<a href="#maxidleconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Idle<wbr>Connections</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -3611,7 +4193,9 @@ maintain.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Open<wbr>Connections</span>
+        <span id="maxopenconnections_csharp">
+<a href="#maxopenconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Open<wbr>Connections</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -3628,19 +4212,23 @@ use.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Connection<wbr>Url</span>
+        <span id="connectionurl_go">
+<a href="#connectionurl_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A URL containing connection information. See
 the [Vault
-docs](https://www.vaultproject.io/api/secret/databases/oracle.html#sample-payload)
+docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload)
 for an example.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Connection<wbr>Lifetime</span>
+        <span id="maxconnectionlifetime_go">
+<a href="#maxconnectionlifetime_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Connection<wbr>Lifetime</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -3650,7 +4238,9 @@ a connection alive for.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Idle<wbr>Connections</span>
+        <span id="maxidleconnections_go">
+<a href="#maxidleconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Idle<wbr>Connections</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -3660,7 +4250,9 @@ maintain.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Open<wbr>Connections</span>
+        <span id="maxopenconnections_go">
+<a href="#maxopenconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Open<wbr>Connections</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -3677,19 +4269,23 @@ use.
 
     <dt class="property-optional"
             title="Optional">
-        <span>connection<wbr>Url</span>
+        <span id="connectionurl_nodejs">
+<a href="#connectionurl_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A URL containing connection information. See
 the [Vault
-docs](https://www.vaultproject.io/api/secret/databases/oracle.html#sample-payload)
+docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload)
 for an example.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Connection<wbr>Lifetime</span>
+        <span id="maxconnectionlifetime_nodejs">
+<a href="#maxconnectionlifetime_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Connection<wbr>Lifetime</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -3699,7 +4295,9 @@ a connection alive for.
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Idle<wbr>Connections</span>
+        <span id="maxidleconnections_nodejs">
+<a href="#maxidleconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Idle<wbr>Connections</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -3709,7 +4307,9 @@ maintain.
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Open<wbr>Connections</span>
+        <span id="maxopenconnections_nodejs">
+<a href="#maxopenconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Open<wbr>Connections</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -3726,19 +4326,23 @@ use.
 
     <dt class="property-optional"
             title="Optional">
-        <span>connection<wbr>Url</span>
+        <span id="connectionurl_python">
+<a href="#connectionurl_python" style="color: inherit; text-decoration: inherit;">connection<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A URL containing connection information. See
 the [Vault
-docs](https://www.vaultproject.io/api/secret/databases/oracle.html#sample-payload)
+docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload)
 for an example.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Connection<wbr>Lifetime</span>
+        <span id="maxconnectionlifetime_python">
+<a href="#maxconnectionlifetime_python" style="color: inherit; text-decoration: inherit;">max<wbr>Connection<wbr>Lifetime</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -3748,7 +4352,9 @@ a connection alive for.
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Idle<wbr>Connections</span>
+        <span id="maxidleconnections_python">
+<a href="#maxidleconnections_python" style="color: inherit; text-decoration: inherit;">max<wbr>Idle<wbr>Connections</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -3758,7 +4364,9 @@ maintain.
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Open<wbr>Connections</span>
+        <span id="maxopenconnections_python">
+<a href="#maxopenconnections_python" style="color: inherit; text-decoration: inherit;">max<wbr>Open<wbr>Connections</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -3793,19 +4401,23 @@ use.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Connection<wbr>Url</span>
+        <span id="connectionurl_csharp">
+<a href="#connectionurl_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A URL containing connection information. See
 the [Vault
-docs](https://www.vaultproject.io/api/secret/databases/oracle.html#sample-payload)
+docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload)
 for an example.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Connection<wbr>Lifetime</span>
+        <span id="maxconnectionlifetime_csharp">
+<a href="#maxconnectionlifetime_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Connection<wbr>Lifetime</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -3815,7 +4427,9 @@ a connection alive for.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Idle<wbr>Connections</span>
+        <span id="maxidleconnections_csharp">
+<a href="#maxidleconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Idle<wbr>Connections</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -3825,7 +4439,9 @@ maintain.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Open<wbr>Connections</span>
+        <span id="maxopenconnections_csharp">
+<a href="#maxopenconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Open<wbr>Connections</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -3842,19 +4458,23 @@ use.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Connection<wbr>Url</span>
+        <span id="connectionurl_go">
+<a href="#connectionurl_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A URL containing connection information. See
 the [Vault
-docs](https://www.vaultproject.io/api/secret/databases/oracle.html#sample-payload)
+docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload)
 for an example.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Connection<wbr>Lifetime</span>
+        <span id="maxconnectionlifetime_go">
+<a href="#maxconnectionlifetime_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Connection<wbr>Lifetime</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -3864,7 +4484,9 @@ a connection alive for.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Idle<wbr>Connections</span>
+        <span id="maxidleconnections_go">
+<a href="#maxidleconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Idle<wbr>Connections</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -3874,7 +4496,9 @@ maintain.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Open<wbr>Connections</span>
+        <span id="maxopenconnections_go">
+<a href="#maxopenconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Open<wbr>Connections</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -3891,19 +4515,23 @@ use.
 
     <dt class="property-optional"
             title="Optional">
-        <span>connection<wbr>Url</span>
+        <span id="connectionurl_nodejs">
+<a href="#connectionurl_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A URL containing connection information. See
 the [Vault
-docs](https://www.vaultproject.io/api/secret/databases/oracle.html#sample-payload)
+docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload)
 for an example.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Connection<wbr>Lifetime</span>
+        <span id="maxconnectionlifetime_nodejs">
+<a href="#maxconnectionlifetime_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Connection<wbr>Lifetime</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -3913,7 +4541,9 @@ a connection alive for.
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Idle<wbr>Connections</span>
+        <span id="maxidleconnections_nodejs">
+<a href="#maxidleconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Idle<wbr>Connections</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -3923,7 +4553,9 @@ maintain.
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Open<wbr>Connections</span>
+        <span id="maxopenconnections_nodejs">
+<a href="#maxopenconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Open<wbr>Connections</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -3940,19 +4572,23 @@ use.
 
     <dt class="property-optional"
             title="Optional">
-        <span>connection<wbr>Url</span>
+        <span id="connectionurl_python">
+<a href="#connectionurl_python" style="color: inherit; text-decoration: inherit;">connection<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A URL containing connection information. See
 the [Vault
-docs](https://www.vaultproject.io/api/secret/databases/oracle.html#sample-payload)
+docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload)
 for an example.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Connection<wbr>Lifetime</span>
+        <span id="maxconnectionlifetime_python">
+<a href="#maxconnectionlifetime_python" style="color: inherit; text-decoration: inherit;">max<wbr>Connection<wbr>Lifetime</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -3962,7 +4598,9 @@ a connection alive for.
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Idle<wbr>Connections</span>
+        <span id="maxidleconnections_python">
+<a href="#maxidleconnections_python" style="color: inherit; text-decoration: inherit;">max<wbr>Idle<wbr>Connections</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -3972,7 +4610,9 @@ maintain.
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Open<wbr>Connections</span>
+        <span id="maxopenconnections_python">
+<a href="#maxopenconnections_python" style="color: inherit; text-decoration: inherit;">max<wbr>Open<wbr>Connections</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -4007,19 +4647,23 @@ use.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Connection<wbr>Url</span>
+        <span id="connectionurl_csharp">
+<a href="#connectionurl_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A URL containing connection information. See
 the [Vault
-docs](https://www.vaultproject.io/api/secret/databases/oracle.html#sample-payload)
+docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload)
 for an example.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Connection<wbr>Lifetime</span>
+        <span id="maxconnectionlifetime_csharp">
+<a href="#maxconnectionlifetime_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Connection<wbr>Lifetime</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -4029,7 +4673,9 @@ a connection alive for.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Idle<wbr>Connections</span>
+        <span id="maxidleconnections_csharp">
+<a href="#maxidleconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Idle<wbr>Connections</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -4039,7 +4685,9 @@ maintain.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Open<wbr>Connections</span>
+        <span id="maxopenconnections_csharp">
+<a href="#maxopenconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Open<wbr>Connections</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -4056,19 +4704,23 @@ use.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Connection<wbr>Url</span>
+        <span id="connectionurl_go">
+<a href="#connectionurl_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A URL containing connection information. See
 the [Vault
-docs](https://www.vaultproject.io/api/secret/databases/oracle.html#sample-payload)
+docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload)
 for an example.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Connection<wbr>Lifetime</span>
+        <span id="maxconnectionlifetime_go">
+<a href="#maxconnectionlifetime_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Connection<wbr>Lifetime</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -4078,7 +4730,9 @@ a connection alive for.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Idle<wbr>Connections</span>
+        <span id="maxidleconnections_go">
+<a href="#maxidleconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Idle<wbr>Connections</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -4088,7 +4742,9 @@ maintain.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Open<wbr>Connections</span>
+        <span id="maxopenconnections_go">
+<a href="#maxopenconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Open<wbr>Connections</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -4105,19 +4761,23 @@ use.
 
     <dt class="property-optional"
             title="Optional">
-        <span>connection<wbr>Url</span>
+        <span id="connectionurl_nodejs">
+<a href="#connectionurl_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A URL containing connection information. See
 the [Vault
-docs](https://www.vaultproject.io/api/secret/databases/oracle.html#sample-payload)
+docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload)
 for an example.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Connection<wbr>Lifetime</span>
+        <span id="maxconnectionlifetime_nodejs">
+<a href="#maxconnectionlifetime_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Connection<wbr>Lifetime</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -4127,7 +4787,9 @@ a connection alive for.
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Idle<wbr>Connections</span>
+        <span id="maxidleconnections_nodejs">
+<a href="#maxidleconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Idle<wbr>Connections</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -4137,7 +4799,9 @@ maintain.
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Open<wbr>Connections</span>
+        <span id="maxopenconnections_nodejs">
+<a href="#maxopenconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Open<wbr>Connections</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -4154,19 +4818,23 @@ use.
 
     <dt class="property-optional"
             title="Optional">
-        <span>connection<wbr>Url</span>
+        <span id="connectionurl_python">
+<a href="#connectionurl_python" style="color: inherit; text-decoration: inherit;">connection<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A URL containing connection information. See
 the [Vault
-docs](https://www.vaultproject.io/api/secret/databases/oracle.html#sample-payload)
+docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload)
 for an example.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Connection<wbr>Lifetime</span>
+        <span id="maxconnectionlifetime_python">
+<a href="#maxconnectionlifetime_python" style="color: inherit; text-decoration: inherit;">max<wbr>Connection<wbr>Lifetime</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -4176,7 +4844,9 @@ a connection alive for.
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Idle<wbr>Connections</span>
+        <span id="maxidleconnections_python">
+<a href="#maxidleconnections_python" style="color: inherit; text-decoration: inherit;">max<wbr>Idle<wbr>Connections</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -4186,7 +4856,9 @@ maintain.
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Open<wbr>Connections</span>
+        <span id="maxopenconnections_python">
+<a href="#maxopenconnections_python" style="color: inherit; text-decoration: inherit;">max<wbr>Open<wbr>Connections</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>

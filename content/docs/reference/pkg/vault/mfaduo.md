@@ -22,7 +22,30 @@ Provides a resource to manage [Duo MFA](https://www.vaultproject.io/docs/enterpr
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Vault = Pulumi.Vault;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var userpass = new Vault.AuthBackend("userpass", new Vault.AuthBackendArgs
+        {
+            Path = "userpass",
+            Type = "userpass",
+        });
+        var myDuo = new Vault.MfaDuo("myDuo", new Vault.MfaDuoArgs
+        {
+            ApiHostname = "api-2b5c39f5.duosecurity.com",
+            IntegrationKey = "BIACEUEAXI20BNWTEYXT",
+            MountAccessor = userpass.Accessor,
+            SecretKey = "8C7THtrIigh2rPZQMbguugt8IUftWhMRCOBzbuyz",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -249,7 +272,9 @@ The MfaDuo resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>Api<wbr>Hostname</span>
+        <span id="apihostname_csharp">
+<a href="#apihostname_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Hostname</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -258,7 +283,9 @@ The MfaDuo resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>Integration<wbr>Key</span>
+        <span id="integrationkey_csharp">
+<a href="#integrationkey_csharp" style="color: inherit; text-decoration: inherit;">Integration<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -267,7 +294,9 @@ The MfaDuo resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>Mount<wbr>Accessor</span>
+        <span id="mountaccessor_csharp">
+<a href="#mountaccessor_csharp" style="color: inherit; text-decoration: inherit;">Mount<wbr>Accessor</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -277,7 +306,9 @@ with this mount as the username in the mapping.
 
     <dt class="property-required"
             title="Required">
-        <span>Secret<wbr>Key</span>
+        <span id="secretkey_csharp">
+<a href="#secretkey_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -286,7 +317,9 @@ with this mount as the username in the mapping.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -295,7 +328,9 @@ with this mount as the username in the mapping.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Push<wbr>Info</span>
+        <span id="pushinfo_csharp">
+<a href="#pushinfo_csharp" style="color: inherit; text-decoration: inherit;">Push<wbr>Info</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -304,7 +339,9 @@ with this mount as the username in the mapping.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Username<wbr>Format</span>
+        <span id="usernameformat_csharp">
+<a href="#usernameformat_csharp" style="color: inherit; text-decoration: inherit;">Username<wbr>Format</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -320,7 +357,9 @@ with this mount as the username in the mapping.
 
     <dt class="property-required"
             title="Required">
-        <span>Api<wbr>Hostname</span>
+        <span id="apihostname_go">
+<a href="#apihostname_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Hostname</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -329,7 +368,9 @@ with this mount as the username in the mapping.
 
     <dt class="property-required"
             title="Required">
-        <span>Integration<wbr>Key</span>
+        <span id="integrationkey_go">
+<a href="#integrationkey_go" style="color: inherit; text-decoration: inherit;">Integration<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -338,7 +379,9 @@ with this mount as the username in the mapping.
 
     <dt class="property-required"
             title="Required">
-        <span>Mount<wbr>Accessor</span>
+        <span id="mountaccessor_go">
+<a href="#mountaccessor_go" style="color: inherit; text-decoration: inherit;">Mount<wbr>Accessor</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -348,7 +391,9 @@ with this mount as the username in the mapping.
 
     <dt class="property-required"
             title="Required">
-        <span>Secret<wbr>Key</span>
+        <span id="secretkey_go">
+<a href="#secretkey_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -357,7 +402,9 @@ with this mount as the username in the mapping.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -366,7 +413,9 @@ with this mount as the username in the mapping.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Push<wbr>Info</span>
+        <span id="pushinfo_go">
+<a href="#pushinfo_go" style="color: inherit; text-decoration: inherit;">Push<wbr>Info</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -375,7 +424,9 @@ with this mount as the username in the mapping.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Username<wbr>Format</span>
+        <span id="usernameformat_go">
+<a href="#usernameformat_go" style="color: inherit; text-decoration: inherit;">Username<wbr>Format</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -391,7 +442,9 @@ with this mount as the username in the mapping.
 
     <dt class="property-required"
             title="Required">
-        <span>api<wbr>Hostname</span>
+        <span id="apihostname_nodejs">
+<a href="#apihostname_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Hostname</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -400,7 +453,9 @@ with this mount as the username in the mapping.
 
     <dt class="property-required"
             title="Required">
-        <span>integration<wbr>Key</span>
+        <span id="integrationkey_nodejs">
+<a href="#integrationkey_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -409,7 +464,9 @@ with this mount as the username in the mapping.
 
     <dt class="property-required"
             title="Required">
-        <span>mount<wbr>Accessor</span>
+        <span id="mountaccessor_nodejs">
+<a href="#mountaccessor_nodejs" style="color: inherit; text-decoration: inherit;">mount<wbr>Accessor</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -419,7 +476,9 @@ with this mount as the username in the mapping.
 
     <dt class="property-required"
             title="Required">
-        <span>secret<wbr>Key</span>
+        <span id="secretkey_nodejs">
+<a href="#secretkey_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -428,7 +487,9 @@ with this mount as the username in the mapping.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -437,7 +498,9 @@ with this mount as the username in the mapping.
 
     <dt class="property-optional"
             title="Optional">
-        <span>push<wbr>Info</span>
+        <span id="pushinfo_nodejs">
+<a href="#pushinfo_nodejs" style="color: inherit; text-decoration: inherit;">push<wbr>Info</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -446,7 +509,9 @@ with this mount as the username in the mapping.
 
     <dt class="property-optional"
             title="Optional">
-        <span>username<wbr>Format</span>
+        <span id="usernameformat_nodejs">
+<a href="#usernameformat_nodejs" style="color: inherit; text-decoration: inherit;">username<wbr>Format</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -462,7 +527,9 @@ with this mount as the username in the mapping.
 
     <dt class="property-required"
             title="Required">
-        <span>api_<wbr>hostname</span>
+        <span id="api_hostname_python">
+<a href="#api_hostname_python" style="color: inherit; text-decoration: inherit;">api_<wbr>hostname</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -471,7 +538,9 @@ with this mount as the username in the mapping.
 
     <dt class="property-required"
             title="Required">
-        <span>integration_<wbr>key</span>
+        <span id="integration_key_python">
+<a href="#integration_key_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -480,7 +549,9 @@ with this mount as the username in the mapping.
 
     <dt class="property-required"
             title="Required">
-        <span>mount_<wbr>accessor</span>
+        <span id="mount_accessor_python">
+<a href="#mount_accessor_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>accessor</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -490,7 +561,9 @@ with this mount as the username in the mapping.
 
     <dt class="property-required"
             title="Required">
-        <span>secret_<wbr>key</span>
+        <span id="secret_key_python">
+<a href="#secret_key_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -499,7 +572,9 @@ with this mount as the username in the mapping.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -508,7 +583,9 @@ with this mount as the username in the mapping.
 
     <dt class="property-optional"
             title="Optional">
-        <span>push_<wbr>info</span>
+        <span id="push_info_python">
+<a href="#push_info_python" style="color: inherit; text-decoration: inherit;">push_<wbr>info</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -517,7 +594,9 @@ with this mount as the username in the mapping.
 
     <dt class="property-optional"
             title="Optional">
-        <span>username_<wbr>format</span>
+        <span id="username_format_python">
+<a href="#username_format_python" style="color: inherit; text-decoration: inherit;">username_<wbr>format</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -544,7 +623,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -559,7 +640,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -574,7 +657,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -589,7 +674,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -730,7 +817,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Api<wbr>Hostname</span>
+        <span id="state_apihostname_csharp">
+<a href="#state_apihostname_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Hostname</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -739,7 +828,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Integration<wbr>Key</span>
+        <span id="state_integrationkey_csharp">
+<a href="#state_integrationkey_csharp" style="color: inherit; text-decoration: inherit;">Integration<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -748,7 +839,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Mount<wbr>Accessor</span>
+        <span id="state_mountaccessor_csharp">
+<a href="#state_mountaccessor_csharp" style="color: inherit; text-decoration: inherit;">Mount<wbr>Accessor</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -758,7 +851,9 @@ with this mount as the username in the mapping.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -767,7 +862,9 @@ with this mount as the username in the mapping.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Push<wbr>Info</span>
+        <span id="state_pushinfo_csharp">
+<a href="#state_pushinfo_csharp" style="color: inherit; text-decoration: inherit;">Push<wbr>Info</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -776,7 +873,9 @@ with this mount as the username in the mapping.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Secret<wbr>Key</span>
+        <span id="state_secretkey_csharp">
+<a href="#state_secretkey_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -785,7 +884,9 @@ with this mount as the username in the mapping.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Username<wbr>Format</span>
+        <span id="state_usernameformat_csharp">
+<a href="#state_usernameformat_csharp" style="color: inherit; text-decoration: inherit;">Username<wbr>Format</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -801,7 +902,9 @@ with this mount as the username in the mapping.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Api<wbr>Hostname</span>
+        <span id="state_apihostname_go">
+<a href="#state_apihostname_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Hostname</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -810,7 +913,9 @@ with this mount as the username in the mapping.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Integration<wbr>Key</span>
+        <span id="state_integrationkey_go">
+<a href="#state_integrationkey_go" style="color: inherit; text-decoration: inherit;">Integration<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -819,7 +924,9 @@ with this mount as the username in the mapping.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Mount<wbr>Accessor</span>
+        <span id="state_mountaccessor_go">
+<a href="#state_mountaccessor_go" style="color: inherit; text-decoration: inherit;">Mount<wbr>Accessor</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -829,7 +936,9 @@ with this mount as the username in the mapping.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -838,7 +947,9 @@ with this mount as the username in the mapping.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Push<wbr>Info</span>
+        <span id="state_pushinfo_go">
+<a href="#state_pushinfo_go" style="color: inherit; text-decoration: inherit;">Push<wbr>Info</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -847,7 +958,9 @@ with this mount as the username in the mapping.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Secret<wbr>Key</span>
+        <span id="state_secretkey_go">
+<a href="#state_secretkey_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -856,7 +969,9 @@ with this mount as the username in the mapping.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Username<wbr>Format</span>
+        <span id="state_usernameformat_go">
+<a href="#state_usernameformat_go" style="color: inherit; text-decoration: inherit;">Username<wbr>Format</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -872,7 +987,9 @@ with this mount as the username in the mapping.
 
     <dt class="property-optional"
             title="Optional">
-        <span>api<wbr>Hostname</span>
+        <span id="state_apihostname_nodejs">
+<a href="#state_apihostname_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Hostname</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -881,7 +998,9 @@ with this mount as the username in the mapping.
 
     <dt class="property-optional"
             title="Optional">
-        <span>integration<wbr>Key</span>
+        <span id="state_integrationkey_nodejs">
+<a href="#state_integrationkey_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -890,7 +1009,9 @@ with this mount as the username in the mapping.
 
     <dt class="property-optional"
             title="Optional">
-        <span>mount<wbr>Accessor</span>
+        <span id="state_mountaccessor_nodejs">
+<a href="#state_mountaccessor_nodejs" style="color: inherit; text-decoration: inherit;">mount<wbr>Accessor</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -900,7 +1021,9 @@ with this mount as the username in the mapping.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -909,7 +1032,9 @@ with this mount as the username in the mapping.
 
     <dt class="property-optional"
             title="Optional">
-        <span>push<wbr>Info</span>
+        <span id="state_pushinfo_nodejs">
+<a href="#state_pushinfo_nodejs" style="color: inherit; text-decoration: inherit;">push<wbr>Info</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -918,7 +1043,9 @@ with this mount as the username in the mapping.
 
     <dt class="property-optional"
             title="Optional">
-        <span>secret<wbr>Key</span>
+        <span id="state_secretkey_nodejs">
+<a href="#state_secretkey_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -927,7 +1054,9 @@ with this mount as the username in the mapping.
 
     <dt class="property-optional"
             title="Optional">
-        <span>username<wbr>Format</span>
+        <span id="state_usernameformat_nodejs">
+<a href="#state_usernameformat_nodejs" style="color: inherit; text-decoration: inherit;">username<wbr>Format</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -943,7 +1072,9 @@ with this mount as the username in the mapping.
 
     <dt class="property-optional"
             title="Optional">
-        <span>api_<wbr>hostname</span>
+        <span id="state_api_hostname_python">
+<a href="#state_api_hostname_python" style="color: inherit; text-decoration: inherit;">api_<wbr>hostname</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -952,7 +1083,9 @@ with this mount as the username in the mapping.
 
     <dt class="property-optional"
             title="Optional">
-        <span>integration_<wbr>key</span>
+        <span id="state_integration_key_python">
+<a href="#state_integration_key_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -961,7 +1094,9 @@ with this mount as the username in the mapping.
 
     <dt class="property-optional"
             title="Optional">
-        <span>mount_<wbr>accessor</span>
+        <span id="state_mount_accessor_python">
+<a href="#state_mount_accessor_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>accessor</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -971,7 +1106,9 @@ with this mount as the username in the mapping.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -980,7 +1117,9 @@ with this mount as the username in the mapping.
 
     <dt class="property-optional"
             title="Optional">
-        <span>push_<wbr>info</span>
+        <span id="state_push_info_python">
+<a href="#state_push_info_python" style="color: inherit; text-decoration: inherit;">push_<wbr>info</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -989,7 +1128,9 @@ with this mount as the username in the mapping.
 
     <dt class="property-optional"
             title="Optional">
-        <span>secret_<wbr>key</span>
+        <span id="state_secret_key_python">
+<a href="#state_secret_key_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -998,7 +1139,9 @@ with this mount as the username in the mapping.
 
     <dt class="property-optional"
             title="Optional">
-        <span>username_<wbr>format</span>
+        <span id="state_username_format_python">
+<a href="#state_username_format_python" style="color: inherit; text-decoration: inherit;">username_<wbr>format</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

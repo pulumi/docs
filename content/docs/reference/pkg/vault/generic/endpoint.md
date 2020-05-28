@@ -196,7 +196,9 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-required"
             title="Required">
-        <span>Data<wbr>Json</span>
+        <span id="datajson_csharp">
+<a href="#datajson_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Json</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -206,7 +208,9 @@ written to the given path as the secret data.
 
     <dt class="property-required"
             title="Required">
-        <span>Path</span>
+        <span id="path_csharp">
+<a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -218,7 +222,9 @@ support the `PUT` methods and to determine whether they also support
 
     <dt class="property-optional"
             title="Optional">
-        <span>Disable<wbr>Delete</span>
+        <span id="disabledelete_csharp">
+<a href="#disabledelete_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Delete</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -227,7 +233,9 @@ support the `PUT` methods and to determine whether they also support
 
     <dt class="property-optional"
             title="Optional">
-        <span>Disable<wbr>Read</span>
+        <span id="disableread_csharp">
+<a href="#disableread_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Read</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -240,7 +248,9 @@ write-only. Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ignore<wbr>Absent<wbr>Fields</span>
+        <span id="ignoreabsentfields_csharp">
+<a href="#ignoreabsentfields_csharp" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Absent<wbr>Fields</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -249,7 +259,9 @@ write-only. Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Write<wbr>Fields</span>
+        <span id="writefields_csharp">
+<a href="#writefields_csharp" style="color: inherit; text-decoration: inherit;">Write<wbr>Fields</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -265,7 +277,9 @@ write-only. Defaults to false.
 
     <dt class="property-required"
             title="Required">
-        <span>Data<wbr>Json</span>
+        <span id="datajson_go">
+<a href="#datajson_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Json</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -275,7 +289,9 @@ written to the given path as the secret data.
 
     <dt class="property-required"
             title="Required">
-        <span>Path</span>
+        <span id="path_go">
+<a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -287,7 +303,9 @@ support the `PUT` methods and to determine whether they also support
 
     <dt class="property-optional"
             title="Optional">
-        <span>Disable<wbr>Delete</span>
+        <span id="disabledelete_go">
+<a href="#disabledelete_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Delete</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -296,7 +314,9 @@ support the `PUT` methods and to determine whether they also support
 
     <dt class="property-optional"
             title="Optional">
-        <span>Disable<wbr>Read</span>
+        <span id="disableread_go">
+<a href="#disableread_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Read</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -309,7 +329,9 @@ write-only. Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ignore<wbr>Absent<wbr>Fields</span>
+        <span id="ignoreabsentfields_go">
+<a href="#ignoreabsentfields_go" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Absent<wbr>Fields</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -318,7 +340,9 @@ write-only. Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Write<wbr>Fields</span>
+        <span id="writefields_go">
+<a href="#writefields_go" style="color: inherit; text-decoration: inherit;">Write<wbr>Fields</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -334,7 +358,9 @@ write-only. Defaults to false.
 
     <dt class="property-required"
             title="Required">
-        <span>data<wbr>Json</span>
+        <span id="datajson_nodejs">
+<a href="#datajson_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Json</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -344,7 +370,9 @@ written to the given path as the secret data.
 
     <dt class="property-required"
             title="Required">
-        <span>path</span>
+        <span id="path_nodejs">
+<a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -356,7 +384,9 @@ support the `PUT` methods and to determine whether they also support
 
     <dt class="property-optional"
             title="Optional">
-        <span>disable<wbr>Delete</span>
+        <span id="disabledelete_nodejs">
+<a href="#disabledelete_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Delete</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -365,7 +395,9 @@ support the `PUT` methods and to determine whether they also support
 
     <dt class="property-optional"
             title="Optional">
-        <span>disable<wbr>Read</span>
+        <span id="disableread_nodejs">
+<a href="#disableread_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Read</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -378,7 +410,9 @@ write-only. Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ignore<wbr>Absent<wbr>Fields</span>
+        <span id="ignoreabsentfields_nodejs">
+<a href="#ignoreabsentfields_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Absent<wbr>Fields</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -387,7 +421,9 @@ write-only. Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>write<wbr>Fields</span>
+        <span id="writefields_nodejs">
+<a href="#writefields_nodejs" style="color: inherit; text-decoration: inherit;">write<wbr>Fields</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -403,7 +439,9 @@ write-only. Defaults to false.
 
     <dt class="property-required"
             title="Required">
-        <span>data_<wbr>json</span>
+        <span id="data_json_python">
+<a href="#data_json_python" style="color: inherit; text-decoration: inherit;">data_<wbr>json</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -413,7 +451,9 @@ written to the given path as the secret data.
 
     <dt class="property-required"
             title="Required">
-        <span>path</span>
+        <span id="path_python">
+<a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -425,7 +465,9 @@ support the `PUT` methods and to determine whether they also support
 
     <dt class="property-optional"
             title="Optional">
-        <span>disable_<wbr>delete</span>
+        <span id="disable_delete_python">
+<a href="#disable_delete_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>delete</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -434,7 +476,9 @@ support the `PUT` methods and to determine whether they also support
 
     <dt class="property-optional"
             title="Optional">
-        <span>disable_<wbr>read</span>
+        <span id="disable_read_python">
+<a href="#disable_read_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>read</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -447,7 +491,9 @@ write-only. Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ignore_<wbr>absent_<wbr>fields</span>
+        <span id="ignore_absent_fields_python">
+<a href="#ignore_absent_fields_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>absent_<wbr>fields</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -456,7 +502,9 @@ write-only. Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>write_<wbr>fields</span>
+        <span id="write_fields_python">
+<a href="#write_fields_python" style="color: inherit; text-decoration: inherit;">write_<wbr>fields</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -483,7 +531,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -491,7 +541,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Write<wbr>Data</span>
+        <span id="writedata_csharp">
+<a href="#writedata_csharp" style="color: inherit; text-decoration: inherit;">Write<wbr>Data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -500,7 +552,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Write<wbr>Data<wbr>Json</span>
+        <span id="writedatajson_csharp">
+<a href="#writedatajson_csharp" style="color: inherit; text-decoration: inherit;">Write<wbr>Data<wbr>Json</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -516,7 +570,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -524,7 +580,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Write<wbr>Data</span>
+        <span id="writedata_go">
+<a href="#writedata_go" style="color: inherit; text-decoration: inherit;">Write<wbr>Data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -533,7 +591,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Write<wbr>Data<wbr>Json</span>
+        <span id="writedatajson_go">
+<a href="#writedatajson_go" style="color: inherit; text-decoration: inherit;">Write<wbr>Data<wbr>Json</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -549,7 +609,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -557,7 +619,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>write<wbr>Data</span>
+        <span id="writedata_nodejs">
+<a href="#writedata_nodejs" style="color: inherit; text-decoration: inherit;">write<wbr>Data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -566,7 +630,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>write<wbr>Data<wbr>Json</span>
+        <span id="writedatajson_nodejs">
+<a href="#writedatajson_nodejs" style="color: inherit; text-decoration: inherit;">write<wbr>Data<wbr>Json</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -582,7 +648,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -590,7 +658,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>write_<wbr>data</span>
+        <span id="write_data_python">
+<a href="#write_data_python" style="color: inherit; text-decoration: inherit;">write_<wbr>data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -599,7 +669,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>write_<wbr>data_<wbr>json</span>
+        <span id="write_data_json_python">
+<a href="#write_data_json_python" style="color: inherit; text-decoration: inherit;">write_<wbr>data_<wbr>json</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -741,7 +813,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Data<wbr>Json</span>
+        <span id="state_datajson_csharp">
+<a href="#state_datajson_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Json</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -751,7 +825,9 @@ written to the given path as the secret data.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Disable<wbr>Delete</span>
+        <span id="state_disabledelete_csharp">
+<a href="#state_disabledelete_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Delete</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -760,7 +836,9 @@ written to the given path as the secret data.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Disable<wbr>Read</span>
+        <span id="state_disableread_csharp">
+<a href="#state_disableread_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Read</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -773,7 +851,9 @@ write-only. Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ignore<wbr>Absent<wbr>Fields</span>
+        <span id="state_ignoreabsentfields_csharp">
+<a href="#state_ignoreabsentfields_csharp" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Absent<wbr>Fields</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -782,7 +862,9 @@ write-only. Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Path</span>
+        <span id="state_path_csharp">
+<a href="#state_path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -794,7 +876,9 @@ support the `PUT` methods and to determine whether they also support
 
     <dt class="property-optional"
             title="Optional">
-        <span>Write<wbr>Data</span>
+        <span id="state_writedata_csharp">
+<a href="#state_writedata_csharp" style="color: inherit; text-decoration: inherit;">Write<wbr>Data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -803,7 +887,9 @@ support the `PUT` methods and to determine whether they also support
 
     <dt class="property-optional"
             title="Optional">
-        <span>Write<wbr>Data<wbr>Json</span>
+        <span id="state_writedatajson_csharp">
+<a href="#state_writedatajson_csharp" style="color: inherit; text-decoration: inherit;">Write<wbr>Data<wbr>Json</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -812,7 +898,9 @@ support the `PUT` methods and to determine whether they also support
 
     <dt class="property-optional"
             title="Optional">
-        <span>Write<wbr>Fields</span>
+        <span id="state_writefields_csharp">
+<a href="#state_writefields_csharp" style="color: inherit; text-decoration: inherit;">Write<wbr>Fields</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -828,7 +916,9 @@ support the `PUT` methods and to determine whether they also support
 
     <dt class="property-optional"
             title="Optional">
-        <span>Data<wbr>Json</span>
+        <span id="state_datajson_go">
+<a href="#state_datajson_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Json</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -838,7 +928,9 @@ written to the given path as the secret data.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Disable<wbr>Delete</span>
+        <span id="state_disabledelete_go">
+<a href="#state_disabledelete_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Delete</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -847,7 +939,9 @@ written to the given path as the secret data.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Disable<wbr>Read</span>
+        <span id="state_disableread_go">
+<a href="#state_disableread_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Read</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -860,7 +954,9 @@ write-only. Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ignore<wbr>Absent<wbr>Fields</span>
+        <span id="state_ignoreabsentfields_go">
+<a href="#state_ignoreabsentfields_go" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Absent<wbr>Fields</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -869,7 +965,9 @@ write-only. Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Path</span>
+        <span id="state_path_go">
+<a href="#state_path_go" style="color: inherit; text-decoration: inherit;">Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -881,7 +979,9 @@ support the `PUT` methods and to determine whether they also support
 
     <dt class="property-optional"
             title="Optional">
-        <span>Write<wbr>Data</span>
+        <span id="state_writedata_go">
+<a href="#state_writedata_go" style="color: inherit; text-decoration: inherit;">Write<wbr>Data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -890,7 +990,9 @@ support the `PUT` methods and to determine whether they also support
 
     <dt class="property-optional"
             title="Optional">
-        <span>Write<wbr>Data<wbr>Json</span>
+        <span id="state_writedatajson_go">
+<a href="#state_writedatajson_go" style="color: inherit; text-decoration: inherit;">Write<wbr>Data<wbr>Json</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -899,7 +1001,9 @@ support the `PUT` methods and to determine whether they also support
 
     <dt class="property-optional"
             title="Optional">
-        <span>Write<wbr>Fields</span>
+        <span id="state_writefields_go">
+<a href="#state_writefields_go" style="color: inherit; text-decoration: inherit;">Write<wbr>Fields</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -915,7 +1019,9 @@ support the `PUT` methods and to determine whether they also support
 
     <dt class="property-optional"
             title="Optional">
-        <span>data<wbr>Json</span>
+        <span id="state_datajson_nodejs">
+<a href="#state_datajson_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Json</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -925,7 +1031,9 @@ written to the given path as the secret data.
 
     <dt class="property-optional"
             title="Optional">
-        <span>disable<wbr>Delete</span>
+        <span id="state_disabledelete_nodejs">
+<a href="#state_disabledelete_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Delete</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -934,7 +1042,9 @@ written to the given path as the secret data.
 
     <dt class="property-optional"
             title="Optional">
-        <span>disable<wbr>Read</span>
+        <span id="state_disableread_nodejs">
+<a href="#state_disableread_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Read</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -947,7 +1057,9 @@ write-only. Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ignore<wbr>Absent<wbr>Fields</span>
+        <span id="state_ignoreabsentfields_nodejs">
+<a href="#state_ignoreabsentfields_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Absent<wbr>Fields</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -956,7 +1068,9 @@ write-only. Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>path</span>
+        <span id="state_path_nodejs">
+<a href="#state_path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -968,7 +1082,9 @@ support the `PUT` methods and to determine whether they also support
 
     <dt class="property-optional"
             title="Optional">
-        <span>write<wbr>Data</span>
+        <span id="state_writedata_nodejs">
+<a href="#state_writedata_nodejs" style="color: inherit; text-decoration: inherit;">write<wbr>Data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -977,7 +1093,9 @@ support the `PUT` methods and to determine whether they also support
 
     <dt class="property-optional"
             title="Optional">
-        <span>write<wbr>Data<wbr>Json</span>
+        <span id="state_writedatajson_nodejs">
+<a href="#state_writedatajson_nodejs" style="color: inherit; text-decoration: inherit;">write<wbr>Data<wbr>Json</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -986,7 +1104,9 @@ support the `PUT` methods and to determine whether they also support
 
     <dt class="property-optional"
             title="Optional">
-        <span>write<wbr>Fields</span>
+        <span id="state_writefields_nodejs">
+<a href="#state_writefields_nodejs" style="color: inherit; text-decoration: inherit;">write<wbr>Fields</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1002,7 +1122,9 @@ support the `PUT` methods and to determine whether they also support
 
     <dt class="property-optional"
             title="Optional">
-        <span>data_<wbr>json</span>
+        <span id="state_data_json_python">
+<a href="#state_data_json_python" style="color: inherit; text-decoration: inherit;">data_<wbr>json</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1012,7 +1134,9 @@ written to the given path as the secret data.
 
     <dt class="property-optional"
             title="Optional">
-        <span>disable_<wbr>delete</span>
+        <span id="state_disable_delete_python">
+<a href="#state_disable_delete_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>delete</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1021,7 +1145,9 @@ written to the given path as the secret data.
 
     <dt class="property-optional"
             title="Optional">
-        <span>disable_<wbr>read</span>
+        <span id="state_disable_read_python">
+<a href="#state_disable_read_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>read</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1034,7 +1160,9 @@ write-only. Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ignore_<wbr>absent_<wbr>fields</span>
+        <span id="state_ignore_absent_fields_python">
+<a href="#state_ignore_absent_fields_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>absent_<wbr>fields</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1043,7 +1171,9 @@ write-only. Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>path</span>
+        <span id="state_path_python">
+<a href="#state_path_python" style="color: inherit; text-decoration: inherit;">path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1055,7 +1185,9 @@ support the `PUT` methods and to determine whether they also support
 
     <dt class="property-optional"
             title="Optional">
-        <span>write_<wbr>data</span>
+        <span id="state_write_data_python">
+<a href="#state_write_data_python" style="color: inherit; text-decoration: inherit;">write_<wbr>data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -1064,7 +1196,9 @@ support the `PUT` methods and to determine whether they also support
 
     <dt class="property-optional"
             title="Optional">
-        <span>write_<wbr>data_<wbr>json</span>
+        <span id="state_write_data_json_python">
+<a href="#state_write_data_json_python" style="color: inherit; text-decoration: inherit;">write_<wbr>data_<wbr>json</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1073,7 +1207,9 @@ support the `PUT` methods and to determine whether they also support
 
     <dt class="property-optional"
             title="Optional">
-        <span>write_<wbr>fields</span>
+        <span id="state_write_fields_python">
+<a href="#state_write_fields_python" style="color: inherit; text-decoration: inherit;">write_<wbr>fields</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>

@@ -258,8 +258,8 @@ information.</p>
 Required for OIDC roles</p></li>
 <li><p><strong>backend</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique name of the auth backend to configure.
 Defaults to <code class="docutils literal notranslate"><span class="pre">jwt</span></code>.</p></li>
-<li><p><strong>bound_audiences</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of <code class="docutils literal notranslate"><span class="pre">aud</span></code> claims to match
-against. Any match is sufficient.</p></li>
+<li><p><strong>bound_audiences</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – (Required for roles of type <code class="docutils literal notranslate"><span class="pre">jwt</span></code>, optional for roles of
+type <code class="docutils literal notranslate"><span class="pre">oidc</span></code>) List of <code class="docutils literal notranslate"><span class="pre">aud</span></code> claims to match against. Any match is sufficient.</p></li>
 <li><p><strong>bound_cidrs</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – If set, a list of
 CIDRs valid as the source address for login requests. This value is also encoded into any resulting token.</p></li>
 <li><p><strong>bound_claims</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – If set, a map of claims/values to match against.
@@ -359,8 +359,8 @@ Defaults to <code class="docutils literal notranslate"><span class="pre">jwt</sp
 <dl class="py attribute">
 <dt id="pulumi_vault.jwt.AuthBackendRole.bound_audiences">
 <code class="sig-name descname">bound_audiences</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.jwt.AuthBackendRole.bound_audiences" title="Permalink to this definition">¶</a></dt>
-<dd><p>List of <code class="docutils literal notranslate"><span class="pre">aud</span></code> claims to match
-against. Any match is sufficient.</p>
+<dd><p>(Required for roles of type <code class="docutils literal notranslate"><span class="pre">jwt</span></code>, optional for roles of
+type <code class="docutils literal notranslate"><span class="pre">oidc</span></code>) List of <code class="docutils literal notranslate"><span class="pre">aud</span></code> claims to match against. Any match is sufficient.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -597,8 +597,8 @@ properties used to qualify the lookup.</p>
 Required for OIDC roles</p></li>
 <li><p><strong>backend</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique name of the auth backend to configure.
 Defaults to <code class="docutils literal notranslate"><span class="pre">jwt</span></code>.</p></li>
-<li><p><strong>bound_audiences</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of <code class="docutils literal notranslate"><span class="pre">aud</span></code> claims to match
-against. Any match is sufficient.</p></li>
+<li><p><strong>bound_audiences</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – (Required for roles of type <code class="docutils literal notranslate"><span class="pre">jwt</span></code>, optional for roles of
+type <code class="docutils literal notranslate"><span class="pre">oidc</span></code>) List of <code class="docutils literal notranslate"><span class="pre">aud</span></code> claims to match against. Any match is sufficient.</p></li>
 <li><p><strong>bound_cidrs</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – If set, a list of
 CIDRs valid as the source address for login requests. This value is also encoded into any resulting token.</p></li>
 <li><p><strong>bound_claims</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – If set, a map of claims/values to match against.

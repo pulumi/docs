@@ -73,7 +73,7 @@ by trusted CA if used.</p></li>
 <p>The <strong>hana</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">connectionUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A URL containing connection information. See
-the <a class="reference external" href="https://www.vaultproject.io/api/secret/databases/oracle.html#sample-payload">Vault
+the <a class="reference external" href="https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload">Vault
 docs</a>
 for an example.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">maxConnectionLifetime</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The maximum number of seconds to keep
@@ -86,7 +86,7 @@ use.</p></li>
 <p>The <strong>mongodb</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">connectionUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A URL containing connection information. See
-the <a class="reference external" href="https://www.vaultproject.io/api/secret/databases/oracle.html#sample-payload">Vault
+the <a class="reference external" href="https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload">Vault
 docs</a>
 for an example.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">maxConnectionLifetime</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The maximum number of seconds to keep
@@ -99,7 +99,7 @@ use.</p></li>
 <p>The <strong>mssql</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">connectionUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A URL containing connection information. See
-the <a class="reference external" href="https://www.vaultproject.io/api/secret/databases/oracle.html#sample-payload">Vault
+the <a class="reference external" href="https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload">Vault
 docs</a>
 for an example.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">maxConnectionLifetime</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The maximum number of seconds to keep
@@ -112,7 +112,7 @@ use.</p></li>
 <p>The <strong>mysql</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">connectionUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A URL containing connection information. See
-the <a class="reference external" href="https://www.vaultproject.io/api/secret/databases/oracle.html#sample-payload">Vault
+the <a class="reference external" href="https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload">Vault
 docs</a>
 for an example.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">maxConnectionLifetime</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The maximum number of seconds to keep
@@ -125,7 +125,7 @@ use.</p></li>
 <p>The <strong>mysql_aurora</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">connectionUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A URL containing connection information. See
-the <a class="reference external" href="https://www.vaultproject.io/api/secret/databases/oracle.html#sample-payload">Vault
+the <a class="reference external" href="https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload">Vault
 docs</a>
 for an example.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">maxConnectionLifetime</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The maximum number of seconds to keep
@@ -138,7 +138,7 @@ use.</p></li>
 <p>The <strong>mysql_legacy</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">connectionUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A URL containing connection information. See
-the <a class="reference external" href="https://www.vaultproject.io/api/secret/databases/oracle.html#sample-payload">Vault
+the <a class="reference external" href="https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload">Vault
 docs</a>
 for an example.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">maxConnectionLifetime</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The maximum number of seconds to keep
@@ -151,7 +151,7 @@ use.</p></li>
 <p>The <strong>mysql_rds</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">connectionUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A URL containing connection information. See
-the <a class="reference external" href="https://www.vaultproject.io/api/secret/databases/oracle.html#sample-payload">Vault
+the <a class="reference external" href="https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload">Vault
 docs</a>
 for an example.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">maxConnectionLifetime</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The maximum number of seconds to keep
@@ -164,7 +164,7 @@ use.</p></li>
 <p>The <strong>oracle</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">connectionUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A URL containing connection information. See
-the <a class="reference external" href="https://www.vaultproject.io/api/secret/databases/oracle.html#sample-payload">Vault
+the <a class="reference external" href="https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload">Vault
 docs</a>
 for an example.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">maxConnectionLifetime</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The maximum number of seconds to keep
@@ -177,7 +177,7 @@ use.</p></li>
 <p>The <strong>postgresql</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">connectionUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A URL containing connection information. See
-the <a class="reference external" href="https://www.vaultproject.io/api/secret/databases/oracle.html#sample-payload">Vault
+the <a class="reference external" href="https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload">Vault
 docs</a>
 for an example.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">maxConnectionLifetime</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The maximum number of seconds to keep
@@ -246,7 +246,7 @@ by trusted CA if used.</p></li>
 <dd><p>A nested block containing configuration options for SAP HanaDB connections.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">connectionUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A URL containing connection information. See
-the <a class="reference external" href="https://www.vaultproject.io/api/secret/databases/oracle.html#sample-payload">Vault
+the <a class="reference external" href="https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload">Vault
 docs</a>
 for an example.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">maxConnectionLifetime</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The maximum number of seconds to keep
@@ -264,7 +264,7 @@ use.</p></li>
 <dd><p>A nested block containing configuration options for MongoDB connections.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">connectionUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A URL containing connection information. See
-the <a class="reference external" href="https://www.vaultproject.io/api/secret/databases/oracle.html#sample-payload">Vault
+the <a class="reference external" href="https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload">Vault
 docs</a>
 for an example.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">maxConnectionLifetime</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The maximum number of seconds to keep
@@ -282,7 +282,7 @@ use.</p></li>
 <dd><p>A nested block containing configuration options for MSSQL connections.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">connectionUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A URL containing connection information. See
-the <a class="reference external" href="https://www.vaultproject.io/api/secret/databases/oracle.html#sample-payload">Vault
+the <a class="reference external" href="https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload">Vault
 docs</a>
 for an example.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">maxConnectionLifetime</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The maximum number of seconds to keep
@@ -300,7 +300,7 @@ use.</p></li>
 <dd><p>A nested block containing configuration options for MySQL connections.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">connectionUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A URL containing connection information. See
-the <a class="reference external" href="https://www.vaultproject.io/api/secret/databases/oracle.html#sample-payload">Vault
+the <a class="reference external" href="https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload">Vault
 docs</a>
 for an example.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">maxConnectionLifetime</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The maximum number of seconds to keep
@@ -318,7 +318,7 @@ use.</p></li>
 <dd><p>A nested block containing configuration options for Aurora MySQL connections.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">connectionUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A URL containing connection information. See
-the <a class="reference external" href="https://www.vaultproject.io/api/secret/databases/oracle.html#sample-payload">Vault
+the <a class="reference external" href="https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload">Vault
 docs</a>
 for an example.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">maxConnectionLifetime</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The maximum number of seconds to keep
@@ -336,7 +336,7 @@ use.</p></li>
 <dd><p>A nested block containing configuration options for legacy MySQL connections.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">connectionUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A URL containing connection information. See
-the <a class="reference external" href="https://www.vaultproject.io/api/secret/databases/oracle.html#sample-payload">Vault
+the <a class="reference external" href="https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload">Vault
 docs</a>
 for an example.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">maxConnectionLifetime</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The maximum number of seconds to keep
@@ -354,7 +354,7 @@ use.</p></li>
 <dd><p>A nested block containing configuration options for RDS MySQL connections.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">connectionUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A URL containing connection information. See
-the <a class="reference external" href="https://www.vaultproject.io/api/secret/databases/oracle.html#sample-payload">Vault
+the <a class="reference external" href="https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload">Vault
 docs</a>
 for an example.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">maxConnectionLifetime</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The maximum number of seconds to keep
@@ -378,7 +378,7 @@ use.</p></li>
 <dd><p>A nested block containing configuration options for Oracle connections.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">connectionUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A URL containing connection information. See
-the <a class="reference external" href="https://www.vaultproject.io/api/secret/databases/oracle.html#sample-payload">Vault
+the <a class="reference external" href="https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload">Vault
 docs</a>
 for an example.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">maxConnectionLifetime</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The maximum number of seconds to keep
@@ -396,7 +396,7 @@ use.</p></li>
 <dd><p>A nested block containing configuration options for PostgreSQL connections.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">connectionUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A URL containing connection information. See
-the <a class="reference external" href="https://www.vaultproject.io/api/secret/databases/oracle.html#sample-payload">Vault
+the <a class="reference external" href="https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload">Vault
 docs</a>
 for an example.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">maxConnectionLifetime</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The maximum number of seconds to keep
@@ -481,7 +481,7 @@ by trusted CA if used.</p></li>
 <p>The <strong>hana</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">connectionUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A URL containing connection information. See
-the <a class="reference external" href="https://www.vaultproject.io/api/secret/databases/oracle.html#sample-payload">Vault
+the <a class="reference external" href="https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload">Vault
 docs</a>
 for an example.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">maxConnectionLifetime</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The maximum number of seconds to keep
@@ -494,7 +494,7 @@ use.</p></li>
 <p>The <strong>mongodb</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">connectionUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A URL containing connection information. See
-the <a class="reference external" href="https://www.vaultproject.io/api/secret/databases/oracle.html#sample-payload">Vault
+the <a class="reference external" href="https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload">Vault
 docs</a>
 for an example.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">maxConnectionLifetime</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The maximum number of seconds to keep
@@ -507,7 +507,7 @@ use.</p></li>
 <p>The <strong>mssql</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">connectionUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A URL containing connection information. See
-the <a class="reference external" href="https://www.vaultproject.io/api/secret/databases/oracle.html#sample-payload">Vault
+the <a class="reference external" href="https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload">Vault
 docs</a>
 for an example.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">maxConnectionLifetime</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The maximum number of seconds to keep
@@ -520,7 +520,7 @@ use.</p></li>
 <p>The <strong>mysql</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">connectionUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A URL containing connection information. See
-the <a class="reference external" href="https://www.vaultproject.io/api/secret/databases/oracle.html#sample-payload">Vault
+the <a class="reference external" href="https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload">Vault
 docs</a>
 for an example.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">maxConnectionLifetime</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The maximum number of seconds to keep
@@ -533,7 +533,7 @@ use.</p></li>
 <p>The <strong>mysql_aurora</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">connectionUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A URL containing connection information. See
-the <a class="reference external" href="https://www.vaultproject.io/api/secret/databases/oracle.html#sample-payload">Vault
+the <a class="reference external" href="https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload">Vault
 docs</a>
 for an example.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">maxConnectionLifetime</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The maximum number of seconds to keep
@@ -546,7 +546,7 @@ use.</p></li>
 <p>The <strong>mysql_legacy</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">connectionUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A URL containing connection information. See
-the <a class="reference external" href="https://www.vaultproject.io/api/secret/databases/oracle.html#sample-payload">Vault
+the <a class="reference external" href="https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload">Vault
 docs</a>
 for an example.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">maxConnectionLifetime</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The maximum number of seconds to keep
@@ -559,7 +559,7 @@ use.</p></li>
 <p>The <strong>mysql_rds</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">connectionUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A URL containing connection information. See
-the <a class="reference external" href="https://www.vaultproject.io/api/secret/databases/oracle.html#sample-payload">Vault
+the <a class="reference external" href="https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload">Vault
 docs</a>
 for an example.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">maxConnectionLifetime</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The maximum number of seconds to keep
@@ -572,7 +572,7 @@ use.</p></li>
 <p>The <strong>oracle</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">connectionUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A URL containing connection information. See
-the <a class="reference external" href="https://www.vaultproject.io/api/secret/databases/oracle.html#sample-payload">Vault
+the <a class="reference external" href="https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload">Vault
 docs</a>
 for an example.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">maxConnectionLifetime</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The maximum number of seconds to keep
@@ -585,7 +585,7 @@ use.</p></li>
 <p>The <strong>postgresql</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">connectionUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A URL containing connection information. See
-the <a class="reference external" href="https://www.vaultproject.io/api/secret/databases/oracle.html#sample-payload">Vault
+the <a class="reference external" href="https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload">Vault
 docs</a>
 for an example.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">maxConnectionLifetime</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The maximum number of seconds to keep

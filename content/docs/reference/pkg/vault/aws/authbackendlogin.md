@@ -15,95 +15,9 @@ accomplished using a signed identity request from IAM or using ec2
 instance metadata. For more information, see the [Vault
 documentation](https://www.vaultproject.io/docs/auth/aws.html).
 
-
-
 {{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_vault as vault
-
-aws = vault.AuthBackend("aws", type="aws")
-example_auth_backend_client = vault.aws.AuthBackendClient("exampleAuthBackendClient",
-    access_key="123456789012",
-    backend=aws.path,
-    secret_key="AWSSECRETKEYGOESHERE")
-example_auth_backend_role = vault.aws.AuthBackendRole("exampleAuthBackendRole",
-    auth_type="ec2",
-    backend=aws.path,
-    bound_account_id="123456789012",
-    bound_ami_id="ami-8c1be5f6",
-    bound_iam_instance_profile_arn="arn:aws:iam::123456789012:instance-profile/MyProfile",
-    bound_subnet_id="vpc-133128f1",
-    bound_vpc_id="vpc-b61106d4",
-    max_ttl=120,
-    role="test-role",
-    token_policies=[
-        "default",
-        "dev",
-        "prod",
-    ],
-    ttl=60)
-example_auth_backend_login = vault.aws.AuthBackendLogin("exampleAuthBackendLogin",
-    backend=vault_auth_backend["example"]["path"],
-    identity="BASE64ENCODEDIDENTITYDOCUMENT",
-    role=example_auth_backend_role.role,
-    signature="BASE64ENCODEDSHA256IDENTITYDOCUMENTSIGNATURE")
-```
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as vault from "@pulumi/vault";
-
-const aws = new vault.AuthBackend("aws", {
-    type: "aws",
-});
-const exampleAuthBackendClient = new vault.aws.AuthBackendClient("example", {
-    accessKey: "123456789012",
-    backend: aws.path,
-    secretKey: "AWSSECRETKEYGOESHERE",
-});
-const exampleAuthBackendRole = new vault.aws.AuthBackendRole("example", {
-    authType: "ec2",
-    backend: aws.path,
-    boundAccountId: "123456789012",
-    boundAmiId: "ami-8c1be5f6",
-    boundIamInstanceProfileArn: "arn:aws:iam::123456789012:instance-profile/MyProfile",
-    boundSubnetId: "vpc-133128f1",
-    boundVpcId: "vpc-b61106d4",
-    maxTtl: 120,
-    role: "test-role",
-    tokenPolicies: [
-        "default",
-        "dev",
-        "prod",
-    ],
-    ttl: 60,
-}, { dependsOn: [exampleAuthBackendClient] });
-const exampleAuthBackendLogin = new vault.aws.AuthBackendLogin("example", {
-    backend: vault_auth_backend_example.path,
-    identity: "BASE64ENCODEDIDENTITYDOCUMENT",
-    role: exampleAuthBackendRole.role,
-    signature: "BASE64ENCODEDSHA256IDENTITYDOCUMENTSIGNATURE",
-});
-```
-{{% /example %}}
-
 {{% /examples %}}
+
 
 
 ## Create a AuthBackendLogin Resource {#create}
@@ -289,7 +203,9 @@ The AuthBackendLogin resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Backend</span>
+        <span id="backend_csharp">
+<a href="#backend_csharp" style="color: inherit; text-decoration: inherit;">Backend</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -299,7 +215,9 @@ The AuthBackendLogin resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Iam<wbr>Http<wbr>Request<wbr>Method</span>
+        <span id="iamhttprequestmethod_csharp">
+<a href="#iamhttprequestmethod_csharp" style="color: inherit; text-decoration: inherit;">Iam<wbr>Http<wbr>Request<wbr>Method</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -309,7 +227,9 @@ request.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Iam<wbr>Request<wbr>Body</span>
+        <span id="iamrequestbody_csharp">
+<a href="#iamrequestbody_csharp" style="color: inherit; text-decoration: inherit;">Iam<wbr>Request<wbr>Body</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -319,7 +239,9 @@ request.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Iam<wbr>Request<wbr>Headers</span>
+        <span id="iamrequestheaders_csharp">
+<a href="#iamrequestheaders_csharp" style="color: inherit; text-decoration: inherit;">Iam<wbr>Request<wbr>Headers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -329,7 +251,9 @@ representation of the GetCallerIdentity HTTP request headers.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Iam<wbr>Request<wbr>Url</span>
+        <span id="iamrequesturl_csharp">
+<a href="#iamrequesturl_csharp" style="color: inherit; text-decoration: inherit;">Iam<wbr>Request<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -339,7 +263,9 @@ request.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Identity</span>
+        <span id="identity_csharp">
+<a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -349,7 +275,9 @@ authenticate with. Can be retrieved from the EC2 metadata server.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Nonce</span>
+        <span id="nonce_csharp">
+<a href="#nonce_csharp" style="color: inherit; text-decoration: inherit;">Nonce</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -361,7 +289,9 @@ the whitelist is tidied again unless they keep track of this nonce.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Pkcs7</span>
+        <span id="pkcs7_csharp">
+<a href="#pkcs7_csharp" style="color: inherit; text-decoration: inherit;">Pkcs7</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -372,7 +302,9 @@ the EC2 metadata server.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Role</span>
+        <span id="role_csharp">
+<a href="#role_csharp" style="color: inherit; text-decoration: inherit;">Role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -382,7 +314,9 @@ against.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Signature</span>
+        <span id="signature_csharp">
+<a href="#signature_csharp" style="color: inherit; text-decoration: inherit;">Signature</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -400,7 +334,9 @@ removed. Can be retrieved from the EC2 metadata server.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Backend</span>
+        <span id="backend_go">
+<a href="#backend_go" style="color: inherit; text-decoration: inherit;">Backend</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -410,7 +346,9 @@ removed. Can be retrieved from the EC2 metadata server.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Iam<wbr>Http<wbr>Request<wbr>Method</span>
+        <span id="iamhttprequestmethod_go">
+<a href="#iamhttprequestmethod_go" style="color: inherit; text-decoration: inherit;">Iam<wbr>Http<wbr>Request<wbr>Method</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -420,7 +358,9 @@ request.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Iam<wbr>Request<wbr>Body</span>
+        <span id="iamrequestbody_go">
+<a href="#iamrequestbody_go" style="color: inherit; text-decoration: inherit;">Iam<wbr>Request<wbr>Body</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -430,7 +370,9 @@ request.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Iam<wbr>Request<wbr>Headers</span>
+        <span id="iamrequestheaders_go">
+<a href="#iamrequestheaders_go" style="color: inherit; text-decoration: inherit;">Iam<wbr>Request<wbr>Headers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -440,7 +382,9 @@ representation of the GetCallerIdentity HTTP request headers.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Iam<wbr>Request<wbr>Url</span>
+        <span id="iamrequesturl_go">
+<a href="#iamrequesturl_go" style="color: inherit; text-decoration: inherit;">Iam<wbr>Request<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -450,7 +394,9 @@ request.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Identity</span>
+        <span id="identity_go">
+<a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -460,7 +406,9 @@ authenticate with. Can be retrieved from the EC2 metadata server.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Nonce</span>
+        <span id="nonce_go">
+<a href="#nonce_go" style="color: inherit; text-decoration: inherit;">Nonce</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -472,7 +420,9 @@ the whitelist is tidied again unless they keep track of this nonce.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Pkcs7</span>
+        <span id="pkcs7_go">
+<a href="#pkcs7_go" style="color: inherit; text-decoration: inherit;">Pkcs7</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -483,7 +433,9 @@ the EC2 metadata server.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Role</span>
+        <span id="role_go">
+<a href="#role_go" style="color: inherit; text-decoration: inherit;">Role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -493,7 +445,9 @@ against.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Signature</span>
+        <span id="signature_go">
+<a href="#signature_go" style="color: inherit; text-decoration: inherit;">Signature</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -511,7 +465,9 @@ removed. Can be retrieved from the EC2 metadata server.
 
     <dt class="property-optional"
             title="Optional">
-        <span>backend</span>
+        <span id="backend_nodejs">
+<a href="#backend_nodejs" style="color: inherit; text-decoration: inherit;">backend</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -521,7 +477,9 @@ removed. Can be retrieved from the EC2 metadata server.
 
     <dt class="property-optional"
             title="Optional">
-        <span>iam<wbr>Http<wbr>Request<wbr>Method</span>
+        <span id="iamhttprequestmethod_nodejs">
+<a href="#iamhttprequestmethod_nodejs" style="color: inherit; text-decoration: inherit;">iam<wbr>Http<wbr>Request<wbr>Method</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -531,7 +489,9 @@ request.
 
     <dt class="property-optional"
             title="Optional">
-        <span>iam<wbr>Request<wbr>Body</span>
+        <span id="iamrequestbody_nodejs">
+<a href="#iamrequestbody_nodejs" style="color: inherit; text-decoration: inherit;">iam<wbr>Request<wbr>Body</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -541,7 +501,9 @@ request.
 
     <dt class="property-optional"
             title="Optional">
-        <span>iam<wbr>Request<wbr>Headers</span>
+        <span id="iamrequestheaders_nodejs">
+<a href="#iamrequestheaders_nodejs" style="color: inherit; text-decoration: inherit;">iam<wbr>Request<wbr>Headers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -551,7 +513,9 @@ representation of the GetCallerIdentity HTTP request headers.
 
     <dt class="property-optional"
             title="Optional">
-        <span>iam<wbr>Request<wbr>Url</span>
+        <span id="iamrequesturl_nodejs">
+<a href="#iamrequesturl_nodejs" style="color: inherit; text-decoration: inherit;">iam<wbr>Request<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -561,7 +525,9 @@ request.
 
     <dt class="property-optional"
             title="Optional">
-        <span>identity</span>
+        <span id="identity_nodejs">
+<a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -571,7 +537,9 @@ authenticate with. Can be retrieved from the EC2 metadata server.
 
     <dt class="property-optional"
             title="Optional">
-        <span>nonce</span>
+        <span id="nonce_nodejs">
+<a href="#nonce_nodejs" style="color: inherit; text-decoration: inherit;">nonce</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -583,7 +551,9 @@ the whitelist is tidied again unless they keep track of this nonce.
 
     <dt class="property-optional"
             title="Optional">
-        <span>pkcs7</span>
+        <span id="pkcs7_nodejs">
+<a href="#pkcs7_nodejs" style="color: inherit; text-decoration: inherit;">pkcs7</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -594,7 +564,9 @@ the EC2 metadata server.
 
     <dt class="property-optional"
             title="Optional">
-        <span>role</span>
+        <span id="role_nodejs">
+<a href="#role_nodejs" style="color: inherit; text-decoration: inherit;">role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -604,7 +576,9 @@ against.
 
     <dt class="property-optional"
             title="Optional">
-        <span>signature</span>
+        <span id="signature_nodejs">
+<a href="#signature_nodejs" style="color: inherit; text-decoration: inherit;">signature</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -622,7 +596,9 @@ removed. Can be retrieved from the EC2 metadata server.
 
     <dt class="property-optional"
             title="Optional">
-        <span>backend</span>
+        <span id="backend_python">
+<a href="#backend_python" style="color: inherit; text-decoration: inherit;">backend</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -632,7 +608,9 @@ removed. Can be retrieved from the EC2 metadata server.
 
     <dt class="property-optional"
             title="Optional">
-        <span>iam_<wbr>http_<wbr>request_<wbr>method</span>
+        <span id="iam_http_request_method_python">
+<a href="#iam_http_request_method_python" style="color: inherit; text-decoration: inherit;">iam_<wbr>http_<wbr>request_<wbr>method</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -642,7 +620,9 @@ request.
 
     <dt class="property-optional"
             title="Optional">
-        <span>iam_<wbr>request_<wbr>body</span>
+        <span id="iam_request_body_python">
+<a href="#iam_request_body_python" style="color: inherit; text-decoration: inherit;">iam_<wbr>request_<wbr>body</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -652,7 +632,9 @@ request.
 
     <dt class="property-optional"
             title="Optional">
-        <span>iam_<wbr>request_<wbr>headers</span>
+        <span id="iam_request_headers_python">
+<a href="#iam_request_headers_python" style="color: inherit; text-decoration: inherit;">iam_<wbr>request_<wbr>headers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -662,7 +644,9 @@ representation of the GetCallerIdentity HTTP request headers.
 
     <dt class="property-optional"
             title="Optional">
-        <span>iam_<wbr>request_<wbr>url</span>
+        <span id="iam_request_url_python">
+<a href="#iam_request_url_python" style="color: inherit; text-decoration: inherit;">iam_<wbr>request_<wbr>url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -672,7 +656,9 @@ request.
 
     <dt class="property-optional"
             title="Optional">
-        <span>identity</span>
+        <span id="identity_python">
+<a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -682,7 +668,9 @@ authenticate with. Can be retrieved from the EC2 metadata server.
 
     <dt class="property-optional"
             title="Optional">
-        <span>nonce</span>
+        <span id="nonce_python">
+<a href="#nonce_python" style="color: inherit; text-decoration: inherit;">nonce</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -694,7 +682,9 @@ the whitelist is tidied again unless they keep track of this nonce.
 
     <dt class="property-optional"
             title="Optional">
-        <span>pkcs7</span>
+        <span id="pkcs7_python">
+<a href="#pkcs7_python" style="color: inherit; text-decoration: inherit;">pkcs7</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -705,7 +695,9 @@ the EC2 metadata server.
 
     <dt class="property-optional"
             title="Optional">
-        <span>role</span>
+        <span id="role_python">
+<a href="#role_python" style="color: inherit; text-decoration: inherit;">role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -715,7 +707,9 @@ against.
 
     <dt class="property-optional"
             title="Optional">
-        <span>signature</span>
+        <span id="signature_python">
+<a href="#signature_python" style="color: inherit; text-decoration: inherit;">signature</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -744,7 +738,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Accessor</span>
+        <span id="accessor_csharp">
+<a href="#accessor_csharp" style="color: inherit; text-decoration: inherit;">Accessor</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -753,7 +749,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Auth<wbr>Type</span>
+        <span id="authtype_csharp">
+<a href="#authtype_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -762,7 +760,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Client<wbr>Token</span>
+        <span id="clienttoken_csharp">
+<a href="#clienttoken_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -771,7 +771,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -779,7 +781,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Lease<wbr>Duration</span>
+        <span id="leaseduration_csharp">
+<a href="#leaseduration_csharp" style="color: inherit; text-decoration: inherit;">Lease<wbr>Duration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -789,7 +793,9 @@ to the time in `lease_start_time`.
 
     <dt class="property-"
             title="">
-        <span>Lease<wbr>Start<wbr>Time</span>
+        <span id="leasestarttime_csharp">
+<a href="#leasestarttime_csharp" style="color: inherit; text-decoration: inherit;">Lease<wbr>Start<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -798,7 +804,9 @@ to the time in `lease_start_time`.
 
     <dt class="property-"
             title="">
-        <span>Metadata</span>
+        <span id="metadata_csharp">
+<a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -808,7 +816,9 @@ authentication used to generate this token.
 
     <dt class="property-"
             title="">
-        <span>Policies</span>
+        <span id="policies_csharp">
+<a href="#policies_csharp" style="color: inherit; text-decoration: inherit;">Policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -817,7 +827,9 @@ authentication used to generate this token.
 
     <dt class="property-"
             title="">
-        <span>Renewable</span>
+        <span id="renewable_csharp">
+<a href="#renewable_csharp" style="color: inherit; text-decoration: inherit;">Renewable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -833,7 +845,9 @@ authentication used to generate this token.
 
     <dt class="property-"
             title="">
-        <span>Accessor</span>
+        <span id="accessor_go">
+<a href="#accessor_go" style="color: inherit; text-decoration: inherit;">Accessor</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -842,7 +856,9 @@ authentication used to generate this token.
 
     <dt class="property-"
             title="">
-        <span>Auth<wbr>Type</span>
+        <span id="authtype_go">
+<a href="#authtype_go" style="color: inherit; text-decoration: inherit;">Auth<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -851,7 +867,9 @@ authentication used to generate this token.
 
     <dt class="property-"
             title="">
-        <span>Client<wbr>Token</span>
+        <span id="clienttoken_go">
+<a href="#clienttoken_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -860,7 +878,9 @@ authentication used to generate this token.
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -868,7 +888,9 @@ authentication used to generate this token.
 
     <dt class="property-"
             title="">
-        <span>Lease<wbr>Duration</span>
+        <span id="leaseduration_go">
+<a href="#leaseduration_go" style="color: inherit; text-decoration: inherit;">Lease<wbr>Duration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -878,7 +900,9 @@ to the time in `lease_start_time`.
 
     <dt class="property-"
             title="">
-        <span>Lease<wbr>Start<wbr>Time</span>
+        <span id="leasestarttime_go">
+<a href="#leasestarttime_go" style="color: inherit; text-decoration: inherit;">Lease<wbr>Start<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -887,7 +911,9 @@ to the time in `lease_start_time`.
 
     <dt class="property-"
             title="">
-        <span>Metadata</span>
+        <span id="metadata_go">
+<a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -897,7 +923,9 @@ authentication used to generate this token.
 
     <dt class="property-"
             title="">
-        <span>Policies</span>
+        <span id="policies_go">
+<a href="#policies_go" style="color: inherit; text-decoration: inherit;">Policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -906,7 +934,9 @@ authentication used to generate this token.
 
     <dt class="property-"
             title="">
-        <span>Renewable</span>
+        <span id="renewable_go">
+<a href="#renewable_go" style="color: inherit; text-decoration: inherit;">Renewable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -922,7 +952,9 @@ authentication used to generate this token.
 
     <dt class="property-"
             title="">
-        <span>accessor</span>
+        <span id="accessor_nodejs">
+<a href="#accessor_nodejs" style="color: inherit; text-decoration: inherit;">accessor</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -931,7 +963,9 @@ authentication used to generate this token.
 
     <dt class="property-"
             title="">
-        <span>auth<wbr>Type</span>
+        <span id="authtype_nodejs">
+<a href="#authtype_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -940,7 +974,9 @@ authentication used to generate this token.
 
     <dt class="property-"
             title="">
-        <span>client<wbr>Token</span>
+        <span id="clienttoken_nodejs">
+<a href="#clienttoken_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -949,7 +985,9 @@ authentication used to generate this token.
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -957,7 +995,9 @@ authentication used to generate this token.
 
     <dt class="property-"
             title="">
-        <span>lease<wbr>Duration</span>
+        <span id="leaseduration_nodejs">
+<a href="#leaseduration_nodejs" style="color: inherit; text-decoration: inherit;">lease<wbr>Duration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -967,7 +1007,9 @@ to the time in `lease_start_time`.
 
     <dt class="property-"
             title="">
-        <span>lease<wbr>Start<wbr>Time</span>
+        <span id="leasestarttime_nodejs">
+<a href="#leasestarttime_nodejs" style="color: inherit; text-decoration: inherit;">lease<wbr>Start<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -976,7 +1018,9 @@ to the time in `lease_start_time`.
 
     <dt class="property-"
             title="">
-        <span>metadata</span>
+        <span id="metadata_nodejs">
+<a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -986,7 +1030,9 @@ authentication used to generate this token.
 
     <dt class="property-"
             title="">
-        <span>policies</span>
+        <span id="policies_nodejs">
+<a href="#policies_nodejs" style="color: inherit; text-decoration: inherit;">policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -995,7 +1041,9 @@ authentication used to generate this token.
 
     <dt class="property-"
             title="">
-        <span>renewable</span>
+        <span id="renewable_nodejs">
+<a href="#renewable_nodejs" style="color: inherit; text-decoration: inherit;">renewable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1011,7 +1059,9 @@ authentication used to generate this token.
 
     <dt class="property-"
             title="">
-        <span>accessor</span>
+        <span id="accessor_python">
+<a href="#accessor_python" style="color: inherit; text-decoration: inherit;">accessor</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1020,7 +1070,9 @@ authentication used to generate this token.
 
     <dt class="property-"
             title="">
-        <span>auth_<wbr>type</span>
+        <span id="auth_type_python">
+<a href="#auth_type_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1029,7 +1081,9 @@ authentication used to generate this token.
 
     <dt class="property-"
             title="">
-        <span>client_<wbr>token</span>
+        <span id="client_token_python">
+<a href="#client_token_python" style="color: inherit; text-decoration: inherit;">client_<wbr>token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1038,7 +1092,9 @@ authentication used to generate this token.
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1046,7 +1102,9 @@ authentication used to generate this token.
 
     <dt class="property-"
             title="">
-        <span>lease_<wbr>duration</span>
+        <span id="lease_duration_python">
+<a href="#lease_duration_python" style="color: inherit; text-decoration: inherit;">lease_<wbr>duration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1056,7 +1114,9 @@ to the time in `lease_start_time`.
 
     <dt class="property-"
             title="">
-        <span>lease_<wbr>start_<wbr>time</span>
+        <span id="lease_start_time_python">
+<a href="#lease_start_time_python" style="color: inherit; text-decoration: inherit;">lease_<wbr>start_<wbr>time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1065,7 +1125,9 @@ to the time in `lease_start_time`.
 
     <dt class="property-"
             title="">
-        <span>metadata</span>
+        <span id="metadata_python">
+<a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -1075,7 +1137,9 @@ authentication used to generate this token.
 
     <dt class="property-"
             title="">
-        <span>policies</span>
+        <span id="policies_python">
+<a href="#policies_python" style="color: inherit; text-decoration: inherit;">policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1084,7 +1148,9 @@ authentication used to generate this token.
 
     <dt class="property-"
             title="">
-        <span>renewable</span>
+        <span id="renewable_python">
+<a href="#renewable_python" style="color: inherit; text-decoration: inherit;">renewable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1226,7 +1292,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Accessor</span>
+        <span id="state_accessor_csharp">
+<a href="#state_accessor_csharp" style="color: inherit; text-decoration: inherit;">Accessor</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1235,7 +1303,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Auth<wbr>Type</span>
+        <span id="state_authtype_csharp">
+<a href="#state_authtype_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1244,7 +1314,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Backend</span>
+        <span id="state_backend_csharp">
+<a href="#state_backend_csharp" style="color: inherit; text-decoration: inherit;">Backend</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1254,7 +1326,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Client<wbr>Token</span>
+        <span id="state_clienttoken_csharp">
+<a href="#state_clienttoken_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1263,7 +1337,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Iam<wbr>Http<wbr>Request<wbr>Method</span>
+        <span id="state_iamhttprequestmethod_csharp">
+<a href="#state_iamhttprequestmethod_csharp" style="color: inherit; text-decoration: inherit;">Iam<wbr>Http<wbr>Request<wbr>Method</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1273,7 +1349,9 @@ request.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Iam<wbr>Request<wbr>Body</span>
+        <span id="state_iamrequestbody_csharp">
+<a href="#state_iamrequestbody_csharp" style="color: inherit; text-decoration: inherit;">Iam<wbr>Request<wbr>Body</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1283,7 +1361,9 @@ request.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Iam<wbr>Request<wbr>Headers</span>
+        <span id="state_iamrequestheaders_csharp">
+<a href="#state_iamrequestheaders_csharp" style="color: inherit; text-decoration: inherit;">Iam<wbr>Request<wbr>Headers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1293,7 +1373,9 @@ representation of the GetCallerIdentity HTTP request headers.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Iam<wbr>Request<wbr>Url</span>
+        <span id="state_iamrequesturl_csharp">
+<a href="#state_iamrequesturl_csharp" style="color: inherit; text-decoration: inherit;">Iam<wbr>Request<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1303,7 +1385,9 @@ request.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Identity</span>
+        <span id="state_identity_csharp">
+<a href="#state_identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1313,7 +1397,9 @@ authenticate with. Can be retrieved from the EC2 metadata server.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Lease<wbr>Duration</span>
+        <span id="state_leaseduration_csharp">
+<a href="#state_leaseduration_csharp" style="color: inherit; text-decoration: inherit;">Lease<wbr>Duration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1323,7 +1409,9 @@ to the time in `lease_start_time`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Lease<wbr>Start<wbr>Time</span>
+        <span id="state_leasestarttime_csharp">
+<a href="#state_leasestarttime_csharp" style="color: inherit; text-decoration: inherit;">Lease<wbr>Start<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1332,7 +1420,9 @@ to the time in `lease_start_time`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Metadata</span>
+        <span id="state_metadata_csharp">
+<a href="#state_metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -1342,7 +1432,9 @@ authentication used to generate this token.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Nonce</span>
+        <span id="state_nonce_csharp">
+<a href="#state_nonce_csharp" style="color: inherit; text-decoration: inherit;">Nonce</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1354,7 +1446,9 @@ the whitelist is tidied again unless they keep track of this nonce.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Pkcs7</span>
+        <span id="state_pkcs7_csharp">
+<a href="#state_pkcs7_csharp" style="color: inherit; text-decoration: inherit;">Pkcs7</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1365,7 +1459,9 @@ the EC2 metadata server.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Policies</span>
+        <span id="state_policies_csharp">
+<a href="#state_policies_csharp" style="color: inherit; text-decoration: inherit;">Policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1374,7 +1470,9 @@ the EC2 metadata server.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Renewable</span>
+        <span id="state_renewable_csharp">
+<a href="#state_renewable_csharp" style="color: inherit; text-decoration: inherit;">Renewable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1383,7 +1481,9 @@ the EC2 metadata server.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Role</span>
+        <span id="state_role_csharp">
+<a href="#state_role_csharp" style="color: inherit; text-decoration: inherit;">Role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1393,7 +1493,9 @@ against.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Signature</span>
+        <span id="state_signature_csharp">
+<a href="#state_signature_csharp" style="color: inherit; text-decoration: inherit;">Signature</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1411,7 +1513,9 @@ removed. Can be retrieved from the EC2 metadata server.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Accessor</span>
+        <span id="state_accessor_go">
+<a href="#state_accessor_go" style="color: inherit; text-decoration: inherit;">Accessor</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1420,7 +1524,9 @@ removed. Can be retrieved from the EC2 metadata server.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Auth<wbr>Type</span>
+        <span id="state_authtype_go">
+<a href="#state_authtype_go" style="color: inherit; text-decoration: inherit;">Auth<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1429,7 +1535,9 @@ removed. Can be retrieved from the EC2 metadata server.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Backend</span>
+        <span id="state_backend_go">
+<a href="#state_backend_go" style="color: inherit; text-decoration: inherit;">Backend</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1439,7 +1547,9 @@ removed. Can be retrieved from the EC2 metadata server.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Client<wbr>Token</span>
+        <span id="state_clienttoken_go">
+<a href="#state_clienttoken_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1448,7 +1558,9 @@ removed. Can be retrieved from the EC2 metadata server.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Iam<wbr>Http<wbr>Request<wbr>Method</span>
+        <span id="state_iamhttprequestmethod_go">
+<a href="#state_iamhttprequestmethod_go" style="color: inherit; text-decoration: inherit;">Iam<wbr>Http<wbr>Request<wbr>Method</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1458,7 +1570,9 @@ request.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Iam<wbr>Request<wbr>Body</span>
+        <span id="state_iamrequestbody_go">
+<a href="#state_iamrequestbody_go" style="color: inherit; text-decoration: inherit;">Iam<wbr>Request<wbr>Body</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1468,7 +1582,9 @@ request.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Iam<wbr>Request<wbr>Headers</span>
+        <span id="state_iamrequestheaders_go">
+<a href="#state_iamrequestheaders_go" style="color: inherit; text-decoration: inherit;">Iam<wbr>Request<wbr>Headers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1478,7 +1594,9 @@ representation of the GetCallerIdentity HTTP request headers.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Iam<wbr>Request<wbr>Url</span>
+        <span id="state_iamrequesturl_go">
+<a href="#state_iamrequesturl_go" style="color: inherit; text-decoration: inherit;">Iam<wbr>Request<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1488,7 +1606,9 @@ request.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Identity</span>
+        <span id="state_identity_go">
+<a href="#state_identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1498,7 +1618,9 @@ authenticate with. Can be retrieved from the EC2 metadata server.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Lease<wbr>Duration</span>
+        <span id="state_leaseduration_go">
+<a href="#state_leaseduration_go" style="color: inherit; text-decoration: inherit;">Lease<wbr>Duration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1508,7 +1630,9 @@ to the time in `lease_start_time`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Lease<wbr>Start<wbr>Time</span>
+        <span id="state_leasestarttime_go">
+<a href="#state_leasestarttime_go" style="color: inherit; text-decoration: inherit;">Lease<wbr>Start<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1517,7 +1641,9 @@ to the time in `lease_start_time`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Metadata</span>
+        <span id="state_metadata_go">
+<a href="#state_metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -1527,7 +1653,9 @@ authentication used to generate this token.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Nonce</span>
+        <span id="state_nonce_go">
+<a href="#state_nonce_go" style="color: inherit; text-decoration: inherit;">Nonce</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1539,7 +1667,9 @@ the whitelist is tidied again unless they keep track of this nonce.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Pkcs7</span>
+        <span id="state_pkcs7_go">
+<a href="#state_pkcs7_go" style="color: inherit; text-decoration: inherit;">Pkcs7</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1550,7 +1680,9 @@ the EC2 metadata server.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Policies</span>
+        <span id="state_policies_go">
+<a href="#state_policies_go" style="color: inherit; text-decoration: inherit;">Policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1559,7 +1691,9 @@ the EC2 metadata server.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Renewable</span>
+        <span id="state_renewable_go">
+<a href="#state_renewable_go" style="color: inherit; text-decoration: inherit;">Renewable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1568,7 +1702,9 @@ the EC2 metadata server.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Role</span>
+        <span id="state_role_go">
+<a href="#state_role_go" style="color: inherit; text-decoration: inherit;">Role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1578,7 +1714,9 @@ against.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Signature</span>
+        <span id="state_signature_go">
+<a href="#state_signature_go" style="color: inherit; text-decoration: inherit;">Signature</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1596,7 +1734,9 @@ removed. Can be retrieved from the EC2 metadata server.
 
     <dt class="property-optional"
             title="Optional">
-        <span>accessor</span>
+        <span id="state_accessor_nodejs">
+<a href="#state_accessor_nodejs" style="color: inherit; text-decoration: inherit;">accessor</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1605,7 +1745,9 @@ removed. Can be retrieved from the EC2 metadata server.
 
     <dt class="property-optional"
             title="Optional">
-        <span>auth<wbr>Type</span>
+        <span id="state_authtype_nodejs">
+<a href="#state_authtype_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1614,7 +1756,9 @@ removed. Can be retrieved from the EC2 metadata server.
 
     <dt class="property-optional"
             title="Optional">
-        <span>backend</span>
+        <span id="state_backend_nodejs">
+<a href="#state_backend_nodejs" style="color: inherit; text-decoration: inherit;">backend</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1624,7 +1768,9 @@ removed. Can be retrieved from the EC2 metadata server.
 
     <dt class="property-optional"
             title="Optional">
-        <span>client<wbr>Token</span>
+        <span id="state_clienttoken_nodejs">
+<a href="#state_clienttoken_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1633,7 +1779,9 @@ removed. Can be retrieved from the EC2 metadata server.
 
     <dt class="property-optional"
             title="Optional">
-        <span>iam<wbr>Http<wbr>Request<wbr>Method</span>
+        <span id="state_iamhttprequestmethod_nodejs">
+<a href="#state_iamhttprequestmethod_nodejs" style="color: inherit; text-decoration: inherit;">iam<wbr>Http<wbr>Request<wbr>Method</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1643,7 +1791,9 @@ request.
 
     <dt class="property-optional"
             title="Optional">
-        <span>iam<wbr>Request<wbr>Body</span>
+        <span id="state_iamrequestbody_nodejs">
+<a href="#state_iamrequestbody_nodejs" style="color: inherit; text-decoration: inherit;">iam<wbr>Request<wbr>Body</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1653,7 +1803,9 @@ request.
 
     <dt class="property-optional"
             title="Optional">
-        <span>iam<wbr>Request<wbr>Headers</span>
+        <span id="state_iamrequestheaders_nodejs">
+<a href="#state_iamrequestheaders_nodejs" style="color: inherit; text-decoration: inherit;">iam<wbr>Request<wbr>Headers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1663,7 +1815,9 @@ representation of the GetCallerIdentity HTTP request headers.
 
     <dt class="property-optional"
             title="Optional">
-        <span>iam<wbr>Request<wbr>Url</span>
+        <span id="state_iamrequesturl_nodejs">
+<a href="#state_iamrequesturl_nodejs" style="color: inherit; text-decoration: inherit;">iam<wbr>Request<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1673,7 +1827,9 @@ request.
 
     <dt class="property-optional"
             title="Optional">
-        <span>identity</span>
+        <span id="state_identity_nodejs">
+<a href="#state_identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1683,7 +1839,9 @@ authenticate with. Can be retrieved from the EC2 metadata server.
 
     <dt class="property-optional"
             title="Optional">
-        <span>lease<wbr>Duration</span>
+        <span id="state_leaseduration_nodejs">
+<a href="#state_leaseduration_nodejs" style="color: inherit; text-decoration: inherit;">lease<wbr>Duration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1693,7 +1851,9 @@ to the time in `lease_start_time`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>lease<wbr>Start<wbr>Time</span>
+        <span id="state_leasestarttime_nodejs">
+<a href="#state_leasestarttime_nodejs" style="color: inherit; text-decoration: inherit;">lease<wbr>Start<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1702,7 +1862,9 @@ to the time in `lease_start_time`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>metadata</span>
+        <span id="state_metadata_nodejs">
+<a href="#state_metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -1712,7 +1874,9 @@ authentication used to generate this token.
 
     <dt class="property-optional"
             title="Optional">
-        <span>nonce</span>
+        <span id="state_nonce_nodejs">
+<a href="#state_nonce_nodejs" style="color: inherit; text-decoration: inherit;">nonce</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1724,7 +1888,9 @@ the whitelist is tidied again unless they keep track of this nonce.
 
     <dt class="property-optional"
             title="Optional">
-        <span>pkcs7</span>
+        <span id="state_pkcs7_nodejs">
+<a href="#state_pkcs7_nodejs" style="color: inherit; text-decoration: inherit;">pkcs7</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1735,7 +1901,9 @@ the EC2 metadata server.
 
     <dt class="property-optional"
             title="Optional">
-        <span>policies</span>
+        <span id="state_policies_nodejs">
+<a href="#state_policies_nodejs" style="color: inherit; text-decoration: inherit;">policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1744,7 +1912,9 @@ the EC2 metadata server.
 
     <dt class="property-optional"
             title="Optional">
-        <span>renewable</span>
+        <span id="state_renewable_nodejs">
+<a href="#state_renewable_nodejs" style="color: inherit; text-decoration: inherit;">renewable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1753,7 +1923,9 @@ the EC2 metadata server.
 
     <dt class="property-optional"
             title="Optional">
-        <span>role</span>
+        <span id="state_role_nodejs">
+<a href="#state_role_nodejs" style="color: inherit; text-decoration: inherit;">role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1763,7 +1935,9 @@ against.
 
     <dt class="property-optional"
             title="Optional">
-        <span>signature</span>
+        <span id="state_signature_nodejs">
+<a href="#state_signature_nodejs" style="color: inherit; text-decoration: inherit;">signature</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1781,7 +1955,9 @@ removed. Can be retrieved from the EC2 metadata server.
 
     <dt class="property-optional"
             title="Optional">
-        <span>accessor</span>
+        <span id="state_accessor_python">
+<a href="#state_accessor_python" style="color: inherit; text-decoration: inherit;">accessor</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1790,7 +1966,9 @@ removed. Can be retrieved from the EC2 metadata server.
 
     <dt class="property-optional"
             title="Optional">
-        <span>auth_<wbr>type</span>
+        <span id="state_auth_type_python">
+<a href="#state_auth_type_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1799,7 +1977,9 @@ removed. Can be retrieved from the EC2 metadata server.
 
     <dt class="property-optional"
             title="Optional">
-        <span>backend</span>
+        <span id="state_backend_python">
+<a href="#state_backend_python" style="color: inherit; text-decoration: inherit;">backend</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1809,7 +1989,9 @@ removed. Can be retrieved from the EC2 metadata server.
 
     <dt class="property-optional"
             title="Optional">
-        <span>client_<wbr>token</span>
+        <span id="state_client_token_python">
+<a href="#state_client_token_python" style="color: inherit; text-decoration: inherit;">client_<wbr>token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1818,7 +2000,9 @@ removed. Can be retrieved from the EC2 metadata server.
 
     <dt class="property-optional"
             title="Optional">
-        <span>iam_<wbr>http_<wbr>request_<wbr>method</span>
+        <span id="state_iam_http_request_method_python">
+<a href="#state_iam_http_request_method_python" style="color: inherit; text-decoration: inherit;">iam_<wbr>http_<wbr>request_<wbr>method</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1828,7 +2012,9 @@ request.
 
     <dt class="property-optional"
             title="Optional">
-        <span>iam_<wbr>request_<wbr>body</span>
+        <span id="state_iam_request_body_python">
+<a href="#state_iam_request_body_python" style="color: inherit; text-decoration: inherit;">iam_<wbr>request_<wbr>body</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1838,7 +2024,9 @@ request.
 
     <dt class="property-optional"
             title="Optional">
-        <span>iam_<wbr>request_<wbr>headers</span>
+        <span id="state_iam_request_headers_python">
+<a href="#state_iam_request_headers_python" style="color: inherit; text-decoration: inherit;">iam_<wbr>request_<wbr>headers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1848,7 +2036,9 @@ representation of the GetCallerIdentity HTTP request headers.
 
     <dt class="property-optional"
             title="Optional">
-        <span>iam_<wbr>request_<wbr>url</span>
+        <span id="state_iam_request_url_python">
+<a href="#state_iam_request_url_python" style="color: inherit; text-decoration: inherit;">iam_<wbr>request_<wbr>url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1858,7 +2048,9 @@ request.
 
     <dt class="property-optional"
             title="Optional">
-        <span>identity</span>
+        <span id="state_identity_python">
+<a href="#state_identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1868,7 +2060,9 @@ authenticate with. Can be retrieved from the EC2 metadata server.
 
     <dt class="property-optional"
             title="Optional">
-        <span>lease_<wbr>duration</span>
+        <span id="state_lease_duration_python">
+<a href="#state_lease_duration_python" style="color: inherit; text-decoration: inherit;">lease_<wbr>duration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1878,7 +2072,9 @@ to the time in `lease_start_time`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>lease_<wbr>start_<wbr>time</span>
+        <span id="state_lease_start_time_python">
+<a href="#state_lease_start_time_python" style="color: inherit; text-decoration: inherit;">lease_<wbr>start_<wbr>time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1887,7 +2083,9 @@ to the time in `lease_start_time`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>metadata</span>
+        <span id="state_metadata_python">
+<a href="#state_metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -1897,7 +2095,9 @@ authentication used to generate this token.
 
     <dt class="property-optional"
             title="Optional">
-        <span>nonce</span>
+        <span id="state_nonce_python">
+<a href="#state_nonce_python" style="color: inherit; text-decoration: inherit;">nonce</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1909,7 +2109,9 @@ the whitelist is tidied again unless they keep track of this nonce.
 
     <dt class="property-optional"
             title="Optional">
-        <span>pkcs7</span>
+        <span id="state_pkcs7_python">
+<a href="#state_pkcs7_python" style="color: inherit; text-decoration: inherit;">pkcs7</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1920,7 +2122,9 @@ the EC2 metadata server.
 
     <dt class="property-optional"
             title="Optional">
-        <span>policies</span>
+        <span id="state_policies_python">
+<a href="#state_policies_python" style="color: inherit; text-decoration: inherit;">policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1929,7 +2133,9 @@ the EC2 metadata server.
 
     <dt class="property-optional"
             title="Optional">
-        <span>renewable</span>
+        <span id="state_renewable_python">
+<a href="#state_renewable_python" style="color: inherit; text-decoration: inherit;">renewable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1938,7 +2144,9 @@ the EC2 metadata server.
 
     <dt class="property-optional"
             title="Optional">
-        <span>role</span>
+        <span id="state_role_python">
+<a href="#state_role_python" style="color: inherit; text-decoration: inherit;">role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1948,7 +2156,9 @@ against.
 
     <dt class="property-optional"
             title="Optional">
-        <span>signature</span>
+        <span id="state_signature_python">
+<a href="#state_signature_python" style="color: inherit; text-decoration: inherit;">signature</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

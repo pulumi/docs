@@ -26,7 +26,7 @@ construction to achieve fine-grained programmatic control over provider settings
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/vault/#Provider">Provider</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>add_address_to_env=None<span class="p">, </span>address=None<span class="p">, </span>auth_logins=None<span class="p">, </span>ca_cert_dir=None<span class="p">, </span>ca_cert_file=None<span class="p">, </span>client_auths=None<span class="p">, </span>max_lease_ttl_seconds=None<span class="p">, </span>max_retries=None<span class="p">, </span>namespace=None<span class="p">, </span>skip_tls_verify=None<span class="p">, </span>token=None<span class="p">, </span>token_name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/vault/#Provider">Provider</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>add_address_to_env=None<span class="p">, </span>address=None<span class="p">, </span>auth_logins=None<span class="p">, </span>ca_cert_dir=None<span class="p">, </span>ca_cert_file=None<span class="p">, </span>client_auths=None<span class="p">, </span>headers=None<span class="p">, </span>max_lease_ttl_seconds=None<span class="p">, </span>max_retries=None<span class="p">, </span>namespace=None<span class="p">, </span>skip_tls_verify=None<span class="p">, </span>token=None<span class="p">, </span>token_name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -200,7 +200,9 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Add<wbr>Address<wbr>To<wbr>Env</span>
+        <span id="addaddresstoenv_csharp">
+<a href="#addaddresstoenv_csharp" style="color: inherit; text-decoration: inherit;">Add<wbr>Address<wbr>To<wbr>Env</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -209,7 +211,9 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Address</span>
+        <span id="address_csharp">
+<a href="#address_csharp" style="color: inherit; text-decoration: inherit;">Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -218,7 +222,9 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Auth<wbr>Logins</span>
+        <span id="authlogins_csharp">
+<a href="#authlogins_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>Logins</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#providerauthlogin">List&lt;Provider<wbr>Auth<wbr>Login<wbr>Args&gt;</a></span>
     </dt>
@@ -227,7 +233,9 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ca<wbr>Cert<wbr>Dir</span>
+        <span id="cacertdir_csharp">
+<a href="#cacertdir_csharp" style="color: inherit; text-decoration: inherit;">Ca<wbr>Cert<wbr>Dir</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -236,7 +244,9 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ca<wbr>Cert<wbr>File</span>
+        <span id="cacertfile_csharp">
+<a href="#cacertfile_csharp" style="color: inherit; text-decoration: inherit;">Ca<wbr>Cert<wbr>File</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -245,7 +255,9 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Client<wbr>Auths</span>
+        <span id="clientauths_csharp">
+<a href="#clientauths_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Auths</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#providerclientauth">List&lt;Provider<wbr>Client<wbr>Auth<wbr>Args&gt;</a></span>
     </dt>
@@ -254,7 +266,20 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Lease<wbr>Ttl<wbr>Seconds</span>
+        <span id="headers_csharp">
+<a href="#headers_csharp" style="color: inherit; text-decoration: inherit;">Headers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#providerheader">List&lt;Provider<wbr>Header<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The headers to send with each Vault request.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxleasettlseconds_csharp">
+<a href="#maxleasettlseconds_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Lease<wbr>Ttl<wbr>Seconds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -263,7 +288,9 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Retries</span>
+        <span id="maxretries_csharp">
+<a href="#maxretries_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Retries</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -272,7 +299,9 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Namespace</span>
+        <span id="namespace_csharp">
+<a href="#namespace_csharp" style="color: inherit; text-decoration: inherit;">Namespace</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -281,7 +310,9 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Skip<wbr>Tls<wbr>Verify</span>
+        <span id="skiptlsverify_csharp">
+<a href="#skiptlsverify_csharp" style="color: inherit; text-decoration: inherit;">Skip<wbr>Tls<wbr>Verify</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -290,7 +321,9 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Token</span>
+        <span id="token_csharp">
+<a href="#token_csharp" style="color: inherit; text-decoration: inherit;">Token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -299,7 +332,9 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Token<wbr>Name</span>
+        <span id="tokenname_csharp">
+<a href="#tokenname_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -315,7 +350,9 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Add<wbr>Address<wbr>To<wbr>Env</span>
+        <span id="addaddresstoenv_go">
+<a href="#addaddresstoenv_go" style="color: inherit; text-decoration: inherit;">Add<wbr>Address<wbr>To<wbr>Env</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -324,7 +361,9 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Address</span>
+        <span id="address_go">
+<a href="#address_go" style="color: inherit; text-decoration: inherit;">Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -333,7 +372,9 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Auth<wbr>Logins</span>
+        <span id="authlogins_go">
+<a href="#authlogins_go" style="color: inherit; text-decoration: inherit;">Auth<wbr>Logins</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#providerauthlogin">[]Provider<wbr>Auth<wbr>Login</a></span>
     </dt>
@@ -342,7 +383,9 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ca<wbr>Cert<wbr>Dir</span>
+        <span id="cacertdir_go">
+<a href="#cacertdir_go" style="color: inherit; text-decoration: inherit;">Ca<wbr>Cert<wbr>Dir</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -351,7 +394,9 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ca<wbr>Cert<wbr>File</span>
+        <span id="cacertfile_go">
+<a href="#cacertfile_go" style="color: inherit; text-decoration: inherit;">Ca<wbr>Cert<wbr>File</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -360,7 +405,9 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Client<wbr>Auths</span>
+        <span id="clientauths_go">
+<a href="#clientauths_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Auths</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#providerclientauth">[]Provider<wbr>Client<wbr>Auth</a></span>
     </dt>
@@ -369,7 +416,20 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Lease<wbr>Ttl<wbr>Seconds</span>
+        <span id="headers_go">
+<a href="#headers_go" style="color: inherit; text-decoration: inherit;">Headers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#providerheader">[]Provider<wbr>Header</a></span>
+    </dt>
+    <dd>{{% md %}}The headers to send with each Vault request.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxleasettlseconds_go">
+<a href="#maxleasettlseconds_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Lease<wbr>Ttl<wbr>Seconds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -378,7 +438,9 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Retries</span>
+        <span id="maxretries_go">
+<a href="#maxretries_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Retries</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -387,7 +449,9 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Namespace</span>
+        <span id="namespace_go">
+<a href="#namespace_go" style="color: inherit; text-decoration: inherit;">Namespace</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -396,7 +460,9 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Skip<wbr>Tls<wbr>Verify</span>
+        <span id="skiptlsverify_go">
+<a href="#skiptlsverify_go" style="color: inherit; text-decoration: inherit;">Skip<wbr>Tls<wbr>Verify</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -405,7 +471,9 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Token</span>
+        <span id="token_go">
+<a href="#token_go" style="color: inherit; text-decoration: inherit;">Token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -414,7 +482,9 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Token<wbr>Name</span>
+        <span id="tokenname_go">
+<a href="#tokenname_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -430,7 +500,9 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>add<wbr>Address<wbr>To<wbr>Env</span>
+        <span id="addaddresstoenv_nodejs">
+<a href="#addaddresstoenv_nodejs" style="color: inherit; text-decoration: inherit;">add<wbr>Address<wbr>To<wbr>Env</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -439,7 +511,9 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>address</span>
+        <span id="address_nodejs">
+<a href="#address_nodejs" style="color: inherit; text-decoration: inherit;">address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -448,7 +522,9 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>auth<wbr>Logins</span>
+        <span id="authlogins_nodejs">
+<a href="#authlogins_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Logins</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#providerauthlogin">Provider<wbr>Auth<wbr>Login[]</a></span>
     </dt>
@@ -457,7 +533,9 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>ca<wbr>Cert<wbr>Dir</span>
+        <span id="cacertdir_nodejs">
+<a href="#cacertdir_nodejs" style="color: inherit; text-decoration: inherit;">ca<wbr>Cert<wbr>Dir</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -466,7 +544,9 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>ca<wbr>Cert<wbr>File</span>
+        <span id="cacertfile_nodejs">
+<a href="#cacertfile_nodejs" style="color: inherit; text-decoration: inherit;">ca<wbr>Cert<wbr>File</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -475,7 +555,9 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>client<wbr>Auths</span>
+        <span id="clientauths_nodejs">
+<a href="#clientauths_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Auths</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#providerclientauth">Provider<wbr>Client<wbr>Auth[]</a></span>
     </dt>
@@ -484,7 +566,20 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Lease<wbr>Ttl<wbr>Seconds</span>
+        <span id="headers_nodejs">
+<a href="#headers_nodejs" style="color: inherit; text-decoration: inherit;">headers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#providerheader">Provider<wbr>Header[]</a></span>
+    </dt>
+    <dd>{{% md %}}The headers to send with each Vault request.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxleasettlseconds_nodejs">
+<a href="#maxleasettlseconds_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Lease<wbr>Ttl<wbr>Seconds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -493,7 +588,9 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Retries</span>
+        <span id="maxretries_nodejs">
+<a href="#maxretries_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Retries</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -502,7 +599,9 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>namespace</span>
+        <span id="namespace_nodejs">
+<a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -511,7 +610,9 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>skip<wbr>Tls<wbr>Verify</span>
+        <span id="skiptlsverify_nodejs">
+<a href="#skiptlsverify_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Tls<wbr>Verify</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -520,7 +621,9 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>token</span>
+        <span id="token_nodejs">
+<a href="#token_nodejs" style="color: inherit; text-decoration: inherit;">token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -529,7 +632,9 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>token<wbr>Name</span>
+        <span id="tokenname_nodejs">
+<a href="#tokenname_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -545,7 +650,9 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>add_<wbr>address_<wbr>to_<wbr>env</span>
+        <span id="add_address_to_env_python">
+<a href="#add_address_to_env_python" style="color: inherit; text-decoration: inherit;">add_<wbr>address_<wbr>to_<wbr>env</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -554,7 +661,9 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>address</span>
+        <span id="address_python">
+<a href="#address_python" style="color: inherit; text-decoration: inherit;">address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -563,7 +672,9 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>auth_<wbr>logins</span>
+        <span id="auth_logins_python">
+<a href="#auth_logins_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>logins</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#providerauthlogin">List[Provider<wbr>Auth<wbr>Login]</a></span>
     </dt>
@@ -572,7 +683,9 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>ca_<wbr>cert_<wbr>dir</span>
+        <span id="ca_cert_dir_python">
+<a href="#ca_cert_dir_python" style="color: inherit; text-decoration: inherit;">ca_<wbr>cert_<wbr>dir</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -581,7 +694,9 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>ca_<wbr>cert_<wbr>file</span>
+        <span id="ca_cert_file_python">
+<a href="#ca_cert_file_python" style="color: inherit; text-decoration: inherit;">ca_<wbr>cert_<wbr>file</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -590,7 +705,9 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>client_<wbr>auths</span>
+        <span id="client_auths_python">
+<a href="#client_auths_python" style="color: inherit; text-decoration: inherit;">client_<wbr>auths</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#providerclientauth">List[Provider<wbr>Client<wbr>Auth]</a></span>
     </dt>
@@ -599,7 +716,20 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>max_<wbr>lease_<wbr>ttl_<wbr>seconds</span>
+        <span id="headers_python">
+<a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#providerheader">List[Provider<wbr>Header]</a></span>
+    </dt>
+    <dd>{{% md %}}The headers to send with each Vault request.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="max_lease_ttl_seconds_python">
+<a href="#max_lease_ttl_seconds_python" style="color: inherit; text-decoration: inherit;">max_<wbr>lease_<wbr>ttl_<wbr>seconds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -608,7 +738,9 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>max_<wbr>retries</span>
+        <span id="max_retries_python">
+<a href="#max_retries_python" style="color: inherit; text-decoration: inherit;">max_<wbr>retries</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -617,7 +749,9 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>namespace</span>
+        <span id="namespace_python">
+<a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -626,7 +760,9 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>skip_<wbr>tls_<wbr>verify</span>
+        <span id="skip_tls_verify_python">
+<a href="#skip_tls_verify_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>tls_<wbr>verify</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -635,7 +771,9 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>token</span>
+        <span id="token_python">
+<a href="#token_python" style="color: inherit; text-decoration: inherit;">token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -644,7 +782,9 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>token_<wbr>name</span>
+        <span id="token_name_python">
+<a href="#token_name_python" style="color: inherit; text-decoration: inherit;">token_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -671,7 +811,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -686,7 +828,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -701,7 +845,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -716,7 +862,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -758,7 +906,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span>Path</span>
+        <span id="path_csharp">
+<a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -766,7 +916,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Namespace</span>
+        <span id="namespace_csharp">
+<a href="#namespace_csharp" style="color: inherit; text-decoration: inherit;">Namespace</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -774,7 +926,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Parameters</span>
+        <span id="parameters_csharp">
+<a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -789,7 +943,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span>Path</span>
+        <span id="path_go">
+<a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -797,7 +953,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Namespace</span>
+        <span id="namespace_go">
+<a href="#namespace_go" style="color: inherit; text-decoration: inherit;">Namespace</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -805,7 +963,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Parameters</span>
+        <span id="parameters_go">
+<a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -820,7 +980,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span>path</span>
+        <span id="path_nodejs">
+<a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -828,7 +990,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>namespace</span>
+        <span id="namespace_nodejs">
+<a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -836,7 +1000,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>parameters</span>
+        <span id="parameters_nodejs">
+<a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -851,7 +1017,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span>path</span>
+        <span id="path_python">
+<a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -859,7 +1027,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>namespace</span>
+        <span id="namespace_python">
+<a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -867,7 +1037,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>parameters</span>
+        <span id="parameters_python">
+<a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -900,7 +1072,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span>Cert<wbr>File</span>
+        <span id="certfile_csharp">
+<a href="#certfile_csharp" style="color: inherit; text-decoration: inherit;">Cert<wbr>File</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -908,7 +1082,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span>Key<wbr>File</span>
+        <span id="keyfile_csharp">
+<a href="#keyfile_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>File</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -923,7 +1099,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span>Cert<wbr>File</span>
+        <span id="certfile_go">
+<a href="#certfile_go" style="color: inherit; text-decoration: inherit;">Cert<wbr>File</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -931,7 +1109,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span>Key<wbr>File</span>
+        <span id="keyfile_go">
+<a href="#keyfile_go" style="color: inherit; text-decoration: inherit;">Key<wbr>File</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -946,7 +1126,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span>cert<wbr>File</span>
+        <span id="certfile_nodejs">
+<a href="#certfile_nodejs" style="color: inherit; text-decoration: inherit;">cert<wbr>File</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -954,7 +1136,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span>key<wbr>File</span>
+        <span id="keyfile_nodejs">
+<a href="#keyfile_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>File</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -969,7 +1153,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span>cert<wbr>File</span>
+        <span id="certfile_python">
+<a href="#certfile_python" style="color: inherit; text-decoration: inherit;">cert<wbr>File</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -977,7 +1163,135 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span>key<wbr>File</span>
+        <span id="keyfile_python">
+<a href="#keyfile_python" style="color: inherit; text-decoration: inherit;">key<wbr>File</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="providerheader">Provider<wbr>Header</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/vault/types/input/#ProviderHeader">input</a>   API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/?tab=doc#ProviderHeaderArgs">input</a>   API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Inputs.ProviderHeaderArgs.html">input</a>   API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

@@ -21,7 +21,26 @@ Provides a resource to manage CA information in an SSH secret backend
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Vault = Pulumi.Vault;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Vault.Mount("example", new Vault.MountArgs
+        {
+            Type = "ssh",
+        });
+        var foo = new Vault.Ssh.SecretBackendCa("foo", new Vault.Ssh.SecretBackendCaArgs
+        {
+            Backend = example.Path,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -238,7 +257,9 @@ The SecretBackendCa resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-optional"
             title="Optional">
-        <span>Backend</span>
+        <span id="backend_csharp">
+<a href="#backend_csharp" style="color: inherit; text-decoration: inherit;">Backend</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -247,7 +268,9 @@ The SecretBackendCa resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-optional"
             title="Optional">
-        <span>Generate<wbr>Signing<wbr>Key</span>
+        <span id="generatesigningkey_csharp">
+<a href="#generatesigningkey_csharp" style="color: inherit; text-decoration: inherit;">Generate<wbr>Signing<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -256,7 +279,9 @@ The SecretBackendCa resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-optional"
             title="Optional">
-        <span>Private<wbr>Key</span>
+        <span id="privatekey_csharp">
+<a href="#privatekey_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -265,7 +290,9 @@ The SecretBackendCa resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-optional"
             title="Optional">
-        <span>Public<wbr>Key</span>
+        <span id="publickey_csharp">
+<a href="#publickey_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -281,7 +308,9 @@ The SecretBackendCa resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-optional"
             title="Optional">
-        <span>Backend</span>
+        <span id="backend_go">
+<a href="#backend_go" style="color: inherit; text-decoration: inherit;">Backend</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -290,7 +319,9 @@ The SecretBackendCa resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-optional"
             title="Optional">
-        <span>Generate<wbr>Signing<wbr>Key</span>
+        <span id="generatesigningkey_go">
+<a href="#generatesigningkey_go" style="color: inherit; text-decoration: inherit;">Generate<wbr>Signing<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -299,7 +330,9 @@ The SecretBackendCa resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-optional"
             title="Optional">
-        <span>Private<wbr>Key</span>
+        <span id="privatekey_go">
+<a href="#privatekey_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -308,7 +341,9 @@ The SecretBackendCa resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-optional"
             title="Optional">
-        <span>Public<wbr>Key</span>
+        <span id="publickey_go">
+<a href="#publickey_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -324,7 +359,9 @@ The SecretBackendCa resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-optional"
             title="Optional">
-        <span>backend</span>
+        <span id="backend_nodejs">
+<a href="#backend_nodejs" style="color: inherit; text-decoration: inherit;">backend</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -333,7 +370,9 @@ The SecretBackendCa resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-optional"
             title="Optional">
-        <span>generate<wbr>Signing<wbr>Key</span>
+        <span id="generatesigningkey_nodejs">
+<a href="#generatesigningkey_nodejs" style="color: inherit; text-decoration: inherit;">generate<wbr>Signing<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -342,7 +381,9 @@ The SecretBackendCa resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-optional"
             title="Optional">
-        <span>private<wbr>Key</span>
+        <span id="privatekey_nodejs">
+<a href="#privatekey_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -351,7 +392,9 @@ The SecretBackendCa resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-optional"
             title="Optional">
-        <span>public<wbr>Key</span>
+        <span id="publickey_nodejs">
+<a href="#publickey_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -367,7 +410,9 @@ The SecretBackendCa resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-optional"
             title="Optional">
-        <span>backend</span>
+        <span id="backend_python">
+<a href="#backend_python" style="color: inherit; text-decoration: inherit;">backend</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -376,7 +421,9 @@ The SecretBackendCa resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-optional"
             title="Optional">
-        <span>generate_<wbr>signing_<wbr>key</span>
+        <span id="generate_signing_key_python">
+<a href="#generate_signing_key_python" style="color: inherit; text-decoration: inherit;">generate_<wbr>signing_<wbr>key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -385,7 +432,9 @@ The SecretBackendCa resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-optional"
             title="Optional">
-        <span>private_<wbr>key</span>
+        <span id="private_key_python">
+<a href="#private_key_python" style="color: inherit; text-decoration: inherit;">private_<wbr>key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -394,7 +443,9 @@ The SecretBackendCa resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-optional"
             title="Optional">
-        <span>public_<wbr>key</span>
+        <span id="public_key_python">
+<a href="#public_key_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -421,7 +472,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -436,7 +489,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -451,7 +506,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -466,7 +523,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -607,7 +666,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Backend</span>
+        <span id="state_backend_csharp">
+<a href="#state_backend_csharp" style="color: inherit; text-decoration: inherit;">Backend</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -616,7 +677,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Generate<wbr>Signing<wbr>Key</span>
+        <span id="state_generatesigningkey_csharp">
+<a href="#state_generatesigningkey_csharp" style="color: inherit; text-decoration: inherit;">Generate<wbr>Signing<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -625,7 +688,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Private<wbr>Key</span>
+        <span id="state_privatekey_csharp">
+<a href="#state_privatekey_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -634,7 +699,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Public<wbr>Key</span>
+        <span id="state_publickey_csharp">
+<a href="#state_publickey_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -650,7 +717,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Backend</span>
+        <span id="state_backend_go">
+<a href="#state_backend_go" style="color: inherit; text-decoration: inherit;">Backend</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -659,7 +728,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Generate<wbr>Signing<wbr>Key</span>
+        <span id="state_generatesigningkey_go">
+<a href="#state_generatesigningkey_go" style="color: inherit; text-decoration: inherit;">Generate<wbr>Signing<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -668,7 +739,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Private<wbr>Key</span>
+        <span id="state_privatekey_go">
+<a href="#state_privatekey_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -677,7 +750,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Public<wbr>Key</span>
+        <span id="state_publickey_go">
+<a href="#state_publickey_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -693,7 +768,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>backend</span>
+        <span id="state_backend_nodejs">
+<a href="#state_backend_nodejs" style="color: inherit; text-decoration: inherit;">backend</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -702,7 +779,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>generate<wbr>Signing<wbr>Key</span>
+        <span id="state_generatesigningkey_nodejs">
+<a href="#state_generatesigningkey_nodejs" style="color: inherit; text-decoration: inherit;">generate<wbr>Signing<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -711,7 +790,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>private<wbr>Key</span>
+        <span id="state_privatekey_nodejs">
+<a href="#state_privatekey_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -720,7 +801,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>public<wbr>Key</span>
+        <span id="state_publickey_nodejs">
+<a href="#state_publickey_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -736,7 +819,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>backend</span>
+        <span id="state_backend_python">
+<a href="#state_backend_python" style="color: inherit; text-decoration: inherit;">backend</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -745,7 +830,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>generate_<wbr>signing_<wbr>key</span>
+        <span id="state_generate_signing_key_python">
+<a href="#state_generate_signing_key_python" style="color: inherit; text-decoration: inherit;">generate_<wbr>signing_<wbr>key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -754,7 +841,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>private_<wbr>key</span>
+        <span id="state_private_key_python">
+<a href="#state_private_key_python" style="color: inherit; text-decoration: inherit;">private_<wbr>key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -763,7 +852,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>public_<wbr>key</span>
+        <span id="state_public_key_python">
+<a href="#state_public_key_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

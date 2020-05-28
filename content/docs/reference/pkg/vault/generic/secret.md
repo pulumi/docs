@@ -196,7 +196,9 @@ The Secret resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>Data<wbr>Json</span>
+        <span id="datajson_csharp">
+<a href="#datajson_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Json</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -206,7 +208,9 @@ written as the secret data at the given path.
 
     <dt class="property-required"
             title="Required">
-        <span>Path</span>
+        <span id="path_csharp">
+<a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -219,7 +223,9 @@ endpoints support the `PUT` and `DELETE` methods.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Disable<wbr>Read</span>
+        <span id="disableread_csharp">
+<a href="#disableread_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Read</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -237,7 +243,9 @@ break drift detection. Defaults to false.
 
     <dt class="property-required"
             title="Required">
-        <span>Data<wbr>Json</span>
+        <span id="datajson_go">
+<a href="#datajson_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Json</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -247,7 +255,9 @@ written as the secret data at the given path.
 
     <dt class="property-required"
             title="Required">
-        <span>Path</span>
+        <span id="path_go">
+<a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -260,7 +270,9 @@ endpoints support the `PUT` and `DELETE` methods.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Disable<wbr>Read</span>
+        <span id="disableread_go">
+<a href="#disableread_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Read</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -278,7 +290,9 @@ break drift detection. Defaults to false.
 
     <dt class="property-required"
             title="Required">
-        <span>data<wbr>Json</span>
+        <span id="datajson_nodejs">
+<a href="#datajson_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Json</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -288,7 +302,9 @@ written as the secret data at the given path.
 
     <dt class="property-required"
             title="Required">
-        <span>path</span>
+        <span id="path_nodejs">
+<a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -301,7 +317,9 @@ endpoints support the `PUT` and `DELETE` methods.
 
     <dt class="property-optional"
             title="Optional">
-        <span>disable<wbr>Read</span>
+        <span id="disableread_nodejs">
+<a href="#disableread_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Read</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -319,7 +337,9 @@ break drift detection. Defaults to false.
 
     <dt class="property-required"
             title="Required">
-        <span>data_<wbr>json</span>
+        <span id="data_json_python">
+<a href="#data_json_python" style="color: inherit; text-decoration: inherit;">data_<wbr>json</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -329,7 +349,9 @@ written as the secret data at the given path.
 
     <dt class="property-required"
             title="Required">
-        <span>path</span>
+        <span id="path_python">
+<a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -342,7 +364,9 @@ endpoints support the `PUT` and `DELETE` methods.
 
     <dt class="property-optional"
             title="Optional">
-        <span>disable_<wbr>read</span>
+        <span id="disable_read_python">
+<a href="#disable_read_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>read</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -371,7 +395,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Data</span>
+        <span id="data_csharp">
+<a href="#data_csharp" style="color: inherit; text-decoration: inherit;">Data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -383,7 +409,9 @@ serialized as JSON.
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -398,7 +426,9 @@ serialized as JSON.
 
     <dt class="property-"
             title="">
-        <span>Data</span>
+        <span id="data_go">
+<a href="#data_go" style="color: inherit; text-decoration: inherit;">Data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -410,7 +440,9 @@ serialized as JSON.
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -425,7 +457,9 @@ serialized as JSON.
 
     <dt class="property-"
             title="">
-        <span>data</span>
+        <span id="data_nodejs">
+<a href="#data_nodejs" style="color: inherit; text-decoration: inherit;">data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -437,7 +471,9 @@ serialized as JSON.
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -452,7 +488,9 @@ serialized as JSON.
 
     <dt class="property-"
             title="">
-        <span>data</span>
+        <span id="data_python">
+<a href="#data_python" style="color: inherit; text-decoration: inherit;">data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -464,7 +502,9 @@ serialized as JSON.
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -605,7 +645,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Data</span>
+        <span id="state_data_csharp">
+<a href="#state_data_csharp" style="color: inherit; text-decoration: inherit;">Data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -617,7 +659,9 @@ serialized as JSON.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Data<wbr>Json</span>
+        <span id="state_datajson_csharp">
+<a href="#state_datajson_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Json</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -627,7 +671,9 @@ written as the secret data at the given path.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Disable<wbr>Read</span>
+        <span id="state_disableread_csharp">
+<a href="#state_disableread_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Read</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -638,7 +684,9 @@ break drift detection. Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Path</span>
+        <span id="state_path_csharp">
+<a href="#state_path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -658,7 +706,9 @@ endpoints support the `PUT` and `DELETE` methods.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Data</span>
+        <span id="state_data_go">
+<a href="#state_data_go" style="color: inherit; text-decoration: inherit;">Data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -670,7 +720,9 @@ serialized as JSON.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Data<wbr>Json</span>
+        <span id="state_datajson_go">
+<a href="#state_datajson_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Json</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -680,7 +732,9 @@ written as the secret data at the given path.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Disable<wbr>Read</span>
+        <span id="state_disableread_go">
+<a href="#state_disableread_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Read</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -691,7 +745,9 @@ break drift detection. Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Path</span>
+        <span id="state_path_go">
+<a href="#state_path_go" style="color: inherit; text-decoration: inherit;">Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -711,7 +767,9 @@ endpoints support the `PUT` and `DELETE` methods.
 
     <dt class="property-optional"
             title="Optional">
-        <span>data</span>
+        <span id="state_data_nodejs">
+<a href="#state_data_nodejs" style="color: inherit; text-decoration: inherit;">data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -723,7 +781,9 @@ serialized as JSON.
 
     <dt class="property-optional"
             title="Optional">
-        <span>data<wbr>Json</span>
+        <span id="state_datajson_nodejs">
+<a href="#state_datajson_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Json</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -733,7 +793,9 @@ written as the secret data at the given path.
 
     <dt class="property-optional"
             title="Optional">
-        <span>disable<wbr>Read</span>
+        <span id="state_disableread_nodejs">
+<a href="#state_disableread_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Read</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -744,7 +806,9 @@ break drift detection. Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>path</span>
+        <span id="state_path_nodejs">
+<a href="#state_path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -764,7 +828,9 @@ endpoints support the `PUT` and `DELETE` methods.
 
     <dt class="property-optional"
             title="Optional">
-        <span>data</span>
+        <span id="state_data_python">
+<a href="#state_data_python" style="color: inherit; text-decoration: inherit;">data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -776,7 +842,9 @@ serialized as JSON.
 
     <dt class="property-optional"
             title="Optional">
-        <span>data_<wbr>json</span>
+        <span id="state_data_json_python">
+<a href="#state_data_json_python" style="color: inherit; text-decoration: inherit;">data_<wbr>json</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -786,7 +854,9 @@ written as the secret data at the given path.
 
     <dt class="property-optional"
             title="Optional">
-        <span>disable_<wbr>read</span>
+        <span id="state_disable_read_python">
+<a href="#state_disable_read_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>read</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -797,7 +867,9 @@ break drift detection. Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>path</span>
+        <span id="state_path_python">
+<a href="#state_path_python" style="color: inherit; text-decoration: inherit;">path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

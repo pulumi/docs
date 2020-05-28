@@ -22,7 +22,31 @@ A group can contain multiple entities as its members. A group can also have subg
 {{< chooser language "typescript,python,go,csharp" / >}}
 ### Internal Group
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Vault = Pulumi.Vault;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var @internal = new Vault.Identity.Group("internal", new Vault.Identity.GroupArgs
+        {
+            Metadata = 
+            {
+                { "version", "2" },
+            },
+            Policies = 
+            {
+                "dev",
+                "test",
+            },
+            Type = "internal",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -66,7 +90,30 @@ const internal = new vault.identity.Group("internal", {
 
 ### External Group
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Vault = Pulumi.Vault;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var @group = new Vault.Identity.Group("group", new Vault.Identity.GroupArgs
+        {
+            Metadata = 
+            {
+                { "version", "1" },
+            },
+            Policies = 
+            {
+                "test",
+            },
+            Type = "external",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -288,7 +335,9 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
 
     <dt class="property-optional"
             title="Optional">
-        <span>External<wbr>Policies</span>
+        <span id="externalpolicies_csharp">
+<a href="#externalpolicies_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -297,7 +346,9 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
 
     <dt class="property-optional"
             title="Optional">
-        <span>Member<wbr>Entity<wbr>Ids</span>
+        <span id="memberentityids_csharp">
+<a href="#memberentityids_csharp" style="color: inherit; text-decoration: inherit;">Member<wbr>Entity<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -306,16 +357,20 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
 
     <dt class="property-optional"
             title="Optional">
-        <span>Member<wbr>Group<wbr>Ids</span>
+        <span id="membergroupids_csharp">
+<a href="#membergroupids_csharp" style="color: inherit; text-decoration: inherit;">Member<wbr>Group<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of Group IDs to be assigned as group members.
+    <dd>{{% md %}}A list of Group IDs to be assigned as group members. Not allowed on `external` groups.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Metadata</span>
+        <span id="metadata_csharp">
+<a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -324,7 +379,9 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -333,7 +390,9 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
 
     <dt class="property-optional"
             title="Optional">
-        <span>Policies</span>
+        <span id="policies_csharp">
+<a href="#policies_csharp" style="color: inherit; text-decoration: inherit;">Policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -342,7 +401,9 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
 
     <dt class="property-optional"
             title="Optional">
-        <span>Type</span>
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -358,7 +419,9 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
 
     <dt class="property-optional"
             title="Optional">
-        <span>External<wbr>Policies</span>
+        <span id="externalpolicies_go">
+<a href="#externalpolicies_go" style="color: inherit; text-decoration: inherit;">External<wbr>Policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -367,7 +430,9 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
 
     <dt class="property-optional"
             title="Optional">
-        <span>Member<wbr>Entity<wbr>Ids</span>
+        <span id="memberentityids_go">
+<a href="#memberentityids_go" style="color: inherit; text-decoration: inherit;">Member<wbr>Entity<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -376,16 +441,20 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
 
     <dt class="property-optional"
             title="Optional">
-        <span>Member<wbr>Group<wbr>Ids</span>
+        <span id="membergroupids_go">
+<a href="#membergroupids_go" style="color: inherit; text-decoration: inherit;">Member<wbr>Group<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}A list of Group IDs to be assigned as group members.
+    <dd>{{% md %}}A list of Group IDs to be assigned as group members. Not allowed on `external` groups.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Metadata</span>
+        <span id="metadata_go">
+<a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -394,7 +463,9 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -403,7 +474,9 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
 
     <dt class="property-optional"
             title="Optional">
-        <span>Policies</span>
+        <span id="policies_go">
+<a href="#policies_go" style="color: inherit; text-decoration: inherit;">Policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -412,7 +485,9 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
 
     <dt class="property-optional"
             title="Optional">
-        <span>Type</span>
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -428,7 +503,9 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
 
     <dt class="property-optional"
             title="Optional">
-        <span>external<wbr>Policies</span>
+        <span id="externalpolicies_nodejs">
+<a href="#externalpolicies_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -437,7 +514,9 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
 
     <dt class="property-optional"
             title="Optional">
-        <span>member<wbr>Entity<wbr>Ids</span>
+        <span id="memberentityids_nodejs">
+<a href="#memberentityids_nodejs" style="color: inherit; text-decoration: inherit;">member<wbr>Entity<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -446,16 +525,20 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
 
     <dt class="property-optional"
             title="Optional">
-        <span>member<wbr>Group<wbr>Ids</span>
+        <span id="membergroupids_nodejs">
+<a href="#membergroupids_nodejs" style="color: inherit; text-decoration: inherit;">member<wbr>Group<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of Group IDs to be assigned as group members.
+    <dd>{{% md %}}A list of Group IDs to be assigned as group members. Not allowed on `external` groups.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>metadata</span>
+        <span id="metadata_nodejs">
+<a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -464,7 +547,9 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -473,7 +558,9 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
 
     <dt class="property-optional"
             title="Optional">
-        <span>policies</span>
+        <span id="policies_nodejs">
+<a href="#policies_nodejs" style="color: inherit; text-decoration: inherit;">policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -482,7 +569,9 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
 
     <dt class="property-optional"
             title="Optional">
-        <span>type</span>
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -498,7 +587,9 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
 
     <dt class="property-optional"
             title="Optional">
-        <span>external_<wbr>policies</span>
+        <span id="external_policies_python">
+<a href="#external_policies_python" style="color: inherit; text-decoration: inherit;">external_<wbr>policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -507,7 +598,9 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
 
     <dt class="property-optional"
             title="Optional">
-        <span>member_<wbr>entity_<wbr>ids</span>
+        <span id="member_entity_ids_python">
+<a href="#member_entity_ids_python" style="color: inherit; text-decoration: inherit;">member_<wbr>entity_<wbr>ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -516,16 +609,20 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
 
     <dt class="property-optional"
             title="Optional">
-        <span>member_<wbr>group_<wbr>ids</span>
+        <span id="member_group_ids_python">
+<a href="#member_group_ids_python" style="color: inherit; text-decoration: inherit;">member_<wbr>group_<wbr>ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}A list of Group IDs to be assigned as group members.
+    <dd>{{% md %}}A list of Group IDs to be assigned as group members. Not allowed on `external` groups.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>metadata</span>
+        <span id="metadata_python">
+<a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -534,7 +631,9 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -543,7 +642,9 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
 
     <dt class="property-optional"
             title="Optional">
-        <span>policies</span>
+        <span id="policies_python">
+<a href="#policies_python" style="color: inherit; text-decoration: inherit;">policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -552,7 +653,9 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
 
     <dt class="property-optional"
             title="Optional">
-        <span>type</span>
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -579,7 +682,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -594,7 +699,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -609,7 +716,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -624,7 +733,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -765,7 +876,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>External<wbr>Policies</span>
+        <span id="state_externalpolicies_csharp">
+<a href="#state_externalpolicies_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -774,7 +887,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Member<wbr>Entity<wbr>Ids</span>
+        <span id="state_memberentityids_csharp">
+<a href="#state_memberentityids_csharp" style="color: inherit; text-decoration: inherit;">Member<wbr>Entity<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -783,16 +898,20 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Member<wbr>Group<wbr>Ids</span>
+        <span id="state_membergroupids_csharp">
+<a href="#state_membergroupids_csharp" style="color: inherit; text-decoration: inherit;">Member<wbr>Group<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of Group IDs to be assigned as group members.
+    <dd>{{% md %}}A list of Group IDs to be assigned as group members. Not allowed on `external` groups.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Metadata</span>
+        <span id="state_metadata_csharp">
+<a href="#state_metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -801,7 +920,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -810,7 +931,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Policies</span>
+        <span id="state_policies_csharp">
+<a href="#state_policies_csharp" style="color: inherit; text-decoration: inherit;">Policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -819,7 +942,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Type</span>
+        <span id="state_type_csharp">
+<a href="#state_type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -835,7 +960,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>External<wbr>Policies</span>
+        <span id="state_externalpolicies_go">
+<a href="#state_externalpolicies_go" style="color: inherit; text-decoration: inherit;">External<wbr>Policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -844,7 +971,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Member<wbr>Entity<wbr>Ids</span>
+        <span id="state_memberentityids_go">
+<a href="#state_memberentityids_go" style="color: inherit; text-decoration: inherit;">Member<wbr>Entity<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -853,16 +982,20 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Member<wbr>Group<wbr>Ids</span>
+        <span id="state_membergroupids_go">
+<a href="#state_membergroupids_go" style="color: inherit; text-decoration: inherit;">Member<wbr>Group<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}A list of Group IDs to be assigned as group members.
+    <dd>{{% md %}}A list of Group IDs to be assigned as group members. Not allowed on `external` groups.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Metadata</span>
+        <span id="state_metadata_go">
+<a href="#state_metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -871,7 +1004,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -880,7 +1015,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Policies</span>
+        <span id="state_policies_go">
+<a href="#state_policies_go" style="color: inherit; text-decoration: inherit;">Policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -889,7 +1026,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Type</span>
+        <span id="state_type_go">
+<a href="#state_type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -905,7 +1044,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>external<wbr>Policies</span>
+        <span id="state_externalpolicies_nodejs">
+<a href="#state_externalpolicies_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -914,7 +1055,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>member<wbr>Entity<wbr>Ids</span>
+        <span id="state_memberentityids_nodejs">
+<a href="#state_memberentityids_nodejs" style="color: inherit; text-decoration: inherit;">member<wbr>Entity<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -923,16 +1066,20 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>member<wbr>Group<wbr>Ids</span>
+        <span id="state_membergroupids_nodejs">
+<a href="#state_membergroupids_nodejs" style="color: inherit; text-decoration: inherit;">member<wbr>Group<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of Group IDs to be assigned as group members.
+    <dd>{{% md %}}A list of Group IDs to be assigned as group members. Not allowed on `external` groups.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>metadata</span>
+        <span id="state_metadata_nodejs">
+<a href="#state_metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -941,7 +1088,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -950,7 +1099,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>policies</span>
+        <span id="state_policies_nodejs">
+<a href="#state_policies_nodejs" style="color: inherit; text-decoration: inherit;">policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -959,7 +1110,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>type</span>
+        <span id="state_type_nodejs">
+<a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -975,7 +1128,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>external_<wbr>policies</span>
+        <span id="state_external_policies_python">
+<a href="#state_external_policies_python" style="color: inherit; text-decoration: inherit;">external_<wbr>policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -984,7 +1139,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>member_<wbr>entity_<wbr>ids</span>
+        <span id="state_member_entity_ids_python">
+<a href="#state_member_entity_ids_python" style="color: inherit; text-decoration: inherit;">member_<wbr>entity_<wbr>ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -993,16 +1150,20 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>member_<wbr>group_<wbr>ids</span>
+        <span id="state_member_group_ids_python">
+<a href="#state_member_group_ids_python" style="color: inherit; text-decoration: inherit;">member_<wbr>group_<wbr>ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}A list of Group IDs to be assigned as group members.
+    <dd>{{% md %}}A list of Group IDs to be assigned as group members. Not allowed on `external` groups.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>metadata</span>
+        <span id="state_metadata_python">
+<a href="#state_metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -1011,7 +1172,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1020,7 +1183,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>policies</span>
+        <span id="state_policies_python">
+<a href="#state_policies_python" style="color: inherit; text-decoration: inherit;">policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1029,7 +1194,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>type</span>
+        <span id="state_type_python">
+<a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

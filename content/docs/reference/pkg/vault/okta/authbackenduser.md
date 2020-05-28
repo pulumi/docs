@@ -21,7 +21,33 @@ Provides a resource to create a user in an
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Vault = Pulumi.Vault;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Vault.Okta.AuthBackend("example", new Vault.Okta.AuthBackendArgs
+        {
+            Organization = "dummy",
+            Path = "user_okta",
+        });
+        var foo = new Vault.Okta.AuthBackendUser("foo", new Vault.Okta.AuthBackendUserArgs
+        {
+            Groups = 
+            {
+                "one",
+                "two",
+            },
+            Path = example.Path,
+            Username = "foo",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -252,7 +278,9 @@ The AuthBackendUser resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-required"
             title="Required">
-        <span>Path</span>
+        <span id="path_csharp">
+<a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -261,7 +289,9 @@ The AuthBackendUser resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-required"
             title="Required">
-        <span>Username</span>
+        <span id="username_csharp">
+<a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -270,7 +300,9 @@ The AuthBackendUser resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-optional"
             title="Optional">
-        <span>Groups</span>
+        <span id="groups_csharp">
+<a href="#groups_csharp" style="color: inherit; text-decoration: inherit;">Groups</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -279,7 +311,9 @@ The AuthBackendUser resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-optional"
             title="Optional">
-        <span>Policies</span>
+        <span id="policies_csharp">
+<a href="#policies_csharp" style="color: inherit; text-decoration: inherit;">Policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -295,7 +329,9 @@ The AuthBackendUser resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-required"
             title="Required">
-        <span>Path</span>
+        <span id="path_go">
+<a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -304,7 +340,9 @@ The AuthBackendUser resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-required"
             title="Required">
-        <span>Username</span>
+        <span id="username_go">
+<a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -313,7 +351,9 @@ The AuthBackendUser resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-optional"
             title="Optional">
-        <span>Groups</span>
+        <span id="groups_go">
+<a href="#groups_go" style="color: inherit; text-decoration: inherit;">Groups</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -322,7 +362,9 @@ The AuthBackendUser resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-optional"
             title="Optional">
-        <span>Policies</span>
+        <span id="policies_go">
+<a href="#policies_go" style="color: inherit; text-decoration: inherit;">Policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -338,7 +380,9 @@ The AuthBackendUser resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-required"
             title="Required">
-        <span>path</span>
+        <span id="path_nodejs">
+<a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -347,7 +391,9 @@ The AuthBackendUser resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-required"
             title="Required">
-        <span>username</span>
+        <span id="username_nodejs">
+<a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -356,7 +402,9 @@ The AuthBackendUser resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-optional"
             title="Optional">
-        <span>groups</span>
+        <span id="groups_nodejs">
+<a href="#groups_nodejs" style="color: inherit; text-decoration: inherit;">groups</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -365,7 +413,9 @@ The AuthBackendUser resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-optional"
             title="Optional">
-        <span>policies</span>
+        <span id="policies_nodejs">
+<a href="#policies_nodejs" style="color: inherit; text-decoration: inherit;">policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -381,7 +431,9 @@ The AuthBackendUser resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-required"
             title="Required">
-        <span>path</span>
+        <span id="path_python">
+<a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -390,7 +442,9 @@ The AuthBackendUser resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-required"
             title="Required">
-        <span>username</span>
+        <span id="username_python">
+<a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -399,7 +453,9 @@ The AuthBackendUser resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-optional"
             title="Optional">
-        <span>groups</span>
+        <span id="groups_python">
+<a href="#groups_python" style="color: inherit; text-decoration: inherit;">groups</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -408,7 +464,9 @@ The AuthBackendUser resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-optional"
             title="Optional">
-        <span>policies</span>
+        <span id="policies_python">
+<a href="#policies_python" style="color: inherit; text-decoration: inherit;">policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -435,7 +493,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -450,7 +510,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -465,7 +527,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -480,7 +544,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -621,7 +687,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Groups</span>
+        <span id="state_groups_csharp">
+<a href="#state_groups_csharp" style="color: inherit; text-decoration: inherit;">Groups</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -630,7 +698,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Path</span>
+        <span id="state_path_csharp">
+<a href="#state_path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -639,7 +709,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Policies</span>
+        <span id="state_policies_csharp">
+<a href="#state_policies_csharp" style="color: inherit; text-decoration: inherit;">Policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -648,7 +720,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Username</span>
+        <span id="state_username_csharp">
+<a href="#state_username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -664,7 +738,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Groups</span>
+        <span id="state_groups_go">
+<a href="#state_groups_go" style="color: inherit; text-decoration: inherit;">Groups</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -673,7 +749,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Path</span>
+        <span id="state_path_go">
+<a href="#state_path_go" style="color: inherit; text-decoration: inherit;">Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -682,7 +760,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Policies</span>
+        <span id="state_policies_go">
+<a href="#state_policies_go" style="color: inherit; text-decoration: inherit;">Policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -691,7 +771,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Username</span>
+        <span id="state_username_go">
+<a href="#state_username_go" style="color: inherit; text-decoration: inherit;">Username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -707,7 +789,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>groups</span>
+        <span id="state_groups_nodejs">
+<a href="#state_groups_nodejs" style="color: inherit; text-decoration: inherit;">groups</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -716,7 +800,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>path</span>
+        <span id="state_path_nodejs">
+<a href="#state_path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -725,7 +811,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>policies</span>
+        <span id="state_policies_nodejs">
+<a href="#state_policies_nodejs" style="color: inherit; text-decoration: inherit;">policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -734,7 +822,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>username</span>
+        <span id="state_username_nodejs">
+<a href="#state_username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -750,7 +840,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>groups</span>
+        <span id="state_groups_python">
+<a href="#state_groups_python" style="color: inherit; text-decoration: inherit;">groups</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -759,7 +851,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>path</span>
+        <span id="state_path_python">
+<a href="#state_path_python" style="color: inherit; text-decoration: inherit;">path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -768,7 +862,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>policies</span>
+        <span id="state_policies_python">
+<a href="#state_policies_python" style="color: inherit; text-decoration: inherit;">policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -777,7 +873,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>username</span>
+        <span id="state_username_python">
+<a href="#state_username_python" style="color: inherit; text-decoration: inherit;">username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
