@@ -43,7 +43,36 @@ This resource exports the following attributes:
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Linode = Pulumi.Linode;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var foo = new Linode.Instance("foo", new Linode.InstanceArgs
+        {
+            Region = "us-central",
+            Type = "g6-nanode-1",
+        });
+        var bar = new Linode.Image("bar", new Linode.ImageArgs
+        {
+            Description = "Image taken from foo",
+            DiskId = foo.Disks.Apply(disks => disks[0].Id),
+            Label = "foo-sda-image",
+            LinodeId = foo.Id,
+        });
+        var barBased = new Linode.Instance("barBased", new Linode.InstanceArgs
+        {
+            Image = bar.Id,
+            Region = "eu-west",
+            Type = foo.Type,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

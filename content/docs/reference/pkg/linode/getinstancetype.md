@@ -39,7 +39,22 @@ The Linode Instance Type resource exports the following attributes:
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Linode = Pulumi.Linode;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var @default = Output.Create(Linode.GetInstanceType.InvokeAsync(new Linode.GetInstanceTypeArgs
+        {
+            Id = "g6-standard-2",
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

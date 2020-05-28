@@ -31,7 +31,22 @@ The Linode Object Storage Cluster resource exports the following attributes:
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Linode = Pulumi.Linode;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var primary = Output.Create(Linode.GetObjectStorageCluster.InvokeAsync(new Linode.GetObjectStorageClusterArgs
+        {
+            Id = "us-east-1",
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

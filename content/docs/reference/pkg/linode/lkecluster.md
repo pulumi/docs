@@ -20,7 +20,36 @@ Manages an LKE cluster.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Linode = Pulumi.Linode;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var my_cluster = new Linode.LkeCluster("my-cluster", new Linode.LkeClusterArgs
+        {
+            K8sVersion = "1.17",
+            Label = "my-cluster",
+            Pools = 
+            {
+                new Linode.Inputs.LkeClusterPoolArgs
+                {
+                    Count = 3,
+                    Type = "g6-standard-2",
+                },
+            },
+            Region = "us-central",
+            Tags = 
+            {
+                "prod",
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
