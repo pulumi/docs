@@ -22,7 +22,79 @@ meta_desc: "Explore the CloudProviderSnapshotBackupPolicy resource of the mongod
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Mongodbatlas = Pulumi.Mongodbatlas;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var myCluster = new Mongodbatlas.Cluster("myCluster", new Mongodbatlas.ClusterArgs
+        {
+            ProjectId = "<PROJECT-ID>",
+            DiskSizeGb = 5,
+            ProviderName = "AWS",
+            ProviderRegionName = "EU_CENTRAL_1",
+            ProviderInstanceSizeName = "M10",
+            ProviderBackupEnabled = true,
+            ProviderDiskIops = 100,
+            ProviderEncryptEbsVolume = false,
+        });
+        var test = new Mongodbatlas.CloudProviderSnapshotBackupPolicy("test", new Mongodbatlas.CloudProviderSnapshotBackupPolicyArgs
+        {
+            ProjectId = myCluster.ProjectId,
+            ClusterName = myCluster.Name,
+            ReferenceHourOfDay = 3,
+            ReferenceMinuteOfHour = 45,
+            RestoreWindowDays = 4,
+            Policies = 
+            {
+                new Mongodbatlas.Inputs.CloudProviderSnapshotBackupPolicyPolicyArgs
+                {
+                    Id = myCluster.SnapshotBackupPolicies.Apply(snapshotBackupPolicies => snapshotBackupPolicies[0].Policies?[0]?.Id),
+                    Policy_item = 
+                    {
+                        
+                        {
+                            { "id", myCluster.SnapshotBackupPolicies.Apply(snapshotBackupPolicies => snapshotBackupPolicies[0].Policies?[0]?.PolicyItems?[0]?.Id) },
+                            { "frequencyInterval", 1 },
+                            { "frequencyType", "hourly" },
+                            { "retentionUnit", "days" },
+                            { "retentionValue", 1 },
+                        },
+                        
+                        {
+                            { "id", myCluster.SnapshotBackupPolicies.Apply(snapshotBackupPolicies => snapshotBackupPolicies[0].Policies?[0]?.PolicyItems?[1]?.Id) },
+                            { "frequencyInterval", 1 },
+                            { "frequencyType", "daily" },
+                            { "retentionUnit", "days" },
+                            { "retentionValue", 2 },
+                        },
+                        
+                        {
+                            { "id", myCluster.SnapshotBackupPolicies.Apply(snapshotBackupPolicies => snapshotBackupPolicies[0].Policies?[0]?.PolicyItems?[2]?.Id) },
+                            { "frequencyInterval", 4 },
+                            { "frequencyType", "weekly" },
+                            { "retentionUnit", "weeks" },
+                            { "retentionValue", 3 },
+                        },
+                        
+                        {
+                            { "id", myCluster.SnapshotBackupPolicies.Apply(snapshotBackupPolicies => snapshotBackupPolicies[0].Policies?[0]?.PolicyItems?[3]?.Id) },
+                            { "frequencyInterval", 5 },
+                            { "frequencyType", "monthly" },
+                            { "retentionUnit", "months" },
+                            { "retentionValue", 4 },
+                        },
+                    },
+                },
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -329,7 +401,9 @@ The CloudProviderSnapshotBackupPolicy resource accepts the following [input]({{<
 
     <dt class="property-required"
             title="Required">
-        <span>Cluster<wbr>Name</span>
+        <span id="clustername_csharp">
+<a href="#clustername_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -338,7 +412,9 @@ The CloudProviderSnapshotBackupPolicy resource accepts the following [input]({{<
 
     <dt class="property-required"
             title="Required">
-        <span>Policies</span>
+        <span id="policies_csharp">
+<a href="#policies_csharp" style="color: inherit; text-decoration: inherit;">Policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudprovidersnapshotbackuppolicypolicy">List&lt;Cloud<wbr>Provider<wbr>Snapshot<wbr>Backup<wbr>Policy<wbr>Policy<wbr>Args&gt;</a></span>
     </dt>
@@ -348,7 +424,9 @@ The CloudProviderSnapshotBackupPolicy resource accepts the following [input]({{<
 
     <dt class="property-required"
             title="Required">
-        <span>Project<wbr>Id</span>
+        <span id="projectid_csharp">
+<a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -357,7 +435,9 @@ The CloudProviderSnapshotBackupPolicy resource accepts the following [input]({{<
 
     <dt class="property-optional"
             title="Optional">
-        <span>Reference<wbr>Hour<wbr>Of<wbr>Day</span>
+        <span id="referencehourofday_csharp">
+<a href="#referencehourofday_csharp" style="color: inherit; text-decoration: inherit;">Reference<wbr>Hour<wbr>Of<wbr>Day</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -366,7 +446,9 @@ The CloudProviderSnapshotBackupPolicy resource accepts the following [input]({{<
 
     <dt class="property-optional"
             title="Optional">
-        <span>Reference<wbr>Minute<wbr>Of<wbr>Hour</span>
+        <span id="referenceminuteofhour_csharp">
+<a href="#referenceminuteofhour_csharp" style="color: inherit; text-decoration: inherit;">Reference<wbr>Minute<wbr>Of<wbr>Hour</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -375,7 +457,9 @@ The CloudProviderSnapshotBackupPolicy resource accepts the following [input]({{<
 
     <dt class="property-optional"
             title="Optional">
-        <span>Restore<wbr>Window<wbr>Days</span>
+        <span id="restorewindowdays_csharp">
+<a href="#restorewindowdays_csharp" style="color: inherit; text-decoration: inherit;">Restore<wbr>Window<wbr>Days</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -384,7 +468,9 @@ The CloudProviderSnapshotBackupPolicy resource accepts the following [input]({{<
 
     <dt class="property-optional"
             title="Optional">
-        <span>Update<wbr>Snapshots</span>
+        <span id="updatesnapshots_csharp">
+<a href="#updatesnapshots_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>Snapshots</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -400,7 +486,9 @@ The CloudProviderSnapshotBackupPolicy resource accepts the following [input]({{<
 
     <dt class="property-required"
             title="Required">
-        <span>Cluster<wbr>Name</span>
+        <span id="clustername_go">
+<a href="#clustername_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -409,7 +497,9 @@ The CloudProviderSnapshotBackupPolicy resource accepts the following [input]({{<
 
     <dt class="property-required"
             title="Required">
-        <span>Policies</span>
+        <span id="policies_go">
+<a href="#policies_go" style="color: inherit; text-decoration: inherit;">Policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudprovidersnapshotbackuppolicypolicy">[]Cloud<wbr>Provider<wbr>Snapshot<wbr>Backup<wbr>Policy<wbr>Policy</a></span>
     </dt>
@@ -419,7 +509,9 @@ The CloudProviderSnapshotBackupPolicy resource accepts the following [input]({{<
 
     <dt class="property-required"
             title="Required">
-        <span>Project<wbr>Id</span>
+        <span id="projectid_go">
+<a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -428,7 +520,9 @@ The CloudProviderSnapshotBackupPolicy resource accepts the following [input]({{<
 
     <dt class="property-optional"
             title="Optional">
-        <span>Reference<wbr>Hour<wbr>Of<wbr>Day</span>
+        <span id="referencehourofday_go">
+<a href="#referencehourofday_go" style="color: inherit; text-decoration: inherit;">Reference<wbr>Hour<wbr>Of<wbr>Day</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -437,7 +531,9 @@ The CloudProviderSnapshotBackupPolicy resource accepts the following [input]({{<
 
     <dt class="property-optional"
             title="Optional">
-        <span>Reference<wbr>Minute<wbr>Of<wbr>Hour</span>
+        <span id="referenceminuteofhour_go">
+<a href="#referenceminuteofhour_go" style="color: inherit; text-decoration: inherit;">Reference<wbr>Minute<wbr>Of<wbr>Hour</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -446,7 +542,9 @@ The CloudProviderSnapshotBackupPolicy resource accepts the following [input]({{<
 
     <dt class="property-optional"
             title="Optional">
-        <span>Restore<wbr>Window<wbr>Days</span>
+        <span id="restorewindowdays_go">
+<a href="#restorewindowdays_go" style="color: inherit; text-decoration: inherit;">Restore<wbr>Window<wbr>Days</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -455,7 +553,9 @@ The CloudProviderSnapshotBackupPolicy resource accepts the following [input]({{<
 
     <dt class="property-optional"
             title="Optional">
-        <span>Update<wbr>Snapshots</span>
+        <span id="updatesnapshots_go">
+<a href="#updatesnapshots_go" style="color: inherit; text-decoration: inherit;">Update<wbr>Snapshots</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -471,7 +571,9 @@ The CloudProviderSnapshotBackupPolicy resource accepts the following [input]({{<
 
     <dt class="property-required"
             title="Required">
-        <span>cluster<wbr>Name</span>
+        <span id="clustername_nodejs">
+<a href="#clustername_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -480,7 +582,9 @@ The CloudProviderSnapshotBackupPolicy resource accepts the following [input]({{<
 
     <dt class="property-required"
             title="Required">
-        <span>policies</span>
+        <span id="policies_nodejs">
+<a href="#policies_nodejs" style="color: inherit; text-decoration: inherit;">policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudprovidersnapshotbackuppolicypolicy">Cloud<wbr>Provider<wbr>Snapshot<wbr>Backup<wbr>Policy<wbr>Policy[]</a></span>
     </dt>
@@ -490,7 +594,9 @@ The CloudProviderSnapshotBackupPolicy resource accepts the following [input]({{<
 
     <dt class="property-required"
             title="Required">
-        <span>project<wbr>Id</span>
+        <span id="projectid_nodejs">
+<a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -499,7 +605,9 @@ The CloudProviderSnapshotBackupPolicy resource accepts the following [input]({{<
 
     <dt class="property-optional"
             title="Optional">
-        <span>reference<wbr>Hour<wbr>Of<wbr>Day</span>
+        <span id="referencehourofday_nodejs">
+<a href="#referencehourofday_nodejs" style="color: inherit; text-decoration: inherit;">reference<wbr>Hour<wbr>Of<wbr>Day</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -508,7 +616,9 @@ The CloudProviderSnapshotBackupPolicy resource accepts the following [input]({{<
 
     <dt class="property-optional"
             title="Optional">
-        <span>reference<wbr>Minute<wbr>Of<wbr>Hour</span>
+        <span id="referenceminuteofhour_nodejs">
+<a href="#referenceminuteofhour_nodejs" style="color: inherit; text-decoration: inherit;">reference<wbr>Minute<wbr>Of<wbr>Hour</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -517,7 +627,9 @@ The CloudProviderSnapshotBackupPolicy resource accepts the following [input]({{<
 
     <dt class="property-optional"
             title="Optional">
-        <span>restore<wbr>Window<wbr>Days</span>
+        <span id="restorewindowdays_nodejs">
+<a href="#restorewindowdays_nodejs" style="color: inherit; text-decoration: inherit;">restore<wbr>Window<wbr>Days</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -526,7 +638,9 @@ The CloudProviderSnapshotBackupPolicy resource accepts the following [input]({{<
 
     <dt class="property-optional"
             title="Optional">
-        <span>update<wbr>Snapshots</span>
+        <span id="updatesnapshots_nodejs">
+<a href="#updatesnapshots_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Snapshots</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -542,7 +656,9 @@ The CloudProviderSnapshotBackupPolicy resource accepts the following [input]({{<
 
     <dt class="property-required"
             title="Required">
-        <span>cluster_<wbr>name</span>
+        <span id="cluster_name_python">
+<a href="#cluster_name_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -551,7 +667,9 @@ The CloudProviderSnapshotBackupPolicy resource accepts the following [input]({{<
 
     <dt class="property-required"
             title="Required">
-        <span>policies</span>
+        <span id="policies_python">
+<a href="#policies_python" style="color: inherit; text-decoration: inherit;">policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudprovidersnapshotbackuppolicypolicy">List[Cloud<wbr>Provider<wbr>Snapshot<wbr>Backup<wbr>Policy<wbr>Policy]</a></span>
     </dt>
@@ -561,7 +679,9 @@ The CloudProviderSnapshotBackupPolicy resource accepts the following [input]({{<
 
     <dt class="property-required"
             title="Required">
-        <span>project_<wbr>id</span>
+        <span id="project_id_python">
+<a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -570,7 +690,9 @@ The CloudProviderSnapshotBackupPolicy resource accepts the following [input]({{<
 
     <dt class="property-optional"
             title="Optional">
-        <span>reference_<wbr>hour_<wbr>of_<wbr>day</span>
+        <span id="reference_hour_of_day_python">
+<a href="#reference_hour_of_day_python" style="color: inherit; text-decoration: inherit;">reference_<wbr>hour_<wbr>of_<wbr>day</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -579,7 +701,9 @@ The CloudProviderSnapshotBackupPolicy resource accepts the following [input]({{<
 
     <dt class="property-optional"
             title="Optional">
-        <span>reference_<wbr>minute_<wbr>of_<wbr>hour</span>
+        <span id="reference_minute_of_hour_python">
+<a href="#reference_minute_of_hour_python" style="color: inherit; text-decoration: inherit;">reference_<wbr>minute_<wbr>of_<wbr>hour</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -588,7 +712,9 @@ The CloudProviderSnapshotBackupPolicy resource accepts the following [input]({{<
 
     <dt class="property-optional"
             title="Optional">
-        <span>restore_<wbr>window_<wbr>days</span>
+        <span id="restore_window_days_python">
+<a href="#restore_window_days_python" style="color: inherit; text-decoration: inherit;">restore_<wbr>window_<wbr>days</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -597,7 +723,9 @@ The CloudProviderSnapshotBackupPolicy resource accepts the following [input]({{<
 
     <dt class="property-optional"
             title="Optional">
-        <span>update_<wbr>snapshots</span>
+        <span id="update_snapshots_python">
+<a href="#update_snapshots_python" style="color: inherit; text-decoration: inherit;">update_<wbr>snapshots</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -624,7 +752,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Cluster<wbr>Id</span>
+        <span id="clusterid_csharp">
+<a href="#clusterid_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -633,7 +763,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -641,7 +773,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Next<wbr>Snapshot</span>
+        <span id="nextsnapshot_csharp">
+<a href="#nextsnapshot_csharp" style="color: inherit; text-decoration: inherit;">Next<wbr>Snapshot</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -657,7 +791,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Cluster<wbr>Id</span>
+        <span id="clusterid_go">
+<a href="#clusterid_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -666,7 +802,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -674,7 +812,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Next<wbr>Snapshot</span>
+        <span id="nextsnapshot_go">
+<a href="#nextsnapshot_go" style="color: inherit; text-decoration: inherit;">Next<wbr>Snapshot</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -690,7 +830,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>cluster<wbr>Id</span>
+        <span id="clusterid_nodejs">
+<a href="#clusterid_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -699,7 +841,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -707,7 +851,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>next<wbr>Snapshot</span>
+        <span id="nextsnapshot_nodejs">
+<a href="#nextsnapshot_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Snapshot</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -723,7 +869,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>cluster_<wbr>id</span>
+        <span id="cluster_id_python">
+<a href="#cluster_id_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -732,7 +880,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -740,7 +890,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>next_<wbr>snapshot</span>
+        <span id="next_snapshot_python">
+<a href="#next_snapshot_python" style="color: inherit; text-decoration: inherit;">next_<wbr>snapshot</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -882,7 +1034,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cluster<wbr>Id</span>
+        <span id="state_clusterid_csharp">
+<a href="#state_clusterid_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -891,7 +1045,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cluster<wbr>Name</span>
+        <span id="state_clustername_csharp">
+<a href="#state_clustername_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -900,7 +1056,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Next<wbr>Snapshot</span>
+        <span id="state_nextsnapshot_csharp">
+<a href="#state_nextsnapshot_csharp" style="color: inherit; text-decoration: inherit;">Next<wbr>Snapshot</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -909,7 +1067,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Policies</span>
+        <span id="state_policies_csharp">
+<a href="#state_policies_csharp" style="color: inherit; text-decoration: inherit;">Policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudprovidersnapshotbackuppolicypolicy">List&lt;Cloud<wbr>Provider<wbr>Snapshot<wbr>Backup<wbr>Policy<wbr>Policy<wbr>Args&gt;</a></span>
     </dt>
@@ -919,7 +1079,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project<wbr>Id</span>
+        <span id="state_projectid_csharp">
+<a href="#state_projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -928,7 +1090,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Reference<wbr>Hour<wbr>Of<wbr>Day</span>
+        <span id="state_referencehourofday_csharp">
+<a href="#state_referencehourofday_csharp" style="color: inherit; text-decoration: inherit;">Reference<wbr>Hour<wbr>Of<wbr>Day</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -937,7 +1101,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Reference<wbr>Minute<wbr>Of<wbr>Hour</span>
+        <span id="state_referenceminuteofhour_csharp">
+<a href="#state_referenceminuteofhour_csharp" style="color: inherit; text-decoration: inherit;">Reference<wbr>Minute<wbr>Of<wbr>Hour</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -946,7 +1112,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Restore<wbr>Window<wbr>Days</span>
+        <span id="state_restorewindowdays_csharp">
+<a href="#state_restorewindowdays_csharp" style="color: inherit; text-decoration: inherit;">Restore<wbr>Window<wbr>Days</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -955,7 +1123,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Update<wbr>Snapshots</span>
+        <span id="state_updatesnapshots_csharp">
+<a href="#state_updatesnapshots_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>Snapshots</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -971,7 +1141,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cluster<wbr>Id</span>
+        <span id="state_clusterid_go">
+<a href="#state_clusterid_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -980,7 +1152,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cluster<wbr>Name</span>
+        <span id="state_clustername_go">
+<a href="#state_clustername_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -989,7 +1163,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Next<wbr>Snapshot</span>
+        <span id="state_nextsnapshot_go">
+<a href="#state_nextsnapshot_go" style="color: inherit; text-decoration: inherit;">Next<wbr>Snapshot</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -998,7 +1174,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Policies</span>
+        <span id="state_policies_go">
+<a href="#state_policies_go" style="color: inherit; text-decoration: inherit;">Policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudprovidersnapshotbackuppolicypolicy">[]Cloud<wbr>Provider<wbr>Snapshot<wbr>Backup<wbr>Policy<wbr>Policy</a></span>
     </dt>
@@ -1008,7 +1186,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project<wbr>Id</span>
+        <span id="state_projectid_go">
+<a href="#state_projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1017,7 +1197,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Reference<wbr>Hour<wbr>Of<wbr>Day</span>
+        <span id="state_referencehourofday_go">
+<a href="#state_referencehourofday_go" style="color: inherit; text-decoration: inherit;">Reference<wbr>Hour<wbr>Of<wbr>Day</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1026,7 +1208,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Reference<wbr>Minute<wbr>Of<wbr>Hour</span>
+        <span id="state_referenceminuteofhour_go">
+<a href="#state_referenceminuteofhour_go" style="color: inherit; text-decoration: inherit;">Reference<wbr>Minute<wbr>Of<wbr>Hour</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1035,7 +1219,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Restore<wbr>Window<wbr>Days</span>
+        <span id="state_restorewindowdays_go">
+<a href="#state_restorewindowdays_go" style="color: inherit; text-decoration: inherit;">Restore<wbr>Window<wbr>Days</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1044,7 +1230,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Update<wbr>Snapshots</span>
+        <span id="state_updatesnapshots_go">
+<a href="#state_updatesnapshots_go" style="color: inherit; text-decoration: inherit;">Update<wbr>Snapshots</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1060,7 +1248,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>cluster<wbr>Id</span>
+        <span id="state_clusterid_nodejs">
+<a href="#state_clusterid_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1069,7 +1259,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>cluster<wbr>Name</span>
+        <span id="state_clustername_nodejs">
+<a href="#state_clustername_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1078,7 +1270,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>next<wbr>Snapshot</span>
+        <span id="state_nextsnapshot_nodejs">
+<a href="#state_nextsnapshot_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Snapshot</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1087,7 +1281,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>policies</span>
+        <span id="state_policies_nodejs">
+<a href="#state_policies_nodejs" style="color: inherit; text-decoration: inherit;">policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudprovidersnapshotbackuppolicypolicy">Cloud<wbr>Provider<wbr>Snapshot<wbr>Backup<wbr>Policy<wbr>Policy[]</a></span>
     </dt>
@@ -1097,7 +1293,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>project<wbr>Id</span>
+        <span id="state_projectid_nodejs">
+<a href="#state_projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1106,7 +1304,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>reference<wbr>Hour<wbr>Of<wbr>Day</span>
+        <span id="state_referencehourofday_nodejs">
+<a href="#state_referencehourofday_nodejs" style="color: inherit; text-decoration: inherit;">reference<wbr>Hour<wbr>Of<wbr>Day</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1115,7 +1315,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>reference<wbr>Minute<wbr>Of<wbr>Hour</span>
+        <span id="state_referenceminuteofhour_nodejs">
+<a href="#state_referenceminuteofhour_nodejs" style="color: inherit; text-decoration: inherit;">reference<wbr>Minute<wbr>Of<wbr>Hour</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1124,7 +1326,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>restore<wbr>Window<wbr>Days</span>
+        <span id="state_restorewindowdays_nodejs">
+<a href="#state_restorewindowdays_nodejs" style="color: inherit; text-decoration: inherit;">restore<wbr>Window<wbr>Days</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1133,7 +1337,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>update<wbr>Snapshots</span>
+        <span id="state_updatesnapshots_nodejs">
+<a href="#state_updatesnapshots_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Snapshots</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1149,7 +1355,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>cluster_<wbr>id</span>
+        <span id="state_cluster_id_python">
+<a href="#state_cluster_id_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1158,7 +1366,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>cluster_<wbr>name</span>
+        <span id="state_cluster_name_python">
+<a href="#state_cluster_name_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1167,7 +1377,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>next_<wbr>snapshot</span>
+        <span id="state_next_snapshot_python">
+<a href="#state_next_snapshot_python" style="color: inherit; text-decoration: inherit;">next_<wbr>snapshot</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1176,7 +1388,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>policies</span>
+        <span id="state_policies_python">
+<a href="#state_policies_python" style="color: inherit; text-decoration: inherit;">policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudprovidersnapshotbackuppolicypolicy">List[Cloud<wbr>Provider<wbr>Snapshot<wbr>Backup<wbr>Policy<wbr>Policy]</a></span>
     </dt>
@@ -1186,7 +1400,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>project_<wbr>id</span>
+        <span id="state_project_id_python">
+<a href="#state_project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1195,7 +1411,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>reference_<wbr>hour_<wbr>of_<wbr>day</span>
+        <span id="state_reference_hour_of_day_python">
+<a href="#state_reference_hour_of_day_python" style="color: inherit; text-decoration: inherit;">reference_<wbr>hour_<wbr>of_<wbr>day</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1204,7 +1422,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>reference_<wbr>minute_<wbr>of_<wbr>hour</span>
+        <span id="state_reference_minute_of_hour_python">
+<a href="#state_reference_minute_of_hour_python" style="color: inherit; text-decoration: inherit;">reference_<wbr>minute_<wbr>of_<wbr>hour</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1213,7 +1433,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>restore_<wbr>window_<wbr>days</span>
+        <span id="state_restore_window_days_python">
+<a href="#state_restore_window_days_python" style="color: inherit; text-decoration: inherit;">restore_<wbr>window_<wbr>days</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1222,7 +1444,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>update_<wbr>snapshots</span>
+        <span id="state_update_snapshots_python">
+<a href="#state_update_snapshots_python" style="color: inherit; text-decoration: inherit;">update_<wbr>snapshots</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1264,7 +1488,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1272,7 +1498,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Policy<wbr>Items</span>
+        <span id="policyitems_csharp">
+<a href="#policyitems_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Items</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudprovidersnapshotbackuppolicypolicypolicyitem">List&lt;Cloud<wbr>Provider<wbr>Snapshot<wbr>Backup<wbr>Policy<wbr>Policy<wbr>Policy<wbr>Item<wbr>Args&gt;</a></span>
     </dt>
@@ -1287,7 +1515,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1295,7 +1525,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Policy<wbr>Items</span>
+        <span id="policyitems_go">
+<a href="#policyitems_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Items</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudprovidersnapshotbackuppolicypolicypolicyitem">[]Cloud<wbr>Provider<wbr>Snapshot<wbr>Backup<wbr>Policy<wbr>Policy<wbr>Policy<wbr>Item</a></span>
     </dt>
@@ -1310,7 +1542,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1318,7 +1552,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>policy<wbr>Items</span>
+        <span id="policyitems_nodejs">
+<a href="#policyitems_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Items</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudprovidersnapshotbackuppolicypolicypolicyitem">Cloud<wbr>Provider<wbr>Snapshot<wbr>Backup<wbr>Policy<wbr>Policy<wbr>Policy<wbr>Item[]</a></span>
     </dt>
@@ -1333,7 +1569,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1341,7 +1579,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>policy<wbr>Items</span>
+        <span id="policyitems_python">
+<a href="#policyitems_python" style="color: inherit; text-decoration: inherit;">policy<wbr>Items</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudprovidersnapshotbackuppolicypolicypolicyitem">List[Cloud<wbr>Provider<wbr>Snapshot<wbr>Backup<wbr>Policy<wbr>Policy<wbr>Policy<wbr>Item]</a></span>
     </dt>
@@ -1374,7 +1614,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Frequency<wbr>Interval</span>
+        <span id="frequencyinterval_csharp">
+<a href="#frequencyinterval_csharp" style="color: inherit; text-decoration: inherit;">Frequency<wbr>Interval</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1382,7 +1624,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Frequency<wbr>Type</span>
+        <span id="frequencytype_csharp">
+<a href="#frequencytype_csharp" style="color: inherit; text-decoration: inherit;">Frequency<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1390,7 +1634,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1398,7 +1644,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Retention<wbr>Unit</span>
+        <span id="retentionunit_csharp">
+<a href="#retentionunit_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Unit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1406,7 +1654,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Retention<wbr>Value</span>
+        <span id="retentionvalue_csharp">
+<a href="#retentionvalue_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1421,7 +1671,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Frequency<wbr>Interval</span>
+        <span id="frequencyinterval_go">
+<a href="#frequencyinterval_go" style="color: inherit; text-decoration: inherit;">Frequency<wbr>Interval</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1429,7 +1681,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Frequency<wbr>Type</span>
+        <span id="frequencytype_go">
+<a href="#frequencytype_go" style="color: inherit; text-decoration: inherit;">Frequency<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1437,7 +1691,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1445,7 +1701,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Retention<wbr>Unit</span>
+        <span id="retentionunit_go">
+<a href="#retentionunit_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Unit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1453,7 +1711,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Retention<wbr>Value</span>
+        <span id="retentionvalue_go">
+<a href="#retentionvalue_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1468,7 +1728,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>frequency<wbr>Interval</span>
+        <span id="frequencyinterval_nodejs">
+<a href="#frequencyinterval_nodejs" style="color: inherit; text-decoration: inherit;">frequency<wbr>Interval</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1476,7 +1738,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>frequency<wbr>Type</span>
+        <span id="frequencytype_nodejs">
+<a href="#frequencytype_nodejs" style="color: inherit; text-decoration: inherit;">frequency<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1484,7 +1748,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1492,7 +1758,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>retention<wbr>Unit</span>
+        <span id="retentionunit_nodejs">
+<a href="#retentionunit_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Unit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1500,7 +1768,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>retention<wbr>Value</span>
+        <span id="retentionvalue_nodejs">
+<a href="#retentionvalue_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1515,7 +1785,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>frequency<wbr>Interval</span>
+        <span id="frequencyinterval_python">
+<a href="#frequencyinterval_python" style="color: inherit; text-decoration: inherit;">frequency<wbr>Interval</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1523,7 +1795,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>frequency<wbr>Type</span>
+        <span id="frequencytype_python">
+<a href="#frequencytype_python" style="color: inherit; text-decoration: inherit;">frequency<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1531,7 +1805,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1539,7 +1815,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>retention<wbr>Unit</span>
+        <span id="retentionunit_python">
+<a href="#retentionunit_python" style="color: inherit; text-decoration: inherit;">retention<wbr>Unit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1547,7 +1825,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>retention<wbr>Value</span>
+        <span id="retentionvalue_python">
+<a href="#retentionvalue_python" style="color: inherit; text-decoration: inherit;">retention<wbr>Value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>

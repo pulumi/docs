@@ -59,7 +59,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Interface<wbr>Endpoint<wbr>Id</span>
+        <span id="interfaceendpointid_csharp">
+<a href="#interfaceendpointid_csharp" style="color: inherit; text-decoration: inherit;">Interface<wbr>Endpoint<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -67,7 +69,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Private<wbr>Link<wbr>Id</span>
+        <span id="privatelinkid_csharp">
+<a href="#privatelinkid_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -76,7 +80,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Project<wbr>Id</span>
+        <span id="projectid_csharp">
+<a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -92,7 +98,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Interface<wbr>Endpoint<wbr>Id</span>
+        <span id="interfaceendpointid_go">
+<a href="#interfaceendpointid_go" style="color: inherit; text-decoration: inherit;">Interface<wbr>Endpoint<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -100,7 +108,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Private<wbr>Link<wbr>Id</span>
+        <span id="privatelinkid_go">
+<a href="#privatelinkid_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -109,7 +119,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Project<wbr>Id</span>
+        <span id="projectid_go">
+<a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -125,7 +137,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>interface<wbr>Endpoint<wbr>Id</span>
+        <span id="interfaceendpointid_nodejs">
+<a href="#interfaceendpointid_nodejs" style="color: inherit; text-decoration: inherit;">interface<wbr>Endpoint<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -133,7 +147,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>private<wbr>Link<wbr>Id</span>
+        <span id="privatelinkid_nodejs">
+<a href="#privatelinkid_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -142,7 +158,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>project<wbr>Id</span>
+        <span id="projectid_nodejs">
+<a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -158,7 +176,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>interface_<wbr>endpoint_<wbr>id</span>
+        <span id="interface_endpoint_id_python">
+<a href="#interface_endpoint_id_python" style="color: inherit; text-decoration: inherit;">interface_<wbr>endpoint_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -166,7 +186,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>private_<wbr>link_<wbr>id</span>
+        <span id="private_link_id_python">
+<a href="#private_link_id_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -175,7 +197,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>project_<wbr>id</span>
+        <span id="project_id_python">
+<a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -204,7 +228,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Connection<wbr>Status</span>
+        <span id="connectionstatus_csharp">
+<a href="#connectionstatus_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -214,7 +240,9 @@ Returns one of the following values:
 
     <dt class="property-"
             title="">
-        <span>Delete<wbr>Requested</span>
+        <span id="deleterequested_csharp">
+<a href="#deleterequested_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>Requested</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -223,7 +251,9 @@ Returns one of the following values:
 
     <dt class="property-"
             title="">
-        <span>Error<wbr>Message</span>
+        <span id="errormessage_csharp">
+<a href="#errormessage_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Message</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -232,7 +262,9 @@ Returns one of the following values:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -241,7 +273,9 @@ Returns one of the following values:
 
     <dt class="property-"
             title="">
-        <span>Interface<wbr>Endpoint<wbr>Id</span>
+        <span id="interfaceendpointid_csharp">
+<a href="#interfaceendpointid_csharp" style="color: inherit; text-decoration: inherit;">Interface<wbr>Endpoint<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -249,7 +283,9 @@ Returns one of the following values:
 
     <dt class="property-"
             title="">
-        <span>Private<wbr>Link<wbr>Id</span>
+        <span id="privatelinkid_csharp">
+<a href="#privatelinkid_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -257,7 +293,9 @@ Returns one of the following values:
 
     <dt class="property-"
             title="">
-        <span>Project<wbr>Id</span>
+        <span id="projectid_csharp">
+<a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -272,7 +310,9 @@ Returns one of the following values:
 
     <dt class="property-"
             title="">
-        <span>Connection<wbr>Status</span>
+        <span id="connectionstatus_go">
+<a href="#connectionstatus_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -282,7 +322,9 @@ Returns one of the following values:
 
     <dt class="property-"
             title="">
-        <span>Delete<wbr>Requested</span>
+        <span id="deleterequested_go">
+<a href="#deleterequested_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>Requested</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -291,7 +333,9 @@ Returns one of the following values:
 
     <dt class="property-"
             title="">
-        <span>Error<wbr>Message</span>
+        <span id="errormessage_go">
+<a href="#errormessage_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Message</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -300,7 +344,9 @@ Returns one of the following values:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -309,7 +355,9 @@ Returns one of the following values:
 
     <dt class="property-"
             title="">
-        <span>Interface<wbr>Endpoint<wbr>Id</span>
+        <span id="interfaceendpointid_go">
+<a href="#interfaceendpointid_go" style="color: inherit; text-decoration: inherit;">Interface<wbr>Endpoint<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -317,7 +365,9 @@ Returns one of the following values:
 
     <dt class="property-"
             title="">
-        <span>Private<wbr>Link<wbr>Id</span>
+        <span id="privatelinkid_go">
+<a href="#privatelinkid_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -325,7 +375,9 @@ Returns one of the following values:
 
     <dt class="property-"
             title="">
-        <span>Project<wbr>Id</span>
+        <span id="projectid_go">
+<a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -340,7 +392,9 @@ Returns one of the following values:
 
     <dt class="property-"
             title="">
-        <span>connection<wbr>Status</span>
+        <span id="connectionstatus_nodejs">
+<a href="#connectionstatus_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -350,7 +404,9 @@ Returns one of the following values:
 
     <dt class="property-"
             title="">
-        <span>delete<wbr>Requested</span>
+        <span id="deleterequested_nodejs">
+<a href="#deleterequested_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Requested</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -359,7 +415,9 @@ Returns one of the following values:
 
     <dt class="property-"
             title="">
-        <span>error<wbr>Message</span>
+        <span id="errormessage_nodejs">
+<a href="#errormessage_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Message</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -368,7 +426,9 @@ Returns one of the following values:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -377,7 +437,9 @@ Returns one of the following values:
 
     <dt class="property-"
             title="">
-        <span>interface<wbr>Endpoint<wbr>Id</span>
+        <span id="interfaceendpointid_nodejs">
+<a href="#interfaceendpointid_nodejs" style="color: inherit; text-decoration: inherit;">interface<wbr>Endpoint<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -385,7 +447,9 @@ Returns one of the following values:
 
     <dt class="property-"
             title="">
-        <span>private<wbr>Link<wbr>Id</span>
+        <span id="privatelinkid_nodejs">
+<a href="#privatelinkid_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -393,7 +457,9 @@ Returns one of the following values:
 
     <dt class="property-"
             title="">
-        <span>project<wbr>Id</span>
+        <span id="projectid_nodejs">
+<a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -408,7 +474,9 @@ Returns one of the following values:
 
     <dt class="property-"
             title="">
-        <span>connection_<wbr>status</span>
+        <span id="connection_status_python">
+<a href="#connection_status_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -418,7 +486,9 @@ Returns one of the following values:
 
     <dt class="property-"
             title="">
-        <span>delete_<wbr>requested</span>
+        <span id="delete_requested_python">
+<a href="#delete_requested_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>requested</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -427,7 +497,9 @@ Returns one of the following values:
 
     <dt class="property-"
             title="">
-        <span>error_<wbr>message</span>
+        <span id="error_message_python">
+<a href="#error_message_python" style="color: inherit; text-decoration: inherit;">error_<wbr>message</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -436,7 +508,9 @@ Returns one of the following values:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -445,7 +519,9 @@ Returns one of the following values:
 
     <dt class="property-"
             title="">
-        <span>interface_<wbr>endpoint_<wbr>id</span>
+        <span id="interface_endpoint_id_python">
+<a href="#interface_endpoint_id_python" style="color: inherit; text-decoration: inherit;">interface_<wbr>endpoint_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -453,7 +529,9 @@ Returns one of the following values:
 
     <dt class="property-"
             title="">
-        <span>private_<wbr>link_<wbr>id</span>
+        <span id="private_link_id_python">
+<a href="#private_link_id_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -461,7 +539,9 @@ Returns one of the following values:
 
     <dt class="property-"
             title="">
-        <span>project_<wbr>id</span>
+        <span id="project_id_python">
+<a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

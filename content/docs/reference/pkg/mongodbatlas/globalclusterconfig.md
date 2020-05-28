@@ -16,175 +16,6 @@ meta_desc: "Explore the GlobalClusterConfig resource of the mongodbatlas package
 > **NOTE:** Groups and projects are synonymous terms. You may find group_id in the official documentation.
 
 
-## Examples Usage
-
-### Example Global cluster
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as mongodbatlas from "@pulumi/mongodbatlas";
-
-const test = new mongodbatlas.Cluster("test", {
-    projectId: "<YOUR-PROJECT-ID>",
-    diskSizeGb: 80,
-    backupEnabled: false,
-    providerBackupEnabled: true,
-    clusterType: "GEOSHARDED",
-    providerName: "AWS",
-    providerDiskIops: 240,
-    providerInstanceSizeName: "M30",
-    replication_specs: [
-        {
-            zoneName: "Zone 1",
-            numShards: 1,
-            regions_config: [{
-                regionName: "EU_CENTRAL_1",
-                electableNodes: 3,
-                priority: 7,
-                readOnlyNodes: 0,
-            }],
-        },
-        {
-            zoneName: "Zone 2",
-            numShards: 1,
-            regions_config: [{
-                regionName: "US_EAST_2",
-                electableNodes: 3,
-                priority: 7,
-                readOnlyNodes: 0,
-            }],
-        },
-    ],
-});
-const config = new mongodbatlas.GlobalClusterConfig("config", {
-    projectId: test.projectId,
-    clusterName: test.name,
-    managed_namespaces: [{
-        db: "mydata",
-        collection: "publishers",
-        customShardKey: "city",
-    }],
-    custom_zone_mappings: [{
-        location: "CA",
-        zone: "Zone 1",
-    }],
-});
-```
-```python
-import pulumi
-import pulumi_mongodbatlas as mongodbatlas
-
-test = mongodbatlas.Cluster("test",
-    project_id="<YOUR-PROJECT-ID>",
-    disk_size_gb=80,
-    backup_enabled=False,
-    provider_backup_enabled=True,
-    cluster_type="GEOSHARDED",
-    provider_name="AWS",
-    provider_disk_iops=240,
-    provider_instance_size_name="M30",
-    replication_specs=[
-        {
-            "zoneName": "Zone 1",
-            "numShards": 1,
-            "regions_config": [{
-                "regionName": "EU_CENTRAL_1",
-                "electableNodes": 3,
-                "priority": 7,
-                "readOnlyNodes": 0,
-            }],
-        },
-        {
-            "zoneName": "Zone 2",
-            "numShards": 1,
-            "regions_config": [{
-                "regionName": "US_EAST_2",
-                "electableNodes": 3,
-                "priority": 7,
-                "readOnlyNodes": 0,
-            }],
-        },
-    ])
-config = mongodbatlas.GlobalClusterConfig("config",
-    project_id=test.project_id,
-    cluster_name=test.name,
-    managed_namespaces=[{
-        "db": "mydata",
-        "collection": "publishers",
-        "customShardKey": "city",
-    }],
-    custom_zone_mappings=[{
-        "location": "CA",
-        "zone": "Zone 1",
-    }])
-```
-
-### Example Global cluster config
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as mongodbatlas from "@pulumi/mongodbatlas";
-
-const cluster-test = new mongodbatlas.Cluster("cluster-test", {
-    projectId: "<YOUR-PROJECT-ID>",
-    numShards: 1,
-    replicationFactor: 3,
-    backupEnabled: true,
-    autoScalingDiskGbEnabled: true,
-    mongoDbMajorVersion: "4.0",
-    providerName: "AWS",
-    diskSizeGb: 100,
-    providerDiskIops: 300,
-    providerEncryptEbsVolume: false,
-    providerInstanceSizeName: "M40",
-    providerRegionName: "US_EAST_1",
-});
-const config = new mongodbatlas.GlobalClusterConfig("config", {
-    projectId: mongodbatlas_cluster.test.project_id,
-    clusterName: mongodbatlas_cluster.test.name,
-    managed_namespaces: [{
-        db: "mydata",
-        collection: "publishers",
-        customShardKey: "city",
-    }],
-    custom_zone_mappings: [{
-        location: "CA",
-        zone: "Zone 1",
-    }],
-});
-```
-```python
-import pulumi
-import pulumi_mongodbatlas as mongodbatlas
-
-cluster_test = mongodbatlas.Cluster("cluster-test",
-    project_id="<YOUR-PROJECT-ID>",
-    num_shards=1,
-    replication_factor=3,
-    backup_enabled=True,
-    auto_scaling_disk_gb_enabled=True,
-    mongo_db_major_version="4.0",
-    provider_name="AWS",
-    disk_size_gb=100,
-    provider_disk_iops=300,
-    provider_encrypt_ebs_volume=False,
-    provider_instance_size_name="M40",
-    provider_region_name="US_EAST_1")
-config = mongodbatlas.GlobalClusterConfig("config",
-    project_id=mongodbatlas_cluster["test"]["project_id"],
-    cluster_name=mongodbatlas_cluster["test"]["name"],
-    managed_namespaces=[{
-        "db": "mydata",
-        "collection": "publishers",
-        "customShardKey": "city",
-    }],
-    custom_zone_mappings=[{
-        "location": "CA",
-        "zone": "Zone 1",
-    }])
-```
-
-
 
 ## Create a GlobalClusterConfig Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
@@ -369,7 +200,9 @@ The GlobalClusterConfig resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-required"
             title="Required">
-        <span>Cluster<wbr>Name</span>
+        <span id="clustername_csharp">
+<a href="#clustername_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -377,7 +210,9 @@ The GlobalClusterConfig resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-required"
             title="Required">
-        <span>Project<wbr>Id</span>
+        <span id="projectid_csharp">
+<a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -387,7 +222,9 @@ The GlobalClusterConfig resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>Custom<wbr>Zone<wbr>Mappings</span>
+        <span id="customzonemappings_csharp">
+<a href="#customzonemappings_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Zone<wbr>Mappings</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#globalclusterconfigcustomzonemapping">List&lt;Global<wbr>Cluster<wbr>Config<wbr>Custom<wbr>Zone<wbr>Mapping<wbr>Args&gt;</a></span>
     </dt>
@@ -396,7 +233,9 @@ The GlobalClusterConfig resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>Managed<wbr>Namespaces</span>
+        <span id="managednamespaces_csharp">
+<a href="#managednamespaces_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Namespaces</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#globalclusterconfigmanagednamespace">List&lt;Global<wbr>Cluster<wbr>Config<wbr>Managed<wbr>Namespace<wbr>Args&gt;</a></span>
     </dt>
@@ -412,7 +251,9 @@ The GlobalClusterConfig resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-required"
             title="Required">
-        <span>Cluster<wbr>Name</span>
+        <span id="clustername_go">
+<a href="#clustername_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -420,7 +261,9 @@ The GlobalClusterConfig resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-required"
             title="Required">
-        <span>Project<wbr>Id</span>
+        <span id="projectid_go">
+<a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -430,7 +273,9 @@ The GlobalClusterConfig resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>Custom<wbr>Zone<wbr>Mappings</span>
+        <span id="customzonemappings_go">
+<a href="#customzonemappings_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Zone<wbr>Mappings</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#globalclusterconfigcustomzonemapping">[]Global<wbr>Cluster<wbr>Config<wbr>Custom<wbr>Zone<wbr>Mapping</a></span>
     </dt>
@@ -439,7 +284,9 @@ The GlobalClusterConfig resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>Managed<wbr>Namespaces</span>
+        <span id="managednamespaces_go">
+<a href="#managednamespaces_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Namespaces</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#globalclusterconfigmanagednamespace">[]Global<wbr>Cluster<wbr>Config<wbr>Managed<wbr>Namespace</a></span>
     </dt>
@@ -455,7 +302,9 @@ The GlobalClusterConfig resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-required"
             title="Required">
-        <span>cluster<wbr>Name</span>
+        <span id="clustername_nodejs">
+<a href="#clustername_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -463,7 +312,9 @@ The GlobalClusterConfig resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-required"
             title="Required">
-        <span>project<wbr>Id</span>
+        <span id="projectid_nodejs">
+<a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -473,7 +324,9 @@ The GlobalClusterConfig resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>custom<wbr>Zone<wbr>Mappings</span>
+        <span id="customzonemappings_nodejs">
+<a href="#customzonemappings_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Zone<wbr>Mappings</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#globalclusterconfigcustomzonemapping">Global<wbr>Cluster<wbr>Config<wbr>Custom<wbr>Zone<wbr>Mapping[]</a></span>
     </dt>
@@ -482,7 +335,9 @@ The GlobalClusterConfig resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>managed<wbr>Namespaces</span>
+        <span id="managednamespaces_nodejs">
+<a href="#managednamespaces_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Namespaces</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#globalclusterconfigmanagednamespace">Global<wbr>Cluster<wbr>Config<wbr>Managed<wbr>Namespace[]</a></span>
     </dt>
@@ -498,7 +353,9 @@ The GlobalClusterConfig resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-required"
             title="Required">
-        <span>cluster_<wbr>name</span>
+        <span id="cluster_name_python">
+<a href="#cluster_name_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -506,7 +363,9 @@ The GlobalClusterConfig resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-required"
             title="Required">
-        <span>project_<wbr>id</span>
+        <span id="project_id_python">
+<a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -516,7 +375,9 @@ The GlobalClusterConfig resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>custom_<wbr>zone_<wbr>mappings</span>
+        <span id="custom_zone_mappings_python">
+<a href="#custom_zone_mappings_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>zone_<wbr>mappings</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#globalclusterconfigcustomzonemapping">List[Global<wbr>Cluster<wbr>Config<wbr>Custom<wbr>Zone<wbr>Mapping]</a></span>
     </dt>
@@ -525,7 +386,9 @@ The GlobalClusterConfig resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>managed_<wbr>namespaces</span>
+        <span id="managed_namespaces_python">
+<a href="#managed_namespaces_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>namespaces</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#globalclusterconfigmanagednamespace">List[Global<wbr>Cluster<wbr>Config<wbr>Managed<wbr>Namespace]</a></span>
     </dt>
@@ -552,7 +415,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Custom<wbr>Zone<wbr>Mapping</span>
+        <span id="customzonemapping_csharp">
+<a href="#customzonemapping_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Zone<wbr>Mapping</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -561,7 +426,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -576,7 +443,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Custom<wbr>Zone<wbr>Mapping</span>
+        <span id="customzonemapping_go">
+<a href="#customzonemapping_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Zone<wbr>Mapping</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -585,7 +454,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -600,7 +471,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>custom<wbr>Zone<wbr>Mapping</span>
+        <span id="customzonemapping_nodejs">
+<a href="#customzonemapping_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Zone<wbr>Mapping</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -609,7 +482,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -624,7 +499,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>custom_<wbr>zone_<wbr>mapping</span>
+        <span id="custom_zone_mapping_python">
+<a href="#custom_zone_mapping_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>zone_<wbr>mapping</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -633,7 +510,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -774,7 +653,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cluster<wbr>Name</span>
+        <span id="state_clustername_csharp">
+<a href="#state_clustername_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -782,7 +663,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Custom<wbr>Zone<wbr>Mapping</span>
+        <span id="state_customzonemapping_csharp">
+<a href="#state_customzonemapping_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Zone<wbr>Mapping</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -791,7 +674,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Custom<wbr>Zone<wbr>Mappings</span>
+        <span id="state_customzonemappings_csharp">
+<a href="#state_customzonemappings_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Zone<wbr>Mappings</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#globalclusterconfigcustomzonemapping">List&lt;Global<wbr>Cluster<wbr>Config<wbr>Custom<wbr>Zone<wbr>Mapping<wbr>Args&gt;</a></span>
     </dt>
@@ -800,7 +685,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Managed<wbr>Namespaces</span>
+        <span id="state_managednamespaces_csharp">
+<a href="#state_managednamespaces_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Namespaces</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#globalclusterconfigmanagednamespace">List&lt;Global<wbr>Cluster<wbr>Config<wbr>Managed<wbr>Namespace<wbr>Args&gt;</a></span>
     </dt>
@@ -809,7 +696,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project<wbr>Id</span>
+        <span id="state_projectid_csharp">
+<a href="#state_projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -826,7 +715,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cluster<wbr>Name</span>
+        <span id="state_clustername_go">
+<a href="#state_clustername_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -834,7 +725,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Custom<wbr>Zone<wbr>Mapping</span>
+        <span id="state_customzonemapping_go">
+<a href="#state_customzonemapping_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Zone<wbr>Mapping</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -843,7 +736,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Custom<wbr>Zone<wbr>Mappings</span>
+        <span id="state_customzonemappings_go">
+<a href="#state_customzonemappings_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Zone<wbr>Mappings</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#globalclusterconfigcustomzonemapping">[]Global<wbr>Cluster<wbr>Config<wbr>Custom<wbr>Zone<wbr>Mapping</a></span>
     </dt>
@@ -852,7 +747,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Managed<wbr>Namespaces</span>
+        <span id="state_managednamespaces_go">
+<a href="#state_managednamespaces_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Namespaces</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#globalclusterconfigmanagednamespace">[]Global<wbr>Cluster<wbr>Config<wbr>Managed<wbr>Namespace</a></span>
     </dt>
@@ -861,7 +758,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project<wbr>Id</span>
+        <span id="state_projectid_go">
+<a href="#state_projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -878,7 +777,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>cluster<wbr>Name</span>
+        <span id="state_clustername_nodejs">
+<a href="#state_clustername_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -886,7 +787,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>custom<wbr>Zone<wbr>Mapping</span>
+        <span id="state_customzonemapping_nodejs">
+<a href="#state_customzonemapping_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Zone<wbr>Mapping</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -895,7 +798,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>custom<wbr>Zone<wbr>Mappings</span>
+        <span id="state_customzonemappings_nodejs">
+<a href="#state_customzonemappings_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Zone<wbr>Mappings</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#globalclusterconfigcustomzonemapping">Global<wbr>Cluster<wbr>Config<wbr>Custom<wbr>Zone<wbr>Mapping[]</a></span>
     </dt>
@@ -904,7 +809,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>managed<wbr>Namespaces</span>
+        <span id="state_managednamespaces_nodejs">
+<a href="#state_managednamespaces_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Namespaces</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#globalclusterconfigmanagednamespace">Global<wbr>Cluster<wbr>Config<wbr>Managed<wbr>Namespace[]</a></span>
     </dt>
@@ -913,7 +820,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>project<wbr>Id</span>
+        <span id="state_projectid_nodejs">
+<a href="#state_projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -930,7 +839,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>cluster_<wbr>name</span>
+        <span id="state_cluster_name_python">
+<a href="#state_cluster_name_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -938,7 +849,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>custom_<wbr>zone_<wbr>mapping</span>
+        <span id="state_custom_zone_mapping_python">
+<a href="#state_custom_zone_mapping_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>zone_<wbr>mapping</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -947,7 +860,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>custom_<wbr>zone_<wbr>mappings</span>
+        <span id="state_custom_zone_mappings_python">
+<a href="#state_custom_zone_mappings_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>zone_<wbr>mappings</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#globalclusterconfigcustomzonemapping">List[Global<wbr>Cluster<wbr>Config<wbr>Custom<wbr>Zone<wbr>Mapping]</a></span>
     </dt>
@@ -956,7 +871,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>managed_<wbr>namespaces</span>
+        <span id="state_managed_namespaces_python">
+<a href="#state_managed_namespaces_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>namespaces</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#globalclusterconfigmanagednamespace">List[Global<wbr>Cluster<wbr>Config<wbr>Managed<wbr>Namespace]</a></span>
     </dt>
@@ -965,7 +882,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>project_<wbr>id</span>
+        <span id="state_project_id_python">
+<a href="#state_project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1008,7 +927,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Location</span>
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1017,7 +938,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Zone</span>
+        <span id="zone_csharp">
+<a href="#zone_csharp" style="color: inherit; text-decoration: inherit;">Zone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1033,7 +956,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Location</span>
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1042,7 +967,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Zone</span>
+        <span id="zone_go">
+<a href="#zone_go" style="color: inherit; text-decoration: inherit;">Zone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1058,7 +985,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>location</span>
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1067,7 +996,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>zone</span>
+        <span id="zone_nodejs">
+<a href="#zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1083,7 +1014,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>location</span>
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1092,7 +1025,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>zone</span>
+        <span id="zone_python">
+<a href="#zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1126,7 +1061,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Collection</span>
+        <span id="collection_csharp">
+<a href="#collection_csharp" style="color: inherit; text-decoration: inherit;">Collection</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1135,7 +1072,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Custom<wbr>Shard<wbr>Key</span>
+        <span id="customshardkey_csharp">
+<a href="#customshardkey_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Shard<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1144,7 +1083,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Db</span>
+        <span id="db_csharp">
+<a href="#db_csharp" style="color: inherit; text-decoration: inherit;">Db</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1160,7 +1101,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Collection</span>
+        <span id="collection_go">
+<a href="#collection_go" style="color: inherit; text-decoration: inherit;">Collection</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1169,7 +1112,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Custom<wbr>Shard<wbr>Key</span>
+        <span id="customshardkey_go">
+<a href="#customshardkey_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Shard<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1178,7 +1123,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Db</span>
+        <span id="db_go">
+<a href="#db_go" style="color: inherit; text-decoration: inherit;">Db</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1194,7 +1141,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>collection</span>
+        <span id="collection_nodejs">
+<a href="#collection_nodejs" style="color: inherit; text-decoration: inherit;">collection</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1203,7 +1152,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>custom<wbr>Shard<wbr>Key</span>
+        <span id="customshardkey_nodejs">
+<a href="#customshardkey_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Shard<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1212,7 +1163,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>db</span>
+        <span id="db_nodejs">
+<a href="#db_nodejs" style="color: inherit; text-decoration: inherit;">db</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1228,7 +1181,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>collection</span>
+        <span id="collection_python">
+<a href="#collection_python" style="color: inherit; text-decoration: inherit;">collection</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1237,7 +1192,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>custom<wbr>Shard<wbr>Key</span>
+        <span id="customshardkey_python">
+<a href="#customshardkey_python" style="color: inherit; text-decoration: inherit;">custom<wbr>Shard<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1246,7 +1203,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>db</span>
+        <span id="db_python">
+<a href="#db_python" style="color: inherit; text-decoration: inherit;">db</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

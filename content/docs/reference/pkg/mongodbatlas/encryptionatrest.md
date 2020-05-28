@@ -24,7 +24,48 @@ You can use the following clouds: AWS CMK, AZURE KEY VAULT and GOOGLE KEY VAULT 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Mongodbatlas = Pulumi.Mongodbatlas;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var test = new Mongodbatlas.EncryptionAtRest("test", new Mongodbatlas.EncryptionAtRestArgs
+        {
+            AwsKms = new Mongodbatlas.Inputs.EncryptionAtRestAwsKmsArgs
+            {
+                Access_key_id = "AKIAIOSFODNN7EXAMPLE",
+                Customer_master_key_id = "030gce02-586d-48d2-a966-05ea954fde0g",
+                Enabled = true,
+                Region = "US_EAST_1",
+                Secret_access_key = "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY",
+            },
+            AzureKeyVault = new Mongodbatlas.Inputs.EncryptionAtRestAzureKeyVaultArgs
+            {
+                Azure_environment = "AZURE",
+                Client_id = "g54f9e2-89e3-40fd-8188-EXAMPLEID",
+                Enabled = true,
+                Key_identifier = "https://EXAMPLEKeyVault.vault.azure.net/keys/EXAMPLEKey/d891821e3d364e9eb88fbd3d11807b86",
+                Key_vault_name = "EXAMPLEKeyVault",
+                Resource_group_name = "ExampleRGName",
+                Secret = "EXAMPLESECRET",
+                Subscription_id = "0ec944e3-g725-44f9-a147-EXAMPLEID",
+                Tenant_id = "e8e4b6ba-ff32-4c88-a9af-EXAMPLEID",
+            },
+            GoogleCloudKms = new Mongodbatlas.Inputs.EncryptionAtRestGoogleCloudKmsArgs
+            {
+                Enabled = true,
+                Key_version_resource_id = "projects/my-project-common-0/locations/us-east4/keyRings/my-key-ring-0/cryptoKeys/my-key-0/cryptoKeyVersions/1",
+                Service_account_key = "{\"type\": \"service_account\",\"project_id\": \"my-project-common-0\",\"private_key_id\": \"e120598ea4f88249469fcdd75a9a785c1bb3\",\"private_key\": \"-----BEGIN PRIVATE KEY-----\\nMIIEuwIBA(truncated)SfecnS0mT94D9\\n-----END PRIVATE KEY-----\\n\",\"client_email\": \"my-email-kms-0@my-project-common-0.iam.gserviceaccount.com\",\"client_id\": \"10180967717292066\",\"auth_uri\": \"https://accounts.google.com/o/oauth2/auth\",\"token_uri\": \"https://accounts.google.com/o/oauth2/token\",\"auth_provider_x509_cert_url\": \"https://www.googleapis.com/oauth2/v1/certs\",\"client_x509_cert_url\": \"https://www.googleapis.com/robot/v1/metadata/x509/my-email-kms-0%40my-project-common-0.iam.gserviceaccount.com\"}",
+            },
+            ProjectId = "<PROJECT-ID>",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -284,7 +325,9 @@ The EncryptionAtRest resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-required"
             title="Required">
-        <span>Project<wbr>Id</span>
+        <span id="projectid_csharp">
+<a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -293,7 +336,9 @@ The EncryptionAtRest resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Aws<wbr>Kms</span>
+        <span id="awskms_csharp">
+<a href="#awskms_csharp" style="color: inherit; text-decoration: inherit;">Aws<wbr>Kms</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#encryptionatrestawskms">Encryption<wbr>At<wbr>Rest<wbr>Aws<wbr>Kms<wbr>Args</a></span>
     </dt>
@@ -302,7 +347,9 @@ The EncryptionAtRest resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Azure<wbr>Key<wbr>Vault</span>
+        <span id="azurekeyvault_csharp">
+<a href="#azurekeyvault_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Key<wbr>Vault</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#encryptionatrestazurekeyvault">Encryption<wbr>At<wbr>Rest<wbr>Azure<wbr>Key<wbr>Vault<wbr>Args</a></span>
     </dt>
@@ -311,7 +358,9 @@ The EncryptionAtRest resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Google<wbr>Cloud<wbr>Kms</span>
+        <span id="googlecloudkms_csharp">
+<a href="#googlecloudkms_csharp" style="color: inherit; text-decoration: inherit;">Google<wbr>Cloud<wbr>Kms</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#encryptionatrestgooglecloudkms">Encryption<wbr>At<wbr>Rest<wbr>Google<wbr>Cloud<wbr>Kms<wbr>Args</a></span>
     </dt>
@@ -327,7 +376,9 @@ The EncryptionAtRest resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-required"
             title="Required">
-        <span>Project<wbr>Id</span>
+        <span id="projectid_go">
+<a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -336,7 +387,9 @@ The EncryptionAtRest resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Aws<wbr>Kms</span>
+        <span id="awskms_go">
+<a href="#awskms_go" style="color: inherit; text-decoration: inherit;">Aws<wbr>Kms</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#encryptionatrestawskms">Encryption<wbr>At<wbr>Rest<wbr>Aws<wbr>Kms</a></span>
     </dt>
@@ -345,7 +398,9 @@ The EncryptionAtRest resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Azure<wbr>Key<wbr>Vault</span>
+        <span id="azurekeyvault_go">
+<a href="#azurekeyvault_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Key<wbr>Vault</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#encryptionatrestazurekeyvault">Encryption<wbr>At<wbr>Rest<wbr>Azure<wbr>Key<wbr>Vault</a></span>
     </dt>
@@ -354,7 +409,9 @@ The EncryptionAtRest resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Google<wbr>Cloud<wbr>Kms</span>
+        <span id="googlecloudkms_go">
+<a href="#googlecloudkms_go" style="color: inherit; text-decoration: inherit;">Google<wbr>Cloud<wbr>Kms</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#encryptionatrestgooglecloudkms">Encryption<wbr>At<wbr>Rest<wbr>Google<wbr>Cloud<wbr>Kms</a></span>
     </dt>
@@ -370,7 +427,9 @@ The EncryptionAtRest resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-required"
             title="Required">
-        <span>project<wbr>Id</span>
+        <span id="projectid_nodejs">
+<a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -379,7 +438,9 @@ The EncryptionAtRest resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>aws<wbr>Kms</span>
+        <span id="awskms_nodejs">
+<a href="#awskms_nodejs" style="color: inherit; text-decoration: inherit;">aws<wbr>Kms</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#encryptionatrestawskms">Encryption<wbr>At<wbr>Rest<wbr>Aws<wbr>Kms</a></span>
     </dt>
@@ -388,7 +449,9 @@ The EncryptionAtRest resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>azure<wbr>Key<wbr>Vault</span>
+        <span id="azurekeyvault_nodejs">
+<a href="#azurekeyvault_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Key<wbr>Vault</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#encryptionatrestazurekeyvault">Encryption<wbr>At<wbr>Rest<wbr>Azure<wbr>Key<wbr>Vault</a></span>
     </dt>
@@ -397,7 +460,9 @@ The EncryptionAtRest resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>google<wbr>Cloud<wbr>Kms</span>
+        <span id="googlecloudkms_nodejs">
+<a href="#googlecloudkms_nodejs" style="color: inherit; text-decoration: inherit;">google<wbr>Cloud<wbr>Kms</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#encryptionatrestgooglecloudkms">Encryption<wbr>At<wbr>Rest<wbr>Google<wbr>Cloud<wbr>Kms</a></span>
     </dt>
@@ -413,7 +478,9 @@ The EncryptionAtRest resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-required"
             title="Required">
-        <span>project_<wbr>id</span>
+        <span id="project_id_python">
+<a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -422,7 +489,9 @@ The EncryptionAtRest resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>aws_<wbr>kms</span>
+        <span id="aws_kms_python">
+<a href="#aws_kms_python" style="color: inherit; text-decoration: inherit;">aws_<wbr>kms</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#encryptionatrestawskms">Dict[Encryption<wbr>At<wbr>Rest<wbr>Aws<wbr>Kms]</a></span>
     </dt>
@@ -431,7 +500,9 @@ The EncryptionAtRest resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>azure_<wbr>key_<wbr>vault</span>
+        <span id="azure_key_vault_python">
+<a href="#azure_key_vault_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>key_<wbr>vault</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#encryptionatrestazurekeyvault">Dict[Encryption<wbr>At<wbr>Rest<wbr>Azure<wbr>Key<wbr>Vault]</a></span>
     </dt>
@@ -440,7 +511,9 @@ The EncryptionAtRest resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>google_<wbr>cloud_<wbr>kms</span>
+        <span id="google_cloud_kms_python">
+<a href="#google_cloud_kms_python" style="color: inherit; text-decoration: inherit;">google_<wbr>cloud_<wbr>kms</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#encryptionatrestgooglecloudkms">Dict[Encryption<wbr>At<wbr>Rest<wbr>Google<wbr>Cloud<wbr>Kms]</a></span>
     </dt>
@@ -467,7 +540,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -482,7 +557,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -497,7 +574,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -512,7 +591,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -653,7 +734,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Aws<wbr>Kms</span>
+        <span id="state_awskms_csharp">
+<a href="#state_awskms_csharp" style="color: inherit; text-decoration: inherit;">Aws<wbr>Kms</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#encryptionatrestawskms">Encryption<wbr>At<wbr>Rest<wbr>Aws<wbr>Kms<wbr>Args</a></span>
     </dt>
@@ -662,7 +745,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Azure<wbr>Key<wbr>Vault</span>
+        <span id="state_azurekeyvault_csharp">
+<a href="#state_azurekeyvault_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Key<wbr>Vault</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#encryptionatrestazurekeyvault">Encryption<wbr>At<wbr>Rest<wbr>Azure<wbr>Key<wbr>Vault<wbr>Args</a></span>
     </dt>
@@ -671,7 +756,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Google<wbr>Cloud<wbr>Kms</span>
+        <span id="state_googlecloudkms_csharp">
+<a href="#state_googlecloudkms_csharp" style="color: inherit; text-decoration: inherit;">Google<wbr>Cloud<wbr>Kms</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#encryptionatrestgooglecloudkms">Encryption<wbr>At<wbr>Rest<wbr>Google<wbr>Cloud<wbr>Kms<wbr>Args</a></span>
     </dt>
@@ -680,7 +767,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project<wbr>Id</span>
+        <span id="state_projectid_csharp">
+<a href="#state_projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -696,7 +785,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Aws<wbr>Kms</span>
+        <span id="state_awskms_go">
+<a href="#state_awskms_go" style="color: inherit; text-decoration: inherit;">Aws<wbr>Kms</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#encryptionatrestawskms">Encryption<wbr>At<wbr>Rest<wbr>Aws<wbr>Kms</a></span>
     </dt>
@@ -705,7 +796,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Azure<wbr>Key<wbr>Vault</span>
+        <span id="state_azurekeyvault_go">
+<a href="#state_azurekeyvault_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Key<wbr>Vault</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#encryptionatrestazurekeyvault">Encryption<wbr>At<wbr>Rest<wbr>Azure<wbr>Key<wbr>Vault</a></span>
     </dt>
@@ -714,7 +807,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Google<wbr>Cloud<wbr>Kms</span>
+        <span id="state_googlecloudkms_go">
+<a href="#state_googlecloudkms_go" style="color: inherit; text-decoration: inherit;">Google<wbr>Cloud<wbr>Kms</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#encryptionatrestgooglecloudkms">Encryption<wbr>At<wbr>Rest<wbr>Google<wbr>Cloud<wbr>Kms</a></span>
     </dt>
@@ -723,7 +818,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project<wbr>Id</span>
+        <span id="state_projectid_go">
+<a href="#state_projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -739,7 +836,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>aws<wbr>Kms</span>
+        <span id="state_awskms_nodejs">
+<a href="#state_awskms_nodejs" style="color: inherit; text-decoration: inherit;">aws<wbr>Kms</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#encryptionatrestawskms">Encryption<wbr>At<wbr>Rest<wbr>Aws<wbr>Kms</a></span>
     </dt>
@@ -748,7 +847,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>azure<wbr>Key<wbr>Vault</span>
+        <span id="state_azurekeyvault_nodejs">
+<a href="#state_azurekeyvault_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Key<wbr>Vault</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#encryptionatrestazurekeyvault">Encryption<wbr>At<wbr>Rest<wbr>Azure<wbr>Key<wbr>Vault</a></span>
     </dt>
@@ -757,7 +858,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>google<wbr>Cloud<wbr>Kms</span>
+        <span id="state_googlecloudkms_nodejs">
+<a href="#state_googlecloudkms_nodejs" style="color: inherit; text-decoration: inherit;">google<wbr>Cloud<wbr>Kms</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#encryptionatrestgooglecloudkms">Encryption<wbr>At<wbr>Rest<wbr>Google<wbr>Cloud<wbr>Kms</a></span>
     </dt>
@@ -766,7 +869,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>project<wbr>Id</span>
+        <span id="state_projectid_nodejs">
+<a href="#state_projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -782,7 +887,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>aws_<wbr>kms</span>
+        <span id="state_aws_kms_python">
+<a href="#state_aws_kms_python" style="color: inherit; text-decoration: inherit;">aws_<wbr>kms</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#encryptionatrestawskms">Dict[Encryption<wbr>At<wbr>Rest<wbr>Aws<wbr>Kms]</a></span>
     </dt>
@@ -791,7 +898,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>azure_<wbr>key_<wbr>vault</span>
+        <span id="state_azure_key_vault_python">
+<a href="#state_azure_key_vault_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>key_<wbr>vault</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#encryptionatrestazurekeyvault">Dict[Encryption<wbr>At<wbr>Rest<wbr>Azure<wbr>Key<wbr>Vault]</a></span>
     </dt>
@@ -800,7 +909,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>google_<wbr>cloud_<wbr>kms</span>
+        <span id="state_google_cloud_kms_python">
+<a href="#state_google_cloud_kms_python" style="color: inherit; text-decoration: inherit;">google_<wbr>cloud_<wbr>kms</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#encryptionatrestgooglecloudkms">Dict[Encryption<wbr>At<wbr>Rest<wbr>Google<wbr>Cloud<wbr>Kms]</a></span>
     </dt>
@@ -809,7 +920,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>project_<wbr>id</span>
+        <span id="state_project_id_python">
+<a href="#state_project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -851,7 +964,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Access<wbr>Key<wbr>Id</span>
+        <span id="accesskeyid_csharp">
+<a href="#accesskeyid_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Key<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -860,7 +975,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Customer<wbr>Master<wbr>Key<wbr>Id</span>
+        <span id="customermasterkeyid_csharp">
+<a href="#customermasterkeyid_csharp" style="color: inherit; text-decoration: inherit;">Customer<wbr>Master<wbr>Key<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -869,7 +986,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Enabled</span>
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -878,7 +997,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Region</span>
+        <span id="region_csharp">
+<a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -887,7 +1008,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Secret<wbr>Access<wbr>Key</span>
+        <span id="secretaccesskey_csharp">
+<a href="#secretaccesskey_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Access<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -903,7 +1026,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Access<wbr>Key<wbr>Id</span>
+        <span id="accesskeyid_go">
+<a href="#accesskeyid_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Key<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -912,7 +1037,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Customer<wbr>Master<wbr>Key<wbr>Id</span>
+        <span id="customermasterkeyid_go">
+<a href="#customermasterkeyid_go" style="color: inherit; text-decoration: inherit;">Customer<wbr>Master<wbr>Key<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -921,7 +1048,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Enabled</span>
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -930,7 +1059,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Region</span>
+        <span id="region_go">
+<a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -939,7 +1070,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Secret<wbr>Access<wbr>Key</span>
+        <span id="secretaccesskey_go">
+<a href="#secretaccesskey_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Access<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -955,7 +1088,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>access<wbr>Key<wbr>Id</span>
+        <span id="accesskeyid_nodejs">
+<a href="#accesskeyid_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Key<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -964,7 +1099,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>customer<wbr>Master<wbr>Key<wbr>Id</span>
+        <span id="customermasterkeyid_nodejs">
+<a href="#customermasterkeyid_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Master<wbr>Key<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -973,7 +1110,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>enabled</span>
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -982,7 +1121,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>region</span>
+        <span id="region_nodejs">
+<a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -991,7 +1132,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>secret<wbr>Access<wbr>Key</span>
+        <span id="secretaccesskey_nodejs">
+<a href="#secretaccesskey_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Access<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1007,7 +1150,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>access_<wbr>key_<wbr>id</span>
+        <span id="access_key_id_python">
+<a href="#access_key_id_python" style="color: inherit; text-decoration: inherit;">access_<wbr>key_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1016,7 +1161,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>customer_<wbr>master_<wbr>key_<wbr>id</span>
+        <span id="customer_master_key_id_python">
+<a href="#customer_master_key_id_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>master_<wbr>key_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1025,7 +1172,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>enabled</span>
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1034,7 +1183,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>region</span>
+        <span id="region_python">
+<a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1043,7 +1194,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>secret_<wbr>access_<wbr>key</span>
+        <span id="secret_access_key_python">
+<a href="#secret_access_key_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>access_<wbr>key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1077,7 +1230,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Azure<wbr>Environment</span>
+        <span id="azureenvironment_csharp">
+<a href="#azureenvironment_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Environment</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1086,7 +1241,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Client<wbr>Id</span>
+        <span id="clientid_csharp">
+<a href="#clientid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1095,7 +1252,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Enabled</span>
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1104,7 +1263,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Key<wbr>Identifier</span>
+        <span id="keyidentifier_csharp">
+<a href="#keyidentifier_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Identifier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1113,7 +1274,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Key<wbr>Vault<wbr>Name</span>
+        <span id="keyvaultname_csharp">
+<a href="#keyvaultname_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1122,7 +1285,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_csharp">
+<a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1131,7 +1296,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Secret</span>
+        <span id="secret_csharp">
+<a href="#secret_csharp" style="color: inherit; text-decoration: inherit;">Secret</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1140,7 +1307,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Subscription<wbr>Id</span>
+        <span id="subscriptionid_csharp">
+<a href="#subscriptionid_csharp" style="color: inherit; text-decoration: inherit;">Subscription<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1149,7 +1318,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Tenant<wbr>Id</span>
+        <span id="tenantid_csharp">
+<a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1165,7 +1336,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Azure<wbr>Environment</span>
+        <span id="azureenvironment_go">
+<a href="#azureenvironment_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Environment</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1174,7 +1347,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Client<wbr>Id</span>
+        <span id="clientid_go">
+<a href="#clientid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1183,7 +1358,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Enabled</span>
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1192,7 +1369,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Key<wbr>Identifier</span>
+        <span id="keyidentifier_go">
+<a href="#keyidentifier_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Identifier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1201,7 +1380,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Key<wbr>Vault<wbr>Name</span>
+        <span id="keyvaultname_go">
+<a href="#keyvaultname_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1210,7 +1391,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_go">
+<a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1219,7 +1402,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Secret</span>
+        <span id="secret_go">
+<a href="#secret_go" style="color: inherit; text-decoration: inherit;">Secret</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1228,7 +1413,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Subscription<wbr>Id</span>
+        <span id="subscriptionid_go">
+<a href="#subscriptionid_go" style="color: inherit; text-decoration: inherit;">Subscription<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1237,7 +1424,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Tenant<wbr>Id</span>
+        <span id="tenantid_go">
+<a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1253,7 +1442,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>azure<wbr>Environment</span>
+        <span id="azureenvironment_nodejs">
+<a href="#azureenvironment_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Environment</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1262,7 +1453,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>client<wbr>Id</span>
+        <span id="clientid_nodejs">
+<a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1271,7 +1464,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>enabled</span>
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1280,7 +1475,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>key<wbr>Identifier</span>
+        <span id="keyidentifier_nodejs">
+<a href="#keyidentifier_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Identifier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1289,7 +1486,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>key<wbr>Vault<wbr>Name</span>
+        <span id="keyvaultname_nodejs">
+<a href="#keyvaultname_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1298,7 +1497,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>resource<wbr>Group<wbr>Name</span>
+        <span id="resourcegroupname_nodejs">
+<a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1307,7 +1508,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>secret</span>
+        <span id="secret_nodejs">
+<a href="#secret_nodejs" style="color: inherit; text-decoration: inherit;">secret</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1316,7 +1519,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>subscription<wbr>Id</span>
+        <span id="subscriptionid_nodejs">
+<a href="#subscriptionid_nodejs" style="color: inherit; text-decoration: inherit;">subscription<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1325,7 +1530,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>tenant<wbr>Id</span>
+        <span id="tenantid_nodejs">
+<a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1341,7 +1548,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>azure_<wbr>environment</span>
+        <span id="azure_environment_python">
+<a href="#azure_environment_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>environment</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1350,7 +1559,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>client_<wbr>id</span>
+        <span id="client_id_python">
+<a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1359,7 +1570,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>enabled</span>
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1368,7 +1581,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>key_<wbr>identifier</span>
+        <span id="key_identifier_python">
+<a href="#key_identifier_python" style="color: inherit; text-decoration: inherit;">key_<wbr>identifier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1377,7 +1592,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>key_<wbr>vault_<wbr>name</span>
+        <span id="key_vault_name_python">
+<a href="#key_vault_name_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1386,7 +1603,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>resource_<wbr>group_<wbr>name</span>
+        <span id="resource_group_name_python">
+<a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1395,7 +1614,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>secret</span>
+        <span id="secret_python">
+<a href="#secret_python" style="color: inherit; text-decoration: inherit;">secret</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1404,7 +1625,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>subscription_<wbr>id</span>
+        <span id="subscription_id_python">
+<a href="#subscription_id_python" style="color: inherit; text-decoration: inherit;">subscription_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1413,7 +1636,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>tenant_<wbr>id</span>
+        <span id="tenant_id_python">
+<a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1447,7 +1672,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Enabled</span>
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1456,7 +1683,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Key<wbr>Version<wbr>Resource<wbr>Id</span>
+        <span id="keyversionresourceid_csharp">
+<a href="#keyversionresourceid_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Version<wbr>Resource<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1465,7 +1694,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Service<wbr>Account<wbr>Key</span>
+        <span id="serviceaccountkey_csharp">
+<a href="#serviceaccountkey_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Account<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1481,7 +1712,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Enabled</span>
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1490,7 +1723,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Key<wbr>Version<wbr>Resource<wbr>Id</span>
+        <span id="keyversionresourceid_go">
+<a href="#keyversionresourceid_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Version<wbr>Resource<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1499,7 +1734,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Service<wbr>Account<wbr>Key</span>
+        <span id="serviceaccountkey_go">
+<a href="#serviceaccountkey_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Account<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1515,7 +1752,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>enabled</span>
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1524,7 +1763,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>key<wbr>Version<wbr>Resource<wbr>Id</span>
+        <span id="keyversionresourceid_nodejs">
+<a href="#keyversionresourceid_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Version<wbr>Resource<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1533,7 +1774,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>service<wbr>Account<wbr>Key</span>
+        <span id="serviceaccountkey_nodejs">
+<a href="#serviceaccountkey_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1549,7 +1792,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>enabled</span>
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1558,7 +1803,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>key_<wbr>version_<wbr>resource_<wbr>id</span>
+        <span id="key_version_resource_id_python">
+<a href="#key_version_resource_id_python" style="color: inherit; text-decoration: inherit;">key_<wbr>version_<wbr>resource_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1567,7 +1814,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>service_<wbr>account_<wbr>key</span>
+        <span id="service_account_key_python">
+<a href="#service_account_key_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account_<wbr>key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

@@ -82,7 +82,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Cluster<wbr>Name</span>
+        <span id="clustername_csharp">
+<a href="#clustername_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -90,7 +92,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Project<wbr>Id</span>
+        <span id="projectid_csharp">
+<a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -100,7 +104,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Managed<wbr>Namespaces</span>
+        <span id="managednamespaces_csharp">
+<a href="#managednamespaces_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Namespaces</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getglobalclusterconfigmanagednamespace">List&lt;Get<wbr>Global<wbr>Cluster<wbr>Config<wbr>Managed<wbr>Namespace<wbr>Args&gt;</a></span>
     </dt>
@@ -116,7 +122,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Cluster<wbr>Name</span>
+        <span id="clustername_go">
+<a href="#clustername_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -124,7 +132,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Project<wbr>Id</span>
+        <span id="projectid_go">
+<a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -134,7 +144,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Managed<wbr>Namespaces</span>
+        <span id="managednamespaces_go">
+<a href="#managednamespaces_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Namespaces</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getglobalclusterconfigmanagednamespace">[]Get<wbr>Global<wbr>Cluster<wbr>Config<wbr>Managed<wbr>Namespace</a></span>
     </dt>
@@ -150,7 +162,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>cluster<wbr>Name</span>
+        <span id="clustername_nodejs">
+<a href="#clustername_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -158,7 +172,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>project<wbr>Id</span>
+        <span id="projectid_nodejs">
+<a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -168,7 +184,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>managed<wbr>Namespaces</span>
+        <span id="managednamespaces_nodejs">
+<a href="#managednamespaces_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Namespaces</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getglobalclusterconfigmanagednamespace">Get<wbr>Global<wbr>Cluster<wbr>Config<wbr>Managed<wbr>Namespace[]</a></span>
     </dt>
@@ -184,7 +202,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>cluster_<wbr>name</span>
+        <span id="cluster_name_python">
+<a href="#cluster_name_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -192,7 +212,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>project_<wbr>id</span>
+        <span id="project_id_python">
+<a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -202,7 +224,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>managed_<wbr>namespaces</span>
+        <span id="managed_namespaces_python">
+<a href="#managed_namespaces_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>namespaces</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getglobalclusterconfigmanagednamespace">List[Get<wbr>Global<wbr>Cluster<wbr>Config<wbr>Managed<wbr>Namespace]</a></span>
     </dt>
@@ -231,7 +255,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Cluster<wbr>Name</span>
+        <span id="clustername_csharp">
+<a href="#clustername_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -239,7 +265,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Custom<wbr>Zone<wbr>Mapping</span>
+        <span id="customzonemapping_csharp">
+<a href="#customzonemapping_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Zone<wbr>Mapping</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -248,7 +276,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -257,7 +287,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Managed<wbr>Namespaces</span>
+        <span id="managednamespaces_csharp">
+<a href="#managednamespaces_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Namespaces</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getglobalclusterconfigmanagednamespace">List&lt;Get<wbr>Global<wbr>Cluster<wbr>Config<wbr>Managed<wbr>Namespace&gt;</a></span>
     </dt>
@@ -266,7 +298,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Project<wbr>Id</span>
+        <span id="projectid_csharp">
+<a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -281,7 +315,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Cluster<wbr>Name</span>
+        <span id="clustername_go">
+<a href="#clustername_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -289,7 +325,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Custom<wbr>Zone<wbr>Mapping</span>
+        <span id="customzonemapping_go">
+<a href="#customzonemapping_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Zone<wbr>Mapping</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -298,7 +336,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -307,7 +347,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Managed<wbr>Namespaces</span>
+        <span id="managednamespaces_go">
+<a href="#managednamespaces_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Namespaces</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getglobalclusterconfigmanagednamespace">[]Get<wbr>Global<wbr>Cluster<wbr>Config<wbr>Managed<wbr>Namespace</a></span>
     </dt>
@@ -316,7 +358,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Project<wbr>Id</span>
+        <span id="projectid_go">
+<a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -331,7 +375,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>cluster<wbr>Name</span>
+        <span id="clustername_nodejs">
+<a href="#clustername_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -339,7 +385,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>custom<wbr>Zone<wbr>Mapping</span>
+        <span id="customzonemapping_nodejs">
+<a href="#customzonemapping_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Zone<wbr>Mapping</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -348,7 +396,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -357,7 +407,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>managed<wbr>Namespaces</span>
+        <span id="managednamespaces_nodejs">
+<a href="#managednamespaces_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Namespaces</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getglobalclusterconfigmanagednamespace">Get<wbr>Global<wbr>Cluster<wbr>Config<wbr>Managed<wbr>Namespace[]</a></span>
     </dt>
@@ -366,7 +418,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>project<wbr>Id</span>
+        <span id="projectid_nodejs">
+<a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -381,7 +435,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>cluster_<wbr>name</span>
+        <span id="cluster_name_python">
+<a href="#cluster_name_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -389,7 +445,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>custom_<wbr>zone_<wbr>mapping</span>
+        <span id="custom_zone_mapping_python">
+<a href="#custom_zone_mapping_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>zone_<wbr>mapping</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -398,7 +456,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -407,7 +467,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>managed_<wbr>namespaces</span>
+        <span id="managed_namespaces_python">
+<a href="#managed_namespaces_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>namespaces</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getglobalclusterconfigmanagednamespace">List[Get<wbr>Global<wbr>Cluster<wbr>Config<wbr>Managed<wbr>Namespace]</a></span>
     </dt>
@@ -416,7 +478,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>project_<wbr>id</span>
+        <span id="project_id_python">
+<a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -455,7 +519,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Collection</span>
+        <span id="collection_csharp">
+<a href="#collection_csharp" style="color: inherit; text-decoration: inherit;">Collection</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -464,7 +530,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Custom<wbr>Shard<wbr>Key</span>
+        <span id="customshardkey_csharp">
+<a href="#customshardkey_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Shard<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -473,7 +541,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Db</span>
+        <span id="db_csharp">
+<a href="#db_csharp" style="color: inherit; text-decoration: inherit;">Db</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -489,7 +559,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Collection</span>
+        <span id="collection_go">
+<a href="#collection_go" style="color: inherit; text-decoration: inherit;">Collection</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -498,7 +570,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Custom<wbr>Shard<wbr>Key</span>
+        <span id="customshardkey_go">
+<a href="#customshardkey_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Shard<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -507,7 +581,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Db</span>
+        <span id="db_go">
+<a href="#db_go" style="color: inherit; text-decoration: inherit;">Db</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -523,7 +599,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>collection</span>
+        <span id="collection_nodejs">
+<a href="#collection_nodejs" style="color: inherit; text-decoration: inherit;">collection</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -532,7 +610,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>custom<wbr>Shard<wbr>Key</span>
+        <span id="customshardkey_nodejs">
+<a href="#customshardkey_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Shard<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -541,7 +621,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>db</span>
+        <span id="db_nodejs">
+<a href="#db_nodejs" style="color: inherit; text-decoration: inherit;">db</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -557,7 +639,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>collection</span>
+        <span id="collection_python">
+<a href="#collection_python" style="color: inherit; text-decoration: inherit;">collection</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -566,7 +650,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>custom<wbr>Shard<wbr>Key</span>
+        <span id="customshardkey_python">
+<a href="#customshardkey_python" style="color: inherit; text-decoration: inherit;">custom<wbr>Shard<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -575,7 +661,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>db</span>
+        <span id="db_python">
+<a href="#db_python" style="color: inherit; text-decoration: inherit;">db</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

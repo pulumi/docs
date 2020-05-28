@@ -1514,25 +1514,25 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">provider_name</span><span class="o">=</span><span class="s2">&quot;AWS&quot;</span><span class="p">,</span>
     <span class="n">provider_volume_type</span><span class="o">=</span><span class="s2">&quot;STANDARD&quot;</span><span class="p">,</span>
     <span class="n">replication_specs</span><span class="o">=</span><span class="p">[{</span>
-        <span class="s2">&quot;numShards&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s2">&quot;num_shards&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
         <span class="s2">&quot;regionsConfig&quot;</span><span class="p">:</span> <span class="p">[</span>
             <span class="p">{</span>
                 <span class="s2">&quot;electableNodes&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
                 <span class="s2">&quot;priority&quot;</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span>
                 <span class="s2">&quot;readOnlyNodes&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-                <span class="s2">&quot;regionName&quot;</span><span class="p">:</span> <span class="s2">&quot;US_EAST_1&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;region_name&quot;</span><span class="p">:</span> <span class="s2">&quot;US_EAST_1&quot;</span><span class="p">,</span>
             <span class="p">},</span>
             <span class="p">{</span>
                 <span class="s2">&quot;electableNodes&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
                 <span class="s2">&quot;priority&quot;</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span>
                 <span class="s2">&quot;readOnlyNodes&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-                <span class="s2">&quot;regionName&quot;</span><span class="p">:</span> <span class="s2">&quot;US_EAST_2&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;region_name&quot;</span><span class="p">:</span> <span class="s2">&quot;US_EAST_2&quot;</span><span class="p">,</span>
             <span class="p">},</span>
             <span class="p">{</span>
                 <span class="s2">&quot;electableNodes&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
                 <span class="s2">&quot;priority&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
                 <span class="s2">&quot;readOnlyNodes&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
-                <span class="s2">&quot;regionName&quot;</span><span class="p">:</span> <span class="s2">&quot;US_WEST_1&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;region_name&quot;</span><span class="p">:</span> <span class="s2">&quot;US_WEST_1&quot;</span><span class="p">,</span>
             <span class="p">},</span>
         <span class="p">],</span>
     <span class="p">}])</span>
@@ -1553,22 +1553,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">provider_volume_type</span><span class="o">=</span><span class="s2">&quot;STANDARD&quot;</span><span class="p">,</span>
     <span class="n">replication_specs</span><span class="o">=</span><span class="p">[</span>
         <span class="p">{</span>
-            <span class="s2">&quot;numShards&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+            <span class="s2">&quot;num_shards&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
             <span class="s2">&quot;regionsConfig&quot;</span><span class="p">:</span> <span class="p">[{</span>
                 <span class="s2">&quot;electableNodes&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
                 <span class="s2">&quot;priority&quot;</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span>
                 <span class="s2">&quot;readOnlyNodes&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-                <span class="s2">&quot;regionName&quot;</span><span class="p">:</span> <span class="s2">&quot;US_EAST_1&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;region_name&quot;</span><span class="p">:</span> <span class="s2">&quot;US_EAST_1&quot;</span><span class="p">,</span>
             <span class="p">}],</span>
             <span class="s2">&quot;zoneName&quot;</span><span class="p">:</span> <span class="s2">&quot;Zone 1&quot;</span><span class="p">,</span>
         <span class="p">},</span>
         <span class="p">{</span>
-            <span class="s2">&quot;numShards&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+            <span class="s2">&quot;num_shards&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
             <span class="s2">&quot;regionsConfig&quot;</span><span class="p">:</span> <span class="p">[{</span>
                 <span class="s2">&quot;electableNodes&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
                 <span class="s2">&quot;priority&quot;</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span>
                 <span class="s2">&quot;readOnlyNodes&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-                <span class="s2">&quot;regionName&quot;</span><span class="p">:</span> <span class="s2">&quot;EU_CENTRAL_1&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;region_name&quot;</span><span class="p">:</span> <span class="s2">&quot;EU_CENTRAL_1&quot;</span><span class="p">,</span>
             <span class="p">}],</span>
             <span class="s2">&quot;zoneName&quot;</span><span class="p">:</span> <span class="s2">&quot;Zone 2&quot;</span><span class="p">,</span>
         <span class="p">},</span>
@@ -2170,21 +2170,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
             <span class="s2">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;UPDATE&quot;</span><span class="p">,</span>
             <span class="s2">&quot;resources&quot;</span><span class="p">:</span> <span class="p">[{</span>
                 <span class="s2">&quot;collectionName&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;databaseName&quot;</span><span class="p">:</span> <span class="s2">&quot;anyDatabase&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;database_name&quot;</span><span class="p">:</span> <span class="s2">&quot;anyDatabase&quot;</span><span class="p">,</span>
             <span class="p">}],</span>
         <span class="p">},</span>
         <span class="p">{</span>
             <span class="s2">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;INSERT&quot;</span><span class="p">,</span>
             <span class="s2">&quot;resources&quot;</span><span class="p">:</span> <span class="p">[{</span>
                 <span class="s2">&quot;collectionName&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;databaseName&quot;</span><span class="p">:</span> <span class="s2">&quot;anyDatabase&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;database_name&quot;</span><span class="p">:</span> <span class="s2">&quot;anyDatabase&quot;</span><span class="p">,</span>
             <span class="p">}],</span>
         <span class="p">},</span>
         <span class="p">{</span>
             <span class="s2">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;REMOVE&quot;</span><span class="p">,</span>
             <span class="s2">&quot;resources&quot;</span><span class="p">:</span> <span class="p">[{</span>
                 <span class="s2">&quot;collectionName&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;databaseName&quot;</span><span class="p">:</span> <span class="s2">&quot;anyDatabase&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;database_name&quot;</span><span class="p">:</span> <span class="s2">&quot;anyDatabase&quot;</span><span class="p">,</span>
             <span class="p">}],</span>
         <span class="p">},</span>
     <span class="p">],</span>
@@ -2200,7 +2200,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
         <span class="s2">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;INSERT&quot;</span><span class="p">,</span>
         <span class="s2">&quot;resources&quot;</span><span class="p">:</span> <span class="p">[{</span>
             <span class="s2">&quot;collectionName&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;databaseName&quot;</span><span class="p">:</span> <span class="s2">&quot;anyDatabase&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;database_name&quot;</span><span class="p">:</span> <span class="s2">&quot;anyDatabase&quot;</span><span class="p">,</span>
         <span class="p">}],</span>
     <span class="p">}],</span>
     <span class="n">project_id</span><span class="o">=</span><span class="s2">&quot;&lt;PROJECT-ID&gt;&quot;</span><span class="p">,</span>
@@ -2220,25 +2220,25 @@ a format of their choosing before sending those properties to the Pulumi engine.
             <span class="s2">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;UPDATE&quot;</span><span class="p">,</span>
             <span class="s2">&quot;resources&quot;</span><span class="p">:</span> <span class="p">[{</span>
                 <span class="s2">&quot;collectionName&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;databaseName&quot;</span><span class="p">:</span> <span class="s2">&quot;anyDatabase&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;database_name&quot;</span><span class="p">:</span> <span class="s2">&quot;anyDatabase&quot;</span><span class="p">,</span>
             <span class="p">}],</span>
         <span class="p">},</span>
         <span class="p">{</span>
             <span class="s2">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;REMOVE&quot;</span><span class="p">,</span>
             <span class="s2">&quot;resources&quot;</span><span class="p">:</span> <span class="p">[{</span>
                 <span class="s2">&quot;collectionName&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;databaseName&quot;</span><span class="p">:</span> <span class="s2">&quot;anyDatabase&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;database_name&quot;</span><span class="p">:</span> <span class="s2">&quot;anyDatabase&quot;</span><span class="p">,</span>
             <span class="p">}],</span>
         <span class="p">},</span>
     <span class="p">],</span>
     <span class="n">inherited_roles</span><span class="o">=</span><span class="p">[</span>
         <span class="p">{</span>
-            <span class="s2">&quot;databaseName&quot;</span><span class="p">:</span> <span class="s2">&quot;admin&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;roleName&quot;</span><span class="p">:</span> <span class="n">inherited_role_one</span><span class="o">.</span><span class="n">role_name</span><span class="p">,</span>
+            <span class="s2">&quot;database_name&quot;</span><span class="p">:</span> <span class="s2">&quot;admin&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;role_name&quot;</span><span class="p">:</span> <span class="n">inherited_role_one</span><span class="o">.</span><span class="n">role_name</span><span class="p">,</span>
         <span class="p">},</span>
         <span class="p">{</span>
-            <span class="s2">&quot;databaseName&quot;</span><span class="p">:</span> <span class="s2">&quot;admin&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;roleName&quot;</span><span class="p">:</span> <span class="n">inherited_role_two</span><span class="o">.</span><span class="n">role_name</span><span class="p">,</span>
+            <span class="s2">&quot;database_name&quot;</span><span class="p">:</span> <span class="s2">&quot;admin&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;role_name&quot;</span><span class="p">:</span> <span class="n">inherited_role_two</span><span class="o">.</span><span class="n">role_name</span><span class="p">,</span>
         <span class="p">},</span>
     <span class="p">],</span>
     <span class="n">project_id</span><span class="o">=</span><span class="n">inherited_role_one</span><span class="o">.</span><span class="n">project_id</span><span class="p">,</span>
@@ -3836,9 +3836,9 @@ The following are valid roles:</p></li>
     <span class="n">replication_specs</span><span class="o">=</span><span class="p">[</span>
         <span class="p">{</span>
             <span class="s2">&quot;zoneName&quot;</span><span class="p">:</span> <span class="s2">&quot;Zone 1&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;numShards&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="s2">&quot;num_shards&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
             <span class="s2">&quot;regions_config&quot;</span><span class="p">:</span> <span class="p">[{</span>
-                <span class="s2">&quot;regionName&quot;</span><span class="p">:</span> <span class="s2">&quot;EU_CENTRAL_1&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;region_name&quot;</span><span class="p">:</span> <span class="s2">&quot;EU_CENTRAL_1&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;electableNodes&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
                 <span class="s2">&quot;priority&quot;</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span>
                 <span class="s2">&quot;readOnlyNodes&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
@@ -3846,9 +3846,9 @@ The following are valid roles:</p></li>
         <span class="p">},</span>
         <span class="p">{</span>
             <span class="s2">&quot;zoneName&quot;</span><span class="p">:</span> <span class="s2">&quot;Zone 2&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;numShards&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="s2">&quot;num_shards&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
             <span class="s2">&quot;regions_config&quot;</span><span class="p">:</span> <span class="p">[{</span>
-                <span class="s2">&quot;regionName&quot;</span><span class="p">:</span> <span class="s2">&quot;US_EAST_2&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;region_name&quot;</span><span class="p">:</span> <span class="s2">&quot;US_EAST_2&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;electableNodes&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
                 <span class="s2">&quot;priority&quot;</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span>
                 <span class="s2">&quot;readOnlyNodes&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
@@ -5576,8 +5576,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="p">}],</span>
     <span class="n">project_id</span><span class="o">=</span><span class="s2">&quot;&lt;PROJECT-ID&gt;&quot;</span><span class="p">,</span>
     <span class="n">roles</span><span class="o">=</span><span class="p">[{</span>
-        <span class="s2">&quot;databaseName&quot;</span><span class="p">:</span> <span class="s2">&quot;admin&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;roleName&quot;</span><span class="p">:</span> <span class="s2">&quot;atlasAdmin&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;database_name&quot;</span><span class="p">:</span> <span class="s2">&quot;admin&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;role_name&quot;</span><span class="p">:</span> <span class="s2">&quot;atlasAdmin&quot;</span><span class="p">,</span>
     <span class="p">}],</span>
     <span class="n">username</span><span class="o">=</span><span class="s2">&quot;myUsername&quot;</span><span class="p">,</span>
     <span class="n">x509_type</span><span class="o">=</span><span class="s2">&quot;MANAGED&quot;</span><span class="p">)</span>
@@ -5753,8 +5753,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="p">}],</span>
     <span class="n">project_id</span><span class="o">=</span><span class="s2">&quot;&lt;PROJECT-ID&gt;&quot;</span><span class="p">,</span>
     <span class="n">roles</span><span class="o">=</span><span class="p">[{</span>
-        <span class="s2">&quot;databaseName&quot;</span><span class="p">:</span> <span class="s2">&quot;admin&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;roleName&quot;</span><span class="p">:</span> <span class="s2">&quot;atlasAdmin&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;database_name&quot;</span><span class="p">:</span> <span class="s2">&quot;admin&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;role_name&quot;</span><span class="p">:</span> <span class="s2">&quot;atlasAdmin&quot;</span><span class="p">,</span>
     <span class="p">}],</span>
     <span class="n">username</span><span class="o">=</span><span class="s2">&quot;myUsername&quot;</span><span class="p">,</span>
     <span class="n">x509_type</span><span class="o">=</span><span class="s2">&quot;MANAGED&quot;</span><span class="p">)</span>
@@ -6009,14 +6009,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
             <span class="s2">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;UPDATE&quot;</span><span class="p">,</span>
             <span class="s2">&quot;resources&quot;</span><span class="p">:</span> <span class="p">[{</span>
                 <span class="s2">&quot;collectionName&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;databaseName&quot;</span><span class="p">:</span> <span class="s2">&quot;anyDatabase&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;database_name&quot;</span><span class="p">:</span> <span class="s2">&quot;anyDatabase&quot;</span><span class="p">,</span>
             <span class="p">}],</span>
         <span class="p">},</span>
         <span class="p">{</span>
             <span class="s2">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;INSERT&quot;</span><span class="p">,</span>
             <span class="s2">&quot;resources&quot;</span><span class="p">:</span> <span class="p">[{</span>
                 <span class="s2">&quot;collectionName&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;databaseName&quot;</span><span class="p">:</span> <span class="s2">&quot;anyDatabase&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;database_name&quot;</span><span class="p">:</span> <span class="s2">&quot;anyDatabase&quot;</span><span class="p">,</span>
             <span class="p">}],</span>
         <span class="p">},</span>
     <span class="p">],</span>
@@ -6057,12 +6057,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">project_id</span><span class="o">=</span><span class="s2">&quot;&lt;PROJECT-ID&gt;&quot;</span><span class="p">,</span>
     <span class="n">roles</span><span class="o">=</span><span class="p">[</span>
         <span class="p">{</span>
-            <span class="s2">&quot;databaseName&quot;</span><span class="p">:</span> <span class="s2">&quot;admin&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;roleName&quot;</span><span class="p">:</span> <span class="s2">&quot;readWrite&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;database_name&quot;</span><span class="p">:</span> <span class="s2">&quot;admin&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;role_name&quot;</span><span class="p">:</span> <span class="s2">&quot;readWrite&quot;</span><span class="p">,</span>
         <span class="p">},</span>
         <span class="p">{</span>
-            <span class="s2">&quot;databaseName&quot;</span><span class="p">:</span> <span class="s2">&quot;admin&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;roleName&quot;</span><span class="p">:</span> <span class="s2">&quot;atlasAdmin&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;database_name&quot;</span><span class="p">:</span> <span class="s2">&quot;admin&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;role_name&quot;</span><span class="p">:</span> <span class="s2">&quot;atlasAdmin&quot;</span><span class="p">,</span>
         <span class="p">},</span>
     <span class="p">],</span>
     <span class="n">username</span><span class="o">=</span><span class="s2">&quot;test-acc-username&quot;</span><span class="p">)</span>
@@ -6114,12 +6114,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">auth_database_name</span><span class="o">=</span><span class="s2">&quot;admin&quot;</span><span class="p">,</span>
     <span class="n">roles</span><span class="o">=</span><span class="p">[</span>
         <span class="p">{</span>
-            <span class="s2">&quot;roleName&quot;</span><span class="p">:</span> <span class="s2">&quot;readWrite&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;databaseName&quot;</span><span class="p">:</span> <span class="s2">&quot;admin&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;role_name&quot;</span><span class="p">:</span> <span class="s2">&quot;readWrite&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;database_name&quot;</span><span class="p">:</span> <span class="s2">&quot;admin&quot;</span><span class="p">,</span>
         <span class="p">},</span>
         <span class="p">{</span>
-            <span class="s2">&quot;roleName&quot;</span><span class="p">:</span> <span class="s2">&quot;atlasAdmin&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;databaseName&quot;</span><span class="p">:</span> <span class="s2">&quot;admin&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;role_name&quot;</span><span class="p">:</span> <span class="s2">&quot;atlasAdmin&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;database_name&quot;</span><span class="p">:</span> <span class="s2">&quot;admin&quot;</span><span class="p">,</span>
         <span class="p">},</span>
     <span class="p">],</span>
     <span class="n">labels</span><span class="o">=</span><span class="p">[</span>
