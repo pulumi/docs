@@ -38,6 +38,22 @@ import pulumi_gcp as gcp
 me = gcp.organizations.get_client_open_id_user_info()
 pulumi.export("my-email", me.email)
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var me = Output.Create(Gcp.Organizations.GetClientOpenIdUserInfo.InvokeAsync());
+        this.My_email = me.Apply(me => me.Email);
+    }
+
+    [Output("my-email")]
+    public Output<string> My_email { get; set; }
+}
+```
 
 
 

@@ -44,6 +44,26 @@ oauth_idp_config = gcp.identityplatform.OauthIdpConfig("oauthIdpConfig",
     enabled=True,
     issuer="issuer")
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var oauthIdpConfig = new Gcp.IdentityPlatform.OauthIdpConfig("oauthIdpConfig", new Gcp.IdentityPlatform.OauthIdpConfigArgs
+        {
+            ClientId = "client-id",
+            ClientSecret = "secret",
+            DisplayName = "Display Name",
+            Enabled = true,
+            Issuer = "issuer",
+        });
+    }
+
+}
+```
 
 
 

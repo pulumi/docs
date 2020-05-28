@@ -51,6 +51,37 @@ policy = gcp.storage.BucketIAMPolicy("policy",
     bucket=google_storage_bucket["default"]["name"],
     policy_data=admin.policy_data)
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+        {
+            Binding = 
+            {
+                
+                {
+                    { "role", "roles/storage.admin" },
+                    { "members", 
+                    {
+                        "user:jane@example.com",
+                    } },
+                },
+            },
+        }));
+        var policy = new Gcp.Storage.BucketIAMPolicy("policy", new Gcp.Storage.BucketIAMPolicyArgs
+        {
+            Bucket = google_storage_bucket.Default.Name,
+            PolicyData = admin.Apply(admin => admin.PolicyData),
+        });
+    }
+
+}
+```
 
 With IAM Conditions:
 
@@ -91,6 +122,43 @@ policy = gcp.storage.BucketIAMPolicy("policy",
     bucket=google_storage_bucket["default"]["name"],
     policy_data=admin.policy_data)
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+        {
+            Binding = 
+            {
+                
+                {
+                    { "role", "roles/storage.admin" },
+                    { "members", 
+                    {
+                        "user:jane@example.com",
+                    } },
+                    { "condition", 
+                    {
+                        { "title", "expires_after_2019_12_31" },
+                        { "description", "Expiring at midnight of 2019-12-31" },
+                        { "expression", "request.time < timestamp(\"2020-01-01T00:00:00Z\")" },
+                    } },
+                },
+            },
+        }));
+        var policy = new Gcp.Storage.BucketIAMPolicy("policy", new Gcp.Storage.BucketIAMPolicyArgs
+        {
+            Bucket = google_storage_bucket.Default.Name,
+            PolicyData = admin.Apply(admin => admin.PolicyData),
+        });
+    }
+
+}
+```
 ## google\_storage\_bucket\_iam\_binding
 
 ```typescript
@@ -111,6 +179,27 @@ binding = gcp.storage.BucketIAMBinding("binding",
     bucket=google_storage_bucket["default"]["name"],
     role="roles/storage.admin",
     members=["user:jane@example.com"])
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var binding = new Gcp.Storage.BucketIAMBinding("binding", new Gcp.Storage.BucketIAMBindingArgs
+        {
+            Bucket = google_storage_bucket.Default.Name,
+            Role = "roles/storage.admin",
+            Members = 
+            {
+                "user:jane@example.com",
+            },
+        });
+    }
+
+}
 ```
 
 With IAM Conditions:
@@ -144,6 +233,33 @@ binding = gcp.storage.BucketIAMBinding("binding",
         "expression": "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
     })
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var binding = new Gcp.Storage.BucketIAMBinding("binding", new Gcp.Storage.BucketIAMBindingArgs
+        {
+            Bucket = google_storage_bucket.Default.Name,
+            Role = "roles/storage.admin",
+            Members = 
+            {
+                "user:jane@example.com",
+            },
+            Condition = new Gcp.Storage.Inputs.BucketIAMBindingConditionArgs
+            {
+                Title = "expires_after_2019_12_31",
+                Description = "Expiring at midnight of 2019-12-31",
+                Expression = "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+            },
+        });
+    }
+
+}
+```
 ## google\_storage\_bucket\_iam\_member
 
 ```typescript
@@ -164,6 +280,24 @@ member = gcp.storage.BucketIAMMember("member",
     bucket=google_storage_bucket["default"]["name"],
     role="roles/storage.admin",
     member="user:jane@example.com")
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var member = new Gcp.Storage.BucketIAMMember("member", new Gcp.Storage.BucketIAMMemberArgs
+        {
+            Bucket = google_storage_bucket.Default.Name,
+            Role = "roles/storage.admin",
+            Member = "user:jane@example.com",
+        });
+    }
+
+}
 ```
 
 With IAM Conditions:
@@ -196,6 +330,30 @@ member = gcp.storage.BucketIAMMember("member",
         "description": "Expiring at midnight of 2019-12-31",
         "expression": "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
     })
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var member = new Gcp.Storage.BucketIAMMember("member", new Gcp.Storage.BucketIAMMemberArgs
+        {
+            Bucket = google_storage_bucket.Default.Name,
+            Role = "roles/storage.admin",
+            Member = "user:jane@example.com",
+            Condition = new Gcp.Storage.Inputs.BucketIAMMemberConditionArgs
+            {
+                Title = "expires_after_2019_12_31",
+                Description = "Expiring at midnight of 2019-12-31",
+                Expression = "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+            },
+        });
+    }
+
+}
 ```
 
 

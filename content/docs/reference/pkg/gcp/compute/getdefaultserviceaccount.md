@@ -20,7 +20,22 @@ Use this data source to retrieve default service account for this project
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var @default = Output.Create(Gcp.Compute.GetDefaultServiceAccount.InvokeAsync());
+        this.DefaultAccount = @default.Apply(@default => @default.Email);
+    }
+
+    [Output("defaultAccount")]
+    public Output<string> DefaultAccount { get; set; }
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -43,7 +58,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
 const default = gcp.compute.getDefaultServiceAccount({});
-export const defaultAccount = default.then(_default => _default.email);
+export const defaultAccount = _default.then(_default => _default.email);
 ```
 {{% /example %}}
 

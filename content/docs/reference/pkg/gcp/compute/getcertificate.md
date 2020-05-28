@@ -20,7 +20,31 @@ Get info about a Google Compute SSL Certificate from its name.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var myCert = Output.Create(Gcp.Compute.GetCertificate.InvokeAsync(new Gcp.Compute.GetCertificateArgs
+        {
+            Name = "my-cert",
+        }));
+        this.Certificate = myCert.Apply(myCert => myCert.Certificate);
+        this.CertificateId = myCert.Apply(myCert => myCert.CertificateId);
+        this.SelfLink = myCert.Apply(myCert => myCert.SelfLink);
+    }
+
+    [Output("certificate")]
+    public Output<string> Certificate { get; set; }
+    [Output("certificateId")]
+    public Output<string> CertificateId { get; set; }
+    [Output("selfLink")]
+    public Output<string> SelfLink { get; set; }
+}
+```
 {{% /example %}}
 
 {{% example go %}}

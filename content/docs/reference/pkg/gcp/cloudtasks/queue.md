@@ -31,6 +31,22 @@ import pulumi_gcp as gcp
 
 default = gcp.cloudtasks.Queue("default", location="us-central1")
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var @default = new Gcp.CloudTasks.Queue("default", new Gcp.CloudTasks.QueueArgs
+        {
+            Location = "us-central1",
+        });
+    }
+
+}
+```
 
 
 

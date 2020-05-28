@@ -68,6 +68,45 @@ peering_secondary = gcp.compute.NetworkPeering("peeringSecondary",
     network=network_secondary.id,
     peer_network=network_primary.id)
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var networkPrimary = new Gcp.Compute.Network("networkPrimary", new Gcp.Compute.NetworkArgs
+        {
+            AutoCreateSubnetworks = "false",
+        });
+        var networkSecondary = new Gcp.Compute.Network("networkSecondary", new Gcp.Compute.NetworkArgs
+        {
+            AutoCreateSubnetworks = "false",
+        });
+        var peeringPrimary = new Gcp.Compute.NetworkPeering("peeringPrimary", new Gcp.Compute.NetworkPeeringArgs
+        {
+            Network = networkPrimary.Id,
+            PeerNetwork = networkSecondary.Id,
+            ImportCustomRoutes = true,
+            ExportCustomRoutes = true,
+        });
+        var peeringPrimaryRoutes = new Gcp.Compute.NetworkPeeringRoutesConfig("peeringPrimaryRoutes", new Gcp.Compute.NetworkPeeringRoutesConfigArgs
+        {
+            Peering = peeringPrimary.Name,
+            Network = networkPrimary.Name,
+            ImportCustomRoutes = true,
+            ExportCustomRoutes = true,
+        });
+        var peeringSecondary = new Gcp.Compute.NetworkPeering("peeringSecondary", new Gcp.Compute.NetworkPeeringArgs
+        {
+            Network = networkSecondary.Id,
+            PeerNetwork = networkPrimary.Id,
+        });
+    }
+
+}
+```
 
 
 

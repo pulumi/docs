@@ -40,6 +40,23 @@ neg = gcp.compute.GlobalNetworkEndpointGroup("neg",
     default_port="90",
     network_endpoint_type="INTERNET_FQDN_PORT")
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var neg = new Gcp.Compute.GlobalNetworkEndpointGroup("neg", new Gcp.Compute.GlobalNetworkEndpointGroupArgs
+        {
+            DefaultPort = "90",
+            NetworkEndpointType = "INTERNET_FQDN_PORT",
+        });
+    }
+
+}
+```
 ## Example Usage - Global Network Endpoint Group Ip Address
 
 
@@ -59,6 +76,23 @@ import pulumi_gcp as gcp
 neg = gcp.compute.GlobalNetworkEndpointGroup("neg",
     default_port=90,
     network_endpoint_type="INTERNET_IP_PORT")
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var neg = new Gcp.Compute.GlobalNetworkEndpointGroup("neg", new Gcp.Compute.GlobalNetworkEndpointGroupArgs
+        {
+            DefaultPort = 90,
+            NetworkEndpointType = "INTERNET_IP_PORT",
+        });
+    }
+
+}
 ```
 
 

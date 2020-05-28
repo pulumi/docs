@@ -25,7 +25,32 @@ granted to the credentials used with this provider.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var log_bucket = new Gcp.Storage.Bucket("log-bucket", new Gcp.Storage.BucketArgs
+        {
+        });
+        var my_sink = new Gcp.Logging.OrganizationSink("my-sink", new Gcp.Logging.OrganizationSinkArgs
+        {
+            OrgId = "123456789",
+            Destination = log_bucket.Name.Apply(name => $"storage.googleapis.com/{name}"),
+            Filter = "resource.type = gce_instance AND severity >= WARN",
+        });
+        var log_writer = new Gcp.Projects.IAMMember("log-writer", new Gcp.Projects.IAMMemberArgs
+        {
+            Role = "roles/storage.objectCreator",
+            Member = my_sink.WriterIdentity,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -53,15 +78,15 @@ log_writer = gcp.projects.IAMMember("log-writer",
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const log-bucket = new gcp.storage.Bucket("log-bucket", {});
-const my-sink = new gcp.logging.OrganizationSink("my-sink", {
+const log_bucket = new gcp.storage.Bucket("log-bucket", {});
+const my_sink = new gcp.logging.OrganizationSink("my-sink", {
     orgId: "123456789",
-    destination: pulumi.interpolate`storage.googleapis.com/${log-bucket.name}`,
+    destination: pulumi.interpolate`storage.googleapis.com/${log_bucket.name}`,
     filter: "resource.type = gce_instance AND severity >= WARN",
 });
-const log-writer = new gcp.projects.IAMMember("log-writer", {
+const log_writer = new gcp.projects.IAMMember("log-writer", {
     role: "roles/storage.objectCreator",
-    member: my-sink.writerIdentity,
+    member: my_sink.writerIdentity,
 });
 ```
 {{% /example %}}

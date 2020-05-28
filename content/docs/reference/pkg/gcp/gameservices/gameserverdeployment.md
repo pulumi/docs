@@ -25,7 +25,7 @@ To get more information about GameServerDeployment, see:
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const default = new gcp.gameservices.GameServerDeployment("default", {
+const _default = new gcp.gameservices.GameServerDeployment("default", {
     deploymentId: "tf-test-deployment",
     description: "a deployment description",
 });
@@ -37,6 +37,23 @@ import pulumi_gcp as gcp
 default = gcp.gameservices.GameServerDeployment("default",
     deployment_id="tf-test-deployment",
     description="a deployment description")
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var @default = new Gcp.GameServices.GameServerDeployment("default", new Gcp.GameServices.GameServerDeploymentArgs
+        {
+            DeploymentId = "tf-test-deployment",
+            Description = "a deployment description",
+        });
+    }
+
+}
 ```
 
 

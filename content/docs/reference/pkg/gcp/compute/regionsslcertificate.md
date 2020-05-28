@@ -32,7 +32,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 import * from "fs";
 
-const default = new gcp.compute.RegionSslCertificate("default", {
+const _default = new gcp.compute.RegionSslCertificate("default", {
     region: "us-central1",
     namePrefix: "my-certificate-",
     description: "a description",
@@ -51,112 +51,26 @@ default = gcp.compute.RegionSslCertificate("default",
     private_key=(lambda path: open(path).read())("path/to/private.key"),
     certificate=(lambda path: open(path).read())("path/to/certificate.crt"))
 ```
-## Example Usage - Region Ssl Certificate Target Https Proxies
+```csharp
+using System.IO;
+using Pulumi;
+using Gcp = Pulumi.Gcp;
 
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var @default = new Gcp.Compute.RegionSslCertificate("default", new Gcp.Compute.RegionSslCertificateArgs
+        {
+            Region = "us-central1",
+            NamePrefix = "my-certificate-",
+            Description = "a description",
+            PrivateKey = File.ReadAllText("path/to/private.key"),
+            Certificate = File.ReadAllText("path/to/certificate.crt"),
+        });
+    }
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-import * from "fs";
-
-// Using with Region Target HTTPS Proxies
-//
-// SSL certificates cannot be updated after creation. In order to apply
-// the specified configuration, the provider will destroy the existing
-// resource and create a replacement. To effectively use an SSL
-// certificate resource with a Target HTTPS Proxy resource, it's
-// recommended to specify create_before_destroy in a lifecycle block.
-// Either omit the Instance Template name attribute, specify a partial
-// name with name_prefix, or use random_id resource. Example:
-const defaultRegionSslCertificate = new gcp.compute.RegionSslCertificate("defaultRegionSslCertificate", {
-    region: "us-central1",
-    namePrefix: "my-certificate-",
-    privateKey: fs.readFileSync("path/to/private.key"),
-    certificate: fs.readFileSync("path/to/certificate.crt"),
-});
-const defaultRegionHealthCheck = new gcp.compute.RegionHealthCheck("defaultRegionHealthCheck", {
-    region: "us-central1",
-    http_health_check: {
-        port: 80,
-    },
-});
-const defaultRegionBackendService = new gcp.compute.RegionBackendService("defaultRegionBackendService", {
-    region: "us-central1",
-    protocol: "HTTP",
-    timeoutSec: 10,
-    healthChecks: [defaultRegionHealthCheck.id],
-});
-const defaultRegionUrlMap = new gcp.compute.RegionUrlMap("defaultRegionUrlMap", {
-    region: "us-central1",
-    description: "a description",
-    defaultService: defaultRegionBackendService.id,
-    host_rule: [{
-        hosts: ["mysite.com"],
-        pathMatcher: "allpaths",
-    }],
-    path_matcher: [{
-        name: "allpaths",
-        defaultService: defaultRegionBackendService.id,
-        path_rule: [{
-            paths: ["/*"],
-            service: defaultRegionBackendService.id,
-        }],
-    }],
-});
-const defaultRegionTargetHttpsProxy = new gcp.compute.RegionTargetHttpsProxy("defaultRegionTargetHttpsProxy", {
-    region: "us-central1",
-    urlMap: defaultRegionUrlMap.id,
-    sslCertificates: [defaultRegionSslCertificate.id],
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-# Using with Region Target HTTPS Proxies
-#
-# SSL certificates cannot be updated after creation. In order to apply
-# the specified configuration, the provider will destroy the existing
-# resource and create a replacement. To effectively use an SSL
-# certificate resource with a Target HTTPS Proxy resource, it's
-# recommended to specify create_before_destroy in a lifecycle block.
-# Either omit the Instance Template name attribute, specify a partial
-# name with name_prefix, or use random_id resource. Example:
-default_region_ssl_certificate = gcp.compute.RegionSslCertificate("defaultRegionSslCertificate",
-    region="us-central1",
-    name_prefix="my-certificate-",
-    private_key=(lambda path: open(path).read())("path/to/private.key"),
-    certificate=(lambda path: open(path).read())("path/to/certificate.crt"))
-default_region_health_check = gcp.compute.RegionHealthCheck("defaultRegionHealthCheck",
-    region="us-central1",
-    http_health_check={
-        "port": 80,
-    })
-default_region_backend_service = gcp.compute.RegionBackendService("defaultRegionBackendService",
-    region="us-central1",
-    protocol="HTTP",
-    timeout_sec=10,
-    health_checks=[default_region_health_check.id])
-default_region_url_map = gcp.compute.RegionUrlMap("defaultRegionUrlMap",
-    region="us-central1",
-    description="a description",
-    default_service=default_region_backend_service.id,
-    host_rule=[{
-        "hosts": ["mysite.com"],
-        "pathMatcher": "allpaths",
-    }],
-    path_matcher=[{
-        "name": "allpaths",
-        "default_service": default_region_backend_service.id,
-        "path_rule": [{
-            "paths": ["/*"],
-            "service": default_region_backend_service.id,
-        }],
-    }])
-default_region_target_https_proxy = gcp.compute.RegionTargetHttpsProxy("defaultRegionTargetHttpsProxy",
-    region="us-central1",
-    url_map=default_region_url_map.id,
-    ssl_certificates=[default_region_ssl_certificate.id])
+}
 ```
 
 

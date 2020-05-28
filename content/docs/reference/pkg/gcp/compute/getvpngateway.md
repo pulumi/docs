@@ -20,7 +20,22 @@ Get a VPN gateway within GCE from its name.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var my_vpn_gateway = Output.Create(Gcp.Compute.GetVPNGateway.InvokeAsync(new Gcp.Compute.GetVPNGatewayArgs
+        {
+            Name = "vpn-gateway-us-east1",
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

@@ -62,6 +62,34 @@ job = gcp.cloudscheduler.Job("job",
     schedule="*/8 * * * *",
     time_zone="America/New_York")
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var job = new Gcp.CloudScheduler.Job("job", new Gcp.CloudScheduler.JobArgs
+        {
+            AttemptDeadline = "320s",
+            Description = "test http job",
+            HttpTarget = new Gcp.CloudScheduler.Inputs.JobHttpTargetArgs
+            {
+                HttpMethod = "POST",
+                Uri = "https://example.com/ping",
+            },
+            RetryConfig = new Gcp.CloudScheduler.Inputs.JobRetryConfigArgs
+            {
+                RetryCount = 1,
+            },
+            Schedule = "*/8 * * * *",
+            TimeZone = "America/New_York",
+        });
+    }
+
+}
+```
 ## Example Usage - Scheduler Job App Engine
 
 
@@ -116,85 +144,42 @@ job = gcp.cloudscheduler.Job("job",
     schedule="*/4 * * * *",
     time_zone="Europe/London")
 ```
-## Example Usage - Scheduler Job Oauth
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
 
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var job = new Gcp.CloudScheduler.Job("job", new Gcp.CloudScheduler.JobArgs
+        {
+            AppEngineHttpTarget = new Gcp.CloudScheduler.Inputs.JobAppEngineHttpTargetArgs
+            {
+                AppEngineRouting = new Gcp.CloudScheduler.Inputs.JobAppEngineHttpTargetAppEngineRoutingArgs
+                {
+                    Instance = "my-instance-001",
+                    Service = "web",
+                    Version = "prod",
+                },
+                HttpMethod = "POST",
+                RelativeUri = "/ping",
+            },
+            AttemptDeadline = "320s",
+            Description = "test app engine job",
+            RetryConfig = new Gcp.CloudScheduler.Inputs.JobRetryConfigArgs
+            {
+                MaxDoublings = 2,
+                MaxRetryDuration = "10s",
+                MinBackoffDuration = "1s",
+                RetryCount = 3,
+            },
+            Schedule = "*/4 * * * *",
+            TimeZone = "Europe/London",
+        });
+    }
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const default = gcp.compute.getDefaultServiceAccount({});
-const job = new gcp.cloudscheduler.Job("job", {
-    description: "test http job",
-    schedule: "*/8 * * * *",
-    timeZone: "America/New_York",
-    attemptDeadline: "320s",
-    http_target: {
-        httpMethod: "GET",
-        uri: "https://cloudscheduler.googleapis.com/v1/projects/my-project-name/locations/us-west1/jobs",
-        oauth_token: {
-            serviceAccountEmail: default.then(_default => _default.email),
-        },
-    },
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-default = gcp.compute.get_default_service_account()
-job = gcp.cloudscheduler.Job("job",
-    description="test http job",
-    schedule="*/8 * * * *",
-    time_zone="America/New_York",
-    attempt_deadline="320s",
-    http_target={
-        "httpMethod": "GET",
-        "uri": "https://cloudscheduler.googleapis.com/v1/projects/my-project-name/locations/us-west1/jobs",
-        "oauth_token": {
-            "service_account_email": default.email,
-        },
-    })
-```
-## Example Usage - Scheduler Job Oidc
-
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const default = gcp.compute.getDefaultServiceAccount({});
-const job = new gcp.cloudscheduler.Job("job", {
-    description: "test http job",
-    schedule: "*/8 * * * *",
-    timeZone: "America/New_York",
-    attemptDeadline: "320s",
-    http_target: {
-        httpMethod: "GET",
-        uri: "https://example.com/ping",
-        oidc_token: {
-            serviceAccountEmail: default.then(_default => _default.email),
-        },
-    },
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-default = gcp.compute.get_default_service_account()
-job = gcp.cloudscheduler.Job("job",
-    description="test http job",
-    schedule="*/8 * * * *",
-    time_zone="America/New_York",
-    attempt_deadline="320s",
-    http_target={
-        "httpMethod": "GET",
-        "uri": "https://example.com/ping",
-        "oidc_token": {
-            "service_account_email": default.email,
-        },
-    })
+}
 ```
 
 

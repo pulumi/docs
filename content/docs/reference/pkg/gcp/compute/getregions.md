@@ -41,6 +41,41 @@ for range in [{"value": i} for i in range(0, len(available.names))]:
         network="my-network",
         region=available.names[range["value"]]))
 ```
+```csharp
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var dict = Output.Create(Initialize());
+    }
+
+    private async Task<IDictionary<string, Output<string>>> Initialize()
+    {
+        var available = await Gcp.Compute.GetRegions.InvokeAsync();
+        var cluster = new List<Gcp.Compute.Subnetwork>();
+        for (var rangeIndex = 0; rangeIndex < available.Names.Length; rangeIndex++)
+        {
+            var range = new { Value = rangeIndex };
+            cluster.Add(new Gcp.Compute.Subnetwork($"cluster-{range.Value}", new Gcp.Compute.SubnetworkArgs
+            {
+                IpCidrRange = $"10.36.{range.Value}.0/24",
+                Network = "my-network",
+                Region = available.Names[range.Value],
+            }));
+        }
+
+        return new Dictionary<string, Output<string>>
+        {
+        };
+    }
+
+}
+```
 
 
 

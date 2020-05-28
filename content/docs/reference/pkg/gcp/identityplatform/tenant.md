@@ -41,6 +41,23 @@ tenant = gcp.identityplatform.Tenant("tenant",
     allow_password_signup=True,
     display_name="tenant")
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var tenant = new Gcp.IdentityPlatform.Tenant("tenant", new Gcp.IdentityPlatform.TenantArgs
+        {
+            AllowPasswordSignup = true,
+            DisplayName = "tenant",
+        });
+    }
+
+}
+```
 
 
 

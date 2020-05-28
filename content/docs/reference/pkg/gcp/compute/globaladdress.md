@@ -35,6 +35,21 @@ import pulumi_gcp as gcp
 
 default = gcp.compute.GlobalAddress("default")
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var @default = new Gcp.Compute.GlobalAddress("default", new Gcp.Compute.GlobalAddressArgs
+        {
+        });
+    }
+
+}
+```
 
 
 

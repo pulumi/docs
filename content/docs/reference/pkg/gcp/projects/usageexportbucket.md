@@ -29,7 +29,23 @@ doc for more information.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var myProject = new Gcp.Organizations.Project("myProject", new Gcp.Organizations.ProjectArgs
+        {
+            OrgId = "1234567",
+            ProjectId = "your-project-id",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

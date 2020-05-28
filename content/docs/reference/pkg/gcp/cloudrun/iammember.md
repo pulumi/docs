@@ -55,6 +55,39 @@ policy = gcp.cloudrun.IamPolicy("policy",
     service=google_cloud_run_service["default"]["name"],
     policy_data=admin.policy_data)
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+        {
+            Binding = 
+            {
+                
+                {
+                    { "role", "roles/viewer" },
+                    { "members", 
+                    {
+                        "user:jane@example.com",
+                    } },
+                },
+            },
+        }));
+        var policy = new Gcp.CloudRun.IamPolicy("policy", new Gcp.CloudRun.IamPolicyArgs
+        {
+            Location = google_cloud_run_service.Default.Location,
+            Project = google_cloud_run_service.Default.Project,
+            Service = google_cloud_run_service.Default.Name,
+            PolicyData = admin.Apply(admin => admin.PolicyData),
+        });
+    }
+
+}
+```
 
 ## google\_cloud\_run\_service\_iam\_binding
 
@@ -81,6 +114,29 @@ binding = gcp.cloudrun.IamBinding("binding",
     role="roles/viewer",
     members=["user:jane@example.com"])
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var binding = new Gcp.CloudRun.IamBinding("binding", new Gcp.CloudRun.IamBindingArgs
+        {
+            Location = google_cloud_run_service.Default.Location,
+            Project = google_cloud_run_service.Default.Project,
+            Service = google_cloud_run_service.Default.Name,
+            Role = "roles/viewer",
+            Members = 
+            {
+                "user:jane@example.com",
+            },
+        });
+    }
+
+}
+```
 
 ## google\_cloud\_run\_service\_iam\_member
 
@@ -106,6 +162,26 @@ member = gcp.cloudrun.IamMember("member",
     service=google_cloud_run_service["default"]["name"],
     role="roles/viewer",
     member="user:jane@example.com")
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var member = new Gcp.CloudRun.IamMember("member", new Gcp.CloudRun.IamMemberArgs
+        {
+            Location = google_cloud_run_service.Default.Location,
+            Project = google_cloud_run_service.Default.Project,
+            Service = google_cloud_run_service.Default.Name,
+            Role = "roles/viewer",
+            Member = "user:jane@example.com",
+        });
+    }
+
+}
 ```
 
 

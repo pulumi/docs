@@ -20,7 +20,22 @@ Get information about a BackendBucket.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var my_backend_bucket = Output.Create(Gcp.Compute.GetBackendBucket.InvokeAsync(new Gcp.Compute.GetBackendBucketArgs
+        {
+            Name = "my-backend",
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

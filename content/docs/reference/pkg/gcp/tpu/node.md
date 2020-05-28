@@ -45,47 +45,25 @@ tpu = gcp.tpu.Node("tpu",
     tensorflow_version=available.versions[0],
     cidr_block="10.2.0.0/29")
 ```
-## Example Usage - TPU Node Full
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
 
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var available = Output.Create(Gcp.Tpu.GetTensorflowVersions.InvokeAsync());
+        var tpu = new Gcp.Tpu.Node("tpu", new Gcp.Tpu.NodeArgs
+        {
+            Zone = "us-central1-b",
+            AcceleratorType = "v3-8",
+            TensorflowVersion = available.Apply(available => available.Versions[0]),
+            CidrBlock = "10.2.0.0/29",
+        });
+    }
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const available = gcp.tpu.getTensorflowVersions({});
-const tpu = new gcp.tpu.Node("tpu", {
-    zone: "us-central1-b",
-    acceleratorType: "v3-8",
-    cidrBlock: "10.3.0.0/29",
-    tensorflowVersion: available.then(available => available.versions[0]),
-    description: "Google Provider test TPU",
-    network: "default",
-    labels: {
-        foo: "bar",
-    },
-    scheduling_config: {
-        preemptible: true,
-    },
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-available = gcp.tpu.get_tensorflow_versions()
-tpu = gcp.tpu.Node("tpu",
-    zone="us-central1-b",
-    accelerator_type="v3-8",
-    cidr_block="10.3.0.0/29",
-    tensorflow_version=available.versions[0],
-    description="Google Provider test TPU",
-    network="default",
-    labels={
-        "foo": "bar",
-    },
-    scheduling_config={
-        "preemptible": True,
-    })
+}
 ```
 
 

@@ -33,7 +33,51 @@ making this resource dependent on those IAM resources via `depends_on`. This wil
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var gcsAccount = Output.Create(Gcp.Storage.GetProjectServiceAccount.InvokeAsync());
+        var topic = new Gcp.PubSub.Topic("topic", new Gcp.PubSub.TopicArgs
+        {
+        });
+        var binding = new Gcp.PubSub.TopicIAMBinding("binding", new Gcp.PubSub.TopicIAMBindingArgs
+        {
+            Topic = topic.Id,
+            Role = "roles/pubsub.publisher",
+            Members = 
+            {
+                gcsAccount.Apply(gcsAccount => $"serviceAccount:{gcsAccount.EmailAddress}"),
+            },
+        });
+        // End enabling notifications
+        var bucket = new Gcp.Storage.Bucket("bucket", new Gcp.Storage.BucketArgs
+        {
+        });
+        var notification = new Gcp.Storage.Notification("notification", new Gcp.Storage.NotificationArgs
+        {
+            Bucket = bucket.Name,
+            PayloadFormat = "JSON_API_V1",
+            Topic = topic.Id,
+            EventTypes = 
+            {
+                "OBJECT_FINALIZE",
+                "OBJECT_METADATA_UPDATE",
+            },
+            CustomAttributes = 
+            {
+                { "new-attribute", "new-attribute-value" },
+            },
+        });
+        // Enable notifications by giving the correct IAM permission to the unique service account.
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

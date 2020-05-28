@@ -45,41 +45,26 @@ template = gcp.compute.NodeTemplate("template",
     region="us-central1",
     node_type=central1a.names[0])
 ```
-## Example Usage - Node Template Server Binding
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
 
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var central1a = Output.Create(Gcp.Compute.GetNodeTypes.InvokeAsync(new Gcp.Compute.GetNodeTypesArgs
+        {
+            Zone = "us-central1-a",
+        }));
+        var template = new Gcp.Compute.NodeTemplate("template", new Gcp.Compute.NodeTemplateArgs
+        {
+            Region = "us-central1",
+            NodeType = central1a.Apply(central1a => central1a.Names[0]),
+        });
+    }
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const central1a = gcp.compute.getNodeTypes({
-    zone: "us-central1-a",
-});
-const template = new gcp.compute.NodeTemplate("template", {
-    region: "us-central1",
-    nodeType: central1a.then(central1a => central1a.names[0]),
-    nodeAffinityLabels: {
-        foo: "baz",
-    },
-    server_binding: {
-        type: "RESTART_NODE_ON_MINIMAL_SERVERS",
-    },
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-central1a = gcp.compute.get_node_types(zone="us-central1-a")
-template = gcp.compute.NodeTemplate("template",
-    region="us-central1",
-    node_type=central1a.names[0],
-    node_affinity_labels={
-        "foo": "baz",
-    },
-    server_binding={
-        "type": "RESTART_NODE_ON_MINIMAL_SERVERS",
-    })
+}
 ```
 
 

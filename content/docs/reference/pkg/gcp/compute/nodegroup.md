@@ -34,7 +34,7 @@ import * as gcp from "@pulumi/gcp";
 const central1a = gcp.compute.getNodeTypes({
     zone: "us-central1-a",
 });
-const soletenant-tmpl = new gcp.compute.NodeTemplate("soletenant-tmpl", {
+const soletenant_tmpl = new gcp.compute.NodeTemplate("soletenant-tmpl", {
     region: "us-central1",
     nodeType: central1a.then(central1a => central1a.names[0]),
 });
@@ -42,7 +42,7 @@ const nodes = new gcp.compute.NodeGroup("nodes", {
     zone: "us-central1-a",
     description: "example gcp.compute.NodeGroup for the Google Provider",
     size: 1,
-    nodeTemplate: soletenant-tmpl.id,
+    nodeTemplate: soletenant_tmpl.id,
 });
 ```
 ```python
@@ -59,50 +59,33 @@ nodes = gcp.compute.NodeGroup("nodes",
     size=1,
     node_template=soletenant_tmpl.id)
 ```
-## Example Usage - Node Group Autoscaling Policy
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
 
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var central1a = Output.Create(Gcp.Compute.GetNodeTypes.InvokeAsync(new Gcp.Compute.GetNodeTypesArgs
+        {
+            Zone = "us-central1-a",
+        }));
+        var soletenant_tmpl = new Gcp.Compute.NodeTemplate("soletenant-tmpl", new Gcp.Compute.NodeTemplateArgs
+        {
+            Region = "us-central1",
+            NodeType = central1a.Apply(central1a => central1a.Names[0]),
+        });
+        var nodes = new Gcp.Compute.NodeGroup("nodes", new Gcp.Compute.NodeGroupArgs
+        {
+            Zone = "us-central1-a",
+            Description = "example gcp.compute.NodeGroup for the Google Provider",
+            Size = 1,
+            NodeTemplate = soletenant_tmpl.Id,
+        });
+    }
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const central1a = gcp.compute.getNodeTypes({
-    zone: "us-central1-a",
-});
-const soletenant-tmpl = new gcp.compute.NodeTemplate("soletenant-tmpl", {
-    region: "us-central1",
-    nodeType: central1a.then(central1a => central1a.names[0]),
-});
-const nodes = new gcp.compute.NodeGroup("nodes", {
-    zone: "us-central1-a",
-    description: "example gcp.compute.NodeGroup for the Google Provider",
-    size: 1,
-    nodeTemplate: soletenant-tmpl.id,
-    autoscaling_policy: {
-        mode: "ON",
-        minNodes: 1,
-        maxNodes: 10,
-    },
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-central1a = gcp.compute.get_node_types(zone="us-central1-a")
-soletenant_tmpl = gcp.compute.NodeTemplate("soletenant-tmpl",
-    region="us-central1",
-    node_type=central1a.names[0])
-nodes = gcp.compute.NodeGroup("nodes",
-    zone="us-central1-a",
-    description="example gcp.compute.NodeGroup for the Google Provider",
-    size=1,
-    node_template=soletenant_tmpl.id,
-    autoscaling_policy={
-        "mode": "ON",
-        "minNodes": 1,
-        "maxNodes": 10,
-    })
+}
 ```
 
 

@@ -41,6 +41,32 @@ dns = gcp.dns.RecordSet("dns",
     managed_zone=env_dns_zone.name,
     rrdatas=["test"])
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var envDnsZone = Output.Create(Gcp.Dns.GetManagedZone.InvokeAsync(new Gcp.Dns.GetManagedZoneArgs
+        {
+            Name = "qa-zone",
+        }));
+        var dns = new Gcp.Dns.RecordSet("dns", new Gcp.Dns.RecordSetArgs
+        {
+            Type = "TXT",
+            Ttl = 300,
+            ManagedZone = envDnsZone.Apply(envDnsZone => envDnsZone.Name),
+            Rrdatas = 
+            {
+                "test",
+            },
+        });
+    }
+
+}
+```
 
 
 

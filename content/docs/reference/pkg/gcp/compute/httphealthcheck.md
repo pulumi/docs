@@ -49,6 +49,24 @@ default = gcp.compute.HttpHealthCheck("default",
     request_path="/health_check",
     timeout_sec=1)
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var @default = new Gcp.Compute.HttpHealthCheck("default", new Gcp.Compute.HttpHealthCheckArgs
+        {
+            CheckIntervalSec = 1,
+            RequestPath = "/health_check",
+            TimeoutSec = 1,
+        });
+    }
+
+}
+```
 
 
 

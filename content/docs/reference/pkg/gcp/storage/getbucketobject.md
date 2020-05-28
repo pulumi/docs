@@ -24,7 +24,23 @@ and
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var picture = Output.Create(Gcp.Storage.GetBucketObject.InvokeAsync(new Gcp.Storage.GetBucketObjectArgs
+        {
+            Bucket = "image-store",
+            Name = "folder/butterfly01.jpg",
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

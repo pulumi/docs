@@ -48,6 +48,32 @@ get_url = gcp.storage.get_object_signed_url(bucket="fried_chicken",
         "x-goog-if-generation-match": 1,
     })
 ```
+```csharp
+using System.IO;
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var getUrl = Output.Create(Gcp.Storage.GetObjectSignedUrl.InvokeAsync(new Gcp.Storage.GetObjectSignedUrlArgs
+        {
+            Bucket = "fried_chicken",
+            Path = "path/to/file",
+            ContentMd5 = "pRviqwS4c4OTJRTe03FD1w==",
+            ContentType = "text/plain",
+            Duration = "2d",
+            Credentials = File.ReadAllText("path/to/credentials.json"),
+            ExtensionHeaders = 
+            {
+                { "x-goog-if-generation-match", 1 },
+            },
+        }));
+    }
+
+}
+```
 
 {{% examples %}}
 ## Example Usage
@@ -55,7 +81,26 @@ get_url = gcp.storage.get_object_signed_url(bucket="fried_chicken",
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var artifact = Output.Create(Gcp.Storage.GetObjectSignedUrl.InvokeAsync(new Gcp.Storage.GetObjectSignedUrlArgs
+        {
+            Bucket = "install_binaries",
+            Path = "path/to/install_file.bin",
+        }));
+        var vm = new Gcp.Compute.Instance("vm", new Gcp.Compute.InstanceArgs
+        {
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

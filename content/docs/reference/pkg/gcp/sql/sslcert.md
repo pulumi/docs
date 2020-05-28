@@ -20,7 +20,35 @@ Creates a new Google SQL SSL Cert on a Google SQL Instance. For more information
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+using Random = Pulumi.Random;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var dbNameSuffix = new Random.RandomId("dbNameSuffix", new Random.RandomIdArgs
+        {
+            ByteLength = 4,
+        });
+        var master = new Gcp.Sql.DatabaseInstance("master", new Gcp.Sql.DatabaseInstanceArgs
+        {
+            Settings = new Gcp.Sql.Inputs.DatabaseInstanceSettingsArgs
+            {
+                Tier = "db-f1-micro",
+            },
+        });
+        var clientCert = new Gcp.Sql.SslCert("clientCert", new Gcp.Sql.SslCertArgs
+        {
+            CommonName = "client-name",
+            Instance = master.Name,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

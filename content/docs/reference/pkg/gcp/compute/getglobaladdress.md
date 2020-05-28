@@ -21,7 +21,36 @@ the official [API](https://cloud.google.com/compute/docs/reference/latest/global
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var myAddress = Output.Create(Gcp.Compute.GetGlobalAddress.InvokeAsync(new Gcp.Compute.GetGlobalAddressArgs
+        {
+            Name = "foobar",
+        }));
+        var prod = new Gcp.Dns.ManagedZone("prod", new Gcp.Dns.ManagedZoneArgs
+        {
+            DnsName = "prod.mydomain.com.",
+        });
+        var frontend = new Gcp.Dns.RecordSet("frontend", new Gcp.Dns.RecordSetArgs
+        {
+            Type = "A",
+            Ttl = 300,
+            ManagedZone = prod.Name,
+            Rrdatas = 
+            {
+                myAddress.Apply(myAddress => myAddress.Address),
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

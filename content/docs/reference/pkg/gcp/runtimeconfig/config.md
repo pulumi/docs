@@ -23,7 +23,22 @@ or the
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var my_runtime_config = new Gcp.RuntimeConfig.Config("my-runtime-config", new Gcp.RuntimeConfig.ConfigArgs
+        {
+            Description = "Runtime configuration values for my service",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

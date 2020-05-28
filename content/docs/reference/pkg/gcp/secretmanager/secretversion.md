@@ -22,7 +22,7 @@ state as plain-text.
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const secret-basic = new gcp.secretmanager.Secret("secret-basic", {
+const secret_basic = new gcp.secretmanager.Secret("secret-basic", {
     secretId: "secret-version",
     labels: {
         label: "my-label",
@@ -31,8 +31,8 @@ const secret-basic = new gcp.secretmanager.Secret("secret-basic", {
         automatic: true,
     },
 });
-const secret-version-basic = new gcp.secretmanager.SecretVersion("secret-version-basic", {
-    secret: secret-basic.id,
+const secret_version_basic = new gcp.secretmanager.SecretVersion("secret-version-basic", {
+    secret: secret_basic.id,
     secretData: "secret-data",
 });
 ```
@@ -51,6 +51,35 @@ secret_basic = gcp.secretmanager.Secret("secret-basic",
 secret_version_basic = gcp.secretmanager.SecretVersion("secret-version-basic",
     secret=secret_basic.id,
     secret_data="secret-data")
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var secret_basic = new Gcp.SecretManager.Secret("secret-basic", new Gcp.SecretManager.SecretArgs
+        {
+            SecretId = "secret-version",
+            Labels = 
+            {
+                { "label", "my-label" },
+            },
+            Replication = new Gcp.SecretManager.Inputs.SecretReplicationArgs
+            {
+                Automatic = true,
+            },
+        });
+        var secret_version_basic = new Gcp.SecretManager.SecretVersion("secret-version-basic", new Gcp.SecretManager.SecretVersionArgs
+        {
+            Secret = secret_basic.Id,
+            SecretData = "secret-data",
+        });
+    }
+
+}
 ```
 
 

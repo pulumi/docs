@@ -44,6 +44,36 @@ admin = gcp.organizations.get_iam_policy(binding=[{
 }])
 policy = gcp.servicedirectory.ServiceIamPolicy("policy", policy_data=admin.policy_data)
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+        {
+            Binding = 
+            {
+                
+                {
+                    { "role", "roles/viewer" },
+                    { "members", 
+                    {
+                        "user:jane@example.com",
+                    } },
+                },
+            },
+        }));
+        var policy = new Gcp.ServiceDirectory.ServiceIamPolicy("policy", new Gcp.ServiceDirectory.ServiceIamPolicyArgs
+        {
+            PolicyData = admin.Apply(admin => admin.PolicyData),
+        });
+    }
+
+}
+```
 
 ## google\_service\_directory\_service\_iam\_binding
 
@@ -64,6 +94,26 @@ binding = gcp.servicedirectory.ServiceIamBinding("binding",
     role="roles/viewer",
     members=["user:jane@example.com"])
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var binding = new Gcp.ServiceDirectory.ServiceIamBinding("binding", new Gcp.ServiceDirectory.ServiceIamBindingArgs
+        {
+            Role = "roles/viewer",
+            Members = 
+            {
+                "user:jane@example.com",
+            },
+        });
+    }
+
+}
+```
 
 ## google\_service\_directory\_service\_iam\_member
 
@@ -83,6 +133,23 @@ import pulumi_gcp as gcp
 member = gcp.servicedirectory.ServiceIamMember("member",
     role="roles/viewer",
     member="user:jane@example.com")
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var member = new Gcp.ServiceDirectory.ServiceIamMember("member", new Gcp.ServiceDirectory.ServiceIamMemberArgs
+        {
+            Role = "roles/viewer",
+            Member = "user:jane@example.com",
+        });
+    }
+
+}
 ```
 
 

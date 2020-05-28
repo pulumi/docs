@@ -21,7 +21,31 @@ Get service account public key. For more information, see [the official document
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var myaccount = new Gcp.ServiceAccount.Account("myaccount", new Gcp.ServiceAccount.AccountArgs
+        {
+            AccountId = "dev-foo-account",
+        });
+        var mykeyKey = new Gcp.ServiceAccount.Key("mykeyKey", new Gcp.ServiceAccount.KeyArgs
+        {
+            ServiceAccountId = myaccount.Name,
+        });
+        var mykeyAccountKey = mykeyKey.Name.Apply(name => Gcp.ServiceAccount.GetAccountKey.InvokeAsync(new Gcp.ServiceAccount.GetAccountKeyArgs
+        {
+            Name = name,
+            PublicKeyType = "TYPE_X509_PEM_FILE",
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

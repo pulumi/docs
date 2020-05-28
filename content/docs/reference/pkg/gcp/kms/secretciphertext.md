@@ -28,67 +28,6 @@ To get more information about SecretCiphertext, see:
 > **Warning:** All arguments including `plaintext` and `additional_authenticated_data` will be stored in the raw
 state as plain-text. [Read more about secrets in state](https://www.pulumi.com/docs/intro/concepts/programming-model/#secrets).
 
-## Example Usage - Kms Secret Ciphertext Basic
-
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const keyring = new gcp.kms.KeyRing("keyring", {location: "global"});
-const cryptokey = new gcp.kms.CryptoKey("cryptokey", {
-    keyRing: keyring.id,
-    rotationPeriod: "100000s",
-});
-const myPassword = new gcp.kms.SecretCiphertext("myPassword", {
-    cryptoKey: cryptokey.id,
-    plaintext: "my-secret-password",
-});
-const instance = new gcp.compute.Instance("instance", {
-    machineType: "n1-standard-1",
-    zone: "us-central1-a",
-    boot_disk: {
-        initialize_params: {
-            image: "debian-cloud/debian-9",
-        },
-    },
-    network_interface: [{
-        network: "default",
-        access_config: [{}],
-    }],
-    metadata: {
-        password: myPassword.ciphertext,
-    },
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-keyring = gcp.kms.KeyRing("keyring", location="global")
-cryptokey = gcp.kms.CryptoKey("cryptokey",
-    key_ring=keyring.id,
-    rotation_period="100000s")
-my_password = gcp.kms.SecretCiphertext("myPassword",
-    crypto_key=cryptokey.id,
-    plaintext="my-secret-password")
-instance = gcp.compute.Instance("instance",
-    machine_type="n1-standard-1",
-    zone="us-central1-a",
-    boot_disk={
-        "initialize_params": {
-            "image": "debian-cloud/debian-9",
-        },
-    },
-    network_interface=[{
-        "network": "default",
-        "access_config": [{}],
-    }],
-    metadata={
-        "password": my_password.ciphertext,
-    })
-```
-
 
 
 ## Create a SecretCiphertext Resource {#create}

@@ -26,7 +26,28 @@ Google Cloud KMS KeyRing.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var myKeyRing = Output.Create(Gcp.Kms.GetKMSKeyRing.InvokeAsync(new Gcp.Kms.GetKMSKeyRingArgs
+        {
+            Name = "my-key-ring",
+            Location = "us-central1",
+        }));
+        var myCryptoKey = myKeyRing.Apply(myKeyRing => Output.Create(Gcp.Kms.GetKMSCryptoKey.InvokeAsync(new Gcp.Kms.GetKMSCryptoKeyArgs
+        {
+            Name = "my-crypto-key",
+            KeyRing = myKeyRing.SelfLink,
+        })));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

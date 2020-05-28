@@ -59,6 +59,37 @@ project = gcp.projects.IAMPolicy("project",
     project="your-project-id",
     policy_data=admin.policy_data)
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+        {
+            Binding = 
+            {
+                
+                {
+                    { "role", "roles/editor" },
+                    { "members", 
+                    {
+                        "user:jane@example.com",
+                    } },
+                },
+            },
+        }));
+        var project = new Gcp.Projects.IAMPolicy("project", new Gcp.Projects.IAMPolicyArgs
+        {
+            Project = "your-project-id",
+            PolicyData = admin.Apply(admin => admin.PolicyData),
+        });
+    }
+
+}
+```
 
 With IAM Conditions):
 
@@ -99,6 +130,43 @@ project = gcp.projects.IAMPolicy("project",
     policy_data=admin.policy_data,
     project="your-project-id")
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+        {
+            Bindings = 
+            {
+                new Gcp.Organizations.Inputs.GetIAMPolicyBindingArgs
+                {
+                    Condition = new Gcp.Organizations.Inputs.GetIAMPolicyBindingConditionArgs
+                    {
+                        Description = "Expiring at midnight of 2019-12-31",
+                        Expression = "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+                        Title = "expires_after_2019_12_31",
+                    },
+                    Members = 
+                    {
+                        "user:jane@example.com",
+                    },
+                    Role = "roles/editor",
+                },
+            },
+        }));
+        var project = new Gcp.Projects.IAMPolicy("project", new Gcp.Projects.IAMPolicyArgs
+        {
+            PolicyData = admin.Apply(admin => admin.PolicyData),
+            Project = "your-project-id",
+        });
+    }
+
+}
+```
 
 ## google\_project\_iam\_binding
 
@@ -123,6 +191,27 @@ project = gcp.projects.IAMBinding("project",
     project="your-project-id",
     role="roles/editor")
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var project = new Gcp.Projects.IAMBinding("project", new Gcp.Projects.IAMBindingArgs
+        {
+            Members = 
+            {
+                "user:jane@example.com",
+            },
+            Project = "your-project-id",
+            Role = "roles/editor",
+        });
+    }
+
+}
+```
 
 With IAM Conditions:
 
@@ -155,6 +244,33 @@ project = gcp.projects.IAMBinding("project",
     project="your-project-id",
     role="roles/editor")
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var project = new Gcp.Projects.IAMBinding("project", new Gcp.Projects.IAMBindingArgs
+        {
+            Condition = new Gcp.Projects.Inputs.IAMBindingConditionArgs
+            {
+                Description = "Expiring at midnight of 2019-12-31",
+                Expression = "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+                Title = "expires_after_2019_12_31",
+            },
+            Members = 
+            {
+                "user:jane@example.com",
+            },
+            Project = "your-project-id",
+            Role = "roles/editor",
+        });
+    }
+
+}
+```
 
 ## google\_project\_iam\_member
 
@@ -176,6 +292,24 @@ project = gcp.projects.IAMMember("project",
     member="user:jane@example.com",
     project="your-project-id",
     role="roles/editor")
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var project = new Gcp.Projects.IAMMember("project", new Gcp.Projects.IAMMemberArgs
+        {
+            Member = "user:jane@example.com",
+            Project = "your-project-id",
+            Role = "roles/editor",
+        });
+    }
+
+}
 ```
 
 With IAM Conditions:
@@ -208,6 +342,30 @@ project = gcp.projects.IAMMember("project",
     member="user:jane@example.com",
     project="your-project-id",
     role="roles/editor")
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var project = new Gcp.Projects.IAMMember("project", new Gcp.Projects.IAMMemberArgs
+        {
+            Condition = new Gcp.Projects.Inputs.IAMMemberConditionArgs
+            {
+                Description = "Expiring at midnight of 2019-12-31",
+                Expression = "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+                Title = "expires_after_2019_12_31",
+            },
+            Member = "user:jane@example.com",
+            Project = "your-project-id",
+            Role = "roles/editor",
+        });
+    }
+
+}
 ```
 
 ## google\_project\_iam\_audit\_config
@@ -246,6 +404,38 @@ project = gcp.projects.IAMAuditConfig("project",
     ],
     project="your-project-id",
     service="allServices")
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var project = new Gcp.Projects.IAMAuditConfig("project", new Gcp.Projects.IAMAuditConfigArgs
+        {
+            AuditLogConfigs = 
+            {
+                new Gcp.Projects.Inputs.IAMAuditConfigAuditLogConfigArgs
+                {
+                    LogType = "ADMIN_READ",
+                },
+                new Gcp.Projects.Inputs.IAMAuditConfigAuditLogConfigArgs
+                {
+                    ExemptedMembers = 
+                    {
+                        "user:joebloggs@hashicorp.com",
+                    },
+                    LogType = "DATA_READ",
+                },
+            },
+            Project = "your-project-id",
+            Service = "allServices",
+        });
+    }
+
+}
 ```
 
 

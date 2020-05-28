@@ -27,7 +27,23 @@ where the Shared VPC feature is referred to by its former name "XPN".
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var service1 = new Gcp.Compute.SharedVPCServiceProject("service1", new Gcp.Compute.SharedVPCServiceProjectArgs
+        {
+            HostProject = "host-project-id",
+            ServiceProject = "service-project-id-1",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

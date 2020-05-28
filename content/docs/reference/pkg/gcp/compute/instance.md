@@ -24,7 +24,67 @@ and
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var @default = new Gcp.Compute.Instance("default", new Gcp.Compute.InstanceArgs
+        {
+            BootDisk = new Gcp.Compute.Inputs.InstanceBootDiskArgs
+            {
+                InitializeParams = new Gcp.Compute.Inputs.InstanceBootDiskInitializeParamsArgs
+                {
+                    Image = "debian-cloud/debian-9",
+                },
+            },
+            MachineType = "n1-standard-1",
+            Metadata = 
+            {
+                { "foo", "bar" },
+            },
+            MetadataStartupScript = "echo hi > /test.txt",
+            NetworkInterfaces = 
+            {
+                new Gcp.Compute.Inputs.InstanceNetworkInterfaceArgs
+                {
+                    AccessConfig = 
+                    {
+                        ,
+                    },
+                    Network = "default",
+                },
+            },
+            ScratchDisks = 
+            {
+                new Gcp.Compute.Inputs.InstanceScratchDiskArgs
+                {
+                    Interface = "SCSI",
+                },
+            },
+            ServiceAccount = new Gcp.Compute.Inputs.InstanceServiceAccountArgs
+            {
+                Scopes = 
+                {
+                    "userinfo-email",
+                    "compute-ro",
+                    "storage-ro",
+                },
+            },
+            Tags = 
+            {
+                "foo",
+                "bar",
+            },
+            Zone = "us-central1-a",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

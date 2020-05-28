@@ -44,6 +44,28 @@ note = gcp.containeranalysis.Note("note", attestation_authority={
     },
 })
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var note = new Gcp.ContainerAnalysis.Note("note", new Gcp.ContainerAnalysis.NoteArgs
+        {
+            AttestationAuthority = new Gcp.ContainerAnalysis.Inputs.NoteAttestationAuthorityArgs
+            {
+                Hint = new Gcp.ContainerAnalysis.Inputs.NoteAttestationAuthorityHintArgs
+                {
+                    HumanReadableName = "Attestor Note",
+                },
+            },
+        });
+    }
+
+}
+```
 
 
 

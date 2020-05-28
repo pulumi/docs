@@ -34,6 +34,21 @@ import pulumi_gcp as gcp
 
 vpc_network = gcp.compute.Network("vpcNetwork")
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var vpcNetwork = new Gcp.Compute.Network("vpcNetwork", new Gcp.Compute.NetworkArgs
+        {
+        });
+    }
+
+}
+```
 
 
 

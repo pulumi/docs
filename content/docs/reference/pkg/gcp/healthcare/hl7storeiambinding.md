@@ -49,6 +49,37 @@ hl7_v2_store = gcp.healthcare.Hl7StoreIamPolicy("hl7V2Store",
     hl7_v2_store_id="your-hl7-v2-store-id",
     policy_data=admin.policy_data)
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+        {
+            Binding = 
+            {
+                
+                {
+                    { "role", "roles/editor" },
+                    { "members", 
+                    {
+                        "user:jane@example.com",
+                    } },
+                },
+            },
+        }));
+        var hl7V2Store = new Gcp.Healthcare.Hl7StoreIamPolicy("hl7V2Store", new Gcp.Healthcare.Hl7StoreIamPolicyArgs
+        {
+            Hl7V2StoreId = "your-hl7-v2-store-id",
+            PolicyData = admin.Apply(admin => admin.PolicyData),
+        });
+    }
+
+}
+```
 
 ## google\_healthcare\_hl7\_v2\_store\_iam\_binding
 
@@ -71,6 +102,27 @@ hl7_v2_store = gcp.healthcare.Hl7StoreIamBinding("hl7V2Store",
     members=["user:jane@example.com"],
     role="roles/editor")
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var hl7V2Store = new Gcp.Healthcare.Hl7StoreIamBinding("hl7V2Store", new Gcp.Healthcare.Hl7StoreIamBindingArgs
+        {
+            Hl7V2StoreId = "your-hl7-v2-store-id",
+            Members = 
+            {
+                "user:jane@example.com",
+            },
+            Role = "roles/editor",
+        });
+    }
+
+}
+```
 
 ## google\_healthcare\_hl7\_v2\_store\_iam\_member
 
@@ -92,6 +144,24 @@ hl7_v2_store = gcp.healthcare.Hl7StoreIamMember("hl7V2Store",
     hl7_v2_store_id="your-hl7-v2-store-id",
     member="user:jane@example.com",
     role="roles/editor")
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var hl7V2Store = new Gcp.Healthcare.Hl7StoreIamMember("hl7V2Store", new Gcp.Healthcare.Hl7StoreIamMemberArgs
+        {
+            Hl7V2StoreId = "your-hl7-v2-store-id",
+            Member = "user:jane@example.com",
+            Role = "roles/editor",
+        });
+    }
+
+}
 ```
 
 

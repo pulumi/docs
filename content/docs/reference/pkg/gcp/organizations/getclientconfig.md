@@ -20,7 +20,22 @@ Use this data source to access the configuration of the Google Cloud provider.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var current = Output.Create(Gcp.Organizations.GetClientConfig.InvokeAsync());
+        this.Project = current.Apply(current => current.Project);
+    }
+
+    [Output("project")]
+    public Output<string> Project { get; set; }
+}
+```
 {{% /example %}}
 
 {{% example go %}}

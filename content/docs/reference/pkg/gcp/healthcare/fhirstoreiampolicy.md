@@ -49,6 +49,37 @@ fhir_store = gcp.healthcare.FhirStoreIamPolicy("fhirStore",
     fhir_store_id="your-fhir-store-id",
     policy_data=admin.policy_data)
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+        {
+            Binding = 
+            {
+                
+                {
+                    { "role", "roles/editor" },
+                    { "members", 
+                    {
+                        "user:jane@example.com",
+                    } },
+                },
+            },
+        }));
+        var fhirStore = new Gcp.Healthcare.FhirStoreIamPolicy("fhirStore", new Gcp.Healthcare.FhirStoreIamPolicyArgs
+        {
+            FhirStoreId = "your-fhir-store-id",
+            PolicyData = admin.Apply(admin => admin.PolicyData),
+        });
+    }
+
+}
+```
 
 ## google\_healthcare\_fhir\_store\_iam\_binding
 
@@ -71,6 +102,27 @@ fhir_store = gcp.healthcare.FhirStoreIamBinding("fhirStore",
     members=["user:jane@example.com"],
     role="roles/editor")
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var fhirStore = new Gcp.Healthcare.FhirStoreIamBinding("fhirStore", new Gcp.Healthcare.FhirStoreIamBindingArgs
+        {
+            FhirStoreId = "your-fhir-store-id",
+            Members = 
+            {
+                "user:jane@example.com",
+            },
+            Role = "roles/editor",
+        });
+    }
+
+}
+```
 
 ## google\_healthcare\_fhir\_store\_iam\_member
 
@@ -92,6 +144,24 @@ fhir_store = gcp.healthcare.FhirStoreIamMember("fhirStore",
     fhir_store_id="your-fhir-store-id",
     member="user:jane@example.com",
     role="roles/editor")
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var fhirStore = new Gcp.Healthcare.FhirStoreIamMember("fhirStore", new Gcp.Healthcare.FhirStoreIamMemberArgs
+        {
+            FhirStoreId = "your-fhir-store-id",
+            Member = "user:jane@example.com",
+            Role = "roles/editor",
+        });
+    }
+
+}
 ```
 
 

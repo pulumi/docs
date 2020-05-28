@@ -47,6 +47,28 @@ example = gcp.servicedirectory.Namespace("example",
         "foo": "bar",
     })
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Gcp.ServiceDirectory.Namespace("example", new Gcp.ServiceDirectory.NamespaceArgs
+        {
+            NamespaceId = "example-namespace",
+            Location = "us-central1",
+            Labels = 
+            {
+                { "key", "value" },
+                { "foo", "bar" },
+            },
+        });
+    }
+
+}
+```
 
 
 

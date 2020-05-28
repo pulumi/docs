@@ -22,7 +22,25 @@ The URLs are computed entirely offline - as long as the project exists, they wil
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var debian = Output.Create(Gcp.Container.GetRegistryImage.InvokeAsync(new Gcp.Container.GetRegistryImageArgs
+        {
+            Name = "debian",
+        }));
+        this.GcrLocation = debian.Apply(debian => debian.ImageUrl);
+    }
+
+    [Output("gcrLocation")]
+    public Output<string> GcrLocation { get; set; }
+}
+```
 {{% /example %}}
 
 {{% example go %}}

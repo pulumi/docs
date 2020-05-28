@@ -77,6 +77,52 @@ static_site = gcp.storage.Bucket("static-site",
         "notFoundPage": "404.html",
     })
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var static_site = new Gcp.Storage.Bucket("static-site", new Gcp.Storage.BucketArgs
+        {
+            BucketPolicyOnly = true,
+            Cors = 
+            {
+                new Gcp.Storage.Inputs.BucketCorArgs
+                {
+                    MaxAgeSeconds = 3600,
+                    Method = 
+                    {
+                        "GET",
+                        "HEAD",
+                        "PUT",
+                        "POST",
+                        "DELETE",
+                    },
+                    Origin = 
+                    {
+                        "http://image-store.com",
+                    },
+                    ResponseHeader = 
+                    {
+                        "*",
+                    },
+                },
+            },
+            ForceDestroy = true,
+            Location = "EU",
+            Website = new Gcp.Storage.Inputs.BucketWebsiteArgs
+            {
+                MainPageSuffix = "index.html",
+                NotFoundPage = "404.html",
+            },
+        });
+    }
+
+}
+```
 
 ## Example Usage - Life cycle settings for storage bucket objects
 
@@ -112,6 +158,37 @@ auto_expire = gcp.storage.Bucket("auto-expire",
         },
     }],
     location="US")
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var auto_expire = new Gcp.Storage.Bucket("auto-expire", new Gcp.Storage.BucketArgs
+        {
+            ForceDestroy = true,
+            LifecycleRules = 
+            {
+                new Gcp.Storage.Inputs.BucketLifecycleRuleArgs
+                {
+                    Action = new Gcp.Storage.Inputs.BucketLifecycleRuleActionArgs
+                    {
+                        Type = "Delete",
+                    },
+                    Condition = new Gcp.Storage.Inputs.BucketLifecycleRuleConditionArgs
+                    {
+                        Age = "3",
+                    },
+                },
+            },
+            Location = "US",
+        });
+    }
+
+}
 ```
 
 

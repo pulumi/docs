@@ -26,7 +26,28 @@ For more information see
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var gcsAccount = Output.Create(Gcp.Storage.GetProjectServiceAccount.InvokeAsync());
+        var binding = new Gcp.PubSub.TopicIAMBinding("binding", new Gcp.PubSub.TopicIAMBindingArgs
+        {
+            Topic = google_pubsub_topic.Topic.Name,
+            Role = "roles/pubsub.publisher",
+            Members = 
+            {
+                gcsAccount.Apply(gcsAccount => $"serviceAccount:{gcsAccount.EmailAddress}"),
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

@@ -23,7 +23,24 @@ For a list of services available, visit the
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var project = new Gcp.Projects.Service("project", new Gcp.Projects.ServiceArgs
+        {
+            DisableDependentServices = true,
+            Project = "your-project-id",
+            Service = "iam.googleapis.com",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

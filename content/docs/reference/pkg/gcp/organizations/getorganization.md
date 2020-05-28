@@ -33,6 +33,27 @@ sales = gcp.organizations.Folder("sales",
     display_name="Sales",
     parent=org.name)
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var org = Output.Create(Gcp.Organizations.GetOrganization.InvokeAsync(new Gcp.Organizations.GetOrganizationArgs
+        {
+            Domain = "example.com",
+        }));
+        var sales = new Gcp.Organizations.Folder("sales", new Gcp.Organizations.FolderArgs
+        {
+            DisplayName = "Sales",
+            Parent = org.Apply(org => org.Name),
+        });
+    }
+
+}
+```
 
 
 

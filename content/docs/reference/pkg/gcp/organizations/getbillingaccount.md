@@ -37,6 +37,29 @@ my_project = gcp.organizations.Project("myProject",
     org_id="1234567",
     billing_account=acct.id)
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var acct = Output.Create(Gcp.Organizations.GetBillingAccount.InvokeAsync(new Gcp.Organizations.GetBillingAccountArgs
+        {
+            DisplayName = "My Billing Account",
+            Open = true,
+        }));
+        var myProject = new Gcp.Organizations.Project("myProject", new Gcp.Organizations.ProjectArgs
+        {
+            ProjectId = "your-project-id",
+            OrgId = "1234567",
+            BillingAccount = acct.Apply(acct => acct.Id),
+        });
+    }
+
+}
+```
 
 
 

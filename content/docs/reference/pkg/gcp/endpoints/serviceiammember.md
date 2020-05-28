@@ -51,6 +51,37 @@ policy = gcp.endpoints.ServiceIamPolicy("policy",
     service_name=google_endpoints_service["endpoints_service"]["service_name"],
     policy_data=admin.policy_data)
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+        {
+            Binding = 
+            {
+                
+                {
+                    { "role", "roles/viewer" },
+                    { "members", 
+                    {
+                        "user:jane@example.com",
+                    } },
+                },
+            },
+        }));
+        var policy = new Gcp.Endpoints.ServiceIamPolicy("policy", new Gcp.Endpoints.ServiceIamPolicyArgs
+        {
+            ServiceName = google_endpoints_service.Endpoints_service.Service_name,
+            PolicyData = admin.Apply(admin => admin.PolicyData),
+        });
+    }
+
+}
+```
 
 ## google\_endpoints\_service\_iam\_binding
 
@@ -73,6 +104,27 @@ binding = gcp.endpoints.ServiceIamBinding("binding",
     role="roles/viewer",
     members=["user:jane@example.com"])
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var binding = new Gcp.Endpoints.ServiceIamBinding("binding", new Gcp.Endpoints.ServiceIamBindingArgs
+        {
+            ServiceName = google_endpoints_service.Endpoints_service.Service_name,
+            Role = "roles/viewer",
+            Members = 
+            {
+                "user:jane@example.com",
+            },
+        });
+    }
+
+}
+```
 
 ## google\_endpoints\_service\_iam\_member
 
@@ -94,6 +146,24 @@ member = gcp.endpoints.ServiceIamMember("member",
     service_name=google_endpoints_service["endpoints_service"]["service_name"],
     role="roles/viewer",
     member="user:jane@example.com")
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var member = new Gcp.Endpoints.ServiceIamMember("member", new Gcp.Endpoints.ServiceIamMemberArgs
+        {
+            ServiceName = google_endpoints_service.Endpoints_service.Service_name,
+            Role = "roles/viewer",
+            Member = "user:jane@example.com",
+        });
+    }
+
+}
 ```
 
 

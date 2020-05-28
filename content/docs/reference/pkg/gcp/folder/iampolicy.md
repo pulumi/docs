@@ -21,7 +21,42 @@ Platform folder.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var department1 = new Gcp.Organizations.Folder("department1", new Gcp.Organizations.FolderArgs
+        {
+            DisplayName = "Department 1",
+            Parent = "organizations/1234567",
+        });
+        var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+        {
+            Binding = 
+            {
+                
+                {
+                    { "role", "roles/editor" },
+                    { "members", 
+                    {
+                        "user:jane@example.com",
+                    } },
+                },
+            },
+        }));
+        var folderAdminPolicy = new Gcp.Folder.IAMPolicy("folderAdminPolicy", new Gcp.Folder.IAMPolicyArgs
+        {
+            Folder = department1.Name,
+            PolicyData = admin.Apply(admin => admin.PolicyData),
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

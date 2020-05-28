@@ -42,6 +42,23 @@ basic = gcp.monitoring.Group("basic",
     display_name="tf-test MonitoringGroup",
     filter="resource.metadata.region=\"europe-west2\"")
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var basic = new Gcp.Monitoring.Group("basic", new Gcp.Monitoring.GroupArgs
+        {
+            DisplayName = "tf-test MonitoringGroup",
+            Filter = "resource.metadata.region=\"europe-west2\"",
+        });
+    }
+
+}
+```
 ## Example Usage - Monitoring Group Subgroup
 
 
@@ -70,6 +87,29 @@ subgroup = gcp.monitoring.Group("subgroup",
     display_name="tf-test MonitoringSubGroup",
     filter="resource.metadata.region=\"europe-west2\"",
     parent_name=parent.name)
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var parent = new Gcp.Monitoring.Group("parent", new Gcp.Monitoring.GroupArgs
+        {
+            DisplayName = "tf-test MonitoringParentGroup",
+            Filter = "resource.metadata.region=\"europe-west2\"",
+        });
+        var subgroup = new Gcp.Monitoring.Group("subgroup", new Gcp.Monitoring.GroupArgs
+        {
+            DisplayName = "tf-test MonitoringSubGroup",
+            Filter = "resource.metadata.region=\"europe-west2\"",
+            ParentName = parent.Name,
+        });
+    }
+
+}
 ```
 
 

@@ -23,7 +23,7 @@ To get more information about Secret, see:
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const secret-basic = new gcp.secretmanager.Secret("secret-basic", {
+const secret_basic = new gcp.secretmanager.Secret("secret-basic", {
     secretId: "secret",
     labels: {
         label: "my-label",
@@ -63,6 +63,43 @@ secret_basic = gcp.secretmanager.Secret("secret-basic",
             ],
         },
     })
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var secret_basic = new Gcp.SecretManager.Secret("secret-basic", new Gcp.SecretManager.SecretArgs
+        {
+            SecretId = "secret",
+            Labels = 
+            {
+                { "label", "my-label" },
+            },
+            Replication = new Gcp.SecretManager.Inputs.SecretReplicationArgs
+            {
+                User_managed = 
+                {
+                    { "replicas", 
+                    {
+                        
+                        {
+                            { "location", "us-central1" },
+                        },
+                        
+                        {
+                            { "location", "us-east1" },
+                        },
+                    } },
+                },
+            },
+        });
+    }
+
+}
 ```
 
 

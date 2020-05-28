@@ -22,7 +22,27 @@ The NEG may be found by providing either a `self_link`, or a `name` and a `zone`
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var neg1 = Output.Create(Gcp.Compute.GetNetworkEndpointGroup.InvokeAsync(new Gcp.Compute.GetNetworkEndpointGroupArgs
+        {
+            Name = "k8s1-abcdef01-myns-mysvc-8080-4b6bac43",
+            Zone = "us-central1-a",
+        }));
+        var neg2 = Output.Create(Gcp.Compute.GetNetworkEndpointGroup.InvokeAsync(new Gcp.Compute.GetNetworkEndpointGroupArgs
+        {
+            SelfLink = "https://www.googleapis.com/compute/v1/projects/myproject/zones/us-central1-a/networkEndpointGroups/k8s1-abcdef01-myns-mysvc-8080-4b6bac43",
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

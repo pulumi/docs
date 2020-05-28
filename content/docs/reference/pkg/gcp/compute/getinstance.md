@@ -24,7 +24,23 @@ and
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var appserver = Output.Create(Gcp.Compute.GetInstance.InvokeAsync(new Gcp.Compute.GetInstanceArgs
+        {
+            Name = "primary-application-server",
+            Zone = "us-central1-a",
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

@@ -18,73 +18,6 @@ and [the API reference](https://cloud.google.com/kubernetes-engine/docs/referenc
 passwords as well as certificate outputs will be stored in the raw state as
 plaintext. [Read more about secrets in state](https://www.pulumi.com/docs/intro/concepts/programming-model/#secrets).
 
-## Example Usage - with a separately managed node pool (recommended)
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const primary = new gcp.container.Cluster("primary", {
-    location: "us-central1",
-    removeDefaultNodePool: true,
-    initialNodeCount: 1,
-    master_auth: {
-        username: "",
-        password: "",
-        client_certificate_config: {
-            issueClientCertificate: false,
-        },
-    },
-});
-const primaryPreemptibleNodes = new gcp.container.NodePool("primaryPreemptibleNodes", {
-    location: "us-central1",
-    cluster: primary.name,
-    nodeCount: 1,
-    node_config: {
-        preemptible: true,
-        machineType: "n1-standard-1",
-        metadata: {
-            "disable-legacy-endpoints": "true",
-        },
-        oauthScopes: [
-            "https://www.googleapis.com/auth/logging.write",
-            "https://www.googleapis.com/auth/monitoring",
-        ],
-    },
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-primary = gcp.container.Cluster("primary",
-    location="us-central1",
-    remove_default_node_pool=True,
-    initial_node_count=1,
-    master_auth={
-        "username": "",
-        "password": "",
-        "client_certificate_config": {
-            "issueClientCertificate": False,
-        },
-    })
-primary_preemptible_nodes = gcp.container.NodePool("primaryPreemptibleNodes",
-    location="us-central1",
-    cluster=primary.name,
-    node_count=1,
-    node_config={
-        "preemptible": True,
-        "machine_type": "n1-standard-1",
-        "metadata": {
-            "disable-legacy-endpoints": "true",
-        },
-        "oauthScopes": [
-            "https://www.googleapis.com/auth/logging.write",
-            "https://www.googleapis.com/auth/monitoring",
-        ],
-    })
-```
-
 ## Example Usage - with the default node pool
 
 ```typescript
@@ -152,6 +85,53 @@ primary = gcp.container.Cluster("primary",
             "bar",
         ],
     })
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var primary = new Gcp.Container.Cluster("primary", new Gcp.Container.ClusterArgs
+        {
+            InitialNodeCount = 3,
+            Location = "us-central1-a",
+            MasterAuth = new Gcp.Container.Inputs.ClusterMasterAuthArgs
+            {
+                ClientCertificateConfig = new Gcp.Container.Inputs.ClusterMasterAuthClientCertificateConfigArgs
+                {
+                    IssueClientCertificate = false,
+                },
+                Password = "",
+                Username = "",
+            },
+            NodeConfig = new Gcp.Container.Inputs.ClusterNodeConfigArgs
+            {
+                Labels = 
+                {
+                    { "foo", "bar" },
+                },
+                Metadata = 
+                {
+                    { "disable-legacy-endpoints", "true" },
+                },
+                OauthScopes = 
+                {
+                    "https://www.googleapis.com/auth/logging.write",
+                    "https://www.googleapis.com/auth/monitoring",
+                },
+                Tags = 
+                {
+                    "foo",
+                    "bar",
+                },
+            },
+        });
+    }
+
+}
 ```
 
 

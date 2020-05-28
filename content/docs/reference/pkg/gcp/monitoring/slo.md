@@ -26,47 +26,6 @@ To get more information about Slo, see:
     * [Service Monitoring](https://cloud.google.com/monitoring/service-monitoring)
     * [Monitoring API Documentation](https://cloud.google.com/monitoring/api/v3/)
 
-## Example Usage - Monitoring Slo Appengine
-
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const default = gcp.monitoring.getAppEngineService({
-    moduleId: "default",
-});
-const appengSlo = new gcp.monitoring.Slo("appengSlo", {
-    service: default.then(_default => _default.serviceId),
-    sloId: "ae-slo",
-    displayName: "Test SLO for App Engine",
-    goal: 0.9,
-    calendarPeriod: "DAY",
-    basic_sli: {
-        latency: {
-            threshold: "1s",
-        },
-    },
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-default = gcp.monitoring.get_app_engine_service(module_id="default")
-appeng_slo = gcp.monitoring.Slo("appengSlo",
-    service=default.service_id,
-    slo_id="ae-slo",
-    display_name="Test SLO for App Engine",
-    goal=0.9,
-    calendar_period="DAY",
-    basic_sli={
-        "latency": {
-            "threshold": "1s",
-        },
-    })
-```
-
 
 
 ## Create a Slo Resource {#create}

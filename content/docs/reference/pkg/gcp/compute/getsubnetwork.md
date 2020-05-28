@@ -20,7 +20,23 @@ Get a subnetwork within GCE from its name and region.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var my_subnetwork = Output.Create(Gcp.Compute.GetSubnetwork.InvokeAsync(new Gcp.Compute.GetSubnetworkArgs
+        {
+            Name = "default-us-east1",
+            Region = "us-east1",
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

@@ -28,7 +28,36 @@ to be functional.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var @default = new Gcp.Compute.Network("default", new Gcp.Compute.NetworkArgs
+        {
+            AutoCreateSubnetworks = "false",
+        });
+        var other = new Gcp.Compute.Network("other", new Gcp.Compute.NetworkArgs
+        {
+            AutoCreateSubnetworks = "false",
+        });
+        var peering1 = new Gcp.Compute.NetworkPeering("peering1", new Gcp.Compute.NetworkPeeringArgs
+        {
+            Network = @default.SelfLink,
+            PeerNetwork = other.SelfLink,
+        });
+        var peering2 = new Gcp.Compute.NetworkPeering("peering2", new Gcp.Compute.NetworkPeeringArgs
+        {
+            Network = other.SelfLink,
+            PeerNetwork = @default.SelfLink,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -56,15 +85,15 @@ peering2 = gcp.compute.NetworkPeering("peering2",
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const default = new gcp.compute.Network("default", {autoCreateSubnetworks: "false"});
+const _default = new gcp.compute.Network("default", {autoCreateSubnetworks: "false"});
 const other = new gcp.compute.Network("other", {autoCreateSubnetworks: "false"});
 const peering1 = new gcp.compute.NetworkPeering("peering1", {
-    network: default.selfLink,
+    network: _default.selfLink,
     peerNetwork: other.selfLink,
 });
 const peering2 = new gcp.compute.NetworkPeering("peering2", {
     network: other.selfLink,
-    peerNetwork: default.selfLink,
+    peerNetwork: _default.selfLink,
 });
 ```
 {{% /example %}}

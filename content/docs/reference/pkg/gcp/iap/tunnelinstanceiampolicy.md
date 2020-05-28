@@ -55,6 +55,39 @@ policy = gcp.iap.TunnelInstanceIAMPolicy("policy",
     instance=google_compute_instance["tunnelvm"]["name"],
     policy_data=admin.policy_data)
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+        {
+            Binding = 
+            {
+                
+                {
+                    { "role", "roles/iap.tunnelResourceAccessor" },
+                    { "members", 
+                    {
+                        "user:jane@example.com",
+                    } },
+                },
+            },
+        }));
+        var policy = new Gcp.Iap.TunnelInstanceIAMPolicy("policy", new Gcp.Iap.TunnelInstanceIAMPolicyArgs
+        {
+            Project = google_compute_instance.Tunnelvm.Project,
+            Zone = google_compute_instance.Tunnelvm.Zone,
+            Instance = google_compute_instance.Tunnelvm.Name,
+            PolicyData = admin.Apply(admin => admin.PolicyData),
+        });
+    }
+
+}
+```
 
 With IAM Conditions:
 
@@ -99,6 +132,45 @@ policy = gcp.iap.TunnelInstanceIAMPolicy("policy",
     instance=google_compute_instance["tunnelvm"]["name"],
     policy_data=admin.policy_data)
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+        {
+            Binding = 
+            {
+                
+                {
+                    { "role", "roles/iap.tunnelResourceAccessor" },
+                    { "members", 
+                    {
+                        "user:jane@example.com",
+                    } },
+                    { "condition", 
+                    {
+                        { "title", "expires_after_2019_12_31" },
+                        { "description", "Expiring at midnight of 2019-12-31" },
+                        { "expression", "request.time < timestamp(\"2020-01-01T00:00:00Z\")" },
+                    } },
+                },
+            },
+        }));
+        var policy = new Gcp.Iap.TunnelInstanceIAMPolicy("policy", new Gcp.Iap.TunnelInstanceIAMPolicyArgs
+        {
+            Project = google_compute_instance.Tunnelvm.Project,
+            Zone = google_compute_instance.Tunnelvm.Zone,
+            Instance = google_compute_instance.Tunnelvm.Name,
+            PolicyData = admin.Apply(admin => admin.PolicyData),
+        });
+    }
+
+}
+```
 ## google\_iap\_tunnel\_instance\_iam\_binding
 
 ```typescript
@@ -123,6 +195,29 @@ binding = gcp.iap.TunnelInstanceIAMBinding("binding",
     instance=google_compute_instance["tunnelvm"]["name"],
     role="roles/iap.tunnelResourceAccessor",
     members=["user:jane@example.com"])
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var binding = new Gcp.Iap.TunnelInstanceIAMBinding("binding", new Gcp.Iap.TunnelInstanceIAMBindingArgs
+        {
+            Project = google_compute_instance.Tunnelvm.Project,
+            Zone = google_compute_instance.Tunnelvm.Zone,
+            Instance = google_compute_instance.Tunnelvm.Name,
+            Role = "roles/iap.tunnelResourceAccessor",
+            Members = 
+            {
+                "user:jane@example.com",
+            },
+        });
+    }
+
+}
 ```
 
 With IAM Conditions:
@@ -160,6 +255,35 @@ binding = gcp.iap.TunnelInstanceIAMBinding("binding",
         "expression": "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
     })
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var binding = new Gcp.Iap.TunnelInstanceIAMBinding("binding", new Gcp.Iap.TunnelInstanceIAMBindingArgs
+        {
+            Project = google_compute_instance.Tunnelvm.Project,
+            Zone = google_compute_instance.Tunnelvm.Zone,
+            Instance = google_compute_instance.Tunnelvm.Name,
+            Role = "roles/iap.tunnelResourceAccessor",
+            Members = 
+            {
+                "user:jane@example.com",
+            },
+            Condition = new Gcp.Iap.Inputs.TunnelInstanceIAMBindingConditionArgs
+            {
+                Title = "expires_after_2019_12_31",
+                Description = "Expiring at midnight of 2019-12-31",
+                Expression = "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+            },
+        });
+    }
+
+}
+```
 ## google\_iap\_tunnel\_instance\_iam\_member
 
 ```typescript
@@ -184,6 +308,26 @@ member = gcp.iap.TunnelInstanceIAMMember("member",
     instance=google_compute_instance["tunnelvm"]["name"],
     role="roles/iap.tunnelResourceAccessor",
     member="user:jane@example.com")
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var member = new Gcp.Iap.TunnelInstanceIAMMember("member", new Gcp.Iap.TunnelInstanceIAMMemberArgs
+        {
+            Project = google_compute_instance.Tunnelvm.Project,
+            Zone = google_compute_instance.Tunnelvm.Zone,
+            Instance = google_compute_instance.Tunnelvm.Name,
+            Role = "roles/iap.tunnelResourceAccessor",
+            Member = "user:jane@example.com",
+        });
+    }
+
+}
 ```
 
 With IAM Conditions:
@@ -220,6 +364,32 @@ member = gcp.iap.TunnelInstanceIAMMember("member",
         "description": "Expiring at midnight of 2019-12-31",
         "expression": "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
     })
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var member = new Gcp.Iap.TunnelInstanceIAMMember("member", new Gcp.Iap.TunnelInstanceIAMMemberArgs
+        {
+            Project = google_compute_instance.Tunnelvm.Project,
+            Zone = google_compute_instance.Tunnelvm.Zone,
+            Instance = google_compute_instance.Tunnelvm.Name,
+            Role = "roles/iap.tunnelResourceAccessor",
+            Member = "user:jane@example.com",
+            Condition = new Gcp.Iap.Inputs.TunnelInstanceIAMMemberConditionArgs
+            {
+                Title = "expires_after_2019_12_31",
+                Description = "Expiring at midnight of 2019-12-31",
+                Expression = "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+            },
+        });
+    }
+
+}
 ```
 
 

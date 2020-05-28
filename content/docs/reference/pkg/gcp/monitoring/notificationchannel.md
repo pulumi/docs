@@ -61,6 +61,27 @@ basic = gcp.monitoring.NotificationChannel("basic",
     },
     type="email")
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var basic = new Gcp.Monitoring.NotificationChannel("basic", new Gcp.Monitoring.NotificationChannelArgs
+        {
+            DisplayName = "Test Notification Channel",
+            Labels = 
+            {
+                { "email_address", "fake_email@blahblah.com" },
+            },
+            Type = "email",
+        });
+    }
+
+}
+```
 ## Example Usage - Notification Channel Sensitive
 
 
@@ -92,6 +113,31 @@ default = gcp.monitoring.NotificationChannel("default",
         "authToken": "one",
     },
     type="slack")
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var @default = new Gcp.Monitoring.NotificationChannel("default", new Gcp.Monitoring.NotificationChannelArgs
+        {
+            DisplayName = "Test Slack Channel",
+            Labels = 
+            {
+                { "channel_name", "#foobar" },
+            },
+            SensitiveLabels = new Gcp.Monitoring.Inputs.NotificationChannelSensitiveLabelsArgs
+            {
+                AuthToken = "one",
+            },
+            Type = "slack",
+        });
+    }
+
+}
 ```
 
 

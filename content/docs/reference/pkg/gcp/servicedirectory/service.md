@@ -53,6 +53,33 @@ example_service = gcp.servicedirectory.Service("exampleService",
         "region": "us-central1",
     })
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleNamespace = new Gcp.ServiceDirectory.Namespace("exampleNamespace", new Gcp.ServiceDirectory.NamespaceArgs
+        {
+            NamespaceId = "example-namespace",
+            Location = "us-central1",
+        });
+        var exampleService = new Gcp.ServiceDirectory.Service("exampleService", new Gcp.ServiceDirectory.ServiceArgs
+        {
+            ServiceId = "example-service",
+            Namespace = exampleNamespace.Id,
+            Metadata = 
+            {
+                { "stage", "prod" },
+                { "region", "us-central1" },
+            },
+        });
+    }
+
+}
+```
 
 
 

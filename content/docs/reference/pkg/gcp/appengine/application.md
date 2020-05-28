@@ -28,7 +28,28 @@ state as plain-text. [Read more about sensitive data in state](https://www.terra
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var myProject = new Gcp.Organizations.Project("myProject", new Gcp.Organizations.ProjectArgs
+        {
+            ProjectId = "your-project-id",
+            OrgId = "1234567",
+        });
+        var app = new Gcp.AppEngine.Application("app", new Gcp.AppEngine.ApplicationArgs
+        {
+            Project = myProject.ProjectId,
+            LocationId = "us-central",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

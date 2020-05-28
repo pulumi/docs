@@ -25,7 +25,24 @@ the IAM policy for an existing Google Cloud Platform Organization.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var binding = new Gcp.Organizations.IAMMember("binding", new Gcp.Organizations.IAMMemberArgs
+        {
+            Member = "user:alice@gmail.com",
+            OrgId = "0123456789",
+            Role = "roles/editor",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

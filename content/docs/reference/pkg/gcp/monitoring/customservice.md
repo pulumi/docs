@@ -49,6 +49,27 @@ custom = gcp.monitoring.CustomService("custom",
         "resourceName": "//product.googleapis.com/foo/foo/services/test",
     })
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var custom = new Gcp.Monitoring.CustomService("custom", new Gcp.Monitoring.CustomServiceArgs
+        {
+            DisplayName = "My Custom Service custom-srv",
+            ServiceId = "custom-srv",
+            Telemetry = new Gcp.Monitoring.Inputs.CustomServiceTelemetryArgs
+            {
+                ResourceName = "//product.googleapis.com/foo/foo/services/test",
+            },
+        });
+    }
+
+}
+```
 
 
 

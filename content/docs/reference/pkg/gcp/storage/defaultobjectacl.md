@@ -32,7 +32,31 @@ to control individual role entity pairs.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var image_store = new Gcp.Storage.Bucket("image-store", new Gcp.Storage.BucketArgs
+        {
+            Location = "EU",
+        });
+        var image_store_default_acl = new Gcp.Storage.DefaultObjectACL("image-store-default-acl", new Gcp.Storage.DefaultObjectACLArgs
+        {
+            Bucket = image_store.Name,
+            RoleEntities = 
+            {
+                "OWNER:user-my.email@gmail.com",
+                "READER:group-mygroup",
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -59,9 +83,9 @@ image_store_default_acl = gcp.storage.DefaultObjectACL("image-store-default-acl"
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const image-store = new gcp.storage.Bucket("image-store", {location: "EU"});
-const image-store-default-acl = new gcp.storage.DefaultObjectACL("image-store-default-acl", {
-    bucket: image-store.name,
+const image_store = new gcp.storage.Bucket("image-store", {location: "EU"});
+const image_store_default_acl = new gcp.storage.DefaultObjectACL("image-store-default-acl", {
+    bucket: image_store.name,
     roleEntities: [
         "OWNER:user-my.email@gmail.com",
         "READER:group-mygroup",

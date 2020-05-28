@@ -66,6 +66,29 @@ default = gcp.compute.Disk("default",
     type="pd-ssd",
     zone="us-central1-a")
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var @default = new Gcp.Compute.Disk("default", new Gcp.Compute.DiskArgs
+        {
+            Image = "debian-8-jessie-v20170523",
+            Labels = 
+            {
+                { "environment", "dev" },
+            },
+            PhysicalBlockSizeBytes = 4096,
+            Type = "pd-ssd",
+            Zone = "us-central1-a",
+        });
+    }
+
+}
+```
 
 
 

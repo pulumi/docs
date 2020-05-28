@@ -20,7 +20,22 @@ Get a network within GCE from its name.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var my_network = Output.Create(Gcp.Compute.GetNetwork.InvokeAsync(new Gcp.Compute.GetNetworkArgs
+        {
+            Name = "default-us-east1",
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

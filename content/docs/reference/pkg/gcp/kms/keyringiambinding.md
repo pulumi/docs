@@ -51,6 +51,41 @@ key_ring = gcp.kms.KeyRingIAMPolicy("keyRing",
     key_ring_id=keyring.id,
     policy_data=admin.policy_data)
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var keyring = new Gcp.Kms.KeyRing("keyring", new Gcp.Kms.KeyRingArgs
+        {
+            Location = "global",
+        });
+        var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+        {
+            Binding = 
+            {
+                
+                {
+                    { "role", "roles/editor" },
+                    { "members", 
+                    {
+                        "user:jane@example.com",
+                    } },
+                },
+            },
+        }));
+        var keyRing = new Gcp.Kms.KeyRingIAMPolicy("keyRing", new Gcp.Kms.KeyRingIAMPolicyArgs
+        {
+            KeyRingId = keyring.Id,
+            PolicyData = admin.Apply(admin => admin.PolicyData),
+        });
+    }
+
+}
+```
 
 With IAM Conditions:
 
@@ -93,6 +128,47 @@ key_ring = gcp.kms.KeyRingIAMPolicy("keyRing",
     key_ring_id=keyring.id,
     policy_data=admin.policy_data)
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var keyring = new Gcp.Kms.KeyRing("keyring", new Gcp.Kms.KeyRingArgs
+        {
+            Location = "global",
+        });
+        var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+        {
+            Binding = 
+            {
+                
+                {
+                    { "role", "roles/editor" },
+                    { "members", 
+                    {
+                        "user:jane@example.com",
+                    } },
+                    { "condition", 
+                    {
+                        { "title", "expires_after_2019_12_31" },
+                        { "description", "Expiring at midnight of 2019-12-31" },
+                        { "expression", "request.time < timestamp(\"2020-01-01T00:00:00Z\")" },
+                    } },
+                },
+            },
+        }));
+        var keyRing = new Gcp.Kms.KeyRingIAMPolicy("keyRing", new Gcp.Kms.KeyRingIAMPolicyArgs
+        {
+            KeyRingId = keyring.Id,
+            PolicyData = admin.Apply(admin => admin.PolicyData),
+        });
+    }
+
+}
+```
 
 ## google\_kms\_key\_ring\_iam\_binding
 
@@ -114,6 +190,27 @@ key_ring = gcp.kms.KeyRingIAMBinding("keyRing",
     key_ring_id="your-key-ring-id",
     members=["user:jane@example.com"],
     role="roles/editor")
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var keyRing = new Gcp.Kms.KeyRingIAMBinding("keyRing", new Gcp.Kms.KeyRingIAMBindingArgs
+        {
+            KeyRingId = "your-key-ring-id",
+            Members = 
+            {
+                "user:jane@example.com",
+            },
+            Role = "roles/editor",
+        });
+    }
+
+}
 ```
 
 With IAM Conditions:
@@ -146,6 +243,33 @@ key_ring = gcp.kms.KeyRingIAMBinding("keyRing",
     key_ring_id="your-key-ring-id",
     members=["user:jane@example.com"],
     role="roles/editor")
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var keyRing = new Gcp.Kms.KeyRingIAMBinding("keyRing", new Gcp.Kms.KeyRingIAMBindingArgs
+        {
+            Condition = new Gcp.Kms.Inputs.KeyRingIAMBindingConditionArgs
+            {
+                Description = "Expiring at midnight of 2019-12-31",
+                Expression = "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+                Title = "expires_after_2019_12_31",
+            },
+            KeyRingId = "your-key-ring-id",
+            Members = 
+            {
+                "user:jane@example.com",
+            },
+            Role = "roles/editor",
+        });
+    }
+
+}
 ```
 
 ## google\_kms\_key\_ring\_iam\_member
@@ -169,6 +293,24 @@ key_ring = gcp.kms.KeyRingIAMMember("keyRing",
     member="user:jane@example.com",
     role="roles/editor")
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var keyRing = new Gcp.Kms.KeyRingIAMMember("keyRing", new Gcp.Kms.KeyRingIAMMemberArgs
+        {
+            KeyRingId = "your-key-ring-id",
+            Member = "user:jane@example.com",
+            Role = "roles/editor",
+        });
+    }
+
+}
+```
 
 With IAM Conditions:
 
@@ -200,6 +342,30 @@ key_ring = gcp.kms.KeyRingIAMMember("keyRing",
     key_ring_id="your-key-ring-id",
     member="user:jane@example.com",
     role="roles/editor")
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var keyRing = new Gcp.Kms.KeyRingIAMMember("keyRing", new Gcp.Kms.KeyRingIAMMemberArgs
+        {
+            Condition = new Gcp.Kms.Inputs.KeyRingIAMMemberConditionArgs
+            {
+                Description = "Expiring at midnight of 2019-12-31",
+                Expression = "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+                Title = "expires_after_2019_12_31",
+            },
+            KeyRingId = "your-key-ring-id",
+            Member = "user:jane@example.com",
+            Role = "roles/editor",
+        });
+    }
+
+}
 ```
 
 

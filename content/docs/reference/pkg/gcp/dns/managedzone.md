@@ -47,216 +47,26 @@ example_zone = gcp.dns.ManagedZone("example-zone",
         "foo": "bar",
     })
 ```
-## Example Usage - Dns Managed Zone Private
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
 
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const network-1 = new gcp.compute.Network("network-1", {autoCreateSubnetworks: false});
-const network-2 = new gcp.compute.Network("network-2", {autoCreateSubnetworks: false});
-const private-zone = new gcp.dns.ManagedZone("private-zone", {
-    dnsName: "private.example.com.",
-    description: "Example private DNS zone",
-    labels: {
-        foo: "bar",
-    },
-    visibility: "private",
-    private_visibility_config: {
-        networks: [
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example_zone = new Gcp.Dns.ManagedZone("example-zone", new Gcp.Dns.ManagedZoneArgs
+        {
+            Description = "Example DNS zone",
+            DnsName = "my-domain.com.",
+            Labels = 
             {
-                networkUrl: network-1.selfLink,
+                { "foo", "bar" },
             },
-            {
-                networkUrl: network-2.selfLink,
-            },
-        ],
-    },
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
+        });
+    }
 
-network_1 = gcp.compute.Network("network-1", auto_create_subnetworks=False)
-network_2 = gcp.compute.Network("network-2", auto_create_subnetworks=False)
-private_zone = gcp.dns.ManagedZone("private-zone",
-    dns_name="private.example.com.",
-    description="Example private DNS zone",
-    labels={
-        "foo": "bar",
-    },
-    visibility="private",
-    private_visibility_config={
-        "networks": [
-            {
-                "networkUrl": network_1.self_link,
-            },
-            {
-                "networkUrl": network_2.self_link,
-            },
-        ],
-    })
-```
-## Example Usage - Dns Managed Zone Private Forwarding
-
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const network-1 = new gcp.compute.Network("network-1", {autoCreateSubnetworks: false});
-const network-2 = new gcp.compute.Network("network-2", {autoCreateSubnetworks: false});
-const private-zone = new gcp.dns.ManagedZone("private-zone", {
-    dnsName: "private.example.com.",
-    description: "Example private DNS zone",
-    labels: {
-        foo: "bar",
-    },
-    visibility: "private",
-    private_visibility_config: {
-        networks: [
-            {
-                networkUrl: network-1.selfLink,
-            },
-            {
-                networkUrl: network-2.selfLink,
-            },
-        ],
-    },
-    forwarding_config: {
-        target_name_servers: [
-            {
-                ipv4Address: "172.16.1.10",
-            },
-            {
-                ipv4Address: "172.16.1.20",
-            },
-        ],
-    },
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-network_1 = gcp.compute.Network("network-1", auto_create_subnetworks=False)
-network_2 = gcp.compute.Network("network-2", auto_create_subnetworks=False)
-private_zone = gcp.dns.ManagedZone("private-zone",
-    dns_name="private.example.com.",
-    description="Example private DNS zone",
-    labels={
-        "foo": "bar",
-    },
-    visibility="private",
-    private_visibility_config={
-        "networks": [
-            {
-                "networkUrl": network_1.self_link,
-            },
-            {
-                "networkUrl": network_2.self_link,
-            },
-        ],
-    },
-    forwarding_config={
-        "target_name_servers": [
-            {
-                "ipv4Address": "172.16.1.10",
-            },
-            {
-                "ipv4Address": "172.16.1.20",
-            },
-        ],
-    })
-```
-## Example Usage - Dns Managed Zone Private Peering
-
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const network-source = new gcp.compute.Network("network-source", {autoCreateSubnetworks: false});
-const network-target = new gcp.compute.Network("network-target", {autoCreateSubnetworks: false});
-const peering-zone = new gcp.dns.ManagedZone("peering-zone", {
-    dnsName: "peering.example.com.",
-    description: "Example private DNS peering zone",
-    visibility: "private",
-    private_visibility_config: {
-        networks: [{
-            networkUrl: network-source.selfLink,
-        }],
-    },
-    peering_config: {
-        target_network: {
-            networkUrl: network-target.selfLink,
-        },
-    },
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-network_source = gcp.compute.Network("network-source", auto_create_subnetworks=False)
-network_target = gcp.compute.Network("network-target", auto_create_subnetworks=False)
-peering_zone = gcp.dns.ManagedZone("peering-zone",
-    dns_name="peering.example.com.",
-    description="Example private DNS peering zone",
-    visibility="private",
-    private_visibility_config={
-        "networks": [{
-            "networkUrl": network_source.self_link,
-        }],
-    },
-    peering_config={
-        "target_network": {
-            "networkUrl": network_target.self_link,
-        },
-    })
-```
-## Example Usage - Dns Managed Zone Service Directory
-
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const example = new gcp.servicedirectory.Namespace("example", {
-    namespaceId: "example",
-    location: "us-central1",
-});
-const sd-zone = new gcp.dns.ManagedZone("sd-zone", {
-    dnsName: "services.example.com.",
-    description: "Example private DNS Service Directory zone",
-    visibility: "private",
-    service_directory_config: {
-        namespace: {
-            namespaceUrl: example.id,
-        },
-    },
-});
-const network = new gcp.compute.Network("network", {autoCreateSubnetworks: false});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-example = gcp.servicedirectory.Namespace("example",
-    namespace_id="example",
-    location="us-central1")
-sd_zone = gcp.dns.ManagedZone("sd-zone",
-    dns_name="services.example.com.",
-    description="Example private DNS Service Directory zone",
-    visibility="private",
-    service_directory_config={
-        "namespace": {
-            "namespaceUrl": example.id,
-        },
-    })
-network = gcp.compute.Network("network", auto_create_subnetworks=False)
+}
 ```
 
 

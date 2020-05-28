@@ -24,7 +24,30 @@ Manages a project-level logging bucket config. For more information see
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var @default = new Gcp.Organizations.Project("default", new Gcp.Organizations.ProjectArgs
+        {
+            ProjectId = "your-project-id",
+            OrgId = "123456789",
+        });
+        var basic = new Gcp.Logging.ProjectBucketConfig("basic", new Gcp.Logging.ProjectBucketConfigArgs
+        {
+            Project = @default.Name,
+            Location = "global",
+            RetentionDays = 30,
+            BucketId = "_Default",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -52,12 +75,12 @@ basic = gcp.logging.ProjectBucketConfig("basic",
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const default = new gcp.organizations.Project("default", {
+const _default = new gcp.organizations.Project("default", {
     projectId: "your-project-id",
     orgId: "123456789",
 });
 const basic = new gcp.logging.ProjectBucketConfig("basic", {
-    project: default.name,
+    project: _default.name,
     location: "global",
     retentionDays: 30,
     bucketId: "_Default",

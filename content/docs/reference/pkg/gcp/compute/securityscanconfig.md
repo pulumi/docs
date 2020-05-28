@@ -29,7 +29,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
 const scannerStaticIp = new gcp.compute.Address("scannerStaticIp", {});
-const scan-config = new gcp.compute.SecurityScanConfig("scan-config", {
+const scan_config = new gcp.compute.SecurityScanConfig("scan-config", {
     displayName: "scan-config",
     startingUrls: [pulumi.interpolate`http://${scannerStaticIp.address}`],
     targetPlatforms: ["COMPUTE"],
@@ -44,6 +44,33 @@ scan_config = gcp.compute.SecurityScanConfig("scan-config",
     display_name="scan-config",
     starting_urls=[scanner_static_ip.address.apply(lambda address: f"http://{address}")],
     target_platforms=["COMPUTE"])
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var scannerStaticIp = new Gcp.Compute.Address("scannerStaticIp", new Gcp.Compute.AddressArgs
+        {
+        });
+        var scan_config = new Gcp.Compute.SecurityScanConfig("scan-config", new Gcp.Compute.SecurityScanConfigArgs
+        {
+            DisplayName = "scan-config",
+            StartingUrls = 
+            {
+                scannerStaticIp.IPAddress.Apply(address => $"http://{address}"),
+            },
+            TargetPlatforms = 
+            {
+                "COMPUTE",
+            },
+        });
+    }
+
+}
 ```
 
 

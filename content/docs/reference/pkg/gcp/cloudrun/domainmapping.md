@@ -74,6 +74,51 @@ default_domain_mapping = gcp.cloudrun.DomainMapping("defaultDomainMapping",
         "routeName": default_service.name,
     })
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var defaultService = new Gcp.CloudRun.Service("defaultService", new Gcp.CloudRun.ServiceArgs
+        {
+            Location = "us-central1",
+            Metadata = new Gcp.CloudRun.Inputs.ServiceMetadataArgs
+            {
+                Namespace = "my-project-name",
+            },
+            Template = new Gcp.CloudRun.Inputs.ServiceTemplateArgs
+            {
+                Spec = new Gcp.CloudRun.Inputs.ServiceTemplateSpecArgs
+                {
+                    Containers = 
+                    {
+                        new Gcp.CloudRun.Inputs.ServiceTemplateSpecContainerArgs
+                        {
+                            Image = "gcr.io/cloudrun/hello",
+                        },
+                    },
+                },
+            },
+        });
+        var defaultDomainMapping = new Gcp.CloudRun.DomainMapping("defaultDomainMapping", new Gcp.CloudRun.DomainMappingArgs
+        {
+            Location = "us-central1",
+            Metadata = new Gcp.CloudRun.Inputs.DomainMappingMetadataArgs
+            {
+                Namespace = "my-project-name",
+            },
+            Spec = new Gcp.CloudRun.Inputs.DomainMappingSpecArgs
+            {
+                RouteName = defaultService.Name,
+            },
+        });
+    }
+
+}
+```
 
 
 

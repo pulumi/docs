@@ -22,7 +22,22 @@ The URLs are computed entirely offline - as long as the project exists, they wil
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var foo = Output.Create(Gcp.Container.GetRegistryRepository.InvokeAsync());
+        this.GcrLocation = foo.Apply(foo => foo.RepositoryUrl);
+    }
+
+    [Output("gcrLocation")]
+    public Output<string> GcrLocation { get; set; }
+}
+```
 {{% /example %}}
 
 {{% example go %}}

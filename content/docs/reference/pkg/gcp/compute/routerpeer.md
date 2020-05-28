@@ -50,6 +50,27 @@ peer = gcp.compute.RouterPeer("peer",
     region="us-central1",
     router="my-router")
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var peer = new Gcp.Compute.RouterPeer("peer", new Gcp.Compute.RouterPeerArgs
+        {
+            AdvertisedRoutePriority = 100,
+            Interface = "interface-1",
+            PeerAsn = 65513,
+            PeerIpAddress = "169.254.1.2",
+            Region = "us-central1",
+            Router = "my-router",
+        });
+    }
+
+}
+```
 
 
 

@@ -22,7 +22,22 @@ For more information see
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var project = Output.Create(Gcp.Organizations.GetProject.InvokeAsync());
+        this.ProjectNumber = project.Apply(project => project.Number);
+    }
+
+    [Output("projectNumber")]
+    public Output<string> ProjectNumber { get; set; }
+}
+```
 {{% /example %}}
 
 {{% example go %}}

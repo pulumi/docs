@@ -49,6 +49,37 @@ dataset = gcp.healthcare.DatasetIamPolicy("dataset",
     dataset_id="your-dataset-id",
     policy_data=admin.policy_data)
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+        {
+            Binding = 
+            {
+                
+                {
+                    { "role", "roles/editor" },
+                    { "members", 
+                    {
+                        "user:jane@example.com",
+                    } },
+                },
+            },
+        }));
+        var dataset = new Gcp.Healthcare.DatasetIamPolicy("dataset", new Gcp.Healthcare.DatasetIamPolicyArgs
+        {
+            DatasetId = "your-dataset-id",
+            PolicyData = admin.Apply(admin => admin.PolicyData),
+        });
+    }
+
+}
+```
 
 ## google\_healthcare\_dataset\_iam\_binding
 
@@ -71,6 +102,27 @@ dataset = gcp.healthcare.DatasetIamBinding("dataset",
     members=["user:jane@example.com"],
     role="roles/editor")
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var dataset = new Gcp.Healthcare.DatasetIamBinding("dataset", new Gcp.Healthcare.DatasetIamBindingArgs
+        {
+            DatasetId = "your-dataset-id",
+            Members = 
+            {
+                "user:jane@example.com",
+            },
+            Role = "roles/editor",
+        });
+    }
+
+}
+```
 
 ## google\_healthcare\_dataset\_iam\_member
 
@@ -92,6 +144,24 @@ dataset = gcp.healthcare.DatasetIamMember("dataset",
     dataset_id="your-dataset-id",
     member="user:jane@example.com",
     role="roles/editor")
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var dataset = new Gcp.Healthcare.DatasetIamMember("dataset", new Gcp.Healthcare.DatasetIamMemberArgs
+        {
+            DatasetId = "your-dataset-id",
+            Member = "user:jane@example.com",
+            Role = "roles/editor",
+        });
+    }
+
+}
 ```
 
 

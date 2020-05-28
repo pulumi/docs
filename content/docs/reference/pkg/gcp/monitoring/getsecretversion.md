@@ -20,7 +20,22 @@ Get a Secret Manager secret's version. For more information see the [official do
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var basic = Output.Create(Gcp.SecretManager.GetSecretVersion.InvokeAsync(new Gcp.SecretManager.GetSecretVersionArgs
+        {
+            Secret = "my-secret",
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
