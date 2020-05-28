@@ -20,7 +20,26 @@ Use this data source to access information about an existing Load Balancer
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Azure.Lb.GetLB.InvokeAsync(new Azure.Lb.GetLBArgs
+        {
+            Name = "example-lb",
+            ResourceGroupName = "example-resources",
+        }));
+        this.LoadbalancerId = example.Apply(example => example.Id);
+    }
+
+    [Output("loadbalancerId")]
+    public Output<string> LoadbalancerId { get; set; }
+}
+```
 {{% /example %}}
 
 {{% example go %}}

@@ -20,7 +20,37 @@ Manages an API Management Microsoft Identity Provider.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West Europe",
+        });
+        var exampleService = new Azure.ApiManagement.Service("exampleService", new Azure.ApiManagement.ServiceArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            PublisherName = "My Company",
+            PublisherEmail = "company@mycompany.io",
+            SkuName = "Developer_1",
+        });
+        var exampleIdentityProviderMicrosoft = new Azure.ApiManagement.IdentityProviderMicrosoft("exampleIdentityProviderMicrosoft", new Azure.ApiManagement.IdentityProviderMicrosoftArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            ApiManagementName = exampleService.Name,
+            ClientId = "00000000-0000-0000-0000-000000000000",
+            ClientSecret = "00000000000000000000000000000000",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

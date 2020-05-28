@@ -12,69 +12,9 @@ meta_desc: "Explore the Server resource of the analysisservices module, includin
 
 Manages an Analysis Services Server.
 
-
-
 {{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_azure as azure
-
-rg = azure.core.ResourceGroup("rg", location="northeurope")
-server = azure.analysisservices.Server("server",
-    location="northeurope",
-    resource_group_name=rg.name,
-    sku="S0",
-    admin_users=["myuser@domain.tld"],
-    enable_power_bi_service=True,
-    ipv4_firewall_rule=[{
-        "name": "myRule1",
-        "rangeStart": "210.117.252.0",
-        "rangeEnd": "210.117.252.255",
-    }],
-    tags={
-        "abc": 123,
-    })
-```
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure from "@pulumi/azure";
-
-const rg = new azure.core.ResourceGroup("rg", {location: "northeurope"});
-const server = new azure.analysisservices.Server("server", {
-    location: "northeurope",
-    resourceGroupName: rg.name,
-    sku: "S0",
-    adminUsers: ["myuser@domain.tld"],
-    enablePowerBiService: true,
-    ipv4_firewall_rule: [{
-        name: "myRule1",
-        rangeStart: "210.117.252.0",
-        rangeEnd: "210.117.252.255",
-    }],
-    tags: {
-        abc: 123,
-    },
-});
-```
-{{% /example %}}
-
 {{% /examples %}}
+
 
 
 ## Create a Server Resource {#create}

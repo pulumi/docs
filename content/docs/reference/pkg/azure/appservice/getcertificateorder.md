@@ -20,7 +20,26 @@ Use this data source to access information about an existing App Service Certifi
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Azure.AppService.GetCertificateOrder.InvokeAsync(new Azure.AppService.GetCertificateOrderArgs
+        {
+            Name = "example-cert-order",
+            ResourceGroupName = "example-resources",
+        }));
+        this.CertificateOrderId = example.Apply(example => example.Id);
+    }
+
+    [Output("certificateOrderId")]
+    public Output<string> CertificateOrderId { get; set; }
+}
+```
 {{% /example %}}
 
 {{% example go %}}

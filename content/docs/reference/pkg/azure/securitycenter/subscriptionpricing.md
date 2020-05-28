@@ -24,7 +24,22 @@ Manages the Pricing Tier for Azure Security Center in the current subscription.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Azure.SecurityCenter.SubscriptionPricing("example", new Azure.SecurityCenter.SubscriptionPricingArgs
+        {
+            Tier = "Standard",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

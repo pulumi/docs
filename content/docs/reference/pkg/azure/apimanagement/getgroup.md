@@ -20,7 +20,27 @@ Use this data source to access information about an existing API Management Grou
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Azure.ApiManagement.GetGroup.InvokeAsync(new Azure.ApiManagement.GetGroupArgs
+        {
+            Name = "my-group",
+            ApiManagementName = "example-apim",
+            ResourceGroupName = "search-service",
+        }));
+        this.GroupType = example.Apply(example => example.Type);
+    }
+
+    [Output("groupType")]
+    public Output<string> GroupType { get; set; }
+}
+```
 {{% /example %}}
 
 {{% example go %}}

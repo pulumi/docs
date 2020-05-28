@@ -76,76 +76,53 @@ example_subscription_rule = azure.servicebus.SubscriptionRule("exampleSubscripti
     filter_type="SqlFilter",
     sql_filter="colour = 'red'")
 ```
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
 
-## Example Usage (Correlation Filter)
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West Europe",
+        });
+        var exampleNamespace = new Azure.ServiceBus.Namespace("exampleNamespace", new Azure.ServiceBus.NamespaceArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            Sku = "Standard",
+            Tags = 
+            {
+                { "source", "example" },
+            },
+        });
+        var exampleTopic = new Azure.ServiceBus.Topic("exampleTopic", new Azure.ServiceBus.TopicArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            NamespaceName = exampleNamespace.Name,
+            EnablePartitioning = true,
+        });
+        var exampleSubscription = new Azure.ServiceBus.Subscription("exampleSubscription", new Azure.ServiceBus.SubscriptionArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            NamespaceName = exampleNamespace.Name,
+            TopicName = exampleTopic.Name,
+            MaxDeliveryCount = 1,
+        });
+        var exampleSubscriptionRule = new Azure.ServiceBus.SubscriptionRule("exampleSubscriptionRule", new Azure.ServiceBus.SubscriptionRuleArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            NamespaceName = exampleNamespace.Name,
+            TopicName = exampleTopic.Name,
+            SubscriptionName = exampleSubscription.Name,
+            FilterType = "SqlFilter",
+            SqlFilter = "colour = 'red'",
+        });
+    }
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure from "@pulumi/azure";
-
-const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
-const exampleNamespace = new azure.servicebus.Namespace("exampleNamespace", {
-    location: exampleResourceGroup.location,
-    resourceGroupName: exampleResourceGroup.name,
-    sku: "Standard",
-    tags: {
-        source: "example",
-    },
-});
-const exampleTopic = new azure.servicebus.Topic("exampleTopic", {
-    resourceGroupName: exampleResourceGroup.name,
-    namespaceName: exampleNamespace.name,
-    enablePartitioning: true,
-});
-const exampleSubscription = new azure.servicebus.Subscription("exampleSubscription", {
-    resourceGroupName: exampleResourceGroup.name,
-    namespaceName: exampleNamespace.name,
-    topicName: exampleTopic.name,
-    maxDeliveryCount: 1,
-});
-const exampleSubscriptionRule = new azure.servicebus.SubscriptionRule("exampleSubscriptionRule", {
-    resourceGroupName: exampleResourceGroup.name,
-    namespaceName: exampleNamespace.name,
-    topicName: exampleTopic.name,
-    subscriptionName: exampleSubscription.name,
-    filterType: "CorrelationFilter",
-    correlation_filter: {
-        correlationId: "high",
-        label: "red",
-    },
-});
-```
-```python
-import pulumi
-import pulumi_azure as azure
-
-example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
-example_namespace = azure.servicebus.Namespace("exampleNamespace",
-    location=example_resource_group.location,
-    resource_group_name=example_resource_group.name,
-    sku="Standard",
-    tags={
-        "source": "example",
-    })
-example_topic = azure.servicebus.Topic("exampleTopic",
-    resource_group_name=example_resource_group.name,
-    namespace_name=example_namespace.name,
-    enable_partitioning=True)
-example_subscription = azure.servicebus.Subscription("exampleSubscription",
-    resource_group_name=example_resource_group.name,
-    namespace_name=example_namespace.name,
-    topic_name=example_topic.name,
-    max_delivery_count=1)
-example_subscription_rule = azure.servicebus.SubscriptionRule("exampleSubscriptionRule",
-    resource_group_name=example_resource_group.name,
-    namespace_name=example_namespace.name,
-    topic_name=example_topic.name,
-    subscription_name=example_subscription.name,
-    filter_type="CorrelationFilter",
-    correlation_filter={
-        "correlationId": "high",
-        "label": "red",
-    })
+}
 ```
 
 

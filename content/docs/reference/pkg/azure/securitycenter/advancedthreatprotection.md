@@ -20,7 +20,38 @@ Manages a resources Advanced Threat Protection setting.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var rg = new Azure.Core.ResourceGroup("rg", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "northeurope",
+        });
+        var exampleAccount = new Azure.Storage.Account("exampleAccount", new Azure.Storage.AccountArgs
+        {
+            ResourceGroupName = azurerm_resource_group.Example.Name,
+            Location = azurerm_resource_group.Example.Location,
+            AccountTier = "Standard",
+            AccountReplicationType = "LRS",
+            Tags = 
+            {
+                { "environment", "example" },
+            },
+        });
+        var exampleAdvancedThreatProtection = new Azure.SecurityCenter.AdvancedThreatProtection("exampleAdvancedThreatProtection", new Azure.SecurityCenter.AdvancedThreatProtectionArgs
+        {
+            TargetResourceId = exampleAccount.Id,
+            Enabled = true,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

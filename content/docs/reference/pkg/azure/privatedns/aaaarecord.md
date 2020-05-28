@@ -20,7 +20,37 @@ Enables you to manage DNS AAAA Records within Azure Private DNS.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var testResourceGroup = new Azure.Core.ResourceGroup("testResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West US",
+        });
+        var testZone = new Azure.PrivateDns.Zone("testZone", new Azure.PrivateDns.ZoneArgs
+        {
+            ResourceGroupName = testResourceGroup.Name,
+        });
+        var testAAAARecord = new Azure.PrivateDns.AAAARecord("testAAAARecord", new Azure.PrivateDns.AAAARecordArgs
+        {
+            ZoneName = testZone.Name,
+            ResourceGroupName = testResourceGroup.Name,
+            Ttl = 300,
+            Records = 
+            {
+                "fd5d:70bc:930e:d008:0000:0000:0000:7334",
+                "fd5d:70bc:930e:d008::7335",
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

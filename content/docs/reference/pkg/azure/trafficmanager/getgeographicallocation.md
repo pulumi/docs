@@ -30,6 +30,25 @@ import pulumi_azure as azure
 example = azure.network.get_traffic_manager(name="World")
 pulumi.export("locationCode", example.id)
 ```
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Azure.Network.GetTrafficManager.InvokeAsync(new Azure.Network.GetTrafficManagerArgs
+        {
+            Name = "World",
+        }));
+        this.LocationCode = example.Apply(example => example.Id);
+    }
+
+    [Output("locationCode")]
+    public Output<string> LocationCode { get; set; }
+}
+```
 
 <p class="resource-deprecated">Deprecated: {{% md %}}azure.trafficmanager.getGeographicalLocation has been deprecated in favor of azure.network.getTrafficManager{{% /md %}}</p>
 

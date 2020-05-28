@@ -20,7 +20,26 @@ Use this data source to access information about an existing Logic App Workflow.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Azure.LogicApps.GetWorkflow.InvokeAsync(new Azure.LogicApps.GetWorkflowArgs
+        {
+            Name = "workflow1",
+            ResourceGroupName = "my-resource-group",
+        }));
+        this.AccessEndpoint = example.Apply(example => example.AccessEndpoint);
+    }
+
+    [Output("accessEndpoint")]
+    public Output<string> AccessEndpoint { get; set; }
+}
+```
 {{% /example %}}
 
 {{% example go %}}

@@ -21,7 +21,37 @@ Manages an API Management Group.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West US",
+        });
+        var exampleService = new Azure.ApiManagement.Service("exampleService", new Azure.ApiManagement.ServiceArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            PublisherName = "pub1",
+            PublisherEmail = "pub1@email.com",
+            SkuName = "Developer_1",
+        });
+        var exampleGroup = new Azure.ApiManagement.Group("exampleGroup", new Azure.ApiManagement.GroupArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            ApiManagementName = exampleService.Name,
+            DisplayName = "Example Group",
+            Description = "This is an example API management group.",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

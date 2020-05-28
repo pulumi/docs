@@ -20,7 +20,23 @@ Use this data source to access information about an existing Kusto (also known a
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Azure.Kusto.GetCluster.InvokeAsync(new Azure.Kusto.GetClusterArgs
+        {
+            Name = "kustocluster",
+            ResourceGroupName = "test_resource_group",
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

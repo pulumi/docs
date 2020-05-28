@@ -22,7 +22,47 @@ Manages a policy set definition.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Azure.Policy.PolicySetDefinition("example", new Azure.Policy.PolicySetDefinitionArgs
+        {
+            DisplayName = "Test Policy Set",
+            Parameters = @"    {
+        ""allowedLocations"": {
+            ""type"": ""Array"",
+            ""metadata"": {
+                ""description"": ""The list of allowed locations for resources."",
+                ""displayName"": ""Allowed locations"",
+                ""strongType"": ""location""
+            }
+        }
+    }
+
+",
+            PolicyDefinitions = @"    [
+        {
+            ""parameters"": {
+                ""listOfAllowedLocations"": {
+                    ""value"": ""[parameters('allowedLocations')]""
+                }
+            },
+            ""policyDefinitionId"": ""/providers/Microsoft.Authorization/policyDefinitions/e765b5de-1225-4ba3-bd56-1ac6695af988""
+        }
+    ]
+
+",
+            PolicyType = "Custom",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

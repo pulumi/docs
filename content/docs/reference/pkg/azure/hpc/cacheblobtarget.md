@@ -20,7 +20,80 @@ Manages a Blob Target within a HPC Cache.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+using AzureAD = Pulumi.AzureAD;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West Europe",
+        });
+        var exampleVirtualNetwork = new Azure.Network.VirtualNetwork("exampleVirtualNetwork", new Azure.Network.VirtualNetworkArgs
+        {
+            AddressSpaces = 
+            {
+                "10.0.0.0/16",
+            },
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+        });
+        var exampleSubnet = new Azure.Network.Subnet("exampleSubnet", new Azure.Network.SubnetArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            VirtualNetworkName = exampleVirtualNetwork.Name,
+            AddressPrefix = "10.0.1.0/24",
+        });
+        var exampleCache = new Azure.Hpc.Cache("exampleCache", new Azure.Hpc.CacheArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            Location = exampleResourceGroup.Location,
+            CacheSizeInGb = 3072,
+            SubnetId = exampleSubnet.Id,
+            SkuName = "Standard_2G",
+        });
+        var exampleAccount = new Azure.Storage.Account("exampleAccount", new Azure.Storage.AccountArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            Location = exampleResourceGroup.Location,
+            AccountTier = "Standard",
+            AccountReplicationType = "LRS",
+        });
+        var exampleContainer = new Azure.Storage.Container("exampleContainer", new Azure.Storage.ContainerArgs
+        {
+            StorageAccountName = exampleAccount.Name,
+        });
+        var exampleServicePrincipal = Output.Create(AzureAD.GetServicePrincipal.InvokeAsync(new AzureAD.GetServicePrincipalArgs
+        {
+            DisplayName = "HPC Cache Resource Provider",
+        }));
+        var exampleStorageAccountContrib = new Azure.Authorization.Assignment("exampleStorageAccountContrib", new Azure.Authorization.AssignmentArgs
+        {
+            Scope = exampleAccount.Id,
+            RoleDefinitionName = "Storage Account Contributor",
+            PrincipalId = exampleServicePrincipal.Apply(exampleServicePrincipal => exampleServicePrincipal.ObjectId),
+        });
+        var exampleStorageBlobDataContrib = new Azure.Authorization.Assignment("exampleStorageBlobDataContrib", new Azure.Authorization.AssignmentArgs
+        {
+            Scope = exampleAccount.Id,
+            RoleDefinitionName = "Storage Blob Data Contributor",
+            PrincipalId = exampleServicePrincipal.Apply(exampleServicePrincipal => exampleServicePrincipal.ObjectId),
+        });
+        var exampleCacheBlobTarget = new Azure.Hpc.CacheBlobTarget("exampleCacheBlobTarget", new Azure.Hpc.CacheBlobTargetArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            CacheName = exampleCache.Name,
+            StorageContainerId = exampleContainer.ResourceManagerId,
+            NamespacePath = "/blob_storage",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

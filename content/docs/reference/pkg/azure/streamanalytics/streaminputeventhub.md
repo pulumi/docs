@@ -20,7 +20,62 @@ Manages a Stream Analytics Stream Input EventHub.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = Output.Create(Azure.Core.GetResourceGroup.InvokeAsync(new Azure.Core.GetResourceGroupArgs
+        {
+            Name = "example-resources",
+        }));
+        var exampleJob = Output.Create(Azure.StreamAnalytics.GetJob.InvokeAsync(new Azure.StreamAnalytics.GetJobArgs
+        {
+            Name = "example-job",
+            ResourceGroupName = azurerm_resource_group.Example.Name,
+        }));
+        var exampleEventHubNamespace = new Azure.EventHub.EventHubNamespace("exampleEventHubNamespace", new Azure.EventHub.EventHubNamespaceArgs
+        {
+            Location = exampleResourceGroup.Apply(exampleResourceGroup => exampleResourceGroup.Location),
+            ResourceGroupName = exampleResourceGroup.Apply(exampleResourceGroup => exampleResourceGroup.Name),
+            Sku = "Standard",
+            Capacity = 1,
+        });
+        var exampleEventHub = new Azure.EventHub.EventHub("exampleEventHub", new Azure.EventHub.EventHubArgs
+        {
+            NamespaceName = exampleEventHubNamespace.Name,
+            ResourceGroupName = exampleResourceGroup.Apply(exampleResourceGroup => exampleResourceGroup.Name),
+            PartitionCount = 2,
+            MessageRetention = 1,
+        });
+        var exampleConsumerGroup = new Azure.EventHub.ConsumerGroup("exampleConsumerGroup", new Azure.EventHub.ConsumerGroupArgs
+        {
+            NamespaceName = exampleEventHubNamespace.Name,
+            EventhubName = exampleEventHub.Name,
+            ResourceGroupName = exampleResourceGroup.Apply(exampleResourceGroup => exampleResourceGroup.Name),
+        });
+        var exampleStreamInputEventHub = new Azure.StreamAnalytics.StreamInputEventHub("exampleStreamInputEventHub", new Azure.StreamAnalytics.StreamInputEventHubArgs
+        {
+            StreamAnalyticsJobName = exampleJob.Apply(exampleJob => exampleJob.Name),
+            ResourceGroupName = exampleJob.Apply(exampleJob => exampleJob.ResourceGroupName),
+            EventhubConsumerGroupName = exampleConsumerGroup.Name,
+            EventhubName = exampleEventHub.Name,
+            ServicebusNamespace = exampleEventHubNamespace.Name,
+            SharedAccessPolicyKey = exampleEventHubNamespace.DefaultPrimaryKey,
+            SharedAccessPolicyName = "RootManageSharedAccessKey",
+            Serialization = new Azure.StreamAnalytics.Inputs.StreamInputEventHubSerializationArgs
+            {
+                Type = "Json",
+                Encoding = "UTF8",
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

@@ -20,7 +20,33 @@ Manages an HTTP Action within a Logic App Workflow
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "East US",
+        });
+        var exampleWorkflow = new Azure.LogicApps.Workflow("exampleWorkflow", new Azure.LogicApps.WorkflowArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+        });
+        var exampleActionHttp = new Azure.LogicApps.ActionHttp("exampleActionHttp", new Azure.LogicApps.ActionHttpArgs
+        {
+            LogicAppId = exampleWorkflow.Id,
+            Method = "GET",
+            Uri = "http://example.com/some-webhook",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

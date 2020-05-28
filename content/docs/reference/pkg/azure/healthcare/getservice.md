@@ -20,7 +20,27 @@ Use this data source to access information about an existing Healthcare Service
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Azure.Healthcare.GetService.InvokeAsync(new Azure.Healthcare.GetServiceArgs
+        {
+            Name = "example-healthcare_service",
+            ResourceGroupName = "example-resources",
+            Location = "westus2",
+        }));
+        this.HealthcareServiceId = example.Apply(example => example.Id);
+    }
+
+    [Output("healthcareServiceId")]
+    public Output<string> HealthcareServiceId { get; set; }
+}
+```
 {{% /example %}}
 
 {{% example go %}}

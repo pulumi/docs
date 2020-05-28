@@ -53,9 +53,9 @@ anything, please consult the source <a class="reference external" href="https://
     <span class="n">account_tier</span><span class="o">=</span><span class="s2">&quot;Standard&quot;</span><span class="p">,</span>
     <span class="n">account_replication_type</span><span class="o">=</span><span class="s2">&quot;LRS&quot;</span><span class="p">,</span>
     <span class="n">network_rules</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;defaultAction&quot;</span><span class="p">:</span> <span class="s2">&quot;Deny&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;ipRules&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;100.0.0.1&quot;</span><span class="p">],</span>
-        <span class="s2">&quot;virtualNetworkSubnetIds&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">example_subnet</span><span class="o">.</span><span class="n">id</span><span class="p">],</span>
+        <span class="s2">&quot;default_action&quot;</span><span class="p">:</span> <span class="s2">&quot;Deny&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;ip_rules&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;100.0.0.1&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;virtual_network_subnet_ids&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">example_subnet</span><span class="o">.</span><span class="n">id</span><span class="p">],</span>
     <span class="p">},</span>
     <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;environment&quot;</span><span class="p">:</span> <span class="s2">&quot;staging&quot;</span><span class="p">,</span>

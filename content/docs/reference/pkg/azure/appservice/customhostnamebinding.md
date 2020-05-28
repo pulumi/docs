@@ -20,7 +20,53 @@ Manages a Hostname Binding within an App Service.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+using Random = Pulumi.Random;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var server = new Random.RandomId("server", new Random.RandomIdArgs
+        {
+            Keepers = 
+            {
+                { "azi_id", 1 },
+            },
+            ByteLength = 8,
+        });
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West Europe",
+        });
+        var examplePlan = new Azure.AppService.Plan("examplePlan", new Azure.AppService.PlanArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            Sku = new Azure.AppService.Inputs.PlanSkuArgs
+            {
+                Tier = "Standard",
+                Size = "S1",
+            },
+        });
+        var exampleAppService = new Azure.AppService.AppService("exampleAppService", new Azure.AppService.AppServiceArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            AppServicePlanId = examplePlan.Id,
+        });
+        var exampleCustomHostnameBinding = new Azure.AppService.CustomHostnameBinding("exampleCustomHostnameBinding", new Azure.AppService.CustomHostnameBindingArgs
+        {
+            Hostname = "www.mywebsite.com",
+            AppServiceName = exampleAppService.Name,
+            ResourceGroupName = exampleResourceGroup.Name,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

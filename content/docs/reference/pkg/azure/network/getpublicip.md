@@ -34,95 +34,28 @@ example = azure.network.get_public_ip(name="name_of_public_ip",
 pulumi.export("domainNameLabel", example.domain_name_label)
 pulumi.export("publicIpAddress", example.ip_address)
 ```
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
 
-## Example Usage (Retrieve the Dynamic Public IP of a new VM)
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Azure.Network.GetPublicIP.InvokeAsync(new Azure.Network.GetPublicIPArgs
+        {
+            Name = "name_of_public_ip",
+            ResourceGroupName = "name_of_resource_group",
+        }));
+        this.DomainNameLabel = example.Apply(example => example.DomainNameLabel);
+        this.PublicIpAddress = example.Apply(example => example.IpAddress);
+    }
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure from "@pulumi/azure";
-
-const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West US 2"});
-const exampleVirtualNetwork = new azure.network.VirtualNetwork("exampleVirtualNetwork", {
-    addressSpaces: ["10.0.0.0/16"],
-    location: exampleResourceGroup.location,
-    resourceGroupName: exampleResourceGroup.name,
-});
-const exampleSubnet = new azure.network.Subnet("exampleSubnet", {
-    resourceGroupName: exampleResourceGroup.name,
-    virtualNetworkName: exampleVirtualNetwork.name,
-    addressPrefix: "10.0.2.0/24",
-});
-const examplePublicIp = new azure.network.PublicIp("examplePublicIp", {
-    location: exampleResourceGroup.location,
-    resourceGroupName: exampleResourceGroup.name,
-    allocationMethod: "Dynamic",
-    idleTimeoutInMinutes: 30,
-    tags: {
-        environment: "test",
-    },
-});
-const exampleNetworkInterface = new azure.network.NetworkInterface("exampleNetworkInterface", {
-    location: exampleResourceGroup.location,
-    resourceGroupName: exampleResourceGroup.name,
-    ip_configuration: [{
-        name: "testconfiguration1",
-        subnetId: exampleSubnet.id,
-        privateIpAddressAllocation: "Static",
-        privateIpAddress: "10.0.2.5",
-        publicIpAddressId: examplePublicIp.id,
-    }],
-});
-const exampleVirtualMachine = new azure.compute.VirtualMachine("exampleVirtualMachine", {
-    location: exampleResourceGroup.location,
-    resourceGroupName: exampleResourceGroup.name,
-    networkInterfaceIds: [exampleNetworkInterface.id],
-});
-// ...
-const examplePublicIP = pulumi.all([examplePublicIp.name, exampleVirtualMachine.resourceGroupName]).apply(([name, resourceGroupName]) => azure.network.getPublicIP({
-    name: name,
-    resourceGroupName: resourceGroupName,
-}));
-export const publicIpAddress = examplePublicIp.ipAddress;
-```
-```python
-import pulumi
-import pulumi_azure as azure
-
-example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West US 2")
-example_virtual_network = azure.network.VirtualNetwork("exampleVirtualNetwork",
-    address_spaces=["10.0.0.0/16"],
-    location=example_resource_group.location,
-    resource_group_name=example_resource_group.name)
-example_subnet = azure.network.Subnet("exampleSubnet",
-    resource_group_name=example_resource_group.name,
-    virtual_network_name=example_virtual_network.name,
-    address_prefix="10.0.2.0/24")
-example_public_ip = azure.network.PublicIp("examplePublicIp",
-    location=example_resource_group.location,
-    resource_group_name=example_resource_group.name,
-    allocation_method="Dynamic",
-    idle_timeout_in_minutes=30,
-    tags={
-        "environment": "test",
-    })
-example_network_interface = azure.network.NetworkInterface("exampleNetworkInterface",
-    location=example_resource_group.location,
-    resource_group_name=example_resource_group.name,
-    ip_configuration=[{
-        "name": "testconfiguration1",
-        "subnetId": example_subnet.id,
-        "privateIpAddressAllocation": "Static",
-        "privateIpAddress": "10.0.2.5",
-        "publicIpAddressId": example_public_ip.id,
-    }])
-example_virtual_machine = azure.compute.VirtualMachine("exampleVirtualMachine",
-    location=example_resource_group.location,
-    resource_group_name=example_resource_group.name,
-    network_interface_ids=[example_network_interface.id])
-# ...
-example_public_ip = pulumi.Output.all(example_public_ip.name, example_virtual_machine.resource_group_name).apply(lambda name, resource_group_name: azure.network.get_public_ip(name=name,
-    resource_group_name=resource_group_name))
-pulumi.export("publicIpAddress", example_public_ip.ip_address)
+    [Output("domainNameLabel")]
+    public Output<string> DomainNameLabel { get; set; }
+    [Output("publicIpAddress")]
+    public Output<string> PublicIpAddress { get; set; }
+}
 ```
 
 

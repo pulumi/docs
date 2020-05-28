@@ -20,7 +20,72 @@ Manages a site recovery network mapping on Azure. A network mapping decides how 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var primaryResourceGroup = new Azure.Core.ResourceGroup("primaryResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West US",
+        });
+        var secondaryResourceGroup = new Azure.Core.ResourceGroup("secondaryResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "East US",
+        });
+        var vault = new Azure.RecoveryServices.Vault("vault", new Azure.RecoveryServices.VaultArgs
+        {
+            Location = secondaryResourceGroup.Location,
+            ResourceGroupName = secondaryResourceGroup.Name,
+            Sku = "Standard",
+        });
+        var primaryFabric = new Azure.SiteRecovery.Fabric("primaryFabric", new Azure.SiteRecovery.FabricArgs
+        {
+            ResourceGroupName = secondaryResourceGroup.Name,
+            RecoveryVaultName = vault.Name,
+            Location = primaryResourceGroup.Location,
+        });
+        var secondaryFabric = new Azure.SiteRecovery.Fabric("secondaryFabric", new Azure.SiteRecovery.FabricArgs
+        {
+            ResourceGroupName = secondaryResourceGroup.Name,
+            RecoveryVaultName = vault.Name,
+            Location = secondaryResourceGroup.Location,
+        });
+        // Avoids issues with crearing fabrics simultainusly
+        var primaryVirtualNetwork = new Azure.Network.VirtualNetwork("primaryVirtualNetwork", new Azure.Network.VirtualNetworkArgs
+        {
+            ResourceGroupName = primaryResourceGroup.Name,
+            AddressSpaces = 
+            {
+                "192.168.1.0/24",
+            },
+            Location = primaryResourceGroup.Location,
+        });
+        var secondaryVirtualNetwork = new Azure.Network.VirtualNetwork("secondaryVirtualNetwork", new Azure.Network.VirtualNetworkArgs
+        {
+            ResourceGroupName = secondaryResourceGroup.Name,
+            AddressSpaces = 
+            {
+                "192.168.2.0/24",
+            },
+            Location = secondaryResourceGroup.Location,
+        });
+        var recovery_mapping = new Azure.SiteRecovery.NetworkMapping("recovery-mapping", new Azure.SiteRecovery.NetworkMappingArgs
+        {
+            ResourceGroupName = secondaryResourceGroup.Name,
+            RecoveryVaultName = vault.Name,
+            SourceRecoveryFabricName = "primary-fabric",
+            TargetRecoveryFabricName = "secondary-fabric",
+            SourceNetworkId = primaryVirtualNetwork.Id,
+            TargetNetworkId = secondaryVirtualNetwork.Id,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -98,7 +163,7 @@ const secondaryVirtualNetwork = new azure.network.VirtualNetwork("secondaryVirtu
     addressSpaces: ["192.168.2.0/24"],
     location: secondaryResourceGroup.location,
 });
-const recovery-mapping = new azure.siterecovery.NetworkMapping("recovery-mapping", {
+const recovery_mapping = new azure.siterecovery.NetworkMapping("recovery-mapping", {
     resourceGroupName: secondaryResourceGroup.name,
     recoveryVaultName: vault.name,
     sourceRecoveryFabricName: "primary-fabric",

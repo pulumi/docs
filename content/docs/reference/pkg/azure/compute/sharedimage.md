@@ -20,7 +20,46 @@ Manages a Shared Image within a Shared Image Gallery.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West Europe",
+        });
+        var exampleSharedImageGallery = new Azure.Compute.SharedImageGallery("exampleSharedImageGallery", new Azure.Compute.SharedImageGalleryArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            Location = exampleResourceGroup.Location,
+            Description = "Shared images and things.",
+            Tags = 
+            {
+                { "Hello", "There" },
+                { "World", "Example" },
+            },
+        });
+        var exampleSharedImage = new Azure.Compute.SharedImage("exampleSharedImage", new Azure.Compute.SharedImageArgs
+        {
+            GalleryName = exampleSharedImageGallery.Name,
+            ResourceGroupName = exampleResourceGroup.Name,
+            Location = exampleResourceGroup.Location,
+            OsType = "Linux",
+            Identifier = new Azure.Compute.Inputs.SharedImageIdentifierArgs
+            {
+                Publisher = "PublisherName",
+                Offer = "OfferName",
+                Sku = "ExampleSku",
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

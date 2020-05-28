@@ -12,86 +12,9 @@ meta_desc: "Explore the Diagnostic resource of the apimanagement module, includi
 
 Manages an API Management Service Diagnostic.
 
-
-
 {{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_azure as azure
-
-example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
-example_insights = azure.appinsights.Insights("exampleInsights",
-    location=example_resource_group.location,
-    resource_group_name=example_resource_group.name,
-    application_type="web")
-example_service = azure.apimanagement.Service("exampleService",
-    location=example_resource_group.location,
-    resource_group_name=example_resource_group.name,
-    publisher_name="My Company",
-    publisher_email="company@mycompany.io",
-    sku_name="Developer_1")
-example_logger = azure.apimanagement.Logger("exampleLogger",
-    api_management_name=example_service.name,
-    resource_group_name=example_resource_group.name,
-    application_insights={
-        "instrumentationKey": example_insights.instrumentation_key,
-    })
-example_diagnostic = azure.apimanagement.Diagnostic("exampleDiagnostic",
-    identifier="applicationinsights",
-    resource_group_name=example_resource_group.name,
-    api_management_name=example_service.name,
-    api_management_logger_id=example_logger.id)
-```
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure from "@pulumi/azure";
-
-const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
-const exampleInsights = new azure.appinsights.Insights("exampleInsights", {
-    location: exampleResourceGroup.location,
-    resourceGroupName: exampleResourceGroup.name,
-    applicationType: "web",
-});
-const exampleService = new azure.apimanagement.Service("exampleService", {
-    location: exampleResourceGroup.location,
-    resourceGroupName: exampleResourceGroup.name,
-    publisherName: "My Company",
-    publisherEmail: "company@mycompany.io",
-    skuName: "Developer_1",
-});
-const exampleLogger = new azure.apimanagement.Logger("exampleLogger", {
-    apiManagementName: exampleService.name,
-    resourceGroupName: exampleResourceGroup.name,
-    application_insights: {
-        instrumentationKey: exampleInsights.instrumentationKey,
-    },
-});
-const exampleDiagnostic = new azure.apimanagement.Diagnostic("exampleDiagnostic", {
-    identifier: "applicationinsights",
-    resourceGroupName: exampleResourceGroup.name,
-    apiManagementName: exampleService.name,
-    apiManagementLoggerId: exampleLogger.id,
-});
-```
-{{% /example %}}
-
 {{% /examples %}}
+
 
 
 ## Create a Diagnostic Resource {#create}

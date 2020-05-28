@@ -41,6 +41,32 @@ example_plan = azure.appservice.Plan("examplePlan",
         "size": "S1",
     })
 ```
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West Europe",
+        });
+        var examplePlan = new Azure.AppService.Plan("examplePlan", new Azure.AppService.PlanArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            Sku = new Azure.AppService.Inputs.PlanSkuArgs
+            {
+                Tier = "Standard",
+                Size = "S1",
+            },
+        });
+    }
+
+}
+```
 
 ## Example Usage (Shared / Consumption Plan)
 
@@ -72,6 +98,33 @@ example_plan = azure.appservice.Plan("examplePlan",
         "tier": "Dynamic",
         "size": "Y1",
     })
+```
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West Europe",
+        });
+        var examplePlan = new Azure.AppService.Plan("examplePlan", new Azure.AppService.PlanArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            Kind = "FunctionApp",
+            Sku = new Azure.AppService.Inputs.PlanSkuArgs
+            {
+                Tier = "Dynamic",
+                Size = "Y1",
+            },
+        });
+    }
+
+}
 ```
 
 ## Example Usage (Linux)
@@ -107,6 +160,34 @@ example_plan = azure.appservice.Plan("examplePlan",
         "size": "S1",
     })
 ```
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West Europe",
+        });
+        var examplePlan = new Azure.AppService.Plan("examplePlan", new Azure.AppService.PlanArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            Kind = "Linux",
+            Reserved = true,
+            Sku = new Azure.AppService.Inputs.PlanSkuArgs
+            {
+                Tier = "Standard",
+                Size = "S1",
+            },
+        });
+    }
+
+}
+```
 
 ## Example Usage (Windows Container)
 
@@ -140,6 +221,34 @@ example_plan = azure.appservice.Plan("examplePlan",
         "tier": "PremiumContainer",
         "size": "PC2",
     })
+```
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West Europe",
+        });
+        var examplePlan = new Azure.AppService.Plan("examplePlan", new Azure.AppService.PlanArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            Kind = "xenon",
+            IsXenon = true,
+            Sku = new Azure.AppService.Inputs.PlanSkuArgs
+            {
+                Tier = "PremiumContainer",
+                Size = "PC2",
+            },
+        });
+    }
+
+}
 ```
 
 

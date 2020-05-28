@@ -20,7 +20,23 @@ Use this data source to access information about an existing EventGrid Topic
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Azure.EventGrid.GetTopic.InvokeAsync(new Azure.EventGrid.GetTopicArgs
+        {
+            Name = "my-eventgrid-topic",
+            ResourceGroupName = "example-resources",
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

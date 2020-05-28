@@ -20,7 +20,52 @@ Manages a Stream Analytics Output to a ServiceBus Topic.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = Output.Create(Azure.Core.GetResourceGroup.InvokeAsync(new Azure.Core.GetResourceGroupArgs
+        {
+            Name = "example-resources",
+        }));
+        var exampleJob = Output.Create(Azure.StreamAnalytics.GetJob.InvokeAsync(new Azure.StreamAnalytics.GetJobArgs
+        {
+            Name = "example-job",
+            ResourceGroupName = azurerm_resource_group.Example.Name,
+        }));
+        var exampleNamespace = new Azure.ServiceBus.Namespace("exampleNamespace", new Azure.ServiceBus.NamespaceArgs
+        {
+            Location = exampleResourceGroup.Apply(exampleResourceGroup => exampleResourceGroup.Location),
+            ResourceGroupName = exampleResourceGroup.Apply(exampleResourceGroup => exampleResourceGroup.Name),
+            Sku = "Standard",
+        });
+        var exampleTopic = new Azure.ServiceBus.Topic("exampleTopic", new Azure.ServiceBus.TopicArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Apply(exampleResourceGroup => exampleResourceGroup.Name),
+            NamespaceName = exampleNamespace.Name,
+            EnablePartitioning = true,
+        });
+        var exampleOutputServicebusTopic = new Azure.StreamAnalytics.OutputServicebusTopic("exampleOutputServicebusTopic", new Azure.StreamAnalytics.OutputServicebusTopicArgs
+        {
+            StreamAnalyticsJobName = exampleJob.Apply(exampleJob => exampleJob.Name),
+            ResourceGroupName = exampleJob.Apply(exampleJob => exampleJob.ResourceGroupName),
+            TopicName = exampleTopic.Name,
+            ServicebusNamespace = exampleNamespace.Name,
+            SharedAccessPolicyKey = exampleNamespace.DefaultPrimaryKey,
+            SharedAccessPolicyName = "RootManageSharedAccessKey",
+            Serialization = new Azure.StreamAnalytics.Inputs.OutputServicebusTopicSerializationArgs
+            {
+                Format = "Avro",
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

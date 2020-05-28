@@ -20,7 +20,26 @@ Use this data source to access information about an existing App Service Plan (f
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Azure.AppService.GetAppServicePlan.InvokeAsync(new Azure.AppService.GetAppServicePlanArgs
+        {
+            Name = "search-app-service-plan",
+            ResourceGroupName = "search-service",
+        }));
+        this.AppServicePlanId = example.Apply(example => example.Id);
+    }
+
+    [Output("appServicePlanId")]
+    public Output<string> AppServicePlanId { get; set; }
+}
+```
 {{% /example %}}
 
 {{% example go %}}

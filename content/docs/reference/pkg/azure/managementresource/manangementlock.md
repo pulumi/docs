@@ -19,7 +19,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
 const current = azure.core.getSubscription({});
-const subscription-level = new azure.management.Lock("subscription-level", {
+const subscription_level = new azure.management.Lock("subscription-level", {
     scope: current.then(current => current.id),
     lockLevel: "CanNotDelete",
     notes: "Items can't be deleted in this subscription!",
@@ -35,6 +35,25 @@ subscription_level = azure.management.Lock("subscription-level",
     lock_level="CanNotDelete",
     notes="Items can't be deleted in this subscription!")
 ```
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var current = Output.Create(Azure.Core.GetSubscription.InvokeAsync());
+        var subscription_level = new Azure.Management.Lock("subscription-level", new Azure.Management.LockArgs
+        {
+            Scope = current.Apply(current => current.Id),
+            LockLevel = "CanNotDelete",
+            Notes = "Items can't be deleted in this subscription!",
+        });
+    }
+
+}
+```
 
 ## Example Usage (Resource Group Level Lock)
 
@@ -43,7 +62,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
 const example = new azure.core.ResourceGroup("example", {location: "West Europe"});
-const resource-group-level = new azure.management.Lock("resource-group-level", {
+const resource_group_level = new azure.management.Lock("resource-group-level", {
     scope: example.id,
     lockLevel: "ReadOnly",
     notes: "This Resource Group is Read-Only",
@@ -59,6 +78,28 @@ resource_group_level = azure.management.Lock("resource-group-level",
     lock_level="ReadOnly",
     notes="This Resource Group is Read-Only")
 ```
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Azure.Core.ResourceGroup("example", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West Europe",
+        });
+        var resource_group_level = new Azure.Management.Lock("resource-group-level", new Azure.Management.LockArgs
+        {
+            Scope = example.Id,
+            LockLevel = "ReadOnly",
+            Notes = "This Resource Group is Read-Only",
+        });
+    }
+
+}
+```
 
 ## Example Usage (Resource Level Lock)
 
@@ -73,7 +114,7 @@ const examplePublicIp = new azure.network.PublicIp("examplePublicIp", {
     allocationMethod: "Static",
     idleTimeoutInMinutes: 30,
 });
-const public-ip = new azure.management.Lock("public-ip", {
+const public_ip = new azure.management.Lock("public-ip", {
     scope: examplePublicIp.id,
     lockLevel: "CanNotDelete",
     notes: "Locked because it's needed by a third-party",
@@ -93,6 +134,35 @@ public_ip = azure.management.Lock("public-ip",
     scope=example_public_ip.id,
     lock_level="CanNotDelete",
     notes="Locked because it's needed by a third-party")
+```
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West Europe",
+        });
+        var examplePublicIp = new Azure.Network.PublicIp("examplePublicIp", new Azure.Network.PublicIpArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            AllocationMethod = "Static",
+            IdleTimeoutInMinutes = 30,
+        });
+        var public_ip = new Azure.Management.Lock("public-ip", new Azure.Management.LockArgs
+        {
+            Scope = examplePublicIp.Id,
+            LockLevel = "CanNotDelete",
+            Notes = "Locked because it's needed by a third-party",
+        });
+    }
+
+}
 ```
 
 <p class="resource-deprecated">Deprecated: {{% md %}}azure.managementresource.ManangementLock has been deprecated in favor of azure.management.Lock{{% /md %}}</p>

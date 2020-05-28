@@ -20,7 +20,26 @@ Use this data source to access information about an existing Spring Cloud Servic
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Azure.AppPlatform.GetSpringCloudService.InvokeAsync(new Azure.AppPlatform.GetSpringCloudServiceArgs
+        {
+            Name = azurerm_spring_cloud_service.Example.Name,
+            ResourceGroupName = azurerm_spring_cloud_service.Example.Resource_group_name,
+        }));
+        this.SpringCloudServiceId = example.Apply(example => example.Id);
+    }
+
+    [Output("springCloudServiceId")]
+    public Output<string> SpringCloudServiceId { get; set; }
+}
+```
 {{% /example %}}
 
 {{% example go %}}

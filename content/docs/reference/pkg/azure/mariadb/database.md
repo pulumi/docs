@@ -20,7 +20,42 @@ Manages a MariaDB Database within a MariaDB Server
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "westeurope",
+        });
+        var exampleServer = new Azure.MariaDB.Server("exampleServer", new Azure.MariaDB.ServerArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            SkuName = "B_Gen5_2",
+            StorageMb = 51200,
+            BackupRetentionDays = 7,
+            GeoRedundantBackupEnabled = false,
+            AdministratorLogin = "acctestun",
+            AdministratorLoginPassword = "H@Sh1CoR3!",
+            Version = "10.2",
+            SslEnforcementEnabled = true,
+        });
+        var exampleDatabase = new Azure.MariaDB.Database("exampleDatabase", new Azure.MariaDB.DatabaseArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            ServerName = exampleServer.Name,
+            Charset = "utf8",
+            Collation = "utf8_general_ci",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

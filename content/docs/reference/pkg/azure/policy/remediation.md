@@ -20,7 +20,73 @@ Manages an Azure Policy Remediation at the specified Scope.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West Europe",
+        });
+        var exampleDefinition = new Azure.Policy.Definition("exampleDefinition", new Azure.Policy.DefinitionArgs
+        {
+            PolicyType = "Custom",
+            Mode = "All",
+            DisplayName = "my-policy-definition",
+            PolicyRule = @"    {
+    ""if"": {
+      ""not"": {
+        ""field"": ""location"",
+        ""in"": ""[parameters('allowedLocations')]""
+      }
+    },
+    ""then"": {
+      ""effect"": ""audit""
+    }
+  }
+",
+            Parameters = @"    {
+    ""allowedLocations"": {
+      ""type"": ""Array"",
+      ""metadata"": {
+        ""description"": ""The list of allowed locations for resources."",
+        ""displayName"": ""Allowed locations"",
+        ""strongType"": ""location""
+      }
+    }
+  }
+",
+        });
+        var exampleAssignment = new Azure.Policy.Assignment("exampleAssignment", new Azure.Policy.AssignmentArgs
+        {
+            Scope = exampleResourceGroup.Id,
+            PolicyDefinitionId = exampleDefinition.Id,
+            Description = "Policy Assignment created via an Acceptance Test",
+            DisplayName = "My Example Policy Assignment",
+            Parameters = @"{
+  ""allowedLocations"": {
+    ""value"": [ ""West Europe"" ]
+  }
+}
+",
+        });
+        var exampleRemediation = new Azure.Policy.Remediation("exampleRemediation", new Azure.Policy.RemediationArgs
+        {
+            Scope = exampleAssignment.Scope,
+            PolicyAssignmentId = exampleAssignment.Id,
+            LocationFilters = 
+            {
+                "West Europe",
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

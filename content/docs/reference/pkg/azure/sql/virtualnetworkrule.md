@@ -20,7 +20,55 @@ Allows you to add, update, or remove an Azure SQL server to a subnet of a virtua
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Azure.Core.ResourceGroup("example", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West US",
+        });
+        var vnet = new Azure.Network.VirtualNetwork("vnet", new Azure.Network.VirtualNetworkArgs
+        {
+            AddressSpaces = 
+            {
+                "10.7.29.0/29",
+            },
+            Location = example.Location,
+            ResourceGroupName = example.Name,
+        });
+        var subnet = new Azure.Network.Subnet("subnet", new Azure.Network.SubnetArgs
+        {
+            ResourceGroupName = example.Name,
+            VirtualNetworkName = vnet.Name,
+            AddressPrefix = "10.7.29.0/29",
+            ServiceEndpoints = 
+            {
+                "Microsoft.Sql",
+            },
+        });
+        var sqlserver = new Azure.Sql.SqlServer("sqlserver", new Azure.Sql.SqlServerArgs
+        {
+            ResourceGroupName = example.Name,
+            Location = example.Location,
+            Version = "12.0",
+            AdministratorLogin = "4dm1n157r470r",
+            AdministratorLoginPassword = "4-v3ry-53cr37-p455w0rd",
+        });
+        var sqlvnetrule = new Azure.Sql.VirtualNetworkRule("sqlvnetrule", new Azure.Sql.VirtualNetworkRuleArgs
+        {
+            ResourceGroupName = example.Name,
+            ServerName = sqlserver.Name,
+            SubnetId = subnet.Id,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

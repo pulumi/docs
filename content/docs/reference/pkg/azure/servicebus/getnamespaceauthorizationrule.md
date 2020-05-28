@@ -20,7 +20,27 @@ Use this data source to access information about an existing ServiceBus Namespac
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Azure.ServiceBus.GetNamespaceAuthorizationRule.InvokeAsync(new Azure.ServiceBus.GetNamespaceAuthorizationRuleArgs
+        {
+            Name = "examplerule",
+            NamespaceName = "examplenamespace",
+            ResourceGroupName = "example-resources",
+        }));
+        this.RuleId = example.Apply(example => example.Id);
+    }
+
+    [Output("ruleId")]
+    public Output<string> RuleId { get; set; }
+}
+```
 {{% /example %}}
 
 {{% example go %}}

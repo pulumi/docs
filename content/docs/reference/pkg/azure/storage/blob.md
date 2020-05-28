@@ -20,7 +20,41 @@ Manages a Blob within a Storage Container.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West Europe",
+        });
+        var exampleAccount = new Azure.Storage.Account("exampleAccount", new Azure.Storage.AccountArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            Location = exampleResourceGroup.Location,
+            AccountTier = "Standard",
+            AccountReplicationType = "LRS",
+        });
+        var exampleContainer = new Azure.Storage.Container("exampleContainer", new Azure.Storage.ContainerArgs
+        {
+            StorageAccountName = exampleAccount.Name,
+            ContainerAccessType = "private",
+        });
+        var exampleBlob = new Azure.Storage.Blob("exampleBlob", new Azure.Storage.BlobArgs
+        {
+            StorageAccountName = exampleAccount.Name,
+            StorageContainerName = exampleContainer.Name,
+            Type = "Block",
+            Source = new FileAsset("some-local-file.zip"),
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

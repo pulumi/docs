@@ -22,7 +22,35 @@ Manages an Extension for a Virtual Machine Scale Set.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using System.Collections.Generic;
+using System.Text.Json;
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleLinuxVirtualMachineScaleSet = new Azure.Compute.LinuxVirtualMachineScaleSet("exampleLinuxVirtualMachineScaleSet", new Azure.Compute.LinuxVirtualMachineScaleSetArgs
+        {
+        });
+        //...
+        var exampleVirtualMachineScaleSetExtension = new Azure.Compute.VirtualMachineScaleSetExtension("exampleVirtualMachineScaleSetExtension", new Azure.Compute.VirtualMachineScaleSetExtensionArgs
+        {
+            VirtualMachineScaleSetId = exampleLinuxVirtualMachineScaleSet.Id,
+            Publisher = "Microsoft.Azure.Extensions",
+            Type = "CustomScript",
+            TypeHandlerVersion = "2.0",
+            Settings = JsonSerializer.Serialize(new Dictionary<string, object?>
+            {
+                { "commandToExecute", "echo $HOSTNAME" },
+            }),
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

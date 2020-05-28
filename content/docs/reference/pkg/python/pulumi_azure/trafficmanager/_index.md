@@ -43,7 +43,7 @@ anything, please consult the source <a class="reference external" href="https://
         <span class="s2">&quot;protocol&quot;</span><span class="p">:</span> <span class="s2">&quot;http&quot;</span><span class="p">,</span>
         <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span>
         <span class="s2">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;/&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;intervalInSeconds&quot;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span>
+        <span class="s2">&quot;interval_in_seconds&quot;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span>
         <span class="s2">&quot;timeoutInSeconds&quot;</span><span class="p">:</span> <span class="mi">9</span><span class="p">,</span>
         <span class="s2">&quot;toleratedNumberOfFailures&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
     <span class="p">},</span>
@@ -386,7 +386,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
         <span class="s2">&quot;protocol&quot;</span><span class="p">:</span> <span class="s2">&quot;http&quot;</span><span class="p">,</span>
         <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span>
         <span class="s2">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;/&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;intervalInSeconds&quot;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span>
+        <span class="s2">&quot;interval_in_seconds&quot;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span>
         <span class="s2">&quot;timeoutInSeconds&quot;</span><span class="p">:</span> <span class="mi">9</span><span class="p">,</span>
         <span class="s2">&quot;toleratedNumberOfFailures&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
     <span class="p">},</span>

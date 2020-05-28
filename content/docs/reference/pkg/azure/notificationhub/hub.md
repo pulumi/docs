@@ -20,7 +20,35 @@ Manages a Notification Hub within a Notification Hub Namespace.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "Australia East",
+        });
+        var exampleNamespace = new Azure.NotificationHub.Namespace("exampleNamespace", new Azure.NotificationHub.NamespaceArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            Location = exampleResourceGroup.Location,
+            NamespaceType = "NotificationHub",
+            SkuName = "Free",
+        });
+        var exampleHub = new Azure.NotificationHub.Hub("exampleHub", new Azure.NotificationHub.HubArgs
+        {
+            NamespaceName = exampleNamespace.Name,
+            ResourceGroupName = exampleResourceGroup.Name,
+            Location = exampleResourceGroup.Location,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

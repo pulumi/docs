@@ -744,8 +744,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">dns_prefix</span><span class="o">=</span><span class="s2">&quot;exampleaks1&quot;</span><span class="p">,</span>
     <span class="n">default_node_pool</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;default&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;nodeCount&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="s2">&quot;vmSize&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_D2_v2&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;node_count&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s2">&quot;vm_size&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_D2_v2&quot;</span><span class="p">,</span>
     <span class="p">},</span>
     <span class="n">identity</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;SystemAssigned&quot;</span><span class="p">,</span>
@@ -1383,12 +1383,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">dns_prefix</span><span class="o">=</span><span class="s2">&quot;exampleaks1&quot;</span><span class="p">,</span>
     <span class="n">default_node_pool</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;default&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;nodeCount&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="s2">&quot;vmSize&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_D2_v2&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;node_count&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s2">&quot;vm_size&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_D2_v2&quot;</span><span class="p">,</span>
     <span class="p">},</span>
     <span class="n">service_principal</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;clientId&quot;</span><span class="p">:</span> <span class="s2">&quot;00000000-0000-0000-0000-000000000000&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;clientSecret&quot;</span><span class="p">:</span> <span class="s2">&quot;00000000000000000000000000000000&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;client_id&quot;</span><span class="p">:</span> <span class="s2">&quot;00000000-0000-0000-0000-000000000000&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;client_secret&quot;</span><span class="p">:</span> <span class="s2">&quot;00000000000000000000000000000000&quot;</span><span class="p">,</span>
     <span class="p">})</span>
 <span class="n">example_kubernetes_cluster_node_pool</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">containerservice</span><span class="o">.</span><span class="n">KubernetesClusterNodePool</span><span class="p">(</span><span class="s2">&quot;exampleKubernetesClusterNodePool&quot;</span><span class="p">,</span>
     <span class="n">kubernetes_cluster_id</span><span class="o">=</span><span class="n">example_kubernetes_cluster</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>

@@ -20,7 +20,26 @@ Use this data source to access information about an existing Managed Disk.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var existing = Output.Create(Azure.Compute.GetManagedDisk.InvokeAsync(new Azure.Compute.GetManagedDiskArgs
+        {
+            Name = "example-datadisk",
+            ResourceGroupName = "example-resources",
+        }));
+        this.Id = existing.Apply(existing => existing.Id);
+    }
+
+    [Output("id")]
+    public Output<string> Id { get; set; }
+}
+```
 {{% /example %}}
 
 {{% example go %}}

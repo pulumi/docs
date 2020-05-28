@@ -12,74 +12,9 @@ meta_desc: "Explore the Share resource of the datashare module, including exampl
 
 Manages a Data Share.
 
-
-
 {{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_azure as azure
-
-example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
-example_account = azure.datashare.Account("exampleAccount",
-    location=example_resource_group.location,
-    resource_group_name=example_resource_group.name,
-    tags={
-        "foo": "bar",
-    })
-example_share = azure.datashare.Share("exampleShare",
-    account_id=example_account.id,
-    kind="CopyBased",
-    description="example desc",
-    terms="example terms",
-    snapshot_schedule={
-        "name": "example-ss",
-        "recurrence": "Day",
-        "startTime": "2020-04-17T04:47:52.9614956Z",
-    })
-```
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure from "@pulumi/azure";
-
-const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
-const exampleAccount = new azure.datashare.Account("exampleAccount", {
-    location: exampleResourceGroup.location,
-    resourceGroupName: exampleResourceGroup.name,
-    tags: {
-        foo: "bar",
-    },
-});
-const exampleShare = new azure.datashare.Share("exampleShare", {
-    accountId: exampleAccount.id,
-    kind: "CopyBased",
-    description: "example desc",
-    terms: "example terms",
-    snapshot_schedule: {
-        name: "example-ss",
-        recurrence: "Day",
-        startTime: "2020-04-17T04:47:52.9614956Z",
-    },
-});
-```
-{{% /example %}}
-
 {{% /examples %}}
+
 
 
 ## Create a Share Resource {#create}

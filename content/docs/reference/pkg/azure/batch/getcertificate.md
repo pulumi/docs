@@ -20,7 +20,27 @@ Use this data source to access information about an existing certificate in a Ba
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Azure.Batch.GetCertificate.InvokeAsync(new Azure.Batch.GetCertificateArgs
+        {
+            Name = "SHA1-42C107874FD0E4A9583292A2F1098E8FE4B2EDDA",
+            AccountName = "examplebatchaccount",
+            ResourceGroupName = "example",
+        }));
+        this.Thumbprint = example.Apply(example => example.Thumbprint);
+    }
+
+    [Output("thumbprint")]
+    public Output<string> Thumbprint { get; set; }
+}
+```
 {{% /example %}}
 
 {{% example go %}}

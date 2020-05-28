@@ -37,6 +37,26 @@ example_assignment = azure.authorization.Assignment("exampleAssignment",
     role_definition_name="Reader",
     principal_id=example_client_config.object_id)
 ```
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var primary = Output.Create(Azure.Core.GetSubscription.InvokeAsync());
+        var exampleClientConfig = Output.Create(Azure.Core.GetClientConfig.InvokeAsync());
+        var exampleAssignment = new Azure.Authorization.Assignment("exampleAssignment", new Azure.Authorization.AssignmentArgs
+        {
+            Scope = primary.Apply(primary => primary.Id),
+            RoleDefinitionName = "Reader",
+            PrincipalId = exampleClientConfig.Apply(exampleClientConfig => exampleClientConfig.ObjectId),
+        });
+    }
+
+}
+```
 
 ## Example Usage (Custom Role & Service Principal)
 
@@ -82,6 +102,47 @@ example_assignment = azure.authorization.Assignment("exampleAssignment",
     role_definition_id=example_role_definition.id,
     principal_id=example_client_config.object_id)
 ```
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var primary = Output.Create(Azure.Core.GetSubscription.InvokeAsync());
+        var exampleClientConfig = Output.Create(Azure.Core.GetClientConfig.InvokeAsync());
+        var exampleRoleDefinition = new Azure.Authorization.RoleDefinition("exampleRoleDefinition", new Azure.Authorization.RoleDefinitionArgs
+        {
+            RoleDefinitionId = "00000000-0000-0000-0000-000000000000",
+            Scope = primary.Apply(primary => primary.Id),
+            Permissions = 
+            {
+                new Azure.Authorization.Inputs.RoleDefinitionPermissionArgs
+                {
+                    Actions = 
+                    {
+                        "Microsoft.Resources/subscriptions/resourceGroups/read",
+                    },
+                    NotActions = {},
+                },
+            },
+            AssignableScopes = 
+            {
+                primary.Apply(primary => primary.Id),
+            },
+        });
+        var exampleAssignment = new Azure.Authorization.Assignment("exampleAssignment", new Azure.Authorization.AssignmentArgs
+        {
+            Name = "00000000-0000-0000-0000-000000000000",
+            Scope = primary.Apply(primary => primary.Id),
+            RoleDefinitionId = exampleRoleDefinition.Id,
+            PrincipalId = exampleClientConfig.Apply(exampleClientConfig => exampleClientConfig.ObjectId),
+        });
+    }
+
+}
+```
 
 ## Example Usage (Custom Role & User)
 
@@ -126,6 +187,47 @@ example_assignment = azure.authorization.Assignment("exampleAssignment",
     scope=primary.id,
     role_definition_id=example_role_definition.id,
     principal_id=example_client_config.client_id)
+```
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var primary = Output.Create(Azure.Core.GetSubscription.InvokeAsync());
+        var exampleClientConfig = Output.Create(Azure.Core.GetClientConfig.InvokeAsync());
+        var exampleRoleDefinition = new Azure.Authorization.RoleDefinition("exampleRoleDefinition", new Azure.Authorization.RoleDefinitionArgs
+        {
+            RoleDefinitionId = "00000000-0000-0000-0000-000000000000",
+            Scope = primary.Apply(primary => primary.Id),
+            Permissions = 
+            {
+                new Azure.Authorization.Inputs.RoleDefinitionPermissionArgs
+                {
+                    Actions = 
+                    {
+                        "Microsoft.Resources/subscriptions/resourceGroups/read",
+                    },
+                    NotActions = {},
+                },
+            },
+            AssignableScopes = 
+            {
+                primary.Apply(primary => primary.Id),
+            },
+        });
+        var exampleAssignment = new Azure.Authorization.Assignment("exampleAssignment", new Azure.Authorization.AssignmentArgs
+        {
+            Name = "00000000-0000-0000-0000-000000000000",
+            Scope = primary.Apply(primary => primary.Id),
+            RoleDefinitionId = exampleRoleDefinition.Id,
+            PrincipalId = exampleClientConfig.Apply(exampleClientConfig => exampleClientConfig.ClientId),
+        });
+    }
+
+}
 ```
 
 ## Example Usage (Custom Role & Management Group)
@@ -173,6 +275,48 @@ example_assignment = azure.authorization.Assignment("exampleAssignment",
     scope=data["azure.management.Group"]["primary"]["id"],
     role_definition_id=example_role_definition.id,
     principal_id=example_client_config.client_id)
+```
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var primary = Output.Create(Azure.Core.GetSubscription.InvokeAsync());
+        var exampleClientConfig = Output.Create(Azure.Core.GetClientConfig.InvokeAsync());
+        var exampleGroup = Output.Create(Azure.Management.GetGroup.InvokeAsync());
+        var exampleRoleDefinition = new Azure.Authorization.RoleDefinition("exampleRoleDefinition", new Azure.Authorization.RoleDefinitionArgs
+        {
+            RoleDefinitionId = "00000000-0000-0000-0000-000000000000",
+            Scope = primary.Apply(primary => primary.Id),
+            Permissions = 
+            {
+                new Azure.Authorization.Inputs.RoleDefinitionPermissionArgs
+                {
+                    Actions = 
+                    {
+                        "Microsoft.Resources/subscriptions/resourceGroups/read",
+                    },
+                    NotActions = {},
+                },
+            },
+            AssignableScopes = 
+            {
+                primary.Apply(primary => primary.Id),
+            },
+        });
+        var exampleAssignment = new Azure.Authorization.Assignment("exampleAssignment", new Azure.Authorization.AssignmentArgs
+        {
+            Name = "00000000-0000-0000-0000-000000000000",
+            Scope = data.Azurerm_management_group.Primary.Id,
+            RoleDefinitionId = exampleRoleDefinition.Id,
+            PrincipalId = exampleClientConfig.Apply(exampleClientConfig => exampleClientConfig.ClientId),
+        });
+    }
+
+}
 ```
 
 <p class="resource-deprecated">Deprecated: {{% md %}}azure.role.Assignment has been deprecated in favor of azure.authorization.Assignment{{% /md %}}</p>

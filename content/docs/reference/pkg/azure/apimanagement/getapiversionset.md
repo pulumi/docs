@@ -20,7 +20,27 @@ Uses this data source to access information about an API Version Set within an A
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Azure.ApiManagement.GetApiVersionSet.InvokeAsync(new Azure.ApiManagement.GetApiVersionSetArgs
+        {
+            ResourceGroupName = "example-resources",
+            ApiManagementName = "example-api",
+            Name = "example-api-version-set",
+        }));
+        this.ApiManagementApiVersionSetId = example.Apply(example => example.Id);
+    }
+
+    [Output("apiManagementApiVersionSetId")]
+    public Output<string> ApiManagementApiVersionSetId { get; set; }
+}
+```
 {{% /example %}}
 
 {{% example go %}}

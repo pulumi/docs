@@ -175,10 +175,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West US&quot;</span><span class="p">,</span>
     <span class="n">server_name</span><span class="o">=</span><span class="n">example_sql_server</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
     <span class="n">extended_auditing_policy</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;storageEndpoint&quot;</span><span class="p">:</span> <span class="n">example_account</span><span class="o">.</span><span class="n">primary_blob_endpoint</span><span class="p">,</span>
-        <span class="s2">&quot;storageAccountAccessKey&quot;</span><span class="p">:</span> <span class="n">example_account</span><span class="o">.</span><span class="n">primary_access_key</span><span class="p">,</span>
+        <span class="s2">&quot;storage_endpoint&quot;</span><span class="p">:</span> <span class="n">example_account</span><span class="o">.</span><span class="n">primary_blob_endpoint</span><span class="p">,</span>
+        <span class="s2">&quot;storage_account_access_key&quot;</span><span class="p">:</span> <span class="n">example_account</span><span class="o">.</span><span class="n">primary_access_key</span><span class="p">,</span>
         <span class="s2">&quot;storageAccountAccessKeyIsSecondary&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
-        <span class="s2">&quot;retentionInDays&quot;</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span>
+        <span class="s2">&quot;retention_in_days&quot;</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span>
     <span class="p">},</span>
     <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;environment&quot;</span><span class="p">:</span> <span class="s2">&quot;production&quot;</span><span class="p">,</span>
@@ -1185,10 +1185,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">administrator_login</span><span class="o">=</span><span class="s2">&quot;mradministrator&quot;</span><span class="p">,</span>
     <span class="n">administrator_login_password</span><span class="o">=</span><span class="s2">&quot;thisIsDog11&quot;</span><span class="p">,</span>
     <span class="n">extended_auditing_policy</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;storageEndpoint&quot;</span><span class="p">:</span> <span class="n">example_account</span><span class="o">.</span><span class="n">primary_blob_endpoint</span><span class="p">,</span>
-        <span class="s2">&quot;storageAccountAccessKey&quot;</span><span class="p">:</span> <span class="n">example_account</span><span class="o">.</span><span class="n">primary_access_key</span><span class="p">,</span>
+        <span class="s2">&quot;storage_endpoint&quot;</span><span class="p">:</span> <span class="n">example_account</span><span class="o">.</span><span class="n">primary_blob_endpoint</span><span class="p">,</span>
+        <span class="s2">&quot;storage_account_access_key&quot;</span><span class="p">:</span> <span class="n">example_account</span><span class="o">.</span><span class="n">primary_access_key</span><span class="p">,</span>
         <span class="s2">&quot;storageAccountAccessKeyIsSecondary&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
-        <span class="s2">&quot;retentionInDays&quot;</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span>
+        <span class="s2">&quot;retention_in_days&quot;</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span>
     <span class="p">},</span>
     <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;environment&quot;</span><span class="p">:</span> <span class="s2">&quot;production&quot;</span><span class="p">,</span>

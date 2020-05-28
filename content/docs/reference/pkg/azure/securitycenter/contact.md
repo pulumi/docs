@@ -22,7 +22,25 @@ Manages the subscription's Security Center Contact.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Azure.SecurityCenter.Contact("example", new Azure.SecurityCenter.ContactArgs
+        {
+            AlertNotifications = true,
+            AlertsToAdmins = true,
+            Email = "contact@example.com",
+            Phone = "+1-555-555-5555",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

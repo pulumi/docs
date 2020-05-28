@@ -20,7 +20,40 @@ Manages a ServiceBus Namespace authorization Rule within a ServiceBus.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West US",
+        });
+        var exampleNamespace = new Azure.ServiceBus.Namespace("exampleNamespace", new Azure.ServiceBus.NamespaceArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            Sku = "Standard",
+            Tags = 
+            {
+                { "source", "example" },
+            },
+        });
+        var exampleNamespaceAuthorizationRule = new Azure.ServiceBus.NamespaceAuthorizationRule("exampleNamespaceAuthorizationRule", new Azure.ServiceBus.NamespaceAuthorizationRuleArgs
+        {
+            NamespaceName = exampleNamespace.Name,
+            ResourceGroupName = exampleResourceGroup.Name,
+            Listen = true,
+            Send = true,
+            Manage = false,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

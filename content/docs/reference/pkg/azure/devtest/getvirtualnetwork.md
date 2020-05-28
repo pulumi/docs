@@ -20,7 +20,27 @@ Use this data source to access information about an existing Dev Test Lab Virtua
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Azure.DevTest.GetVirtualNetwork.InvokeAsync(new Azure.DevTest.GetVirtualNetworkArgs
+        {
+            Name = "example-network",
+            LabName = "examplelab",
+            ResourceGroupName = "example-resource",
+        }));
+        this.LabSubnetName = example.Apply(example => example.AllowedSubnets[0].LabSubnetName);
+    }
+
+    [Output("labSubnetName")]
+    public Output<string> LabSubnetName { get; set; }
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -35,7 +55,7 @@ import pulumi_azure as azure
 example = azure.devtest.get_virtual_network(name="example-network",
     lab_name="examplelab",
     resource_group_name="example-resource")
-pulumi.export("labSubnetName", example.allowed_subnets[0].lab_subnet_name)
+pulumi.export("labSubnetName", example.allowed_subnets[0]["lab_subnet_name"])
 ```
 {{% /example %}}
 

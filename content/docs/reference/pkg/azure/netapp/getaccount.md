@@ -32,6 +32,26 @@ example = azure.netapp.get_account(resource_group_name="acctestRG",
     name="acctestnetappaccount")
 pulumi.export("netappAccountId", example.id)
 ```
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Azure.NetApp.GetAccount.InvokeAsync(new Azure.NetApp.GetAccountArgs
+        {
+            ResourceGroupName = "acctestRG",
+            Name = "acctestnetappaccount",
+        }));
+        this.NetappAccountId = example.Apply(example => example.Id);
+    }
+
+    [Output("netappAccountId")]
+    public Output<string> NetappAccountId { get; set; }
+}
+```
 
 
 

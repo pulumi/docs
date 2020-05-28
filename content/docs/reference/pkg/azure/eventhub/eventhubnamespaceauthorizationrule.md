@@ -20,7 +20,41 @@ Manages an Authorization Rule for an Event Hub Namespace.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West US",
+        });
+        var exampleEventHubNamespace = new Azure.EventHub.EventHubNamespace("exampleEventHubNamespace", new Azure.EventHub.EventHubNamespaceArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            Sku = "Basic",
+            Capacity = 2,
+            Tags = 
+            {
+                { "environment", "Production" },
+            },
+        });
+        var exampleEventHubNamespaceAuthorizationRule = new Azure.EventHub.EventHubNamespaceAuthorizationRule("exampleEventHubNamespaceAuthorizationRule", new Azure.EventHub.EventHubNamespaceAuthorizationRuleArgs
+        {
+            NamespaceName = exampleEventHubNamespace.Name,
+            ResourceGroupName = exampleResourceGroup.Name,
+            Listen = true,
+            Send = false,
+            Manage = false,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

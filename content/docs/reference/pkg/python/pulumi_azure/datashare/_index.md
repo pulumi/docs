@@ -249,7 +249,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">snapshot_schedule</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;example-ss&quot;</span><span class="p">,</span>
         <span class="s2">&quot;recurrence&quot;</span><span class="p">:</span> <span class="s2">&quot;Day&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;startTime&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-04-17T04:47:52.9614956Z&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;start_time&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-04-17T04:47:52.9614956Z&quot;</span><span class="p">,</span>
     <span class="p">})</span>
 </pre></div>
 </div>

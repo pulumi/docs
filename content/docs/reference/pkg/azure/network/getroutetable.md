@@ -20,7 +20,23 @@ Use this data source to access information about an existing Route Table.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Azure.Network.GetRouteTable.InvokeAsync(new Azure.Network.GetRouteTableArgs
+        {
+            Name = "myroutetable",
+            ResourceGroupName = "some-resource-group",
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

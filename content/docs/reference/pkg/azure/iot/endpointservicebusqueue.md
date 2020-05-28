@@ -22,7 +22,64 @@ Manages an IotHub ServiceBus Queue Endpoint
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "East US",
+        });
+        var exampleNamespace = new Azure.ServiceBus.Namespace("exampleNamespace", new Azure.ServiceBus.NamespaceArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            Sku = "Standard",
+        });
+        var exampleQueue = new Azure.ServiceBus.Queue("exampleQueue", new Azure.ServiceBus.QueueArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            NamespaceName = exampleNamespace.Name,
+            EnablePartitioning = true,
+        });
+        var exampleQueueAuthorizationRule = new Azure.ServiceBus.QueueAuthorizationRule("exampleQueueAuthorizationRule", new Azure.ServiceBus.QueueAuthorizationRuleArgs
+        {
+            NamespaceName = exampleNamespace.Name,
+            QueueName = exampleQueue.Name,
+            ResourceGroupName = exampleResourceGroup.Name,
+            Listen = false,
+            Send = true,
+            Manage = false,
+        });
+        var exampleIoTHub = new Azure.Iot.IoTHub("exampleIoTHub", new Azure.Iot.IoTHubArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            Location = exampleResourceGroup.Location,
+            Sku = new Azure.Iot.Inputs.IoTHubSkuArgs
+            {
+                Name = "B1",
+                Tier = "Basic",
+                Capacity = "1",
+            },
+            Tags = 
+            {
+                { "purpose", "example" },
+            },
+        });
+        var exampleEndpointServicebusQueue = new Azure.Iot.EndpointServicebusQueue("exampleEndpointServicebusQueue", new Azure.Iot.EndpointServicebusQueueArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            IothubName = exampleIoTHub.Name,
+            ConnectionString = exampleQueueAuthorizationRule.PrimaryConnectionString,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

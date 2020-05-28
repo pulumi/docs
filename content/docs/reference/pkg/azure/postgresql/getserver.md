@@ -20,7 +20,26 @@ Use this data source to access information about an existing PostgreSQL Azure Da
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Azure.PostgreSql.GetServer.InvokeAsync(new Azure.PostgreSql.GetServerArgs
+        {
+            Name = "postgresql-server-1",
+            ResourceGroupName = "api-rg-pro",
+        }));
+        this.PostgresqlServerId = example.Apply(example => example.Id);
+    }
+
+    [Output("postgresqlServerId")]
+    public Output<string> PostgresqlServerId { get; set; }
+}
+```
 {{% /example %}}
 
 {{% example go %}}

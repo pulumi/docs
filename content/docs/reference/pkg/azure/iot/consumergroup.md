@@ -20,7 +20,42 @@ Manages a Consumer Group within an IotHub
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West US",
+        });
+        var exampleIoTHub = new Azure.Iot.IoTHub("exampleIoTHub", new Azure.Iot.IoTHubArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            Location = exampleResourceGroup.Location,
+            Sku = new Azure.Iot.Inputs.IoTHubSkuArgs
+            {
+                Name = "S1",
+                Capacity = "1",
+            },
+            Tags = 
+            {
+                { "purpose", "testing" },
+            },
+        });
+        var exampleConsumerGroup = new Azure.Iot.ConsumerGroup("exampleConsumerGroup", new Azure.Iot.ConsumerGroupArgs
+        {
+            IothubName = exampleIoTHub.Name,
+            EventhubEndpointName = "events",
+            ResourceGroupName = exampleResourceGroup.Name,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

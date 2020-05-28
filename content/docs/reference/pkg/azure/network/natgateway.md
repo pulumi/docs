@@ -20,7 +20,62 @@ Manages a Azure NAT Gateway.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "eastus2",
+        });
+        var examplePublicIp = new Azure.Network.PublicIp("examplePublicIp", new Azure.Network.PublicIpArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            AllocationMethod = "Static",
+            Sku = "Standard",
+            Zones = 
+            {
+                "1",
+            },
+        });
+        var examplePublicIpPrefix = new Azure.Network.PublicIpPrefix("examplePublicIpPrefix", new Azure.Network.PublicIpPrefixArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            PrefixLength = 30,
+            Zones = 
+            {
+                "1",
+            },
+        });
+        var exampleNatGateway = new Azure.Network.NatGateway("exampleNatGateway", new Azure.Network.NatGatewayArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            PublicIpAddressIds = 
+            {
+                examplePublicIp.Id,
+            },
+            PublicIpPrefixIds = 
+            {
+                examplePublicIpPrefix.Id,
+            },
+            SkuName = "Standard",
+            IdleTimeoutInMinutes = 10,
+            Zones = 
+            {
+                "1",
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

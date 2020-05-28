@@ -20,7 +20,26 @@ Use this data source to access information about an existing Application Securit
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Azure.Network.GetApplicationSecurityGroup.InvokeAsync(new Azure.Network.GetApplicationSecurityGroupArgs
+        {
+            Name = "tf-appsecuritygroup",
+            ResourceGroupName = "my-resource-group",
+        }));
+        this.ApplicationSecurityGroupId = example.Apply(example => example.Id);
+    }
+
+    [Output("applicationSecurityGroupId")]
+    public Output<string> ApplicationSecurityGroupId { get; set; }
+}
+```
 {{% /example %}}
 
 {{% example go %}}

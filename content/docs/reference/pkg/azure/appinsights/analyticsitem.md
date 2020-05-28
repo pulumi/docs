@@ -20,7 +20,35 @@ Manages an Application Insights Analytics Item component.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West Europe",
+        });
+        var exampleInsights = new Azure.AppInsights.Insights("exampleInsights", new Azure.AppInsights.InsightsArgs
+        {
+            Location = "West Europe",
+            ResourceGroupName = exampleResourceGroup.Name,
+            ApplicationType = "web",
+        });
+        var exampleAnalyticsItem = new Azure.AppInsights.AnalyticsItem("exampleAnalyticsItem", new Azure.AppInsights.AnalyticsItemArgs
+        {
+            ApplicationInsightsId = exampleInsights.Id,
+            Content = "requests //simple example query",
+            Scope = "shared",
+            Type = "query",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

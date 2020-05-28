@@ -14,88 +14,9 @@ Manages an App Service (within an App Service Plan).
 
 > **Note:** When using Slots - the `app_settings`, `connection_string` and `site_config` blocks on the `azure.appservice.AppService` resource will be overwritten when promoting a Slot using the `azure.appservice.ActiveSlot` resource.
 
-
-
 {{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_azure as azure
-
-example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
-example_plan = azure.appservice.Plan("examplePlan",
-    location=example_resource_group.location,
-    resource_group_name=example_resource_group.name,
-    sku={
-        "tier": "Standard",
-        "size": "S1",
-    })
-example_app_service = azure.appservice.AppService("exampleAppService",
-    location=example_resource_group.location,
-    resource_group_name=example_resource_group.name,
-    app_service_plan_id=example_plan.id,
-    site_config={
-        "dotnetFrameworkVersion": "v4.0",
-        "scmType": "LocalGit",
-    },
-    app_settings={
-        "SOME_KEY": "some-value",
-    },
-    connection_string=[{
-        "name": "Database",
-        "type": "SQLServer",
-        "value": "Server=some-server.mydomain.com;Integrated Security=SSPI",
-    }])
-```
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure from "@pulumi/azure";
-
-const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
-const examplePlan = new azure.appservice.Plan("examplePlan", {
-    location: exampleResourceGroup.location,
-    resourceGroupName: exampleResourceGroup.name,
-    sku: {
-        tier: "Standard",
-        size: "S1",
-    },
-});
-const exampleAppService = new azure.appservice.AppService("exampleAppService", {
-    location: exampleResourceGroup.location,
-    resourceGroupName: exampleResourceGroup.name,
-    appServicePlanId: examplePlan.id,
-    site_config: {
-        dotnetFrameworkVersion: "v4.0",
-        scmType: "LocalGit",
-    },
-    appSettings: {
-        SOME_KEY: "some-value",
-    },
-    connection_string: [{
-        name: "Database",
-        type: "SQLServer",
-        value: "Server=some-server.mydomain.com;Integrated Security=SSPI",
-    }],
-});
-```
-{{% /example %}}
-
 {{% /examples %}}
+
 
 
 ## Create a AppService Resource {#create}

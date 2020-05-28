@@ -20,7 +20,27 @@ Use this data source to access information about an existing SQL Azure Database.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Azure.Sql.GetDatabase.InvokeAsync(new Azure.Sql.GetDatabaseArgs
+        {
+            Name = "example_db",
+            ServerName = "example_db_server",
+            ResourceGroupName = "example-resources",
+        }));
+        this.SqlDatabaseId = example.Apply(example => example.Id);
+    }
+
+    [Output("sqlDatabaseId")]
+    public Output<string> SqlDatabaseId { get; set; }
+}
+```
 {{% /example %}}
 
 {{% example go %}}

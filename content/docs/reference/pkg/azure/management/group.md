@@ -20,7 +20,37 @@ Manages a Management Group.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var current = Output.Create(Azure.Core.GetSubscription.InvokeAsync());
+        var exampleParent = new Azure.Management.Group("exampleParent", new Azure.Management.GroupArgs
+        {
+            DisplayName = "ParentGroup",
+            SubscriptionIds = 
+            {
+                current.Apply(current => current.SubscriptionId),
+            },
+        });
+        var exampleChild = new Azure.Management.Group("exampleChild", new Azure.Management.GroupArgs
+        {
+            DisplayName = "ChildGroup",
+            ParentManagementGroupId = exampleParent.Id,
+            SubscriptionIds = 
+            {
+                current.Apply(current => current.SubscriptionId),
+            },
+        });
+        // other subscription IDs can go here
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

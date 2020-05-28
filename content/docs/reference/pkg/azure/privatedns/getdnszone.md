@@ -20,7 +20,26 @@ Use this data source to access information about an existing Private DNS Zone.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Azure.PrivateDns.GetDnsZone.InvokeAsync(new Azure.PrivateDns.GetDnsZoneArgs
+        {
+            Name = "contoso.internal",
+            ResourceGroupName = "contoso-dns",
+        }));
+        this.PrivateDnsZoneId = example.Apply(example => example.Id);
+    }
+
+    [Output("privateDnsZoneId")]
+    public Output<string> PrivateDnsZoneId { get; set; }
+}
+```
 {{% /example %}}
 
 {{% example go %}}

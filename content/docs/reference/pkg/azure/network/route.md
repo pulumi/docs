@@ -24,7 +24,34 @@ At this time you cannot use a Route Table with in-line Routes in conjunction wit
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West US",
+        });
+        var exampleRouteTable = new Azure.Network.RouteTable("exampleRouteTable", new Azure.Network.RouteTableArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+        });
+        var exampleRoute = new Azure.Network.Route("exampleRoute", new Azure.Network.RouteArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            RouteTableName = exampleRouteTable.Name,
+            AddressPrefix = "10.1.0.0/16",
+            NextHopType = "vnetlocal",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

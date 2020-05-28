@@ -20,7 +20,23 @@ Use this data source to access information about an existing IotHub Device Provi
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Azure.Iot.GetDps.InvokeAsync(new Azure.Iot.GetDpsArgs
+        {
+            Name = "iot_hub_dps_test",
+            ResourceGroupName = "iothub_dps_rg",
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

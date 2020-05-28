@@ -20,7 +20,39 @@ Manages a Directory within an Azure Storage File Share.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West Europe",
+        });
+        var exampleAccount = new Azure.Storage.Account("exampleAccount", new Azure.Storage.AccountArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            Location = exampleResourceGroup.Location,
+            AccountTier = "Standard",
+            AccountReplicationType = "LRS",
+        });
+        var exampleShare = new Azure.Storage.Share("exampleShare", new Azure.Storage.ShareArgs
+        {
+            StorageAccountName = exampleAccount.Name,
+            Quota = 50,
+        });
+        var exampleShareDirectory = new Azure.Storage.ShareDirectory("exampleShareDirectory", new Azure.Storage.ShareDirectoryArgs
+        {
+            ShareName = exampleShare.Name,
+            StorageAccountName = exampleAccount.Name,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

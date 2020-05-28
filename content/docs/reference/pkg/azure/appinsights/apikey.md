@@ -20,7 +20,85 @@ Manages an Application Insights API key.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West Europe",
+        });
+        var exampleInsights = new Azure.AppInsights.Insights("exampleInsights", new Azure.AppInsights.InsightsArgs
+        {
+            Location = "West Europe",
+            ResourceGroupName = exampleResourceGroup.Name,
+            ApplicationType = "web",
+        });
+        var readTelemetry = new Azure.AppInsights.ApiKey("readTelemetry", new Azure.AppInsights.ApiKeyArgs
+        {
+            ApplicationInsightsId = exampleInsights.Id,
+            ReadPermissions = 
+            {
+                "aggregate",
+                "api",
+                "draft",
+                "extendqueries",
+                "search",
+            },
+        });
+        var writeAnnotations = new Azure.AppInsights.ApiKey("writeAnnotations", new Azure.AppInsights.ApiKeyArgs
+        {
+            ApplicationInsightsId = exampleInsights.Id,
+            WritePermissions = 
+            {
+                "annotations",
+            },
+        });
+        var authenticateSdkControlChannelApiKey = new Azure.AppInsights.ApiKey("authenticateSdkControlChannelApiKey", new Azure.AppInsights.ApiKeyArgs
+        {
+            ApplicationInsightsId = exampleInsights.Id,
+            ReadPermissions = 
+            {
+                "agentconfig",
+            },
+        });
+        var fullPermissions = new Azure.AppInsights.ApiKey("fullPermissions", new Azure.AppInsights.ApiKeyArgs
+        {
+            ApplicationInsightsId = exampleInsights.Id,
+            ReadPermissions = 
+            {
+                "agentconfig",
+                "aggregate",
+                "api",
+                "draft",
+                "extendqueries",
+                "search",
+            },
+            WritePermissions = 
+            {
+                "annotations",
+            },
+        });
+        this.ReadTelemetryApiKey = readTelemetry.ApiKey;
+        this.WriteAnnotationsApiKey = writeAnnotations.ApiKey;
+        this.AuthenticateSdkControlChannel = authenticateSdkControlChannelApiKey.ApiKey;
+        this.FullPermissionsApiKey = fullPermissions.ApiKey;
+    }
+
+    [Output("readTelemetryApiKey")]
+    public Output<string> ReadTelemetryApiKey { get; set; }
+    [Output("writeAnnotationsApiKey")]
+    public Output<string> WriteAnnotationsApiKey { get; set; }
+    [Output("authenticateSdkControlChannel")]
+    public Output<string> AuthenticateSdkControlChannel { get; set; }
+    [Output("fullPermissionsApiKey")]
+    public Output<string> FullPermissionsApiKey { get; set; }
+}
+```
 {{% /example %}}
 
 {{% example go %}}

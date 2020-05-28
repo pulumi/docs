@@ -121,24 +121,24 @@ anything, please consult the source <a class="reference external" href="https://
         <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;Password123!&quot;</span><span class="p">,</span>
     <span class="p">},</span>
     <span class="n">storage_account</span><span class="o">=</span><span class="p">[{</span>
-        <span class="s2">&quot;storageContainerId&quot;</span><span class="p">:</span> <span class="n">example_container</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
-        <span class="s2">&quot;storageAccountKey&quot;</span><span class="p">:</span> <span class="n">example_account</span><span class="o">.</span><span class="n">primary_access_key</span><span class="p">,</span>
+        <span class="s2">&quot;storage_container_id&quot;</span><span class="p">:</span> <span class="n">example_container</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;storage_account_key&quot;</span><span class="p">:</span> <span class="n">example_account</span><span class="o">.</span><span class="n">primary_access_key</span><span class="p">,</span>
         <span class="s2">&quot;isDefault&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
     <span class="p">}],</span>
     <span class="n">roles</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;head_node&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="s2">&quot;vmSize&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_D3_V2&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;vm_size&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_D3_V2&quot;</span><span class="p">,</span>
             <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;acctestusrvm&quot;</span><span class="p">,</span>
             <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;AccTestvdSC4daf986!&quot;</span><span class="p">,</span>
         <span class="p">},</span>
         <span class="s2">&quot;worker_node&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="s2">&quot;vmSize&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_D3_V2&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;vm_size&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_D3_V2&quot;</span><span class="p">,</span>
             <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;acctestusrvm&quot;</span><span class="p">,</span>
             <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;AccTestvdSC4daf986!&quot;</span><span class="p">,</span>
             <span class="s2">&quot;targetInstanceCount&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
         <span class="p">},</span>
         <span class="s2">&quot;zookeeper_node&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="s2">&quot;vmSize&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_D3_V2&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;vm_size&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_D3_V2&quot;</span><span class="p">,</span>
             <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;acctestusrvm&quot;</span><span class="p">,</span>
             <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;AccTestvdSC4daf986!&quot;</span><span class="p">,</span>
         <span class="p">},</span>
@@ -509,24 +509,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
         <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;PAssword123!&quot;</span><span class="p">,</span>
     <span class="p">},</span>
     <span class="n">storage_account</span><span class="o">=</span><span class="p">[{</span>
-        <span class="s2">&quot;storageContainerId&quot;</span><span class="p">:</span> <span class="n">example_container</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
-        <span class="s2">&quot;storageAccountKey&quot;</span><span class="p">:</span> <span class="n">example_account</span><span class="o">.</span><span class="n">primary_access_key</span><span class="p">,</span>
+        <span class="s2">&quot;storage_container_id&quot;</span><span class="p">:</span> <span class="n">example_container</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;storage_account_key&quot;</span><span class="p">:</span> <span class="n">example_account</span><span class="o">.</span><span class="n">primary_access_key</span><span class="p">,</span>
         <span class="s2">&quot;isDefault&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
     <span class="p">}],</span>
     <span class="n">roles</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;head_node&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="s2">&quot;vmSize&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_D3_V2&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;vm_size&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_D3_V2&quot;</span><span class="p">,</span>
             <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;acctestusrvm&quot;</span><span class="p">,</span>
             <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;AccTestvdSC4daf986!&quot;</span><span class="p">,</span>
         <span class="p">},</span>
         <span class="s2">&quot;worker_node&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="s2">&quot;vmSize&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_D4_V2&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;vm_size&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_D4_V2&quot;</span><span class="p">,</span>
             <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;acctestusrvm&quot;</span><span class="p">,</span>
             <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;AccTestvdSC4daf986!&quot;</span><span class="p">,</span>
             <span class="s2">&quot;targetInstanceCount&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
         <span class="p">},</span>
         <span class="s2">&quot;zookeeper_node&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="s2">&quot;vmSize&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_D3_V2&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;vm_size&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_D3_V2&quot;</span><span class="p">,</span>
             <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;acctestusrvm&quot;</span><span class="p">,</span>
             <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;AccTestvdSC4daf986!&quot;</span><span class="p">,</span>
         <span class="p">},</span>
@@ -1020,24 +1020,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
         <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;Password!&quot;</span><span class="p">,</span>
     <span class="p">},</span>
     <span class="n">storage_account</span><span class="o">=</span><span class="p">[{</span>
-        <span class="s2">&quot;storageContainerId&quot;</span><span class="p">:</span> <span class="n">example_container</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
-        <span class="s2">&quot;storageAccountKey&quot;</span><span class="p">:</span> <span class="n">example_account</span><span class="o">.</span><span class="n">primary_access_key</span><span class="p">,</span>
+        <span class="s2">&quot;storage_container_id&quot;</span><span class="p">:</span> <span class="n">example_container</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;storage_account_key&quot;</span><span class="p">:</span> <span class="n">example_account</span><span class="o">.</span><span class="n">primary_access_key</span><span class="p">,</span>
         <span class="s2">&quot;isDefault&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
     <span class="p">}],</span>
     <span class="n">roles</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;head_node&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="s2">&quot;vmSize&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_D13_V2&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;vm_size&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_D13_V2&quot;</span><span class="p">,</span>
             <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;acctestusrvm&quot;</span><span class="p">,</span>
             <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;AccTestvdSC4daf986!&quot;</span><span class="p">,</span>
         <span class="p">},</span>
         <span class="s2">&quot;worker_node&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="s2">&quot;vmSize&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_D14_V2&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;vm_size&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_D14_V2&quot;</span><span class="p">,</span>
             <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;acctestusrvm&quot;</span><span class="p">,</span>
             <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;AccTestvdSC4daf986!&quot;</span><span class="p">,</span>
             <span class="s2">&quot;targetInstanceCount&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
         <span class="p">},</span>
         <span class="s2">&quot;zookeeper_node&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="s2">&quot;vmSize&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_A4_V2&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;vm_size&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_A4_V2&quot;</span><span class="p">,</span>
             <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;acctestusrvm&quot;</span><span class="p">,</span>
             <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;AccTestvdSC4daf986!&quot;</span><span class="p">,</span>
         <span class="p">},</span>
@@ -1408,25 +1408,25 @@ a format of their choosing before sending those properties to the Pulumi engine.
         <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;Password123!&quot;</span><span class="p">,</span>
     <span class="p">},</span>
     <span class="n">storage_account</span><span class="o">=</span><span class="p">[{</span>
-        <span class="s2">&quot;storageContainerId&quot;</span><span class="p">:</span> <span class="n">example_container</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
-        <span class="s2">&quot;storageAccountKey&quot;</span><span class="p">:</span> <span class="n">example_account</span><span class="o">.</span><span class="n">primary_access_key</span><span class="p">,</span>
+        <span class="s2">&quot;storage_container_id&quot;</span><span class="p">:</span> <span class="n">example_container</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;storage_account_key&quot;</span><span class="p">:</span> <span class="n">example_account</span><span class="o">.</span><span class="n">primary_access_key</span><span class="p">,</span>
         <span class="s2">&quot;isDefault&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
     <span class="p">}],</span>
     <span class="n">roles</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;head_node&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="s2">&quot;vmSize&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_D3_V2&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;vm_size&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_D3_V2&quot;</span><span class="p">,</span>
             <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;acctestusrvm&quot;</span><span class="p">,</span>
             <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;AccTestvdSC4daf986!&quot;</span><span class="p">,</span>
         <span class="p">},</span>
         <span class="s2">&quot;worker_node&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="s2">&quot;vmSize&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_D3_V2&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;vm_size&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_D3_V2&quot;</span><span class="p">,</span>
             <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;acctestusrvm&quot;</span><span class="p">,</span>
             <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;AccTestvdSC4daf986!&quot;</span><span class="p">,</span>
             <span class="s2">&quot;numberOfDisksPerNode&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
             <span class="s2">&quot;targetInstanceCount&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
         <span class="p">},</span>
         <span class="s2">&quot;zookeeper_node&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="s2">&quot;vmSize&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_D3_V2&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;vm_size&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_D3_V2&quot;</span><span class="p">,</span>
             <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;acctestusrvm&quot;</span><span class="p">,</span>
             <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;AccTestvdSC4daf986!&quot;</span><span class="p">,</span>
         <span class="p">},</span>
@@ -1798,29 +1798,29 @@ a format of their choosing before sending those properties to the Pulumi engine.
         <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;Password123!&quot;</span><span class="p">,</span>
     <span class="p">},</span>
     <span class="n">storage_account</span><span class="o">=</span><span class="p">[{</span>
-        <span class="s2">&quot;storageContainerId&quot;</span><span class="p">:</span> <span class="n">example_container</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
-        <span class="s2">&quot;storageAccountKey&quot;</span><span class="p">:</span> <span class="n">example_account</span><span class="o">.</span><span class="n">primary_access_key</span><span class="p">,</span>
+        <span class="s2">&quot;storage_container_id&quot;</span><span class="p">:</span> <span class="n">example_container</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;storage_account_key&quot;</span><span class="p">:</span> <span class="n">example_account</span><span class="o">.</span><span class="n">primary_access_key</span><span class="p">,</span>
         <span class="s2">&quot;isDefault&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
     <span class="p">}],</span>
     <span class="n">roles</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;head_node&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="s2">&quot;vmSize&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_D3_v2&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;vm_size&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_D3_v2&quot;</span><span class="p">,</span>
             <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;acctestusrvm&quot;</span><span class="p">,</span>
             <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;AccTestvdSC4daf986!&quot;</span><span class="p">,</span>
         <span class="p">},</span>
         <span class="s2">&quot;worker_node&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="s2">&quot;vmSize&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_D4_V2&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;vm_size&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_D4_V2&quot;</span><span class="p">,</span>
             <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;acctestusrvm&quot;</span><span class="p">,</span>
             <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;AccTestvdSC4daf986!&quot;</span><span class="p">,</span>
             <span class="s2">&quot;targetInstanceCount&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
         <span class="p">},</span>
         <span class="s2">&quot;zookeeper_node&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="s2">&quot;vmSize&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_D3_v2&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;vm_size&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_D3_v2&quot;</span><span class="p">,</span>
             <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;acctestusrvm&quot;</span><span class="p">,</span>
             <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;AccTestvdSC4daf986!&quot;</span><span class="p">,</span>
         <span class="p">},</span>
         <span class="s2">&quot;edge_node&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="s2">&quot;vmSize&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_D3_v2&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;vm_size&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_D3_v2&quot;</span><span class="p">,</span>
             <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;acctestusrvm&quot;</span><span class="p">,</span>
             <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;AccTestvdSC4daf986!&quot;</span><span class="p">,</span>
         <span class="p">},</span>
@@ -2187,29 +2187,29 @@ a format of their choosing before sending those properties to the Pulumi engine.
         <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;Password123!&quot;</span><span class="p">,</span>
     <span class="p">},</span>
     <span class="n">storage_account</span><span class="o">=</span><span class="p">[{</span>
-        <span class="s2">&quot;storageContainerId&quot;</span><span class="p">:</span> <span class="n">example_container</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
-        <span class="s2">&quot;storageAccountKey&quot;</span><span class="p">:</span> <span class="n">example_account</span><span class="o">.</span><span class="n">primary_access_key</span><span class="p">,</span>
+        <span class="s2">&quot;storage_container_id&quot;</span><span class="p">:</span> <span class="n">example_container</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;storage_account_key&quot;</span><span class="p">:</span> <span class="n">example_account</span><span class="o">.</span><span class="n">primary_access_key</span><span class="p">,</span>
         <span class="s2">&quot;isDefault&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
     <span class="p">}],</span>
     <span class="n">roles</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;head_node&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="s2">&quot;vmSize&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_D3_v2&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;vm_size&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_D3_v2&quot;</span><span class="p">,</span>
             <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;acctestusrvm&quot;</span><span class="p">,</span>
             <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;AccTestvdSC4daf986!&quot;</span><span class="p">,</span>
         <span class="p">},</span>
         <span class="s2">&quot;worker_node&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="s2">&quot;vmSize&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_D4_V2&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;vm_size&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_D4_V2&quot;</span><span class="p">,</span>
             <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;acctestusrvm&quot;</span><span class="p">,</span>
             <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;AccTestvdSC4daf986!&quot;</span><span class="p">,</span>
             <span class="s2">&quot;targetInstanceCount&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
         <span class="p">},</span>
         <span class="s2">&quot;zookeeper_node&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="s2">&quot;vmSize&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_D3_v2&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;vm_size&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_D3_v2&quot;</span><span class="p">,</span>
             <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;acctestusrvm&quot;</span><span class="p">,</span>
             <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;AccTestvdSC4daf986!&quot;</span><span class="p">,</span>
         <span class="p">},</span>
         <span class="s2">&quot;edge_node&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="s2">&quot;vmSize&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_D3_v2&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;vm_size&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_D3_v2&quot;</span><span class="p">,</span>
             <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;acctestusrvm&quot;</span><span class="p">,</span>
             <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;AccTestvdSC4daf986!&quot;</span><span class="p">,</span>
         <span class="p">},</span>
@@ -2578,24 +2578,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
         <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;Password123!&quot;</span><span class="p">,</span>
     <span class="p">},</span>
     <span class="n">storage_account</span><span class="o">=</span><span class="p">[{</span>
-        <span class="s2">&quot;storageContainerId&quot;</span><span class="p">:</span> <span class="n">example_container</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
-        <span class="s2">&quot;storageAccountKey&quot;</span><span class="p">:</span> <span class="n">example_account</span><span class="o">.</span><span class="n">primary_access_key</span><span class="p">,</span>
+        <span class="s2">&quot;storage_container_id&quot;</span><span class="p">:</span> <span class="n">example_container</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;storage_account_key&quot;</span><span class="p">:</span> <span class="n">example_account</span><span class="o">.</span><span class="n">primary_access_key</span><span class="p">,</span>
         <span class="s2">&quot;isDefault&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
     <span class="p">}],</span>
     <span class="n">roles</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;head_node&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="s2">&quot;vmSize&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_A3&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;vm_size&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_A3&quot;</span><span class="p">,</span>
             <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;acctestusrvm&quot;</span><span class="p">,</span>
             <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;AccTestvdSC4daf986!&quot;</span><span class="p">,</span>
         <span class="p">},</span>
         <span class="s2">&quot;worker_node&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="s2">&quot;vmSize&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_A3&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;vm_size&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_A3&quot;</span><span class="p">,</span>
             <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;acctestusrvm&quot;</span><span class="p">,</span>
             <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;AccTestvdSC4daf986!&quot;</span><span class="p">,</span>
             <span class="s2">&quot;targetInstanceCount&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
         <span class="p">},</span>
         <span class="s2">&quot;zookeeper_node&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="s2">&quot;vmSize&quot;</span><span class="p">:</span> <span class="s2">&quot;Medium&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;vm_size&quot;</span><span class="p">:</span> <span class="s2">&quot;Medium&quot;</span><span class="p">,</span>
             <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;acctestusrvm&quot;</span><span class="p">,</span>
             <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;AccTestvdSC4daf986!&quot;</span><span class="p">,</span>
         <span class="p">},</span>
@@ -2966,24 +2966,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
         <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;Password123!&quot;</span><span class="p">,</span>
     <span class="p">},</span>
     <span class="n">storage_account</span><span class="o">=</span><span class="p">[{</span>
-        <span class="s2">&quot;storageContainerId&quot;</span><span class="p">:</span> <span class="n">example_container</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
-        <span class="s2">&quot;storageAccountKey&quot;</span><span class="p">:</span> <span class="n">example_account</span><span class="o">.</span><span class="n">primary_access_key</span><span class="p">,</span>
+        <span class="s2">&quot;storage_container_id&quot;</span><span class="p">:</span> <span class="n">example_container</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;storage_account_key&quot;</span><span class="p">:</span> <span class="n">example_account</span><span class="o">.</span><span class="n">primary_access_key</span><span class="p">,</span>
         <span class="s2">&quot;isDefault&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
     <span class="p">}],</span>
     <span class="n">roles</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;head_node&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="s2">&quot;vmSize&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_A3&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;vm_size&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_A3&quot;</span><span class="p">,</span>
             <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;acctestusrvm&quot;</span><span class="p">,</span>
             <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;AccTestvdSC4daf986!&quot;</span><span class="p">,</span>
         <span class="p">},</span>
         <span class="s2">&quot;worker_node&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="s2">&quot;vmSize&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_D3_V2&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;vm_size&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_D3_V2&quot;</span><span class="p">,</span>
             <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;acctestusrvm&quot;</span><span class="p">,</span>
             <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;AccTestvdSC4daf986!&quot;</span><span class="p">,</span>
             <span class="s2">&quot;targetInstanceCount&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
         <span class="p">},</span>
         <span class="s2">&quot;zookeeper_node&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="s2">&quot;vmSize&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_A4_V2&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;vm_size&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_A4_V2&quot;</span><span class="p">,</span>
             <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;acctestusrvm&quot;</span><span class="p">,</span>
             <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;AccTestvdSC4daf986!&quot;</span><span class="p">,</span>
         <span class="p">},</span>

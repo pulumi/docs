@@ -20,7 +20,40 @@ Manages an Azure Batch account.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "westeurope",
+        });
+        var exampleAccount = new Azure.Storage.Account("exampleAccount", new Azure.Storage.AccountArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            Location = exampleResourceGroup.Location,
+            AccountTier = "Standard",
+            AccountReplicationType = "LRS",
+        });
+        var exampleBatch_accountAccount = new Azure.Batch.Account("exampleBatch/accountAccount", new Azure.Batch.AccountArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            Location = exampleResourceGroup.Location,
+            PoolAllocationMode = "BatchService",
+            StorageAccountId = exampleAccount.Id,
+            Tags = 
+            {
+                { "env", "test" },
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -61,7 +94,7 @@ const exampleAccount = new azure.storage.Account("exampleAccount", {
     accountTier: "Standard",
     accountReplicationType: "LRS",
 });
-const exampleBatch/accountAccount = new azure.batch.Account("exampleBatch/accountAccount", {
+const exampleBatch_accountAccount = new azure.batch.Account("exampleBatch/accountAccount", {
     resourceGroupName: exampleResourceGroup.name,
     location: exampleResourceGroup.location,
     poolAllocationMode: "BatchService",

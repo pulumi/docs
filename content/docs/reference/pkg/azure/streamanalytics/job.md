@@ -20,7 +20,42 @@ Manages a Stream Analytics Job.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West Europe",
+        });
+        var exampleJob = new Azure.StreamAnalytics.Job("exampleJob", new Azure.StreamAnalytics.JobArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            Location = exampleResourceGroup.Location,
+            CompatibilityLevel = "1.1",
+            DataLocale = "en-GB",
+            EventsLateArrivalMaxDelayInSeconds = 60,
+            EventsOutOfOrderMaxDelayInSeconds = 50,
+            EventsOutOfOrderPolicy = "Adjust",
+            OutputErrorPolicy = "Drop",
+            StreamingUnits = 3,
+            Tags = 
+            {
+                { "environment", "Example" },
+            },
+            TransformationQuery = @"    SELECT *
+    INTO [YourOutputAlias]
+    FROM [YourInputAlias]
+",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

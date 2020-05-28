@@ -20,7 +20,29 @@ Manages a Gremlin Database within a Cosmos DB Account.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleAccount = Output.Create(Azure.CosmosDB.GetAccount.InvokeAsync(new Azure.CosmosDB.GetAccountArgs
+        {
+            Name = "tfex-cosmosdb-account",
+            ResourceGroupName = "tfex-cosmosdb-account-rg",
+        }));
+        var exampleGremlinDatabase = new Azure.CosmosDB.GremlinDatabase("exampleGremlinDatabase", new Azure.CosmosDB.GremlinDatabaseArgs
+        {
+            ResourceGroupName = exampleAccount.Apply(exampleAccount => exampleAccount.ResourceGroupName),
+            AccountName = exampleAccount.Apply(exampleAccount => exampleAccount.Name),
+            Throughput = 400,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

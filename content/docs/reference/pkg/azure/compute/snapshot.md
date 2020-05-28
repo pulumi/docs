@@ -20,7 +20,37 @@ Manages a Disk Snapshot.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West Europe",
+        });
+        var exampleManagedDisk = new Azure.Compute.ManagedDisk("exampleManagedDisk", new Azure.Compute.ManagedDiskArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            StorageAccountType = "Standard_LRS",
+            CreateOption = "Empty",
+            DiskSizeGb = "10",
+        });
+        var exampleSnapshot = new Azure.Compute.Snapshot("exampleSnapshot", new Azure.Compute.SnapshotArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            CreateOption = "Copy",
+            SourceUri = exampleManagedDisk.Id,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

@@ -20,7 +20,26 @@ Use this data source to access information about an existing Stream Analytics Jo
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Azure.StreamAnalytics.GetJob.InvokeAsync(new Azure.StreamAnalytics.GetJobArgs
+        {
+            Name = "example-job",
+            ResourceGroupName = "example-resources",
+        }));
+        this.JobId = example.Apply(example => example.JobId);
+    }
+
+    [Output("jobId")]
+    public Output<string> JobId { get; set; }
+}
+```
 {{% /example %}}
 
 {{% example go %}}

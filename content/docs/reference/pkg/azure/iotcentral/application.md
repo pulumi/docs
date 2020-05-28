@@ -20,7 +20,35 @@ Manages an IoT Central Application
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West Europe",
+        });
+        var exampleApplication = new Azure.IotCentral.Application("exampleApplication", new Azure.IotCentral.ApplicationArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            Location = exampleResourceGroup.Location,
+            SubDomain = "example-iotcentral-app-subdomain",
+            DisplayName = "example-iotcentral-app-display-name",
+            Sku = "S1",
+            Template = "iotc-default@1.0.0",
+            Tags = 
+            {
+                { "Foo", "Bar" },
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

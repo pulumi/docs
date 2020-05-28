@@ -20,7 +20,39 @@ Manages a Sentinel Scheduled Alert Rule.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West Europe",
+        });
+        var exampleAnalyticsWorkspace = new Azure.OperationalInsights.AnalyticsWorkspace("exampleAnalyticsWorkspace", new Azure.OperationalInsights.AnalyticsWorkspaceArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            Sku = "pergb2018",
+        });
+        var exampleAlertRuleScheduled = new Azure.Sentinel.AlertRuleScheduled("exampleAlertRuleScheduled", new Azure.Sentinel.AlertRuleScheduledArgs
+        {
+            LogAnalyticsWorkspaceId = exampleAnalyticsWorkspace.Id,
+            DisplayName = "example",
+            Severity = "High",
+            Query = @"AzureActivity |
+  where OperationName == ""Create or Update Virtual Machine"" or OperationName ==""Create Deployment"" |
+  where ActivityStatus == ""Succeeded"" |
+  make-series dcount(ResourceId) default=0 on EventSubmissionTimestamp in range(ago(7d), now(), 1d) by Caller
+",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

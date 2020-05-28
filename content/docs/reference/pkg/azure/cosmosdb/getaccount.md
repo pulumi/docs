@@ -20,7 +20,26 @@ Use this data source to access information about an existing CosmosDB (formally 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Azure.CosmosDB.GetAccount.InvokeAsync(new Azure.CosmosDB.GetAccountArgs
+        {
+            Name = "tfex-cosmosdb-account",
+            ResourceGroupName = "tfex-cosmosdb-account-rg",
+        }));
+        this.CosmosdbAccountEndpoint = data.Azurerm_cosmosdb_account.Jobs.Endpoint;
+    }
+
+    [Output("cosmosdbAccountEndpoint")]
+    public Output<string> CosmosdbAccountEndpoint { get; set; }
+}
+```
 {{% /example %}}
 
 {{% example go %}}

@@ -22,7 +22,41 @@ Manages registration of a storage account with Azure Backup. Storage accounts mu
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var rg = new Azure.Core.ResourceGroup("rg", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West US",
+        });
+        var vault = new Azure.RecoveryServices.Vault("vault", new Azure.RecoveryServices.VaultArgs
+        {
+            Location = rg.Location,
+            ResourceGroupName = rg.Name,
+            Sku = "Standard",
+        });
+        var sa = new Azure.Storage.Account("sa", new Azure.Storage.AccountArgs
+        {
+            Location = rg.Location,
+            ResourceGroupName = rg.Name,
+            AccountTier = "Standard",
+            AccountReplicationType = "LRS",
+        });
+        var container = new Azure.Backup.ContainerStorageAccount("container", new Azure.Backup.ContainerStorageAccountArgs
+        {
+            ResourceGroupName = rg.Name,
+            RecoveryVaultName = vault.Name,
+            StorageAccountId = sa.Id,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

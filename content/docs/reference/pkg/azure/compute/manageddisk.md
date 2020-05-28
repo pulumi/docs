@@ -45,6 +45,34 @@ example_managed_disk = azure.compute.ManagedDisk("exampleManagedDisk",
         "environment": "staging",
     })
 ```
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West US 2",
+        });
+        var exampleManagedDisk = new Azure.Compute.ManagedDisk("exampleManagedDisk", new Azure.Compute.ManagedDiskArgs
+        {
+            Location = "West US 2",
+            ResourceGroupName = exampleResourceGroup.Name,
+            StorageAccountType = "Standard_LRS",
+            CreateOption = "Empty",
+            DiskSizeGb = "1",
+            Tags = 
+            {
+                { "environment", "staging" },
+            },
+        });
+    }
+
+}
+```
 
 ## Example Usage with Create Copy
 
@@ -99,6 +127,47 @@ copy = azure.compute.ManagedDisk("copy",
     tags={
         "environment": "staging",
     })
+```
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Azure.Core.ResourceGroup("example", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West US 2",
+        });
+        var source = new Azure.Compute.ManagedDisk("source", new Azure.Compute.ManagedDiskArgs
+        {
+            Location = "West US 2",
+            ResourceGroupName = example.Name,
+            StorageAccountType = "Standard_LRS",
+            CreateOption = "Empty",
+            DiskSizeGb = "1",
+            Tags = 
+            {
+                { "environment", "staging" },
+            },
+        });
+        var copy = new Azure.Compute.ManagedDisk("copy", new Azure.Compute.ManagedDiskArgs
+        {
+            Location = "West US 2",
+            ResourceGroupName = example.Name,
+            StorageAccountType = "Standard_LRS",
+            CreateOption = "Copy",
+            SourceResourceId = source.Id,
+            DiskSizeGb = "1",
+            Tags = 
+            {
+                { "environment", "staging" },
+            },
+        });
+    }
+
+}
 ```
 
 

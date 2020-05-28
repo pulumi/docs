@@ -20,7 +20,37 @@ Manages an API Management Facebook Identity Provider.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West Europe",
+        });
+        var exampleService = new Azure.ApiManagement.Service("exampleService", new Azure.ApiManagement.ServiceArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            PublisherName = "My Company",
+            PublisherEmail = "company@mycompany.io",
+            SkuName = "Developer_1",
+        });
+        var exampleIdentityProviderFacebook = new Azure.ApiManagement.IdentityProviderFacebook("exampleIdentityProviderFacebook", new Azure.ApiManagement.IdentityProviderFacebookArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            ApiManagementName = exampleService.Name,
+            AppId = "00000000000000000000000000000000",
+            AppSecret = "00000000000000000000000000000000",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

@@ -20,7 +20,26 @@ Use this data source to access information about an existing Notification Hub Na
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Azure.NotificationHub.GetNamespace.InvokeAsync(new Azure.NotificationHub.GetNamespaceArgs
+        {
+            Name = "my-namespace",
+            ResourceGroupName = "my-resource-group",
+        }));
+        this.ServicebusEndpoint = example.Apply(example => example.ServicebusEndpoint);
+    }
+
+    [Output("servicebusEndpoint")]
+    public Output<string> ServicebusEndpoint { get; set; }
+}
+```
 {{% /example %}}
 
 {{% example go %}}

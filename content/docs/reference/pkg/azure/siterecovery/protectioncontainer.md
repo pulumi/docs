@@ -20,7 +20,44 @@ Manages a Azure Site Recovery protection container. Protection containers serve 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var primary = new Azure.Core.ResourceGroup("primary", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West US",
+        });
+        var secondary = new Azure.Core.ResourceGroup("secondary", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "East US",
+        });
+        var vault = new Azure.RecoveryServices.Vault("vault", new Azure.RecoveryServices.VaultArgs
+        {
+            Location = secondary.Location,
+            ResourceGroupName = secondary.Name,
+            Sku = "Standard",
+        });
+        var fabric = new Azure.SiteRecovery.Fabric("fabric", new Azure.SiteRecovery.FabricArgs
+        {
+            ResourceGroupName = secondary.Name,
+            RecoveryVaultName = vault.Name,
+            Location = primary.Location,
+        });
+        var protection_container = new Azure.SiteRecovery.ProtectionContainer("protection-container", new Azure.SiteRecovery.ProtectionContainerArgs
+        {
+            ResourceGroupName = secondary.Name,
+            RecoveryVaultName = vault.Name,
+            RecoveryFabricName = fabric.Name,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -66,7 +103,7 @@ const fabric = new azure.siterecovery.Fabric("fabric", {
     recoveryVaultName: vault.name,
     location: primary.location,
 });
-const protection-container = new azure.siterecovery.ProtectionContainer("protection-container", {
+const protection_container = new azure.siterecovery.ProtectionContainer("protection-container", {
     resourceGroupName: secondary.name,
     recoveryVaultName: vault.name,
     recoveryFabricName: fabric.name,

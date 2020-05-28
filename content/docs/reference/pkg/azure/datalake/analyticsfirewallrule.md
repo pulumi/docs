@@ -20,7 +20,40 @@ Manages a Azure Data Lake Analytics Firewall Rule.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "northeurope",
+        });
+        var exampleStore = new Azure.DataLake.Store("exampleStore", new Azure.DataLake.StoreArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            Location = exampleResourceGroup.Location,
+        });
+        var exampleAnalyticsAccount = new Azure.DataLake.AnalyticsAccount("exampleAnalyticsAccount", new Azure.DataLake.AnalyticsAccountArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            Location = exampleResourceGroup.Location,
+            DefaultStoreAccountName = exampleStore.Name,
+        });
+        var exampleAnalyticsFirewallRule = new Azure.DataLake.AnalyticsFirewallRule("exampleAnalyticsFirewallRule", new Azure.DataLake.AnalyticsFirewallRuleArgs
+        {
+            AccountName = azurerm_data_lake_analytics.Example.Name,
+            ResourceGroupName = exampleResourceGroup.Name,
+            StartIpAddress = "1.2.3.4",
+            EndIpAddress = "2.3.4.5",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

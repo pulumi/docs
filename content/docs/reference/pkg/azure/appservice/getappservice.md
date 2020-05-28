@@ -20,7 +20,26 @@ Use this data source to access information about an existing App Service.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Azure.AppService.GetAppService.InvokeAsync(new Azure.AppService.GetAppServiceArgs
+        {
+            Name = "search-app-service",
+            ResourceGroupName = "search-service",
+        }));
+        this.AppServiceId = example.Apply(example => example.Id);
+    }
+
+    [Output("appServiceId")]
+    public Output<string> AppServiceId { get; set; }
+}
+```
 {{% /example %}}
 
 {{% example go %}}

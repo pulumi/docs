@@ -41,6 +41,33 @@ example_firewall_rule = azure.postgresql.FirewallRule("exampleFirewallRule",
     start_ip_address="40.112.8.12",
     end_ip_address="40.112.8.12")
 ```
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West Europe",
+        });
+        var exampleServer = new Azure.PostgreSql.Server("exampleServer", new Azure.PostgreSql.ServerArgs
+        {
+        });
+        // ...
+        var exampleFirewallRule = new Azure.PostgreSql.FirewallRule("exampleFirewallRule", new Azure.PostgreSql.FirewallRuleArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            ServerName = exampleServer.Name,
+            StartIpAddress = "40.112.8.12",
+            EndIpAddress = "40.112.8.12",
+        });
+    }
+
+}
+```
 
 ## Example Usage (IP Range)
 
@@ -70,6 +97,33 @@ example_firewall_rule = azure.postgresql.FirewallRule("exampleFirewallRule",
     server_name=example_server.name,
     start_ip_address="40.112.0.0",
     end_ip_address="40.112.255.255")
+```
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West Europe",
+        });
+        var exampleServer = new Azure.PostgreSql.Server("exampleServer", new Azure.PostgreSql.ServerArgs
+        {
+        });
+        // ...
+        var exampleFirewallRule = new Azure.PostgreSql.FirewallRule("exampleFirewallRule", new Azure.PostgreSql.FirewallRuleArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            ServerName = exampleServer.Name,
+            StartIpAddress = "40.112.0.0",
+            EndIpAddress = "40.112.255.255",
+        });
+    }
+
+}
 ```
 
 

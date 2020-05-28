@@ -20,7 +20,37 @@ Manages a Log Analytics (formally Operational Insights) Windows Performance Coun
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West Europe",
+        });
+        var exampleAnalyticsWorkspace = new Azure.OperationalInsights.AnalyticsWorkspace("exampleAnalyticsWorkspace", new Azure.OperationalInsights.AnalyticsWorkspaceArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            Sku = "PerGB2018",
+        });
+        var exampleDataSourceWindowsPerformanceCounter = new Azure.LogAnalytics.DataSourceWindowsPerformanceCounter("exampleDataSourceWindowsPerformanceCounter", new Azure.LogAnalytics.DataSourceWindowsPerformanceCounterArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            WorkspaceName = exampleAnalyticsWorkspace.Name,
+            ObjectName = "CPU",
+            InstanceName = "*",
+            CounterName = "CPU",
+            IntervalSeconds = 10,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

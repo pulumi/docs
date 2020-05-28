@@ -20,7 +20,23 @@ Use this data source to access information about an existing Storage Container.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Azure.Storage.GetStorageContainer.InvokeAsync(new Azure.Storage.GetStorageContainerArgs
+        {
+            Name = "example-container-name",
+            StorageAccountName = "example-storage-account-name",
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

@@ -20,7 +20,24 @@ Use this data source to access information about an existing Batch pool
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Azure.Batch.GetPool.InvokeAsync(new Azure.Batch.GetPoolArgs
+        {
+            AccountName = "testbatchaccount",
+            Name = "testbatchpool",
+            ResourceGroupName = "test",
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

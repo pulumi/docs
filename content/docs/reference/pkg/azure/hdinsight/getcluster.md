@@ -20,7 +20,26 @@ Use this data source to access information about an existing HDInsight Cluster.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Azure.HDInsight.GetCluster.InvokeAsync(new Azure.HDInsight.GetClusterArgs
+        {
+            Name = "example",
+            ResourceGroupName = "example-resources",
+        }));
+        this.HttpsEndpoint = example.Apply(example => example.HttpsEndpoint);
+    }
+
+    [Output("httpsEndpoint")]
+    public Output<string> HttpsEndpoint { get; set; }
+}
+```
 {{% /example %}}
 
 {{% example go %}}

@@ -20,7 +20,39 @@ Allows you to set a user or group as the AD administrator for an Azure SQL serve
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var current = Output.Create(Azure.Core.GetClientConfig.InvokeAsync());
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West US",
+        });
+        var exampleSqlServer = new Azure.Sql.SqlServer("exampleSqlServer", new Azure.Sql.SqlServerArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            Location = exampleResourceGroup.Location,
+            Version = "12.0",
+            AdministratorLogin = "4dm1n157r470r",
+            AdministratorLoginPassword = "4-v3ry-53cr37-p455w0rd",
+        });
+        var exampleActiveDirectoryAdministrator = new Azure.Sql.ActiveDirectoryAdministrator("exampleActiveDirectoryAdministrator", new Azure.Sql.ActiveDirectoryAdministratorArgs
+        {
+            ServerName = exampleSqlServer.Name,
+            ResourceGroupName = exampleResourceGroup.Name,
+            Login = "sqladmin",
+            TenantId = current.Apply(current => current.TenantId),
+            ObjectId = current.Apply(current => current.ObjectId),
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

@@ -20,7 +20,26 @@ Use this data source to access information about an existing Dev Test Lab.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Azure.DevTest.GetLab.InvokeAsync(new Azure.DevTest.GetLabArgs
+        {
+            Name = "example-lab",
+            ResourceGroupName = "example-resources",
+        }));
+        this.UniqueIdentifier = example.Apply(example => example.UniqueIdentifier);
+    }
+
+    [Output("uniqueIdentifier")]
+    public Output<string> UniqueIdentifier { get; set; }
+}
+```
 {{% /example %}}
 
 {{% example go %}}

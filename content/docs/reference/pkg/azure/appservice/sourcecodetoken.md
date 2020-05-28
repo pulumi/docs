@@ -22,7 +22,23 @@ Manages an App Service source control token.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Azure.AppService.SourceCodeToken("example", new Azure.AppService.SourceCodeTokenArgs
+        {
+            Token = "7e57735e77e577e57",
+            Type = "GitHub",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

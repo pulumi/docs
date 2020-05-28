@@ -20,7 +20,37 @@ Manages a Linked Service (connection) between Data Lake Storage Gen2 and Azure D
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "northeurope",
+        });
+        var exampleFactory = new Azure.DataFactory.Factory("exampleFactory", new Azure.DataFactory.FactoryArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+        });
+        var current = Output.Create(Azure.Core.GetClientConfig.InvokeAsync());
+        var exampleLinkedServiceDataLakeStorageGen2 = new Azure.DataFactory.LinkedServiceDataLakeStorageGen2("exampleLinkedServiceDataLakeStorageGen2", new Azure.DataFactory.LinkedServiceDataLakeStorageGen2Args
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            DataFactoryName = exampleFactory.Name,
+            ServicePrincipalId = current.Apply(current => current.ClientId),
+            ServicePrincipalKey = "exampleKey",
+            Tenant = "11111111-1111-1111-1111-111111111111",
+            Url = "https://datalakestoragegen2",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

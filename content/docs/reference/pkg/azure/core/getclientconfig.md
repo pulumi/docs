@@ -20,7 +20,22 @@ Use this data source to access the configuration of the AzureRM provider.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var current = Output.Create(Azure.Core.GetClientConfig.InvokeAsync());
+        this.AccountId = current.Apply(current => current.ClientId);
+    }
+
+    [Output("accountId")]
+    public Output<string> AccountId { get; set; }
+}
+```
 {{% /example %}}
 
 {{% example go %}}

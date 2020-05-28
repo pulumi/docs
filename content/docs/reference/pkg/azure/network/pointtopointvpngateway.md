@@ -20,7 +20,26 @@ Manages a Point-to-Site VPN Gateway.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Azure.Network.PointToPointVpnGateway("example", new Azure.Network.PointToPointVpnGatewayArgs
+        {
+            Location = azurerm_resource_group.Example.Location,
+            ResourceGroupName = azurerm_resource_group.Example.Resource_group_name,
+            VirtualHubId = azurerm_virtual_hub.Example.Id,
+            VpnServerConfigurationId = azurerm_vpn_server_configuration.Example.Id,
+            ScaleUnit = 1,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

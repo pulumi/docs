@@ -20,7 +20,23 @@ Use this data source to access information about an existing Snapshot.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Azure.Compute.GetSnapshot.InvokeAsync(new Azure.Compute.GetSnapshotArgs
+        {
+            Name = "my-snapshot",
+            ResourceGroupName = "my-resource-group",
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

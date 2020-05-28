@@ -20,7 +20,25 @@ Use this data source to access information about the permissions from the Manage
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var contributor = Output.Create(Azure.KeyVault.GetAccessPolicy.InvokeAsync(new Azure.KeyVault.GetAccessPolicyArgs
+        {
+            Name = "Key Management",
+        }));
+        this.AccessPolicyKeyPermissions = contributor.Apply(contributor => contributor.KeyPermissions);
+    }
+
+    [Output("accessPolicyKeyPermissions")]
+    public Output<string> AccessPolicyKeyPermissions { get; set; }
+}
+```
 {{% /example %}}
 
 {{% example go %}}

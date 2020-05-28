@@ -20,7 +20,53 @@ Manages an API Management API Assignment to a Product.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleService = Output.Create(Azure.ApiManagement.GetService.InvokeAsync(new Azure.ApiManagement.GetServiceArgs
+        {
+            Name = "example-api",
+            ResourceGroupName = "example-resources",
+        }));
+        var exampleApi = Output.Tuple(exampleService, exampleService).Apply(values =>
+        {
+            var exampleService = values.Item1;
+            var exampleService1 = values.Item2;
+            return Output.Create(Azure.ApiManagement.GetApi.InvokeAsync(new Azure.ApiManagement.GetApiArgs
+            {
+                Name = "search-api",
+                ApiManagementName = exampleService.Name,
+                ResourceGroupName = exampleService1.ResourceGroupName,
+                Revision = "2",
+            }));
+        });
+        var exampleProduct = Output.Tuple(exampleService, exampleService).Apply(values =>
+        {
+            var exampleService = values.Item1;
+            var exampleService1 = values.Item2;
+            return Output.Create(Azure.ApiManagement.GetProduct.InvokeAsync(new Azure.ApiManagement.GetProductArgs
+            {
+                ProductId = "my-product",
+                ApiManagementName = exampleService.Name,
+                ResourceGroupName = exampleService1.ResourceGroupName,
+            }));
+        });
+        var exampleProductApi = new Azure.ApiManagement.ProductApi("exampleProductApi", new Azure.ApiManagement.ProductApiArgs
+        {
+            ApiName = exampleApi.Apply(exampleApi => exampleApi.Name),
+            ProductId = exampleProduct.Apply(exampleProduct => exampleProduct.ProductId),
+            ApiManagementName = exampleService.Apply(exampleService => exampleService.Name),
+            ResourceGroupName = exampleService.Apply(exampleService => exampleService.ResourceGroupName),
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

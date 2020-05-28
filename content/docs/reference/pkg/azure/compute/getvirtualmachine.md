@@ -20,7 +20,26 @@ Use this data source to access information about an existing Virtual Machine.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Azure.Compute.GetVirtualMachine.InvokeAsync(new Azure.Compute.GetVirtualMachineArgs
+        {
+            Name = "production",
+            ResourceGroupName = "networking",
+        }));
+        this.VirtualMachineId = example.Apply(example => example.Id);
+    }
+
+    [Output("virtualMachineId")]
+    public Output<string> VirtualMachineId { get; set; }
+}
+```
 {{% /example %}}
 
 {{% example go %}}

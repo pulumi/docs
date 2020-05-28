@@ -249,7 +249,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
     <span class="n">ip_configuration</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;configuration&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;subnetId&quot;</span><span class="p">:</span> <span class="n">example_subnet</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;subnet_id&quot;</span><span class="p">:</span> <span class="n">example_subnet</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
         <span class="s2">&quot;publicIpAddressId&quot;</span><span class="p">:</span> <span class="n">example_public_ip</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="p">})</span>
 </pre></div>
@@ -410,7 +410,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">resource_group_name</span><span class="o">=</span><span class="n">main_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
     <span class="n">ip_configuration</span><span class="o">=</span><span class="p">[{</span>
         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;internal&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;subnetId&quot;</span><span class="p">:</span> <span class="n">internal</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;subnet_id&quot;</span><span class="p">:</span> <span class="n">internal</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
         <span class="s2">&quot;privateIpAddressAllocation&quot;</span><span class="p">:</span> <span class="s2">&quot;Dynamic&quot;</span><span class="p">,</span>
     <span class="p">}])</span>
 <span class="n">example_virtual_machine</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">VirtualMachine</span><span class="p">(</span><span class="s2">&quot;exampleVirtualMachine&quot;</span><span class="p">,</span>
@@ -427,16 +427,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">storage_os_disk</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;myosdisk1&quot;</span><span class="p">,</span>
         <span class="s2">&quot;caching&quot;</span><span class="p">:</span> <span class="s2">&quot;ReadWrite&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;createOption&quot;</span><span class="p">:</span> <span class="s2">&quot;FromImage&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;create_option&quot;</span><span class="p">:</span> <span class="s2">&quot;FromImage&quot;</span><span class="p">,</span>
         <span class="s2">&quot;managedDiskType&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_LRS&quot;</span><span class="p">,</span>
     <span class="p">},</span>
     <span class="n">os_profile</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;computerName&quot;</span><span class="p">:</span> <span class="n">vm_name</span><span class="p">,</span>
-        <span class="s2">&quot;adminUsername&quot;</span><span class="p">:</span> <span class="s2">&quot;testadmin&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;adminPassword&quot;</span><span class="p">:</span> <span class="s2">&quot;Password1234!&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;computer_name&quot;</span><span class="p">:</span> <span class="n">vm_name</span><span class="p">,</span>
+        <span class="s2">&quot;admin_username&quot;</span><span class="p">:</span> <span class="s2">&quot;testadmin&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;admin_password&quot;</span><span class="p">:</span> <span class="s2">&quot;Password1234!&quot;</span><span class="p">,</span>
     <span class="p">},</span>
     <span class="n">os_profile_linux_config</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;disablePasswordAuthentication&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="s2">&quot;disable_password_authentication&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
     <span class="p">})</span>
 <span class="n">example_managed_disk</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">ManagedDisk</span><span class="p">(</span><span class="s2">&quot;exampleManagedDisk&quot;</span><span class="p">,</span>
     <span class="n">location</span><span class="o">=</span><span class="n">main_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
@@ -850,9 +850,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">tenant_id</span><span class="o">=</span><span class="n">current</span><span class="o">.</span><span class="n">tenant_id</span><span class="p">,</span>
     <span class="n">sku_name</span><span class="o">=</span><span class="s2">&quot;premium&quot;</span><span class="p">,</span>
     <span class="n">access_policy</span><span class="o">=</span><span class="p">[{</span>
-        <span class="s2">&quot;tenantId&quot;</span><span class="p">:</span> <span class="n">current</span><span class="o">.</span><span class="n">tenant_id</span><span class="p">,</span>
-        <span class="s2">&quot;objectId&quot;</span><span class="p">:</span> <span class="n">current</span><span class="o">.</span><span class="n">object_id</span><span class="p">,</span>
-        <span class="s2">&quot;keyPermissions&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;tenant_id&quot;</span><span class="p">:</span> <span class="n">current</span><span class="o">.</span><span class="n">tenant_id</span><span class="p">,</span>
+        <span class="s2">&quot;object_id&quot;</span><span class="p">:</span> <span class="n">current</span><span class="o">.</span><span class="n">object_id</span><span class="p">,</span>
+        <span class="s2">&quot;key_permissions&quot;</span><span class="p">:</span> <span class="p">[</span>
             <span class="s2">&quot;create&quot;</span><span class="p">,</span>
             <span class="s2">&quot;get&quot;</span><span class="p">,</span>
             <span class="s2">&quot;delete&quot;</span><span class="p">,</span>
@@ -861,7 +861,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
             <span class="s2">&quot;unwrapkey&quot;</span><span class="p">,</span>
             <span class="s2">&quot;get&quot;</span><span class="p">,</span>
         <span class="p">],</span>
-        <span class="s2">&quot;secretPermissions&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;secret_permissions&quot;</span><span class="p">:</span> <span class="p">[</span>
             <span class="s2">&quot;get&quot;</span><span class="p">,</span>
             <span class="s2">&quot;delete&quot;</span><span class="p">,</span>
             <span class="s2">&quot;set&quot;</span><span class="p">,</span>
@@ -1038,7 +1038,7 @@ and run automated tasks.</p>
     <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
     <span class="n">ip_configuration</span><span class="o">=</span><span class="p">[{</span>
         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;testconfiguration1&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;subnetId&quot;</span><span class="p">:</span> <span class="n">example_subnet</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;subnet_id&quot;</span><span class="p">:</span> <span class="n">example_subnet</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
         <span class="s2">&quot;privateIpAddressAllocation&quot;</span><span class="p">:</span> <span class="s2">&quot;Dynamic&quot;</span><span class="p">,</span>
     <span class="p">}])</span>
 <span class="n">example_account</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">Account</span><span class="p">(</span><span class="s2">&quot;exampleAccount&quot;</span><span class="p">,</span>
@@ -1068,15 +1068,15 @@ and run automated tasks.</p>
         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;myosdisk1&quot;</span><span class="p">,</span>
         <span class="s2">&quot;vhdUri&quot;</span><span class="p">:</span> <span class="n">pulumi</span><span class="o">.</span><span class="n">Output</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="n">example_account</span><span class="o">.</span><span class="n">primary_blob_endpoint</span><span class="p">,</span> <span class="n">example_container</span><span class="o">.</span><span class="n">name</span><span class="p">)</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">primary_blob_endpoint</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">primary_blob_endpoint</span><span class="si">}{</span><span class="n">name</span><span class="si">}</span><span class="s2">/myosdisk1.vhd&quot;</span><span class="p">),</span>
         <span class="s2">&quot;caching&quot;</span><span class="p">:</span> <span class="s2">&quot;ReadWrite&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;createOption&quot;</span><span class="p">:</span> <span class="s2">&quot;FromImage&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;create_option&quot;</span><span class="p">:</span> <span class="s2">&quot;FromImage&quot;</span><span class="p">,</span>
     <span class="p">},</span>
     <span class="n">os_profile</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;computerName&quot;</span><span class="p">:</span> <span class="s2">&quot;hostname&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;adminUsername&quot;</span><span class="p">:</span> <span class="s2">&quot;testadmin&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;adminPassword&quot;</span><span class="p">:</span> <span class="s2">&quot;Password1234!&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;computer_name&quot;</span><span class="p">:</span> <span class="s2">&quot;hostname&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;admin_username&quot;</span><span class="p">:</span> <span class="s2">&quot;testadmin&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;admin_password&quot;</span><span class="p">:</span> <span class="s2">&quot;Password1234!&quot;</span><span class="p">,</span>
     <span class="p">},</span>
     <span class="n">os_profile_linux_config</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;disablePasswordAuthentication&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="s2">&quot;disable_password_authentication&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
     <span class="p">},</span>
     <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;environment&quot;</span><span class="p">:</span> <span class="s2">&quot;staging&quot;</span><span class="p">,</span>
@@ -1742,7 +1742,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West US&quot;</span><span class="p">,</span>
     <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
     <span class="n">os_disk</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;osType&quot;</span><span class="p">:</span> <span class="s2">&quot;Linux&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;os_type&quot;</span><span class="p">:</span> <span class="s2">&quot;Linux&quot;</span><span class="p">,</span>
         <span class="s2">&quot;osState&quot;</span><span class="p">:</span> <span class="s2">&quot;Generalized&quot;</span><span class="p">,</span>
         <span class="s2">&quot;blobUri&quot;</span><span class="p">:</span> <span class="s2">&quot;</span><span class="si">{blob_uri}</span><span class="s2">&quot;</span><span class="p">,</span>
         <span class="s2">&quot;sizeGb&quot;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span>
@@ -1978,7 +1978,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
     <span class="n">ip_configuration</span><span class="o">=</span><span class="p">[{</span>
         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;internal&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;subnetId&quot;</span><span class="p">:</span> <span class="n">example_subnet</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;subnet_id&quot;</span><span class="p">:</span> <span class="n">example_subnet</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
         <span class="s2">&quot;privateIpAddressAllocation&quot;</span><span class="p">:</span> <span class="s2">&quot;Dynamic&quot;</span><span class="p">,</span>
     <span class="p">}])</span>
 <span class="n">example_linux_virtual_machine</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">LinuxVirtualMachine</span><span class="p">(</span><span class="s2">&quot;exampleLinuxVirtualMachine&quot;</span><span class="p">,</span>
@@ -1993,7 +1993,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="p">}],</span>
     <span class="n">os_disk</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;caching&quot;</span><span class="p">:</span> <span class="s2">&quot;ReadWrite&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;storageAccountType&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_LRS&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;storage_account_type&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_LRS&quot;</span><span class="p">,</span>
     <span class="p">},</span>
     <span class="n">source_image_reference</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;publisher&quot;</span><span class="p">:</span> <span class="s2">&quot;Canonical&quot;</span><span class="p">,</span>
@@ -2537,7 +2537,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
         <span class="s2">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;latest&quot;</span><span class="p">,</span>
     <span class="p">},</span>
     <span class="n">os_disk</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;storageAccountType&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_LRS&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;storage_account_type&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_LRS&quot;</span><span class="p">,</span>
         <span class="s2">&quot;caching&quot;</span><span class="p">:</span> <span class="s2">&quot;ReadWrite&quot;</span><span class="p">,</span>
     <span class="p">},</span>
     <span class="n">network_interface</span><span class="o">=</span><span class="p">[{</span>
@@ -2546,7 +2546,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
         <span class="s2">&quot;ip_configuration&quot;</span><span class="p">:</span> <span class="p">[{</span>
             <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;internal&quot;</span><span class="p">,</span>
             <span class="s2">&quot;primary&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
-            <span class="s2">&quot;subnetId&quot;</span><span class="p">:</span> <span class="n">internal</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+            <span class="s2">&quot;subnet_id&quot;</span><span class="p">:</span> <span class="n">internal</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
         <span class="p">}],</span>
     <span class="p">}])</span>
 </pre></div>
@@ -3780,21 +3780,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">storage_profile_os_disk</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
         <span class="s2">&quot;caching&quot;</span><span class="p">:</span> <span class="s2">&quot;ReadWrite&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;createOption&quot;</span><span class="p">:</span> <span class="s2">&quot;FromImage&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;create_option&quot;</span><span class="p">:</span> <span class="s2">&quot;FromImage&quot;</span><span class="p">,</span>
         <span class="s2">&quot;managedDiskType&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_LRS&quot;</span><span class="p">,</span>
     <span class="p">},</span>
     <span class="n">storage_profile_data_disk</span><span class="o">=</span><span class="p">[{</span>
         <span class="s2">&quot;lun&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
         <span class="s2">&quot;caching&quot;</span><span class="p">:</span> <span class="s2">&quot;ReadWrite&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;createOption&quot;</span><span class="p">:</span> <span class="s2">&quot;Empty&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;diskSizeGb&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+        <span class="s2">&quot;create_option&quot;</span><span class="p">:</span> <span class="s2">&quot;Empty&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;disk_size_gb&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
     <span class="p">}],</span>
     <span class="n">os_profile</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;computerNamePrefix&quot;</span><span class="p">:</span> <span class="s2">&quot;testvm&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;adminUsername&quot;</span><span class="p">:</span> <span class="s2">&quot;myadmin&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;computer_name_prefix&quot;</span><span class="p">:</span> <span class="s2">&quot;testvm&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;admin_username&quot;</span><span class="p">:</span> <span class="s2">&quot;myadmin&quot;</span><span class="p">,</span>
     <span class="p">},</span>
     <span class="n">os_profile_linux_config</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;disablePasswordAuthentication&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;disable_password_authentication&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
         <span class="s2">&quot;ssh_keys&quot;</span><span class="p">:</span> <span class="p">[{</span>
             <span class="s2">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;/home/myadmin/.ssh/authorized_keys&quot;</span><span class="p">,</span>
             <span class="s2">&quot;keyData&quot;</span><span class="p">:</span> <span class="p">(</span><span class="k">lambda</span> <span class="n">path</span><span class="p">:</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())(</span><span class="s2">&quot;~/.ssh/demo_key.pub&quot;</span><span class="p">),</span>
@@ -3806,7 +3806,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
         <span class="s2">&quot;ip_configuration&quot;</span><span class="p">:</span> <span class="p">[{</span>
             <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;TestIPConfiguration&quot;</span><span class="p">,</span>
             <span class="s2">&quot;primary&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
-            <span class="s2">&quot;subnetId&quot;</span><span class="p">:</span> <span class="n">example_subnet</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+            <span class="s2">&quot;subnet_id&quot;</span><span class="p">:</span> <span class="n">example_subnet</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
             <span class="s2">&quot;loadBalancerBackendAddressPoolIds&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">bpepool</span><span class="o">.</span><span class="n">id</span><span class="p">],</span>
             <span class="s2">&quot;loadBalancerInboundNatRulesIds&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">lbnatpool</span><span class="o">.</span><span class="n">id</span><span class="p">],</span>
         <span class="p">}],</span>
@@ -3850,11 +3850,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
         <span class="s2">&quot;capacity&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
     <span class="p">},</span>
     <span class="n">os_profile</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;computerNamePrefix&quot;</span><span class="p">:</span> <span class="s2">&quot;testvm&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;adminUsername&quot;</span><span class="p">:</span> <span class="s2">&quot;myadmin&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;computer_name_prefix&quot;</span><span class="p">:</span> <span class="s2">&quot;testvm&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;admin_username&quot;</span><span class="p">:</span> <span class="s2">&quot;myadmin&quot;</span><span class="p">,</span>
     <span class="p">},</span>
     <span class="n">os_profile_linux_config</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;disablePasswordAuthentication&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;disable_password_authentication&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
         <span class="s2">&quot;ssh_keys&quot;</span><span class="p">:</span> <span class="p">[{</span>
             <span class="s2">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;/home/myadmin/.ssh/authorized_keys&quot;</span><span class="p">,</span>
             <span class="s2">&quot;keyData&quot;</span><span class="p">:</span> <span class="p">(</span><span class="k">lambda</span> <span class="n">path</span><span class="p">:</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())(</span><span class="s2">&quot;~/.ssh/demo_key.pub&quot;</span><span class="p">),</span>
@@ -3866,13 +3866,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
         <span class="s2">&quot;ip_configuration&quot;</span><span class="p">:</span> <span class="p">[{</span>
             <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;TestIPConfiguration&quot;</span><span class="p">,</span>
             <span class="s2">&quot;primary&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
-            <span class="s2">&quot;subnetId&quot;</span><span class="p">:</span> <span class="n">example_subnet</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+            <span class="s2">&quot;subnet_id&quot;</span><span class="p">:</span> <span class="n">example_subnet</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
         <span class="p">}],</span>
     <span class="p">}],</span>
     <span class="n">storage_profile_os_disk</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;osDiskProfile&quot;</span><span class="p">,</span>
         <span class="s2">&quot;caching&quot;</span><span class="p">:</span> <span class="s2">&quot;ReadWrite&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;createOption&quot;</span><span class="p">:</span> <span class="s2">&quot;FromImage&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;create_option&quot;</span><span class="p">:</span> <span class="s2">&quot;FromImage&quot;</span><span class="p">,</span>
         <span class="s2">&quot;vhdContainers&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">pulumi</span><span class="o">.</span><span class="n">Output</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="n">example_account</span><span class="o">.</span><span class="n">primary_blob_endpoint</span><span class="p">,</span> <span class="n">example_container</span><span class="o">.</span><span class="n">name</span><span class="p">)</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">primary_blob_endpoint</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">primary_blob_endpoint</span><span class="si">}{</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)],</span>
     <span class="p">},</span>
     <span class="n">storage_profile_image_reference</span><span class="o">=</span><span class="p">{</span>
@@ -4946,7 +4946,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">target_region</span><span class="o">=</span><span class="p">[{</span>
         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="n">existing_shared_image</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
         <span class="s2">&quot;regionalReplicaCount&quot;</span><span class="p">:</span> <span class="s2">&quot;5&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;storageAccountType&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_LRS&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;storage_account_type&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_LRS&quot;</span><span class="p">,</span>
     <span class="p">}])</span>
 </pre></div>
 </div>
@@ -5318,7 +5318,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">resource_group_name</span><span class="o">=</span><span class="n">main_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
     <span class="n">ip_configuration</span><span class="o">=</span><span class="p">[{</span>
         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;testconfiguration1&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;subnetId&quot;</span><span class="p">:</span> <span class="n">internal</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;subnet_id&quot;</span><span class="p">:</span> <span class="n">internal</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
         <span class="s2">&quot;privateIpAddressAllocation&quot;</span><span class="p">:</span> <span class="s2">&quot;Dynamic&quot;</span><span class="p">,</span>
     <span class="p">}])</span>
 <span class="n">main_virtual_machine</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">VirtualMachine</span><span class="p">(</span><span class="s2">&quot;mainVirtualMachine&quot;</span><span class="p">,</span>
@@ -5335,16 +5335,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">storage_os_disk</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;myosdisk1&quot;</span><span class="p">,</span>
         <span class="s2">&quot;caching&quot;</span><span class="p">:</span> <span class="s2">&quot;ReadWrite&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;createOption&quot;</span><span class="p">:</span> <span class="s2">&quot;FromImage&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;create_option&quot;</span><span class="p">:</span> <span class="s2">&quot;FromImage&quot;</span><span class="p">,</span>
         <span class="s2">&quot;managedDiskType&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_LRS&quot;</span><span class="p">,</span>
     <span class="p">},</span>
     <span class="n">os_profile</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;computerName&quot;</span><span class="p">:</span> <span class="s2">&quot;hostname&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;adminUsername&quot;</span><span class="p">:</span> <span class="s2">&quot;testadmin&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;adminPassword&quot;</span><span class="p">:</span> <span class="s2">&quot;Password1234!&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;computer_name&quot;</span><span class="p">:</span> <span class="s2">&quot;hostname&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;admin_username&quot;</span><span class="p">:</span> <span class="s2">&quot;testadmin&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;admin_password&quot;</span><span class="p">:</span> <span class="s2">&quot;Password1234!&quot;</span><span class="p">,</span>
     <span class="p">},</span>
     <span class="n">os_profile_linux_config</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;disablePasswordAuthentication&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="s2">&quot;disable_password_authentication&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
     <span class="p">},</span>
     <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;environment&quot;</span><span class="p">:</span> <span class="s2">&quot;staging&quot;</span><span class="p">,</span>
@@ -6090,7 +6090,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
     <span class="n">ip_configuration</span><span class="o">=</span><span class="p">[{</span>
         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;internal&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;subnetId&quot;</span><span class="p">:</span> <span class="n">example_subnet</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;subnet_id&quot;</span><span class="p">:</span> <span class="n">example_subnet</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
         <span class="s2">&quot;privateIpAddressAllocation&quot;</span><span class="p">:</span> <span class="s2">&quot;Dynamic&quot;</span><span class="p">,</span>
     <span class="p">}])</span>
 <span class="n">example_windows_virtual_machine</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">WindowsVirtualMachine</span><span class="p">(</span><span class="s2">&quot;exampleWindowsVirtualMachine&quot;</span><span class="p">,</span>
@@ -6102,7 +6102,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">network_interface_ids</span><span class="o">=</span><span class="p">[</span><span class="n">example_network_interface</span><span class="o">.</span><span class="n">id</span><span class="p">],</span>
     <span class="n">os_disk</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;caching&quot;</span><span class="p">:</span> <span class="s2">&quot;ReadWrite&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;storageAccountType&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_LRS&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;storage_account_type&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_LRS&quot;</span><span class="p">,</span>
     <span class="p">},</span>
     <span class="n">source_image_reference</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;publisher&quot;</span><span class="p">:</span> <span class="s2">&quot;MicrosoftWindowsServer&quot;</span><span class="p">,</span>
@@ -6687,7 +6687,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
         <span class="s2">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;latest&quot;</span><span class="p">,</span>
     <span class="p">},</span>
     <span class="n">os_disk</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;storageAccountType&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_LRS&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;storage_account_type&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_LRS&quot;</span><span class="p">,</span>
         <span class="s2">&quot;caching&quot;</span><span class="p">:</span> <span class="s2">&quot;ReadWrite&quot;</span><span class="p">,</span>
     <span class="p">},</span>
     <span class="n">network_interface</span><span class="o">=</span><span class="p">[{</span>
@@ -6696,7 +6696,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
         <span class="s2">&quot;ip_configuration&quot;</span><span class="p">:</span> <span class="p">[{</span>
             <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;internal&quot;</span><span class="p">,</span>
             <span class="s2">&quot;primary&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
-            <span class="s2">&quot;subnetId&quot;</span><span class="p">:</span> <span class="n">internal</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+            <span class="s2">&quot;subnet_id&quot;</span><span class="p">:</span> <span class="n">internal</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
         <span class="p">}],</span>
     <span class="p">}])</span>
 </pre></div>

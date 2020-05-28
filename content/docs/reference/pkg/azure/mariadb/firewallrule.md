@@ -35,6 +35,25 @@ example = azure.mariadb.FirewallRule("example",
     server_name="test-server",
     start_ip_address="40.112.8.12")
 ```
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Azure.MariaDB.FirewallRule("example", new Azure.MariaDB.FirewallRuleArgs
+        {
+            EndIpAddress = "40.112.8.12",
+            ResourceGroupName = "test-rg",
+            ServerName = "test-server",
+            StartIpAddress = "40.112.8.12",
+        });
+    }
+
+}
+```
 
 ## Example Usage (IP Range)
 
@@ -58,6 +77,25 @@ example = azure.mariadb.FirewallRule("example",
     resource_group_name="test-rg",
     server_name="test-server",
     start_ip_address="40.112.0.0")
+```
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Azure.MariaDB.FirewallRule("example", new Azure.MariaDB.FirewallRuleArgs
+        {
+            EndIpAddress = "40.112.255.255",
+            ResourceGroupName = "test-rg",
+            ServerName = "test-server",
+            StartIpAddress = "40.112.0.0",
+        });
+    }
+
+}
 ```
 
 
