@@ -25,7 +25,41 @@ exist concurrently.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+using Random = Pulumi.Random;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var priority = new Random.RandomInteger("priority", new Random.RandomIntegerArgs
+        {
+            Keepers = 
+            {
+                { "listener_arn", @var.Listener_arn },
+            },
+            Max = 50000,
+            Min = 1,
+        });
+        var main = new Aws.Alb.ListenerRule("main", new Aws.Alb.ListenerRuleArgs
+        {
+            Actions = 
+            {
+                new Aws.Alb.Inputs.ListenerRuleActionArgs
+                {
+                    TargetGroupArn = @var.Target_group_arn,
+                    Type = "forward",
+                },
+            },
+            ListenerArn = @var.Listener_arn,
+            Priority = priority.Result,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -46,7 +80,7 @@ priority = random.RandomInteger("priority",
     min=1)
 main = aws.alb.ListenerRule("main",
     actions=[{
-        "targetGroupArn": var["target_group_arn"],
+        "target_group_arn": var["target_group_arn"],
         "type": "forward",
     }],
     listener_arn=var["listener_arn"],
@@ -265,7 +299,9 @@ The RandomInteger resource accepts the following [input]({{< relref "/docs/intro
 
     <dt class="property-required"
             title="Required">
-        <span>Max</span>
+        <span id="max_csharp">
+<a href="#max_csharp" style="color: inherit; text-decoration: inherit;">Max</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -274,7 +310,9 @@ The RandomInteger resource accepts the following [input]({{< relref "/docs/intro
 
     <dt class="property-required"
             title="Required">
-        <span>Min</span>
+        <span id="min_csharp">
+<a href="#min_csharp" style="color: inherit; text-decoration: inherit;">Min</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -283,7 +321,9 @@ The RandomInteger resource accepts the following [input]({{< relref "/docs/intro
 
     <dt class="property-optional"
             title="Optional">
-        <span>Keepers</span>
+        <span id="keepers_csharp">
+<a href="#keepers_csharp" style="color: inherit; text-decoration: inherit;">Keepers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -294,7 +334,9 @@ the main provider documentation for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Seed</span>
+        <span id="seed_csharp">
+<a href="#seed_csharp" style="color: inherit; text-decoration: inherit;">Seed</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -310,7 +352,9 @@ the main provider documentation for more information.
 
     <dt class="property-required"
             title="Required">
-        <span>Max</span>
+        <span id="max_go">
+<a href="#max_go" style="color: inherit; text-decoration: inherit;">Max</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -319,7 +363,9 @@ the main provider documentation for more information.
 
     <dt class="property-required"
             title="Required">
-        <span>Min</span>
+        <span id="min_go">
+<a href="#min_go" style="color: inherit; text-decoration: inherit;">Min</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -328,7 +374,9 @@ the main provider documentation for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Keepers</span>
+        <span id="keepers_go">
+<a href="#keepers_go" style="color: inherit; text-decoration: inherit;">Keepers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -339,7 +387,9 @@ the main provider documentation for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Seed</span>
+        <span id="seed_go">
+<a href="#seed_go" style="color: inherit; text-decoration: inherit;">Seed</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -355,7 +405,9 @@ the main provider documentation for more information.
 
     <dt class="property-required"
             title="Required">
-        <span>max</span>
+        <span id="max_nodejs">
+<a href="#max_nodejs" style="color: inherit; text-decoration: inherit;">max</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -364,7 +416,9 @@ the main provider documentation for more information.
 
     <dt class="property-required"
             title="Required">
-        <span>min</span>
+        <span id="min_nodejs">
+<a href="#min_nodejs" style="color: inherit; text-decoration: inherit;">min</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -373,7 +427,9 @@ the main provider documentation for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>keepers</span>
+        <span id="keepers_nodejs">
+<a href="#keepers_nodejs" style="color: inherit; text-decoration: inherit;">keepers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -384,7 +440,9 @@ the main provider documentation for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>seed</span>
+        <span id="seed_nodejs">
+<a href="#seed_nodejs" style="color: inherit; text-decoration: inherit;">seed</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -400,7 +458,9 @@ the main provider documentation for more information.
 
     <dt class="property-required"
             title="Required">
-        <span>max</span>
+        <span id="max_python">
+<a href="#max_python" style="color: inherit; text-decoration: inherit;">max</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -409,7 +469,9 @@ the main provider documentation for more information.
 
     <dt class="property-required"
             title="Required">
-        <span>min</span>
+        <span id="min_python">
+<a href="#min_python" style="color: inherit; text-decoration: inherit;">min</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -418,7 +480,9 @@ the main provider documentation for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>keepers</span>
+        <span id="keepers_python">
+<a href="#keepers_python" style="color: inherit; text-decoration: inherit;">keepers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -429,7 +493,9 @@ the main provider documentation for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>seed</span>
+        <span id="seed_python">
+<a href="#seed_python" style="color: inherit; text-decoration: inherit;">seed</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -456,7 +522,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -464,7 +532,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Result</span>
+        <span id="result_csharp">
+<a href="#result_csharp" style="color: inherit; text-decoration: inherit;">Result</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -480,7 +550,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -488,7 +560,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Result</span>
+        <span id="result_go">
+<a href="#result_go" style="color: inherit; text-decoration: inherit;">Result</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -504,7 +578,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -512,7 +588,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>result</span>
+        <span id="result_nodejs">
+<a href="#result_nodejs" style="color: inherit; text-decoration: inherit;">result</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -528,7 +606,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -536,7 +616,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>result</span>
+        <span id="result_python">
+<a href="#result_python" style="color: inherit; text-decoration: inherit;">result</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -678,7 +760,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Keepers</span>
+        <span id="state_keepers_csharp">
+<a href="#state_keepers_csharp" style="color: inherit; text-decoration: inherit;">Keepers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -689,7 +773,9 @@ the main provider documentation for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max</span>
+        <span id="state_max_csharp">
+<a href="#state_max_csharp" style="color: inherit; text-decoration: inherit;">Max</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -698,7 +784,9 @@ the main provider documentation for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Min</span>
+        <span id="state_min_csharp">
+<a href="#state_min_csharp" style="color: inherit; text-decoration: inherit;">Min</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -707,7 +795,9 @@ the main provider documentation for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Result</span>
+        <span id="state_result_csharp">
+<a href="#state_result_csharp" style="color: inherit; text-decoration: inherit;">Result</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -716,7 +806,9 @@ the main provider documentation for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Seed</span>
+        <span id="state_seed_csharp">
+<a href="#state_seed_csharp" style="color: inherit; text-decoration: inherit;">Seed</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -732,7 +824,9 @@ the main provider documentation for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Keepers</span>
+        <span id="state_keepers_go">
+<a href="#state_keepers_go" style="color: inherit; text-decoration: inherit;">Keepers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -743,7 +837,9 @@ the main provider documentation for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max</span>
+        <span id="state_max_go">
+<a href="#state_max_go" style="color: inherit; text-decoration: inherit;">Max</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -752,7 +848,9 @@ the main provider documentation for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Min</span>
+        <span id="state_min_go">
+<a href="#state_min_go" style="color: inherit; text-decoration: inherit;">Min</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -761,7 +859,9 @@ the main provider documentation for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Result</span>
+        <span id="state_result_go">
+<a href="#state_result_go" style="color: inherit; text-decoration: inherit;">Result</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -770,7 +870,9 @@ the main provider documentation for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Seed</span>
+        <span id="state_seed_go">
+<a href="#state_seed_go" style="color: inherit; text-decoration: inherit;">Seed</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -786,7 +888,9 @@ the main provider documentation for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>keepers</span>
+        <span id="state_keepers_nodejs">
+<a href="#state_keepers_nodejs" style="color: inherit; text-decoration: inherit;">keepers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -797,7 +901,9 @@ the main provider documentation for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>max</span>
+        <span id="state_max_nodejs">
+<a href="#state_max_nodejs" style="color: inherit; text-decoration: inherit;">max</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -806,7 +912,9 @@ the main provider documentation for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>min</span>
+        <span id="state_min_nodejs">
+<a href="#state_min_nodejs" style="color: inherit; text-decoration: inherit;">min</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -815,7 +923,9 @@ the main provider documentation for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>result</span>
+        <span id="state_result_nodejs">
+<a href="#state_result_nodejs" style="color: inherit; text-decoration: inherit;">result</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -824,7 +934,9 @@ the main provider documentation for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>seed</span>
+        <span id="state_seed_nodejs">
+<a href="#state_seed_nodejs" style="color: inherit; text-decoration: inherit;">seed</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -840,7 +952,9 @@ the main provider documentation for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>keepers</span>
+        <span id="state_keepers_python">
+<a href="#state_keepers_python" style="color: inherit; text-decoration: inherit;">keepers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -851,7 +965,9 @@ the main provider documentation for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>max</span>
+        <span id="state_max_python">
+<a href="#state_max_python" style="color: inherit; text-decoration: inherit;">max</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -860,7 +976,9 @@ the main provider documentation for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>min</span>
+        <span id="state_min_python">
+<a href="#state_min_python" style="color: inherit; text-decoration: inherit;">min</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -869,7 +987,9 @@ the main provider documentation for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>result</span>
+        <span id="state_result_python">
+<a href="#state_result_python" style="color: inherit; text-decoration: inherit;">result</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -878,7 +998,9 @@ the main provider documentation for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>seed</span>
+        <span id="state_seed_python">
+<a href="#state_seed_python" style="color: inherit; text-decoration: inherit;">seed</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

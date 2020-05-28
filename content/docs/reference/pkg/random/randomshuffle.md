@@ -21,7 +21,34 @@ of strings given as an argument.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+using Random = Pulumi.Random;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var az = new Random.RandomShuffle("az", new Random.RandomShuffleArgs
+        {
+            Inputs = 
+            {
+                "us-west-1a",
+                "us-west-1c",
+                "us-west-1d",
+                "us-west-1e",
+            },
+            ResultCount = 2,
+        });
+        var example = new Aws.Elb.LoadBalancer("example", new Aws.Elb.LoadBalancerArgs
+        {
+            AvailabilityZones = az.Results,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -255,7 +282,9 @@ The RandomShuffle resource accepts the following [input]({{< relref "/docs/intro
 
     <dt class="property-required"
             title="Required">
-        <span>Inputs</span>
+        <span id="inputs_csharp">
+<a href="#inputs_csharp" style="color: inherit; text-decoration: inherit;">Inputs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -264,7 +293,9 @@ The RandomShuffle resource accepts the following [input]({{< relref "/docs/intro
 
     <dt class="property-optional"
             title="Optional">
-        <span>Keepers</span>
+        <span id="keepers_csharp">
+<a href="#keepers_csharp" style="color: inherit; text-decoration: inherit;">Keepers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -275,7 +306,9 @@ the main provider documentation for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Result<wbr>Count</span>
+        <span id="resultcount_csharp">
+<a href="#resultcount_csharp" style="color: inherit; text-decoration: inherit;">Result<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -288,7 +321,9 @@ of items in the input list.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Seed</span>
+        <span id="seed_csharp">
+<a href="#seed_csharp" style="color: inherit; text-decoration: inherit;">Seed</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -303,7 +338,9 @@ of items in the input list.
 
     <dt class="property-required"
             title="Required">
-        <span>Inputs</span>
+        <span id="inputs_go">
+<a href="#inputs_go" style="color: inherit; text-decoration: inherit;">Inputs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -312,7 +349,9 @@ of items in the input list.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Keepers</span>
+        <span id="keepers_go">
+<a href="#keepers_go" style="color: inherit; text-decoration: inherit;">Keepers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -323,7 +362,9 @@ the main provider documentation for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Result<wbr>Count</span>
+        <span id="resultcount_go">
+<a href="#resultcount_go" style="color: inherit; text-decoration: inherit;">Result<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -336,7 +377,9 @@ of items in the input list.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Seed</span>
+        <span id="seed_go">
+<a href="#seed_go" style="color: inherit; text-decoration: inherit;">Seed</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -351,7 +394,9 @@ of items in the input list.
 
     <dt class="property-required"
             title="Required">
-        <span>inputs</span>
+        <span id="inputs_nodejs">
+<a href="#inputs_nodejs" style="color: inherit; text-decoration: inherit;">inputs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -360,7 +405,9 @@ of items in the input list.
 
     <dt class="property-optional"
             title="Optional">
-        <span>keepers</span>
+        <span id="keepers_nodejs">
+<a href="#keepers_nodejs" style="color: inherit; text-decoration: inherit;">keepers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -371,7 +418,9 @@ the main provider documentation for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>result<wbr>Count</span>
+        <span id="resultcount_nodejs">
+<a href="#resultcount_nodejs" style="color: inherit; text-decoration: inherit;">result<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -384,7 +433,9 @@ of items in the input list.
 
     <dt class="property-optional"
             title="Optional">
-        <span>seed</span>
+        <span id="seed_nodejs">
+<a href="#seed_nodejs" style="color: inherit; text-decoration: inherit;">seed</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -399,7 +450,9 @@ of items in the input list.
 
     <dt class="property-required"
             title="Required">
-        <span>inputs</span>
+        <span id="inputs_python">
+<a href="#inputs_python" style="color: inherit; text-decoration: inherit;">inputs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -408,7 +461,9 @@ of items in the input list.
 
     <dt class="property-optional"
             title="Optional">
-        <span>keepers</span>
+        <span id="keepers_python">
+<a href="#keepers_python" style="color: inherit; text-decoration: inherit;">keepers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -419,7 +474,9 @@ the main provider documentation for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>result_<wbr>count</span>
+        <span id="result_count_python">
+<a href="#result_count_python" style="color: inherit; text-decoration: inherit;">result_<wbr>count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -432,7 +489,9 @@ of items in the input list.
 
     <dt class="property-optional"
             title="Optional">
-        <span>seed</span>
+        <span id="seed_python">
+<a href="#seed_python" style="color: inherit; text-decoration: inherit;">seed</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -458,7 +517,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -466,7 +527,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Results</span>
+        <span id="results_csharp">
+<a href="#results_csharp" style="color: inherit; text-decoration: inherit;">Results</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -482,7 +545,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -490,7 +555,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Results</span>
+        <span id="results_go">
+<a href="#results_go" style="color: inherit; text-decoration: inherit;">Results</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -506,7 +573,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -514,7 +583,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>results</span>
+        <span id="results_nodejs">
+<a href="#results_nodejs" style="color: inherit; text-decoration: inherit;">results</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -530,7 +601,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -538,7 +611,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>results</span>
+        <span id="results_python">
+<a href="#results_python" style="color: inherit; text-decoration: inherit;">results</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -680,7 +755,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Inputs</span>
+        <span id="state_inputs_csharp">
+<a href="#state_inputs_csharp" style="color: inherit; text-decoration: inherit;">Inputs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -689,7 +766,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Keepers</span>
+        <span id="state_keepers_csharp">
+<a href="#state_keepers_csharp" style="color: inherit; text-decoration: inherit;">Keepers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -700,7 +779,9 @@ the main provider documentation for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Result<wbr>Count</span>
+        <span id="state_resultcount_csharp">
+<a href="#state_resultcount_csharp" style="color: inherit; text-decoration: inherit;">Result<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -713,7 +794,9 @@ of items in the input list.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Results</span>
+        <span id="state_results_csharp">
+<a href="#state_results_csharp" style="color: inherit; text-decoration: inherit;">Results</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -722,7 +805,9 @@ of items in the input list.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Seed</span>
+        <span id="state_seed_csharp">
+<a href="#state_seed_csharp" style="color: inherit; text-decoration: inherit;">Seed</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -737,7 +822,9 @@ of items in the input list.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Inputs</span>
+        <span id="state_inputs_go">
+<a href="#state_inputs_go" style="color: inherit; text-decoration: inherit;">Inputs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -746,7 +833,9 @@ of items in the input list.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Keepers</span>
+        <span id="state_keepers_go">
+<a href="#state_keepers_go" style="color: inherit; text-decoration: inherit;">Keepers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -757,7 +846,9 @@ the main provider documentation for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Result<wbr>Count</span>
+        <span id="state_resultcount_go">
+<a href="#state_resultcount_go" style="color: inherit; text-decoration: inherit;">Result<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -770,7 +861,9 @@ of items in the input list.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Results</span>
+        <span id="state_results_go">
+<a href="#state_results_go" style="color: inherit; text-decoration: inherit;">Results</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -779,7 +872,9 @@ of items in the input list.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Seed</span>
+        <span id="state_seed_go">
+<a href="#state_seed_go" style="color: inherit; text-decoration: inherit;">Seed</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -794,7 +889,9 @@ of items in the input list.
 
     <dt class="property-optional"
             title="Optional">
-        <span>inputs</span>
+        <span id="state_inputs_nodejs">
+<a href="#state_inputs_nodejs" style="color: inherit; text-decoration: inherit;">inputs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -803,7 +900,9 @@ of items in the input list.
 
     <dt class="property-optional"
             title="Optional">
-        <span>keepers</span>
+        <span id="state_keepers_nodejs">
+<a href="#state_keepers_nodejs" style="color: inherit; text-decoration: inherit;">keepers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -814,7 +913,9 @@ the main provider documentation for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>result<wbr>Count</span>
+        <span id="state_resultcount_nodejs">
+<a href="#state_resultcount_nodejs" style="color: inherit; text-decoration: inherit;">result<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -827,7 +928,9 @@ of items in the input list.
 
     <dt class="property-optional"
             title="Optional">
-        <span>results</span>
+        <span id="state_results_nodejs">
+<a href="#state_results_nodejs" style="color: inherit; text-decoration: inherit;">results</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -836,7 +939,9 @@ of items in the input list.
 
     <dt class="property-optional"
             title="Optional">
-        <span>seed</span>
+        <span id="state_seed_nodejs">
+<a href="#state_seed_nodejs" style="color: inherit; text-decoration: inherit;">seed</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -851,7 +956,9 @@ of items in the input list.
 
     <dt class="property-optional"
             title="Optional">
-        <span>inputs</span>
+        <span id="state_inputs_python">
+<a href="#state_inputs_python" style="color: inherit; text-decoration: inherit;">inputs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -860,7 +967,9 @@ of items in the input list.
 
     <dt class="property-optional"
             title="Optional">
-        <span>keepers</span>
+        <span id="state_keepers_python">
+<a href="#state_keepers_python" style="color: inherit; text-decoration: inherit;">keepers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -871,7 +980,9 @@ the main provider documentation for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>result_<wbr>count</span>
+        <span id="state_result_count_python">
+<a href="#state_result_count_python" style="color: inherit; text-decoration: inherit;">result_<wbr>count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -884,7 +995,9 @@ of items in the input list.
 
     <dt class="property-optional"
             title="Optional">
-        <span>results</span>
+        <span id="state_results_python">
+<a href="#state_results_python" style="color: inherit; text-decoration: inherit;">results</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -893,7 +1006,9 @@ of items in the input list.
 
     <dt class="property-optional"
             title="Optional">
-        <span>seed</span>
+        <span id="state_seed_python">
+<a href="#state_seed_python" style="color: inherit; text-decoration: inherit;">seed</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

@@ -31,7 +31,35 @@ exist concurrently.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+using Random = Pulumi.Random;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var serverRandomId = new Random.RandomId("serverRandomId", new Random.RandomIdArgs
+        {
+            ByteLength = 8,
+            Keepers = 
+            {
+                { "ami_id", @var.Ami_id },
+            },
+        });
+        var serverInstance = new Aws.Ec2.Instance("serverInstance", new Aws.Ec2.InstanceArgs
+        {
+            Ami = serverRandomId.Keepers.Apply(keepers => keepers.AmiId),
+            Tags = 
+            {
+                { "Name", serverRandomId.Hex.Apply(hex => $"web-server {hex}") },
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -265,7 +293,9 @@ The RandomId resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-required"
             title="Required">
-        <span>Byte<wbr>Length</span>
+        <span id="bytelength_csharp">
+<a href="#bytelength_csharp" style="color: inherit; text-decoration: inherit;">Byte<wbr>Length</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -275,7 +305,9 @@ minimum value is 1, which produces eight bits of randomness.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Keepers</span>
+        <span id="keepers_csharp">
+<a href="#keepers_csharp" style="color: inherit; text-decoration: inherit;">Keepers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -286,7 +318,9 @@ the main provider documentation for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Prefix</span>
+        <span id="prefix_csharp">
+<a href="#prefix_csharp" style="color: inherit; text-decoration: inherit;">Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -304,7 +338,9 @@ base64 encoded.
 
     <dt class="property-required"
             title="Required">
-        <span>Byte<wbr>Length</span>
+        <span id="bytelength_go">
+<a href="#bytelength_go" style="color: inherit; text-decoration: inherit;">Byte<wbr>Length</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -314,7 +350,9 @@ minimum value is 1, which produces eight bits of randomness.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Keepers</span>
+        <span id="keepers_go">
+<a href="#keepers_go" style="color: inherit; text-decoration: inherit;">Keepers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -325,7 +363,9 @@ the main provider documentation for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Prefix</span>
+        <span id="prefix_go">
+<a href="#prefix_go" style="color: inherit; text-decoration: inherit;">Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -343,7 +383,9 @@ base64 encoded.
 
     <dt class="property-required"
             title="Required">
-        <span>byte<wbr>Length</span>
+        <span id="bytelength_nodejs">
+<a href="#bytelength_nodejs" style="color: inherit; text-decoration: inherit;">byte<wbr>Length</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -353,7 +395,9 @@ minimum value is 1, which produces eight bits of randomness.
 
     <dt class="property-optional"
             title="Optional">
-        <span>keepers</span>
+        <span id="keepers_nodejs">
+<a href="#keepers_nodejs" style="color: inherit; text-decoration: inherit;">keepers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -364,7 +408,9 @@ the main provider documentation for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>prefix</span>
+        <span id="prefix_nodejs">
+<a href="#prefix_nodejs" style="color: inherit; text-decoration: inherit;">prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -382,7 +428,9 @@ base64 encoded.
 
     <dt class="property-required"
             title="Required">
-        <span>byte_<wbr>length</span>
+        <span id="byte_length_python">
+<a href="#byte_length_python" style="color: inherit; text-decoration: inherit;">byte_<wbr>length</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -392,7 +440,9 @@ minimum value is 1, which produces eight bits of randomness.
 
     <dt class="property-optional"
             title="Optional">
-        <span>keepers</span>
+        <span id="keepers_python">
+<a href="#keepers_python" style="color: inherit; text-decoration: inherit;">keepers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -403,7 +453,9 @@ the main provider documentation for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>prefix</span>
+        <span id="prefix_python">
+<a href="#prefix_python" style="color: inherit; text-decoration: inherit;">prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -432,7 +484,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property- property-deprecated"
             title=", Deprecated">
-        <span>B64</span>
+        <span id="b64_csharp">
+<a href="#b64_csharp" style="color: inherit; text-decoration: inherit;">B64</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -440,7 +494,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>B64Std</span>
+        <span id="b64std_csharp">
+<a href="#b64std_csharp" style="color: inherit; text-decoration: inherit;">B64Std</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -449,7 +505,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>B64Url</span>
+        <span id="b64url_csharp">
+<a href="#b64url_csharp" style="color: inherit; text-decoration: inherit;">B64Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -458,7 +516,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Dec</span>
+        <span id="dec_csharp">
+<a href="#dec_csharp" style="color: inherit; text-decoration: inherit;">Dec</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -467,7 +527,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Hex</span>
+        <span id="hex_csharp">
+<a href="#hex_csharp" style="color: inherit; text-decoration: inherit;">Hex</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -476,7 +538,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -491,7 +555,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property- property-deprecated"
             title=", Deprecated">
-        <span>B64</span>
+        <span id="b64_go">
+<a href="#b64_go" style="color: inherit; text-decoration: inherit;">B64</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -499,7 +565,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>B64Std</span>
+        <span id="b64std_go">
+<a href="#b64std_go" style="color: inherit; text-decoration: inherit;">B64Std</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -508,7 +576,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>B64Url</span>
+        <span id="b64url_go">
+<a href="#b64url_go" style="color: inherit; text-decoration: inherit;">B64Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -517,7 +587,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Dec</span>
+        <span id="dec_go">
+<a href="#dec_go" style="color: inherit; text-decoration: inherit;">Dec</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -526,7 +598,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Hex</span>
+        <span id="hex_go">
+<a href="#hex_go" style="color: inherit; text-decoration: inherit;">Hex</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -535,7 +609,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -550,7 +626,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property- property-deprecated"
             title=", Deprecated">
-        <span>b64</span>
+        <span id="b64_nodejs">
+<a href="#b64_nodejs" style="color: inherit; text-decoration: inherit;">b64</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -558,7 +636,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>b64Std</span>
+        <span id="b64std_nodejs">
+<a href="#b64std_nodejs" style="color: inherit; text-decoration: inherit;">b64Std</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -567,7 +647,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>b64Url</span>
+        <span id="b64url_nodejs">
+<a href="#b64url_nodejs" style="color: inherit; text-decoration: inherit;">b64Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -576,7 +658,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>dec</span>
+        <span id="dec_nodejs">
+<a href="#dec_nodejs" style="color: inherit; text-decoration: inherit;">dec</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -585,7 +669,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>hex</span>
+        <span id="hex_nodejs">
+<a href="#hex_nodejs" style="color: inherit; text-decoration: inherit;">hex</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -594,7 +680,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -609,7 +697,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property- property-deprecated"
             title=", Deprecated">
-        <span>b64</span>
+        <span id="b64_python">
+<a href="#b64_python" style="color: inherit; text-decoration: inherit;">b64</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -617,7 +707,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>b64_<wbr>std</span>
+        <span id="b64_std_python">
+<a href="#b64_std_python" style="color: inherit; text-decoration: inherit;">b64_<wbr>std</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -626,7 +718,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>b64_<wbr>url</span>
+        <span id="b64_url_python">
+<a href="#b64_url_python" style="color: inherit; text-decoration: inherit;">b64_<wbr>url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -635,7 +729,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>dec</span>
+        <span id="dec_python">
+<a href="#dec_python" style="color: inherit; text-decoration: inherit;">dec</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -644,7 +740,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>hex</span>
+        <span id="hex_python">
+<a href="#hex_python" style="color: inherit; text-decoration: inherit;">hex</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -653,7 +751,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -794,7 +894,9 @@ The following state arguments are supported:
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>B64</span>
+        <span id="state_b64_csharp">
+<a href="#state_b64_csharp" style="color: inherit; text-decoration: inherit;">B64</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -802,7 +904,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>B64Std</span>
+        <span id="state_b64std_csharp">
+<a href="#state_b64std_csharp" style="color: inherit; text-decoration: inherit;">B64Std</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -811,7 +915,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>B64Url</span>
+        <span id="state_b64url_csharp">
+<a href="#state_b64url_csharp" style="color: inherit; text-decoration: inherit;">B64Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -820,7 +926,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Byte<wbr>Length</span>
+        <span id="state_bytelength_csharp">
+<a href="#state_bytelength_csharp" style="color: inherit; text-decoration: inherit;">Byte<wbr>Length</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -830,7 +938,9 @@ minimum value is 1, which produces eight bits of randomness.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dec</span>
+        <span id="state_dec_csharp">
+<a href="#state_dec_csharp" style="color: inherit; text-decoration: inherit;">Dec</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -839,7 +949,9 @@ minimum value is 1, which produces eight bits of randomness.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Hex</span>
+        <span id="state_hex_csharp">
+<a href="#state_hex_csharp" style="color: inherit; text-decoration: inherit;">Hex</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -848,7 +960,9 @@ minimum value is 1, which produces eight bits of randomness.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Keepers</span>
+        <span id="state_keepers_csharp">
+<a href="#state_keepers_csharp" style="color: inherit; text-decoration: inherit;">Keepers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -859,7 +973,9 @@ the main provider documentation for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Prefix</span>
+        <span id="state_prefix_csharp">
+<a href="#state_prefix_csharp" style="color: inherit; text-decoration: inherit;">Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -877,7 +993,9 @@ base64 encoded.
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>B64</span>
+        <span id="state_b64_go">
+<a href="#state_b64_go" style="color: inherit; text-decoration: inherit;">B64</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -885,7 +1003,9 @@ base64 encoded.
 
     <dt class="property-optional"
             title="Optional">
-        <span>B64Std</span>
+        <span id="state_b64std_go">
+<a href="#state_b64std_go" style="color: inherit; text-decoration: inherit;">B64Std</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -894,7 +1014,9 @@ base64 encoded.
 
     <dt class="property-optional"
             title="Optional">
-        <span>B64Url</span>
+        <span id="state_b64url_go">
+<a href="#state_b64url_go" style="color: inherit; text-decoration: inherit;">B64Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -903,7 +1025,9 @@ base64 encoded.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Byte<wbr>Length</span>
+        <span id="state_bytelength_go">
+<a href="#state_bytelength_go" style="color: inherit; text-decoration: inherit;">Byte<wbr>Length</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -913,7 +1037,9 @@ minimum value is 1, which produces eight bits of randomness.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dec</span>
+        <span id="state_dec_go">
+<a href="#state_dec_go" style="color: inherit; text-decoration: inherit;">Dec</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -922,7 +1048,9 @@ minimum value is 1, which produces eight bits of randomness.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Hex</span>
+        <span id="state_hex_go">
+<a href="#state_hex_go" style="color: inherit; text-decoration: inherit;">Hex</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -931,7 +1059,9 @@ minimum value is 1, which produces eight bits of randomness.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Keepers</span>
+        <span id="state_keepers_go">
+<a href="#state_keepers_go" style="color: inherit; text-decoration: inherit;">Keepers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -942,7 +1072,9 @@ the main provider documentation for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Prefix</span>
+        <span id="state_prefix_go">
+<a href="#state_prefix_go" style="color: inherit; text-decoration: inherit;">Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -960,7 +1092,9 @@ base64 encoded.
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>b64</span>
+        <span id="state_b64_nodejs">
+<a href="#state_b64_nodejs" style="color: inherit; text-decoration: inherit;">b64</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -968,7 +1102,9 @@ base64 encoded.
 
     <dt class="property-optional"
             title="Optional">
-        <span>b64Std</span>
+        <span id="state_b64std_nodejs">
+<a href="#state_b64std_nodejs" style="color: inherit; text-decoration: inherit;">b64Std</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -977,7 +1113,9 @@ base64 encoded.
 
     <dt class="property-optional"
             title="Optional">
-        <span>b64Url</span>
+        <span id="state_b64url_nodejs">
+<a href="#state_b64url_nodejs" style="color: inherit; text-decoration: inherit;">b64Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -986,7 +1124,9 @@ base64 encoded.
 
     <dt class="property-optional"
             title="Optional">
-        <span>byte<wbr>Length</span>
+        <span id="state_bytelength_nodejs">
+<a href="#state_bytelength_nodejs" style="color: inherit; text-decoration: inherit;">byte<wbr>Length</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -996,7 +1136,9 @@ minimum value is 1, which produces eight bits of randomness.
 
     <dt class="property-optional"
             title="Optional">
-        <span>dec</span>
+        <span id="state_dec_nodejs">
+<a href="#state_dec_nodejs" style="color: inherit; text-decoration: inherit;">dec</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1005,7 +1147,9 @@ minimum value is 1, which produces eight bits of randomness.
 
     <dt class="property-optional"
             title="Optional">
-        <span>hex</span>
+        <span id="state_hex_nodejs">
+<a href="#state_hex_nodejs" style="color: inherit; text-decoration: inherit;">hex</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1014,7 +1158,9 @@ minimum value is 1, which produces eight bits of randomness.
 
     <dt class="property-optional"
             title="Optional">
-        <span>keepers</span>
+        <span id="state_keepers_nodejs">
+<a href="#state_keepers_nodejs" style="color: inherit; text-decoration: inherit;">keepers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -1025,7 +1171,9 @@ the main provider documentation for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>prefix</span>
+        <span id="state_prefix_nodejs">
+<a href="#state_prefix_nodejs" style="color: inherit; text-decoration: inherit;">prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1043,7 +1191,9 @@ base64 encoded.
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>b64</span>
+        <span id="state_b64_python">
+<a href="#state_b64_python" style="color: inherit; text-decoration: inherit;">b64</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1051,7 +1201,9 @@ base64 encoded.
 
     <dt class="property-optional"
             title="Optional">
-        <span>b64_<wbr>std</span>
+        <span id="state_b64_std_python">
+<a href="#state_b64_std_python" style="color: inherit; text-decoration: inherit;">b64_<wbr>std</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1060,7 +1212,9 @@ base64 encoded.
 
     <dt class="property-optional"
             title="Optional">
-        <span>b64_<wbr>url</span>
+        <span id="state_b64_url_python">
+<a href="#state_b64_url_python" style="color: inherit; text-decoration: inherit;">b64_<wbr>url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1069,7 +1223,9 @@ base64 encoded.
 
     <dt class="property-optional"
             title="Optional">
-        <span>byte_<wbr>length</span>
+        <span id="state_byte_length_python">
+<a href="#state_byte_length_python" style="color: inherit; text-decoration: inherit;">byte_<wbr>length</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1079,7 +1235,9 @@ minimum value is 1, which produces eight bits of randomness.
 
     <dt class="property-optional"
             title="Optional">
-        <span>dec</span>
+        <span id="state_dec_python">
+<a href="#state_dec_python" style="color: inherit; text-decoration: inherit;">dec</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1088,7 +1246,9 @@ minimum value is 1, which produces eight bits of randomness.
 
     <dt class="property-optional"
             title="Optional">
-        <span>hex</span>
+        <span id="state_hex_python">
+<a href="#state_hex_python" style="color: inherit; text-decoration: inherit;">hex</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1097,7 +1257,9 @@ minimum value is 1, which produces eight bits of randomness.
 
     <dt class="property-optional"
             title="Optional">
-        <span>keepers</span>
+        <span id="state_keepers_python">
+<a href="#state_keepers_python" style="color: inherit; text-decoration: inherit;">keepers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -1108,7 +1270,9 @@ the main provider documentation for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>prefix</span>
+        <span id="state_prefix_python">
+<a href="#state_prefix_python" style="color: inherit; text-decoration: inherit;">prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
