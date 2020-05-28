@@ -3,7 +3,7 @@ title: Deploy the Changes | Azure
 h1: Deploy the Changes
 linktitle: Deploy the Changes
 meta_desc: This page provides an overview of how deploy changes to an Azure project.
-weight: 9
+weight: 7
 menu:
   getstarted:
     parent: azure

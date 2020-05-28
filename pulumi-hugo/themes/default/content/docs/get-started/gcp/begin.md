@@ -1,13 +1,23 @@
 ---
-title: Before you begin | GCP
-h1: Before you begin
-linktitle: Before you begin
+title: Before You Begin | GCP
+h1: Before You Begin
+linktitle: Before You Begin
 meta_desc: This page provides an overview on how to get started with Pulumi when starting an GCP project.
-weight: 10000
-block_external_search_index: true
-exclude_from_pulumi_search_index: true
+weight: 2
+menu:
+  getstarted:
+    parent: gcp
+    identifier: gcp-begin
 
-aliases: ["/docs/quickstart/gcp/begin/"]
+aliases: [
+  "/docs/quickstart/gcp/begin/",
+  "/docs/quickstart/gcp/install-pulumi/",
+  "/docs/quickstart/gcp/install-language-runtime/",
+  "/docs/quickstart/gcp/configure/",
+  "/docs/get-started/gcp/install-pulumi/",
+  "/docs/get-started/gcp/install-language-runtime/",
+  "/docs/get-started/gcp/configure/"
+]
 ---
 
 Before we get started using Pulumi, let's run through a few quick steps to ensure our environment is setup correctly.
@@ -48,5 +58,4 @@ Next, we'll configure GCP.
 
 Next, we'll create a new project.
 
-<a data-track="previous-step" class="btn" href="/docs/get-started/gcp/">&lt; PREVIOUS STEP</a>
-<a data-track="next-step" class="btn" href="/docs/get-started/gcp/create-project/">CREATE A NEW PROJECT &gt;</a>
+{{< get-started-stepper >}}

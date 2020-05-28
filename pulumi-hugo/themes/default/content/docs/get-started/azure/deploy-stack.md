@@ -3,7 +3,7 @@ title: Deploy the Stack | Azure
 h1: Deploy the Stack
 linktitle: Deploy the Stack
 meta_desc: This page provides an overview of how deploy changes to an Azure project.
-weight: 7
+weight: 5
 menu:
   getstarted:
     parent: azure

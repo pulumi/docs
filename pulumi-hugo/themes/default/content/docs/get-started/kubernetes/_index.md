@@ -25,6 +25,6 @@ help you accomplish all these within minutes.
 This guide will have you quickly provisioning infrastructure on Kubernetes with
 Pulumi in your favorite language.
 
-Let's start with installing Pulumi.
+To get started we will walk through installing Pulumi, installing your preferred language runtime (if needed), and setting up the kubectl CLI. Click the button below to get started.
 
 {{< get-started-stepper >}}
