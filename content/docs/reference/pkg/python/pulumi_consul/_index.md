@@ -1108,6 +1108,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd></dd></dl>
 
 <dl class="py class">
+<dt id="pulumi_consul.AwaitableGetNetworkAreaMembersResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_consul.</code><code class="sig-name descname">AwaitableGetNetworkAreaMembersResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">datacenter</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">members</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">token</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">uuid</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.AwaitableGetNetworkAreaMembersResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_consul.AwaitableGetNetworkSegmentsResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_consul.</code><code class="sig-name descname">AwaitableGetNetworkSegmentsResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">datacenter</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">segments</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">token</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.AwaitableGetNetworkSegmentsResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_consul.AwaitableGetNodesResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_consul.</code><code class="sig-name descname">AwaitableGetNodesResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">datacenter</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">node_ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">node_names</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">nodes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">query_options</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.AwaitableGetNodesResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -1589,7 +1599,7 @@ an <code class="docutils literal notranslate"><span class="pre">id</span></code>
 <dl class="py attribute">
 <dt id="pulumi_consul.GetAclTokenSecretIdResult.secret_id">
 <code class="sig-name descname">secret_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_consul.GetAclTokenSecretIdResult.secret_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>The secret ID of the ACL token if <code class="docutils literal notranslate"><span class="pre">gpg_key</span></code> has not been set.</p>
+<dd><p>The secret ID of the ACL token if <code class="docutils literal notranslate"><span class="pre">pgp_key</span></code> has not been set.</p>
 </dd></dl>
 
 </dd></dl>
@@ -1845,6 +1855,60 @@ has the value of the key.</p></li>
 <dt id="pulumi_consul.GetKeysResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_consul.GetKeysResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_consul.GetNetworkAreaMembersResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_consul.</code><code class="sig-name descname">GetNetworkAreaMembersResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">datacenter</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">members</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">token</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">uuid</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.GetNetworkAreaMembersResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getNetworkAreaMembers.</p>
+<dl class="py attribute">
+<dt id="pulumi_consul.GetNetworkAreaMembersResult.datacenter">
+<code class="sig-name descname">datacenter</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_consul.GetNetworkAreaMembersResult.datacenter" title="Permalink to this definition">¶</a></dt>
+<dd><p>The node’s Consul datacenter.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_consul.GetNetworkAreaMembersResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_consul.GetNetworkAreaMembersResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_consul.GetNetworkAreaMembersResult.members">
+<code class="sig-name descname">members</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_consul.GetNetworkAreaMembersResult.members" title="Permalink to this definition">¶</a></dt>
+<dd><p>The list of Consul servers in this network area</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_consul.GetNetworkAreaMembersResult.uuid">
+<code class="sig-name descname">uuid</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_consul.GetNetworkAreaMembersResult.uuid" title="Permalink to this definition">¶</a></dt>
+<dd><p>The UUID of the Network Area being queried.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_consul.GetNetworkSegmentsResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_consul.</code><code class="sig-name descname">GetNetworkSegmentsResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">datacenter</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">segments</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">token</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.GetNetworkSegmentsResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getNetworkSegments.</p>
+<dl class="py attribute">
+<dt id="pulumi_consul.GetNetworkSegmentsResult.datacenter">
+<code class="sig-name descname">datacenter</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_consul.GetNetworkSegmentsResult.datacenter" title="Permalink to this definition">¶</a></dt>
+<dd><p>The datacenter the segments are being read from.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_consul.GetNetworkSegmentsResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_consul.GetNetworkSegmentsResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_consul.GetNetworkSegmentsResult.segments">
+<code class="sig-name descname">segments</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_consul.GetNetworkSegmentsResult.segments" title="Permalink to this definition">¶</a></dt>
+<dd><p>The list of network segments.</p>
 </dd></dl>
 
 </dd></dl>
@@ -2468,6 +2532,445 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="py class">
+<dt id="pulumi_consul.License">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_consul.</code><code class="sig-name descname">License</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">datacenter</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">license</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.License" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><p><strong>NOTE:</strong> This feature requires <a class="reference external" href="https://www.consul.io/docs/enterprise/index.html">Consul Enterprise</a>.</p>
+</div></blockquote>
+<p>The <code class="docutils literal notranslate"><span class="pre">.License</span></code> resource provides datacenter-level management of
+the Consul Enterprise license. If ACLs are enabled then a token with operator
+privileges may be required in order to use this command.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_consul</span> <span class="k">as</span> <span class="nn">consul</span>
+
+<span class="n">license</span> <span class="o">=</span> <span class="n">consul</span><span class="o">.</span><span class="n">License</span><span class="p">(</span><span class="s2">&quot;license&quot;</span><span class="p">,</span> <span class="n">license</span><span class="o">=</span><span class="p">(</span><span class="k">lambda</span> <span class="n">path</span><span class="p">:</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())(</span><span class="s2">&quot;license.hclic&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>datacenter</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The datacenter to use. This overrides the
+agent’s default datacenter and the datacenter in the provider setup.</p></li>
+<li><p><strong>license</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Consul license to use.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt id="pulumi_consul.License.customer_id">
+<code class="sig-name descname">customer_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_consul.License.customer_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the customer the license is attached to.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_consul.License.datacenter">
+<code class="sig-name descname">datacenter</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_consul.License.datacenter" title="Permalink to this definition">¶</a></dt>
+<dd><p>The datacenter to use. This overrides the
+agent’s default datacenter and the datacenter in the provider setup.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_consul.License.expiration_time">
+<code class="sig-name descname">expiration_time</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_consul.License.expiration_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>The expiration time of the license.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_consul.License.features">
+<code class="sig-name descname">features</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_consul.License.features" title="Permalink to this definition">¶</a></dt>
+<dd><p>The features for which the license is valid.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_consul.License.flags">
+<code class="sig-name descname">flags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_consul.License.flags" title="Permalink to this definition">¶</a></dt>
+<dd><p>The metadata attached to the license.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_consul.License.installation_id">
+<code class="sig-name descname">installation_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_consul.License.installation_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the current installation.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_consul.License.issue_time">
+<code class="sig-name descname">issue_time</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_consul.License.issue_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>The date the license was issued.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_consul.License.license">
+<code class="sig-name descname">license</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_consul.License.license" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Consul license to use.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_consul.License.license_id">
+<code class="sig-name descname">license_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_consul.License.license_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the license used.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_consul.License.product">
+<code class="sig-name descname">product</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_consul.License.product" title="Permalink to this definition">¶</a></dt>
+<dd><p>The product for which the license is valid.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_consul.License.start_time">
+<code class="sig-name descname">start_time</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_consul.License.start_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>The start time of the license.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_consul.License.valid">
+<code class="sig-name descname">valid</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_consul.License.valid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether the license is valid.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_consul.License.warnings">
+<code class="sig-name descname">warnings</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_consul.License.warnings" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of warning messages regarding the license validity.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_consul.License.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">customer_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">datacenter</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">expiration_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">features</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">flags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">installation_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">issue_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">license</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">license_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">product</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">start_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">valid</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">warnings</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.License.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing License resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>customer_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the customer the license is attached to.</p></li>
+<li><p><strong>datacenter</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The datacenter to use. This overrides the
+agent’s default datacenter and the datacenter in the provider setup.</p></li>
+<li><p><strong>expiration_time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The expiration time of the license.</p></li>
+<li><p><strong>features</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The features for which the license is valid.</p></li>
+<li><p><strong>flags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The metadata attached to the license.</p></li>
+<li><p><strong>installation_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the current installation.</p></li>
+<li><p><strong>issue_time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The date the license was issued.</p></li>
+<li><p><strong>license</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Consul license to use.</p></li>
+<li><p><strong>license_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the license used.</p></li>
+<li><p><strong>product</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The product for which the license is valid.</p></li>
+<li><p><strong>start_time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The start time of the license.</p></li>
+<li><p><strong>valid</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether the license is valid.</p></li>
+<li><p><strong>warnings</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of warning messages regarding the license validity.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_consul.License.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.License.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_consul.License.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.License.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_consul.Namespace">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_consul.</code><code class="sig-name descname">Namespace</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">meta</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy_defaults</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role_defaults</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.Namespace" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><p><strong>NOTE:</strong> This feature requires Consul Enterprise.</p>
+</div></blockquote>
+<p>The <code class="docutils literal notranslate"><span class="pre">.Namespace</span></code> resource provides isolated <a class="reference external" href="https://www.consul.io/docs/enterprise/namespaces/index.html">Consul Enterprise Namespaces</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_consul</span> <span class="k">as</span> <span class="nn">consul</span>
+
+<span class="n">production</span> <span class="o">=</span> <span class="n">consul</span><span class="o">.</span><span class="n">Namespace</span><span class="p">(</span><span class="s2">&quot;production&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Production namespace&quot;</span><span class="p">,</span>
+    <span class="n">meta</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;foo&quot;</span><span class="p">:</span> <span class="s2">&quot;bar&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Free form namespace description.</p></li>
+<li><p><strong>meta</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Specifies arbitrary KV metadata to associate with the
+namespace.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The namespace name.</p></li>
+<li><p><strong>policy_defaults</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of default policies that should be
+applied to all tokens created in this namespace.</p></li>
+<li><p><strong>role_defaults</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of default roles that should be applied
+to all tokens created in this namespace.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt id="pulumi_consul.Namespace.description">
+<code class="sig-name descname">description</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_consul.Namespace.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>Free form namespace description.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_consul.Namespace.meta">
+<code class="sig-name descname">meta</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_consul.Namespace.meta" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies arbitrary KV metadata to associate with the
+namespace.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_consul.Namespace.name">
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_consul.Namespace.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The namespace name.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_consul.Namespace.policy_defaults">
+<code class="sig-name descname">policy_defaults</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_consul.Namespace.policy_defaults" title="Permalink to this definition">¶</a></dt>
+<dd><p>The list of default policies that should be
+applied to all tokens created in this namespace.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_consul.Namespace.role_defaults">
+<code class="sig-name descname">role_defaults</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_consul.Namespace.role_defaults" title="Permalink to this definition">¶</a></dt>
+<dd><p>The list of default roles that should be applied
+to all tokens created in this namespace.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_consul.Namespace.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">meta</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy_defaults</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role_defaults</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.Namespace.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Namespace resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Free form namespace description.</p></li>
+<li><p><strong>meta</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Specifies arbitrary KV metadata to associate with the
+namespace.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The namespace name.</p></li>
+<li><p><strong>policy_defaults</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of default policies that should be
+applied to all tokens created in this namespace.</p></li>
+<li><p><strong>role_defaults</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of default roles that should be applied
+to all tokens created in this namespace.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_consul.Namespace.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.Namespace.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_consul.Namespace.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.Namespace.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_consul.NetworkArea">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_consul.</code><code class="sig-name descname">NetworkArea</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">datacenter</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peer_datacenter</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">retry_joins</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">token</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">use_tls</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.NetworkArea" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><p><strong>NOTE:</strong> This feature requires <a class="reference external" href="https://www.consul.io/docs/enterprise/index.html">Consul Enterprise</a>.</p>
+</div></blockquote>
+<p>The <code class="docutils literal notranslate"><span class="pre">.NetworkArea</span></code> resource manages a relationship between servers in two
+different Consul datacenters.</p>
+<p>Unlike Consul’s WAN feature, network areas use just the server RPC port for
+communication, and relationships can be made between independent pairs of
+datacenters, so not all servers need to be fully connected. This allows for
+complex topologies among Consul datacenters like hub/spoke and more general trees.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_consul</span> <span class="k">as</span> <span class="nn">consul</span>
+
+<span class="n">dc2</span> <span class="o">=</span> <span class="n">consul</span><span class="o">.</span><span class="n">NetworkArea</span><span class="p">(</span><span class="s2">&quot;dc2&quot;</span><span class="p">,</span>
+    <span class="n">peer_datacenter</span><span class="o">=</span><span class="s2">&quot;dc2&quot;</span><span class="p">,</span>
+    <span class="n">retry_joins</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;1.2.3.4&quot;</span><span class="p">],</span>
+    <span class="n">use_tls</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>datacenter</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The datacenter to use. This overrides the
+agent’s default datacenter and the datacenter in the provider setup.</p></li>
+<li><p><strong>peer_datacenter</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Consul datacenter that will be
+joined to form the area.</p></li>
+<li><p><strong>retry_joins</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Specifies a list of Consul servers to attempt to
+join. Servers can be given as <code class="docutils literal notranslate"><span class="pre">IP</span></code>, <code class="docutils literal notranslate"><span class="pre">IP:port</span></code>, <code class="docutils literal notranslate"><span class="pre">hostname</span></code>, or <code class="docutils literal notranslate"><span class="pre">hostname:port</span></code>.</p></li>
+<li><p><strong>token</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ACL token to use. This overrides the
+token that the agent provides by default.</p></li>
+<li><p><strong>use_tls</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether gossip over this area should be
+encrypted with TLS if possible. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt id="pulumi_consul.NetworkArea.datacenter">
+<code class="sig-name descname">datacenter</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_consul.NetworkArea.datacenter" title="Permalink to this definition">¶</a></dt>
+<dd><p>The datacenter to use. This overrides the
+agent’s default datacenter and the datacenter in the provider setup.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_consul.NetworkArea.peer_datacenter">
+<code class="sig-name descname">peer_datacenter</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_consul.NetworkArea.peer_datacenter" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the Consul datacenter that will be
+joined to form the area.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_consul.NetworkArea.retry_joins">
+<code class="sig-name descname">retry_joins</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_consul.NetworkArea.retry_joins" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies a list of Consul servers to attempt to
+join. Servers can be given as <code class="docutils literal notranslate"><span class="pre">IP</span></code>, <code class="docutils literal notranslate"><span class="pre">IP:port</span></code>, <code class="docutils literal notranslate"><span class="pre">hostname</span></code>, or <code class="docutils literal notranslate"><span class="pre">hostname:port</span></code>.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_consul.NetworkArea.token">
+<code class="sig-name descname">token</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_consul.NetworkArea.token" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ACL token to use. This overrides the
+token that the agent provides by default.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_consul.NetworkArea.use_tls">
+<code class="sig-name descname">use_tls</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_consul.NetworkArea.use_tls" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies whether gossip over this area should be
+encrypted with TLS if possible. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_consul.NetworkArea.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">datacenter</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peer_datacenter</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">retry_joins</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">token</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">use_tls</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.NetworkArea.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing NetworkArea resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>datacenter</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The datacenter to use. This overrides the
+agent’s default datacenter and the datacenter in the provider setup.</p></li>
+<li><p><strong>peer_datacenter</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Consul datacenter that will be
+joined to form the area.</p></li>
+<li><p><strong>retry_joins</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Specifies a list of Consul servers to attempt to
+join. Servers can be given as <code class="docutils literal notranslate"><span class="pre">IP</span></code>, <code class="docutils literal notranslate"><span class="pre">IP:port</span></code>, <code class="docutils literal notranslate"><span class="pre">hostname</span></code>, or <code class="docutils literal notranslate"><span class="pre">hostname:port</span></code>.</p></li>
+<li><p><strong>token</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ACL token to use. This overrides the
+token that the agent provides by default.</p></li>
+<li><p><strong>use_tls</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether gossip over this area should be
+encrypted with TLS if possible. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_consul.NetworkArea.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.NetworkArea.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_consul.NetworkArea.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.NetworkArea.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_consul.Node">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_consul.</code><code class="sig-name descname">Node</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">datacenter</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">meta</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">token</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.Node" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides access to Node data in Consul. This can be used to define a
@@ -2583,7 +3086,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_consul.PreparedQuery">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_consul.</code><code class="sig-name descname">PreparedQuery</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">connect</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">datacenter</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dns</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">failover</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">near</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">only_passing</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">session</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">stored_token</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">template</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">token</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.PreparedQuery" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_consul.</code><code class="sig-name descname">PreparedQuery</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">connect</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">datacenter</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dns</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">failover</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ignore_check_ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">near</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">node_meta</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">only_passing</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_meta</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">session</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">stored_token</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">template</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">token</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.PreparedQuery" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a PreparedQuery resource with the given unique name, props, and options.
 :param str resource_name: The name of the resource.
 :param pulumi.ResourceOptions opts: Options for the resource.
@@ -2600,6 +3103,12 @@ agent’s default datacenter and the datacenter in the provider setup.</p></li>
 <li><p><strong>dns</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Settings for controlling the DNS response details.</p></li>
 <li><p><strong>failover</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Options for controlling behavior when no healthy
 nodes are available in the local DC.</p></li>
+<li><p><strong>ignore_check_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Specifies a list of check IDs that should be
+ignored when filtering unhealthy instances. This is mostly useful in an
+emergency or as a temporary measure when a health check is found to be
+unreliable. Being able to ignore it in centrally-defined queries can be
+simpler than de-registering the check as an interim solution until the check
+can be fixed.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the prepared query. Used to identify
 the prepared query during requests. Can be specified as an empty string
 to configure the query as a catch-all.</p></li>
@@ -2607,9 +3116,15 @@ to configure the query as a catch-all.</p></li>
 near using Consul’s distance sorting and network coordinates. The magic
 <code class="docutils literal notranslate"><span class="pre">_agent</span></code> value can be used to always sort nearest the node servicing the
 request.</p></li>
+<li><p><strong>node_meta</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Specifies a list of user-defined key/value pairs that
+will be used for filtering the query results to nodes with the given metadata
+values present.</p></li>
 <li><p><strong>only_passing</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – When <code class="docutils literal notranslate"><span class="pre">true</span></code>, the prepared query will only
 return nodes with passing health checks in the result.</p></li>
 <li><p><strong>service</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the service to query.</p></li>
+<li><p><strong>service_meta</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Specifies a list of user-defined key/value pairs
+that will be used for filtering the query results to services with the given
+metadata values present.</p></li>
 <li><p><strong>session</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Consul session to tie this query’s
 lifetime to.  This is an advanced parameter that should not be used without a
 complete understanding of Consul sessions and the implications of their use
@@ -2681,6 +3196,17 @@ sorted in ascending order of estimated RTT.</p></li>
 </dd></dl>
 
 <dl class="py attribute">
+<dt id="pulumi_consul.PreparedQuery.ignore_check_ids">
+<code class="sig-name descname">ignore_check_ids</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_consul.PreparedQuery.ignore_check_ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies a list of check IDs that should be
+ignored when filtering unhealthy instances. This is mostly useful in an
+emergency or as a temporary measure when a health check is found to be
+unreliable. Being able to ignore it in centrally-defined queries can be
+simpler than de-registering the check as an interim solution until the check
+can be fixed.</p>
+</dd></dl>
+
+<dl class="py attribute">
 <dt id="pulumi_consul.PreparedQuery.name">
 <code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_consul.PreparedQuery.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the prepared query. Used to identify
@@ -2698,6 +3224,14 @@ request.</p>
 </dd></dl>
 
 <dl class="py attribute">
+<dt id="pulumi_consul.PreparedQuery.node_meta">
+<code class="sig-name descname">node_meta</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_consul.PreparedQuery.node_meta" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies a list of user-defined key/value pairs that
+will be used for filtering the query results to nodes with the given metadata
+values present.</p>
+</dd></dl>
+
+<dl class="py attribute">
 <dt id="pulumi_consul.PreparedQuery.only_passing">
 <code class="sig-name descname">only_passing</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_consul.PreparedQuery.only_passing" title="Permalink to this definition">¶</a></dt>
 <dd><p>When <code class="docutils literal notranslate"><span class="pre">true</span></code>, the prepared query will only
@@ -2708,6 +3242,14 @@ return nodes with passing health checks in the result.</p>
 <dt id="pulumi_consul.PreparedQuery.service">
 <code class="sig-name descname">service</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_consul.PreparedQuery.service" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the service to query.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_consul.PreparedQuery.service_meta">
+<code class="sig-name descname">service_meta</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_consul.PreparedQuery.service_meta" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies a list of user-defined key/value pairs
+that will be used for filtering the query results to services with the given
+metadata values present.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -2757,7 +3299,7 @@ This overrides the token that the agent provides by default.</p>
 
 <dl class="py method">
 <dt id="pulumi_consul.PreparedQuery.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">connect</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">datacenter</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dns</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">failover</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">near</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">only_passing</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">session</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">stored_token</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">template</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">token</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.PreparedQuery.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">connect</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">datacenter</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dns</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">failover</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ignore_check_ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">near</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">node_meta</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">only_passing</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_meta</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">session</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">stored_token</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">template</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">token</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.PreparedQuery.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing PreparedQuery resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -2774,6 +3316,12 @@ agent’s default datacenter and the datacenter in the provider setup.</p></li>
 <li><p><strong>dns</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Settings for controlling the DNS response details.</p></li>
 <li><p><strong>failover</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Options for controlling behavior when no healthy
 nodes are available in the local DC.</p></li>
+<li><p><strong>ignore_check_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Specifies a list of check IDs that should be
+ignored when filtering unhealthy instances. This is mostly useful in an
+emergency or as a temporary measure when a health check is found to be
+unreliable. Being able to ignore it in centrally-defined queries can be
+simpler than de-registering the check as an interim solution until the check
+can be fixed.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the prepared query. Used to identify
 the prepared query during requests. Can be specified as an empty string
 to configure the query as a catch-all.</p></li>
@@ -2781,9 +3329,15 @@ to configure the query as a catch-all.</p></li>
 near using Consul’s distance sorting and network coordinates. The magic
 <code class="docutils literal notranslate"><span class="pre">_agent</span></code> value can be used to always sort nearest the node servicing the
 request.</p></li>
+<li><p><strong>node_meta</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Specifies a list of user-defined key/value pairs that
+will be used for filtering the query results to nodes with the given metadata
+values present.</p></li>
 <li><p><strong>only_passing</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – When <code class="docutils literal notranslate"><span class="pre">true</span></code>, the prepared query will only
 return nodes with passing health checks in the result.</p></li>
 <li><p><strong>service</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the service to query.</p></li>
+<li><p><strong>service_meta</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Specifies a list of user-defined key/value pairs
+that will be used for filtering the query results to services with the given
+metadata values present.</p></li>
 <li><p><strong>session</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Consul session to tie this query’s
 lifetime to.  This is an advanced parameter that should not be used without a
 complete understanding of Consul sessions and the implications of their use
@@ -3334,7 +3888,7 @@ default datacenter and the datacenter in the provider setup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">allowStale</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">datacenter</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">near</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">nodeMeta</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">node_meta</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">requireConsistent</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">token</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">waitIndex</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
@@ -3352,7 +3906,7 @@ default datacenter and the datacenter in the provider setup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">datacenter</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">namespace</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">near</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">nodeMeta</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">node_meta</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">requireConsistent</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">token</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">waitIndex</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
@@ -3370,7 +3924,7 @@ default datacenter and the datacenter in the provider setup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">datacenter</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">namespace</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">near</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">nodeMeta</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">node_meta</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">requireConsistent</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">token</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">waitIndex</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
@@ -3457,6 +4011,65 @@ or written to.</p></li>
 </dd></dl>
 
 <dl class="py function">
+<dt id="pulumi_consul.get_network_area_members">
+<code class="sig-prename descclassname">pulumi_consul.</code><code class="sig-name descname">get_network_area_members</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">datacenter</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">token</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">uuid</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.get_network_area_members" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><p><strong>NOTE:</strong> This feature requires <a class="reference external" href="https://www.consul.io/docs/enterprise/index.html">Consul Enterprise</a>.</p>
+</div></blockquote>
+<p>The <code class="docutils literal notranslate"><span class="pre">.getNetworkAreaMembers</span></code> data source provides a list of the Consul
+servers present in a specific network area.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_consul</span> <span class="k">as</span> <span class="nn">consul</span>
+
+<span class="n">dc2_network_area</span> <span class="o">=</span> <span class="n">consul</span><span class="o">.</span><span class="n">NetworkArea</span><span class="p">(</span><span class="s2">&quot;dc2NetworkArea&quot;</span><span class="p">,</span>
+    <span class="n">peer_datacenter</span><span class="o">=</span><span class="s2">&quot;dc2&quot;</span><span class="p">,</span>
+    <span class="n">retry_joins</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;1.2.3.4&quot;</span><span class="p">],</span>
+    <span class="n">use_tls</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">dc2_network_area_members</span> <span class="o">=</span> <span class="n">dc2_network_area</span><span class="o">.</span><span class="n">id</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="nb">id</span><span class="p">:</span> <span class="n">consul</span><span class="o">.</span><span class="n">get_network_area_members</span><span class="p">(</span><span class="n">uuid</span><span class="o">=</span><span class="nb">id</span><span class="p">))</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;members&quot;</span><span class="p">,</span> <span class="n">dc2_network_area_members</span><span class="o">.</span><span class="n">members</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>datacenter</strong> (<em>str</em>) – The datacenter to use. This overrides the
+agent’s default datacenter and the datacenter in the provider setup.</p></li>
+<li><p><strong>token</strong> (<em>str</em>) – The ACL token to use. This overrides the
+token that the agent provides by default.</p></li>
+<li><p><strong>uuid</strong> (<em>str</em>) – The UUID of the area to list.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pulumi_consul.get_network_segments">
+<code class="sig-prename descclassname">pulumi_consul.</code><code class="sig-name descname">get_network_segments</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">datacenter</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">token</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.get_network_segments" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><p><strong>NOTE:</strong> This feature requires <a class="reference external" href="https://www.consul.io/docs/enterprise/index.html">Consul Enterprise</a>.</p>
+</div></blockquote>
+<p>The <code class="docutils literal notranslate"><span class="pre">consul_network_segment</span></code> data source can be used to retrieve the network
+segments defined in the configuration.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_consul</span> <span class="k">as</span> <span class="nn">consul</span>
+
+<span class="n">segments_network_segments</span> <span class="o">=</span> <span class="n">consul</span><span class="o">.</span><span class="n">get_network_segments</span><span class="p">()</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;segments&quot;</span><span class="p">,</span> <span class="n">segments_network_segments</span><span class="o">.</span><span class="n">segments</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>datacenter</strong> (<em>str</em>) – The datacenter to use. This overrides the
+agent’s default datacenter and the datacenter in the provider setup.</p></li>
+<li><p><strong>token</strong> (<em>str</em>) – The ACL token to use. This overrides the
+token that the agent provides by default.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
 <dt id="pulumi_consul.get_nodes">
 <code class="sig-prename descclassname">pulumi_consul.</code><code class="sig-name descname">get_nodes</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">query_options</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.get_nodes" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">.getNodes</span></code> data source returns a list of Consul nodes that have
@@ -3477,7 +4090,7 @@ same value found in <code class="docutils literal notranslate"><span class="pre"
 empty, the <code class="docutils literal notranslate"><span class="pre">datacenter</span></code> value found in the Consul agent that this provider is
 configured to talk to then the datacenter in the provider setup.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">near</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">nodeMeta</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">node_meta</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">requireConsistent</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - When <code class="docutils literal notranslate"><span class="pre">true</span></code> force the client to perform a
 read on at least quorum servers and verify the result is the same.  Defaults
 to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
@@ -3524,7 +4137,7 @@ empty, the <code class="docutils literal notranslate"><span class="pre">datacent
 configured to talk to.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">namespace</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The namespace to lookup the service.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">near</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">nodeMeta</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">node_meta</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">requireConsistent</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - When <code class="docutils literal notranslate"><span class="pre">true</span></code> force the client to perform a
 read on at least quorum servers and verify the result is the same.  Defaults
 to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
@@ -3588,7 +4201,7 @@ empty, the <code class="docutils literal notranslate"><span class="pre">datacent
 configured to talk to.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">namespace</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The namespace to lookup the services.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">near</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">nodeMeta</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">node_meta</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">requireConsistent</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - When <code class="docutils literal notranslate"><span class="pre">true</span></code> force the client to perform a
 read on at least quorum servers and verify the result is the same.  Defaults
 to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>

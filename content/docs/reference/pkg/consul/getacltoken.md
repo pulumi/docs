@@ -24,7 +24,25 @@ If you want to get the secret ID associated with a token, use the
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Consul = Pulumi.Consul;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var test = Output.Create(Consul.GetAclToken.InvokeAsync(new Consul.GetAclTokenArgs
+        {
+            AccessorId = "00000000-0000-0000-0000-000000000002",
+        }));
+        this.ConsulAclPolicies = test.Apply(test => test.Policies);
+    }
+
+    [Output("consulAclPolicies")]
+    public Output<string> ConsulAclPolicies { get; set; }
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -97,7 +115,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Accessor<wbr>Id</span>
+        <span id="accessorid_csharp">
+<a href="#accessorid_csharp" style="color: inherit; text-decoration: inherit;">Accessor<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -106,7 +126,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -115,7 +137,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Local</span>
+        <span id="local_csharp">
+<a href="#local_csharp" style="color: inherit; text-decoration: inherit;">Local</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -124,7 +148,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Namespace</span>
+        <span id="namespace_csharp">
+<a href="#namespace_csharp" style="color: inherit; text-decoration: inherit;">Namespace</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -133,7 +159,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Policies</span>
+        <span id="policies_csharp">
+<a href="#policies_csharp" style="color: inherit; text-decoration: inherit;">Policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getacltokenpolicy">List&lt;Get<wbr>Acl<wbr>Token<wbr>Policy<wbr>Args&gt;</a></span>
     </dt>
@@ -150,7 +178,9 @@ an `id` and a `name` attribute.
 
     <dt class="property-required"
             title="Required">
-        <span>Accessor<wbr>Id</span>
+        <span id="accessorid_go">
+<a href="#accessorid_go" style="color: inherit; text-decoration: inherit;">Accessor<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -159,7 +189,9 @@ an `id` and a `name` attribute.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -168,7 +200,9 @@ an `id` and a `name` attribute.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Local</span>
+        <span id="local_go">
+<a href="#local_go" style="color: inherit; text-decoration: inherit;">Local</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -177,7 +211,9 @@ an `id` and a `name` attribute.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Namespace</span>
+        <span id="namespace_go">
+<a href="#namespace_go" style="color: inherit; text-decoration: inherit;">Namespace</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -186,7 +222,9 @@ an `id` and a `name` attribute.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Policies</span>
+        <span id="policies_go">
+<a href="#policies_go" style="color: inherit; text-decoration: inherit;">Policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getacltokenpolicy">[]Get<wbr>Acl<wbr>Token<wbr>Policy</a></span>
     </dt>
@@ -203,7 +241,9 @@ an `id` and a `name` attribute.
 
     <dt class="property-required"
             title="Required">
-        <span>accessor<wbr>Id</span>
+        <span id="accessorid_nodejs">
+<a href="#accessorid_nodejs" style="color: inherit; text-decoration: inherit;">accessor<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -212,7 +252,9 @@ an `id` and a `name` attribute.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -221,7 +263,9 @@ an `id` and a `name` attribute.
 
     <dt class="property-optional"
             title="Optional">
-        <span>local</span>
+        <span id="local_nodejs">
+<a href="#local_nodejs" style="color: inherit; text-decoration: inherit;">local</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -230,7 +274,9 @@ an `id` and a `name` attribute.
 
     <dt class="property-optional"
             title="Optional">
-        <span>namespace</span>
+        <span id="namespace_nodejs">
+<a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -239,7 +285,9 @@ an `id` and a `name` attribute.
 
     <dt class="property-optional"
             title="Optional">
-        <span>policies</span>
+        <span id="policies_nodejs">
+<a href="#policies_nodejs" style="color: inherit; text-decoration: inherit;">policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getacltokenpolicy">Get<wbr>Acl<wbr>Token<wbr>Policy[]</a></span>
     </dt>
@@ -256,7 +304,9 @@ an `id` and a `name` attribute.
 
     <dt class="property-required"
             title="Required">
-        <span>accessor_<wbr>id</span>
+        <span id="accessor_id_python">
+<a href="#accessor_id_python" style="color: inherit; text-decoration: inherit;">accessor_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -265,7 +315,9 @@ an `id` and a `name` attribute.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -274,7 +326,9 @@ an `id` and a `name` attribute.
 
     <dt class="property-optional"
             title="Optional">
-        <span>local</span>
+        <span id="local_python">
+<a href="#local_python" style="color: inherit; text-decoration: inherit;">local</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -283,7 +337,9 @@ an `id` and a `name` attribute.
 
     <dt class="property-optional"
             title="Optional">
-        <span>namespace</span>
+        <span id="namespace_python">
+<a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -292,7 +348,9 @@ an `id` and a `name` attribute.
 
     <dt class="property-optional"
             title="Optional">
-        <span>policies</span>
+        <span id="policies_python">
+<a href="#policies_python" style="color: inherit; text-decoration: inherit;">policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getacltokenpolicy">List[Get<wbr>Acl<wbr>Token<wbr>Policy]</a></span>
     </dt>
@@ -322,7 +380,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Accessor<wbr>Id</span>
+        <span id="accessorid_csharp">
+<a href="#accessorid_csharp" style="color: inherit; text-decoration: inherit;">Accessor<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -330,7 +390,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -339,7 +401,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Description</span>
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -348,7 +412,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Local</span>
+        <span id="local_csharp">
+<a href="#local_csharp" style="color: inherit; text-decoration: inherit;">Local</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -357,7 +423,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Namespace</span>
+        <span id="namespace_csharp">
+<a href="#namespace_csharp" style="color: inherit; text-decoration: inherit;">Namespace</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -365,7 +433,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Policies</span>
+        <span id="policies_csharp">
+<a href="#policies_csharp" style="color: inherit; text-decoration: inherit;">Policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getacltokenpolicy">List&lt;Get<wbr>Acl<wbr>Token<wbr>Policy&gt;</a></span>
     </dt>
@@ -382,7 +452,9 @@ an `id` and a `name` attribute.
 
     <dt class="property-"
             title="">
-        <span>Accessor<wbr>Id</span>
+        <span id="accessorid_go">
+<a href="#accessorid_go" style="color: inherit; text-decoration: inherit;">Accessor<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -390,7 +462,9 @@ an `id` and a `name` attribute.
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -399,7 +473,9 @@ an `id` and a `name` attribute.
 
     <dt class="property-"
             title="">
-        <span>Description</span>
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -408,7 +484,9 @@ an `id` and a `name` attribute.
 
     <dt class="property-"
             title="">
-        <span>Local</span>
+        <span id="local_go">
+<a href="#local_go" style="color: inherit; text-decoration: inherit;">Local</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -417,7 +495,9 @@ an `id` and a `name` attribute.
 
     <dt class="property-"
             title="">
-        <span>Namespace</span>
+        <span id="namespace_go">
+<a href="#namespace_go" style="color: inherit; text-decoration: inherit;">Namespace</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -425,7 +505,9 @@ an `id` and a `name` attribute.
 
     <dt class="property-"
             title="">
-        <span>Policies</span>
+        <span id="policies_go">
+<a href="#policies_go" style="color: inherit; text-decoration: inherit;">Policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getacltokenpolicy">[]Get<wbr>Acl<wbr>Token<wbr>Policy</a></span>
     </dt>
@@ -442,7 +524,9 @@ an `id` and a `name` attribute.
 
     <dt class="property-"
             title="">
-        <span>accessor<wbr>Id</span>
+        <span id="accessorid_nodejs">
+<a href="#accessorid_nodejs" style="color: inherit; text-decoration: inherit;">accessor<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -450,7 +534,9 @@ an `id` and a `name` attribute.
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -459,7 +545,9 @@ an `id` and a `name` attribute.
 
     <dt class="property-"
             title="">
-        <span>description</span>
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -468,7 +556,9 @@ an `id` and a `name` attribute.
 
     <dt class="property-"
             title="">
-        <span>local</span>
+        <span id="local_nodejs">
+<a href="#local_nodejs" style="color: inherit; text-decoration: inherit;">local</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -477,7 +567,9 @@ an `id` and a `name` attribute.
 
     <dt class="property-"
             title="">
-        <span>namespace</span>
+        <span id="namespace_nodejs">
+<a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -485,7 +577,9 @@ an `id` and a `name` attribute.
 
     <dt class="property-"
             title="">
-        <span>policies</span>
+        <span id="policies_nodejs">
+<a href="#policies_nodejs" style="color: inherit; text-decoration: inherit;">policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getacltokenpolicy">Get<wbr>Acl<wbr>Token<wbr>Policy[]</a></span>
     </dt>
@@ -502,7 +596,9 @@ an `id` and a `name` attribute.
 
     <dt class="property-"
             title="">
-        <span>accessor_<wbr>id</span>
+        <span id="accessor_id_python">
+<a href="#accessor_id_python" style="color: inherit; text-decoration: inherit;">accessor_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -510,7 +606,9 @@ an `id` and a `name` attribute.
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -519,7 +617,9 @@ an `id` and a `name` attribute.
 
     <dt class="property-"
             title="">
-        <span>description</span>
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -528,7 +628,9 @@ an `id` and a `name` attribute.
 
     <dt class="property-"
             title="">
-        <span>local</span>
+        <span id="local_python">
+<a href="#local_python" style="color: inherit; text-decoration: inherit;">local</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -537,7 +639,9 @@ an `id` and a `name` attribute.
 
     <dt class="property-"
             title="">
-        <span>namespace</span>
+        <span id="namespace_python">
+<a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -545,7 +649,9 @@ an `id` and a `name` attribute.
 
     <dt class="property-"
             title="">
-        <span>policies</span>
+        <span id="policies_python">
+<a href="#policies_python" style="color: inherit; text-decoration: inherit;">policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getacltokenpolicy">List[Get<wbr>Acl<wbr>Token<wbr>Policy]</a></span>
     </dt>
@@ -586,7 +692,9 @@ an `id` and a `name` attribute.
 
     <dt class="property-required"
             title="Required">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -594,7 +702,9 @@ an `id` and a `name` attribute.
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -609,7 +719,9 @@ an `id` and a `name` attribute.
 
     <dt class="property-required"
             title="Required">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -617,7 +729,9 @@ an `id` and a `name` attribute.
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -632,7 +746,9 @@ an `id` and a `name` attribute.
 
     <dt class="property-required"
             title="Required">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -640,7 +756,9 @@ an `id` and a `name` attribute.
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -655,7 +773,9 @@ an `id` and a `name` attribute.
 
     <dt class="property-required"
             title="Required">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -663,7 +783,9 @@ an `id` and a `name` attribute.
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

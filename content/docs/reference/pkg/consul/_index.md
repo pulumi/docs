@@ -27,6 +27,9 @@ A Pulumi package for creating and managing consul resources.
     <li><a href="intention" title="Intention"><span class="symbol resource"></span>Intention</a></li>
     <li><a href="keyprefix" title="KeyPrefix"><span class="symbol resource"></span>KeyPrefix</a></li>
     <li><a href="keys" title="Keys"><span class="symbol resource"></span>Keys</a></li>
+    <li><a href="license" title="License"><span class="symbol resource"></span>License</a></li>
+    <li><a href="namespace" title="Namespace"><span class="symbol resource"></span>Namespace</a></li>
+    <li><a href="networkarea" title="NetworkArea"><span class="symbol resource"></span>NetworkArea</a></li>
     <li><a href="node" title="Node"><span class="symbol resource"></span>Node</a></li>
     <li><a href="preparedquery" title="PreparedQuery"><span class="symbol resource"></span>PreparedQuery</a></li>
     <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
@@ -48,6 +51,8 @@ A Pulumi package for creating and managing consul resources.
     <li><a href="getcatalogservices" title="GetCatalogServices"><span class="symbol function"></span>GetCatalogServices</a></li>
     <li><a href="getkeyprefix" title="GetKeyPrefix"><span class="symbol function"></span>GetKeyPrefix</a></li>
     <li><a href="getkeys" title="GetKeys"><span class="symbol function"></span>GetKeys</a></li>
+    <li><a href="getnetworkareamembers" title="GetNetworkAreaMembers"><span class="symbol function"></span>GetNetworkAreaMembers</a></li>
+    <li><a href="getnetworksegments" title="GetNetworkSegments"><span class="symbol function"></span>GetNetworkSegments</a></li>
     <li><a href="getnodes" title="GetNodes"><span class="symbol function"></span>GetNodes</a></li>
     <li><a href="getservice" title="GetService"><span class="symbol function"></span>GetService</a></li>
     <li><a href="getservicehealth" title="GetServiceHealth"><span class="symbol function"></span>GetServiceHealth</a></li>
@@ -63,7 +68,7 @@ A Pulumi package for creating and managing consul resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`consul` Terraform Provider](https://github.com/terraform-providers/terraform-provider-consul).</dd>
 	<dt>Version</dt>
-	<dd>2.1.1</dd>
+	<dd>2.2.0</dd>
 </dl>
 
 

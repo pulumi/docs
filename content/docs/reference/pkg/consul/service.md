@@ -26,7 +26,31 @@ not recommended to use this resource.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Consul = Pulumi.Consul;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var compute = new Consul.Node("compute", new Consul.NodeArgs
+        {
+            Address = "www.google.com",
+        });
+        var google = new Consul.Service("google", new Consul.ServiceArgs
+        {
+            Node = compute.Name,
+            Port = 80,
+            Tags = 
+            {
+                "tag0",
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -248,7 +272,9 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-required"
             title="Required">
-        <span>Node</span>
+        <span id="node_csharp">
+<a href="#node_csharp" style="color: inherit; text-decoration: inherit;">Node</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -257,7 +283,9 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Address</span>
+        <span id="address_csharp">
+<a href="#address_csharp" style="color: inherit; text-decoration: inherit;">Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -267,7 +295,9 @@ address of the node.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Checks</span>
+        <span id="checks_csharp">
+<a href="#checks_csharp" style="color: inherit; text-decoration: inherit;">Checks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicecheck">List&lt;Service<wbr>Check<wbr>Args&gt;</a></span>
     </dt>
@@ -275,7 +305,9 @@ address of the node.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Datacenter</span>
+        <span id="datacenter_csharp">
+<a href="#datacenter_csharp" style="color: inherit; text-decoration: inherit;">Datacenter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -285,7 +317,9 @@ agent's default datacenter and the datacenter in the provider setup.
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>External</span>
+        <span id="external_csharp">
+<a href="#external_csharp" style="color: inherit; text-decoration: inherit;">External</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -293,7 +327,9 @@ agent's default datacenter and the datacenter in the provider setup.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Meta</span>
+        <span id="meta_csharp">
+<a href="#meta_csharp" style="color: inherit; text-decoration: inherit;">Meta</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -303,7 +339,9 @@ instance.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -312,7 +350,9 @@ instance.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Namespace</span>
+        <span id="namespace_csharp">
+<a href="#namespace_csharp" style="color: inherit; text-decoration: inherit;">Namespace</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -321,7 +361,9 @@ instance.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Port</span>
+        <span id="port_csharp">
+<a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -330,7 +372,9 @@ instance.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Service<wbr>Id</span>
+        <span id="serviceid_csharp">
+<a href="#serviceid_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -340,7 +384,9 @@ of the `name` attribute.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -357,7 +403,9 @@ but can be used to distinguish between services or nodes.
 
     <dt class="property-required"
             title="Required">
-        <span>Node</span>
+        <span id="node_go">
+<a href="#node_go" style="color: inherit; text-decoration: inherit;">Node</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -366,7 +414,9 @@ but can be used to distinguish between services or nodes.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Address</span>
+        <span id="address_go">
+<a href="#address_go" style="color: inherit; text-decoration: inherit;">Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -376,7 +426,9 @@ address of the node.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Checks</span>
+        <span id="checks_go">
+<a href="#checks_go" style="color: inherit; text-decoration: inherit;">Checks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicecheck">[]Service<wbr>Check</a></span>
     </dt>
@@ -384,7 +436,9 @@ address of the node.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Datacenter</span>
+        <span id="datacenter_go">
+<a href="#datacenter_go" style="color: inherit; text-decoration: inherit;">Datacenter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -394,7 +448,9 @@ agent's default datacenter and the datacenter in the provider setup.
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>External</span>
+        <span id="external_go">
+<a href="#external_go" style="color: inherit; text-decoration: inherit;">External</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -402,7 +458,9 @@ agent's default datacenter and the datacenter in the provider setup.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Meta</span>
+        <span id="meta_go">
+<a href="#meta_go" style="color: inherit; text-decoration: inherit;">Meta</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -412,7 +470,9 @@ instance.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -421,7 +481,9 @@ instance.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Namespace</span>
+        <span id="namespace_go">
+<a href="#namespace_go" style="color: inherit; text-decoration: inherit;">Namespace</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -430,7 +492,9 @@ instance.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Port</span>
+        <span id="port_go">
+<a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -439,7 +503,9 @@ instance.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Service<wbr>Id</span>
+        <span id="serviceid_go">
+<a href="#serviceid_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -449,7 +515,9 @@ of the `name` attribute.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -466,7 +534,9 @@ but can be used to distinguish between services or nodes.
 
     <dt class="property-required"
             title="Required">
-        <span>node</span>
+        <span id="node_nodejs">
+<a href="#node_nodejs" style="color: inherit; text-decoration: inherit;">node</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -475,7 +545,9 @@ but can be used to distinguish between services or nodes.
 
     <dt class="property-optional"
             title="Optional">
-        <span>address</span>
+        <span id="address_nodejs">
+<a href="#address_nodejs" style="color: inherit; text-decoration: inherit;">address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -485,7 +557,9 @@ address of the node.
 
     <dt class="property-optional"
             title="Optional">
-        <span>checks</span>
+        <span id="checks_nodejs">
+<a href="#checks_nodejs" style="color: inherit; text-decoration: inherit;">checks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicecheck">Service<wbr>Check[]</a></span>
     </dt>
@@ -493,7 +567,9 @@ address of the node.
 
     <dt class="property-optional"
             title="Optional">
-        <span>datacenter</span>
+        <span id="datacenter_nodejs">
+<a href="#datacenter_nodejs" style="color: inherit; text-decoration: inherit;">datacenter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -503,7 +579,9 @@ agent's default datacenter and the datacenter in the provider setup.
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>external</span>
+        <span id="external_nodejs">
+<a href="#external_nodejs" style="color: inherit; text-decoration: inherit;">external</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -511,7 +589,9 @@ agent's default datacenter and the datacenter in the provider setup.
 
     <dt class="property-optional"
             title="Optional">
-        <span>meta</span>
+        <span id="meta_nodejs">
+<a href="#meta_nodejs" style="color: inherit; text-decoration: inherit;">meta</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -521,7 +601,9 @@ instance.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -530,7 +612,9 @@ instance.
 
     <dt class="property-optional"
             title="Optional">
-        <span>namespace</span>
+        <span id="namespace_nodejs">
+<a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -539,7 +623,9 @@ instance.
 
     <dt class="property-optional"
             title="Optional">
-        <span>port</span>
+        <span id="port_nodejs">
+<a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -548,7 +634,9 @@ instance.
 
     <dt class="property-optional"
             title="Optional">
-        <span>service<wbr>Id</span>
+        <span id="serviceid_nodejs">
+<a href="#serviceid_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -558,7 +646,9 @@ of the `name` attribute.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -575,7 +665,9 @@ but can be used to distinguish between services or nodes.
 
     <dt class="property-required"
             title="Required">
-        <span>node</span>
+        <span id="node_python">
+<a href="#node_python" style="color: inherit; text-decoration: inherit;">node</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -584,7 +676,9 @@ but can be used to distinguish between services or nodes.
 
     <dt class="property-optional"
             title="Optional">
-        <span>address</span>
+        <span id="address_python">
+<a href="#address_python" style="color: inherit; text-decoration: inherit;">address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -594,7 +688,9 @@ address of the node.
 
     <dt class="property-optional"
             title="Optional">
-        <span>checks</span>
+        <span id="checks_python">
+<a href="#checks_python" style="color: inherit; text-decoration: inherit;">checks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicecheck">List[Service<wbr>Check]</a></span>
     </dt>
@@ -602,7 +698,9 @@ address of the node.
 
     <dt class="property-optional"
             title="Optional">
-        <span>datacenter</span>
+        <span id="datacenter_python">
+<a href="#datacenter_python" style="color: inherit; text-decoration: inherit;">datacenter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -612,7 +710,9 @@ agent's default datacenter and the datacenter in the provider setup.
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>external</span>
+        <span id="external_python">
+<a href="#external_python" style="color: inherit; text-decoration: inherit;">external</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -620,7 +720,9 @@ agent's default datacenter and the datacenter in the provider setup.
 
     <dt class="property-optional"
             title="Optional">
-        <span>meta</span>
+        <span id="meta_python">
+<a href="#meta_python" style="color: inherit; text-decoration: inherit;">meta</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -630,7 +732,9 @@ instance.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -639,7 +743,9 @@ instance.
 
     <dt class="property-optional"
             title="Optional">
-        <span>namespace</span>
+        <span id="namespace_python">
+<a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -648,7 +754,9 @@ instance.
 
     <dt class="property-optional"
             title="Optional">
-        <span>port</span>
+        <span id="port_python">
+<a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -657,7 +765,9 @@ instance.
 
     <dt class="property-optional"
             title="Optional">
-        <span>service_<wbr>id</span>
+        <span id="service_id_python">
+<a href="#service_id_python" style="color: inherit; text-decoration: inherit;">service_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -667,7 +777,9 @@ of the `name` attribute.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -695,7 +807,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -710,7 +824,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -725,7 +841,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -740,7 +858,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -881,7 +1001,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Address</span>
+        <span id="state_address_csharp">
+<a href="#state_address_csharp" style="color: inherit; text-decoration: inherit;">Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -891,7 +1013,9 @@ address of the node.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Checks</span>
+        <span id="state_checks_csharp">
+<a href="#state_checks_csharp" style="color: inherit; text-decoration: inherit;">Checks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicecheck">List&lt;Service<wbr>Check<wbr>Args&gt;</a></span>
     </dt>
@@ -899,7 +1023,9 @@ address of the node.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Datacenter</span>
+        <span id="state_datacenter_csharp">
+<a href="#state_datacenter_csharp" style="color: inherit; text-decoration: inherit;">Datacenter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -909,7 +1035,9 @@ agent's default datacenter and the datacenter in the provider setup.
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>External</span>
+        <span id="state_external_csharp">
+<a href="#state_external_csharp" style="color: inherit; text-decoration: inherit;">External</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -917,7 +1045,9 @@ agent's default datacenter and the datacenter in the provider setup.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Meta</span>
+        <span id="state_meta_csharp">
+<a href="#state_meta_csharp" style="color: inherit; text-decoration: inherit;">Meta</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -927,7 +1057,9 @@ instance.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -936,7 +1068,9 @@ instance.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Namespace</span>
+        <span id="state_namespace_csharp">
+<a href="#state_namespace_csharp" style="color: inherit; text-decoration: inherit;">Namespace</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -945,7 +1079,9 @@ instance.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Node</span>
+        <span id="state_node_csharp">
+<a href="#state_node_csharp" style="color: inherit; text-decoration: inherit;">Node</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -954,7 +1090,9 @@ instance.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Port</span>
+        <span id="state_port_csharp">
+<a href="#state_port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -963,7 +1101,9 @@ instance.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Service<wbr>Id</span>
+        <span id="state_serviceid_csharp">
+<a href="#state_serviceid_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -973,7 +1113,9 @@ of the `name` attribute.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_csharp">
+<a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -990,7 +1132,9 @@ but can be used to distinguish between services or nodes.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Address</span>
+        <span id="state_address_go">
+<a href="#state_address_go" style="color: inherit; text-decoration: inherit;">Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1000,7 +1144,9 @@ address of the node.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Checks</span>
+        <span id="state_checks_go">
+<a href="#state_checks_go" style="color: inherit; text-decoration: inherit;">Checks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicecheck">[]Service<wbr>Check</a></span>
     </dt>
@@ -1008,7 +1154,9 @@ address of the node.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Datacenter</span>
+        <span id="state_datacenter_go">
+<a href="#state_datacenter_go" style="color: inherit; text-decoration: inherit;">Datacenter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1018,7 +1166,9 @@ agent's default datacenter and the datacenter in the provider setup.
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>External</span>
+        <span id="state_external_go">
+<a href="#state_external_go" style="color: inherit; text-decoration: inherit;">External</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1026,7 +1176,9 @@ agent's default datacenter and the datacenter in the provider setup.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Meta</span>
+        <span id="state_meta_go">
+<a href="#state_meta_go" style="color: inherit; text-decoration: inherit;">Meta</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -1036,7 +1188,9 @@ instance.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1045,7 +1199,9 @@ instance.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Namespace</span>
+        <span id="state_namespace_go">
+<a href="#state_namespace_go" style="color: inherit; text-decoration: inherit;">Namespace</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1054,7 +1210,9 @@ instance.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Node</span>
+        <span id="state_node_go">
+<a href="#state_node_go" style="color: inherit; text-decoration: inherit;">Node</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1063,7 +1221,9 @@ instance.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Port</span>
+        <span id="state_port_go">
+<a href="#state_port_go" style="color: inherit; text-decoration: inherit;">Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1072,7 +1232,9 @@ instance.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Service<wbr>Id</span>
+        <span id="state_serviceid_go">
+<a href="#state_serviceid_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1082,7 +1244,9 @@ of the `name` attribute.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_go">
+<a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1099,7 +1263,9 @@ but can be used to distinguish between services or nodes.
 
     <dt class="property-optional"
             title="Optional">
-        <span>address</span>
+        <span id="state_address_nodejs">
+<a href="#state_address_nodejs" style="color: inherit; text-decoration: inherit;">address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1109,7 +1275,9 @@ address of the node.
 
     <dt class="property-optional"
             title="Optional">
-        <span>checks</span>
+        <span id="state_checks_nodejs">
+<a href="#state_checks_nodejs" style="color: inherit; text-decoration: inherit;">checks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicecheck">Service<wbr>Check[]</a></span>
     </dt>
@@ -1117,7 +1285,9 @@ address of the node.
 
     <dt class="property-optional"
             title="Optional">
-        <span>datacenter</span>
+        <span id="state_datacenter_nodejs">
+<a href="#state_datacenter_nodejs" style="color: inherit; text-decoration: inherit;">datacenter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1127,7 +1297,9 @@ agent's default datacenter and the datacenter in the provider setup.
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>external</span>
+        <span id="state_external_nodejs">
+<a href="#state_external_nodejs" style="color: inherit; text-decoration: inherit;">external</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1135,7 +1307,9 @@ agent's default datacenter and the datacenter in the provider setup.
 
     <dt class="property-optional"
             title="Optional">
-        <span>meta</span>
+        <span id="state_meta_nodejs">
+<a href="#state_meta_nodejs" style="color: inherit; text-decoration: inherit;">meta</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -1145,7 +1319,9 @@ instance.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1154,7 +1330,9 @@ instance.
 
     <dt class="property-optional"
             title="Optional">
-        <span>namespace</span>
+        <span id="state_namespace_nodejs">
+<a href="#state_namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1163,7 +1341,9 @@ instance.
 
     <dt class="property-optional"
             title="Optional">
-        <span>node</span>
+        <span id="state_node_nodejs">
+<a href="#state_node_nodejs" style="color: inherit; text-decoration: inherit;">node</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1172,7 +1352,9 @@ instance.
 
     <dt class="property-optional"
             title="Optional">
-        <span>port</span>
+        <span id="state_port_nodejs">
+<a href="#state_port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1181,7 +1363,9 @@ instance.
 
     <dt class="property-optional"
             title="Optional">
-        <span>service<wbr>Id</span>
+        <span id="state_serviceid_nodejs">
+<a href="#state_serviceid_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1191,7 +1375,9 @@ of the `name` attribute.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_nodejs">
+<a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1208,7 +1394,9 @@ but can be used to distinguish between services or nodes.
 
     <dt class="property-optional"
             title="Optional">
-        <span>address</span>
+        <span id="state_address_python">
+<a href="#state_address_python" style="color: inherit; text-decoration: inherit;">address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1218,7 +1406,9 @@ address of the node.
 
     <dt class="property-optional"
             title="Optional">
-        <span>checks</span>
+        <span id="state_checks_python">
+<a href="#state_checks_python" style="color: inherit; text-decoration: inherit;">checks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicecheck">List[Service<wbr>Check]</a></span>
     </dt>
@@ -1226,7 +1416,9 @@ address of the node.
 
     <dt class="property-optional"
             title="Optional">
-        <span>datacenter</span>
+        <span id="state_datacenter_python">
+<a href="#state_datacenter_python" style="color: inherit; text-decoration: inherit;">datacenter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1236,7 +1428,9 @@ agent's default datacenter and the datacenter in the provider setup.
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>external</span>
+        <span id="state_external_python">
+<a href="#state_external_python" style="color: inherit; text-decoration: inherit;">external</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1244,7 +1438,9 @@ agent's default datacenter and the datacenter in the provider setup.
 
     <dt class="property-optional"
             title="Optional">
-        <span>meta</span>
+        <span id="state_meta_python">
+<a href="#state_meta_python" style="color: inherit; text-decoration: inherit;">meta</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -1254,7 +1450,9 @@ instance.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1263,7 +1461,9 @@ instance.
 
     <dt class="property-optional"
             title="Optional">
-        <span>namespace</span>
+        <span id="state_namespace_python">
+<a href="#state_namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1272,7 +1472,9 @@ instance.
 
     <dt class="property-optional"
             title="Optional">
-        <span>node</span>
+        <span id="state_node_python">
+<a href="#state_node_python" style="color: inherit; text-decoration: inherit;">node</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1281,7 +1483,9 @@ instance.
 
     <dt class="property-optional"
             title="Optional">
-        <span>port</span>
+        <span id="state_port_python">
+<a href="#state_port_python" style="color: inherit; text-decoration: inherit;">port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1290,7 +1494,9 @@ instance.
 
     <dt class="property-optional"
             title="Optional">
-        <span>service_<wbr>id</span>
+        <span id="state_service_id_python">
+<a href="#state_service_id_python" style="color: inherit; text-decoration: inherit;">service_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1300,7 +1506,9 @@ of the `name` attribute.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_python">
+<a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1343,7 +1551,9 @@ but can be used to distinguish between services or nodes.
 
     <dt class="property-required"
             title="Required">
-        <span>Check<wbr>Id</span>
+        <span id="checkid_csharp">
+<a href="#checkid_csharp" style="color: inherit; text-decoration: inherit;">Check<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1353,7 +1563,9 @@ if not set.
 
     <dt class="property-required"
             title="Required">
-        <span>Interval</span>
+        <span id="interval_csharp">
+<a href="#interval_csharp" style="color: inherit; text-decoration: inherit;">Interval</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1363,7 +1575,9 @@ invocation.
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1372,7 +1586,9 @@ invocation.
 
     <dt class="property-required"
             title="Required">
-        <span>Timeout</span>
+        <span id="timeout_csharp">
+<a href="#timeout_csharp" style="color: inherit; text-decoration: inherit;">Timeout</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1381,7 +1597,9 @@ invocation.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Deregister<wbr>Critical<wbr>Service<wbr>After</span>
+        <span id="deregistercriticalserviceafter_csharp">
+<a href="#deregistercriticalserviceafter_csharp" style="color: inherit; text-decoration: inherit;">Deregister<wbr>Critical<wbr>Service<wbr>After</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1392,7 +1610,9 @@ Defaults to `30s`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Headers</span>
+        <span id="headers_csharp">
+<a href="#headers_csharp" style="color: inherit; text-decoration: inherit;">Headers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicecheckheader">List&lt;Service<wbr>Check<wbr>Header<wbr>Args&gt;</a></span>
     </dt>
@@ -1402,7 +1622,9 @@ The attributes of each header is given below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Http</span>
+        <span id="http_csharp">
+<a href="#http_csharp" style="color: inherit; text-decoration: inherit;">Http</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1411,7 +1633,9 @@ The attributes of each header is given below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Method</span>
+        <span id="method_csharp">
+<a href="#method_csharp" style="color: inherit; text-decoration: inherit;">Method</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1421,7 +1645,9 @@ to `GET`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Notes</span>
+        <span id="notes_csharp">
+<a href="#notes_csharp" style="color: inherit; text-decoration: inherit;">Notes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1430,7 +1656,9 @@ to `GET`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Status</span>
+        <span id="status_csharp">
+<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1439,7 +1667,9 @@ to `GET`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tcp</span>
+        <span id="tcp_csharp">
+<a href="#tcp_csharp" style="color: inherit; text-decoration: inherit;">Tcp</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1448,7 +1678,9 @@ to `GET`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tls<wbr>Skip<wbr>Verify</span>
+        <span id="tlsskipverify_csharp">
+<a href="#tlsskipverify_csharp" style="color: inherit; text-decoration: inherit;">Tls<wbr>Skip<wbr>Verify</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1465,7 +1697,9 @@ verification for HTTP health-checks. Defaults to `false`.
 
     <dt class="property-required"
             title="Required">
-        <span>Check<wbr>Id</span>
+        <span id="checkid_go">
+<a href="#checkid_go" style="color: inherit; text-decoration: inherit;">Check<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1475,7 +1709,9 @@ if not set.
 
     <dt class="property-required"
             title="Required">
-        <span>Interval</span>
+        <span id="interval_go">
+<a href="#interval_go" style="color: inherit; text-decoration: inherit;">Interval</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1485,7 +1721,9 @@ invocation.
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1494,7 +1732,9 @@ invocation.
 
     <dt class="property-required"
             title="Required">
-        <span>Timeout</span>
+        <span id="timeout_go">
+<a href="#timeout_go" style="color: inherit; text-decoration: inherit;">Timeout</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1503,7 +1743,9 @@ invocation.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Deregister<wbr>Critical<wbr>Service<wbr>After</span>
+        <span id="deregistercriticalserviceafter_go">
+<a href="#deregistercriticalserviceafter_go" style="color: inherit; text-decoration: inherit;">Deregister<wbr>Critical<wbr>Service<wbr>After</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1514,7 +1756,9 @@ Defaults to `30s`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Headers</span>
+        <span id="headers_go">
+<a href="#headers_go" style="color: inherit; text-decoration: inherit;">Headers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicecheckheader">[]Service<wbr>Check<wbr>Header</a></span>
     </dt>
@@ -1524,7 +1768,9 @@ The attributes of each header is given below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Http</span>
+        <span id="http_go">
+<a href="#http_go" style="color: inherit; text-decoration: inherit;">Http</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1533,7 +1779,9 @@ The attributes of each header is given below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Method</span>
+        <span id="method_go">
+<a href="#method_go" style="color: inherit; text-decoration: inherit;">Method</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1543,7 +1791,9 @@ to `GET`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Notes</span>
+        <span id="notes_go">
+<a href="#notes_go" style="color: inherit; text-decoration: inherit;">Notes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1552,7 +1802,9 @@ to `GET`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Status</span>
+        <span id="status_go">
+<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1561,7 +1813,9 @@ to `GET`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tcp</span>
+        <span id="tcp_go">
+<a href="#tcp_go" style="color: inherit; text-decoration: inherit;">Tcp</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1570,7 +1824,9 @@ to `GET`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tls<wbr>Skip<wbr>Verify</span>
+        <span id="tlsskipverify_go">
+<a href="#tlsskipverify_go" style="color: inherit; text-decoration: inherit;">Tls<wbr>Skip<wbr>Verify</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1587,7 +1843,9 @@ verification for HTTP health-checks. Defaults to `false`.
 
     <dt class="property-required"
             title="Required">
-        <span>check<wbr>Id</span>
+        <span id="checkid_nodejs">
+<a href="#checkid_nodejs" style="color: inherit; text-decoration: inherit;">check<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1597,7 +1855,9 @@ if not set.
 
     <dt class="property-required"
             title="Required">
-        <span>interval</span>
+        <span id="interval_nodejs">
+<a href="#interval_nodejs" style="color: inherit; text-decoration: inherit;">interval</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1607,7 +1867,9 @@ invocation.
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1616,7 +1878,9 @@ invocation.
 
     <dt class="property-required"
             title="Required">
-        <span>timeout</span>
+        <span id="timeout_nodejs">
+<a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1625,7 +1889,9 @@ invocation.
 
     <dt class="property-optional"
             title="Optional">
-        <span>deregister<wbr>Critical<wbr>Service<wbr>After</span>
+        <span id="deregistercriticalserviceafter_nodejs">
+<a href="#deregistercriticalserviceafter_nodejs" style="color: inherit; text-decoration: inherit;">deregister<wbr>Critical<wbr>Service<wbr>After</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1636,7 +1902,9 @@ Defaults to `30s`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>headers</span>
+        <span id="headers_nodejs">
+<a href="#headers_nodejs" style="color: inherit; text-decoration: inherit;">headers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicecheckheader">Service<wbr>Check<wbr>Header[]</a></span>
     </dt>
@@ -1646,7 +1914,9 @@ The attributes of each header is given below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>http</span>
+        <span id="http_nodejs">
+<a href="#http_nodejs" style="color: inherit; text-decoration: inherit;">http</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1655,7 +1925,9 @@ The attributes of each header is given below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>method</span>
+        <span id="method_nodejs">
+<a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1665,7 +1937,9 @@ to `GET`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>notes</span>
+        <span id="notes_nodejs">
+<a href="#notes_nodejs" style="color: inherit; text-decoration: inherit;">notes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1674,7 +1948,9 @@ to `GET`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>status</span>
+        <span id="status_nodejs">
+<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1683,7 +1959,9 @@ to `GET`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tcp</span>
+        <span id="tcp_nodejs">
+<a href="#tcp_nodejs" style="color: inherit; text-decoration: inherit;">tcp</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1692,7 +1970,9 @@ to `GET`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tls<wbr>Skip<wbr>Verify</span>
+        <span id="tlsskipverify_nodejs">
+<a href="#tlsskipverify_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Skip<wbr>Verify</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1709,7 +1989,9 @@ verification for HTTP health-checks. Defaults to `false`.
 
     <dt class="property-required"
             title="Required">
-        <span>check<wbr>Id</span>
+        <span id="checkid_python">
+<a href="#checkid_python" style="color: inherit; text-decoration: inherit;">check<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1719,7 +2001,9 @@ if not set.
 
     <dt class="property-required"
             title="Required">
-        <span>interval</span>
+        <span id="interval_python">
+<a href="#interval_python" style="color: inherit; text-decoration: inherit;">interval</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1729,7 +2013,9 @@ invocation.
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1738,7 +2024,9 @@ invocation.
 
     <dt class="property-required"
             title="Required">
-        <span>timeout</span>
+        <span id="timeout_python">
+<a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1747,7 +2035,9 @@ invocation.
 
     <dt class="property-optional"
             title="Optional">
-        <span>deregister<wbr>Critical<wbr>Service<wbr>After</span>
+        <span id="deregistercriticalserviceafter_python">
+<a href="#deregistercriticalserviceafter_python" style="color: inherit; text-decoration: inherit;">deregister<wbr>Critical<wbr>Service<wbr>After</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1758,7 +2048,9 @@ Defaults to `30s`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>headers</span>
+        <span id="headers_python">
+<a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicecheckheader">List[Service<wbr>Check<wbr>Header]</a></span>
     </dt>
@@ -1768,7 +2060,9 @@ The attributes of each header is given below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>http</span>
+        <span id="http_python">
+<a href="#http_python" style="color: inherit; text-decoration: inherit;">http</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1777,7 +2071,9 @@ The attributes of each header is given below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>method</span>
+        <span id="method_python">
+<a href="#method_python" style="color: inherit; text-decoration: inherit;">method</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1787,7 +2083,9 @@ to `GET`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>notes</span>
+        <span id="notes_python">
+<a href="#notes_python" style="color: inherit; text-decoration: inherit;">notes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1796,7 +2094,9 @@ to `GET`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>status</span>
+        <span id="status_python">
+<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1805,7 +2105,9 @@ to `GET`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tcp</span>
+        <span id="tcp_python">
+<a href="#tcp_python" style="color: inherit; text-decoration: inherit;">tcp</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1814,7 +2116,9 @@ to `GET`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tls<wbr>Skip<wbr>Verify</span>
+        <span id="tlsskipverify_python">
+<a href="#tlsskipverify_python" style="color: inherit; text-decoration: inherit;">tls<wbr>Skip<wbr>Verify</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1849,7 +2153,9 @@ verification for HTTP health-checks. Defaults to `false`.
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1858,7 +2164,9 @@ verification for HTTP health-checks. Defaults to `false`.
 
     <dt class="property-required"
             title="Required">
-        <span>Values</span>
+        <span id="values_csharp">
+<a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1874,7 +2182,9 @@ verification for HTTP health-checks. Defaults to `false`.
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1883,7 +2193,9 @@ verification for HTTP health-checks. Defaults to `false`.
 
     <dt class="property-required"
             title="Required">
-        <span>Values</span>
+        <span id="values_go">
+<a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1899,7 +2211,9 @@ verification for HTTP health-checks. Defaults to `false`.
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1908,7 +2222,9 @@ verification for HTTP health-checks. Defaults to `false`.
 
     <dt class="property-required"
             title="Required">
-        <span>values</span>
+        <span id="values_nodejs">
+<a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1924,7 +2240,9 @@ verification for HTTP health-checks. Defaults to `false`.
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1933,7 +2251,9 @@ verification for HTTP health-checks. Defaults to `false`.
 
     <dt class="property-required"
             title="Required">
-        <span>values</span>
+        <span id="values_python">
+<a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>

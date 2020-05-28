@@ -24,7 +24,24 @@ cluster and stable server introduction.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Consul = Pulumi.Consul;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var config = new Consul.AutopilotConfig("config", new Consul.AutopilotConfigArgs
+        {
+            CleanupDeadServers = false,
+            LastContactThreshold = "1s",
+            MaxTrailingLogs = 500,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -242,7 +259,9 @@ The AutopilotConfig resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cleanup<wbr>Dead<wbr>Servers</span>
+        <span id="cleanupdeadservers_csharp">
+<a href="#cleanupdeadservers_csharp" style="color: inherit; text-decoration: inherit;">Cleanup<wbr>Dead<wbr>Servers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -252,7 +271,9 @@ replacement comes online. Defaults to true.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Datacenter</span>
+        <span id="datacenter_csharp">
+<a href="#datacenter_csharp" style="color: inherit; text-decoration: inherit;">Datacenter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -262,7 +283,9 @@ default datacenter and the datacenter in the provider setup.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Disable<wbr>Upgrade<wbr>Migration</span>
+        <span id="disableupgrademigration_csharp">
+<a href="#disableupgrademigration_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Upgrade<wbr>Migration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -272,7 +295,9 @@ Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Last<wbr>Contact<wbr>Threshold</span>
+        <span id="lastcontactthreshold_csharp">
+<a href="#lastcontactthreshold_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Contact<wbr>Threshold</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -282,7 +307,9 @@ considered as unhealthy and will be removed. Defaults to `"200ms"`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Trailing<wbr>Logs</span>
+        <span id="maxtrailinglogs_csharp">
+<a href="#maxtrailinglogs_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Trailing<wbr>Logs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -292,7 +319,9 @@ server can trail the leader. Defaults to 250.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Redundancy<wbr>Zone<wbr>Tag</span>
+        <span id="redundancyzonetag_csharp">
+<a href="#redundancyzonetag_csharp" style="color: inherit; text-decoration: inherit;">Redundancy<wbr>Zone<wbr>Tag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -303,7 +332,9 @@ of isolated failure domains. Defaults to an empty string.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Server<wbr>Stabilization<wbr>Time</span>
+        <span id="serverstabilizationtime_csharp">
+<a href="#serverstabilizationtime_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Stabilization<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -314,7 +345,9 @@ healthy and stable before being promoted to a full, voting member. Defaults to
 
     <dt class="property-optional"
             title="Optional">
-        <span>Upgrade<wbr>Version<wbr>Tag</span>
+        <span id="upgradeversiontag_csharp">
+<a href="#upgradeversiontag_csharp" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Version<wbr>Tag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -331,7 +364,9 @@ used during a migration. Defaults to an empty string.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cleanup<wbr>Dead<wbr>Servers</span>
+        <span id="cleanupdeadservers_go">
+<a href="#cleanupdeadservers_go" style="color: inherit; text-decoration: inherit;">Cleanup<wbr>Dead<wbr>Servers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -341,7 +376,9 @@ replacement comes online. Defaults to true.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Datacenter</span>
+        <span id="datacenter_go">
+<a href="#datacenter_go" style="color: inherit; text-decoration: inherit;">Datacenter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -351,7 +388,9 @@ default datacenter and the datacenter in the provider setup.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Disable<wbr>Upgrade<wbr>Migration</span>
+        <span id="disableupgrademigration_go">
+<a href="#disableupgrademigration_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Upgrade<wbr>Migration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -361,7 +400,9 @@ Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Last<wbr>Contact<wbr>Threshold</span>
+        <span id="lastcontactthreshold_go">
+<a href="#lastcontactthreshold_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Contact<wbr>Threshold</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -371,7 +412,9 @@ considered as unhealthy and will be removed. Defaults to `"200ms"`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Trailing<wbr>Logs</span>
+        <span id="maxtrailinglogs_go">
+<a href="#maxtrailinglogs_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Trailing<wbr>Logs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -381,7 +424,9 @@ server can trail the leader. Defaults to 250.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Redundancy<wbr>Zone<wbr>Tag</span>
+        <span id="redundancyzonetag_go">
+<a href="#redundancyzonetag_go" style="color: inherit; text-decoration: inherit;">Redundancy<wbr>Zone<wbr>Tag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -392,7 +437,9 @@ of isolated failure domains. Defaults to an empty string.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Server<wbr>Stabilization<wbr>Time</span>
+        <span id="serverstabilizationtime_go">
+<a href="#serverstabilizationtime_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Stabilization<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -403,7 +450,9 @@ healthy and stable before being promoted to a full, voting member. Defaults to
 
     <dt class="property-optional"
             title="Optional">
-        <span>Upgrade<wbr>Version<wbr>Tag</span>
+        <span id="upgradeversiontag_go">
+<a href="#upgradeversiontag_go" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Version<wbr>Tag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -420,7 +469,9 @@ used during a migration. Defaults to an empty string.
 
     <dt class="property-optional"
             title="Optional">
-        <span>cleanup<wbr>Dead<wbr>Servers</span>
+        <span id="cleanupdeadservers_nodejs">
+<a href="#cleanupdeadservers_nodejs" style="color: inherit; text-decoration: inherit;">cleanup<wbr>Dead<wbr>Servers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -430,7 +481,9 @@ replacement comes online. Defaults to true.
 
     <dt class="property-optional"
             title="Optional">
-        <span>datacenter</span>
+        <span id="datacenter_nodejs">
+<a href="#datacenter_nodejs" style="color: inherit; text-decoration: inherit;">datacenter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -440,7 +493,9 @@ default datacenter and the datacenter in the provider setup.
 
     <dt class="property-optional"
             title="Optional">
-        <span>disable<wbr>Upgrade<wbr>Migration</span>
+        <span id="disableupgrademigration_nodejs">
+<a href="#disableupgrademigration_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Upgrade<wbr>Migration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -450,7 +505,9 @@ Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>last<wbr>Contact<wbr>Threshold</span>
+        <span id="lastcontactthreshold_nodejs">
+<a href="#lastcontactthreshold_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Contact<wbr>Threshold</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -460,7 +517,9 @@ considered as unhealthy and will be removed. Defaults to `"200ms"`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Trailing<wbr>Logs</span>
+        <span id="maxtrailinglogs_nodejs">
+<a href="#maxtrailinglogs_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Trailing<wbr>Logs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -470,7 +529,9 @@ server can trail the leader. Defaults to 250.
 
     <dt class="property-optional"
             title="Optional">
-        <span>redundancy<wbr>Zone<wbr>Tag</span>
+        <span id="redundancyzonetag_nodejs">
+<a href="#redundancyzonetag_nodejs" style="color: inherit; text-decoration: inherit;">redundancy<wbr>Zone<wbr>Tag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -481,7 +542,9 @@ of isolated failure domains. Defaults to an empty string.
 
     <dt class="property-optional"
             title="Optional">
-        <span>server<wbr>Stabilization<wbr>Time</span>
+        <span id="serverstabilizationtime_nodejs">
+<a href="#serverstabilizationtime_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Stabilization<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -492,7 +555,9 @@ healthy and stable before being promoted to a full, voting member. Defaults to
 
     <dt class="property-optional"
             title="Optional">
-        <span>upgrade<wbr>Version<wbr>Tag</span>
+        <span id="upgradeversiontag_nodejs">
+<a href="#upgradeversiontag_nodejs" style="color: inherit; text-decoration: inherit;">upgrade<wbr>Version<wbr>Tag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -509,7 +574,9 @@ used during a migration. Defaults to an empty string.
 
     <dt class="property-optional"
             title="Optional">
-        <span>cleanup_<wbr>dead_<wbr>servers</span>
+        <span id="cleanup_dead_servers_python">
+<a href="#cleanup_dead_servers_python" style="color: inherit; text-decoration: inherit;">cleanup_<wbr>dead_<wbr>servers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -519,7 +586,9 @@ replacement comes online. Defaults to true.
 
     <dt class="property-optional"
             title="Optional">
-        <span>datacenter</span>
+        <span id="datacenter_python">
+<a href="#datacenter_python" style="color: inherit; text-decoration: inherit;">datacenter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -529,7 +598,9 @@ default datacenter and the datacenter in the provider setup.
 
     <dt class="property-optional"
             title="Optional">
-        <span>disable_<wbr>upgrade_<wbr>migration</span>
+        <span id="disable_upgrade_migration_python">
+<a href="#disable_upgrade_migration_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>upgrade_<wbr>migration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -539,7 +610,9 @@ Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>last_<wbr>contact_<wbr>threshold</span>
+        <span id="last_contact_threshold_python">
+<a href="#last_contact_threshold_python" style="color: inherit; text-decoration: inherit;">last_<wbr>contact_<wbr>threshold</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -549,7 +622,9 @@ considered as unhealthy and will be removed. Defaults to `"200ms"`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>max_<wbr>trailing_<wbr>logs</span>
+        <span id="max_trailing_logs_python">
+<a href="#max_trailing_logs_python" style="color: inherit; text-decoration: inherit;">max_<wbr>trailing_<wbr>logs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -559,7 +634,9 @@ server can trail the leader. Defaults to 250.
 
     <dt class="property-optional"
             title="Optional">
-        <span>redundancy_<wbr>zone_<wbr>tag</span>
+        <span id="redundancy_zone_tag_python">
+<a href="#redundancy_zone_tag_python" style="color: inherit; text-decoration: inherit;">redundancy_<wbr>zone_<wbr>tag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -570,7 +647,9 @@ of isolated failure domains. Defaults to an empty string.
 
     <dt class="property-optional"
             title="Optional">
-        <span>server_<wbr>stabilization_<wbr>time</span>
+        <span id="server_stabilization_time_python">
+<a href="#server_stabilization_time_python" style="color: inherit; text-decoration: inherit;">server_<wbr>stabilization_<wbr>time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -581,7 +660,9 @@ healthy and stable before being promoted to a full, voting member. Defaults to
 
     <dt class="property-optional"
             title="Optional">
-        <span>upgrade_<wbr>version_<wbr>tag</span>
+        <span id="upgrade_version_tag_python">
+<a href="#upgrade_version_tag_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>version_<wbr>tag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -609,7 +690,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -624,7 +707,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -639,7 +724,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -654,7 +741,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -795,7 +884,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cleanup<wbr>Dead<wbr>Servers</span>
+        <span id="state_cleanupdeadservers_csharp">
+<a href="#state_cleanupdeadservers_csharp" style="color: inherit; text-decoration: inherit;">Cleanup<wbr>Dead<wbr>Servers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -805,7 +896,9 @@ replacement comes online. Defaults to true.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Datacenter</span>
+        <span id="state_datacenter_csharp">
+<a href="#state_datacenter_csharp" style="color: inherit; text-decoration: inherit;">Datacenter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -815,7 +908,9 @@ default datacenter and the datacenter in the provider setup.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Disable<wbr>Upgrade<wbr>Migration</span>
+        <span id="state_disableupgrademigration_csharp">
+<a href="#state_disableupgrademigration_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Upgrade<wbr>Migration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -825,7 +920,9 @@ Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Last<wbr>Contact<wbr>Threshold</span>
+        <span id="state_lastcontactthreshold_csharp">
+<a href="#state_lastcontactthreshold_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Contact<wbr>Threshold</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -835,7 +932,9 @@ considered as unhealthy and will be removed. Defaults to `"200ms"`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Trailing<wbr>Logs</span>
+        <span id="state_maxtrailinglogs_csharp">
+<a href="#state_maxtrailinglogs_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Trailing<wbr>Logs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -845,7 +944,9 @@ server can trail the leader. Defaults to 250.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Redundancy<wbr>Zone<wbr>Tag</span>
+        <span id="state_redundancyzonetag_csharp">
+<a href="#state_redundancyzonetag_csharp" style="color: inherit; text-decoration: inherit;">Redundancy<wbr>Zone<wbr>Tag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -856,7 +957,9 @@ of isolated failure domains. Defaults to an empty string.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Server<wbr>Stabilization<wbr>Time</span>
+        <span id="state_serverstabilizationtime_csharp">
+<a href="#state_serverstabilizationtime_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Stabilization<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -867,7 +970,9 @@ healthy and stable before being promoted to a full, voting member. Defaults to
 
     <dt class="property-optional"
             title="Optional">
-        <span>Upgrade<wbr>Version<wbr>Tag</span>
+        <span id="state_upgradeversiontag_csharp">
+<a href="#state_upgradeversiontag_csharp" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Version<wbr>Tag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -884,7 +989,9 @@ used during a migration. Defaults to an empty string.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cleanup<wbr>Dead<wbr>Servers</span>
+        <span id="state_cleanupdeadservers_go">
+<a href="#state_cleanupdeadservers_go" style="color: inherit; text-decoration: inherit;">Cleanup<wbr>Dead<wbr>Servers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -894,7 +1001,9 @@ replacement comes online. Defaults to true.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Datacenter</span>
+        <span id="state_datacenter_go">
+<a href="#state_datacenter_go" style="color: inherit; text-decoration: inherit;">Datacenter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -904,7 +1013,9 @@ default datacenter and the datacenter in the provider setup.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Disable<wbr>Upgrade<wbr>Migration</span>
+        <span id="state_disableupgrademigration_go">
+<a href="#state_disableupgrademigration_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Upgrade<wbr>Migration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -914,7 +1025,9 @@ Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Last<wbr>Contact<wbr>Threshold</span>
+        <span id="state_lastcontactthreshold_go">
+<a href="#state_lastcontactthreshold_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Contact<wbr>Threshold</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -924,7 +1037,9 @@ considered as unhealthy and will be removed. Defaults to `"200ms"`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Trailing<wbr>Logs</span>
+        <span id="state_maxtrailinglogs_go">
+<a href="#state_maxtrailinglogs_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Trailing<wbr>Logs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -934,7 +1049,9 @@ server can trail the leader. Defaults to 250.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Redundancy<wbr>Zone<wbr>Tag</span>
+        <span id="state_redundancyzonetag_go">
+<a href="#state_redundancyzonetag_go" style="color: inherit; text-decoration: inherit;">Redundancy<wbr>Zone<wbr>Tag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -945,7 +1062,9 @@ of isolated failure domains. Defaults to an empty string.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Server<wbr>Stabilization<wbr>Time</span>
+        <span id="state_serverstabilizationtime_go">
+<a href="#state_serverstabilizationtime_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Stabilization<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -956,7 +1075,9 @@ healthy and stable before being promoted to a full, voting member. Defaults to
 
     <dt class="property-optional"
             title="Optional">
-        <span>Upgrade<wbr>Version<wbr>Tag</span>
+        <span id="state_upgradeversiontag_go">
+<a href="#state_upgradeversiontag_go" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Version<wbr>Tag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -973,7 +1094,9 @@ used during a migration. Defaults to an empty string.
 
     <dt class="property-optional"
             title="Optional">
-        <span>cleanup<wbr>Dead<wbr>Servers</span>
+        <span id="state_cleanupdeadservers_nodejs">
+<a href="#state_cleanupdeadservers_nodejs" style="color: inherit; text-decoration: inherit;">cleanup<wbr>Dead<wbr>Servers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -983,7 +1106,9 @@ replacement comes online. Defaults to true.
 
     <dt class="property-optional"
             title="Optional">
-        <span>datacenter</span>
+        <span id="state_datacenter_nodejs">
+<a href="#state_datacenter_nodejs" style="color: inherit; text-decoration: inherit;">datacenter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -993,7 +1118,9 @@ default datacenter and the datacenter in the provider setup.
 
     <dt class="property-optional"
             title="Optional">
-        <span>disable<wbr>Upgrade<wbr>Migration</span>
+        <span id="state_disableupgrademigration_nodejs">
+<a href="#state_disableupgrademigration_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Upgrade<wbr>Migration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1003,7 +1130,9 @@ Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>last<wbr>Contact<wbr>Threshold</span>
+        <span id="state_lastcontactthreshold_nodejs">
+<a href="#state_lastcontactthreshold_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Contact<wbr>Threshold</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1013,7 +1142,9 @@ considered as unhealthy and will be removed. Defaults to `"200ms"`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Trailing<wbr>Logs</span>
+        <span id="state_maxtrailinglogs_nodejs">
+<a href="#state_maxtrailinglogs_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Trailing<wbr>Logs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1023,7 +1154,9 @@ server can trail the leader. Defaults to 250.
 
     <dt class="property-optional"
             title="Optional">
-        <span>redundancy<wbr>Zone<wbr>Tag</span>
+        <span id="state_redundancyzonetag_nodejs">
+<a href="#state_redundancyzonetag_nodejs" style="color: inherit; text-decoration: inherit;">redundancy<wbr>Zone<wbr>Tag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1034,7 +1167,9 @@ of isolated failure domains. Defaults to an empty string.
 
     <dt class="property-optional"
             title="Optional">
-        <span>server<wbr>Stabilization<wbr>Time</span>
+        <span id="state_serverstabilizationtime_nodejs">
+<a href="#state_serverstabilizationtime_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Stabilization<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1045,7 +1180,9 @@ healthy and stable before being promoted to a full, voting member. Defaults to
 
     <dt class="property-optional"
             title="Optional">
-        <span>upgrade<wbr>Version<wbr>Tag</span>
+        <span id="state_upgradeversiontag_nodejs">
+<a href="#state_upgradeversiontag_nodejs" style="color: inherit; text-decoration: inherit;">upgrade<wbr>Version<wbr>Tag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1062,7 +1199,9 @@ used during a migration. Defaults to an empty string.
 
     <dt class="property-optional"
             title="Optional">
-        <span>cleanup_<wbr>dead_<wbr>servers</span>
+        <span id="state_cleanup_dead_servers_python">
+<a href="#state_cleanup_dead_servers_python" style="color: inherit; text-decoration: inherit;">cleanup_<wbr>dead_<wbr>servers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1072,7 +1211,9 @@ replacement comes online. Defaults to true.
 
     <dt class="property-optional"
             title="Optional">
-        <span>datacenter</span>
+        <span id="state_datacenter_python">
+<a href="#state_datacenter_python" style="color: inherit; text-decoration: inherit;">datacenter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1082,7 +1223,9 @@ default datacenter and the datacenter in the provider setup.
 
     <dt class="property-optional"
             title="Optional">
-        <span>disable_<wbr>upgrade_<wbr>migration</span>
+        <span id="state_disable_upgrade_migration_python">
+<a href="#state_disable_upgrade_migration_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>upgrade_<wbr>migration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1092,7 +1235,9 @@ Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>last_<wbr>contact_<wbr>threshold</span>
+        <span id="state_last_contact_threshold_python">
+<a href="#state_last_contact_threshold_python" style="color: inherit; text-decoration: inherit;">last_<wbr>contact_<wbr>threshold</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1102,7 +1247,9 @@ considered as unhealthy and will be removed. Defaults to `"200ms"`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>max_<wbr>trailing_<wbr>logs</span>
+        <span id="state_max_trailing_logs_python">
+<a href="#state_max_trailing_logs_python" style="color: inherit; text-decoration: inherit;">max_<wbr>trailing_<wbr>logs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1112,7 +1259,9 @@ server can trail the leader. Defaults to 250.
 
     <dt class="property-optional"
             title="Optional">
-        <span>redundancy_<wbr>zone_<wbr>tag</span>
+        <span id="state_redundancy_zone_tag_python">
+<a href="#state_redundancy_zone_tag_python" style="color: inherit; text-decoration: inherit;">redundancy_<wbr>zone_<wbr>tag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1123,7 +1272,9 @@ of isolated failure domains. Defaults to an empty string.
 
     <dt class="property-optional"
             title="Optional">
-        <span>server_<wbr>stabilization_<wbr>time</span>
+        <span id="state_server_stabilization_time_python">
+<a href="#state_server_stabilization_time_python" style="color: inherit; text-decoration: inherit;">server_<wbr>stabilization_<wbr>time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1134,7 +1285,9 @@ healthy and stable before being promoted to a full, voting member. Defaults to
 
     <dt class="property-optional"
             title="Optional">
-        <span>upgrade_<wbr>version_<wbr>tag</span>
+        <span id="state_upgrade_version_tag_python">
+<a href="#state_upgrade_version_tag_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>version_<wbr>tag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

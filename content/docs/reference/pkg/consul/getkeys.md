@@ -21,7 +21,38 @@ This is a powerful way dynamically set values in templates.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+using Consul = Pulumi.Consul;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var appKeys = Output.Create(Consul.GetKeys.InvokeAsync(new Consul.GetKeysArgs
+        {
+            Datacenter = "nyc1",
+            Keys = 
+            {
+                new Consul.Inputs.GetKeysKeyArgs
+                {
+                    Default = "ami-1234",
+                    Name = "ami",
+                    Path = "service/app/launch_ami",
+                },
+            },
+            Token = "abcd",
+        }));
+        // Start our instance with the dynamic ami value
+        var appInstance = new Aws.Ec2.Instance("appInstance", new Aws.Ec2.InstanceArgs
+        {
+            Ami = appKeys.Apply(appKeys => appKeys.Var.Ami),
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -112,7 +143,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Datacenter</span>
+        <span id="datacenter_csharp">
+<a href="#datacenter_csharp" style="color: inherit; text-decoration: inherit;">Datacenter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -122,7 +155,9 @@ agent's default datacenter and the datacenter in the provider setup.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Keys</span>
+        <span id="keys_csharp">
+<a href="#keys_csharp" style="color: inherit; text-decoration: inherit;">Keys</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getkeyskey">List&lt;Get<wbr>Keys<wbr>Key<wbr>Args&gt;</a></span>
     </dt>
@@ -132,7 +167,9 @@ values documented below. Multiple blocks supported.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Namespace</span>
+        <span id="namespace_csharp">
+<a href="#namespace_csharp" style="color: inherit; text-decoration: inherit;">Namespace</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -141,7 +178,9 @@ values documented below. Multiple blocks supported.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Token</span>
+        <span id="token_csharp">
+<a href="#token_csharp" style="color: inherit; text-decoration: inherit;">Token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -158,7 +197,9 @@ token that the agent provides by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Datacenter</span>
+        <span id="datacenter_go">
+<a href="#datacenter_go" style="color: inherit; text-decoration: inherit;">Datacenter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -168,7 +209,9 @@ agent's default datacenter and the datacenter in the provider setup.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Keys</span>
+        <span id="keys_go">
+<a href="#keys_go" style="color: inherit; text-decoration: inherit;">Keys</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getkeyskey">[]Get<wbr>Keys<wbr>Key</a></span>
     </dt>
@@ -178,7 +221,9 @@ values documented below. Multiple blocks supported.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Namespace</span>
+        <span id="namespace_go">
+<a href="#namespace_go" style="color: inherit; text-decoration: inherit;">Namespace</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -187,7 +232,9 @@ values documented below. Multiple blocks supported.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Token</span>
+        <span id="token_go">
+<a href="#token_go" style="color: inherit; text-decoration: inherit;">Token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -204,7 +251,9 @@ token that the agent provides by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>datacenter</span>
+        <span id="datacenter_nodejs">
+<a href="#datacenter_nodejs" style="color: inherit; text-decoration: inherit;">datacenter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -214,7 +263,9 @@ agent's default datacenter and the datacenter in the provider setup.
 
     <dt class="property-optional"
             title="Optional">
-        <span>keys</span>
+        <span id="keys_nodejs">
+<a href="#keys_nodejs" style="color: inherit; text-decoration: inherit;">keys</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getkeyskey">Get<wbr>Keys<wbr>Key[]</a></span>
     </dt>
@@ -224,7 +275,9 @@ values documented below. Multiple blocks supported.
 
     <dt class="property-optional"
             title="Optional">
-        <span>namespace</span>
+        <span id="namespace_nodejs">
+<a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -233,7 +286,9 @@ values documented below. Multiple blocks supported.
 
     <dt class="property-optional"
             title="Optional">
-        <span>token</span>
+        <span id="token_nodejs">
+<a href="#token_nodejs" style="color: inherit; text-decoration: inherit;">token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -250,7 +305,9 @@ token that the agent provides by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>datacenter</span>
+        <span id="datacenter_python">
+<a href="#datacenter_python" style="color: inherit; text-decoration: inherit;">datacenter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -260,7 +317,9 @@ agent's default datacenter and the datacenter in the provider setup.
 
     <dt class="property-optional"
             title="Optional">
-        <span>keys</span>
+        <span id="keys_python">
+<a href="#keys_python" style="color: inherit; text-decoration: inherit;">keys</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getkeyskey">List[Get<wbr>Keys<wbr>Key]</a></span>
     </dt>
@@ -270,7 +329,9 @@ values documented below. Multiple blocks supported.
 
     <dt class="property-optional"
             title="Optional">
-        <span>namespace</span>
+        <span id="namespace_python">
+<a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -279,7 +340,9 @@ values documented below. Multiple blocks supported.
 
     <dt class="property-optional"
             title="Optional">
-        <span>token</span>
+        <span id="token_python">
+<a href="#token_python" style="color: inherit; text-decoration: inherit;">token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -309,7 +372,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Datacenter</span>
+        <span id="datacenter_csharp">
+<a href="#datacenter_csharp" style="color: inherit; text-decoration: inherit;">Datacenter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -320,7 +385,9 @@ has the value of the key.
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -329,7 +396,9 @@ has the value of the key.
 
     <dt class="property-"
             title="">
-        <span>Var</span>
+        <span id="var_csharp">
+<a href="#var_csharp" style="color: inherit; text-decoration: inherit;">Var</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -337,7 +406,9 @@ has the value of the key.
 
     <dt class="property-"
             title="">
-        <span>Keys</span>
+        <span id="keys_csharp">
+<a href="#keys_csharp" style="color: inherit; text-decoration: inherit;">Keys</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getkeyskey">List&lt;Get<wbr>Keys<wbr>Key&gt;</a></span>
     </dt>
@@ -345,7 +416,9 @@ has the value of the key.
 
     <dt class="property-"
             title="">
-        <span>Namespace</span>
+        <span id="namespace_csharp">
+<a href="#namespace_csharp" style="color: inherit; text-decoration: inherit;">Namespace</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -353,7 +426,9 @@ has the value of the key.
 
     <dt class="property-"
             title="">
-        <span>Token</span>
+        <span id="token_csharp">
+<a href="#token_csharp" style="color: inherit; text-decoration: inherit;">Token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -368,7 +443,9 @@ has the value of the key.
 
     <dt class="property-"
             title="">
-        <span>Datacenter</span>
+        <span id="datacenter_go">
+<a href="#datacenter_go" style="color: inherit; text-decoration: inherit;">Datacenter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -379,7 +456,9 @@ has the value of the key.
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -388,7 +467,9 @@ has the value of the key.
 
     <dt class="property-"
             title="">
-        <span>Var</span>
+        <span id="var_go">
+<a href="#var_go" style="color: inherit; text-decoration: inherit;">Var</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -396,7 +477,9 @@ has the value of the key.
 
     <dt class="property-"
             title="">
-        <span>Keys</span>
+        <span id="keys_go">
+<a href="#keys_go" style="color: inherit; text-decoration: inherit;">Keys</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getkeyskey">[]Get<wbr>Keys<wbr>Key</a></span>
     </dt>
@@ -404,7 +487,9 @@ has the value of the key.
 
     <dt class="property-"
             title="">
-        <span>Namespace</span>
+        <span id="namespace_go">
+<a href="#namespace_go" style="color: inherit; text-decoration: inherit;">Namespace</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -412,7 +497,9 @@ has the value of the key.
 
     <dt class="property-"
             title="">
-        <span>Token</span>
+        <span id="token_go">
+<a href="#token_go" style="color: inherit; text-decoration: inherit;">Token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -427,7 +514,9 @@ has the value of the key.
 
     <dt class="property-"
             title="">
-        <span>datacenter</span>
+        <span id="datacenter_nodejs">
+<a href="#datacenter_nodejs" style="color: inherit; text-decoration: inherit;">datacenter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -438,7 +527,9 @@ has the value of the key.
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -447,7 +538,9 @@ has the value of the key.
 
     <dt class="property-"
             title="">
-        <span>var</span>
+        <span id="var_nodejs">
+<a href="#var_nodejs" style="color: inherit; text-decoration: inherit;">var</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -455,7 +548,9 @@ has the value of the key.
 
     <dt class="property-"
             title="">
-        <span>keys</span>
+        <span id="keys_nodejs">
+<a href="#keys_nodejs" style="color: inherit; text-decoration: inherit;">keys</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getkeyskey">Get<wbr>Keys<wbr>Key[]</a></span>
     </dt>
@@ -463,7 +558,9 @@ has the value of the key.
 
     <dt class="property-"
             title="">
-        <span>namespace</span>
+        <span id="namespace_nodejs">
+<a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -471,7 +568,9 @@ has the value of the key.
 
     <dt class="property-"
             title="">
-        <span>token</span>
+        <span id="token_nodejs">
+<a href="#token_nodejs" style="color: inherit; text-decoration: inherit;">token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -486,7 +585,9 @@ has the value of the key.
 
     <dt class="property-"
             title="">
-        <span>datacenter</span>
+        <span id="datacenter_python">
+<a href="#datacenter_python" style="color: inherit; text-decoration: inherit;">datacenter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -497,7 +598,9 @@ has the value of the key.
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -506,7 +609,9 @@ has the value of the key.
 
     <dt class="property-"
             title="">
-        <span>var</span>
+        <span id="var_python">
+<a href="#var_python" style="color: inherit; text-decoration: inherit;">var</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -514,7 +619,9 @@ has the value of the key.
 
     <dt class="property-"
             title="">
-        <span>keys</span>
+        <span id="keys_python">
+<a href="#keys_python" style="color: inherit; text-decoration: inherit;">keys</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getkeyskey">List[Get<wbr>Keys<wbr>Key]</a></span>
     </dt>
@@ -522,7 +629,9 @@ has the value of the key.
 
     <dt class="property-"
             title="">
-        <span>namespace</span>
+        <span id="namespace_python">
+<a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -530,7 +639,9 @@ has the value of the key.
 
     <dt class="property-"
             title="">
-        <span>token</span>
+        <span id="token_python">
+<a href="#token_python" style="color: inherit; text-decoration: inherit;">token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -569,7 +680,9 @@ has the value of the key.
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -580,7 +693,9 @@ in Consul.
 
     <dt class="property-required"
             title="Required">
-        <span>Path</span>
+        <span id="path_csharp">
+<a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -590,7 +705,9 @@ or written to.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default</span>
+        <span id="default_csharp">
+<a href="#default_csharp" style="color: inherit; text-decoration: inherit;">Default</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -607,7 +724,9 @@ if the key does not exist in Consul. Defaults to an empty string.
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -618,7 +737,9 @@ in Consul.
 
     <dt class="property-required"
             title="Required">
-        <span>Path</span>
+        <span id="path_go">
+<a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -628,7 +749,9 @@ or written to.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default</span>
+        <span id="default_go">
+<a href="#default_go" style="color: inherit; text-decoration: inherit;">Default</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -645,7 +768,9 @@ if the key does not exist in Consul. Defaults to an empty string.
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -656,7 +781,9 @@ in Consul.
 
     <dt class="property-required"
             title="Required">
-        <span>path</span>
+        <span id="path_nodejs">
+<a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -666,7 +793,9 @@ or written to.
 
     <dt class="property-optional"
             title="Optional">
-        <span>default</span>
+        <span id="default_nodejs">
+<a href="#default_nodejs" style="color: inherit; text-decoration: inherit;">default</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -683,7 +812,9 @@ if the key does not exist in Consul. Defaults to an empty string.
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -694,7 +825,9 @@ in Consul.
 
     <dt class="property-required"
             title="Required">
-        <span>path</span>
+        <span id="path_python">
+<a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -704,7 +837,9 @@ or written to.
 
     <dt class="property-optional"
             title="Optional">
-        <span>default</span>
+        <span id="default_python">
+<a href="#default_python" style="color: inherit; text-decoration: inherit;">default</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

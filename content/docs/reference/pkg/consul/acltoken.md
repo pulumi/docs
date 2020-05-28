@@ -20,7 +20,35 @@ The `consul..AclToken` resource writes an ACL token into Consul.
 {{< chooser language "typescript,python,go,csharp" / >}}
 ### Basic usage
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Consul = Pulumi.Consul;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var agent = new Consul.AclPolicy("agent", new Consul.AclPolicyArgs
+        {
+            Rules = @"node_prefix """" {
+  policy = ""read""
+}
+
+",
+        });
+        var test = new Consul.AclToken("test", new Consul.AclTokenArgs
+        {
+            Description = "my test token",
+            Local = true,
+            Policies = 
+            {
+                agent.Name,
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -249,7 +277,9 @@ The AclToken resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Accessor<wbr>Id</span>
+        <span id="accessorid_csharp">
+<a href="#accessorid_csharp" style="color: inherit; text-decoration: inherit;">Accessor<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -259,7 +289,9 @@ generate a random uuid.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -268,7 +300,9 @@ generate a random uuid.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Local</span>
+        <span id="local_csharp">
+<a href="#local_csharp" style="color: inherit; text-decoration: inherit;">Local</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -277,7 +311,9 @@ generate a random uuid.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Namespace</span>
+        <span id="namespace_csharp">
+<a href="#namespace_csharp" style="color: inherit; text-decoration: inherit;">Namespace</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -286,7 +322,9 @@ generate a random uuid.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Policies</span>
+        <span id="policies_csharp">
+<a href="#policies_csharp" style="color: inherit; text-decoration: inherit;">Policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -295,7 +333,9 @@ generate a random uuid.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Roles</span>
+        <span id="roles_csharp">
+<a href="#roles_csharp" style="color: inherit; text-decoration: inherit;">Roles</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -311,7 +351,9 @@ generate a random uuid.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Accessor<wbr>Id</span>
+        <span id="accessorid_go">
+<a href="#accessorid_go" style="color: inherit; text-decoration: inherit;">Accessor<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -321,7 +363,9 @@ generate a random uuid.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -330,7 +374,9 @@ generate a random uuid.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Local</span>
+        <span id="local_go">
+<a href="#local_go" style="color: inherit; text-decoration: inherit;">Local</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -339,7 +385,9 @@ generate a random uuid.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Namespace</span>
+        <span id="namespace_go">
+<a href="#namespace_go" style="color: inherit; text-decoration: inherit;">Namespace</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -348,7 +396,9 @@ generate a random uuid.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Policies</span>
+        <span id="policies_go">
+<a href="#policies_go" style="color: inherit; text-decoration: inherit;">Policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -357,7 +407,9 @@ generate a random uuid.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Roles</span>
+        <span id="roles_go">
+<a href="#roles_go" style="color: inherit; text-decoration: inherit;">Roles</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -373,7 +425,9 @@ generate a random uuid.
 
     <dt class="property-optional"
             title="Optional">
-        <span>accessor<wbr>Id</span>
+        <span id="accessorid_nodejs">
+<a href="#accessorid_nodejs" style="color: inherit; text-decoration: inherit;">accessor<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -383,7 +437,9 @@ generate a random uuid.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -392,7 +448,9 @@ generate a random uuid.
 
     <dt class="property-optional"
             title="Optional">
-        <span>local</span>
+        <span id="local_nodejs">
+<a href="#local_nodejs" style="color: inherit; text-decoration: inherit;">local</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -401,7 +459,9 @@ generate a random uuid.
 
     <dt class="property-optional"
             title="Optional">
-        <span>namespace</span>
+        <span id="namespace_nodejs">
+<a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -410,7 +470,9 @@ generate a random uuid.
 
     <dt class="property-optional"
             title="Optional">
-        <span>policies</span>
+        <span id="policies_nodejs">
+<a href="#policies_nodejs" style="color: inherit; text-decoration: inherit;">policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -419,7 +481,9 @@ generate a random uuid.
 
     <dt class="property-optional"
             title="Optional">
-        <span>roles</span>
+        <span id="roles_nodejs">
+<a href="#roles_nodejs" style="color: inherit; text-decoration: inherit;">roles</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -435,7 +499,9 @@ generate a random uuid.
 
     <dt class="property-optional"
             title="Optional">
-        <span>accessor_<wbr>id</span>
+        <span id="accessor_id_python">
+<a href="#accessor_id_python" style="color: inherit; text-decoration: inherit;">accessor_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -445,7 +511,9 @@ generate a random uuid.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -454,7 +522,9 @@ generate a random uuid.
 
     <dt class="property-optional"
             title="Optional">
-        <span>local</span>
+        <span id="local_python">
+<a href="#local_python" style="color: inherit; text-decoration: inherit;">local</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -463,7 +533,9 @@ generate a random uuid.
 
     <dt class="property-optional"
             title="Optional">
-        <span>namespace</span>
+        <span id="namespace_python">
+<a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -472,7 +544,9 @@ generate a random uuid.
 
     <dt class="property-optional"
             title="Optional">
-        <span>policies</span>
+        <span id="policies_python">
+<a href="#policies_python" style="color: inherit; text-decoration: inherit;">policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -481,7 +555,9 @@ generate a random uuid.
 
     <dt class="property-optional"
             title="Optional">
-        <span>roles</span>
+        <span id="roles_python">
+<a href="#roles_python" style="color: inherit; text-decoration: inherit;">roles</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -508,7 +584,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -523,7 +601,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -538,7 +618,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -553,7 +635,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -694,7 +778,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Accessor<wbr>Id</span>
+        <span id="state_accessorid_csharp">
+<a href="#state_accessorid_csharp" style="color: inherit; text-decoration: inherit;">Accessor<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -704,7 +790,9 @@ generate a random uuid.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_csharp">
+<a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -713,7 +801,9 @@ generate a random uuid.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Local</span>
+        <span id="state_local_csharp">
+<a href="#state_local_csharp" style="color: inherit; text-decoration: inherit;">Local</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -722,7 +812,9 @@ generate a random uuid.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Namespace</span>
+        <span id="state_namespace_csharp">
+<a href="#state_namespace_csharp" style="color: inherit; text-decoration: inherit;">Namespace</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -731,7 +823,9 @@ generate a random uuid.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Policies</span>
+        <span id="state_policies_csharp">
+<a href="#state_policies_csharp" style="color: inherit; text-decoration: inherit;">Policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -740,7 +834,9 @@ generate a random uuid.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Roles</span>
+        <span id="state_roles_csharp">
+<a href="#state_roles_csharp" style="color: inherit; text-decoration: inherit;">Roles</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -756,7 +852,9 @@ generate a random uuid.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Accessor<wbr>Id</span>
+        <span id="state_accessorid_go">
+<a href="#state_accessorid_go" style="color: inherit; text-decoration: inherit;">Accessor<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -766,7 +864,9 @@ generate a random uuid.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_go">
+<a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -775,7 +875,9 @@ generate a random uuid.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Local</span>
+        <span id="state_local_go">
+<a href="#state_local_go" style="color: inherit; text-decoration: inherit;">Local</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -784,7 +886,9 @@ generate a random uuid.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Namespace</span>
+        <span id="state_namespace_go">
+<a href="#state_namespace_go" style="color: inherit; text-decoration: inherit;">Namespace</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -793,7 +897,9 @@ generate a random uuid.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Policies</span>
+        <span id="state_policies_go">
+<a href="#state_policies_go" style="color: inherit; text-decoration: inherit;">Policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -802,7 +908,9 @@ generate a random uuid.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Roles</span>
+        <span id="state_roles_go">
+<a href="#state_roles_go" style="color: inherit; text-decoration: inherit;">Roles</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -818,7 +926,9 @@ generate a random uuid.
 
     <dt class="property-optional"
             title="Optional">
-        <span>accessor<wbr>Id</span>
+        <span id="state_accessorid_nodejs">
+<a href="#state_accessorid_nodejs" style="color: inherit; text-decoration: inherit;">accessor<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -828,7 +938,9 @@ generate a random uuid.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_nodejs">
+<a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -837,7 +949,9 @@ generate a random uuid.
 
     <dt class="property-optional"
             title="Optional">
-        <span>local</span>
+        <span id="state_local_nodejs">
+<a href="#state_local_nodejs" style="color: inherit; text-decoration: inherit;">local</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -846,7 +960,9 @@ generate a random uuid.
 
     <dt class="property-optional"
             title="Optional">
-        <span>namespace</span>
+        <span id="state_namespace_nodejs">
+<a href="#state_namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -855,7 +971,9 @@ generate a random uuid.
 
     <dt class="property-optional"
             title="Optional">
-        <span>policies</span>
+        <span id="state_policies_nodejs">
+<a href="#state_policies_nodejs" style="color: inherit; text-decoration: inherit;">policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -864,7 +982,9 @@ generate a random uuid.
 
     <dt class="property-optional"
             title="Optional">
-        <span>roles</span>
+        <span id="state_roles_nodejs">
+<a href="#state_roles_nodejs" style="color: inherit; text-decoration: inherit;">roles</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -880,7 +1000,9 @@ generate a random uuid.
 
     <dt class="property-optional"
             title="Optional">
-        <span>accessor_<wbr>id</span>
+        <span id="state_accessor_id_python">
+<a href="#state_accessor_id_python" style="color: inherit; text-decoration: inherit;">accessor_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -890,7 +1012,9 @@ generate a random uuid.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_python">
+<a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -899,7 +1023,9 @@ generate a random uuid.
 
     <dt class="property-optional"
             title="Optional">
-        <span>local</span>
+        <span id="state_local_python">
+<a href="#state_local_python" style="color: inherit; text-decoration: inherit;">local</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -908,7 +1034,9 @@ generate a random uuid.
 
     <dt class="property-optional"
             title="Optional">
-        <span>namespace</span>
+        <span id="state_namespace_python">
+<a href="#state_namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -917,7 +1045,9 @@ generate a random uuid.
 
     <dt class="property-optional"
             title="Optional">
-        <span>policies</span>
+        <span id="state_policies_python">
+<a href="#state_policies_python" style="color: inherit; text-decoration: inherit;">policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -926,7 +1056,9 @@ generate a random uuid.
 
     <dt class="property-optional"
             title="Optional">
-        <span>roles</span>
+        <span id="state_roles_python">
+<a href="#state_roles_python" style="color: inherit; text-decoration: inherit;">roles</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
