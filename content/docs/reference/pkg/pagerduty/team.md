@@ -22,7 +22,22 @@ The account must have the `teams` ability to use the following resource.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Pagerduty = Pulumi.Pagerduty;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Pagerduty.Team("example", new Pagerduty.TeamArgs
+        {
+            Description = "All engineering",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

@@ -21,7 +21,49 @@ A [contact method](https://v2.developer.pagerduty.com/v2/page/api-reference#!/Us
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Pagerduty = Pulumi.Pagerduty;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Pagerduty.User("example", new Pagerduty.UserArgs
+        {
+            Email = "125.greenholt.earline@graham.name",
+            Teams = 
+            {
+                pagerduty_team.Example.Id,
+            },
+        });
+        var email = new Pagerduty.UserContactMethod("email", new Pagerduty.UserContactMethodArgs
+        {
+            Address = "foo@bar.com",
+            Label = "Work",
+            Type = "email_contact_method",
+            UserId = example.Id,
+        });
+        var phone = new Pagerduty.UserContactMethod("phone", new Pagerduty.UserContactMethodArgs
+        {
+            Address = "2025550199",
+            CountryCode = "+1",
+            Label = "Work",
+            Type = "phone_contact_method",
+            UserId = example.Id,
+        });
+        var sms = new Pagerduty.UserContactMethod("sms", new Pagerduty.UserContactMethodArgs
+        {
+            Address = "2025550199",
+            CountryCode = "+1",
+            Label = "Work",
+            Type = "sms_contact_method",
+            UserId = example.Id,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

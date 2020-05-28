@@ -21,7 +21,53 @@ An [escalation policy](https://v2.developer.pagerduty.com/v2/page/api-reference#
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Pagerduty = Pulumi.Pagerduty;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleTeam = new Pagerduty.Team("exampleTeam", new Pagerduty.TeamArgs
+        {
+            Description = "All engineering",
+        });
+        var exampleUser = new Pagerduty.User("exampleUser", new Pagerduty.UserArgs
+        {
+            Email = "125.greenholt.earline@graham.name",
+            Teams = 
+            {
+                exampleTeam.Id,
+            },
+        });
+        var exampleEscalationPolicy = new Pagerduty.EscalationPolicy("exampleEscalationPolicy", new Pagerduty.EscalationPolicyArgs
+        {
+            NumLoops = 2,
+            Rules = 
+            {
+                new Pagerduty.Inputs.EscalationPolicyRuleArgs
+                {
+                    EscalationDelayInMinutes = 10,
+                    Target = 
+                    {
+                        
+                        {
+                            { "id", exampleUser.Id },
+                            { "type", "user" },
+                        },
+                    },
+                },
+            },
+            Teams = 
+            {
+                exampleTeam.Id,
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

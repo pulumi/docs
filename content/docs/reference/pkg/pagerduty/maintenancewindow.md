@@ -23,7 +23,27 @@ Maintenance windows are specified to start at a certain time and end after they 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Pagerduty = Pulumi.Pagerduty;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Pagerduty.MaintenanceWindow("example", new Pagerduty.MaintenanceWindowArgs
+        {
+            EndTime = "2015-11-09T22:00:00-05:00",
+            Services = 
+            {
+                pagerduty_service.Example.Id,
+            },
+            StartTime = "2015-11-09T20:00:00-05:00",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

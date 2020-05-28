@@ -20,7 +20,28 @@ Use this data source to get information about a specific [escalation policy](htt
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Pagerduty = Pulumi.Pagerduty;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var testEscalationPolicy = Output.Create(Pagerduty.GetEscalationPolicy.InvokeAsync(new Pagerduty.GetEscalationPolicyArgs
+        {
+            Name = "Engineering Escalation Policy",
+        }));
+        var testService = new Pagerduty.Service("testService", new Pagerduty.ServiceArgs
+        {
+            AcknowledgementTimeout = 600,
+            AutoResolveTimeout = 14400,
+            EscalationPolicy = testEscalationPolicy.Apply(testEscalationPolicy => testEscalationPolicy.Id),
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

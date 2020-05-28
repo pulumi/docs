@@ -21,7 +21,22 @@ A [user](https://v2.developer.pagerduty.com/v2/page/api-reference#!/Users/get_us
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Pagerduty = Pulumi.Pagerduty;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Pagerduty.User("example", new Pagerduty.UserArgs
+        {
+            Email = "125.greenholt.earline@graham.name",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

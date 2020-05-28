@@ -20,7 +20,22 @@ With [add-ons](https://v2.developer.pagerduty.com/v2/page/api-reference#!/Add-on
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Pagerduty = Pulumi.Pagerduty;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Pagerduty.Addon("example", new Pagerduty.AddonArgs
+        {
+            Src = "https://intranet.example.com/status",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

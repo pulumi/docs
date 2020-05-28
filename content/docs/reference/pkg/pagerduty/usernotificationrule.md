@@ -20,7 +20,78 @@ A [notification rule](https://v2.developer.pagerduty.com/v2/page/api-reference#!
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Pagerduty = Pulumi.Pagerduty;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Pagerduty.User("example", new Pagerduty.UserArgs
+        {
+            Email = "125.greenholt.earline@graham.name",
+        });
+        var email = new Pagerduty.UserContactMethod("email", new Pagerduty.UserContactMethodArgs
+        {
+            UserId = example.Id,
+            Type = "email_contact_method",
+            Address = "foo@bar.com",
+            Label = "Work",
+        });
+        var phone = new Pagerduty.UserContactMethod("phone", new Pagerduty.UserContactMethodArgs
+        {
+            UserId = example.Id,
+            Type = "phone_contact_method",
+            CountryCode = "+1",
+            Address = "2025550199",
+            Label = "Work",
+        });
+        var sms = new Pagerduty.UserContactMethod("sms", new Pagerduty.UserContactMethodArgs
+        {
+            UserId = example.Id,
+            Type = "sms_contact_method",
+            CountryCode = "+1",
+            Address = "2025550199",
+            Label = "Work",
+        });
+        var highUrgencyPhone = new Pagerduty.UserNotificationRule("highUrgencyPhone", new Pagerduty.UserNotificationRuleArgs
+        {
+            UserId = example.Id,
+            StartDelayInMinutes = 1,
+            Urgency = "high",
+            ContactMethod = new Pagerduty.Inputs.UserNotificationRuleContactMethodArgs
+            {
+                Type = "phone_contact_method",
+                Id = phone.Id,
+            },
+        });
+        var lowUrgencyEmail = new Pagerduty.UserNotificationRule("lowUrgencyEmail", new Pagerduty.UserNotificationRuleArgs
+        {
+            UserId = example.Id,
+            StartDelayInMinutes = 1,
+            Urgency = "low",
+            ContactMethod = new Pagerduty.Inputs.UserNotificationRuleContactMethodArgs
+            {
+                Type = "email_contact_method",
+                Id = email.Id,
+            },
+        });
+        var lowUrgencySms = new Pagerduty.UserNotificationRule("lowUrgencySms", new Pagerduty.UserNotificationRuleArgs
+        {
+            UserId = example.Id,
+            StartDelayInMinutes = 10,
+            Urgency = "low",
+            ContactMethod = new Pagerduty.Inputs.UserNotificationRuleContactMethodArgs
+            {
+                Type = "sms_contact_method",
+                Id = sms.Id,
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
