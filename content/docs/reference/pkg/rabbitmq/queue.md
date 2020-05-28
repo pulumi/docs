@@ -20,7 +20,41 @@ The ``rabbitmq..Queue`` resource creates and manages a queue.
 {{< chooser language "typescript,python,go,csharp" / >}}
 ### Basic Example
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using RabbitMQ = Pulumi.RabbitMQ;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var testVHost = new RabbitMQ.VHost("testVHost", new RabbitMQ.VHostArgs
+        {
+        });
+        var guest = new RabbitMQ.Permissions("guest", new RabbitMQ.PermissionsArgs
+        {
+            Permissions = new RabbitMQ.Inputs.PermissionsPermissionsArgs
+            {
+                Configure = ".*",
+                Read = ".*",
+                Write = ".*",
+            },
+            User = "guest",
+            Vhost = testVHost.Name,
+        });
+        var testQueue = new RabbitMQ.Queue("testQueue", new RabbitMQ.QueueArgs
+        {
+            Settings = new RabbitMQ.Inputs.QueueSettingsArgs
+            {
+                AutoDelete = true,
+                Durable = false,
+            },
+            Vhost = guest.Vhost,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -77,7 +111,48 @@ const testQueue = new rabbitmq.Queue("test", {
 
 ### Example With JSON Arguments
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using RabbitMQ = Pulumi.RabbitMQ;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var config = new Config();
+        var arguments = config.Get("arguments") ?? @"{
+  ""x-message-ttl"": 5000
+}
+
+";
+        var testVHost = new RabbitMQ.VHost("testVHost", new RabbitMQ.VHostArgs
+        {
+        });
+        var guest = new RabbitMQ.Permissions("guest", new RabbitMQ.PermissionsArgs
+        {
+            Permissions = new RabbitMQ.Inputs.PermissionsPermissionsArgs
+            {
+                Configure = ".*",
+                Read = ".*",
+                Write = ".*",
+            },
+            User = "guest",
+            Vhost = testVHost.Name,
+        });
+        var testQueue = new RabbitMQ.Queue("testQueue", new RabbitMQ.QueueArgs
+        {
+            Settings = new RabbitMQ.Inputs.QueueSettingsArgs
+            {
+                ArgumentsJson = arguments,
+                AutoDelete = true,
+                Durable = false,
+            },
+            Vhost = guest.Vhost,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -334,7 +409,9 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
 
     <dt class="property-required"
             title="Required">
-        <span>Settings</span>
+        <span id="settings_csharp">
+<a href="#settings_csharp" style="color: inherit; text-decoration: inherit;">Settings</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#queuesettings">Pulumi.<wbr>Rabbit<wbr>MQ.<wbr>Inputs.<wbr>Queue<wbr>Settings<wbr>Args</a></span>
     </dt>
@@ -344,7 +421,9 @@ described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -353,7 +432,9 @@ described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vhost</span>
+        <span id="vhost_csharp">
+<a href="#vhost_csharp" style="color: inherit; text-decoration: inherit;">Vhost</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -369,7 +450,9 @@ described below.
 
     <dt class="property-required"
             title="Required">
-        <span>Settings</span>
+        <span id="settings_go">
+<a href="#settings_go" style="color: inherit; text-decoration: inherit;">Settings</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#queuesettings">Queue<wbr>Settings</a></span>
     </dt>
@@ -379,7 +462,9 @@ described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -388,7 +473,9 @@ described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vhost</span>
+        <span id="vhost_go">
+<a href="#vhost_go" style="color: inherit; text-decoration: inherit;">Vhost</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -404,7 +491,9 @@ described below.
 
     <dt class="property-required"
             title="Required">
-        <span>settings</span>
+        <span id="settings_nodejs">
+<a href="#settings_nodejs" style="color: inherit; text-decoration: inherit;">settings</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#queuesettings">Queue<wbr>Settings</a></span>
     </dt>
@@ -414,7 +503,9 @@ described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -423,7 +514,9 @@ described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>vhost</span>
+        <span id="vhost_nodejs">
+<a href="#vhost_nodejs" style="color: inherit; text-decoration: inherit;">vhost</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -439,7 +532,9 @@ described below.
 
     <dt class="property-required"
             title="Required">
-        <span>settings</span>
+        <span id="settings_python">
+<a href="#settings_python" style="color: inherit; text-decoration: inherit;">settings</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#queuesettings">Dict[Queue<wbr>Settings]</a></span>
     </dt>
@@ -449,7 +544,9 @@ described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -458,7 +555,9 @@ described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>vhost</span>
+        <span id="vhost_python">
+<a href="#vhost_python" style="color: inherit; text-decoration: inherit;">vhost</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -485,7 +584,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -500,7 +601,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -515,7 +618,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -530,7 +635,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -671,7 +778,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -680,7 +789,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Settings</span>
+        <span id="state_settings_csharp">
+<a href="#state_settings_csharp" style="color: inherit; text-decoration: inherit;">Settings</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#queuesettings">Pulumi.<wbr>Rabbit<wbr>MQ.<wbr>Inputs.<wbr>Queue<wbr>Settings<wbr>Args</a></span>
     </dt>
@@ -690,7 +801,9 @@ described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vhost</span>
+        <span id="state_vhost_csharp">
+<a href="#state_vhost_csharp" style="color: inherit; text-decoration: inherit;">Vhost</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -706,7 +819,9 @@ described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -715,7 +830,9 @@ described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Settings</span>
+        <span id="state_settings_go">
+<a href="#state_settings_go" style="color: inherit; text-decoration: inherit;">Settings</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#queuesettings">Queue<wbr>Settings</a></span>
     </dt>
@@ -725,7 +842,9 @@ described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vhost</span>
+        <span id="state_vhost_go">
+<a href="#state_vhost_go" style="color: inherit; text-decoration: inherit;">Vhost</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -741,7 +860,9 @@ described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -750,7 +871,9 @@ described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>settings</span>
+        <span id="state_settings_nodejs">
+<a href="#state_settings_nodejs" style="color: inherit; text-decoration: inherit;">settings</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#queuesettings">Queue<wbr>Settings</a></span>
     </dt>
@@ -760,7 +883,9 @@ described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>vhost</span>
+        <span id="state_vhost_nodejs">
+<a href="#state_vhost_nodejs" style="color: inherit; text-decoration: inherit;">vhost</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -776,7 +901,9 @@ described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -785,7 +912,9 @@ described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>settings</span>
+        <span id="state_settings_python">
+<a href="#state_settings_python" style="color: inherit; text-decoration: inherit;">settings</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#queuesettings">Dict[Queue<wbr>Settings]</a></span>
     </dt>
@@ -795,7 +924,9 @@ described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>vhost</span>
+        <span id="state_vhost_python">
+<a href="#state_vhost_python" style="color: inherit; text-decoration: inherit;">vhost</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -837,7 +968,9 @@ described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Arguments</span>
+        <span id="arguments_csharp">
+<a href="#arguments_csharp" style="color: inherit; text-decoration: inherit;">Arguments</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -848,7 +981,9 @@ values, use `arguments_json`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Arguments<wbr>Json</span>
+        <span id="argumentsjson_csharp">
+<a href="#argumentsjson_csharp" style="color: inherit; text-decoration: inherit;">Arguments<wbr>Json</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -859,7 +994,9 @@ non-string values.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Auto<wbr>Delete</span>
+        <span id="autodelete_csharp">
+<a href="#autodelete_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Delete</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -869,7 +1006,9 @@ consumers have unsubscribed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Durable</span>
+        <span id="durable_csharp">
+<a href="#durable_csharp" style="color: inherit; text-decoration: inherit;">Durable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -886,7 +1025,9 @@ Defaults to `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Arguments</span>
+        <span id="arguments_go">
+<a href="#arguments_go" style="color: inherit; text-decoration: inherit;">Arguments</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -897,7 +1038,9 @@ values, use `arguments_json`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Arguments<wbr>Json</span>
+        <span id="argumentsjson_go">
+<a href="#argumentsjson_go" style="color: inherit; text-decoration: inherit;">Arguments<wbr>Json</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -908,7 +1051,9 @@ non-string values.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Auto<wbr>Delete</span>
+        <span id="autodelete_go">
+<a href="#autodelete_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Delete</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -918,7 +1063,9 @@ consumers have unsubscribed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Durable</span>
+        <span id="durable_go">
+<a href="#durable_go" style="color: inherit; text-decoration: inherit;">Durable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -935,7 +1082,9 @@ Defaults to `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>arguments</span>
+        <span id="arguments_nodejs">
+<a href="#arguments_nodejs" style="color: inherit; text-decoration: inherit;">arguments</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -946,7 +1095,9 @@ values, use `arguments_json`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>arguments<wbr>Json</span>
+        <span id="argumentsjson_nodejs">
+<a href="#argumentsjson_nodejs" style="color: inherit; text-decoration: inherit;">arguments<wbr>Json</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -957,7 +1108,9 @@ non-string values.
 
     <dt class="property-optional"
             title="Optional">
-        <span>auto<wbr>Delete</span>
+        <span id="autodelete_nodejs">
+<a href="#autodelete_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Delete</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -967,7 +1120,9 @@ consumers have unsubscribed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>durable</span>
+        <span id="durable_nodejs">
+<a href="#durable_nodejs" style="color: inherit; text-decoration: inherit;">durable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -984,7 +1139,9 @@ Defaults to `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>arguments</span>
+        <span id="arguments_python">
+<a href="#arguments_python" style="color: inherit; text-decoration: inherit;">arguments</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -995,7 +1152,9 @@ values, use `arguments_json`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>arguments<wbr>Json</span>
+        <span id="argumentsjson_python">
+<a href="#argumentsjson_python" style="color: inherit; text-decoration: inherit;">arguments<wbr>Json</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1006,7 +1165,9 @@ non-string values.
 
     <dt class="property-optional"
             title="Optional">
-        <span>auto<wbr>Delete</span>
+        <span id="autodelete_python">
+<a href="#autodelete_python" style="color: inherit; text-decoration: inherit;">auto<wbr>Delete</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1016,7 +1177,9 @@ consumers have unsubscribed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>durable</span>
+        <span id="durable_python">
+<a href="#durable_python" style="color: inherit; text-decoration: inherit;">durable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>

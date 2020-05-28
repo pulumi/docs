@@ -21,7 +21,43 @@ topic permissions.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using RabbitMQ = Pulumi.RabbitMQ;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var testVHost = new RabbitMQ.VHost("testVHost", new RabbitMQ.VHostArgs
+        {
+        });
+        var testUser = new RabbitMQ.User("testUser", new RabbitMQ.UserArgs
+        {
+            Password = "foobar",
+            Tags = 
+            {
+                "administrator",
+            },
+        });
+        var testTopicPermissions = new RabbitMQ.TopicPermissions("testTopicPermissions", new RabbitMQ.TopicPermissionsArgs
+        {
+            Permissions = 
+            {
+                new RabbitMQ.Inputs.TopicPermissionsPermissionArgs
+                {
+                    Exchange = "amq.topic",
+                    Read = ".*",
+                    Write = ".*",
+                },
+            },
+            User = testUser.Name,
+            Vhost = testVHost.Name,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -256,7 +292,9 @@ The TopicPermissions resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-required"
             title="Required">
-        <span>Permissions</span>
+        <span id="permissions_csharp">
+<a href="#permissions_csharp" style="color: inherit; text-decoration: inherit;">Permissions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#topicpermissionspermission">List&lt;Pulumi.<wbr>Rabbit<wbr>MQ.<wbr>Inputs.<wbr>Topic<wbr>Permissions<wbr>Permission<wbr>Args&gt;</a></span>
     </dt>
@@ -266,7 +304,9 @@ described below.
 
     <dt class="property-required"
             title="Required">
-        <span>User</span>
+        <span id="user_csharp">
+<a href="#user_csharp" style="color: inherit; text-decoration: inherit;">User</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -275,7 +315,9 @@ described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vhost</span>
+        <span id="vhost_csharp">
+<a href="#vhost_csharp" style="color: inherit; text-decoration: inherit;">Vhost</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -291,7 +333,9 @@ described below.
 
     <dt class="property-required"
             title="Required">
-        <span>Permissions</span>
+        <span id="permissions_go">
+<a href="#permissions_go" style="color: inherit; text-decoration: inherit;">Permissions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#topicpermissionspermission">[]Topic<wbr>Permissions<wbr>Permission</a></span>
     </dt>
@@ -301,7 +345,9 @@ described below.
 
     <dt class="property-required"
             title="Required">
-        <span>User</span>
+        <span id="user_go">
+<a href="#user_go" style="color: inherit; text-decoration: inherit;">User</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -310,7 +356,9 @@ described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vhost</span>
+        <span id="vhost_go">
+<a href="#vhost_go" style="color: inherit; text-decoration: inherit;">Vhost</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -326,7 +374,9 @@ described below.
 
     <dt class="property-required"
             title="Required">
-        <span>permissions</span>
+        <span id="permissions_nodejs">
+<a href="#permissions_nodejs" style="color: inherit; text-decoration: inherit;">permissions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#topicpermissionspermission">Topic<wbr>Permissions<wbr>Permission[]</a></span>
     </dt>
@@ -336,7 +386,9 @@ described below.
 
     <dt class="property-required"
             title="Required">
-        <span>user</span>
+        <span id="user_nodejs">
+<a href="#user_nodejs" style="color: inherit; text-decoration: inherit;">user</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -345,7 +397,9 @@ described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>vhost</span>
+        <span id="vhost_nodejs">
+<a href="#vhost_nodejs" style="color: inherit; text-decoration: inherit;">vhost</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -361,7 +415,9 @@ described below.
 
     <dt class="property-required"
             title="Required">
-        <span>permissions</span>
+        <span id="permissions_python">
+<a href="#permissions_python" style="color: inherit; text-decoration: inherit;">permissions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#topicpermissionspermission">List[Topic<wbr>Permissions<wbr>Permission]</a></span>
     </dt>
@@ -371,7 +427,9 @@ described below.
 
     <dt class="property-required"
             title="Required">
-        <span>user</span>
+        <span id="user_python">
+<a href="#user_python" style="color: inherit; text-decoration: inherit;">user</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -380,7 +438,9 @@ described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>vhost</span>
+        <span id="vhost_python">
+<a href="#vhost_python" style="color: inherit; text-decoration: inherit;">vhost</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -407,7 +467,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -422,7 +484,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -437,7 +501,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -452,7 +518,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -593,7 +661,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Permissions</span>
+        <span id="state_permissions_csharp">
+<a href="#state_permissions_csharp" style="color: inherit; text-decoration: inherit;">Permissions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#topicpermissionspermission">List&lt;Pulumi.<wbr>Rabbit<wbr>MQ.<wbr>Inputs.<wbr>Topic<wbr>Permissions<wbr>Permission<wbr>Args&gt;</a></span>
     </dt>
@@ -603,7 +673,9 @@ described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>User</span>
+        <span id="state_user_csharp">
+<a href="#state_user_csharp" style="color: inherit; text-decoration: inherit;">User</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -612,7 +684,9 @@ described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vhost</span>
+        <span id="state_vhost_csharp">
+<a href="#state_vhost_csharp" style="color: inherit; text-decoration: inherit;">Vhost</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -628,7 +702,9 @@ described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Permissions</span>
+        <span id="state_permissions_go">
+<a href="#state_permissions_go" style="color: inherit; text-decoration: inherit;">Permissions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#topicpermissionspermission">[]Topic<wbr>Permissions<wbr>Permission</a></span>
     </dt>
@@ -638,7 +714,9 @@ described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>User</span>
+        <span id="state_user_go">
+<a href="#state_user_go" style="color: inherit; text-decoration: inherit;">User</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -647,7 +725,9 @@ described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vhost</span>
+        <span id="state_vhost_go">
+<a href="#state_vhost_go" style="color: inherit; text-decoration: inherit;">Vhost</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -663,7 +743,9 @@ described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>permissions</span>
+        <span id="state_permissions_nodejs">
+<a href="#state_permissions_nodejs" style="color: inherit; text-decoration: inherit;">permissions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#topicpermissionspermission">Topic<wbr>Permissions<wbr>Permission[]</a></span>
     </dt>
@@ -673,7 +755,9 @@ described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>user</span>
+        <span id="state_user_nodejs">
+<a href="#state_user_nodejs" style="color: inherit; text-decoration: inherit;">user</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -682,7 +766,9 @@ described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>vhost</span>
+        <span id="state_vhost_nodejs">
+<a href="#state_vhost_nodejs" style="color: inherit; text-decoration: inherit;">vhost</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -698,7 +784,9 @@ described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>permissions</span>
+        <span id="state_permissions_python">
+<a href="#state_permissions_python" style="color: inherit; text-decoration: inherit;">permissions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#topicpermissionspermission">List[Topic<wbr>Permissions<wbr>Permission]</a></span>
     </dt>
@@ -708,7 +796,9 @@ described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>user</span>
+        <span id="state_user_python">
+<a href="#state_user_python" style="color: inherit; text-decoration: inherit;">user</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -717,7 +807,9 @@ described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>vhost</span>
+        <span id="state_vhost_python">
+<a href="#state_vhost_python" style="color: inherit; text-decoration: inherit;">vhost</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -759,7 +851,9 @@ described below.
 
     <dt class="property-required"
             title="Required">
-        <span>Exchange</span>
+        <span id="exchange_csharp">
+<a href="#exchange_csharp" style="color: inherit; text-decoration: inherit;">Exchange</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -768,7 +862,9 @@ described below.
 
     <dt class="property-required"
             title="Required">
-        <span>Read</span>
+        <span id="read_csharp">
+<a href="#read_csharp" style="color: inherit; text-decoration: inherit;">Read</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -777,7 +873,9 @@ described below.
 
     <dt class="property-required"
             title="Required">
-        <span>Write</span>
+        <span id="write_csharp">
+<a href="#write_csharp" style="color: inherit; text-decoration: inherit;">Write</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -793,7 +891,9 @@ described below.
 
     <dt class="property-required"
             title="Required">
-        <span>Exchange</span>
+        <span id="exchange_go">
+<a href="#exchange_go" style="color: inherit; text-decoration: inherit;">Exchange</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -802,7 +902,9 @@ described below.
 
     <dt class="property-required"
             title="Required">
-        <span>Read</span>
+        <span id="read_go">
+<a href="#read_go" style="color: inherit; text-decoration: inherit;">Read</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -811,7 +913,9 @@ described below.
 
     <dt class="property-required"
             title="Required">
-        <span>Write</span>
+        <span id="write_go">
+<a href="#write_go" style="color: inherit; text-decoration: inherit;">Write</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -827,7 +931,9 @@ described below.
 
     <dt class="property-required"
             title="Required">
-        <span>exchange</span>
+        <span id="exchange_nodejs">
+<a href="#exchange_nodejs" style="color: inherit; text-decoration: inherit;">exchange</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -836,7 +942,9 @@ described below.
 
     <dt class="property-required"
             title="Required">
-        <span>read</span>
+        <span id="read_nodejs">
+<a href="#read_nodejs" style="color: inherit; text-decoration: inherit;">read</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -845,7 +953,9 @@ described below.
 
     <dt class="property-required"
             title="Required">
-        <span>write</span>
+        <span id="write_nodejs">
+<a href="#write_nodejs" style="color: inherit; text-decoration: inherit;">write</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -861,7 +971,9 @@ described below.
 
     <dt class="property-required"
             title="Required">
-        <span>exchange</span>
+        <span id="exchange_python">
+<a href="#exchange_python" style="color: inherit; text-decoration: inherit;">exchange</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -870,7 +982,9 @@ described below.
 
     <dt class="property-required"
             title="Required">
-        <span>read</span>
+        <span id="read_python">
+<a href="#read_python" style="color: inherit; text-decoration: inherit;">read</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -879,7 +993,9 @@ described below.
 
     <dt class="property-required"
             title="Required">
-        <span>write</span>
+        <span id="write_python">
+<a href="#write_python" style="color: inherit; text-decoration: inherit;">write</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
