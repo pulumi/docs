@@ -196,7 +196,9 @@ The ActionsSecret resource accepts the following [input]({{< relref "/docs/intro
 
     <dt class="property-required"
             title="Required">
-        <span>Plaintext<wbr>Value</span>
+        <span id="plaintextvalue_csharp">
+<a href="#plaintextvalue_csharp" style="color: inherit; text-decoration: inherit;">Plaintext<wbr>Value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -205,7 +207,9 @@ The ActionsSecret resource accepts the following [input]({{< relref "/docs/intro
 
     <dt class="property-required"
             title="Required">
-        <span>Repository</span>
+        <span id="repository_csharp">
+<a href="#repository_csharp" style="color: inherit; text-decoration: inherit;">Repository</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -214,7 +218,9 @@ The ActionsSecret resource accepts the following [input]({{< relref "/docs/intro
 
     <dt class="property-required"
             title="Required">
-        <span>Secret<wbr>Name</span>
+        <span id="secretname_csharp">
+<a href="#secretname_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -230,7 +236,9 @@ The ActionsSecret resource accepts the following [input]({{< relref "/docs/intro
 
     <dt class="property-required"
             title="Required">
-        <span>Plaintext<wbr>Value</span>
+        <span id="plaintextvalue_go">
+<a href="#plaintextvalue_go" style="color: inherit; text-decoration: inherit;">Plaintext<wbr>Value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -239,7 +247,9 @@ The ActionsSecret resource accepts the following [input]({{< relref "/docs/intro
 
     <dt class="property-required"
             title="Required">
-        <span>Repository</span>
+        <span id="repository_go">
+<a href="#repository_go" style="color: inherit; text-decoration: inherit;">Repository</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -248,7 +258,9 @@ The ActionsSecret resource accepts the following [input]({{< relref "/docs/intro
 
     <dt class="property-required"
             title="Required">
-        <span>Secret<wbr>Name</span>
+        <span id="secretname_go">
+<a href="#secretname_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -264,7 +276,9 @@ The ActionsSecret resource accepts the following [input]({{< relref "/docs/intro
 
     <dt class="property-required"
             title="Required">
-        <span>plaintext<wbr>Value</span>
+        <span id="plaintextvalue_nodejs">
+<a href="#plaintextvalue_nodejs" style="color: inherit; text-decoration: inherit;">plaintext<wbr>Value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -273,7 +287,9 @@ The ActionsSecret resource accepts the following [input]({{< relref "/docs/intro
 
     <dt class="property-required"
             title="Required">
-        <span>repository</span>
+        <span id="repository_nodejs">
+<a href="#repository_nodejs" style="color: inherit; text-decoration: inherit;">repository</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -282,7 +298,9 @@ The ActionsSecret resource accepts the following [input]({{< relref "/docs/intro
 
     <dt class="property-required"
             title="Required">
-        <span>secret<wbr>Name</span>
+        <span id="secretname_nodejs">
+<a href="#secretname_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -298,7 +316,9 @@ The ActionsSecret resource accepts the following [input]({{< relref "/docs/intro
 
     <dt class="property-required"
             title="Required">
-        <span>plaintext_<wbr>value</span>
+        <span id="plaintext_value_python">
+<a href="#plaintext_value_python" style="color: inherit; text-decoration: inherit;">plaintext_<wbr>value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -307,7 +327,9 @@ The ActionsSecret resource accepts the following [input]({{< relref "/docs/intro
 
     <dt class="property-required"
             title="Required">
-        <span>repository</span>
+        <span id="repository_python">
+<a href="#repository_python" style="color: inherit; text-decoration: inherit;">repository</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -316,7 +338,9 @@ The ActionsSecret resource accepts the following [input]({{< relref "/docs/intro
 
     <dt class="property-required"
             title="Required">
-        <span>secret_<wbr>name</span>
+        <span id="secret_name_python">
+<a href="#secret_name_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -343,7 +367,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Created<wbr>At</span>
+        <span id="createdat_csharp">
+<a href="#createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -352,7 +378,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -360,7 +388,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Updated<wbr>At</span>
+        <span id="updatedat_csharp">
+<a href="#updatedat_csharp" style="color: inherit; text-decoration: inherit;">Updated<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -376,7 +406,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Created<wbr>At</span>
+        <span id="createdat_go">
+<a href="#createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -385,7 +417,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -393,7 +427,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Updated<wbr>At</span>
+        <span id="updatedat_go">
+<a href="#updatedat_go" style="color: inherit; text-decoration: inherit;">Updated<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -409,7 +445,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>created<wbr>At</span>
+        <span id="createdat_nodejs">
+<a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -418,7 +456,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -426,7 +466,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>updated<wbr>At</span>
+        <span id="updatedat_nodejs">
+<a href="#updatedat_nodejs" style="color: inherit; text-decoration: inherit;">updated<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -442,7 +484,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>created_<wbr>at</span>
+        <span id="created_at_python">
+<a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -451,7 +495,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -459,7 +505,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>updated_<wbr>at</span>
+        <span id="updated_at_python">
+<a href="#updated_at_python" style="color: inherit; text-decoration: inherit;">updated_<wbr>at</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -601,7 +649,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Created<wbr>At</span>
+        <span id="state_createdat_csharp">
+<a href="#state_createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -610,7 +660,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Plaintext<wbr>Value</span>
+        <span id="state_plaintextvalue_csharp">
+<a href="#state_plaintextvalue_csharp" style="color: inherit; text-decoration: inherit;">Plaintext<wbr>Value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -619,7 +671,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Repository</span>
+        <span id="state_repository_csharp">
+<a href="#state_repository_csharp" style="color: inherit; text-decoration: inherit;">Repository</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -628,7 +682,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Secret<wbr>Name</span>
+        <span id="state_secretname_csharp">
+<a href="#state_secretname_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -637,7 +693,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Updated<wbr>At</span>
+        <span id="state_updatedat_csharp">
+<a href="#state_updatedat_csharp" style="color: inherit; text-decoration: inherit;">Updated<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -653,7 +711,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Created<wbr>At</span>
+        <span id="state_createdat_go">
+<a href="#state_createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -662,7 +722,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Plaintext<wbr>Value</span>
+        <span id="state_plaintextvalue_go">
+<a href="#state_plaintextvalue_go" style="color: inherit; text-decoration: inherit;">Plaintext<wbr>Value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -671,7 +733,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Repository</span>
+        <span id="state_repository_go">
+<a href="#state_repository_go" style="color: inherit; text-decoration: inherit;">Repository</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -680,7 +744,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Secret<wbr>Name</span>
+        <span id="state_secretname_go">
+<a href="#state_secretname_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -689,7 +755,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Updated<wbr>At</span>
+        <span id="state_updatedat_go">
+<a href="#state_updatedat_go" style="color: inherit; text-decoration: inherit;">Updated<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -705,7 +773,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>created<wbr>At</span>
+        <span id="state_createdat_nodejs">
+<a href="#state_createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -714,7 +784,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>plaintext<wbr>Value</span>
+        <span id="state_plaintextvalue_nodejs">
+<a href="#state_plaintextvalue_nodejs" style="color: inherit; text-decoration: inherit;">plaintext<wbr>Value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -723,7 +795,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>repository</span>
+        <span id="state_repository_nodejs">
+<a href="#state_repository_nodejs" style="color: inherit; text-decoration: inherit;">repository</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -732,7 +806,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>secret<wbr>Name</span>
+        <span id="state_secretname_nodejs">
+<a href="#state_secretname_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -741,7 +817,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>updated<wbr>At</span>
+        <span id="state_updatedat_nodejs">
+<a href="#state_updatedat_nodejs" style="color: inherit; text-decoration: inherit;">updated<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -757,7 +835,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>created_<wbr>at</span>
+        <span id="state_created_at_python">
+<a href="#state_created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -766,7 +846,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>plaintext_<wbr>value</span>
+        <span id="state_plaintext_value_python">
+<a href="#state_plaintext_value_python" style="color: inherit; text-decoration: inherit;">plaintext_<wbr>value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -775,7 +857,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>repository</span>
+        <span id="state_repository_python">
+<a href="#state_repository_python" style="color: inherit; text-decoration: inherit;">repository</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -784,7 +868,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>secret_<wbr>name</span>
+        <span id="state_secret_name_python">
+<a href="#state_secret_name_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -793,7 +879,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>updated_<wbr>at</span>
+        <span id="state_updated_at_python">
+<a href="#state_updated_at_python" style="color: inherit; text-decoration: inherit;">updated_<wbr>at</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

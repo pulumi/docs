@@ -22,7 +22,72 @@ This resource allows you to configure branch protection for repositories in your
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Github = Pulumi.Github;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleTeam = new Github.Team("exampleTeam", new Github.TeamArgs
+        {
+        });
+        // Protect the master branch of the foo repository. Additionally, require that
+        // the "ci/travis" context to be passing and only allow the engineers team merge
+        // to the branch.
+        var exampleBranchProtection = new Github.BranchProtection("exampleBranchProtection", new Github.BranchProtectionArgs
+        {
+            Branch = "master",
+            EnforceAdmins = true,
+            Repository = github_repository.Example.Name,
+            RequiredPullRequestReviews = new Github.Inputs.BranchProtectionRequiredPullRequestReviewsArgs
+            {
+                DismissStaleReviews = true,
+                DismissalTeams = 
+                {
+                    exampleTeam.Slug,
+                    github_team.Second.Slug,
+                },
+                DismissalUsers = 
+                {
+                    "foo-user",
+                },
+            },
+            RequiredStatusChecks = new Github.Inputs.BranchProtectionRequiredStatusChecksArgs
+            {
+                Contexts = 
+                {
+                    "ci/travis",
+                },
+                Strict = false,
+            },
+            Restrictions = new Github.Inputs.BranchProtectionRestrictionsArgs
+            {
+                Apps = 
+                {
+                    "foo-app",
+                },
+                Teams = 
+                {
+                    exampleTeam.Slug,
+                },
+                Users = 
+                {
+                    "foo-user",
+                },
+            },
+        });
+        var exampleTeamRepository = new Github.TeamRepository("exampleTeamRepository", new Github.TeamRepositoryArgs
+        {
+            Permission = "pull",
+            Repository = github_repository.Example.Name,
+            TeamId = exampleTeam.Id,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -291,7 +356,9 @@ The BranchProtection resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-required"
             title="Required">
-        <span>Branch</span>
+        <span id="branch_csharp">
+<a href="#branch_csharp" style="color: inherit; text-decoration: inherit;">Branch</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -300,7 +367,9 @@ The BranchProtection resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-required"
             title="Required">
-        <span>Repository</span>
+        <span id="repository_csharp">
+<a href="#repository_csharp" style="color: inherit; text-decoration: inherit;">Repository</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -309,7 +378,9 @@ The BranchProtection resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enforce<wbr>Admins</span>
+        <span id="enforceadmins_csharp">
+<a href="#enforceadmins_csharp" style="color: inherit; text-decoration: inherit;">Enforce<wbr>Admins</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -318,7 +389,9 @@ The BranchProtection resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Require<wbr>Signed<wbr>Commits</span>
+        <span id="requiresignedcommits_csharp">
+<a href="#requiresignedcommits_csharp" style="color: inherit; text-decoration: inherit;">Require<wbr>Signed<wbr>Commits</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -327,7 +400,9 @@ The BranchProtection resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Required<wbr>Pull<wbr>Request<wbr>Reviews</span>
+        <span id="requiredpullrequestreviews_csharp">
+<a href="#requiredpullrequestreviews_csharp" style="color: inherit; text-decoration: inherit;">Required<wbr>Pull<wbr>Request<wbr>Reviews</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#branchprotectionrequiredpullrequestreviews">Branch<wbr>Protection<wbr>Required<wbr>Pull<wbr>Request<wbr>Reviews<wbr>Args</a></span>
     </dt>
@@ -336,7 +411,9 @@ The BranchProtection resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Required<wbr>Status<wbr>Checks</span>
+        <span id="requiredstatuschecks_csharp">
+<a href="#requiredstatuschecks_csharp" style="color: inherit; text-decoration: inherit;">Required<wbr>Status<wbr>Checks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#branchprotectionrequiredstatuschecks">Branch<wbr>Protection<wbr>Required<wbr>Status<wbr>Checks<wbr>Args</a></span>
     </dt>
@@ -345,7 +422,9 @@ The BranchProtection resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Restrictions</span>
+        <span id="restrictions_csharp">
+<a href="#restrictions_csharp" style="color: inherit; text-decoration: inherit;">Restrictions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#branchprotectionrestrictions">Branch<wbr>Protection<wbr>Restrictions<wbr>Args</a></span>
     </dt>
@@ -361,7 +440,9 @@ The BranchProtection resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-required"
             title="Required">
-        <span>Branch</span>
+        <span id="branch_go">
+<a href="#branch_go" style="color: inherit; text-decoration: inherit;">Branch</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -370,7 +451,9 @@ The BranchProtection resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-required"
             title="Required">
-        <span>Repository</span>
+        <span id="repository_go">
+<a href="#repository_go" style="color: inherit; text-decoration: inherit;">Repository</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -379,7 +462,9 @@ The BranchProtection resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enforce<wbr>Admins</span>
+        <span id="enforceadmins_go">
+<a href="#enforceadmins_go" style="color: inherit; text-decoration: inherit;">Enforce<wbr>Admins</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -388,7 +473,9 @@ The BranchProtection resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Require<wbr>Signed<wbr>Commits</span>
+        <span id="requiresignedcommits_go">
+<a href="#requiresignedcommits_go" style="color: inherit; text-decoration: inherit;">Require<wbr>Signed<wbr>Commits</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -397,7 +484,9 @@ The BranchProtection resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Required<wbr>Pull<wbr>Request<wbr>Reviews</span>
+        <span id="requiredpullrequestreviews_go">
+<a href="#requiredpullrequestreviews_go" style="color: inherit; text-decoration: inherit;">Required<wbr>Pull<wbr>Request<wbr>Reviews</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#branchprotectionrequiredpullrequestreviews">Branch<wbr>Protection<wbr>Required<wbr>Pull<wbr>Request<wbr>Reviews</a></span>
     </dt>
@@ -406,7 +495,9 @@ The BranchProtection resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Required<wbr>Status<wbr>Checks</span>
+        <span id="requiredstatuschecks_go">
+<a href="#requiredstatuschecks_go" style="color: inherit; text-decoration: inherit;">Required<wbr>Status<wbr>Checks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#branchprotectionrequiredstatuschecks">Branch<wbr>Protection<wbr>Required<wbr>Status<wbr>Checks</a></span>
     </dt>
@@ -415,7 +506,9 @@ The BranchProtection resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Restrictions</span>
+        <span id="restrictions_go">
+<a href="#restrictions_go" style="color: inherit; text-decoration: inherit;">Restrictions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#branchprotectionrestrictions">Branch<wbr>Protection<wbr>Restrictions</a></span>
     </dt>
@@ -431,7 +524,9 @@ The BranchProtection resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-required"
             title="Required">
-        <span>branch</span>
+        <span id="branch_nodejs">
+<a href="#branch_nodejs" style="color: inherit; text-decoration: inherit;">branch</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -440,7 +535,9 @@ The BranchProtection resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-required"
             title="Required">
-        <span>repository</span>
+        <span id="repository_nodejs">
+<a href="#repository_nodejs" style="color: inherit; text-decoration: inherit;">repository</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -449,7 +546,9 @@ The BranchProtection resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>enforce<wbr>Admins</span>
+        <span id="enforceadmins_nodejs">
+<a href="#enforceadmins_nodejs" style="color: inherit; text-decoration: inherit;">enforce<wbr>Admins</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -458,7 +557,9 @@ The BranchProtection resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>require<wbr>Signed<wbr>Commits</span>
+        <span id="requiresignedcommits_nodejs">
+<a href="#requiresignedcommits_nodejs" style="color: inherit; text-decoration: inherit;">require<wbr>Signed<wbr>Commits</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -467,7 +568,9 @@ The BranchProtection resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>required<wbr>Pull<wbr>Request<wbr>Reviews</span>
+        <span id="requiredpullrequestreviews_nodejs">
+<a href="#requiredpullrequestreviews_nodejs" style="color: inherit; text-decoration: inherit;">required<wbr>Pull<wbr>Request<wbr>Reviews</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#branchprotectionrequiredpullrequestreviews">Branch<wbr>Protection<wbr>Required<wbr>Pull<wbr>Request<wbr>Reviews</a></span>
     </dt>
@@ -476,7 +579,9 @@ The BranchProtection resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>required<wbr>Status<wbr>Checks</span>
+        <span id="requiredstatuschecks_nodejs">
+<a href="#requiredstatuschecks_nodejs" style="color: inherit; text-decoration: inherit;">required<wbr>Status<wbr>Checks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#branchprotectionrequiredstatuschecks">Branch<wbr>Protection<wbr>Required<wbr>Status<wbr>Checks</a></span>
     </dt>
@@ -485,7 +590,9 @@ The BranchProtection resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>restrictions</span>
+        <span id="restrictions_nodejs">
+<a href="#restrictions_nodejs" style="color: inherit; text-decoration: inherit;">restrictions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#branchprotectionrestrictions">Branch<wbr>Protection<wbr>Restrictions</a></span>
     </dt>
@@ -501,7 +608,9 @@ The BranchProtection resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-required"
             title="Required">
-        <span>branch</span>
+        <span id="branch_python">
+<a href="#branch_python" style="color: inherit; text-decoration: inherit;">branch</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -510,7 +619,9 @@ The BranchProtection resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-required"
             title="Required">
-        <span>repository</span>
+        <span id="repository_python">
+<a href="#repository_python" style="color: inherit; text-decoration: inherit;">repository</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -519,7 +630,9 @@ The BranchProtection resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>enforce_<wbr>admins</span>
+        <span id="enforce_admins_python">
+<a href="#enforce_admins_python" style="color: inherit; text-decoration: inherit;">enforce_<wbr>admins</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -528,7 +641,9 @@ The BranchProtection resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>require_<wbr>signed_<wbr>commits</span>
+        <span id="require_signed_commits_python">
+<a href="#require_signed_commits_python" style="color: inherit; text-decoration: inherit;">require_<wbr>signed_<wbr>commits</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -537,7 +652,9 @@ The BranchProtection resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>required_<wbr>pull_<wbr>request_<wbr>reviews</span>
+        <span id="required_pull_request_reviews_python">
+<a href="#required_pull_request_reviews_python" style="color: inherit; text-decoration: inherit;">required_<wbr>pull_<wbr>request_<wbr>reviews</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#branchprotectionrequiredpullrequestreviews">Dict[Branch<wbr>Protection<wbr>Required<wbr>Pull<wbr>Request<wbr>Reviews]</a></span>
     </dt>
@@ -546,7 +663,9 @@ The BranchProtection resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>required_<wbr>status_<wbr>checks</span>
+        <span id="required_status_checks_python">
+<a href="#required_status_checks_python" style="color: inherit; text-decoration: inherit;">required_<wbr>status_<wbr>checks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#branchprotectionrequiredstatuschecks">Dict[Branch<wbr>Protection<wbr>Required<wbr>Status<wbr>Checks]</a></span>
     </dt>
@@ -555,7 +674,9 @@ The BranchProtection resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>restrictions</span>
+        <span id="restrictions_python">
+<a href="#restrictions_python" style="color: inherit; text-decoration: inherit;">restrictions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#branchprotectionrestrictions">Dict[Branch<wbr>Protection<wbr>Restrictions]</a></span>
     </dt>
@@ -582,7 +703,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Etag</span>
+        <span id="etag_csharp">
+<a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -590,7 +713,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -605,7 +730,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Etag</span>
+        <span id="etag_go">
+<a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -613,7 +740,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -628,7 +757,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>etag</span>
+        <span id="etag_nodejs">
+<a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -636,7 +767,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -651,7 +784,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>etag</span>
+        <span id="etag_python">
+<a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -659,7 +794,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -800,7 +937,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Branch</span>
+        <span id="state_branch_csharp">
+<a href="#state_branch_csharp" style="color: inherit; text-decoration: inherit;">Branch</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -809,7 +948,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enforce<wbr>Admins</span>
+        <span id="state_enforceadmins_csharp">
+<a href="#state_enforceadmins_csharp" style="color: inherit; text-decoration: inherit;">Enforce<wbr>Admins</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -818,7 +959,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Etag</span>
+        <span id="state_etag_csharp">
+<a href="#state_etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -826,7 +969,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Repository</span>
+        <span id="state_repository_csharp">
+<a href="#state_repository_csharp" style="color: inherit; text-decoration: inherit;">Repository</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -835,7 +980,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Require<wbr>Signed<wbr>Commits</span>
+        <span id="state_requiresignedcommits_csharp">
+<a href="#state_requiresignedcommits_csharp" style="color: inherit; text-decoration: inherit;">Require<wbr>Signed<wbr>Commits</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -844,7 +991,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Required<wbr>Pull<wbr>Request<wbr>Reviews</span>
+        <span id="state_requiredpullrequestreviews_csharp">
+<a href="#state_requiredpullrequestreviews_csharp" style="color: inherit; text-decoration: inherit;">Required<wbr>Pull<wbr>Request<wbr>Reviews</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#branchprotectionrequiredpullrequestreviews">Branch<wbr>Protection<wbr>Required<wbr>Pull<wbr>Request<wbr>Reviews<wbr>Args</a></span>
     </dt>
@@ -853,7 +1002,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Required<wbr>Status<wbr>Checks</span>
+        <span id="state_requiredstatuschecks_csharp">
+<a href="#state_requiredstatuschecks_csharp" style="color: inherit; text-decoration: inherit;">Required<wbr>Status<wbr>Checks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#branchprotectionrequiredstatuschecks">Branch<wbr>Protection<wbr>Required<wbr>Status<wbr>Checks<wbr>Args</a></span>
     </dt>
@@ -862,7 +1013,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Restrictions</span>
+        <span id="state_restrictions_csharp">
+<a href="#state_restrictions_csharp" style="color: inherit; text-decoration: inherit;">Restrictions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#branchprotectionrestrictions">Branch<wbr>Protection<wbr>Restrictions<wbr>Args</a></span>
     </dt>
@@ -878,7 +1031,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Branch</span>
+        <span id="state_branch_go">
+<a href="#state_branch_go" style="color: inherit; text-decoration: inherit;">Branch</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -887,7 +1042,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enforce<wbr>Admins</span>
+        <span id="state_enforceadmins_go">
+<a href="#state_enforceadmins_go" style="color: inherit; text-decoration: inherit;">Enforce<wbr>Admins</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -896,7 +1053,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Etag</span>
+        <span id="state_etag_go">
+<a href="#state_etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -904,7 +1063,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Repository</span>
+        <span id="state_repository_go">
+<a href="#state_repository_go" style="color: inherit; text-decoration: inherit;">Repository</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -913,7 +1074,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Require<wbr>Signed<wbr>Commits</span>
+        <span id="state_requiresignedcommits_go">
+<a href="#state_requiresignedcommits_go" style="color: inherit; text-decoration: inherit;">Require<wbr>Signed<wbr>Commits</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -922,7 +1085,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Required<wbr>Pull<wbr>Request<wbr>Reviews</span>
+        <span id="state_requiredpullrequestreviews_go">
+<a href="#state_requiredpullrequestreviews_go" style="color: inherit; text-decoration: inherit;">Required<wbr>Pull<wbr>Request<wbr>Reviews</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#branchprotectionrequiredpullrequestreviews">Branch<wbr>Protection<wbr>Required<wbr>Pull<wbr>Request<wbr>Reviews</a></span>
     </dt>
@@ -931,7 +1096,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Required<wbr>Status<wbr>Checks</span>
+        <span id="state_requiredstatuschecks_go">
+<a href="#state_requiredstatuschecks_go" style="color: inherit; text-decoration: inherit;">Required<wbr>Status<wbr>Checks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#branchprotectionrequiredstatuschecks">Branch<wbr>Protection<wbr>Required<wbr>Status<wbr>Checks</a></span>
     </dt>
@@ -940,7 +1107,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Restrictions</span>
+        <span id="state_restrictions_go">
+<a href="#state_restrictions_go" style="color: inherit; text-decoration: inherit;">Restrictions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#branchprotectionrestrictions">Branch<wbr>Protection<wbr>Restrictions</a></span>
     </dt>
@@ -956,7 +1125,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>branch</span>
+        <span id="state_branch_nodejs">
+<a href="#state_branch_nodejs" style="color: inherit; text-decoration: inherit;">branch</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -965,7 +1136,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>enforce<wbr>Admins</span>
+        <span id="state_enforceadmins_nodejs">
+<a href="#state_enforceadmins_nodejs" style="color: inherit; text-decoration: inherit;">enforce<wbr>Admins</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -974,7 +1147,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>etag</span>
+        <span id="state_etag_nodejs">
+<a href="#state_etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -982,7 +1157,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>repository</span>
+        <span id="state_repository_nodejs">
+<a href="#state_repository_nodejs" style="color: inherit; text-decoration: inherit;">repository</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -991,7 +1168,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>require<wbr>Signed<wbr>Commits</span>
+        <span id="state_requiresignedcommits_nodejs">
+<a href="#state_requiresignedcommits_nodejs" style="color: inherit; text-decoration: inherit;">require<wbr>Signed<wbr>Commits</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1000,7 +1179,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>required<wbr>Pull<wbr>Request<wbr>Reviews</span>
+        <span id="state_requiredpullrequestreviews_nodejs">
+<a href="#state_requiredpullrequestreviews_nodejs" style="color: inherit; text-decoration: inherit;">required<wbr>Pull<wbr>Request<wbr>Reviews</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#branchprotectionrequiredpullrequestreviews">Branch<wbr>Protection<wbr>Required<wbr>Pull<wbr>Request<wbr>Reviews</a></span>
     </dt>
@@ -1009,7 +1190,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>required<wbr>Status<wbr>Checks</span>
+        <span id="state_requiredstatuschecks_nodejs">
+<a href="#state_requiredstatuschecks_nodejs" style="color: inherit; text-decoration: inherit;">required<wbr>Status<wbr>Checks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#branchprotectionrequiredstatuschecks">Branch<wbr>Protection<wbr>Required<wbr>Status<wbr>Checks</a></span>
     </dt>
@@ -1018,7 +1201,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>restrictions</span>
+        <span id="state_restrictions_nodejs">
+<a href="#state_restrictions_nodejs" style="color: inherit; text-decoration: inherit;">restrictions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#branchprotectionrestrictions">Branch<wbr>Protection<wbr>Restrictions</a></span>
     </dt>
@@ -1034,7 +1219,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>branch</span>
+        <span id="state_branch_python">
+<a href="#state_branch_python" style="color: inherit; text-decoration: inherit;">branch</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1043,7 +1230,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>enforce_<wbr>admins</span>
+        <span id="state_enforce_admins_python">
+<a href="#state_enforce_admins_python" style="color: inherit; text-decoration: inherit;">enforce_<wbr>admins</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1052,7 +1241,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>etag</span>
+        <span id="state_etag_python">
+<a href="#state_etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1060,7 +1251,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>repository</span>
+        <span id="state_repository_python">
+<a href="#state_repository_python" style="color: inherit; text-decoration: inherit;">repository</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1069,7 +1262,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>require_<wbr>signed_<wbr>commits</span>
+        <span id="state_require_signed_commits_python">
+<a href="#state_require_signed_commits_python" style="color: inherit; text-decoration: inherit;">require_<wbr>signed_<wbr>commits</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1078,7 +1273,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>required_<wbr>pull_<wbr>request_<wbr>reviews</span>
+        <span id="state_required_pull_request_reviews_python">
+<a href="#state_required_pull_request_reviews_python" style="color: inherit; text-decoration: inherit;">required_<wbr>pull_<wbr>request_<wbr>reviews</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#branchprotectionrequiredpullrequestreviews">Dict[Branch<wbr>Protection<wbr>Required<wbr>Pull<wbr>Request<wbr>Reviews]</a></span>
     </dt>
@@ -1087,7 +1284,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>required_<wbr>status_<wbr>checks</span>
+        <span id="state_required_status_checks_python">
+<a href="#state_required_status_checks_python" style="color: inherit; text-decoration: inherit;">required_<wbr>status_<wbr>checks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#branchprotectionrequiredstatuschecks">Dict[Branch<wbr>Protection<wbr>Required<wbr>Status<wbr>Checks]</a></span>
     </dt>
@@ -1096,7 +1295,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>restrictions</span>
+        <span id="state_restrictions_python">
+<a href="#state_restrictions_python" style="color: inherit; text-decoration: inherit;">restrictions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#branchprotectionrestrictions">Dict[Branch<wbr>Protection<wbr>Restrictions]</a></span>
     </dt>
@@ -1138,7 +1339,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dismiss<wbr>Stale<wbr>Reviews</span>
+        <span id="dismissstalereviews_csharp">
+<a href="#dismissstalereviews_csharp" style="color: inherit; text-decoration: inherit;">Dismiss<wbr>Stale<wbr>Reviews</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1146,7 +1349,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dismissal<wbr>Teams</span>
+        <span id="dismissalteams_csharp">
+<a href="#dismissalteams_csharp" style="color: inherit; text-decoration: inherit;">Dismissal<wbr>Teams</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1154,7 +1359,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dismissal<wbr>Users</span>
+        <span id="dismissalusers_csharp">
+<a href="#dismissalusers_csharp" style="color: inherit; text-decoration: inherit;">Dismissal<wbr>Users</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1162,7 +1369,9 @@ The following state arguments are supported:
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>Include<wbr>Admins</span>
+        <span id="includeadmins_csharp">
+<a href="#includeadmins_csharp" style="color: inherit; text-decoration: inherit;">Include<wbr>Admins</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1170,7 +1379,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Require<wbr>Code<wbr>Owner<wbr>Reviews</span>
+        <span id="requirecodeownerreviews_csharp">
+<a href="#requirecodeownerreviews_csharp" style="color: inherit; text-decoration: inherit;">Require<wbr>Code<wbr>Owner<wbr>Reviews</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1178,7 +1389,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Required<wbr>Approving<wbr>Review<wbr>Count</span>
+        <span id="requiredapprovingreviewcount_csharp">
+<a href="#requiredapprovingreviewcount_csharp" style="color: inherit; text-decoration: inherit;">Required<wbr>Approving<wbr>Review<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1193,7 +1406,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dismiss<wbr>Stale<wbr>Reviews</span>
+        <span id="dismissstalereviews_go">
+<a href="#dismissstalereviews_go" style="color: inherit; text-decoration: inherit;">Dismiss<wbr>Stale<wbr>Reviews</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1201,7 +1416,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dismissal<wbr>Teams</span>
+        <span id="dismissalteams_go">
+<a href="#dismissalteams_go" style="color: inherit; text-decoration: inherit;">Dismissal<wbr>Teams</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1209,7 +1426,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dismissal<wbr>Users</span>
+        <span id="dismissalusers_go">
+<a href="#dismissalusers_go" style="color: inherit; text-decoration: inherit;">Dismissal<wbr>Users</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1217,7 +1436,9 @@ The following state arguments are supported:
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>Include<wbr>Admins</span>
+        <span id="includeadmins_go">
+<a href="#includeadmins_go" style="color: inherit; text-decoration: inherit;">Include<wbr>Admins</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1225,7 +1446,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Require<wbr>Code<wbr>Owner<wbr>Reviews</span>
+        <span id="requirecodeownerreviews_go">
+<a href="#requirecodeownerreviews_go" style="color: inherit; text-decoration: inherit;">Require<wbr>Code<wbr>Owner<wbr>Reviews</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1233,7 +1456,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Required<wbr>Approving<wbr>Review<wbr>Count</span>
+        <span id="requiredapprovingreviewcount_go">
+<a href="#requiredapprovingreviewcount_go" style="color: inherit; text-decoration: inherit;">Required<wbr>Approving<wbr>Review<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1248,7 +1473,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>dismiss<wbr>Stale<wbr>Reviews</span>
+        <span id="dismissstalereviews_nodejs">
+<a href="#dismissstalereviews_nodejs" style="color: inherit; text-decoration: inherit;">dismiss<wbr>Stale<wbr>Reviews</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1256,7 +1483,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>dismissal<wbr>Teams</span>
+        <span id="dismissalteams_nodejs">
+<a href="#dismissalteams_nodejs" style="color: inherit; text-decoration: inherit;">dismissal<wbr>Teams</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1264,7 +1493,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>dismissal<wbr>Users</span>
+        <span id="dismissalusers_nodejs">
+<a href="#dismissalusers_nodejs" style="color: inherit; text-decoration: inherit;">dismissal<wbr>Users</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1272,7 +1503,9 @@ The following state arguments are supported:
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>include<wbr>Admins</span>
+        <span id="includeadmins_nodejs">
+<a href="#includeadmins_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Admins</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1280,7 +1513,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>require<wbr>Code<wbr>Owner<wbr>Reviews</span>
+        <span id="requirecodeownerreviews_nodejs">
+<a href="#requirecodeownerreviews_nodejs" style="color: inherit; text-decoration: inherit;">require<wbr>Code<wbr>Owner<wbr>Reviews</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1288,7 +1523,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>required<wbr>Approving<wbr>Review<wbr>Count</span>
+        <span id="requiredapprovingreviewcount_nodejs">
+<a href="#requiredapprovingreviewcount_nodejs" style="color: inherit; text-decoration: inherit;">required<wbr>Approving<wbr>Review<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1303,7 +1540,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>dismiss<wbr>Stale<wbr>Reviews</span>
+        <span id="dismissstalereviews_python">
+<a href="#dismissstalereviews_python" style="color: inherit; text-decoration: inherit;">dismiss<wbr>Stale<wbr>Reviews</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1311,7 +1550,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>dismissal<wbr>Teams</span>
+        <span id="dismissalteams_python">
+<a href="#dismissalteams_python" style="color: inherit; text-decoration: inherit;">dismissal<wbr>Teams</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1319,7 +1560,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>dismissal<wbr>Users</span>
+        <span id="dismissalusers_python">
+<a href="#dismissalusers_python" style="color: inherit; text-decoration: inherit;">dismissal<wbr>Users</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1327,7 +1570,9 @@ The following state arguments are supported:
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>include<wbr>Admins</span>
+        <span id="includeadmins_python">
+<a href="#includeadmins_python" style="color: inherit; text-decoration: inherit;">include<wbr>Admins</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1335,7 +1580,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>require<wbr>Code<wbr>Owner<wbr>Reviews</span>
+        <span id="requirecodeownerreviews_python">
+<a href="#requirecodeownerreviews_python" style="color: inherit; text-decoration: inherit;">require<wbr>Code<wbr>Owner<wbr>Reviews</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1343,7 +1590,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>required<wbr>Approving<wbr>Review<wbr>Count</span>
+        <span id="requiredapprovingreviewcount_python">
+<a href="#requiredapprovingreviewcount_python" style="color: inherit; text-decoration: inherit;">required<wbr>Approving<wbr>Review<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1376,7 +1625,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Contexts</span>
+        <span id="contexts_csharp">
+<a href="#contexts_csharp" style="color: inherit; text-decoration: inherit;">Contexts</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1384,7 +1635,9 @@ The following state arguments are supported:
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>Include<wbr>Admins</span>
+        <span id="includeadmins_csharp">
+<a href="#includeadmins_csharp" style="color: inherit; text-decoration: inherit;">Include<wbr>Admins</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1392,7 +1645,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Strict</span>
+        <span id="strict_csharp">
+<a href="#strict_csharp" style="color: inherit; text-decoration: inherit;">Strict</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1407,7 +1662,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Contexts</span>
+        <span id="contexts_go">
+<a href="#contexts_go" style="color: inherit; text-decoration: inherit;">Contexts</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1415,7 +1672,9 @@ The following state arguments are supported:
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>Include<wbr>Admins</span>
+        <span id="includeadmins_go">
+<a href="#includeadmins_go" style="color: inherit; text-decoration: inherit;">Include<wbr>Admins</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1423,7 +1682,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Strict</span>
+        <span id="strict_go">
+<a href="#strict_go" style="color: inherit; text-decoration: inherit;">Strict</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1438,7 +1699,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>contexts</span>
+        <span id="contexts_nodejs">
+<a href="#contexts_nodejs" style="color: inherit; text-decoration: inherit;">contexts</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1446,7 +1709,9 @@ The following state arguments are supported:
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>include<wbr>Admins</span>
+        <span id="includeadmins_nodejs">
+<a href="#includeadmins_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Admins</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1454,7 +1719,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>strict</span>
+        <span id="strict_nodejs">
+<a href="#strict_nodejs" style="color: inherit; text-decoration: inherit;">strict</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1469,7 +1736,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>contexts</span>
+        <span id="contexts_python">
+<a href="#contexts_python" style="color: inherit; text-decoration: inherit;">contexts</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1477,7 +1746,9 @@ The following state arguments are supported:
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>include<wbr>Admins</span>
+        <span id="includeadmins_python">
+<a href="#includeadmins_python" style="color: inherit; text-decoration: inherit;">include<wbr>Admins</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1485,7 +1756,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>strict</span>
+        <span id="strict_python">
+<a href="#strict_python" style="color: inherit; text-decoration: inherit;">strict</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1518,7 +1791,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Apps</span>
+        <span id="apps_csharp">
+<a href="#apps_csharp" style="color: inherit; text-decoration: inherit;">Apps</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1526,7 +1801,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Teams</span>
+        <span id="teams_csharp">
+<a href="#teams_csharp" style="color: inherit; text-decoration: inherit;">Teams</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1534,7 +1811,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Users</span>
+        <span id="users_csharp">
+<a href="#users_csharp" style="color: inherit; text-decoration: inherit;">Users</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1549,7 +1828,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Apps</span>
+        <span id="apps_go">
+<a href="#apps_go" style="color: inherit; text-decoration: inherit;">Apps</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1557,7 +1838,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Teams</span>
+        <span id="teams_go">
+<a href="#teams_go" style="color: inherit; text-decoration: inherit;">Teams</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1565,7 +1848,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Users</span>
+        <span id="users_go">
+<a href="#users_go" style="color: inherit; text-decoration: inherit;">Users</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1580,7 +1865,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>apps</span>
+        <span id="apps_nodejs">
+<a href="#apps_nodejs" style="color: inherit; text-decoration: inherit;">apps</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1588,7 +1875,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>teams</span>
+        <span id="teams_nodejs">
+<a href="#teams_nodejs" style="color: inherit; text-decoration: inherit;">teams</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1596,7 +1885,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>users</span>
+        <span id="users_nodejs">
+<a href="#users_nodejs" style="color: inherit; text-decoration: inherit;">users</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1611,7 +1902,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>apps</span>
+        <span id="apps_python">
+<a href="#apps_python" style="color: inherit; text-decoration: inherit;">apps</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1619,7 +1912,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>teams</span>
+        <span id="teams_python">
+<a href="#teams_python" style="color: inherit; text-decoration: inherit;">teams</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1627,7 +1922,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>users</span>
+        <span id="users_python">
+<a href="#users_python" style="color: inherit; text-decoration: inherit;">users</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>

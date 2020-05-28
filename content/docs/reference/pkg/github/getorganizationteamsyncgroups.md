@@ -20,7 +20,19 @@ Use this data source to retrieve the identity provider (IdP) groups for an organ
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Github = Pulumi.Github;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var test = Output.Create(Github.GetOrganizationTeamSyncGroups.InvokeAsync());
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -90,7 +102,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Groups</span>
+        <span id="groups_csharp">
+<a href="#groups_csharp" style="color: inherit; text-decoration: inherit;">Groups</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getorganizationteamsyncgroupsgroup">List&lt;Get<wbr>Organization<wbr>Team<wbr>Sync<wbr>Groups<wbr>Group&gt;</a></span>
     </dt>
@@ -99,7 +113,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -115,7 +131,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Groups</span>
+        <span id="groups_go">
+<a href="#groups_go" style="color: inherit; text-decoration: inherit;">Groups</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getorganizationteamsyncgroupsgroup">[]Get<wbr>Organization<wbr>Team<wbr>Sync<wbr>Groups<wbr>Group</a></span>
     </dt>
@@ -124,7 +142,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -140,7 +160,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>groups</span>
+        <span id="groups_nodejs">
+<a href="#groups_nodejs" style="color: inherit; text-decoration: inherit;">groups</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getorganizationteamsyncgroupsgroup">Get<wbr>Organization<wbr>Team<wbr>Sync<wbr>Groups<wbr>Group[]</a></span>
     </dt>
@@ -149,7 +171,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -165,7 +189,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>groups</span>
+        <span id="groups_python">
+<a href="#groups_python" style="color: inherit; text-decoration: inherit;">groups</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getorganizationteamsyncgroupsgroup">List[Get<wbr>Organization<wbr>Team<wbr>Sync<wbr>Groups<wbr>Group]</a></span>
     </dt>
@@ -174,7 +200,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -214,7 +242,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Group<wbr>Description</span>
+        <span id="groupdescription_csharp">
+<a href="#groupdescription_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -223,7 +253,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Group<wbr>Id</span>
+        <span id="groupid_csharp">
+<a href="#groupid_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -232,7 +264,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Group<wbr>Name</span>
+        <span id="groupname_csharp">
+<a href="#groupname_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -248,7 +282,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Group<wbr>Description</span>
+        <span id="groupdescription_go">
+<a href="#groupdescription_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -257,7 +293,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Group<wbr>Id</span>
+        <span id="groupid_go">
+<a href="#groupid_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -266,7 +304,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Group<wbr>Name</span>
+        <span id="groupname_go">
+<a href="#groupname_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -282,7 +322,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>group<wbr>Description</span>
+        <span id="groupdescription_nodejs">
+<a href="#groupdescription_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -291,7 +333,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>group<wbr>Id</span>
+        <span id="groupid_nodejs">
+<a href="#groupid_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -300,7 +344,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>group<wbr>Name</span>
+        <span id="groupname_nodejs">
+<a href="#groupname_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -316,7 +362,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>group<wbr>Description</span>
+        <span id="groupdescription_python">
+<a href="#groupdescription_python" style="color: inherit; text-decoration: inherit;">group<wbr>Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -325,7 +373,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>group<wbr>Id</span>
+        <span id="groupid_python">
+<a href="#groupid_python" style="color: inherit; text-decoration: inherit;">group<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -334,7 +384,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>group<wbr>Name</span>
+        <span id="groupname_python">
+<a href="#groupname_python" style="color: inherit; text-decoration: inherit;">group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

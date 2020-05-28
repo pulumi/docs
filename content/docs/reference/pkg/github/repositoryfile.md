@@ -22,7 +22,24 @@ GitHub repository.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Github = Pulumi.Github;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var gitignore = new Github.RepositoryFile("gitignore", new Github.RepositoryFileArgs
+        {
+            Content = "**/*.tfstate",
+            File = ".gitignore",
+            Repository = "example",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -240,7 +257,9 @@ The RepositoryFile resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-required"
             title="Required">
-        <span>Content</span>
+        <span id="content_csharp">
+<a href="#content_csharp" style="color: inherit; text-decoration: inherit;">Content</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -249,7 +268,9 @@ The RepositoryFile resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-required"
             title="Required">
-        <span>File</span>
+        <span id="file_csharp">
+<a href="#file_csharp" style="color: inherit; text-decoration: inherit;">File</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -258,7 +279,9 @@ The RepositoryFile resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-required"
             title="Required">
-        <span>Repository</span>
+        <span id="repository_csharp">
+<a href="#repository_csharp" style="color: inherit; text-decoration: inherit;">Repository</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -267,7 +290,9 @@ The RepositoryFile resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>Branch</span>
+        <span id="branch_csharp">
+<a href="#branch_csharp" style="color: inherit; text-decoration: inherit;">Branch</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -277,7 +302,9 @@ The branch must already exist, it will not be created if it does not already exi
 
     <dt class="property-optional"
             title="Optional">
-        <span>Commit<wbr>Author</span>
+        <span id="commitauthor_csharp">
+<a href="#commitauthor_csharp" style="color: inherit; text-decoration: inherit;">Commit<wbr>Author</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -286,7 +313,9 @@ The branch must already exist, it will not be created if it does not already exi
 
     <dt class="property-optional"
             title="Optional">
-        <span>Commit<wbr>Email</span>
+        <span id="commitemail_csharp">
+<a href="#commitemail_csharp" style="color: inherit; text-decoration: inherit;">Commit<wbr>Email</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -295,7 +324,9 @@ The branch must already exist, it will not be created if it does not already exi
 
     <dt class="property-optional"
             title="Optional">
-        <span>Commit<wbr>Message</span>
+        <span id="commitmessage_csharp">
+<a href="#commitmessage_csharp" style="color: inherit; text-decoration: inherit;">Commit<wbr>Message</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -311,7 +342,9 @@ The branch must already exist, it will not be created if it does not already exi
 
     <dt class="property-required"
             title="Required">
-        <span>Content</span>
+        <span id="content_go">
+<a href="#content_go" style="color: inherit; text-decoration: inherit;">Content</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -320,7 +353,9 @@ The branch must already exist, it will not be created if it does not already exi
 
     <dt class="property-required"
             title="Required">
-        <span>File</span>
+        <span id="file_go">
+<a href="#file_go" style="color: inherit; text-decoration: inherit;">File</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -329,7 +364,9 @@ The branch must already exist, it will not be created if it does not already exi
 
     <dt class="property-required"
             title="Required">
-        <span>Repository</span>
+        <span id="repository_go">
+<a href="#repository_go" style="color: inherit; text-decoration: inherit;">Repository</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -338,7 +375,9 @@ The branch must already exist, it will not be created if it does not already exi
 
     <dt class="property-optional"
             title="Optional">
-        <span>Branch</span>
+        <span id="branch_go">
+<a href="#branch_go" style="color: inherit; text-decoration: inherit;">Branch</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -348,7 +387,9 @@ The branch must already exist, it will not be created if it does not already exi
 
     <dt class="property-optional"
             title="Optional">
-        <span>Commit<wbr>Author</span>
+        <span id="commitauthor_go">
+<a href="#commitauthor_go" style="color: inherit; text-decoration: inherit;">Commit<wbr>Author</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -357,7 +398,9 @@ The branch must already exist, it will not be created if it does not already exi
 
     <dt class="property-optional"
             title="Optional">
-        <span>Commit<wbr>Email</span>
+        <span id="commitemail_go">
+<a href="#commitemail_go" style="color: inherit; text-decoration: inherit;">Commit<wbr>Email</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -366,7 +409,9 @@ The branch must already exist, it will not be created if it does not already exi
 
     <dt class="property-optional"
             title="Optional">
-        <span>Commit<wbr>Message</span>
+        <span id="commitmessage_go">
+<a href="#commitmessage_go" style="color: inherit; text-decoration: inherit;">Commit<wbr>Message</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -382,7 +427,9 @@ The branch must already exist, it will not be created if it does not already exi
 
     <dt class="property-required"
             title="Required">
-        <span>content</span>
+        <span id="content_nodejs">
+<a href="#content_nodejs" style="color: inherit; text-decoration: inherit;">content</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -391,7 +438,9 @@ The branch must already exist, it will not be created if it does not already exi
 
     <dt class="property-required"
             title="Required">
-        <span>file</span>
+        <span id="file_nodejs">
+<a href="#file_nodejs" style="color: inherit; text-decoration: inherit;">file</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -400,7 +449,9 @@ The branch must already exist, it will not be created if it does not already exi
 
     <dt class="property-required"
             title="Required">
-        <span>repository</span>
+        <span id="repository_nodejs">
+<a href="#repository_nodejs" style="color: inherit; text-decoration: inherit;">repository</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -409,7 +460,9 @@ The branch must already exist, it will not be created if it does not already exi
 
     <dt class="property-optional"
             title="Optional">
-        <span>branch</span>
+        <span id="branch_nodejs">
+<a href="#branch_nodejs" style="color: inherit; text-decoration: inherit;">branch</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -419,7 +472,9 @@ The branch must already exist, it will not be created if it does not already exi
 
     <dt class="property-optional"
             title="Optional">
-        <span>commit<wbr>Author</span>
+        <span id="commitauthor_nodejs">
+<a href="#commitauthor_nodejs" style="color: inherit; text-decoration: inherit;">commit<wbr>Author</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -428,7 +483,9 @@ The branch must already exist, it will not be created if it does not already exi
 
     <dt class="property-optional"
             title="Optional">
-        <span>commit<wbr>Email</span>
+        <span id="commitemail_nodejs">
+<a href="#commitemail_nodejs" style="color: inherit; text-decoration: inherit;">commit<wbr>Email</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -437,7 +494,9 @@ The branch must already exist, it will not be created if it does not already exi
 
     <dt class="property-optional"
             title="Optional">
-        <span>commit<wbr>Message</span>
+        <span id="commitmessage_nodejs">
+<a href="#commitmessage_nodejs" style="color: inherit; text-decoration: inherit;">commit<wbr>Message</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -453,7 +512,9 @@ The branch must already exist, it will not be created if it does not already exi
 
     <dt class="property-required"
             title="Required">
-        <span>content</span>
+        <span id="content_python">
+<a href="#content_python" style="color: inherit; text-decoration: inherit;">content</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -462,7 +523,9 @@ The branch must already exist, it will not be created if it does not already exi
 
     <dt class="property-required"
             title="Required">
-        <span>file</span>
+        <span id="file_python">
+<a href="#file_python" style="color: inherit; text-decoration: inherit;">file</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -471,7 +534,9 @@ The branch must already exist, it will not be created if it does not already exi
 
     <dt class="property-required"
             title="Required">
-        <span>repository</span>
+        <span id="repository_python">
+<a href="#repository_python" style="color: inherit; text-decoration: inherit;">repository</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -480,7 +545,9 @@ The branch must already exist, it will not be created if it does not already exi
 
     <dt class="property-optional"
             title="Optional">
-        <span>branch</span>
+        <span id="branch_python">
+<a href="#branch_python" style="color: inherit; text-decoration: inherit;">branch</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -490,7 +557,9 @@ The branch must already exist, it will not be created if it does not already exi
 
     <dt class="property-optional"
             title="Optional">
-        <span>commit_<wbr>author</span>
+        <span id="commit_author_python">
+<a href="#commit_author_python" style="color: inherit; text-decoration: inherit;">commit_<wbr>author</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -499,7 +568,9 @@ The branch must already exist, it will not be created if it does not already exi
 
     <dt class="property-optional"
             title="Optional">
-        <span>commit_<wbr>email</span>
+        <span id="commit_email_python">
+<a href="#commit_email_python" style="color: inherit; text-decoration: inherit;">commit_<wbr>email</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -508,7 +579,9 @@ The branch must already exist, it will not be created if it does not already exi
 
     <dt class="property-optional"
             title="Optional">
-        <span>commit_<wbr>message</span>
+        <span id="commit_message_python">
+<a href="#commit_message_python" style="color: inherit; text-decoration: inherit;">commit_<wbr>message</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -535,7 +608,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -543,7 +618,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Sha</span>
+        <span id="sha_csharp">
+<a href="#sha_csharp" style="color: inherit; text-decoration: inherit;">Sha</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -559,7 +636,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -567,7 +646,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Sha</span>
+        <span id="sha_go">
+<a href="#sha_go" style="color: inherit; text-decoration: inherit;">Sha</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -583,7 +664,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -591,7 +674,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>sha</span>
+        <span id="sha_nodejs">
+<a href="#sha_nodejs" style="color: inherit; text-decoration: inherit;">sha</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -607,7 +692,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -615,7 +702,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>sha</span>
+        <span id="sha_python">
+<a href="#sha_python" style="color: inherit; text-decoration: inherit;">sha</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -757,7 +846,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Branch</span>
+        <span id="state_branch_csharp">
+<a href="#state_branch_csharp" style="color: inherit; text-decoration: inherit;">Branch</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -767,7 +858,9 @@ The branch must already exist, it will not be created if it does not already exi
 
     <dt class="property-optional"
             title="Optional">
-        <span>Commit<wbr>Author</span>
+        <span id="state_commitauthor_csharp">
+<a href="#state_commitauthor_csharp" style="color: inherit; text-decoration: inherit;">Commit<wbr>Author</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -776,7 +869,9 @@ The branch must already exist, it will not be created if it does not already exi
 
     <dt class="property-optional"
             title="Optional">
-        <span>Commit<wbr>Email</span>
+        <span id="state_commitemail_csharp">
+<a href="#state_commitemail_csharp" style="color: inherit; text-decoration: inherit;">Commit<wbr>Email</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -785,7 +880,9 @@ The branch must already exist, it will not be created if it does not already exi
 
     <dt class="property-optional"
             title="Optional">
-        <span>Commit<wbr>Message</span>
+        <span id="state_commitmessage_csharp">
+<a href="#state_commitmessage_csharp" style="color: inherit; text-decoration: inherit;">Commit<wbr>Message</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -794,7 +891,9 @@ The branch must already exist, it will not be created if it does not already exi
 
     <dt class="property-optional"
             title="Optional">
-        <span>Content</span>
+        <span id="state_content_csharp">
+<a href="#state_content_csharp" style="color: inherit; text-decoration: inherit;">Content</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -803,7 +902,9 @@ The branch must already exist, it will not be created if it does not already exi
 
     <dt class="property-optional"
             title="Optional">
-        <span>File</span>
+        <span id="state_file_csharp">
+<a href="#state_file_csharp" style="color: inherit; text-decoration: inherit;">File</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -812,7 +913,9 @@ The branch must already exist, it will not be created if it does not already exi
 
     <dt class="property-optional"
             title="Optional">
-        <span>Repository</span>
+        <span id="state_repository_csharp">
+<a href="#state_repository_csharp" style="color: inherit; text-decoration: inherit;">Repository</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -821,7 +924,9 @@ The branch must already exist, it will not be created if it does not already exi
 
     <dt class="property-optional"
             title="Optional">
-        <span>Sha</span>
+        <span id="state_sha_csharp">
+<a href="#state_sha_csharp" style="color: inherit; text-decoration: inherit;">Sha</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -837,7 +942,9 @@ The branch must already exist, it will not be created if it does not already exi
 
     <dt class="property-optional"
             title="Optional">
-        <span>Branch</span>
+        <span id="state_branch_go">
+<a href="#state_branch_go" style="color: inherit; text-decoration: inherit;">Branch</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -847,7 +954,9 @@ The branch must already exist, it will not be created if it does not already exi
 
     <dt class="property-optional"
             title="Optional">
-        <span>Commit<wbr>Author</span>
+        <span id="state_commitauthor_go">
+<a href="#state_commitauthor_go" style="color: inherit; text-decoration: inherit;">Commit<wbr>Author</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -856,7 +965,9 @@ The branch must already exist, it will not be created if it does not already exi
 
     <dt class="property-optional"
             title="Optional">
-        <span>Commit<wbr>Email</span>
+        <span id="state_commitemail_go">
+<a href="#state_commitemail_go" style="color: inherit; text-decoration: inherit;">Commit<wbr>Email</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -865,7 +976,9 @@ The branch must already exist, it will not be created if it does not already exi
 
     <dt class="property-optional"
             title="Optional">
-        <span>Commit<wbr>Message</span>
+        <span id="state_commitmessage_go">
+<a href="#state_commitmessage_go" style="color: inherit; text-decoration: inherit;">Commit<wbr>Message</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -874,7 +987,9 @@ The branch must already exist, it will not be created if it does not already exi
 
     <dt class="property-optional"
             title="Optional">
-        <span>Content</span>
+        <span id="state_content_go">
+<a href="#state_content_go" style="color: inherit; text-decoration: inherit;">Content</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -883,7 +998,9 @@ The branch must already exist, it will not be created if it does not already exi
 
     <dt class="property-optional"
             title="Optional">
-        <span>File</span>
+        <span id="state_file_go">
+<a href="#state_file_go" style="color: inherit; text-decoration: inherit;">File</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -892,7 +1009,9 @@ The branch must already exist, it will not be created if it does not already exi
 
     <dt class="property-optional"
             title="Optional">
-        <span>Repository</span>
+        <span id="state_repository_go">
+<a href="#state_repository_go" style="color: inherit; text-decoration: inherit;">Repository</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -901,7 +1020,9 @@ The branch must already exist, it will not be created if it does not already exi
 
     <dt class="property-optional"
             title="Optional">
-        <span>Sha</span>
+        <span id="state_sha_go">
+<a href="#state_sha_go" style="color: inherit; text-decoration: inherit;">Sha</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -917,7 +1038,9 @@ The branch must already exist, it will not be created if it does not already exi
 
     <dt class="property-optional"
             title="Optional">
-        <span>branch</span>
+        <span id="state_branch_nodejs">
+<a href="#state_branch_nodejs" style="color: inherit; text-decoration: inherit;">branch</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -927,7 +1050,9 @@ The branch must already exist, it will not be created if it does not already exi
 
     <dt class="property-optional"
             title="Optional">
-        <span>commit<wbr>Author</span>
+        <span id="state_commitauthor_nodejs">
+<a href="#state_commitauthor_nodejs" style="color: inherit; text-decoration: inherit;">commit<wbr>Author</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -936,7 +1061,9 @@ The branch must already exist, it will not be created if it does not already exi
 
     <dt class="property-optional"
             title="Optional">
-        <span>commit<wbr>Email</span>
+        <span id="state_commitemail_nodejs">
+<a href="#state_commitemail_nodejs" style="color: inherit; text-decoration: inherit;">commit<wbr>Email</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -945,7 +1072,9 @@ The branch must already exist, it will not be created if it does not already exi
 
     <dt class="property-optional"
             title="Optional">
-        <span>commit<wbr>Message</span>
+        <span id="state_commitmessage_nodejs">
+<a href="#state_commitmessage_nodejs" style="color: inherit; text-decoration: inherit;">commit<wbr>Message</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -954,7 +1083,9 @@ The branch must already exist, it will not be created if it does not already exi
 
     <dt class="property-optional"
             title="Optional">
-        <span>content</span>
+        <span id="state_content_nodejs">
+<a href="#state_content_nodejs" style="color: inherit; text-decoration: inherit;">content</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -963,7 +1094,9 @@ The branch must already exist, it will not be created if it does not already exi
 
     <dt class="property-optional"
             title="Optional">
-        <span>file</span>
+        <span id="state_file_nodejs">
+<a href="#state_file_nodejs" style="color: inherit; text-decoration: inherit;">file</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -972,7 +1105,9 @@ The branch must already exist, it will not be created if it does not already exi
 
     <dt class="property-optional"
             title="Optional">
-        <span>repository</span>
+        <span id="state_repository_nodejs">
+<a href="#state_repository_nodejs" style="color: inherit; text-decoration: inherit;">repository</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -981,7 +1116,9 @@ The branch must already exist, it will not be created if it does not already exi
 
     <dt class="property-optional"
             title="Optional">
-        <span>sha</span>
+        <span id="state_sha_nodejs">
+<a href="#state_sha_nodejs" style="color: inherit; text-decoration: inherit;">sha</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -997,7 +1134,9 @@ The branch must already exist, it will not be created if it does not already exi
 
     <dt class="property-optional"
             title="Optional">
-        <span>branch</span>
+        <span id="state_branch_python">
+<a href="#state_branch_python" style="color: inherit; text-decoration: inherit;">branch</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1007,7 +1146,9 @@ The branch must already exist, it will not be created if it does not already exi
 
     <dt class="property-optional"
             title="Optional">
-        <span>commit_<wbr>author</span>
+        <span id="state_commit_author_python">
+<a href="#state_commit_author_python" style="color: inherit; text-decoration: inherit;">commit_<wbr>author</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1016,7 +1157,9 @@ The branch must already exist, it will not be created if it does not already exi
 
     <dt class="property-optional"
             title="Optional">
-        <span>commit_<wbr>email</span>
+        <span id="state_commit_email_python">
+<a href="#state_commit_email_python" style="color: inherit; text-decoration: inherit;">commit_<wbr>email</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1025,7 +1168,9 @@ The branch must already exist, it will not be created if it does not already exi
 
     <dt class="property-optional"
             title="Optional">
-        <span>commit_<wbr>message</span>
+        <span id="state_commit_message_python">
+<a href="#state_commit_message_python" style="color: inherit; text-decoration: inherit;">commit_<wbr>message</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1034,7 +1179,9 @@ The branch must already exist, it will not be created if it does not already exi
 
     <dt class="property-optional"
             title="Optional">
-        <span>content</span>
+        <span id="state_content_python">
+<a href="#state_content_python" style="color: inherit; text-decoration: inherit;">content</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1043,7 +1190,9 @@ The branch must already exist, it will not be created if it does not already exi
 
     <dt class="property-optional"
             title="Optional">
-        <span>file</span>
+        <span id="state_file_python">
+<a href="#state_file_python" style="color: inherit; text-decoration: inherit;">file</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1052,7 +1201,9 @@ The branch must already exist, it will not be created if it does not already exi
 
     <dt class="property-optional"
             title="Optional">
-        <span>repository</span>
+        <span id="state_repository_python">
+<a href="#state_repository_python" style="color: inherit; text-decoration: inherit;">repository</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1061,7 +1212,9 @@ The branch must already exist, it will not be created if it does not already exi
 
     <dt class="property-optional"
             title="Optional">
-        <span>sha</span>
+        <span id="state_sha_python">
+<a href="#state_sha_python" style="color: inherit; text-decoration: inherit;">sha</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

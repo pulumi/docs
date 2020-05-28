@@ -200,7 +200,9 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Anonymous</span>
+        <span id="anonymous_csharp">
+<a href="#anonymous_csharp" style="color: inherit; text-decoration: inherit;">Anonymous</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -210,7 +212,9 @@ authentication.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Base<wbr>Url</span>
+        <span id="baseurl_csharp">
+<a href="#baseurl_csharp" style="color: inherit; text-decoration: inherit;">Base<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -219,7 +223,9 @@ authentication.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Individual</span>
+        <span id="individual_csharp">
+<a href="#individual_csharp" style="color: inherit; text-decoration: inherit;">Individual</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -228,7 +234,9 @@ authentication.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Insecure</span>
+        <span id="insecure_csharp">
+<a href="#insecure_csharp" style="color: inherit; text-decoration: inherit;">Insecure</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -237,7 +245,9 @@ authentication.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Organization</span>
+        <span id="organization_csharp">
+<a href="#organization_csharp" style="color: inherit; text-decoration: inherit;">Organization</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -246,7 +256,9 @@ authentication.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Token</span>
+        <span id="token_csharp">
+<a href="#token_csharp" style="color: inherit; text-decoration: inherit;">Token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -262,7 +274,9 @@ authentication.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Anonymous</span>
+        <span id="anonymous_go">
+<a href="#anonymous_go" style="color: inherit; text-decoration: inherit;">Anonymous</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -272,7 +286,9 @@ authentication.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Base<wbr>Url</span>
+        <span id="baseurl_go">
+<a href="#baseurl_go" style="color: inherit; text-decoration: inherit;">Base<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -281,7 +297,9 @@ authentication.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Individual</span>
+        <span id="individual_go">
+<a href="#individual_go" style="color: inherit; text-decoration: inherit;">Individual</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -290,7 +308,9 @@ authentication.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Insecure</span>
+        <span id="insecure_go">
+<a href="#insecure_go" style="color: inherit; text-decoration: inherit;">Insecure</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -299,7 +319,9 @@ authentication.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Organization</span>
+        <span id="organization_go">
+<a href="#organization_go" style="color: inherit; text-decoration: inherit;">Organization</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -308,7 +330,9 @@ authentication.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Token</span>
+        <span id="token_go">
+<a href="#token_go" style="color: inherit; text-decoration: inherit;">Token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -324,7 +348,9 @@ authentication.
 
     <dt class="property-optional"
             title="Optional">
-        <span>anonymous</span>
+        <span id="anonymous_nodejs">
+<a href="#anonymous_nodejs" style="color: inherit; text-decoration: inherit;">anonymous</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -334,7 +360,9 @@ authentication.
 
     <dt class="property-optional"
             title="Optional">
-        <span>base<wbr>Url</span>
+        <span id="baseurl_nodejs">
+<a href="#baseurl_nodejs" style="color: inherit; text-decoration: inherit;">base<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -343,7 +371,9 @@ authentication.
 
     <dt class="property-optional"
             title="Optional">
-        <span>individual</span>
+        <span id="individual_nodejs">
+<a href="#individual_nodejs" style="color: inherit; text-decoration: inherit;">individual</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -352,7 +382,9 @@ authentication.
 
     <dt class="property-optional"
             title="Optional">
-        <span>insecure</span>
+        <span id="insecure_nodejs">
+<a href="#insecure_nodejs" style="color: inherit; text-decoration: inherit;">insecure</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -361,7 +393,9 @@ authentication.
 
     <dt class="property-optional"
             title="Optional">
-        <span>organization</span>
+        <span id="organization_nodejs">
+<a href="#organization_nodejs" style="color: inherit; text-decoration: inherit;">organization</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -370,7 +404,9 @@ authentication.
 
     <dt class="property-optional"
             title="Optional">
-        <span>token</span>
+        <span id="token_nodejs">
+<a href="#token_nodejs" style="color: inherit; text-decoration: inherit;">token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -386,7 +422,9 @@ authentication.
 
     <dt class="property-optional"
             title="Optional">
-        <span>anonymous</span>
+        <span id="anonymous_python">
+<a href="#anonymous_python" style="color: inherit; text-decoration: inherit;">anonymous</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -396,7 +434,9 @@ authentication.
 
     <dt class="property-optional"
             title="Optional">
-        <span>base_<wbr>url</span>
+        <span id="base_url_python">
+<a href="#base_url_python" style="color: inherit; text-decoration: inherit;">base_<wbr>url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -405,7 +445,9 @@ authentication.
 
     <dt class="property-optional"
             title="Optional">
-        <span>individual</span>
+        <span id="individual_python">
+<a href="#individual_python" style="color: inherit; text-decoration: inherit;">individual</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -414,7 +456,9 @@ authentication.
 
     <dt class="property-optional"
             title="Optional">
-        <span>insecure</span>
+        <span id="insecure_python">
+<a href="#insecure_python" style="color: inherit; text-decoration: inherit;">insecure</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -423,7 +467,9 @@ authentication.
 
     <dt class="property-optional"
             title="Optional">
-        <span>organization</span>
+        <span id="organization_python">
+<a href="#organization_python" style="color: inherit; text-decoration: inherit;">organization</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -432,7 +478,9 @@ authentication.
 
     <dt class="property-optional"
             title="Optional">
-        <span>token</span>
+        <span id="token_python">
+<a href="#token_python" style="color: inherit; text-decoration: inherit;">token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -459,7 +507,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -474,7 +524,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -489,7 +541,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -504,7 +558,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

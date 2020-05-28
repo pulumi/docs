@@ -22,7 +22,25 @@ This resource allows you to add/remove GPG keys from your user account.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Github = Pulumi.Github;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Github.UserGpgKey("example", new Github.UserGpgKeyArgs
+        {
+            ArmoredPublicKey = @"-----BEGIN PGP PUBLIC KEY BLOCK-----
+...
+-----END PGP PUBLIC KEY BLOCK-----
+",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -240,7 +258,9 @@ The UserGpgKey resource accepts the following [input]({{< relref "/docs/intro/co
 
     <dt class="property-required"
             title="Required">
-        <span>Armored<wbr>Public<wbr>Key</span>
+        <span id="armoredpublickey_csharp">
+<a href="#armoredpublickey_csharp" style="color: inherit; text-decoration: inherit;">Armored<wbr>Public<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -257,7 +277,9 @@ See [Generating a new GPG key](https://help.github.com/articles/generating-a-new
 
     <dt class="property-required"
             title="Required">
-        <span>Armored<wbr>Public<wbr>Key</span>
+        <span id="armoredpublickey_go">
+<a href="#armoredpublickey_go" style="color: inherit; text-decoration: inherit;">Armored<wbr>Public<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -274,7 +296,9 @@ See [Generating a new GPG key](https://help.github.com/articles/generating-a-new
 
     <dt class="property-required"
             title="Required">
-        <span>armored<wbr>Public<wbr>Key</span>
+        <span id="armoredpublickey_nodejs">
+<a href="#armoredpublickey_nodejs" style="color: inherit; text-decoration: inherit;">armored<wbr>Public<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -291,7 +315,9 @@ See [Generating a new GPG key](https://help.github.com/articles/generating-a-new
 
     <dt class="property-required"
             title="Required">
-        <span>armored_<wbr>public_<wbr>key</span>
+        <span id="armored_public_key_python">
+<a href="#armored_public_key_python" style="color: inherit; text-decoration: inherit;">armored_<wbr>public_<wbr>key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -319,7 +345,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Etag</span>
+        <span id="etag_csharp">
+<a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -327,7 +355,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -335,7 +365,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Key<wbr>Id</span>
+        <span id="keyid_csharp">
+<a href="#keyid_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -351,7 +383,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Etag</span>
+        <span id="etag_go">
+<a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -359,7 +393,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -367,7 +403,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Key<wbr>Id</span>
+        <span id="keyid_go">
+<a href="#keyid_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -383,7 +421,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>etag</span>
+        <span id="etag_nodejs">
+<a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -391,7 +431,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -399,7 +441,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>key<wbr>Id</span>
+        <span id="keyid_nodejs">
+<a href="#keyid_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -415,7 +459,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>etag</span>
+        <span id="etag_python">
+<a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -423,7 +469,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -431,7 +479,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>key_<wbr>id</span>
+        <span id="key_id_python">
+<a href="#key_id_python" style="color: inherit; text-decoration: inherit;">key_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -573,7 +623,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Armored<wbr>Public<wbr>Key</span>
+        <span id="state_armoredpublickey_csharp">
+<a href="#state_armoredpublickey_csharp" style="color: inherit; text-decoration: inherit;">Armored<wbr>Public<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -583,7 +635,9 @@ See [Generating a new GPG key](https://help.github.com/articles/generating-a-new
 
     <dt class="property-optional"
             title="Optional">
-        <span>Etag</span>
+        <span id="state_etag_csharp">
+<a href="#state_etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -591,7 +645,9 @@ See [Generating a new GPG key](https://help.github.com/articles/generating-a-new
 
     <dt class="property-optional"
             title="Optional">
-        <span>Key<wbr>Id</span>
+        <span id="state_keyid_csharp">
+<a href="#state_keyid_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -607,7 +663,9 @@ See [Generating a new GPG key](https://help.github.com/articles/generating-a-new
 
     <dt class="property-optional"
             title="Optional">
-        <span>Armored<wbr>Public<wbr>Key</span>
+        <span id="state_armoredpublickey_go">
+<a href="#state_armoredpublickey_go" style="color: inherit; text-decoration: inherit;">Armored<wbr>Public<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -617,7 +675,9 @@ See [Generating a new GPG key](https://help.github.com/articles/generating-a-new
 
     <dt class="property-optional"
             title="Optional">
-        <span>Etag</span>
+        <span id="state_etag_go">
+<a href="#state_etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -625,7 +685,9 @@ See [Generating a new GPG key](https://help.github.com/articles/generating-a-new
 
     <dt class="property-optional"
             title="Optional">
-        <span>Key<wbr>Id</span>
+        <span id="state_keyid_go">
+<a href="#state_keyid_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -641,7 +703,9 @@ See [Generating a new GPG key](https://help.github.com/articles/generating-a-new
 
     <dt class="property-optional"
             title="Optional">
-        <span>armored<wbr>Public<wbr>Key</span>
+        <span id="state_armoredpublickey_nodejs">
+<a href="#state_armoredpublickey_nodejs" style="color: inherit; text-decoration: inherit;">armored<wbr>Public<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -651,7 +715,9 @@ See [Generating a new GPG key](https://help.github.com/articles/generating-a-new
 
     <dt class="property-optional"
             title="Optional">
-        <span>etag</span>
+        <span id="state_etag_nodejs">
+<a href="#state_etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -659,7 +725,9 @@ See [Generating a new GPG key](https://help.github.com/articles/generating-a-new
 
     <dt class="property-optional"
             title="Optional">
-        <span>key<wbr>Id</span>
+        <span id="state_keyid_nodejs">
+<a href="#state_keyid_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -675,7 +743,9 @@ See [Generating a new GPG key](https://help.github.com/articles/generating-a-new
 
     <dt class="property-optional"
             title="Optional">
-        <span>armored_<wbr>public_<wbr>key</span>
+        <span id="state_armored_public_key_python">
+<a href="#state_armored_public_key_python" style="color: inherit; text-decoration: inherit;">armored_<wbr>public_<wbr>key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -685,7 +755,9 @@ See [Generating a new GPG key](https://help.github.com/articles/generating-a-new
 
     <dt class="property-optional"
             title="Optional">
-        <span>etag</span>
+        <span id="state_etag_python">
+<a href="#state_etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -693,7 +765,9 @@ See [Generating a new GPG key](https://help.github.com/articles/generating-a-new
 
     <dt class="property-optional"
             title="Optional">
-        <span>key_<wbr>id</span>
+        <span id="state_key_id_python">
+<a href="#state_key_id_python" style="color: inherit; text-decoration: inherit;">key_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

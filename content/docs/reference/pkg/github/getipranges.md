@@ -20,7 +20,19 @@ Use this data source to retrieve information about GitHub's IP addresses.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Github = Pulumi.Github;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var test = Output.Create(Github.GetIpRanges.InvokeAsync());
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -90,7 +102,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Gits</span>
+        <span id="gits_csharp">
+<a href="#gits_csharp" style="color: inherit; text-decoration: inherit;">Gits</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -99,7 +113,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Hooks</span>
+        <span id="hooks_csharp">
+<a href="#hooks_csharp" style="color: inherit; text-decoration: inherit;">Hooks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -108,7 +124,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -117,7 +135,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Importers</span>
+        <span id="importers_csharp">
+<a href="#importers_csharp" style="color: inherit; text-decoration: inherit;">Importers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -126,7 +146,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Pages</span>
+        <span id="pages_csharp">
+<a href="#pages_csharp" style="color: inherit; text-decoration: inherit;">Pages</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -142,7 +164,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Gits</span>
+        <span id="gits_go">
+<a href="#gits_go" style="color: inherit; text-decoration: inherit;">Gits</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -151,7 +175,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Hooks</span>
+        <span id="hooks_go">
+<a href="#hooks_go" style="color: inherit; text-decoration: inherit;">Hooks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -160,7 +186,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -169,7 +197,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Importers</span>
+        <span id="importers_go">
+<a href="#importers_go" style="color: inherit; text-decoration: inherit;">Importers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -178,7 +208,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Pages</span>
+        <span id="pages_go">
+<a href="#pages_go" style="color: inherit; text-decoration: inherit;">Pages</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -194,7 +226,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>gits</span>
+        <span id="gits_nodejs">
+<a href="#gits_nodejs" style="color: inherit; text-decoration: inherit;">gits</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -203,7 +237,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>hooks</span>
+        <span id="hooks_nodejs">
+<a href="#hooks_nodejs" style="color: inherit; text-decoration: inherit;">hooks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -212,7 +248,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -221,7 +259,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>importers</span>
+        <span id="importers_nodejs">
+<a href="#importers_nodejs" style="color: inherit; text-decoration: inherit;">importers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -230,7 +270,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>pages</span>
+        <span id="pages_nodejs">
+<a href="#pages_nodejs" style="color: inherit; text-decoration: inherit;">pages</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -246,7 +288,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>gits</span>
+        <span id="gits_python">
+<a href="#gits_python" style="color: inherit; text-decoration: inherit;">gits</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -255,7 +299,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>hooks</span>
+        <span id="hooks_python">
+<a href="#hooks_python" style="color: inherit; text-decoration: inherit;">hooks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -264,7 +310,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -273,7 +321,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>importers</span>
+        <span id="importers_python">
+<a href="#importers_python" style="color: inherit; text-decoration: inherit;">importers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -282,7 +332,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>pages</span>
+        <span id="pages_python">
+<a href="#pages_python" style="color: inherit; text-decoration: inherit;">pages</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>

@@ -23,7 +23,23 @@ another branch or commit.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Github = Pulumi.Github;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var development = new Github.Branch("development", new Github.BranchArgs
+        {
+            Branch = "development",
+            Repository = "example",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -239,7 +255,9 @@ The Branch resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>Branch<wbr>Name</span>
+        <span id="branchname_csharp">
+<a href="#branchname_csharp" style="color: inherit; text-decoration: inherit;">Branch<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -248,7 +266,9 @@ The Branch resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>Repository</span>
+        <span id="repository_csharp">
+<a href="#repository_csharp" style="color: inherit; text-decoration: inherit;">Repository</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -257,7 +277,9 @@ The Branch resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>Branch</span>
+        <span id="sourcebranch_csharp">
+<a href="#sourcebranch_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Branch</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -266,7 +288,9 @@ The Branch resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>Sha</span>
+        <span id="sourcesha_csharp">
+<a href="#sourcesha_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Sha</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -282,7 +306,9 @@ The Branch resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>Branch</span>
+        <span id="branch_go">
+<a href="#branch_go" style="color: inherit; text-decoration: inherit;">Branch</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -291,7 +317,9 @@ The Branch resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>Repository</span>
+        <span id="repository_go">
+<a href="#repository_go" style="color: inherit; text-decoration: inherit;">Repository</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -300,7 +328,9 @@ The Branch resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>Branch</span>
+        <span id="sourcebranch_go">
+<a href="#sourcebranch_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Branch</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -309,7 +339,9 @@ The Branch resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>Sha</span>
+        <span id="sourcesha_go">
+<a href="#sourcesha_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Sha</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -325,7 +357,9 @@ The Branch resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>branch</span>
+        <span id="branch_nodejs">
+<a href="#branch_nodejs" style="color: inherit; text-decoration: inherit;">branch</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -334,7 +368,9 @@ The Branch resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>repository</span>
+        <span id="repository_nodejs">
+<a href="#repository_nodejs" style="color: inherit; text-decoration: inherit;">repository</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -343,7 +379,9 @@ The Branch resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>source<wbr>Branch</span>
+        <span id="sourcebranch_nodejs">
+<a href="#sourcebranch_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Branch</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -352,7 +390,9 @@ The Branch resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>source<wbr>Sha</span>
+        <span id="sourcesha_nodejs">
+<a href="#sourcesha_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Sha</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -368,7 +408,9 @@ The Branch resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>branch</span>
+        <span id="branch_python">
+<a href="#branch_python" style="color: inherit; text-decoration: inherit;">branch</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -377,7 +419,9 @@ The Branch resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>repository</span>
+        <span id="repository_python">
+<a href="#repository_python" style="color: inherit; text-decoration: inherit;">repository</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -386,7 +430,9 @@ The Branch resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>source_<wbr>branch</span>
+        <span id="source_branch_python">
+<a href="#source_branch_python" style="color: inherit; text-decoration: inherit;">source_<wbr>branch</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -395,7 +441,9 @@ The Branch resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>source_<wbr>sha</span>
+        <span id="source_sha_python">
+<a href="#source_sha_python" style="color: inherit; text-decoration: inherit;">source_<wbr>sha</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -422,7 +470,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Etag</span>
+        <span id="etag_csharp">
+<a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -431,7 +481,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -439,7 +491,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Ref</span>
+        <span id="ref_csharp">
+<a href="#ref_csharp" style="color: inherit; text-decoration: inherit;">Ref</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -448,7 +502,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Sha</span>
+        <span id="sha_csharp">
+<a href="#sha_csharp" style="color: inherit; text-decoration: inherit;">Sha</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -464,7 +520,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Etag</span>
+        <span id="etag_go">
+<a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -473,7 +531,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -481,7 +541,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Ref</span>
+        <span id="ref_go">
+<a href="#ref_go" style="color: inherit; text-decoration: inherit;">Ref</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -490,7 +552,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Sha</span>
+        <span id="sha_go">
+<a href="#sha_go" style="color: inherit; text-decoration: inherit;">Sha</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -506,7 +570,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>etag</span>
+        <span id="etag_nodejs">
+<a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -515,7 +581,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -523,7 +591,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>ref</span>
+        <span id="ref_nodejs">
+<a href="#ref_nodejs" style="color: inherit; text-decoration: inherit;">ref</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -532,7 +602,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>sha</span>
+        <span id="sha_nodejs">
+<a href="#sha_nodejs" style="color: inherit; text-decoration: inherit;">sha</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -548,7 +620,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>etag</span>
+        <span id="etag_python">
+<a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -557,7 +631,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -565,7 +641,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>ref</span>
+        <span id="ref_python">
+<a href="#ref_python" style="color: inherit; text-decoration: inherit;">ref</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -574,7 +652,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>sha</span>
+        <span id="sha_python">
+<a href="#sha_python" style="color: inherit; text-decoration: inherit;">sha</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -716,7 +796,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Branch<wbr>Name</span>
+        <span id="state_branchname_csharp">
+<a href="#state_branchname_csharp" style="color: inherit; text-decoration: inherit;">Branch<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -725,7 +807,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Etag</span>
+        <span id="state_etag_csharp">
+<a href="#state_etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -734,7 +818,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ref</span>
+        <span id="state_ref_csharp">
+<a href="#state_ref_csharp" style="color: inherit; text-decoration: inherit;">Ref</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -743,7 +829,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Repository</span>
+        <span id="state_repository_csharp">
+<a href="#state_repository_csharp" style="color: inherit; text-decoration: inherit;">Repository</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -752,7 +840,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Sha</span>
+        <span id="state_sha_csharp">
+<a href="#state_sha_csharp" style="color: inherit; text-decoration: inherit;">Sha</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -761,7 +851,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>Branch</span>
+        <span id="state_sourcebranch_csharp">
+<a href="#state_sourcebranch_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Branch</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -770,7 +862,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>Sha</span>
+        <span id="state_sourcesha_csharp">
+<a href="#state_sourcesha_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Sha</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -786,7 +880,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Branch</span>
+        <span id="state_branch_go">
+<a href="#state_branch_go" style="color: inherit; text-decoration: inherit;">Branch</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -795,7 +891,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Etag</span>
+        <span id="state_etag_go">
+<a href="#state_etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -804,7 +902,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ref</span>
+        <span id="state_ref_go">
+<a href="#state_ref_go" style="color: inherit; text-decoration: inherit;">Ref</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -813,7 +913,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Repository</span>
+        <span id="state_repository_go">
+<a href="#state_repository_go" style="color: inherit; text-decoration: inherit;">Repository</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -822,7 +924,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Sha</span>
+        <span id="state_sha_go">
+<a href="#state_sha_go" style="color: inherit; text-decoration: inherit;">Sha</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -831,7 +935,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>Branch</span>
+        <span id="state_sourcebranch_go">
+<a href="#state_sourcebranch_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Branch</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -840,7 +946,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>Sha</span>
+        <span id="state_sourcesha_go">
+<a href="#state_sourcesha_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Sha</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -856,7 +964,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>branch</span>
+        <span id="state_branch_nodejs">
+<a href="#state_branch_nodejs" style="color: inherit; text-decoration: inherit;">branch</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -865,7 +975,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>etag</span>
+        <span id="state_etag_nodejs">
+<a href="#state_etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -874,7 +986,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>ref</span>
+        <span id="state_ref_nodejs">
+<a href="#state_ref_nodejs" style="color: inherit; text-decoration: inherit;">ref</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -883,7 +997,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>repository</span>
+        <span id="state_repository_nodejs">
+<a href="#state_repository_nodejs" style="color: inherit; text-decoration: inherit;">repository</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -892,7 +1008,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>sha</span>
+        <span id="state_sha_nodejs">
+<a href="#state_sha_nodejs" style="color: inherit; text-decoration: inherit;">sha</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -901,7 +1019,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>source<wbr>Branch</span>
+        <span id="state_sourcebranch_nodejs">
+<a href="#state_sourcebranch_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Branch</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -910,7 +1030,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>source<wbr>Sha</span>
+        <span id="state_sourcesha_nodejs">
+<a href="#state_sourcesha_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Sha</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -926,7 +1048,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>branch</span>
+        <span id="state_branch_python">
+<a href="#state_branch_python" style="color: inherit; text-decoration: inherit;">branch</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -935,7 +1059,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>etag</span>
+        <span id="state_etag_python">
+<a href="#state_etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -944,7 +1070,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>ref</span>
+        <span id="state_ref_python">
+<a href="#state_ref_python" style="color: inherit; text-decoration: inherit;">ref</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -953,7 +1081,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>repository</span>
+        <span id="state_repository_python">
+<a href="#state_repository_python" style="color: inherit; text-decoration: inherit;">repository</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -962,7 +1092,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>sha</span>
+        <span id="state_sha_python">
+<a href="#state_sha_python" style="color: inherit; text-decoration: inherit;">sha</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -971,7 +1103,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>source_<wbr>branch</span>
+        <span id="state_source_branch_python">
+<a href="#state_source_branch_python" style="color: inherit; text-decoration: inherit;">source_<wbr>branch</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -980,7 +1114,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>source_<wbr>sha</span>
+        <span id="state_source_sha_python">
+<a href="#state_source_sha_python" style="color: inherit; text-decoration: inherit;">source_<wbr>sha</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
