@@ -196,7 +196,9 @@ The Event resource accepts the following [input]({{< relref "/docs/intro/concept
 
     <dt class="property-required"
             title="Required">
-        <span>Events</span>
+        <span id="events_csharp">
+<a href="#events_csharp" style="color: inherit; text-decoration: inherit;">Events</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventevent">List&lt;Pulumi.<wbr>New<wbr>Relic.<wbr>Insights.<wbr>Inputs.<wbr>Event<wbr>Event<wbr>Args&gt;</a></span>
     </dt>
@@ -212,7 +214,9 @@ The Event resource accepts the following [input]({{< relref "/docs/intro/concept
 
     <dt class="property-required"
             title="Required">
-        <span>Events</span>
+        <span id="events_go">
+<a href="#events_go" style="color: inherit; text-decoration: inherit;">Events</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventevent">[]Event<wbr>Event</a></span>
     </dt>
@@ -228,7 +232,9 @@ The Event resource accepts the following [input]({{< relref "/docs/intro/concept
 
     <dt class="property-required"
             title="Required">
-        <span>events</span>
+        <span id="events_nodejs">
+<a href="#events_nodejs" style="color: inherit; text-decoration: inherit;">events</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventevent">Event<wbr>Event[]</a></span>
     </dt>
@@ -244,7 +250,9 @@ The Event resource accepts the following [input]({{< relref "/docs/intro/concept
 
     <dt class="property-required"
             title="Required">
-        <span>events</span>
+        <span id="events_python">
+<a href="#events_python" style="color: inherit; text-decoration: inherit;">events</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventevent">List[Event<wbr>Event]</a></span>
     </dt>
@@ -271,7 +279,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -286,7 +296,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -301,7 +313,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -316,7 +330,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -457,7 +473,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Events</span>
+        <span id="state_events_csharp">
+<a href="#state_events_csharp" style="color: inherit; text-decoration: inherit;">Events</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventevent">List&lt;Pulumi.<wbr>New<wbr>Relic.<wbr>Insights.<wbr>Inputs.<wbr>Event<wbr>Event<wbr>Args&gt;</a></span>
     </dt>
@@ -473,7 +491,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Events</span>
+        <span id="state_events_go">
+<a href="#state_events_go" style="color: inherit; text-decoration: inherit;">Events</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventevent">[]Event<wbr>Event</a></span>
     </dt>
@@ -489,7 +509,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>events</span>
+        <span id="state_events_nodejs">
+<a href="#state_events_nodejs" style="color: inherit; text-decoration: inherit;">events</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventevent">Event<wbr>Event[]</a></span>
     </dt>
@@ -505,7 +527,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>events</span>
+        <span id="state_events_python">
+<a href="#state_events_python" style="color: inherit; text-decoration: inherit;">events</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventevent">List[Event<wbr>Event]</a></span>
     </dt>
@@ -547,7 +571,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Attributes</span>
+        <span id="attributes_csharp">
+<a href="#attributes_csharp" style="color: inherit; text-decoration: inherit;">Attributes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventeventattribute">List&lt;Pulumi.<wbr>New<wbr>Relic.<wbr>Insights.<wbr>Inputs.<wbr>Event<wbr>Event<wbr>Attribute<wbr>Args&gt;</a></span>
     </dt>
@@ -555,7 +581,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Type</span>
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -563,7 +591,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Timestamp</span>
+        <span id="timestamp_csharp">
+<a href="#timestamp_csharp" style="color: inherit; text-decoration: inherit;">Timestamp</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -578,7 +608,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Attributes</span>
+        <span id="attributes_go">
+<a href="#attributes_go" style="color: inherit; text-decoration: inherit;">Attributes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventeventattribute">[]Event<wbr>Event<wbr>Attribute</a></span>
     </dt>
@@ -586,7 +618,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Type</span>
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -594,7 +628,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Timestamp</span>
+        <span id="timestamp_go">
+<a href="#timestamp_go" style="color: inherit; text-decoration: inherit;">Timestamp</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -609,7 +645,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>attributes</span>
+        <span id="attributes_nodejs">
+<a href="#attributes_nodejs" style="color: inherit; text-decoration: inherit;">attributes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventeventattribute">Event<wbr>Event<wbr>Attribute[]</a></span>
     </dt>
@@ -617,7 +655,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>type</span>
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -625,7 +665,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>timestamp</span>
+        <span id="timestamp_nodejs">
+<a href="#timestamp_nodejs" style="color: inherit; text-decoration: inherit;">timestamp</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -640,7 +682,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>attributes</span>
+        <span id="attributes_python">
+<a href="#attributes_python" style="color: inherit; text-decoration: inherit;">attributes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventeventattribute">List[Event<wbr>Event<wbr>Attribute]</a></span>
     </dt>
@@ -648,7 +692,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>type</span>
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -656,7 +702,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>timestamp</span>
+        <span id="timestamp_python">
+<a href="#timestamp_python" style="color: inherit; text-decoration: inherit;">timestamp</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -689,7 +737,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Key</span>
+        <span id="key_csharp">
+<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -697,7 +747,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Value</span>
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -705,7 +757,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Type</span>
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -720,7 +774,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Key</span>
+        <span id="key_go">
+<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -728,7 +784,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Value</span>
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -736,7 +794,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Type</span>
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -751,7 +811,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>key</span>
+        <span id="key_nodejs">
+<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -759,7 +821,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>value</span>
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -767,7 +831,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>type</span>
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -782,7 +848,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>key</span>
+        <span id="key_python">
+<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -790,7 +858,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>value</span>
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -798,7 +868,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>type</span>
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
