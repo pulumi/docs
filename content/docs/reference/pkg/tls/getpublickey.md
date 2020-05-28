@@ -21,7 +21,23 @@ resources.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using System.IO;
+using Pulumi;
+using Tls = Pulumi.Tls;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Tls.GetPublicKey.InvokeAsync(new Tls.GetPublicKeyArgs
+        {
+            PrivateKeyPem = File.ReadAllText("~/.ssh/id_rsa"),
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -90,7 +106,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Private<wbr>Key<wbr>Pem</span>
+        <span id="privatekeypem_csharp">
+<a href="#privatekeypem_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Key<wbr>Pem</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -106,7 +124,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Private<wbr>Key<wbr>Pem</span>
+        <span id="privatekeypem_go">
+<a href="#privatekeypem_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Key<wbr>Pem</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -122,7 +142,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>private<wbr>Key<wbr>Pem</span>
+        <span id="privatekeypem_nodejs">
+<a href="#privatekeypem_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Key<wbr>Pem</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -138,7 +160,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>private_<wbr>key_<wbr>pem</span>
+        <span id="private_key_pem_python">
+<a href="#private_key_pem_python" style="color: inherit; text-decoration: inherit;">private_<wbr>key_<wbr>pem</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -167,7 +191,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Algorithm</span>
+        <span id="algorithm_csharp">
+<a href="#algorithm_csharp" style="color: inherit; text-decoration: inherit;">Algorithm</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -175,7 +201,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -184,7 +212,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Private<wbr>Key<wbr>Pem</span>
+        <span id="privatekeypem_csharp">
+<a href="#privatekeypem_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Key<wbr>Pem</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -193,7 +223,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Public<wbr>Key<wbr>Fingerprint<wbr>Md5</span>
+        <span id="publickeyfingerprintmd5_csharp">
+<a href="#publickeyfingerprintmd5_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Key<wbr>Fingerprint<wbr>Md5</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -205,7 +237,9 @@ selected private key format is compatible, as per the rules for
 
     <dt class="property-"
             title="">
-        <span>Public<wbr>Key<wbr>Openssh</span>
+        <span id="publickeyopenssh_csharp">
+<a href="#publickeyopenssh_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Key<wbr>Openssh</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -218,7 +252,9 @@ is selected.
 
     <dt class="property-"
             title="">
-        <span>Public<wbr>Key<wbr>Pem</span>
+        <span id="publickeypem_csharp">
+<a href="#publickeypem_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Key<wbr>Pem</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -234,7 +270,9 @@ is selected.
 
     <dt class="property-"
             title="">
-        <span>Algorithm</span>
+        <span id="algorithm_go">
+<a href="#algorithm_go" style="color: inherit; text-decoration: inherit;">Algorithm</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -242,7 +280,9 @@ is selected.
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -251,7 +291,9 @@ is selected.
 
     <dt class="property-"
             title="">
-        <span>Private<wbr>Key<wbr>Pem</span>
+        <span id="privatekeypem_go">
+<a href="#privatekeypem_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Key<wbr>Pem</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -260,7 +302,9 @@ is selected.
 
     <dt class="property-"
             title="">
-        <span>Public<wbr>Key<wbr>Fingerprint<wbr>Md5</span>
+        <span id="publickeyfingerprintmd5_go">
+<a href="#publickeyfingerprintmd5_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Key<wbr>Fingerprint<wbr>Md5</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -272,7 +316,9 @@ selected private key format is compatible, as per the rules for
 
     <dt class="property-"
             title="">
-        <span>Public<wbr>Key<wbr>Openssh</span>
+        <span id="publickeyopenssh_go">
+<a href="#publickeyopenssh_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Key<wbr>Openssh</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -285,7 +331,9 @@ is selected.
 
     <dt class="property-"
             title="">
-        <span>Public<wbr>Key<wbr>Pem</span>
+        <span id="publickeypem_go">
+<a href="#publickeypem_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Key<wbr>Pem</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -301,7 +349,9 @@ is selected.
 
     <dt class="property-"
             title="">
-        <span>algorithm</span>
+        <span id="algorithm_nodejs">
+<a href="#algorithm_nodejs" style="color: inherit; text-decoration: inherit;">algorithm</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -309,7 +359,9 @@ is selected.
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -318,7 +370,9 @@ is selected.
 
     <dt class="property-"
             title="">
-        <span>private<wbr>Key<wbr>Pem</span>
+        <span id="privatekeypem_nodejs">
+<a href="#privatekeypem_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Key<wbr>Pem</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -327,7 +381,9 @@ is selected.
 
     <dt class="property-"
             title="">
-        <span>public<wbr>Key<wbr>Fingerprint<wbr>Md5</span>
+        <span id="publickeyfingerprintmd5_nodejs">
+<a href="#publickeyfingerprintmd5_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Key<wbr>Fingerprint<wbr>Md5</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -339,7 +395,9 @@ selected private key format is compatible, as per the rules for
 
     <dt class="property-"
             title="">
-        <span>public<wbr>Key<wbr>Openssh</span>
+        <span id="publickeyopenssh_nodejs">
+<a href="#publickeyopenssh_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Key<wbr>Openssh</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -352,7 +410,9 @@ is selected.
 
     <dt class="property-"
             title="">
-        <span>public<wbr>Key<wbr>Pem</span>
+        <span id="publickeypem_nodejs">
+<a href="#publickeypem_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Key<wbr>Pem</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -368,7 +428,9 @@ is selected.
 
     <dt class="property-"
             title="">
-        <span>algorithm</span>
+        <span id="algorithm_python">
+<a href="#algorithm_python" style="color: inherit; text-decoration: inherit;">algorithm</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -376,7 +438,9 @@ is selected.
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -385,7 +449,9 @@ is selected.
 
     <dt class="property-"
             title="">
-        <span>private_<wbr>key_<wbr>pem</span>
+        <span id="private_key_pem_python">
+<a href="#private_key_pem_python" style="color: inherit; text-decoration: inherit;">private_<wbr>key_<wbr>pem</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -394,7 +460,9 @@ is selected.
 
     <dt class="property-"
             title="">
-        <span>public_<wbr>key_<wbr>fingerprint_<wbr>md5</span>
+        <span id="public_key_fingerprint_md5_python">
+<a href="#public_key_fingerprint_md5_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key_<wbr>fingerprint_<wbr>md5</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -406,7 +474,9 @@ selected private key format is compatible, as per the rules for
 
     <dt class="property-"
             title="">
-        <span>public_<wbr>key_<wbr>openssh</span>
+        <span id="public_key_openssh_python">
+<a href="#public_key_openssh_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key_<wbr>openssh</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -419,7 +489,9 @@ is selected.
 
     <dt class="property-"
             title="">
-        <span>public_<wbr>key_<wbr>pem</span>
+        <span id="public_key_pem_python">
+<a href="#public_key_pem_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key_<wbr>pem</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
