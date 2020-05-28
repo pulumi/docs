@@ -196,7 +196,9 @@ The KafkaConnector resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-required"
             title="Required">
-        <span>Config</span>
+        <span id="config_csharp">
+<a href="#config_csharp" style="color: inherit; text-decoration: inherit;">Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -205,7 +207,9 @@ The KafkaConnector resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-required"
             title="Required">
-        <span>Connector<wbr>Name</span>
+        <span id="connectorname_csharp">
+<a href="#connectorname_csharp" style="color: inherit; text-decoration: inherit;">Connector<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -214,7 +218,9 @@ The KafkaConnector resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-required"
             title="Required">
-        <span>Project</span>
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -223,7 +229,9 @@ The KafkaConnector resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-required"
             title="Required">
-        <span>Service<wbr>Name</span>
+        <span id="servicename_csharp">
+<a href="#servicename_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -239,7 +247,9 @@ The KafkaConnector resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-required"
             title="Required">
-        <span>Config</span>
+        <span id="config_go">
+<a href="#config_go" style="color: inherit; text-decoration: inherit;">Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -248,7 +258,9 @@ The KafkaConnector resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-required"
             title="Required">
-        <span>Connector<wbr>Name</span>
+        <span id="connectorname_go">
+<a href="#connectorname_go" style="color: inherit; text-decoration: inherit;">Connector<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -257,7 +269,9 @@ The KafkaConnector resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-required"
             title="Required">
-        <span>Project</span>
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -266,7 +280,9 @@ The KafkaConnector resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-required"
             title="Required">
-        <span>Service<wbr>Name</span>
+        <span id="servicename_go">
+<a href="#servicename_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -282,7 +298,9 @@ The KafkaConnector resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-required"
             title="Required">
-        <span>config</span>
+        <span id="config_nodejs">
+<a href="#config_nodejs" style="color: inherit; text-decoration: inherit;">config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -291,7 +309,9 @@ The KafkaConnector resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-required"
             title="Required">
-        <span>connector<wbr>Name</span>
+        <span id="connectorname_nodejs">
+<a href="#connectorname_nodejs" style="color: inherit; text-decoration: inherit;">connector<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -300,7 +320,9 @@ The KafkaConnector resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-required"
             title="Required">
-        <span>project</span>
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -309,7 +331,9 @@ The KafkaConnector resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-required"
             title="Required">
-        <span>service<wbr>Name</span>
+        <span id="servicename_nodejs">
+<a href="#servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -325,7 +349,9 @@ The KafkaConnector resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-required"
             title="Required">
-        <span>config</span>
+        <span id="config_python">
+<a href="#config_python" style="color: inherit; text-decoration: inherit;">config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -334,7 +360,9 @@ The KafkaConnector resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-required"
             title="Required">
-        <span>connector_<wbr>name</span>
+        <span id="connector_name_python">
+<a href="#connector_name_python" style="color: inherit; text-decoration: inherit;">connector_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -343,7 +371,9 @@ The KafkaConnector resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-required"
             title="Required">
-        <span>project</span>
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -352,7 +382,9 @@ The KafkaConnector resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-required"
             title="Required">
-        <span>service_<wbr>name</span>
+        <span id="service_name_python">
+<a href="#service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -379,7 +411,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -387,7 +421,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Plugin<wbr>Author</span>
+        <span id="pluginauthor_csharp">
+<a href="#pluginauthor_csharp" style="color: inherit; text-decoration: inherit;">Plugin<wbr>Author</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -396,7 +432,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Plugin<wbr>Class</span>
+        <span id="pluginclass_csharp">
+<a href="#pluginclass_csharp" style="color: inherit; text-decoration: inherit;">Plugin<wbr>Class</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -405,7 +443,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Plugin<wbr>Doc<wbr>Url</span>
+        <span id="plugindocurl_csharp">
+<a href="#plugindocurl_csharp" style="color: inherit; text-decoration: inherit;">Plugin<wbr>Doc<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -414,7 +454,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Plugin<wbr>Title</span>
+        <span id="plugintitle_csharp">
+<a href="#plugintitle_csharp" style="color: inherit; text-decoration: inherit;">Plugin<wbr>Title</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -423,7 +465,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Plugin<wbr>Type</span>
+        <span id="plugintype_csharp">
+<a href="#plugintype_csharp" style="color: inherit; text-decoration: inherit;">Plugin<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -432,7 +476,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Plugin<wbr>Version</span>
+        <span id="pluginversion_csharp">
+<a href="#pluginversion_csharp" style="color: inherit; text-decoration: inherit;">Plugin<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -441,7 +487,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Tasks</span>
+        <span id="tasks_csharp">
+<a href="#tasks_csharp" style="color: inherit; text-decoration: inherit;">Tasks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kafkaconnectortask">List&lt;Kafka<wbr>Connector<wbr>Task&gt;</a></span>
     </dt>
@@ -457,7 +505,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -465,7 +515,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Plugin<wbr>Author</span>
+        <span id="pluginauthor_go">
+<a href="#pluginauthor_go" style="color: inherit; text-decoration: inherit;">Plugin<wbr>Author</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -474,7 +526,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Plugin<wbr>Class</span>
+        <span id="pluginclass_go">
+<a href="#pluginclass_go" style="color: inherit; text-decoration: inherit;">Plugin<wbr>Class</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -483,7 +537,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Plugin<wbr>Doc<wbr>Url</span>
+        <span id="plugindocurl_go">
+<a href="#plugindocurl_go" style="color: inherit; text-decoration: inherit;">Plugin<wbr>Doc<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -492,7 +548,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Plugin<wbr>Title</span>
+        <span id="plugintitle_go">
+<a href="#plugintitle_go" style="color: inherit; text-decoration: inherit;">Plugin<wbr>Title</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -501,7 +559,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Plugin<wbr>Type</span>
+        <span id="plugintype_go">
+<a href="#plugintype_go" style="color: inherit; text-decoration: inherit;">Plugin<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -510,7 +570,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Plugin<wbr>Version</span>
+        <span id="pluginversion_go">
+<a href="#pluginversion_go" style="color: inherit; text-decoration: inherit;">Plugin<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -519,7 +581,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Tasks</span>
+        <span id="tasks_go">
+<a href="#tasks_go" style="color: inherit; text-decoration: inherit;">Tasks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kafkaconnectortask">[]Kafka<wbr>Connector<wbr>Task</a></span>
     </dt>
@@ -535,7 +599,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -543,7 +609,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>plugin<wbr>Author</span>
+        <span id="pluginauthor_nodejs">
+<a href="#pluginauthor_nodejs" style="color: inherit; text-decoration: inherit;">plugin<wbr>Author</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -552,7 +620,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>plugin<wbr>Class</span>
+        <span id="pluginclass_nodejs">
+<a href="#pluginclass_nodejs" style="color: inherit; text-decoration: inherit;">plugin<wbr>Class</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -561,7 +631,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>plugin<wbr>Doc<wbr>Url</span>
+        <span id="plugindocurl_nodejs">
+<a href="#plugindocurl_nodejs" style="color: inherit; text-decoration: inherit;">plugin<wbr>Doc<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -570,7 +642,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>plugin<wbr>Title</span>
+        <span id="plugintitle_nodejs">
+<a href="#plugintitle_nodejs" style="color: inherit; text-decoration: inherit;">plugin<wbr>Title</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -579,7 +653,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>plugin<wbr>Type</span>
+        <span id="plugintype_nodejs">
+<a href="#plugintype_nodejs" style="color: inherit; text-decoration: inherit;">plugin<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -588,7 +664,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>plugin<wbr>Version</span>
+        <span id="pluginversion_nodejs">
+<a href="#pluginversion_nodejs" style="color: inherit; text-decoration: inherit;">plugin<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -597,7 +675,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>tasks</span>
+        <span id="tasks_nodejs">
+<a href="#tasks_nodejs" style="color: inherit; text-decoration: inherit;">tasks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kafkaconnectortask">Kafka<wbr>Connector<wbr>Task[]</a></span>
     </dt>
@@ -613,7 +693,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -621,7 +703,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>plugin_<wbr>author</span>
+        <span id="plugin_author_python">
+<a href="#plugin_author_python" style="color: inherit; text-decoration: inherit;">plugin_<wbr>author</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -630,7 +714,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>plugin_<wbr>class</span>
+        <span id="plugin_class_python">
+<a href="#plugin_class_python" style="color: inherit; text-decoration: inherit;">plugin_<wbr>class</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -639,7 +725,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>plugin_<wbr>doc_<wbr>url</span>
+        <span id="plugin_doc_url_python">
+<a href="#plugin_doc_url_python" style="color: inherit; text-decoration: inherit;">plugin_<wbr>doc_<wbr>url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -648,7 +736,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>plugin_<wbr>title</span>
+        <span id="plugin_title_python">
+<a href="#plugin_title_python" style="color: inherit; text-decoration: inherit;">plugin_<wbr>title</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -657,7 +747,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>plugin_<wbr>type</span>
+        <span id="plugin_type_python">
+<a href="#plugin_type_python" style="color: inherit; text-decoration: inherit;">plugin_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -666,7 +758,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>plugin_<wbr>version</span>
+        <span id="plugin_version_python">
+<a href="#plugin_version_python" style="color: inherit; text-decoration: inherit;">plugin_<wbr>version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -675,7 +769,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>tasks</span>
+        <span id="tasks_python">
+<a href="#tasks_python" style="color: inherit; text-decoration: inherit;">tasks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kafkaconnectortask">List[Kafka<wbr>Connector<wbr>Task]</a></span>
     </dt>
@@ -817,7 +913,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Config</span>
+        <span id="state_config_csharp">
+<a href="#state_config_csharp" style="color: inherit; text-decoration: inherit;">Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -826,7 +924,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Connector<wbr>Name</span>
+        <span id="state_connectorname_csharp">
+<a href="#state_connectorname_csharp" style="color: inherit; text-decoration: inherit;">Connector<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -835,7 +935,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Plugin<wbr>Author</span>
+        <span id="state_pluginauthor_csharp">
+<a href="#state_pluginauthor_csharp" style="color: inherit; text-decoration: inherit;">Plugin<wbr>Author</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -844,7 +946,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Plugin<wbr>Class</span>
+        <span id="state_pluginclass_csharp">
+<a href="#state_pluginclass_csharp" style="color: inherit; text-decoration: inherit;">Plugin<wbr>Class</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -853,7 +957,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Plugin<wbr>Doc<wbr>Url</span>
+        <span id="state_plugindocurl_csharp">
+<a href="#state_plugindocurl_csharp" style="color: inherit; text-decoration: inherit;">Plugin<wbr>Doc<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -862,7 +968,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Plugin<wbr>Title</span>
+        <span id="state_plugintitle_csharp">
+<a href="#state_plugintitle_csharp" style="color: inherit; text-decoration: inherit;">Plugin<wbr>Title</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -871,7 +979,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Plugin<wbr>Type</span>
+        <span id="state_plugintype_csharp">
+<a href="#state_plugintype_csharp" style="color: inherit; text-decoration: inherit;">Plugin<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -880,7 +990,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Plugin<wbr>Version</span>
+        <span id="state_pluginversion_csharp">
+<a href="#state_pluginversion_csharp" style="color: inherit; text-decoration: inherit;">Plugin<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -889,7 +1001,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project</span>
+        <span id="state_project_csharp">
+<a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -898,7 +1012,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Service<wbr>Name</span>
+        <span id="state_servicename_csharp">
+<a href="#state_servicename_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -907,7 +1023,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tasks</span>
+        <span id="state_tasks_csharp">
+<a href="#state_tasks_csharp" style="color: inherit; text-decoration: inherit;">Tasks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kafkaconnectortask">List&lt;Kafka<wbr>Connector<wbr>Task<wbr>Args&gt;</a></span>
     </dt>
@@ -923,7 +1041,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Config</span>
+        <span id="state_config_go">
+<a href="#state_config_go" style="color: inherit; text-decoration: inherit;">Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -932,7 +1052,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Connector<wbr>Name</span>
+        <span id="state_connectorname_go">
+<a href="#state_connectorname_go" style="color: inherit; text-decoration: inherit;">Connector<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -941,7 +1063,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Plugin<wbr>Author</span>
+        <span id="state_pluginauthor_go">
+<a href="#state_pluginauthor_go" style="color: inherit; text-decoration: inherit;">Plugin<wbr>Author</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -950,7 +1074,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Plugin<wbr>Class</span>
+        <span id="state_pluginclass_go">
+<a href="#state_pluginclass_go" style="color: inherit; text-decoration: inherit;">Plugin<wbr>Class</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -959,7 +1085,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Plugin<wbr>Doc<wbr>Url</span>
+        <span id="state_plugindocurl_go">
+<a href="#state_plugindocurl_go" style="color: inherit; text-decoration: inherit;">Plugin<wbr>Doc<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -968,7 +1096,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Plugin<wbr>Title</span>
+        <span id="state_plugintitle_go">
+<a href="#state_plugintitle_go" style="color: inherit; text-decoration: inherit;">Plugin<wbr>Title</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -977,7 +1107,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Plugin<wbr>Type</span>
+        <span id="state_plugintype_go">
+<a href="#state_plugintype_go" style="color: inherit; text-decoration: inherit;">Plugin<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -986,7 +1118,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Plugin<wbr>Version</span>
+        <span id="state_pluginversion_go">
+<a href="#state_pluginversion_go" style="color: inherit; text-decoration: inherit;">Plugin<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -995,7 +1129,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project</span>
+        <span id="state_project_go">
+<a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1004,7 +1140,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Service<wbr>Name</span>
+        <span id="state_servicename_go">
+<a href="#state_servicename_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1013,7 +1151,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tasks</span>
+        <span id="state_tasks_go">
+<a href="#state_tasks_go" style="color: inherit; text-decoration: inherit;">Tasks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kafkaconnectortask">[]Kafka<wbr>Connector<wbr>Task</a></span>
     </dt>
@@ -1029,7 +1169,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>config</span>
+        <span id="state_config_nodejs">
+<a href="#state_config_nodejs" style="color: inherit; text-decoration: inherit;">config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -1038,7 +1180,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>connector<wbr>Name</span>
+        <span id="state_connectorname_nodejs">
+<a href="#state_connectorname_nodejs" style="color: inherit; text-decoration: inherit;">connector<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1047,7 +1191,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>plugin<wbr>Author</span>
+        <span id="state_pluginauthor_nodejs">
+<a href="#state_pluginauthor_nodejs" style="color: inherit; text-decoration: inherit;">plugin<wbr>Author</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1056,7 +1202,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>plugin<wbr>Class</span>
+        <span id="state_pluginclass_nodejs">
+<a href="#state_pluginclass_nodejs" style="color: inherit; text-decoration: inherit;">plugin<wbr>Class</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1065,7 +1213,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>plugin<wbr>Doc<wbr>Url</span>
+        <span id="state_plugindocurl_nodejs">
+<a href="#state_plugindocurl_nodejs" style="color: inherit; text-decoration: inherit;">plugin<wbr>Doc<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1074,7 +1224,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>plugin<wbr>Title</span>
+        <span id="state_plugintitle_nodejs">
+<a href="#state_plugintitle_nodejs" style="color: inherit; text-decoration: inherit;">plugin<wbr>Title</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1083,7 +1235,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>plugin<wbr>Type</span>
+        <span id="state_plugintype_nodejs">
+<a href="#state_plugintype_nodejs" style="color: inherit; text-decoration: inherit;">plugin<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1092,7 +1246,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>plugin<wbr>Version</span>
+        <span id="state_pluginversion_nodejs">
+<a href="#state_pluginversion_nodejs" style="color: inherit; text-decoration: inherit;">plugin<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1101,7 +1257,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>project</span>
+        <span id="state_project_nodejs">
+<a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1110,7 +1268,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>service<wbr>Name</span>
+        <span id="state_servicename_nodejs">
+<a href="#state_servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1119,7 +1279,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>tasks</span>
+        <span id="state_tasks_nodejs">
+<a href="#state_tasks_nodejs" style="color: inherit; text-decoration: inherit;">tasks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kafkaconnectortask">Kafka<wbr>Connector<wbr>Task[]</a></span>
     </dt>
@@ -1135,7 +1297,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>config</span>
+        <span id="state_config_python">
+<a href="#state_config_python" style="color: inherit; text-decoration: inherit;">config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -1144,7 +1308,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>connector_<wbr>name</span>
+        <span id="state_connector_name_python">
+<a href="#state_connector_name_python" style="color: inherit; text-decoration: inherit;">connector_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1153,7 +1319,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>plugin_<wbr>author</span>
+        <span id="state_plugin_author_python">
+<a href="#state_plugin_author_python" style="color: inherit; text-decoration: inherit;">plugin_<wbr>author</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1162,7 +1330,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>plugin_<wbr>class</span>
+        <span id="state_plugin_class_python">
+<a href="#state_plugin_class_python" style="color: inherit; text-decoration: inherit;">plugin_<wbr>class</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1171,7 +1341,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>plugin_<wbr>doc_<wbr>url</span>
+        <span id="state_plugin_doc_url_python">
+<a href="#state_plugin_doc_url_python" style="color: inherit; text-decoration: inherit;">plugin_<wbr>doc_<wbr>url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1180,7 +1352,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>plugin_<wbr>title</span>
+        <span id="state_plugin_title_python">
+<a href="#state_plugin_title_python" style="color: inherit; text-decoration: inherit;">plugin_<wbr>title</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1189,7 +1363,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>plugin_<wbr>type</span>
+        <span id="state_plugin_type_python">
+<a href="#state_plugin_type_python" style="color: inherit; text-decoration: inherit;">plugin_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1198,7 +1374,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>plugin_<wbr>version</span>
+        <span id="state_plugin_version_python">
+<a href="#state_plugin_version_python" style="color: inherit; text-decoration: inherit;">plugin_<wbr>version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1207,7 +1385,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>project</span>
+        <span id="state_project_python">
+<a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1216,7 +1396,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>service_<wbr>name</span>
+        <span id="state_service_name_python">
+<a href="#state_service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1225,7 +1407,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>tasks</span>
+        <span id="state_tasks_python">
+<a href="#state_tasks_python" style="color: inherit; text-decoration: inherit;">tasks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kafkaconnectortask">List[Kafka<wbr>Connector<wbr>Task]</a></span>
     </dt>
@@ -1267,7 +1451,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Connector</span>
+        <span id="connector_csharp">
+<a href="#connector_csharp" style="color: inherit; text-decoration: inherit;">Connector</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1275,7 +1461,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Task</span>
+        <span id="task_csharp">
+<a href="#task_csharp" style="color: inherit; text-decoration: inherit;">Task</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1290,7 +1478,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Connector</span>
+        <span id="connector_go">
+<a href="#connector_go" style="color: inherit; text-decoration: inherit;">Connector</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1298,7 +1488,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Task</span>
+        <span id="task_go">
+<a href="#task_go" style="color: inherit; text-decoration: inherit;">Task</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1313,7 +1505,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>connector</span>
+        <span id="connector_nodejs">
+<a href="#connector_nodejs" style="color: inherit; text-decoration: inherit;">connector</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1321,7 +1515,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>task</span>
+        <span id="task_nodejs">
+<a href="#task_nodejs" style="color: inherit; text-decoration: inherit;">task</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1336,7 +1532,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>connector</span>
+        <span id="connector_python">
+<a href="#connector_python" style="color: inherit; text-decoration: inherit;">connector</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1344,7 +1542,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>task</span>
+        <span id="task_python">
+<a href="#task_python" style="color: inherit; text-decoration: inherit;">task</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
