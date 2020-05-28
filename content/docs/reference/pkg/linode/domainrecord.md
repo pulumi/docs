@@ -24,7 +24,31 @@ This resource exports no additional attributes.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Linode = Pulumi.Linode;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var foobarDomain = new Linode.Domain("foobarDomain", new Linode.DomainArgs
+        {
+            Domain = "foobar.example",
+            SoaEmail = "example@foobar.example",
+            Type = "master",
+        });
+        var foobarDomainRecord = new Linode.DomainRecord("foobarDomainRecord", new Linode.DomainRecordArgs
+        {
+            DomainId = foobarDomain.Id,
+            Name = "www",
+            RecordType = "CNAME",
+            Target = "foobar.example",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

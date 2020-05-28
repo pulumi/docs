@@ -20,7 +20,22 @@ meta_desc: "Explore the GetSshKey function of the Linode package, including exam
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Linode = Pulumi.Linode;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var foo = Output.Create(Linode.GetSshKey.InvokeAsync(new Linode.GetSshKeyArgs
+        {
+            Label = "foo",
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

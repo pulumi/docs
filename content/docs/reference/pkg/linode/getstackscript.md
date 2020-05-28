@@ -61,7 +61,17 @@ This resource exports the following attributes:
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

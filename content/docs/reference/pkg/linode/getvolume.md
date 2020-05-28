@@ -43,7 +43,22 @@ The Linode Volume resource exports the following attributes:
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Linode = Pulumi.Linode;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var foo = Output.Create(Linode.GetVolume.InvokeAsync(new Linode.GetVolumeArgs
+        {
+            Id = "1234567",
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

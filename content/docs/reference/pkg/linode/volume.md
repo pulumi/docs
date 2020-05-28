@@ -29,7 +29,34 @@ This resource exports the following attributes:
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Linode = Pulumi.Linode;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var foobaz = new Linode.Instance("foobaz", new Linode.InstanceArgs
+        {
+            Region = "us-west",
+            RootPass = "3X4mp13",
+            Tags = 
+            {
+                "foobaz",
+            },
+            Type = "g6-nanode-1",
+        });
+        var foobar = new Linode.Volume("foobar", new Linode.VolumeArgs
+        {
+            Label = "foo-volume",
+            LinodeId = foobaz.Id,
+            Region = foobaz.Region,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

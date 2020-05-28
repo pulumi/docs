@@ -20,7 +20,22 @@ meta_desc: "Explore the GetRegion function of the Linode package, including exam
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Linode = Pulumi.Linode;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var region = Output.Create(Linode.GetRegion.InvokeAsync(new Linode.GetRegionArgs
+        {
+            Id = "us-east",
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

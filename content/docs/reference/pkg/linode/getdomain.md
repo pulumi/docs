@@ -51,7 +51,26 @@ The Linode Domain resource exports the following attributes:
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Linode = Pulumi.Linode;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var foo = Output.Create(Linode.GetDomain.InvokeAsync(new Linode.GetDomainArgs
+        {
+            Id = "1234567",
+        }));
+        var bar = Output.Create(Linode.GetDomain.InvokeAsync(new Linode.GetDomainArgs
+        {
+            Domain = "bar.example.com",
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

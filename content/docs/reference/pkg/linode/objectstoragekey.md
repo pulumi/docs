@@ -27,7 +27,22 @@ This resource exports the following attributes:
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Linode = Pulumi.Linode;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var foo = new Linode.ObjectStorageKey("foo", new Linode.ObjectStorageKeyArgs
+        {
+            Label = "image-access",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

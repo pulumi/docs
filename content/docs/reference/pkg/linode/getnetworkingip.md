@@ -41,7 +41,22 @@ The Linode Network IP Address resource exports the following attributes:
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Linode = Pulumi.Linode;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var ns1LinodeCom = Output.Create(Linode.GetNetworkingIp.InvokeAsync(new Linode.GetNetworkingIpArgs
+        {
+            Address = "162.159.27.72",
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

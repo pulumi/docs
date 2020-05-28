@@ -47,7 +47,28 @@ The Linode Volume resource exports the following attributes:
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Linode = Pulumi.Linode;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var myRecord = Output.Create(Linode.GetDomainRecord.InvokeAsync(new Linode.GetDomainRecordArgs
+        {
+            DomainId = "3150401",
+            Id = "14950401",
+        }));
+        var myWwwRecord = Output.Create(Linode.GetDomainRecord.InvokeAsync(new Linode.GetDomainRecordArgs
+        {
+            DomainId = "3150401",
+            Name = "www",
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

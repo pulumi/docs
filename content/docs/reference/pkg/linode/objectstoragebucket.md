@@ -20,7 +20,27 @@ Provides a Linode Object Storage Bucket resource. This can be used to create, mo
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Linode = Pulumi.Linode;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var primary = Output.Create(Linode.GetObjectStorageCluster.InvokeAsync(new Linode.GetObjectStorageClusterArgs
+        {
+            Id = "us-east-1",
+        }));
+        var foobar = new Linode.ObjectStorageBucket("foobar", new Linode.ObjectStorageBucketArgs
+        {
+            Cluster = primary.Apply(primary => primary.Id),
+            Label = "%s",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
