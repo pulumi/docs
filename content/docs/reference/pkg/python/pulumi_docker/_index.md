@@ -24,6 +24,21 @@ anything, please consult the source <a class="reference external" href="https://
 <dd></dd></dl>
 
 <dl class="py class">
+<dt id="pulumi_docker.CacheFrom">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_docker.</code><code class="sig-name descname">CacheFrom</code><a class="headerlink" href="#pulumi_docker.CacheFrom" title="Permalink to this definition">¶</a></dt>
+<dd><p>CacheFrom may be used to specify build stages to use for the Docker build cache. The final image
+is always implicitly included.</p>
+<dl class="py attribute">
+<dt id="pulumi_docker.CacheFrom.stages">
+<code class="sig-name descname">stages</code><em class="property">: Optional[List[pulumi.Input[pulumi.Input[str]]]]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_docker.CacheFrom.stages" title="Permalink to this definition">¶</a></dt>
+<dd><p>An optional list of build stages to use for caching. Each build stage in this list will be
+built explicitly and pushed to the target repository. A given stage’s image will be tagged as
+“[stage-name]”.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_docker.Container">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_docker.</code><code class="sig-name descname">Container</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">attach</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">capabilities</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">command</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cpu_set</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cpu_shares</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">destroy_grace_seconds</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">devices</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dns</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dns_opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dns_searches</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">domainname</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">entrypoints</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">envs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">group_adds</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">healthcheck</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">hostname</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">hosts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">image</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ipc_mode</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">links</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">log_driver</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">log_opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">logs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_retry_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">memory</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">memory_swap</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mounts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">must_run</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_aliases</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_mode</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">networks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">networks_advanced</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pid_mode</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ports</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">privileged</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">publish_all_ports</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">read_only</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">restart</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rm</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">shm_size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">start</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sysctls</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tmpfs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ulimits</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">uploads</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">userns_mode</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">volumes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">working_dir</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_docker.Container" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages the lifecycle of a Docker container.</p>
@@ -925,6 +940,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
+<dl class="py exception">
+<dt id="pulumi_docker.Error">
+<em class="property">exception </em><code class="sig-prename descclassname">pulumi_docker.</code><code class="sig-name descname">Error</code><a class="headerlink" href="#pulumi_docker.Error" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 <dl class="py class">
 <dt id="pulumi_docker.GetNetworkResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_docker.</code><code class="sig-name descname">GetNetworkResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">driver</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">internal</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ipam_configs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">options</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scope</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_docker.GetNetworkResult" title="Permalink to this definition">¶</a></dt>
@@ -961,6 +981,92 @@ See [docker docs][networkdocs] for more details.</p>
 <dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
+</dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_docker.Image">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_docker.</code><code class="sig-name descname">Image</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">image_name</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">build</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">, </span>pulumi_docker.docker.DockerBuild<span class="p">]</span></span></em>, <em class="sig-param"><span class="n">local_image_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">registry</span><span class="p">:</span> <span class="n">Union[pulumi_docker.image.ImageRegistry, Awaitable[pulumi_docker.image.ImageRegistry], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">skip_push</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>bool<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_docker.Image" title="Permalink to this definition">¶</a></dt>
+<dd><p>A docker.Image resource represents a Docker image built locally which is published and made
+available via a remote Docker registry.  This can be used to ensure that a Docker source
+directory from a local deployment environment is built and pushed to a cloud-hosted Docker
+registry as part of a Pulumi deployment, so that it can be referenced as an image input from
+other cloud services that reference Docker images - including Kubernetes Pods, AWS ECS Tasks, and
+Azure Container Instances.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>image_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The qualified image name that will be pushed to the remote registry.
+Must be a supported image name for the target registry user.  This name can include a tag at the end.  If
+provided all pushed image resources will contain that tag as well.
+Either [imageName] or [localImageName] can have a tag.  However, if both have a tag, then
+those tags must match.</p></li>
+<li><p><strong>DockerBuild</strong><strong>] </strong><strong>build</strong> (<em>Union</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>,</em>) – The Docker build context, as a folder path or a detailed
+DockerBuild object.</p></li>
+<li><p><strong>local_image_name</strong> (<em>Optional</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>]</em>) – The docker image name to build locally before tagging with
+imageName.  If not provided, it will be given the value of to [imageName].  This name can include a tag at
+the end.  If provided all pushed image resources will contain that tag as well.
+Either [imageName] or [localImageName] can have a tag.  However, if both have a tag, then
+those tags must match.</p></li>
+<li><p><strong>registry</strong> (<em>Optional</em><em>[</em><em>pulumi.Input</em><em>[</em><em>ImageRegistry</em><em>]</em><em>]</em>) – Credentials for the docker registry to push to.</p></li>
+<li><p><strong>skip_push</strong> (<em>Optional</em><em>[</em><em>bool</em><em>]</em>) – Skip push flag.</p></li>
+<li><p><strong>opts</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a><em>]</em>) – Options for the resource.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt id="pulumi_docker.Image.image_name">
+<code class="sig-name descname">image_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_docker.Image.image_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The unique pinned image name on the remote repository.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_docker.Image.registry_server">
+<code class="sig-name descname">registry_server</code><em class="property">: pulumi.Output[Optional[str]]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_docker.Image.registry_server" title="Permalink to this definition">¶</a></dt>
+<dd><p>The server the image is located at.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_docker.Image.base_image_name">
+<code class="sig-name descname">base_image_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_docker.Image.base_image_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The base image name that was built and pushed.  This does not include the id annotation, so
+is not pinned to the specific build performed by this docker.Image.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_docker.LooseVersion">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_docker.</code><code class="sig-name descname">LooseVersion</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">vstring</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_docker.LooseVersion" title="Permalink to this definition">¶</a></dt>
+<dd><p>Version numbering for anarchists and software realists.
+Implements the standard interface for version number classes as
+described above.  A version number consists of a series of numbers,
+separated by either periods or strings of letters.  When comparing
+version numbers, the numeric components will be compared
+numerically, and the alphabetic components lexically.  The following
+are all valid version numbers, in no particular order:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">1.5</span><span class="o">.</span><span class="mi">1</span>
+<span class="mf">1.5</span><span class="o">.</span><span class="mi">2</span><span class="n">b2</span>
+<span class="mi">161</span>
+<span class="mf">3.10</span><span class="n">a</span>
+<span class="mf">8.02</span>
+<span class="mf">3.4</span><span class="n">j</span>
+<span class="mf">1996.07</span><span class="o">.</span><span class="mi">12</span>
+<span class="mf">3.2</span><span class="o">.</span><span class="n">pl0</span>
+<span class="mf">3.1</span><span class="o">.</span><span class="mf">1.6</span>
+<span class="mi">2</span><span class="n">g6</span>
+<span class="mi">11</span><span class="n">g</span>
+<span class="mf">0.960923</span>
+<span class="mf">2.2</span><span class="n">beta29</span>
+<span class="mf">1.13</span><span class="o">++</span>
+<span class="mf">5.5</span><span class="o">.</span><span class="n">kw</span>
+<span class="mf">2.0</span><span class="n">b1pl0</span>
+</pre></div>
+</div>
+<p>In fact, there is no such thing as an invalid version number under
+this scheme; the rules for comparison are simple and predictable,
+but may not always give the results you want (for some definition
+of “want”).</p>
 </dd></dl>
 
 <dl class="py class">
@@ -1385,6 +1491,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 </dd></dl>
+
+<dl class="py exception">
+<dt id="pulumi_docker.ResourceError">
+<em class="property">exception </em><code class="sig-prename descclassname">pulumi_docker.</code><code class="sig-name descname">ResourceError</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">message</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">resource</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.Resource<span class="p">]</span></span></em>, <em class="sig-param"><span class="n">hide_stack</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>bool<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_docker.ResourceError" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 <dl class="py class">
 <dt id="pulumi_docker.Secret">
@@ -2543,6 +2654,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="py function">
+<dt id="pulumi_docker.build_and_push_image">
+<code class="sig-prename descclassname">pulumi_docker.</code><code class="sig-name descname">build_and_push_image</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">base_image_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">path_or_build</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>pulumi_docker.docker.DockerBuild<span class="p">, </span>Awaitable<span class="p">[</span>Union<span class="p">[</span>str<span class="p">, </span>pulumi_docker.docker.DockerBuild<span class="p">]</span><span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">repository_url</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">log_resource</span><span class="p">:</span> <span class="n">pulumi.resource.Resource</span></em>, <em class="sig-param"><span class="n">registry</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi_docker.docker.Registry<span class="p">]</span></span></em>, <em class="sig-param"><span class="n">skip_push</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pulumi_docker.build_and_push_image" title="Permalink to this definition">¶</a></dt>
+<dd><p>build_and_push_image will build and push the Dockerfile and context from [pathOrBuild] into the
+requested docker repo [repository_url].  It returns the unique target image name for the image in
+the docker repository.  During preview this will build the image, and return the target image
+name, without pushing. During a normal update, it will do the same, as well as tag and push the
+image.</p>
+</dd></dl>
+
+<dl class="py function">
 <dt id="pulumi_docker.get_network">
 <code class="sig-prename descclassname">pulumi_docker.</code><code class="sig-name descname">get_network</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_docker.get_network" title="Permalink to this definition">¶</a></dt>
 <dd><p>Finds a specific docker network and returns information about it.</p>
@@ -2582,6 +2703,24 @@ to date on the latest available version of the tag.</p>
 <dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The name of the Docker image, including any tags. e.g. <code class="docutils literal notranslate"><span class="pre">alpine:latest</span></code></p>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pulumi_docker.random">
+<code class="sig-prename descclassname">pulumi_docker.</code><code class="sig-name descname">random</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; x in the interval [0, 1).<a class="headerlink" href="#pulumi_docker.random" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="pulumi_docker.run_command_that_can_fail">
+<code class="sig-prename descclassname">pulumi_docker.</code><code class="sig-name descname">run_command_that_can_fail</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cmd_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">args</span><span class="p">:</span> <span class="n">List<span class="p">[</span>str<span class="p">]</span></span></em>, <em class="sig-param"><span class="n">log_resource</span><span class="p">:</span> <span class="n">pulumi.resource.Resource</span></em>, <em class="sig-param"><span class="n">report_full_command_line</span><span class="p">:</span> <span class="n">bool</span></em>, <em class="sig-param"><span class="n">report_error_as_warning</span><span class="p">:</span> <span class="n">bool</span></em>, <em class="sig-param"><span class="n">stdin</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">env</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Mapping<span class="p">[</span>str<span class="p">, </span>str<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_docker.docker.CommandResult<a class="headerlink" href="#pulumi_docker.run_command_that_can_fail" title="Permalink to this definition">¶</a></dt>
+<dd><p>Runs a CLI command in a child process, returning a future for the process’s exit. Both stdout
+and stderr are redirected to process.stdout and process.stderr by default.</p>
+<p>If the [stdin] argument is defined, its contents are piped into stdin for the child process.</p>
+<p>[log_resource] is used to specify the resource to associate command output with. Stderr messages
+are always sent (since they may contain important information about something that’s gone wrong).
+Stdout messages will be logged ephemerally to this resource.  This lets the user know there is
+progress, without having that dumped on them at the end.  If an error occurs though, the stdout
+content will be printed.</p>
 </dd></dl>
 
 </div>

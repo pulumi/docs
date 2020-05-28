@@ -22,7 +22,22 @@ to prepare volumes that can be shared across containers.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Docker = Pulumi.Docker;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        // Creates a docker volume "shared_volume".
+        var sharedVolume = new Docker.Volume("sharedVolume", new Docker.VolumeArgs
+        {
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -235,7 +250,9 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>Driver</span>
+        <span id="driver_csharp">
+<a href="#driver_csharp" style="color: inherit; text-decoration: inherit;">Driver</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -244,7 +261,9 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>Driver<wbr>Opts</span>
+        <span id="driveropts_csharp">
+<a href="#driveropts_csharp" style="color: inherit; text-decoration: inherit;">Driver<wbr>Opts</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -253,7 +272,9 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>Labels</span>
+        <span id="labels_csharp">
+<a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#volumelabel">List&lt;Volume<wbr>Label<wbr>Args&gt;</a></span>
     </dt>
@@ -262,7 +283,9 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -279,7 +302,9 @@ provided).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Driver</span>
+        <span id="driver_go">
+<a href="#driver_go" style="color: inherit; text-decoration: inherit;">Driver</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -288,7 +313,9 @@ provided).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Driver<wbr>Opts</span>
+        <span id="driveropts_go">
+<a href="#driveropts_go" style="color: inherit; text-decoration: inherit;">Driver<wbr>Opts</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -297,7 +324,9 @@ provided).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Labels</span>
+        <span id="labels_go">
+<a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#volumelabel">[]Volume<wbr>Label</a></span>
     </dt>
@@ -306,7 +335,9 @@ provided).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -323,7 +354,9 @@ provided).
 
     <dt class="property-optional"
             title="Optional">
-        <span>driver</span>
+        <span id="driver_nodejs">
+<a href="#driver_nodejs" style="color: inherit; text-decoration: inherit;">driver</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -332,7 +365,9 @@ provided).
 
     <dt class="property-optional"
             title="Optional">
-        <span>driver<wbr>Opts</span>
+        <span id="driveropts_nodejs">
+<a href="#driveropts_nodejs" style="color: inherit; text-decoration: inherit;">driver<wbr>Opts</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -341,7 +376,9 @@ provided).
 
     <dt class="property-optional"
             title="Optional">
-        <span>labels</span>
+        <span id="labels_nodejs">
+<a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#volumelabel">Volume<wbr>Label[]</a></span>
     </dt>
@@ -350,7 +387,9 @@ provided).
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -367,7 +406,9 @@ provided).
 
     <dt class="property-optional"
             title="Optional">
-        <span>driver</span>
+        <span id="driver_python">
+<a href="#driver_python" style="color: inherit; text-decoration: inherit;">driver</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -376,7 +417,9 @@ provided).
 
     <dt class="property-optional"
             title="Optional">
-        <span>driver_<wbr>opts</span>
+        <span id="driver_opts_python">
+<a href="#driver_opts_python" style="color: inherit; text-decoration: inherit;">driver_<wbr>opts</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -385,7 +428,9 @@ provided).
 
     <dt class="property-optional"
             title="Optional">
-        <span>labels</span>
+        <span id="labels_python">
+<a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#volumelabel">List[Volume<wbr>Label]</a></span>
     </dt>
@@ -394,7 +439,9 @@ provided).
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -422,7 +469,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -430,7 +479,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Mountpoint</span>
+        <span id="mountpoint_csharp">
+<a href="#mountpoint_csharp" style="color: inherit; text-decoration: inherit;">Mountpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -445,7 +496,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -453,7 +506,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Mountpoint</span>
+        <span id="mountpoint_go">
+<a href="#mountpoint_go" style="color: inherit; text-decoration: inherit;">Mountpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -468,7 +523,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -476,7 +533,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>mountpoint</span>
+        <span id="mountpoint_nodejs">
+<a href="#mountpoint_nodejs" style="color: inherit; text-decoration: inherit;">mountpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -491,7 +550,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -499,7 +560,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>mountpoint</span>
+        <span id="mountpoint_python">
+<a href="#mountpoint_python" style="color: inherit; text-decoration: inherit;">mountpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -640,7 +703,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Driver</span>
+        <span id="state_driver_csharp">
+<a href="#state_driver_csharp" style="color: inherit; text-decoration: inherit;">Driver</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -649,7 +714,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Driver<wbr>Opts</span>
+        <span id="state_driveropts_csharp">
+<a href="#state_driveropts_csharp" style="color: inherit; text-decoration: inherit;">Driver<wbr>Opts</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -658,7 +725,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Labels</span>
+        <span id="state_labels_csharp">
+<a href="#state_labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#volumelabel">List&lt;Volume<wbr>Label<wbr>Args&gt;</a></span>
     </dt>
@@ -667,7 +736,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Mountpoint</span>
+        <span id="state_mountpoint_csharp">
+<a href="#state_mountpoint_csharp" style="color: inherit; text-decoration: inherit;">Mountpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -675,7 +746,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -692,7 +765,9 @@ provided).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Driver</span>
+        <span id="state_driver_go">
+<a href="#state_driver_go" style="color: inherit; text-decoration: inherit;">Driver</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -701,7 +776,9 @@ provided).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Driver<wbr>Opts</span>
+        <span id="state_driveropts_go">
+<a href="#state_driveropts_go" style="color: inherit; text-decoration: inherit;">Driver<wbr>Opts</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -710,7 +787,9 @@ provided).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Labels</span>
+        <span id="state_labels_go">
+<a href="#state_labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#volumelabel">[]Volume<wbr>Label</a></span>
     </dt>
@@ -719,7 +798,9 @@ provided).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Mountpoint</span>
+        <span id="state_mountpoint_go">
+<a href="#state_mountpoint_go" style="color: inherit; text-decoration: inherit;">Mountpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -727,7 +808,9 @@ provided).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -744,7 +827,9 @@ provided).
 
     <dt class="property-optional"
             title="Optional">
-        <span>driver</span>
+        <span id="state_driver_nodejs">
+<a href="#state_driver_nodejs" style="color: inherit; text-decoration: inherit;">driver</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -753,7 +838,9 @@ provided).
 
     <dt class="property-optional"
             title="Optional">
-        <span>driver<wbr>Opts</span>
+        <span id="state_driveropts_nodejs">
+<a href="#state_driveropts_nodejs" style="color: inherit; text-decoration: inherit;">driver<wbr>Opts</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -762,7 +849,9 @@ provided).
 
     <dt class="property-optional"
             title="Optional">
-        <span>labels</span>
+        <span id="state_labels_nodejs">
+<a href="#state_labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#volumelabel">Volume<wbr>Label[]</a></span>
     </dt>
@@ -771,7 +860,9 @@ provided).
 
     <dt class="property-optional"
             title="Optional">
-        <span>mountpoint</span>
+        <span id="state_mountpoint_nodejs">
+<a href="#state_mountpoint_nodejs" style="color: inherit; text-decoration: inherit;">mountpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -779,7 +870,9 @@ provided).
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -796,7 +889,9 @@ provided).
 
     <dt class="property-optional"
             title="Optional">
-        <span>driver</span>
+        <span id="state_driver_python">
+<a href="#state_driver_python" style="color: inherit; text-decoration: inherit;">driver</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -805,7 +900,9 @@ provided).
 
     <dt class="property-optional"
             title="Optional">
-        <span>driver_<wbr>opts</span>
+        <span id="state_driver_opts_python">
+<a href="#state_driver_opts_python" style="color: inherit; text-decoration: inherit;">driver_<wbr>opts</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -814,7 +911,9 @@ provided).
 
     <dt class="property-optional"
             title="Optional">
-        <span>labels</span>
+        <span id="state_labels_python">
+<a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#volumelabel">List[Volume<wbr>Label]</a></span>
     </dt>
@@ -823,7 +922,9 @@ provided).
 
     <dt class="property-optional"
             title="Optional">
-        <span>mountpoint</span>
+        <span id="state_mountpoint_python">
+<a href="#state_mountpoint_python" style="color: inherit; text-decoration: inherit;">mountpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -831,7 +932,9 @@ provided).
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -874,7 +977,9 @@ provided).
 
     <dt class="property-required"
             title="Required">
-        <span>Label</span>
+        <span id="label_csharp">
+<a href="#label_csharp" style="color: inherit; text-decoration: inherit;">Label</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -882,7 +987,9 @@ provided).
 
     <dt class="property-required"
             title="Required">
-        <span>Value</span>
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -897,7 +1004,9 @@ provided).
 
     <dt class="property-required"
             title="Required">
-        <span>Label</span>
+        <span id="label_go">
+<a href="#label_go" style="color: inherit; text-decoration: inherit;">Label</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -905,7 +1014,9 @@ provided).
 
     <dt class="property-required"
             title="Required">
-        <span>Value</span>
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -920,7 +1031,9 @@ provided).
 
     <dt class="property-required"
             title="Required">
-        <span>label</span>
+        <span id="label_nodejs">
+<a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -928,7 +1041,9 @@ provided).
 
     <dt class="property-required"
             title="Required">
-        <span>value</span>
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -943,7 +1058,9 @@ provided).
 
     <dt class="property-required"
             title="Required">
-        <span>label</span>
+        <span id="label_python">
+<a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -951,7 +1068,9 @@ provided).
 
     <dt class="property-required"
             title="Required">
-        <span>value</span>
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
