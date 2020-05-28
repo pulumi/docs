@@ -35,7 +35,28 @@ Image Service set it.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var rancheros = new OpenStack.Images.Image("rancheros", new OpenStack.Images.ImageArgs
+        {
+            ContainerFormat = "bare",
+            DiskFormat = "qcow2",
+            ImageSourceUrl = "https://releases.rancher.com/os/latest/rancheros-openstack.img",
+            Properties = 
+            {
+                { "key", "value" },
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -259,7 +280,9 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
 
     <dt class="property-required"
             title="Required">
-        <span>Container<wbr>Format</span>
+        <span id="containerformat_csharp">
+<a href="#containerformat_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Format</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -269,7 +292,9 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
 
     <dt class="property-required"
             title="Required">
-        <span>Disk<wbr>Format</span>
+        <span id="diskformat_csharp">
+<a href="#diskformat_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Format</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -279,7 +304,9 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
 
     <dt class="property-optional"
             title="Optional">
-        <span>Image<wbr>Cache<wbr>Path</span>
+        <span id="imagecachepath_csharp">
+<a href="#imagecachepath_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Cache<wbr>Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -287,7 +314,9 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
 
     <dt class="property-optional"
             title="Optional">
-        <span>Image<wbr>Source<wbr>Url</span>
+        <span id="imagesourceurl_csharp">
+<a href="#imagesourceurl_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Source<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -299,7 +328,9 @@ Conflicts with `local_file_path`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Local<wbr>File<wbr>Path</span>
+        <span id="localfilepath_csharp">
+<a href="#localfilepath_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>File<wbr>Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -310,7 +341,9 @@ that will be uploaded to Glance. Conflicts with `image_source_url` and
 
     <dt class="property-optional"
             title="Optional">
-        <span>Min<wbr>Disk<wbr>Gb</span>
+        <span id="mindiskgb_csharp">
+<a href="#mindiskgb_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Disk<wbr>Gb</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -320,7 +353,9 @@ Defaults to 0.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Min<wbr>Ram<wbr>Mb</span>
+        <span id="minrammb_csharp">
+<a href="#minrammb_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Ram<wbr>Mb</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -330,7 +365,9 @@ Defauts to 0.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -339,7 +376,9 @@ Defauts to 0.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Properties</span>
+        <span id="properties_csharp">
+<a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -350,7 +389,9 @@ information about properties.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Protected</span>
+        <span id="protected_csharp">
+<a href="#protected_csharp" style="color: inherit; text-decoration: inherit;">Protected</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -360,7 +401,9 @@ Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="region_csharp">
+<a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -372,7 +415,9 @@ is used. Changing this creates a new Image.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -382,7 +427,9 @@ At this time, it is not possible to delete all tags of an image.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Verify<wbr>Checksum</span>
+        <span id="verifychecksum_csharp">
+<a href="#verifychecksum_csharp" style="color: inherit; text-decoration: inherit;">Verify<wbr>Checksum</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -393,7 +440,9 @@ Defaults to true when not using `web_download`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Visibility</span>
+        <span id="visibility_csharp">
+<a href="#visibility_csharp" style="color: inherit; text-decoration: inherit;">Visibility</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -404,7 +453,9 @@ visibility depends upon the configuration of the OpenStack cloud.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Web<wbr>Download</span>
+        <span id="webdownload_csharp">
+<a href="#webdownload_csharp" style="color: inherit; text-decoration: inherit;">Web<wbr>Download</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -422,7 +473,9 @@ Conflicts with `local_file_path`. Defaults to false.
 
     <dt class="property-required"
             title="Required">
-        <span>Container<wbr>Format</span>
+        <span id="containerformat_go">
+<a href="#containerformat_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Format</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -432,7 +485,9 @@ Conflicts with `local_file_path`. Defaults to false.
 
     <dt class="property-required"
             title="Required">
-        <span>Disk<wbr>Format</span>
+        <span id="diskformat_go">
+<a href="#diskformat_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Format</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -442,7 +497,9 @@ Conflicts with `local_file_path`. Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Image<wbr>Cache<wbr>Path</span>
+        <span id="imagecachepath_go">
+<a href="#imagecachepath_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Cache<wbr>Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -450,7 +507,9 @@ Conflicts with `local_file_path`. Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Image<wbr>Source<wbr>Url</span>
+        <span id="imagesourceurl_go">
+<a href="#imagesourceurl_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Source<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -462,7 +521,9 @@ Conflicts with `local_file_path`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Local<wbr>File<wbr>Path</span>
+        <span id="localfilepath_go">
+<a href="#localfilepath_go" style="color: inherit; text-decoration: inherit;">Local<wbr>File<wbr>Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -473,7 +534,9 @@ that will be uploaded to Glance. Conflicts with `image_source_url` and
 
     <dt class="property-optional"
             title="Optional">
-        <span>Min<wbr>Disk<wbr>Gb</span>
+        <span id="mindiskgb_go">
+<a href="#mindiskgb_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Disk<wbr>Gb</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -483,7 +546,9 @@ Defaults to 0.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Min<wbr>Ram<wbr>Mb</span>
+        <span id="minrammb_go">
+<a href="#minrammb_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Ram<wbr>Mb</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -493,7 +558,9 @@ Defauts to 0.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -502,7 +569,9 @@ Defauts to 0.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Properties</span>
+        <span id="properties_go">
+<a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -513,7 +582,9 @@ information about properties.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Protected</span>
+        <span id="protected_go">
+<a href="#protected_go" style="color: inherit; text-decoration: inherit;">Protected</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -523,7 +594,9 @@ Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="region_go">
+<a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -535,7 +608,9 @@ is used. Changing this creates a new Image.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -545,7 +620,9 @@ At this time, it is not possible to delete all tags of an image.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Verify<wbr>Checksum</span>
+        <span id="verifychecksum_go">
+<a href="#verifychecksum_go" style="color: inherit; text-decoration: inherit;">Verify<wbr>Checksum</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -556,7 +633,9 @@ Defaults to true when not using `web_download`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Visibility</span>
+        <span id="visibility_go">
+<a href="#visibility_go" style="color: inherit; text-decoration: inherit;">Visibility</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -567,7 +646,9 @@ visibility depends upon the configuration of the OpenStack cloud.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Web<wbr>Download</span>
+        <span id="webdownload_go">
+<a href="#webdownload_go" style="color: inherit; text-decoration: inherit;">Web<wbr>Download</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -585,7 +666,9 @@ Conflicts with `local_file_path`. Defaults to false.
 
     <dt class="property-required"
             title="Required">
-        <span>container<wbr>Format</span>
+        <span id="containerformat_nodejs">
+<a href="#containerformat_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Format</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -595,7 +678,9 @@ Conflicts with `local_file_path`. Defaults to false.
 
     <dt class="property-required"
             title="Required">
-        <span>disk<wbr>Format</span>
+        <span id="diskformat_nodejs">
+<a href="#diskformat_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Format</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -605,7 +690,9 @@ Conflicts with `local_file_path`. Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>image<wbr>Cache<wbr>Path</span>
+        <span id="imagecachepath_nodejs">
+<a href="#imagecachepath_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Cache<wbr>Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -613,7 +700,9 @@ Conflicts with `local_file_path`. Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>image<wbr>Source<wbr>Url</span>
+        <span id="imagesourceurl_nodejs">
+<a href="#imagesourceurl_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Source<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -625,7 +714,9 @@ Conflicts with `local_file_path`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>local<wbr>File<wbr>Path</span>
+        <span id="localfilepath_nodejs">
+<a href="#localfilepath_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>File<wbr>Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -636,7 +727,9 @@ that will be uploaded to Glance. Conflicts with `image_source_url` and
 
     <dt class="property-optional"
             title="Optional">
-        <span>min<wbr>Disk<wbr>Gb</span>
+        <span id="mindiskgb_nodejs">
+<a href="#mindiskgb_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Disk<wbr>Gb</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -646,7 +739,9 @@ Defaults to 0.
 
     <dt class="property-optional"
             title="Optional">
-        <span>min<wbr>Ram<wbr>Mb</span>
+        <span id="minrammb_nodejs">
+<a href="#minrammb_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Ram<wbr>Mb</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -656,7 +751,9 @@ Defauts to 0.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -665,7 +762,9 @@ Defauts to 0.
 
     <dt class="property-optional"
             title="Optional">
-        <span>properties</span>
+        <span id="properties_nodejs">
+<a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -676,7 +775,9 @@ information about properties.
 
     <dt class="property-optional"
             title="Optional">
-        <span>protected</span>
+        <span id="protected_nodejs">
+<a href="#protected_nodejs" style="color: inherit; text-decoration: inherit;">protected</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -686,7 +787,9 @@ Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="region_nodejs">
+<a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -698,7 +801,9 @@ is used. Changing this creates a new Image.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -708,7 +813,9 @@ At this time, it is not possible to delete all tags of an image.
 
     <dt class="property-optional"
             title="Optional">
-        <span>verify<wbr>Checksum</span>
+        <span id="verifychecksum_nodejs">
+<a href="#verifychecksum_nodejs" style="color: inherit; text-decoration: inherit;">verify<wbr>Checksum</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -719,7 +826,9 @@ Defaults to true when not using `web_download`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>visibility</span>
+        <span id="visibility_nodejs">
+<a href="#visibility_nodejs" style="color: inherit; text-decoration: inherit;">visibility</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -730,7 +839,9 @@ visibility depends upon the configuration of the OpenStack cloud.
 
     <dt class="property-optional"
             title="Optional">
-        <span>web<wbr>Download</span>
+        <span id="webdownload_nodejs">
+<a href="#webdownload_nodejs" style="color: inherit; text-decoration: inherit;">web<wbr>Download</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -748,7 +859,9 @@ Conflicts with `local_file_path`. Defaults to false.
 
     <dt class="property-required"
             title="Required">
-        <span>container_<wbr>format</span>
+        <span id="container_format_python">
+<a href="#container_format_python" style="color: inherit; text-decoration: inherit;">container_<wbr>format</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -758,7 +871,9 @@ Conflicts with `local_file_path`. Defaults to false.
 
     <dt class="property-required"
             title="Required">
-        <span>disk_<wbr>format</span>
+        <span id="disk_format_python">
+<a href="#disk_format_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>format</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -768,7 +883,9 @@ Conflicts with `local_file_path`. Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>image_<wbr>cache_<wbr>path</span>
+        <span id="image_cache_path_python">
+<a href="#image_cache_path_python" style="color: inherit; text-decoration: inherit;">image_<wbr>cache_<wbr>path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -776,7 +893,9 @@ Conflicts with `local_file_path`. Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>image_<wbr>source_<wbr>url</span>
+        <span id="image_source_url_python">
+<a href="#image_source_url_python" style="color: inherit; text-decoration: inherit;">image_<wbr>source_<wbr>url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -788,7 +907,9 @@ Conflicts with `local_file_path`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>local_<wbr>file_<wbr>path</span>
+        <span id="local_file_path_python">
+<a href="#local_file_path_python" style="color: inherit; text-decoration: inherit;">local_<wbr>file_<wbr>path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -799,7 +920,9 @@ that will be uploaded to Glance. Conflicts with `image_source_url` and
 
     <dt class="property-optional"
             title="Optional">
-        <span>min_<wbr>disk_<wbr>gb</span>
+        <span id="min_disk_gb_python">
+<a href="#min_disk_gb_python" style="color: inherit; text-decoration: inherit;">min_<wbr>disk_<wbr>gb</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -809,7 +932,9 @@ Defaults to 0.
 
     <dt class="property-optional"
             title="Optional">
-        <span>min_<wbr>ram_<wbr>mb</span>
+        <span id="min_ram_mb_python">
+<a href="#min_ram_mb_python" style="color: inherit; text-decoration: inherit;">min_<wbr>ram_<wbr>mb</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -819,7 +944,9 @@ Defauts to 0.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -828,7 +955,9 @@ Defauts to 0.
 
     <dt class="property-optional"
             title="Optional">
-        <span>properties</span>
+        <span id="properties_python">
+<a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -839,7 +968,9 @@ information about properties.
 
     <dt class="property-optional"
             title="Optional">
-        <span>protected</span>
+        <span id="protected_python">
+<a href="#protected_python" style="color: inherit; text-decoration: inherit;">protected</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -849,7 +980,9 @@ Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="region_python">
+<a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -861,7 +994,9 @@ is used. Changing this creates a new Image.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -871,7 +1006,9 @@ At this time, it is not possible to delete all tags of an image.
 
     <dt class="property-optional"
             title="Optional">
-        <span>verify_<wbr>checksum</span>
+        <span id="verify_checksum_python">
+<a href="#verify_checksum_python" style="color: inherit; text-decoration: inherit;">verify_<wbr>checksum</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -882,7 +1019,9 @@ Defaults to true when not using `web_download`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>visibility</span>
+        <span id="visibility_python">
+<a href="#visibility_python" style="color: inherit; text-decoration: inherit;">visibility</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -893,7 +1032,9 @@ visibility depends upon the configuration of the OpenStack cloud.
 
     <dt class="property-optional"
             title="Optional">
-        <span>web_<wbr>download</span>
+        <span id="web_download_python">
+<a href="#web_download_python" style="color: inherit; text-decoration: inherit;">web_<wbr>download</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -922,7 +1063,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Checksum</span>
+        <span id="checksum_csharp">
+<a href="#checksum_csharp" style="color: inherit; text-decoration: inherit;">Checksum</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -931,7 +1074,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Created<wbr>At</span>
+        <span id="createdat_csharp">
+<a href="#createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -940,7 +1085,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>File</span>
+        <span id="file_csharp">
+<a href="#file_csharp" style="color: inherit; text-decoration: inherit;">File</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -951,7 +1098,9 @@ or the path to retrieve it.
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -959,7 +1108,9 @@ or the path to retrieve it.
 
     <dt class="property-"
             title="">
-        <span>Metadata</span>
+        <span id="metadata_csharp">
+<a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -970,7 +1121,9 @@ and tags. See https://docs.openstack.org/glance/latest/user/metadefs-concepts.ht
 
     <dt class="property-"
             title="">
-        <span>Owner</span>
+        <span id="owner_csharp">
+<a href="#owner_csharp" style="color: inherit; text-decoration: inherit;">Owner</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -979,7 +1132,9 @@ and tags. See https://docs.openstack.org/glance/latest/user/metadefs-concepts.ht
 
     <dt class="property-"
             title="">
-        <span>Schema</span>
+        <span id="schema_csharp">
+<a href="#schema_csharp" style="color: inherit; text-decoration: inherit;">Schema</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -989,7 +1144,9 @@ the image or image
 
     <dt class="property-"
             title="">
-        <span>Size<wbr>Bytes</span>
+        <span id="sizebytes_csharp">
+<a href="#sizebytes_csharp" style="color: inherit; text-decoration: inherit;">Size<wbr>Bytes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -998,7 +1155,9 @@ the image or image
 
     <dt class="property-"
             title="">
-        <span>Status</span>
+        <span id="status_csharp">
+<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1008,7 +1167,9 @@ or "saving".
 
     <dt class="property- property-deprecated"
             title=", Deprecated">
-        <span>Update<wbr>At</span>
+        <span id="updateat_csharp">
+<a href="#updateat_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1017,7 +1178,9 @@ or "saving".
 
     <dt class="property-"
             title="">
-        <span>Updated<wbr>At</span>
+        <span id="updatedat_csharp">
+<a href="#updatedat_csharp" style="color: inherit; text-decoration: inherit;">Updated<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1033,7 +1196,9 @@ or "saving".
 
     <dt class="property-"
             title="">
-        <span>Checksum</span>
+        <span id="checksum_go">
+<a href="#checksum_go" style="color: inherit; text-decoration: inherit;">Checksum</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1042,7 +1207,9 @@ or "saving".
 
     <dt class="property-"
             title="">
-        <span>Created<wbr>At</span>
+        <span id="createdat_go">
+<a href="#createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1051,7 +1218,9 @@ or "saving".
 
     <dt class="property-"
             title="">
-        <span>File</span>
+        <span id="file_go">
+<a href="#file_go" style="color: inherit; text-decoration: inherit;">File</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1062,7 +1231,9 @@ or the path to retrieve it.
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1070,7 +1241,9 @@ or the path to retrieve it.
 
     <dt class="property-"
             title="">
-        <span>Metadata</span>
+        <span id="metadata_go">
+<a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -1081,7 +1254,9 @@ and tags. See https://docs.openstack.org/glance/latest/user/metadefs-concepts.ht
 
     <dt class="property-"
             title="">
-        <span>Owner</span>
+        <span id="owner_go">
+<a href="#owner_go" style="color: inherit; text-decoration: inherit;">Owner</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1090,7 +1265,9 @@ and tags. See https://docs.openstack.org/glance/latest/user/metadefs-concepts.ht
 
     <dt class="property-"
             title="">
-        <span>Schema</span>
+        <span id="schema_go">
+<a href="#schema_go" style="color: inherit; text-decoration: inherit;">Schema</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1100,7 +1277,9 @@ the image or image
 
     <dt class="property-"
             title="">
-        <span>Size<wbr>Bytes</span>
+        <span id="sizebytes_go">
+<a href="#sizebytes_go" style="color: inherit; text-decoration: inherit;">Size<wbr>Bytes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1109,7 +1288,9 @@ the image or image
 
     <dt class="property-"
             title="">
-        <span>Status</span>
+        <span id="status_go">
+<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1119,7 +1300,9 @@ or "saving".
 
     <dt class="property- property-deprecated"
             title=", Deprecated">
-        <span>Update<wbr>At</span>
+        <span id="updateat_go">
+<a href="#updateat_go" style="color: inherit; text-decoration: inherit;">Update<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1128,7 +1311,9 @@ or "saving".
 
     <dt class="property-"
             title="">
-        <span>Updated<wbr>At</span>
+        <span id="updatedat_go">
+<a href="#updatedat_go" style="color: inherit; text-decoration: inherit;">Updated<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1144,7 +1329,9 @@ or "saving".
 
     <dt class="property-"
             title="">
-        <span>checksum</span>
+        <span id="checksum_nodejs">
+<a href="#checksum_nodejs" style="color: inherit; text-decoration: inherit;">checksum</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1153,7 +1340,9 @@ or "saving".
 
     <dt class="property-"
             title="">
-        <span>created<wbr>At</span>
+        <span id="createdat_nodejs">
+<a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1162,7 +1351,9 @@ or "saving".
 
     <dt class="property-"
             title="">
-        <span>file</span>
+        <span id="file_nodejs">
+<a href="#file_nodejs" style="color: inherit; text-decoration: inherit;">file</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1173,7 +1364,9 @@ or the path to retrieve it.
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1181,7 +1374,9 @@ or the path to retrieve it.
 
     <dt class="property-"
             title="">
-        <span>metadata</span>
+        <span id="metadata_nodejs">
+<a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -1192,7 +1387,9 @@ and tags. See https://docs.openstack.org/glance/latest/user/metadefs-concepts.ht
 
     <dt class="property-"
             title="">
-        <span>owner</span>
+        <span id="owner_nodejs">
+<a href="#owner_nodejs" style="color: inherit; text-decoration: inherit;">owner</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1201,7 +1398,9 @@ and tags. See https://docs.openstack.org/glance/latest/user/metadefs-concepts.ht
 
     <dt class="property-"
             title="">
-        <span>schema</span>
+        <span id="schema_nodejs">
+<a href="#schema_nodejs" style="color: inherit; text-decoration: inherit;">schema</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1211,7 +1410,9 @@ the image or image
 
     <dt class="property-"
             title="">
-        <span>size<wbr>Bytes</span>
+        <span id="sizebytes_nodejs">
+<a href="#sizebytes_nodejs" style="color: inherit; text-decoration: inherit;">size<wbr>Bytes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1220,7 +1421,9 @@ the image or image
 
     <dt class="property-"
             title="">
-        <span>status</span>
+        <span id="status_nodejs">
+<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1230,7 +1433,9 @@ or "saving".
 
     <dt class="property- property-deprecated"
             title=", Deprecated">
-        <span>update<wbr>At</span>
+        <span id="updateat_nodejs">
+<a href="#updateat_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1239,7 +1444,9 @@ or "saving".
 
     <dt class="property-"
             title="">
-        <span>updated<wbr>At</span>
+        <span id="updatedat_nodejs">
+<a href="#updatedat_nodejs" style="color: inherit; text-decoration: inherit;">updated<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1255,7 +1462,9 @@ or "saving".
 
     <dt class="property-"
             title="">
-        <span>checksum</span>
+        <span id="checksum_python">
+<a href="#checksum_python" style="color: inherit; text-decoration: inherit;">checksum</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1264,7 +1473,9 @@ or "saving".
 
     <dt class="property-"
             title="">
-        <span>created_<wbr>at</span>
+        <span id="created_at_python">
+<a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1273,7 +1484,9 @@ or "saving".
 
     <dt class="property-"
             title="">
-        <span>file</span>
+        <span id="file_python">
+<a href="#file_python" style="color: inherit; text-decoration: inherit;">file</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1284,7 +1497,9 @@ or the path to retrieve it.
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1292,7 +1507,9 @@ or the path to retrieve it.
 
     <dt class="property-"
             title="">
-        <span>metadata</span>
+        <span id="metadata_python">
+<a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -1303,7 +1520,9 @@ and tags. See https://docs.openstack.org/glance/latest/user/metadefs-concepts.ht
 
     <dt class="property-"
             title="">
-        <span>owner</span>
+        <span id="owner_python">
+<a href="#owner_python" style="color: inherit; text-decoration: inherit;">owner</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1312,7 +1531,9 @@ and tags. See https://docs.openstack.org/glance/latest/user/metadefs-concepts.ht
 
     <dt class="property-"
             title="">
-        <span>schema</span>
+        <span id="schema_python">
+<a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1322,7 +1543,9 @@ the image or image
 
     <dt class="property-"
             title="">
-        <span>size_<wbr>bytes</span>
+        <span id="size_bytes_python">
+<a href="#size_bytes_python" style="color: inherit; text-decoration: inherit;">size_<wbr>bytes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1331,7 +1554,9 @@ the image or image
 
     <dt class="property-"
             title="">
-        <span>status</span>
+        <span id="status_python">
+<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1341,7 +1566,9 @@ or "saving".
 
     <dt class="property- property-deprecated"
             title=", Deprecated">
-        <span>update_<wbr>at</span>
+        <span id="update_at_python">
+<a href="#update_at_python" style="color: inherit; text-decoration: inherit;">update_<wbr>at</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1350,7 +1577,9 @@ or "saving".
 
     <dt class="property-"
             title="">
-        <span>updated_<wbr>at</span>
+        <span id="updated_at_python">
+<a href="#updated_at_python" style="color: inherit; text-decoration: inherit;">updated_<wbr>at</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1492,7 +1721,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Checksum</span>
+        <span id="state_checksum_csharp">
+<a href="#state_checksum_csharp" style="color: inherit; text-decoration: inherit;">Checksum</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1501,7 +1732,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Container<wbr>Format</span>
+        <span id="state_containerformat_csharp">
+<a href="#state_containerformat_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Format</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1511,7 +1744,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Created<wbr>At</span>
+        <span id="state_createdat_csharp">
+<a href="#state_createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1520,7 +1755,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Disk<wbr>Format</span>
+        <span id="state_diskformat_csharp">
+<a href="#state_diskformat_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Format</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1530,7 +1767,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>File</span>
+        <span id="state_file_csharp">
+<a href="#state_file_csharp" style="color: inherit; text-decoration: inherit;">File</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1541,7 +1780,9 @@ or the path to retrieve it.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Image<wbr>Cache<wbr>Path</span>
+        <span id="state_imagecachepath_csharp">
+<a href="#state_imagecachepath_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Cache<wbr>Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1549,7 +1790,9 @@ or the path to retrieve it.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Image<wbr>Source<wbr>Url</span>
+        <span id="state_imagesourceurl_csharp">
+<a href="#state_imagesourceurl_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Source<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1561,7 +1804,9 @@ Conflicts with `local_file_path`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Local<wbr>File<wbr>Path</span>
+        <span id="state_localfilepath_csharp">
+<a href="#state_localfilepath_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>File<wbr>Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1572,7 +1817,9 @@ that will be uploaded to Glance. Conflicts with `image_source_url` and
 
     <dt class="property-optional"
             title="Optional">
-        <span>Metadata</span>
+        <span id="state_metadata_csharp">
+<a href="#state_metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -1583,7 +1830,9 @@ and tags. See https://docs.openstack.org/glance/latest/user/metadefs-concepts.ht
 
     <dt class="property-optional"
             title="Optional">
-        <span>Min<wbr>Disk<wbr>Gb</span>
+        <span id="state_mindiskgb_csharp">
+<a href="#state_mindiskgb_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Disk<wbr>Gb</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1593,7 +1842,9 @@ Defaults to 0.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Min<wbr>Ram<wbr>Mb</span>
+        <span id="state_minrammb_csharp">
+<a href="#state_minrammb_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Ram<wbr>Mb</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1603,7 +1854,9 @@ Defauts to 0.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1612,7 +1865,9 @@ Defauts to 0.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Owner</span>
+        <span id="state_owner_csharp">
+<a href="#state_owner_csharp" style="color: inherit; text-decoration: inherit;">Owner</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1621,7 +1876,9 @@ Defauts to 0.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Properties</span>
+        <span id="state_properties_csharp">
+<a href="#state_properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -1632,7 +1889,9 @@ information about properties.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Protected</span>
+        <span id="state_protected_csharp">
+<a href="#state_protected_csharp" style="color: inherit; text-decoration: inherit;">Protected</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1642,7 +1901,9 @@ Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="state_region_csharp">
+<a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1654,7 +1915,9 @@ is used. Changing this creates a new Image.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Schema</span>
+        <span id="state_schema_csharp">
+<a href="#state_schema_csharp" style="color: inherit; text-decoration: inherit;">Schema</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1664,7 +1927,9 @@ the image or image
 
     <dt class="property-optional"
             title="Optional">
-        <span>Size<wbr>Bytes</span>
+        <span id="state_sizebytes_csharp">
+<a href="#state_sizebytes_csharp" style="color: inherit; text-decoration: inherit;">Size<wbr>Bytes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1673,7 +1938,9 @@ the image or image
 
     <dt class="property-optional"
             title="Optional">
-        <span>Status</span>
+        <span id="state_status_csharp">
+<a href="#state_status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1683,7 +1950,9 @@ or "saving".
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_csharp">
+<a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1693,7 +1962,9 @@ At this time, it is not possible to delete all tags of an image.
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>Update<wbr>At</span>
+        <span id="state_updateat_csharp">
+<a href="#state_updateat_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1702,7 +1973,9 @@ At this time, it is not possible to delete all tags of an image.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Updated<wbr>At</span>
+        <span id="state_updatedat_csharp">
+<a href="#state_updatedat_csharp" style="color: inherit; text-decoration: inherit;">Updated<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1711,7 +1984,9 @@ At this time, it is not possible to delete all tags of an image.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Verify<wbr>Checksum</span>
+        <span id="state_verifychecksum_csharp">
+<a href="#state_verifychecksum_csharp" style="color: inherit; text-decoration: inherit;">Verify<wbr>Checksum</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1722,7 +1997,9 @@ Defaults to true when not using `web_download`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Visibility</span>
+        <span id="state_visibility_csharp">
+<a href="#state_visibility_csharp" style="color: inherit; text-decoration: inherit;">Visibility</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1733,7 +2010,9 @@ visibility depends upon the configuration of the OpenStack cloud.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Web<wbr>Download</span>
+        <span id="state_webdownload_csharp">
+<a href="#state_webdownload_csharp" style="color: inherit; text-decoration: inherit;">Web<wbr>Download</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1751,7 +2030,9 @@ Conflicts with `local_file_path`. Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Checksum</span>
+        <span id="state_checksum_go">
+<a href="#state_checksum_go" style="color: inherit; text-decoration: inherit;">Checksum</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1760,7 +2041,9 @@ Conflicts with `local_file_path`. Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Container<wbr>Format</span>
+        <span id="state_containerformat_go">
+<a href="#state_containerformat_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Format</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1770,7 +2053,9 @@ Conflicts with `local_file_path`. Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Created<wbr>At</span>
+        <span id="state_createdat_go">
+<a href="#state_createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1779,7 +2064,9 @@ Conflicts with `local_file_path`. Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Disk<wbr>Format</span>
+        <span id="state_diskformat_go">
+<a href="#state_diskformat_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Format</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1789,7 +2076,9 @@ Conflicts with `local_file_path`. Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>File</span>
+        <span id="state_file_go">
+<a href="#state_file_go" style="color: inherit; text-decoration: inherit;">File</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1800,7 +2089,9 @@ or the path to retrieve it.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Image<wbr>Cache<wbr>Path</span>
+        <span id="state_imagecachepath_go">
+<a href="#state_imagecachepath_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Cache<wbr>Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1808,7 +2099,9 @@ or the path to retrieve it.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Image<wbr>Source<wbr>Url</span>
+        <span id="state_imagesourceurl_go">
+<a href="#state_imagesourceurl_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Source<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1820,7 +2113,9 @@ Conflicts with `local_file_path`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Local<wbr>File<wbr>Path</span>
+        <span id="state_localfilepath_go">
+<a href="#state_localfilepath_go" style="color: inherit; text-decoration: inherit;">Local<wbr>File<wbr>Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1831,7 +2126,9 @@ that will be uploaded to Glance. Conflicts with `image_source_url` and
 
     <dt class="property-optional"
             title="Optional">
-        <span>Metadata</span>
+        <span id="state_metadata_go">
+<a href="#state_metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -1842,7 +2139,9 @@ and tags. See https://docs.openstack.org/glance/latest/user/metadefs-concepts.ht
 
     <dt class="property-optional"
             title="Optional">
-        <span>Min<wbr>Disk<wbr>Gb</span>
+        <span id="state_mindiskgb_go">
+<a href="#state_mindiskgb_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Disk<wbr>Gb</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1852,7 +2151,9 @@ Defaults to 0.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Min<wbr>Ram<wbr>Mb</span>
+        <span id="state_minrammb_go">
+<a href="#state_minrammb_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Ram<wbr>Mb</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1862,7 +2163,9 @@ Defauts to 0.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1871,7 +2174,9 @@ Defauts to 0.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Owner</span>
+        <span id="state_owner_go">
+<a href="#state_owner_go" style="color: inherit; text-decoration: inherit;">Owner</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1880,7 +2185,9 @@ Defauts to 0.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Properties</span>
+        <span id="state_properties_go">
+<a href="#state_properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -1891,7 +2198,9 @@ information about properties.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Protected</span>
+        <span id="state_protected_go">
+<a href="#state_protected_go" style="color: inherit; text-decoration: inherit;">Protected</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1901,7 +2210,9 @@ Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="state_region_go">
+<a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1913,7 +2224,9 @@ is used. Changing this creates a new Image.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Schema</span>
+        <span id="state_schema_go">
+<a href="#state_schema_go" style="color: inherit; text-decoration: inherit;">Schema</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1923,7 +2236,9 @@ the image or image
 
     <dt class="property-optional"
             title="Optional">
-        <span>Size<wbr>Bytes</span>
+        <span id="state_sizebytes_go">
+<a href="#state_sizebytes_go" style="color: inherit; text-decoration: inherit;">Size<wbr>Bytes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1932,7 +2247,9 @@ the image or image
 
     <dt class="property-optional"
             title="Optional">
-        <span>Status</span>
+        <span id="state_status_go">
+<a href="#state_status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1942,7 +2259,9 @@ or "saving".
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_go">
+<a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1952,7 +2271,9 @@ At this time, it is not possible to delete all tags of an image.
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>Update<wbr>At</span>
+        <span id="state_updateat_go">
+<a href="#state_updateat_go" style="color: inherit; text-decoration: inherit;">Update<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1961,7 +2282,9 @@ At this time, it is not possible to delete all tags of an image.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Updated<wbr>At</span>
+        <span id="state_updatedat_go">
+<a href="#state_updatedat_go" style="color: inherit; text-decoration: inherit;">Updated<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1970,7 +2293,9 @@ At this time, it is not possible to delete all tags of an image.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Verify<wbr>Checksum</span>
+        <span id="state_verifychecksum_go">
+<a href="#state_verifychecksum_go" style="color: inherit; text-decoration: inherit;">Verify<wbr>Checksum</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1981,7 +2306,9 @@ Defaults to true when not using `web_download`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Visibility</span>
+        <span id="state_visibility_go">
+<a href="#state_visibility_go" style="color: inherit; text-decoration: inherit;">Visibility</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1992,7 +2319,9 @@ visibility depends upon the configuration of the OpenStack cloud.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Web<wbr>Download</span>
+        <span id="state_webdownload_go">
+<a href="#state_webdownload_go" style="color: inherit; text-decoration: inherit;">Web<wbr>Download</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -2010,7 +2339,9 @@ Conflicts with `local_file_path`. Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>checksum</span>
+        <span id="state_checksum_nodejs">
+<a href="#state_checksum_nodejs" style="color: inherit; text-decoration: inherit;">checksum</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2019,7 +2350,9 @@ Conflicts with `local_file_path`. Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>container<wbr>Format</span>
+        <span id="state_containerformat_nodejs">
+<a href="#state_containerformat_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Format</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2029,7 +2362,9 @@ Conflicts with `local_file_path`. Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>created<wbr>At</span>
+        <span id="state_createdat_nodejs">
+<a href="#state_createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2038,7 +2373,9 @@ Conflicts with `local_file_path`. Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>disk<wbr>Format</span>
+        <span id="state_diskformat_nodejs">
+<a href="#state_diskformat_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Format</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2048,7 +2385,9 @@ Conflicts with `local_file_path`. Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>file</span>
+        <span id="state_file_nodejs">
+<a href="#state_file_nodejs" style="color: inherit; text-decoration: inherit;">file</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2059,7 +2398,9 @@ or the path to retrieve it.
 
     <dt class="property-optional"
             title="Optional">
-        <span>image<wbr>Cache<wbr>Path</span>
+        <span id="state_imagecachepath_nodejs">
+<a href="#state_imagecachepath_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Cache<wbr>Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2067,7 +2408,9 @@ or the path to retrieve it.
 
     <dt class="property-optional"
             title="Optional">
-        <span>image<wbr>Source<wbr>Url</span>
+        <span id="state_imagesourceurl_nodejs">
+<a href="#state_imagesourceurl_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Source<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2079,7 +2422,9 @@ Conflicts with `local_file_path`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>local<wbr>File<wbr>Path</span>
+        <span id="state_localfilepath_nodejs">
+<a href="#state_localfilepath_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>File<wbr>Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2090,7 +2435,9 @@ that will be uploaded to Glance. Conflicts with `image_source_url` and
 
     <dt class="property-optional"
             title="Optional">
-        <span>metadata</span>
+        <span id="state_metadata_nodejs">
+<a href="#state_metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -2101,7 +2448,9 @@ and tags. See https://docs.openstack.org/glance/latest/user/metadefs-concepts.ht
 
     <dt class="property-optional"
             title="Optional">
-        <span>min<wbr>Disk<wbr>Gb</span>
+        <span id="state_mindiskgb_nodejs">
+<a href="#state_mindiskgb_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Disk<wbr>Gb</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -2111,7 +2460,9 @@ Defaults to 0.
 
     <dt class="property-optional"
             title="Optional">
-        <span>min<wbr>Ram<wbr>Mb</span>
+        <span id="state_minrammb_nodejs">
+<a href="#state_minrammb_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Ram<wbr>Mb</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -2121,7 +2472,9 @@ Defauts to 0.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2130,7 +2483,9 @@ Defauts to 0.
 
     <dt class="property-optional"
             title="Optional">
-        <span>owner</span>
+        <span id="state_owner_nodejs">
+<a href="#state_owner_nodejs" style="color: inherit; text-decoration: inherit;">owner</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2139,7 +2494,9 @@ Defauts to 0.
 
     <dt class="property-optional"
             title="Optional">
-        <span>properties</span>
+        <span id="state_properties_nodejs">
+<a href="#state_properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -2150,7 +2507,9 @@ information about properties.
 
     <dt class="property-optional"
             title="Optional">
-        <span>protected</span>
+        <span id="state_protected_nodejs">
+<a href="#state_protected_nodejs" style="color: inherit; text-decoration: inherit;">protected</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -2160,7 +2519,9 @@ Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="state_region_nodejs">
+<a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2172,7 +2533,9 @@ is used. Changing this creates a new Image.
 
     <dt class="property-optional"
             title="Optional">
-        <span>schema</span>
+        <span id="state_schema_nodejs">
+<a href="#state_schema_nodejs" style="color: inherit; text-decoration: inherit;">schema</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2182,7 +2545,9 @@ the image or image
 
     <dt class="property-optional"
             title="Optional">
-        <span>size<wbr>Bytes</span>
+        <span id="state_sizebytes_nodejs">
+<a href="#state_sizebytes_nodejs" style="color: inherit; text-decoration: inherit;">size<wbr>Bytes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -2191,7 +2556,9 @@ the image or image
 
     <dt class="property-optional"
             title="Optional">
-        <span>status</span>
+        <span id="state_status_nodejs">
+<a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2201,7 +2568,9 @@ or "saving".
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_nodejs">
+<a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -2211,7 +2580,9 @@ At this time, it is not possible to delete all tags of an image.
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>update<wbr>At</span>
+        <span id="state_updateat_nodejs">
+<a href="#state_updateat_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2220,7 +2591,9 @@ At this time, it is not possible to delete all tags of an image.
 
     <dt class="property-optional"
             title="Optional">
-        <span>updated<wbr>At</span>
+        <span id="state_updatedat_nodejs">
+<a href="#state_updatedat_nodejs" style="color: inherit; text-decoration: inherit;">updated<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2229,7 +2602,9 @@ At this time, it is not possible to delete all tags of an image.
 
     <dt class="property-optional"
             title="Optional">
-        <span>verify<wbr>Checksum</span>
+        <span id="state_verifychecksum_nodejs">
+<a href="#state_verifychecksum_nodejs" style="color: inherit; text-decoration: inherit;">verify<wbr>Checksum</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -2240,7 +2615,9 @@ Defaults to true when not using `web_download`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>visibility</span>
+        <span id="state_visibility_nodejs">
+<a href="#state_visibility_nodejs" style="color: inherit; text-decoration: inherit;">visibility</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2251,7 +2628,9 @@ visibility depends upon the configuration of the OpenStack cloud.
 
     <dt class="property-optional"
             title="Optional">
-        <span>web<wbr>Download</span>
+        <span id="state_webdownload_nodejs">
+<a href="#state_webdownload_nodejs" style="color: inherit; text-decoration: inherit;">web<wbr>Download</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -2269,7 +2648,9 @@ Conflicts with `local_file_path`. Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>checksum</span>
+        <span id="state_checksum_python">
+<a href="#state_checksum_python" style="color: inherit; text-decoration: inherit;">checksum</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2278,7 +2659,9 @@ Conflicts with `local_file_path`. Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>container_<wbr>format</span>
+        <span id="state_container_format_python">
+<a href="#state_container_format_python" style="color: inherit; text-decoration: inherit;">container_<wbr>format</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2288,7 +2671,9 @@ Conflicts with `local_file_path`. Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>created_<wbr>at</span>
+        <span id="state_created_at_python">
+<a href="#state_created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2297,7 +2682,9 @@ Conflicts with `local_file_path`. Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>disk_<wbr>format</span>
+        <span id="state_disk_format_python">
+<a href="#state_disk_format_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>format</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2307,7 +2694,9 @@ Conflicts with `local_file_path`. Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>file</span>
+        <span id="state_file_python">
+<a href="#state_file_python" style="color: inherit; text-decoration: inherit;">file</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2318,7 +2707,9 @@ or the path to retrieve it.
 
     <dt class="property-optional"
             title="Optional">
-        <span>image_<wbr>cache_<wbr>path</span>
+        <span id="state_image_cache_path_python">
+<a href="#state_image_cache_path_python" style="color: inherit; text-decoration: inherit;">image_<wbr>cache_<wbr>path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2326,7 +2717,9 @@ or the path to retrieve it.
 
     <dt class="property-optional"
             title="Optional">
-        <span>image_<wbr>source_<wbr>url</span>
+        <span id="state_image_source_url_python">
+<a href="#state_image_source_url_python" style="color: inherit; text-decoration: inherit;">image_<wbr>source_<wbr>url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2338,7 +2731,9 @@ Conflicts with `local_file_path`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>local_<wbr>file_<wbr>path</span>
+        <span id="state_local_file_path_python">
+<a href="#state_local_file_path_python" style="color: inherit; text-decoration: inherit;">local_<wbr>file_<wbr>path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2349,7 +2744,9 @@ that will be uploaded to Glance. Conflicts with `image_source_url` and
 
     <dt class="property-optional"
             title="Optional">
-        <span>metadata</span>
+        <span id="state_metadata_python">
+<a href="#state_metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -2360,7 +2757,9 @@ and tags. See https://docs.openstack.org/glance/latest/user/metadefs-concepts.ht
 
     <dt class="property-optional"
             title="Optional">
-        <span>min_<wbr>disk_<wbr>gb</span>
+        <span id="state_min_disk_gb_python">
+<a href="#state_min_disk_gb_python" style="color: inherit; text-decoration: inherit;">min_<wbr>disk_<wbr>gb</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2370,7 +2769,9 @@ Defaults to 0.
 
     <dt class="property-optional"
             title="Optional">
-        <span>min_<wbr>ram_<wbr>mb</span>
+        <span id="state_min_ram_mb_python">
+<a href="#state_min_ram_mb_python" style="color: inherit; text-decoration: inherit;">min_<wbr>ram_<wbr>mb</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2380,7 +2781,9 @@ Defauts to 0.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2389,7 +2792,9 @@ Defauts to 0.
 
     <dt class="property-optional"
             title="Optional">
-        <span>owner</span>
+        <span id="state_owner_python">
+<a href="#state_owner_python" style="color: inherit; text-decoration: inherit;">owner</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2398,7 +2803,9 @@ Defauts to 0.
 
     <dt class="property-optional"
             title="Optional">
-        <span>properties</span>
+        <span id="state_properties_python">
+<a href="#state_properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -2409,7 +2816,9 @@ information about properties.
 
     <dt class="property-optional"
             title="Optional">
-        <span>protected</span>
+        <span id="state_protected_python">
+<a href="#state_protected_python" style="color: inherit; text-decoration: inherit;">protected</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2419,7 +2828,9 @@ Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="state_region_python">
+<a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2431,7 +2842,9 @@ is used. Changing this creates a new Image.
 
     <dt class="property-optional"
             title="Optional">
-        <span>schema</span>
+        <span id="state_schema_python">
+<a href="#state_schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2441,7 +2854,9 @@ the image or image
 
     <dt class="property-optional"
             title="Optional">
-        <span>size_<wbr>bytes</span>
+        <span id="state_size_bytes_python">
+<a href="#state_size_bytes_python" style="color: inherit; text-decoration: inherit;">size_<wbr>bytes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2450,7 +2865,9 @@ the image or image
 
     <dt class="property-optional"
             title="Optional">
-        <span>status</span>
+        <span id="state_status_python">
+<a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2460,7 +2877,9 @@ or "saving".
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_python">
+<a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -2470,7 +2889,9 @@ At this time, it is not possible to delete all tags of an image.
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>update_<wbr>at</span>
+        <span id="state_update_at_python">
+<a href="#state_update_at_python" style="color: inherit; text-decoration: inherit;">update_<wbr>at</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2479,7 +2900,9 @@ At this time, it is not possible to delete all tags of an image.
 
     <dt class="property-optional"
             title="Optional">
-        <span>updated_<wbr>at</span>
+        <span id="state_updated_at_python">
+<a href="#state_updated_at_python" style="color: inherit; text-decoration: inherit;">updated_<wbr>at</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2488,7 +2911,9 @@ At this time, it is not possible to delete all tags of an image.
 
     <dt class="property-optional"
             title="Optional">
-        <span>verify_<wbr>checksum</span>
+        <span id="state_verify_checksum_python">
+<a href="#state_verify_checksum_python" style="color: inherit; text-decoration: inherit;">verify_<wbr>checksum</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2499,7 +2924,9 @@ Defaults to true when not using `web_download`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>visibility</span>
+        <span id="state_visibility_python">
+<a href="#state_visibility_python" style="color: inherit; text-decoration: inherit;">visibility</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2510,7 +2937,9 @@ visibility depends upon the configuration of the OpenStack cloud.
 
     <dt class="property-optional"
             title="Optional">
-        <span>web_<wbr>download</span>
+        <span id="state_web_download_python">
+<a href="#state_web_download_python" style="color: inherit; text-decoration: inherit;">web_<wbr>download</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>

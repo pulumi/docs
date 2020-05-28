@@ -21,7 +21,34 @@ Compute (Nova) v2 API.
 {{< chooser language "typescript,python,go,csharp" / >}}
 ### Basic attachment of a single volume to a single instance
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var volume1 = new OpenStack.BlockStorage.VolumeV2("volume1", new OpenStack.BlockStorage.VolumeV2Args
+        {
+            Size = 1,
+        });
+        var instance1 = new OpenStack.Compute.Instance("instance1", new OpenStack.Compute.InstanceArgs
+        {
+            SecurityGroups = 
+            {
+                "default",
+            },
+        });
+        var va1 = new OpenStack.Compute.VolumeAttach("va1", new OpenStack.Compute.VolumeAttachArgs
+        {
+            InstanceId = instance1.Id,
+            VolumeId = volume1.Id,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -61,7 +88,49 @@ const va1 = new openstack.compute.VolumeAttach("va_1", {
 
 ### Using Multiattach-enabled volumes
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var volume1 = new OpenStack.BlockStorage.Volume("volume1", new OpenStack.BlockStorage.VolumeArgs
+        {
+            Multiattach = true,
+            Size = 1,
+        });
+        var instance1 = new OpenStack.Compute.Instance("instance1", new OpenStack.Compute.InstanceArgs
+        {
+            SecurityGroups = 
+            {
+                "default",
+            },
+        });
+        var instance2 = new OpenStack.Compute.Instance("instance2", new OpenStack.Compute.InstanceArgs
+        {
+            SecurityGroups = 
+            {
+                "default",
+            },
+        });
+        var va1 = new OpenStack.Compute.VolumeAttach("va1", new OpenStack.Compute.VolumeAttachArgs
+        {
+            InstanceId = instance1.Id,
+            Multiattach = true,
+            VolumeId = openstack_blockstorage_volume_v2.Volume_1.Id,
+        });
+        var va2 = new OpenStack.Compute.VolumeAttach("va2", new OpenStack.Compute.VolumeAttachArgs
+        {
+            InstanceId = instance2.Id,
+            Multiattach = true,
+            VolumeId = openstack_blockstorage_volume_v2.Volume_1.Id,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -303,7 +372,9 @@ The VolumeAttach resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-required"
             title="Required">
-        <span>Instance<wbr>Id</span>
+        <span id="instanceid_csharp">
+<a href="#instanceid_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -312,7 +383,9 @@ The VolumeAttach resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-required"
             title="Required">
-        <span>Volume<wbr>Id</span>
+        <span id="volumeid_csharp">
+<a href="#volumeid_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -321,7 +394,9 @@ The VolumeAttach resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Device</span>
+        <span id="device_csharp">
+<a href="#device_csharp" style="color: inherit; text-decoration: inherit;">Device</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -332,7 +407,9 @@ should not be used as an authoritative piece of information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Multiattach</span>
+        <span id="multiattach_csharp">
+<a href="#multiattach_csharp" style="color: inherit; text-decoration: inherit;">Multiattach</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -341,7 +418,9 @@ should not be used as an authoritative piece of information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="region_csharp">
+<a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -360,7 +439,9 @@ new volume attachment.
 
     <dt class="property-required"
             title="Required">
-        <span>Instance<wbr>Id</span>
+        <span id="instanceid_go">
+<a href="#instanceid_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -369,7 +450,9 @@ new volume attachment.
 
     <dt class="property-required"
             title="Required">
-        <span>Volume<wbr>Id</span>
+        <span id="volumeid_go">
+<a href="#volumeid_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -378,7 +461,9 @@ new volume attachment.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Device</span>
+        <span id="device_go">
+<a href="#device_go" style="color: inherit; text-decoration: inherit;">Device</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -389,7 +474,9 @@ should not be used as an authoritative piece of information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Multiattach</span>
+        <span id="multiattach_go">
+<a href="#multiattach_go" style="color: inherit; text-decoration: inherit;">Multiattach</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -398,7 +485,9 @@ should not be used as an authoritative piece of information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="region_go">
+<a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -417,7 +506,9 @@ new volume attachment.
 
     <dt class="property-required"
             title="Required">
-        <span>instance<wbr>Id</span>
+        <span id="instanceid_nodejs">
+<a href="#instanceid_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -426,7 +517,9 @@ new volume attachment.
 
     <dt class="property-required"
             title="Required">
-        <span>volume<wbr>Id</span>
+        <span id="volumeid_nodejs">
+<a href="#volumeid_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -435,7 +528,9 @@ new volume attachment.
 
     <dt class="property-optional"
             title="Optional">
-        <span>device</span>
+        <span id="device_nodejs">
+<a href="#device_nodejs" style="color: inherit; text-decoration: inherit;">device</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -446,7 +541,9 @@ should not be used as an authoritative piece of information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>multiattach</span>
+        <span id="multiattach_nodejs">
+<a href="#multiattach_nodejs" style="color: inherit; text-decoration: inherit;">multiattach</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -455,7 +552,9 @@ should not be used as an authoritative piece of information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="region_nodejs">
+<a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -474,7 +573,9 @@ new volume attachment.
 
     <dt class="property-required"
             title="Required">
-        <span>instance_<wbr>id</span>
+        <span id="instance_id_python">
+<a href="#instance_id_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -483,7 +584,9 @@ new volume attachment.
 
     <dt class="property-required"
             title="Required">
-        <span>volume_<wbr>id</span>
+        <span id="volume_id_python">
+<a href="#volume_id_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -492,7 +595,9 @@ new volume attachment.
 
     <dt class="property-optional"
             title="Optional">
-        <span>device</span>
+        <span id="device_python">
+<a href="#device_python" style="color: inherit; text-decoration: inherit;">device</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -503,7 +608,9 @@ should not be used as an authoritative piece of information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>multiattach</span>
+        <span id="multiattach_python">
+<a href="#multiattach_python" style="color: inherit; text-decoration: inherit;">multiattach</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -512,7 +619,9 @@ should not be used as an authoritative piece of information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="region_python">
+<a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -542,7 +651,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -557,7 +668,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -572,7 +685,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -587,7 +702,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -728,7 +845,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Device</span>
+        <span id="state_device_csharp">
+<a href="#state_device_csharp" style="color: inherit; text-decoration: inherit;">Device</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -739,7 +858,9 @@ should not be used as an authoritative piece of information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Instance<wbr>Id</span>
+        <span id="state_instanceid_csharp">
+<a href="#state_instanceid_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -748,7 +869,9 @@ should not be used as an authoritative piece of information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Multiattach</span>
+        <span id="state_multiattach_csharp">
+<a href="#state_multiattach_csharp" style="color: inherit; text-decoration: inherit;">Multiattach</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -757,7 +880,9 @@ should not be used as an authoritative piece of information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="state_region_csharp">
+<a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -769,7 +894,9 @@ new volume attachment.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Volume<wbr>Id</span>
+        <span id="state_volumeid_csharp">
+<a href="#state_volumeid_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -785,7 +912,9 @@ new volume attachment.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Device</span>
+        <span id="state_device_go">
+<a href="#state_device_go" style="color: inherit; text-decoration: inherit;">Device</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -796,7 +925,9 @@ should not be used as an authoritative piece of information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Instance<wbr>Id</span>
+        <span id="state_instanceid_go">
+<a href="#state_instanceid_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -805,7 +936,9 @@ should not be used as an authoritative piece of information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Multiattach</span>
+        <span id="state_multiattach_go">
+<a href="#state_multiattach_go" style="color: inherit; text-decoration: inherit;">Multiattach</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -814,7 +947,9 @@ should not be used as an authoritative piece of information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="state_region_go">
+<a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -826,7 +961,9 @@ new volume attachment.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Volume<wbr>Id</span>
+        <span id="state_volumeid_go">
+<a href="#state_volumeid_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -842,7 +979,9 @@ new volume attachment.
 
     <dt class="property-optional"
             title="Optional">
-        <span>device</span>
+        <span id="state_device_nodejs">
+<a href="#state_device_nodejs" style="color: inherit; text-decoration: inherit;">device</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -853,7 +992,9 @@ should not be used as an authoritative piece of information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>instance<wbr>Id</span>
+        <span id="state_instanceid_nodejs">
+<a href="#state_instanceid_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -862,7 +1003,9 @@ should not be used as an authoritative piece of information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>multiattach</span>
+        <span id="state_multiattach_nodejs">
+<a href="#state_multiattach_nodejs" style="color: inherit; text-decoration: inherit;">multiattach</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -871,7 +1014,9 @@ should not be used as an authoritative piece of information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="state_region_nodejs">
+<a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -883,7 +1028,9 @@ new volume attachment.
 
     <dt class="property-optional"
             title="Optional">
-        <span>volume<wbr>Id</span>
+        <span id="state_volumeid_nodejs">
+<a href="#state_volumeid_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -899,7 +1046,9 @@ new volume attachment.
 
     <dt class="property-optional"
             title="Optional">
-        <span>device</span>
+        <span id="state_device_python">
+<a href="#state_device_python" style="color: inherit; text-decoration: inherit;">device</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -910,7 +1059,9 @@ should not be used as an authoritative piece of information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>instance_<wbr>id</span>
+        <span id="state_instance_id_python">
+<a href="#state_instance_id_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -919,7 +1070,9 @@ should not be used as an authoritative piece of information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>multiattach</span>
+        <span id="state_multiattach_python">
+<a href="#state_multiattach_python" style="color: inherit; text-decoration: inherit;">multiattach</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -928,7 +1081,9 @@ should not be used as an authoritative piece of information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="state_region_python">
+<a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -940,7 +1095,9 @@ new volume attachment.
 
     <dt class="property-optional"
             title="Optional">
-        <span>volume_<wbr>id</span>
+        <span id="state_volume_id_python">
+<a href="#state_volume_id_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

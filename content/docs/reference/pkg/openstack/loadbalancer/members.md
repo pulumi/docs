@@ -24,7 +24,35 @@ openstack.loadbalancer.Member resource.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var members1 = new OpenStack.LoadBalancer.Members("members1", new OpenStack.LoadBalancer.MembersArgs
+        {
+            Members = 
+            {
+                new OpenStack.LoadBalancer.Inputs.MembersMemberArgs
+                {
+                    Address = "192.168.199.23",
+                    ProtocolPort = 8080,
+                },
+                new OpenStack.LoadBalancer.Inputs.MembersMemberArgs
+                {
+                    Address = "192.168.199.24",
+                    ProtocolPort = 8080,
+                },
+            },
+            PoolId = "935685fb-a896-40f9-9ff4-ae531a3a00fe",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -40,11 +68,11 @@ members1 = openstack.loadbalancer.Members("members1",
     members=[
         {
             "address": "192.168.199.23",
-            "protocolPort": 8080,
+            "protocol_port": 8080,
         },
         {
             "address": "192.168.199.24",
-            "protocolPort": 8080,
+            "protocol_port": 8080,
         },
     ],
     pool_id="935685fb-a896-40f9-9ff4-ae531a3a00fe")
@@ -258,7 +286,9 @@ The Members resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-required"
             title="Required">
-        <span>Pool<wbr>Id</span>
+        <span id="poolid_csharp">
+<a href="#poolid_csharp" style="color: inherit; text-decoration: inherit;">Pool<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -268,7 +298,9 @@ Changing this creates a new members resource.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Member<wbr>List</span>
+        <span id="memberlist_csharp">
+<a href="#memberlist_csharp" style="color: inherit; text-decoration: inherit;">Member<wbr>List</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#membersmember">List&lt;Pulumi.<wbr>Open<wbr>Stack.<wbr>Load<wbr>Balancer.<wbr>Inputs.<wbr>Members<wbr>Member<wbr>Args&gt;</a></span>
     </dt>
@@ -278,7 +310,9 @@ structure is described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="region_csharp">
+<a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -297,7 +331,9 @@ members resource.
 
     <dt class="property-required"
             title="Required">
-        <span>Pool<wbr>Id</span>
+        <span id="poolid_go">
+<a href="#poolid_go" style="color: inherit; text-decoration: inherit;">Pool<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -307,7 +343,9 @@ Changing this creates a new members resource.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Members</span>
+        <span id="members_go">
+<a href="#members_go" style="color: inherit; text-decoration: inherit;">Members</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#membersmember">[]Members<wbr>Member</a></span>
     </dt>
@@ -317,7 +355,9 @@ structure is described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="region_go">
+<a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -336,7 +376,9 @@ members resource.
 
     <dt class="property-required"
             title="Required">
-        <span>pool<wbr>Id</span>
+        <span id="poolid_nodejs">
+<a href="#poolid_nodejs" style="color: inherit; text-decoration: inherit;">pool<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -346,7 +388,9 @@ Changing this creates a new members resource.
 
     <dt class="property-optional"
             title="Optional">
-        <span>members</span>
+        <span id="members_nodejs">
+<a href="#members_nodejs" style="color: inherit; text-decoration: inherit;">members</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#membersmember">Members<wbr>Member[]</a></span>
     </dt>
@@ -356,7 +400,9 @@ structure is described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="region_nodejs">
+<a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -375,7 +421,9 @@ members resource.
 
     <dt class="property-required"
             title="Required">
-        <span>pool_<wbr>id</span>
+        <span id="pool_id_python">
+<a href="#pool_id_python" style="color: inherit; text-decoration: inherit;">pool_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -385,7 +433,9 @@ Changing this creates a new members resource.
 
     <dt class="property-optional"
             title="Optional">
-        <span>members</span>
+        <span id="members_python">
+<a href="#members_python" style="color: inherit; text-decoration: inherit;">members</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#membersmember">List[Members<wbr>Member]</a></span>
     </dt>
@@ -395,7 +445,9 @@ structure is described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="region_python">
+<a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -425,7 +477,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -440,7 +494,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -455,7 +511,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -470,7 +528,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -611,7 +671,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Member<wbr>List</span>
+        <span id="state_memberlist_csharp">
+<a href="#state_memberlist_csharp" style="color: inherit; text-decoration: inherit;">Member<wbr>List</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#membersmember">List&lt;Pulumi.<wbr>Open<wbr>Stack.<wbr>Load<wbr>Balancer.<wbr>Inputs.<wbr>Members<wbr>Member<wbr>Args&gt;</a></span>
     </dt>
@@ -621,7 +683,9 @@ structure is described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Pool<wbr>Id</span>
+        <span id="state_poolid_csharp">
+<a href="#state_poolid_csharp" style="color: inherit; text-decoration: inherit;">Pool<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -631,7 +695,9 @@ Changing this creates a new members resource.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="state_region_csharp">
+<a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -650,7 +716,9 @@ members resource.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Members</span>
+        <span id="state_members_go">
+<a href="#state_members_go" style="color: inherit; text-decoration: inherit;">Members</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#membersmember">[]Members<wbr>Member</a></span>
     </dt>
@@ -660,7 +728,9 @@ structure is described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Pool<wbr>Id</span>
+        <span id="state_poolid_go">
+<a href="#state_poolid_go" style="color: inherit; text-decoration: inherit;">Pool<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -670,7 +740,9 @@ Changing this creates a new members resource.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="state_region_go">
+<a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -689,7 +761,9 @@ members resource.
 
     <dt class="property-optional"
             title="Optional">
-        <span>members</span>
+        <span id="state_members_nodejs">
+<a href="#state_members_nodejs" style="color: inherit; text-decoration: inherit;">members</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#membersmember">Members<wbr>Member[]</a></span>
     </dt>
@@ -699,7 +773,9 @@ structure is described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>pool<wbr>Id</span>
+        <span id="state_poolid_nodejs">
+<a href="#state_poolid_nodejs" style="color: inherit; text-decoration: inherit;">pool<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -709,7 +785,9 @@ Changing this creates a new members resource.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="state_region_nodejs">
+<a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -728,7 +806,9 @@ members resource.
 
     <dt class="property-optional"
             title="Optional">
-        <span>members</span>
+        <span id="state_members_python">
+<a href="#state_members_python" style="color: inherit; text-decoration: inherit;">members</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#membersmember">List[Members<wbr>Member]</a></span>
     </dt>
@@ -738,7 +818,9 @@ structure is described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>pool_<wbr>id</span>
+        <span id="state_pool_id_python">
+<a href="#state_pool_id_python" style="color: inherit; text-decoration: inherit;">pool_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -748,7 +830,9 @@ Changing this creates a new members resource.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="state_region_python">
+<a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -793,7 +877,9 @@ members resource.
 
     <dt class="property-required"
             title="Required">
-        <span>Address</span>
+        <span id="address_csharp">
+<a href="#address_csharp" style="color: inherit; text-decoration: inherit;">Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -803,7 +889,9 @@ the load balancer.
 
     <dt class="property-required"
             title="Required">
-        <span>Protocol<wbr>Port</span>
+        <span id="protocolport_csharp">
+<a href="#protocolport_csharp" style="color: inherit; text-decoration: inherit;">Protocol<wbr>Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -812,7 +900,9 @@ the load balancer.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Admin<wbr>State<wbr>Up</span>
+        <span id="adminstateup_csharp">
+<a href="#adminstateup_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>State<wbr>Up</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -822,7 +912,9 @@ A valid value is true (UP) or false (DOWN). Defaults to true.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -831,7 +923,9 @@ A valid value is true (UP) or false (DOWN). Defaults to true.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -840,7 +934,9 @@ A valid value is true (UP) or false (DOWN). Defaults to true.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Subnet<wbr>Id</span>
+        <span id="subnetid_csharp">
+<a href="#subnetid_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -849,7 +945,9 @@ A valid value is true (UP) or false (DOWN). Defaults to true.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Weight</span>
+        <span id="weight_csharp">
+<a href="#weight_csharp" style="color: inherit; text-decoration: inherit;">Weight</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -868,7 +966,9 @@ as a member with a weight of 2. Defaults to 1.
 
     <dt class="property-required"
             title="Required">
-        <span>Address</span>
+        <span id="address_go">
+<a href="#address_go" style="color: inherit; text-decoration: inherit;">Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -878,7 +978,9 @@ the load balancer.
 
     <dt class="property-required"
             title="Required">
-        <span>Protocol<wbr>Port</span>
+        <span id="protocolport_go">
+<a href="#protocolport_go" style="color: inherit; text-decoration: inherit;">Protocol<wbr>Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -887,7 +989,9 @@ the load balancer.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Admin<wbr>State<wbr>Up</span>
+        <span id="adminstateup_go">
+<a href="#adminstateup_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>State<wbr>Up</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -897,7 +1001,9 @@ A valid value is true (UP) or false (DOWN). Defaults to true.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -906,7 +1012,9 @@ A valid value is true (UP) or false (DOWN). Defaults to true.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -915,7 +1023,9 @@ A valid value is true (UP) or false (DOWN). Defaults to true.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Subnet<wbr>Id</span>
+        <span id="subnetid_go">
+<a href="#subnetid_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -924,7 +1034,9 @@ A valid value is true (UP) or false (DOWN). Defaults to true.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Weight</span>
+        <span id="weight_go">
+<a href="#weight_go" style="color: inherit; text-decoration: inherit;">Weight</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -943,7 +1055,9 @@ as a member with a weight of 2. Defaults to 1.
 
     <dt class="property-required"
             title="Required">
-        <span>address</span>
+        <span id="address_nodejs">
+<a href="#address_nodejs" style="color: inherit; text-decoration: inherit;">address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -953,7 +1067,9 @@ the load balancer.
 
     <dt class="property-required"
             title="Required">
-        <span>protocol<wbr>Port</span>
+        <span id="protocolport_nodejs">
+<a href="#protocolport_nodejs" style="color: inherit; text-decoration: inherit;">protocol<wbr>Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -962,7 +1078,9 @@ the load balancer.
 
     <dt class="property-optional"
             title="Optional">
-        <span>admin<wbr>State<wbr>Up</span>
+        <span id="adminstateup_nodejs">
+<a href="#adminstateup_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>State<wbr>Up</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -972,7 +1090,9 @@ A valid value is true (UP) or false (DOWN). Defaults to true.
 
     <dt class="property-optional"
             title="Optional">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -981,7 +1101,9 @@ A valid value is true (UP) or false (DOWN). Defaults to true.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -990,7 +1112,9 @@ A valid value is true (UP) or false (DOWN). Defaults to true.
 
     <dt class="property-optional"
             title="Optional">
-        <span>subnet<wbr>Id</span>
+        <span id="subnetid_nodejs">
+<a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -999,7 +1123,9 @@ A valid value is true (UP) or false (DOWN). Defaults to true.
 
     <dt class="property-optional"
             title="Optional">
-        <span>weight</span>
+        <span id="weight_nodejs">
+<a href="#weight_nodejs" style="color: inherit; text-decoration: inherit;">weight</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1018,7 +1144,9 @@ as a member with a weight of 2. Defaults to 1.
 
     <dt class="property-required"
             title="Required">
-        <span>address</span>
+        <span id="address_python">
+<a href="#address_python" style="color: inherit; text-decoration: inherit;">address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1028,7 +1156,9 @@ the load balancer.
 
     <dt class="property-required"
             title="Required">
-        <span>protocol_<wbr>port</span>
+        <span id="protocol_port_python">
+<a href="#protocol_port_python" style="color: inherit; text-decoration: inherit;">protocol_<wbr>port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1037,7 +1167,9 @@ the load balancer.
 
     <dt class="property-optional"
             title="Optional">
-        <span>admin_<wbr>state_<wbr>up</span>
+        <span id="admin_state_up_python">
+<a href="#admin_state_up_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>state_<wbr>up</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1047,7 +1179,9 @@ A valid value is true (UP) or false (DOWN). Defaults to true.
 
     <dt class="property-optional"
             title="Optional">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1056,7 +1190,9 @@ A valid value is true (UP) or false (DOWN). Defaults to true.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1065,7 +1201,9 @@ A valid value is true (UP) or false (DOWN). Defaults to true.
 
     <dt class="property-optional"
             title="Optional">
-        <span>subnet_<wbr>id</span>
+        <span id="subnet_id_python">
+<a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1074,7 +1212,9 @@ A valid value is true (UP) or false (DOWN). Defaults to true.
 
     <dt class="property-optional"
             title="Optional">
-        <span>weight</span>
+        <span id="weight_python">
+<a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>

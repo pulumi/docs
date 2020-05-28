@@ -26,7 +26,37 @@ a new ID and URL.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var container1 = new OpenStack.ObjectStorage.Container("container1", new OpenStack.ObjectStorage.ContainerArgs
+        {
+            Metadata = 
+            {
+                { "Temp-URL-Key", "testkey" },
+            },
+        });
+        var object1 = new OpenStack.ObjectStorage.ContainerObject("object1", new OpenStack.ObjectStorage.ContainerObjectArgs
+        {
+            ContainerName = container1.Name,
+            Content = "Hello, world!",
+        });
+        var objTempurl = new OpenStack.ObjectStorage.TempUrl("objTempurl", new OpenStack.ObjectStorage.TempUrlArgs
+        {
+            Container = container1.Name,
+            Method = "post",
+            Object = object1.Name,
+            Ttl = 20,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -261,7 +291,9 @@ The TempUrl resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-required"
             title="Required">
-        <span>Container</span>
+        <span id="container_csharp">
+<a href="#container_csharp" style="color: inherit; text-decoration: inherit;">Container</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -270,7 +302,9 @@ The TempUrl resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-required"
             title="Required">
-        <span>Object</span>
+        <span id="object_csharp">
+<a href="#object_csharp" style="color: inherit; text-decoration: inherit;">Object</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -279,7 +313,9 @@ The TempUrl resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-required"
             title="Required">
-        <span>Ttl</span>
+        <span id="ttl_csharp">
+<a href="#ttl_csharp" style="color: inherit; text-decoration: inherit;">Ttl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -289,7 +325,9 @@ be valid.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Method</span>
+        <span id="method_csharp">
+<a href="#method_csharp" style="color: inherit; text-decoration: inherit;">Method</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -299,7 +337,9 @@ Valid values are `GET`, and `POST`. Default is `GET`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Regenerate</span>
+        <span id="regenerate_csharp">
+<a href="#regenerate_csharp" style="color: inherit; text-decoration: inherit;">Regenerate</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -310,7 +350,9 @@ ID and new URL. Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="region_csharp">
+<a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -319,7 +361,9 @@ ID and new URL. Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Split</span>
+        <span id="split_csharp">
+<a href="#split_csharp" style="color: inherit; text-decoration: inherit;">Split</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -334,7 +378,9 @@ ID and new URL. Defaults to false.
 
     <dt class="property-required"
             title="Required">
-        <span>Container</span>
+        <span id="container_go">
+<a href="#container_go" style="color: inherit; text-decoration: inherit;">Container</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -343,7 +389,9 @@ ID and new URL. Defaults to false.
 
     <dt class="property-required"
             title="Required">
-        <span>Object</span>
+        <span id="object_go">
+<a href="#object_go" style="color: inherit; text-decoration: inherit;">Object</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -352,7 +400,9 @@ ID and new URL. Defaults to false.
 
     <dt class="property-required"
             title="Required">
-        <span>Ttl</span>
+        <span id="ttl_go">
+<a href="#ttl_go" style="color: inherit; text-decoration: inherit;">Ttl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -362,7 +412,9 @@ be valid.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Method</span>
+        <span id="method_go">
+<a href="#method_go" style="color: inherit; text-decoration: inherit;">Method</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -372,7 +424,9 @@ Valid values are `GET`, and `POST`. Default is `GET`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Regenerate</span>
+        <span id="regenerate_go">
+<a href="#regenerate_go" style="color: inherit; text-decoration: inherit;">Regenerate</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -383,7 +437,9 @@ ID and new URL. Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="region_go">
+<a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -392,7 +448,9 @@ ID and new URL. Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Split</span>
+        <span id="split_go">
+<a href="#split_go" style="color: inherit; text-decoration: inherit;">Split</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -407,7 +465,9 @@ ID and new URL. Defaults to false.
 
     <dt class="property-required"
             title="Required">
-        <span>container</span>
+        <span id="container_nodejs">
+<a href="#container_nodejs" style="color: inherit; text-decoration: inherit;">container</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -416,7 +476,9 @@ ID and new URL. Defaults to false.
 
     <dt class="property-required"
             title="Required">
-        <span>object</span>
+        <span id="object_nodejs">
+<a href="#object_nodejs" style="color: inherit; text-decoration: inherit;">object</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -425,7 +487,9 @@ ID and new URL. Defaults to false.
 
     <dt class="property-required"
             title="Required">
-        <span>ttl</span>
+        <span id="ttl_nodejs">
+<a href="#ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -435,7 +499,9 @@ be valid.
 
     <dt class="property-optional"
             title="Optional">
-        <span>method</span>
+        <span id="method_nodejs">
+<a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -445,7 +511,9 @@ Valid values are `GET`, and `POST`. Default is `GET`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>regenerate</span>
+        <span id="regenerate_nodejs">
+<a href="#regenerate_nodejs" style="color: inherit; text-decoration: inherit;">regenerate</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -456,7 +524,9 @@ ID and new URL. Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="region_nodejs">
+<a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -465,7 +535,9 @@ ID and new URL. Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>split</span>
+        <span id="split_nodejs">
+<a href="#split_nodejs" style="color: inherit; text-decoration: inherit;">split</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -480,7 +552,9 @@ ID and new URL. Defaults to false.
 
     <dt class="property-required"
             title="Required">
-        <span>container</span>
+        <span id="container_python">
+<a href="#container_python" style="color: inherit; text-decoration: inherit;">container</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -489,7 +563,9 @@ ID and new URL. Defaults to false.
 
     <dt class="property-required"
             title="Required">
-        <span>object</span>
+        <span id="object_python">
+<a href="#object_python" style="color: inherit; text-decoration: inherit;">object</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -498,7 +574,9 @@ ID and new URL. Defaults to false.
 
     <dt class="property-required"
             title="Required">
-        <span>ttl</span>
+        <span id="ttl_python">
+<a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -508,7 +586,9 @@ be valid.
 
     <dt class="property-optional"
             title="Optional">
-        <span>method</span>
+        <span id="method_python">
+<a href="#method_python" style="color: inherit; text-decoration: inherit;">method</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -518,7 +598,9 @@ Valid values are `GET`, and `POST`. Default is `GET`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>regenerate</span>
+        <span id="regenerate_python">
+<a href="#regenerate_python" style="color: inherit; text-decoration: inherit;">regenerate</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -529,7 +611,9 @@ ID and new URL. Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="region_python">
+<a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -538,7 +622,9 @@ ID and new URL. Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>split</span>
+        <span id="split_python">
+<a href="#split_python" style="color: inherit; text-decoration: inherit;">split</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -564,7 +650,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -572,7 +660,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Url</span>
+        <span id="url_csharp">
+<a href="#url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -588,7 +678,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -596,7 +688,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Url</span>
+        <span id="url_go">
+<a href="#url_go" style="color: inherit; text-decoration: inherit;">Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -612,7 +706,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -620,7 +716,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>url</span>
+        <span id="url_nodejs">
+<a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -636,7 +734,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -644,7 +744,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>url</span>
+        <span id="url_python">
+<a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -786,7 +888,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Container</span>
+        <span id="state_container_csharp">
+<a href="#state_container_csharp" style="color: inherit; text-decoration: inherit;">Container</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -795,7 +899,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Method</span>
+        <span id="state_method_csharp">
+<a href="#state_method_csharp" style="color: inherit; text-decoration: inherit;">Method</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -805,7 +911,9 @@ Valid values are `GET`, and `POST`. Default is `GET`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Object</span>
+        <span id="state_object_csharp">
+<a href="#state_object_csharp" style="color: inherit; text-decoration: inherit;">Object</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -814,7 +922,9 @@ Valid values are `GET`, and `POST`. Default is `GET`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Regenerate</span>
+        <span id="state_regenerate_csharp">
+<a href="#state_regenerate_csharp" style="color: inherit; text-decoration: inherit;">Regenerate</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -825,7 +935,9 @@ ID and new URL. Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="state_region_csharp">
+<a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -834,7 +946,9 @@ ID and new URL. Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Split</span>
+        <span id="state_split_csharp">
+<a href="#state_split_csharp" style="color: inherit; text-decoration: inherit;">Split</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -842,7 +956,9 @@ ID and new URL. Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ttl</span>
+        <span id="state_ttl_csharp">
+<a href="#state_ttl_csharp" style="color: inherit; text-decoration: inherit;">Ttl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -852,7 +968,9 @@ be valid.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Url</span>
+        <span id="state_url_csharp">
+<a href="#state_url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -868,7 +986,9 @@ be valid.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Container</span>
+        <span id="state_container_go">
+<a href="#state_container_go" style="color: inherit; text-decoration: inherit;">Container</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -877,7 +997,9 @@ be valid.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Method</span>
+        <span id="state_method_go">
+<a href="#state_method_go" style="color: inherit; text-decoration: inherit;">Method</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -887,7 +1009,9 @@ Valid values are `GET`, and `POST`. Default is `GET`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Object</span>
+        <span id="state_object_go">
+<a href="#state_object_go" style="color: inherit; text-decoration: inherit;">Object</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -896,7 +1020,9 @@ Valid values are `GET`, and `POST`. Default is `GET`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Regenerate</span>
+        <span id="state_regenerate_go">
+<a href="#state_regenerate_go" style="color: inherit; text-decoration: inherit;">Regenerate</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -907,7 +1033,9 @@ ID and new URL. Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="state_region_go">
+<a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -916,7 +1044,9 @@ ID and new URL. Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Split</span>
+        <span id="state_split_go">
+<a href="#state_split_go" style="color: inherit; text-decoration: inherit;">Split</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -924,7 +1054,9 @@ ID and new URL. Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ttl</span>
+        <span id="state_ttl_go">
+<a href="#state_ttl_go" style="color: inherit; text-decoration: inherit;">Ttl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -934,7 +1066,9 @@ be valid.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Url</span>
+        <span id="state_url_go">
+<a href="#state_url_go" style="color: inherit; text-decoration: inherit;">Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -950,7 +1084,9 @@ be valid.
 
     <dt class="property-optional"
             title="Optional">
-        <span>container</span>
+        <span id="state_container_nodejs">
+<a href="#state_container_nodejs" style="color: inherit; text-decoration: inherit;">container</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -959,7 +1095,9 @@ be valid.
 
     <dt class="property-optional"
             title="Optional">
-        <span>method</span>
+        <span id="state_method_nodejs">
+<a href="#state_method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -969,7 +1107,9 @@ Valid values are `GET`, and `POST`. Default is `GET`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>object</span>
+        <span id="state_object_nodejs">
+<a href="#state_object_nodejs" style="color: inherit; text-decoration: inherit;">object</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -978,7 +1118,9 @@ Valid values are `GET`, and `POST`. Default is `GET`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>regenerate</span>
+        <span id="state_regenerate_nodejs">
+<a href="#state_regenerate_nodejs" style="color: inherit; text-decoration: inherit;">regenerate</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -989,7 +1131,9 @@ ID and new URL. Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="state_region_nodejs">
+<a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -998,7 +1142,9 @@ ID and new URL. Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>split</span>
+        <span id="state_split_nodejs">
+<a href="#state_split_nodejs" style="color: inherit; text-decoration: inherit;">split</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1006,7 +1152,9 @@ ID and new URL. Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ttl</span>
+        <span id="state_ttl_nodejs">
+<a href="#state_ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1016,7 +1164,9 @@ be valid.
 
     <dt class="property-optional"
             title="Optional">
-        <span>url</span>
+        <span id="state_url_nodejs">
+<a href="#state_url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1032,7 +1182,9 @@ be valid.
 
     <dt class="property-optional"
             title="Optional">
-        <span>container</span>
+        <span id="state_container_python">
+<a href="#state_container_python" style="color: inherit; text-decoration: inherit;">container</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1041,7 +1193,9 @@ be valid.
 
     <dt class="property-optional"
             title="Optional">
-        <span>method</span>
+        <span id="state_method_python">
+<a href="#state_method_python" style="color: inherit; text-decoration: inherit;">method</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1051,7 +1205,9 @@ Valid values are `GET`, and `POST`. Default is `GET`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>object</span>
+        <span id="state_object_python">
+<a href="#state_object_python" style="color: inherit; text-decoration: inherit;">object</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1060,7 +1216,9 @@ Valid values are `GET`, and `POST`. Default is `GET`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>regenerate</span>
+        <span id="state_regenerate_python">
+<a href="#state_regenerate_python" style="color: inherit; text-decoration: inherit;">regenerate</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1071,7 +1229,9 @@ ID and new URL. Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="state_region_python">
+<a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1080,7 +1240,9 @@ ID and new URL. Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>split</span>
+        <span id="state_split_python">
+<a href="#state_split_python" style="color: inherit; text-decoration: inherit;">split</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1088,7 +1250,9 @@ ID and new URL. Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ttl</span>
+        <span id="state_ttl_python">
+<a href="#state_ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1098,7 +1262,9 @@ be valid.
 
     <dt class="property-optional"
             title="Optional">
-        <span>url</span>
+        <span id="state_url_python">
+<a href="#state_url_python" style="color: inherit; text-decoration: inherit;">url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

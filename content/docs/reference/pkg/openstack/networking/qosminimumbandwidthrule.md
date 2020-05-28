@@ -20,7 +20,27 @@ Manages a V2 Neutron QoS minimum bandwidth rule resource within OpenStack.
 {{< chooser language "typescript,python,go,csharp" / >}}
 ### Create a QoS Policy with some minimum bandwidth rule
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var qosPolicy1 = new OpenStack.Networking.QosPolicy("qosPolicy1", new OpenStack.Networking.QosPolicyArgs
+        {
+            Description = "min_kbps",
+        });
+        var minimumBandwidthRule1 = new OpenStack.Networking.QosMinimumBandwidthRule("minimumBandwidthRule1", new OpenStack.Networking.QosMinimumBandwidthRuleArgs
+        {
+            MinKbps = 200,
+            QosPolicyId = qosPolicy1.Id,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -240,7 +260,9 @@ The QosMinimumBandwidthRule resource accepts the following [input]({{< relref "/
 
     <dt class="property-required"
             title="Required">
-        <span>Min<wbr>Kbps</span>
+        <span id="minkbps_csharp">
+<a href="#minkbps_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Kbps</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -250,7 +272,9 @@ QoS minimum bandwidth rule.
 
     <dt class="property-required"
             title="Required">
-        <span>Qos<wbr>Policy<wbr>Id</span>
+        <span id="qospolicyid_csharp">
+<a href="#qospolicyid_csharp" style="color: inherit; text-decoration: inherit;">Qos<wbr>Policy<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -259,7 +283,9 @@ QoS minimum bandwidth rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Direction</span>
+        <span id="direction_csharp">
+<a href="#direction_csharp" style="color: inherit; text-decoration: inherit;">Direction</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -269,7 +295,9 @@ existing QoS minimum bandwidth rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="region_csharp">
+<a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -287,7 +315,9 @@ A Networking client is needed to create a Neutron QoS minimum bandwidth rule. If
 
     <dt class="property-required"
             title="Required">
-        <span>Min<wbr>Kbps</span>
+        <span id="minkbps_go">
+<a href="#minkbps_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Kbps</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -297,7 +327,9 @@ QoS minimum bandwidth rule.
 
     <dt class="property-required"
             title="Required">
-        <span>Qos<wbr>Policy<wbr>Id</span>
+        <span id="qospolicyid_go">
+<a href="#qospolicyid_go" style="color: inherit; text-decoration: inherit;">Qos<wbr>Policy<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -306,7 +338,9 @@ QoS minimum bandwidth rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Direction</span>
+        <span id="direction_go">
+<a href="#direction_go" style="color: inherit; text-decoration: inherit;">Direction</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -316,7 +350,9 @@ existing QoS minimum bandwidth rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="region_go">
+<a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -334,7 +370,9 @@ A Networking client is needed to create a Neutron QoS minimum bandwidth rule. If
 
     <dt class="property-required"
             title="Required">
-        <span>min<wbr>Kbps</span>
+        <span id="minkbps_nodejs">
+<a href="#minkbps_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Kbps</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -344,7 +382,9 @@ QoS minimum bandwidth rule.
 
     <dt class="property-required"
             title="Required">
-        <span>qos<wbr>Policy<wbr>Id</span>
+        <span id="qospolicyid_nodejs">
+<a href="#qospolicyid_nodejs" style="color: inherit; text-decoration: inherit;">qos<wbr>Policy<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -353,7 +393,9 @@ QoS minimum bandwidth rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>direction</span>
+        <span id="direction_nodejs">
+<a href="#direction_nodejs" style="color: inherit; text-decoration: inherit;">direction</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -363,7 +405,9 @@ existing QoS minimum bandwidth rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="region_nodejs">
+<a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -381,7 +425,9 @@ A Networking client is needed to create a Neutron QoS minimum bandwidth rule. If
 
     <dt class="property-required"
             title="Required">
-        <span>min_<wbr>kbps</span>
+        <span id="min_kbps_python">
+<a href="#min_kbps_python" style="color: inherit; text-decoration: inherit;">min_<wbr>kbps</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -391,7 +437,9 @@ QoS minimum bandwidth rule.
 
     <dt class="property-required"
             title="Required">
-        <span>qos_<wbr>policy_<wbr>id</span>
+        <span id="qos_policy_id_python">
+<a href="#qos_policy_id_python" style="color: inherit; text-decoration: inherit;">qos_<wbr>policy_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -400,7 +448,9 @@ QoS minimum bandwidth rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>direction</span>
+        <span id="direction_python">
+<a href="#direction_python" style="color: inherit; text-decoration: inherit;">direction</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -410,7 +460,9 @@ existing QoS minimum bandwidth rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="region_python">
+<a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -439,7 +491,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -454,7 +508,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -469,7 +525,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -484,7 +542,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -625,7 +685,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Direction</span>
+        <span id="state_direction_csharp">
+<a href="#state_direction_csharp" style="color: inherit; text-decoration: inherit;">Direction</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -635,7 +697,9 @@ existing QoS minimum bandwidth rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Min<wbr>Kbps</span>
+        <span id="state_minkbps_csharp">
+<a href="#state_minkbps_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Kbps</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -645,7 +709,9 @@ QoS minimum bandwidth rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Qos<wbr>Policy<wbr>Id</span>
+        <span id="state_qospolicyid_csharp">
+<a href="#state_qospolicyid_csharp" style="color: inherit; text-decoration: inherit;">Qos<wbr>Policy<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -654,7 +720,9 @@ QoS minimum bandwidth rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="state_region_csharp">
+<a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -672,7 +740,9 @@ A Networking client is needed to create a Neutron QoS minimum bandwidth rule. If
 
     <dt class="property-optional"
             title="Optional">
-        <span>Direction</span>
+        <span id="state_direction_go">
+<a href="#state_direction_go" style="color: inherit; text-decoration: inherit;">Direction</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -682,7 +752,9 @@ existing QoS minimum bandwidth rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Min<wbr>Kbps</span>
+        <span id="state_minkbps_go">
+<a href="#state_minkbps_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Kbps</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -692,7 +764,9 @@ QoS minimum bandwidth rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Qos<wbr>Policy<wbr>Id</span>
+        <span id="state_qospolicyid_go">
+<a href="#state_qospolicyid_go" style="color: inherit; text-decoration: inherit;">Qos<wbr>Policy<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -701,7 +775,9 @@ QoS minimum bandwidth rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="state_region_go">
+<a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -719,7 +795,9 @@ A Networking client is needed to create a Neutron QoS minimum bandwidth rule. If
 
     <dt class="property-optional"
             title="Optional">
-        <span>direction</span>
+        <span id="state_direction_nodejs">
+<a href="#state_direction_nodejs" style="color: inherit; text-decoration: inherit;">direction</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -729,7 +807,9 @@ existing QoS minimum bandwidth rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>min<wbr>Kbps</span>
+        <span id="state_minkbps_nodejs">
+<a href="#state_minkbps_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Kbps</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -739,7 +819,9 @@ QoS minimum bandwidth rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>qos<wbr>Policy<wbr>Id</span>
+        <span id="state_qospolicyid_nodejs">
+<a href="#state_qospolicyid_nodejs" style="color: inherit; text-decoration: inherit;">qos<wbr>Policy<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -748,7 +830,9 @@ QoS minimum bandwidth rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="state_region_nodejs">
+<a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -766,7 +850,9 @@ A Networking client is needed to create a Neutron QoS minimum bandwidth rule. If
 
     <dt class="property-optional"
             title="Optional">
-        <span>direction</span>
+        <span id="state_direction_python">
+<a href="#state_direction_python" style="color: inherit; text-decoration: inherit;">direction</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -776,7 +862,9 @@ existing QoS minimum bandwidth rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>min_<wbr>kbps</span>
+        <span id="state_min_kbps_python">
+<a href="#state_min_kbps_python" style="color: inherit; text-decoration: inherit;">min_<wbr>kbps</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -786,7 +874,9 @@ QoS minimum bandwidth rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>qos_<wbr>policy_<wbr>id</span>
+        <span id="state_qos_policy_id_python">
+<a href="#state_qos_policy_id_python" style="color: inherit; text-decoration: inherit;">qos_<wbr>policy_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -795,7 +885,9 @@ QoS minimum bandwidth rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="state_region_python">
+<a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

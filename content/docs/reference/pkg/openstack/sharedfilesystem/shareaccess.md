@@ -196,7 +196,9 @@ The ShareAccess resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>Access<wbr>Level</span>
+        <span id="accesslevel_csharp">
+<a href="#accesslevel_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -205,7 +207,9 @@ The ShareAccess resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>Access<wbr>To</span>
+        <span id="accessto_csharp">
+<a href="#accessto_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>To</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -215,7 +219,9 @@ address or a username verified by configured Security Service of the Share Netwo
 
     <dt class="property-required"
             title="Required">
-        <span>Access<wbr>Type</span>
+        <span id="accesstype_csharp">
+<a href="#accesstype_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -226,7 +232,9 @@ Shared Filesystem microversion 2.13 (Mitaka) or later.
 
     <dt class="property-required"
             title="Required">
-        <span>Share<wbr>Id</span>
+        <span id="shareid_csharp">
+<a href="#shareid_csharp" style="color: inherit; text-decoration: inherit;">Share<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -235,7 +243,9 @@ Shared Filesystem microversion 2.13 (Mitaka) or later.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="region_csharp">
+<a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -253,7 +263,9 @@ creates a new share access.
 
     <dt class="property-required"
             title="Required">
-        <span>Access<wbr>Level</span>
+        <span id="accesslevel_go">
+<a href="#accesslevel_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -262,7 +274,9 @@ creates a new share access.
 
     <dt class="property-required"
             title="Required">
-        <span>Access<wbr>To</span>
+        <span id="accessto_go">
+<a href="#accessto_go" style="color: inherit; text-decoration: inherit;">Access<wbr>To</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -272,7 +286,9 @@ address or a username verified by configured Security Service of the Share Netwo
 
     <dt class="property-required"
             title="Required">
-        <span>Access<wbr>Type</span>
+        <span id="accesstype_go">
+<a href="#accesstype_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -283,7 +299,9 @@ Shared Filesystem microversion 2.13 (Mitaka) or later.
 
     <dt class="property-required"
             title="Required">
-        <span>Share<wbr>Id</span>
+        <span id="shareid_go">
+<a href="#shareid_go" style="color: inherit; text-decoration: inherit;">Share<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -292,7 +310,9 @@ Shared Filesystem microversion 2.13 (Mitaka) or later.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="region_go">
+<a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -310,7 +330,9 @@ creates a new share access.
 
     <dt class="property-required"
             title="Required">
-        <span>access<wbr>Level</span>
+        <span id="accesslevel_nodejs">
+<a href="#accesslevel_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -319,7 +341,9 @@ creates a new share access.
 
     <dt class="property-required"
             title="Required">
-        <span>access<wbr>To</span>
+        <span id="accessto_nodejs">
+<a href="#accessto_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>To</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -329,7 +353,9 @@ address or a username verified by configured Security Service of the Share Netwo
 
     <dt class="property-required"
             title="Required">
-        <span>access<wbr>Type</span>
+        <span id="accesstype_nodejs">
+<a href="#accesstype_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -340,7 +366,9 @@ Shared Filesystem microversion 2.13 (Mitaka) or later.
 
     <dt class="property-required"
             title="Required">
-        <span>share<wbr>Id</span>
+        <span id="shareid_nodejs">
+<a href="#shareid_nodejs" style="color: inherit; text-decoration: inherit;">share<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -349,7 +377,9 @@ Shared Filesystem microversion 2.13 (Mitaka) or later.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="region_nodejs">
+<a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -367,7 +397,9 @@ creates a new share access.
 
     <dt class="property-required"
             title="Required">
-        <span>access_<wbr>level</span>
+        <span id="access_level_python">
+<a href="#access_level_python" style="color: inherit; text-decoration: inherit;">access_<wbr>level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -376,7 +408,9 @@ creates a new share access.
 
     <dt class="property-required"
             title="Required">
-        <span>access_<wbr>to</span>
+        <span id="access_to_python">
+<a href="#access_to_python" style="color: inherit; text-decoration: inherit;">access_<wbr>to</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -386,7 +420,9 @@ address or a username verified by configured Security Service of the Share Netwo
 
     <dt class="property-required"
             title="Required">
-        <span>access_<wbr>type</span>
+        <span id="access_type_python">
+<a href="#access_type_python" style="color: inherit; text-decoration: inherit;">access_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -397,7 +433,9 @@ Shared Filesystem microversion 2.13 (Mitaka) or later.
 
     <dt class="property-required"
             title="Required">
-        <span>share_<wbr>id</span>
+        <span id="share_id_python">
+<a href="#share_id_python" style="color: inherit; text-decoration: inherit;">share_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -406,7 +444,9 @@ Shared Filesystem microversion 2.13 (Mitaka) or later.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="region_python">
+<a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -435,7 +475,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Access<wbr>Key</span>
+        <span id="accesskey_csharp">
+<a href="#accesskey_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -444,7 +486,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -459,7 +503,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Access<wbr>Key</span>
+        <span id="accesskey_go">
+<a href="#accesskey_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -468,7 +514,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -483,7 +531,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>access<wbr>Key</span>
+        <span id="accesskey_nodejs">
+<a href="#accesskey_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -492,7 +542,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -507,7 +559,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>access_<wbr>key</span>
+        <span id="access_key_python">
+<a href="#access_key_python" style="color: inherit; text-decoration: inherit;">access_<wbr>key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -516,7 +570,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -657,7 +713,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Access<wbr>Key</span>
+        <span id="state_accesskey_csharp">
+<a href="#state_accesskey_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -666,7 +724,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Access<wbr>Level</span>
+        <span id="state_accesslevel_csharp">
+<a href="#state_accesslevel_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -675,7 +735,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Access<wbr>To</span>
+        <span id="state_accessto_csharp">
+<a href="#state_accessto_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>To</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -685,7 +747,9 @@ address or a username verified by configured Security Service of the Share Netwo
 
     <dt class="property-optional"
             title="Optional">
-        <span>Access<wbr>Type</span>
+        <span id="state_accesstype_csharp">
+<a href="#state_accesstype_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -696,7 +760,9 @@ Shared Filesystem microversion 2.13 (Mitaka) or later.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="state_region_csharp">
+<a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -707,7 +773,9 @@ creates a new share access.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Share<wbr>Id</span>
+        <span id="state_shareid_csharp">
+<a href="#state_shareid_csharp" style="color: inherit; text-decoration: inherit;">Share<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -723,7 +791,9 @@ creates a new share access.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Access<wbr>Key</span>
+        <span id="state_accesskey_go">
+<a href="#state_accesskey_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -732,7 +802,9 @@ creates a new share access.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Access<wbr>Level</span>
+        <span id="state_accesslevel_go">
+<a href="#state_accesslevel_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -741,7 +813,9 @@ creates a new share access.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Access<wbr>To</span>
+        <span id="state_accessto_go">
+<a href="#state_accessto_go" style="color: inherit; text-decoration: inherit;">Access<wbr>To</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -751,7 +825,9 @@ address or a username verified by configured Security Service of the Share Netwo
 
     <dt class="property-optional"
             title="Optional">
-        <span>Access<wbr>Type</span>
+        <span id="state_accesstype_go">
+<a href="#state_accesstype_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -762,7 +838,9 @@ Shared Filesystem microversion 2.13 (Mitaka) or later.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="state_region_go">
+<a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -773,7 +851,9 @@ creates a new share access.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Share<wbr>Id</span>
+        <span id="state_shareid_go">
+<a href="#state_shareid_go" style="color: inherit; text-decoration: inherit;">Share<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -789,7 +869,9 @@ creates a new share access.
 
     <dt class="property-optional"
             title="Optional">
-        <span>access<wbr>Key</span>
+        <span id="state_accesskey_nodejs">
+<a href="#state_accesskey_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -798,7 +880,9 @@ creates a new share access.
 
     <dt class="property-optional"
             title="Optional">
-        <span>access<wbr>Level</span>
+        <span id="state_accesslevel_nodejs">
+<a href="#state_accesslevel_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -807,7 +891,9 @@ creates a new share access.
 
     <dt class="property-optional"
             title="Optional">
-        <span>access<wbr>To</span>
+        <span id="state_accessto_nodejs">
+<a href="#state_accessto_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>To</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -817,7 +903,9 @@ address or a username verified by configured Security Service of the Share Netwo
 
     <dt class="property-optional"
             title="Optional">
-        <span>access<wbr>Type</span>
+        <span id="state_accesstype_nodejs">
+<a href="#state_accesstype_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -828,7 +916,9 @@ Shared Filesystem microversion 2.13 (Mitaka) or later.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="state_region_nodejs">
+<a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -839,7 +929,9 @@ creates a new share access.
 
     <dt class="property-optional"
             title="Optional">
-        <span>share<wbr>Id</span>
+        <span id="state_shareid_nodejs">
+<a href="#state_shareid_nodejs" style="color: inherit; text-decoration: inherit;">share<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -855,7 +947,9 @@ creates a new share access.
 
     <dt class="property-optional"
             title="Optional">
-        <span>access_<wbr>key</span>
+        <span id="state_access_key_python">
+<a href="#state_access_key_python" style="color: inherit; text-decoration: inherit;">access_<wbr>key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -864,7 +958,9 @@ creates a new share access.
 
     <dt class="property-optional"
             title="Optional">
-        <span>access_<wbr>level</span>
+        <span id="state_access_level_python">
+<a href="#state_access_level_python" style="color: inherit; text-decoration: inherit;">access_<wbr>level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -873,7 +969,9 @@ creates a new share access.
 
     <dt class="property-optional"
             title="Optional">
-        <span>access_<wbr>to</span>
+        <span id="state_access_to_python">
+<a href="#state_access_to_python" style="color: inherit; text-decoration: inherit;">access_<wbr>to</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -883,7 +981,9 @@ address or a username verified by configured Security Service of the Share Netwo
 
     <dt class="property-optional"
             title="Optional">
-        <span>access_<wbr>type</span>
+        <span id="state_access_type_python">
+<a href="#state_access_type_python" style="color: inherit; text-decoration: inherit;">access_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -894,7 +994,9 @@ Shared Filesystem microversion 2.13 (Mitaka) or later.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="state_region_python">
+<a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -905,7 +1007,9 @@ creates a new share access.
 
     <dt class="property-optional"
             title="Optional">
-        <span>share_<wbr>id</span>
+        <span id="state_share_id_python">
+<a href="#state_share_id_python" style="color: inherit; text-decoration: inherit;">share_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

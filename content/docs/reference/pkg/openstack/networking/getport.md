@@ -20,7 +20,22 @@ Use this data source to get the ID of an available OpenStack port.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var port1 = Output.Create(OpenStack.Networking.GetPort.InvokeAsync(new OpenStack.Networking.GetPortArgs
+        {
+            Name = "port_1",
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -90,7 +105,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Admin<wbr>State<wbr>Up</span>
+        <span id="adminstateup_csharp">
+<a href="#adminstateup_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>State<wbr>Up</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -99,7 +116,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -108,7 +127,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Device<wbr>Id</span>
+        <span id="deviceid_csharp">
+<a href="#deviceid_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -117,7 +138,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Device<wbr>Owner</span>
+        <span id="deviceowner_csharp">
+<a href="#deviceowner_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Owner</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -126,7 +149,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dns<wbr>Name</span>
+        <span id="dnsname_csharp">
+<a href="#dnsname_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -136,7 +161,9 @@ DNS extension is enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Fixed<wbr>Ip</span>
+        <span id="fixedip_csharp">
+<a href="#fixedip_csharp" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -145,7 +172,9 @@ DNS extension is enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Mac<wbr>Address</span>
+        <span id="macaddress_csharp">
+<a href="#macaddress_csharp" style="color: inherit; text-decoration: inherit;">Mac<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -154,7 +183,9 @@ DNS extension is enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -163,7 +194,9 @@ DNS extension is enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Network<wbr>Id</span>
+        <span id="networkid_csharp">
+<a href="#networkid_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -172,7 +205,9 @@ DNS extension is enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Port<wbr>Id</span>
+        <span id="portid_csharp">
+<a href="#portid_csharp" style="color: inherit; text-decoration: inherit;">Port<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -181,7 +216,9 @@ DNS extension is enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project<wbr>Id</span>
+        <span id="projectid_csharp">
+<a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -190,7 +227,9 @@ DNS extension is enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="region_csharp">
+<a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -201,7 +240,9 @@ A Neutron client is needed to retrieve port ids. If omitted, the
 
     <dt class="property-optional"
             title="Optional">
-        <span>Security<wbr>Group<wbr>Ids</span>
+        <span id="securitygroupids_csharp">
+<a href="#securitygroupids_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -210,7 +251,9 @@ A Neutron client is needed to retrieve port ids. If omitted, the
 
     <dt class="property-optional"
             title="Optional">
-        <span>Status</span>
+        <span id="status_csharp">
+<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -219,7 +262,9 @@ A Neutron client is needed to retrieve port ids. If omitted, the
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -228,7 +273,9 @@ A Neutron client is needed to retrieve port ids. If omitted, the
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tenant<wbr>Id</span>
+        <span id="tenantid_csharp">
+<a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -243,7 +290,9 @@ A Neutron client is needed to retrieve port ids. If omitted, the
 
     <dt class="property-optional"
             title="Optional">
-        <span>Admin<wbr>State<wbr>Up</span>
+        <span id="adminstateup_go">
+<a href="#adminstateup_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>State<wbr>Up</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -252,7 +301,9 @@ A Neutron client is needed to retrieve port ids. If omitted, the
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -261,7 +312,9 @@ A Neutron client is needed to retrieve port ids. If omitted, the
 
     <dt class="property-optional"
             title="Optional">
-        <span>Device<wbr>Id</span>
+        <span id="deviceid_go">
+<a href="#deviceid_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -270,7 +323,9 @@ A Neutron client is needed to retrieve port ids. If omitted, the
 
     <dt class="property-optional"
             title="Optional">
-        <span>Device<wbr>Owner</span>
+        <span id="deviceowner_go">
+<a href="#deviceowner_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Owner</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -279,7 +334,9 @@ A Neutron client is needed to retrieve port ids. If omitted, the
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dns<wbr>Name</span>
+        <span id="dnsname_go">
+<a href="#dnsname_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -289,7 +346,9 @@ DNS extension is enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Fixed<wbr>Ip</span>
+        <span id="fixedip_go">
+<a href="#fixedip_go" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -298,7 +357,9 @@ DNS extension is enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Mac<wbr>Address</span>
+        <span id="macaddress_go">
+<a href="#macaddress_go" style="color: inherit; text-decoration: inherit;">Mac<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -307,7 +368,9 @@ DNS extension is enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -316,7 +379,9 @@ DNS extension is enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Network<wbr>Id</span>
+        <span id="networkid_go">
+<a href="#networkid_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -325,7 +390,9 @@ DNS extension is enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Port<wbr>Id</span>
+        <span id="portid_go">
+<a href="#portid_go" style="color: inherit; text-decoration: inherit;">Port<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -334,7 +401,9 @@ DNS extension is enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project<wbr>Id</span>
+        <span id="projectid_go">
+<a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -343,7 +412,9 @@ DNS extension is enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="region_go">
+<a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -354,7 +425,9 @@ A Neutron client is needed to retrieve port ids. If omitted, the
 
     <dt class="property-optional"
             title="Optional">
-        <span>Security<wbr>Group<wbr>Ids</span>
+        <span id="securitygroupids_go">
+<a href="#securitygroupids_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -363,7 +436,9 @@ A Neutron client is needed to retrieve port ids. If omitted, the
 
     <dt class="property-optional"
             title="Optional">
-        <span>Status</span>
+        <span id="status_go">
+<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -372,7 +447,9 @@ A Neutron client is needed to retrieve port ids. If omitted, the
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -381,7 +458,9 @@ A Neutron client is needed to retrieve port ids. If omitted, the
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tenant<wbr>Id</span>
+        <span id="tenantid_go">
+<a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -396,7 +475,9 @@ A Neutron client is needed to retrieve port ids. If omitted, the
 
     <dt class="property-optional"
             title="Optional">
-        <span>admin<wbr>State<wbr>Up</span>
+        <span id="adminstateup_nodejs">
+<a href="#adminstateup_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>State<wbr>Up</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -405,7 +486,9 @@ A Neutron client is needed to retrieve port ids. If omitted, the
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -414,7 +497,9 @@ A Neutron client is needed to retrieve port ids. If omitted, the
 
     <dt class="property-optional"
             title="Optional">
-        <span>device<wbr>Id</span>
+        <span id="deviceid_nodejs">
+<a href="#deviceid_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -423,7 +508,9 @@ A Neutron client is needed to retrieve port ids. If omitted, the
 
     <dt class="property-optional"
             title="Optional">
-        <span>device<wbr>Owner</span>
+        <span id="deviceowner_nodejs">
+<a href="#deviceowner_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Owner</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -432,7 +519,9 @@ A Neutron client is needed to retrieve port ids. If omitted, the
 
     <dt class="property-optional"
             title="Optional">
-        <span>dns<wbr>Name</span>
+        <span id="dnsname_nodejs">
+<a href="#dnsname_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -442,7 +531,9 @@ DNS extension is enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>fixed<wbr>Ip</span>
+        <span id="fixedip_nodejs">
+<a href="#fixedip_nodejs" style="color: inherit; text-decoration: inherit;">fixed<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -451,7 +542,9 @@ DNS extension is enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>mac<wbr>Address</span>
+        <span id="macaddress_nodejs">
+<a href="#macaddress_nodejs" style="color: inherit; text-decoration: inherit;">mac<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -460,7 +553,9 @@ DNS extension is enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -469,7 +564,9 @@ DNS extension is enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>network<wbr>Id</span>
+        <span id="networkid_nodejs">
+<a href="#networkid_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -478,7 +575,9 @@ DNS extension is enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>port<wbr>Id</span>
+        <span id="portid_nodejs">
+<a href="#portid_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -487,7 +586,9 @@ DNS extension is enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>project<wbr>Id</span>
+        <span id="projectid_nodejs">
+<a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -496,7 +597,9 @@ DNS extension is enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="region_nodejs">
+<a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -507,7 +610,9 @@ A Neutron client is needed to retrieve port ids. If omitted, the
 
     <dt class="property-optional"
             title="Optional">
-        <span>security<wbr>Group<wbr>Ids</span>
+        <span id="securitygroupids_nodejs">
+<a href="#securitygroupids_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -516,7 +621,9 @@ A Neutron client is needed to retrieve port ids. If omitted, the
 
     <dt class="property-optional"
             title="Optional">
-        <span>status</span>
+        <span id="status_nodejs">
+<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -525,7 +632,9 @@ A Neutron client is needed to retrieve port ids. If omitted, the
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -534,7 +643,9 @@ A Neutron client is needed to retrieve port ids. If omitted, the
 
     <dt class="property-optional"
             title="Optional">
-        <span>tenant<wbr>Id</span>
+        <span id="tenantid_nodejs">
+<a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -549,7 +660,9 @@ A Neutron client is needed to retrieve port ids. If omitted, the
 
     <dt class="property-optional"
             title="Optional">
-        <span>admin_<wbr>state_<wbr>up</span>
+        <span id="admin_state_up_python">
+<a href="#admin_state_up_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>state_<wbr>up</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -558,7 +671,9 @@ A Neutron client is needed to retrieve port ids. If omitted, the
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -567,7 +682,9 @@ A Neutron client is needed to retrieve port ids. If omitted, the
 
     <dt class="property-optional"
             title="Optional">
-        <span>device_<wbr>id</span>
+        <span id="device_id_python">
+<a href="#device_id_python" style="color: inherit; text-decoration: inherit;">device_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -576,7 +693,9 @@ A Neutron client is needed to retrieve port ids. If omitted, the
 
     <dt class="property-optional"
             title="Optional">
-        <span>device_<wbr>owner</span>
+        <span id="device_owner_python">
+<a href="#device_owner_python" style="color: inherit; text-decoration: inherit;">device_<wbr>owner</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -585,7 +704,9 @@ A Neutron client is needed to retrieve port ids. If omitted, the
 
     <dt class="property-optional"
             title="Optional">
-        <span>dns_<wbr>name</span>
+        <span id="dns_name_python">
+<a href="#dns_name_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -595,7 +716,9 @@ DNS extension is enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>fixed_<wbr>ip</span>
+        <span id="fixed_ip_python">
+<a href="#fixed_ip_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -604,7 +727,9 @@ DNS extension is enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>mac_<wbr>address</span>
+        <span id="mac_address_python">
+<a href="#mac_address_python" style="color: inherit; text-decoration: inherit;">mac_<wbr>address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -613,7 +738,9 @@ DNS extension is enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -622,7 +749,9 @@ DNS extension is enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>network_<wbr>id</span>
+        <span id="network_id_python">
+<a href="#network_id_python" style="color: inherit; text-decoration: inherit;">network_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -631,7 +760,9 @@ DNS extension is enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>port_<wbr>id</span>
+        <span id="port_id_python">
+<a href="#port_id_python" style="color: inherit; text-decoration: inherit;">port_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -640,7 +771,9 @@ DNS extension is enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>project_<wbr>id</span>
+        <span id="project_id_python">
+<a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -649,7 +782,9 @@ DNS extension is enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="region_python">
+<a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -660,7 +795,9 @@ A Neutron client is needed to retrieve port ids. If omitted, the
 
     <dt class="property-optional"
             title="Optional">
-        <span>security_<wbr>group_<wbr>ids</span>
+        <span id="security_group_ids_python">
+<a href="#security_group_ids_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -669,7 +806,9 @@ A Neutron client is needed to retrieve port ids. If omitted, the
 
     <dt class="property-optional"
             title="Optional">
-        <span>status</span>
+        <span id="status_python">
+<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -678,7 +817,9 @@ A Neutron client is needed to retrieve port ids. If omitted, the
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -687,7 +828,9 @@ A Neutron client is needed to retrieve port ids. If omitted, the
 
     <dt class="property-optional"
             title="Optional">
-        <span>tenant_<wbr>id</span>
+        <span id="tenant_id_python">
+<a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -715,7 +858,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>All<wbr>Fixed<wbr>Ips</span>
+        <span id="allfixedips_csharp">
+<a href="#allfixedips_csharp" style="color: inherit; text-decoration: inherit;">All<wbr>Fixed<wbr>Ips</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -725,7 +870,9 @@ order returned by the Network v2 API.
 
     <dt class="property-"
             title="">
-        <span>All<wbr>Security<wbr>Group<wbr>Ids</span>
+        <span id="allsecuritygroupids_csharp">
+<a href="#allsecuritygroupids_csharp" style="color: inherit; text-decoration: inherit;">All<wbr>Security<wbr>Group<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -734,7 +881,9 @@ order returned by the Network v2 API.
 
     <dt class="property-"
             title="">
-        <span>All<wbr>Tags</span>
+        <span id="alltags_csharp">
+<a href="#alltags_csharp" style="color: inherit; text-decoration: inherit;">All<wbr>Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -743,7 +892,9 @@ order returned by the Network v2 API.
 
     <dt class="property-"
             title="">
-        <span>Allowed<wbr>Address<wbr>Pairs</span>
+        <span id="allowedaddresspairs_csharp">
+<a href="#allowedaddresspairs_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Address<wbr>Pairs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getportallowedaddresspair">List&lt;Pulumi.<wbr>Open<wbr>Stack.<wbr>Networking.<wbr>Outputs.<wbr>Get<wbr>Port<wbr>Allowed<wbr>Address<wbr>Pair&gt;</a></span>
     </dt>
@@ -754,7 +905,9 @@ below.
 
     <dt class="property-"
             title="">
-        <span>Bindings</span>
+        <span id="bindings_csharp">
+<a href="#bindings_csharp" style="color: inherit; text-decoration: inherit;">Bindings</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getportbinding">List&lt;Pulumi.<wbr>Open<wbr>Stack.<wbr>Networking.<wbr>Outputs.<wbr>Get<wbr>Port<wbr>Binding&gt;</a></span>
     </dt>
@@ -763,7 +916,9 @@ below.
 
     <dt class="property-"
             title="">
-        <span>Dns<wbr>Assignments</span>
+        <span id="dnsassignments_csharp">
+<a href="#dnsassignments_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Assignments</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;Immutable<wbr>Dictionary&lt;string, object&gt;&gt;</span>
     </dt>
@@ -772,7 +927,9 @@ below.
 
     <dt class="property-"
             title="">
-        <span>Extra<wbr>Dhcp<wbr>Options</span>
+        <span id="extradhcpoptions_csharp">
+<a href="#extradhcpoptions_csharp" style="color: inherit; text-decoration: inherit;">Extra<wbr>Dhcp<wbr>Options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getportextradhcpoption">List&lt;Pulumi.<wbr>Open<wbr>Stack.<wbr>Networking.<wbr>Outputs.<wbr>Get<wbr>Port<wbr>Extra<wbr>Dhcp<wbr>Option&gt;</a></span>
     </dt>
@@ -782,7 +939,9 @@ The structure is described below.
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -791,7 +950,9 @@ The structure is described below.
 
     <dt class="property-"
             title="">
-        <span>Admin<wbr>State<wbr>Up</span>
+        <span id="adminstateup_csharp">
+<a href="#adminstateup_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>State<wbr>Up</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -800,7 +961,9 @@ The structure is described below.
 
     <dt class="property-"
             title="">
-        <span>Description</span>
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -809,7 +972,9 @@ The structure is described below.
 
     <dt class="property-"
             title="">
-        <span>Device<wbr>Id</span>
+        <span id="deviceid_csharp">
+<a href="#deviceid_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -818,7 +983,9 @@ The structure is described below.
 
     <dt class="property-"
             title="">
-        <span>Device<wbr>Owner</span>
+        <span id="deviceowner_csharp">
+<a href="#deviceowner_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Owner</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -827,7 +994,9 @@ The structure is described below.
 
     <dt class="property-"
             title="">
-        <span>Dns<wbr>Name</span>
+        <span id="dnsname_csharp">
+<a href="#dnsname_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -836,7 +1005,9 @@ The structure is described below.
 
     <dt class="property-"
             title="">
-        <span>Fixed<wbr>Ip</span>
+        <span id="fixedip_csharp">
+<a href="#fixedip_csharp" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -844,7 +1015,9 @@ The structure is described below.
 
     <dt class="property-"
             title="">
-        <span>Mac<wbr>Address</span>
+        <span id="macaddress_csharp">
+<a href="#macaddress_csharp" style="color: inherit; text-decoration: inherit;">Mac<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -853,7 +1026,9 @@ The structure is described below.
 
     <dt class="property-"
             title="">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -862,7 +1037,9 @@ The structure is described below.
 
     <dt class="property-"
             title="">
-        <span>Network<wbr>Id</span>
+        <span id="networkid_csharp">
+<a href="#networkid_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -871,7 +1048,9 @@ The structure is described below.
 
     <dt class="property-"
             title="">
-        <span>Port<wbr>Id</span>
+        <span id="portid_csharp">
+<a href="#portid_csharp" style="color: inherit; text-decoration: inherit;">Port<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -880,7 +1059,9 @@ The structure is described below.
 
     <dt class="property-"
             title="">
-        <span>Project<wbr>Id</span>
+        <span id="projectid_csharp">
+<a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -889,7 +1070,9 @@ The structure is described below.
 
     <dt class="property-"
             title="">
-        <span>Region</span>
+        <span id="region_csharp">
+<a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -898,7 +1081,9 @@ The structure is described below.
 
     <dt class="property-"
             title="">
-        <span>Security<wbr>Group<wbr>Ids</span>
+        <span id="securitygroupids_csharp">
+<a href="#securitygroupids_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -906,7 +1091,9 @@ The structure is described below.
 
     <dt class="property-"
             title="">
-        <span>Status</span>
+        <span id="status_csharp">
+<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -914,7 +1101,9 @@ The structure is described below.
 
     <dt class="property-"
             title="">
-        <span>Tags</span>
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -922,7 +1111,9 @@ The structure is described below.
 
     <dt class="property-"
             title="">
-        <span>Tenant<wbr>Id</span>
+        <span id="tenantid_csharp">
+<a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -937,7 +1128,9 @@ The structure is described below.
 
     <dt class="property-"
             title="">
-        <span>All<wbr>Fixed<wbr>Ips</span>
+        <span id="allfixedips_go">
+<a href="#allfixedips_go" style="color: inherit; text-decoration: inherit;">All<wbr>Fixed<wbr>Ips</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -947,7 +1140,9 @@ order returned by the Network v2 API.
 
     <dt class="property-"
             title="">
-        <span>All<wbr>Security<wbr>Group<wbr>Ids</span>
+        <span id="allsecuritygroupids_go">
+<a href="#allsecuritygroupids_go" style="color: inherit; text-decoration: inherit;">All<wbr>Security<wbr>Group<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -956,7 +1151,9 @@ order returned by the Network v2 API.
 
     <dt class="property-"
             title="">
-        <span>All<wbr>Tags</span>
+        <span id="alltags_go">
+<a href="#alltags_go" style="color: inherit; text-decoration: inherit;">All<wbr>Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -965,7 +1162,9 @@ order returned by the Network v2 API.
 
     <dt class="property-"
             title="">
-        <span>Allowed<wbr>Address<wbr>Pairs</span>
+        <span id="allowedaddresspairs_go">
+<a href="#allowedaddresspairs_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Address<wbr>Pairs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getportallowedaddresspair">[]Get<wbr>Port<wbr>Allowed<wbr>Address<wbr>Pair</a></span>
     </dt>
@@ -976,7 +1175,9 @@ below.
 
     <dt class="property-"
             title="">
-        <span>Bindings</span>
+        <span id="bindings_go">
+<a href="#bindings_go" style="color: inherit; text-decoration: inherit;">Bindings</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getportbinding">[]Get<wbr>Port<wbr>Binding</a></span>
     </dt>
@@ -985,7 +1186,9 @@ below.
 
     <dt class="property-"
             title="">
-        <span>Dns<wbr>Assignments</span>
+        <span id="dnsassignments_go">
+<a href="#dnsassignments_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Assignments</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">[]map[string]interface{}</span>
     </dt>
@@ -994,7 +1197,9 @@ below.
 
     <dt class="property-"
             title="">
-        <span>Extra<wbr>Dhcp<wbr>Options</span>
+        <span id="extradhcpoptions_go">
+<a href="#extradhcpoptions_go" style="color: inherit; text-decoration: inherit;">Extra<wbr>Dhcp<wbr>Options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getportextradhcpoption">[]Get<wbr>Port<wbr>Extra<wbr>Dhcp<wbr>Option</a></span>
     </dt>
@@ -1004,7 +1209,9 @@ The structure is described below.
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1013,7 +1220,9 @@ The structure is described below.
 
     <dt class="property-"
             title="">
-        <span>Admin<wbr>State<wbr>Up</span>
+        <span id="adminstateup_go">
+<a href="#adminstateup_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>State<wbr>Up</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1022,7 +1231,9 @@ The structure is described below.
 
     <dt class="property-"
             title="">
-        <span>Description</span>
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1031,7 +1242,9 @@ The structure is described below.
 
     <dt class="property-"
             title="">
-        <span>Device<wbr>Id</span>
+        <span id="deviceid_go">
+<a href="#deviceid_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1040,7 +1253,9 @@ The structure is described below.
 
     <dt class="property-"
             title="">
-        <span>Device<wbr>Owner</span>
+        <span id="deviceowner_go">
+<a href="#deviceowner_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Owner</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1049,7 +1264,9 @@ The structure is described below.
 
     <dt class="property-"
             title="">
-        <span>Dns<wbr>Name</span>
+        <span id="dnsname_go">
+<a href="#dnsname_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1058,7 +1275,9 @@ The structure is described below.
 
     <dt class="property-"
             title="">
-        <span>Fixed<wbr>Ip</span>
+        <span id="fixedip_go">
+<a href="#fixedip_go" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1066,7 +1285,9 @@ The structure is described below.
 
     <dt class="property-"
             title="">
-        <span>Mac<wbr>Address</span>
+        <span id="macaddress_go">
+<a href="#macaddress_go" style="color: inherit; text-decoration: inherit;">Mac<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1075,7 +1296,9 @@ The structure is described below.
 
     <dt class="property-"
             title="">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1084,7 +1307,9 @@ The structure is described below.
 
     <dt class="property-"
             title="">
-        <span>Network<wbr>Id</span>
+        <span id="networkid_go">
+<a href="#networkid_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1093,7 +1318,9 @@ The structure is described below.
 
     <dt class="property-"
             title="">
-        <span>Port<wbr>Id</span>
+        <span id="portid_go">
+<a href="#portid_go" style="color: inherit; text-decoration: inherit;">Port<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1102,7 +1329,9 @@ The structure is described below.
 
     <dt class="property-"
             title="">
-        <span>Project<wbr>Id</span>
+        <span id="projectid_go">
+<a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1111,7 +1340,9 @@ The structure is described below.
 
     <dt class="property-"
             title="">
-        <span>Region</span>
+        <span id="region_go">
+<a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1120,7 +1351,9 @@ The structure is described below.
 
     <dt class="property-"
             title="">
-        <span>Security<wbr>Group<wbr>Ids</span>
+        <span id="securitygroupids_go">
+<a href="#securitygroupids_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1128,7 +1361,9 @@ The structure is described below.
 
     <dt class="property-"
             title="">
-        <span>Status</span>
+        <span id="status_go">
+<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1136,7 +1371,9 @@ The structure is described below.
 
     <dt class="property-"
             title="">
-        <span>Tags</span>
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1144,7 +1381,9 @@ The structure is described below.
 
     <dt class="property-"
             title="">
-        <span>Tenant<wbr>Id</span>
+        <span id="tenantid_go">
+<a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1159,7 +1398,9 @@ The structure is described below.
 
     <dt class="property-"
             title="">
-        <span>all<wbr>Fixed<wbr>Ips</span>
+        <span id="allfixedips_nodejs">
+<a href="#allfixedips_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Fixed<wbr>Ips</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1169,7 +1410,9 @@ order returned by the Network v2 API.
 
     <dt class="property-"
             title="">
-        <span>all<wbr>Security<wbr>Group<wbr>Ids</span>
+        <span id="allsecuritygroupids_nodejs">
+<a href="#allsecuritygroupids_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Security<wbr>Group<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1178,7 +1421,9 @@ order returned by the Network v2 API.
 
     <dt class="property-"
             title="">
-        <span>all<wbr>Tags</span>
+        <span id="alltags_nodejs">
+<a href="#alltags_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1187,7 +1432,9 @@ order returned by the Network v2 API.
 
     <dt class="property-"
             title="">
-        <span>allowed<wbr>Address<wbr>Pairs</span>
+        <span id="allowedaddresspairs_nodejs">
+<a href="#allowedaddresspairs_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Address<wbr>Pairs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getportallowedaddresspair">Get<wbr>Port<wbr>Allowed<wbr>Address<wbr>Pair[]</a></span>
     </dt>
@@ -1198,7 +1445,9 @@ below.
 
     <dt class="property-"
             title="">
-        <span>bindings</span>
+        <span id="bindings_nodejs">
+<a href="#bindings_nodejs" style="color: inherit; text-decoration: inherit;">bindings</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getportbinding">Get<wbr>Port<wbr>Binding[]</a></span>
     </dt>
@@ -1207,7 +1456,9 @@ below.
 
     <dt class="property-"
             title="">
-        <span>dns<wbr>Assignments</span>
+        <span id="dnsassignments_nodejs">
+<a href="#dnsassignments_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Assignments</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}[]</span>
     </dt>
@@ -1216,7 +1467,9 @@ below.
 
     <dt class="property-"
             title="">
-        <span>extra<wbr>Dhcp<wbr>Options</span>
+        <span id="extradhcpoptions_nodejs">
+<a href="#extradhcpoptions_nodejs" style="color: inherit; text-decoration: inherit;">extra<wbr>Dhcp<wbr>Options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getportextradhcpoption">Get<wbr>Port<wbr>Extra<wbr>Dhcp<wbr>Option[]</a></span>
     </dt>
@@ -1226,7 +1479,9 @@ The structure is described below.
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1235,7 +1490,9 @@ The structure is described below.
 
     <dt class="property-"
             title="">
-        <span>admin<wbr>State<wbr>Up</span>
+        <span id="adminstateup_nodejs">
+<a href="#adminstateup_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>State<wbr>Up</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1244,7 +1501,9 @@ The structure is described below.
 
     <dt class="property-"
             title="">
-        <span>description</span>
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1253,7 +1512,9 @@ The structure is described below.
 
     <dt class="property-"
             title="">
-        <span>device<wbr>Id</span>
+        <span id="deviceid_nodejs">
+<a href="#deviceid_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1262,7 +1523,9 @@ The structure is described below.
 
     <dt class="property-"
             title="">
-        <span>device<wbr>Owner</span>
+        <span id="deviceowner_nodejs">
+<a href="#deviceowner_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Owner</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1271,7 +1534,9 @@ The structure is described below.
 
     <dt class="property-"
             title="">
-        <span>dns<wbr>Name</span>
+        <span id="dnsname_nodejs">
+<a href="#dnsname_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1280,7 +1545,9 @@ The structure is described below.
 
     <dt class="property-"
             title="">
-        <span>fixed<wbr>Ip</span>
+        <span id="fixedip_nodejs">
+<a href="#fixedip_nodejs" style="color: inherit; text-decoration: inherit;">fixed<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1288,7 +1555,9 @@ The structure is described below.
 
     <dt class="property-"
             title="">
-        <span>mac<wbr>Address</span>
+        <span id="macaddress_nodejs">
+<a href="#macaddress_nodejs" style="color: inherit; text-decoration: inherit;">mac<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1297,7 +1566,9 @@ The structure is described below.
 
     <dt class="property-"
             title="">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1306,7 +1577,9 @@ The structure is described below.
 
     <dt class="property-"
             title="">
-        <span>network<wbr>Id</span>
+        <span id="networkid_nodejs">
+<a href="#networkid_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1315,7 +1588,9 @@ The structure is described below.
 
     <dt class="property-"
             title="">
-        <span>port<wbr>Id</span>
+        <span id="portid_nodejs">
+<a href="#portid_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1324,7 +1599,9 @@ The structure is described below.
 
     <dt class="property-"
             title="">
-        <span>project<wbr>Id</span>
+        <span id="projectid_nodejs">
+<a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1333,7 +1610,9 @@ The structure is described below.
 
     <dt class="property-"
             title="">
-        <span>region</span>
+        <span id="region_nodejs">
+<a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1342,7 +1621,9 @@ The structure is described below.
 
     <dt class="property-"
             title="">
-        <span>security<wbr>Group<wbr>Ids</span>
+        <span id="securitygroupids_nodejs">
+<a href="#securitygroupids_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1350,7 +1631,9 @@ The structure is described below.
 
     <dt class="property-"
             title="">
-        <span>status</span>
+        <span id="status_nodejs">
+<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1358,7 +1641,9 @@ The structure is described below.
 
     <dt class="property-"
             title="">
-        <span>tags</span>
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1366,7 +1651,9 @@ The structure is described below.
 
     <dt class="property-"
             title="">
-        <span>tenant<wbr>Id</span>
+        <span id="tenantid_nodejs">
+<a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1381,7 +1668,9 @@ The structure is described below.
 
     <dt class="property-"
             title="">
-        <span>all_<wbr>fixed_<wbr>ips</span>
+        <span id="all_fixed_ips_python">
+<a href="#all_fixed_ips_python" style="color: inherit; text-decoration: inherit;">all_<wbr>fixed_<wbr>ips</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1391,7 +1680,9 @@ order returned by the Network v2 API.
 
     <dt class="property-"
             title="">
-        <span>all_<wbr>security_<wbr>group_<wbr>ids</span>
+        <span id="all_security_group_ids_python">
+<a href="#all_security_group_ids_python" style="color: inherit; text-decoration: inherit;">all_<wbr>security_<wbr>group_<wbr>ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1400,7 +1691,9 @@ order returned by the Network v2 API.
 
     <dt class="property-"
             title="">
-        <span>all_<wbr>tags</span>
+        <span id="all_tags_python">
+<a href="#all_tags_python" style="color: inherit; text-decoration: inherit;">all_<wbr>tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1409,7 +1702,9 @@ order returned by the Network v2 API.
 
     <dt class="property-"
             title="">
-        <span>allowed_<wbr>address_<wbr>pairs</span>
+        <span id="allowed_address_pairs_python">
+<a href="#allowed_address_pairs_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>address_<wbr>pairs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getportallowedaddresspair">List[Get<wbr>Port<wbr>Allowed<wbr>Address<wbr>Pair]</a></span>
     </dt>
@@ -1420,7 +1715,9 @@ below.
 
     <dt class="property-"
             title="">
-        <span>bindings</span>
+        <span id="bindings_python">
+<a href="#bindings_python" style="color: inherit; text-decoration: inherit;">bindings</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getportbinding">List[Get<wbr>Port<wbr>Binding]</a></span>
     </dt>
@@ -1429,7 +1726,9 @@ below.
 
     <dt class="property-"
             title="">
-        <span>dns_<wbr>assignments</span>
+        <span id="dns_assignments_python">
+<a href="#dns_assignments_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>assignments</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">List[Any>]</span>
     </dt>
@@ -1438,7 +1737,9 @@ below.
 
     <dt class="property-"
             title="">
-        <span>extra_<wbr>dhcp_<wbr>options</span>
+        <span id="extra_dhcp_options_python">
+<a href="#extra_dhcp_options_python" style="color: inherit; text-decoration: inherit;">extra_<wbr>dhcp_<wbr>options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getportextradhcpoption">List[Get<wbr>Port<wbr>Extra<wbr>Dhcp<wbr>Option]</a></span>
     </dt>
@@ -1448,7 +1749,9 @@ The structure is described below.
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1457,7 +1760,9 @@ The structure is described below.
 
     <dt class="property-"
             title="">
-        <span>admin_<wbr>state_<wbr>up</span>
+        <span id="admin_state_up_python">
+<a href="#admin_state_up_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>state_<wbr>up</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1466,7 +1771,9 @@ The structure is described below.
 
     <dt class="property-"
             title="">
-        <span>description</span>
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1475,7 +1782,9 @@ The structure is described below.
 
     <dt class="property-"
             title="">
-        <span>device_<wbr>id</span>
+        <span id="device_id_python">
+<a href="#device_id_python" style="color: inherit; text-decoration: inherit;">device_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1484,7 +1793,9 @@ The structure is described below.
 
     <dt class="property-"
             title="">
-        <span>device_<wbr>owner</span>
+        <span id="device_owner_python">
+<a href="#device_owner_python" style="color: inherit; text-decoration: inherit;">device_<wbr>owner</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1493,7 +1804,9 @@ The structure is described below.
 
     <dt class="property-"
             title="">
-        <span>dns_<wbr>name</span>
+        <span id="dns_name_python">
+<a href="#dns_name_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1502,7 +1815,9 @@ The structure is described below.
 
     <dt class="property-"
             title="">
-        <span>fixed_<wbr>ip</span>
+        <span id="fixed_ip_python">
+<a href="#fixed_ip_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1510,7 +1825,9 @@ The structure is described below.
 
     <dt class="property-"
             title="">
-        <span>mac_<wbr>address</span>
+        <span id="mac_address_python">
+<a href="#mac_address_python" style="color: inherit; text-decoration: inherit;">mac_<wbr>address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1519,7 +1836,9 @@ The structure is described below.
 
     <dt class="property-"
             title="">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1528,7 +1847,9 @@ The structure is described below.
 
     <dt class="property-"
             title="">
-        <span>network_<wbr>id</span>
+        <span id="network_id_python">
+<a href="#network_id_python" style="color: inherit; text-decoration: inherit;">network_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1537,7 +1858,9 @@ The structure is described below.
 
     <dt class="property-"
             title="">
-        <span>port_<wbr>id</span>
+        <span id="port_id_python">
+<a href="#port_id_python" style="color: inherit; text-decoration: inherit;">port_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1546,7 +1869,9 @@ The structure is described below.
 
     <dt class="property-"
             title="">
-        <span>project_<wbr>id</span>
+        <span id="project_id_python">
+<a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1555,7 +1880,9 @@ The structure is described below.
 
     <dt class="property-"
             title="">
-        <span>region</span>
+        <span id="region_python">
+<a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1564,7 +1891,9 @@ The structure is described below.
 
     <dt class="property-"
             title="">
-        <span>security_<wbr>group_<wbr>ids</span>
+        <span id="security_group_ids_python">
+<a href="#security_group_ids_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1572,7 +1901,9 @@ The structure is described below.
 
     <dt class="property-"
             title="">
-        <span>status</span>
+        <span id="status_python">
+<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1580,7 +1911,9 @@ The structure is described below.
 
     <dt class="property-"
             title="">
-        <span>tags</span>
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1588,7 +1921,9 @@ The structure is described below.
 
     <dt class="property-"
             title="">
-        <span>tenant_<wbr>id</span>
+        <span id="tenant_id_python">
+<a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1627,7 +1962,9 @@ The structure is described below.
 
     <dt class="property-required"
             title="Required">
-        <span>Ip<wbr>Address</span>
+        <span id="ipaddress_csharp">
+<a href="#ipaddress_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1636,7 +1973,9 @@ The structure is described below.
 
     <dt class="property-required"
             title="Required">
-        <span>Mac<wbr>Address</span>
+        <span id="macaddress_csharp">
+<a href="#macaddress_csharp" style="color: inherit; text-decoration: inherit;">Mac<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1652,7 +1991,9 @@ The structure is described below.
 
     <dt class="property-required"
             title="Required">
-        <span>Ip<wbr>Address</span>
+        <span id="ipaddress_go">
+<a href="#ipaddress_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1661,7 +2002,9 @@ The structure is described below.
 
     <dt class="property-required"
             title="Required">
-        <span>Mac<wbr>Address</span>
+        <span id="macaddress_go">
+<a href="#macaddress_go" style="color: inherit; text-decoration: inherit;">Mac<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1677,7 +2020,9 @@ The structure is described below.
 
     <dt class="property-required"
             title="Required">
-        <span>ip<wbr>Address</span>
+        <span id="ipaddress_nodejs">
+<a href="#ipaddress_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1686,7 +2031,9 @@ The structure is described below.
 
     <dt class="property-required"
             title="Required">
-        <span>mac<wbr>Address</span>
+        <span id="macaddress_nodejs">
+<a href="#macaddress_nodejs" style="color: inherit; text-decoration: inherit;">mac<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1702,7 +2049,9 @@ The structure is described below.
 
     <dt class="property-required"
             title="Required">
-        <span>ip_<wbr>address</span>
+        <span id="ip_address_python">
+<a href="#ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1711,7 +2060,9 @@ The structure is described below.
 
     <dt class="property-required"
             title="Required">
-        <span>mac_<wbr>address</span>
+        <span id="mac_address_python">
+<a href="#mac_address_python" style="color: inherit; text-decoration: inherit;">mac_<wbr>address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1745,7 +2096,9 @@ The structure is described below.
 
     <dt class="property-required"
             title="Required">
-        <span>Host<wbr>Id</span>
+        <span id="hostid_csharp">
+<a href="#hostid_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1754,7 +2107,9 @@ The structure is described below.
 
     <dt class="property-required"
             title="Required">
-        <span>Profile</span>
+        <span id="profile_csharp">
+<a href="#profile_csharp" style="color: inherit; text-decoration: inherit;">Profile</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1763,7 +2118,9 @@ The structure is described below.
 
     <dt class="property-required"
             title="Required">
-        <span>Vif<wbr>Details</span>
+        <span id="vifdetails_csharp">
+<a href="#vifdetails_csharp" style="color: inherit; text-decoration: inherit;">Vif<wbr>Details</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -1773,7 +2130,9 @@ specific binding.
 
     <dt class="property-required"
             title="Required">
-        <span>Vif<wbr>Type</span>
+        <span id="viftype_csharp">
+<a href="#viftype_csharp" style="color: inherit; text-decoration: inherit;">Vif<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1782,7 +2141,9 @@ specific binding.
 
     <dt class="property-required"
             title="Required">
-        <span>Vnic<wbr>Type</span>
+        <span id="vnictype_csharp">
+<a href="#vnictype_csharp" style="color: inherit; text-decoration: inherit;">Vnic<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1798,7 +2159,9 @@ specific binding.
 
     <dt class="property-required"
             title="Required">
-        <span>Host<wbr>Id</span>
+        <span id="hostid_go">
+<a href="#hostid_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1807,7 +2170,9 @@ specific binding.
 
     <dt class="property-required"
             title="Required">
-        <span>Profile</span>
+        <span id="profile_go">
+<a href="#profile_go" style="color: inherit; text-decoration: inherit;">Profile</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1816,7 +2181,9 @@ specific binding.
 
     <dt class="property-required"
             title="Required">
-        <span>Vif<wbr>Details</span>
+        <span id="vifdetails_go">
+<a href="#vifdetails_go" style="color: inherit; text-decoration: inherit;">Vif<wbr>Details</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -1826,7 +2193,9 @@ specific binding.
 
     <dt class="property-required"
             title="Required">
-        <span>Vif<wbr>Type</span>
+        <span id="viftype_go">
+<a href="#viftype_go" style="color: inherit; text-decoration: inherit;">Vif<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1835,7 +2204,9 @@ specific binding.
 
     <dt class="property-required"
             title="Required">
-        <span>Vnic<wbr>Type</span>
+        <span id="vnictype_go">
+<a href="#vnictype_go" style="color: inherit; text-decoration: inherit;">Vnic<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1851,7 +2222,9 @@ specific binding.
 
     <dt class="property-required"
             title="Required">
-        <span>host<wbr>Id</span>
+        <span id="hostid_nodejs">
+<a href="#hostid_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1860,7 +2233,9 @@ specific binding.
 
     <dt class="property-required"
             title="Required">
-        <span>profile</span>
+        <span id="profile_nodejs">
+<a href="#profile_nodejs" style="color: inherit; text-decoration: inherit;">profile</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1869,7 +2244,9 @@ specific binding.
 
     <dt class="property-required"
             title="Required">
-        <span>vif<wbr>Details</span>
+        <span id="vifdetails_nodejs">
+<a href="#vifdetails_nodejs" style="color: inherit; text-decoration: inherit;">vif<wbr>Details</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -1879,7 +2256,9 @@ specific binding.
 
     <dt class="property-required"
             title="Required">
-        <span>vif<wbr>Type</span>
+        <span id="viftype_nodejs">
+<a href="#viftype_nodejs" style="color: inherit; text-decoration: inherit;">vif<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1888,7 +2267,9 @@ specific binding.
 
     <dt class="property-required"
             title="Required">
-        <span>vnic<wbr>Type</span>
+        <span id="vnictype_nodejs">
+<a href="#vnictype_nodejs" style="color: inherit; text-decoration: inherit;">vnic<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1904,7 +2285,9 @@ specific binding.
 
     <dt class="property-required"
             title="Required">
-        <span>host<wbr>Id</span>
+        <span id="hostid_python">
+<a href="#hostid_python" style="color: inherit; text-decoration: inherit;">host<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1913,7 +2296,9 @@ specific binding.
 
     <dt class="property-required"
             title="Required">
-        <span>profile</span>
+        <span id="profile_python">
+<a href="#profile_python" style="color: inherit; text-decoration: inherit;">profile</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1922,7 +2307,9 @@ specific binding.
 
     <dt class="property-required"
             title="Required">
-        <span>vif<wbr>Details</span>
+        <span id="vifdetails_python">
+<a href="#vifdetails_python" style="color: inherit; text-decoration: inherit;">vif<wbr>Details</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -1932,7 +2319,9 @@ specific binding.
 
     <dt class="property-required"
             title="Required">
-        <span>vif<wbr>Type</span>
+        <span id="viftype_python">
+<a href="#viftype_python" style="color: inherit; text-decoration: inherit;">vif<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1941,7 +2330,9 @@ specific binding.
 
     <dt class="property-required"
             title="Required">
-        <span>vnic<wbr>Type</span>
+        <span id="vnictype_python">
+<a href="#vnictype_python" style="color: inherit; text-decoration: inherit;">vnic<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1975,7 +2366,9 @@ specific binding.
 
     <dt class="property-required"
             title="Required">
-        <span>Ip<wbr>Version</span>
+        <span id="ipversion_csharp">
+<a href="#ipversion_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1984,7 +2377,9 @@ specific binding.
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1993,7 +2388,9 @@ specific binding.
 
     <dt class="property-required"
             title="Required">
-        <span>Value</span>
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2009,7 +2406,9 @@ specific binding.
 
     <dt class="property-required"
             title="Required">
-        <span>Ip<wbr>Version</span>
+        <span id="ipversion_go">
+<a href="#ipversion_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -2018,7 +2417,9 @@ specific binding.
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2027,7 +2428,9 @@ specific binding.
 
     <dt class="property-required"
             title="Required">
-        <span>Value</span>
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2043,7 +2446,9 @@ specific binding.
 
     <dt class="property-required"
             title="Required">
-        <span>ip<wbr>Version</span>
+        <span id="ipversion_nodejs">
+<a href="#ipversion_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -2052,7 +2457,9 @@ specific binding.
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2061,7 +2468,9 @@ specific binding.
 
     <dt class="property-required"
             title="Required">
-        <span>value</span>
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2077,7 +2486,9 @@ specific binding.
 
     <dt class="property-required"
             title="Required">
-        <span>ip_<wbr>version</span>
+        <span id="ip_version_python">
+<a href="#ip_version_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2086,7 +2497,9 @@ specific binding.
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2095,7 +2508,9 @@ specific binding.
 
     <dt class="property-required"
             title="Required">
-        <span>value</span>
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

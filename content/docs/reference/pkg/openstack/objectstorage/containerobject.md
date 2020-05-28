@@ -20,7 +20,42 @@ Manages a V1 container object resource within OpenStack.
 {{< chooser language "typescript,python,go,csharp" / >}}
 ### Example with simple content
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var container1 = new OpenStack.ObjectStorage.Container("container1", new OpenStack.ObjectStorage.ContainerArgs
+        {
+            ContentType = "application/json",
+            Metadata = 
+            {
+                { "test", "true" },
+            },
+            Region = "RegionOne",
+        });
+        var doc1 = new OpenStack.ObjectStorage.ContainerObject("doc1", new OpenStack.ObjectStorage.ContainerObjectArgs
+        {
+            ContainerName = container1.Name,
+            Content = @"               {
+                 ""foo"" : ""bar""
+               }
+
+",
+            ContentType = "application/json",
+            Metadata = 
+            {
+                { "test", "true" },
+            },
+            Region = "RegionOne",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -82,7 +117,38 @@ const doc1 = new openstack.objectstorage.ContainerObject("doc_1", {
 
 ### Example with content from file
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var container1 = new OpenStack.ObjectStorage.Container("container1", new OpenStack.ObjectStorage.ContainerArgs
+        {
+            ContentType = "application/json",
+            Metadata = 
+            {
+                { "test", "true" },
+            },
+            Region = "RegionOne",
+        });
+        var doc1 = new OpenStack.ObjectStorage.ContainerObject("doc1", new OpenStack.ObjectStorage.ContainerObjectArgs
+        {
+            ContainerName = container1.Name,
+            ContentType = "application/json",
+            Metadata = 
+            {
+                { "test", "true" },
+            },
+            Region = "RegionOne",
+            Source = "./default.json",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -321,7 +387,9 @@ The ContainerObject resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-required"
             title="Required">
-        <span>Container<wbr>Name</span>
+        <span id="containername_csharp">
+<a href="#containername_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -335,7 +403,9 @@ character delimits the container and object name. For example, the path
 
     <dt class="property-optional"
             title="Optional">
-        <span>Content</span>
+        <span id="content_csharp">
+<a href="#content_csharp" style="color: inherit; text-decoration: inherit;">Content</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -345,7 +415,9 @@ character delimits the container and object name. For example, the path
 
     <dt class="property-optional"
             title="Optional">
-        <span>Content<wbr>Disposition</span>
+        <span id="contentdisposition_csharp">
+<a href="#contentdisposition_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Disposition</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -356,7 +428,9 @@ program to save this file rather than show the file, which is the default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Content<wbr>Encoding</span>
+        <span id="contentencoding_csharp">
+<a href="#contentencoding_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Encoding</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -366,7 +440,9 @@ metadata.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Content<wbr>Type</span>
+        <span id="contenttype_csharp">
+<a href="#contenttype_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -375,7 +451,9 @@ metadata.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Copy<wbr>From</span>
+        <span id="copyfrom_csharp">
+<a href="#copyfrom_csharp" style="color: inherit; text-decoration: inherit;">Copy<wbr>From</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -388,7 +466,9 @@ container and object before you include them in the header. Conflicts with `sour
 
     <dt class="property-optional"
             title="Optional">
-        <span>Delete<wbr>After</span>
+        <span id="deleteafter_csharp">
+<a href="#deleteafter_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>After</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -399,7 +479,9 @@ the X-Delete-At metadata item.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Delete<wbr>At</span>
+        <span id="deleteat_csharp">
+<a href="#deleteat_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -409,7 +491,9 @@ For example, "2015-08-26" is equivalent to Mon, Wed, 26 Aug 2015 00:00:00 GMT.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Detect<wbr>Content<wbr>Type</span>
+        <span id="detectcontenttype_csharp">
+<a href="#detectcontenttype_csharp" style="color: inherit; text-decoration: inherit;">Detect<wbr>Content<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -420,7 +504,9 @@ header, if present.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Etag</span>
+        <span id="etag_csharp">
+<a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -429,7 +515,9 @@ header, if present.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Metadata</span>
+        <span id="metadata_csharp">
+<a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -437,7 +525,9 @@ header, if present.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -446,7 +536,9 @@ header, if present.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Object<wbr>Manifest</span>
+        <span id="objectmanifest_csharp">
+<a href="#objectmanifest_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Manifest</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -459,7 +551,9 @@ header.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="region_csharp">
+<a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -470,7 +564,9 @@ creates a new container.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source</span>
+        <span id="source_csharp">
+<a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -487,7 +583,9 @@ as the object's content. Conflicts with `source` and `copy_from`.
 
     <dt class="property-required"
             title="Required">
-        <span>Container<wbr>Name</span>
+        <span id="containername_go">
+<a href="#containername_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -501,7 +599,9 @@ character delimits the container and object name. For example, the path
 
     <dt class="property-optional"
             title="Optional">
-        <span>Content</span>
+        <span id="content_go">
+<a href="#content_go" style="color: inherit; text-decoration: inherit;">Content</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -511,7 +611,9 @@ character delimits the container and object name. For example, the path
 
     <dt class="property-optional"
             title="Optional">
-        <span>Content<wbr>Disposition</span>
+        <span id="contentdisposition_go">
+<a href="#contentdisposition_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Disposition</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -522,7 +624,9 @@ program to save this file rather than show the file, which is the default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Content<wbr>Encoding</span>
+        <span id="contentencoding_go">
+<a href="#contentencoding_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Encoding</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -532,7 +636,9 @@ metadata.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Content<wbr>Type</span>
+        <span id="contenttype_go">
+<a href="#contenttype_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -541,7 +647,9 @@ metadata.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Copy<wbr>From</span>
+        <span id="copyfrom_go">
+<a href="#copyfrom_go" style="color: inherit; text-decoration: inherit;">Copy<wbr>From</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -554,7 +662,9 @@ container and object before you include them in the header. Conflicts with `sour
 
     <dt class="property-optional"
             title="Optional">
-        <span>Delete<wbr>After</span>
+        <span id="deleteafter_go">
+<a href="#deleteafter_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>After</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -565,7 +675,9 @@ the X-Delete-At metadata item.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Delete<wbr>At</span>
+        <span id="deleteat_go">
+<a href="#deleteat_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -575,7 +687,9 @@ For example, "2015-08-26" is equivalent to Mon, Wed, 26 Aug 2015 00:00:00 GMT.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Detect<wbr>Content<wbr>Type</span>
+        <span id="detectcontenttype_go">
+<a href="#detectcontenttype_go" style="color: inherit; text-decoration: inherit;">Detect<wbr>Content<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -586,7 +700,9 @@ header, if present.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Etag</span>
+        <span id="etag_go">
+<a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -595,7 +711,9 @@ header, if present.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Metadata</span>
+        <span id="metadata_go">
+<a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -603,7 +721,9 @@ header, if present.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -612,7 +732,9 @@ header, if present.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Object<wbr>Manifest</span>
+        <span id="objectmanifest_go">
+<a href="#objectmanifest_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Manifest</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -625,7 +747,9 @@ header.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="region_go">
+<a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -636,7 +760,9 @@ creates a new container.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source</span>
+        <span id="source_go">
+<a href="#source_go" style="color: inherit; text-decoration: inherit;">Source</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -653,7 +779,9 @@ as the object's content. Conflicts with `source` and `copy_from`.
 
     <dt class="property-required"
             title="Required">
-        <span>container<wbr>Name</span>
+        <span id="containername_nodejs">
+<a href="#containername_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -667,7 +795,9 @@ character delimits the container and object name. For example, the path
 
     <dt class="property-optional"
             title="Optional">
-        <span>content</span>
+        <span id="content_nodejs">
+<a href="#content_nodejs" style="color: inherit; text-decoration: inherit;">content</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -677,7 +807,9 @@ character delimits the container and object name. For example, the path
 
     <dt class="property-optional"
             title="Optional">
-        <span>content<wbr>Disposition</span>
+        <span id="contentdisposition_nodejs">
+<a href="#contentdisposition_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Disposition</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -688,7 +820,9 @@ program to save this file rather than show the file, which is the default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>content<wbr>Encoding</span>
+        <span id="contentencoding_nodejs">
+<a href="#contentencoding_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Encoding</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -698,7 +832,9 @@ metadata.
 
     <dt class="property-optional"
             title="Optional">
-        <span>content<wbr>Type</span>
+        <span id="contenttype_nodejs">
+<a href="#contenttype_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -707,7 +843,9 @@ metadata.
 
     <dt class="property-optional"
             title="Optional">
-        <span>copy<wbr>From</span>
+        <span id="copyfrom_nodejs">
+<a href="#copyfrom_nodejs" style="color: inherit; text-decoration: inherit;">copy<wbr>From</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -720,7 +858,9 @@ container and object before you include them in the header. Conflicts with `sour
 
     <dt class="property-optional"
             title="Optional">
-        <span>delete<wbr>After</span>
+        <span id="deleteafter_nodejs">
+<a href="#deleteafter_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>After</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -731,7 +871,9 @@ the X-Delete-At metadata item.
 
     <dt class="property-optional"
             title="Optional">
-        <span>delete<wbr>At</span>
+        <span id="deleteat_nodejs">
+<a href="#deleteat_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -741,7 +883,9 @@ For example, "2015-08-26" is equivalent to Mon, Wed, 26 Aug 2015 00:00:00 GMT.
 
     <dt class="property-optional"
             title="Optional">
-        <span>detect<wbr>Content<wbr>Type</span>
+        <span id="detectcontenttype_nodejs">
+<a href="#detectcontenttype_nodejs" style="color: inherit; text-decoration: inherit;">detect<wbr>Content<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -752,7 +896,9 @@ header, if present.
 
     <dt class="property-optional"
             title="Optional">
-        <span>etag</span>
+        <span id="etag_nodejs">
+<a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -761,7 +907,9 @@ header, if present.
 
     <dt class="property-optional"
             title="Optional">
-        <span>metadata</span>
+        <span id="metadata_nodejs">
+<a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -769,7 +917,9 @@ header, if present.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -778,7 +928,9 @@ header, if present.
 
     <dt class="property-optional"
             title="Optional">
-        <span>object<wbr>Manifest</span>
+        <span id="objectmanifest_nodejs">
+<a href="#objectmanifest_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Manifest</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -791,7 +943,9 @@ header.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="region_nodejs">
+<a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -802,7 +956,9 @@ creates a new container.
 
     <dt class="property-optional"
             title="Optional">
-        <span>source</span>
+        <span id="source_nodejs">
+<a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -819,7 +975,9 @@ as the object's content. Conflicts with `source` and `copy_from`.
 
     <dt class="property-required"
             title="Required">
-        <span>container_<wbr>name</span>
+        <span id="container_name_python">
+<a href="#container_name_python" style="color: inherit; text-decoration: inherit;">container_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -833,7 +991,9 @@ character delimits the container and object name. For example, the path
 
     <dt class="property-optional"
             title="Optional">
-        <span>content</span>
+        <span id="content_python">
+<a href="#content_python" style="color: inherit; text-decoration: inherit;">content</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -843,7 +1003,9 @@ character delimits the container and object name. For example, the path
 
     <dt class="property-optional"
             title="Optional">
-        <span>content_<wbr>disposition</span>
+        <span id="content_disposition_python">
+<a href="#content_disposition_python" style="color: inherit; text-decoration: inherit;">content_<wbr>disposition</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -854,7 +1016,9 @@ program to save this file rather than show the file, which is the default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>content_<wbr>encoding</span>
+        <span id="content_encoding_python">
+<a href="#content_encoding_python" style="color: inherit; text-decoration: inherit;">content_<wbr>encoding</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -864,7 +1028,9 @@ metadata.
 
     <dt class="property-optional"
             title="Optional">
-        <span>content_<wbr>type</span>
+        <span id="content_type_python">
+<a href="#content_type_python" style="color: inherit; text-decoration: inherit;">content_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -873,7 +1039,9 @@ metadata.
 
     <dt class="property-optional"
             title="Optional">
-        <span>copy_<wbr>from</span>
+        <span id="copy_from_python">
+<a href="#copy_from_python" style="color: inherit; text-decoration: inherit;">copy_<wbr>from</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -886,7 +1054,9 @@ container and object before you include them in the header. Conflicts with `sour
 
     <dt class="property-optional"
             title="Optional">
-        <span>delete_<wbr>after</span>
+        <span id="delete_after_python">
+<a href="#delete_after_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>after</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -897,7 +1067,9 @@ the X-Delete-At metadata item.
 
     <dt class="property-optional"
             title="Optional">
-        <span>delete_<wbr>at</span>
+        <span id="delete_at_python">
+<a href="#delete_at_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>at</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -907,7 +1079,9 @@ For example, "2015-08-26" is equivalent to Mon, Wed, 26 Aug 2015 00:00:00 GMT.
 
     <dt class="property-optional"
             title="Optional">
-        <span>detect_<wbr>content_<wbr>type</span>
+        <span id="detect_content_type_python">
+<a href="#detect_content_type_python" style="color: inherit; text-decoration: inherit;">detect_<wbr>content_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -918,7 +1092,9 @@ header, if present.
 
     <dt class="property-optional"
             title="Optional">
-        <span>etag</span>
+        <span id="etag_python">
+<a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -927,7 +1103,9 @@ header, if present.
 
     <dt class="property-optional"
             title="Optional">
-        <span>metadata</span>
+        <span id="metadata_python">
+<a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -935,7 +1113,9 @@ header, if present.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -944,7 +1124,9 @@ header, if present.
 
     <dt class="property-optional"
             title="Optional">
-        <span>object_<wbr>manifest</span>
+        <span id="object_manifest_python">
+<a href="#object_manifest_python" style="color: inherit; text-decoration: inherit;">object_<wbr>manifest</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -957,7 +1139,9 @@ header.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="region_python">
+<a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -968,7 +1152,9 @@ creates a new container.
 
     <dt class="property-optional"
             title="Optional">
-        <span>source</span>
+        <span id="source_python">
+<a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -996,7 +1182,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Content<wbr>Length</span>
+        <span id="contentlength_csharp">
+<a href="#contentlength_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Length</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1006,7 +1194,9 @@ length of informational or error text in the response body.
 
     <dt class="property-"
             title="">
-        <span>Date</span>
+        <span id="date_csharp">
+<a href="#date_csharp" style="color: inherit; text-decoration: inherit;">Date</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1017,7 +1207,9 @@ time is always in UTC.
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1025,7 +1217,9 @@ time is always in UTC.
 
     <dt class="property-"
             title="">
-        <span>Last<wbr>Modified</span>
+        <span id="lastmodified_csharp">
+<a href="#lastmodified_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1039,7 +1233,9 @@ example, the offset value is -05:00.
 
     <dt class="property-"
             title="">
-        <span>Trans<wbr>Id</span>
+        <span id="transid_csharp">
+<a href="#transid_csharp" style="color: inherit; text-decoration: inherit;">Trans<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1056,7 +1252,9 @@ need this value if you report a problem.
 
     <dt class="property-"
             title="">
-        <span>Content<wbr>Length</span>
+        <span id="contentlength_go">
+<a href="#contentlength_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Length</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1066,7 +1264,9 @@ length of informational or error text in the response body.
 
     <dt class="property-"
             title="">
-        <span>Date</span>
+        <span id="date_go">
+<a href="#date_go" style="color: inherit; text-decoration: inherit;">Date</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1077,7 +1277,9 @@ time is always in UTC.
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1085,7 +1287,9 @@ time is always in UTC.
 
     <dt class="property-"
             title="">
-        <span>Last<wbr>Modified</span>
+        <span id="lastmodified_go">
+<a href="#lastmodified_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1099,7 +1303,9 @@ example, the offset value is -05:00.
 
     <dt class="property-"
             title="">
-        <span>Trans<wbr>Id</span>
+        <span id="transid_go">
+<a href="#transid_go" style="color: inherit; text-decoration: inherit;">Trans<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1116,7 +1322,9 @@ need this value if you report a problem.
 
     <dt class="property-"
             title="">
-        <span>content<wbr>Length</span>
+        <span id="contentlength_nodejs">
+<a href="#contentlength_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Length</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1126,7 +1334,9 @@ length of informational or error text in the response body.
 
     <dt class="property-"
             title="">
-        <span>date</span>
+        <span id="date_nodejs">
+<a href="#date_nodejs" style="color: inherit; text-decoration: inherit;">date</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1137,7 +1347,9 @@ time is always in UTC.
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1145,7 +1357,9 @@ time is always in UTC.
 
     <dt class="property-"
             title="">
-        <span>last<wbr>Modified</span>
+        <span id="lastmodified_nodejs">
+<a href="#lastmodified_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1159,7 +1373,9 @@ example, the offset value is -05:00.
 
     <dt class="property-"
             title="">
-        <span>trans<wbr>Id</span>
+        <span id="transid_nodejs">
+<a href="#transid_nodejs" style="color: inherit; text-decoration: inherit;">trans<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1176,7 +1392,9 @@ need this value if you report a problem.
 
     <dt class="property-"
             title="">
-        <span>content_<wbr>length</span>
+        <span id="content_length_python">
+<a href="#content_length_python" style="color: inherit; text-decoration: inherit;">content_<wbr>length</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1186,7 +1404,9 @@ length of informational or error text in the response body.
 
     <dt class="property-"
             title="">
-        <span>date</span>
+        <span id="date_python">
+<a href="#date_python" style="color: inherit; text-decoration: inherit;">date</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1197,7 +1417,9 @@ time is always in UTC.
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1205,7 +1427,9 @@ time is always in UTC.
 
     <dt class="property-"
             title="">
-        <span>last_<wbr>modified</span>
+        <span id="last_modified_python">
+<a href="#last_modified_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1219,7 +1443,9 @@ example, the offset value is -05:00.
 
     <dt class="property-"
             title="">
-        <span>trans_<wbr>id</span>
+        <span id="trans_id_python">
+<a href="#trans_id_python" style="color: inherit; text-decoration: inherit;">trans_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1362,7 +1588,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Container<wbr>Name</span>
+        <span id="state_containername_csharp">
+<a href="#state_containername_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1376,7 +1604,9 @@ character delimits the container and object name. For example, the path
 
     <dt class="property-optional"
             title="Optional">
-        <span>Content</span>
+        <span id="state_content_csharp">
+<a href="#state_content_csharp" style="color: inherit; text-decoration: inherit;">Content</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1386,7 +1616,9 @@ character delimits the container and object name. For example, the path
 
     <dt class="property-optional"
             title="Optional">
-        <span>Content<wbr>Disposition</span>
+        <span id="state_contentdisposition_csharp">
+<a href="#state_contentdisposition_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Disposition</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1397,7 +1629,9 @@ program to save this file rather than show the file, which is the default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Content<wbr>Encoding</span>
+        <span id="state_contentencoding_csharp">
+<a href="#state_contentencoding_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Encoding</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1407,7 +1641,9 @@ metadata.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Content<wbr>Length</span>
+        <span id="state_contentlength_csharp">
+<a href="#state_contentlength_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Length</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1417,7 +1653,9 @@ length of informational or error text in the response body.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Content<wbr>Type</span>
+        <span id="state_contenttype_csharp">
+<a href="#state_contenttype_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1426,7 +1664,9 @@ length of informational or error text in the response body.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Copy<wbr>From</span>
+        <span id="state_copyfrom_csharp">
+<a href="#state_copyfrom_csharp" style="color: inherit; text-decoration: inherit;">Copy<wbr>From</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1439,7 +1679,9 @@ container and object before you include them in the header. Conflicts with `sour
 
     <dt class="property-optional"
             title="Optional">
-        <span>Date</span>
+        <span id="state_date_csharp">
+<a href="#state_date_csharp" style="color: inherit; text-decoration: inherit;">Date</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1450,7 +1692,9 @@ time is always in UTC.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Delete<wbr>After</span>
+        <span id="state_deleteafter_csharp">
+<a href="#state_deleteafter_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>After</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1461,7 +1705,9 @@ the X-Delete-At metadata item.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Delete<wbr>At</span>
+        <span id="state_deleteat_csharp">
+<a href="#state_deleteat_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1471,7 +1717,9 @@ For example, "2015-08-26" is equivalent to Mon, Wed, 26 Aug 2015 00:00:00 GMT.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Detect<wbr>Content<wbr>Type</span>
+        <span id="state_detectcontenttype_csharp">
+<a href="#state_detectcontenttype_csharp" style="color: inherit; text-decoration: inherit;">Detect<wbr>Content<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1482,7 +1730,9 @@ header, if present.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Etag</span>
+        <span id="state_etag_csharp">
+<a href="#state_etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1491,7 +1741,9 @@ header, if present.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Last<wbr>Modified</span>
+        <span id="state_lastmodified_csharp">
+<a href="#state_lastmodified_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1505,7 +1757,9 @@ example, the offset value is -05:00.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Metadata</span>
+        <span id="state_metadata_csharp">
+<a href="#state_metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -1513,7 +1767,9 @@ example, the offset value is -05:00.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1522,7 +1778,9 @@ example, the offset value is -05:00.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Object<wbr>Manifest</span>
+        <span id="state_objectmanifest_csharp">
+<a href="#state_objectmanifest_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Manifest</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1535,7 +1793,9 @@ header.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="state_region_csharp">
+<a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1546,7 +1806,9 @@ creates a new container.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source</span>
+        <span id="state_source_csharp">
+<a href="#state_source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1556,7 +1818,9 @@ as the object's content. Conflicts with `source` and `copy_from`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Trans<wbr>Id</span>
+        <span id="state_transid_csharp">
+<a href="#state_transid_csharp" style="color: inherit; text-decoration: inherit;">Trans<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1573,7 +1837,9 @@ need this value if you report a problem.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Container<wbr>Name</span>
+        <span id="state_containername_go">
+<a href="#state_containername_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1587,7 +1853,9 @@ character delimits the container and object name. For example, the path
 
     <dt class="property-optional"
             title="Optional">
-        <span>Content</span>
+        <span id="state_content_go">
+<a href="#state_content_go" style="color: inherit; text-decoration: inherit;">Content</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1597,7 +1865,9 @@ character delimits the container and object name. For example, the path
 
     <dt class="property-optional"
             title="Optional">
-        <span>Content<wbr>Disposition</span>
+        <span id="state_contentdisposition_go">
+<a href="#state_contentdisposition_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Disposition</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1608,7 +1878,9 @@ program to save this file rather than show the file, which is the default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Content<wbr>Encoding</span>
+        <span id="state_contentencoding_go">
+<a href="#state_contentencoding_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Encoding</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1618,7 +1890,9 @@ metadata.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Content<wbr>Length</span>
+        <span id="state_contentlength_go">
+<a href="#state_contentlength_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Length</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1628,7 +1902,9 @@ length of informational or error text in the response body.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Content<wbr>Type</span>
+        <span id="state_contenttype_go">
+<a href="#state_contenttype_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1637,7 +1913,9 @@ length of informational or error text in the response body.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Copy<wbr>From</span>
+        <span id="state_copyfrom_go">
+<a href="#state_copyfrom_go" style="color: inherit; text-decoration: inherit;">Copy<wbr>From</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1650,7 +1928,9 @@ container and object before you include them in the header. Conflicts with `sour
 
     <dt class="property-optional"
             title="Optional">
-        <span>Date</span>
+        <span id="state_date_go">
+<a href="#state_date_go" style="color: inherit; text-decoration: inherit;">Date</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1661,7 +1941,9 @@ time is always in UTC.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Delete<wbr>After</span>
+        <span id="state_deleteafter_go">
+<a href="#state_deleteafter_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>After</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1672,7 +1954,9 @@ the X-Delete-At metadata item.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Delete<wbr>At</span>
+        <span id="state_deleteat_go">
+<a href="#state_deleteat_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1682,7 +1966,9 @@ For example, "2015-08-26" is equivalent to Mon, Wed, 26 Aug 2015 00:00:00 GMT.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Detect<wbr>Content<wbr>Type</span>
+        <span id="state_detectcontenttype_go">
+<a href="#state_detectcontenttype_go" style="color: inherit; text-decoration: inherit;">Detect<wbr>Content<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1693,7 +1979,9 @@ header, if present.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Etag</span>
+        <span id="state_etag_go">
+<a href="#state_etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1702,7 +1990,9 @@ header, if present.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Last<wbr>Modified</span>
+        <span id="state_lastmodified_go">
+<a href="#state_lastmodified_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1716,7 +2006,9 @@ example, the offset value is -05:00.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Metadata</span>
+        <span id="state_metadata_go">
+<a href="#state_metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -1724,7 +2016,9 @@ example, the offset value is -05:00.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1733,7 +2027,9 @@ example, the offset value is -05:00.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Object<wbr>Manifest</span>
+        <span id="state_objectmanifest_go">
+<a href="#state_objectmanifest_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Manifest</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1746,7 +2042,9 @@ header.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="state_region_go">
+<a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1757,7 +2055,9 @@ creates a new container.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source</span>
+        <span id="state_source_go">
+<a href="#state_source_go" style="color: inherit; text-decoration: inherit;">Source</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1767,7 +2067,9 @@ as the object's content. Conflicts with `source` and `copy_from`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Trans<wbr>Id</span>
+        <span id="state_transid_go">
+<a href="#state_transid_go" style="color: inherit; text-decoration: inherit;">Trans<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1784,7 +2086,9 @@ need this value if you report a problem.
 
     <dt class="property-optional"
             title="Optional">
-        <span>container<wbr>Name</span>
+        <span id="state_containername_nodejs">
+<a href="#state_containername_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1798,7 +2102,9 @@ character delimits the container and object name. For example, the path
 
     <dt class="property-optional"
             title="Optional">
-        <span>content</span>
+        <span id="state_content_nodejs">
+<a href="#state_content_nodejs" style="color: inherit; text-decoration: inherit;">content</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1808,7 +2114,9 @@ character delimits the container and object name. For example, the path
 
     <dt class="property-optional"
             title="Optional">
-        <span>content<wbr>Disposition</span>
+        <span id="state_contentdisposition_nodejs">
+<a href="#state_contentdisposition_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Disposition</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1819,7 +2127,9 @@ program to save this file rather than show the file, which is the default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>content<wbr>Encoding</span>
+        <span id="state_contentencoding_nodejs">
+<a href="#state_contentencoding_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Encoding</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1829,7 +2139,9 @@ metadata.
 
     <dt class="property-optional"
             title="Optional">
-        <span>content<wbr>Length</span>
+        <span id="state_contentlength_nodejs">
+<a href="#state_contentlength_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Length</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1839,7 +2151,9 @@ length of informational or error text in the response body.
 
     <dt class="property-optional"
             title="Optional">
-        <span>content<wbr>Type</span>
+        <span id="state_contenttype_nodejs">
+<a href="#state_contenttype_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1848,7 +2162,9 @@ length of informational or error text in the response body.
 
     <dt class="property-optional"
             title="Optional">
-        <span>copy<wbr>From</span>
+        <span id="state_copyfrom_nodejs">
+<a href="#state_copyfrom_nodejs" style="color: inherit; text-decoration: inherit;">copy<wbr>From</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1861,7 +2177,9 @@ container and object before you include them in the header. Conflicts with `sour
 
     <dt class="property-optional"
             title="Optional">
-        <span>date</span>
+        <span id="state_date_nodejs">
+<a href="#state_date_nodejs" style="color: inherit; text-decoration: inherit;">date</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1872,7 +2190,9 @@ time is always in UTC.
 
     <dt class="property-optional"
             title="Optional">
-        <span>delete<wbr>After</span>
+        <span id="state_deleteafter_nodejs">
+<a href="#state_deleteafter_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>After</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1883,7 +2203,9 @@ the X-Delete-At metadata item.
 
     <dt class="property-optional"
             title="Optional">
-        <span>delete<wbr>At</span>
+        <span id="state_deleteat_nodejs">
+<a href="#state_deleteat_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1893,7 +2215,9 @@ For example, "2015-08-26" is equivalent to Mon, Wed, 26 Aug 2015 00:00:00 GMT.
 
     <dt class="property-optional"
             title="Optional">
-        <span>detect<wbr>Content<wbr>Type</span>
+        <span id="state_detectcontenttype_nodejs">
+<a href="#state_detectcontenttype_nodejs" style="color: inherit; text-decoration: inherit;">detect<wbr>Content<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1904,7 +2228,9 @@ header, if present.
 
     <dt class="property-optional"
             title="Optional">
-        <span>etag</span>
+        <span id="state_etag_nodejs">
+<a href="#state_etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1913,7 +2239,9 @@ header, if present.
 
     <dt class="property-optional"
             title="Optional">
-        <span>last<wbr>Modified</span>
+        <span id="state_lastmodified_nodejs">
+<a href="#state_lastmodified_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1927,7 +2255,9 @@ example, the offset value is -05:00.
 
     <dt class="property-optional"
             title="Optional">
-        <span>metadata</span>
+        <span id="state_metadata_nodejs">
+<a href="#state_metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -1935,7 +2265,9 @@ example, the offset value is -05:00.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1944,7 +2276,9 @@ example, the offset value is -05:00.
 
     <dt class="property-optional"
             title="Optional">
-        <span>object<wbr>Manifest</span>
+        <span id="state_objectmanifest_nodejs">
+<a href="#state_objectmanifest_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Manifest</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1957,7 +2291,9 @@ header.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="state_region_nodejs">
+<a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1968,7 +2304,9 @@ creates a new container.
 
     <dt class="property-optional"
             title="Optional">
-        <span>source</span>
+        <span id="state_source_nodejs">
+<a href="#state_source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1978,7 +2316,9 @@ as the object's content. Conflicts with `source` and `copy_from`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>trans<wbr>Id</span>
+        <span id="state_transid_nodejs">
+<a href="#state_transid_nodejs" style="color: inherit; text-decoration: inherit;">trans<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1995,7 +2335,9 @@ need this value if you report a problem.
 
     <dt class="property-optional"
             title="Optional">
-        <span>container_<wbr>name</span>
+        <span id="state_container_name_python">
+<a href="#state_container_name_python" style="color: inherit; text-decoration: inherit;">container_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2009,7 +2351,9 @@ character delimits the container and object name. For example, the path
 
     <dt class="property-optional"
             title="Optional">
-        <span>content</span>
+        <span id="state_content_python">
+<a href="#state_content_python" style="color: inherit; text-decoration: inherit;">content</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2019,7 +2363,9 @@ character delimits the container and object name. For example, the path
 
     <dt class="property-optional"
             title="Optional">
-        <span>content_<wbr>disposition</span>
+        <span id="state_content_disposition_python">
+<a href="#state_content_disposition_python" style="color: inherit; text-decoration: inherit;">content_<wbr>disposition</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2030,7 +2376,9 @@ program to save this file rather than show the file, which is the default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>content_<wbr>encoding</span>
+        <span id="state_content_encoding_python">
+<a href="#state_content_encoding_python" style="color: inherit; text-decoration: inherit;">content_<wbr>encoding</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2040,7 +2388,9 @@ metadata.
 
     <dt class="property-optional"
             title="Optional">
-        <span>content_<wbr>length</span>
+        <span id="state_content_length_python">
+<a href="#state_content_length_python" style="color: inherit; text-decoration: inherit;">content_<wbr>length</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2050,7 +2400,9 @@ length of informational or error text in the response body.
 
     <dt class="property-optional"
             title="Optional">
-        <span>content_<wbr>type</span>
+        <span id="state_content_type_python">
+<a href="#state_content_type_python" style="color: inherit; text-decoration: inherit;">content_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2059,7 +2411,9 @@ length of informational or error text in the response body.
 
     <dt class="property-optional"
             title="Optional">
-        <span>copy_<wbr>from</span>
+        <span id="state_copy_from_python">
+<a href="#state_copy_from_python" style="color: inherit; text-decoration: inherit;">copy_<wbr>from</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2072,7 +2426,9 @@ container and object before you include them in the header. Conflicts with `sour
 
     <dt class="property-optional"
             title="Optional">
-        <span>date</span>
+        <span id="state_date_python">
+<a href="#state_date_python" style="color: inherit; text-decoration: inherit;">date</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2083,7 +2439,9 @@ time is always in UTC.
 
     <dt class="property-optional"
             title="Optional">
-        <span>delete_<wbr>after</span>
+        <span id="state_delete_after_python">
+<a href="#state_delete_after_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>after</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2094,7 +2452,9 @@ the X-Delete-At metadata item.
 
     <dt class="property-optional"
             title="Optional">
-        <span>delete_<wbr>at</span>
+        <span id="state_delete_at_python">
+<a href="#state_delete_at_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>at</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2104,7 +2464,9 @@ For example, "2015-08-26" is equivalent to Mon, Wed, 26 Aug 2015 00:00:00 GMT.
 
     <dt class="property-optional"
             title="Optional">
-        <span>detect_<wbr>content_<wbr>type</span>
+        <span id="state_detect_content_type_python">
+<a href="#state_detect_content_type_python" style="color: inherit; text-decoration: inherit;">detect_<wbr>content_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2115,7 +2477,9 @@ header, if present.
 
     <dt class="property-optional"
             title="Optional">
-        <span>etag</span>
+        <span id="state_etag_python">
+<a href="#state_etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2124,7 +2488,9 @@ header, if present.
 
     <dt class="property-optional"
             title="Optional">
-        <span>last_<wbr>modified</span>
+        <span id="state_last_modified_python">
+<a href="#state_last_modified_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2138,7 +2504,9 @@ example, the offset value is -05:00.
 
     <dt class="property-optional"
             title="Optional">
-        <span>metadata</span>
+        <span id="state_metadata_python">
+<a href="#state_metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -2146,7 +2514,9 @@ example, the offset value is -05:00.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2155,7 +2525,9 @@ example, the offset value is -05:00.
 
     <dt class="property-optional"
             title="Optional">
-        <span>object_<wbr>manifest</span>
+        <span id="state_object_manifest_python">
+<a href="#state_object_manifest_python" style="color: inherit; text-decoration: inherit;">object_<wbr>manifest</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2168,7 +2540,9 @@ header.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="state_region_python">
+<a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2179,7 +2553,9 @@ creates a new container.
 
     <dt class="property-optional"
             title="Optional">
-        <span>source</span>
+        <span id="state_source_python">
+<a href="#state_source_python" style="color: inherit; text-decoration: inherit;">source</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2189,7 +2565,9 @@ as the object's content. Conflicts with `source` and `copy_from`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>trans_<wbr>id</span>
+        <span id="state_trans_id_python">
+<a href="#state_trans_id_python" style="color: inherit; text-decoration: inherit;">trans_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

@@ -20,7 +20,26 @@ Manages a V1 load balancer monitor resource within OpenStack.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var monitor1 = new OpenStack.LoadBalancer.MonitorV1("monitor1", new OpenStack.LoadBalancer.MonitorV1Args
+        {
+            AdminStateUp = "true",
+            Delay = 30,
+            MaxRetries = 3,
+            Timeout = 5,
+            Type = "PING",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -242,7 +261,9 @@ The MonitorV1 resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-required"
             title="Required">
-        <span>Delay</span>
+        <span id="delay_csharp">
+<a href="#delay_csharp" style="color: inherit; text-decoration: inherit;">Delay</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -252,7 +273,9 @@ Changing this creates a new monitor.
 
     <dt class="property-required"
             title="Required">
-        <span>Max<wbr>Retries</span>
+        <span id="maxretries_csharp">
+<a href="#maxretries_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Retries</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -263,7 +286,9 @@ this updates the max_retries of the existing monitor.
 
     <dt class="property-required"
             title="Required">
-        <span>Timeout</span>
+        <span id="timeout_csharp">
+<a href="#timeout_csharp" style="color: inherit; text-decoration: inherit;">Timeout</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -274,7 +299,9 @@ Changing this updates the timeout of the existing monitor.
 
     <dt class="property-required"
             title="Required">
-        <span>Type</span>
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -285,7 +312,9 @@ creates a new monitor.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Admin<wbr>State<wbr>Up</span>
+        <span id="adminstateup_csharp">
+<a href="#adminstateup_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>State<wbr>Up</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -296,7 +325,9 @@ state of the existing monitor.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Expected<wbr>Codes</span>
+        <span id="expectedcodes_csharp">
+<a href="#expectedcodes_csharp" style="color: inherit; text-decoration: inherit;">Expected<wbr>Codes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -308,7 +339,9 @@ of the existing monitor.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Http<wbr>Method</span>
+        <span id="httpmethod_csharp">
+<a href="#httpmethod_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Method</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -319,7 +352,9 @@ to "GET". Changing this updates the http_method of the existing monitor.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="region_csharp">
+<a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -331,7 +366,9 @@ LB monitor.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tenant<wbr>Id</span>
+        <span id="tenantid_csharp">
+<a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -341,7 +378,9 @@ create a monitor for another tenant. Changing this creates a new monitor.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Url<wbr>Path</span>
+        <span id="urlpath_csharp">
+<a href="#urlpath_csharp" style="color: inherit; text-decoration: inherit;">Url<wbr>Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -359,7 +398,9 @@ url_path of the existing monitor.
 
     <dt class="property-required"
             title="Required">
-        <span>Delay</span>
+        <span id="delay_go">
+<a href="#delay_go" style="color: inherit; text-decoration: inherit;">Delay</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -369,7 +410,9 @@ Changing this creates a new monitor.
 
     <dt class="property-required"
             title="Required">
-        <span>Max<wbr>Retries</span>
+        <span id="maxretries_go">
+<a href="#maxretries_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Retries</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -380,7 +423,9 @@ this updates the max_retries of the existing monitor.
 
     <dt class="property-required"
             title="Required">
-        <span>Timeout</span>
+        <span id="timeout_go">
+<a href="#timeout_go" style="color: inherit; text-decoration: inherit;">Timeout</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -391,7 +436,9 @@ Changing this updates the timeout of the existing monitor.
 
     <dt class="property-required"
             title="Required">
-        <span>Type</span>
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -402,7 +449,9 @@ creates a new monitor.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Admin<wbr>State<wbr>Up</span>
+        <span id="adminstateup_go">
+<a href="#adminstateup_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>State<wbr>Up</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -413,7 +462,9 @@ state of the existing monitor.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Expected<wbr>Codes</span>
+        <span id="expectedcodes_go">
+<a href="#expectedcodes_go" style="color: inherit; text-decoration: inherit;">Expected<wbr>Codes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -425,7 +476,9 @@ of the existing monitor.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Http<wbr>Method</span>
+        <span id="httpmethod_go">
+<a href="#httpmethod_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Method</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -436,7 +489,9 @@ to "GET". Changing this updates the http_method of the existing monitor.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="region_go">
+<a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -448,7 +503,9 @@ LB monitor.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tenant<wbr>Id</span>
+        <span id="tenantid_go">
+<a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -458,7 +515,9 @@ create a monitor for another tenant. Changing this creates a new monitor.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Url<wbr>Path</span>
+        <span id="urlpath_go">
+<a href="#urlpath_go" style="color: inherit; text-decoration: inherit;">Url<wbr>Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -476,7 +535,9 @@ url_path of the existing monitor.
 
     <dt class="property-required"
             title="Required">
-        <span>delay</span>
+        <span id="delay_nodejs">
+<a href="#delay_nodejs" style="color: inherit; text-decoration: inherit;">delay</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -486,7 +547,9 @@ Changing this creates a new monitor.
 
     <dt class="property-required"
             title="Required">
-        <span>max<wbr>Retries</span>
+        <span id="maxretries_nodejs">
+<a href="#maxretries_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Retries</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -497,7 +560,9 @@ this updates the max_retries of the existing monitor.
 
     <dt class="property-required"
             title="Required">
-        <span>timeout</span>
+        <span id="timeout_nodejs">
+<a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -508,7 +573,9 @@ Changing this updates the timeout of the existing monitor.
 
     <dt class="property-required"
             title="Required">
-        <span>type</span>
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -519,7 +586,9 @@ creates a new monitor.
 
     <dt class="property-optional"
             title="Optional">
-        <span>admin<wbr>State<wbr>Up</span>
+        <span id="adminstateup_nodejs">
+<a href="#adminstateup_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>State<wbr>Up</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -530,7 +599,9 @@ state of the existing monitor.
 
     <dt class="property-optional"
             title="Optional">
-        <span>expected<wbr>Codes</span>
+        <span id="expectedcodes_nodejs">
+<a href="#expectedcodes_nodejs" style="color: inherit; text-decoration: inherit;">expected<wbr>Codes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -542,7 +613,9 @@ of the existing monitor.
 
     <dt class="property-optional"
             title="Optional">
-        <span>http<wbr>Method</span>
+        <span id="httpmethod_nodejs">
+<a href="#httpmethod_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Method</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -553,7 +626,9 @@ to "GET". Changing this updates the http_method of the existing monitor.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="region_nodejs">
+<a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -565,7 +640,9 @@ LB monitor.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tenant<wbr>Id</span>
+        <span id="tenantid_nodejs">
+<a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -575,7 +652,9 @@ create a monitor for another tenant. Changing this creates a new monitor.
 
     <dt class="property-optional"
             title="Optional">
-        <span>url<wbr>Path</span>
+        <span id="urlpath_nodejs">
+<a href="#urlpath_nodejs" style="color: inherit; text-decoration: inherit;">url<wbr>Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -593,7 +672,9 @@ url_path of the existing monitor.
 
     <dt class="property-required"
             title="Required">
-        <span>delay</span>
+        <span id="delay_python">
+<a href="#delay_python" style="color: inherit; text-decoration: inherit;">delay</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -603,7 +684,9 @@ Changing this creates a new monitor.
 
     <dt class="property-required"
             title="Required">
-        <span>max_<wbr>retries</span>
+        <span id="max_retries_python">
+<a href="#max_retries_python" style="color: inherit; text-decoration: inherit;">max_<wbr>retries</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -614,7 +697,9 @@ this updates the max_retries of the existing monitor.
 
     <dt class="property-required"
             title="Required">
-        <span>timeout</span>
+        <span id="timeout_python">
+<a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -625,7 +710,9 @@ Changing this updates the timeout of the existing monitor.
 
     <dt class="property-required"
             title="Required">
-        <span>type</span>
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -636,7 +723,9 @@ creates a new monitor.
 
     <dt class="property-optional"
             title="Optional">
-        <span>admin_<wbr>state_<wbr>up</span>
+        <span id="admin_state_up_python">
+<a href="#admin_state_up_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>state_<wbr>up</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -647,7 +736,9 @@ state of the existing monitor.
 
     <dt class="property-optional"
             title="Optional">
-        <span>expected_<wbr>codes</span>
+        <span id="expected_codes_python">
+<a href="#expected_codes_python" style="color: inherit; text-decoration: inherit;">expected_<wbr>codes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -659,7 +750,9 @@ of the existing monitor.
 
     <dt class="property-optional"
             title="Optional">
-        <span>http_<wbr>method</span>
+        <span id="http_method_python">
+<a href="#http_method_python" style="color: inherit; text-decoration: inherit;">http_<wbr>method</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -670,7 +763,9 @@ to "GET". Changing this updates the http_method of the existing monitor.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="region_python">
+<a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -682,7 +777,9 @@ LB monitor.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tenant_<wbr>id</span>
+        <span id="tenant_id_python">
+<a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -692,7 +789,9 @@ create a monitor for another tenant. Changing this creates a new monitor.
 
     <dt class="property-optional"
             title="Optional">
-        <span>url_<wbr>path</span>
+        <span id="url_path_python">
+<a href="#url_path_python" style="color: inherit; text-decoration: inherit;">url_<wbr>path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -721,7 +820,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -736,7 +837,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -751,7 +854,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -766,7 +871,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -907,7 +1014,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Admin<wbr>State<wbr>Up</span>
+        <span id="state_adminstateup_csharp">
+<a href="#state_adminstateup_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>State<wbr>Up</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -918,7 +1027,9 @@ state of the existing monitor.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Delay</span>
+        <span id="state_delay_csharp">
+<a href="#state_delay_csharp" style="color: inherit; text-decoration: inherit;">Delay</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -928,7 +1039,9 @@ Changing this creates a new monitor.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Expected<wbr>Codes</span>
+        <span id="state_expectedcodes_csharp">
+<a href="#state_expectedcodes_csharp" style="color: inherit; text-decoration: inherit;">Expected<wbr>Codes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -940,7 +1053,9 @@ of the existing monitor.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Http<wbr>Method</span>
+        <span id="state_httpmethod_csharp">
+<a href="#state_httpmethod_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Method</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -951,7 +1066,9 @@ to "GET". Changing this updates the http_method of the existing monitor.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Retries</span>
+        <span id="state_maxretries_csharp">
+<a href="#state_maxretries_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Retries</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -962,7 +1079,9 @@ this updates the max_retries of the existing monitor.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="state_region_csharp">
+<a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -974,7 +1093,9 @@ LB monitor.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tenant<wbr>Id</span>
+        <span id="state_tenantid_csharp">
+<a href="#state_tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -984,7 +1105,9 @@ create a monitor for another tenant. Changing this creates a new monitor.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Timeout</span>
+        <span id="state_timeout_csharp">
+<a href="#state_timeout_csharp" style="color: inherit; text-decoration: inherit;">Timeout</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -995,7 +1118,9 @@ Changing this updates the timeout of the existing monitor.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Type</span>
+        <span id="state_type_csharp">
+<a href="#state_type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1006,7 +1131,9 @@ creates a new monitor.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Url<wbr>Path</span>
+        <span id="state_urlpath_csharp">
+<a href="#state_urlpath_csharp" style="color: inherit; text-decoration: inherit;">Url<wbr>Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1024,7 +1151,9 @@ url_path of the existing monitor.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Admin<wbr>State<wbr>Up</span>
+        <span id="state_adminstateup_go">
+<a href="#state_adminstateup_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>State<wbr>Up</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1035,7 +1164,9 @@ state of the existing monitor.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Delay</span>
+        <span id="state_delay_go">
+<a href="#state_delay_go" style="color: inherit; text-decoration: inherit;">Delay</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1045,7 +1176,9 @@ Changing this creates a new monitor.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Expected<wbr>Codes</span>
+        <span id="state_expectedcodes_go">
+<a href="#state_expectedcodes_go" style="color: inherit; text-decoration: inherit;">Expected<wbr>Codes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1057,7 +1190,9 @@ of the existing monitor.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Http<wbr>Method</span>
+        <span id="state_httpmethod_go">
+<a href="#state_httpmethod_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Method</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1068,7 +1203,9 @@ to "GET". Changing this updates the http_method of the existing monitor.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Retries</span>
+        <span id="state_maxretries_go">
+<a href="#state_maxretries_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Retries</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1079,7 +1216,9 @@ this updates the max_retries of the existing monitor.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="state_region_go">
+<a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1091,7 +1230,9 @@ LB monitor.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tenant<wbr>Id</span>
+        <span id="state_tenantid_go">
+<a href="#state_tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1101,7 +1242,9 @@ create a monitor for another tenant. Changing this creates a new monitor.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Timeout</span>
+        <span id="state_timeout_go">
+<a href="#state_timeout_go" style="color: inherit; text-decoration: inherit;">Timeout</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1112,7 +1255,9 @@ Changing this updates the timeout of the existing monitor.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Type</span>
+        <span id="state_type_go">
+<a href="#state_type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1123,7 +1268,9 @@ creates a new monitor.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Url<wbr>Path</span>
+        <span id="state_urlpath_go">
+<a href="#state_urlpath_go" style="color: inherit; text-decoration: inherit;">Url<wbr>Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1141,7 +1288,9 @@ url_path of the existing monitor.
 
     <dt class="property-optional"
             title="Optional">
-        <span>admin<wbr>State<wbr>Up</span>
+        <span id="state_adminstateup_nodejs">
+<a href="#state_adminstateup_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>State<wbr>Up</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1152,7 +1301,9 @@ state of the existing monitor.
 
     <dt class="property-optional"
             title="Optional">
-        <span>delay</span>
+        <span id="state_delay_nodejs">
+<a href="#state_delay_nodejs" style="color: inherit; text-decoration: inherit;">delay</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1162,7 +1313,9 @@ Changing this creates a new monitor.
 
     <dt class="property-optional"
             title="Optional">
-        <span>expected<wbr>Codes</span>
+        <span id="state_expectedcodes_nodejs">
+<a href="#state_expectedcodes_nodejs" style="color: inherit; text-decoration: inherit;">expected<wbr>Codes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1174,7 +1327,9 @@ of the existing monitor.
 
     <dt class="property-optional"
             title="Optional">
-        <span>http<wbr>Method</span>
+        <span id="state_httpmethod_nodejs">
+<a href="#state_httpmethod_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Method</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1185,7 +1340,9 @@ to "GET". Changing this updates the http_method of the existing monitor.
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Retries</span>
+        <span id="state_maxretries_nodejs">
+<a href="#state_maxretries_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Retries</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1196,7 +1353,9 @@ this updates the max_retries of the existing monitor.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="state_region_nodejs">
+<a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1208,7 +1367,9 @@ LB monitor.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tenant<wbr>Id</span>
+        <span id="state_tenantid_nodejs">
+<a href="#state_tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1218,7 +1379,9 @@ create a monitor for another tenant. Changing this creates a new monitor.
 
     <dt class="property-optional"
             title="Optional">
-        <span>timeout</span>
+        <span id="state_timeout_nodejs">
+<a href="#state_timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1229,7 +1392,9 @@ Changing this updates the timeout of the existing monitor.
 
     <dt class="property-optional"
             title="Optional">
-        <span>type</span>
+        <span id="state_type_nodejs">
+<a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1240,7 +1405,9 @@ creates a new monitor.
 
     <dt class="property-optional"
             title="Optional">
-        <span>url<wbr>Path</span>
+        <span id="state_urlpath_nodejs">
+<a href="#state_urlpath_nodejs" style="color: inherit; text-decoration: inherit;">url<wbr>Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1258,7 +1425,9 @@ url_path of the existing monitor.
 
     <dt class="property-optional"
             title="Optional">
-        <span>admin_<wbr>state_<wbr>up</span>
+        <span id="state_admin_state_up_python">
+<a href="#state_admin_state_up_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>state_<wbr>up</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1269,7 +1438,9 @@ state of the existing monitor.
 
     <dt class="property-optional"
             title="Optional">
-        <span>delay</span>
+        <span id="state_delay_python">
+<a href="#state_delay_python" style="color: inherit; text-decoration: inherit;">delay</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1279,7 +1450,9 @@ Changing this creates a new monitor.
 
     <dt class="property-optional"
             title="Optional">
-        <span>expected_<wbr>codes</span>
+        <span id="state_expected_codes_python">
+<a href="#state_expected_codes_python" style="color: inherit; text-decoration: inherit;">expected_<wbr>codes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1291,7 +1464,9 @@ of the existing monitor.
 
     <dt class="property-optional"
             title="Optional">
-        <span>http_<wbr>method</span>
+        <span id="state_http_method_python">
+<a href="#state_http_method_python" style="color: inherit; text-decoration: inherit;">http_<wbr>method</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1302,7 +1477,9 @@ to "GET". Changing this updates the http_method of the existing monitor.
 
     <dt class="property-optional"
             title="Optional">
-        <span>max_<wbr>retries</span>
+        <span id="state_max_retries_python">
+<a href="#state_max_retries_python" style="color: inherit; text-decoration: inherit;">max_<wbr>retries</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1313,7 +1490,9 @@ this updates the max_retries of the existing monitor.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="state_region_python">
+<a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1325,7 +1504,9 @@ LB monitor.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tenant_<wbr>id</span>
+        <span id="state_tenant_id_python">
+<a href="#state_tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1335,7 +1516,9 @@ create a monitor for another tenant. Changing this creates a new monitor.
 
     <dt class="property-optional"
             title="Optional">
-        <span>timeout</span>
+        <span id="state_timeout_python">
+<a href="#state_timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1346,7 +1529,9 @@ Changing this updates the timeout of the existing monitor.
 
     <dt class="property-optional"
             title="Optional">
-        <span>type</span>
+        <span id="state_type_python">
+<a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1357,7 +1542,9 @@ creates a new monitor.
 
     <dt class="property-optional"
             title="Optional">
-        <span>url_<wbr>path</span>
+        <span id="state_url_path_python">
+<a href="#state_url_path_python" style="color: inherit; text-decoration: inherit;">url_<wbr>path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

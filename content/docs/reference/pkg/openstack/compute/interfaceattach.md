@@ -21,7 +21,34 @@ Compute (Nova) v2 API.
 {{< chooser language "typescript,python,go,csharp" / >}}
 ### Basic Attachment
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var network1 = new OpenStack.Networking.Network("network1", new OpenStack.Networking.NetworkArgs
+        {
+            AdminStateUp = "true",
+        });
+        var instance1 = new OpenStack.Compute.Instance("instance1", new OpenStack.Compute.InstanceArgs
+        {
+            SecurityGroups = 
+            {
+                "default",
+            },
+        });
+        var ai1 = new OpenStack.Compute.InterfaceAttach("ai1", new OpenStack.Compute.InterfaceAttachArgs
+        {
+            InstanceId = instance1.Id,
+            NetworkId = openstack_networking_port_v2.Network_1.Id,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -61,7 +88,35 @@ const ai1 = new openstack.compute.InterfaceAttach("ai_1", {
 
 ### Attachment Specifying a Fixed IP
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var network1 = new OpenStack.Networking.Network("network1", new OpenStack.Networking.NetworkArgs
+        {
+            AdminStateUp = "true",
+        });
+        var instance1 = new OpenStack.Compute.Instance("instance1", new OpenStack.Compute.InstanceArgs
+        {
+            SecurityGroups = 
+            {
+                "default",
+            },
+        });
+        var ai1 = new OpenStack.Compute.InterfaceAttach("ai1", new OpenStack.Compute.InterfaceAttachArgs
+        {
+            FixedIp = "10.0.10.10",
+            InstanceId = instance1.Id,
+            NetworkId = openstack_networking_port_v2.Network_1.Id,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -103,7 +158,39 @@ const ai1 = new openstack.compute.InterfaceAttach("ai_1", {
 
 ### Attachment Using an Existing Port
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var network1 = new OpenStack.Networking.Network("network1", new OpenStack.Networking.NetworkArgs
+        {
+            AdminStateUp = "true",
+        });
+        var port1 = new OpenStack.Networking.Port("port1", new OpenStack.Networking.PortArgs
+        {
+            AdminStateUp = "true",
+            NetworkId = network1.Id,
+        });
+        var instance1 = new OpenStack.Compute.Instance("instance1", new OpenStack.Compute.InstanceArgs
+        {
+            SecurityGroups = 
+            {
+                "default",
+            },
+        });
+        var ai1 = new OpenStack.Compute.InterfaceAttach("ai1", new OpenStack.Compute.InterfaceAttachArgs
+        {
+            InstanceId = instance1.Id,
+            PortId = port1.Id,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -334,7 +421,9 @@ The InterfaceAttach resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-required"
             title="Required">
-        <span>Instance<wbr>Id</span>
+        <span id="instanceid_csharp">
+<a href="#instanceid_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -343,7 +432,9 @@ The InterfaceAttach resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-optional"
             title="Optional">
-        <span>Fixed<wbr>Ip</span>
+        <span id="fixedip_csharp">
+<a href="#fixedip_csharp" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -353,7 +444,9 @@ _NOTE_: This option cannot be used with port_id. You must specifiy a network_id.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Network<wbr>Id</span>
+        <span id="networkid_csharp">
+<a href="#networkid_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -363,7 +456,9 @@ _NOTE_: This option and `port_id` are mutually exclusive.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Port<wbr>Id</span>
+        <span id="portid_csharp">
+<a href="#portid_csharp" style="color: inherit; text-decoration: inherit;">Port<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -373,7 +468,9 @@ _NOTE_: This option and `network_id` are mutually exclusive.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="region_csharp">
+<a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -391,7 +488,9 @@ creates a new attachment.
 
     <dt class="property-required"
             title="Required">
-        <span>Instance<wbr>Id</span>
+        <span id="instanceid_go">
+<a href="#instanceid_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -400,7 +499,9 @@ creates a new attachment.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Fixed<wbr>Ip</span>
+        <span id="fixedip_go">
+<a href="#fixedip_go" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -410,7 +511,9 @@ _NOTE_: This option cannot be used with port_id. You must specifiy a network_id.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Network<wbr>Id</span>
+        <span id="networkid_go">
+<a href="#networkid_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -420,7 +523,9 @@ _NOTE_: This option and `port_id` are mutually exclusive.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Port<wbr>Id</span>
+        <span id="portid_go">
+<a href="#portid_go" style="color: inherit; text-decoration: inherit;">Port<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -430,7 +535,9 @@ _NOTE_: This option and `network_id` are mutually exclusive.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="region_go">
+<a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -448,7 +555,9 @@ creates a new attachment.
 
     <dt class="property-required"
             title="Required">
-        <span>instance<wbr>Id</span>
+        <span id="instanceid_nodejs">
+<a href="#instanceid_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -457,7 +566,9 @@ creates a new attachment.
 
     <dt class="property-optional"
             title="Optional">
-        <span>fixed<wbr>Ip</span>
+        <span id="fixedip_nodejs">
+<a href="#fixedip_nodejs" style="color: inherit; text-decoration: inherit;">fixed<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -467,7 +578,9 @@ _NOTE_: This option cannot be used with port_id. You must specifiy a network_id.
 
     <dt class="property-optional"
             title="Optional">
-        <span>network<wbr>Id</span>
+        <span id="networkid_nodejs">
+<a href="#networkid_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -477,7 +590,9 @@ _NOTE_: This option and `port_id` are mutually exclusive.
 
     <dt class="property-optional"
             title="Optional">
-        <span>port<wbr>Id</span>
+        <span id="portid_nodejs">
+<a href="#portid_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -487,7 +602,9 @@ _NOTE_: This option and `network_id` are mutually exclusive.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="region_nodejs">
+<a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -505,7 +622,9 @@ creates a new attachment.
 
     <dt class="property-required"
             title="Required">
-        <span>instance_<wbr>id</span>
+        <span id="instance_id_python">
+<a href="#instance_id_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -514,7 +633,9 @@ creates a new attachment.
 
     <dt class="property-optional"
             title="Optional">
-        <span>fixed_<wbr>ip</span>
+        <span id="fixed_ip_python">
+<a href="#fixed_ip_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -524,7 +645,9 @@ _NOTE_: This option cannot be used with port_id. You must specifiy a network_id.
 
     <dt class="property-optional"
             title="Optional">
-        <span>network_<wbr>id</span>
+        <span id="network_id_python">
+<a href="#network_id_python" style="color: inherit; text-decoration: inherit;">network_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -534,7 +657,9 @@ _NOTE_: This option and `port_id` are mutually exclusive.
 
     <dt class="property-optional"
             title="Optional">
-        <span>port_<wbr>id</span>
+        <span id="port_id_python">
+<a href="#port_id_python" style="color: inherit; text-decoration: inherit;">port_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -544,7 +669,9 @@ _NOTE_: This option and `network_id` are mutually exclusive.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="region_python">
+<a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -573,7 +700,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -588,7 +717,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -603,7 +734,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -618,7 +751,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -759,7 +894,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Fixed<wbr>Ip</span>
+        <span id="state_fixedip_csharp">
+<a href="#state_fixedip_csharp" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -769,7 +906,9 @@ _NOTE_: This option cannot be used with port_id. You must specifiy a network_id.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Instance<wbr>Id</span>
+        <span id="state_instanceid_csharp">
+<a href="#state_instanceid_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -778,7 +917,9 @@ _NOTE_: This option cannot be used with port_id. You must specifiy a network_id.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Network<wbr>Id</span>
+        <span id="state_networkid_csharp">
+<a href="#state_networkid_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -788,7 +929,9 @@ _NOTE_: This option and `port_id` are mutually exclusive.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Port<wbr>Id</span>
+        <span id="state_portid_csharp">
+<a href="#state_portid_csharp" style="color: inherit; text-decoration: inherit;">Port<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -798,7 +941,9 @@ _NOTE_: This option and `network_id` are mutually exclusive.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="state_region_csharp">
+<a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -816,7 +961,9 @@ creates a new attachment.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Fixed<wbr>Ip</span>
+        <span id="state_fixedip_go">
+<a href="#state_fixedip_go" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -826,7 +973,9 @@ _NOTE_: This option cannot be used with port_id. You must specifiy a network_id.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Instance<wbr>Id</span>
+        <span id="state_instanceid_go">
+<a href="#state_instanceid_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -835,7 +984,9 @@ _NOTE_: This option cannot be used with port_id. You must specifiy a network_id.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Network<wbr>Id</span>
+        <span id="state_networkid_go">
+<a href="#state_networkid_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -845,7 +996,9 @@ _NOTE_: This option and `port_id` are mutually exclusive.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Port<wbr>Id</span>
+        <span id="state_portid_go">
+<a href="#state_portid_go" style="color: inherit; text-decoration: inherit;">Port<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -855,7 +1008,9 @@ _NOTE_: This option and `network_id` are mutually exclusive.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="state_region_go">
+<a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -873,7 +1028,9 @@ creates a new attachment.
 
     <dt class="property-optional"
             title="Optional">
-        <span>fixed<wbr>Ip</span>
+        <span id="state_fixedip_nodejs">
+<a href="#state_fixedip_nodejs" style="color: inherit; text-decoration: inherit;">fixed<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -883,7 +1040,9 @@ _NOTE_: This option cannot be used with port_id. You must specifiy a network_id.
 
     <dt class="property-optional"
             title="Optional">
-        <span>instance<wbr>Id</span>
+        <span id="state_instanceid_nodejs">
+<a href="#state_instanceid_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -892,7 +1051,9 @@ _NOTE_: This option cannot be used with port_id. You must specifiy a network_id.
 
     <dt class="property-optional"
             title="Optional">
-        <span>network<wbr>Id</span>
+        <span id="state_networkid_nodejs">
+<a href="#state_networkid_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -902,7 +1063,9 @@ _NOTE_: This option and `port_id` are mutually exclusive.
 
     <dt class="property-optional"
             title="Optional">
-        <span>port<wbr>Id</span>
+        <span id="state_portid_nodejs">
+<a href="#state_portid_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -912,7 +1075,9 @@ _NOTE_: This option and `network_id` are mutually exclusive.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="state_region_nodejs">
+<a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -930,7 +1095,9 @@ creates a new attachment.
 
     <dt class="property-optional"
             title="Optional">
-        <span>fixed_<wbr>ip</span>
+        <span id="state_fixed_ip_python">
+<a href="#state_fixed_ip_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -940,7 +1107,9 @@ _NOTE_: This option cannot be used with port_id. You must specifiy a network_id.
 
     <dt class="property-optional"
             title="Optional">
-        <span>instance_<wbr>id</span>
+        <span id="state_instance_id_python">
+<a href="#state_instance_id_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -949,7 +1118,9 @@ _NOTE_: This option cannot be used with port_id. You must specifiy a network_id.
 
     <dt class="property-optional"
             title="Optional">
-        <span>network_<wbr>id</span>
+        <span id="state_network_id_python">
+<a href="#state_network_id_python" style="color: inherit; text-decoration: inherit;">network_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -959,7 +1130,9 @@ _NOTE_: This option and `port_id` are mutually exclusive.
 
     <dt class="property-optional"
             title="Optional">
-        <span>port_<wbr>id</span>
+        <span id="state_port_id_python">
+<a href="#state_port_id_python" style="color: inherit; text-decoration: inherit;">port_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -969,7 +1142,9 @@ _NOTE_: This option and `network_id` are mutually exclusive.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="state_region_python">
+<a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

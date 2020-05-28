@@ -20,7 +20,23 @@ Manages a V2 router resource within OpenStack.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var router1 = new OpenStack.Networking.Router("router1", new OpenStack.Networking.RouterArgs
+        {
+            AdminStateUp = true,
+            ExternalNetworkId = "f67f0d72-0ddf-11e4-9d95-e1f29f417e2f",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -236,7 +252,9 @@ The Router resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>Admin<wbr>State<wbr>Up</span>
+        <span id="adminstateup_csharp">
+<a href="#adminstateup_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>State<wbr>Up</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -247,7 +265,9 @@ The Router resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>Availability<wbr>Zone<wbr>Hints</span>
+        <span id="availabilityzonehints_csharp">
+<a href="#availabilityzonehints_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone<wbr>Hints</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -258,7 +278,9 @@ this creates a new router.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -267,7 +289,9 @@ this creates a new router.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Distributed</span>
+        <span id="distributed_csharp">
+<a href="#distributed_csharp" style="color: inherit; text-decoration: inherit;">Distributed</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -278,7 +302,9 @@ usage of this property to administrative users only.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enable<wbr>Snat</span>
+        <span id="enablesnat_csharp">
+<a href="#enablesnat_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Snat</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -291,7 +317,9 @@ in OpenStack Neutron.
 
     <dt class="property-optional"
             title="Optional">
-        <span>External<wbr>Fixed<wbr>Ips</span>
+        <span id="externalfixedips_csharp">
+<a href="#externalfixedips_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Fixed<wbr>Ips</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routerexternalfixedip">List&lt;Pulumi.<wbr>Open<wbr>Stack.<wbr>Networking.<wbr>Inputs.<wbr>Router<wbr>External<wbr>Fixed<wbr>Ip<wbr>Args&gt;</a></span>
     </dt>
@@ -303,7 +331,9 @@ external fixed IPs of the router.
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>External<wbr>Gateway</span>
+        <span id="externalgateway_csharp">
+<a href="#externalgateway_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Gateway</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -316,7 +346,9 @@ of an existing router.
 
     <dt class="property-optional"
             title="Optional">
-        <span>External<wbr>Network<wbr>Id</span>
+        <span id="externalnetworkid_csharp">
+<a href="#externalnetworkid_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Network<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -328,7 +360,9 @@ this updates the external gateway of the router.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -338,7 +372,9 @@ updates the `name` of an existing router.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="region_csharp">
+<a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -350,7 +386,9 @@ router.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -359,7 +397,9 @@ router.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tenant<wbr>Id</span>
+        <span id="tenantid_csharp">
+<a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -369,7 +409,9 @@ to create a router for another tenant. Changing this creates a new router.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Value<wbr>Specs</span>
+        <span id="valuespecs_csharp">
+<a href="#valuespecs_csharp" style="color: inherit; text-decoration: inherit;">Value<wbr>Specs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -378,7 +420,9 @@ to create a router for another tenant. Changing this creates a new router.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vendor<wbr>Options</span>
+        <span id="vendoroptions_csharp">
+<a href="#vendoroptions_csharp" style="color: inherit; text-decoration: inherit;">Vendor<wbr>Options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routervendoroptions">Pulumi.<wbr>Open<wbr>Stack.<wbr>Networking.<wbr>Inputs.<wbr>Router<wbr>Vendor<wbr>Options<wbr>Args</a></span>
     </dt>
@@ -395,7 +439,9 @@ Supported options are described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Admin<wbr>State<wbr>Up</span>
+        <span id="adminstateup_go">
+<a href="#adminstateup_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>State<wbr>Up</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -406,7 +452,9 @@ Supported options are described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Availability<wbr>Zone<wbr>Hints</span>
+        <span id="availabilityzonehints_go">
+<a href="#availabilityzonehints_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone<wbr>Hints</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -417,7 +465,9 @@ this creates a new router.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -426,7 +476,9 @@ this creates a new router.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Distributed</span>
+        <span id="distributed_go">
+<a href="#distributed_go" style="color: inherit; text-decoration: inherit;">Distributed</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -437,7 +489,9 @@ usage of this property to administrative users only.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enable<wbr>Snat</span>
+        <span id="enablesnat_go">
+<a href="#enablesnat_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Snat</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -450,7 +504,9 @@ in OpenStack Neutron.
 
     <dt class="property-optional"
             title="Optional">
-        <span>External<wbr>Fixed<wbr>Ips</span>
+        <span id="externalfixedips_go">
+<a href="#externalfixedips_go" style="color: inherit; text-decoration: inherit;">External<wbr>Fixed<wbr>Ips</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routerexternalfixedip">[]Router<wbr>External<wbr>Fixed<wbr>Ip</a></span>
     </dt>
@@ -462,7 +518,9 @@ external fixed IPs of the router.
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>External<wbr>Gateway</span>
+        <span id="externalgateway_go">
+<a href="#externalgateway_go" style="color: inherit; text-decoration: inherit;">External<wbr>Gateway</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -475,7 +533,9 @@ of an existing router.
 
     <dt class="property-optional"
             title="Optional">
-        <span>External<wbr>Network<wbr>Id</span>
+        <span id="externalnetworkid_go">
+<a href="#externalnetworkid_go" style="color: inherit; text-decoration: inherit;">External<wbr>Network<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -487,7 +547,9 @@ this updates the external gateway of the router.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -497,7 +559,9 @@ updates the `name` of an existing router.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="region_go">
+<a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -509,7 +573,9 @@ router.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -518,7 +584,9 @@ router.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tenant<wbr>Id</span>
+        <span id="tenantid_go">
+<a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -528,7 +596,9 @@ to create a router for another tenant. Changing this creates a new router.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Value<wbr>Specs</span>
+        <span id="valuespecs_go">
+<a href="#valuespecs_go" style="color: inherit; text-decoration: inherit;">Value<wbr>Specs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -537,7 +607,9 @@ to create a router for another tenant. Changing this creates a new router.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vendor<wbr>Options</span>
+        <span id="vendoroptions_go">
+<a href="#vendoroptions_go" style="color: inherit; text-decoration: inherit;">Vendor<wbr>Options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routervendoroptions">Router<wbr>Vendor<wbr>Options</a></span>
     </dt>
@@ -554,7 +626,9 @@ Supported options are described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>admin<wbr>State<wbr>Up</span>
+        <span id="adminstateup_nodejs">
+<a href="#adminstateup_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>State<wbr>Up</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -565,7 +639,9 @@ Supported options are described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>availability<wbr>Zone<wbr>Hints</span>
+        <span id="availabilityzonehints_nodejs">
+<a href="#availabilityzonehints_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zone<wbr>Hints</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -576,7 +652,9 @@ this creates a new router.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -585,7 +663,9 @@ this creates a new router.
 
     <dt class="property-optional"
             title="Optional">
-        <span>distributed</span>
+        <span id="distributed_nodejs">
+<a href="#distributed_nodejs" style="color: inherit; text-decoration: inherit;">distributed</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -596,7 +676,9 @@ usage of this property to administrative users only.
 
     <dt class="property-optional"
             title="Optional">
-        <span>enable<wbr>Snat</span>
+        <span id="enablesnat_nodejs">
+<a href="#enablesnat_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Snat</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -609,7 +691,9 @@ in OpenStack Neutron.
 
     <dt class="property-optional"
             title="Optional">
-        <span>external<wbr>Fixed<wbr>Ips</span>
+        <span id="externalfixedips_nodejs">
+<a href="#externalfixedips_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Fixed<wbr>Ips</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routerexternalfixedip">Router<wbr>External<wbr>Fixed<wbr>Ip[]</a></span>
     </dt>
@@ -621,7 +705,9 @@ external fixed IPs of the router.
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>external<wbr>Gateway</span>
+        <span id="externalgateway_nodejs">
+<a href="#externalgateway_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Gateway</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -634,7 +720,9 @@ of an existing router.
 
     <dt class="property-optional"
             title="Optional">
-        <span>external<wbr>Network<wbr>Id</span>
+        <span id="externalnetworkid_nodejs">
+<a href="#externalnetworkid_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Network<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -646,7 +734,9 @@ this updates the external gateway of the router.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -656,7 +746,9 @@ updates the `name` of an existing router.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="region_nodejs">
+<a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -668,7 +760,9 @@ router.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -677,7 +771,9 @@ router.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tenant<wbr>Id</span>
+        <span id="tenantid_nodejs">
+<a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -687,7 +783,9 @@ to create a router for another tenant. Changing this creates a new router.
 
     <dt class="property-optional"
             title="Optional">
-        <span>value<wbr>Specs</span>
+        <span id="valuespecs_nodejs">
+<a href="#valuespecs_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>Specs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -696,7 +794,9 @@ to create a router for another tenant. Changing this creates a new router.
 
     <dt class="property-optional"
             title="Optional">
-        <span>vendor<wbr>Options</span>
+        <span id="vendoroptions_nodejs">
+<a href="#vendoroptions_nodejs" style="color: inherit; text-decoration: inherit;">vendor<wbr>Options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routervendoroptions">Router<wbr>Vendor<wbr>Options</a></span>
     </dt>
@@ -713,7 +813,9 @@ Supported options are described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>admin_<wbr>state_<wbr>up</span>
+        <span id="admin_state_up_python">
+<a href="#admin_state_up_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>state_<wbr>up</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -724,7 +826,9 @@ Supported options are described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>availability_<wbr>zone_<wbr>hints</span>
+        <span id="availability_zone_hints_python">
+<a href="#availability_zone_hints_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zone_<wbr>hints</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -735,7 +839,9 @@ this creates a new router.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -744,7 +850,9 @@ this creates a new router.
 
     <dt class="property-optional"
             title="Optional">
-        <span>distributed</span>
+        <span id="distributed_python">
+<a href="#distributed_python" style="color: inherit; text-decoration: inherit;">distributed</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -755,7 +863,9 @@ usage of this property to administrative users only.
 
     <dt class="property-optional"
             title="Optional">
-        <span>enable_<wbr>snat</span>
+        <span id="enable_snat_python">
+<a href="#enable_snat_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>snat</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -768,7 +878,9 @@ in OpenStack Neutron.
 
     <dt class="property-optional"
             title="Optional">
-        <span>external_<wbr>fixed_<wbr>ips</span>
+        <span id="external_fixed_ips_python">
+<a href="#external_fixed_ips_python" style="color: inherit; text-decoration: inherit;">external_<wbr>fixed_<wbr>ips</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routerexternalfixedip">List[Router<wbr>External<wbr>Fixed<wbr>Ip]</a></span>
     </dt>
@@ -780,7 +892,9 @@ external fixed IPs of the router.
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>external_<wbr>gateway</span>
+        <span id="external_gateway_python">
+<a href="#external_gateway_python" style="color: inherit; text-decoration: inherit;">external_<wbr>gateway</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -793,7 +907,9 @@ of an existing router.
 
     <dt class="property-optional"
             title="Optional">
-        <span>external_<wbr>network_<wbr>id</span>
+        <span id="external_network_id_python">
+<a href="#external_network_id_python" style="color: inherit; text-decoration: inherit;">external_<wbr>network_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -805,7 +921,9 @@ this updates the external gateway of the router.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -815,7 +933,9 @@ updates the `name` of an existing router.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="region_python">
+<a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -827,7 +947,9 @@ router.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -836,7 +958,9 @@ router.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tenant_<wbr>id</span>
+        <span id="tenant_id_python">
+<a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -846,7 +970,9 @@ to create a router for another tenant. Changing this creates a new router.
 
     <dt class="property-optional"
             title="Optional">
-        <span>value_<wbr>specs</span>
+        <span id="value_specs_python">
+<a href="#value_specs_python" style="color: inherit; text-decoration: inherit;">value_<wbr>specs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -855,7 +981,9 @@ to create a router for another tenant. Changing this creates a new router.
 
     <dt class="property-optional"
             title="Optional">
-        <span>vendor_<wbr>options</span>
+        <span id="vendor_options_python">
+<a href="#vendor_options_python" style="color: inherit; text-decoration: inherit;">vendor_<wbr>options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routervendoroptions">Dict[Router<wbr>Vendor<wbr>Options]</a></span>
     </dt>
@@ -883,7 +1011,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>All<wbr>Tags</span>
+        <span id="alltags_csharp">
+<a href="#alltags_csharp" style="color: inherit; text-decoration: inherit;">All<wbr>Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -893,7 +1023,9 @@ explicitly and implicitly added.
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -908,7 +1040,9 @@ explicitly and implicitly added.
 
     <dt class="property-"
             title="">
-        <span>All<wbr>Tags</span>
+        <span id="alltags_go">
+<a href="#alltags_go" style="color: inherit; text-decoration: inherit;">All<wbr>Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -918,7 +1052,9 @@ explicitly and implicitly added.
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -933,7 +1069,9 @@ explicitly and implicitly added.
 
     <dt class="property-"
             title="">
-        <span>all<wbr>Tags</span>
+        <span id="alltags_nodejs">
+<a href="#alltags_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -943,7 +1081,9 @@ explicitly and implicitly added.
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -958,7 +1098,9 @@ explicitly and implicitly added.
 
     <dt class="property-"
             title="">
-        <span>all_<wbr>tags</span>
+        <span id="all_tags_python">
+<a href="#all_tags_python" style="color: inherit; text-decoration: inherit;">all_<wbr>tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -968,7 +1110,9 @@ explicitly and implicitly added.
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1109,7 +1253,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Admin<wbr>State<wbr>Up</span>
+        <span id="state_adminstateup_csharp">
+<a href="#state_adminstateup_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>State<wbr>Up</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1120,7 +1266,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>All<wbr>Tags</span>
+        <span id="state_alltags_csharp">
+<a href="#state_alltags_csharp" style="color: inherit; text-decoration: inherit;">All<wbr>Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1130,7 +1278,9 @@ explicitly and implicitly added.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Availability<wbr>Zone<wbr>Hints</span>
+        <span id="state_availabilityzonehints_csharp">
+<a href="#state_availabilityzonehints_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone<wbr>Hints</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1141,7 +1291,9 @@ this creates a new router.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_csharp">
+<a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1150,7 +1302,9 @@ this creates a new router.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Distributed</span>
+        <span id="state_distributed_csharp">
+<a href="#state_distributed_csharp" style="color: inherit; text-decoration: inherit;">Distributed</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1161,7 +1315,9 @@ usage of this property to administrative users only.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enable<wbr>Snat</span>
+        <span id="state_enablesnat_csharp">
+<a href="#state_enablesnat_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Snat</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1174,7 +1330,9 @@ in OpenStack Neutron.
 
     <dt class="property-optional"
             title="Optional">
-        <span>External<wbr>Fixed<wbr>Ips</span>
+        <span id="state_externalfixedips_csharp">
+<a href="#state_externalfixedips_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Fixed<wbr>Ips</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routerexternalfixedip">List&lt;Pulumi.<wbr>Open<wbr>Stack.<wbr>Networking.<wbr>Inputs.<wbr>Router<wbr>External<wbr>Fixed<wbr>Ip<wbr>Args&gt;</a></span>
     </dt>
@@ -1186,7 +1344,9 @@ external fixed IPs of the router.
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>External<wbr>Gateway</span>
+        <span id="state_externalgateway_csharp">
+<a href="#state_externalgateway_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Gateway</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1199,7 +1359,9 @@ of an existing router.
 
     <dt class="property-optional"
             title="Optional">
-        <span>External<wbr>Network<wbr>Id</span>
+        <span id="state_externalnetworkid_csharp">
+<a href="#state_externalnetworkid_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Network<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1211,7 +1373,9 @@ this updates the external gateway of the router.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1221,7 +1385,9 @@ updates the `name` of an existing router.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="state_region_csharp">
+<a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1233,7 +1399,9 @@ router.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_csharp">
+<a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1242,7 +1410,9 @@ router.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tenant<wbr>Id</span>
+        <span id="state_tenantid_csharp">
+<a href="#state_tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1252,7 +1422,9 @@ to create a router for another tenant. Changing this creates a new router.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Value<wbr>Specs</span>
+        <span id="state_valuespecs_csharp">
+<a href="#state_valuespecs_csharp" style="color: inherit; text-decoration: inherit;">Value<wbr>Specs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -1261,7 +1433,9 @@ to create a router for another tenant. Changing this creates a new router.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vendor<wbr>Options</span>
+        <span id="state_vendoroptions_csharp">
+<a href="#state_vendoroptions_csharp" style="color: inherit; text-decoration: inherit;">Vendor<wbr>Options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routervendoroptions">Pulumi.<wbr>Open<wbr>Stack.<wbr>Networking.<wbr>Inputs.<wbr>Router<wbr>Vendor<wbr>Options<wbr>Args</a></span>
     </dt>
@@ -1278,7 +1452,9 @@ Supported options are described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Admin<wbr>State<wbr>Up</span>
+        <span id="state_adminstateup_go">
+<a href="#state_adminstateup_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>State<wbr>Up</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1289,7 +1465,9 @@ Supported options are described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>All<wbr>Tags</span>
+        <span id="state_alltags_go">
+<a href="#state_alltags_go" style="color: inherit; text-decoration: inherit;">All<wbr>Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1299,7 +1477,9 @@ explicitly and implicitly added.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Availability<wbr>Zone<wbr>Hints</span>
+        <span id="state_availabilityzonehints_go">
+<a href="#state_availabilityzonehints_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone<wbr>Hints</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1310,7 +1490,9 @@ this creates a new router.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_go">
+<a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1319,7 +1501,9 @@ this creates a new router.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Distributed</span>
+        <span id="state_distributed_go">
+<a href="#state_distributed_go" style="color: inherit; text-decoration: inherit;">Distributed</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1330,7 +1514,9 @@ usage of this property to administrative users only.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enable<wbr>Snat</span>
+        <span id="state_enablesnat_go">
+<a href="#state_enablesnat_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Snat</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1343,7 +1529,9 @@ in OpenStack Neutron.
 
     <dt class="property-optional"
             title="Optional">
-        <span>External<wbr>Fixed<wbr>Ips</span>
+        <span id="state_externalfixedips_go">
+<a href="#state_externalfixedips_go" style="color: inherit; text-decoration: inherit;">External<wbr>Fixed<wbr>Ips</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routerexternalfixedip">[]Router<wbr>External<wbr>Fixed<wbr>Ip</a></span>
     </dt>
@@ -1355,7 +1543,9 @@ external fixed IPs of the router.
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>External<wbr>Gateway</span>
+        <span id="state_externalgateway_go">
+<a href="#state_externalgateway_go" style="color: inherit; text-decoration: inherit;">External<wbr>Gateway</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1368,7 +1558,9 @@ of an existing router.
 
     <dt class="property-optional"
             title="Optional">
-        <span>External<wbr>Network<wbr>Id</span>
+        <span id="state_externalnetworkid_go">
+<a href="#state_externalnetworkid_go" style="color: inherit; text-decoration: inherit;">External<wbr>Network<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1380,7 +1572,9 @@ this updates the external gateway of the router.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1390,7 +1584,9 @@ updates the `name` of an existing router.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="state_region_go">
+<a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1402,7 +1598,9 @@ router.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_go">
+<a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1411,7 +1609,9 @@ router.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tenant<wbr>Id</span>
+        <span id="state_tenantid_go">
+<a href="#state_tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1421,7 +1621,9 @@ to create a router for another tenant. Changing this creates a new router.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Value<wbr>Specs</span>
+        <span id="state_valuespecs_go">
+<a href="#state_valuespecs_go" style="color: inherit; text-decoration: inherit;">Value<wbr>Specs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -1430,7 +1632,9 @@ to create a router for another tenant. Changing this creates a new router.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vendor<wbr>Options</span>
+        <span id="state_vendoroptions_go">
+<a href="#state_vendoroptions_go" style="color: inherit; text-decoration: inherit;">Vendor<wbr>Options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routervendoroptions">Router<wbr>Vendor<wbr>Options</a></span>
     </dt>
@@ -1447,7 +1651,9 @@ Supported options are described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>admin<wbr>State<wbr>Up</span>
+        <span id="state_adminstateup_nodejs">
+<a href="#state_adminstateup_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>State<wbr>Up</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1458,7 +1664,9 @@ Supported options are described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>all<wbr>Tags</span>
+        <span id="state_alltags_nodejs">
+<a href="#state_alltags_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1468,7 +1676,9 @@ explicitly and implicitly added.
 
     <dt class="property-optional"
             title="Optional">
-        <span>availability<wbr>Zone<wbr>Hints</span>
+        <span id="state_availabilityzonehints_nodejs">
+<a href="#state_availabilityzonehints_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zone<wbr>Hints</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1479,7 +1689,9 @@ this creates a new router.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_nodejs">
+<a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1488,7 +1700,9 @@ this creates a new router.
 
     <dt class="property-optional"
             title="Optional">
-        <span>distributed</span>
+        <span id="state_distributed_nodejs">
+<a href="#state_distributed_nodejs" style="color: inherit; text-decoration: inherit;">distributed</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1499,7 +1713,9 @@ usage of this property to administrative users only.
 
     <dt class="property-optional"
             title="Optional">
-        <span>enable<wbr>Snat</span>
+        <span id="state_enablesnat_nodejs">
+<a href="#state_enablesnat_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Snat</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1512,7 +1728,9 @@ in OpenStack Neutron.
 
     <dt class="property-optional"
             title="Optional">
-        <span>external<wbr>Fixed<wbr>Ips</span>
+        <span id="state_externalfixedips_nodejs">
+<a href="#state_externalfixedips_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Fixed<wbr>Ips</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routerexternalfixedip">Router<wbr>External<wbr>Fixed<wbr>Ip[]</a></span>
     </dt>
@@ -1524,7 +1742,9 @@ external fixed IPs of the router.
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>external<wbr>Gateway</span>
+        <span id="state_externalgateway_nodejs">
+<a href="#state_externalgateway_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Gateway</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1537,7 +1757,9 @@ of an existing router.
 
     <dt class="property-optional"
             title="Optional">
-        <span>external<wbr>Network<wbr>Id</span>
+        <span id="state_externalnetworkid_nodejs">
+<a href="#state_externalnetworkid_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Network<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1549,7 +1771,9 @@ this updates the external gateway of the router.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1559,7 +1783,9 @@ updates the `name` of an existing router.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="state_region_nodejs">
+<a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1571,7 +1797,9 @@ router.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_nodejs">
+<a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1580,7 +1808,9 @@ router.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tenant<wbr>Id</span>
+        <span id="state_tenantid_nodejs">
+<a href="#state_tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1590,7 +1820,9 @@ to create a router for another tenant. Changing this creates a new router.
 
     <dt class="property-optional"
             title="Optional">
-        <span>value<wbr>Specs</span>
+        <span id="state_valuespecs_nodejs">
+<a href="#state_valuespecs_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>Specs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -1599,7 +1831,9 @@ to create a router for another tenant. Changing this creates a new router.
 
     <dt class="property-optional"
             title="Optional">
-        <span>vendor<wbr>Options</span>
+        <span id="state_vendoroptions_nodejs">
+<a href="#state_vendoroptions_nodejs" style="color: inherit; text-decoration: inherit;">vendor<wbr>Options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routervendoroptions">Router<wbr>Vendor<wbr>Options</a></span>
     </dt>
@@ -1616,7 +1850,9 @@ Supported options are described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>admin_<wbr>state_<wbr>up</span>
+        <span id="state_admin_state_up_python">
+<a href="#state_admin_state_up_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>state_<wbr>up</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1627,7 +1863,9 @@ Supported options are described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>all_<wbr>tags</span>
+        <span id="state_all_tags_python">
+<a href="#state_all_tags_python" style="color: inherit; text-decoration: inherit;">all_<wbr>tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1637,7 +1875,9 @@ explicitly and implicitly added.
 
     <dt class="property-optional"
             title="Optional">
-        <span>availability_<wbr>zone_<wbr>hints</span>
+        <span id="state_availability_zone_hints_python">
+<a href="#state_availability_zone_hints_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zone_<wbr>hints</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1648,7 +1888,9 @@ this creates a new router.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_python">
+<a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1657,7 +1899,9 @@ this creates a new router.
 
     <dt class="property-optional"
             title="Optional">
-        <span>distributed</span>
+        <span id="state_distributed_python">
+<a href="#state_distributed_python" style="color: inherit; text-decoration: inherit;">distributed</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1668,7 +1912,9 @@ usage of this property to administrative users only.
 
     <dt class="property-optional"
             title="Optional">
-        <span>enable_<wbr>snat</span>
+        <span id="state_enable_snat_python">
+<a href="#state_enable_snat_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>snat</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1681,7 +1927,9 @@ in OpenStack Neutron.
 
     <dt class="property-optional"
             title="Optional">
-        <span>external_<wbr>fixed_<wbr>ips</span>
+        <span id="state_external_fixed_ips_python">
+<a href="#state_external_fixed_ips_python" style="color: inherit; text-decoration: inherit;">external_<wbr>fixed_<wbr>ips</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routerexternalfixedip">List[Router<wbr>External<wbr>Fixed<wbr>Ip]</a></span>
     </dt>
@@ -1693,7 +1941,9 @@ external fixed IPs of the router.
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>external_<wbr>gateway</span>
+        <span id="state_external_gateway_python">
+<a href="#state_external_gateway_python" style="color: inherit; text-decoration: inherit;">external_<wbr>gateway</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1706,7 +1956,9 @@ of an existing router.
 
     <dt class="property-optional"
             title="Optional">
-        <span>external_<wbr>network_<wbr>id</span>
+        <span id="state_external_network_id_python">
+<a href="#state_external_network_id_python" style="color: inherit; text-decoration: inherit;">external_<wbr>network_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1718,7 +1970,9 @@ this updates the external gateway of the router.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1728,7 +1982,9 @@ updates the `name` of an existing router.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="state_region_python">
+<a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1740,7 +1996,9 @@ router.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_python">
+<a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1749,7 +2007,9 @@ router.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tenant_<wbr>id</span>
+        <span id="state_tenant_id_python">
+<a href="#state_tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1759,7 +2019,9 @@ to create a router for another tenant. Changing this creates a new router.
 
     <dt class="property-optional"
             title="Optional">
-        <span>value_<wbr>specs</span>
+        <span id="state_value_specs_python">
+<a href="#state_value_specs_python" style="color: inherit; text-decoration: inherit;">value_<wbr>specs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -1768,7 +2030,9 @@ to create a router for another tenant. Changing this creates a new router.
 
     <dt class="property-optional"
             title="Optional">
-        <span>vendor_<wbr>options</span>
+        <span id="state_vendor_options_python">
+<a href="#state_vendor_options_python" style="color: inherit; text-decoration: inherit;">vendor_<wbr>options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routervendoroptions">Dict[Router<wbr>Vendor<wbr>Options]</a></span>
     </dt>
@@ -1811,7 +2075,9 @@ Supported options are described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ip<wbr>Address</span>
+        <span id="ipaddress_csharp">
+<a href="#ipaddress_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1820,7 +2086,9 @@ Supported options are described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Subnet<wbr>Id</span>
+        <span id="subnetid_csharp">
+<a href="#subnetid_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1836,7 +2104,9 @@ Supported options are described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ip<wbr>Address</span>
+        <span id="ipaddress_go">
+<a href="#ipaddress_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1845,7 +2115,9 @@ Supported options are described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Subnet<wbr>Id</span>
+        <span id="subnetid_go">
+<a href="#subnetid_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1861,7 +2133,9 @@ Supported options are described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ip<wbr>Address</span>
+        <span id="ipaddress_nodejs">
+<a href="#ipaddress_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1870,7 +2144,9 @@ Supported options are described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>subnet<wbr>Id</span>
+        <span id="subnetid_nodejs">
+<a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1886,7 +2162,9 @@ Supported options are described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ip_<wbr>address</span>
+        <span id="ip_address_python">
+<a href="#ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1895,7 +2173,9 @@ Supported options are described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>subnet_<wbr>id</span>
+        <span id="subnet_id_python">
+<a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1929,7 +2209,9 @@ Supported options are described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Set<wbr>Router<wbr>Gateway<wbr>After<wbr>Create</span>
+        <span id="setroutergatewayaftercreate_csharp">
+<a href="#setroutergatewayaftercreate_csharp" style="color: inherit; text-decoration: inherit;">Set<wbr>Router<wbr>Gateway<wbr>After<wbr>Create</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1946,7 +2228,9 @@ the Router gateway is assigned during creation or updated after creation.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Set<wbr>Router<wbr>Gateway<wbr>After<wbr>Create</span>
+        <span id="setroutergatewayaftercreate_go">
+<a href="#setroutergatewayaftercreate_go" style="color: inherit; text-decoration: inherit;">Set<wbr>Router<wbr>Gateway<wbr>After<wbr>Create</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1963,7 +2247,9 @@ the Router gateway is assigned during creation or updated after creation.
 
     <dt class="property-optional"
             title="Optional">
-        <span>set<wbr>Router<wbr>Gateway<wbr>After<wbr>Create</span>
+        <span id="setroutergatewayaftercreate_nodejs">
+<a href="#setroutergatewayaftercreate_nodejs" style="color: inherit; text-decoration: inherit;">set<wbr>Router<wbr>Gateway<wbr>After<wbr>Create</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1980,7 +2266,9 @@ the Router gateway is assigned during creation or updated after creation.
 
     <dt class="property-optional"
             title="Optional">
-        <span>set<wbr>Router<wbr>Gateway<wbr>After<wbr>Create</span>
+        <span id="setroutergatewayaftercreate_python">
+<a href="#setroutergatewayaftercreate_python" style="color: inherit; text-decoration: inherit;">set<wbr>Router<wbr>Gateway<wbr>After<wbr>Create</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>

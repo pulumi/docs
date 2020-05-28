@@ -20,7 +20,22 @@ Use this data source to get the ID of an available Shared File System share netw
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var sharenetwork1 = Output.Create(OpenStack.SharedFileSystem.GetShareNetwork.InvokeAsync(new OpenStack.SharedFileSystem.GetShareNetworkArgs
+        {
+            Name = "sharenetwork_1",
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -90,7 +105,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -99,7 +116,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ip<wbr>Version</span>
+        <span id="ipversion_csharp">
+<a href="#ipversion_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -108,7 +127,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -117,7 +138,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Network<wbr>Type</span>
+        <span id="networktype_csharp">
+<a href="#networktype_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -127,7 +150,9 @@ GRE, or flat.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Neutron<wbr>Net<wbr>Id</span>
+        <span id="neutronnetid_csharp">
+<a href="#neutronnetid_csharp" style="color: inherit; text-decoration: inherit;">Neutron<wbr>Net<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -136,7 +161,9 @@ GRE, or flat.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Neutron<wbr>Subnet<wbr>Id</span>
+        <span id="neutronsubnetid_csharp">
+<a href="#neutronsubnetid_csharp" style="color: inherit; text-decoration: inherit;">Neutron<wbr>Subnet<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -145,7 +172,9 @@ GRE, or flat.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="region_csharp">
+<a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -156,7 +185,9 @@ A Shared File System client is needed to read a share network. If omitted, the
 
     <dt class="property-optional"
             title="Optional">
-        <span>Security<wbr>Service<wbr>Id</span>
+        <span id="securityserviceid_csharp">
+<a href="#securityserviceid_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Service<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -166,7 +197,9 @@ the share network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Segmentation<wbr>Id</span>
+        <span id="segmentationid_csharp">
+<a href="#segmentationid_csharp" style="color: inherit; text-decoration: inherit;">Segmentation<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -182,7 +215,9 @@ the share network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -191,7 +226,9 @@ the share network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ip<wbr>Version</span>
+        <span id="ipversion_go">
+<a href="#ipversion_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -200,7 +237,9 @@ the share network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -209,7 +248,9 @@ the share network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Network<wbr>Type</span>
+        <span id="networktype_go">
+<a href="#networktype_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -219,7 +260,9 @@ GRE, or flat.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Neutron<wbr>Net<wbr>Id</span>
+        <span id="neutronnetid_go">
+<a href="#neutronnetid_go" style="color: inherit; text-decoration: inherit;">Neutron<wbr>Net<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -228,7 +271,9 @@ GRE, or flat.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Neutron<wbr>Subnet<wbr>Id</span>
+        <span id="neutronsubnetid_go">
+<a href="#neutronsubnetid_go" style="color: inherit; text-decoration: inherit;">Neutron<wbr>Subnet<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -237,7 +282,9 @@ GRE, or flat.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="region_go">
+<a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -248,7 +295,9 @@ A Shared File System client is needed to read a share network. If omitted, the
 
     <dt class="property-optional"
             title="Optional">
-        <span>Security<wbr>Service<wbr>Id</span>
+        <span id="securityserviceid_go">
+<a href="#securityserviceid_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Service<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -258,7 +307,9 @@ the share network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Segmentation<wbr>Id</span>
+        <span id="segmentationid_go">
+<a href="#segmentationid_go" style="color: inherit; text-decoration: inherit;">Segmentation<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -274,7 +325,9 @@ the share network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -283,7 +336,9 @@ the share network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ip<wbr>Version</span>
+        <span id="ipversion_nodejs">
+<a href="#ipversion_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -292,7 +347,9 @@ the share network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -301,7 +358,9 @@ the share network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>network<wbr>Type</span>
+        <span id="networktype_nodejs">
+<a href="#networktype_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -311,7 +370,9 @@ GRE, or flat.
 
     <dt class="property-optional"
             title="Optional">
-        <span>neutron<wbr>Net<wbr>Id</span>
+        <span id="neutronnetid_nodejs">
+<a href="#neutronnetid_nodejs" style="color: inherit; text-decoration: inherit;">neutron<wbr>Net<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -320,7 +381,9 @@ GRE, or flat.
 
     <dt class="property-optional"
             title="Optional">
-        <span>neutron<wbr>Subnet<wbr>Id</span>
+        <span id="neutronsubnetid_nodejs">
+<a href="#neutronsubnetid_nodejs" style="color: inherit; text-decoration: inherit;">neutron<wbr>Subnet<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -329,7 +392,9 @@ GRE, or flat.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="region_nodejs">
+<a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -340,7 +405,9 @@ A Shared File System client is needed to read a share network. If omitted, the
 
     <dt class="property-optional"
             title="Optional">
-        <span>security<wbr>Service<wbr>Id</span>
+        <span id="securityserviceid_nodejs">
+<a href="#securityserviceid_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Service<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -350,7 +417,9 @@ the share network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>segmentation<wbr>Id</span>
+        <span id="segmentationid_nodejs">
+<a href="#segmentationid_nodejs" style="color: inherit; text-decoration: inherit;">segmentation<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -366,7 +435,9 @@ the share network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -375,7 +446,9 @@ the share network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ip_<wbr>version</span>
+        <span id="ip_version_python">
+<a href="#ip_version_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -384,7 +457,9 @@ the share network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -393,7 +468,9 @@ the share network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>network_<wbr>type</span>
+        <span id="network_type_python">
+<a href="#network_type_python" style="color: inherit; text-decoration: inherit;">network_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -403,7 +480,9 @@ GRE, or flat.
 
     <dt class="property-optional"
             title="Optional">
-        <span>neutron_<wbr>net_<wbr>id</span>
+        <span id="neutron_net_id_python">
+<a href="#neutron_net_id_python" style="color: inherit; text-decoration: inherit;">neutron_<wbr>net_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -412,7 +491,9 @@ GRE, or flat.
 
     <dt class="property-optional"
             title="Optional">
-        <span>neutron_<wbr>subnet_<wbr>id</span>
+        <span id="neutron_subnet_id_python">
+<a href="#neutron_subnet_id_python" style="color: inherit; text-decoration: inherit;">neutron_<wbr>subnet_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -421,7 +502,9 @@ GRE, or flat.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="region_python">
+<a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -432,7 +515,9 @@ A Shared File System client is needed to read a share network. If omitted, the
 
     <dt class="property-optional"
             title="Optional">
-        <span>security_<wbr>service_<wbr>id</span>
+        <span id="security_service_id_python">
+<a href="#security_service_id_python" style="color: inherit; text-decoration: inherit;">security_<wbr>service_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -442,7 +527,9 @@ the share network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>segmentation_<wbr>id</span>
+        <span id="segmentation_id_python">
+<a href="#segmentation_id_python" style="color: inherit; text-decoration: inherit;">segmentation_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -471,7 +558,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Cidr</span>
+        <span id="cidr_csharp">
+<a href="#cidr_csharp" style="color: inherit; text-decoration: inherit;">Cidr</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -480,7 +569,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Description</span>
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -489,7 +580,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -498,7 +591,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Ip<wbr>Version</span>
+        <span id="ipversion_csharp">
+<a href="#ipversion_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -507,7 +602,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -516,7 +613,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Network<wbr>Type</span>
+        <span id="networktype_csharp">
+<a href="#networktype_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -525,7 +624,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Neutron<wbr>Net<wbr>Id</span>
+        <span id="neutronnetid_csharp">
+<a href="#neutronnetid_csharp" style="color: inherit; text-decoration: inherit;">Neutron<wbr>Net<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -534,7 +635,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Neutron<wbr>Subnet<wbr>Id</span>
+        <span id="neutronsubnetid_csharp">
+<a href="#neutronsubnetid_csharp" style="color: inherit; text-decoration: inherit;">Neutron<wbr>Subnet<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -543,7 +646,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Project<wbr>Id</span>
+        <span id="projectid_csharp">
+<a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -552,7 +657,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Region</span>
+        <span id="region_csharp">
+<a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -561,7 +668,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Security<wbr>Service<wbr>Ids</span>
+        <span id="securityserviceids_csharp">
+<a href="#securityserviceids_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Service<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -571,7 +680,9 @@ the share network.
 
     <dt class="property-"
             title="">
-        <span>Segmentation<wbr>Id</span>
+        <span id="segmentationid_csharp">
+<a href="#segmentationid_csharp" style="color: inherit; text-decoration: inherit;">Segmentation<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -580,7 +691,9 @@ the share network.
 
     <dt class="property-"
             title="">
-        <span>Security<wbr>Service<wbr>Id</span>
+        <span id="securityserviceid_csharp">
+<a href="#securityserviceid_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Service<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -596,7 +709,9 @@ the share network.
 
     <dt class="property-"
             title="">
-        <span>Cidr</span>
+        <span id="cidr_go">
+<a href="#cidr_go" style="color: inherit; text-decoration: inherit;">Cidr</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -605,7 +720,9 @@ the share network.
 
     <dt class="property-"
             title="">
-        <span>Description</span>
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -614,7 +731,9 @@ the share network.
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -623,7 +742,9 @@ the share network.
 
     <dt class="property-"
             title="">
-        <span>Ip<wbr>Version</span>
+        <span id="ipversion_go">
+<a href="#ipversion_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -632,7 +753,9 @@ the share network.
 
     <dt class="property-"
             title="">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -641,7 +764,9 @@ the share network.
 
     <dt class="property-"
             title="">
-        <span>Network<wbr>Type</span>
+        <span id="networktype_go">
+<a href="#networktype_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -650,7 +775,9 @@ the share network.
 
     <dt class="property-"
             title="">
-        <span>Neutron<wbr>Net<wbr>Id</span>
+        <span id="neutronnetid_go">
+<a href="#neutronnetid_go" style="color: inherit; text-decoration: inherit;">Neutron<wbr>Net<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -659,7 +786,9 @@ the share network.
 
     <dt class="property-"
             title="">
-        <span>Neutron<wbr>Subnet<wbr>Id</span>
+        <span id="neutronsubnetid_go">
+<a href="#neutronsubnetid_go" style="color: inherit; text-decoration: inherit;">Neutron<wbr>Subnet<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -668,7 +797,9 @@ the share network.
 
     <dt class="property-"
             title="">
-        <span>Project<wbr>Id</span>
+        <span id="projectid_go">
+<a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -677,7 +808,9 @@ the share network.
 
     <dt class="property-"
             title="">
-        <span>Region</span>
+        <span id="region_go">
+<a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -686,7 +819,9 @@ the share network.
 
     <dt class="property-"
             title="">
-        <span>Security<wbr>Service<wbr>Ids</span>
+        <span id="securityserviceids_go">
+<a href="#securityserviceids_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Service<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -696,7 +831,9 @@ the share network.
 
     <dt class="property-"
             title="">
-        <span>Segmentation<wbr>Id</span>
+        <span id="segmentationid_go">
+<a href="#segmentationid_go" style="color: inherit; text-decoration: inherit;">Segmentation<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -705,7 +842,9 @@ the share network.
 
     <dt class="property-"
             title="">
-        <span>Security<wbr>Service<wbr>Id</span>
+        <span id="securityserviceid_go">
+<a href="#securityserviceid_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Service<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -721,7 +860,9 @@ the share network.
 
     <dt class="property-"
             title="">
-        <span>cidr</span>
+        <span id="cidr_nodejs">
+<a href="#cidr_nodejs" style="color: inherit; text-decoration: inherit;">cidr</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -730,7 +871,9 @@ the share network.
 
     <dt class="property-"
             title="">
-        <span>description</span>
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -739,7 +882,9 @@ the share network.
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -748,7 +893,9 @@ the share network.
 
     <dt class="property-"
             title="">
-        <span>ip<wbr>Version</span>
+        <span id="ipversion_nodejs">
+<a href="#ipversion_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -757,7 +904,9 @@ the share network.
 
     <dt class="property-"
             title="">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -766,7 +915,9 @@ the share network.
 
     <dt class="property-"
             title="">
-        <span>network<wbr>Type</span>
+        <span id="networktype_nodejs">
+<a href="#networktype_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -775,7 +926,9 @@ the share network.
 
     <dt class="property-"
             title="">
-        <span>neutron<wbr>Net<wbr>Id</span>
+        <span id="neutronnetid_nodejs">
+<a href="#neutronnetid_nodejs" style="color: inherit; text-decoration: inherit;">neutron<wbr>Net<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -784,7 +937,9 @@ the share network.
 
     <dt class="property-"
             title="">
-        <span>neutron<wbr>Subnet<wbr>Id</span>
+        <span id="neutronsubnetid_nodejs">
+<a href="#neutronsubnetid_nodejs" style="color: inherit; text-decoration: inherit;">neutron<wbr>Subnet<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -793,7 +948,9 @@ the share network.
 
     <dt class="property-"
             title="">
-        <span>project<wbr>Id</span>
+        <span id="projectid_nodejs">
+<a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -802,7 +959,9 @@ the share network.
 
     <dt class="property-"
             title="">
-        <span>region</span>
+        <span id="region_nodejs">
+<a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -811,7 +970,9 @@ the share network.
 
     <dt class="property-"
             title="">
-        <span>security<wbr>Service<wbr>Ids</span>
+        <span id="securityserviceids_nodejs">
+<a href="#securityserviceids_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Service<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -821,7 +982,9 @@ the share network.
 
     <dt class="property-"
             title="">
-        <span>segmentation<wbr>Id</span>
+        <span id="segmentationid_nodejs">
+<a href="#segmentationid_nodejs" style="color: inherit; text-decoration: inherit;">segmentation<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -830,7 +993,9 @@ the share network.
 
     <dt class="property-"
             title="">
-        <span>security<wbr>Service<wbr>Id</span>
+        <span id="securityserviceid_nodejs">
+<a href="#securityserviceid_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Service<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -846,7 +1011,9 @@ the share network.
 
     <dt class="property-"
             title="">
-        <span>cidr</span>
+        <span id="cidr_python">
+<a href="#cidr_python" style="color: inherit; text-decoration: inherit;">cidr</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -855,7 +1022,9 @@ the share network.
 
     <dt class="property-"
             title="">
-        <span>description</span>
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -864,7 +1033,9 @@ the share network.
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -873,7 +1044,9 @@ the share network.
 
     <dt class="property-"
             title="">
-        <span>ip_<wbr>version</span>
+        <span id="ip_version_python">
+<a href="#ip_version_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -882,7 +1055,9 @@ the share network.
 
     <dt class="property-"
             title="">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -891,7 +1066,9 @@ the share network.
 
     <dt class="property-"
             title="">
-        <span>network_<wbr>type</span>
+        <span id="network_type_python">
+<a href="#network_type_python" style="color: inherit; text-decoration: inherit;">network_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -900,7 +1077,9 @@ the share network.
 
     <dt class="property-"
             title="">
-        <span>neutron_<wbr>net_<wbr>id</span>
+        <span id="neutron_net_id_python">
+<a href="#neutron_net_id_python" style="color: inherit; text-decoration: inherit;">neutron_<wbr>net_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -909,7 +1088,9 @@ the share network.
 
     <dt class="property-"
             title="">
-        <span>neutron_<wbr>subnet_<wbr>id</span>
+        <span id="neutron_subnet_id_python">
+<a href="#neutron_subnet_id_python" style="color: inherit; text-decoration: inherit;">neutron_<wbr>subnet_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -918,7 +1099,9 @@ the share network.
 
     <dt class="property-"
             title="">
-        <span>project_<wbr>id</span>
+        <span id="project_id_python">
+<a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -927,7 +1110,9 @@ the share network.
 
     <dt class="property-"
             title="">
-        <span>region</span>
+        <span id="region_python">
+<a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -936,7 +1121,9 @@ the share network.
 
     <dt class="property-"
             title="">
-        <span>security_<wbr>service_<wbr>ids</span>
+        <span id="security_service_ids_python">
+<a href="#security_service_ids_python" style="color: inherit; text-decoration: inherit;">security_<wbr>service_<wbr>ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -946,7 +1133,9 @@ the share network.
 
     <dt class="property-"
             title="">
-        <span>segmentation_<wbr>id</span>
+        <span id="segmentation_id_python">
+<a href="#segmentation_id_python" style="color: inherit; text-decoration: inherit;">segmentation_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -955,7 +1144,9 @@ the share network.
 
     <dt class="property-"
             title="">
-        <span>security_<wbr>service_<wbr>id</span>
+        <span id="security_service_id_python">
+<a href="#security_service_id_python" style="color: inherit; text-decoration: inherit;">security_<wbr>service_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

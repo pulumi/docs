@@ -22,7 +22,32 @@ and also allows an admin to target a specific tenant_id.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var secgroup1 = new OpenStack.Networking.SecGroup("secgroup1", new OpenStack.Networking.SecGroupArgs
+        {
+            Description = "My neutron security group",
+        });
+        var secgroupRule1 = new OpenStack.Networking.SecGroupRule("secgroupRule1", new OpenStack.Networking.SecGroupRuleArgs
+        {
+            Direction = "ingress",
+            Ethertype = "IPv4",
+            PortRangeMax = 22,
+            PortRangeMin = 22,
+            Protocol = "tcp",
+            RemoteIpPrefix = "0.0.0.0/0",
+            SecurityGroupId = secgroup1.Id,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -252,7 +277,9 @@ The SecGroupRule resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-required"
             title="Required">
-        <span>Direction</span>
+        <span id="direction_csharp">
+<a href="#direction_csharp" style="color: inherit; text-decoration: inherit;">Direction</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -262,7 +289,9 @@ or __egress__. Changing this creates a new security group rule.
 
     <dt class="property-required"
             title="Required">
-        <span>Ethertype</span>
+        <span id="ethertype_csharp">
+<a href="#ethertype_csharp" style="color: inherit; text-decoration: inherit;">Ethertype</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -272,7 +301,9 @@ or __IPv6__. Changing this creates a new security group rule.
 
     <dt class="property-required"
             title="Required">
-        <span>Security<wbr>Group<wbr>Id</span>
+        <span id="securitygroupid_csharp">
+<a href="#securitygroupid_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -283,7 +314,9 @@ tenant. Changing this creates a new security group rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -292,7 +325,9 @@ tenant. Changing this creates a new security group rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Port<wbr>Range<wbr>Max</span>
+        <span id="portrangemax_csharp">
+<a href="#portrangemax_csharp" style="color: inherit; text-decoration: inherit;">Port<wbr>Range<wbr>Max</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -303,7 +338,9 @@ security group rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Port<wbr>Range<wbr>Min</span>
+        <span id="portrangemin_csharp">
+<a href="#portrangemin_csharp" style="color: inherit; text-decoration: inherit;">Port<wbr>Range<wbr>Min</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -314,7 +351,9 @@ security group rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Protocol</span>
+        <span id="protocol_csharp">
+<a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -344,7 +383,9 @@ security group rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="region_csharp">
+<a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -356,7 +397,9 @@ security group rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Remote<wbr>Group<wbr>Id</span>
+        <span id="remotegroupid_csharp">
+<a href="#remotegroupid_csharp" style="color: inherit; text-decoration: inherit;">Remote<wbr>Group<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -367,7 +410,9 @@ a new security group rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Remote<wbr>Ip<wbr>Prefix</span>
+        <span id="remoteipprefix_csharp">
+<a href="#remoteipprefix_csharp" style="color: inherit; text-decoration: inherit;">Remote<wbr>Ip<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -377,7 +422,9 @@ CIDR (i.e. 192.168.0.0/16). Changing this creates a new security group rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tenant<wbr>Id</span>
+        <span id="tenantid_csharp">
+<a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -395,7 +442,9 @@ security group rule.
 
     <dt class="property-required"
             title="Required">
-        <span>Direction</span>
+        <span id="direction_go">
+<a href="#direction_go" style="color: inherit; text-decoration: inherit;">Direction</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -405,7 +454,9 @@ or __egress__. Changing this creates a new security group rule.
 
     <dt class="property-required"
             title="Required">
-        <span>Ethertype</span>
+        <span id="ethertype_go">
+<a href="#ethertype_go" style="color: inherit; text-decoration: inherit;">Ethertype</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -415,7 +466,9 @@ or __IPv6__. Changing this creates a new security group rule.
 
     <dt class="property-required"
             title="Required">
-        <span>Security<wbr>Group<wbr>Id</span>
+        <span id="securitygroupid_go">
+<a href="#securitygroupid_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -426,7 +479,9 @@ tenant. Changing this creates a new security group rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -435,7 +490,9 @@ tenant. Changing this creates a new security group rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Port<wbr>Range<wbr>Max</span>
+        <span id="portrangemax_go">
+<a href="#portrangemax_go" style="color: inherit; text-decoration: inherit;">Port<wbr>Range<wbr>Max</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -446,7 +503,9 @@ security group rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Port<wbr>Range<wbr>Min</span>
+        <span id="portrangemin_go">
+<a href="#portrangemin_go" style="color: inherit; text-decoration: inherit;">Port<wbr>Range<wbr>Min</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -457,7 +516,9 @@ security group rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Protocol</span>
+        <span id="protocol_go">
+<a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -487,7 +548,9 @@ security group rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="region_go">
+<a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -499,7 +562,9 @@ security group rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Remote<wbr>Group<wbr>Id</span>
+        <span id="remotegroupid_go">
+<a href="#remotegroupid_go" style="color: inherit; text-decoration: inherit;">Remote<wbr>Group<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -510,7 +575,9 @@ a new security group rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Remote<wbr>Ip<wbr>Prefix</span>
+        <span id="remoteipprefix_go">
+<a href="#remoteipprefix_go" style="color: inherit; text-decoration: inherit;">Remote<wbr>Ip<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -520,7 +587,9 @@ CIDR (i.e. 192.168.0.0/16). Changing this creates a new security group rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tenant<wbr>Id</span>
+        <span id="tenantid_go">
+<a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -538,7 +607,9 @@ security group rule.
 
     <dt class="property-required"
             title="Required">
-        <span>direction</span>
+        <span id="direction_nodejs">
+<a href="#direction_nodejs" style="color: inherit; text-decoration: inherit;">direction</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -548,7 +619,9 @@ or __egress__. Changing this creates a new security group rule.
 
     <dt class="property-required"
             title="Required">
-        <span>ethertype</span>
+        <span id="ethertype_nodejs">
+<a href="#ethertype_nodejs" style="color: inherit; text-decoration: inherit;">ethertype</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -558,7 +631,9 @@ or __IPv6__. Changing this creates a new security group rule.
 
     <dt class="property-required"
             title="Required">
-        <span>security<wbr>Group<wbr>Id</span>
+        <span id="securitygroupid_nodejs">
+<a href="#securitygroupid_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -569,7 +644,9 @@ tenant. Changing this creates a new security group rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -578,7 +655,9 @@ tenant. Changing this creates a new security group rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>port<wbr>Range<wbr>Max</span>
+        <span id="portrangemax_nodejs">
+<a href="#portrangemax_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Range<wbr>Max</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -589,7 +668,9 @@ security group rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>port<wbr>Range<wbr>Min</span>
+        <span id="portrangemin_nodejs">
+<a href="#portrangemin_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Range<wbr>Min</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -600,7 +681,9 @@ security group rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>protocol</span>
+        <span id="protocol_nodejs">
+<a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -630,7 +713,9 @@ security group rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="region_nodejs">
+<a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -642,7 +727,9 @@ security group rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>remote<wbr>Group<wbr>Id</span>
+        <span id="remotegroupid_nodejs">
+<a href="#remotegroupid_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Group<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -653,7 +740,9 @@ a new security group rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>remote<wbr>Ip<wbr>Prefix</span>
+        <span id="remoteipprefix_nodejs">
+<a href="#remoteipprefix_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Ip<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -663,7 +752,9 @@ CIDR (i.e. 192.168.0.0/16). Changing this creates a new security group rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tenant<wbr>Id</span>
+        <span id="tenantid_nodejs">
+<a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -681,7 +772,9 @@ security group rule.
 
     <dt class="property-required"
             title="Required">
-        <span>direction</span>
+        <span id="direction_python">
+<a href="#direction_python" style="color: inherit; text-decoration: inherit;">direction</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -691,7 +784,9 @@ or __egress__. Changing this creates a new security group rule.
 
     <dt class="property-required"
             title="Required">
-        <span>ethertype</span>
+        <span id="ethertype_python">
+<a href="#ethertype_python" style="color: inherit; text-decoration: inherit;">ethertype</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -701,7 +796,9 @@ or __IPv6__. Changing this creates a new security group rule.
 
     <dt class="property-required"
             title="Required">
-        <span>security_<wbr>group_<wbr>id</span>
+        <span id="security_group_id_python">
+<a href="#security_group_id_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -712,7 +809,9 @@ tenant. Changing this creates a new security group rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -721,7 +820,9 @@ tenant. Changing this creates a new security group rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>port_<wbr>range_<wbr>max</span>
+        <span id="port_range_max_python">
+<a href="#port_range_max_python" style="color: inherit; text-decoration: inherit;">port_<wbr>range_<wbr>max</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -732,7 +833,9 @@ security group rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>port_<wbr>range_<wbr>min</span>
+        <span id="port_range_min_python">
+<a href="#port_range_min_python" style="color: inherit; text-decoration: inherit;">port_<wbr>range_<wbr>min</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -743,7 +846,9 @@ security group rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>protocol</span>
+        <span id="protocol_python">
+<a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -773,7 +878,9 @@ security group rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="region_python">
+<a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -785,7 +892,9 @@ security group rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>remote_<wbr>group_<wbr>id</span>
+        <span id="remote_group_id_python">
+<a href="#remote_group_id_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>group_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -796,7 +905,9 @@ a new security group rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>remote_<wbr>ip_<wbr>prefix</span>
+        <span id="remote_ip_prefix_python">
+<a href="#remote_ip_prefix_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>ip_<wbr>prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -806,7 +917,9 @@ CIDR (i.e. 192.168.0.0/16). Changing this creates a new security group rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tenant_<wbr>id</span>
+        <span id="tenant_id_python">
+<a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -835,7 +948,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -850,7 +965,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -865,7 +982,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -880,7 +999,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1021,7 +1142,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_csharp">
+<a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1030,7 +1153,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Direction</span>
+        <span id="state_direction_csharp">
+<a href="#state_direction_csharp" style="color: inherit; text-decoration: inherit;">Direction</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1040,7 +1165,9 @@ or __egress__. Changing this creates a new security group rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ethertype</span>
+        <span id="state_ethertype_csharp">
+<a href="#state_ethertype_csharp" style="color: inherit; text-decoration: inherit;">Ethertype</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1050,7 +1177,9 @@ or __IPv6__. Changing this creates a new security group rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Port<wbr>Range<wbr>Max</span>
+        <span id="state_portrangemax_csharp">
+<a href="#state_portrangemax_csharp" style="color: inherit; text-decoration: inherit;">Port<wbr>Range<wbr>Max</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1061,7 +1190,9 @@ security group rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Port<wbr>Range<wbr>Min</span>
+        <span id="state_portrangemin_csharp">
+<a href="#state_portrangemin_csharp" style="color: inherit; text-decoration: inherit;">Port<wbr>Range<wbr>Min</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1072,7 +1203,9 @@ security group rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Protocol</span>
+        <span id="state_protocol_csharp">
+<a href="#state_protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1102,7 +1235,9 @@ security group rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="state_region_csharp">
+<a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1114,7 +1249,9 @@ security group rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Remote<wbr>Group<wbr>Id</span>
+        <span id="state_remotegroupid_csharp">
+<a href="#state_remotegroupid_csharp" style="color: inherit; text-decoration: inherit;">Remote<wbr>Group<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1125,7 +1262,9 @@ a new security group rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Remote<wbr>Ip<wbr>Prefix</span>
+        <span id="state_remoteipprefix_csharp">
+<a href="#state_remoteipprefix_csharp" style="color: inherit; text-decoration: inherit;">Remote<wbr>Ip<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1135,7 +1274,9 @@ CIDR (i.e. 192.168.0.0/16). Changing this creates a new security group rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Security<wbr>Group<wbr>Id</span>
+        <span id="state_securitygroupid_csharp">
+<a href="#state_securitygroupid_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1146,7 +1287,9 @@ tenant. Changing this creates a new security group rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tenant<wbr>Id</span>
+        <span id="state_tenantid_csharp">
+<a href="#state_tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1164,7 +1307,9 @@ security group rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_go">
+<a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1173,7 +1318,9 @@ security group rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Direction</span>
+        <span id="state_direction_go">
+<a href="#state_direction_go" style="color: inherit; text-decoration: inherit;">Direction</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1183,7 +1330,9 @@ or __egress__. Changing this creates a new security group rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ethertype</span>
+        <span id="state_ethertype_go">
+<a href="#state_ethertype_go" style="color: inherit; text-decoration: inherit;">Ethertype</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1193,7 +1342,9 @@ or __IPv6__. Changing this creates a new security group rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Port<wbr>Range<wbr>Max</span>
+        <span id="state_portrangemax_go">
+<a href="#state_portrangemax_go" style="color: inherit; text-decoration: inherit;">Port<wbr>Range<wbr>Max</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1204,7 +1355,9 @@ security group rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Port<wbr>Range<wbr>Min</span>
+        <span id="state_portrangemin_go">
+<a href="#state_portrangemin_go" style="color: inherit; text-decoration: inherit;">Port<wbr>Range<wbr>Min</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1215,7 +1368,9 @@ security group rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Protocol</span>
+        <span id="state_protocol_go">
+<a href="#state_protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1245,7 +1400,9 @@ security group rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="state_region_go">
+<a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1257,7 +1414,9 @@ security group rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Remote<wbr>Group<wbr>Id</span>
+        <span id="state_remotegroupid_go">
+<a href="#state_remotegroupid_go" style="color: inherit; text-decoration: inherit;">Remote<wbr>Group<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1268,7 +1427,9 @@ a new security group rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Remote<wbr>Ip<wbr>Prefix</span>
+        <span id="state_remoteipprefix_go">
+<a href="#state_remoteipprefix_go" style="color: inherit; text-decoration: inherit;">Remote<wbr>Ip<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1278,7 +1439,9 @@ CIDR (i.e. 192.168.0.0/16). Changing this creates a new security group rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Security<wbr>Group<wbr>Id</span>
+        <span id="state_securitygroupid_go">
+<a href="#state_securitygroupid_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1289,7 +1452,9 @@ tenant. Changing this creates a new security group rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tenant<wbr>Id</span>
+        <span id="state_tenantid_go">
+<a href="#state_tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1307,7 +1472,9 @@ security group rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_nodejs">
+<a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1316,7 +1483,9 @@ security group rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>direction</span>
+        <span id="state_direction_nodejs">
+<a href="#state_direction_nodejs" style="color: inherit; text-decoration: inherit;">direction</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1326,7 +1495,9 @@ or __egress__. Changing this creates a new security group rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ethertype</span>
+        <span id="state_ethertype_nodejs">
+<a href="#state_ethertype_nodejs" style="color: inherit; text-decoration: inherit;">ethertype</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1336,7 +1507,9 @@ or __IPv6__. Changing this creates a new security group rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>port<wbr>Range<wbr>Max</span>
+        <span id="state_portrangemax_nodejs">
+<a href="#state_portrangemax_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Range<wbr>Max</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1347,7 +1520,9 @@ security group rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>port<wbr>Range<wbr>Min</span>
+        <span id="state_portrangemin_nodejs">
+<a href="#state_portrangemin_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Range<wbr>Min</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1358,7 +1533,9 @@ security group rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>protocol</span>
+        <span id="state_protocol_nodejs">
+<a href="#state_protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1388,7 +1565,9 @@ security group rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="state_region_nodejs">
+<a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1400,7 +1579,9 @@ security group rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>remote<wbr>Group<wbr>Id</span>
+        <span id="state_remotegroupid_nodejs">
+<a href="#state_remotegroupid_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Group<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1411,7 +1592,9 @@ a new security group rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>remote<wbr>Ip<wbr>Prefix</span>
+        <span id="state_remoteipprefix_nodejs">
+<a href="#state_remoteipprefix_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Ip<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1421,7 +1604,9 @@ CIDR (i.e. 192.168.0.0/16). Changing this creates a new security group rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>security<wbr>Group<wbr>Id</span>
+        <span id="state_securitygroupid_nodejs">
+<a href="#state_securitygroupid_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1432,7 +1617,9 @@ tenant. Changing this creates a new security group rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tenant<wbr>Id</span>
+        <span id="state_tenantid_nodejs">
+<a href="#state_tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1450,7 +1637,9 @@ security group rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_python">
+<a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1459,7 +1648,9 @@ security group rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>direction</span>
+        <span id="state_direction_python">
+<a href="#state_direction_python" style="color: inherit; text-decoration: inherit;">direction</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1469,7 +1660,9 @@ or __egress__. Changing this creates a new security group rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ethertype</span>
+        <span id="state_ethertype_python">
+<a href="#state_ethertype_python" style="color: inherit; text-decoration: inherit;">ethertype</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1479,7 +1672,9 @@ or __IPv6__. Changing this creates a new security group rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>port_<wbr>range_<wbr>max</span>
+        <span id="state_port_range_max_python">
+<a href="#state_port_range_max_python" style="color: inherit; text-decoration: inherit;">port_<wbr>range_<wbr>max</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1490,7 +1685,9 @@ security group rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>port_<wbr>range_<wbr>min</span>
+        <span id="state_port_range_min_python">
+<a href="#state_port_range_min_python" style="color: inherit; text-decoration: inherit;">port_<wbr>range_<wbr>min</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1501,7 +1698,9 @@ security group rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>protocol</span>
+        <span id="state_protocol_python">
+<a href="#state_protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1531,7 +1730,9 @@ security group rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="state_region_python">
+<a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1543,7 +1744,9 @@ security group rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>remote_<wbr>group_<wbr>id</span>
+        <span id="state_remote_group_id_python">
+<a href="#state_remote_group_id_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>group_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1554,7 +1757,9 @@ a new security group rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>remote_<wbr>ip_<wbr>prefix</span>
+        <span id="state_remote_ip_prefix_python">
+<a href="#state_remote_ip_prefix_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>ip_<wbr>prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1564,7 +1769,9 @@ CIDR (i.e. 192.168.0.0/16). Changing this creates a new security group rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>security_<wbr>group_<wbr>id</span>
+        <span id="state_security_group_id_python">
+<a href="#state_security_group_id_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1575,7 +1782,9 @@ tenant. Changing this creates a new security group rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tenant_<wbr>id</span>
+        <span id="state_tenant_id_python">
+<a href="#state_tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

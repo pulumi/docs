@@ -20,7 +20,49 @@ Manages a V1 stack resource within OpenStack.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var stack1 = new OpenStack.Orchestration.StackV1("stack1", new OpenStack.Orchestration.StackV1Args
+        {
+            DisableRollback = true,
+            EnvironmentOpts = 
+            {
+                { "Bin", @"
+
+" },
+            },
+            Parameters = 
+            {
+                { "length", 4 },
+            },
+            TemplateOpts = 
+            {
+                { "Bin", @"heat_template_version: 2013-05-23
+parameters:
+  length:
+    type: number
+resources:
+  test_res:
+    type: OS::Heat::TestResource
+  random:
+    type: OS::Heat::RandomString
+    properties:
+      length: {get_param: length}
+
+" },
+            },
+            Timeout = 30,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -277,7 +319,9 @@ The StackV1 resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-required"
             title="Required">
-        <span>Template<wbr>Opts</span>
+        <span id="templateopts_csharp">
+<a href="#templateopts_csharp" style="color: inherit; text-decoration: inherit;">Template<wbr>Opts</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -289,7 +333,9 @@ Template Opts.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Capabilities</span>
+        <span id="capabilities_csharp">
+<a href="#capabilities_csharp" style="color: inherit; text-decoration: inherit;">Capabilities</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -298,7 +344,9 @@ Template Opts.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Creation<wbr>Time</span>
+        <span id="creationtime_csharp">
+<a href="#creationtime_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -310,7 +358,9 @@ is the time zone as an offset from UTC.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -319,7 +369,9 @@ is the time zone as an offset from UTC.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Disable<wbr>Rollback</span>
+        <span id="disablerollback_csharp">
+<a href="#disablerollback_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Rollback</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -330,7 +382,9 @@ resources are not deleted when stack creation fails.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Environment<wbr>Opts</span>
+        <span id="environmentopts_csharp">
+<a href="#environmentopts_csharp" style="color: inherit; text-decoration: inherit;">Environment<wbr>Opts</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -342,7 +396,9 @@ Environment Opts.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -352,7 +408,9 @@ alphabetic character. Changing this updates the stack's name.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Notification<wbr>Topics</span>
+        <span id="notificationtopics_csharp">
+<a href="#notificationtopics_csharp" style="color: inherit; text-decoration: inherit;">Notification<wbr>Topics</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -361,7 +419,9 @@ alphabetic character. Changing this updates the stack's name.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Outputs</span>
+        <span id="outputs_csharp">
+<a href="#outputs_csharp" style="color: inherit; text-decoration: inherit;">Outputs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#stackv1output">List&lt;Pulumi.<wbr>Open<wbr>Stack.<wbr>Orchestration.<wbr>Inputs.<wbr>Stack<wbr>V1Output<wbr>Args&gt;</a></span>
     </dt>
@@ -370,7 +430,9 @@ alphabetic character. Changing this updates the stack's name.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Parameters</span>
+        <span id="parameters_csharp">
+<a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -380,7 +442,9 @@ to the template. Changing this updates the existing stack parameters.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="region_csharp">
+<a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -391,7 +455,9 @@ creates a new stack.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Status</span>
+        <span id="status_csharp">
+<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -400,7 +466,9 @@ creates a new stack.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Status<wbr>Reason</span>
+        <span id="statusreason_csharp">
+<a href="#statusreason_csharp" style="color: inherit; text-decoration: inherit;">Status<wbr>Reason</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -409,7 +477,9 @@ creates a new stack.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -418,7 +488,9 @@ creates a new stack.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Template<wbr>Description</span>
+        <span id="templatedescription_csharp">
+<a href="#templatedescription_csharp" style="color: inherit; text-decoration: inherit;">Template<wbr>Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -427,7 +499,9 @@ creates a new stack.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Timeout</span>
+        <span id="timeout_csharp">
+<a href="#timeout_csharp" style="color: inherit; text-decoration: inherit;">Timeout</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -436,7 +510,9 @@ creates a new stack.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Updated<wbr>Time</span>
+        <span id="updatedtime_csharp">
+<a href="#updatedtime_csharp" style="color: inherit; text-decoration: inherit;">Updated<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -455,7 +531,9 @@ is the time zone as an offset from UTC.
 
     <dt class="property-required"
             title="Required">
-        <span>Template<wbr>Opts</span>
+        <span id="templateopts_go">
+<a href="#templateopts_go" style="color: inherit; text-decoration: inherit;">Template<wbr>Opts</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -467,7 +545,9 @@ Template Opts.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Capabilities</span>
+        <span id="capabilities_go">
+<a href="#capabilities_go" style="color: inherit; text-decoration: inherit;">Capabilities</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -476,7 +556,9 @@ Template Opts.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Creation<wbr>Time</span>
+        <span id="creationtime_go">
+<a href="#creationtime_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -488,7 +570,9 @@ is the time zone as an offset from UTC.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -497,7 +581,9 @@ is the time zone as an offset from UTC.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Disable<wbr>Rollback</span>
+        <span id="disablerollback_go">
+<a href="#disablerollback_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Rollback</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -508,7 +594,9 @@ resources are not deleted when stack creation fails.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Environment<wbr>Opts</span>
+        <span id="environmentopts_go">
+<a href="#environmentopts_go" style="color: inherit; text-decoration: inherit;">Environment<wbr>Opts</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -520,7 +608,9 @@ Environment Opts.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -530,7 +620,9 @@ alphabetic character. Changing this updates the stack's name.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Notification<wbr>Topics</span>
+        <span id="notificationtopics_go">
+<a href="#notificationtopics_go" style="color: inherit; text-decoration: inherit;">Notification<wbr>Topics</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -539,7 +631,9 @@ alphabetic character. Changing this updates the stack's name.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Outputs</span>
+        <span id="outputs_go">
+<a href="#outputs_go" style="color: inherit; text-decoration: inherit;">Outputs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#stackv1output">[]Stack<wbr>V1Output</a></span>
     </dt>
@@ -548,7 +642,9 @@ alphabetic character. Changing this updates the stack's name.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Parameters</span>
+        <span id="parameters_go">
+<a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -558,7 +654,9 @@ to the template. Changing this updates the existing stack parameters.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="region_go">
+<a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -569,7 +667,9 @@ creates a new stack.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Status</span>
+        <span id="status_go">
+<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -578,7 +678,9 @@ creates a new stack.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Status<wbr>Reason</span>
+        <span id="statusreason_go">
+<a href="#statusreason_go" style="color: inherit; text-decoration: inherit;">Status<wbr>Reason</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -587,7 +689,9 @@ creates a new stack.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -596,7 +700,9 @@ creates a new stack.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Template<wbr>Description</span>
+        <span id="templatedescription_go">
+<a href="#templatedescription_go" style="color: inherit; text-decoration: inherit;">Template<wbr>Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -605,7 +711,9 @@ creates a new stack.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Timeout</span>
+        <span id="timeout_go">
+<a href="#timeout_go" style="color: inherit; text-decoration: inherit;">Timeout</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -614,7 +722,9 @@ creates a new stack.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Updated<wbr>Time</span>
+        <span id="updatedtime_go">
+<a href="#updatedtime_go" style="color: inherit; text-decoration: inherit;">Updated<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -633,7 +743,9 @@ is the time zone as an offset from UTC.
 
     <dt class="property-required"
             title="Required">
-        <span>template<wbr>Opts</span>
+        <span id="templateopts_nodejs">
+<a href="#templateopts_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Opts</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -645,7 +757,9 @@ Template Opts.
 
     <dt class="property-optional"
             title="Optional">
-        <span>capabilities</span>
+        <span id="capabilities_nodejs">
+<a href="#capabilities_nodejs" style="color: inherit; text-decoration: inherit;">capabilities</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -654,7 +768,9 @@ Template Opts.
 
     <dt class="property-optional"
             title="Optional">
-        <span>creation<wbr>Time</span>
+        <span id="creationtime_nodejs">
+<a href="#creationtime_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -666,7 +782,9 @@ is the time zone as an offset from UTC.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -675,7 +793,9 @@ is the time zone as an offset from UTC.
 
     <dt class="property-optional"
             title="Optional">
-        <span>disable<wbr>Rollback</span>
+        <span id="disablerollback_nodejs">
+<a href="#disablerollback_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Rollback</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -686,7 +806,9 @@ resources are not deleted when stack creation fails.
 
     <dt class="property-optional"
             title="Optional">
-        <span>environment<wbr>Opts</span>
+        <span id="environmentopts_nodejs">
+<a href="#environmentopts_nodejs" style="color: inherit; text-decoration: inherit;">environment<wbr>Opts</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -698,7 +820,9 @@ Environment Opts.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -708,7 +832,9 @@ alphabetic character. Changing this updates the stack's name.
 
     <dt class="property-optional"
             title="Optional">
-        <span>notification<wbr>Topics</span>
+        <span id="notificationtopics_nodejs">
+<a href="#notificationtopics_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Topics</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -717,7 +843,9 @@ alphabetic character. Changing this updates the stack's name.
 
     <dt class="property-optional"
             title="Optional">
-        <span>outputs</span>
+        <span id="outputs_nodejs">
+<a href="#outputs_nodejs" style="color: inherit; text-decoration: inherit;">outputs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#stackv1output">Stack<wbr>V1Output[]</a></span>
     </dt>
@@ -726,7 +854,9 @@ alphabetic character. Changing this updates the stack's name.
 
     <dt class="property-optional"
             title="Optional">
-        <span>parameters</span>
+        <span id="parameters_nodejs">
+<a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -736,7 +866,9 @@ to the template. Changing this updates the existing stack parameters.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="region_nodejs">
+<a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -747,7 +879,9 @@ creates a new stack.
 
     <dt class="property-optional"
             title="Optional">
-        <span>status</span>
+        <span id="status_nodejs">
+<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -756,7 +890,9 @@ creates a new stack.
 
     <dt class="property-optional"
             title="Optional">
-        <span>status<wbr>Reason</span>
+        <span id="statusreason_nodejs">
+<a href="#statusreason_nodejs" style="color: inherit; text-decoration: inherit;">status<wbr>Reason</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -765,7 +901,9 @@ creates a new stack.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -774,7 +912,9 @@ creates a new stack.
 
     <dt class="property-optional"
             title="Optional">
-        <span>template<wbr>Description</span>
+        <span id="templatedescription_nodejs">
+<a href="#templatedescription_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -783,7 +923,9 @@ creates a new stack.
 
     <dt class="property-optional"
             title="Optional">
-        <span>timeout</span>
+        <span id="timeout_nodejs">
+<a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -792,7 +934,9 @@ creates a new stack.
 
     <dt class="property-optional"
             title="Optional">
-        <span>updated<wbr>Time</span>
+        <span id="updatedtime_nodejs">
+<a href="#updatedtime_nodejs" style="color: inherit; text-decoration: inherit;">updated<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -811,7 +955,9 @@ is the time zone as an offset from UTC.
 
     <dt class="property-required"
             title="Required">
-        <span>template_<wbr>opts</span>
+        <span id="template_opts_python">
+<a href="#template_opts_python" style="color: inherit; text-decoration: inherit;">template_<wbr>opts</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -823,7 +969,9 @@ Template Opts.
 
     <dt class="property-optional"
             title="Optional">
-        <span>capabilities</span>
+        <span id="capabilities_python">
+<a href="#capabilities_python" style="color: inherit; text-decoration: inherit;">capabilities</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -832,7 +980,9 @@ Template Opts.
 
     <dt class="property-optional"
             title="Optional">
-        <span>creation_<wbr>time</span>
+        <span id="creation_time_python">
+<a href="#creation_time_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -844,7 +994,9 @@ is the time zone as an offset from UTC.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -853,7 +1005,9 @@ is the time zone as an offset from UTC.
 
     <dt class="property-optional"
             title="Optional">
-        <span>disable_<wbr>rollback</span>
+        <span id="disable_rollback_python">
+<a href="#disable_rollback_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>rollback</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -864,7 +1018,9 @@ resources are not deleted when stack creation fails.
 
     <dt class="property-optional"
             title="Optional">
-        <span>environment_<wbr>opts</span>
+        <span id="environment_opts_python">
+<a href="#environment_opts_python" style="color: inherit; text-decoration: inherit;">environment_<wbr>opts</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -876,7 +1032,9 @@ Environment Opts.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -886,7 +1044,9 @@ alphabetic character. Changing this updates the stack's name.
 
     <dt class="property-optional"
             title="Optional">
-        <span>notification_<wbr>topics</span>
+        <span id="notification_topics_python">
+<a href="#notification_topics_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>topics</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -895,7 +1055,9 @@ alphabetic character. Changing this updates the stack's name.
 
     <dt class="property-optional"
             title="Optional">
-        <span>outputs</span>
+        <span id="outputs_python">
+<a href="#outputs_python" style="color: inherit; text-decoration: inherit;">outputs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#stackv1output">List[Stack<wbr>V1Output]</a></span>
     </dt>
@@ -904,7 +1066,9 @@ alphabetic character. Changing this updates the stack's name.
 
     <dt class="property-optional"
             title="Optional">
-        <span>parameters</span>
+        <span id="parameters_python">
+<a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -914,7 +1078,9 @@ to the template. Changing this updates the existing stack parameters.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="region_python">
+<a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -925,7 +1091,9 @@ creates a new stack.
 
     <dt class="property-optional"
             title="Optional">
-        <span>status</span>
+        <span id="status_python">
+<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -934,7 +1102,9 @@ creates a new stack.
 
     <dt class="property-optional"
             title="Optional">
-        <span>status_<wbr>reason</span>
+        <span id="status_reason_python">
+<a href="#status_reason_python" style="color: inherit; text-decoration: inherit;">status_<wbr>reason</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -943,7 +1113,9 @@ creates a new stack.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -952,7 +1124,9 @@ creates a new stack.
 
     <dt class="property-optional"
             title="Optional">
-        <span>template_<wbr>description</span>
+        <span id="template_description_python">
+<a href="#template_description_python" style="color: inherit; text-decoration: inherit;">template_<wbr>description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -961,7 +1135,9 @@ creates a new stack.
 
     <dt class="property-optional"
             title="Optional">
-        <span>timeout</span>
+        <span id="timeout_python">
+<a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -970,7 +1146,9 @@ creates a new stack.
 
     <dt class="property-optional"
             title="Optional">
-        <span>updated_<wbr>time</span>
+        <span id="updated_time_python">
+<a href="#updated_time_python" style="color: inherit; text-decoration: inherit;">updated_<wbr>time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1000,7 +1178,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1015,7 +1195,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1030,7 +1212,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1045,7 +1229,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1186,7 +1372,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Capabilities</span>
+        <span id="state_capabilities_csharp">
+<a href="#state_capabilities_csharp" style="color: inherit; text-decoration: inherit;">Capabilities</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1195,7 +1383,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Creation<wbr>Time</span>
+        <span id="state_creationtime_csharp">
+<a href="#state_creationtime_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1207,7 +1397,9 @@ is the time zone as an offset from UTC.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_csharp">
+<a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1216,7 +1408,9 @@ is the time zone as an offset from UTC.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Disable<wbr>Rollback</span>
+        <span id="state_disablerollback_csharp">
+<a href="#state_disablerollback_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Rollback</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1227,7 +1421,9 @@ resources are not deleted when stack creation fails.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Environment<wbr>Opts</span>
+        <span id="state_environmentopts_csharp">
+<a href="#state_environmentopts_csharp" style="color: inherit; text-decoration: inherit;">Environment<wbr>Opts</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -1239,7 +1435,9 @@ Environment Opts.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1249,7 +1447,9 @@ alphabetic character. Changing this updates the stack's name.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Notification<wbr>Topics</span>
+        <span id="state_notificationtopics_csharp">
+<a href="#state_notificationtopics_csharp" style="color: inherit; text-decoration: inherit;">Notification<wbr>Topics</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1258,7 +1458,9 @@ alphabetic character. Changing this updates the stack's name.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Outputs</span>
+        <span id="state_outputs_csharp">
+<a href="#state_outputs_csharp" style="color: inherit; text-decoration: inherit;">Outputs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#stackv1output">List&lt;Pulumi.<wbr>Open<wbr>Stack.<wbr>Orchestration.<wbr>Inputs.<wbr>Stack<wbr>V1Output<wbr>Args&gt;</a></span>
     </dt>
@@ -1267,7 +1469,9 @@ alphabetic character. Changing this updates the stack's name.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Parameters</span>
+        <span id="state_parameters_csharp">
+<a href="#state_parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -1277,7 +1481,9 @@ to the template. Changing this updates the existing stack parameters.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="state_region_csharp">
+<a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1288,7 +1494,9 @@ creates a new stack.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Status</span>
+        <span id="state_status_csharp">
+<a href="#state_status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1297,7 +1505,9 @@ creates a new stack.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Status<wbr>Reason</span>
+        <span id="state_statusreason_csharp">
+<a href="#state_statusreason_csharp" style="color: inherit; text-decoration: inherit;">Status<wbr>Reason</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1306,7 +1516,9 @@ creates a new stack.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_csharp">
+<a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1315,7 +1527,9 @@ creates a new stack.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Template<wbr>Description</span>
+        <span id="state_templatedescription_csharp">
+<a href="#state_templatedescription_csharp" style="color: inherit; text-decoration: inherit;">Template<wbr>Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1324,7 +1538,9 @@ creates a new stack.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Template<wbr>Opts</span>
+        <span id="state_templateopts_csharp">
+<a href="#state_templateopts_csharp" style="color: inherit; text-decoration: inherit;">Template<wbr>Opts</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -1336,7 +1552,9 @@ Template Opts.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Timeout</span>
+        <span id="state_timeout_csharp">
+<a href="#state_timeout_csharp" style="color: inherit; text-decoration: inherit;">Timeout</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1345,7 +1563,9 @@ Template Opts.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Updated<wbr>Time</span>
+        <span id="state_updatedtime_csharp">
+<a href="#state_updatedtime_csharp" style="color: inherit; text-decoration: inherit;">Updated<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1364,7 +1584,9 @@ is the time zone as an offset from UTC.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Capabilities</span>
+        <span id="state_capabilities_go">
+<a href="#state_capabilities_go" style="color: inherit; text-decoration: inherit;">Capabilities</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1373,7 +1595,9 @@ is the time zone as an offset from UTC.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Creation<wbr>Time</span>
+        <span id="state_creationtime_go">
+<a href="#state_creationtime_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1385,7 +1609,9 @@ is the time zone as an offset from UTC.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_go">
+<a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1394,7 +1620,9 @@ is the time zone as an offset from UTC.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Disable<wbr>Rollback</span>
+        <span id="state_disablerollback_go">
+<a href="#state_disablerollback_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Rollback</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1405,7 +1633,9 @@ resources are not deleted when stack creation fails.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Environment<wbr>Opts</span>
+        <span id="state_environmentopts_go">
+<a href="#state_environmentopts_go" style="color: inherit; text-decoration: inherit;">Environment<wbr>Opts</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -1417,7 +1647,9 @@ Environment Opts.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1427,7 +1659,9 @@ alphabetic character. Changing this updates the stack's name.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Notification<wbr>Topics</span>
+        <span id="state_notificationtopics_go">
+<a href="#state_notificationtopics_go" style="color: inherit; text-decoration: inherit;">Notification<wbr>Topics</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1436,7 +1670,9 @@ alphabetic character. Changing this updates the stack's name.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Outputs</span>
+        <span id="state_outputs_go">
+<a href="#state_outputs_go" style="color: inherit; text-decoration: inherit;">Outputs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#stackv1output">[]Stack<wbr>V1Output</a></span>
     </dt>
@@ -1445,7 +1681,9 @@ alphabetic character. Changing this updates the stack's name.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Parameters</span>
+        <span id="state_parameters_go">
+<a href="#state_parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -1455,7 +1693,9 @@ to the template. Changing this updates the existing stack parameters.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="state_region_go">
+<a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1466,7 +1706,9 @@ creates a new stack.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Status</span>
+        <span id="state_status_go">
+<a href="#state_status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1475,7 +1717,9 @@ creates a new stack.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Status<wbr>Reason</span>
+        <span id="state_statusreason_go">
+<a href="#state_statusreason_go" style="color: inherit; text-decoration: inherit;">Status<wbr>Reason</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1484,7 +1728,9 @@ creates a new stack.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_go">
+<a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1493,7 +1739,9 @@ creates a new stack.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Template<wbr>Description</span>
+        <span id="state_templatedescription_go">
+<a href="#state_templatedescription_go" style="color: inherit; text-decoration: inherit;">Template<wbr>Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1502,7 +1750,9 @@ creates a new stack.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Template<wbr>Opts</span>
+        <span id="state_templateopts_go">
+<a href="#state_templateopts_go" style="color: inherit; text-decoration: inherit;">Template<wbr>Opts</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -1514,7 +1764,9 @@ Template Opts.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Timeout</span>
+        <span id="state_timeout_go">
+<a href="#state_timeout_go" style="color: inherit; text-decoration: inherit;">Timeout</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1523,7 +1775,9 @@ Template Opts.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Updated<wbr>Time</span>
+        <span id="state_updatedtime_go">
+<a href="#state_updatedtime_go" style="color: inherit; text-decoration: inherit;">Updated<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1542,7 +1796,9 @@ is the time zone as an offset from UTC.
 
     <dt class="property-optional"
             title="Optional">
-        <span>capabilities</span>
+        <span id="state_capabilities_nodejs">
+<a href="#state_capabilities_nodejs" style="color: inherit; text-decoration: inherit;">capabilities</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1551,7 +1807,9 @@ is the time zone as an offset from UTC.
 
     <dt class="property-optional"
             title="Optional">
-        <span>creation<wbr>Time</span>
+        <span id="state_creationtime_nodejs">
+<a href="#state_creationtime_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1563,7 +1821,9 @@ is the time zone as an offset from UTC.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_nodejs">
+<a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1572,7 +1832,9 @@ is the time zone as an offset from UTC.
 
     <dt class="property-optional"
             title="Optional">
-        <span>disable<wbr>Rollback</span>
+        <span id="state_disablerollback_nodejs">
+<a href="#state_disablerollback_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Rollback</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1583,7 +1845,9 @@ resources are not deleted when stack creation fails.
 
     <dt class="property-optional"
             title="Optional">
-        <span>environment<wbr>Opts</span>
+        <span id="state_environmentopts_nodejs">
+<a href="#state_environmentopts_nodejs" style="color: inherit; text-decoration: inherit;">environment<wbr>Opts</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -1595,7 +1859,9 @@ Environment Opts.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1605,7 +1871,9 @@ alphabetic character. Changing this updates the stack's name.
 
     <dt class="property-optional"
             title="Optional">
-        <span>notification<wbr>Topics</span>
+        <span id="state_notificationtopics_nodejs">
+<a href="#state_notificationtopics_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Topics</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1614,7 +1882,9 @@ alphabetic character. Changing this updates the stack's name.
 
     <dt class="property-optional"
             title="Optional">
-        <span>outputs</span>
+        <span id="state_outputs_nodejs">
+<a href="#state_outputs_nodejs" style="color: inherit; text-decoration: inherit;">outputs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#stackv1output">Stack<wbr>V1Output[]</a></span>
     </dt>
@@ -1623,7 +1893,9 @@ alphabetic character. Changing this updates the stack's name.
 
     <dt class="property-optional"
             title="Optional">
-        <span>parameters</span>
+        <span id="state_parameters_nodejs">
+<a href="#state_parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -1633,7 +1905,9 @@ to the template. Changing this updates the existing stack parameters.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="state_region_nodejs">
+<a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1644,7 +1918,9 @@ creates a new stack.
 
     <dt class="property-optional"
             title="Optional">
-        <span>status</span>
+        <span id="state_status_nodejs">
+<a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1653,7 +1929,9 @@ creates a new stack.
 
     <dt class="property-optional"
             title="Optional">
-        <span>status<wbr>Reason</span>
+        <span id="state_statusreason_nodejs">
+<a href="#state_statusreason_nodejs" style="color: inherit; text-decoration: inherit;">status<wbr>Reason</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1662,7 +1940,9 @@ creates a new stack.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_nodejs">
+<a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1671,7 +1951,9 @@ creates a new stack.
 
     <dt class="property-optional"
             title="Optional">
-        <span>template<wbr>Description</span>
+        <span id="state_templatedescription_nodejs">
+<a href="#state_templatedescription_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1680,7 +1962,9 @@ creates a new stack.
 
     <dt class="property-optional"
             title="Optional">
-        <span>template<wbr>Opts</span>
+        <span id="state_templateopts_nodejs">
+<a href="#state_templateopts_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Opts</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -1692,7 +1976,9 @@ Template Opts.
 
     <dt class="property-optional"
             title="Optional">
-        <span>timeout</span>
+        <span id="state_timeout_nodejs">
+<a href="#state_timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1701,7 +1987,9 @@ Template Opts.
 
     <dt class="property-optional"
             title="Optional">
-        <span>updated<wbr>Time</span>
+        <span id="state_updatedtime_nodejs">
+<a href="#state_updatedtime_nodejs" style="color: inherit; text-decoration: inherit;">updated<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1720,7 +2008,9 @@ is the time zone as an offset from UTC.
 
     <dt class="property-optional"
             title="Optional">
-        <span>capabilities</span>
+        <span id="state_capabilities_python">
+<a href="#state_capabilities_python" style="color: inherit; text-decoration: inherit;">capabilities</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1729,7 +2019,9 @@ is the time zone as an offset from UTC.
 
     <dt class="property-optional"
             title="Optional">
-        <span>creation_<wbr>time</span>
+        <span id="state_creation_time_python">
+<a href="#state_creation_time_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1741,7 +2033,9 @@ is the time zone as an offset from UTC.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_python">
+<a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1750,7 +2044,9 @@ is the time zone as an offset from UTC.
 
     <dt class="property-optional"
             title="Optional">
-        <span>disable_<wbr>rollback</span>
+        <span id="state_disable_rollback_python">
+<a href="#state_disable_rollback_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>rollback</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1761,7 +2057,9 @@ resources are not deleted when stack creation fails.
 
     <dt class="property-optional"
             title="Optional">
-        <span>environment_<wbr>opts</span>
+        <span id="state_environment_opts_python">
+<a href="#state_environment_opts_python" style="color: inherit; text-decoration: inherit;">environment_<wbr>opts</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -1773,7 +2071,9 @@ Environment Opts.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1783,7 +2083,9 @@ alphabetic character. Changing this updates the stack's name.
 
     <dt class="property-optional"
             title="Optional">
-        <span>notification_<wbr>topics</span>
+        <span id="state_notification_topics_python">
+<a href="#state_notification_topics_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>topics</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1792,7 +2094,9 @@ alphabetic character. Changing this updates the stack's name.
 
     <dt class="property-optional"
             title="Optional">
-        <span>outputs</span>
+        <span id="state_outputs_python">
+<a href="#state_outputs_python" style="color: inherit; text-decoration: inherit;">outputs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#stackv1output">List[Stack<wbr>V1Output]</a></span>
     </dt>
@@ -1801,7 +2105,9 @@ alphabetic character. Changing this updates the stack's name.
 
     <dt class="property-optional"
             title="Optional">
-        <span>parameters</span>
+        <span id="state_parameters_python">
+<a href="#state_parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -1811,7 +2117,9 @@ to the template. Changing this updates the existing stack parameters.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="state_region_python">
+<a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1822,7 +2130,9 @@ creates a new stack.
 
     <dt class="property-optional"
             title="Optional">
-        <span>status</span>
+        <span id="state_status_python">
+<a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1831,7 +2141,9 @@ creates a new stack.
 
     <dt class="property-optional"
             title="Optional">
-        <span>status_<wbr>reason</span>
+        <span id="state_status_reason_python">
+<a href="#state_status_reason_python" style="color: inherit; text-decoration: inherit;">status_<wbr>reason</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1840,7 +2152,9 @@ creates a new stack.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_python">
+<a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1849,7 +2163,9 @@ creates a new stack.
 
     <dt class="property-optional"
             title="Optional">
-        <span>template_<wbr>description</span>
+        <span id="state_template_description_python">
+<a href="#state_template_description_python" style="color: inherit; text-decoration: inherit;">template_<wbr>description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1858,7 +2174,9 @@ creates a new stack.
 
     <dt class="property-optional"
             title="Optional">
-        <span>template_<wbr>opts</span>
+        <span id="state_template_opts_python">
+<a href="#state_template_opts_python" style="color: inherit; text-decoration: inherit;">template_<wbr>opts</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -1870,7 +2188,9 @@ Template Opts.
 
     <dt class="property-optional"
             title="Optional">
-        <span>timeout</span>
+        <span id="state_timeout_python">
+<a href="#state_timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1879,7 +2199,9 @@ Template Opts.
 
     <dt class="property-optional"
             title="Optional">
-        <span>updated_<wbr>time</span>
+        <span id="state_updated_time_python">
+<a href="#state_updated_time_python" style="color: inherit; text-decoration: inherit;">updated_<wbr>time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1924,7 +2246,9 @@ is the time zone as an offset from UTC.
 
     <dt class="property-required"
             title="Required">
-        <span>Output<wbr>Key</span>
+        <span id="outputkey_csharp">
+<a href="#outputkey_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1932,7 +2256,9 @@ is the time zone as an offset from UTC.
 
     <dt class="property-required"
             title="Required">
-        <span>Output<wbr>Value</span>
+        <span id="outputvalue_csharp">
+<a href="#outputvalue_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>Value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1940,7 +2266,9 @@ is the time zone as an offset from UTC.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1956,7 +2284,9 @@ is the time zone as an offset from UTC.
 
     <dt class="property-required"
             title="Required">
-        <span>Output<wbr>Key</span>
+        <span id="outputkey_go">
+<a href="#outputkey_go" style="color: inherit; text-decoration: inherit;">Output<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1964,7 +2294,9 @@ is the time zone as an offset from UTC.
 
     <dt class="property-required"
             title="Required">
-        <span>Output<wbr>Value</span>
+        <span id="outputvalue_go">
+<a href="#outputvalue_go" style="color: inherit; text-decoration: inherit;">Output<wbr>Value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1972,7 +2304,9 @@ is the time zone as an offset from UTC.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1988,7 +2322,9 @@ is the time zone as an offset from UTC.
 
     <dt class="property-required"
             title="Required">
-        <span>output<wbr>Key</span>
+        <span id="outputkey_nodejs">
+<a href="#outputkey_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1996,7 +2332,9 @@ is the time zone as an offset from UTC.
 
     <dt class="property-required"
             title="Required">
-        <span>output<wbr>Value</span>
+        <span id="outputvalue_nodejs">
+<a href="#outputvalue_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2004,7 +2342,9 @@ is the time zone as an offset from UTC.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2020,7 +2360,9 @@ is the time zone as an offset from UTC.
 
     <dt class="property-required"
             title="Required">
-        <span>output<wbr>Key</span>
+        <span id="outputkey_python">
+<a href="#outputkey_python" style="color: inherit; text-decoration: inherit;">output<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2028,7 +2370,9 @@ is the time zone as an offset from UTC.
 
     <dt class="property-required"
             title="Required">
-        <span>output<wbr>Value</span>
+        <span id="outputvalue_python">
+<a href="#outputvalue_python" style="color: inherit; text-decoration: inherit;">output<wbr>Value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2036,7 +2380,9 @@ is the time zone as an offset from UTC.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

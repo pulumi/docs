@@ -21,7 +21,22 @@ template.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var clustertemplate1 = Output.Create(OpenStack.ContainerInfra.GetClusterTemplate.InvokeAsync(new OpenStack.ContainerInfra.GetClusterTemplateArgs
+        {
+            Name = "clustertemplate_1",
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -91,7 +106,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -100,7 +117,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="region_csharp">
+<a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -118,7 +137,9 @@ If omitted, the `region` argument of the provider is used.
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -127,7 +148,9 @@ If omitted, the `region` argument of the provider is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="region_go">
+<a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -145,7 +168,9 @@ If omitted, the `region` argument of the provider is used.
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -154,7 +179,9 @@ If omitted, the `region` argument of the provider is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="region_nodejs">
+<a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -172,7 +199,9 @@ If omitted, the `region` argument of the provider is used.
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -181,7 +210,9 @@ If omitted, the `region` argument of the provider is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="region_python">
+<a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -212,7 +243,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Apiserver<wbr>Port</span>
+        <span id="apiserverport_csharp">
+<a href="#apiserverport_csharp" style="color: inherit; text-decoration: inherit;">Apiserver<wbr>Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -222,7 +255,9 @@ Engine for this cluster template.
 
     <dt class="property-"
             title="">
-        <span>Cluster<wbr>Distro</span>
+        <span id="clusterdistro_csharp">
+<a href="#clusterdistro_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Distro</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -231,7 +266,9 @@ Engine for this cluster template.
 
     <dt class="property-"
             title="">
-        <span>Coe</span>
+        <span id="coe_csharp">
+<a href="#coe_csharp" style="color: inherit; text-decoration: inherit;">Coe</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -240,7 +277,9 @@ Engine for this cluster template.
 
     <dt class="property-"
             title="">
-        <span>Created<wbr>At</span>
+        <span id="createdat_csharp">
+<a href="#createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -249,7 +288,9 @@ Engine for this cluster template.
 
     <dt class="property-"
             title="">
-        <span>Dns<wbr>Nameserver</span>
+        <span id="dnsnameserver_csharp">
+<a href="#dnsnameserver_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Nameserver</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -259,7 +300,9 @@ cluster.
 
     <dt class="property-"
             title="">
-        <span>Docker<wbr>Storage<wbr>Driver</span>
+        <span id="dockerstoragedriver_csharp">
+<a href="#dockerstoragedriver_csharp" style="color: inherit; text-decoration: inherit;">Docker<wbr>Storage<wbr>Driver</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -269,7 +312,9 @@ Docker storage driver of the existing cluster template.
 
     <dt class="property-"
             title="">
-        <span>Docker<wbr>Volume<wbr>Size</span>
+        <span id="dockervolumesize_csharp">
+<a href="#dockervolumesize_csharp" style="color: inherit; text-decoration: inherit;">Docker<wbr>Volume<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -278,7 +323,9 @@ Docker storage driver of the existing cluster template.
 
     <dt class="property-"
             title="">
-        <span>External<wbr>Network<wbr>Id</span>
+        <span id="externalnetworkid_csharp">
+<a href="#externalnetworkid_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Network<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -288,7 +335,9 @@ the cluster.
 
     <dt class="property-"
             title="">
-        <span>Fixed<wbr>Network</span>
+        <span id="fixednetwork_csharp">
+<a href="#fixednetwork_csharp" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Network</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -297,7 +346,9 @@ the cluster.
 
     <dt class="property-"
             title="">
-        <span>Fixed<wbr>Subnet</span>
+        <span id="fixedsubnet_csharp">
+<a href="#fixedsubnet_csharp" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Subnet</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -306,7 +357,9 @@ the cluster.
 
     <dt class="property-"
             title="">
-        <span>Flavor</span>
+        <span id="flavor_csharp">
+<a href="#flavor_csharp" style="color: inherit; text-decoration: inherit;">Flavor</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -315,7 +368,9 @@ the cluster.
 
     <dt class="property-"
             title="">
-        <span>Floating<wbr>Ip<wbr>Enabled</span>
+        <span id="floatingipenabled_csharp">
+<a href="#floatingipenabled_csharp" style="color: inherit; text-decoration: inherit;">Floating<wbr>Ip<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -325,7 +380,9 @@ floating IP for every node or not.
 
     <dt class="property-"
             title="">
-        <span>Http<wbr>Proxy</span>
+        <span id="httpproxy_csharp">
+<a href="#httpproxy_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Proxy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -335,7 +392,9 @@ relay them.
 
     <dt class="property-"
             title="">
-        <span>Https<wbr>Proxy</span>
+        <span id="httpsproxy_csharp">
+<a href="#httpsproxy_csharp" style="color: inherit; text-decoration: inherit;">Https<wbr>Proxy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -345,7 +404,9 @@ relay them.
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -354,7 +415,9 @@ relay them.
 
     <dt class="property-"
             title="">
-        <span>Image</span>
+        <span id="image_csharp">
+<a href="#image_csharp" style="color: inherit; text-decoration: inherit;">Image</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -363,7 +426,9 @@ relay them.
 
     <dt class="property-"
             title="">
-        <span>Insecure<wbr>Registry</span>
+        <span id="insecureregistry_csharp">
+<a href="#insecureregistry_csharp" style="color: inherit; text-decoration: inherit;">Insecure<wbr>Registry</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -372,7 +437,9 @@ relay them.
 
     <dt class="property-"
             title="">
-        <span>Keypair<wbr>Id</span>
+        <span id="keypairid_csharp">
+<a href="#keypairid_csharp" style="color: inherit; text-decoration: inherit;">Keypair<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -381,7 +448,9 @@ relay them.
 
     <dt class="property-"
             title="">
-        <span>Labels</span>
+        <span id="labels_csharp">
+<a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -391,7 +460,9 @@ of the cluster template.
 
     <dt class="property-"
             title="">
-        <span>Master<wbr>Flavor</span>
+        <span id="masterflavor_csharp">
+<a href="#masterflavor_csharp" style="color: inherit; text-decoration: inherit;">Master<wbr>Flavor</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -400,7 +471,9 @@ of the cluster template.
 
     <dt class="property-"
             title="">
-        <span>Master<wbr>Lb<wbr>Enabled</span>
+        <span id="masterlbenabled_csharp">
+<a href="#masterlbenabled_csharp" style="color: inherit; text-decoration: inherit;">Master<wbr>Lb<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -410,7 +483,9 @@ loadbalancer for master nodes or not.
 
     <dt class="property-"
             title="">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -419,7 +494,9 @@ loadbalancer for master nodes or not.
 
     <dt class="property-"
             title="">
-        <span>Network<wbr>Driver</span>
+        <span id="networkdriver_csharp">
+<a href="#networkdriver_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Driver</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -428,7 +505,9 @@ loadbalancer for master nodes or not.
 
     <dt class="property-"
             title="">
-        <span>No<wbr>Proxy</span>
+        <span id="noproxy_csharp">
+<a href="#noproxy_csharp" style="color: inherit; text-decoration: inherit;">No<wbr>Proxy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -438,7 +517,9 @@ the cluster.
 
     <dt class="property-"
             title="">
-        <span>Project<wbr>Id</span>
+        <span id="projectid_csharp">
+<a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -447,7 +528,9 @@ the cluster.
 
     <dt class="property-"
             title="">
-        <span>Public</span>
+        <span id="public_csharp">
+<a href="#public_csharp" style="color: inherit; text-decoration: inherit;">Public</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -456,7 +539,9 @@ the cluster.
 
     <dt class="property-"
             title="">
-        <span>Region</span>
+        <span id="region_csharp">
+<a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -465,7 +550,9 @@ the cluster.
 
     <dt class="property-"
             title="">
-        <span>Registry<wbr>Enabled</span>
+        <span id="registryenabled_csharp">
+<a href="#registryenabled_csharp" style="color: inherit; text-decoration: inherit;">Registry<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -475,7 +562,9 @@ cluster.
 
     <dt class="property-"
             title="">
-        <span>Server<wbr>Type</span>
+        <span id="servertype_csharp">
+<a href="#servertype_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -484,7 +573,9 @@ cluster.
 
     <dt class="property-"
             title="">
-        <span>Tls<wbr>Disabled</span>
+        <span id="tlsdisabled_csharp">
+<a href="#tlsdisabled_csharp" style="color: inherit; text-decoration: inherit;">Tls<wbr>Disabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -493,7 +584,9 @@ cluster.
 
     <dt class="property-"
             title="">
-        <span>Updated<wbr>At</span>
+        <span id="updatedat_csharp">
+<a href="#updatedat_csharp" style="color: inherit; text-decoration: inherit;">Updated<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -502,7 +595,9 @@ cluster.
 
     <dt class="property-"
             title="">
-        <span>User<wbr>Id</span>
+        <span id="userid_csharp">
+<a href="#userid_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -511,7 +606,9 @@ cluster.
 
     <dt class="property-"
             title="">
-        <span>Volume<wbr>Driver</span>
+        <span id="volumedriver_csharp">
+<a href="#volumedriver_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Driver</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -528,7 +625,9 @@ cluster nodes.
 
     <dt class="property-"
             title="">
-        <span>Apiserver<wbr>Port</span>
+        <span id="apiserverport_go">
+<a href="#apiserverport_go" style="color: inherit; text-decoration: inherit;">Apiserver<wbr>Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -538,7 +637,9 @@ Engine for this cluster template.
 
     <dt class="property-"
             title="">
-        <span>Cluster<wbr>Distro</span>
+        <span id="clusterdistro_go">
+<a href="#clusterdistro_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Distro</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -547,7 +648,9 @@ Engine for this cluster template.
 
     <dt class="property-"
             title="">
-        <span>Coe</span>
+        <span id="coe_go">
+<a href="#coe_go" style="color: inherit; text-decoration: inherit;">Coe</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -556,7 +659,9 @@ Engine for this cluster template.
 
     <dt class="property-"
             title="">
-        <span>Created<wbr>At</span>
+        <span id="createdat_go">
+<a href="#createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -565,7 +670,9 @@ Engine for this cluster template.
 
     <dt class="property-"
             title="">
-        <span>Dns<wbr>Nameserver</span>
+        <span id="dnsnameserver_go">
+<a href="#dnsnameserver_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Nameserver</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -575,7 +682,9 @@ cluster.
 
     <dt class="property-"
             title="">
-        <span>Docker<wbr>Storage<wbr>Driver</span>
+        <span id="dockerstoragedriver_go">
+<a href="#dockerstoragedriver_go" style="color: inherit; text-decoration: inherit;">Docker<wbr>Storage<wbr>Driver</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -585,7 +694,9 @@ Docker storage driver of the existing cluster template.
 
     <dt class="property-"
             title="">
-        <span>Docker<wbr>Volume<wbr>Size</span>
+        <span id="dockervolumesize_go">
+<a href="#dockervolumesize_go" style="color: inherit; text-decoration: inherit;">Docker<wbr>Volume<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -594,7 +705,9 @@ Docker storage driver of the existing cluster template.
 
     <dt class="property-"
             title="">
-        <span>External<wbr>Network<wbr>Id</span>
+        <span id="externalnetworkid_go">
+<a href="#externalnetworkid_go" style="color: inherit; text-decoration: inherit;">External<wbr>Network<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -604,7 +717,9 @@ the cluster.
 
     <dt class="property-"
             title="">
-        <span>Fixed<wbr>Network</span>
+        <span id="fixednetwork_go">
+<a href="#fixednetwork_go" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Network</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -613,7 +728,9 @@ the cluster.
 
     <dt class="property-"
             title="">
-        <span>Fixed<wbr>Subnet</span>
+        <span id="fixedsubnet_go">
+<a href="#fixedsubnet_go" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Subnet</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -622,7 +739,9 @@ the cluster.
 
     <dt class="property-"
             title="">
-        <span>Flavor</span>
+        <span id="flavor_go">
+<a href="#flavor_go" style="color: inherit; text-decoration: inherit;">Flavor</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -631,7 +750,9 @@ the cluster.
 
     <dt class="property-"
             title="">
-        <span>Floating<wbr>Ip<wbr>Enabled</span>
+        <span id="floatingipenabled_go">
+<a href="#floatingipenabled_go" style="color: inherit; text-decoration: inherit;">Floating<wbr>Ip<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -641,7 +762,9 @@ floating IP for every node or not.
 
     <dt class="property-"
             title="">
-        <span>Http<wbr>Proxy</span>
+        <span id="httpproxy_go">
+<a href="#httpproxy_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Proxy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -651,7 +774,9 @@ relay them.
 
     <dt class="property-"
             title="">
-        <span>Https<wbr>Proxy</span>
+        <span id="httpsproxy_go">
+<a href="#httpsproxy_go" style="color: inherit; text-decoration: inherit;">Https<wbr>Proxy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -661,7 +786,9 @@ relay them.
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -670,7 +797,9 @@ relay them.
 
     <dt class="property-"
             title="">
-        <span>Image</span>
+        <span id="image_go">
+<a href="#image_go" style="color: inherit; text-decoration: inherit;">Image</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -679,7 +808,9 @@ relay them.
 
     <dt class="property-"
             title="">
-        <span>Insecure<wbr>Registry</span>
+        <span id="insecureregistry_go">
+<a href="#insecureregistry_go" style="color: inherit; text-decoration: inherit;">Insecure<wbr>Registry</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -688,7 +819,9 @@ relay them.
 
     <dt class="property-"
             title="">
-        <span>Keypair<wbr>Id</span>
+        <span id="keypairid_go">
+<a href="#keypairid_go" style="color: inherit; text-decoration: inherit;">Keypair<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -697,7 +830,9 @@ relay them.
 
     <dt class="property-"
             title="">
-        <span>Labels</span>
+        <span id="labels_go">
+<a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -707,7 +842,9 @@ of the cluster template.
 
     <dt class="property-"
             title="">
-        <span>Master<wbr>Flavor</span>
+        <span id="masterflavor_go">
+<a href="#masterflavor_go" style="color: inherit; text-decoration: inherit;">Master<wbr>Flavor</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -716,7 +853,9 @@ of the cluster template.
 
     <dt class="property-"
             title="">
-        <span>Master<wbr>Lb<wbr>Enabled</span>
+        <span id="masterlbenabled_go">
+<a href="#masterlbenabled_go" style="color: inherit; text-decoration: inherit;">Master<wbr>Lb<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -726,7 +865,9 @@ loadbalancer for master nodes or not.
 
     <dt class="property-"
             title="">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -735,7 +876,9 @@ loadbalancer for master nodes or not.
 
     <dt class="property-"
             title="">
-        <span>Network<wbr>Driver</span>
+        <span id="networkdriver_go">
+<a href="#networkdriver_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Driver</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -744,7 +887,9 @@ loadbalancer for master nodes or not.
 
     <dt class="property-"
             title="">
-        <span>No<wbr>Proxy</span>
+        <span id="noproxy_go">
+<a href="#noproxy_go" style="color: inherit; text-decoration: inherit;">No<wbr>Proxy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -754,7 +899,9 @@ the cluster.
 
     <dt class="property-"
             title="">
-        <span>Project<wbr>Id</span>
+        <span id="projectid_go">
+<a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -763,7 +910,9 @@ the cluster.
 
     <dt class="property-"
             title="">
-        <span>Public</span>
+        <span id="public_go">
+<a href="#public_go" style="color: inherit; text-decoration: inherit;">Public</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -772,7 +921,9 @@ the cluster.
 
     <dt class="property-"
             title="">
-        <span>Region</span>
+        <span id="region_go">
+<a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -781,7 +932,9 @@ the cluster.
 
     <dt class="property-"
             title="">
-        <span>Registry<wbr>Enabled</span>
+        <span id="registryenabled_go">
+<a href="#registryenabled_go" style="color: inherit; text-decoration: inherit;">Registry<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -791,7 +944,9 @@ cluster.
 
     <dt class="property-"
             title="">
-        <span>Server<wbr>Type</span>
+        <span id="servertype_go">
+<a href="#servertype_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -800,7 +955,9 @@ cluster.
 
     <dt class="property-"
             title="">
-        <span>Tls<wbr>Disabled</span>
+        <span id="tlsdisabled_go">
+<a href="#tlsdisabled_go" style="color: inherit; text-decoration: inherit;">Tls<wbr>Disabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -809,7 +966,9 @@ cluster.
 
     <dt class="property-"
             title="">
-        <span>Updated<wbr>At</span>
+        <span id="updatedat_go">
+<a href="#updatedat_go" style="color: inherit; text-decoration: inherit;">Updated<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -818,7 +977,9 @@ cluster.
 
     <dt class="property-"
             title="">
-        <span>User<wbr>Id</span>
+        <span id="userid_go">
+<a href="#userid_go" style="color: inherit; text-decoration: inherit;">User<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -827,7 +988,9 @@ cluster.
 
     <dt class="property-"
             title="">
-        <span>Volume<wbr>Driver</span>
+        <span id="volumedriver_go">
+<a href="#volumedriver_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Driver</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -844,7 +1007,9 @@ cluster nodes.
 
     <dt class="property-"
             title="">
-        <span>apiserver<wbr>Port</span>
+        <span id="apiserverport_nodejs">
+<a href="#apiserverport_nodejs" style="color: inherit; text-decoration: inherit;">apiserver<wbr>Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -854,7 +1019,9 @@ Engine for this cluster template.
 
     <dt class="property-"
             title="">
-        <span>cluster<wbr>Distro</span>
+        <span id="clusterdistro_nodejs">
+<a href="#clusterdistro_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Distro</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -863,7 +1030,9 @@ Engine for this cluster template.
 
     <dt class="property-"
             title="">
-        <span>coe</span>
+        <span id="coe_nodejs">
+<a href="#coe_nodejs" style="color: inherit; text-decoration: inherit;">coe</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -872,7 +1041,9 @@ Engine for this cluster template.
 
     <dt class="property-"
             title="">
-        <span>created<wbr>At</span>
+        <span id="createdat_nodejs">
+<a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -881,7 +1052,9 @@ Engine for this cluster template.
 
     <dt class="property-"
             title="">
-        <span>dns<wbr>Nameserver</span>
+        <span id="dnsnameserver_nodejs">
+<a href="#dnsnameserver_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Nameserver</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -891,7 +1064,9 @@ cluster.
 
     <dt class="property-"
             title="">
-        <span>docker<wbr>Storage<wbr>Driver</span>
+        <span id="dockerstoragedriver_nodejs">
+<a href="#dockerstoragedriver_nodejs" style="color: inherit; text-decoration: inherit;">docker<wbr>Storage<wbr>Driver</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -901,7 +1076,9 @@ Docker storage driver of the existing cluster template.
 
     <dt class="property-"
             title="">
-        <span>docker<wbr>Volume<wbr>Size</span>
+        <span id="dockervolumesize_nodejs">
+<a href="#dockervolumesize_nodejs" style="color: inherit; text-decoration: inherit;">docker<wbr>Volume<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -910,7 +1087,9 @@ Docker storage driver of the existing cluster template.
 
     <dt class="property-"
             title="">
-        <span>external<wbr>Network<wbr>Id</span>
+        <span id="externalnetworkid_nodejs">
+<a href="#externalnetworkid_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Network<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -920,7 +1099,9 @@ the cluster.
 
     <dt class="property-"
             title="">
-        <span>fixed<wbr>Network</span>
+        <span id="fixednetwork_nodejs">
+<a href="#fixednetwork_nodejs" style="color: inherit; text-decoration: inherit;">fixed<wbr>Network</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -929,7 +1110,9 @@ the cluster.
 
     <dt class="property-"
             title="">
-        <span>fixed<wbr>Subnet</span>
+        <span id="fixedsubnet_nodejs">
+<a href="#fixedsubnet_nodejs" style="color: inherit; text-decoration: inherit;">fixed<wbr>Subnet</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -938,7 +1121,9 @@ the cluster.
 
     <dt class="property-"
             title="">
-        <span>flavor</span>
+        <span id="flavor_nodejs">
+<a href="#flavor_nodejs" style="color: inherit; text-decoration: inherit;">flavor</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -947,7 +1132,9 @@ the cluster.
 
     <dt class="property-"
             title="">
-        <span>floating<wbr>Ip<wbr>Enabled</span>
+        <span id="floatingipenabled_nodejs">
+<a href="#floatingipenabled_nodejs" style="color: inherit; text-decoration: inherit;">floating<wbr>Ip<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -957,7 +1144,9 @@ floating IP for every node or not.
 
     <dt class="property-"
             title="">
-        <span>http<wbr>Proxy</span>
+        <span id="httpproxy_nodejs">
+<a href="#httpproxy_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Proxy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -967,7 +1156,9 @@ relay them.
 
     <dt class="property-"
             title="">
-        <span>https<wbr>Proxy</span>
+        <span id="httpsproxy_nodejs">
+<a href="#httpsproxy_nodejs" style="color: inherit; text-decoration: inherit;">https<wbr>Proxy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -977,7 +1168,9 @@ relay them.
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -986,7 +1179,9 @@ relay them.
 
     <dt class="property-"
             title="">
-        <span>image</span>
+        <span id="image_nodejs">
+<a href="#image_nodejs" style="color: inherit; text-decoration: inherit;">image</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -995,7 +1190,9 @@ relay them.
 
     <dt class="property-"
             title="">
-        <span>insecure<wbr>Registry</span>
+        <span id="insecureregistry_nodejs">
+<a href="#insecureregistry_nodejs" style="color: inherit; text-decoration: inherit;">insecure<wbr>Registry</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1004,7 +1201,9 @@ relay them.
 
     <dt class="property-"
             title="">
-        <span>keypair<wbr>Id</span>
+        <span id="keypairid_nodejs">
+<a href="#keypairid_nodejs" style="color: inherit; text-decoration: inherit;">keypair<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1013,7 +1212,9 @@ relay them.
 
     <dt class="property-"
             title="">
-        <span>labels</span>
+        <span id="labels_nodejs">
+<a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -1023,7 +1224,9 @@ of the cluster template.
 
     <dt class="property-"
             title="">
-        <span>master<wbr>Flavor</span>
+        <span id="masterflavor_nodejs">
+<a href="#masterflavor_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Flavor</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1032,7 +1235,9 @@ of the cluster template.
 
     <dt class="property-"
             title="">
-        <span>master<wbr>Lb<wbr>Enabled</span>
+        <span id="masterlbenabled_nodejs">
+<a href="#masterlbenabled_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Lb<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1042,7 +1247,9 @@ loadbalancer for master nodes or not.
 
     <dt class="property-"
             title="">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1051,7 +1258,9 @@ loadbalancer for master nodes or not.
 
     <dt class="property-"
             title="">
-        <span>network<wbr>Driver</span>
+        <span id="networkdriver_nodejs">
+<a href="#networkdriver_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Driver</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1060,7 +1269,9 @@ loadbalancer for master nodes or not.
 
     <dt class="property-"
             title="">
-        <span>no<wbr>Proxy</span>
+        <span id="noproxy_nodejs">
+<a href="#noproxy_nodejs" style="color: inherit; text-decoration: inherit;">no<wbr>Proxy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1070,7 +1281,9 @@ the cluster.
 
     <dt class="property-"
             title="">
-        <span>project<wbr>Id</span>
+        <span id="projectid_nodejs">
+<a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1079,7 +1292,9 @@ the cluster.
 
     <dt class="property-"
             title="">
-        <span>public</span>
+        <span id="public_nodejs">
+<a href="#public_nodejs" style="color: inherit; text-decoration: inherit;">public</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1088,7 +1303,9 @@ the cluster.
 
     <dt class="property-"
             title="">
-        <span>region</span>
+        <span id="region_nodejs">
+<a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1097,7 +1314,9 @@ the cluster.
 
     <dt class="property-"
             title="">
-        <span>registry<wbr>Enabled</span>
+        <span id="registryenabled_nodejs">
+<a href="#registryenabled_nodejs" style="color: inherit; text-decoration: inherit;">registry<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1107,7 +1326,9 @@ cluster.
 
     <dt class="property-"
             title="">
-        <span>server<wbr>Type</span>
+        <span id="servertype_nodejs">
+<a href="#servertype_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1116,7 +1337,9 @@ cluster.
 
     <dt class="property-"
             title="">
-        <span>tls<wbr>Disabled</span>
+        <span id="tlsdisabled_nodejs">
+<a href="#tlsdisabled_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Disabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1125,7 +1348,9 @@ cluster.
 
     <dt class="property-"
             title="">
-        <span>updated<wbr>At</span>
+        <span id="updatedat_nodejs">
+<a href="#updatedat_nodejs" style="color: inherit; text-decoration: inherit;">updated<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1134,7 +1359,9 @@ cluster.
 
     <dt class="property-"
             title="">
-        <span>user<wbr>Id</span>
+        <span id="userid_nodejs">
+<a href="#userid_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1143,7 +1370,9 @@ cluster.
 
     <dt class="property-"
             title="">
-        <span>volume<wbr>Driver</span>
+        <span id="volumedriver_nodejs">
+<a href="#volumedriver_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Driver</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1160,7 +1389,9 @@ cluster nodes.
 
     <dt class="property-"
             title="">
-        <span>apiserver_<wbr>port</span>
+        <span id="apiserver_port_python">
+<a href="#apiserver_port_python" style="color: inherit; text-decoration: inherit;">apiserver_<wbr>port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1170,7 +1401,9 @@ Engine for this cluster template.
 
     <dt class="property-"
             title="">
-        <span>cluster_<wbr>distro</span>
+        <span id="cluster_distro_python">
+<a href="#cluster_distro_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>distro</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1179,7 +1412,9 @@ Engine for this cluster template.
 
     <dt class="property-"
             title="">
-        <span>coe</span>
+        <span id="coe_python">
+<a href="#coe_python" style="color: inherit; text-decoration: inherit;">coe</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1188,7 +1423,9 @@ Engine for this cluster template.
 
     <dt class="property-"
             title="">
-        <span>created_<wbr>at</span>
+        <span id="created_at_python">
+<a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1197,7 +1434,9 @@ Engine for this cluster template.
 
     <dt class="property-"
             title="">
-        <span>dns_<wbr>nameserver</span>
+        <span id="dns_nameserver_python">
+<a href="#dns_nameserver_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>nameserver</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1207,7 +1446,9 @@ cluster.
 
     <dt class="property-"
             title="">
-        <span>docker_<wbr>storage_<wbr>driver</span>
+        <span id="docker_storage_driver_python">
+<a href="#docker_storage_driver_python" style="color: inherit; text-decoration: inherit;">docker_<wbr>storage_<wbr>driver</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1217,7 +1458,9 @@ Docker storage driver of the existing cluster template.
 
     <dt class="property-"
             title="">
-        <span>docker_<wbr>volume_<wbr>size</span>
+        <span id="docker_volume_size_python">
+<a href="#docker_volume_size_python" style="color: inherit; text-decoration: inherit;">docker_<wbr>volume_<wbr>size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1226,7 +1469,9 @@ Docker storage driver of the existing cluster template.
 
     <dt class="property-"
             title="">
-        <span>external_<wbr>network_<wbr>id</span>
+        <span id="external_network_id_python">
+<a href="#external_network_id_python" style="color: inherit; text-decoration: inherit;">external_<wbr>network_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1236,7 +1481,9 @@ the cluster.
 
     <dt class="property-"
             title="">
-        <span>fixed_<wbr>network</span>
+        <span id="fixed_network_python">
+<a href="#fixed_network_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>network</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1245,7 +1492,9 @@ the cluster.
 
     <dt class="property-"
             title="">
-        <span>fixed_<wbr>subnet</span>
+        <span id="fixed_subnet_python">
+<a href="#fixed_subnet_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>subnet</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1254,7 +1503,9 @@ the cluster.
 
     <dt class="property-"
             title="">
-        <span>flavor</span>
+        <span id="flavor_python">
+<a href="#flavor_python" style="color: inherit; text-decoration: inherit;">flavor</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1263,7 +1514,9 @@ the cluster.
 
     <dt class="property-"
             title="">
-        <span>floating_<wbr>ip_<wbr>enabled</span>
+        <span id="floating_ip_enabled_python">
+<a href="#floating_ip_enabled_python" style="color: inherit; text-decoration: inherit;">floating_<wbr>ip_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1273,7 +1526,9 @@ floating IP for every node or not.
 
     <dt class="property-"
             title="">
-        <span>http_<wbr>proxy</span>
+        <span id="http_proxy_python">
+<a href="#http_proxy_python" style="color: inherit; text-decoration: inherit;">http_<wbr>proxy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1283,7 +1538,9 @@ relay them.
 
     <dt class="property-"
             title="">
-        <span>https_<wbr>proxy</span>
+        <span id="https_proxy_python">
+<a href="#https_proxy_python" style="color: inherit; text-decoration: inherit;">https_<wbr>proxy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1293,7 +1550,9 @@ relay them.
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1302,7 +1561,9 @@ relay them.
 
     <dt class="property-"
             title="">
-        <span>image</span>
+        <span id="image_python">
+<a href="#image_python" style="color: inherit; text-decoration: inherit;">image</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1311,7 +1572,9 @@ relay them.
 
     <dt class="property-"
             title="">
-        <span>insecure_<wbr>registry</span>
+        <span id="insecure_registry_python">
+<a href="#insecure_registry_python" style="color: inherit; text-decoration: inherit;">insecure_<wbr>registry</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1320,7 +1583,9 @@ relay them.
 
     <dt class="property-"
             title="">
-        <span>keypair_<wbr>id</span>
+        <span id="keypair_id_python">
+<a href="#keypair_id_python" style="color: inherit; text-decoration: inherit;">keypair_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1329,7 +1594,9 @@ relay them.
 
     <dt class="property-"
             title="">
-        <span>labels</span>
+        <span id="labels_python">
+<a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -1339,7 +1606,9 @@ of the cluster template.
 
     <dt class="property-"
             title="">
-        <span>master_<wbr>flavor</span>
+        <span id="master_flavor_python">
+<a href="#master_flavor_python" style="color: inherit; text-decoration: inherit;">master_<wbr>flavor</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1348,7 +1617,9 @@ of the cluster template.
 
     <dt class="property-"
             title="">
-        <span>master_<wbr>lb_<wbr>enabled</span>
+        <span id="master_lb_enabled_python">
+<a href="#master_lb_enabled_python" style="color: inherit; text-decoration: inherit;">master_<wbr>lb_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1358,7 +1629,9 @@ loadbalancer for master nodes or not.
 
     <dt class="property-"
             title="">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1367,7 +1640,9 @@ loadbalancer for master nodes or not.
 
     <dt class="property-"
             title="">
-        <span>network_<wbr>driver</span>
+        <span id="network_driver_python">
+<a href="#network_driver_python" style="color: inherit; text-decoration: inherit;">network_<wbr>driver</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1376,7 +1651,9 @@ loadbalancer for master nodes or not.
 
     <dt class="property-"
             title="">
-        <span>no_<wbr>proxy</span>
+        <span id="no_proxy_python">
+<a href="#no_proxy_python" style="color: inherit; text-decoration: inherit;">no_<wbr>proxy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1386,7 +1663,9 @@ the cluster.
 
     <dt class="property-"
             title="">
-        <span>project_<wbr>id</span>
+        <span id="project_id_python">
+<a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1395,7 +1674,9 @@ the cluster.
 
     <dt class="property-"
             title="">
-        <span>public</span>
+        <span id="public_python">
+<a href="#public_python" style="color: inherit; text-decoration: inherit;">public</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1404,7 +1685,9 @@ the cluster.
 
     <dt class="property-"
             title="">
-        <span>region</span>
+        <span id="region_python">
+<a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1413,7 +1696,9 @@ the cluster.
 
     <dt class="property-"
             title="">
-        <span>registry_<wbr>enabled</span>
+        <span id="registry_enabled_python">
+<a href="#registry_enabled_python" style="color: inherit; text-decoration: inherit;">registry_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1423,7 +1708,9 @@ cluster.
 
     <dt class="property-"
             title="">
-        <span>server_<wbr>type</span>
+        <span id="server_type_python">
+<a href="#server_type_python" style="color: inherit; text-decoration: inherit;">server_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1432,7 +1719,9 @@ cluster.
 
     <dt class="property-"
             title="">
-        <span>tls_<wbr>disabled</span>
+        <span id="tls_disabled_python">
+<a href="#tls_disabled_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>disabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1441,7 +1730,9 @@ cluster.
 
     <dt class="property-"
             title="">
-        <span>updated_<wbr>at</span>
+        <span id="updated_at_python">
+<a href="#updated_at_python" style="color: inherit; text-decoration: inherit;">updated_<wbr>at</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1450,7 +1741,9 @@ cluster.
 
     <dt class="property-"
             title="">
-        <span>user_<wbr>id</span>
+        <span id="user_id_python">
+<a href="#user_id_python" style="color: inherit; text-decoration: inherit;">user_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1459,7 +1752,9 @@ cluster.
 
     <dt class="property-"
             title="">
-        <span>volume_<wbr>driver</span>
+        <span id="volume_driver_python">
+<a href="#volume_driver_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>driver</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

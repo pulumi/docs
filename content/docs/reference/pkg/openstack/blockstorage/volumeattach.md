@@ -32,7 +32,32 @@ the `openstack.compute.VolumeAttach` resource for that.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var volume1 = new OpenStack.BlockStorage.Volume("volume1", new OpenStack.BlockStorage.VolumeArgs
+        {
+            Size = 1,
+        });
+        var va1 = new OpenStack.BlockStorage.VolumeAttach("va1", new OpenStack.BlockStorage.VolumeAttachArgs
+        {
+            Device = "auto",
+            HostName = "devstack",
+            Initiator = "iqn.1993-08.org.debian:01:e9861fb1859",
+            IpAddress = "192.168.255.10",
+            OsType = "linux2",
+            Platform = "x86_64",
+            VolumeId = volume1.Id,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -262,7 +287,9 @@ The VolumeAttach resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-required"
             title="Required">
-        <span>Host<wbr>Name</span>
+        <span id="hostname_csharp">
+<a href="#hostname_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -271,7 +298,9 @@ The VolumeAttach resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-required"
             title="Required">
-        <span>Volume<wbr>Id</span>
+        <span id="volumeid_csharp">
+<a href="#volumeid_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -280,7 +309,9 @@ The VolumeAttach resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Attach<wbr>Mode</span>
+        <span id="attachmode_csharp">
+<a href="#attachmode_csharp" style="color: inherit; text-decoration: inherit;">Attach<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -291,7 +322,9 @@ If left unspecified, the Block Storage API will apply a default of `rw`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Device</span>
+        <span id="device_csharp">
+<a href="#device_csharp" style="color: inherit; text-decoration: inherit;">Device</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -302,7 +335,9 @@ You can specify `auto` or a device such as `/dev/vdc`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Initiator</span>
+        <span id="initiator_csharp">
+<a href="#initiator_csharp" style="color: inherit; text-decoration: inherit;">Initiator</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -311,7 +346,9 @@ You can specify `auto` or a device such as `/dev/vdc`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ip<wbr>Address</span>
+        <span id="ipaddress_csharp">
+<a href="#ipaddress_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -320,7 +357,9 @@ You can specify `auto` or a device such as `/dev/vdc`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Multipath</span>
+        <span id="multipath_csharp">
+<a href="#multipath_csharp" style="color: inherit; text-decoration: inherit;">Multipath</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -329,7 +368,9 @@ You can specify `auto` or a device such as `/dev/vdc`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Os<wbr>Type</span>
+        <span id="ostype_csharp">
+<a href="#ostype_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -338,7 +379,9 @@ You can specify `auto` or a device such as `/dev/vdc`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Platform</span>
+        <span id="platform_csharp">
+<a href="#platform_csharp" style="color: inherit; text-decoration: inherit;">Platform</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -347,7 +390,9 @@ You can specify `auto` or a device such as `/dev/vdc`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="region_csharp">
+<a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -359,7 +404,9 @@ creates a new volume attachment.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Wwnn</span>
+        <span id="wwnn_csharp">
+<a href="#wwnn_csharp" style="color: inherit; text-decoration: inherit;">Wwnn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -368,7 +415,9 @@ creates a new volume attachment.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Wwpns</span>
+        <span id="wwpns_csharp">
+<a href="#wwpns_csharp" style="color: inherit; text-decoration: inherit;">Wwpns</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -385,7 +434,9 @@ connections.
 
     <dt class="property-required"
             title="Required">
-        <span>Host<wbr>Name</span>
+        <span id="hostname_go">
+<a href="#hostname_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -394,7 +445,9 @@ connections.
 
     <dt class="property-required"
             title="Required">
-        <span>Volume<wbr>Id</span>
+        <span id="volumeid_go">
+<a href="#volumeid_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -403,7 +456,9 @@ connections.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Attach<wbr>Mode</span>
+        <span id="attachmode_go">
+<a href="#attachmode_go" style="color: inherit; text-decoration: inherit;">Attach<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -414,7 +469,9 @@ If left unspecified, the Block Storage API will apply a default of `rw`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Device</span>
+        <span id="device_go">
+<a href="#device_go" style="color: inherit; text-decoration: inherit;">Device</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -425,7 +482,9 @@ You can specify `auto` or a device such as `/dev/vdc`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Initiator</span>
+        <span id="initiator_go">
+<a href="#initiator_go" style="color: inherit; text-decoration: inherit;">Initiator</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -434,7 +493,9 @@ You can specify `auto` or a device such as `/dev/vdc`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ip<wbr>Address</span>
+        <span id="ipaddress_go">
+<a href="#ipaddress_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -443,7 +504,9 @@ You can specify `auto` or a device such as `/dev/vdc`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Multipath</span>
+        <span id="multipath_go">
+<a href="#multipath_go" style="color: inherit; text-decoration: inherit;">Multipath</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -452,7 +515,9 @@ You can specify `auto` or a device such as `/dev/vdc`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Os<wbr>Type</span>
+        <span id="ostype_go">
+<a href="#ostype_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -461,7 +526,9 @@ You can specify `auto` or a device such as `/dev/vdc`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Platform</span>
+        <span id="platform_go">
+<a href="#platform_go" style="color: inherit; text-decoration: inherit;">Platform</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -470,7 +537,9 @@ You can specify `auto` or a device such as `/dev/vdc`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="region_go">
+<a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -482,7 +551,9 @@ creates a new volume attachment.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Wwnn</span>
+        <span id="wwnn_go">
+<a href="#wwnn_go" style="color: inherit; text-decoration: inherit;">Wwnn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -491,7 +562,9 @@ creates a new volume attachment.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Wwpns</span>
+        <span id="wwpns_go">
+<a href="#wwpns_go" style="color: inherit; text-decoration: inherit;">Wwpns</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -508,7 +581,9 @@ connections.
 
     <dt class="property-required"
             title="Required">
-        <span>host<wbr>Name</span>
+        <span id="hostname_nodejs">
+<a href="#hostname_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -517,7 +592,9 @@ connections.
 
     <dt class="property-required"
             title="Required">
-        <span>volume<wbr>Id</span>
+        <span id="volumeid_nodejs">
+<a href="#volumeid_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -526,7 +603,9 @@ connections.
 
     <dt class="property-optional"
             title="Optional">
-        <span>attach<wbr>Mode</span>
+        <span id="attachmode_nodejs">
+<a href="#attachmode_nodejs" style="color: inherit; text-decoration: inherit;">attach<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -537,7 +616,9 @@ If left unspecified, the Block Storage API will apply a default of `rw`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>device</span>
+        <span id="device_nodejs">
+<a href="#device_nodejs" style="color: inherit; text-decoration: inherit;">device</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -548,7 +629,9 @@ You can specify `auto` or a device such as `/dev/vdc`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>initiator</span>
+        <span id="initiator_nodejs">
+<a href="#initiator_nodejs" style="color: inherit; text-decoration: inherit;">initiator</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -557,7 +640,9 @@ You can specify `auto` or a device such as `/dev/vdc`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ip<wbr>Address</span>
+        <span id="ipaddress_nodejs">
+<a href="#ipaddress_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -566,7 +651,9 @@ You can specify `auto` or a device such as `/dev/vdc`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>multipath</span>
+        <span id="multipath_nodejs">
+<a href="#multipath_nodejs" style="color: inherit; text-decoration: inherit;">multipath</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -575,7 +662,9 @@ You can specify `auto` or a device such as `/dev/vdc`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>os<wbr>Type</span>
+        <span id="ostype_nodejs">
+<a href="#ostype_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -584,7 +673,9 @@ You can specify `auto` or a device such as `/dev/vdc`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>platform</span>
+        <span id="platform_nodejs">
+<a href="#platform_nodejs" style="color: inherit; text-decoration: inherit;">platform</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -593,7 +684,9 @@ You can specify `auto` or a device such as `/dev/vdc`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="region_nodejs">
+<a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -605,7 +698,9 @@ creates a new volume attachment.
 
     <dt class="property-optional"
             title="Optional">
-        <span>wwnn</span>
+        <span id="wwnn_nodejs">
+<a href="#wwnn_nodejs" style="color: inherit; text-decoration: inherit;">wwnn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -614,7 +709,9 @@ creates a new volume attachment.
 
     <dt class="property-optional"
             title="Optional">
-        <span>wwpns</span>
+        <span id="wwpns_nodejs">
+<a href="#wwpns_nodejs" style="color: inherit; text-decoration: inherit;">wwpns</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -631,7 +728,9 @@ connections.
 
     <dt class="property-required"
             title="Required">
-        <span>host_<wbr>name</span>
+        <span id="host_name_python">
+<a href="#host_name_python" style="color: inherit; text-decoration: inherit;">host_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -640,7 +739,9 @@ connections.
 
     <dt class="property-required"
             title="Required">
-        <span>volume_<wbr>id</span>
+        <span id="volume_id_python">
+<a href="#volume_id_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -649,7 +750,9 @@ connections.
 
     <dt class="property-optional"
             title="Optional">
-        <span>attach_<wbr>mode</span>
+        <span id="attach_mode_python">
+<a href="#attach_mode_python" style="color: inherit; text-decoration: inherit;">attach_<wbr>mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -660,7 +763,9 @@ If left unspecified, the Block Storage API will apply a default of `rw`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>device</span>
+        <span id="device_python">
+<a href="#device_python" style="color: inherit; text-decoration: inherit;">device</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -671,7 +776,9 @@ You can specify `auto` or a device such as `/dev/vdc`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>initiator</span>
+        <span id="initiator_python">
+<a href="#initiator_python" style="color: inherit; text-decoration: inherit;">initiator</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -680,7 +787,9 @@ You can specify `auto` or a device such as `/dev/vdc`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ip_<wbr>address</span>
+        <span id="ip_address_python">
+<a href="#ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -689,7 +798,9 @@ You can specify `auto` or a device such as `/dev/vdc`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>multipath</span>
+        <span id="multipath_python">
+<a href="#multipath_python" style="color: inherit; text-decoration: inherit;">multipath</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -698,7 +809,9 @@ You can specify `auto` or a device such as `/dev/vdc`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>os_<wbr>type</span>
+        <span id="os_type_python">
+<a href="#os_type_python" style="color: inherit; text-decoration: inherit;">os_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -707,7 +820,9 @@ You can specify `auto` or a device such as `/dev/vdc`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>platform</span>
+        <span id="platform_python">
+<a href="#platform_python" style="color: inherit; text-decoration: inherit;">platform</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -716,7 +831,9 @@ You can specify `auto` or a device such as `/dev/vdc`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="region_python">
+<a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -728,7 +845,9 @@ creates a new volume attachment.
 
     <dt class="property-optional"
             title="Optional">
-        <span>wwnn</span>
+        <span id="wwnn_python">
+<a href="#wwnn_python" style="color: inherit; text-decoration: inherit;">wwnn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -737,7 +856,9 @@ creates a new volume attachment.
 
     <dt class="property-optional"
             title="Optional">
-        <span>wwpns</span>
+        <span id="wwpns_python">
+<a href="#wwpns_python" style="color: inherit; text-decoration: inherit;">wwpns</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -765,7 +886,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Data</span>
+        <span id="data_csharp">
+<a href="#data_csharp" style="color: inherit; text-decoration: inherit;">Data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -776,7 +899,9 @@ script to finalize the connection. See below for more information.
 
     <dt class="property-"
             title="">
-        <span>Driver<wbr>Volume<wbr>Type</span>
+        <span id="drivervolumetype_csharp">
+<a href="#drivervolumetype_csharp" style="color: inherit; text-decoration: inherit;">Driver<wbr>Volume<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -785,7 +910,9 @@ script to finalize the connection. See below for more information.
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -793,7 +920,9 @@ script to finalize the connection. See below for more information.
 
     <dt class="property-"
             title="">
-        <span>Mount<wbr>Point<wbr>Base</span>
+        <span id="mountpointbase_csharp">
+<a href="#mountpointbase_csharp" style="color: inherit; text-decoration: inherit;">Mount<wbr>Point<wbr>Base</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -809,7 +938,9 @@ script to finalize the connection. See below for more information.
 
     <dt class="property-"
             title="">
-        <span>Data</span>
+        <span id="data_go">
+<a href="#data_go" style="color: inherit; text-decoration: inherit;">Data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -820,7 +951,9 @@ script to finalize the connection. See below for more information.
 
     <dt class="property-"
             title="">
-        <span>Driver<wbr>Volume<wbr>Type</span>
+        <span id="drivervolumetype_go">
+<a href="#drivervolumetype_go" style="color: inherit; text-decoration: inherit;">Driver<wbr>Volume<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -829,7 +962,9 @@ script to finalize the connection. See below for more information.
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -837,7 +972,9 @@ script to finalize the connection. See below for more information.
 
     <dt class="property-"
             title="">
-        <span>Mount<wbr>Point<wbr>Base</span>
+        <span id="mountpointbase_go">
+<a href="#mountpointbase_go" style="color: inherit; text-decoration: inherit;">Mount<wbr>Point<wbr>Base</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -853,7 +990,9 @@ script to finalize the connection. See below for more information.
 
     <dt class="property-"
             title="">
-        <span>data</span>
+        <span id="data_nodejs">
+<a href="#data_nodejs" style="color: inherit; text-decoration: inherit;">data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -864,7 +1003,9 @@ script to finalize the connection. See below for more information.
 
     <dt class="property-"
             title="">
-        <span>driver<wbr>Volume<wbr>Type</span>
+        <span id="drivervolumetype_nodejs">
+<a href="#drivervolumetype_nodejs" style="color: inherit; text-decoration: inherit;">driver<wbr>Volume<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -873,7 +1014,9 @@ script to finalize the connection. See below for more information.
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -881,7 +1024,9 @@ script to finalize the connection. See below for more information.
 
     <dt class="property-"
             title="">
-        <span>mount<wbr>Point<wbr>Base</span>
+        <span id="mountpointbase_nodejs">
+<a href="#mountpointbase_nodejs" style="color: inherit; text-decoration: inherit;">mount<wbr>Point<wbr>Base</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -897,7 +1042,9 @@ script to finalize the connection. See below for more information.
 
     <dt class="property-"
             title="">
-        <span>data</span>
+        <span id="data_python">
+<a href="#data_python" style="color: inherit; text-decoration: inherit;">data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -908,7 +1055,9 @@ script to finalize the connection. See below for more information.
 
     <dt class="property-"
             title="">
-        <span>driver_<wbr>volume_<wbr>type</span>
+        <span id="driver_volume_type_python">
+<a href="#driver_volume_type_python" style="color: inherit; text-decoration: inherit;">driver_<wbr>volume_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -917,7 +1066,9 @@ script to finalize the connection. See below for more information.
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -925,7 +1076,9 @@ script to finalize the connection. See below for more information.
 
     <dt class="property-"
             title="">
-        <span>mount_<wbr>point_<wbr>base</span>
+        <span id="mount_point_base_python">
+<a href="#mount_point_base_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>point_<wbr>base</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1067,7 +1220,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Attach<wbr>Mode</span>
+        <span id="state_attachmode_csharp">
+<a href="#state_attachmode_csharp" style="color: inherit; text-decoration: inherit;">Attach<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1078,7 +1233,9 @@ If left unspecified, the Block Storage API will apply a default of `rw`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Data</span>
+        <span id="state_data_csharp">
+<a href="#state_data_csharp" style="color: inherit; text-decoration: inherit;">Data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -1089,7 +1246,9 @@ script to finalize the connection. See below for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Device</span>
+        <span id="state_device_csharp">
+<a href="#state_device_csharp" style="color: inherit; text-decoration: inherit;">Device</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1100,7 +1259,9 @@ You can specify `auto` or a device such as `/dev/vdc`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Driver<wbr>Volume<wbr>Type</span>
+        <span id="state_drivervolumetype_csharp">
+<a href="#state_drivervolumetype_csharp" style="color: inherit; text-decoration: inherit;">Driver<wbr>Volume<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1109,7 +1270,9 @@ You can specify `auto` or a device such as `/dev/vdc`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Host<wbr>Name</span>
+        <span id="state_hostname_csharp">
+<a href="#state_hostname_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1118,7 +1281,9 @@ You can specify `auto` or a device such as `/dev/vdc`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Initiator</span>
+        <span id="state_initiator_csharp">
+<a href="#state_initiator_csharp" style="color: inherit; text-decoration: inherit;">Initiator</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1127,7 +1292,9 @@ You can specify `auto` or a device such as `/dev/vdc`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ip<wbr>Address</span>
+        <span id="state_ipaddress_csharp">
+<a href="#state_ipaddress_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1136,7 +1303,9 @@ You can specify `auto` or a device such as `/dev/vdc`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Mount<wbr>Point<wbr>Base</span>
+        <span id="state_mountpointbase_csharp">
+<a href="#state_mountpointbase_csharp" style="color: inherit; text-decoration: inherit;">Mount<wbr>Point<wbr>Base</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1145,7 +1314,9 @@ You can specify `auto` or a device such as `/dev/vdc`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Multipath</span>
+        <span id="state_multipath_csharp">
+<a href="#state_multipath_csharp" style="color: inherit; text-decoration: inherit;">Multipath</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1154,7 +1325,9 @@ You can specify `auto` or a device such as `/dev/vdc`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Os<wbr>Type</span>
+        <span id="state_ostype_csharp">
+<a href="#state_ostype_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1163,7 +1336,9 @@ You can specify `auto` or a device such as `/dev/vdc`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Platform</span>
+        <span id="state_platform_csharp">
+<a href="#state_platform_csharp" style="color: inherit; text-decoration: inherit;">Platform</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1172,7 +1347,9 @@ You can specify `auto` or a device such as `/dev/vdc`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="state_region_csharp">
+<a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1184,7 +1361,9 @@ creates a new volume attachment.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Volume<wbr>Id</span>
+        <span id="state_volumeid_csharp">
+<a href="#state_volumeid_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1193,7 +1372,9 @@ creates a new volume attachment.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Wwnn</span>
+        <span id="state_wwnn_csharp">
+<a href="#state_wwnn_csharp" style="color: inherit; text-decoration: inherit;">Wwnn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1202,7 +1383,9 @@ creates a new volume attachment.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Wwpns</span>
+        <span id="state_wwpns_csharp">
+<a href="#state_wwpns_csharp" style="color: inherit; text-decoration: inherit;">Wwpns</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1219,7 +1402,9 @@ connections.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Attach<wbr>Mode</span>
+        <span id="state_attachmode_go">
+<a href="#state_attachmode_go" style="color: inherit; text-decoration: inherit;">Attach<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1230,7 +1415,9 @@ If left unspecified, the Block Storage API will apply a default of `rw`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Data</span>
+        <span id="state_data_go">
+<a href="#state_data_go" style="color: inherit; text-decoration: inherit;">Data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -1241,7 +1428,9 @@ script to finalize the connection. See below for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Device</span>
+        <span id="state_device_go">
+<a href="#state_device_go" style="color: inherit; text-decoration: inherit;">Device</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1252,7 +1441,9 @@ You can specify `auto` or a device such as `/dev/vdc`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Driver<wbr>Volume<wbr>Type</span>
+        <span id="state_drivervolumetype_go">
+<a href="#state_drivervolumetype_go" style="color: inherit; text-decoration: inherit;">Driver<wbr>Volume<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1261,7 +1452,9 @@ You can specify `auto` or a device such as `/dev/vdc`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Host<wbr>Name</span>
+        <span id="state_hostname_go">
+<a href="#state_hostname_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1270,7 +1463,9 @@ You can specify `auto` or a device such as `/dev/vdc`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Initiator</span>
+        <span id="state_initiator_go">
+<a href="#state_initiator_go" style="color: inherit; text-decoration: inherit;">Initiator</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1279,7 +1474,9 @@ You can specify `auto` or a device such as `/dev/vdc`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ip<wbr>Address</span>
+        <span id="state_ipaddress_go">
+<a href="#state_ipaddress_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1288,7 +1485,9 @@ You can specify `auto` or a device such as `/dev/vdc`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Mount<wbr>Point<wbr>Base</span>
+        <span id="state_mountpointbase_go">
+<a href="#state_mountpointbase_go" style="color: inherit; text-decoration: inherit;">Mount<wbr>Point<wbr>Base</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1297,7 +1496,9 @@ You can specify `auto` or a device such as `/dev/vdc`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Multipath</span>
+        <span id="state_multipath_go">
+<a href="#state_multipath_go" style="color: inherit; text-decoration: inherit;">Multipath</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1306,7 +1507,9 @@ You can specify `auto` or a device such as `/dev/vdc`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Os<wbr>Type</span>
+        <span id="state_ostype_go">
+<a href="#state_ostype_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1315,7 +1518,9 @@ You can specify `auto` or a device such as `/dev/vdc`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Platform</span>
+        <span id="state_platform_go">
+<a href="#state_platform_go" style="color: inherit; text-decoration: inherit;">Platform</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1324,7 +1529,9 @@ You can specify `auto` or a device such as `/dev/vdc`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="state_region_go">
+<a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1336,7 +1543,9 @@ creates a new volume attachment.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Volume<wbr>Id</span>
+        <span id="state_volumeid_go">
+<a href="#state_volumeid_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1345,7 +1554,9 @@ creates a new volume attachment.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Wwnn</span>
+        <span id="state_wwnn_go">
+<a href="#state_wwnn_go" style="color: inherit; text-decoration: inherit;">Wwnn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1354,7 +1565,9 @@ creates a new volume attachment.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Wwpns</span>
+        <span id="state_wwpns_go">
+<a href="#state_wwpns_go" style="color: inherit; text-decoration: inherit;">Wwpns</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1371,7 +1584,9 @@ connections.
 
     <dt class="property-optional"
             title="Optional">
-        <span>attach<wbr>Mode</span>
+        <span id="state_attachmode_nodejs">
+<a href="#state_attachmode_nodejs" style="color: inherit; text-decoration: inherit;">attach<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1382,7 +1597,9 @@ If left unspecified, the Block Storage API will apply a default of `rw`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>data</span>
+        <span id="state_data_nodejs">
+<a href="#state_data_nodejs" style="color: inherit; text-decoration: inherit;">data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -1393,7 +1610,9 @@ script to finalize the connection. See below for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>device</span>
+        <span id="state_device_nodejs">
+<a href="#state_device_nodejs" style="color: inherit; text-decoration: inherit;">device</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1404,7 +1623,9 @@ You can specify `auto` or a device such as `/dev/vdc`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>driver<wbr>Volume<wbr>Type</span>
+        <span id="state_drivervolumetype_nodejs">
+<a href="#state_drivervolumetype_nodejs" style="color: inherit; text-decoration: inherit;">driver<wbr>Volume<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1413,7 +1634,9 @@ You can specify `auto` or a device such as `/dev/vdc`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>host<wbr>Name</span>
+        <span id="state_hostname_nodejs">
+<a href="#state_hostname_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1422,7 +1645,9 @@ You can specify `auto` or a device such as `/dev/vdc`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>initiator</span>
+        <span id="state_initiator_nodejs">
+<a href="#state_initiator_nodejs" style="color: inherit; text-decoration: inherit;">initiator</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1431,7 +1656,9 @@ You can specify `auto` or a device such as `/dev/vdc`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ip<wbr>Address</span>
+        <span id="state_ipaddress_nodejs">
+<a href="#state_ipaddress_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1440,7 +1667,9 @@ You can specify `auto` or a device such as `/dev/vdc`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>mount<wbr>Point<wbr>Base</span>
+        <span id="state_mountpointbase_nodejs">
+<a href="#state_mountpointbase_nodejs" style="color: inherit; text-decoration: inherit;">mount<wbr>Point<wbr>Base</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1449,7 +1678,9 @@ You can specify `auto` or a device such as `/dev/vdc`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>multipath</span>
+        <span id="state_multipath_nodejs">
+<a href="#state_multipath_nodejs" style="color: inherit; text-decoration: inherit;">multipath</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1458,7 +1689,9 @@ You can specify `auto` or a device such as `/dev/vdc`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>os<wbr>Type</span>
+        <span id="state_ostype_nodejs">
+<a href="#state_ostype_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1467,7 +1700,9 @@ You can specify `auto` or a device such as `/dev/vdc`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>platform</span>
+        <span id="state_platform_nodejs">
+<a href="#state_platform_nodejs" style="color: inherit; text-decoration: inherit;">platform</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1476,7 +1711,9 @@ You can specify `auto` or a device such as `/dev/vdc`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="state_region_nodejs">
+<a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1488,7 +1725,9 @@ creates a new volume attachment.
 
     <dt class="property-optional"
             title="Optional">
-        <span>volume<wbr>Id</span>
+        <span id="state_volumeid_nodejs">
+<a href="#state_volumeid_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1497,7 +1736,9 @@ creates a new volume attachment.
 
     <dt class="property-optional"
             title="Optional">
-        <span>wwnn</span>
+        <span id="state_wwnn_nodejs">
+<a href="#state_wwnn_nodejs" style="color: inherit; text-decoration: inherit;">wwnn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1506,7 +1747,9 @@ creates a new volume attachment.
 
     <dt class="property-optional"
             title="Optional">
-        <span>wwpns</span>
+        <span id="state_wwpns_nodejs">
+<a href="#state_wwpns_nodejs" style="color: inherit; text-decoration: inherit;">wwpns</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1523,7 +1766,9 @@ connections.
 
     <dt class="property-optional"
             title="Optional">
-        <span>attach_<wbr>mode</span>
+        <span id="state_attach_mode_python">
+<a href="#state_attach_mode_python" style="color: inherit; text-decoration: inherit;">attach_<wbr>mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1534,7 +1779,9 @@ If left unspecified, the Block Storage API will apply a default of `rw`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>data</span>
+        <span id="state_data_python">
+<a href="#state_data_python" style="color: inherit; text-decoration: inherit;">data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -1545,7 +1792,9 @@ script to finalize the connection. See below for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span>device</span>
+        <span id="state_device_python">
+<a href="#state_device_python" style="color: inherit; text-decoration: inherit;">device</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1556,7 +1805,9 @@ You can specify `auto` or a device such as `/dev/vdc`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>driver_<wbr>volume_<wbr>type</span>
+        <span id="state_driver_volume_type_python">
+<a href="#state_driver_volume_type_python" style="color: inherit; text-decoration: inherit;">driver_<wbr>volume_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1565,7 +1816,9 @@ You can specify `auto` or a device such as `/dev/vdc`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>host_<wbr>name</span>
+        <span id="state_host_name_python">
+<a href="#state_host_name_python" style="color: inherit; text-decoration: inherit;">host_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1574,7 +1827,9 @@ You can specify `auto` or a device such as `/dev/vdc`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>initiator</span>
+        <span id="state_initiator_python">
+<a href="#state_initiator_python" style="color: inherit; text-decoration: inherit;">initiator</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1583,7 +1838,9 @@ You can specify `auto` or a device such as `/dev/vdc`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ip_<wbr>address</span>
+        <span id="state_ip_address_python">
+<a href="#state_ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1592,7 +1849,9 @@ You can specify `auto` or a device such as `/dev/vdc`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>mount_<wbr>point_<wbr>base</span>
+        <span id="state_mount_point_base_python">
+<a href="#state_mount_point_base_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>point_<wbr>base</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1601,7 +1860,9 @@ You can specify `auto` or a device such as `/dev/vdc`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>multipath</span>
+        <span id="state_multipath_python">
+<a href="#state_multipath_python" style="color: inherit; text-decoration: inherit;">multipath</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1610,7 +1871,9 @@ You can specify `auto` or a device such as `/dev/vdc`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>os_<wbr>type</span>
+        <span id="state_os_type_python">
+<a href="#state_os_type_python" style="color: inherit; text-decoration: inherit;">os_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1619,7 +1882,9 @@ You can specify `auto` or a device such as `/dev/vdc`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>platform</span>
+        <span id="state_platform_python">
+<a href="#state_platform_python" style="color: inherit; text-decoration: inherit;">platform</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1628,7 +1893,9 @@ You can specify `auto` or a device such as `/dev/vdc`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="state_region_python">
+<a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1640,7 +1907,9 @@ creates a new volume attachment.
 
     <dt class="property-optional"
             title="Optional">
-        <span>volume_<wbr>id</span>
+        <span id="state_volume_id_python">
+<a href="#state_volume_id_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1649,7 +1918,9 @@ creates a new volume attachment.
 
     <dt class="property-optional"
             title="Optional">
-        <span>wwnn</span>
+        <span id="state_wwnn_python">
+<a href="#state_wwnn_python" style="color: inherit; text-decoration: inherit;">wwnn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1658,7 +1929,9 @@ creates a new volume attachment.
 
     <dt class="property-optional"
             title="Optional">
-        <span>wwpns</span>
+        <span id="state_wwpns_python">
+<a href="#state_wwpns_python" style="color: inherit; text-decoration: inherit;">wwpns</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>

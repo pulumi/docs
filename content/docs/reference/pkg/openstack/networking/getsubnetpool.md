@@ -20,7 +20,22 @@ Use this data source to get the ID of an available OpenStack subnetpool.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var subnetpool1 = Output.Create(OpenStack.Networking.GetSubnetPool.InvokeAsync(new OpenStack.Networking.GetSubnetPoolArgs
+        {
+            Name = "subnetpool_1",
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -90,7 +105,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Address<wbr>Scope<wbr>Id</span>
+        <span id="addressscopeid_csharp">
+<a href="#addressscopeid_csharp" style="color: inherit; text-decoration: inherit;">Address<wbr>Scope<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -100,7 +117,9 @@ is assigned to.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default<wbr>Prefixlen</span>
+        <span id="defaultprefixlen_csharp">
+<a href="#defaultprefixlen_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Prefixlen</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -110,7 +129,9 @@ length.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default<wbr>Quota</span>
+        <span id="defaultquota_csharp">
+<a href="#defaultquota_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Quota</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -120,7 +141,9 @@ can be allocated from the subnetpool for project subnets.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -129,7 +152,9 @@ can be allocated from the subnetpool for project subnets.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ip<wbr>Version</span>
+        <span id="ipversion_csharp">
+<a href="#ipversion_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -138,7 +163,9 @@ can be allocated from the subnetpool for project subnets.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Is<wbr>Default</span>
+        <span id="isdefault_csharp">
+<a href="#isdefault_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Default</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -147,7 +174,9 @@ can be allocated from the subnetpool for project subnets.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Prefixlen</span>
+        <span id="maxprefixlen_csharp">
+<a href="#maxprefixlen_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Prefixlen</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -156,7 +185,9 @@ can be allocated from the subnetpool for project subnets.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Min<wbr>Prefixlen</span>
+        <span id="minprefixlen_csharp">
+<a href="#minprefixlen_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Prefixlen</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -165,7 +196,9 @@ can be allocated from the subnetpool for project subnets.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -174,7 +207,9 @@ can be allocated from the subnetpool for project subnets.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project<wbr>Id</span>
+        <span id="projectid_csharp">
+<a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -183,7 +218,9 @@ can be allocated from the subnetpool for project subnets.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="region_csharp">
+<a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -194,7 +231,9 @@ A Networking client is needed to retrieve a subnetpool id. If omitted, the
 
     <dt class="property-optional"
             title="Optional">
-        <span>Shared</span>
+        <span id="shared_csharp">
+<a href="#shared_csharp" style="color: inherit; text-decoration: inherit;">Shared</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -203,7 +242,9 @@ A Networking client is needed to retrieve a subnetpool id. If omitted, the
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -219,7 +260,9 @@ A Networking client is needed to retrieve a subnetpool id. If omitted, the
 
     <dt class="property-optional"
             title="Optional">
-        <span>Address<wbr>Scope<wbr>Id</span>
+        <span id="addressscopeid_go">
+<a href="#addressscopeid_go" style="color: inherit; text-decoration: inherit;">Address<wbr>Scope<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -229,7 +272,9 @@ is assigned to.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default<wbr>Prefixlen</span>
+        <span id="defaultprefixlen_go">
+<a href="#defaultprefixlen_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Prefixlen</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -239,7 +284,9 @@ length.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default<wbr>Quota</span>
+        <span id="defaultquota_go">
+<a href="#defaultquota_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Quota</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -249,7 +296,9 @@ can be allocated from the subnetpool for project subnets.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -258,7 +307,9 @@ can be allocated from the subnetpool for project subnets.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ip<wbr>Version</span>
+        <span id="ipversion_go">
+<a href="#ipversion_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -267,7 +318,9 @@ can be allocated from the subnetpool for project subnets.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Is<wbr>Default</span>
+        <span id="isdefault_go">
+<a href="#isdefault_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Default</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -276,7 +329,9 @@ can be allocated from the subnetpool for project subnets.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Prefixlen</span>
+        <span id="maxprefixlen_go">
+<a href="#maxprefixlen_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Prefixlen</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -285,7 +340,9 @@ can be allocated from the subnetpool for project subnets.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Min<wbr>Prefixlen</span>
+        <span id="minprefixlen_go">
+<a href="#minprefixlen_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Prefixlen</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -294,7 +351,9 @@ can be allocated from the subnetpool for project subnets.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -303,7 +362,9 @@ can be allocated from the subnetpool for project subnets.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project<wbr>Id</span>
+        <span id="projectid_go">
+<a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -312,7 +373,9 @@ can be allocated from the subnetpool for project subnets.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="region_go">
+<a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -323,7 +386,9 @@ A Networking client is needed to retrieve a subnetpool id. If omitted, the
 
     <dt class="property-optional"
             title="Optional">
-        <span>Shared</span>
+        <span id="shared_go">
+<a href="#shared_go" style="color: inherit; text-decoration: inherit;">Shared</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -332,7 +397,9 @@ A Networking client is needed to retrieve a subnetpool id. If omitted, the
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -348,7 +415,9 @@ A Networking client is needed to retrieve a subnetpool id. If omitted, the
 
     <dt class="property-optional"
             title="Optional">
-        <span>address<wbr>Scope<wbr>Id</span>
+        <span id="addressscopeid_nodejs">
+<a href="#addressscopeid_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Scope<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -358,7 +427,9 @@ is assigned to.
 
     <dt class="property-optional"
             title="Optional">
-        <span>default<wbr>Prefixlen</span>
+        <span id="defaultprefixlen_nodejs">
+<a href="#defaultprefixlen_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Prefixlen</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -368,7 +439,9 @@ length.
 
     <dt class="property-optional"
             title="Optional">
-        <span>default<wbr>Quota</span>
+        <span id="defaultquota_nodejs">
+<a href="#defaultquota_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Quota</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -378,7 +451,9 @@ can be allocated from the subnetpool for project subnets.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -387,7 +462,9 @@ can be allocated from the subnetpool for project subnets.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ip<wbr>Version</span>
+        <span id="ipversion_nodejs">
+<a href="#ipversion_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -396,7 +473,9 @@ can be allocated from the subnetpool for project subnets.
 
     <dt class="property-optional"
             title="Optional">
-        <span>is<wbr>Default</span>
+        <span id="isdefault_nodejs">
+<a href="#isdefault_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Default</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -405,7 +484,9 @@ can be allocated from the subnetpool for project subnets.
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Prefixlen</span>
+        <span id="maxprefixlen_nodejs">
+<a href="#maxprefixlen_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Prefixlen</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -414,7 +495,9 @@ can be allocated from the subnetpool for project subnets.
 
     <dt class="property-optional"
             title="Optional">
-        <span>min<wbr>Prefixlen</span>
+        <span id="minprefixlen_nodejs">
+<a href="#minprefixlen_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Prefixlen</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -423,7 +506,9 @@ can be allocated from the subnetpool for project subnets.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -432,7 +517,9 @@ can be allocated from the subnetpool for project subnets.
 
     <dt class="property-optional"
             title="Optional">
-        <span>project<wbr>Id</span>
+        <span id="projectid_nodejs">
+<a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -441,7 +528,9 @@ can be allocated from the subnetpool for project subnets.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="region_nodejs">
+<a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -452,7 +541,9 @@ A Networking client is needed to retrieve a subnetpool id. If omitted, the
 
     <dt class="property-optional"
             title="Optional">
-        <span>shared</span>
+        <span id="shared_nodejs">
+<a href="#shared_nodejs" style="color: inherit; text-decoration: inherit;">shared</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -461,7 +552,9 @@ A Networking client is needed to retrieve a subnetpool id. If omitted, the
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -477,7 +570,9 @@ A Networking client is needed to retrieve a subnetpool id. If omitted, the
 
     <dt class="property-optional"
             title="Optional">
-        <span>address_<wbr>scope_<wbr>id</span>
+        <span id="address_scope_id_python">
+<a href="#address_scope_id_python" style="color: inherit; text-decoration: inherit;">address_<wbr>scope_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -487,7 +582,9 @@ is assigned to.
 
     <dt class="property-optional"
             title="Optional">
-        <span>default_<wbr>prefixlen</span>
+        <span id="default_prefixlen_python">
+<a href="#default_prefixlen_python" style="color: inherit; text-decoration: inherit;">default_<wbr>prefixlen</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -497,7 +594,9 @@ length.
 
     <dt class="property-optional"
             title="Optional">
-        <span>default_<wbr>quota</span>
+        <span id="default_quota_python">
+<a href="#default_quota_python" style="color: inherit; text-decoration: inherit;">default_<wbr>quota</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -507,7 +606,9 @@ can be allocated from the subnetpool for project subnets.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -516,7 +617,9 @@ can be allocated from the subnetpool for project subnets.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ip_<wbr>version</span>
+        <span id="ip_version_python">
+<a href="#ip_version_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -525,7 +628,9 @@ can be allocated from the subnetpool for project subnets.
 
     <dt class="property-optional"
             title="Optional">
-        <span>is_<wbr>default</span>
+        <span id="is_default_python">
+<a href="#is_default_python" style="color: inherit; text-decoration: inherit;">is_<wbr>default</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -534,7 +639,9 @@ can be allocated from the subnetpool for project subnets.
 
     <dt class="property-optional"
             title="Optional">
-        <span>max_<wbr>prefixlen</span>
+        <span id="max_prefixlen_python">
+<a href="#max_prefixlen_python" style="color: inherit; text-decoration: inherit;">max_<wbr>prefixlen</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -543,7 +650,9 @@ can be allocated from the subnetpool for project subnets.
 
     <dt class="property-optional"
             title="Optional">
-        <span>min_<wbr>prefixlen</span>
+        <span id="min_prefixlen_python">
+<a href="#min_prefixlen_python" style="color: inherit; text-decoration: inherit;">min_<wbr>prefixlen</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -552,7 +661,9 @@ can be allocated from the subnetpool for project subnets.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -561,7 +672,9 @@ can be allocated from the subnetpool for project subnets.
 
     <dt class="property-optional"
             title="Optional">
-        <span>project_<wbr>id</span>
+        <span id="project_id_python">
+<a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -570,7 +683,9 @@ can be allocated from the subnetpool for project subnets.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="region_python">
+<a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -581,7 +696,9 @@ A Networking client is needed to retrieve a subnetpool id. If omitted, the
 
     <dt class="property-optional"
             title="Optional">
-        <span>shared</span>
+        <span id="shared_python">
+<a href="#shared_python" style="color: inherit; text-decoration: inherit;">shared</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -590,7 +707,9 @@ A Networking client is needed to retrieve a subnetpool id. If omitted, the
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -619,7 +738,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Address<wbr>Scope<wbr>Id</span>
+        <span id="addressscopeid_csharp">
+<a href="#addressscopeid_csharp" style="color: inherit; text-decoration: inherit;">Address<wbr>Scope<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -629,7 +750,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>All<wbr>Tags</span>
+        <span id="alltags_csharp">
+<a href="#alltags_csharp" style="color: inherit; text-decoration: inherit;">All<wbr>Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -638,7 +761,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Created<wbr>At</span>
+        <span id="createdat_csharp">
+<a href="#createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -647,7 +772,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Default<wbr>Prefixlen</span>
+        <span id="defaultprefixlen_csharp">
+<a href="#defaultprefixlen_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Prefixlen</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -656,7 +783,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Default<wbr>Quota</span>
+        <span id="defaultquota_csharp">
+<a href="#defaultquota_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Quota</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -665,7 +794,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Description</span>
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -674,7 +805,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -683,7 +816,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Ip<wbr>Version</span>
+        <span id="ipversion_csharp">
+<a href="#ipversion_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -691,7 +826,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Is<wbr>Default</span>
+        <span id="isdefault_csharp">
+<a href="#isdefault_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Default</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -700,7 +837,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Max<wbr>Prefixlen</span>
+        <span id="maxprefixlen_csharp">
+<a href="#maxprefixlen_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Prefixlen</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -709,7 +848,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Min<wbr>Prefixlen</span>
+        <span id="minprefixlen_csharp">
+<a href="#minprefixlen_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Prefixlen</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -718,7 +859,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -727,7 +870,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Prefixes</span>
+        <span id="prefixes_csharp">
+<a href="#prefixes_csharp" style="color: inherit; text-decoration: inherit;">Prefixes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -736,7 +881,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Project<wbr>Id</span>
+        <span id="projectid_csharp">
+<a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -745,7 +892,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Region</span>
+        <span id="region_csharp">
+<a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -754,7 +903,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Revision<wbr>Number</span>
+        <span id="revisionnumber_csharp">
+<a href="#revisionnumber_csharp" style="color: inherit; text-decoration: inherit;">Revision<wbr>Number</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -763,7 +914,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Shared</span>
+        <span id="shared_csharp">
+<a href="#shared_csharp" style="color: inherit; text-decoration: inherit;">Shared</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -772,7 +925,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Updated<wbr>At</span>
+        <span id="updatedat_csharp">
+<a href="#updatedat_csharp" style="color: inherit; text-decoration: inherit;">Updated<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -781,7 +936,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Tags</span>
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -796,7 +953,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Address<wbr>Scope<wbr>Id</span>
+        <span id="addressscopeid_go">
+<a href="#addressscopeid_go" style="color: inherit; text-decoration: inherit;">Address<wbr>Scope<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -806,7 +965,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>All<wbr>Tags</span>
+        <span id="alltags_go">
+<a href="#alltags_go" style="color: inherit; text-decoration: inherit;">All<wbr>Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -815,7 +976,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Created<wbr>At</span>
+        <span id="createdat_go">
+<a href="#createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -824,7 +987,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Default<wbr>Prefixlen</span>
+        <span id="defaultprefixlen_go">
+<a href="#defaultprefixlen_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Prefixlen</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -833,7 +998,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Default<wbr>Quota</span>
+        <span id="defaultquota_go">
+<a href="#defaultquota_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Quota</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -842,7 +1009,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Description</span>
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -851,7 +1020,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -860,7 +1031,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Ip<wbr>Version</span>
+        <span id="ipversion_go">
+<a href="#ipversion_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -868,7 +1041,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Is<wbr>Default</span>
+        <span id="isdefault_go">
+<a href="#isdefault_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Default</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -877,7 +1052,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Max<wbr>Prefixlen</span>
+        <span id="maxprefixlen_go">
+<a href="#maxprefixlen_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Prefixlen</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -886,7 +1063,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Min<wbr>Prefixlen</span>
+        <span id="minprefixlen_go">
+<a href="#minprefixlen_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Prefixlen</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -895,7 +1074,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -904,7 +1085,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Prefixes</span>
+        <span id="prefixes_go">
+<a href="#prefixes_go" style="color: inherit; text-decoration: inherit;">Prefixes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -913,7 +1096,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Project<wbr>Id</span>
+        <span id="projectid_go">
+<a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -922,7 +1107,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Region</span>
+        <span id="region_go">
+<a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -931,7 +1118,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Revision<wbr>Number</span>
+        <span id="revisionnumber_go">
+<a href="#revisionnumber_go" style="color: inherit; text-decoration: inherit;">Revision<wbr>Number</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -940,7 +1129,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Shared</span>
+        <span id="shared_go">
+<a href="#shared_go" style="color: inherit; text-decoration: inherit;">Shared</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -949,7 +1140,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Updated<wbr>At</span>
+        <span id="updatedat_go">
+<a href="#updatedat_go" style="color: inherit; text-decoration: inherit;">Updated<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -958,7 +1151,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Tags</span>
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -973,7 +1168,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>address<wbr>Scope<wbr>Id</span>
+        <span id="addressscopeid_nodejs">
+<a href="#addressscopeid_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Scope<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -983,7 +1180,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>all<wbr>Tags</span>
+        <span id="alltags_nodejs">
+<a href="#alltags_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -992,7 +1191,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>created<wbr>At</span>
+        <span id="createdat_nodejs">
+<a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1001,7 +1202,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>default<wbr>Prefixlen</span>
+        <span id="defaultprefixlen_nodejs">
+<a href="#defaultprefixlen_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Prefixlen</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1010,7 +1213,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>default<wbr>Quota</span>
+        <span id="defaultquota_nodejs">
+<a href="#defaultquota_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Quota</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1019,7 +1224,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>description</span>
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1028,7 +1235,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1037,7 +1246,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>ip<wbr>Version</span>
+        <span id="ipversion_nodejs">
+<a href="#ipversion_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1045,7 +1256,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>is<wbr>Default</span>
+        <span id="isdefault_nodejs">
+<a href="#isdefault_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Default</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1054,7 +1267,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>max<wbr>Prefixlen</span>
+        <span id="maxprefixlen_nodejs">
+<a href="#maxprefixlen_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Prefixlen</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1063,7 +1278,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>min<wbr>Prefixlen</span>
+        <span id="minprefixlen_nodejs">
+<a href="#minprefixlen_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Prefixlen</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1072,7 +1289,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1081,7 +1300,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>prefixes</span>
+        <span id="prefixes_nodejs">
+<a href="#prefixes_nodejs" style="color: inherit; text-decoration: inherit;">prefixes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1090,7 +1311,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>project<wbr>Id</span>
+        <span id="projectid_nodejs">
+<a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1099,7 +1322,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>region</span>
+        <span id="region_nodejs">
+<a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1108,7 +1333,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>revision<wbr>Number</span>
+        <span id="revisionnumber_nodejs">
+<a href="#revisionnumber_nodejs" style="color: inherit; text-decoration: inherit;">revision<wbr>Number</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1117,7 +1344,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>shared</span>
+        <span id="shared_nodejs">
+<a href="#shared_nodejs" style="color: inherit; text-decoration: inherit;">shared</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1126,7 +1355,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>updated<wbr>At</span>
+        <span id="updatedat_nodejs">
+<a href="#updatedat_nodejs" style="color: inherit; text-decoration: inherit;">updated<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1135,7 +1366,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>tags</span>
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1150,7 +1383,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>address_<wbr>scope_<wbr>id</span>
+        <span id="address_scope_id_python">
+<a href="#address_scope_id_python" style="color: inherit; text-decoration: inherit;">address_<wbr>scope_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1160,7 +1395,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>all_<wbr>tags</span>
+        <span id="all_tags_python">
+<a href="#all_tags_python" style="color: inherit; text-decoration: inherit;">all_<wbr>tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1169,7 +1406,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>created_<wbr>at</span>
+        <span id="created_at_python">
+<a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1178,7 +1417,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>default_<wbr>prefixlen</span>
+        <span id="default_prefixlen_python">
+<a href="#default_prefixlen_python" style="color: inherit; text-decoration: inherit;">default_<wbr>prefixlen</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1187,7 +1428,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>default_<wbr>quota</span>
+        <span id="default_quota_python">
+<a href="#default_quota_python" style="color: inherit; text-decoration: inherit;">default_<wbr>quota</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1196,7 +1439,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>description</span>
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1205,7 +1450,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1214,7 +1461,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>ip_<wbr>version</span>
+        <span id="ip_version_python">
+<a href="#ip_version_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1222,7 +1471,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>is_<wbr>default</span>
+        <span id="is_default_python">
+<a href="#is_default_python" style="color: inherit; text-decoration: inherit;">is_<wbr>default</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1231,7 +1482,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>max_<wbr>prefixlen</span>
+        <span id="max_prefixlen_python">
+<a href="#max_prefixlen_python" style="color: inherit; text-decoration: inherit;">max_<wbr>prefixlen</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1240,7 +1493,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>min_<wbr>prefixlen</span>
+        <span id="min_prefixlen_python">
+<a href="#min_prefixlen_python" style="color: inherit; text-decoration: inherit;">min_<wbr>prefixlen</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1249,7 +1504,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1258,7 +1515,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>prefixes</span>
+        <span id="prefixes_python">
+<a href="#prefixes_python" style="color: inherit; text-decoration: inherit;">prefixes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1267,7 +1526,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>project_<wbr>id</span>
+        <span id="project_id_python">
+<a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1276,7 +1537,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>region</span>
+        <span id="region_python">
+<a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1285,7 +1548,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>revision_<wbr>number</span>
+        <span id="revision_number_python">
+<a href="#revision_number_python" style="color: inherit; text-decoration: inherit;">revision_<wbr>number</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1294,7 +1559,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>shared</span>
+        <span id="shared_python">
+<a href="#shared_python" style="color: inherit; text-decoration: inherit;">shared</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1303,7 +1570,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>updated_<wbr>at</span>
+        <span id="updated_at_python">
+<a href="#updated_at_python" style="color: inherit; text-decoration: inherit;">updated_<wbr>at</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1312,7 +1581,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>tags</span>
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>

@@ -20,7 +20,28 @@ Manages a V2 Neutron IPSec site connection resource within OpenStack.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var conn1 = new OpenStack.VPNaaS.SiteConnection("conn1", new OpenStack.VPNaaS.SiteConnectionArgs
+        {
+            IkepolicyId = openstack_vpnaas_ike_policy_v2.Policy_2.Id,
+            IpsecpolicyId = openstack_vpnaas_ipsec_policy_v2.Policy_1.Id,
+            LocalEpGroupId = openstack_vpnaas_endpoint_group_v2.Group_2.Id,
+            PeerAddress = "192.168.10.1",
+            PeerEpGroupId = openstack_vpnaas_endpoint_group_v2.Group_1.Id,
+            Psk = "secret",
+            VpnserviceId = openstack_vpnaas_service_v2.Service_1.Id,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -246,7 +267,9 @@ The SiteConnection resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-required"
             title="Required">
-        <span>Ikepolicy<wbr>Id</span>
+        <span id="ikepolicyid_csharp">
+<a href="#ikepolicyid_csharp" style="color: inherit; text-decoration: inherit;">Ikepolicy<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -255,7 +278,9 @@ The SiteConnection resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-required"
             title="Required">
-        <span>Ipsecpolicy<wbr>Id</span>
+        <span id="ipsecpolicyid_csharp">
+<a href="#ipsecpolicyid_csharp" style="color: inherit; text-decoration: inherit;">Ipsecpolicy<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -264,7 +289,9 @@ The SiteConnection resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-required"
             title="Required">
-        <span>Peer<wbr>Address</span>
+        <span id="peeraddress_csharp">
+<a href="#peeraddress_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -273,7 +300,9 @@ The SiteConnection resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-required"
             title="Required">
-        <span>Peer<wbr>Id</span>
+        <span id="peerid_csharp">
+<a href="#peerid_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -284,7 +313,9 @@ Changing this updates the existing policy.
 
     <dt class="property-required"
             title="Required">
-        <span>Psk</span>
+        <span id="psk_csharp">
+<a href="#psk_csharp" style="color: inherit; text-decoration: inherit;">Psk</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -293,7 +324,9 @@ Changing this updates the existing policy.
 
     <dt class="property-required"
             title="Required">
-        <span>Vpnservice<wbr>Id</span>
+        <span id="vpnserviceid_csharp">
+<a href="#vpnserviceid_csharp" style="color: inherit; text-decoration: inherit;">Vpnservice<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -302,7 +335,9 @@ Changing this updates the existing policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Admin<wbr>State<wbr>Up</span>
+        <span id="adminstateup_csharp">
+<a href="#adminstateup_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>State<wbr>Up</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -312,7 +347,9 @@ Changing this updates the administrative state of the existing connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -322,7 +359,9 @@ Changing this updates the description of the existing connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dpds</span>
+        <span id="dpds_csharp">
+<a href="#dpds_csharp" style="color: inherit; text-decoration: inherit;">Dpds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#siteconnectiondpd">List&lt;Pulumi.<wbr>Open<wbr>Stack.<wbr>VPNaa<wbr>S.<wbr>Inputs.<wbr>Site<wbr>Connection<wbr>Dpd<wbr>Args&gt;</a></span>
     </dt>
@@ -334,7 +373,9 @@ Default value is hold.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Initiator</span>
+        <span id="initiator_csharp">
+<a href="#initiator_csharp" style="color: inherit; text-decoration: inherit;">Initiator</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -343,7 +384,9 @@ Default value is hold.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Local<wbr>Ep<wbr>Group<wbr>Id</span>
+        <span id="localepgroupid_csharp">
+<a href="#localepgroupid_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Ep<wbr>Group<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -355,7 +398,9 @@ Changing this updates the existing connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Local<wbr>Id</span>
+        <span id="localid_csharp">
+<a href="#localid_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -366,7 +411,9 @@ If this is not configured then the external IP address will be used as the ID.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Mtu</span>
+        <span id="mtu_csharp">
+<a href="#mtu_csharp" style="color: inherit; text-decoration: inherit;">Mtu</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -376,7 +423,9 @@ Minimum value is 68 for IPv4, and 1280 for IPv6.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -386,7 +435,9 @@ the existing connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Peer<wbr>Cidrs</span>
+        <span id="peercidrs_csharp">
+<a href="#peercidrs_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>Cidrs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -395,7 +446,9 @@ the existing connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Peer<wbr>Ep<wbr>Group<wbr>Id</span>
+        <span id="peerepgroupid_csharp">
+<a href="#peerepgroupid_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>Ep<wbr>Group<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -406,7 +459,9 @@ where peer_cidrs is provided with a subnet_id for the VPN service.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="region_csharp">
+<a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -418,7 +473,9 @@ site connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tenant<wbr>Id</span>
+        <span id="tenantid_csharp">
+<a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -428,7 +485,9 @@ create a connection for another project. Changing this creates a new connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Value<wbr>Specs</span>
+        <span id="valuespecs_csharp">
+<a href="#valuespecs_csharp" style="color: inherit; text-decoration: inherit;">Value<wbr>Specs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -444,7 +503,9 @@ create a connection for another project. Changing this creates a new connection.
 
     <dt class="property-required"
             title="Required">
-        <span>Ikepolicy<wbr>Id</span>
+        <span id="ikepolicyid_go">
+<a href="#ikepolicyid_go" style="color: inherit; text-decoration: inherit;">Ikepolicy<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -453,7 +514,9 @@ create a connection for another project. Changing this creates a new connection.
 
     <dt class="property-required"
             title="Required">
-        <span>Ipsecpolicy<wbr>Id</span>
+        <span id="ipsecpolicyid_go">
+<a href="#ipsecpolicyid_go" style="color: inherit; text-decoration: inherit;">Ipsecpolicy<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -462,7 +525,9 @@ create a connection for another project. Changing this creates a new connection.
 
     <dt class="property-required"
             title="Required">
-        <span>Peer<wbr>Address</span>
+        <span id="peeraddress_go">
+<a href="#peeraddress_go" style="color: inherit; text-decoration: inherit;">Peer<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -471,7 +536,9 @@ create a connection for another project. Changing this creates a new connection.
 
     <dt class="property-required"
             title="Required">
-        <span>Peer<wbr>Id</span>
+        <span id="peerid_go">
+<a href="#peerid_go" style="color: inherit; text-decoration: inherit;">Peer<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -482,7 +549,9 @@ Changing this updates the existing policy.
 
     <dt class="property-required"
             title="Required">
-        <span>Psk</span>
+        <span id="psk_go">
+<a href="#psk_go" style="color: inherit; text-decoration: inherit;">Psk</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -491,7 +560,9 @@ Changing this updates the existing policy.
 
     <dt class="property-required"
             title="Required">
-        <span>Vpnservice<wbr>Id</span>
+        <span id="vpnserviceid_go">
+<a href="#vpnserviceid_go" style="color: inherit; text-decoration: inherit;">Vpnservice<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -500,7 +571,9 @@ Changing this updates the existing policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Admin<wbr>State<wbr>Up</span>
+        <span id="adminstateup_go">
+<a href="#adminstateup_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>State<wbr>Up</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -510,7 +583,9 @@ Changing this updates the administrative state of the existing connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -520,7 +595,9 @@ Changing this updates the description of the existing connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dpds</span>
+        <span id="dpds_go">
+<a href="#dpds_go" style="color: inherit; text-decoration: inherit;">Dpds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#siteconnectiondpd">[]Site<wbr>Connection<wbr>Dpd</a></span>
     </dt>
@@ -532,7 +609,9 @@ Default value is hold.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Initiator</span>
+        <span id="initiator_go">
+<a href="#initiator_go" style="color: inherit; text-decoration: inherit;">Initiator</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -541,7 +620,9 @@ Default value is hold.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Local<wbr>Ep<wbr>Group<wbr>Id</span>
+        <span id="localepgroupid_go">
+<a href="#localepgroupid_go" style="color: inherit; text-decoration: inherit;">Local<wbr>Ep<wbr>Group<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -553,7 +634,9 @@ Changing this updates the existing connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Local<wbr>Id</span>
+        <span id="localid_go">
+<a href="#localid_go" style="color: inherit; text-decoration: inherit;">Local<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -564,7 +647,9 @@ If this is not configured then the external IP address will be used as the ID.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Mtu</span>
+        <span id="mtu_go">
+<a href="#mtu_go" style="color: inherit; text-decoration: inherit;">Mtu</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -574,7 +659,9 @@ Minimum value is 68 for IPv4, and 1280 for IPv6.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -584,7 +671,9 @@ the existing connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Peer<wbr>Cidrs</span>
+        <span id="peercidrs_go">
+<a href="#peercidrs_go" style="color: inherit; text-decoration: inherit;">Peer<wbr>Cidrs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -593,7 +682,9 @@ the existing connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Peer<wbr>Ep<wbr>Group<wbr>Id</span>
+        <span id="peerepgroupid_go">
+<a href="#peerepgroupid_go" style="color: inherit; text-decoration: inherit;">Peer<wbr>Ep<wbr>Group<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -604,7 +695,9 @@ where peer_cidrs is provided with a subnet_id for the VPN service.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="region_go">
+<a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -616,7 +709,9 @@ site connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tenant<wbr>Id</span>
+        <span id="tenantid_go">
+<a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -626,7 +721,9 @@ create a connection for another project. Changing this creates a new connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Value<wbr>Specs</span>
+        <span id="valuespecs_go">
+<a href="#valuespecs_go" style="color: inherit; text-decoration: inherit;">Value<wbr>Specs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -642,7 +739,9 @@ create a connection for another project. Changing this creates a new connection.
 
     <dt class="property-required"
             title="Required">
-        <span>ikepolicy<wbr>Id</span>
+        <span id="ikepolicyid_nodejs">
+<a href="#ikepolicyid_nodejs" style="color: inherit; text-decoration: inherit;">ikepolicy<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -651,7 +750,9 @@ create a connection for another project. Changing this creates a new connection.
 
     <dt class="property-required"
             title="Required">
-        <span>ipsecpolicy<wbr>Id</span>
+        <span id="ipsecpolicyid_nodejs">
+<a href="#ipsecpolicyid_nodejs" style="color: inherit; text-decoration: inherit;">ipsecpolicy<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -660,7 +761,9 @@ create a connection for another project. Changing this creates a new connection.
 
     <dt class="property-required"
             title="Required">
-        <span>peer<wbr>Address</span>
+        <span id="peeraddress_nodejs">
+<a href="#peeraddress_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -669,7 +772,9 @@ create a connection for another project. Changing this creates a new connection.
 
     <dt class="property-required"
             title="Required">
-        <span>peer<wbr>Id</span>
+        <span id="peerid_nodejs">
+<a href="#peerid_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -680,7 +785,9 @@ Changing this updates the existing policy.
 
     <dt class="property-required"
             title="Required">
-        <span>psk</span>
+        <span id="psk_nodejs">
+<a href="#psk_nodejs" style="color: inherit; text-decoration: inherit;">psk</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -689,7 +796,9 @@ Changing this updates the existing policy.
 
     <dt class="property-required"
             title="Required">
-        <span>vpnservice<wbr>Id</span>
+        <span id="vpnserviceid_nodejs">
+<a href="#vpnserviceid_nodejs" style="color: inherit; text-decoration: inherit;">vpnservice<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -698,7 +807,9 @@ Changing this updates the existing policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>admin<wbr>State<wbr>Up</span>
+        <span id="adminstateup_nodejs">
+<a href="#adminstateup_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>State<wbr>Up</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -708,7 +819,9 @@ Changing this updates the administrative state of the existing connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -718,7 +831,9 @@ Changing this updates the description of the existing connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>dpds</span>
+        <span id="dpds_nodejs">
+<a href="#dpds_nodejs" style="color: inherit; text-decoration: inherit;">dpds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#siteconnectiondpd">Site<wbr>Connection<wbr>Dpd[]</a></span>
     </dt>
@@ -730,7 +845,9 @@ Default value is hold.
 
     <dt class="property-optional"
             title="Optional">
-        <span>initiator</span>
+        <span id="initiator_nodejs">
+<a href="#initiator_nodejs" style="color: inherit; text-decoration: inherit;">initiator</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -739,7 +856,9 @@ Default value is hold.
 
     <dt class="property-optional"
             title="Optional">
-        <span>local<wbr>Ep<wbr>Group<wbr>Id</span>
+        <span id="localepgroupid_nodejs">
+<a href="#localepgroupid_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Ep<wbr>Group<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -751,7 +870,9 @@ Changing this updates the existing connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>local<wbr>Id</span>
+        <span id="localid_nodejs">
+<a href="#localid_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -762,7 +883,9 @@ If this is not configured then the external IP address will be used as the ID.
 
     <dt class="property-optional"
             title="Optional">
-        <span>mtu</span>
+        <span id="mtu_nodejs">
+<a href="#mtu_nodejs" style="color: inherit; text-decoration: inherit;">mtu</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -772,7 +895,9 @@ Minimum value is 68 for IPv4, and 1280 for IPv6.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -782,7 +907,9 @@ the existing connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>peer<wbr>Cidrs</span>
+        <span id="peercidrs_nodejs">
+<a href="#peercidrs_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Cidrs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -791,7 +918,9 @@ the existing connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>peer<wbr>Ep<wbr>Group<wbr>Id</span>
+        <span id="peerepgroupid_nodejs">
+<a href="#peerepgroupid_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Ep<wbr>Group<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -802,7 +931,9 @@ where peer_cidrs is provided with a subnet_id for the VPN service.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="region_nodejs">
+<a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -814,7 +945,9 @@ site connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tenant<wbr>Id</span>
+        <span id="tenantid_nodejs">
+<a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -824,7 +957,9 @@ create a connection for another project. Changing this creates a new connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>value<wbr>Specs</span>
+        <span id="valuespecs_nodejs">
+<a href="#valuespecs_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>Specs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -840,7 +975,9 @@ create a connection for another project. Changing this creates a new connection.
 
     <dt class="property-required"
             title="Required">
-        <span>ikepolicy_<wbr>id</span>
+        <span id="ikepolicy_id_python">
+<a href="#ikepolicy_id_python" style="color: inherit; text-decoration: inherit;">ikepolicy_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -849,7 +986,9 @@ create a connection for another project. Changing this creates a new connection.
 
     <dt class="property-required"
             title="Required">
-        <span>ipsecpolicy_<wbr>id</span>
+        <span id="ipsecpolicy_id_python">
+<a href="#ipsecpolicy_id_python" style="color: inherit; text-decoration: inherit;">ipsecpolicy_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -858,7 +997,9 @@ create a connection for another project. Changing this creates a new connection.
 
     <dt class="property-required"
             title="Required">
-        <span>peer_<wbr>address</span>
+        <span id="peer_address_python">
+<a href="#peer_address_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -867,7 +1008,9 @@ create a connection for another project. Changing this creates a new connection.
 
     <dt class="property-required"
             title="Required">
-        <span>peer_<wbr>id</span>
+        <span id="peer_id_python">
+<a href="#peer_id_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -878,7 +1021,9 @@ Changing this updates the existing policy.
 
     <dt class="property-required"
             title="Required">
-        <span>psk</span>
+        <span id="psk_python">
+<a href="#psk_python" style="color: inherit; text-decoration: inherit;">psk</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -887,7 +1032,9 @@ Changing this updates the existing policy.
 
     <dt class="property-required"
             title="Required">
-        <span>vpnservice_<wbr>id</span>
+        <span id="vpnservice_id_python">
+<a href="#vpnservice_id_python" style="color: inherit; text-decoration: inherit;">vpnservice_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -896,7 +1043,9 @@ Changing this updates the existing policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>admin_<wbr>state_<wbr>up</span>
+        <span id="admin_state_up_python">
+<a href="#admin_state_up_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>state_<wbr>up</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -906,7 +1055,9 @@ Changing this updates the administrative state of the existing connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -916,7 +1067,9 @@ Changing this updates the description of the existing connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>dpds</span>
+        <span id="dpds_python">
+<a href="#dpds_python" style="color: inherit; text-decoration: inherit;">dpds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#siteconnectiondpd">List[Site<wbr>Connection<wbr>Dpd]</a></span>
     </dt>
@@ -928,7 +1081,9 @@ Default value is hold.
 
     <dt class="property-optional"
             title="Optional">
-        <span>initiator</span>
+        <span id="initiator_python">
+<a href="#initiator_python" style="color: inherit; text-decoration: inherit;">initiator</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -937,7 +1092,9 @@ Default value is hold.
 
     <dt class="property-optional"
             title="Optional">
-        <span>local_<wbr>ep_<wbr>group_<wbr>id</span>
+        <span id="local_ep_group_id_python">
+<a href="#local_ep_group_id_python" style="color: inherit; text-decoration: inherit;">local_<wbr>ep_<wbr>group_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -949,7 +1106,9 @@ Changing this updates the existing connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>local_<wbr>id</span>
+        <span id="local_id_python">
+<a href="#local_id_python" style="color: inherit; text-decoration: inherit;">local_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -960,7 +1119,9 @@ If this is not configured then the external IP address will be used as the ID.
 
     <dt class="property-optional"
             title="Optional">
-        <span>mtu</span>
+        <span id="mtu_python">
+<a href="#mtu_python" style="color: inherit; text-decoration: inherit;">mtu</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -970,7 +1131,9 @@ Minimum value is 68 for IPv4, and 1280 for IPv6.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -980,7 +1143,9 @@ the existing connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>peer_<wbr>cidrs</span>
+        <span id="peer_cidrs_python">
+<a href="#peer_cidrs_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>cidrs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -989,7 +1154,9 @@ the existing connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>peer_<wbr>ep_<wbr>group_<wbr>id</span>
+        <span id="peer_ep_group_id_python">
+<a href="#peer_ep_group_id_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>ep_<wbr>group_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1000,7 +1167,9 @@ where peer_cidrs is provided with a subnet_id for the VPN service.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="region_python">
+<a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1012,7 +1181,9 @@ site connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tenant_<wbr>id</span>
+        <span id="tenant_id_python">
+<a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1022,7 +1193,9 @@ create a connection for another project. Changing this creates a new connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>value_<wbr>specs</span>
+        <span id="value_specs_python">
+<a href="#value_specs_python" style="color: inherit; text-decoration: inherit;">value_<wbr>specs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -1049,7 +1222,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1064,7 +1239,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1079,7 +1256,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1094,7 +1273,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1235,7 +1416,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Admin<wbr>State<wbr>Up</span>
+        <span id="state_adminstateup_csharp">
+<a href="#state_adminstateup_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>State<wbr>Up</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1245,7 +1428,9 @@ Changing this updates the administrative state of the existing connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_csharp">
+<a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1255,7 +1440,9 @@ Changing this updates the description of the existing connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dpds</span>
+        <span id="state_dpds_csharp">
+<a href="#state_dpds_csharp" style="color: inherit; text-decoration: inherit;">Dpds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#siteconnectiondpd">List&lt;Pulumi.<wbr>Open<wbr>Stack.<wbr>VPNaa<wbr>S.<wbr>Inputs.<wbr>Site<wbr>Connection<wbr>Dpd<wbr>Args&gt;</a></span>
     </dt>
@@ -1267,7 +1454,9 @@ Default value is hold.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ikepolicy<wbr>Id</span>
+        <span id="state_ikepolicyid_csharp">
+<a href="#state_ikepolicyid_csharp" style="color: inherit; text-decoration: inherit;">Ikepolicy<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1276,7 +1465,9 @@ Default value is hold.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Initiator</span>
+        <span id="state_initiator_csharp">
+<a href="#state_initiator_csharp" style="color: inherit; text-decoration: inherit;">Initiator</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1285,7 +1476,9 @@ Default value is hold.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ipsecpolicy<wbr>Id</span>
+        <span id="state_ipsecpolicyid_csharp">
+<a href="#state_ipsecpolicyid_csharp" style="color: inherit; text-decoration: inherit;">Ipsecpolicy<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1294,7 +1487,9 @@ Default value is hold.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Local<wbr>Ep<wbr>Group<wbr>Id</span>
+        <span id="state_localepgroupid_csharp">
+<a href="#state_localepgroupid_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Ep<wbr>Group<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1306,7 +1501,9 @@ Changing this updates the existing connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Local<wbr>Id</span>
+        <span id="state_localid_csharp">
+<a href="#state_localid_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1317,7 +1514,9 @@ If this is not configured then the external IP address will be used as the ID.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Mtu</span>
+        <span id="state_mtu_csharp">
+<a href="#state_mtu_csharp" style="color: inherit; text-decoration: inherit;">Mtu</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1327,7 +1526,9 @@ Minimum value is 68 for IPv4, and 1280 for IPv6.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1337,7 +1538,9 @@ the existing connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Peer<wbr>Address</span>
+        <span id="state_peeraddress_csharp">
+<a href="#state_peeraddress_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1346,7 +1549,9 @@ the existing connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Peer<wbr>Cidrs</span>
+        <span id="state_peercidrs_csharp">
+<a href="#state_peercidrs_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>Cidrs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1355,7 +1560,9 @@ the existing connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Peer<wbr>Ep<wbr>Group<wbr>Id</span>
+        <span id="state_peerepgroupid_csharp">
+<a href="#state_peerepgroupid_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>Ep<wbr>Group<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1366,7 +1573,9 @@ where peer_cidrs is provided with a subnet_id for the VPN service.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Peer<wbr>Id</span>
+        <span id="state_peerid_csharp">
+<a href="#state_peerid_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1377,7 +1586,9 @@ Changing this updates the existing policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Psk</span>
+        <span id="state_psk_csharp">
+<a href="#state_psk_csharp" style="color: inherit; text-decoration: inherit;">Psk</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1386,7 +1597,9 @@ Changing this updates the existing policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="state_region_csharp">
+<a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1398,7 +1611,9 @@ site connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tenant<wbr>Id</span>
+        <span id="state_tenantid_csharp">
+<a href="#state_tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1408,7 +1623,9 @@ create a connection for another project. Changing this creates a new connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Value<wbr>Specs</span>
+        <span id="state_valuespecs_csharp">
+<a href="#state_valuespecs_csharp" style="color: inherit; text-decoration: inherit;">Value<wbr>Specs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -1417,7 +1634,9 @@ create a connection for another project. Changing this creates a new connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vpnservice<wbr>Id</span>
+        <span id="state_vpnserviceid_csharp">
+<a href="#state_vpnserviceid_csharp" style="color: inherit; text-decoration: inherit;">Vpnservice<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1433,7 +1652,9 @@ create a connection for another project. Changing this creates a new connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Admin<wbr>State<wbr>Up</span>
+        <span id="state_adminstateup_go">
+<a href="#state_adminstateup_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>State<wbr>Up</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1443,7 +1664,9 @@ Changing this updates the administrative state of the existing connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_go">
+<a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1453,7 +1676,9 @@ Changing this updates the description of the existing connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dpds</span>
+        <span id="state_dpds_go">
+<a href="#state_dpds_go" style="color: inherit; text-decoration: inherit;">Dpds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#siteconnectiondpd">[]Site<wbr>Connection<wbr>Dpd</a></span>
     </dt>
@@ -1465,7 +1690,9 @@ Default value is hold.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ikepolicy<wbr>Id</span>
+        <span id="state_ikepolicyid_go">
+<a href="#state_ikepolicyid_go" style="color: inherit; text-decoration: inherit;">Ikepolicy<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1474,7 +1701,9 @@ Default value is hold.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Initiator</span>
+        <span id="state_initiator_go">
+<a href="#state_initiator_go" style="color: inherit; text-decoration: inherit;">Initiator</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1483,7 +1712,9 @@ Default value is hold.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ipsecpolicy<wbr>Id</span>
+        <span id="state_ipsecpolicyid_go">
+<a href="#state_ipsecpolicyid_go" style="color: inherit; text-decoration: inherit;">Ipsecpolicy<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1492,7 +1723,9 @@ Default value is hold.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Local<wbr>Ep<wbr>Group<wbr>Id</span>
+        <span id="state_localepgroupid_go">
+<a href="#state_localepgroupid_go" style="color: inherit; text-decoration: inherit;">Local<wbr>Ep<wbr>Group<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1504,7 +1737,9 @@ Changing this updates the existing connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Local<wbr>Id</span>
+        <span id="state_localid_go">
+<a href="#state_localid_go" style="color: inherit; text-decoration: inherit;">Local<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1515,7 +1750,9 @@ If this is not configured then the external IP address will be used as the ID.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Mtu</span>
+        <span id="state_mtu_go">
+<a href="#state_mtu_go" style="color: inherit; text-decoration: inherit;">Mtu</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1525,7 +1762,9 @@ Minimum value is 68 for IPv4, and 1280 for IPv6.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1535,7 +1774,9 @@ the existing connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Peer<wbr>Address</span>
+        <span id="state_peeraddress_go">
+<a href="#state_peeraddress_go" style="color: inherit; text-decoration: inherit;">Peer<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1544,7 +1785,9 @@ the existing connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Peer<wbr>Cidrs</span>
+        <span id="state_peercidrs_go">
+<a href="#state_peercidrs_go" style="color: inherit; text-decoration: inherit;">Peer<wbr>Cidrs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1553,7 +1796,9 @@ the existing connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Peer<wbr>Ep<wbr>Group<wbr>Id</span>
+        <span id="state_peerepgroupid_go">
+<a href="#state_peerepgroupid_go" style="color: inherit; text-decoration: inherit;">Peer<wbr>Ep<wbr>Group<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1564,7 +1809,9 @@ where peer_cidrs is provided with a subnet_id for the VPN service.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Peer<wbr>Id</span>
+        <span id="state_peerid_go">
+<a href="#state_peerid_go" style="color: inherit; text-decoration: inherit;">Peer<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1575,7 +1822,9 @@ Changing this updates the existing policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Psk</span>
+        <span id="state_psk_go">
+<a href="#state_psk_go" style="color: inherit; text-decoration: inherit;">Psk</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1584,7 +1833,9 @@ Changing this updates the existing policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="state_region_go">
+<a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1596,7 +1847,9 @@ site connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tenant<wbr>Id</span>
+        <span id="state_tenantid_go">
+<a href="#state_tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1606,7 +1859,9 @@ create a connection for another project. Changing this creates a new connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Value<wbr>Specs</span>
+        <span id="state_valuespecs_go">
+<a href="#state_valuespecs_go" style="color: inherit; text-decoration: inherit;">Value<wbr>Specs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -1615,7 +1870,9 @@ create a connection for another project. Changing this creates a new connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vpnservice<wbr>Id</span>
+        <span id="state_vpnserviceid_go">
+<a href="#state_vpnserviceid_go" style="color: inherit; text-decoration: inherit;">Vpnservice<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1631,7 +1888,9 @@ create a connection for another project. Changing this creates a new connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>admin<wbr>State<wbr>Up</span>
+        <span id="state_adminstateup_nodejs">
+<a href="#state_adminstateup_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>State<wbr>Up</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1641,7 +1900,9 @@ Changing this updates the administrative state of the existing connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_nodejs">
+<a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1651,7 +1912,9 @@ Changing this updates the description of the existing connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>dpds</span>
+        <span id="state_dpds_nodejs">
+<a href="#state_dpds_nodejs" style="color: inherit; text-decoration: inherit;">dpds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#siteconnectiondpd">Site<wbr>Connection<wbr>Dpd[]</a></span>
     </dt>
@@ -1663,7 +1926,9 @@ Default value is hold.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ikepolicy<wbr>Id</span>
+        <span id="state_ikepolicyid_nodejs">
+<a href="#state_ikepolicyid_nodejs" style="color: inherit; text-decoration: inherit;">ikepolicy<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1672,7 +1937,9 @@ Default value is hold.
 
     <dt class="property-optional"
             title="Optional">
-        <span>initiator</span>
+        <span id="state_initiator_nodejs">
+<a href="#state_initiator_nodejs" style="color: inherit; text-decoration: inherit;">initiator</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1681,7 +1948,9 @@ Default value is hold.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ipsecpolicy<wbr>Id</span>
+        <span id="state_ipsecpolicyid_nodejs">
+<a href="#state_ipsecpolicyid_nodejs" style="color: inherit; text-decoration: inherit;">ipsecpolicy<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1690,7 +1959,9 @@ Default value is hold.
 
     <dt class="property-optional"
             title="Optional">
-        <span>local<wbr>Ep<wbr>Group<wbr>Id</span>
+        <span id="state_localepgroupid_nodejs">
+<a href="#state_localepgroupid_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Ep<wbr>Group<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1702,7 +1973,9 @@ Changing this updates the existing connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>local<wbr>Id</span>
+        <span id="state_localid_nodejs">
+<a href="#state_localid_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1713,7 +1986,9 @@ If this is not configured then the external IP address will be used as the ID.
 
     <dt class="property-optional"
             title="Optional">
-        <span>mtu</span>
+        <span id="state_mtu_nodejs">
+<a href="#state_mtu_nodejs" style="color: inherit; text-decoration: inherit;">mtu</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1723,7 +1998,9 @@ Minimum value is 68 for IPv4, and 1280 for IPv6.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1733,7 +2010,9 @@ the existing connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>peer<wbr>Address</span>
+        <span id="state_peeraddress_nodejs">
+<a href="#state_peeraddress_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1742,7 +2021,9 @@ the existing connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>peer<wbr>Cidrs</span>
+        <span id="state_peercidrs_nodejs">
+<a href="#state_peercidrs_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Cidrs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1751,7 +2032,9 @@ the existing connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>peer<wbr>Ep<wbr>Group<wbr>Id</span>
+        <span id="state_peerepgroupid_nodejs">
+<a href="#state_peerepgroupid_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Ep<wbr>Group<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1762,7 +2045,9 @@ where peer_cidrs is provided with a subnet_id for the VPN service.
 
     <dt class="property-optional"
             title="Optional">
-        <span>peer<wbr>Id</span>
+        <span id="state_peerid_nodejs">
+<a href="#state_peerid_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1773,7 +2058,9 @@ Changing this updates the existing policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>psk</span>
+        <span id="state_psk_nodejs">
+<a href="#state_psk_nodejs" style="color: inherit; text-decoration: inherit;">psk</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1782,7 +2069,9 @@ Changing this updates the existing policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="state_region_nodejs">
+<a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1794,7 +2083,9 @@ site connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tenant<wbr>Id</span>
+        <span id="state_tenantid_nodejs">
+<a href="#state_tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1804,7 +2095,9 @@ create a connection for another project. Changing this creates a new connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>value<wbr>Specs</span>
+        <span id="state_valuespecs_nodejs">
+<a href="#state_valuespecs_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>Specs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -1813,7 +2106,9 @@ create a connection for another project. Changing this creates a new connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>vpnservice<wbr>Id</span>
+        <span id="state_vpnserviceid_nodejs">
+<a href="#state_vpnserviceid_nodejs" style="color: inherit; text-decoration: inherit;">vpnservice<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1829,7 +2124,9 @@ create a connection for another project. Changing this creates a new connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>admin_<wbr>state_<wbr>up</span>
+        <span id="state_admin_state_up_python">
+<a href="#state_admin_state_up_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>state_<wbr>up</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1839,7 +2136,9 @@ Changing this updates the administrative state of the existing connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_python">
+<a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1849,7 +2148,9 @@ Changing this updates the description of the existing connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>dpds</span>
+        <span id="state_dpds_python">
+<a href="#state_dpds_python" style="color: inherit; text-decoration: inherit;">dpds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#siteconnectiondpd">List[Site<wbr>Connection<wbr>Dpd]</a></span>
     </dt>
@@ -1861,7 +2162,9 @@ Default value is hold.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ikepolicy_<wbr>id</span>
+        <span id="state_ikepolicy_id_python">
+<a href="#state_ikepolicy_id_python" style="color: inherit; text-decoration: inherit;">ikepolicy_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1870,7 +2173,9 @@ Default value is hold.
 
     <dt class="property-optional"
             title="Optional">
-        <span>initiator</span>
+        <span id="state_initiator_python">
+<a href="#state_initiator_python" style="color: inherit; text-decoration: inherit;">initiator</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1879,7 +2184,9 @@ Default value is hold.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ipsecpolicy_<wbr>id</span>
+        <span id="state_ipsecpolicy_id_python">
+<a href="#state_ipsecpolicy_id_python" style="color: inherit; text-decoration: inherit;">ipsecpolicy_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1888,7 +2195,9 @@ Default value is hold.
 
     <dt class="property-optional"
             title="Optional">
-        <span>local_<wbr>ep_<wbr>group_<wbr>id</span>
+        <span id="state_local_ep_group_id_python">
+<a href="#state_local_ep_group_id_python" style="color: inherit; text-decoration: inherit;">local_<wbr>ep_<wbr>group_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1900,7 +2209,9 @@ Changing this updates the existing connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>local_<wbr>id</span>
+        <span id="state_local_id_python">
+<a href="#state_local_id_python" style="color: inherit; text-decoration: inherit;">local_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1911,7 +2222,9 @@ If this is not configured then the external IP address will be used as the ID.
 
     <dt class="property-optional"
             title="Optional">
-        <span>mtu</span>
+        <span id="state_mtu_python">
+<a href="#state_mtu_python" style="color: inherit; text-decoration: inherit;">mtu</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1921,7 +2234,9 @@ Minimum value is 68 for IPv4, and 1280 for IPv6.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1931,7 +2246,9 @@ the existing connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>peer_<wbr>address</span>
+        <span id="state_peer_address_python">
+<a href="#state_peer_address_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1940,7 +2257,9 @@ the existing connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>peer_<wbr>cidrs</span>
+        <span id="state_peer_cidrs_python">
+<a href="#state_peer_cidrs_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>cidrs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1949,7 +2268,9 @@ the existing connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>peer_<wbr>ep_<wbr>group_<wbr>id</span>
+        <span id="state_peer_ep_group_id_python">
+<a href="#state_peer_ep_group_id_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>ep_<wbr>group_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1960,7 +2281,9 @@ where peer_cidrs is provided with a subnet_id for the VPN service.
 
     <dt class="property-optional"
             title="Optional">
-        <span>peer_<wbr>id</span>
+        <span id="state_peer_id_python">
+<a href="#state_peer_id_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1971,7 +2294,9 @@ Changing this updates the existing policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>psk</span>
+        <span id="state_psk_python">
+<a href="#state_psk_python" style="color: inherit; text-decoration: inherit;">psk</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1980,7 +2305,9 @@ Changing this updates the existing policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="state_region_python">
+<a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1992,7 +2319,9 @@ site connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tenant_<wbr>id</span>
+        <span id="state_tenant_id_python">
+<a href="#state_tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2002,7 +2331,9 @@ create a connection for another project. Changing this creates a new connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>value_<wbr>specs</span>
+        <span id="state_value_specs_python">
+<a href="#state_value_specs_python" style="color: inherit; text-decoration: inherit;">value_<wbr>specs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -2011,7 +2342,9 @@ create a connection for another project. Changing this creates a new connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>vpnservice_<wbr>id</span>
+        <span id="state_vpnservice_id_python">
+<a href="#state_vpnservice_id_python" style="color: inherit; text-decoration: inherit;">vpnservice_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2053,7 +2386,9 @@ create a connection for another project. Changing this creates a new connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Action</span>
+        <span id="action_csharp">
+<a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2061,7 +2396,9 @@ create a connection for another project. Changing this creates a new connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Interval</span>
+        <span id="interval_csharp">
+<a href="#interval_csharp" style="color: inherit; text-decoration: inherit;">Interval</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -2069,7 +2406,9 @@ create a connection for another project. Changing this creates a new connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Timeout</span>
+        <span id="timeout_csharp">
+<a href="#timeout_csharp" style="color: inherit; text-decoration: inherit;">Timeout</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -2084,7 +2423,9 @@ create a connection for another project. Changing this creates a new connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Action</span>
+        <span id="action_go">
+<a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2092,7 +2433,9 @@ create a connection for another project. Changing this creates a new connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Interval</span>
+        <span id="interval_go">
+<a href="#interval_go" style="color: inherit; text-decoration: inherit;">Interval</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -2100,7 +2443,9 @@ create a connection for another project. Changing this creates a new connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Timeout</span>
+        <span id="timeout_go">
+<a href="#timeout_go" style="color: inherit; text-decoration: inherit;">Timeout</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -2115,7 +2460,9 @@ create a connection for another project. Changing this creates a new connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>action</span>
+        <span id="action_nodejs">
+<a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2123,7 +2470,9 @@ create a connection for another project. Changing this creates a new connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>interval</span>
+        <span id="interval_nodejs">
+<a href="#interval_nodejs" style="color: inherit; text-decoration: inherit;">interval</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -2131,7 +2480,9 @@ create a connection for another project. Changing this creates a new connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>timeout</span>
+        <span id="timeout_nodejs">
+<a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -2146,7 +2497,9 @@ create a connection for another project. Changing this creates a new connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>action</span>
+        <span id="action_python">
+<a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2154,7 +2507,9 @@ create a connection for another project. Changing this creates a new connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>interval</span>
+        <span id="interval_python">
+<a href="#interval_python" style="color: inherit; text-decoration: inherit;">interval</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2162,7 +2517,9 @@ create a connection for another project. Changing this creates a new connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span>timeout</span>
+        <span id="timeout_python">
+<a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>

@@ -20,7 +20,27 @@ Use this data source to get the ID of an available OpenStack image.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var ubuntu = Output.Create(OpenStack.Images.GetImage.InvokeAsync(new OpenStack.Images.GetImageArgs
+        {
+            MostRecent = true,
+            Name = "Ubuntu 16.04",
+            Properties = 
+            {
+                { "key", "value" },
+            },
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -98,7 +118,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Member<wbr>Status</span>
+        <span id="memberstatus_csharp">
+<a href="#memberstatus_csharp" style="color: inherit; text-decoration: inherit;">Member<wbr>Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -108,7 +130,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Most<wbr>Recent</span>
+        <span id="mostrecent_csharp">
+<a href="#mostrecent_csharp" style="color: inherit; text-decoration: inherit;">Most<wbr>Recent</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -118,7 +142,9 @@ recent image.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -127,7 +153,9 @@ recent image.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Owner</span>
+        <span id="owner_csharp">
+<a href="#owner_csharp" style="color: inherit; text-decoration: inherit;">Owner</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -136,7 +164,9 @@ recent image.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Properties</span>
+        <span id="properties_csharp">
+<a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -146,7 +176,9 @@ All specified properties must be matched.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="region_csharp">
+<a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -158,7 +190,9 @@ is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Size<wbr>Max</span>
+        <span id="sizemax_csharp">
+<a href="#sizemax_csharp" style="color: inherit; text-decoration: inherit;">Size<wbr>Max</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -167,7 +201,9 @@ is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Size<wbr>Min</span>
+        <span id="sizemin_csharp">
+<a href="#sizemin_csharp" style="color: inherit; text-decoration: inherit;">Size<wbr>Min</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -176,7 +212,9 @@ is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Sort<wbr>Direction</span>
+        <span id="sortdirection_csharp">
+<a href="#sortdirection_csharp" style="color: inherit; text-decoration: inherit;">Sort<wbr>Direction</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -185,7 +223,9 @@ is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Sort<wbr>Key</span>
+        <span id="sortkey_csharp">
+<a href="#sortkey_csharp" style="color: inherit; text-decoration: inherit;">Sort<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -194,7 +234,9 @@ is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tag</span>
+        <span id="tag_csharp">
+<a href="#tag_csharp" style="color: inherit; text-decoration: inherit;">Tag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -203,7 +245,9 @@ is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Visibility</span>
+        <span id="visibility_csharp">
+<a href="#visibility_csharp" style="color: inherit; text-decoration: inherit;">Visibility</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -220,7 +264,9 @@ is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Member<wbr>Status</span>
+        <span id="memberstatus_go">
+<a href="#memberstatus_go" style="color: inherit; text-decoration: inherit;">Member<wbr>Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -230,7 +276,9 @@ is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Most<wbr>Recent</span>
+        <span id="mostrecent_go">
+<a href="#mostrecent_go" style="color: inherit; text-decoration: inherit;">Most<wbr>Recent</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -240,7 +288,9 @@ recent image.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -249,7 +299,9 @@ recent image.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Owner</span>
+        <span id="owner_go">
+<a href="#owner_go" style="color: inherit; text-decoration: inherit;">Owner</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -258,7 +310,9 @@ recent image.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Properties</span>
+        <span id="properties_go">
+<a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -268,7 +322,9 @@ All specified properties must be matched.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="region_go">
+<a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -280,7 +336,9 @@ is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Size<wbr>Max</span>
+        <span id="sizemax_go">
+<a href="#sizemax_go" style="color: inherit; text-decoration: inherit;">Size<wbr>Max</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -289,7 +347,9 @@ is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Size<wbr>Min</span>
+        <span id="sizemin_go">
+<a href="#sizemin_go" style="color: inherit; text-decoration: inherit;">Size<wbr>Min</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -298,7 +358,9 @@ is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Sort<wbr>Direction</span>
+        <span id="sortdirection_go">
+<a href="#sortdirection_go" style="color: inherit; text-decoration: inherit;">Sort<wbr>Direction</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -307,7 +369,9 @@ is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Sort<wbr>Key</span>
+        <span id="sortkey_go">
+<a href="#sortkey_go" style="color: inherit; text-decoration: inherit;">Sort<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -316,7 +380,9 @@ is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tag</span>
+        <span id="tag_go">
+<a href="#tag_go" style="color: inherit; text-decoration: inherit;">Tag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -325,7 +391,9 @@ is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Visibility</span>
+        <span id="visibility_go">
+<a href="#visibility_go" style="color: inherit; text-decoration: inherit;">Visibility</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -342,7 +410,9 @@ is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>member<wbr>Status</span>
+        <span id="memberstatus_nodejs">
+<a href="#memberstatus_nodejs" style="color: inherit; text-decoration: inherit;">member<wbr>Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -352,7 +422,9 @@ is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>most<wbr>Recent</span>
+        <span id="mostrecent_nodejs">
+<a href="#mostrecent_nodejs" style="color: inherit; text-decoration: inherit;">most<wbr>Recent</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -362,7 +434,9 @@ recent image.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -371,7 +445,9 @@ recent image.
 
     <dt class="property-optional"
             title="Optional">
-        <span>owner</span>
+        <span id="owner_nodejs">
+<a href="#owner_nodejs" style="color: inherit; text-decoration: inherit;">owner</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -380,7 +456,9 @@ recent image.
 
     <dt class="property-optional"
             title="Optional">
-        <span>properties</span>
+        <span id="properties_nodejs">
+<a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -390,7 +468,9 @@ All specified properties must be matched.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="region_nodejs">
+<a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -402,7 +482,9 @@ is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>size<wbr>Max</span>
+        <span id="sizemax_nodejs">
+<a href="#sizemax_nodejs" style="color: inherit; text-decoration: inherit;">size<wbr>Max</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -411,7 +493,9 @@ is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>size<wbr>Min</span>
+        <span id="sizemin_nodejs">
+<a href="#sizemin_nodejs" style="color: inherit; text-decoration: inherit;">size<wbr>Min</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -420,7 +504,9 @@ is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>sort<wbr>Direction</span>
+        <span id="sortdirection_nodejs">
+<a href="#sortdirection_nodejs" style="color: inherit; text-decoration: inherit;">sort<wbr>Direction</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -429,7 +515,9 @@ is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>sort<wbr>Key</span>
+        <span id="sortkey_nodejs">
+<a href="#sortkey_nodejs" style="color: inherit; text-decoration: inherit;">sort<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -438,7 +526,9 @@ is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tag</span>
+        <span id="tag_nodejs">
+<a href="#tag_nodejs" style="color: inherit; text-decoration: inherit;">tag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -447,7 +537,9 @@ is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>visibility</span>
+        <span id="visibility_nodejs">
+<a href="#visibility_nodejs" style="color: inherit; text-decoration: inherit;">visibility</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -464,7 +556,9 @@ is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>member_<wbr>status</span>
+        <span id="member_status_python">
+<a href="#member_status_python" style="color: inherit; text-decoration: inherit;">member_<wbr>status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -474,7 +568,9 @@ is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>most_<wbr>recent</span>
+        <span id="most_recent_python">
+<a href="#most_recent_python" style="color: inherit; text-decoration: inherit;">most_<wbr>recent</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -484,7 +580,9 @@ recent image.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -493,7 +591,9 @@ recent image.
 
     <dt class="property-optional"
             title="Optional">
-        <span>owner</span>
+        <span id="owner_python">
+<a href="#owner_python" style="color: inherit; text-decoration: inherit;">owner</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -502,7 +602,9 @@ recent image.
 
     <dt class="property-optional"
             title="Optional">
-        <span>properties</span>
+        <span id="properties_python">
+<a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -512,7 +614,9 @@ All specified properties must be matched.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="region_python">
+<a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -524,7 +628,9 @@ is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>size_<wbr>max</span>
+        <span id="size_max_python">
+<a href="#size_max_python" style="color: inherit; text-decoration: inherit;">size_<wbr>max</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -533,7 +639,9 @@ is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>size_<wbr>min</span>
+        <span id="size_min_python">
+<a href="#size_min_python" style="color: inherit; text-decoration: inherit;">size_<wbr>min</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -542,7 +650,9 @@ is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>sort_<wbr>direction</span>
+        <span id="sort_direction_python">
+<a href="#sort_direction_python" style="color: inherit; text-decoration: inherit;">sort_<wbr>direction</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -551,7 +661,9 @@ is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>sort_<wbr>key</span>
+        <span id="sort_key_python">
+<a href="#sort_key_python" style="color: inherit; text-decoration: inherit;">sort_<wbr>key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -560,7 +672,9 @@ is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tag</span>
+        <span id="tag_python">
+<a href="#tag_python" style="color: inherit; text-decoration: inherit;">tag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -569,7 +683,9 @@ is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>visibility</span>
+        <span id="visibility_python">
+<a href="#visibility_python" style="color: inherit; text-decoration: inherit;">visibility</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -599,7 +715,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Checksum</span>
+        <span id="checksum_csharp">
+<a href="#checksum_csharp" style="color: inherit; text-decoration: inherit;">Checksum</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -608,7 +726,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Container<wbr>Format</span>
+        <span id="containerformat_csharp">
+<a href="#containerformat_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Format</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -616,7 +736,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Created<wbr>At</span>
+        <span id="createdat_csharp">
+<a href="#createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -627,7 +749,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Disk<wbr>Format</span>
+        <span id="diskformat_csharp">
+<a href="#diskformat_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Format</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -635,7 +759,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>File</span>
+        <span id="file_csharp">
+<a href="#file_csharp" style="color: inherit; text-decoration: inherit;">File</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -645,7 +771,9 @@ location of the image or the path to retrieve it.
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -654,7 +782,9 @@ location of the image or the path to retrieve it.
 
     <dt class="property-"
             title="">
-        <span>Metadata</span>
+        <span id="metadata_csharp">
+<a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -665,7 +795,9 @@ and tags. See https://docs.openstack.org/glance/latest/user/metadefs-concepts.ht
 
     <dt class="property-"
             title="">
-        <span>Min<wbr>Disk<wbr>Gb</span>
+        <span id="mindiskgb_csharp">
+<a href="#mindiskgb_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Disk<wbr>Gb</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -674,7 +806,9 @@ and tags. See https://docs.openstack.org/glance/latest/user/metadefs-concepts.ht
 
     <dt class="property-"
             title="">
-        <span>Min<wbr>Ram<wbr>Mb</span>
+        <span id="minrammb_csharp">
+<a href="#minrammb_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Ram<wbr>Mb</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -683,7 +817,9 @@ and tags. See https://docs.openstack.org/glance/latest/user/metadefs-concepts.ht
 
     <dt class="property-"
             title="">
-        <span>Protected</span>
+        <span id="protected_csharp">
+<a href="#protected_csharp" style="color: inherit; text-decoration: inherit;">Protected</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -692,7 +828,9 @@ and tags. See https://docs.openstack.org/glance/latest/user/metadefs-concepts.ht
 
     <dt class="property-"
             title="">
-        <span>Region</span>
+        <span id="region_csharp">
+<a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -700,7 +838,9 @@ and tags. See https://docs.openstack.org/glance/latest/user/metadefs-concepts.ht
 
     <dt class="property-"
             title="">
-        <span>Schema</span>
+        <span id="schema_csharp">
+<a href="#schema_csharp" style="color: inherit; text-decoration: inherit;">Schema</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -710,7 +850,9 @@ the image or image
 
     <dt class="property-"
             title="">
-        <span>Size<wbr>Bytes</span>
+        <span id="sizebytes_csharp">
+<a href="#sizebytes_csharp" style="color: inherit; text-decoration: inherit;">Size<wbr>Bytes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -719,7 +861,9 @@ the image or image
 
     <dt class="property-"
             title="">
-        <span>Tags</span>
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -728,7 +872,9 @@ the image or image
 
     <dt class="property-"
             title="">
-        <span>Updated<wbr>At</span>
+        <span id="updatedat_csharp">
+<a href="#updatedat_csharp" style="color: inherit; text-decoration: inherit;">Updated<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -737,7 +883,9 @@ the image or image
 
     <dt class="property-"
             title="">
-        <span>Member<wbr>Status</span>
+        <span id="memberstatus_csharp">
+<a href="#memberstatus_csharp" style="color: inherit; text-decoration: inherit;">Member<wbr>Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -745,7 +893,9 @@ the image or image
 
     <dt class="property-"
             title="">
-        <span>Most<wbr>Recent</span>
+        <span id="mostrecent_csharp">
+<a href="#mostrecent_csharp" style="color: inherit; text-decoration: inherit;">Most<wbr>Recent</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -753,7 +903,9 @@ the image or image
 
     <dt class="property-"
             title="">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -761,7 +913,9 @@ the image or image
 
     <dt class="property-"
             title="">
-        <span>Owner</span>
+        <span id="owner_csharp">
+<a href="#owner_csharp" style="color: inherit; text-decoration: inherit;">Owner</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -769,7 +923,9 @@ the image or image
 
     <dt class="property-"
             title="">
-        <span>Properties</span>
+        <span id="properties_csharp">
+<a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -778,7 +934,9 @@ the image or image
 
     <dt class="property-"
             title="">
-        <span>Size<wbr>Max</span>
+        <span id="sizemax_csharp">
+<a href="#sizemax_csharp" style="color: inherit; text-decoration: inherit;">Size<wbr>Max</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -786,7 +944,9 @@ the image or image
 
     <dt class="property-"
             title="">
-        <span>Size<wbr>Min</span>
+        <span id="sizemin_csharp">
+<a href="#sizemin_csharp" style="color: inherit; text-decoration: inherit;">Size<wbr>Min</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -794,7 +954,9 @@ the image or image
 
     <dt class="property-"
             title="">
-        <span>Sort<wbr>Direction</span>
+        <span id="sortdirection_csharp">
+<a href="#sortdirection_csharp" style="color: inherit; text-decoration: inherit;">Sort<wbr>Direction</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -802,7 +964,9 @@ the image or image
 
     <dt class="property-"
             title="">
-        <span>Sort<wbr>Key</span>
+        <span id="sortkey_csharp">
+<a href="#sortkey_csharp" style="color: inherit; text-decoration: inherit;">Sort<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -810,7 +974,9 @@ the image or image
 
     <dt class="property-"
             title="">
-        <span>Tag</span>
+        <span id="tag_csharp">
+<a href="#tag_csharp" style="color: inherit; text-decoration: inherit;">Tag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -818,7 +984,9 @@ the image or image
 
     <dt class="property-"
             title="">
-        <span>Visibility</span>
+        <span id="visibility_csharp">
+<a href="#visibility_csharp" style="color: inherit; text-decoration: inherit;">Visibility</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -833,7 +1001,9 @@ the image or image
 
     <dt class="property-"
             title="">
-        <span>Checksum</span>
+        <span id="checksum_go">
+<a href="#checksum_go" style="color: inherit; text-decoration: inherit;">Checksum</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -842,7 +1012,9 @@ the image or image
 
     <dt class="property-"
             title="">
-        <span>Container<wbr>Format</span>
+        <span id="containerformat_go">
+<a href="#containerformat_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Format</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -850,7 +1022,9 @@ the image or image
 
     <dt class="property-"
             title="">
-        <span>Created<wbr>At</span>
+        <span id="createdat_go">
+<a href="#createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -861,7 +1035,9 @@ the image or image
 
     <dt class="property-"
             title="">
-        <span>Disk<wbr>Format</span>
+        <span id="diskformat_go">
+<a href="#diskformat_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Format</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -869,7 +1045,9 @@ the image or image
 
     <dt class="property-"
             title="">
-        <span>File</span>
+        <span id="file_go">
+<a href="#file_go" style="color: inherit; text-decoration: inherit;">File</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -879,7 +1057,9 @@ location of the image or the path to retrieve it.
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -888,7 +1068,9 @@ location of the image or the path to retrieve it.
 
     <dt class="property-"
             title="">
-        <span>Metadata</span>
+        <span id="metadata_go">
+<a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -899,7 +1081,9 @@ and tags. See https://docs.openstack.org/glance/latest/user/metadefs-concepts.ht
 
     <dt class="property-"
             title="">
-        <span>Min<wbr>Disk<wbr>Gb</span>
+        <span id="mindiskgb_go">
+<a href="#mindiskgb_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Disk<wbr>Gb</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -908,7 +1092,9 @@ and tags. See https://docs.openstack.org/glance/latest/user/metadefs-concepts.ht
 
     <dt class="property-"
             title="">
-        <span>Min<wbr>Ram<wbr>Mb</span>
+        <span id="minrammb_go">
+<a href="#minrammb_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Ram<wbr>Mb</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -917,7 +1103,9 @@ and tags. See https://docs.openstack.org/glance/latest/user/metadefs-concepts.ht
 
     <dt class="property-"
             title="">
-        <span>Protected</span>
+        <span id="protected_go">
+<a href="#protected_go" style="color: inherit; text-decoration: inherit;">Protected</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -926,7 +1114,9 @@ and tags. See https://docs.openstack.org/glance/latest/user/metadefs-concepts.ht
 
     <dt class="property-"
             title="">
-        <span>Region</span>
+        <span id="region_go">
+<a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -934,7 +1124,9 @@ and tags. See https://docs.openstack.org/glance/latest/user/metadefs-concepts.ht
 
     <dt class="property-"
             title="">
-        <span>Schema</span>
+        <span id="schema_go">
+<a href="#schema_go" style="color: inherit; text-decoration: inherit;">Schema</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -944,7 +1136,9 @@ the image or image
 
     <dt class="property-"
             title="">
-        <span>Size<wbr>Bytes</span>
+        <span id="sizebytes_go">
+<a href="#sizebytes_go" style="color: inherit; text-decoration: inherit;">Size<wbr>Bytes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -953,7 +1147,9 @@ the image or image
 
     <dt class="property-"
             title="">
-        <span>Tags</span>
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -962,7 +1158,9 @@ the image or image
 
     <dt class="property-"
             title="">
-        <span>Updated<wbr>At</span>
+        <span id="updatedat_go">
+<a href="#updatedat_go" style="color: inherit; text-decoration: inherit;">Updated<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -971,7 +1169,9 @@ the image or image
 
     <dt class="property-"
             title="">
-        <span>Member<wbr>Status</span>
+        <span id="memberstatus_go">
+<a href="#memberstatus_go" style="color: inherit; text-decoration: inherit;">Member<wbr>Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -979,7 +1179,9 @@ the image or image
 
     <dt class="property-"
             title="">
-        <span>Most<wbr>Recent</span>
+        <span id="mostrecent_go">
+<a href="#mostrecent_go" style="color: inherit; text-decoration: inherit;">Most<wbr>Recent</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -987,7 +1189,9 @@ the image or image
 
     <dt class="property-"
             title="">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -995,7 +1199,9 @@ the image or image
 
     <dt class="property-"
             title="">
-        <span>Owner</span>
+        <span id="owner_go">
+<a href="#owner_go" style="color: inherit; text-decoration: inherit;">Owner</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1003,7 +1209,9 @@ the image or image
 
     <dt class="property-"
             title="">
-        <span>Properties</span>
+        <span id="properties_go">
+<a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -1012,7 +1220,9 @@ the image or image
 
     <dt class="property-"
             title="">
-        <span>Size<wbr>Max</span>
+        <span id="sizemax_go">
+<a href="#sizemax_go" style="color: inherit; text-decoration: inherit;">Size<wbr>Max</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1020,7 +1230,9 @@ the image or image
 
     <dt class="property-"
             title="">
-        <span>Size<wbr>Min</span>
+        <span id="sizemin_go">
+<a href="#sizemin_go" style="color: inherit; text-decoration: inherit;">Size<wbr>Min</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1028,7 +1240,9 @@ the image or image
 
     <dt class="property-"
             title="">
-        <span>Sort<wbr>Direction</span>
+        <span id="sortdirection_go">
+<a href="#sortdirection_go" style="color: inherit; text-decoration: inherit;">Sort<wbr>Direction</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1036,7 +1250,9 @@ the image or image
 
     <dt class="property-"
             title="">
-        <span>Sort<wbr>Key</span>
+        <span id="sortkey_go">
+<a href="#sortkey_go" style="color: inherit; text-decoration: inherit;">Sort<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1044,7 +1260,9 @@ the image or image
 
     <dt class="property-"
             title="">
-        <span>Tag</span>
+        <span id="tag_go">
+<a href="#tag_go" style="color: inherit; text-decoration: inherit;">Tag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1052,7 +1270,9 @@ the image or image
 
     <dt class="property-"
             title="">
-        <span>Visibility</span>
+        <span id="visibility_go">
+<a href="#visibility_go" style="color: inherit; text-decoration: inherit;">Visibility</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1067,7 +1287,9 @@ the image or image
 
     <dt class="property-"
             title="">
-        <span>checksum</span>
+        <span id="checksum_nodejs">
+<a href="#checksum_nodejs" style="color: inherit; text-decoration: inherit;">checksum</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1076,7 +1298,9 @@ the image or image
 
     <dt class="property-"
             title="">
-        <span>container<wbr>Format</span>
+        <span id="containerformat_nodejs">
+<a href="#containerformat_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Format</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1084,7 +1308,9 @@ the image or image
 
     <dt class="property-"
             title="">
-        <span>created<wbr>At</span>
+        <span id="createdat_nodejs">
+<a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1095,7 +1321,9 @@ the image or image
 
     <dt class="property-"
             title="">
-        <span>disk<wbr>Format</span>
+        <span id="diskformat_nodejs">
+<a href="#diskformat_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Format</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1103,7 +1331,9 @@ the image or image
 
     <dt class="property-"
             title="">
-        <span>file</span>
+        <span id="file_nodejs">
+<a href="#file_nodejs" style="color: inherit; text-decoration: inherit;">file</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1113,7 +1343,9 @@ location of the image or the path to retrieve it.
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1122,7 +1354,9 @@ location of the image or the path to retrieve it.
 
     <dt class="property-"
             title="">
-        <span>metadata</span>
+        <span id="metadata_nodejs">
+<a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -1133,7 +1367,9 @@ and tags. See https://docs.openstack.org/glance/latest/user/metadefs-concepts.ht
 
     <dt class="property-"
             title="">
-        <span>min<wbr>Disk<wbr>Gb</span>
+        <span id="mindiskgb_nodejs">
+<a href="#mindiskgb_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Disk<wbr>Gb</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1142,7 +1378,9 @@ and tags. See https://docs.openstack.org/glance/latest/user/metadefs-concepts.ht
 
     <dt class="property-"
             title="">
-        <span>min<wbr>Ram<wbr>Mb</span>
+        <span id="minrammb_nodejs">
+<a href="#minrammb_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Ram<wbr>Mb</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1151,7 +1389,9 @@ and tags. See https://docs.openstack.org/glance/latest/user/metadefs-concepts.ht
 
     <dt class="property-"
             title="">
-        <span>protected</span>
+        <span id="protected_nodejs">
+<a href="#protected_nodejs" style="color: inherit; text-decoration: inherit;">protected</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1160,7 +1400,9 @@ and tags. See https://docs.openstack.org/glance/latest/user/metadefs-concepts.ht
 
     <dt class="property-"
             title="">
-        <span>region</span>
+        <span id="region_nodejs">
+<a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1168,7 +1410,9 @@ and tags. See https://docs.openstack.org/glance/latest/user/metadefs-concepts.ht
 
     <dt class="property-"
             title="">
-        <span>schema</span>
+        <span id="schema_nodejs">
+<a href="#schema_nodejs" style="color: inherit; text-decoration: inherit;">schema</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1178,7 +1422,9 @@ the image or image
 
     <dt class="property-"
             title="">
-        <span>size<wbr>Bytes</span>
+        <span id="sizebytes_nodejs">
+<a href="#sizebytes_nodejs" style="color: inherit; text-decoration: inherit;">size<wbr>Bytes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1187,7 +1433,9 @@ the image or image
 
     <dt class="property-"
             title="">
-        <span>tags</span>
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1196,7 +1444,9 @@ the image or image
 
     <dt class="property-"
             title="">
-        <span>updated<wbr>At</span>
+        <span id="updatedat_nodejs">
+<a href="#updatedat_nodejs" style="color: inherit; text-decoration: inherit;">updated<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1205,7 +1455,9 @@ the image or image
 
     <dt class="property-"
             title="">
-        <span>member<wbr>Status</span>
+        <span id="memberstatus_nodejs">
+<a href="#memberstatus_nodejs" style="color: inherit; text-decoration: inherit;">member<wbr>Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1213,7 +1465,9 @@ the image or image
 
     <dt class="property-"
             title="">
-        <span>most<wbr>Recent</span>
+        <span id="mostrecent_nodejs">
+<a href="#mostrecent_nodejs" style="color: inherit; text-decoration: inherit;">most<wbr>Recent</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1221,7 +1475,9 @@ the image or image
 
     <dt class="property-"
             title="">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1229,7 +1485,9 @@ the image or image
 
     <dt class="property-"
             title="">
-        <span>owner</span>
+        <span id="owner_nodejs">
+<a href="#owner_nodejs" style="color: inherit; text-decoration: inherit;">owner</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1237,7 +1495,9 @@ the image or image
 
     <dt class="property-"
             title="">
-        <span>properties</span>
+        <span id="properties_nodejs">
+<a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -1246,7 +1506,9 @@ the image or image
 
     <dt class="property-"
             title="">
-        <span>size<wbr>Max</span>
+        <span id="sizemax_nodejs">
+<a href="#sizemax_nodejs" style="color: inherit; text-decoration: inherit;">size<wbr>Max</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1254,7 +1516,9 @@ the image or image
 
     <dt class="property-"
             title="">
-        <span>size<wbr>Min</span>
+        <span id="sizemin_nodejs">
+<a href="#sizemin_nodejs" style="color: inherit; text-decoration: inherit;">size<wbr>Min</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1262,7 +1526,9 @@ the image or image
 
     <dt class="property-"
             title="">
-        <span>sort<wbr>Direction</span>
+        <span id="sortdirection_nodejs">
+<a href="#sortdirection_nodejs" style="color: inherit; text-decoration: inherit;">sort<wbr>Direction</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1270,7 +1536,9 @@ the image or image
 
     <dt class="property-"
             title="">
-        <span>sort<wbr>Key</span>
+        <span id="sortkey_nodejs">
+<a href="#sortkey_nodejs" style="color: inherit; text-decoration: inherit;">sort<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1278,7 +1546,9 @@ the image or image
 
     <dt class="property-"
             title="">
-        <span>tag</span>
+        <span id="tag_nodejs">
+<a href="#tag_nodejs" style="color: inherit; text-decoration: inherit;">tag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1286,7 +1556,9 @@ the image or image
 
     <dt class="property-"
             title="">
-        <span>visibility</span>
+        <span id="visibility_nodejs">
+<a href="#visibility_nodejs" style="color: inherit; text-decoration: inherit;">visibility</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1301,7 +1573,9 @@ the image or image
 
     <dt class="property-"
             title="">
-        <span>checksum</span>
+        <span id="checksum_python">
+<a href="#checksum_python" style="color: inherit; text-decoration: inherit;">checksum</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1310,7 +1584,9 @@ the image or image
 
     <dt class="property-"
             title="">
-        <span>container_<wbr>format</span>
+        <span id="container_format_python">
+<a href="#container_format_python" style="color: inherit; text-decoration: inherit;">container_<wbr>format</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1318,7 +1594,9 @@ the image or image
 
     <dt class="property-"
             title="">
-        <span>created_<wbr>at</span>
+        <span id="created_at_python">
+<a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1329,7 +1607,9 @@ the image or image
 
     <dt class="property-"
             title="">
-        <span>disk_<wbr>format</span>
+        <span id="disk_format_python">
+<a href="#disk_format_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>format</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1337,7 +1617,9 @@ the image or image
 
     <dt class="property-"
             title="">
-        <span>file</span>
+        <span id="file_python">
+<a href="#file_python" style="color: inherit; text-decoration: inherit;">file</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1347,7 +1629,9 @@ location of the image or the path to retrieve it.
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1356,7 +1640,9 @@ location of the image or the path to retrieve it.
 
     <dt class="property-"
             title="">
-        <span>metadata</span>
+        <span id="metadata_python">
+<a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -1367,7 +1653,9 @@ and tags. See https://docs.openstack.org/glance/latest/user/metadefs-concepts.ht
 
     <dt class="property-"
             title="">
-        <span>min_<wbr>disk_<wbr>gb</span>
+        <span id="min_disk_gb_python">
+<a href="#min_disk_gb_python" style="color: inherit; text-decoration: inherit;">min_<wbr>disk_<wbr>gb</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1376,7 +1664,9 @@ and tags. See https://docs.openstack.org/glance/latest/user/metadefs-concepts.ht
 
     <dt class="property-"
             title="">
-        <span>min_<wbr>ram_<wbr>mb</span>
+        <span id="min_ram_mb_python">
+<a href="#min_ram_mb_python" style="color: inherit; text-decoration: inherit;">min_<wbr>ram_<wbr>mb</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1385,7 +1675,9 @@ and tags. See https://docs.openstack.org/glance/latest/user/metadefs-concepts.ht
 
     <dt class="property-"
             title="">
-        <span>protected</span>
+        <span id="protected_python">
+<a href="#protected_python" style="color: inherit; text-decoration: inherit;">protected</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1394,7 +1686,9 @@ and tags. See https://docs.openstack.org/glance/latest/user/metadefs-concepts.ht
 
     <dt class="property-"
             title="">
-        <span>region</span>
+        <span id="region_python">
+<a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1402,7 +1696,9 @@ and tags. See https://docs.openstack.org/glance/latest/user/metadefs-concepts.ht
 
     <dt class="property-"
             title="">
-        <span>schema</span>
+        <span id="schema_python">
+<a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1412,7 +1708,9 @@ the image or image
 
     <dt class="property-"
             title="">
-        <span>size_<wbr>bytes</span>
+        <span id="size_bytes_python">
+<a href="#size_bytes_python" style="color: inherit; text-decoration: inherit;">size_<wbr>bytes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1421,7 +1719,9 @@ the image or image
 
     <dt class="property-"
             title="">
-        <span>tags</span>
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1430,7 +1730,9 @@ the image or image
 
     <dt class="property-"
             title="">
-        <span>updated_<wbr>at</span>
+        <span id="updated_at_python">
+<a href="#updated_at_python" style="color: inherit; text-decoration: inherit;">updated_<wbr>at</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1439,7 +1741,9 @@ the image or image
 
     <dt class="property-"
             title="">
-        <span>member_<wbr>status</span>
+        <span id="member_status_python">
+<a href="#member_status_python" style="color: inherit; text-decoration: inherit;">member_<wbr>status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1447,7 +1751,9 @@ the image or image
 
     <dt class="property-"
             title="">
-        <span>most_<wbr>recent</span>
+        <span id="most_recent_python">
+<a href="#most_recent_python" style="color: inherit; text-decoration: inherit;">most_<wbr>recent</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1455,7 +1761,9 @@ the image or image
 
     <dt class="property-"
             title="">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1463,7 +1771,9 @@ the image or image
 
     <dt class="property-"
             title="">
-        <span>owner</span>
+        <span id="owner_python">
+<a href="#owner_python" style="color: inherit; text-decoration: inherit;">owner</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1471,7 +1781,9 @@ the image or image
 
     <dt class="property-"
             title="">
-        <span>properties</span>
+        <span id="properties_python">
+<a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -1480,7 +1792,9 @@ the image or image
 
     <dt class="property-"
             title="">
-        <span>size_<wbr>max</span>
+        <span id="size_max_python">
+<a href="#size_max_python" style="color: inherit; text-decoration: inherit;">size_<wbr>max</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1488,7 +1802,9 @@ the image or image
 
     <dt class="property-"
             title="">
-        <span>size_<wbr>min</span>
+        <span id="size_min_python">
+<a href="#size_min_python" style="color: inherit; text-decoration: inherit;">size_<wbr>min</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1496,7 +1812,9 @@ the image or image
 
     <dt class="property-"
             title="">
-        <span>sort_<wbr>direction</span>
+        <span id="sort_direction_python">
+<a href="#sort_direction_python" style="color: inherit; text-decoration: inherit;">sort_<wbr>direction</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1504,7 +1822,9 @@ the image or image
 
     <dt class="property-"
             title="">
-        <span>sort_<wbr>key</span>
+        <span id="sort_key_python">
+<a href="#sort_key_python" style="color: inherit; text-decoration: inherit;">sort_<wbr>key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1512,7 +1832,9 @@ the image or image
 
     <dt class="property-"
             title="">
-        <span>tag</span>
+        <span id="tag_python">
+<a href="#tag_python" style="color: inherit; text-decoration: inherit;">tag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1520,7 +1842,9 @@ the image or image
 
     <dt class="property-"
             title="">
-        <span>visibility</span>
+        <span id="visibility_python">
+<a href="#visibility_python" style="color: inherit; text-decoration: inherit;">visibility</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

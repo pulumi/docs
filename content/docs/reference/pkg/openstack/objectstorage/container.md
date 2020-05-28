@@ -20,7 +20,32 @@ Manages a V1 container resource within OpenStack.
 {{< chooser language "typescript,python,go,csharp" / >}}
 ### Basic Container
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var container1 = new OpenStack.ObjectStorage.Container("container1", new OpenStack.ObjectStorage.ContainerArgs
+        {
+            ContentType = "application/json",
+            Metadata = 
+            {
+                { "test", "true" },
+            },
+            Region = "RegionOne",
+            Versioning = new OpenStack.ObjectStorage.Inputs.ContainerVersioningArgs
+            {
+                Location = "tf-test-container-versions",
+                Type = "versions",
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -66,7 +91,23 @@ const container1 = new openstack.objectstorage.Container("container_1", {
 
 ### Global Read Access
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var container1 = new OpenStack.ObjectStorage.Container("container1", new OpenStack.ObjectStorage.ContainerArgs
+        {
+            ContainerRead = ".r:*",
+            Region = "RegionOne",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -98,7 +139,23 @@ const container1 = new openstack.objectstorage.Container("container_1", {
 
 ### Global Read and List Access
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var container1 = new OpenStack.ObjectStorage.Container("container1", new OpenStack.ObjectStorage.ContainerArgs
+        {
+            ContainerRead = ".r:*,.rlistings",
+            Region = "RegionOne",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -130,7 +187,28 @@ const container1 = new openstack.objectstorage.Container("container_1", {
 
 ### Write-Only Access for a User
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var current = Output.Create(OpenStack.Identity.GetAuthScope.InvokeAsync(new OpenStack.Identity.GetAuthScopeArgs
+        {
+            Name = "current",
+        }));
+        var container1 = new OpenStack.ObjectStorage.Container("container1", new OpenStack.ObjectStorage.ContainerArgs
+        {
+            ContainerRead = $".r:-{@var.Username}",
+            ContainerWrite = current.Apply(current => $"{current.ProjectId}:{@var.Username}"),
+            Region = "RegionOne",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -352,7 +430,9 @@ The Container resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span>Container<wbr>Read</span>
+        <span id="containerread_csharp">
+<a href="#containerread_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Read</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -364,7 +444,9 @@ container). Changing this updates the access control list read access.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Container<wbr>Sync<wbr>Key</span>
+        <span id="containersynckey_csharp">
+<a href="#containersynckey_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Sync<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -374,7 +456,9 @@ Changing this updates container synchronization.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Container<wbr>Sync<wbr>To</span>
+        <span id="containersyncto_csharp">
+<a href="#containersyncto_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Sync<wbr>To</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -384,7 +468,9 @@ Changing this updates container synchronization.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Container<wbr>Write</span>
+        <span id="containerwrite_csharp">
+<a href="#containerwrite_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Write</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -394,7 +480,9 @@ Changing this updates the access control list write access.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Content<wbr>Type</span>
+        <span id="contenttype_csharp">
+<a href="#contenttype_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -404,7 +492,9 @@ updates the MIME type.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Force<wbr>Destroy</span>
+        <span id="forcedestroy_csharp">
+<a href="#forcedestroy_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Destroy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -413,7 +503,9 @@ updates the MIME type.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Metadata</span>
+        <span id="metadata_csharp">
+<a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -423,7 +515,9 @@ Changing this updates the existing container metadata.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -433,7 +527,9 @@ new container.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="region_csharp">
+<a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -444,7 +540,9 @@ creates a new container.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Versioning</span>
+        <span id="versioning_csharp">
+<a href="#versioning_csharp" style="color: inherit; text-decoration: inherit;">Versioning</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerversioning">Pulumi.<wbr>Open<wbr>Stack.<wbr>Object<wbr>Storage.<wbr>Inputs.<wbr>Container<wbr>Versioning<wbr>Args</a></span>
     </dt>
@@ -460,7 +558,9 @@ creates a new container.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Container<wbr>Read</span>
+        <span id="containerread_go">
+<a href="#containerread_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Read</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -472,7 +572,9 @@ container). Changing this updates the access control list read access.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Container<wbr>Sync<wbr>Key</span>
+        <span id="containersynckey_go">
+<a href="#containersynckey_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Sync<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -482,7 +584,9 @@ Changing this updates container synchronization.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Container<wbr>Sync<wbr>To</span>
+        <span id="containersyncto_go">
+<a href="#containersyncto_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Sync<wbr>To</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -492,7 +596,9 @@ Changing this updates container synchronization.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Container<wbr>Write</span>
+        <span id="containerwrite_go">
+<a href="#containerwrite_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Write</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -502,7 +608,9 @@ Changing this updates the access control list write access.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Content<wbr>Type</span>
+        <span id="contenttype_go">
+<a href="#contenttype_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -512,7 +620,9 @@ updates the MIME type.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Force<wbr>Destroy</span>
+        <span id="forcedestroy_go">
+<a href="#forcedestroy_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Destroy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -521,7 +631,9 @@ updates the MIME type.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Metadata</span>
+        <span id="metadata_go">
+<a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -531,7 +643,9 @@ Changing this updates the existing container metadata.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -541,7 +655,9 @@ new container.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="region_go">
+<a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -552,7 +668,9 @@ creates a new container.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Versioning</span>
+        <span id="versioning_go">
+<a href="#versioning_go" style="color: inherit; text-decoration: inherit;">Versioning</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerversioning">Container<wbr>Versioning</a></span>
     </dt>
@@ -568,7 +686,9 @@ creates a new container.
 
     <dt class="property-optional"
             title="Optional">
-        <span>container<wbr>Read</span>
+        <span id="containerread_nodejs">
+<a href="#containerread_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Read</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -580,7 +700,9 @@ container). Changing this updates the access control list read access.
 
     <dt class="property-optional"
             title="Optional">
-        <span>container<wbr>Sync<wbr>Key</span>
+        <span id="containersynckey_nodejs">
+<a href="#containersynckey_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Sync<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -590,7 +712,9 @@ Changing this updates container synchronization.
 
     <dt class="property-optional"
             title="Optional">
-        <span>container<wbr>Sync<wbr>To</span>
+        <span id="containersyncto_nodejs">
+<a href="#containersyncto_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Sync<wbr>To</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -600,7 +724,9 @@ Changing this updates container synchronization.
 
     <dt class="property-optional"
             title="Optional">
-        <span>container<wbr>Write</span>
+        <span id="containerwrite_nodejs">
+<a href="#containerwrite_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Write</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -610,7 +736,9 @@ Changing this updates the access control list write access.
 
     <dt class="property-optional"
             title="Optional">
-        <span>content<wbr>Type</span>
+        <span id="contenttype_nodejs">
+<a href="#contenttype_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -620,7 +748,9 @@ updates the MIME type.
 
     <dt class="property-optional"
             title="Optional">
-        <span>force<wbr>Destroy</span>
+        <span id="forcedestroy_nodejs">
+<a href="#forcedestroy_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Destroy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -629,7 +759,9 @@ updates the MIME type.
 
     <dt class="property-optional"
             title="Optional">
-        <span>metadata</span>
+        <span id="metadata_nodejs">
+<a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -639,7 +771,9 @@ Changing this updates the existing container metadata.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -649,7 +783,9 @@ new container.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="region_nodejs">
+<a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -660,7 +796,9 @@ creates a new container.
 
     <dt class="property-optional"
             title="Optional">
-        <span>versioning</span>
+        <span id="versioning_nodejs">
+<a href="#versioning_nodejs" style="color: inherit; text-decoration: inherit;">versioning</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerversioning">Container<wbr>Versioning</a></span>
     </dt>
@@ -676,7 +814,9 @@ creates a new container.
 
     <dt class="property-optional"
             title="Optional">
-        <span>container_<wbr>read</span>
+        <span id="container_read_python">
+<a href="#container_read_python" style="color: inherit; text-decoration: inherit;">container_<wbr>read</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -688,7 +828,9 @@ container). Changing this updates the access control list read access.
 
     <dt class="property-optional"
             title="Optional">
-        <span>container_<wbr>sync_<wbr>key</span>
+        <span id="container_sync_key_python">
+<a href="#container_sync_key_python" style="color: inherit; text-decoration: inherit;">container_<wbr>sync_<wbr>key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -698,7 +840,9 @@ Changing this updates container synchronization.
 
     <dt class="property-optional"
             title="Optional">
-        <span>container_<wbr>sync_<wbr>to</span>
+        <span id="container_sync_to_python">
+<a href="#container_sync_to_python" style="color: inherit; text-decoration: inherit;">container_<wbr>sync_<wbr>to</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -708,7 +852,9 @@ Changing this updates container synchronization.
 
     <dt class="property-optional"
             title="Optional">
-        <span>container_<wbr>write</span>
+        <span id="container_write_python">
+<a href="#container_write_python" style="color: inherit; text-decoration: inherit;">container_<wbr>write</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -718,7 +864,9 @@ Changing this updates the access control list write access.
 
     <dt class="property-optional"
             title="Optional">
-        <span>content_<wbr>type</span>
+        <span id="content_type_python">
+<a href="#content_type_python" style="color: inherit; text-decoration: inherit;">content_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -728,7 +876,9 @@ updates the MIME type.
 
     <dt class="property-optional"
             title="Optional">
-        <span>force_<wbr>destroy</span>
+        <span id="force_destroy_python">
+<a href="#force_destroy_python" style="color: inherit; text-decoration: inherit;">force_<wbr>destroy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -737,7 +887,9 @@ updates the MIME type.
 
     <dt class="property-optional"
             title="Optional">
-        <span>metadata</span>
+        <span id="metadata_python">
+<a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -747,7 +899,9 @@ Changing this updates the existing container metadata.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -757,7 +911,9 @@ new container.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="region_python">
+<a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -768,7 +924,9 @@ creates a new container.
 
     <dt class="property-optional"
             title="Optional">
-        <span>versioning</span>
+        <span id="versioning_python">
+<a href="#versioning_python" style="color: inherit; text-decoration: inherit;">versioning</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerversioning">Dict[Container<wbr>Versioning]</a></span>
     </dt>
@@ -795,7 +953,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -810,7 +970,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -825,7 +987,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -840,7 +1004,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -981,7 +1147,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Container<wbr>Read</span>
+        <span id="state_containerread_csharp">
+<a href="#state_containerread_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Read</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -993,7 +1161,9 @@ container). Changing this updates the access control list read access.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Container<wbr>Sync<wbr>Key</span>
+        <span id="state_containersynckey_csharp">
+<a href="#state_containersynckey_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Sync<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1003,7 +1173,9 @@ Changing this updates container synchronization.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Container<wbr>Sync<wbr>To</span>
+        <span id="state_containersyncto_csharp">
+<a href="#state_containersyncto_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Sync<wbr>To</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1013,7 +1185,9 @@ Changing this updates container synchronization.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Container<wbr>Write</span>
+        <span id="state_containerwrite_csharp">
+<a href="#state_containerwrite_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Write</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1023,7 +1197,9 @@ Changing this updates the access control list write access.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Content<wbr>Type</span>
+        <span id="state_contenttype_csharp">
+<a href="#state_contenttype_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1033,7 +1209,9 @@ updates the MIME type.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Force<wbr>Destroy</span>
+        <span id="state_forcedestroy_csharp">
+<a href="#state_forcedestroy_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Destroy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1042,7 +1220,9 @@ updates the MIME type.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Metadata</span>
+        <span id="state_metadata_csharp">
+<a href="#state_metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -1052,7 +1232,9 @@ Changing this updates the existing container metadata.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1062,7 +1244,9 @@ new container.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="state_region_csharp">
+<a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1073,7 +1257,9 @@ creates a new container.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Versioning</span>
+        <span id="state_versioning_csharp">
+<a href="#state_versioning_csharp" style="color: inherit; text-decoration: inherit;">Versioning</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerversioning">Pulumi.<wbr>Open<wbr>Stack.<wbr>Object<wbr>Storage.<wbr>Inputs.<wbr>Container<wbr>Versioning<wbr>Args</a></span>
     </dt>
@@ -1089,7 +1275,9 @@ creates a new container.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Container<wbr>Read</span>
+        <span id="state_containerread_go">
+<a href="#state_containerread_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Read</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1101,7 +1289,9 @@ container). Changing this updates the access control list read access.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Container<wbr>Sync<wbr>Key</span>
+        <span id="state_containersynckey_go">
+<a href="#state_containersynckey_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Sync<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1111,7 +1301,9 @@ Changing this updates container synchronization.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Container<wbr>Sync<wbr>To</span>
+        <span id="state_containersyncto_go">
+<a href="#state_containersyncto_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Sync<wbr>To</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1121,7 +1313,9 @@ Changing this updates container synchronization.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Container<wbr>Write</span>
+        <span id="state_containerwrite_go">
+<a href="#state_containerwrite_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Write</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1131,7 +1325,9 @@ Changing this updates the access control list write access.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Content<wbr>Type</span>
+        <span id="state_contenttype_go">
+<a href="#state_contenttype_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1141,7 +1337,9 @@ updates the MIME type.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Force<wbr>Destroy</span>
+        <span id="state_forcedestroy_go">
+<a href="#state_forcedestroy_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Destroy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1150,7 +1348,9 @@ updates the MIME type.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Metadata</span>
+        <span id="state_metadata_go">
+<a href="#state_metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -1160,7 +1360,9 @@ Changing this updates the existing container metadata.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1170,7 +1372,9 @@ new container.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="state_region_go">
+<a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1181,7 +1385,9 @@ creates a new container.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Versioning</span>
+        <span id="state_versioning_go">
+<a href="#state_versioning_go" style="color: inherit; text-decoration: inherit;">Versioning</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerversioning">Container<wbr>Versioning</a></span>
     </dt>
@@ -1197,7 +1403,9 @@ creates a new container.
 
     <dt class="property-optional"
             title="Optional">
-        <span>container<wbr>Read</span>
+        <span id="state_containerread_nodejs">
+<a href="#state_containerread_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Read</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1209,7 +1417,9 @@ container). Changing this updates the access control list read access.
 
     <dt class="property-optional"
             title="Optional">
-        <span>container<wbr>Sync<wbr>Key</span>
+        <span id="state_containersynckey_nodejs">
+<a href="#state_containersynckey_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Sync<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1219,7 +1429,9 @@ Changing this updates container synchronization.
 
     <dt class="property-optional"
             title="Optional">
-        <span>container<wbr>Sync<wbr>To</span>
+        <span id="state_containersyncto_nodejs">
+<a href="#state_containersyncto_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Sync<wbr>To</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1229,7 +1441,9 @@ Changing this updates container synchronization.
 
     <dt class="property-optional"
             title="Optional">
-        <span>container<wbr>Write</span>
+        <span id="state_containerwrite_nodejs">
+<a href="#state_containerwrite_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Write</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1239,7 +1453,9 @@ Changing this updates the access control list write access.
 
     <dt class="property-optional"
             title="Optional">
-        <span>content<wbr>Type</span>
+        <span id="state_contenttype_nodejs">
+<a href="#state_contenttype_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1249,7 +1465,9 @@ updates the MIME type.
 
     <dt class="property-optional"
             title="Optional">
-        <span>force<wbr>Destroy</span>
+        <span id="state_forcedestroy_nodejs">
+<a href="#state_forcedestroy_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Destroy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1258,7 +1476,9 @@ updates the MIME type.
 
     <dt class="property-optional"
             title="Optional">
-        <span>metadata</span>
+        <span id="state_metadata_nodejs">
+<a href="#state_metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -1268,7 +1488,9 @@ Changing this updates the existing container metadata.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1278,7 +1500,9 @@ new container.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="state_region_nodejs">
+<a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1289,7 +1513,9 @@ creates a new container.
 
     <dt class="property-optional"
             title="Optional">
-        <span>versioning</span>
+        <span id="state_versioning_nodejs">
+<a href="#state_versioning_nodejs" style="color: inherit; text-decoration: inherit;">versioning</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerversioning">Container<wbr>Versioning</a></span>
     </dt>
@@ -1305,7 +1531,9 @@ creates a new container.
 
     <dt class="property-optional"
             title="Optional">
-        <span>container_<wbr>read</span>
+        <span id="state_container_read_python">
+<a href="#state_container_read_python" style="color: inherit; text-decoration: inherit;">container_<wbr>read</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1317,7 +1545,9 @@ container). Changing this updates the access control list read access.
 
     <dt class="property-optional"
             title="Optional">
-        <span>container_<wbr>sync_<wbr>key</span>
+        <span id="state_container_sync_key_python">
+<a href="#state_container_sync_key_python" style="color: inherit; text-decoration: inherit;">container_<wbr>sync_<wbr>key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1327,7 +1557,9 @@ Changing this updates container synchronization.
 
     <dt class="property-optional"
             title="Optional">
-        <span>container_<wbr>sync_<wbr>to</span>
+        <span id="state_container_sync_to_python">
+<a href="#state_container_sync_to_python" style="color: inherit; text-decoration: inherit;">container_<wbr>sync_<wbr>to</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1337,7 +1569,9 @@ Changing this updates container synchronization.
 
     <dt class="property-optional"
             title="Optional">
-        <span>container_<wbr>write</span>
+        <span id="state_container_write_python">
+<a href="#state_container_write_python" style="color: inherit; text-decoration: inherit;">container_<wbr>write</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1347,7 +1581,9 @@ Changing this updates the access control list write access.
 
     <dt class="property-optional"
             title="Optional">
-        <span>content_<wbr>type</span>
+        <span id="state_content_type_python">
+<a href="#state_content_type_python" style="color: inherit; text-decoration: inherit;">content_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1357,7 +1593,9 @@ updates the MIME type.
 
     <dt class="property-optional"
             title="Optional">
-        <span>force_<wbr>destroy</span>
+        <span id="state_force_destroy_python">
+<a href="#state_force_destroy_python" style="color: inherit; text-decoration: inherit;">force_<wbr>destroy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1366,7 +1604,9 @@ updates the MIME type.
 
     <dt class="property-optional"
             title="Optional">
-        <span>metadata</span>
+        <span id="state_metadata_python">
+<a href="#state_metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -1376,7 +1616,9 @@ Changing this updates the existing container metadata.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1386,7 +1628,9 @@ new container.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="state_region_python">
+<a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1397,7 +1641,9 @@ creates a new container.
 
     <dt class="property-optional"
             title="Optional">
-        <span>versioning</span>
+        <span id="state_versioning_python">
+<a href="#state_versioning_python" style="color: inherit; text-decoration: inherit;">versioning</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerversioning">Dict[Container<wbr>Versioning]</a></span>
     </dt>
@@ -1439,7 +1685,9 @@ creates a new container.
 
     <dt class="property-required"
             title="Required">
-        <span>Location</span>
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1448,7 +1696,9 @@ creates a new container.
 
     <dt class="property-required"
             title="Required">
-        <span>Type</span>
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1464,7 +1714,9 @@ creates a new container.
 
     <dt class="property-required"
             title="Required">
-        <span>Location</span>
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1473,7 +1725,9 @@ creates a new container.
 
     <dt class="property-required"
             title="Required">
-        <span>Type</span>
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1489,7 +1743,9 @@ creates a new container.
 
     <dt class="property-required"
             title="Required">
-        <span>location</span>
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1498,7 +1754,9 @@ creates a new container.
 
     <dt class="property-required"
             title="Required">
-        <span>type</span>
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1514,7 +1772,9 @@ creates a new container.
 
     <dt class="property-required"
             title="Required">
-        <span>location</span>
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1523,7 +1783,9 @@ creates a new container.
 
     <dt class="property-required"
             title="Required">
-        <span>type</span>
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
