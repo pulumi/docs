@@ -71,6 +71,48 @@ policy_with_channels = newrelic.AlertPolicy("policyWithChannels",
         email_channel.id,
     ])
 ```
+```csharp
+using Pulumi;
+using NewRelic = Pulumi.NewRelic;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        // Provision a Slack notification channel.
+        var slackChannel = new NewRelic.AlertChannel("slackChannel", new NewRelic.AlertChannelArgs
+        {
+            Type = "slack",
+            Config = new NewRelic.Inputs.AlertChannelConfigArgs
+            {
+                Url = "https://hooks.slack.com/services/<*****>/<*****>",
+                Channel = "example-alerts-channel",
+            },
+        });
+        // Provision an email notification channel.
+        var emailChannel = new NewRelic.AlertChannel("emailChannel", new NewRelic.AlertChannelArgs
+        {
+            Type = "email",
+            Config = new NewRelic.Inputs.AlertChannelConfigArgs
+            {
+                Recipients = "example@testing.com",
+                IncludeJsonAttachment = "1",
+            },
+        });
+        // Provision the alert policy.
+        var policyWithChannels = new NewRelic.AlertPolicy("policyWithChannels", new NewRelic.AlertPolicyArgs
+        {
+            IncidentPreference = "PER_CONDITION",
+            ChannelIds = 
+            {
+                slackChannel.Id,
+                emailChannel.Id,
+            },
+        });
+    }
+
+}
+```
 <br>
 
 ##### Reference existing notification channels and add those channel to a policy
@@ -106,6 +148,36 @@ policy_with_channels = newrelic.AlertPolicy("policyWithChannels",
         slack_channel.id,
         email_channel.id,
     ])
+```
+```csharp
+using Pulumi;
+using NewRelic = Pulumi.NewRelic;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var slackChannel = Output.Create(NewRelic.GetAlertChannel.InvokeAsync(new NewRelic.GetAlertChannelArgs
+        {
+            Name = "slack-channel-notification",
+        }));
+        var emailChannel = Output.Create(NewRelic.GetAlertChannel.InvokeAsync(new NewRelic.GetAlertChannelArgs
+        {
+            Name = "test@example.com",
+        }));
+        // Provision the alert policy.
+        var policyWithChannels = new NewRelic.AlertPolicy("policyWithChannels", new NewRelic.AlertPolicyArgs
+        {
+            IncidentPreference = "PER_CONDITION",
+            ChannelIds = 
+            {
+                slackChannel.Apply(slackChannel => slackChannel.Id),
+                emailChannel.Apply(emailChannel => emailChannel.Id),
+            },
+        });
+    }
+
+}
 ```
 
 {{% examples %}}
@@ -322,7 +394,9 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Channel<wbr>Ids</span>
+        <span id="channelids_csharp">
+<a href="#channelids_csharp" style="color: inherit; text-decoration: inherit;">Channel<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;int&gt;</a></span>
     </dt>
@@ -333,7 +407,9 @@ imported via terraform import.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Incident<wbr>Preference</span>
+        <span id="incidentpreference_csharp">
+<a href="#incidentpreference_csharp" style="color: inherit; text-decoration: inherit;">Incident<wbr>Preference</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -342,7 +418,9 @@ imported via terraform import.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -358,7 +436,9 @@ imported via terraform import.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Channel<wbr>Ids</span>
+        <span id="channelids_go">
+<a href="#channelids_go" style="color: inherit; text-decoration: inherit;">Channel<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">[]int</a></span>
     </dt>
@@ -369,7 +449,9 @@ imported via terraform import.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Incident<wbr>Preference</span>
+        <span id="incidentpreference_go">
+<a href="#incidentpreference_go" style="color: inherit; text-decoration: inherit;">Incident<wbr>Preference</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -378,7 +460,9 @@ imported via terraform import.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -394,7 +478,9 @@ imported via terraform import.
 
     <dt class="property-optional"
             title="Optional">
-        <span>channel<wbr>Ids</span>
+        <span id="channelids_nodejs">
+<a href="#channelids_nodejs" style="color: inherit; text-decoration: inherit;">channel<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number[]</a></span>
     </dt>
@@ -405,7 +491,9 @@ imported via terraform import.
 
     <dt class="property-optional"
             title="Optional">
-        <span>incident<wbr>Preference</span>
+        <span id="incidentpreference_nodejs">
+<a href="#incidentpreference_nodejs" style="color: inherit; text-decoration: inherit;">incident<wbr>Preference</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -414,7 +502,9 @@ imported via terraform import.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -430,7 +520,9 @@ imported via terraform import.
 
     <dt class="property-optional"
             title="Optional">
-        <span>channel_<wbr>ids</span>
+        <span id="channel_ids_python">
+<a href="#channel_ids_python" style="color: inherit; text-decoration: inherit;">channel_<wbr>ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Integer]</a></span>
     </dt>
@@ -441,7 +533,9 @@ imported via terraform import.
 
     <dt class="property-optional"
             title="Optional">
-        <span>incident_<wbr>preference</span>
+        <span id="incident_preference_python">
+<a href="#incident_preference_python" style="color: inherit; text-decoration: inherit;">incident_<wbr>preference</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -450,7 +544,9 @@ imported via terraform import.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -477,7 +573,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property- property-deprecated"
             title=", Deprecated">
-        <span>Created<wbr>At</span>
+        <span id="createdat_csharp">
+<a href="#createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -486,7 +584,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -494,7 +594,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property- property-deprecated"
             title=", Deprecated">
-        <span>Updated<wbr>At</span>
+        <span id="updatedat_csharp">
+<a href="#updatedat_csharp" style="color: inherit; text-decoration: inherit;">Updated<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -510,7 +612,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property- property-deprecated"
             title=", Deprecated">
-        <span>Created<wbr>At</span>
+        <span id="createdat_go">
+<a href="#createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -519,7 +623,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -527,7 +633,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property- property-deprecated"
             title=", Deprecated">
-        <span>Updated<wbr>At</span>
+        <span id="updatedat_go">
+<a href="#updatedat_go" style="color: inherit; text-decoration: inherit;">Updated<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -543,7 +651,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property- property-deprecated"
             title=", Deprecated">
-        <span>created<wbr>At</span>
+        <span id="createdat_nodejs">
+<a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -552,7 +662,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -560,7 +672,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property- property-deprecated"
             title=", Deprecated">
-        <span>updated<wbr>At</span>
+        <span id="updatedat_nodejs">
+<a href="#updatedat_nodejs" style="color: inherit; text-decoration: inherit;">updated<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -576,7 +690,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property- property-deprecated"
             title=", Deprecated">
-        <span>created_<wbr>at</span>
+        <span id="created_at_python">
+<a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -585,7 +701,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -593,7 +711,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property- property-deprecated"
             title=", Deprecated">
-        <span>updated_<wbr>at</span>
+        <span id="updated_at_python">
+<a href="#updated_at_python" style="color: inherit; text-decoration: inherit;">updated_<wbr>at</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -735,7 +855,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Channel<wbr>Ids</span>
+        <span id="state_channelids_csharp">
+<a href="#state_channelids_csharp" style="color: inherit; text-decoration: inherit;">Channel<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;int&gt;</a></span>
     </dt>
@@ -746,7 +868,9 @@ imported via terraform import.
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>Created<wbr>At</span>
+        <span id="state_createdat_csharp">
+<a href="#state_createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -755,7 +879,9 @@ imported via terraform import.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Incident<wbr>Preference</span>
+        <span id="state_incidentpreference_csharp">
+<a href="#state_incidentpreference_csharp" style="color: inherit; text-decoration: inherit;">Incident<wbr>Preference</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -764,7 +890,9 @@ imported via terraform import.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -773,7 +901,9 @@ imported via terraform import.
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>Updated<wbr>At</span>
+        <span id="state_updatedat_csharp">
+<a href="#state_updatedat_csharp" style="color: inherit; text-decoration: inherit;">Updated<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -789,7 +919,9 @@ imported via terraform import.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Channel<wbr>Ids</span>
+        <span id="state_channelids_go">
+<a href="#state_channelids_go" style="color: inherit; text-decoration: inherit;">Channel<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">[]int</a></span>
     </dt>
@@ -800,7 +932,9 @@ imported via terraform import.
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>Created<wbr>At</span>
+        <span id="state_createdat_go">
+<a href="#state_createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -809,7 +943,9 @@ imported via terraform import.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Incident<wbr>Preference</span>
+        <span id="state_incidentpreference_go">
+<a href="#state_incidentpreference_go" style="color: inherit; text-decoration: inherit;">Incident<wbr>Preference</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -818,7 +954,9 @@ imported via terraform import.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -827,7 +965,9 @@ imported via terraform import.
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>Updated<wbr>At</span>
+        <span id="state_updatedat_go">
+<a href="#state_updatedat_go" style="color: inherit; text-decoration: inherit;">Updated<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -843,7 +983,9 @@ imported via terraform import.
 
     <dt class="property-optional"
             title="Optional">
-        <span>channel<wbr>Ids</span>
+        <span id="state_channelids_nodejs">
+<a href="#state_channelids_nodejs" style="color: inherit; text-decoration: inherit;">channel<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number[]</a></span>
     </dt>
@@ -854,7 +996,9 @@ imported via terraform import.
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>created<wbr>At</span>
+        <span id="state_createdat_nodejs">
+<a href="#state_createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -863,7 +1007,9 @@ imported via terraform import.
 
     <dt class="property-optional"
             title="Optional">
-        <span>incident<wbr>Preference</span>
+        <span id="state_incidentpreference_nodejs">
+<a href="#state_incidentpreference_nodejs" style="color: inherit; text-decoration: inherit;">incident<wbr>Preference</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -872,7 +1018,9 @@ imported via terraform import.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -881,7 +1029,9 @@ imported via terraform import.
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>updated<wbr>At</span>
+        <span id="state_updatedat_nodejs">
+<a href="#state_updatedat_nodejs" style="color: inherit; text-decoration: inherit;">updated<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -897,7 +1047,9 @@ imported via terraform import.
 
     <dt class="property-optional"
             title="Optional">
-        <span>channel_<wbr>ids</span>
+        <span id="state_channel_ids_python">
+<a href="#state_channel_ids_python" style="color: inherit; text-decoration: inherit;">channel_<wbr>ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Integer]</a></span>
     </dt>
@@ -908,7 +1060,9 @@ imported via terraform import.
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>created_<wbr>at</span>
+        <span id="state_created_at_python">
+<a href="#state_created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -917,7 +1071,9 @@ imported via terraform import.
 
     <dt class="property-optional"
             title="Optional">
-        <span>incident_<wbr>preference</span>
+        <span id="state_incident_preference_python">
+<a href="#state_incident_preference_python" style="color: inherit; text-decoration: inherit;">incident_<wbr>preference</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -926,7 +1082,9 @@ imported via terraform import.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -935,7 +1093,9 @@ imported via terraform import.
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>updated_<wbr>at</span>
+        <span id="state_updated_at_python">
+<a href="#state_updated_at_python" style="color: inherit; text-decoration: inherit;">updated_<wbr>at</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

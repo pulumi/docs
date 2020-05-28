@@ -28,7 +28,24 @@ cannot be deleted.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using NewRelic = Pulumi.NewRelic;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var app = new NewRelic.Plugins.ApplicationSettings("app", new NewRelic.Plugins.ApplicationSettingsArgs
+        {
+            AppApdexThreshold = "0.7",
+            EnableRealUserMonitoring = false,
+            EndUserApdexThreshold = "0.8",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -246,7 +263,9 @@ The ApplicationSettings resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-required"
             title="Required">
-        <span>App<wbr>Apdex<wbr>Threshold</span>
+        <span id="appapdexthreshold_csharp">
+<a href="#appapdexthreshold_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Apdex<wbr>Threshold</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
@@ -255,7 +274,9 @@ The ApplicationSettings resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-required"
             title="Required">
-        <span>Enable<wbr>Real<wbr>User<wbr>Monitoring</span>
+        <span id="enablerealusermonitoring_csharp">
+<a href="#enablerealusermonitoring_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Real<wbr>User<wbr>Monitoring</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -264,7 +285,9 @@ The ApplicationSettings resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-required"
             title="Required">
-        <span>End<wbr>User<wbr>Apdex<wbr>Threshold</span>
+        <span id="enduserapdexthreshold_csharp">
+<a href="#enduserapdexthreshold_csharp" style="color: inherit; text-decoration: inherit;">End<wbr>User<wbr>Apdex<wbr>Threshold</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
@@ -273,7 +296,9 @@ The ApplicationSettings resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -289,7 +314,9 @@ The ApplicationSettings resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-required"
             title="Required">
-        <span>App<wbr>Apdex<wbr>Threshold</span>
+        <span id="appapdexthreshold_go">
+<a href="#appapdexthreshold_go" style="color: inherit; text-decoration: inherit;">App<wbr>Apdex<wbr>Threshold</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
@@ -298,7 +325,9 @@ The ApplicationSettings resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-required"
             title="Required">
-        <span>Enable<wbr>Real<wbr>User<wbr>Monitoring</span>
+        <span id="enablerealusermonitoring_go">
+<a href="#enablerealusermonitoring_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Real<wbr>User<wbr>Monitoring</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -307,7 +336,9 @@ The ApplicationSettings resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-required"
             title="Required">
-        <span>End<wbr>User<wbr>Apdex<wbr>Threshold</span>
+        <span id="enduserapdexthreshold_go">
+<a href="#enduserapdexthreshold_go" style="color: inherit; text-decoration: inherit;">End<wbr>User<wbr>Apdex<wbr>Threshold</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
@@ -316,7 +347,9 @@ The ApplicationSettings resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -332,7 +365,9 @@ The ApplicationSettings resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-required"
             title="Required">
-        <span>app<wbr>Apdex<wbr>Threshold</span>
+        <span id="appapdexthreshold_nodejs">
+<a href="#appapdexthreshold_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Apdex<wbr>Threshold</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
@@ -341,7 +376,9 @@ The ApplicationSettings resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-required"
             title="Required">
-        <span>enable<wbr>Real<wbr>User<wbr>Monitoring</span>
+        <span id="enablerealusermonitoring_nodejs">
+<a href="#enablerealusermonitoring_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Real<wbr>User<wbr>Monitoring</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -350,7 +387,9 @@ The ApplicationSettings resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-required"
             title="Required">
-        <span>end<wbr>User<wbr>Apdex<wbr>Threshold</span>
+        <span id="enduserapdexthreshold_nodejs">
+<a href="#enduserapdexthreshold_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>User<wbr>Apdex<wbr>Threshold</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
@@ -359,7 +398,9 @@ The ApplicationSettings resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -375,7 +416,9 @@ The ApplicationSettings resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-required"
             title="Required">
-        <span>app_<wbr>apdex_<wbr>threshold</span>
+        <span id="app_apdex_threshold_python">
+<a href="#app_apdex_threshold_python" style="color: inherit; text-decoration: inherit;">app_<wbr>apdex_<wbr>threshold</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -384,7 +427,9 @@ The ApplicationSettings resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-required"
             title="Required">
-        <span>enable_<wbr>real_<wbr>user_<wbr>monitoring</span>
+        <span id="enable_real_user_monitoring_python">
+<a href="#enable_real_user_monitoring_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>real_<wbr>user_<wbr>monitoring</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -393,7 +438,9 @@ The ApplicationSettings resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-required"
             title="Required">
-        <span>end_<wbr>user_<wbr>apdex_<wbr>threshold</span>
+        <span id="end_user_apdex_threshold_python">
+<a href="#end_user_apdex_threshold_python" style="color: inherit; text-decoration: inherit;">end_<wbr>user_<wbr>apdex_<wbr>threshold</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -402,7 +449,9 @@ The ApplicationSettings resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -429,7 +478,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -444,7 +495,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -459,7 +512,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -474,7 +529,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -615,7 +672,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>App<wbr>Apdex<wbr>Threshold</span>
+        <span id="state_appapdexthreshold_csharp">
+<a href="#state_appapdexthreshold_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Apdex<wbr>Threshold</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
@@ -624,7 +683,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enable<wbr>Real<wbr>User<wbr>Monitoring</span>
+        <span id="state_enablerealusermonitoring_csharp">
+<a href="#state_enablerealusermonitoring_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Real<wbr>User<wbr>Monitoring</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -633,7 +694,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>End<wbr>User<wbr>Apdex<wbr>Threshold</span>
+        <span id="state_enduserapdexthreshold_csharp">
+<a href="#state_enduserapdexthreshold_csharp" style="color: inherit; text-decoration: inherit;">End<wbr>User<wbr>Apdex<wbr>Threshold</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
@@ -642,7 +705,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -658,7 +723,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>App<wbr>Apdex<wbr>Threshold</span>
+        <span id="state_appapdexthreshold_go">
+<a href="#state_appapdexthreshold_go" style="color: inherit; text-decoration: inherit;">App<wbr>Apdex<wbr>Threshold</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
@@ -667,7 +734,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enable<wbr>Real<wbr>User<wbr>Monitoring</span>
+        <span id="state_enablerealusermonitoring_go">
+<a href="#state_enablerealusermonitoring_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Real<wbr>User<wbr>Monitoring</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -676,7 +745,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>End<wbr>User<wbr>Apdex<wbr>Threshold</span>
+        <span id="state_enduserapdexthreshold_go">
+<a href="#state_enduserapdexthreshold_go" style="color: inherit; text-decoration: inherit;">End<wbr>User<wbr>Apdex<wbr>Threshold</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
@@ -685,7 +756,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -701,7 +774,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>app<wbr>Apdex<wbr>Threshold</span>
+        <span id="state_appapdexthreshold_nodejs">
+<a href="#state_appapdexthreshold_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Apdex<wbr>Threshold</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
@@ -710,7 +785,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>enable<wbr>Real<wbr>User<wbr>Monitoring</span>
+        <span id="state_enablerealusermonitoring_nodejs">
+<a href="#state_enablerealusermonitoring_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Real<wbr>User<wbr>Monitoring</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -719,7 +796,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>end<wbr>User<wbr>Apdex<wbr>Threshold</span>
+        <span id="state_enduserapdexthreshold_nodejs">
+<a href="#state_enduserapdexthreshold_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>User<wbr>Apdex<wbr>Threshold</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
@@ -728,7 +807,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -744,7 +825,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>app_<wbr>apdex_<wbr>threshold</span>
+        <span id="state_app_apdex_threshold_python">
+<a href="#state_app_apdex_threshold_python" style="color: inherit; text-decoration: inherit;">app_<wbr>apdex_<wbr>threshold</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -753,7 +836,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>enable_<wbr>real_<wbr>user_<wbr>monitoring</span>
+        <span id="state_enable_real_user_monitoring_python">
+<a href="#state_enable_real_user_monitoring_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>real_<wbr>user_<wbr>monitoring</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -762,7 +847,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>end_<wbr>user_<wbr>apdex_<wbr>threshold</span>
+        <span id="state_end_user_apdex_threshold_python">
+<a href="#state_end_user_apdex_threshold_python" style="color: inherit; text-decoration: inherit;">end_<wbr>user_<wbr>apdex_<wbr>threshold</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -771,7 +858,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

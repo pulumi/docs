@@ -20,7 +20,53 @@ Use this resource to map alert policies to alert channels in New Relic.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using NewRelic = Pulumi.NewRelic;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var examplePolicy = Output.Create(NewRelic.GetAlertPolicy.InvokeAsync(new NewRelic.GetAlertPolicyArgs
+        {
+            Name = "my-alert-policy",
+        }));
+        // Creates an email alert channel.
+        var emailChannel = new NewRelic.AlertChannel("emailChannel", new NewRelic.AlertChannelArgs
+        {
+            Type = "email",
+            Config = new NewRelic.Inputs.AlertChannelConfigArgs
+            {
+                Recipients = "foo@example.com",
+                IncludeJsonAttachment = "1",
+            },
+        });
+        // Creates a Slack alert channel.
+        var slackChannel = new NewRelic.AlertChannel("slackChannel", new NewRelic.AlertChannelArgs
+        {
+            Type = "slack",
+            Config = new NewRelic.Inputs.AlertChannelConfigArgs
+            {
+                Channel = "#example-channel",
+                Url = "http://example-org.slack.com",
+            },
+        });
+        // Applies the created channels above to the alert policy
+        // referenced at the top of the config.
+        var foo = new NewRelic.AlertPolicyChannel("foo", new NewRelic.AlertPolicyChannelArgs
+        {
+            PolicyId = newrelic_alert_policy.Example_policy.Id,
+            ChannelIds = 
+            {
+                emailChannel.Id,
+                slackChannel.Id,
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -280,7 +326,9 @@ The AlertPolicyChannel resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-required"
             title="Required">
-        <span>Policy<wbr>Id</span>
+        <span id="policyid_csharp">
+<a href="#policyid_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -289,7 +337,9 @@ The AlertPolicyChannel resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>Channel<wbr>Id</span>
+        <span id="channelid_csharp">
+<a href="#channelid_csharp" style="color: inherit; text-decoration: inherit;">Channel<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -298,7 +348,9 @@ The AlertPolicyChannel resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Channel<wbr>Ids</span>
+        <span id="channelids_csharp">
+<a href="#channelids_csharp" style="color: inherit; text-decoration: inherit;">Channel<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;int&gt;</a></span>
     </dt>
@@ -315,7 +367,9 @@ drift your Terraform state.
 
     <dt class="property-required"
             title="Required">
-        <span>Policy<wbr>Id</span>
+        <span id="policyid_go">
+<a href="#policyid_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -324,7 +378,9 @@ drift your Terraform state.
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>Channel<wbr>Id</span>
+        <span id="channelid_go">
+<a href="#channelid_go" style="color: inherit; text-decoration: inherit;">Channel<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -333,7 +389,9 @@ drift your Terraform state.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Channel<wbr>Ids</span>
+        <span id="channelids_go">
+<a href="#channelids_go" style="color: inherit; text-decoration: inherit;">Channel<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">[]int</a></span>
     </dt>
@@ -350,7 +408,9 @@ drift your Terraform state.
 
     <dt class="property-required"
             title="Required">
-        <span>policy<wbr>Id</span>
+        <span id="policyid_nodejs">
+<a href="#policyid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -359,7 +419,9 @@ drift your Terraform state.
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>channel<wbr>Id</span>
+        <span id="channelid_nodejs">
+<a href="#channelid_nodejs" style="color: inherit; text-decoration: inherit;">channel<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -368,7 +430,9 @@ drift your Terraform state.
 
     <dt class="property-optional"
             title="Optional">
-        <span>channel<wbr>Ids</span>
+        <span id="channelids_nodejs">
+<a href="#channelids_nodejs" style="color: inherit; text-decoration: inherit;">channel<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number[]</a></span>
     </dt>
@@ -385,7 +449,9 @@ drift your Terraform state.
 
     <dt class="property-required"
             title="Required">
-        <span>policy_<wbr>id</span>
+        <span id="policy_id_python">
+<a href="#policy_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -394,7 +460,9 @@ drift your Terraform state.
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>channel_<wbr>id</span>
+        <span id="channel_id_python">
+<a href="#channel_id_python" style="color: inherit; text-decoration: inherit;">channel_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -403,7 +471,9 @@ drift your Terraform state.
 
     <dt class="property-optional"
             title="Optional">
-        <span>channel_<wbr>ids</span>
+        <span id="channel_ids_python">
+<a href="#channel_ids_python" style="color: inherit; text-decoration: inherit;">channel_<wbr>ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Integer]</a></span>
     </dt>
@@ -431,7 +501,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -446,7 +518,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -461,7 +535,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -476,7 +552,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -617,7 +695,9 @@ The following state arguments are supported:
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>Channel<wbr>Id</span>
+        <span id="state_channelid_csharp">
+<a href="#state_channelid_csharp" style="color: inherit; text-decoration: inherit;">Channel<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -626,7 +706,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Channel<wbr>Ids</span>
+        <span id="state_channelids_csharp">
+<a href="#state_channelids_csharp" style="color: inherit; text-decoration: inherit;">Channel<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;int&gt;</a></span>
     </dt>
@@ -636,7 +718,9 @@ drift your Terraform state.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Policy<wbr>Id</span>
+        <span id="state_policyid_csharp">
+<a href="#state_policyid_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -652,7 +736,9 @@ drift your Terraform state.
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>Channel<wbr>Id</span>
+        <span id="state_channelid_go">
+<a href="#state_channelid_go" style="color: inherit; text-decoration: inherit;">Channel<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -661,7 +747,9 @@ drift your Terraform state.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Channel<wbr>Ids</span>
+        <span id="state_channelids_go">
+<a href="#state_channelids_go" style="color: inherit; text-decoration: inherit;">Channel<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">[]int</a></span>
     </dt>
@@ -671,7 +759,9 @@ drift your Terraform state.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Policy<wbr>Id</span>
+        <span id="state_policyid_go">
+<a href="#state_policyid_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -687,7 +777,9 @@ drift your Terraform state.
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>channel<wbr>Id</span>
+        <span id="state_channelid_nodejs">
+<a href="#state_channelid_nodejs" style="color: inherit; text-decoration: inherit;">channel<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -696,7 +788,9 @@ drift your Terraform state.
 
     <dt class="property-optional"
             title="Optional">
-        <span>channel<wbr>Ids</span>
+        <span id="state_channelids_nodejs">
+<a href="#state_channelids_nodejs" style="color: inherit; text-decoration: inherit;">channel<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number[]</a></span>
     </dt>
@@ -706,7 +800,9 @@ drift your Terraform state.
 
     <dt class="property-optional"
             title="Optional">
-        <span>policy<wbr>Id</span>
+        <span id="state_policyid_nodejs">
+<a href="#state_policyid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -722,7 +818,9 @@ drift your Terraform state.
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>channel_<wbr>id</span>
+        <span id="state_channel_id_python">
+<a href="#state_channel_id_python" style="color: inherit; text-decoration: inherit;">channel_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -731,7 +829,9 @@ drift your Terraform state.
 
     <dt class="property-optional"
             title="Optional">
-        <span>channel_<wbr>ids</span>
+        <span id="state_channel_ids_python">
+<a href="#state_channel_ids_python" style="color: inherit; text-decoration: inherit;">channel_<wbr>ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Integer]</a></span>
     </dt>
@@ -741,7 +841,9 @@ drift your Terraform state.
 
     <dt class="property-optional"
             title="Optional">
-        <span>policy_<wbr>id</span>
+        <span id="state_policy_id_python">
+<a href="#state_policy_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>

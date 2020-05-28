@@ -24,7 +24,37 @@ variable with your Personal API key,
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using NewRelic = Pulumi.NewRelic;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var foo = new NewRelic.Plugins.Workload("foo", new NewRelic.Plugins.WorkloadArgs
+        {
+            AccountId = 12345678,
+            EntityGuids = 
+            {
+                "MjUyMDUyOHxBUE18QVBQTElDQVRJT058MjE1MDM3Nzk1",
+            },
+            EntitySearchQueries = 
+            {
+                new NewRelic.Plugins.Inputs.WorkloadEntitySearchQueryArgs
+                {
+                    Query = "name like 'Example application'",
+                },
+            },
+            ScopeAccountIds = 
+            {
+                12345678,
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -248,7 +278,9 @@ The Workload resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-required"
             title="Required">
-        <span>Account<wbr>Id</span>
+        <span id="accountid_csharp">
+<a href="#accountid_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -257,7 +289,9 @@ The Workload resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Entity<wbr>Guids</span>
+        <span id="entityguids_csharp">
+<a href="#entityguids_csharp" style="color: inherit; text-decoration: inherit;">Entity<wbr>Guids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -266,7 +300,9 @@ The Workload resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Entity<wbr>Search<wbr>Queries</span>
+        <span id="entitysearchqueries_csharp">
+<a href="#entitysearchqueries_csharp" style="color: inherit; text-decoration: inherit;">Entity<wbr>Search<wbr>Queries</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#workloadentitysearchquery">List&lt;Pulumi.<wbr>New<wbr>Relic.<wbr>Plugins.<wbr>Inputs.<wbr>Workload<wbr>Entity<wbr>Search<wbr>Query<wbr>Args&gt;</a></span>
     </dt>
@@ -275,7 +311,9 @@ The Workload resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -284,7 +322,9 @@ The Workload resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Scope<wbr>Account<wbr>Ids</span>
+        <span id="scopeaccountids_csharp">
+<a href="#scopeaccountids_csharp" style="color: inherit; text-decoration: inherit;">Scope<wbr>Account<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;int&gt;</a></span>
     </dt>
@@ -300,7 +340,9 @@ The Workload resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-required"
             title="Required">
-        <span>Account<wbr>Id</span>
+        <span id="accountid_go">
+<a href="#accountid_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -309,7 +351,9 @@ The Workload resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Entity<wbr>Guids</span>
+        <span id="entityguids_go">
+<a href="#entityguids_go" style="color: inherit; text-decoration: inherit;">Entity<wbr>Guids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -318,7 +362,9 @@ The Workload resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Entity<wbr>Search<wbr>Queries</span>
+        <span id="entitysearchqueries_go">
+<a href="#entitysearchqueries_go" style="color: inherit; text-decoration: inherit;">Entity<wbr>Search<wbr>Queries</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#workloadentitysearchquery">[]Workload<wbr>Entity<wbr>Search<wbr>Query</a></span>
     </dt>
@@ -327,7 +373,9 @@ The Workload resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -336,7 +384,9 @@ The Workload resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Scope<wbr>Account<wbr>Ids</span>
+        <span id="scopeaccountids_go">
+<a href="#scopeaccountids_go" style="color: inherit; text-decoration: inherit;">Scope<wbr>Account<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">[]int</a></span>
     </dt>
@@ -352,7 +402,9 @@ The Workload resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-required"
             title="Required">
-        <span>account<wbr>Id</span>
+        <span id="accountid_nodejs">
+<a href="#accountid_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -361,7 +413,9 @@ The Workload resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>entity<wbr>Guids</span>
+        <span id="entityguids_nodejs">
+<a href="#entityguids_nodejs" style="color: inherit; text-decoration: inherit;">entity<wbr>Guids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -370,7 +424,9 @@ The Workload resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>entity<wbr>Search<wbr>Queries</span>
+        <span id="entitysearchqueries_nodejs">
+<a href="#entitysearchqueries_nodejs" style="color: inherit; text-decoration: inherit;">entity<wbr>Search<wbr>Queries</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#workloadentitysearchquery">Workload<wbr>Entity<wbr>Search<wbr>Query[]</a></span>
     </dt>
@@ -379,7 +435,9 @@ The Workload resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -388,7 +446,9 @@ The Workload resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>scope<wbr>Account<wbr>Ids</span>
+        <span id="scopeaccountids_nodejs">
+<a href="#scopeaccountids_nodejs" style="color: inherit; text-decoration: inherit;">scope<wbr>Account<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number[]</a></span>
     </dt>
@@ -404,7 +464,9 @@ The Workload resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-required"
             title="Required">
-        <span>account_<wbr>id</span>
+        <span id="account_id_python">
+<a href="#account_id_python" style="color: inherit; text-decoration: inherit;">account_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -413,7 +475,9 @@ The Workload resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>entity_<wbr>guids</span>
+        <span id="entity_guids_python">
+<a href="#entity_guids_python" style="color: inherit; text-decoration: inherit;">entity_<wbr>guids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -422,7 +486,9 @@ The Workload resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>entity_<wbr>search_<wbr>queries</span>
+        <span id="entity_search_queries_python">
+<a href="#entity_search_queries_python" style="color: inherit; text-decoration: inherit;">entity_<wbr>search_<wbr>queries</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#workloadentitysearchquery">List[Workload<wbr>Entity<wbr>Search<wbr>Query]</a></span>
     </dt>
@@ -431,7 +497,9 @@ The Workload resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -440,7 +508,9 @@ The Workload resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>scope_<wbr>account_<wbr>ids</span>
+        <span id="scope_account_ids_python">
+<a href="#scope_account_ids_python" style="color: inherit; text-decoration: inherit;">scope_<wbr>account_<wbr>ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Integer]</a></span>
     </dt>
@@ -467,7 +537,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Composite<wbr>Entity<wbr>Search<wbr>Query</span>
+        <span id="compositeentitysearchquery_csharp">
+<a href="#compositeentitysearchquery_csharp" style="color: inherit; text-decoration: inherit;">Composite<wbr>Entity<wbr>Search<wbr>Query</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -476,7 +548,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Guid</span>
+        <span id="guid_csharp">
+<a href="#guid_csharp" style="color: inherit; text-decoration: inherit;">Guid</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -485,7 +559,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -493,7 +569,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Permalink</span>
+        <span id="permalink_csharp">
+<a href="#permalink_csharp" style="color: inherit; text-decoration: inherit;">Permalink</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -502,7 +580,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Workload<wbr>Id</span>
+        <span id="workloadid_csharp">
+<a href="#workloadid_csharp" style="color: inherit; text-decoration: inherit;">Workload<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -518,7 +598,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Composite<wbr>Entity<wbr>Search<wbr>Query</span>
+        <span id="compositeentitysearchquery_go">
+<a href="#compositeentitysearchquery_go" style="color: inherit; text-decoration: inherit;">Composite<wbr>Entity<wbr>Search<wbr>Query</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -527,7 +609,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Guid</span>
+        <span id="guid_go">
+<a href="#guid_go" style="color: inherit; text-decoration: inherit;">Guid</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -536,7 +620,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -544,7 +630,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Permalink</span>
+        <span id="permalink_go">
+<a href="#permalink_go" style="color: inherit; text-decoration: inherit;">Permalink</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -553,7 +641,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Workload<wbr>Id</span>
+        <span id="workloadid_go">
+<a href="#workloadid_go" style="color: inherit; text-decoration: inherit;">Workload<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -569,7 +659,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>composite<wbr>Entity<wbr>Search<wbr>Query</span>
+        <span id="compositeentitysearchquery_nodejs">
+<a href="#compositeentitysearchquery_nodejs" style="color: inherit; text-decoration: inherit;">composite<wbr>Entity<wbr>Search<wbr>Query</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -578,7 +670,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>guid</span>
+        <span id="guid_nodejs">
+<a href="#guid_nodejs" style="color: inherit; text-decoration: inherit;">guid</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -587,7 +681,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -595,7 +691,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>permalink</span>
+        <span id="permalink_nodejs">
+<a href="#permalink_nodejs" style="color: inherit; text-decoration: inherit;">permalink</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -604,7 +702,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>workload<wbr>Id</span>
+        <span id="workloadid_nodejs">
+<a href="#workloadid_nodejs" style="color: inherit; text-decoration: inherit;">workload<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -620,7 +720,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>composite_<wbr>entity_<wbr>search_<wbr>query</span>
+        <span id="composite_entity_search_query_python">
+<a href="#composite_entity_search_query_python" style="color: inherit; text-decoration: inherit;">composite_<wbr>entity_<wbr>search_<wbr>query</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -629,7 +731,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>guid</span>
+        <span id="guid_python">
+<a href="#guid_python" style="color: inherit; text-decoration: inherit;">guid</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -638,7 +742,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -646,7 +752,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>permalink</span>
+        <span id="permalink_python">
+<a href="#permalink_python" style="color: inherit; text-decoration: inherit;">permalink</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -655,7 +763,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>workload_<wbr>id</span>
+        <span id="workload_id_python">
+<a href="#workload_id_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -797,7 +907,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Account<wbr>Id</span>
+        <span id="state_accountid_csharp">
+<a href="#state_accountid_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -806,7 +918,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Composite<wbr>Entity<wbr>Search<wbr>Query</span>
+        <span id="state_compositeentitysearchquery_csharp">
+<a href="#state_compositeentitysearchquery_csharp" style="color: inherit; text-decoration: inherit;">Composite<wbr>Entity<wbr>Search<wbr>Query</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -815,7 +929,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Entity<wbr>Guids</span>
+        <span id="state_entityguids_csharp">
+<a href="#state_entityguids_csharp" style="color: inherit; text-decoration: inherit;">Entity<wbr>Guids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -824,7 +940,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Entity<wbr>Search<wbr>Queries</span>
+        <span id="state_entitysearchqueries_csharp">
+<a href="#state_entitysearchqueries_csharp" style="color: inherit; text-decoration: inherit;">Entity<wbr>Search<wbr>Queries</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#workloadentitysearchquery">List&lt;Pulumi.<wbr>New<wbr>Relic.<wbr>Plugins.<wbr>Inputs.<wbr>Workload<wbr>Entity<wbr>Search<wbr>Query<wbr>Args&gt;</a></span>
     </dt>
@@ -833,7 +951,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Guid</span>
+        <span id="state_guid_csharp">
+<a href="#state_guid_csharp" style="color: inherit; text-decoration: inherit;">Guid</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -842,7 +962,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -851,7 +973,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Permalink</span>
+        <span id="state_permalink_csharp">
+<a href="#state_permalink_csharp" style="color: inherit; text-decoration: inherit;">Permalink</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -860,7 +984,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Scope<wbr>Account<wbr>Ids</span>
+        <span id="state_scopeaccountids_csharp">
+<a href="#state_scopeaccountids_csharp" style="color: inherit; text-decoration: inherit;">Scope<wbr>Account<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;int&gt;</a></span>
     </dt>
@@ -869,7 +995,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Workload<wbr>Id</span>
+        <span id="state_workloadid_csharp">
+<a href="#state_workloadid_csharp" style="color: inherit; text-decoration: inherit;">Workload<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -885,7 +1013,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Account<wbr>Id</span>
+        <span id="state_accountid_go">
+<a href="#state_accountid_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -894,7 +1024,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Composite<wbr>Entity<wbr>Search<wbr>Query</span>
+        <span id="state_compositeentitysearchquery_go">
+<a href="#state_compositeentitysearchquery_go" style="color: inherit; text-decoration: inherit;">Composite<wbr>Entity<wbr>Search<wbr>Query</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -903,7 +1035,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Entity<wbr>Guids</span>
+        <span id="state_entityguids_go">
+<a href="#state_entityguids_go" style="color: inherit; text-decoration: inherit;">Entity<wbr>Guids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -912,7 +1046,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Entity<wbr>Search<wbr>Queries</span>
+        <span id="state_entitysearchqueries_go">
+<a href="#state_entitysearchqueries_go" style="color: inherit; text-decoration: inherit;">Entity<wbr>Search<wbr>Queries</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#workloadentitysearchquery">[]Workload<wbr>Entity<wbr>Search<wbr>Query</a></span>
     </dt>
@@ -921,7 +1057,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Guid</span>
+        <span id="state_guid_go">
+<a href="#state_guid_go" style="color: inherit; text-decoration: inherit;">Guid</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -930,7 +1068,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -939,7 +1079,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Permalink</span>
+        <span id="state_permalink_go">
+<a href="#state_permalink_go" style="color: inherit; text-decoration: inherit;">Permalink</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -948,7 +1090,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Scope<wbr>Account<wbr>Ids</span>
+        <span id="state_scopeaccountids_go">
+<a href="#state_scopeaccountids_go" style="color: inherit; text-decoration: inherit;">Scope<wbr>Account<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">[]int</a></span>
     </dt>
@@ -957,7 +1101,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Workload<wbr>Id</span>
+        <span id="state_workloadid_go">
+<a href="#state_workloadid_go" style="color: inherit; text-decoration: inherit;">Workload<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -973,7 +1119,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>account<wbr>Id</span>
+        <span id="state_accountid_nodejs">
+<a href="#state_accountid_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -982,7 +1130,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>composite<wbr>Entity<wbr>Search<wbr>Query</span>
+        <span id="state_compositeentitysearchquery_nodejs">
+<a href="#state_compositeentitysearchquery_nodejs" style="color: inherit; text-decoration: inherit;">composite<wbr>Entity<wbr>Search<wbr>Query</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -991,7 +1141,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>entity<wbr>Guids</span>
+        <span id="state_entityguids_nodejs">
+<a href="#state_entityguids_nodejs" style="color: inherit; text-decoration: inherit;">entity<wbr>Guids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1000,7 +1152,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>entity<wbr>Search<wbr>Queries</span>
+        <span id="state_entitysearchqueries_nodejs">
+<a href="#state_entitysearchqueries_nodejs" style="color: inherit; text-decoration: inherit;">entity<wbr>Search<wbr>Queries</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#workloadentitysearchquery">Workload<wbr>Entity<wbr>Search<wbr>Query[]</a></span>
     </dt>
@@ -1009,7 +1163,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>guid</span>
+        <span id="state_guid_nodejs">
+<a href="#state_guid_nodejs" style="color: inherit; text-decoration: inherit;">guid</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1018,7 +1174,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1027,7 +1185,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>permalink</span>
+        <span id="state_permalink_nodejs">
+<a href="#state_permalink_nodejs" style="color: inherit; text-decoration: inherit;">permalink</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1036,7 +1196,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>scope<wbr>Account<wbr>Ids</span>
+        <span id="state_scopeaccountids_nodejs">
+<a href="#state_scopeaccountids_nodejs" style="color: inherit; text-decoration: inherit;">scope<wbr>Account<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number[]</a></span>
     </dt>
@@ -1045,7 +1207,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>workload<wbr>Id</span>
+        <span id="state_workloadid_nodejs">
+<a href="#state_workloadid_nodejs" style="color: inherit; text-decoration: inherit;">workload<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1061,7 +1225,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>account_<wbr>id</span>
+        <span id="state_account_id_python">
+<a href="#state_account_id_python" style="color: inherit; text-decoration: inherit;">account_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1070,7 +1236,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>composite_<wbr>entity_<wbr>search_<wbr>query</span>
+        <span id="state_composite_entity_search_query_python">
+<a href="#state_composite_entity_search_query_python" style="color: inherit; text-decoration: inherit;">composite_<wbr>entity_<wbr>search_<wbr>query</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1079,7 +1247,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>entity_<wbr>guids</span>
+        <span id="state_entity_guids_python">
+<a href="#state_entity_guids_python" style="color: inherit; text-decoration: inherit;">entity_<wbr>guids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1088,7 +1258,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>entity_<wbr>search_<wbr>queries</span>
+        <span id="state_entity_search_queries_python">
+<a href="#state_entity_search_queries_python" style="color: inherit; text-decoration: inherit;">entity_<wbr>search_<wbr>queries</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#workloadentitysearchquery">List[Workload<wbr>Entity<wbr>Search<wbr>Query]</a></span>
     </dt>
@@ -1097,7 +1269,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>guid</span>
+        <span id="state_guid_python">
+<a href="#state_guid_python" style="color: inherit; text-decoration: inherit;">guid</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1106,7 +1280,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1115,7 +1291,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>permalink</span>
+        <span id="state_permalink_python">
+<a href="#state_permalink_python" style="color: inherit; text-decoration: inherit;">permalink</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1124,7 +1302,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>scope_<wbr>account_<wbr>ids</span>
+        <span id="state_scope_account_ids_python">
+<a href="#state_scope_account_ids_python" style="color: inherit; text-decoration: inherit;">scope_<wbr>account_<wbr>ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Integer]</a></span>
     </dt>
@@ -1133,7 +1313,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>workload_<wbr>id</span>
+        <span id="state_workload_id_python">
+<a href="#state_workload_id_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1175,7 +1357,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Query</span>
+        <span id="query_csharp">
+<a href="#query_csharp" style="color: inherit; text-decoration: inherit;">Query</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1191,7 +1375,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Query</span>
+        <span id="query_go">
+<a href="#query_go" style="color: inherit; text-decoration: inherit;">Query</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1207,7 +1393,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>query</span>
+        <span id="query_nodejs">
+<a href="#query_nodejs" style="color: inherit; text-decoration: inherit;">query</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1223,7 +1411,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>query</span>
+        <span id="query_python">
+<a href="#query_python" style="color: inherit; text-decoration: inherit;">query</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
