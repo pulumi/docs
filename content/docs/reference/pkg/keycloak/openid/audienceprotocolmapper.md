@@ -60,6 +60,40 @@ audience_mapper = keycloak.openid.AudienceProtocolMapper("audienceMapper",
     included_custom_audience="foo",
     realm_id=realm.id)
 ```
+```csharp
+using Pulumi;
+using Keycloak = Pulumi.Keycloak;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var realm = new Keycloak.Realm("realm", new Keycloak.RealmArgs
+        {
+            Enabled = true,
+            Realm = "my-realm",
+        });
+        var openidClient = new Keycloak.OpenId.Client("openidClient", new Keycloak.OpenId.ClientArgs
+        {
+            AccessType = "CONFIDENTIAL",
+            ClientId = "test-client",
+            Enabled = true,
+            RealmId = realm.Id,
+            ValidRedirectUris = 
+            {
+                "http://localhost:8080/openid-callback",
+            },
+        });
+        var audienceMapper = new Keycloak.OpenId.AudienceProtocolMapper("audienceMapper", new Keycloak.OpenId.AudienceProtocolMapperArgs
+        {
+            ClientId = openidClient.Id,
+            IncludedCustomAudience = "foo",
+            RealmId = realm.Id,
+        });
+    }
+
+}
+```
 
 ### Example Usage (Client Scope)
 
@@ -92,6 +126,33 @@ audience_mapper = keycloak.openid.AudienceProtocolMapper("audienceMapper",
     client_scope_id=client_scope.id,
     included_custom_audience="foo",
     realm_id=realm.id)
+```
+```csharp
+using Pulumi;
+using Keycloak = Pulumi.Keycloak;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var realm = new Keycloak.Realm("realm", new Keycloak.RealmArgs
+        {
+            Enabled = true,
+            Realm = "my-realm",
+        });
+        var clientScope = new Keycloak.OpenId.ClientScope("clientScope", new Keycloak.OpenId.ClientScopeArgs
+        {
+            RealmId = realm.Id,
+        });
+        var audienceMapper = new Keycloak.OpenId.AudienceProtocolMapper("audienceMapper", new Keycloak.OpenId.AudienceProtocolMapperArgs
+        {
+            ClientScopeId = clientScope.Id,
+            IncludedCustomAudience = "foo",
+            RealmId = realm.Id,
+        });
+    }
+
+}
 ```
 
 ### Argument Reference
@@ -292,7 +353,9 @@ The AudienceProtocolMapper resource accepts the following [input]({{< relref "/d
 
     <dt class="property-required"
             title="Required">
-        <span>Realm<wbr>Id</span>
+        <span id="realmid_csharp">
+<a href="#realmid_csharp" style="color: inherit; text-decoration: inherit;">Realm<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -301,7 +364,9 @@ The AudienceProtocolMapper resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
-        <span>Add<wbr>To<wbr>Access<wbr>Token</span>
+        <span id="addtoaccesstoken_csharp">
+<a href="#addtoaccesstoken_csharp" style="color: inherit; text-decoration: inherit;">Add<wbr>To<wbr>Access<wbr>Token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -310,7 +375,9 @@ The AudienceProtocolMapper resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
-        <span>Add<wbr>To<wbr>Id<wbr>Token</span>
+        <span id="addtoidtoken_csharp">
+<a href="#addtoidtoken_csharp" style="color: inherit; text-decoration: inherit;">Add<wbr>To<wbr>Id<wbr>Token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -319,7 +386,9 @@ The AudienceProtocolMapper resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
-        <span>Client<wbr>Id</span>
+        <span id="clientid_csharp">
+<a href="#clientid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -328,7 +397,9 @@ The AudienceProtocolMapper resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
-        <span>Client<wbr>Scope<wbr>Id</span>
+        <span id="clientscopeid_csharp">
+<a href="#clientscopeid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Scope<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -337,7 +408,9 @@ The AudienceProtocolMapper resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
-        <span>Included<wbr>Client<wbr>Audience</span>
+        <span id="includedclientaudience_csharp">
+<a href="#includedclientaudience_csharp" style="color: inherit; text-decoration: inherit;">Included<wbr>Client<wbr>Audience</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -346,7 +419,9 @@ The AudienceProtocolMapper resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
-        <span>Included<wbr>Custom<wbr>Audience</span>
+        <span id="includedcustomaudience_csharp">
+<a href="#includedcustomaudience_csharp" style="color: inherit; text-decoration: inherit;">Included<wbr>Custom<wbr>Audience</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -355,7 +430,9 @@ The AudienceProtocolMapper resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -371,7 +448,9 @@ The AudienceProtocolMapper resource accepts the following [input]({{< relref "/d
 
     <dt class="property-required"
             title="Required">
-        <span>Realm<wbr>Id</span>
+        <span id="realmid_go">
+<a href="#realmid_go" style="color: inherit; text-decoration: inherit;">Realm<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -380,7 +459,9 @@ The AudienceProtocolMapper resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
-        <span>Add<wbr>To<wbr>Access<wbr>Token</span>
+        <span id="addtoaccesstoken_go">
+<a href="#addtoaccesstoken_go" style="color: inherit; text-decoration: inherit;">Add<wbr>To<wbr>Access<wbr>Token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -389,7 +470,9 @@ The AudienceProtocolMapper resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
-        <span>Add<wbr>To<wbr>Id<wbr>Token</span>
+        <span id="addtoidtoken_go">
+<a href="#addtoidtoken_go" style="color: inherit; text-decoration: inherit;">Add<wbr>To<wbr>Id<wbr>Token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -398,7 +481,9 @@ The AudienceProtocolMapper resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
-        <span>Client<wbr>Id</span>
+        <span id="clientid_go">
+<a href="#clientid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -407,7 +492,9 @@ The AudienceProtocolMapper resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
-        <span>Client<wbr>Scope<wbr>Id</span>
+        <span id="clientscopeid_go">
+<a href="#clientscopeid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Scope<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -416,7 +503,9 @@ The AudienceProtocolMapper resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
-        <span>Included<wbr>Client<wbr>Audience</span>
+        <span id="includedclientaudience_go">
+<a href="#includedclientaudience_go" style="color: inherit; text-decoration: inherit;">Included<wbr>Client<wbr>Audience</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -425,7 +514,9 @@ The AudienceProtocolMapper resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
-        <span>Included<wbr>Custom<wbr>Audience</span>
+        <span id="includedcustomaudience_go">
+<a href="#includedcustomaudience_go" style="color: inherit; text-decoration: inherit;">Included<wbr>Custom<wbr>Audience</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -434,7 +525,9 @@ The AudienceProtocolMapper resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -450,7 +543,9 @@ The AudienceProtocolMapper resource accepts the following [input]({{< relref "/d
 
     <dt class="property-required"
             title="Required">
-        <span>realm<wbr>Id</span>
+        <span id="realmid_nodejs">
+<a href="#realmid_nodejs" style="color: inherit; text-decoration: inherit;">realm<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -459,7 +554,9 @@ The AudienceProtocolMapper resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
-        <span>add<wbr>To<wbr>Access<wbr>Token</span>
+        <span id="addtoaccesstoken_nodejs">
+<a href="#addtoaccesstoken_nodejs" style="color: inherit; text-decoration: inherit;">add<wbr>To<wbr>Access<wbr>Token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -468,7 +565,9 @@ The AudienceProtocolMapper resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
-        <span>add<wbr>To<wbr>Id<wbr>Token</span>
+        <span id="addtoidtoken_nodejs">
+<a href="#addtoidtoken_nodejs" style="color: inherit; text-decoration: inherit;">add<wbr>To<wbr>Id<wbr>Token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -477,7 +576,9 @@ The AudienceProtocolMapper resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
-        <span>client<wbr>Id</span>
+        <span id="clientid_nodejs">
+<a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -486,7 +587,9 @@ The AudienceProtocolMapper resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
-        <span>client<wbr>Scope<wbr>Id</span>
+        <span id="clientscopeid_nodejs">
+<a href="#clientscopeid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Scope<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -495,7 +598,9 @@ The AudienceProtocolMapper resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
-        <span>included<wbr>Client<wbr>Audience</span>
+        <span id="includedclientaudience_nodejs">
+<a href="#includedclientaudience_nodejs" style="color: inherit; text-decoration: inherit;">included<wbr>Client<wbr>Audience</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -504,7 +609,9 @@ The AudienceProtocolMapper resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
-        <span>included<wbr>Custom<wbr>Audience</span>
+        <span id="includedcustomaudience_nodejs">
+<a href="#includedcustomaudience_nodejs" style="color: inherit; text-decoration: inherit;">included<wbr>Custom<wbr>Audience</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -513,7 +620,9 @@ The AudienceProtocolMapper resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -529,7 +638,9 @@ The AudienceProtocolMapper resource accepts the following [input]({{< relref "/d
 
     <dt class="property-required"
             title="Required">
-        <span>realm_<wbr>id</span>
+        <span id="realm_id_python">
+<a href="#realm_id_python" style="color: inherit; text-decoration: inherit;">realm_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -538,7 +649,9 @@ The AudienceProtocolMapper resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
-        <span>add_<wbr>to_<wbr>access_<wbr>token</span>
+        <span id="add_to_access_token_python">
+<a href="#add_to_access_token_python" style="color: inherit; text-decoration: inherit;">add_<wbr>to_<wbr>access_<wbr>token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -547,7 +660,9 @@ The AudienceProtocolMapper resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
-        <span>add_<wbr>to_<wbr>id_<wbr>token</span>
+        <span id="add_to_id_token_python">
+<a href="#add_to_id_token_python" style="color: inherit; text-decoration: inherit;">add_<wbr>to_<wbr>id_<wbr>token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -556,7 +671,9 @@ The AudienceProtocolMapper resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
-        <span>client_<wbr>id</span>
+        <span id="client_id_python">
+<a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -565,7 +682,9 @@ The AudienceProtocolMapper resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
-        <span>client_<wbr>scope_<wbr>id</span>
+        <span id="client_scope_id_python">
+<a href="#client_scope_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>scope_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -574,7 +693,9 @@ The AudienceProtocolMapper resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
-        <span>included_<wbr>client_<wbr>audience</span>
+        <span id="included_client_audience_python">
+<a href="#included_client_audience_python" style="color: inherit; text-decoration: inherit;">included_<wbr>client_<wbr>audience</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -583,7 +704,9 @@ The AudienceProtocolMapper resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
-        <span>included_<wbr>custom_<wbr>audience</span>
+        <span id="included_custom_audience_python">
+<a href="#included_custom_audience_python" style="color: inherit; text-decoration: inherit;">included_<wbr>custom_<wbr>audience</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -592,7 +715,9 @@ The AudienceProtocolMapper resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -619,7 +744,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -634,7 +761,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -649,7 +778,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -664,7 +795,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -805,7 +938,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Add<wbr>To<wbr>Access<wbr>Token</span>
+        <span id="state_addtoaccesstoken_csharp">
+<a href="#state_addtoaccesstoken_csharp" style="color: inherit; text-decoration: inherit;">Add<wbr>To<wbr>Access<wbr>Token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -814,7 +949,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Add<wbr>To<wbr>Id<wbr>Token</span>
+        <span id="state_addtoidtoken_csharp">
+<a href="#state_addtoidtoken_csharp" style="color: inherit; text-decoration: inherit;">Add<wbr>To<wbr>Id<wbr>Token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -823,7 +960,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Client<wbr>Id</span>
+        <span id="state_clientid_csharp">
+<a href="#state_clientid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -832,7 +971,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Client<wbr>Scope<wbr>Id</span>
+        <span id="state_clientscopeid_csharp">
+<a href="#state_clientscopeid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Scope<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -841,7 +982,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Included<wbr>Client<wbr>Audience</span>
+        <span id="state_includedclientaudience_csharp">
+<a href="#state_includedclientaudience_csharp" style="color: inherit; text-decoration: inherit;">Included<wbr>Client<wbr>Audience</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -850,7 +993,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Included<wbr>Custom<wbr>Audience</span>
+        <span id="state_includedcustomaudience_csharp">
+<a href="#state_includedcustomaudience_csharp" style="color: inherit; text-decoration: inherit;">Included<wbr>Custom<wbr>Audience</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -859,7 +1004,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -868,7 +1015,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Realm<wbr>Id</span>
+        <span id="state_realmid_csharp">
+<a href="#state_realmid_csharp" style="color: inherit; text-decoration: inherit;">Realm<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -884,7 +1033,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Add<wbr>To<wbr>Access<wbr>Token</span>
+        <span id="state_addtoaccesstoken_go">
+<a href="#state_addtoaccesstoken_go" style="color: inherit; text-decoration: inherit;">Add<wbr>To<wbr>Access<wbr>Token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -893,7 +1044,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Add<wbr>To<wbr>Id<wbr>Token</span>
+        <span id="state_addtoidtoken_go">
+<a href="#state_addtoidtoken_go" style="color: inherit; text-decoration: inherit;">Add<wbr>To<wbr>Id<wbr>Token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -902,7 +1055,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Client<wbr>Id</span>
+        <span id="state_clientid_go">
+<a href="#state_clientid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -911,7 +1066,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Client<wbr>Scope<wbr>Id</span>
+        <span id="state_clientscopeid_go">
+<a href="#state_clientscopeid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Scope<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -920,7 +1077,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Included<wbr>Client<wbr>Audience</span>
+        <span id="state_includedclientaudience_go">
+<a href="#state_includedclientaudience_go" style="color: inherit; text-decoration: inherit;">Included<wbr>Client<wbr>Audience</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -929,7 +1088,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Included<wbr>Custom<wbr>Audience</span>
+        <span id="state_includedcustomaudience_go">
+<a href="#state_includedcustomaudience_go" style="color: inherit; text-decoration: inherit;">Included<wbr>Custom<wbr>Audience</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -938,7 +1099,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -947,7 +1110,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Realm<wbr>Id</span>
+        <span id="state_realmid_go">
+<a href="#state_realmid_go" style="color: inherit; text-decoration: inherit;">Realm<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -963,7 +1128,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>add<wbr>To<wbr>Access<wbr>Token</span>
+        <span id="state_addtoaccesstoken_nodejs">
+<a href="#state_addtoaccesstoken_nodejs" style="color: inherit; text-decoration: inherit;">add<wbr>To<wbr>Access<wbr>Token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -972,7 +1139,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>add<wbr>To<wbr>Id<wbr>Token</span>
+        <span id="state_addtoidtoken_nodejs">
+<a href="#state_addtoidtoken_nodejs" style="color: inherit; text-decoration: inherit;">add<wbr>To<wbr>Id<wbr>Token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -981,7 +1150,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>client<wbr>Id</span>
+        <span id="state_clientid_nodejs">
+<a href="#state_clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -990,7 +1161,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>client<wbr>Scope<wbr>Id</span>
+        <span id="state_clientscopeid_nodejs">
+<a href="#state_clientscopeid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Scope<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -999,7 +1172,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>included<wbr>Client<wbr>Audience</span>
+        <span id="state_includedclientaudience_nodejs">
+<a href="#state_includedclientaudience_nodejs" style="color: inherit; text-decoration: inherit;">included<wbr>Client<wbr>Audience</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1008,7 +1183,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>included<wbr>Custom<wbr>Audience</span>
+        <span id="state_includedcustomaudience_nodejs">
+<a href="#state_includedcustomaudience_nodejs" style="color: inherit; text-decoration: inherit;">included<wbr>Custom<wbr>Audience</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1017,7 +1194,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1026,7 +1205,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>realm<wbr>Id</span>
+        <span id="state_realmid_nodejs">
+<a href="#state_realmid_nodejs" style="color: inherit; text-decoration: inherit;">realm<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1042,7 +1223,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>add_<wbr>to_<wbr>access_<wbr>token</span>
+        <span id="state_add_to_access_token_python">
+<a href="#state_add_to_access_token_python" style="color: inherit; text-decoration: inherit;">add_<wbr>to_<wbr>access_<wbr>token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1051,7 +1234,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>add_<wbr>to_<wbr>id_<wbr>token</span>
+        <span id="state_add_to_id_token_python">
+<a href="#state_add_to_id_token_python" style="color: inherit; text-decoration: inherit;">add_<wbr>to_<wbr>id_<wbr>token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1060,7 +1245,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>client_<wbr>id</span>
+        <span id="state_client_id_python">
+<a href="#state_client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1069,7 +1256,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>client_<wbr>scope_<wbr>id</span>
+        <span id="state_client_scope_id_python">
+<a href="#state_client_scope_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>scope_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1078,7 +1267,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>included_<wbr>client_<wbr>audience</span>
+        <span id="state_included_client_audience_python">
+<a href="#state_included_client_audience_python" style="color: inherit; text-decoration: inherit;">included_<wbr>client_<wbr>audience</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1087,7 +1278,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>included_<wbr>custom_<wbr>audience</span>
+        <span id="state_included_custom_audience_python">
+<a href="#state_included_custom_audience_python" style="color: inherit; text-decoration: inherit;">included_<wbr>custom_<wbr>audience</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1096,7 +1289,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1105,7 +1300,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>realm_<wbr>id</span>
+        <span id="state_realm_id_python">
+<a href="#state_realm_id_python" style="color: inherit; text-decoration: inherit;">realm_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

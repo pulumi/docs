@@ -54,6 +54,39 @@ realm_events = keycloak.RealmEvents("realmEvents",
     events_listeners=["jboss-logging"],
     realm_id=realm.id)
 ```
+```csharp
+using Pulumi;
+using Keycloak = Pulumi.Keycloak;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var realm = new Keycloak.Realm("realm", new Keycloak.RealmArgs
+        {
+            Realm = "test",
+        });
+        var realmEvents = new Keycloak.RealmEvents("realmEvents", new Keycloak.RealmEventsArgs
+        {
+            AdminEventsDetailsEnabled = true,
+            AdminEventsEnabled = true,
+            EnabledEventTypes = 
+            {
+                "LOGIN",
+                "LOGOUT",
+            },
+            EventsEnabled = true,
+            EventsExpiration = 3600,
+            EventsListeners = 
+            {
+                "jboss-logging",
+            },
+            RealmId = realm.Id,
+        });
+    }
+
+}
+```
 
 ### Argument Reference
 
@@ -252,7 +285,9 @@ The RealmEvents resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>Realm<wbr>Id</span>
+        <span id="realmid_csharp">
+<a href="#realmid_csharp" style="color: inherit; text-decoration: inherit;">Realm<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -260,7 +295,9 @@ The RealmEvents resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Admin<wbr>Events<wbr>Details<wbr>Enabled</span>
+        <span id="admineventsdetailsenabled_csharp">
+<a href="#admineventsdetailsenabled_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>Events<wbr>Details<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -268,7 +305,9 @@ The RealmEvents resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Admin<wbr>Events<wbr>Enabled</span>
+        <span id="admineventsenabled_csharp">
+<a href="#admineventsenabled_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>Events<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -276,7 +315,9 @@ The RealmEvents resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enabled<wbr>Event<wbr>Types</span>
+        <span id="enabledeventtypes_csharp">
+<a href="#enabledeventtypes_csharp" style="color: inherit; text-decoration: inherit;">Enabled<wbr>Event<wbr>Types</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -284,7 +325,9 @@ The RealmEvents resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Events<wbr>Enabled</span>
+        <span id="eventsenabled_csharp">
+<a href="#eventsenabled_csharp" style="color: inherit; text-decoration: inherit;">Events<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -292,7 +335,9 @@ The RealmEvents resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Events<wbr>Expiration</span>
+        <span id="eventsexpiration_csharp">
+<a href="#eventsexpiration_csharp" style="color: inherit; text-decoration: inherit;">Events<wbr>Expiration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -300,7 +345,9 @@ The RealmEvents resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Events<wbr>Listeners</span>
+        <span id="eventslisteners_csharp">
+<a href="#eventslisteners_csharp" style="color: inherit; text-decoration: inherit;">Events<wbr>Listeners</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -315,7 +362,9 @@ The RealmEvents resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>Realm<wbr>Id</span>
+        <span id="realmid_go">
+<a href="#realmid_go" style="color: inherit; text-decoration: inherit;">Realm<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -323,7 +372,9 @@ The RealmEvents resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Admin<wbr>Events<wbr>Details<wbr>Enabled</span>
+        <span id="admineventsdetailsenabled_go">
+<a href="#admineventsdetailsenabled_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>Events<wbr>Details<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -331,7 +382,9 @@ The RealmEvents resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Admin<wbr>Events<wbr>Enabled</span>
+        <span id="admineventsenabled_go">
+<a href="#admineventsenabled_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>Events<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -339,7 +392,9 @@ The RealmEvents resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enabled<wbr>Event<wbr>Types</span>
+        <span id="enabledeventtypes_go">
+<a href="#enabledeventtypes_go" style="color: inherit; text-decoration: inherit;">Enabled<wbr>Event<wbr>Types</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -347,7 +402,9 @@ The RealmEvents resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Events<wbr>Enabled</span>
+        <span id="eventsenabled_go">
+<a href="#eventsenabled_go" style="color: inherit; text-decoration: inherit;">Events<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -355,7 +412,9 @@ The RealmEvents resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Events<wbr>Expiration</span>
+        <span id="eventsexpiration_go">
+<a href="#eventsexpiration_go" style="color: inherit; text-decoration: inherit;">Events<wbr>Expiration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -363,7 +422,9 @@ The RealmEvents resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Events<wbr>Listeners</span>
+        <span id="eventslisteners_go">
+<a href="#eventslisteners_go" style="color: inherit; text-decoration: inherit;">Events<wbr>Listeners</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -378,7 +439,9 @@ The RealmEvents resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>realm<wbr>Id</span>
+        <span id="realmid_nodejs">
+<a href="#realmid_nodejs" style="color: inherit; text-decoration: inherit;">realm<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -386,7 +449,9 @@ The RealmEvents resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>admin<wbr>Events<wbr>Details<wbr>Enabled</span>
+        <span id="admineventsdetailsenabled_nodejs">
+<a href="#admineventsdetailsenabled_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Events<wbr>Details<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -394,7 +459,9 @@ The RealmEvents resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>admin<wbr>Events<wbr>Enabled</span>
+        <span id="admineventsenabled_nodejs">
+<a href="#admineventsenabled_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Events<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -402,7 +469,9 @@ The RealmEvents resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>enabled<wbr>Event<wbr>Types</span>
+        <span id="enabledeventtypes_nodejs">
+<a href="#enabledeventtypes_nodejs" style="color: inherit; text-decoration: inherit;">enabled<wbr>Event<wbr>Types</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -410,7 +479,9 @@ The RealmEvents resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>events<wbr>Enabled</span>
+        <span id="eventsenabled_nodejs">
+<a href="#eventsenabled_nodejs" style="color: inherit; text-decoration: inherit;">events<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -418,7 +489,9 @@ The RealmEvents resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>events<wbr>Expiration</span>
+        <span id="eventsexpiration_nodejs">
+<a href="#eventsexpiration_nodejs" style="color: inherit; text-decoration: inherit;">events<wbr>Expiration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -426,7 +499,9 @@ The RealmEvents resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>events<wbr>Listeners</span>
+        <span id="eventslisteners_nodejs">
+<a href="#eventslisteners_nodejs" style="color: inherit; text-decoration: inherit;">events<wbr>Listeners</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -441,7 +516,9 @@ The RealmEvents resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>realm_<wbr>id</span>
+        <span id="realm_id_python">
+<a href="#realm_id_python" style="color: inherit; text-decoration: inherit;">realm_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -449,7 +526,9 @@ The RealmEvents resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>admin_<wbr>events_<wbr>details_<wbr>enabled</span>
+        <span id="admin_events_details_enabled_python">
+<a href="#admin_events_details_enabled_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>events_<wbr>details_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -457,7 +536,9 @@ The RealmEvents resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>admin_<wbr>events_<wbr>enabled</span>
+        <span id="admin_events_enabled_python">
+<a href="#admin_events_enabled_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>events_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -465,7 +546,9 @@ The RealmEvents resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>enabled_<wbr>event_<wbr>types</span>
+        <span id="enabled_event_types_python">
+<a href="#enabled_event_types_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>event_<wbr>types</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -473,7 +556,9 @@ The RealmEvents resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>events_<wbr>enabled</span>
+        <span id="events_enabled_python">
+<a href="#events_enabled_python" style="color: inherit; text-decoration: inherit;">events_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -481,7 +566,9 @@ The RealmEvents resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>events_<wbr>expiration</span>
+        <span id="events_expiration_python">
+<a href="#events_expiration_python" style="color: inherit; text-decoration: inherit;">events_<wbr>expiration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -489,7 +576,9 @@ The RealmEvents resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>events_<wbr>listeners</span>
+        <span id="events_listeners_python">
+<a href="#events_listeners_python" style="color: inherit; text-decoration: inherit;">events_<wbr>listeners</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -515,7 +604,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -530,7 +621,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -545,7 +638,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -560,7 +655,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -701,7 +798,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Admin<wbr>Events<wbr>Details<wbr>Enabled</span>
+        <span id="state_admineventsdetailsenabled_csharp">
+<a href="#state_admineventsdetailsenabled_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>Events<wbr>Details<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -709,7 +808,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Admin<wbr>Events<wbr>Enabled</span>
+        <span id="state_admineventsenabled_csharp">
+<a href="#state_admineventsenabled_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>Events<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -717,7 +818,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enabled<wbr>Event<wbr>Types</span>
+        <span id="state_enabledeventtypes_csharp">
+<a href="#state_enabledeventtypes_csharp" style="color: inherit; text-decoration: inherit;">Enabled<wbr>Event<wbr>Types</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -725,7 +828,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Events<wbr>Enabled</span>
+        <span id="state_eventsenabled_csharp">
+<a href="#state_eventsenabled_csharp" style="color: inherit; text-decoration: inherit;">Events<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -733,7 +838,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Events<wbr>Expiration</span>
+        <span id="state_eventsexpiration_csharp">
+<a href="#state_eventsexpiration_csharp" style="color: inherit; text-decoration: inherit;">Events<wbr>Expiration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -741,7 +848,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Events<wbr>Listeners</span>
+        <span id="state_eventslisteners_csharp">
+<a href="#state_eventslisteners_csharp" style="color: inherit; text-decoration: inherit;">Events<wbr>Listeners</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -749,7 +858,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Realm<wbr>Id</span>
+        <span id="state_realmid_csharp">
+<a href="#state_realmid_csharp" style="color: inherit; text-decoration: inherit;">Realm<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -764,7 +875,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Admin<wbr>Events<wbr>Details<wbr>Enabled</span>
+        <span id="state_admineventsdetailsenabled_go">
+<a href="#state_admineventsdetailsenabled_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>Events<wbr>Details<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -772,7 +885,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Admin<wbr>Events<wbr>Enabled</span>
+        <span id="state_admineventsenabled_go">
+<a href="#state_admineventsenabled_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>Events<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -780,7 +895,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enabled<wbr>Event<wbr>Types</span>
+        <span id="state_enabledeventtypes_go">
+<a href="#state_enabledeventtypes_go" style="color: inherit; text-decoration: inherit;">Enabled<wbr>Event<wbr>Types</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -788,7 +905,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Events<wbr>Enabled</span>
+        <span id="state_eventsenabled_go">
+<a href="#state_eventsenabled_go" style="color: inherit; text-decoration: inherit;">Events<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -796,7 +915,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Events<wbr>Expiration</span>
+        <span id="state_eventsexpiration_go">
+<a href="#state_eventsexpiration_go" style="color: inherit; text-decoration: inherit;">Events<wbr>Expiration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -804,7 +925,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Events<wbr>Listeners</span>
+        <span id="state_eventslisteners_go">
+<a href="#state_eventslisteners_go" style="color: inherit; text-decoration: inherit;">Events<wbr>Listeners</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -812,7 +935,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Realm<wbr>Id</span>
+        <span id="state_realmid_go">
+<a href="#state_realmid_go" style="color: inherit; text-decoration: inherit;">Realm<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -827,7 +952,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>admin<wbr>Events<wbr>Details<wbr>Enabled</span>
+        <span id="state_admineventsdetailsenabled_nodejs">
+<a href="#state_admineventsdetailsenabled_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Events<wbr>Details<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -835,7 +962,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>admin<wbr>Events<wbr>Enabled</span>
+        <span id="state_admineventsenabled_nodejs">
+<a href="#state_admineventsenabled_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Events<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -843,7 +972,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>enabled<wbr>Event<wbr>Types</span>
+        <span id="state_enabledeventtypes_nodejs">
+<a href="#state_enabledeventtypes_nodejs" style="color: inherit; text-decoration: inherit;">enabled<wbr>Event<wbr>Types</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -851,7 +982,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>events<wbr>Enabled</span>
+        <span id="state_eventsenabled_nodejs">
+<a href="#state_eventsenabled_nodejs" style="color: inherit; text-decoration: inherit;">events<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -859,7 +992,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>events<wbr>Expiration</span>
+        <span id="state_eventsexpiration_nodejs">
+<a href="#state_eventsexpiration_nodejs" style="color: inherit; text-decoration: inherit;">events<wbr>Expiration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -867,7 +1002,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>events<wbr>Listeners</span>
+        <span id="state_eventslisteners_nodejs">
+<a href="#state_eventslisteners_nodejs" style="color: inherit; text-decoration: inherit;">events<wbr>Listeners</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -875,7 +1012,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>realm<wbr>Id</span>
+        <span id="state_realmid_nodejs">
+<a href="#state_realmid_nodejs" style="color: inherit; text-decoration: inherit;">realm<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -890,7 +1029,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>admin_<wbr>events_<wbr>details_<wbr>enabled</span>
+        <span id="state_admin_events_details_enabled_python">
+<a href="#state_admin_events_details_enabled_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>events_<wbr>details_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -898,7 +1039,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>admin_<wbr>events_<wbr>enabled</span>
+        <span id="state_admin_events_enabled_python">
+<a href="#state_admin_events_enabled_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>events_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -906,7 +1049,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>enabled_<wbr>event_<wbr>types</span>
+        <span id="state_enabled_event_types_python">
+<a href="#state_enabled_event_types_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>event_<wbr>types</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -914,7 +1059,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>events_<wbr>enabled</span>
+        <span id="state_events_enabled_python">
+<a href="#state_events_enabled_python" style="color: inherit; text-decoration: inherit;">events_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -922,7 +1069,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>events_<wbr>expiration</span>
+        <span id="state_events_expiration_python">
+<a href="#state_events_expiration_python" style="color: inherit; text-decoration: inherit;">events_<wbr>expiration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -930,7 +1079,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>events_<wbr>listeners</span>
+        <span id="state_events_listeners_python">
+<a href="#state_events_listeners_python" style="color: inherit; text-decoration: inherit;">events_<wbr>listeners</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -938,7 +1089,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>realm_<wbr>id</span>
+        <span id="state_realm_id_python">
+<a href="#state_realm_id_python" style="color: inherit; text-decoration: inherit;">realm_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

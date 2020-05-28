@@ -75,6 +75,45 @@ msad_user_account_control_mapper = keycloak.ldap.MsadUserAccountControlMapper("m
     ldap_user_federation_id=ldap_user_federation.id,
     realm_id=realm.id)
 ```
+```csharp
+using Pulumi;
+using Keycloak = Pulumi.Keycloak;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var realm = new Keycloak.Realm("realm", new Keycloak.RealmArgs
+        {
+            Enabled = true,
+            Realm = "test",
+        });
+        var ldapUserFederation = new Keycloak.Ldap.UserFederation("ldapUserFederation", new Keycloak.Ldap.UserFederationArgs
+        {
+            BindCredential = "admin",
+            BindDn = "cn=admin,dc=example,dc=org",
+            ConnectionUrl = "ldap://my-ad-server",
+            RdnLdapAttribute = "cn",
+            RealmId = realm.Id,
+            UserObjectClasses = 
+            {
+                "person",
+                "organizationalPerson",
+                "user",
+            },
+            UsernameLdapAttribute = "cn",
+            UsersDn = "dc=example,dc=org",
+            UuidLdapAttribute = "objectGUID",
+        });
+        var msadUserAccountControlMapper = new Keycloak.Ldap.MsadUserAccountControlMapper("msadUserAccountControlMapper", new Keycloak.Ldap.MsadUserAccountControlMapperArgs
+        {
+            LdapUserFederationId = ldapUserFederation.Id,
+            RealmId = realm.Id,
+        });
+    }
+
+}
+```
 
 ### Argument Reference
 
@@ -270,7 +309,9 @@ The MsadUserAccountControlMapper resource accepts the following [input]({{< relr
 
     <dt class="property-required"
             title="Required">
-        <span>Ldap<wbr>User<wbr>Federation<wbr>Id</span>
+        <span id="ldapuserfederationid_csharp">
+<a href="#ldapuserfederationid_csharp" style="color: inherit; text-decoration: inherit;">Ldap<wbr>User<wbr>Federation<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -279,7 +320,9 @@ The MsadUserAccountControlMapper resource accepts the following [input]({{< relr
 
     <dt class="property-required"
             title="Required">
-        <span>Realm<wbr>Id</span>
+        <span id="realmid_csharp">
+<a href="#realmid_csharp" style="color: inherit; text-decoration: inherit;">Realm<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -288,7 +331,9 @@ The MsadUserAccountControlMapper resource accepts the following [input]({{< relr
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ldap<wbr>Password<wbr>Policy<wbr>Hints<wbr>Enabled</span>
+        <span id="ldappasswordpolicyhintsenabled_csharp">
+<a href="#ldappasswordpolicyhintsenabled_csharp" style="color: inherit; text-decoration: inherit;">Ldap<wbr>Password<wbr>Policy<wbr>Hints<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -296,7 +341,9 @@ The MsadUserAccountControlMapper resource accepts the following [input]({{< relr
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -312,7 +359,9 @@ The MsadUserAccountControlMapper resource accepts the following [input]({{< relr
 
     <dt class="property-required"
             title="Required">
-        <span>Ldap<wbr>User<wbr>Federation<wbr>Id</span>
+        <span id="ldapuserfederationid_go">
+<a href="#ldapuserfederationid_go" style="color: inherit; text-decoration: inherit;">Ldap<wbr>User<wbr>Federation<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -321,7 +370,9 @@ The MsadUserAccountControlMapper resource accepts the following [input]({{< relr
 
     <dt class="property-required"
             title="Required">
-        <span>Realm<wbr>Id</span>
+        <span id="realmid_go">
+<a href="#realmid_go" style="color: inherit; text-decoration: inherit;">Realm<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -330,7 +381,9 @@ The MsadUserAccountControlMapper resource accepts the following [input]({{< relr
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ldap<wbr>Password<wbr>Policy<wbr>Hints<wbr>Enabled</span>
+        <span id="ldappasswordpolicyhintsenabled_go">
+<a href="#ldappasswordpolicyhintsenabled_go" style="color: inherit; text-decoration: inherit;">Ldap<wbr>Password<wbr>Policy<wbr>Hints<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -338,7 +391,9 @@ The MsadUserAccountControlMapper resource accepts the following [input]({{< relr
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -354,7 +409,9 @@ The MsadUserAccountControlMapper resource accepts the following [input]({{< relr
 
     <dt class="property-required"
             title="Required">
-        <span>ldap<wbr>User<wbr>Federation<wbr>Id</span>
+        <span id="ldapuserfederationid_nodejs">
+<a href="#ldapuserfederationid_nodejs" style="color: inherit; text-decoration: inherit;">ldap<wbr>User<wbr>Federation<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -363,7 +420,9 @@ The MsadUserAccountControlMapper resource accepts the following [input]({{< relr
 
     <dt class="property-required"
             title="Required">
-        <span>realm<wbr>Id</span>
+        <span id="realmid_nodejs">
+<a href="#realmid_nodejs" style="color: inherit; text-decoration: inherit;">realm<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -372,7 +431,9 @@ The MsadUserAccountControlMapper resource accepts the following [input]({{< relr
 
     <dt class="property-optional"
             title="Optional">
-        <span>ldap<wbr>Password<wbr>Policy<wbr>Hints<wbr>Enabled</span>
+        <span id="ldappasswordpolicyhintsenabled_nodejs">
+<a href="#ldappasswordpolicyhintsenabled_nodejs" style="color: inherit; text-decoration: inherit;">ldap<wbr>Password<wbr>Policy<wbr>Hints<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -380,7 +441,9 @@ The MsadUserAccountControlMapper resource accepts the following [input]({{< relr
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -396,7 +459,9 @@ The MsadUserAccountControlMapper resource accepts the following [input]({{< relr
 
     <dt class="property-required"
             title="Required">
-        <span>ldap_<wbr>user_<wbr>federation_<wbr>id</span>
+        <span id="ldap_user_federation_id_python">
+<a href="#ldap_user_federation_id_python" style="color: inherit; text-decoration: inherit;">ldap_<wbr>user_<wbr>federation_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -405,7 +470,9 @@ The MsadUserAccountControlMapper resource accepts the following [input]({{< relr
 
     <dt class="property-required"
             title="Required">
-        <span>realm_<wbr>id</span>
+        <span id="realm_id_python">
+<a href="#realm_id_python" style="color: inherit; text-decoration: inherit;">realm_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -414,7 +481,9 @@ The MsadUserAccountControlMapper resource accepts the following [input]({{< relr
 
     <dt class="property-optional"
             title="Optional">
-        <span>ldap_<wbr>password_<wbr>policy_<wbr>hints_<wbr>enabled</span>
+        <span id="ldap_password_policy_hints_enabled_python">
+<a href="#ldap_password_policy_hints_enabled_python" style="color: inherit; text-decoration: inherit;">ldap_<wbr>password_<wbr>policy_<wbr>hints_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -422,7 +491,9 @@ The MsadUserAccountControlMapper resource accepts the following [input]({{< relr
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -449,7 +520,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -464,7 +537,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -479,7 +554,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -494,7 +571,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -635,7 +714,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ldap<wbr>Password<wbr>Policy<wbr>Hints<wbr>Enabled</span>
+        <span id="state_ldappasswordpolicyhintsenabled_csharp">
+<a href="#state_ldappasswordpolicyhintsenabled_csharp" style="color: inherit; text-decoration: inherit;">Ldap<wbr>Password<wbr>Policy<wbr>Hints<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -643,7 +724,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ldap<wbr>User<wbr>Federation<wbr>Id</span>
+        <span id="state_ldapuserfederationid_csharp">
+<a href="#state_ldapuserfederationid_csharp" style="color: inherit; text-decoration: inherit;">Ldap<wbr>User<wbr>Federation<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -652,7 +735,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -661,7 +746,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Realm<wbr>Id</span>
+        <span id="state_realmid_csharp">
+<a href="#state_realmid_csharp" style="color: inherit; text-decoration: inherit;">Realm<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -677,7 +764,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ldap<wbr>Password<wbr>Policy<wbr>Hints<wbr>Enabled</span>
+        <span id="state_ldappasswordpolicyhintsenabled_go">
+<a href="#state_ldappasswordpolicyhintsenabled_go" style="color: inherit; text-decoration: inherit;">Ldap<wbr>Password<wbr>Policy<wbr>Hints<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -685,7 +774,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ldap<wbr>User<wbr>Federation<wbr>Id</span>
+        <span id="state_ldapuserfederationid_go">
+<a href="#state_ldapuserfederationid_go" style="color: inherit; text-decoration: inherit;">Ldap<wbr>User<wbr>Federation<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -694,7 +785,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -703,7 +796,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Realm<wbr>Id</span>
+        <span id="state_realmid_go">
+<a href="#state_realmid_go" style="color: inherit; text-decoration: inherit;">Realm<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -719,7 +814,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>ldap<wbr>Password<wbr>Policy<wbr>Hints<wbr>Enabled</span>
+        <span id="state_ldappasswordpolicyhintsenabled_nodejs">
+<a href="#state_ldappasswordpolicyhintsenabled_nodejs" style="color: inherit; text-decoration: inherit;">ldap<wbr>Password<wbr>Policy<wbr>Hints<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -727,7 +824,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>ldap<wbr>User<wbr>Federation<wbr>Id</span>
+        <span id="state_ldapuserfederationid_nodejs">
+<a href="#state_ldapuserfederationid_nodejs" style="color: inherit; text-decoration: inherit;">ldap<wbr>User<wbr>Federation<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -736,7 +835,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -745,7 +846,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>realm<wbr>Id</span>
+        <span id="state_realmid_nodejs">
+<a href="#state_realmid_nodejs" style="color: inherit; text-decoration: inherit;">realm<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -761,7 +864,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>ldap_<wbr>password_<wbr>policy_<wbr>hints_<wbr>enabled</span>
+        <span id="state_ldap_password_policy_hints_enabled_python">
+<a href="#state_ldap_password_policy_hints_enabled_python" style="color: inherit; text-decoration: inherit;">ldap_<wbr>password_<wbr>policy_<wbr>hints_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -769,7 +874,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>ldap_<wbr>user_<wbr>federation_<wbr>id</span>
+        <span id="state_ldap_user_federation_id_python">
+<a href="#state_ldap_user_federation_id_python" style="color: inherit; text-decoration: inherit;">ldap_<wbr>user_<wbr>federation_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -778,7 +885,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -787,7 +896,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>realm_<wbr>id</span>
+        <span id="state_realm_id_python">
+<a href="#state_realm_id_python" style="color: inherit; text-decoration: inherit;">realm_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

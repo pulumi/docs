@@ -61,6 +61,40 @@ user_realm_role_mapper = keycloak.openid.UserRealmRoleProtocolMapper("userRealmR
     client_id=openid_client.id,
     realm_id=realm.id)
 ```
+```csharp
+using Pulumi;
+using Keycloak = Pulumi.Keycloak;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var realm = new Keycloak.Realm("realm", new Keycloak.RealmArgs
+        {
+            Enabled = true,
+            Realm = "my-realm",
+        });
+        var openidClient = new Keycloak.OpenId.Client("openidClient", new Keycloak.OpenId.ClientArgs
+        {
+            AccessType = "CONFIDENTIAL",
+            ClientId = "test-client",
+            Enabled = true,
+            RealmId = realm.Id,
+            ValidRedirectUris = 
+            {
+                "http://localhost:8080/openid-callback",
+            },
+        });
+        var userRealmRoleMapper = new Keycloak.OpenId.UserRealmRoleProtocolMapper("userRealmRoleMapper", new Keycloak.OpenId.UserRealmRoleProtocolMapperArgs
+        {
+            ClaimName = "foo",
+            ClientId = openidClient.Id,
+            RealmId = realm.Id,
+        });
+    }
+
+}
+```
 
 ### Example Usage (Client Scope)
 
@@ -93,6 +127,33 @@ user_realm_role_mapper = keycloak.openid.UserRealmRoleProtocolMapper("userRealmR
     claim_name="foo",
     client_scope_id=client_scope.id,
     realm_id=realm.id)
+```
+```csharp
+using Pulumi;
+using Keycloak = Pulumi.Keycloak;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var realm = new Keycloak.Realm("realm", new Keycloak.RealmArgs
+        {
+            Enabled = true,
+            Realm = "my-realm",
+        });
+        var clientScope = new Keycloak.OpenId.ClientScope("clientScope", new Keycloak.OpenId.ClientScopeArgs
+        {
+            RealmId = realm.Id,
+        });
+        var userRealmRoleMapper = new Keycloak.OpenId.UserRealmRoleProtocolMapper("userRealmRoleMapper", new Keycloak.OpenId.UserRealmRoleProtocolMapperArgs
+        {
+            ClaimName = "foo",
+            ClientScopeId = clientScope.Id,
+            RealmId = realm.Id,
+        });
+    }
+
+}
 ```
 
 ### Argument Reference
@@ -296,7 +357,9 @@ The UserRealmRoleProtocolMapper resource accepts the following [input]({{< relre
 
     <dt class="property-required"
             title="Required">
-        <span>Claim<wbr>Name</span>
+        <span id="claimname_csharp">
+<a href="#claimname_csharp" style="color: inherit; text-decoration: inherit;">Claim<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -304,7 +367,9 @@ The UserRealmRoleProtocolMapper resource accepts the following [input]({{< relre
 
     <dt class="property-required"
             title="Required">
-        <span>Realm<wbr>Id</span>
+        <span id="realmid_csharp">
+<a href="#realmid_csharp" style="color: inherit; text-decoration: inherit;">Realm<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -313,7 +378,9 @@ The UserRealmRoleProtocolMapper resource accepts the following [input]({{< relre
 
     <dt class="property-optional"
             title="Optional">
-        <span>Add<wbr>To<wbr>Access<wbr>Token</span>
+        <span id="addtoaccesstoken_csharp">
+<a href="#addtoaccesstoken_csharp" style="color: inherit; text-decoration: inherit;">Add<wbr>To<wbr>Access<wbr>Token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -322,7 +389,9 @@ The UserRealmRoleProtocolMapper resource accepts the following [input]({{< relre
 
     <dt class="property-optional"
             title="Optional">
-        <span>Add<wbr>To<wbr>Id<wbr>Token</span>
+        <span id="addtoidtoken_csharp">
+<a href="#addtoidtoken_csharp" style="color: inherit; text-decoration: inherit;">Add<wbr>To<wbr>Id<wbr>Token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -331,7 +400,9 @@ The UserRealmRoleProtocolMapper resource accepts the following [input]({{< relre
 
     <dt class="property-optional"
             title="Optional">
-        <span>Add<wbr>To<wbr>Userinfo</span>
+        <span id="addtouserinfo_csharp">
+<a href="#addtouserinfo_csharp" style="color: inherit; text-decoration: inherit;">Add<wbr>To<wbr>Userinfo</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -340,7 +411,9 @@ The UserRealmRoleProtocolMapper resource accepts the following [input]({{< relre
 
     <dt class="property-optional"
             title="Optional">
-        <span>Claim<wbr>Value<wbr>Type</span>
+        <span id="claimvaluetype_csharp">
+<a href="#claimvaluetype_csharp" style="color: inherit; text-decoration: inherit;">Claim<wbr>Value<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -349,7 +422,9 @@ The UserRealmRoleProtocolMapper resource accepts the following [input]({{< relre
 
     <dt class="property-optional"
             title="Optional">
-        <span>Client<wbr>Id</span>
+        <span id="clientid_csharp">
+<a href="#clientid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -358,7 +433,9 @@ The UserRealmRoleProtocolMapper resource accepts the following [input]({{< relre
 
     <dt class="property-optional"
             title="Optional">
-        <span>Client<wbr>Scope<wbr>Id</span>
+        <span id="clientscopeid_csharp">
+<a href="#clientscopeid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Scope<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -367,7 +444,9 @@ The UserRealmRoleProtocolMapper resource accepts the following [input]({{< relre
 
     <dt class="property-optional"
             title="Optional">
-        <span>Multivalued</span>
+        <span id="multivalued_csharp">
+<a href="#multivalued_csharp" style="color: inherit; text-decoration: inherit;">Multivalued</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -376,7 +455,9 @@ The UserRealmRoleProtocolMapper resource accepts the following [input]({{< relre
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -385,7 +466,9 @@ The UserRealmRoleProtocolMapper resource accepts the following [input]({{< relre
 
     <dt class="property-optional"
             title="Optional">
-        <span>Realm<wbr>Role<wbr>Prefix</span>
+        <span id="realmroleprefix_csharp">
+<a href="#realmroleprefix_csharp" style="color: inherit; text-decoration: inherit;">Realm<wbr>Role<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -401,7 +484,9 @@ The UserRealmRoleProtocolMapper resource accepts the following [input]({{< relre
 
     <dt class="property-required"
             title="Required">
-        <span>Claim<wbr>Name</span>
+        <span id="claimname_go">
+<a href="#claimname_go" style="color: inherit; text-decoration: inherit;">Claim<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -409,7 +494,9 @@ The UserRealmRoleProtocolMapper resource accepts the following [input]({{< relre
 
     <dt class="property-required"
             title="Required">
-        <span>Realm<wbr>Id</span>
+        <span id="realmid_go">
+<a href="#realmid_go" style="color: inherit; text-decoration: inherit;">Realm<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -418,7 +505,9 @@ The UserRealmRoleProtocolMapper resource accepts the following [input]({{< relre
 
     <dt class="property-optional"
             title="Optional">
-        <span>Add<wbr>To<wbr>Access<wbr>Token</span>
+        <span id="addtoaccesstoken_go">
+<a href="#addtoaccesstoken_go" style="color: inherit; text-decoration: inherit;">Add<wbr>To<wbr>Access<wbr>Token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -427,7 +516,9 @@ The UserRealmRoleProtocolMapper resource accepts the following [input]({{< relre
 
     <dt class="property-optional"
             title="Optional">
-        <span>Add<wbr>To<wbr>Id<wbr>Token</span>
+        <span id="addtoidtoken_go">
+<a href="#addtoidtoken_go" style="color: inherit; text-decoration: inherit;">Add<wbr>To<wbr>Id<wbr>Token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -436,7 +527,9 @@ The UserRealmRoleProtocolMapper resource accepts the following [input]({{< relre
 
     <dt class="property-optional"
             title="Optional">
-        <span>Add<wbr>To<wbr>Userinfo</span>
+        <span id="addtouserinfo_go">
+<a href="#addtouserinfo_go" style="color: inherit; text-decoration: inherit;">Add<wbr>To<wbr>Userinfo</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -445,7 +538,9 @@ The UserRealmRoleProtocolMapper resource accepts the following [input]({{< relre
 
     <dt class="property-optional"
             title="Optional">
-        <span>Claim<wbr>Value<wbr>Type</span>
+        <span id="claimvaluetype_go">
+<a href="#claimvaluetype_go" style="color: inherit; text-decoration: inherit;">Claim<wbr>Value<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -454,7 +549,9 @@ The UserRealmRoleProtocolMapper resource accepts the following [input]({{< relre
 
     <dt class="property-optional"
             title="Optional">
-        <span>Client<wbr>Id</span>
+        <span id="clientid_go">
+<a href="#clientid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -463,7 +560,9 @@ The UserRealmRoleProtocolMapper resource accepts the following [input]({{< relre
 
     <dt class="property-optional"
             title="Optional">
-        <span>Client<wbr>Scope<wbr>Id</span>
+        <span id="clientscopeid_go">
+<a href="#clientscopeid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Scope<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -472,7 +571,9 @@ The UserRealmRoleProtocolMapper resource accepts the following [input]({{< relre
 
     <dt class="property-optional"
             title="Optional">
-        <span>Multivalued</span>
+        <span id="multivalued_go">
+<a href="#multivalued_go" style="color: inherit; text-decoration: inherit;">Multivalued</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -481,7 +582,9 @@ The UserRealmRoleProtocolMapper resource accepts the following [input]({{< relre
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -490,7 +593,9 @@ The UserRealmRoleProtocolMapper resource accepts the following [input]({{< relre
 
     <dt class="property-optional"
             title="Optional">
-        <span>Realm<wbr>Role<wbr>Prefix</span>
+        <span id="realmroleprefix_go">
+<a href="#realmroleprefix_go" style="color: inherit; text-decoration: inherit;">Realm<wbr>Role<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -506,7 +611,9 @@ The UserRealmRoleProtocolMapper resource accepts the following [input]({{< relre
 
     <dt class="property-required"
             title="Required">
-        <span>claim<wbr>Name</span>
+        <span id="claimname_nodejs">
+<a href="#claimname_nodejs" style="color: inherit; text-decoration: inherit;">claim<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -514,7 +621,9 @@ The UserRealmRoleProtocolMapper resource accepts the following [input]({{< relre
 
     <dt class="property-required"
             title="Required">
-        <span>realm<wbr>Id</span>
+        <span id="realmid_nodejs">
+<a href="#realmid_nodejs" style="color: inherit; text-decoration: inherit;">realm<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -523,7 +632,9 @@ The UserRealmRoleProtocolMapper resource accepts the following [input]({{< relre
 
     <dt class="property-optional"
             title="Optional">
-        <span>add<wbr>To<wbr>Access<wbr>Token</span>
+        <span id="addtoaccesstoken_nodejs">
+<a href="#addtoaccesstoken_nodejs" style="color: inherit; text-decoration: inherit;">add<wbr>To<wbr>Access<wbr>Token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -532,7 +643,9 @@ The UserRealmRoleProtocolMapper resource accepts the following [input]({{< relre
 
     <dt class="property-optional"
             title="Optional">
-        <span>add<wbr>To<wbr>Id<wbr>Token</span>
+        <span id="addtoidtoken_nodejs">
+<a href="#addtoidtoken_nodejs" style="color: inherit; text-decoration: inherit;">add<wbr>To<wbr>Id<wbr>Token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -541,7 +654,9 @@ The UserRealmRoleProtocolMapper resource accepts the following [input]({{< relre
 
     <dt class="property-optional"
             title="Optional">
-        <span>add<wbr>To<wbr>Userinfo</span>
+        <span id="addtouserinfo_nodejs">
+<a href="#addtouserinfo_nodejs" style="color: inherit; text-decoration: inherit;">add<wbr>To<wbr>Userinfo</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -550,7 +665,9 @@ The UserRealmRoleProtocolMapper resource accepts the following [input]({{< relre
 
     <dt class="property-optional"
             title="Optional">
-        <span>claim<wbr>Value<wbr>Type</span>
+        <span id="claimvaluetype_nodejs">
+<a href="#claimvaluetype_nodejs" style="color: inherit; text-decoration: inherit;">claim<wbr>Value<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -559,7 +676,9 @@ The UserRealmRoleProtocolMapper resource accepts the following [input]({{< relre
 
     <dt class="property-optional"
             title="Optional">
-        <span>client<wbr>Id</span>
+        <span id="clientid_nodejs">
+<a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -568,7 +687,9 @@ The UserRealmRoleProtocolMapper resource accepts the following [input]({{< relre
 
     <dt class="property-optional"
             title="Optional">
-        <span>client<wbr>Scope<wbr>Id</span>
+        <span id="clientscopeid_nodejs">
+<a href="#clientscopeid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Scope<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -577,7 +698,9 @@ The UserRealmRoleProtocolMapper resource accepts the following [input]({{< relre
 
     <dt class="property-optional"
             title="Optional">
-        <span>multivalued</span>
+        <span id="multivalued_nodejs">
+<a href="#multivalued_nodejs" style="color: inherit; text-decoration: inherit;">multivalued</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -586,7 +709,9 @@ The UserRealmRoleProtocolMapper resource accepts the following [input]({{< relre
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -595,7 +720,9 @@ The UserRealmRoleProtocolMapper resource accepts the following [input]({{< relre
 
     <dt class="property-optional"
             title="Optional">
-        <span>realm<wbr>Role<wbr>Prefix</span>
+        <span id="realmroleprefix_nodejs">
+<a href="#realmroleprefix_nodejs" style="color: inherit; text-decoration: inherit;">realm<wbr>Role<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -611,7 +738,9 @@ The UserRealmRoleProtocolMapper resource accepts the following [input]({{< relre
 
     <dt class="property-required"
             title="Required">
-        <span>claim_<wbr>name</span>
+        <span id="claim_name_python">
+<a href="#claim_name_python" style="color: inherit; text-decoration: inherit;">claim_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -619,7 +748,9 @@ The UserRealmRoleProtocolMapper resource accepts the following [input]({{< relre
 
     <dt class="property-required"
             title="Required">
-        <span>realm_<wbr>id</span>
+        <span id="realm_id_python">
+<a href="#realm_id_python" style="color: inherit; text-decoration: inherit;">realm_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -628,7 +759,9 @@ The UserRealmRoleProtocolMapper resource accepts the following [input]({{< relre
 
     <dt class="property-optional"
             title="Optional">
-        <span>add_<wbr>to_<wbr>access_<wbr>token</span>
+        <span id="add_to_access_token_python">
+<a href="#add_to_access_token_python" style="color: inherit; text-decoration: inherit;">add_<wbr>to_<wbr>access_<wbr>token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -637,7 +770,9 @@ The UserRealmRoleProtocolMapper resource accepts the following [input]({{< relre
 
     <dt class="property-optional"
             title="Optional">
-        <span>add_<wbr>to_<wbr>id_<wbr>token</span>
+        <span id="add_to_id_token_python">
+<a href="#add_to_id_token_python" style="color: inherit; text-decoration: inherit;">add_<wbr>to_<wbr>id_<wbr>token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -646,7 +781,9 @@ The UserRealmRoleProtocolMapper resource accepts the following [input]({{< relre
 
     <dt class="property-optional"
             title="Optional">
-        <span>add_<wbr>to_<wbr>userinfo</span>
+        <span id="add_to_userinfo_python">
+<a href="#add_to_userinfo_python" style="color: inherit; text-decoration: inherit;">add_<wbr>to_<wbr>userinfo</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -655,7 +792,9 @@ The UserRealmRoleProtocolMapper resource accepts the following [input]({{< relre
 
     <dt class="property-optional"
             title="Optional">
-        <span>claim_<wbr>value_<wbr>type</span>
+        <span id="claim_value_type_python">
+<a href="#claim_value_type_python" style="color: inherit; text-decoration: inherit;">claim_<wbr>value_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -664,7 +803,9 @@ The UserRealmRoleProtocolMapper resource accepts the following [input]({{< relre
 
     <dt class="property-optional"
             title="Optional">
-        <span>client_<wbr>id</span>
+        <span id="client_id_python">
+<a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -673,7 +814,9 @@ The UserRealmRoleProtocolMapper resource accepts the following [input]({{< relre
 
     <dt class="property-optional"
             title="Optional">
-        <span>client_<wbr>scope_<wbr>id</span>
+        <span id="client_scope_id_python">
+<a href="#client_scope_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>scope_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -682,7 +825,9 @@ The UserRealmRoleProtocolMapper resource accepts the following [input]({{< relre
 
     <dt class="property-optional"
             title="Optional">
-        <span>multivalued</span>
+        <span id="multivalued_python">
+<a href="#multivalued_python" style="color: inherit; text-decoration: inherit;">multivalued</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -691,7 +836,9 @@ The UserRealmRoleProtocolMapper resource accepts the following [input]({{< relre
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -700,7 +847,9 @@ The UserRealmRoleProtocolMapper resource accepts the following [input]({{< relre
 
     <dt class="property-optional"
             title="Optional">
-        <span>realm_<wbr>role_<wbr>prefix</span>
+        <span id="realm_role_prefix_python">
+<a href="#realm_role_prefix_python" style="color: inherit; text-decoration: inherit;">realm_<wbr>role_<wbr>prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -727,7 +876,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -742,7 +893,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -757,7 +910,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -772,7 +927,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -913,7 +1070,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Add<wbr>To<wbr>Access<wbr>Token</span>
+        <span id="state_addtoaccesstoken_csharp">
+<a href="#state_addtoaccesstoken_csharp" style="color: inherit; text-decoration: inherit;">Add<wbr>To<wbr>Access<wbr>Token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -922,7 +1081,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Add<wbr>To<wbr>Id<wbr>Token</span>
+        <span id="state_addtoidtoken_csharp">
+<a href="#state_addtoidtoken_csharp" style="color: inherit; text-decoration: inherit;">Add<wbr>To<wbr>Id<wbr>Token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -931,7 +1092,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Add<wbr>To<wbr>Userinfo</span>
+        <span id="state_addtouserinfo_csharp">
+<a href="#state_addtouserinfo_csharp" style="color: inherit; text-decoration: inherit;">Add<wbr>To<wbr>Userinfo</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -940,7 +1103,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Claim<wbr>Name</span>
+        <span id="state_claimname_csharp">
+<a href="#state_claimname_csharp" style="color: inherit; text-decoration: inherit;">Claim<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -948,7 +1113,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Claim<wbr>Value<wbr>Type</span>
+        <span id="state_claimvaluetype_csharp">
+<a href="#state_claimvaluetype_csharp" style="color: inherit; text-decoration: inherit;">Claim<wbr>Value<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -957,7 +1124,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Client<wbr>Id</span>
+        <span id="state_clientid_csharp">
+<a href="#state_clientid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -966,7 +1135,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Client<wbr>Scope<wbr>Id</span>
+        <span id="state_clientscopeid_csharp">
+<a href="#state_clientscopeid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Scope<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -975,7 +1146,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Multivalued</span>
+        <span id="state_multivalued_csharp">
+<a href="#state_multivalued_csharp" style="color: inherit; text-decoration: inherit;">Multivalued</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -984,7 +1157,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -993,7 +1168,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Realm<wbr>Id</span>
+        <span id="state_realmid_csharp">
+<a href="#state_realmid_csharp" style="color: inherit; text-decoration: inherit;">Realm<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1002,7 +1179,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Realm<wbr>Role<wbr>Prefix</span>
+        <span id="state_realmroleprefix_csharp">
+<a href="#state_realmroleprefix_csharp" style="color: inherit; text-decoration: inherit;">Realm<wbr>Role<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1018,7 +1197,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Add<wbr>To<wbr>Access<wbr>Token</span>
+        <span id="state_addtoaccesstoken_go">
+<a href="#state_addtoaccesstoken_go" style="color: inherit; text-decoration: inherit;">Add<wbr>To<wbr>Access<wbr>Token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1027,7 +1208,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Add<wbr>To<wbr>Id<wbr>Token</span>
+        <span id="state_addtoidtoken_go">
+<a href="#state_addtoidtoken_go" style="color: inherit; text-decoration: inherit;">Add<wbr>To<wbr>Id<wbr>Token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1036,7 +1219,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Add<wbr>To<wbr>Userinfo</span>
+        <span id="state_addtouserinfo_go">
+<a href="#state_addtouserinfo_go" style="color: inherit; text-decoration: inherit;">Add<wbr>To<wbr>Userinfo</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1045,7 +1230,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Claim<wbr>Name</span>
+        <span id="state_claimname_go">
+<a href="#state_claimname_go" style="color: inherit; text-decoration: inherit;">Claim<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1053,7 +1240,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Claim<wbr>Value<wbr>Type</span>
+        <span id="state_claimvaluetype_go">
+<a href="#state_claimvaluetype_go" style="color: inherit; text-decoration: inherit;">Claim<wbr>Value<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1062,7 +1251,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Client<wbr>Id</span>
+        <span id="state_clientid_go">
+<a href="#state_clientid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1071,7 +1262,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Client<wbr>Scope<wbr>Id</span>
+        <span id="state_clientscopeid_go">
+<a href="#state_clientscopeid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Scope<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1080,7 +1273,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Multivalued</span>
+        <span id="state_multivalued_go">
+<a href="#state_multivalued_go" style="color: inherit; text-decoration: inherit;">Multivalued</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1089,7 +1284,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1098,7 +1295,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Realm<wbr>Id</span>
+        <span id="state_realmid_go">
+<a href="#state_realmid_go" style="color: inherit; text-decoration: inherit;">Realm<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1107,7 +1306,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Realm<wbr>Role<wbr>Prefix</span>
+        <span id="state_realmroleprefix_go">
+<a href="#state_realmroleprefix_go" style="color: inherit; text-decoration: inherit;">Realm<wbr>Role<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1123,7 +1324,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>add<wbr>To<wbr>Access<wbr>Token</span>
+        <span id="state_addtoaccesstoken_nodejs">
+<a href="#state_addtoaccesstoken_nodejs" style="color: inherit; text-decoration: inherit;">add<wbr>To<wbr>Access<wbr>Token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1132,7 +1335,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>add<wbr>To<wbr>Id<wbr>Token</span>
+        <span id="state_addtoidtoken_nodejs">
+<a href="#state_addtoidtoken_nodejs" style="color: inherit; text-decoration: inherit;">add<wbr>To<wbr>Id<wbr>Token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1141,7 +1346,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>add<wbr>To<wbr>Userinfo</span>
+        <span id="state_addtouserinfo_nodejs">
+<a href="#state_addtouserinfo_nodejs" style="color: inherit; text-decoration: inherit;">add<wbr>To<wbr>Userinfo</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1150,7 +1357,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>claim<wbr>Name</span>
+        <span id="state_claimname_nodejs">
+<a href="#state_claimname_nodejs" style="color: inherit; text-decoration: inherit;">claim<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1158,7 +1367,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>claim<wbr>Value<wbr>Type</span>
+        <span id="state_claimvaluetype_nodejs">
+<a href="#state_claimvaluetype_nodejs" style="color: inherit; text-decoration: inherit;">claim<wbr>Value<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1167,7 +1378,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>client<wbr>Id</span>
+        <span id="state_clientid_nodejs">
+<a href="#state_clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1176,7 +1389,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>client<wbr>Scope<wbr>Id</span>
+        <span id="state_clientscopeid_nodejs">
+<a href="#state_clientscopeid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Scope<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1185,7 +1400,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>multivalued</span>
+        <span id="state_multivalued_nodejs">
+<a href="#state_multivalued_nodejs" style="color: inherit; text-decoration: inherit;">multivalued</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1194,7 +1411,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1203,7 +1422,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>realm<wbr>Id</span>
+        <span id="state_realmid_nodejs">
+<a href="#state_realmid_nodejs" style="color: inherit; text-decoration: inherit;">realm<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1212,7 +1433,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>realm<wbr>Role<wbr>Prefix</span>
+        <span id="state_realmroleprefix_nodejs">
+<a href="#state_realmroleprefix_nodejs" style="color: inherit; text-decoration: inherit;">realm<wbr>Role<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1228,7 +1451,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>add_<wbr>to_<wbr>access_<wbr>token</span>
+        <span id="state_add_to_access_token_python">
+<a href="#state_add_to_access_token_python" style="color: inherit; text-decoration: inherit;">add_<wbr>to_<wbr>access_<wbr>token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1237,7 +1462,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>add_<wbr>to_<wbr>id_<wbr>token</span>
+        <span id="state_add_to_id_token_python">
+<a href="#state_add_to_id_token_python" style="color: inherit; text-decoration: inherit;">add_<wbr>to_<wbr>id_<wbr>token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1246,7 +1473,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>add_<wbr>to_<wbr>userinfo</span>
+        <span id="state_add_to_userinfo_python">
+<a href="#state_add_to_userinfo_python" style="color: inherit; text-decoration: inherit;">add_<wbr>to_<wbr>userinfo</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1255,7 +1484,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>claim_<wbr>name</span>
+        <span id="state_claim_name_python">
+<a href="#state_claim_name_python" style="color: inherit; text-decoration: inherit;">claim_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1263,7 +1494,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>claim_<wbr>value_<wbr>type</span>
+        <span id="state_claim_value_type_python">
+<a href="#state_claim_value_type_python" style="color: inherit; text-decoration: inherit;">claim_<wbr>value_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1272,7 +1505,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>client_<wbr>id</span>
+        <span id="state_client_id_python">
+<a href="#state_client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1281,7 +1516,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>client_<wbr>scope_<wbr>id</span>
+        <span id="state_client_scope_id_python">
+<a href="#state_client_scope_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>scope_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1290,7 +1527,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>multivalued</span>
+        <span id="state_multivalued_python">
+<a href="#state_multivalued_python" style="color: inherit; text-decoration: inherit;">multivalued</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1299,7 +1538,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1308,7 +1549,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>realm_<wbr>id</span>
+        <span id="state_realm_id_python">
+<a href="#state_realm_id_python" style="color: inherit; text-decoration: inherit;">realm_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1317,7 +1560,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>realm_<wbr>role_<wbr>prefix</span>
+        <span id="state_realm_role_prefix_python">
+<a href="#state_realm_role_prefix_python" style="color: inherit; text-decoration: inherit;">realm_<wbr>role_<wbr>prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
